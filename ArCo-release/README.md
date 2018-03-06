@@ -2,6 +2,8 @@
 
 ArCo is an initiative of ICCD (Istituto Centrale per il Catalogo e la Documentazione) and  CNR (Italian National Research Council) in the context of dati.beniculturali.it. Its aim is to contribute to the valorisation of cultural heritage with the publication of Linked Open Data.
 
+Notice: this release mainly contains documentation in Italian. In the future we will also add the English version.
+
 # Release
 This release is a package containing:
 
