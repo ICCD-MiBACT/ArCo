@@ -1,6 +1,6 @@
 # ArCo
 
-ArCo is an initiative of the ICCD (Istituto Centrale per il Catalogo e la Documentazione) and the CNR (Italian National Research Council), as part of the project dati.beniculturali.it, for cultural heritage enhancement through the publication of LOD.
+ArCo is an initiative of ICCD (Istituto Centrale per il Catalogo e la Documentazione) and  CNR (Italian National Research Council), as part of dati.beniculturali.it, for cultural heritage enhancement through the publication of LOD.
 
 ArCo aims at making available data from the Catalogo generale dei beni culturali following the paradigm of the Linked Data initiative, in an open format, in order to ensure accessibility to users and interoperability.
 
