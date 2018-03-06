@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ArCo - Home page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">ArCo</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#guida">Guida</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ontologie">Ontologie</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#dati">Dati</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#esempi">Esempi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-secondary text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/logo-arco-con-trasparenza-520x416.png" alt="">
+        <h1 class="text-uppercase mb-0">Architettura della Conoscenza</h1>
+        <hr class="star-light">
+        <span class="h2-span"><a href="http://stlab.istc.cnr.it/"><img id="stlab" src="./img/CNR.png" /></a></span>
+        <span class="h2-span"><a href="http://www.iccd.beniculturali.it/"><img id="iccd" src="./img/iccd.jpg" /></a></span>
+      </div>
+    </header>
+
+    <!-- Guida -->
+    <section class="portfolio" id="guida">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Guida</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-mt-4">
+	        <p>Questo documento descrive brevemente le ontologie incluse nella versione v0.1 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche ad esse associate, gestite con il sistema SIGEC dall’Istituto Centrale per il Catalogo e la Documentazione.  </p>
+			<p>La versione v0.1 di ArCo &egrave; la prima ad essere pubblicata. Le ontologie che compongono la rete hanno tutte lo stato <b>“alpha”</b> che indica sia una condizione di instabilit&agrave; (cio&egrave; le ontologie potranno subire modifiche anche sostanziali nelle prossime versioni) sia il fatto che le ontologie non sono state ancora sottoposte ad attivit&agrave; di collaudo sistematiche.</p>
+			<div class="text-center mt-4">
+              <a class="btn btn-xl btn-outline-light" href="./primer-guide.html" target="_blank">
+                <i class="fa fa-search mr-2"></i>
+                Leggi di pi&ugrave;
+              </a>
+            </div>
+			<!-- p>Le ontologie ArCo sono pubblicate all’interno di un <i>docker</i> che comprende:
+			  <ul>
+			    <li>Questa guida;</li>
+				<li>I moduli ontologici sviluppati;</li>
+  				<li>Esempi di <i>competency questions</i> e la loro traduzione sotto forma di SPARQL query, che mostrano le informazioni che possono essere estratte dai dati del SIGEC trasformati in RDF secondo la modellazione di ArCO;</li>
+  				<li>L'ontologia Cultural-ON e un campione <b>non aggiornato</b>dei dati del DB Unico, avente unicamente lo scopo di permettere attività di analisi dei dati durante il meetup, al fine di evidenziare possibili problematiche relative all’entity linking;</li>
+  				<li>Un campione dei dati del SIGEC trasformati in RDF secondo la modellazione ArCo</li>
+  				<li>Un motore SPARQL basato su Virtuoso per permettere l'interrogazione dei dati e delle ontologie.</li>
+			  </ul>
+			</p -->
+		  </div>
+	    </div>
+      </div>
+    </section>
+    <!-- Ontologie -->
+    <section class="portfolio" id="ontologie">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Ontologie</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=http://stlab.istc.cnr.it/arco/docker_data/ontologies/arco-core.owl">
+              <div class="ontology-title text-center text-white"><h3>Ontologia core</h3></div>
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/core.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=http://stlab.istc.cnr.it/arco/docker_data/ontologies/cp-description.owl">
+              <div class="ontology-title text-center text-white"><h3>Cultrural property description</h3></div>
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/cultural-good.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+			  <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=http://stlab.istc.cnr.it/arco/docker_data/ontologies/catalogue-record.owl">
+              <div class="ontology-title text-center text-white"><h3>Catalog record &amp versioning</h3></div>
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/catalog-record.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=http://stlab.istc.cnr.it/arco/docker_data/ontologies/cultural-event.owl">
+              <div class="ontology-title text-center text-white"><h3>Cultural events and ehibitions</h3></div>
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/cultural-event.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=http://stlab.istc.cnr.it/arco/docker_data/ontologies/identifiers.owl">	
+              <div class="ontology-title text-center text-white"><h3>Identifiers</h3></div>
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/identifiers.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=http://stlab.istc.cnr.it/arco/docker_data/ontologies/location-geoamm.owl">	
+              <div class="ontology-title text-center text-white"><h3>Locations &amp; addresses</h3></div>
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/locations.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-primary mb-0" id="dati">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Dati</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Il dataset di ArCo può essere scaricato in formato N-Triples in un unico dump compresso.</p>
+            <div class="text-center mt-4">
+              <a class="btn btn-xl btn-outline-light" href="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz">
+                <i class="fa fa-download mr-2"></i>
+                Scarica!
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Usa lo SPARQL endpoint del progetto ArCo per interrogare i dati interattivamente.</p>
+            <div class="text-center mt-4">
+              <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql" target="_blank">
+                <i class="fa fa-search mr-2"></i>
+                Interroga!
+              </a>
+            </div>
+          </div>
+        </div>
+        
+          
+        
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="esempi">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Esempi</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Quali eventi culturali hanno interessato il bene culturale X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Quali sono le persone coinvolte nelle operazioni di redazione e aggiornamento della scheda sul bene culturale X, e con quali ruoli?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Quando è stata redatta e aggiornata la scheda sul bene culturale X?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX l0: &lt;https://w3id.org/italia/onto/l0/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+SELECT ?event ?eventName ?culturalProperty ?culturalPropertyLabel
+WHERE{
+  ?event cis:involves ?culturalProperty ;
+    l0:name ?eventName .
+  ?culturalProperty rdfs:label ?culturalPropertyLabel
+}</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX sheet: &lt;http://www.w3id.org/arco/sheet/&gt;
+PREFIX roapit: &lt;https://w3id.org/italia/onto/RO/&gt;
+SELECT *
+WHERE{
+  ?entity sheet:hasCatalogueRecordVersion ?record . 
+  ?record sheet:hasCatalogueRecordRiT ?rit . 
+  ?rit roapit:withRole ?role ;
+    roapit:isRoleInTimeOf ?agent
+}
+limit 100</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX sheet: &lt;http://www.w3id.org/arco/sheet/&gt;
+SELECT *
+WHERE{
+  ?entity sheet:hasCatalogueRecordVersion ?record . 
+  ?record sheet:editedAtTime ?time .
+  ?time rdfs:label ?timeLabel
+}
+limit 100</pre>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+ 			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+l0%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2Fl0%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+%3Fevent+%3FeventName+%3FculturalProperty+%3FculturalPropertyLabel%0D%0AWHERE%7B%0D%0A%3Fevent+cis%3Ainvolves+%3FculturalProperty+%3B%0D%0A++l0%3Aname+%3FeventName+.%0D%0A%3FculturalProperty+rdfs%3Alabel+%3FculturalPropertyLabel%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+sheet%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fsheet%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+sheet%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+sheet%3AhasCatalogueRecordRiT+%3Frit+.+%0D%0A++%3Frit+roapit%3AwithRole+%3Frole+%3B%0D%0A++++roapit%3AisRoleInTimeOf+%3Fagent%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+sheet%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fsheet%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+sheet%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+sheet%3AeditedAtTime+%3Ftime+.%0D%0A++%3Ftime+rdfs%3Alabel+%3FtimeLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Dove è conservato il bene culturale mobile X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Dove si trova il bene culturale immobile X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Quali sono i beni culturali immateriali descritti nelle schede attualmente pubblicate?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
+PREFIX locgeoamm: &lt;http://www.w3id.org/arco/locgeoamm/&gt;
+SELECT *
+WHERE{
+  ?entity a arco:MovableCulturalProperty ;
+    rdfs:label ?entityLabel ;
+    locgeoamm:isInSite ?site .
+  ?site rdfs:label ?siteLabel
+}
+limit 100</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+SELECT *
+WHERE{
+  ?entity a arco:ImmovableCulturalProperty ;
+    rdfs:label ?entityLabel ;
+    cis:siteAddress ?address .
+  ?address rdfs:label ?addressLabel
+}
+limit 100</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+SELECT *
+WHERE{
+  ?entity a arco:IntangibleCulturalProperty
+}</pre>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+ 			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+locgeoamm%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Flocgeoamm%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+a+arco%3AMovableCulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++locgeoamm%3AisInSite+%3Fsite+.%0D%0A++%3Fsite+rdfs%3Alabel+%3FsiteLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++cis%3AsiteAddress+%3Faddress+.%0D%0A++%3Faddress+rdfs%3Alabel+%3FaddressLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+a+arco%3AIntangibleCulturalProperty%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Qual è l'ambito di tutela sotto il quale ricade il bene culturale X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Qual è il codice univoco associato al bene culturale X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Quali sono i beni culturali immateriali descritti nelle schede attualmente pubblicate?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX cpdescription: &lt;http://www.w3id.org/arco/cpdescription/&gt;
+SELECT ?entity ?entityLabel ?scope ?scopeLabel
+WHERE{
+  ?entity cpdescription:hasMibactScopeOfProtection ?scope ;
+    rdfs:label ?entityLabel .
+  ?scope rdfs:label ?scopeLabel
+}</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX identifier: &lt;http://www.w3id.org/arco/identifier/&gt;
+SELECT ?entity ?id
+WHERE{
+  ?entity identifier:uniqueIdentifier ?id 
+}</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX identifier: &lt;http://www.w3id.org/arco/identifier/&gt;
+PREFIX sheet: &lt;http://www.w3id.org/arco/sheet/&gt;
+SELECT ?record ?sheetId ?entity
+WHERE{
+  ?record identifier:sheetIdentifier ?sheetId ;
+    sheet:describes ?entity
+}
+LIMIT 100</pre>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+ 			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+cpdescription%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcpdescription%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fscope+%3FscopeLabel%0D%0AWHERE%7B%0D%0A++%3Fentity+cpdescription%3AhasMibactScopeOfProtection+%3Fscope+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+.%0D%0A++%3Fscope+rdfs%3Alabel+%3FscopeLabel%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+identifier%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fidentifier%2F%3E%0D%0ASELECT+%3Fentity+%3Fid%0D%0AWHERE%7B%0D%0A++%3Fentity+identifier%3AuniqueIdentifier+%3Fid+%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+identifier%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fidentifier%2F%3E%0D%0APREFIX+sheet%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fsheet%2F%3E%0D%0ASELECT+%3Frecord+%3FsheetId+%3Fentity%0D%0AWHERE%7B%0D%0A++%3Frecord+identifier%3AsheetIdentifier+%3FsheetId+%3B%0D%0A++++sheet%3Adescribes+%3Fentity%0D%0A%7D%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>
+          <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">
+            <span class="cc-license-icons">
+              <span id="cc-logo" class="icon"><img alt="cc logo" class="cc" src="./img/cc_icon_white_x2.png"></span>
+              <span id="cc-attribution" class="icon"><img class="cc" src="./img/attribution_icon_white_x2.png"></span>
+            </span>
+          </a>
+        </small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="core">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Ontologia core</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/core.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/google-code-prettify/run_prettify.js"></script>
+    <script src="vendor/lang-sparql/lang-sparql.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.js"></script>
+
+  </body>
+
+</html>

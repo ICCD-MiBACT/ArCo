@@ -1,0 +1,19 @@
+version: '2'
+services:
+  virtuoso:
+    build: ./virtuoso
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "https://w3id.org/arco"
+    volumes:
+      - ./data/virtuoso:/data
+    ports:
+      - "8890:8890"
+  lode:
+    build: ./lode
+    ports:
+      - "9090:8080"
+  httpd:
+    build: ./httpd
+    ports:
+      - "8080:80"

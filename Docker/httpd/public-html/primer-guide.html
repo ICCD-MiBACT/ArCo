@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ArCo - Primer Guide v0.1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">ArCo - Primer Guide v0.1</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="./index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="primer">
+      <div class="container">
+        <h1>ArCo - Primer Guide v0.1</h1>
+      </div>
+    </section>      
+    <section class="primer">
+      <div class="container">
+        <h2 id="intro">Introduzione</h2>
+	  	<p>Questo documento descrive brevemente le ontologie incluse nella versione v0.1 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche ad esse associate, gestite con il sistema SIGEC dall'Istituto Centrale per il Catalogo e la Documentazione.  </p>
+		<p>La versione v0.1 di ArCo &egrave; la prima ad essere pubblicata. Le ontologie che compongono la rete hanno tutte lo stato <b>"alpha"</b> che indica sia una condizione di instabilit&agrave; (cio&egrave; le ontologie potranno subire modifiche anche sostanziali nelle prossime versioni) sia il fatto che le ontologie non sono state ancora sottoposte ad attivit&agrave; di collaudo sistematiche. Si rimanda alla <a class="js-scroll-trigger" href="#versioni">prossima sezione</a> per ulteriori dettagli sull'interpretazione delle versioni.</p>
+		<p>Le ontologie ArCo sono pubblicate all'interno di un <i>docker</i> che comprende:</p>
+		<ul>
+		  <li>Questa guida;</li>
+  		  <li>I moduli ontologici sviluppati;</li>
+  		  <li>Esempi di <i>competency questions</i> e la loro traduzione sotto forma di SPARQL query, che mostrano le informazioni che possono essere estratte dai dati del SIGEC trasformati in RDF secondo la modellazione di ArCO;</li>
+  		  <li>L'ontologia Cultural-ON e un campione <b>non aggiornato</b>dei dati del DB Unico, avente unicamente lo scopo di permettere attività di analisi dei dati durante il meetup, al fine di evidenziare possibili problematiche relative all'entity linking;</li>
+  		  <li>Un campione dei dati del SIGEC trasformati in RDF secondo la modellazione ArCo</li>
+  		  <li>Un motore SPARQL basato su Virtuoso per permettere l'interrogazione dei dati e delle ontologie.</li>
+		</ul>
+	  </div>
+	</section>
+	<section class="primer">
+      <div class="container">
+        <h2>Indice dei contenuti</h2>
+        <ol>
+          <li><a class="js-scroll-trigger" href="#versioni">Guida per l'interpretazione delle versioni</a></li>
+		  <li><a class="js-scroll-trigger" href="#rete">La rete di ontologie ArCo v0.1</a></li>
+		  <li><a class="js-scroll-trigger" href="#moduli">I moduli di ArCo v0.1</a></li>
+		</ol>
+	  </div>
+	</section>
+	<section class="primer" id="versioni">
+      <div class="container">
+        <h2>Guida per l'interpretazione delle versioni</h2>
+        <p>"ArCo" &egrave; e rester&agrave; il nome della rete di ontologie e sar&agrave; sempre associato ad un numero di versione. Tutte i numeri di versione 0.x indicheranno che la release èegrave; nel suo complesso <i>instabile</i>.</p> 
+        <p>ArCo contiene diversi moduli. Ogni modulo avr&agrave; un suo numero di versione. I numeri di versione 0.x potranno avere due possibili stati "alpha" e "beta". "alpha" vuol dire che l'ontologia &egrave; stata  collaudata solo con test interni. "beta" vuol dire che l'ontologia &grave; stata collaudata anche con competency question derivanti da casi d'uso esterni al SIGEC. Un modulo pu&ograve; rimanere in stato "beta" anche nel corso di diverse versioni.</p>
+        <p>Il numero di versione 1.0 per ArCo indicher&agrave; la prima release stabile del progetto (Prevista a novembre/dicembre 2018). Il numero di versione 1.0 per un modulo indica che quel modulo èegrave; ritenuto stabile e che far&agrave; parte della prima release stabile, ArCo v1.0. I moduli v1.0 potranno essere individualmente pubblicati su dati.beniculturali.it.</p> 
+        <p>All'interno dei moduli ontologici ogni singola entit&agrave; avr&agrave; una indicazione del suo stato che pu&ograve; essere "stabile" o "non stabile". Lo stato di un'entit&agrave; si riferisce sia al vocabolario sia all'assiomatizzazione ad essa associata.</p>
+	  </div>
+	</section>
+	<section class="primer" id="rete">
+      <div class="container">
+        <h2>La rete di ontologie ArCo v0.1</h2>
+        <p>Questa prima versione della rete di ontologie ArCo rappresenta una parte della <a target="_blank" href"http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici">Normativa Trasversale</a> e comprende la modellazione di alcuni nuclei informativi previsti dalla normativa:</p>
+        <ul>
+          <li>Classificazione dei beni culturali in: bene culturale materiale (mobile e immobile) e immateriale;</li>
+          <li>Attivit&agrave; di redazione e aggiornamento/revisione delle schede catalografiche;</li>
+          <li>Informazioni di base sul bene culturale;</li>
+          <li>Codici identificativi relativi al bene culturale e alla scheda catalografica;</li>
+          <li>Eventi culturali in cui &egrave; coinvolto il bene culturale;</li>
+          <li>Localizzazione geografico-amministrativa del bene culturale.</li>
+        </ul>
+        <p>La rete ArCo di ontologie, in questa prima versione, include sei moduli (escludendo quelli importati per riuso diretto di ontologie che non fanno parte in modo nativo di ArCo) corrispondenti ai nuclei informativi sopra descritti. I moduli formano una rete di ontologie basata sulla propriet&agrave; owl:import. Nella tabella seguente sono elencati gli IRI dei moduli e delle ontologie riusate, ognuno associato ad un prefisso, usato per brevit&agrave; nel resto del documento. Nella figura che segue la tabella èegrave; illustrata la rete di ontologie come un grafo i cui nodi rappresentano i moduli e gli archi rappresentano la relazine owl:import.</p>
+        <table>
+          <tr>
+            <th>Prefisso</th>
+            <th>IRI</th> 
+          </tr>
+          <tr>
+            <td>arco:</td> 
+            <td>http://www.w3id.org/arco/core/</td>
+          </tr>
+          <tr>
+            <td>culturalevent:</td> 
+            <td>http://www.w3id.org/arco/culturalevent/</td>
+          </tr>
+          <tr>
+            <td>cataloguerecord:</td>
+            <td>http://www.w3id.org/arco/cataloguerecord/</td>
+          </tr>
+          <tr>
+            <td>cpdescription:</td> 
+            <td>http://www.w3id.org/arco/cpdescription/</td>
+          </tr>
+          <tr>
+            <td>locgeoamm:</td>
+            <td>http://www.w3id.org/arco/locgeoamm/</td>
+          </tr>
+          <tr>
+            <td>identifier:</td> 
+            <td>http://www.w3id.org/arco/identifier/</td>
+          </tr>
+          <tr>
+            <td>cis:</td> 
+            <td>http://dati.beniculturali.it/cis/</td>
+          </tr>
+  		  <tr>
+    		<td>l0:</td> 
+    		<td>https://w3id.org/italia/onto/l0/</td>
+  		  </tr>
+  		  <tr>
+    		<td>roapit:</td> 
+    		<td>https://w3id.org/italia/onto/RO/</td>
+  		  </tr>
+  		  <tr>
+		    <td>tiapit:</td> 
+    		<td>https://w3id.org/italia/onto/TI/</td>
+	  	  </tr>
+		</table>
+		
+		<div class="text-center mt-4">
+		  <img src="./img/arco-network.png" style="width: 1000px;"/>
+		</div>
+		<p>In pi&ugrave; moduli, &egrave; stata riusata direttamente una  <a target="_blank" href="http://dati.beniculturali.it/cis/">versione revisionata dell'ontologia Cultural-ON</a>, e sono stati usati alcuni <a target="_blank" href"http://ontologydesignpatterns.org/">Ontology Design Patterns</a>, per esempio per la modellazione dell'intervallo temporale e dei ruoli indicizzati nel tempo. Sono state inoltre riusate le ontologie della rete <a target="_blank" href="https://github.com/italia/daf-ontologie-vocabolari-controllati">OntoPiA</a>, elaborate dal Team Digitale e usate per rappresentare i dati della pubblica amministrazione, che vengono direttamente importate dalla <a target="_blank" http://dati.beniculturali.it/cis/">versione revisionata di Cultural-ON</a>.</p>
+		<p>Durante la fase di modellazione, sono stati tenuti in considerazione anche altre ontologie rilevanti per questo dominio (<a target="_blank" href="http://www.cidoc-crm.org/Version/version-6.2">CIDOC-CRM</a>, le ontologie del progetto <a target="_blank" href="http://data.fondazionezeri.unibo.it/">Zeri&Lode</a>), e in futuro sono previste operazioni di allineamento e di riuso anche di altre ontologie, che si aggiungeranno a <a target="_blank" http://dati.beniculturali.it/cis/">Cultural-ON</a> e alle ontologie incluse in <a target=_blank" href="https://github.com/italia/daf-ontologie-vocabolari-controllati">OntoPiA</a>.</p>
+	  </div>
+	</section>
+    <section class="primer" id="moduli">
+      <div class="container">
+        <h2>I moduli di ArCo v0.1</h2>
+        <p>In questa sezione si illustrano sinteticamente i nuclei concettuali principali delle ontologie della rete ArCo. Per una loro descrizione dettagliata si rimanda alla sezione "Ontologie" della pagina principale. </p>
+        <p>Sia le scelte di modellazione sia il vocabolario sono da ritenersi provvisori: potrebbero quindi esserci modifiche anche sostanziali gi&agrave; a partire dalla prossima versione.</p>
+        
+        <h3>Modulo Core</h3>
+        <p>Il diagramma seguente illustra la classificazione dei beni culturali in Materiali (Mobili e Immobili) e Immateriali, e la relazione tra Bene culturale e Scheda catalografica. La classe dei beni culturali &egrave; disgiunta da quella delle schede catalografiche. Sono disgiunti anche l'insieme dei beni Materiali e quello dei beni Immateriali e, la classe dei Beni Mobili da quella dei Beni Immobili.</p>
+        <div class="text-center mt-4">
+          <img src="./img/arco-core-diagram.jpg" />
+        </div>
+        
+        <h3>Modulo sulla redazione e su aggiornamenti/revisioni della scheda</h3>
+        <p>Il diagramma seguente illustra la rappresentazione delle versioni di una stessa scheda catalografica, prodotte dalla sua redazione e da operazioni di aggiornamento o revisione, collocate in un intervallo temporale e collegate a un ruolo esercitato da un agente. Un "Catalogue Record" (scheda di catalogo) viene specializzato in tante sottoclassi quante sono le tipologie di scheda previste dalla normativa.
+		<div class="text-center mt-4">
+		  <img src="./img/catalogue-record-diagram.jpg" />
+		</div>
+		
+		<h3>Modulo con informazioni di base per descrizione del bene culturale</h3>
+		<p>Questo modulo rispecchia esattamente l'organizzazione nella normativa delle informazioni descrittive di base del bene (ambito di tutela, categoria, definizione), ed &egrave; stato cos&igrave; elaborato per produrre i dati in modo che possano evidenziare eventuali tassonomie del bene culturale da rappresentare nell'ontologia.</p>
+		<div class="text-center mt-4">
+		  <img src="./img/cp-description-diagram.jpg" />
+		</div>
+		
+		<h3>Riuso di Cultural-ON per gli eventi culturali</h3>
+		<p>In questo diagramma si mostra il riuso di classi e propriet&agrave; di <a target="_blank" http://dati.beniculturali.it/cis/">Cultural-ON</a> per la rappresentazione degli eventi culturali: si riusa direttamente la classe <a  href="http://dati.beniculturali.it/cis/CulturalEvent">cis:CulturalEvent</a> per rappresentare un evento culturale generico, e la si specializza per mezzo della creazione di una sua sottoclasse, culturalevent:Exhibition, riflettendo la rilevanza che la normativa dell'ICCD attribuisce alle mostre, rispetto agli altri eventi culturali. Le due classi sono messe in relazione con il bene culturale, arco:CulturalProperty, attraverso il riuso della propriet&agrave; <a target="_blank" href="http://dati.beniculturali.it/cis/involves">cis:involves</a>.</p>
+	  	<div class="text-center mt-4">
+	  	  <img src="./img/riuso-cis-culturalevent.jpg" />
+	  	</div>
+	  	
+	  	<h3>Riuso di Cultural-ON per la localizzazione</h3>
+	  	<p>In questo diagramma si mostra il riuso della classe di Cultural-On cis:Site, inteso come contenitore fisico, al quale si associano informazioni sulla collocazione geografica. I beni culturali mobili vengono collegati al Site con la relazione locgeoamm:isInSite; i beni culturali immobili, ancorati al suolo, e che sono quindi essi stessi entit&agrave; cui si collegano informazioni geografiche, sono invece dichiarati come sottoclasse di <a target="_blank" href="http://dati.beniculturali.it/cis/Site">cis:Site</a>.</p>
+	  	<div class="text-center mt-4">
+	  	  <img src="./img/riuso-cis-site.jpg" />
+	  	</div>
+	  </div>
+	</section>
+	
+	<div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>
+          <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">
+            <span class="cc-license-icons">
+              <span id="cc-logo" class="icon"><img alt="cc logo" class="cc" src="./img/cc_icon_white_x2.png"></span>
+              <span id="cc-attribution" class="icon"><img class="cc" src="./img/attribution_icon_white_x2.png"></span>
+            </span>
+          </a>
+        </small>
+      </div>
+    </div>
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.js"></script>
+  </body>
+</html>
