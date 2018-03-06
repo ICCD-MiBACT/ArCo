@@ -11,8 +11,8 @@ the definition of a network of ontologies for representing the informations cont
 # Release
 This release provides a package containing:
 
- * the ontologies of ArCo;
- * a SPARQL endpoint with the data;
+ * the ArCo ontology network;
+ * a SPARQL endpoint;
  * a detailed guide about how to use the ontologies and query the data.
 
 The package relies on [Docker](https://www.docker.com/community-edition), an application you need to install if you do not have it on your machine. Please, refer to the [official documentation](https://docs.docker.com/get-started/#containers-and-virtual-machines) for detailed information about Docker and how to install it.
@@ -31,7 +31,7 @@ Once the build process ends you can run the package with the following command
 ```sh
 $ docker-compose up
 ```
-We remark that the very first run might require time (~5minutes) as the SPARQL endpoint is populated with data (~6GB).
+We remark that the command ``docker-compose build`` should be executed only once for building the release. Additionally, the very first run (i.e. ``$ docker-compose up``) might require time (~5minutes) as the SPARQL endpoint is populated with data (~6GB).
 
 Finally, the docker installation will made available the following endpoints:
  * the [project homepage](http://localhost:8080/) with the documentation and links to the ontologies and the data dumps;
