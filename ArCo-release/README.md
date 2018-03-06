@@ -8,14 +8,14 @@ The main activities of the project will include:
 
 the definition of a network of ontologies for representing the informations contained in the general catalogue, in relation to different types of cultural objects, taking into account the actual ICCD standards the publication of the data processed in the SiGeC (Sistema Generale del Catalogo, following the Linked Open Data principles, to populate the MiBACT SDL (semantic digital library).
 
-# Docker
+# Release
 This release provides a package containing:
 
  * the ontologies of ArCo;
  * a SPARQL endpoint with the data;
  * a detailed guide about how to use the ontologies and query the data.
 
-The package relies on [Docker](https://www.docker.com/community-edition). Hence, you need to install Docker if you do not have it on your machine.
+The package relies on [Docker](https://www.docker.com/community-edition), an application you need to install if you do not have it on your machine. Please, refer to the [official documentation](https://docs.docker.com/get-started/#containers-and-virtual-machines) for detailed information about Docker and how to install it.
 
 ## Installation and execution
 Launch the docker daemon on your machine, e.g.:
