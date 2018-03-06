@@ -9,7 +9,7 @@ The main activities of the project will include:
 the definition of a network of ontologies for representing the informations contained in the general catalogue, in relation to different types of cultural objects, taking into account the actual ICCD standards the publication of the data processed in the SiGeC (Sistema Generale del Catalogo, following the Linked Open Data principles, to populate the MiBACT SDL (semantic digital library).
 
 # Docker
-This release provides a package:
+This release provides a package containing:
 
  * the ontologies of ArCo;
  * a SPARQL endpoint with the data;
