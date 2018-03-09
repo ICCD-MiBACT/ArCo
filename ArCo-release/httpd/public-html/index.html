@@ -237,12 +237,12 @@ WHERE{
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX sheet: &lt;http://www.w3id.org/arco/sheet/&gt;
+PREFIX cataloguerecord: &lt;http://www.w3id.org/arco/cataloguerecord/&gt;
 PREFIX roapit: &lt;https://w3id.org/italia/onto/RO/&gt;
 SELECT *
 WHERE{
-  ?entity sheet:hasCatalogueRecordVersion ?record . 
-  ?record sheet:hasCatalogueRecordRiT ?rit . 
+  ?entity cataloguerecord:hasCatalogueRecordVersion ?record . 
+  ?record cataloguerecord:hasCatalogueRecordRiT ?rit . 
   ?rit roapit:withRole ?role ;
     roapit:isRoleInTimeOf ?agent
 }
@@ -252,11 +252,11 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX sheet: &lt;http://www.w3id.org/arco/sheet/&gt;
+PREFIX cataloguerecord: &lt;http://www.w3id.org/arco/cataloguerecord/&gt;
 SELECT *
 WHERE{
-  ?entity sheet:hasCatalogueRecordVersion ?record . 
-  ?record sheet:editedAtTime ?time .
+  ?record cataloguerecord:hasCatalogueRecordVersion ?recordVersion . 
+  ?recordVersion cataloguerecord:editedAtTime ?time .
   ?time rdfs:label ?timeLabel
 }
 limit 100</pre>
@@ -277,7 +277,7 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
 			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+sheet%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fsheet%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+sheet%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+sheet%3AhasCatalogueRecordRiT+%3Frit+.+%0D%0A++%3Frit+roapit%3AwithRole+%3Frole+%3B%0D%0A++++roapit%3AisRoleInTimeOf+%3Fagent%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+cataloguerecord%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcataloguerecord%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+cataloguerecord%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+cataloguerecord%3AhasCatalogueRecordRiT+%3Frit+.+%0D%0A++%3Frit+roapit%3AwithRole+%3Frole+%3B%0D%0A++++roapit%3AisRoleInTimeOf+%3Fagent%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -287,7 +287,7 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
 			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+sheet%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fsheet%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+sheet%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+sheet%3AeditedAtTime+%3Ftime+.%0D%0A++%3Ftime+rdfs%3Alabel+%3FtimeLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+cataloguerecord%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcataloguerecord%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Frecord+cataloguerecord%3AhasCatalogueRecordVersion+%3FrecordVersion+.+%0D%0A++%3FrecordVersion+cataloguerecord%3AeditedAtTime+%3Ftime+.%0D%0A++%3Ftime+rdfs%3Alabel+%3FtimeLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -421,11 +421,11 @@ WHERE{
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX identifier: &lt;http://www.w3id.org/arco/identifier/&gt;
-PREFIX sheet: &lt;http://www.w3id.org/arco/sheet/&gt;
-SELECT ?record ?sheetId ?entity
+PREFIX cataloguerecord: &lt;http://www.w3id.org/arco/cataloguerecord/&gt;
+SELECT ?record ?catalogueRecordId ?entity
 WHERE{
-  ?record identifier:sheetIdentifier ?sheetId ;
-    sheet:describes ?entity
+  ?record identifier:catalogueRecordIdentifier ?catalogueRecordId ;
+    cataloguerecord:describes ?entity
 }
 LIMIT 100</pre>
             </div>
@@ -455,7 +455,7 @@ LIMIT 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
 			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+identifier%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fidentifier%2F%3E%0D%0APREFIX+sheet%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fsheet%2F%3E%0D%0ASELECT+%3Frecord+%3FsheetId+%3Fentity%0D%0AWHERE%7B%0D%0A++%3Frecord+identifier%3AsheetIdentifier+%3FsheetId+%3B%0D%0A++++sheet%3Adescribes+%3Fentity%0D%0A%7D%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+identifier%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fidentifier%2F%3E%0D%0APREFIX+cataloguerecord%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcataloguerecord%2F%3E%0D%0ASELECT+%3Frecord+%3FcatalogueRecordId+%3Fentity%0D%0AWHERE%7B%0D%0A++%3Frecord+identifier%3AcatalogueRecordIdentifier+%3FcatalogueRecordId+%3B%0D%0A++++cataloguerecord%3Adescribes+%3Fentity%0D%0A%7D%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
