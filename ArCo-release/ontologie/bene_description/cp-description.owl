@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3id.org/arco/cpdescription/"
+     xml:base="http://www.w3id.org/arco/cpdescription/"
+     xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:cpdescription="http://www.w3id.org/arco/cpdescription/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.w3id.org/arco/cpdescription/">
+        <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
+        <owl:imports rdf:resource="http://www.w3id.org/arco/core/"/>
+        <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.1 alpha</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/cpdescription/hasCategory">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/cpdescription/CulturalPropertyCategory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua categoria.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha categoria</rdfs:label>
+        <rdfs:label xml:lang="en">has category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/hasDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/cpdescription/hasDefinition">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/cpdescription/CulturalPropertyDefinition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa il bene culturale alla sua definizione, cioè al termine o alla locuzione che individua il bene che si sta catalogando.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha definizione</rdfs:label>
+        <rdfs:label xml:lang="en">has definition</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/hasDesignationInTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/cpdescription/hasDesignationInTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3id.org/arco/cpdescription/hasNameInTime"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua denominazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha designazione nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has designation in time</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/hasMibactScopeOfProtection -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/cpdescription/hasMibactScopeOfProtection">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/cpdescription/MibactScopeOfProtection"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale all&apos;ambito di tutela nel quale ricade.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha ambito di tutela</rdfs:label>
+        <rdfs:label xml:lang="en">has MiBACT scope of protection</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/hasNameInTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/cpdescription/hasNameInTime">
+        <rdfs:comment xml:lang="it">Questa proprietà è stata creata come proprietà generica per sottoproprietà più specifiche, per collegare un&apos;entità a una denominazione nel tempo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha nome nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has name in time</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/name -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/NameInTime -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/NameInTime"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/core/CulturalProperty -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/core/CulturalProperty"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/CulturalPropertyCategory -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cpdescription/CulturalPropertyCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria, che contiene le indicazioni che consentono di inquadrare l’individuazione terminologica del bene catalogato nell’ambito di una più ampia e complessa organizzazione semantica.</rdfs:comment>
+        <rdfs:label xml:lang="it">Categoria del bene</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural Property Category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/CulturalPropertyDefinition -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cpdescription/CulturalPropertyDefinition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione del bene, cioè il termine o la locuzione che individua il bene che si sta catalogando</rdfs:comment>
+        <rdfs:label xml:lang="en">Cultural property definition</rdfs:label>
+        <rdfs:label xml:lang="it">Definizione del bene</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/MibactScopeOfProtection -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cpdescription/MibactScopeOfProtection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/cpdescription/Archaeological"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/cpdescription/ArchitecturalLandscape"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/cpdescription/EthnoAnthropological"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/cpdescription/HistoricalArtistic"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito di tutela del MiBACT (archeologico, architettonico e paesaggistico, etnoantropologico, storico artistico), nel quale ricade il bene culturale in esame.</rdfs:comment>
+        <rdfs:label xml:lang="it">Ambito di tutela MiBACT</rdfs:label>
+        <rdfs:label xml:lang="en">MiBACT Scope of protection</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Topic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Topic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/Archaeological -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/arco/cpdescription/Archaeological">
+        <rdf:type rdf:resource="http://www.w3id.org/arco/cpdescription/MibactScopeOfProtection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/ArchitecturalLandscape -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/arco/cpdescription/ArchitecturalLandscape">
+        <rdf:type rdf:resource="http://www.w3id.org/arco/cpdescription/MibactScopeOfProtection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/EthnoAnthropological -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/arco/cpdescription/EthnoAnthropological">
+        <rdf:type rdf:resource="http://www.w3id.org/arco/cpdescription/MibactScopeOfProtection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/HistoricalArtistic -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/arco/cpdescription/HistoricalArtistic">
+        <rdf:type rdf:resource="http://www.w3id.org/arco/cpdescription/MibactScopeOfProtection"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
