@@ -10,12 +10,13 @@ ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-rel
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/event_exhibition/cultural-event.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/localizzazione_geo_amm/location-geoamm.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/modulo_core/arco-core.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/cultural-definition/cultural-definition.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 
 # Add DB Unico
 ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-luoghi.ttl.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 
 # Add ArCo data
-ADD http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/arco_dataset-v0.2.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
 
 #RUN cd /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/ \
 #		&& tar -xvzf ontologies.tar.gz \

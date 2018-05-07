@@ -311,10 +311,10 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Dove è conservato il bene culturale mobile X?</p>
+            <p class="lead">Quali sono tutte le localizzazioni che hanno riguardato il bene culturale X, di che tipo sono, e in quali intervalli temporali?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Dove si trova il bene culturale immobile X?</p>
+            <p class="lead">Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?</p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">Quali sono i beni culturali immateriali descritti nelle schede attualmente pubblicate?</p>
@@ -325,37 +325,41 @@ limit 100</pre>
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
-PREFIX locgeoamm: &lt;http://www.w3id.org/arco/locgeoamm/&gt;
+PREFIX locgeoamm: &lt;http://www.w3id.org/arco/location/&gt;
+PREFIX tiapit: &lt;http://www.w3id.org/italia/onto/TI/&gt;
 SELECT *
 WHERE{
-  ?entity a arco:MovableCulturalProperty ;
+  ?entity a arco:CulturalProperty ;
     rdfs:label ?entityLabel ;
-    locgeoamm:isInSite ?site .
-  ?site rdfs:label ?siteLabel
+    locgeoamm:hasTimeIndexedQualifiedLocation ?location .
+  ?location rdfs:label ?locationLabel ;
+    locgeoamm:hasLocationType ?locationType ;
+    tiapit:atTime ?locationTimeInterval .
 }
-limit 100</pre>
+limit 100
+</pre>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
-PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+PREFIX locgeoamm: &lt;http://www.w3id.org/arco/location/&gt;
 SELECT *
-WHERE{
-  ?entity a arco:ImmovableCulturalProperty ;
-    rdfs:label ?entityLabel ;
-    cis:siteAddress ?address .
-  ?address rdfs:label ?addressLabel
+WHERE {
+  ?entity a arco:CulturalProperty ;
+    rdfs:label ?entityLabel ; 
+    locgeoamm:hasTimeIndexedQualifiedLocation ?location ;
+  ?location locgeomm:hasLocationType locgeoamm:StorageLocation .
 }
-limit 100</pre>
+limit 100
+</pre>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
-PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
 SELECT *
 WHERE{
   ?entity a arco:IntangibleCulturalProperty
@@ -367,7 +371,7 @@ WHERE{
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
  			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+locgeoamm%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Flocgeoamm%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+a+arco%3AMovableCulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++locgeoamm%3AisInSite+%3Fsite+.%0D%0A++%3Fsite+rdfs%3Alabel+%3FsiteLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX%20arco%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0APREFIX%20locgeoamm%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Flocation%2F%3E%0APREFIX%20tiapit%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Fitalia%2Fonto%2FTI%2F%3E%0ASELECT%20*%0AWHERE%7B%0A%20%20%3Fentity%20a%20arco%3ACulturalProperty%20%3B%0A%20%20%20%20rdfs%3Alabel%20%3FentityLabel%20%3B%0A%20%20%20%20locgeoamm%3AhasTimeIndexedQualifiedLocation%20%3Flocation%20.%0A%20%20%3Flocation%20rdfs%3Alabel%20%3FlocationLabel%20%3B%0A%20%20%20%20locgeoamm%3AhasLocationType%20%3FlocationType%20%3B%0A%20%20%20%20tiapit%3AatTime%20%3FlocationTimeInterval%20.%0A%7D%0Alimit%20100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -377,7 +381,7 @@ WHERE{
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
 			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++cis%3AsiteAddress+%3Faddress+.%0D%0A++%3Faddress+rdfs%3Alabel+%3FaddressLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX%20arco%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0APREFIX%20locgeoamm%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Flocation%2F%3E%0ASELECT%20*%0AWHERE%20%7B%0A%20%20%3Fentity%20a%20arco%3ACulturalProperty%20%3B%0A%20%20%20%20rdfs%3Alabel%20%3FentityLabel%20%3B%20%0A%20%20%20%20locgeoamm%3AhasTimeIndexedQualifiedLocation%20%3Flocation%20%3B%0A%20%20%3Flocation%20locgeomm%3AhasLocationType%20locgeoamm%3AStorageLocation%20.%0A%7D%0Alimit%20100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -404,7 +408,7 @@ WHERE{
             <p class="lead">Qual è il codice univoco associato al bene culturale X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quali sono i beni culturali immateriali descritti nelle schede attualmente pubblicate?</p>
+            <p class="lead">Quali sono tutti gli autori o gli ambiti culturali attribuiti al bene culturale X? E con quale ruolo? E quale motivazione giustifica l'attribuzione?</p>
           </div>
         </div>
         <div class="row">
@@ -433,14 +437,16 @@ WHERE{
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX identifier: &lt;http://www.w3id.org/arco/identifier/&gt;
-PREFIX cataloguerecord: &lt;http://www.w3id.org/arco/cataloguerecord/&gt;
-SELECT ?record ?catalogueRecordId ?entity
+PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
+PREFIX culturaldefinition &lt;http://www.w3id.org/arco/culturaldefinition/&gt;
+SELECT *
 WHERE{
-  ?record identifier:catalogueRecordIdentifier ?catalogueRecordId ;
-    cataloguerecord:describes ?entity
+  ?entity a arco:CulturalProperty ;
+    culturaldefinition:hasAuthorshipAttribution ?attribution .
+  ?attribution culturaldefinition:interventionRole ?role ;
+    culturaldefinition:hasSource ?attributionSource
 }
-LIMIT 100</pre>
+limit 100</pre>
             </div>
           </div>
         </div>
@@ -468,12 +474,87 @@ LIMIT 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
 			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX+identifier%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fidentifier%2F%3E%0D%0APREFIX+cataloguerecord%3A+%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcataloguerecord%2F%3E%0D%0ASELECT+%3Frecord+%3FcatalogueRecordId+%3Fentity%0D%0AWHERE%7B%0D%0A++%3Frecord+identifier%3AcatalogueRecordIdentifier+%3FcatalogueRecordId+%3B%0D%0A++++cataloguerecord%3Adescribes+%3Fentity%0D%0A%7D%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX%20arco%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0APREFIX%20culturaldefinition%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fculturaldefinition%2F%3E%0ASELECT%20*%0AWHERE%7B%0A%20%20%3Fentity%20a%20arco%3ACulturalProperty%20%3B%0A%20%20%20%20culturaldefinition%3AhasAuthorshipAttribution%20%3Fattribution%20.%0A%20%20%3Fattribution%20culturaldefinition%3AinterventionRole%20%3Frole%20%3B%0A%20%20%20%20culturaldefinition%3AhasSource%20%3FattributionSource%0A%7D%0Alimit%20100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">A quando risale la realizzazione del bene culturale X? E quale motivazione giustifica la cronologia?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Qual è lo stato di conservazione del bene culturale X? E quali interventi sul bene sono stati proposti?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
+PREFIX culturaldefinition &lt;http://www.w3id.org/arco/culturaldefinition/&gt;
+SELECT ?entity, ?entityLabel, ?dating, ?datingSource, ?datingEvent
+WHERE{
+  ?entity a arco:CulturalProperty ;
+    rdfs:label ?entityLabel ;
+  culturaldefinition:hasDating ?dating . 
+  ?dating culturaldefinition:hasSource ?datingSource ;
+    culturaldefinition:hasEvent ?datingEvent .
+  ?datingEvent l0:name ?eventName
+  FILTER regex(?eventName, "realizzazione", "i")
+}
+limit 100</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
+PREFIX cpdescription &lt;http://www.w3id.org/arco/cpdescription/&gt;
+SELECT ?entity, ?entityLabel, ?conservationStatus, ?proposedIntervention
+WHERE{
+  ?entity a arco:CulturalProperty ;
+    rdfs:label ?entityLabel ;
+    cpdescription:hasProposedIntervention ?proposedIntervention ;
+    cpdescription:hasConservationStatus ?conservation .
+  ?conservationStatus cpdescription:hasConservationStatusType ?conservationStatus .	
+}</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+ 			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX%20arco%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0APREFIX%20culturaldefinition%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fculturaldefinition%2F%3E%0ASELECT%20%3Fentity%2C%20%3FentityLabel%2C%20%3Fdating%2C%20%3FdatingSource%2C%20%3FdatingEvent%0AWHERE%7B%0A%20%20%3Fentity%20a%20arco%3ACulturalProperty%20%3B%0A%20%20%20%20rdfs%3Alabel%20%3FentityLabel%20%3B%0A%20%20culturaldefinition%3AhasDating%20%3Fdating%20.%20%0A%20%20%3Fdating%20culturaldefinition%3AhasSource%20%3FdatingSource%20%3B%0A%20%20%20%20culturaldefinition%3AhasEvent%20%3FdatingEvent%20.%0A%20%20%3FdatingEvent%20l0%3Aname%20%3FeventName%0A%20%20FILTER%20regex(%3FeventName%2C%20%22realizzazione%22%2C%20%22i%22)%0A%7D%0Alimit%20100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+			  <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX%20arco%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0APREFIX%20cpdescription%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcpdescription%2F%3E%0ASELECT%20%3Fentity%2C%20%3FentityLabel%2C%20%3FconservationStatus%2C%20%3FproposedIntervention%0AWHERE%7B%0A%20%20%3Fentity%20a%20arco%3ACulturalProperty%20%3B%0A%20%20%20%20rdfs%3Alabel%20%3FentityLabel%20%3B%0A%20%20%20%20cpdescription%3AhasProposedIntervention%20%3FproposedIntervention%20%3B%0A%20%20%20%20cpdescription%3AhasConservationStatus%20%3Fconservation%20.%0A%20%20%3FconservationStatus%20cpdescription%3AhasConservationStatusType%20%3FconservationStatus%20.%09%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            
           </div>
         </div>
       </div>
