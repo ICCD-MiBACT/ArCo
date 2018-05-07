@@ -9,6 +9,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.w3id.org/arco/identifier/">
@@ -19,10 +20,10 @@
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo xml:lang="it">Versione 0.1 alpha</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -63,6 +64,38 @@
     
 
 
+    <!-- http://www.w3id.org/arco/identifier/authorICCDIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/arco/identifier/authorICCDIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice univoco ICCD a un autore.</rdfs:comment>
+        <rdfs:label xml:lang="en">author ICCD identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice ICCD dell&apos;autore</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/identifier/authorLocalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/arco/identifier/authorLocalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice identificativo, che individua il riferimento autoriale in modo univoco nell&apos;ambito di un repertorio locale, a un autore.</rdfs:comment>
+        <rdfs:label xml:lang="en">author local identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice identificativo locale dell&apos;autore</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3id.org/arco/identifier/catalogueRecordIdentifier -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3id.org/arco/identifier/catalogueRecordIdentifier">
@@ -88,6 +121,19 @@
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare il numero di catalogo generale a un bene culturale descritto in una scheda catalografica.</rdfs:comment>
         <rdfs:label xml:lang="en">iccd number</rdfs:label>
         <rdfs:label xml:lang="it">numero catalogo generale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/identifier/note -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/arco/identifier/note">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali note, relative a una certa informazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">note</rdfs:label>
+        <rdfs:label xml:lang="it">note</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -214,6 +260,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/arco/identifier/C">
         <rdf:type rdf:resource="http://www.w3id.org/arco/identifier/CataloguingLevel"/>
+        <rdfs:label xml:lang="en">Detailed Level</rdfs:label>
+        <rdfs:label xml:lang="it">Livello di Catalogo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -222,6 +272,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/arco/identifier/I">
         <rdf:type rdf:resource="http://www.w3id.org/arco/identifier/CataloguingLevel"/>
+        <rdfs:label xml:lang="it">Livello di Inventario</rdfs:label>
+        <rdfs:label xml:lang="en">Minimum Level</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -230,10 +284,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/arco/identifier/P">
         <rdf:type rdf:resource="http://www.w3id.org/arco/identifier/CataloguingLevel"/>
+        <rdfs:label xml:lang="it">Livello di Precatalogo</rdfs:label>
+        <rdfs:label xml:lang="en">Medium Level</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 

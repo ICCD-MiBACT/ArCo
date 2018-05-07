@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3id.org/arco/culturaldefinition/"
+     xml:base="http://www.w3id.org/arco/culturaldefinition/"
+     xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:culturaldefinition="http://www.w3id.org/arco/culturaldefinition/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.w3id.org/arco/culturaldefinition/">
+        <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
+        <owl:imports rdf:resource="http://www.w3id.org/arco/core/"/>
+        <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.1 alpha</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasAuthor">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/culturaldefinition/AlternativeAuthorshipAttribution"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/culturaldefinition/PreferredAuthorshipAttribution"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene attribuito un autore a un bene culturale all&apos;autore stesso.</rdfs:comment>
+        <rdfs:label xml:lang="en">author</rdfs:label>
+        <rdfs:label xml:lang="it">autore</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasAuthorityFileCataloguingAgency -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasAuthorityFileCataloguingAgency">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/culturaldefinition/PreferredAuthorshipAttribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;attribuzione di un autore a un bene culturale all&apos;ente schedatore dell&apos;authority file relativo a quell&apos;autore. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega l&apos;attribuzione, l&apos;authority file, e l&apos;ente schedatore dell&apos;authority file.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha ente schedatore dell&apos;authority file</rdfs:label>
+        <rdfs:label xml:lang="en">has authority file cataloguing agency</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasAuthorshipAttribution -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasAuthorshipAttribution">
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
+        <rdfs:label xml:lang="it">ha attribuzione di autore/responsabilità</rdfs:label>
+        <rdfs:label xml:lang="en">has authorship attribution</rdfs:label>
+        <owl:versionInfo xml:lang="it">Proprietà che lega un oggetto culturale a un&apos;attribuzione di autore o di responsabilità relativa all&apos;oggetto.</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasCircumstance -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasCircumstance">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/culturaldefinition/Commission"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/culturaldefinition/Circumstance"/>
+        <rdfs:label xml:lang="it">ha circostanza di committenza</rdfs:label>
+        <rdfs:label xml:lang="en">has commission circumstance</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa proprietà collega una situazione in cui viene indicata la committenza di un bene culturale all&apos;occasione che ha determinato quella committenza</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasCommission -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasCommission">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/culturaldefinition/Commission"/>
+        <rdfs:label xml:lang="it">Questa proprietà collega un bene culturale alla sua committenza.</rdfs:label>
+        <rdfs:label xml:lang="it">ha committenza</rdfs:label>
+        <rdfs:label xml:lang="en">has commission</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasCommittent -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasCommittent">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/culturaldefinition/Commission"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene indicata la committenza di un bene culturale alla persona o istituzione committente.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha committente</rdfs:label>
+        <rdfs:label xml:lang="en">has committent</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasCulturalScope -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasCulturalScope">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/culturaldefinition/CulturalScopeAttribution"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/culturaldefinition/CulturalScope"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene attribuito un ambito culturale a un bene culturale all&apos;ambito culturale stesso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ambito culturale</rdfs:label>
+        <rdfs:label xml:lang="en">cultural scope</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasDating -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasDating">
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/culturaldefinition/Dating"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità culturale alla sua cronologia.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha cronologia</rdfs:label>
+        <rdfs:label xml:lang="en">has dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasEvent">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/culturaldefinition/Dating"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;evento relativo al bene culturale, cui si riferisce una specifica cronologia.</rdfs:comment>
+        <rdfs:label xml:lang="en">has event related</rdfs:label>
+        <rdfs:label xml:lang="it">relativa a evento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasSource">
+        <rdfs:range rdf:resource="http://www.w3id.org/arco/culturaldefinition/Source"/>
+        <rdfs:label xml:lang="it">Questa proprietà associa una attribuzione di autore/responsabilità, di cronologia, di committenza, alla motivazione o fonte che hanno determinato l&apos;attribuzione.</rdfs:label>
+        <rdfs:label xml:lang="it">ha motivazione</rdfs:label>
+        <rdfs:label xml:lang="en">has source</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/interventionRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/interventionRole">
+        <rdfs:domain rdf:resource="http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/roapit/Role"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa un&apos;attribuzione di autore/responsabilità al ruolo rivestito dall&apos;autore o dall&apos;ambito culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">intervention role</rdfs:label>
+        <rdfs:label xml:lang="it">ruolo nell&apos;intervento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/agentDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/agentDate">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare delle indicazioni cronologiche generiche (le date di nascita e di morte o, quando queste sono ignote, le date di attività) a un agente.</rdfs:comment>
+        <rdfs:label xml:lang="en">agent date</rdfs:label>
+        <rdfs:label xml:lang="it">indicazioni cronologiche relative a un agente</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/authorIntervention -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/authorIntervention">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/culturaldefinition/AlternativeAuthorshipAttribution"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/arco/culturaldefinition/PreferredAuthorshipAttribution"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="it">Questa proprietà rappresenta specifiche relative all&apos;intervento effettuato dallautore sul bene culturale.</rdfs:label>
+        <rdfs:label xml:lang="en">author intervention</rdfs:label>
+        <rdfs:label xml:lang="it">intervento dell&apos;autore</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/AlternativeAuthorshipAttribution -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/AlternativeAuthorshipAttribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/authorIntervention"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;attribuzione di autore superata, alternativa o tradizionale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alternative Authorship Attribution</rdfs:label>
+        <rdfs:label xml:lang="it">Attribuzione Alternativa di Autore</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasAuthorityFileCataloguingAgency"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasSource"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/arco/culturaldefinition/Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/interventionRole"/>
+                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/roapit/Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Attribuzione di Autore o responsabilità</rdfs:label>
+        <rdfs:label xml:lang="en">Authorship Attribution</rdfs:label>
+        <rdfs:label xml:lang="it">Questa classe rappresenta l&apos;attribuzione di un autore o di una responsabilità per un bene culturale, cioè le informazioni relative ai soggetti (persone singole o enti collettivi) intervenuti nella realizzazione del bene e/o all&apos;ambito culturale di riferimento.</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/Circumstance -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/Circumstance">
+        <rdfs:label xml:lang="it">Circostanza</rdfs:label>
+        <rdfs:label xml:lang="en">Circumstance</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa classe rappresenta l&apos;occasione per cui è stato commissionato un bene culturale</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/Commission -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/Commission">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasCircumstance"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/arco/culturaldefinition/Circumstance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasCommittent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasSource"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/arco/culturaldefinition/Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la committenza relativa a un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Commission</rdfs:label>
+        <rdfs:label xml:lang="it">Committenza</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/CulturalScope -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/CulturalScope">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito culturale a cui può essere riferito un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Ambito culturale</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural Scope</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/CulturalScopeAttribution -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/CulturalScopeAttribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasCulturalScope"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/arco/culturaldefinition/CulturalScope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Attribuzione di Ambito Culturale</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural Scope Attribution</rdfs:label>
+        <rdfs:label xml:lang="it">Questa classe rappresenta l&apos;attribuzione di un ambito culturale a cui può essere riferito il bene culturale.</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/Dating -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/Dating">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasEvent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasSource"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/arco/culturaldefinition/Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la cronologia di un&apos;entità.</rdfs:comment>
+        <rdfs:label xml:lang="it">Cronologia</rdfs:label>
+        <rdfs:label xml:lang="en">Dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/PreferredAuthorshipAttribution -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/PreferredAuthorshipAttribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/culturaldefinition/authorIntervention"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attribuzione di autore maggiormente accreditata o convincente.</rdfs:comment>
+        <rdfs:label xml:lang="it">Attribuzione Primaria di Autore</rdfs:label>
+        <rdfs:label xml:lang="en">Preferred Authorship Attribution</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/Source -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/Source">
+        <rdfs:label xml:lang="it">Motivazione</rdfs:label>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa classe rappresenta la motivazione o la fonte che ha determinato una certa attribuzione</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

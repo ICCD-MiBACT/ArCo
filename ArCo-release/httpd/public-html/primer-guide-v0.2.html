@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>ArCo - Primer Guide v0.2</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+
+<!-- Plugin CSS -->
+<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"
+	type="text/css">
+
+<!-- Custom styles for this template -->
+<link href="css/freelancer.css" rel="stylesheet">
+</head>
+<body>
+	<nav
+		class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+		id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">ArCo - Primer Guide v0.2</a>
+			<button
+				class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
+				type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+						href="./index.html">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="primer">
+		<div class="container">
+			<h1>ArCo - Primer Guide v0.2</h1>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="intro">Introduzione</h2>
+			<p>Questo documento descrive brevemente le ontologie incluse
+				nella versione v0.2 di ArCo, una rete di ontologie per descrivere i
+				diversi tipi di beni culturali e le schede catalografiche a essi
+				associate, gestite con il sistema SIGEC dall'Istituto Centrale per
+				il Catalogo e la Documentazione.</p>
+			<p>
+				La versione v0.2 di ArCo &egrave; la seconda a essere pubblicata. Le
+				ontologie già presenti nella release precedente hanno stato <i>beta</i>,
+				mentre quella introdotta in questa release ha stato <i>alpha</i>. Si
+				rimanda al primer della versione v0.1 per ulteriori dettagli
+				sull'interpretazione delle versioni.
+			</p>
+			<p>
+				Le ontologie ArCo sono pubblicate all'interno di un <i>docker</i>
+				che comprende:
+			</p>
+			<ul>
+				<li>Questa guida;</li>
+				<li>I moduli ontologici sviluppati;</li>
+				<li>Esempi di <i>competency questions</i> e loro traduzione
+					sotto forma di SPARQL query;
+				</li>
+				<li>Un campione dei dati del SIGEC trasformati in RDF secondo
+					le modellazioni di ArCo</li>
+				<li>Un motore SPARQL basato su Virtuoso per permettere
+					l'interrogazione dei dati e delle ontologie.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2>Indice dei contenuti</h2>
+			<ol>
+				<li><a href="#rete">La rete di ontologie ArCo v0.2</a></li>
+				<li><a href="#moduli">I moduli di ArCo v0.2</a></li>
+			</ol>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="rete">La rete di ontologie ArCo v0.2</h2>
+			<p>
+				Questa seconda versione della rete di ontologie ArCo rappresenta una
+				parte della <a target="_blank"href"http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici">Normativa
+					Trasversale</a> e comprende, oltre alle porzioni di normativa già
+				modellate nella prima versione, la modellazione di nuovi nuclei
+				informativi relativi al bene culturale:
+			</p>
+			<ul>
+				<li>Stato di conservazione del bene, interventi proposti,
+					modalità di conservazione;</li>
+				<li>Tutte le tipologie di localizzazione del bene culturale
+					(localizzazione fisica attuale, luogo di provenienza, luogo di
+					deposito, luogo di rilevamento, etc.);</li>
+				<li>Attribuzione preferita e alternativa di autore e
+					attribuzione di ambito culturale;</li>
+				<li>Committenza del bene culturale;</li>
+				<li>Cronologia del bene (sia della sua realizzazione, sia di
+					altri eventi che lo hanno riguardato);</li>
+				<li>Classificazione dei beni culturali in base ai settori
+					disciplinari delle schede catalografiche;</li>
+				<li>Tipologia del bene culturale;</li>
+				<li>Soggetto del bene, codice Iconclass, titolo (proprio,
+					alternativo, parallelo);</li>
+				<li>Edizione di un bene storico e artistico.</li>
+			</ul>
+			<p>La rete ArCo di ontologie, in questa seconda versione, include
+				sette moduli (escludendo quelli importati per riuso diretto di
+				ontologie che non fanno parte in modo nativo di ArCo). I moduli
+				formano una rete di ontologie basata sulla propriet&agrave;
+				owl:imports. Nella tabella seguente sono elencati gli IRI dei moduli
+				e delle ontologie riusate, ognuno associato a un prefisso.</p>
+			<table>
+				<tr>
+					<th>Prefisso</th>
+					<th>IRI</th>
+				</tr>
+				<tr>
+					<td>arco:</td>
+					<td>http://www.w3id.org/arco/core/</td>
+				</tr>
+				<tr>
+					<td>culturalevent:</td>
+					<td>http://www.w3id.org/arco/culturalevent/</td>
+				</tr>
+				<tr>
+					<td>cataloguerecord:</td>
+					<td>http://www.w3id.org/arco/cataloguerecord/</td>
+				</tr>
+				<tr>
+					<td>cpdescription:</td>
+					<td>http://www.w3id.org/arco/cpdescription/</td>
+				</tr>
+				<tr>
+					<td>locgeoamm:</td>
+					<td>http://www.w3id.org/arco/location/</td>
+				</tr>
+				<tr>
+					<td>identifier:</td>
+					<td>http://www.w3id.org/arco/identifier/</td>
+				</tr>
+				<tr>
+					<td>culturaldefinition:</td>
+					<td>http://www.w3id.org/arco/culturaldefinition/</td>
+				</tr>
+				<tr>
+					<td>cis:</td>
+					<td>http://dati.beniculturali.it/cis/</td>
+				</tr>
+				<tr>
+					<td>l0:</td>
+					<td>https://w3id.org/italia/onto/l0/</td>
+				</tr>
+				<tr>
+					<td>roapit:</td>
+					<td>https://w3id.org/italia/onto/RO/</td>
+				</tr>
+				<tr>
+					<td>tiapit:</td>
+					<td>https://w3id.org/italia/onto/TI/</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="moduli">I moduli di ArCo v0.2</h2>
+			<p>In questa sezione si illustrano sinteticamente i nuovi nuclei
+				concettuali principali introdotti nella seconda versione della rete
+				ArCo. Per una loro descrizione dettagliata si rimanda alla sezione
+				"Ontologie" della pagina principale.</p>
+			<p>Sia le scelte di modellazione sia il vocabolario sono da
+				ritenersi provvisori.</p>
+
+
+			<h3>Modulo Core (arco:)</h3>
+			<p>Il diagramma seguente illustra la classificazione dei beni
+				culturali in base ai settori disciplinari: beni archeologici, beni
+				architettonici e paesaggistici, beni demoetnoantropologici, beni
+				fotografici, beni musicali, beni naturalistici, beni numismatici,
+				beni scientifici e tecnologici, beni storici e artistici. Questa
+				classificazione si inserisce all'interno della gerarchia di alto
+				livello modellata nella prima versione del modulo, tra beni mobili,
+				immobili e immateriali.</p>
+			<div class="text-center mt-4">
+				<img src="./img2/culturalproperty-classification.jpg" />
+			</div>
+
+			<h3>Modulo sullo stato di conservazione, sulla tipologia del
+				bene, sull'edizione di un bene storico e artistico (cpdescription:)</h3>
+			<p>I diagrammi seguenti illustrano la rappresentazione delle
+				informazioni sullo stato di conservazione del bene, sugli interventi
+				proposti e sulle modalità di conservazione; la tipologia di un bene
+				culturale, articolata, secondo la normativa, in "definizione"
+				(CulturalPropertyDefinition) e "tipologia"
+				(CulturalPropertySpecification); l'edizione di un bene storico e
+				artistico; soggetto e titoli attribuiti al bene.
+			<div class="text-center mt-4">
+				<img src="./img2/conservationStatus.jpg" /> <img
+					src="./img2/culturalPropertyType.jpg" /> <img
+					src="./img2/historicArtisticProperty-edition.jpg" /> <img
+					src="./img2/subject-title.jpg" />
+			</div>
+
+			<h3>Modulo sull'attribuzione di autore, sulla cronologia, sulla
+				committenza (culturaldefinition:)</h3>
+			<p>Questo modulo modella le attribuzioni di autore, preferita o
+				alternativa, e l'attribuzione di ambito culturale; la cronologia
+				della realizzazione del bene o di altri eventi a esso associati; la
+				committenza.</p>
+			<div class="text-center mt-4">
+				<img src="./img2/authorshipAttribution.jpg" /> <img
+					src="./img2/dating.jpg" /> <img src="./img2/commission.jpg" />
+			</div>
+
+			<h3>Modulo sulle tipologie di localizzazione (locgeoamm:)</h3>
+			<p>In questo diagramma si mostra la modellazione relativa alle
+				localizzazioni, inserite in un arco temporale, che coinvolgono o
+				hanno coinvolto un bene culturale. La tipologia di localizzazione
+				viene espressa per mezzo degli individui della classe LocationType.</p>
+			<div class="text-center mt-4">
+				<img src="./img2/otherLocations.jpg" />
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -2,15 +2,16 @@
 <rdf:RDF xmlns="http://www.w3id.org/arco/cataloguerecord/"
      xml:base="http://www.w3id.org/arco/cataloguerecord/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:cataloguerecord="http://www.w3id.org/arco/cataloguerecord/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.w3id.org/arco/cataloguerecord/">
@@ -21,10 +22,10 @@
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo xml:lang="it">Versione 0.1 alpha</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -37,6 +38,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/isRelatedToRiT -->
+
+    <owl:ObjectProperty rdf:about="http://dati.beniculturali.it/cis/isRelatedToRiT"/>
     
 
 
@@ -375,7 +382,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
+    // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -383,159 +390,20 @@
     
 
 
-    <!-- http://www.w3id.org/arco/cataloguerecord/ATcatalogueRecord -->
+    <!-- http://www.w3id.org/arco/identifier/catalogueRecordIdentifier -->
 
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/ATcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti antropologici.</rdfs:comment>
-        <rdfs:label xml:lang="en">AT catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Reperti antropologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/arco/identifier/catalogueRecordIdentifier"/>
     
 
 
-    <!-- http://www.w3id.org/arco/cataloguerecord/AcatalogueRecord -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/AcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive architettura.</rdfs:comment>
-        <rdfs:label xml:lang="en">A catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Architettura</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BDIcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BDIcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici immateriali.</rdfs:comment>
-        <rdfs:label xml:lang="en">BDI catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici immateriali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BDMcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BDMcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici materiali.</rdfs:comment>
-        <rdfs:label xml:lang="en">BDM catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici materiali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BNBcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BNBcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Botanica.</rdfs:comment>
-        <rdfs:label xml:lang="en">BNB catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Botanica</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BNMcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BNMcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Mineralogia.</rdfs:comment>
-        <rdfs:label xml:lang="en">BNM catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Mineralogia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BNPEcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BNPEcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Petrologia.</rdfs:comment>
-        <rdfs:label xml:lang="en">BNPE catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Petrologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BNPLcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BNPLcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Planetologia.</rdfs:comment>
-        <rdfs:label xml:lang="en">BNPL catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Planetologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BNPcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BNPcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Paleontologia.</rdfs:comment>
-        <rdfs:label xml:lang="en">BNP catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Paleontologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/BNZcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/BNZcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Zoologia.</rdfs:comment>
-        <rdfs:label xml:lang="en">BNZ catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Zoologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/CAcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CAcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive complessi archeologici.</rdfs:comment>
-        <rdfs:label xml:lang="en">CA catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Complessi archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/CNScatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CNScatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive centri/nuclei storici.</rdfs:comment>
-        <rdfs:label xml:lang="en">CNS catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Centri/nuclei storici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
     
 
 
@@ -572,6 +440,396 @@
     
 
 
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive architettura.</rdfs:comment>
+        <rdfs:label xml:lang="en">A catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Architettura</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordAT -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordAT">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti antropologici.</rdfs:comment>
+        <rdfs:label xml:lang="en">AT catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Reperti antropologici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBDI -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBDI">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici immateriali.</rdfs:comment>
+        <rdfs:label xml:lang="en">BDI catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici immateriali</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBDM -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBDM">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici materiali.</rdfs:comment>
+        <rdfs:label xml:lang="en">BDM catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici materiali</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNB -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNB">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Botanica.</rdfs:comment>
+        <rdfs:label xml:lang="en">BNB catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Botanica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNM -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNM">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Mineralogia.</rdfs:comment>
+        <rdfs:label xml:lang="en">BNM catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Mineralogia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNP">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Paleontologia.</rdfs:comment>
+        <rdfs:label xml:lang="en">BNP catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Paleontologia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNPE -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNPE">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Petrologia.</rdfs:comment>
+        <rdfs:label xml:lang="en">BNPE catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Petrologia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNPL -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNPL">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Planetologia.</rdfs:comment>
+        <rdfs:label xml:lang="en">BNPL catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Planetologia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNZ -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNZ">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Zoologia.</rdfs:comment>
+        <rdfs:label xml:lang="en">BNZ catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni naturalistici-Zoologia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordCA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordCA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive complessi archeologici.</rdfs:comment>
+        <rdfs:label xml:lang="en">CA catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Complessi archeologici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordCNS -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordCNS">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive centri/nuclei storici.</rdfs:comment>
+        <rdfs:label xml:lang="en">CNS catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Centri/nuclei storici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordD -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordD">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive disegni.</rdfs:comment>
+        <rdfs:label xml:lang="en">D catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Disegni</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordF -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordF">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fotografia.</rdfs:comment>
+        <rdfs:label xml:lang="en">F catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Fotografia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordFF -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordFF">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fondi fotografici.</rdfs:comment>
+        <rdfs:label xml:lang="en">FF catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Fondi fotografici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordMA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordMA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive monumenti archeologici.</rdfs:comment>
+        <rdfs:label xml:lang="en">MA catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Monumenti archeologici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordMI -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordMI">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive matrici incise.</rdfs:comment>
+        <rdfs:label xml:lang="en">MI catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Matrici incise</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordNU -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordNU">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni numismatici.</rdfs:comment>
+        <rdfs:label xml:lang="en">NU catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Beni numismatici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordOA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordOA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte.</rdfs:comment>
+        <rdfs:label xml:lang="en">OA catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Opere/oggetti d&apos;arte</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordOAC -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordOAC">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte contemporanea.</rdfs:comment>
+        <rdfs:label xml:lang="en">OAC catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda opere/oggetti d&apos;arte contemporanea</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordPG -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordPG">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:label xml:lang="en">PG catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Parchi/giardini</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive parchi/giardini.</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordPST -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordPST">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive il patrimonio scientifico e tecnologico.</rdfs:comment>
+        <rdfs:label xml:lang="en">PST catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Patrimonio scientifico e tecnologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordRA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordRA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti archeologici.</rdfs:comment>
+        <rdfs:label xml:lang="en">RA catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Reperti archeologici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordS -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordS">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive stampe.</rdfs:comment>
+        <rdfs:label xml:lang="en">S catalogue record</rdfs:label>
+        <rdfs:label xml:lang="en">Scheda Stampe</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSAS -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSAS">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive saggi stratigrafici.</rdfs:comment>
+        <rdfs:label xml:lang="en">SAS catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Saggi stratigrafici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSI -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSI">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive siti archeologici.</rdfs:comment>
+        <rdfs:label xml:lang="en">SI catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Siti archeologici</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSM -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSM">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali.</rdfs:comment>
+        <rdfs:label xml:lang="en">SM catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Strumenti musicali</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSMO -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSMO">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali-organo.</rdfs:comment>
+        <rdfs:label xml:lang="en">SMO catalogue record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Strumenti musicali-Organo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordTMA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordTMA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive tabella materiali archeologici.</rdfs:comment>
+        <rdfs:label xml:lang="it">Scheda Tabella materiali archeologici</rdfs:label>
+        <rdfs:label xml:lang="en">TMA catalogue record</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordVeAC -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordVeAC">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive vestimenti antichi/contemporanei.</rdfs:comment>
+        <rdfs:label xml:lang="it">Scheda Vestimenti antichi/contemporanei</rdfs:label>
+        <rdfs:label xml:lang="en">VeAC catalogue record</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/arco/cataloguerecord/CatalogueRecordVersion -->
 
     <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordVersion">
@@ -586,6 +844,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/arco/cataloguerecord/hasCatalogueRecordVersionRiT"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/arco/cataloguerecord/hasCataloguingAgent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -621,240 +885,6 @@
         <rdfs:comment xml:lang="it">Rappresenta una versione (relativa a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni.</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue record version</rdfs:label>
         <rdfs:label xml:lang="it">Versione della scheda</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/DcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/DcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive disegni.</rdfs:comment>
-        <rdfs:label xml:lang="en">D catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Disegni</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/FFcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/FFcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fondi fotografici.</rdfs:comment>
-        <rdfs:label xml:lang="en">FF catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Fondi fotografici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/FcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/FcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fotografia.</rdfs:comment>
-        <rdfs:label xml:lang="en">F catalogue record</rdfs:label>
-        <rdfs:label xml:lang="en">Scheda Fotografia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/MAcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/MAcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive monumenti archeologici.</rdfs:comment>
-        <rdfs:label xml:lang="en">MA catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Monumenti archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/MIcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/MIcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive matrici incise.</rdfs:comment>
-        <rdfs:label xml:lang="en">MI catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Matrici incise</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/NUcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/NUcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni numismatici.</rdfs:comment>
-        <rdfs:label xml:lang="en">NU catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Beni numismatici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/OACcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/OACcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte contemporanea.</rdfs:comment>
-        <rdfs:label xml:lang="en">OAC catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda opere/oggetti d&apos;arte contemporanea</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/OAcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/OAcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte.</rdfs:comment>
-        <rdfs:label xml:lang="en">OA catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Opere/oggetti d&apos;arte</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/PGcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/PGcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:label xml:lang="en">PG catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Parchi/giardini</rdfs:label>
-        <owl:versionInfo xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive parchi/giardini.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/PSTcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/PSTcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive il patrimonio scientifico e tecnologico.</rdfs:comment>
-        <rdfs:label xml:lang="en">PST catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Patrimonio scientifico e tecnologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/RAcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/RAcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti archeologici.</rdfs:comment>
-        <rdfs:label xml:lang="en">RA catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Reperti archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/SAScatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/SAScatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive saggi stratigrafici.</rdfs:comment>
-        <rdfs:label xml:lang="en">SAS catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Saggi stratigrafici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/SIcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/SIcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive siti archeologici.</rdfs:comment>
-        <rdfs:label xml:lang="en">SI catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Siti archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/SMOcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/SMOcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali-organo.</rdfs:comment>
-        <rdfs:label xml:lang="en">SMO catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Strumenti musicali-Organo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/SMcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/SMcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali.</rdfs:comment>
-        <rdfs:label xml:lang="en">SM catalogue record</rdfs:label>
-        <rdfs:label xml:lang="it">Scheda Strumenti musicali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/ScatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/ScatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive stampe.</rdfs:comment>
-        <rdfs:label xml:lang="en">S catalogue record</rdfs:label>
-        <rdfs:label xml:lang="en">Scheda Stampe</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/TMAcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/TMAcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive tabella materiali archeologici.</rdfs:comment>
-        <rdfs:label xml:lang="it">Scheda Tabella materiali archeologici</rdfs:label>
-        <rdfs:label xml:lang="en">TMA catalogue record</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/arco/cataloguerecord/VeACcatalogueRecord -->
-
-    <owl:Class rdf:about="http://www.w3id.org/arco/cataloguerecord/VeACcatalogueRecord">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/cataloguerecord/CatalogueRecord"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive vestimenti antichi/contemporanei.</rdfs:comment>
-        <rdfs:label xml:lang="it">Scheda Vestimenti antichi/contemporanei</rdfs:label>
-        <rdfs:label xml:lang="en">VeAC catalogue record</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -902,41 +932,41 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/ATcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/AcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BDIcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BDMcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BNBcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BNMcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BNPEcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BNPLcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BNPcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/BNZcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CAcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CNScatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/DcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/FFcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/FcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/MAcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/MIcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/NUcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/OACcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/OAcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/PGcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/PSTcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/RAcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/SAScatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/SIcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/SMOcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/SMcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/ScatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/TMAcatalogueRecord"/>
-            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/VeACcatalogueRecord"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordA"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordAT"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBDI"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBDM"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNB"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNM"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNP"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNPE"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNPL"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordBNZ"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordCA"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordCNS"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordD"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordF"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordFF"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordMA"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordMI"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordNU"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordOA"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordOAC"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordPG"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordPST"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordRA"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordS"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSAS"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSI"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSM"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordSMO"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordTMA"/>
+            <rdf:Description rdf:about="http://www.w3id.org/arco/cataloguerecord/CatalogueRecordVeAC"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
