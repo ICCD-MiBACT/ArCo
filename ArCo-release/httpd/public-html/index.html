@@ -311,7 +311,7 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Quali sono tutte le localizzazioni che hanno riguardato il bene culturale X, di che tipo sono, e in quali intervalli temporali?</p>
+            <p class="lead">Quali sono tutte le localizzazioni che hanno riguardato il bene culturale X e di che tipo sono?</p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?</p>
@@ -324,17 +324,15 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
-PREFIX locgeoamm: &lt;http://www.w3id.org/arco/location/&gt;
-PREFIX tiapit: &lt;http://www.w3id.org/italia/onto/TI/&gt;
+PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
+PREFIX locgeoamm: &lt;https://w3id.org/arco/location/&gt;
+PREFIX tiapit: &lt;https://w3id.org/italia/onto/TI/&gt;
 SELECT *
 WHERE{
-  ?entity a arco:CulturalProperty ;
-    rdfs:label ?entityLabel ;
+  ?entity rdfs:label ?entityLabel ;
     locgeoamm:hasTimeIndexedQualifiedLocation ?location .
-  ?location rdfs:label ?locationLabel ;
-    locgeoamm:hasLocationType ?locationType ;
-    tiapit:atTime ?locationTimeInterval .
+  ?location locgeoamm:locationType ?locationType ;
+    locgeoamm:atSite ?site .
 }
 limit 100
 </pre>
@@ -343,14 +341,13 @@ limit 100
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
-PREFIX locgeoamm: &lt;http://www.w3id.org/arco/location/&gt;
+PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
+PREFIX locgeoamm: &lt;https://w3id.org/arco/location/&gt;
 SELECT *
 WHERE {
-  ?entity a arco:CulturalProperty ;
-    rdfs:label ?entityLabel ; 
-    locgeoamm:hasTimeIndexedQualifiedLocation ?location ;
-  ?location locgeomm:hasLocationType locgeoamm:StorageLocation .
+  ?entity rdfs:label ?entityLabel ; 
+    locgeoamm:hasTimeIndexedQualifiedLocation ?location .
+  ?location locgeoamm:locationType locgeoamm:StorageLocation.
 }
 limit 100
 </pre>
@@ -371,7 +368,7 @@ WHERE{
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
  			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX%20arco%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0APREFIX%20locgeoamm%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Flocation%2F%3E%0APREFIX%20tiapit%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Fitalia%2Fonto%2FTI%2F%3E%0ASELECT%20*%0AWHERE%7B%0A%20%20%3Fentity%20a%20arco%3ACulturalProperty%20%3B%0A%20%20%20%20rdfs%3Alabel%20%3FentityLabel%20%3B%0A%20%20%20%20locgeoamm%3AhasTimeIndexedQualifiedLocation%20%3Flocation%20.%0A%20%20%3Flocation%20rdfs%3Alabel%20%3FlocationLabel%20%3B%0A%20%20%20%20locgeoamm%3AhasLocationType%20%3FlocationType%20%3B%0A%20%20%20%20tiapit%3AatTime%20%3FlocationTimeInterval%20.%0A%7D%0Alimit%20100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+locgeoamm%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+tiapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FTI%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++locgeoamm%3AhasTimeIndexedQualifiedLocation+%3Flocation+.%0D%0A++%3Flocation+locgeoamm%3AlocationType+%3FlocationType+%3B%0D%0A++++locgeoamm%3AatSite+%3Fsite+.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -381,7 +378,7 @@ WHERE{
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
 			  <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql?default-graph-uri=&query=PREFIX%20arco%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F%3E%0APREFIX%20locgeoamm%3A%20%3Chttp%3A%2F%2Fwww.w3id.org%2Farco%2Flocation%2F%3E%0ASELECT%20*%0AWHERE%20%7B%0A%20%20%3Fentity%20a%20arco%3ACulturalProperty%20%3B%0A%20%20%20%20rdfs%3Alabel%20%3FentityLabel%20%3B%20%0A%20%20%20%20locgeoamm%3AhasTimeIndexedQualifiedLocation%20%3Flocation%20%3B%0A%20%20%3Flocation%20locgeomm%3AhasLocationType%20locgeoamm%3AStorageLocation%20.%0A%7D%0Alimit%20100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+locgeoamm%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B+%0D%0A++++locgeoamm%3AhasTimeIndexedQualifiedLocation+%3Flocation+.%0D%0A++%3Flocation+locgeoamm%3AlocationType+locgeoamm%3AStorageLocation.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -438,7 +435,7 @@ WHERE{
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
-PREFIX culturaldefinition &lt;http://www.w3id.org/arco/culturaldefinition/&gt;
+PREFIX culturaldefinition: &lt;http://www.w3id.org/arco/culturaldefinition/&gt;
 SELECT *
 WHERE{
   ?entity a arco:CulturalProperty ;
@@ -499,7 +496,7 @@ limit 100</pre>
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX arco: &lt;http://www.w3id.org/arco/core/&gt;
-PREFIX culturaldefinition &lt;http://www.w3id.org/arco/culturaldefinition/&gt;
+PREFIX culturaldefinition: &lt;http://www.w3id.org/arco/culturaldefinition/&gt;
 SELECT ?entity, ?entityLabel, ?dating, ?datingSource, ?datingEvent
 WHERE{
   ?entity a arco:CulturalProperty ;
