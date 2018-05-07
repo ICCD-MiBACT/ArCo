@@ -8,7 +8,7 @@ ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-rel
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/bene_description/cp-description.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/catalogue_record/catalogue-record.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/event_exhibition/cultural-event.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/localizzazione_geo_amm/location-geoamm.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/localizzazione/location.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/modulo_core/arco-core.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/cultural-definition/cultural-definition.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 
