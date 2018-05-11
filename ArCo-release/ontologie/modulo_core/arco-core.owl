@@ -39,23 +39,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://dati.gov.it/onto/clvapit#Address -->
-
-    <rdfs:Datatype rdf:about="http://dati.gov.it/onto/clvapit#Address"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -115,6 +98,30 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/hasConservationStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/cpdescription/hasConservationStatus"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasAuthorshipAttribution -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasAuthorshipAttribution"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasCommission -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasCommission"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/hasDating -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/arco/culturaldefinition/hasDating"/>
     
 
 
@@ -180,6 +187,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/ArchaeologicalProperty">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/TangibleCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale archeologico</rdfs:comment>
         <rdfs:label xml:lang="en">Archaeological Property</rdfs:label>
         <rdfs:label xml:lang="it">Bene Archeologico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -192,6 +200,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/ArchitecturalOrLandscapeHeritage">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/ImmovableCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale architettonico e paesaggistico</rdfs:comment>
         <rdfs:label xml:lang="en">Architectural or Landscape Heritage</rdfs:label>
         <rdfs:label xml:lang="it">Bene Architettonico o Paesaggistico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -242,12 +251,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/arco/cpdescription/iconclassCode"/>
-                <owl:allValuesFrom rdf:resource="http://dati.gov.it/onto/clvapit#Address"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/arco/identifier/iccdNumber"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -284,6 +287,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/DemoEthnoAnthropologicalHeritage">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale demoetnoantropologico</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Demoetnoantropologico</rdfs:label>
         <rdfs:label xml:lang="en">Demo-ethno-anthropological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -296,6 +300,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/HistoricOrArtisticProperty">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/MovableCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale storico e artistico</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Storico o Artistico</rdfs:label>
         <rdfs:label xml:lang="en">Historic Or Artistic Property</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -354,6 +359,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/MusicHeritage">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/MovableCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale musicale</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Musicale</rdfs:label>
         <rdfs:label xml:lang="en">Music Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -366,6 +372,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/NaturalHeritage">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/MovableCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale naturalistico</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Naturalistico</rdfs:label>
         <rdfs:label xml:lang="en">Natural Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -378,6 +385,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/NumismaticProperty">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/MovableCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale numismatico</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic Property</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -390,6 +398,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/PhotographicHeritage">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/MovableCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale fotografico</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -402,6 +411,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.w3id.org/arco/core/ScientificOrTechnologicalHeritage">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/arco/core/MovableCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale scientifico e tecnologico</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Scientifico o Tecnologico</rdfs:label>
         <rdfs:label xml:lang="en">Scientific Or Technological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -421,6 +431,30 @@ trovano.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/arco/cpdescription/ConservationStatus -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/cpdescription/ConservationStatus"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/Commission -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/Commission"/>
+    
+
+
+    <!-- http://www.w3id.org/arco/culturaldefinition/Dating -->
+
+    <owl:Class rdf:about="http://www.w3id.org/arco/culturaldefinition/Dating"/>
     
 
 
