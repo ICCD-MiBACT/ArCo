@@ -7,11 +7,14 @@ services:
       DEFAULT_GRAPH: "https://w3id.org/arco"
     ports:
       - "8890:8890"
+    restart: always
   lode:
     build: ./lode
     ports:
       - "9090:8080"
+    restart: always
   httpd:
     build: ./httpd
     ports:
       - "8080:80"
+    restart: always
