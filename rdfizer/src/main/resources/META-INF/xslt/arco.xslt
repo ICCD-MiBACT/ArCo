@@ -1280,6 +1280,35 @@
                                 </xsl:choose>
                             </xsl:attribute>
                         </tiapit:atTime>
+                        <xsl:if test="./DTS">
+                        	<xsl:if test="./DTS/DTSI or ./DTS/DTSF">
+                        		<xsl:variable name="startDate">
+	                    			<xsl:choose>
+			                    		<xsl:when test="./DTS/DTSV">
+				                        	<xsl:value-of select="concat(normalize-space(./DTS/DTSV), ' ', normalize-space(./DTS/DTSI))" />
+				                        </xsl:when>
+				                        <xsl:otherwise>
+				                        	<xsl:value-of select="normalize-space(./DTS/DTSI)" />
+				                        </xsl:otherwise>
+			                    	</xsl:choose>
+			                    </xsl:variable>
+			                    <xsl:variable name="endDate">
+		                    		<xsl:choose>
+			                        	<xsl:when test="./DTS/DTSL">
+			                            	<xsl:value-of select="concat(normalize-space(./DTS/DTSL), ' ', normalize-space(./DTS/DTSF))" />
+			                            </xsl:when>
+			                            <xsl:otherwise>
+			                            	<xsl:value-of select="normalize-space(./DTS/DTSF)" />
+			                            </xsl:otherwise>
+			                        </xsl:choose>
+		                    	</xsl:variable>
+                        		<culturaldefinition:specificTime>
+                        			<xsl:attribute name="rdf:resource">
+		                            	<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat($startDate, '-',  $endDate)))" />
+		                        	</xsl:attribute>
+                        		</culturaldefinition:specificTime>
+                        	</xsl:if>
+                        </xsl:if>
                     </xsl:if>
                 </rdf:Description>
                 <xsl:if test="./DTZ">
@@ -1319,7 +1348,7 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                         </l0:name>
-                        <xsl:if test="./DTS">
+                        <!--  xsl:if test="./DTS">
                             <tiapit:startTime>
                                 <xsl:choose>
                                     <xsl:when test="./DTS/DTSV">
@@ -1340,8 +1369,59 @@
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </tiapit:endTime>
-                        </xsl:if>
+                        </xsl:if -->
                     </rdf:Description>
+                    
+                    <!-- Time intervall with start time and end time -->
+                    <xsl:if test="./DTS">
+                    	<xsl:if test="./DTS/DTSI or ./DTS/DTSF">
+	                    	<xsl:variable name="startDate">
+	                    		<xsl:choose>
+		                    		<xsl:when test="./DTS/DTSV">
+			                        	<xsl:value-of select="concat(normalize-space(./DTS/DTSV), ' ', normalize-space(./DTS/DTSI))" />
+			                        </xsl:when>
+			                        <xsl:otherwise>
+			                        	<xsl:value-of select="normalize-space(./DTS/DTSI)" />
+			                        </xsl:otherwise>
+			                    </xsl:choose>
+		                    </xsl:variable>
+		                               
+	                    	<xsl:variable name="endDate">
+	                    		<xsl:choose>
+		                        	<xsl:when test="./DTS/DTSL">
+		                            	<xsl:value-of select="concat(normalize-space(./DTS/DTSL), ' ', normalize-space(./DTS/DTSF))" />
+		                            </xsl:when>
+		                            <xsl:otherwise>
+		                            	<xsl:value-of select="normalize-space(./DTS/DTSF)" />
+		                            </xsl:otherwise>
+		                        </xsl:choose>
+	                    	</xsl:variable>
+		                    <rdf:Description>
+		                        <xsl:attribute name="rdf:about">
+		                            <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(concat($startDate, '-',  $endDate)))" />
+		                        </xsl:attribute>
+		                        <rdf:type>
+		                            <xsl:attribute name="rdf:resource">
+		                                <xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+		                            </xsl:attribute>
+		                        </rdf:type>
+		                        <rdfs:label>
+		                       		<xsl:value-of select="concat($startDate, ' ', $endDate)" />
+		                        </rdfs:label>
+		                        <l0:name>
+		                            <xsl:value-of select="concat($startDate, ' ', $endDate)" />
+		                        </l0:name>
+		                        <xsl:if test="./DTS">
+		                            <tiapit:startTime>
+		                                <xsl:value-of select="$startDate" />
+		                            </tiapit:startTime>
+		                            <tiapit:endTime>
+		                                <xsl:value-of select="$endDate" />
+		                            </tiapit:endTime>
+		                        </xsl:if>
+		                    </rdf:Description>
+		                </xsl:if>
+		        	</xsl:if>
                 </xsl:if>
             </xsl:for-each>
             <xsl:for-each select="schede/*/OG/OGT">
