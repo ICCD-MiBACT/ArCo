@@ -142,13 +142,28 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/cpdescription/hasDesignationInTime">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/cpdescription/hasNameInTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
-        <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua denominazione.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/cpdescription/DesignationInTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua denominazione e/o dedicazione o, per la normativa FF, titolo, nel corso del tempo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha designazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>OG/OGD</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/cpdescription/hasDesignationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/cpdescription/hasDesignationType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/cpdescription/DesignationInTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/cpdescription/DesignationType"/>
+        <rdfs:label xml:lang="it">ha tipo di denominazione</rdfs:label>
+        <rdfs:label xml:lang="en">has designation type</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa proprietà collega una denominazione o dedicazione o, per la normativa FF, titolo nel tempo al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.)</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD/OGDT</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -163,7 +178,7 @@
         <rdfs:label xml:lang="en">has location as subject</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>se LA/TLC o LA/TCL = &quot;area rappresentata&quot;</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">se 4.00 LA/TLC o versioni precedenti a 4.00 LA/TCL = &quot;area rappresentata&quot;</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -178,6 +193,7 @@
         <rdfs:label xml:lang="en">has measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -190,6 +206,7 @@
         <rdfs:label xml:lang="en">has measurement type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -203,6 +220,7 @@
         <rdfs:label xml:lang="en">has measurements</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -223,11 +241,12 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/cpdescription/hasOrientation">
         <rdfs:range rdf:resource="https://w3id.org/arco/cpdescription/Orientation"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al suo orientamento.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al suo orientamento, secondo l&apos;asse principale individuato.</rdfs:comment>
         <rdfs:label xml:lang="it">ha orientamento</rdfs:label>
         <rdfs:label xml:lang="en">has orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -427,6 +446,52 @@
     
 
 
+    <!-- https://w3id.org/arco/cpdescription/DesignationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/cpdescription/DesignationInTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/cpdescription/hasDesignationType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/cpdescription/DesignationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/note"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una denominazione e/o dedicazione attestata nel corso del tempo per il bene in esame. Per la normativa FF, la classe rappresenta nello specifico la  denominazione o il titolo del fondo attestati nel corso del tempo per il bene in esame; uno stesso fondo può avere più denominazioni/titoli nel corso del tempo.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/cpdescription/DesignationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/cpdescription/DesignationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di denominazione o dedicazione o, per la normativa FF, titolo, del bene (altra lingua, attribuita, attuale, dialettale, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">Designation Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di denominazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD/OGDT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/cpdescription/Measurement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/cpdescription/Measurement">
@@ -436,7 +501,7 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/cpdescription/MeasurementType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una misura osservata per un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una misura osservata per un oggetto. Le misure sono relative alle dimensioni del bene in esame. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
         <rdfs:label xml:lang="it">Misura</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -455,19 +520,7 @@
         <rdfs:label xml:lang="it">Tipo di Misura</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR
-
-MT/MIS/MISA
-MT/MIS/MISD
-MT/MIS/MISL
-MT/MIS/MISN
-MT/MIS/MISG
-MT/MIS/MISP (solo per versioni di normativa precedenti alla 4.00)
-MT/MIS/MISS
-MT/MIS/MISR
-MT/MIS/MISV (solo per versioni di normativa precedenti alla 4.00)
-
-ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</core:iccdNormTag>
     </owl:Class>
     
 
@@ -481,12 +534,12 @@ ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MIS
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/cpdescription/Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:label xml:lang="en">Measurements</rdfs:label>
         <rdfs:label xml:lang="it">Misure</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">MT/MIS</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</core:iccdNormTag>
     </owl:Class>
     
 
@@ -494,13 +547,12 @@ ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MIS
     <!-- https://w3id.org/arco/cpdescription/Orientation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/cpdescription/Orientation">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;orientamento di un oggetto (NO, SE, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;orientamento di un oggetto (NO, SE, etc.), secondo l&apos;asse principale individuato.</rdfs:comment>
         <rdfs:label xml:lang="it">Orientamento</rdfs:label>
         <rdfs:label xml:lang="en">Orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT
-ICCD Schede CA e MA: MT/ORT</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</core:iccdNormTag>
     </owl:Class>
     
 
