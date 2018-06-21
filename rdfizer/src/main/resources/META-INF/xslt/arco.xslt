@@ -247,7 +247,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/cataloguerecord/CatalogueRecordVersion/'" />
+                            <xsl:value-of select="'https://w3id.org/arco/cataloguerecord/CatalogueRecordVersion'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -927,22 +927,40 @@
                         <xsl:value-of select="normalize-space(.)" />
                     </culturaldefinition:alternativeTitle>
                 </xsl:for-each>
+                <!-- proper title -->
                 <xsl:for-each select="schede/*/OG/SGT/SGTP">
                     <culturaldefinition:properTitle>
                         <xsl:value-of select="normalize-space(.)" />
                     </culturaldefinition:properTitle>
                 </xsl:for-each>
+                <xsl:if test="not(schede/*/SG/SGL/SGLT='NR' or schede/*/SG/SGL/SGLT='NR (recupero pregresso)')">
+                <xsl:for-each select="schede/*/SG/SGL/SGLT">
+                    <culturaldefinition:properTitle>
+                        <xsl:value-of select="normalize-space(.)" />
+                    </culturaldefinition:properTitle>
+                </xsl:for-each>
+               </xsl:if>
                 <!-- parallel title -->
                 <xsl:for-each select="schede/*/OG/SGT/SGTR">
                     <culturaldefinition:parallelTitle>
                         <xsl:value-of select="normalize-space(.)" />
                     </culturaldefinition:parallelTitle>
                 </xsl:for-each>
+                <xsl:if test="not(schede/*/SG/SGL/SGLL='NR' or schede/*/SG/SGL/SGLL='NR (recupero pregresso)')">
                 <xsl:for-each select="schede/*/SG/SGL/SGLL">
                     <culturaldefinition:parallelTitle>
                         <xsl:value-of select="normalize-space(.)" />
                     </culturaldefinition:parallelTitle>
                 </xsl:for-each>
+                </xsl:if>
+                <!-- attributed title -->
+                <xsl:if test="not(schede/*/SG/SGL/SGLA='NR' or schede/*/SG/SGL/SGLA='NR (recupero pregresso)')">
+                <xsl:for-each select="schede/*/SG/SGL/SGLA">
+                    <culturaldefinition:attributedTitle>
+                        <xsl:value-of select="normalize-space(.)" />
+                    </culturaldefinition:attributedTitle>
+                </xsl:for-each>
+               </xsl:if>
                 <!-- name in time (OG/OGD) -->
                 <xsl:for-each select="schede/*/OG/OGD">
                     <cpdescription:hasDesignationInTime>
@@ -1169,8 +1187,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </culturaldefinition:hasEvent>
-                    <!-- Valentina_ aggiunto choose sia per hasSource sia per creazione 
-						risorse - da controllare soprattutto correttezza path -->
+                    <!-- Valentina aggiunto choose sia per hasSource sia per creazione risorse - testato  -->
 					<culturaldefinition:hasSource>
                     <xsl:choose>
                         <xsl:when test="./DTM/DTMS">
@@ -1410,10 +1427,10 @@
 		                            </xsl:attribute>
 		                        </rdf:type>
 		                        <rdfs:label>
-		                       		<xsl:value-of select="concat($startDate, ' ', $endDate)" />
+		                       		<xsl:value-of select="concat($startDate, ' - ', $endDate)" />
 		                        </rdfs:label>
 		                        <l0:name>
-		                            <xsl:value-of select="concat($startDate, ' ', $endDate)" />
+		                            <xsl:value-of select="concat($startDate, ' - ', $endDate)" />
 		                        </l0:name>
 		                        <xsl:if test="./DTS">
 		                            <tiapit:startTime>
@@ -2015,6 +2032,9 @@
                         <rdfs:label>
                             <xsl:value-of select="normalize-space(./CMMD)" />
                         </rdfs:label>
+                        <tiapit:time>
+                            <xsl:value-of select="normalize-space(./CMMD)" />
+                        </tiapit:time>
                     </rdf:Description>
                 </xsl:if>
                 <xsl:if test="./CMMF">
@@ -3088,6 +3108,14 @@
                                         <xsl:value-of select="normalize-space(./PRC/PRCN)" />
                                     </l0:name>
                                 </xsl:if>
+                                <xsl:if test="./PRC/PRCD">
+                                    <rdfs:label>
+                                        <xsl:value-of select="normalize-space(./PRC/PRCD)" />
+                                    </rdfs:label>
+                                    <l0:name>
+                                        <xsl:value-of select="normalize-space(./PRC/PRCD)" />
+                                    </l0:name>
+                                </xsl:if>
                                 <xsl:if test="./PRV/*">
                                     <cis:siteAddress>
                                         <xsl:attribute name="rdf:resource">
@@ -3137,6 +3165,49 @@
                                     </locgeoamm:hasSiteType>
                                 </xsl:if>
                             </rdf:Description>
+                            <!-- PRCM cultural institute or site as an individual -->
+                            <xsl:if test="./PRC/PRCM">
+                            	<rdf:Description>
+                            		<xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'CulturalInstituteOrSite/', arco-fn:urify(normalize-space(./PRC/PRCM)))" />
+                                    </xsl:attribute>
+                                    <rdf:type>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'http://dati.beniculturali.it/cis/CulturalInstituteOrSite'" />
+                                        </xsl:attribute>
+                                    </rdf:type>
+                                    <rdfs:label>
+                                        <xsl:value-of select="normalize-space(./PRC/PRCM)" />
+                                    </rdfs:label>
+                                    <l0:name>
+                                        <xsl:value-of select="normalize-space(./PRC/PRCM)" />
+                                    </l0:name>
+                                    <cis:hasNameInTime>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="concat($NS, 'NameInTime/', arco-fn:urify(normalize-space(./PRC/PRCM)))" />
+                                        </xsl:attribute>
+                                    </cis:hasNameInTime>
+                                    <cis:hasSite>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="$site" />
+                                        </xsl:attribute>
+                                    </cis:hasSite>
+                                </rdf:Description>
+                                <!-- Name in time of CIS -->
+                                <rdf:Description>
+                                    <xsl:attribute name="rdf:about">
+                                        <xsl:value-of select="concat($NS, 'NameInTime/', arco-fn:urify(normalize-space(./PRC/PRCM)))" />
+                                    </xsl:attribute>
+                                    <rdf:type>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'http://dati.beniculturali.it/cis/NameInTime'" />
+                                        </xsl:attribute>
+                                    </rdf:type>
+                                    <cis:institutionalName>
+                                        <xsl:value-of select="normalize-space(./PRC/PRCM)" />
+                                    </cis:institutionalName>
+                            	</rdf:Description>
+                            </xsl:if>
                             <!-- Site Type as an individual -->
                             <xsl:if test="./PRC/PRCT">
                                 <rdf:Description>
@@ -3159,20 +3230,20 @@
                                     <rdfs:label>
                                     	<xsl:choose>
                                             <xsl:when test="./PRC/PRCQ">
-                                                <xsl:value-of select="concat('Tipo di contenitore fisico:', normalize-space(./PRC/PRCT), ' ', normalize-space(./PRC/PRCQ))" />
+                                                <xsl:value-of select="concat('Tipo di contenitore fisico: ', normalize-space(./PRC/PRCT), ' ', normalize-space(./PRC/PRCQ))" />
                                             </xsl:when>
                                             <xsl:otherwise>
-                                                <xsl:value-of select="concat('Tipo di contenitore fisico:', normalize-space(./PRC/PRCT))" />
+                                                <xsl:value-of select="concat('Tipo di contenitore fisico: ', normalize-space(./PRC/PRCT))" />
                                             </xsl:otherwise>
                                         </xsl:choose>
                                     </rdfs:label>
                                         <l0:name>
                                             <xsl:choose>
                                             <xsl:when test="./PRC/PRCQ">
-                                                <xsl:value-of select="concat('Tipo di contenitore fisico:', normalize-space(./PRC/PRCT), ' ', normalize-space(./PRC/PRCQ))" />
+                                                <xsl:value-of select="concat('Tipo di contenitore fisico: ', normalize-space(./PRC/PRCT), ' ', normalize-space(./PRC/PRCQ))" />
                                             </xsl:when>
                                             <xsl:otherwise>
-                                                <xsl:value-of select="concat('Tipo di contenitore fisico:', normalize-space(./PRC/PRCT))" />
+                                                <xsl:value-of select="concat('Tipo di contenitore fisico: ', normalize-space(./PRC/PRCT))" />
                                             </xsl:otherwise>
                                         </xsl:choose>
                                         </l0:name>
@@ -3279,7 +3350,7 @@
                                             </xsl:attribute>
                                         </locgeoamm:hasToponymInTime>
                                     </xsl:if>
-                                    <xsl:if test="./PRC/PRCU">
+                                    <xsl:if test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-')">
                                         <clvapit:fullAddress>
                                             <xsl:value-of select="normalize-space(./PRC/PRCU)" />
                                         </clvapit:fullAddress>
