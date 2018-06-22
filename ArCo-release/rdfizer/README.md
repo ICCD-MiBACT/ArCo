@@ -14,6 +14,8 @@ $> mvn clean install
 
 Once the build process fininshes the executable JAR named `arco.rdfizer-0.1.jar` can be found under the folder `target`.
 
+If the XLST sheet is modified, then the software needs to be rebuilt again.
+
 ### Usage
 The JAR named arco.rdfizer-0.1.jar can be executed in a terminal.
 The command synopsis is the following:
