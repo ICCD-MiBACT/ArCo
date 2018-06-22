@@ -27,6 +27,7 @@ ENV PATH /usr/local/virtuoso-opensource/bin/:$PATH
 
 # Add Virtuoso config
 COPY virtuoso.ini /virtuoso.ini
+COPY virtuoso.ini /usr/local/virtuoso-opensource/var/lib/virtuoso/db/virtuoso.ini
 
 # Add dump_nquads_procedure
 COPY dump_nquads_procedure.sql /dump_nquads_procedure.sql
