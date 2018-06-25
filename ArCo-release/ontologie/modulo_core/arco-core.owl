@@ -24,10 +24,12 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/core/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/objective/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/subjective/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo è il modulo core della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al bene culturale, considerate centrali. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
         <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
@@ -660,6 +662,12 @@
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasDocumentation"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/subjective/Documentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasCulturalPropertyComponent"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/core/CulturalPropertyComponent"/>
             </owl:Restriction>
@@ -717,6 +725,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAuthorshipAttribution"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/AuthorshipAttribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasBibliography"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

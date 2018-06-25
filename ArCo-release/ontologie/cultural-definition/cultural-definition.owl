@@ -27,6 +27,7 @@
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo modulo comprende la modellazione delle informazioni ricavabili dallo studio, e per questo soggettive, relative a un bene culturale, che si separano dalle informazioni oggettive ricavabili dall&apos;osservazione diretta del bene.</rdfs:comment>
         <owl:versionInfo xml:lang="it">Versione 0.1 alpha</owl:versionInfo>
     </owl:Ontology>
     
@@ -122,6 +123,20 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>AU/AUT; AU/ATB; AU/AAT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasBibliography -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasBibliography">
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla bibliografia che riguarda il bene descritto in una scheda di catalogo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha bibliografia</rdfs:label>
+        <rdfs:label xml:lang="en">has bibliography</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -243,6 +258,21 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>DT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasDocumentation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasDocumentation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Documentation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla documentazione che riguarda il bene descritto in una scheda di catalogo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha documentazione</rdfs:label>
+        <rdfs:label xml:lang="en">has documentation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: tutti i campi strutturati di DO tranne BIB</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1258,6 +1288,7 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/BibliographyType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/BibliographyType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/subjective/DocumentationType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative al tipo di riferimento bibliografico.</rdfs:comment>
         <rdfs:label xml:lang="en">Bibliography type</rdfs:label>
@@ -1539,6 +1570,7 @@ bene catalogato.</rdfs:comment>
     <!-- https://w3id.org/arco/subjective/DocumentationType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/DocumentationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative al tipo di documentazione.</rdfs:comment>
         <rdfs:label xml:lang="en">Documentation type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di documentazione</rdfs:label>

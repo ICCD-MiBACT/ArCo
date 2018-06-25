@@ -1804,7 +1804,7 @@
                         </xsl:attribute>
                     </rdf:type>
                     <xsl:if test="./AUTN">
-                        <culturaldefinition:hasAuthor>
+                        <culturaldefinition:hasAttributedAuthor>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:choose>
                                     <xsl:when test="./AUTS">
@@ -1815,7 +1815,7 @@
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </xsl:attribute>
-                        </culturaldefinition:hasAuthor>
+                        </culturaldefinition:hasAttributedAuthor>
                     </xsl:if>
                     <xsl:if test="./AUTR">
                         <culturaldefinition:hasInterventionRole>
@@ -2102,7 +2102,7 @@
                             <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/AlternativeAuthorshipAttribution'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <culturaldefinition:hasAuthor>
+                    <culturaldefinition:hasAttributedAuthor>
                         <xsl:attribute name="rdf:resource">
                             <xsl:choose>
                                 <xsl:when test="./AATN">
@@ -2113,7 +2113,7 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
-                    </culturaldefinition:hasAuthor>
+                    </culturaldefinition:hasAttributedAuthor>
                     <xsl:if test="./AATY">
                         <arco:note>
                             <xsl:value-of select="normalize-space(./AATY)" />
