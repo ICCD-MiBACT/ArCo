@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/arco/core/"
      xml:base="https://w3id.org/arco/core/"
      xmlns:locgeoamm="https://w3id.org/arco/location/"
+     xmlns:subjective="https://w3id.org/arco/subjective/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -10,24 +11,19 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:objective="https://w3id.org/arco/objective/"
      xmlns:arco="https://w3id.org/arco/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:cpdescription="https://w3id.org/arco/cpdescription/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
-     xmlns:culturaldefinition="https://w3id.org/arco/culturaldefinition/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/core/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/culturalevent/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/identifier/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/cpdescription/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/location/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/culturaldefinition/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/objective/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -127,9 +123,9 @@
     <!-- https://w3id.org/arco/core/hasCategory -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasCategory">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalPropertyCategory"/>
-        <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua categoria.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/Category"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa un&apos;entità di qualsiasi tipo alla sua categoria. Viene utilizzata, per esempio, per collegare un bene culturale alla sua categoria, oppure una particolare documentazione alla categoria in cui è classificata.</rdfs:comment>
         <rdfs:label xml:lang="it">ha categoria</rdfs:label>
         <rdfs:label xml:lang="en">has category</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -263,6 +259,21 @@
     
 
 
+    <!-- https://w3id.org/arco/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasType">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a una sua tipologia. Per esempio, nell&apos;ambito delle normative dell&apos;ICCD, può collegare: uno stato di conservazione di un bene culturale a uno dei valori del tipo di stato di conservazione (buono, cattivo, mediocre, etc.); un bene culturale alla sua tipologia (OGTD + OGTT); una denominazione o dedicazione, o, per la normativa FF, il titolo nel tempo, al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.); una misura al tipo di misura (altezza, larghezza, diametro, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo</rdfs:label>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: Denominazione OG/OGD/OGDT - ICCD Normativa Trasversale: Misura MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO - ICCD Normativa Trasversale 4.00: Stato di conservazione CO/STC/STCC - ICCD Normativa Trasversale 4.00: Tipo di bene OG/OGT</iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/core/isAgentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isAgentOf">
@@ -346,42 +357,6 @@
     
 
 
-    <!-- https://w3id.org/arco/cpdescription/hasConservationStatus -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/cpdescription/hasConservationStatus"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/hasAuthorshipAttribution -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/culturaldefinition/hasAuthorshipAttribution"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/hasCommission -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/culturaldefinition/hasCommission"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/hasDating -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/culturaldefinition/hasDating"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/hasTitle -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/culturaldefinition/hasTitle"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/isMemberOfCollection -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/culturaldefinition/isMemberOfCollection"/>
-    
-
-
     <!-- https://w3id.org/arco/location/hasTimeIndexedQualifiedLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasTimeIndexedQualifiedLocation"/>
@@ -391,6 +366,60 @@
     <!-- https://w3id.org/arco/location/hasTypeOfContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasTypeOfContext"/>
+    
+
+
+    <!-- https://w3id.org/arco/objective/hasConservationStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/objective/hasMeasurements -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasMeasurements"/>
+    
+
+
+    <!-- https://w3id.org/arco/objective/hasOrientation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasOrientation"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasAuthorshipAttribution -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAuthorshipAttribution"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasCommission -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCommission"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasDating -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasDating"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasInventory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasInventory"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasTitle -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasTitle"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/isMemberOfCollection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isMemberOfCollection"/>
     
 
 
@@ -527,15 +556,15 @@
     
 
 
-    <!-- https://w3id.org/arco/culturaldefinition/subject -->
+    <!-- https://w3id.org/arco/subjective/subject -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/culturaldefinition/subject"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/subject"/>
     
 
 
-    <!-- https://w3id.org/arco/culturaldefinition/title -->
+    <!-- https://w3id.org/arco/subjective/title -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/culturaldefinition/title"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/title"/>
     
 
 
@@ -612,6 +641,19 @@
     
 
 
+    <!-- https://w3id.org/arco/core/Category -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/Category">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il concetto generico di categoria, intesa come sddivisione che si ottiene ordinando o classificando secondo vari criteri. Viene specializzata in sottoclassi più specifiche.</rdfs:comment>
+        <rdfs:label xml:lang="it">Categoria</rdfs:label>
+        <rdfs:label xml:lang="en">Category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/core/CulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/CulturalProperty">
@@ -643,54 +685,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/cpdescription/hasConservationStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/cpdescription/ConservationStatus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/cpdescription/hasMeasurements"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/cpdescription/Measurements"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/cpdescription/hasOrientation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/cpdescription/Orientation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/hasAuthorshipAttribution"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/hasCommission"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/culturaldefinition/Commission"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/hasDating"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/culturaldefinition/Dating"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/hasInventory"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/culturaldefinition/Inventory"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/hasTitle"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/culturaldefinition/Title"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasTimeIndexedQualifiedLocation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
             </owl:Restriction>
@@ -699,6 +693,54 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasTypeOfContext"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/location/TypeOfContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/objective/hasConservationStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/objective/ConservationStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/objective/hasMeasurements"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/objective/Measurements"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/objective/hasOrientation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/objective/Orientation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAuthorshipAttribution"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/AuthorshipAttribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasCommission"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Commission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasDating"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Dating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasInventory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Inventory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasTitle"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -727,13 +769,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/subject"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/subject"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/title"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/title"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -750,7 +792,7 @@
     <!-- https://w3id.org/arco/core/CulturalPropertyCategory -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/CulturalPropertyCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Category"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/name"/>
@@ -893,7 +935,7 @@ rappresentata da performance effimere di manifestazioni tradizionali, tecniche, 
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Category"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito di tutela del MiBACT (archeologico, architettonico e paesaggistico, etnoantropologico, storico artistico), nel quale ricade il bene culturale in esame.</rdfs:comment>
         <rdfs:label xml:lang="it">Ambito di tutela MiBACT</rdfs:label>
         <rdfs:label xml:lang="en">MiBACT Scope of protection</rdfs:label>
@@ -909,8 +951,8 @@ rappresentata da performance effimere di manifestazioni tradizionali, tecniche, 
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/TangibleCulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/culturaldefinition/isMemberOfCollection"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/culturaldefinition/CollectionMembership"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/isMemberOfCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/CollectionMembership"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">It represents a movable cultural property</rdfs:comment>
@@ -1061,39 +1103,16 @@ trovano.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/cpdescription/ConservationStatus -->
+    <!-- https://w3id.org/arco/core/Type -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/cpdescription/ConservationStatus"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/AuthorshipAttribution -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/culturaldefinition/AuthorshipAttribution"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/CollectionMembership -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/culturaldefinition/CollectionMembership"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/Commission -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/culturaldefinition/Commission"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/Dating -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/culturaldefinition/Dating"/>
-    
-
-
-    <!-- https://w3id.org/arco/culturaldefinition/Title -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/culturaldefinition/Title"/>
+    <owl:Class rdf:about="https://w3id.org/arco/core/Type">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il concetto generico di tipologia.</rdfs:comment>
+        <rdfs:label xml:lang="it">Tipo</rdfs:label>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
     
 
 
@@ -1106,6 +1125,60 @@ trovano.</rdfs:comment>
     <!-- https://w3id.org/arco/location/TypeOfContext -->
 
     <owl:Class rdf:about="https://w3id.org/arco/location/TypeOfContext"/>
+    
+
+
+    <!-- https://w3id.org/arco/objective/ConservationStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/objective/ConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/objective/Measurements -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/objective/Measurements"/>
+    
+
+
+    <!-- https://w3id.org/arco/objective/Orientation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/objective/Orientation"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/AuthorshipAttribution -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/AuthorshipAttribution"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/CollectionMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/CollectionMembership"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Commission -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Commission"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Dating -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Dating"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Inventory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Inventory"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Title -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Title"/>
     
 
 
