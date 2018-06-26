@@ -130,6 +130,7 @@
     <!-- https://w3id.org/arco/subjective/hasBibliography -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasBibliography">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla bibliografia che riguarda il bene descritto in una scheda di catalogo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha bibliografia</rdfs:label>

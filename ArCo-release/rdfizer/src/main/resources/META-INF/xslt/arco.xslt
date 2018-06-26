@@ -46,7 +46,7 @@
                 <xsl:for-each select="schede/*/CD/LIR">
                     <cataloguerecord:hasCataloguingLevel>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat('http://www.w3id.org/arco/identifier/', upper-case(arco-fn:urify(.)))" />
+                            <xsl:value-of select="concat('https://w3id.org/arco/catalogue/', upper-case(arco-fn:urify(.)))" />
                         </xsl:attribute>
                     </cataloguerecord:hasCataloguingLevel>
                 </xsl:for-each>
@@ -65,12 +65,10 @@
                         </xsl:choose>
                     </cataloguerecord:catalogueRecordIdentifier>
                 </xsl:if>
-                <!-- Valentina: aggiunta questa proprietà per avere sempre un collegamento 
-					col nome del file xml -->
+                <!-- proprietà per avere sempre un collegamento col nome del file xml "ICCD..." -->
                 <cataloguerecord:systemRecordCode>
                     <xsl:value-of select="$item" />
                 </cataloguerecord:systemRecordCode>
-                <!-- Valentina -->
                 <xsl:for-each select="schede/*/RV/RSP">
                     <cataloguerecord:deletedICCDIdentifier>
                         <xsl:value-of select="." />
@@ -81,7 +79,6 @@
                         <xsl:value-of select="." />
                     </cataloguerecord:deletedICCDIdentifier>
                 </xsl:for-each>
-                <!-- fine Valentina -->
                 <xsl:if test="schede/*/CM/CMP">
                     <cataloguerecord:hasCatalogueRecordVersion>
                         <xsl:attribute name="rdf:resource">
@@ -213,6 +210,18 @@
                             </xsl:attribute>
                         </cataloguerecord:hasDigitalTranscriptionOperator>
                     </xsl:if>
+                    <xsl:if test="schede/*/CM/RVM/RVME">
+                        <cataloguerecord:hasCatalogueRecordRiT>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVME)))" />
+                            </xsl:attribute>
+                        </cataloguerecord:hasCatalogueRecordRiT>
+                        <cataloguerecord:hasDigitalTranscriptionResponsibleAgent>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVME)))" />
+                            </xsl:attribute>
+                        </cataloguerecord:hasDigitalTranscriptionResponsibleAgent>
+                    </xsl:if>
                     <xsl:if test="schede/*/CM/RVM/RVMD">
                         <cataloguerecord:editedAtTime>
                             <xsl:attribute name="rdf:resource">
@@ -235,6 +244,11 @@
                                 <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(schede/*/CM/FUR/@hint)), '-', arco-fn:urify(normalize-space(schede/*/CM/FUR)))" />
                             </xsl:attribute>
                         </cataloguerecord:hasCatalogueRecordRiT>
+                        <cataloguerecord:hasOfficialInCharge>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/FUR)))" />
+                            </xsl:attribute>
+                        </cataloguerecord:hasOfficialInCharge>
                     </xsl:if>
                 </rdf:Description>
             </xsl:if>
@@ -269,6 +283,30 @@
                                 <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGN)))" />
                             </xsl:attribute>
                         </cataloguerecord:hasUpdateResponsibleResearchAndCompilation>
+                    </xsl:if>
+                    <xsl:if test="./AGGR">
+                        <cataloguerecord:hasCatalogueRecordRiT>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(./AGGR)))" />
+                            </xsl:attribute>
+                        </cataloguerecord:hasCatalogueRecordRiT>
+                        <cataloguerecord:hasUpdateScientificRevisor>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGR)))" />
+                            </xsl:attribute>
+                        </cataloguerecord:hasUpdateScientificRevisor>
+                    </xsl:if>
+                    <xsl:if test="./AGGE">
+                        <cataloguerecord:hasCatalogueRecordRiT>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(./AGGE)))" />
+                            </xsl:attribute>
+                        </cataloguerecord:hasCatalogueRecordRiT>
+                        <cataloguerecord:hasUpdateResponsibleAgent>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGE)))" />
+                            </xsl:attribute>
+                        </cataloguerecord:hasUpdateResponsibleAgent>
                     </xsl:if>
                     <xsl:if test="./AGGD">
                         <cataloguerecord:editedAtTime>
@@ -307,7 +345,7 @@
                         </rdfs:label>
                     </rdf:Description>
                 </xsl:if>
-                <!-- Participant role -->
+                <!-- Participant role AGGN -->
                 <xsl:if test="./AGGN">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
@@ -318,12 +356,15 @@
                                 <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
                             </xsl:attribute>
                         </rdf:type>
-                        <rdfs:label>
-                            <xsl:value-of select="concat(./@hint, ' by: ', normalize-space(./AGGN))" />
+                        <rdfs:label xml:lang="it">
+                            <xsl:value-of select="concat(./@hint, ' da ', normalize-space(./AGGN))" />
+                        </rdfs:label>
+                        <rdfs:label xml:lang="en">
+                            <xsl:value-of select="concat('Update', ' by ', normalize-space(./AGGN))" />
                         </rdfs:label>
                         <roapit:withRole>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(normalize-space(./@hint)))" />
+                                <xsl:value-of select="concat($NS, 'Role/UpdateResponsibleCompilation')" />
                             </xsl:attribute>
                         </roapit:withRole>
                         <roapit:isRoleInTimeOf>
@@ -335,15 +376,18 @@
                     <!-- Role -->
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
-                            <xsl:value-of select="concat($NS, 'Role/updater')" />
+                            <xsl:value-of select="concat($NS, 'Role/UpdateResponsibleCompilation')" />
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
                             </xsl:attribute>
                         </rdf:type>
-                        <rdfs:label>
-                            <xsl:value-of select="'Updater'" />
+                        <rdfs:label xml:lang="en">
+                            <xsl:value-of select="'Update responsible research and compilation'" />
+                        </rdfs:label>
+                        <rdfs:label xml:lang="it">
+                            <xsl:value-of select="'Responsabile di ricerca e redazione di aggiornamento'" />
                         </rdfs:label>
                     </rdf:Description>
                     <!-- Agent -->
@@ -361,6 +405,126 @@
                         </rdfs:label>
                     </rdf:Description>
                 </xsl:if>
+                <!-- Participant role - AGGE-->
+                <xsl:if test="./AGGE">
+                    <rdf:Description>
+                        <xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(./AGGE)))" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <rdfs:label xml:lang="it">
+                            <xsl:value-of select="concat(./@hint, ' da ', normalize-space(./AGGE))" />
+                        </rdfs:label>
+                        <rdfs:label xml:lang="en">
+                            <xsl:value-of select="concat('Update', ' by ', normalize-space(./AGGE))" />
+                        </rdfs:label>
+                        <roapit:withRole>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Role/UpdateResponsible')" />
+                            </xsl:attribute>
+                        </roapit:withRole>
+                        <roapit:isRoleInTimeOf>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGE)))" />
+                            </xsl:attribute>
+                        </roapit:isRoleInTimeOf>
+                    </rdf:Description>
+                    <!-- Role -->
+                    <rdf:Description>
+                        <xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'Role/UpdateResponsible')" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <rdfs:label xml:lang="en">
+                            <xsl:value-of select="'Update responsible'" />
+                        </rdfs:label>
+                        <rdfs:label xml:lang="it">
+                            <xsl:value-of select="'Responsabile di aggiornamento'" />
+                        </rdfs:label>
+                    </rdf:Description>
+                    <!-- Agent -->
+                    <rdf:Description>
+                        <xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGE)))" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <rdfs:label>
+                            <xsl:value-of select="normalize-space(./AGGE)" />
+                        </rdfs:label>
+                    </rdf:Description>
+                </xsl:if>
+                <!-- Participant role - AGGR -->
+                <xsl:if test="./AGGR">
+                    <rdf:Description>
+                        <xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(./AGGR)))" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <rdfs:label xml:lang="it">
+                            <xsl:value-of select="concat(./@hint, ' da ', normalize-space(./AGGR))" />
+                        </rdfs:label>
+                        <rdfs:label xml:lang="en">
+                            <xsl:value-of select="concat('Update', ' by ', normalize-space(./AGGR))" />
+                        </rdfs:label>
+                        <roapit:withRole>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Role/UpdateScientificRevisor')" />
+                            </xsl:attribute>
+                        </roapit:withRole>
+                        <roapit:isRoleInTimeOf>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGR)))" />
+                            </xsl:attribute>
+                        </roapit:isRoleInTimeOf>
+                    </rdf:Description>
+                    <!-- Role -->
+                    <rdf:Description>
+                        <xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'Role/UpdateScientificRevisor')" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <rdfs:label xml:lang="en">
+                            <xsl:value-of select="'Update scientific revisor'" />
+                        </rdfs:label>
+                        <rdfs:label xml:lang="it">
+                            <xsl:value-of select="'Referente verifica scientifica'" />
+                        </rdfs:label>
+                    </rdf:Description>
+                    <!-- Agent -->
+                    <rdf:Description>
+                        <xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGR)))" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <rdfs:label>
+                            <xsl:value-of select="normalize-space(./AGGR)" />
+                        </rdfs:label>
+                    </rdf:Description>
+                </xsl:if>
             </xsl:for-each>
             <!-- Referente verifica scientifica -->
             <xsl:if test="schede/*/CM/RSR">
@@ -373,12 +537,15 @@
                             <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="concat(schede/*/CM/RSR/@hint, ': ', normalize-space(schede/*/CM/RSR))" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Scientific director', ': ', normalize-space(schede/*/CM/RSR))" />
                     </rdfs:label>
                     <roapit:withRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(normalize-space(schede/*/CM/RSR/@hint)))" />
+                            <xsl:value-of select="concat($NS, 'Role/ScientificDirector')" />
                         </xsl:attribute>
                     </roapit:withRole>
                     <roapit:isRoleInTimeOf>
@@ -404,15 +571,18 @@
                 <!-- Role: Referente verifica scientifica -->
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/RSR/@hint)))" />
+                        <xsl:value-of select="concat($NS, 'Role/ScientificDirector')" />
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="normalize-space(schede/*/CM/RSR/@hint)" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Scientific Director'" />
                     </rdfs:label>
                 </rdf:Description>
             </xsl:if>
@@ -427,12 +597,15 @@
                             <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="concat(schede/*/CM/FUR/@hint, ': ', normalize-space(schede/*/CM/FUR))" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Official in charge', ': ', normalize-space(schede/*/CM/FUR))" />
                     </rdfs:label>
                     <roapit:withRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(normalize-space(schede/*/CM/FUR/@hint)))" />
+                            <xsl:value-of select="concat($NS, 'Role/OfficialInCharge')" />
                         </xsl:attribute>
                     </roapit:withRole>
                     <roapit:isRoleInTimeOf>
@@ -458,15 +631,18 @@
                 <!-- Role: Funzionario responsabile -->
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/FUR/@hint)))" />
+                        <xsl:value-of select="concat($NS, 'Role/OfficialInCharge')" />
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="normalize-space(schede/*/CM/FUR/@hint)" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Official in charge'" />
                     </rdfs:label>
                 </rdf:Description>
             </xsl:if>
@@ -481,12 +657,15 @@
                             <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
-                        <xsl:value-of select="concat(./AGGF/@hint, ': ', normalize-space(./AGGF))" />
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="concat(./AGGF/@hint, ' di aggiornamento: ', normalize-space(./AGGF))" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Update official in charge', ': ', normalize-space(./AGGF))" />
                     </rdfs:label>
                     <roapit:withRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Role/', arco-fn:urify(normalize-space(./AGGF/@hint)))" />
+                            <xsl:value-of select="concat($NS, 'Role/OfficialInCharge')" />
                         </xsl:attribute>
                     </roapit:withRole>
                     <roapit:isRoleInTimeOf>
@@ -510,6 +689,23 @@
                     </rdfs:label>
                 </rdf:Description>
             </xsl:for-each>
+            <!-- Role funzionario responsabile -->
+            <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'Role/OfficialInCharge')" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="normalize-space(schede/*/CM/FUR/@hint)" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Official in charge'" />
+                    </rdfs:label>
+               </rdf:Description>
             <!-- Version time interval - CMD -->
             <xsl:if test="schede/*/CM/CMP/CMPD">
                 <rdf:Description>
@@ -553,12 +749,15 @@
                             <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="en">
                         <xsl:value-of select="concat('Compilation by ', normalize-space(schede/*/CM/CMP/CMPN))" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="concat('Compilazione da ', normalize-space(schede/*/CM/CMP/CMPN))" />
                     </rdfs:label>
                     <roapit:withRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Role/compiler')" />
+                            <xsl:value-of select="concat($NS, 'Role/ResponsibleCompilation')" />
                         </xsl:attribute>
                     </roapit:withRole>
                     <roapit:isRoleInTimeOf>
@@ -568,32 +767,7 @@
                     </roapit:isRoleInTimeOf>
                 </rdf:Description>
             </xsl:if>
-            <!-- Participant role - RVM -->
-            <xsl:if test="schede/*/CM/RVM/RVMN">
-                <rdf:Description>
-                    <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVMN)))" />
-                    </xsl:attribute>
-                    <rdf:type>
-                        <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
-                        </xsl:attribute>
-                    </rdf:type>
-                    <rdfs:label>
-                        <xsl:value-of select="concat(schede/*/CM/RVM/@hint, ' by ', normalize-space(schede/*/CM/RVM/RVMN))" />
-                    </rdfs:label>
-                    <roapit:withRole>
-                        <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Role/transcriber')" />
-                        </xsl:attribute>
-                    </roapit:withRole>
-                    <roapit:isRoleInTimeOf>
-                        <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVMN)))" />
-                        </xsl:attribute>
-                    </roapit:isRoleInTimeOf>
-                </rdf:Description>
-            </xsl:if>
+            <!-- responsible research and compilation Agent -->
             <xsl:if test="schede/*/CM/CMP/CMPN">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
@@ -608,8 +782,113 @@
                         <xsl:value-of select="normalize-space(schede/*/CM/CMP/CMPN)" />
                     </rdfs:label>
                 </rdf:Description>
+                <!-- responsible research and compilation role -->
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'Role/ResponsibleCompilation')" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Responsible research and compilation'" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="'Responsabile ricerca e redazione'" />
+                    </rdfs:label>
+                </rdf:Description>
             </xsl:if>
+            <!-- Participant role - RVME -->
+            <xsl:if test="schede/*/CM/RVM/RVME">
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVME)))" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="concat(schede/*/CM/RVM/@hint, ' da ', normalize-space(schede/*/CM/RVM/RVME))" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Digital transcription', ' by ', normalize-space(schede/*/CM/RVM/RVME))" />
+                    </rdfs:label>
+                    <roapit:withRole>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'Role/DigitalTranscriptionResponsibleAgent')" />
+                        </xsl:attribute>
+                    </roapit:withRole>
+                    <roapit:isRoleInTimeOf>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVME)))" />
+                        </xsl:attribute>
+                    </roapit:isRoleInTimeOf>
+                </rdf:Description>
+                <!-- digital transcription responsible agent -->
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVME)))" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label>
+                        <xsl:value-of select="normalize-space(schede/*/CM/RVM/RVME)" />
+                    </rdfs:label>
+                </rdf:Description>
+                <!-- digital transcription responsible agent role -->
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'Role/DigitalTranscriptionResponsibleAgent')" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Digital transcription responsible agent'" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="'Responsabile della trascrizione per informatizzazione'" />
+                    </rdfs:label>
+                </rdf:Description>
+            </xsl:if>
+            <!-- Participant role - RVMN -->
             <xsl:if test="schede/*/CM/RVM/RVMN">
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVMN)))" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="concat(schede/*/CM/RVM/@hint, ' da ', normalize-space(schede/*/CM/RVM/RVMN))" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Digital transcription', ' by ', normalize-space(schede/*/CM/RVM/RVMN))" />
+                    </rdfs:label>
+                    <roapit:withRole>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'Role/DigitalTranscriptionOperator')" />
+                        </xsl:attribute>
+                    </roapit:withRole>
+                    <roapit:isRoleInTimeOf>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVMN)))" />
+                        </xsl:attribute>
+                    </roapit:isRoleInTimeOf>
+                </rdf:Description>
+                <!-- digital transcription agent -->
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
                         <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVMN)))" />
@@ -623,7 +902,27 @@
                         <xsl:value-of select="normalize-space(schede/*/CM/RVM/RVMN)" />
                     </rdfs:label>
                 </rdf:Description>
+                <!-- digital transciption operator role -->
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'Role/DigitalTranscriptionOperator')" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Digital transcription operator'" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="'Operatore della trascrizione per informatizzazione'" />
+                    </rdfs:label>
+                </rdf:Description>
             </xsl:if>
+            
+            
+            
             <!-- We then introduce the cultural entity described by the sheet. -->
             <rdf:Description>
                 <xsl:attribute name="rdf:about">
@@ -847,19 +1146,19 @@
                             <xsl:attribute name="rdf:resource">
                                 <xsl:choose>
                                     <xsl:when test=".='archeologico'">
-                                        <xsl:value-of select="'http://www.w3id.org/arco/core/Archaeological'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/core/Archaeological'" />
                                     </xsl:when>
                                     <xsl:when test=".='architettonico e paesaggistico'">
-                                        <xsl:value-of select="'http://www.w3id.org/arco/core/ArchitecturalLandscape'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/core/ArchitecturalLandscape'" />
                                     </xsl:when>
                                     <xsl:when test=".='etnoantropologico'">
-                                        <xsl:value-of select="'http://www.w3id.org/arco/core/EthnoAnthropological'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/core/EthnoAnthropological'" />
                                     </xsl:when>
                                     <xsl:when test=".='storico artistico'">
-                                        <xsl:value-of select="'http://www.w3id.org/arco/core/HistoricalArtistic'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/core/HistoricalArtistic'" />
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:value-of select="concat('http://www.w3id.org/arco/core/', arco-fn:urify(normalize-space(.)))" />
+                                        <xsl:value-of select="concat('https://w3id.org/arco/core/', arco-fn:urify(normalize-space(.)))" />
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </xsl:attribute>
