@@ -31,7 +31,7 @@
                 </xsl:attribute>
                 <rdf:type>
                     <xsl:attribute name="rdf:resource">
-                        <xsl:value-of select="concat('https://w3id.org/arco/cataloguerecord/', 'CatalogueRecord', $sheetType)" />
+                        <xsl:value-of select="concat('https://w3id.org/arco/catalogue/', 'CatalogueRecord', $sheetType)" />
                     </xsl:attribute>
                 </rdf:type>
                 <rdfs:label>
@@ -120,7 +120,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/cataloguerecord/CatalogueRecordVersion/'" />
+                            <xsl:value-of select="'https://w3id.org/arco/catalogue/CatalogueRecordVersion/'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -187,7 +187,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/cataloguerecord/CatalogueRecordVersion/'" />
+                            <xsl:value-of select="'https://w3id.org/arco/catalogue/CatalogueRecordVersion/'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -261,7 +261,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/cataloguerecord/CatalogueRecordVersion'" />
+                            <xsl:value-of select="'https://w3id.org/arco/catalogue/CatalogueRecordVersion'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -950,7 +950,7 @@
                 <xsl:if test="schede/*/LC/PVC/*">
                     <locgeoamm:hasCulturalPropertyAddress>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(normalize-space(schede/*/LC/PVC))))" />
+                            <xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(schede/*/LC/PVC), normalize-space(schede/*/LC/PVL), normalize-space(schede/*/LC/LDC/LDCU)))))" />
                         </xsl:attribute>
                     </locgeoamm:hasCulturalPropertyAddress>
                 </xsl:if>
