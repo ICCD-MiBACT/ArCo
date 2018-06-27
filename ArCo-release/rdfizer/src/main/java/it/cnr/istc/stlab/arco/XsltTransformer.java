@@ -94,7 +94,7 @@ public class XsltTransformer {
 							converter.convert(fileName, inputStream, byteArrayOut);
 							
 							String rdfSource = new String(byteArrayOut.toByteArray());
-							//System.out.println(sss);
+							//System.out.println(rdfSource);
 							
 							ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
 							
