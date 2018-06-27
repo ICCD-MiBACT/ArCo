@@ -113,7 +113,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasRelatedAgency"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente schedatore. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente schedatore. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente schedatore</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agency</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -181,7 +181,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasRelatedAgency"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente competente per la tutela. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente competente per la tutela. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente competente per la tutela</rdfs:label>
         <rdfs:label xml:lang="en">has heritage protection agency</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -234,8 +234,8 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/isRelatedToRiT"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/core/hasAgentRole"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/core/hasAgent"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale a un ente che riveste un ruolo nei suoi confronti. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. La proprietà è specializzata per mezzo di sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente collegato</rdfs:label>
@@ -250,7 +250,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasRole">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isRoleOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/roapit/Role"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ruolo</rdfs:label>
@@ -605,7 +605,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasRole"/>
-                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/roapit/Role"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Agent Role</rdfs:label>
@@ -1193,6 +1193,12 @@ trovano.</rdfs:comment>
     <!-- https://w3id.org/arco/subjective/Title -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Title"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/Role -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/RO/Role"/>
     
 
 

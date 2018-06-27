@@ -1022,11 +1022,11 @@
                     </cpdescription:storageConditions>
                 </xsl:if>
                 <xsl:if test="schede/*/CD/ECP">
-                    <cis:isRelatedToRiT>
+                    <arco:hasAgentRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-ente-competente-per-tutela')" />
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
                         </xsl:attribute>
-                    </cis:isRelatedToRiT>
+                    </arco:hasAgentRole>
                     <arco:hasHeritageProtectionAgency>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CD/ECP)))" />
@@ -1034,11 +1034,11 @@
                     </arco:hasHeritageProtectionAgency>
                 </xsl:if>
                 <xsl:if test="schede/*/CD/ESC">
-                    <cis:isRelatedToRiT>
+                    <arco:hasAgentRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-ente-schedatore')" />
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
                         </xsl:attribute>
-                    </cis:isRelatedToRiT>
+                    </arco:hasAgentRole>
                     <arco:hasCataloguingAgency>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CD/ESC)))" />
@@ -1180,7 +1180,7 @@
                     <cpdescription:hasCulturalPropertyType>
                         <xsl:attribute name="rdf:resource">
                             <xsl:choose>
-                                <!-- Cambiati URI da Valentina: tolto $itemURI -->
+                                <!-- Cambiati URI: tolto $itemURI -->
                                 <xsl:when test="./OGTT">
                                     <xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:urify(normalize-space(./OGTD)), '-', arco-fn:urify(normalize-space(./OGTT)))" />
                                 </xsl:when>
@@ -1191,15 +1191,25 @@
                         </xsl:attribute>
                     </cpdescription:hasCulturalPropertyType>
                 </xsl:for-each>
-                <xsl:for-each select="schede/*/SGT/SGTI">
+                <xsl:for-each select="schede/*/*/SGT/SGTI">
                     <culturaldefinition:subject>
                         <xsl:value-of select="normalize-space(.)" />
                     </culturaldefinition:subject>
+                    <culturaldefinition:hasSubject>
+                    	<xsl:attribute name="rdf:resource">
+                    		<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+                    	</xsl:attribute>
+                    </culturaldefinition:hasSubject>
                 </xsl:for-each>
                 <xsl:for-each select="schede/*/DA/AID/AIDI">
                     <culturaldefinition:subject>
                         <xsl:value-of select="normalize-space(.)" />
                     </culturaldefinition:subject>
+                    <culturaldefinition:hasSubject>
+                    	<xsl:attribute name="rdf:resource">
+                    		<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+                    	</xsl:attribute>
+                    </culturaldefinition:hasSubject>
                 </xsl:for-each>
                 <xsl:for-each select="schede/*/DA/DES/DESI">
                     <culturaldefinition:iconclassCode>
@@ -1294,6 +1304,54 @@
                     </arco:suffix>
                 </xsl:for-each>
             </rdf:Description>
+            <!-- Subject as an individual (sgti) -->
+            <xsl:for-each select="schede/*/*/SGT/SGTI">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+                          <xsl:value-of select="'https://w3id.org/arco/subjective/Subject'" />
+                        </xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label>
+                        <xsl:value-of select="normalize-space(.)" />
+                    </rdfs:label>
+                    <l0:name>
+                        <xsl:value-of select="normalize-space(.)" />
+                    </l0:name>
+                    <culturaldefinition:isSubjectOf>
+                    	<xsl:attribute name="rdf:resource">
+                    		<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                    	</xsl:attribute>
+                    </culturaldefinition:isSubjectOf>
+            	</rdf:Description>
+            </xsl:for-each>
+            <!-- Subject as an individual (aidi) -->
+            <xsl:for-each select="schede/*/DA/AID/AIDI">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+                          <xsl:value-of select="'https://w3id.org/arco/subjective/Subject'" />
+                        </xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label>
+                        <xsl:value-of select="normalize-space(.)" />
+                    </rdfs:label>
+                    <l0:name>
+                        <xsl:value-of select="normalize-space(.)" />
+                    </l0:name>
+                    <culturaldefinition:isSubjectOf>
+                    	<xsl:attribute name="rdf:resource">
+                    		<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                    	</xsl:attribute>
+                    </culturaldefinition:isSubjectOf>
+            	</rdf:Description>
+            </xsl:for-each>
             <xsl:for-each select="schede/*/OG/OGD">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
@@ -1328,7 +1386,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Edition'" />
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/Edition'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -1466,7 +1524,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Dating'" />
+                            <xsl:value-of select="'https://w3id.org/arco/subjective/Dating'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -1516,7 +1574,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Source'" />
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/Source'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -1758,7 +1816,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/cpdescription/CulturalPropertyType'" />
+                            <xsl:value-of select="'https://w3id.org/arco/objective/CulturalPropertyType'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -1797,7 +1855,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/cpdescription/CulturalPropertyDefinition'" />
+                            <xsl:value-of select="'https://w3id.org/arco/objective/CulturalPropertyDefinition'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -1814,7 +1872,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/cpdescription/CulturalPropertySpecification'" />
+                            <xsl:value-of select="'https://w3id.org/arco/objective/CulturalPropertySpecification'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -1826,39 +1884,50 @@
             <xsl:for-each select="schede/*/CD/ESC">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-ente-schedatore')" />
+                        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="concat('Ente schedatore del bene ', $itemURI, ': ', .)" />
                     </rdfs:label>
-                    <roapit:withRole>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Cataloguing agency for cultural property ', $itemURI, ': ', .)" />
+                    </rdfs:label>
+                    <arco:hasRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Role/', 'ente-schedatore')" />
+                            <xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
                         </xsl:attribute>
-                    </roapit:withRole>
-                    <roapit:isRoleInTimeOf>
+                    </arco:hasRole>
+                    <arco:hasAgent>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
                         </xsl:attribute>
-                    </roapit:isRoleInTimeOf>
+                    </arco:hasAgent>
                 </rdf:Description>
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'Role/', 'ente-schedatore')" />
+                        <xsl:value-of select="concat($NS, 'Role/CataloguinAgency')" />
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="'Ente schedatore'" />
                     </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Cataloguing agency'" />
+                    </rdfs:label>
+                    <arco:isRoleOf>
+                    	<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+                        </xsl:attribute>
+                    </arco:isRoleOf>
                 </rdf:Description>
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
@@ -1875,44 +1944,60 @@
                     <l0:name>
                         <xsl:value-of select="normalize-space(.)" />
                     </l0:name>
+                    <arco:isAgentOf>
+                    	<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+                        </xsl:attribute>
+                    </arco:isAgentOf>
                 </rdf:Description>
             </xsl:for-each>
             <xsl:if test="schede/*/CD/ECP">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-ente-competente-per-tutela')" />
+                        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="concat('Ente competente per tutela del bene ', $itemURI, ': ', schede/*/CD/ECP)" />
                     </rdfs:label>
-                    <roapit:withRole>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Heritage protection agency for cultural property ', $itemURI, ': ', schede/*/CD/ECP)" />
+                    </rdfs:label>
+                    <arco:hasRole>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'Role/', 'ente-competente-per-tutela')" />
+                            <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
                         </xsl:attribute>
-                    </roapit:withRole>
-                    <roapit:isRoleInTimeOf>
+                    </arco:hasRole>
+                    <arco:hasAgent>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CD/ECP)))" />
                         </xsl:attribute>
-                    </roapit:isRoleInTimeOf>
+                    </arco:hasAgent>
                 </rdf:Description>
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'Role/', 'ente-competente-per-tutela')" />
+                        <xsl:value-of select="concat($NS, 'Role/HeritageProtectionAgency')" />
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:value-of select="'Ente competente per tutela'" />
                     </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Heritage Protection Agency'" />
+                    </rdfs:label>
+                    <arco:isRoleOf>
+                    	<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+                        </xsl:attribute>
+                    </arco:isRoleOf>
                 </rdf:Description>
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
@@ -1929,6 +2014,11 @@
                     <l0:name>
                         <xsl:value-of select="normalize-space(schede/*/CD/ECP)" />
                     </l0:name>
+                    <arco:isAgentOf>
+                    	<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+                        </xsl:attribute>
+                    </arco:isAgentOf>
                 </rdf:Description>
             </xsl:if>
             <!-- Name in time -->
@@ -2008,7 +2098,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/CulturalScopeAttribution'" />
+                            <xsl:value-of select="'https://w3id.org/arco/subjective/CulturalScopeAttribution'" />
                         </xsl:attribute>
                     </rdf:type>
                     <xsl:if test="./ATBD">
@@ -2044,7 +2134,7 @@
                         <xsl:attribute name="rdf:about">
                             <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./ATBM)))" />
                         </xsl:attribute>
-                        <rdf:type rdf:resource="https://w3id.org/arco/culturaldefinition/Source" />
+                        <rdf:type rdf:resource="https://w3id.org/arco/subjective/Source" />
                         <rdfs:label>
                             <xsl:value-of select="normalize-space(./ATBM)" />
                         </rdfs:label>
@@ -2080,7 +2170,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/CulturalScope'" />
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/CulturalScope'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -2099,7 +2189,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/PreferredAuthorshipAttribution'" />
+                            <xsl:value-of select="'https://w3id.org/arco/subjective/PreferredAuthorshipAttribution'" />
                         </xsl:attribute>
                     </rdf:type>
                     <xsl:if test="./AUTN">
@@ -2173,7 +2263,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Source'" />
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/Source'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -2279,7 +2369,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Commission'" />
+                            <xsl:value-of select="'https://w3id.org/arco/subjective/Commission'" />
                         </xsl:attribute>
                     </rdf:type>
                     <xsl:if test="./CMMN">
@@ -2343,7 +2433,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Source'" />
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/Source'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -2361,7 +2451,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Circumstance'" />
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/Circumstance'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -2398,7 +2488,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/AlternativeAuthorshipAttribution'" />
+                            <xsl:value-of select="'https://w3id.org/arco/subjective/AlternativeAuthorshipAttribution'" />
                         </xsl:attribute>
                     </rdf:type>
                     <culturaldefinition:hasAttributedAuthor>
@@ -2475,7 +2565,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Source'" />
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/Source'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -2511,7 +2601,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/arco/cpdescription/ConservationStatus'" />
+                                <xsl:value-of select="'https://w3id.org/arco/objective/ConservationStatus'" />
                             </xsl:attribute>
                         </rdf:type>
                         <cpdescription:hasConservationStatusType>
@@ -2519,25 +2609,25 @@
                                 <xsl:choose>
                                     <!-- Valentina - aggiunto lower case per intercettare anche maiuscoli e aggiunti alcuni or in base ai dati -->
                                     <xsl:when test="lower-case(normalize-space(./STCC))='buono' or lower-case(normalize-space(./STCC))='buonoe' or lower-case(normalize-space(./STCC))='buona'">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/Good'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/Good'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(./STCC))='mediocre'">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/Mediocre'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/Mediocre'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(./STCC))='discreto' or lower-case(normalize-space(./STCC))='discreta'">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/Decent'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/Decent'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(./STCC))='cattivo' or lower-case(normalize-space(./STCC))='cattiva'">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/Bad'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/Bad'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(./STCC))='dato non disponibile'">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/Unavailable'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/Unavailable'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(./STCC))='NR (recupero pregresso)' or lower-case(normalize-space(./STCC))='NR'">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/NR'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/NR'" />
                                     </xsl:when>
                                     <xsl:when test="./STCC">
-                                        <xsl:value-of select="concat('https://w3id.org/arco/cpdescription/', arco-fn:urify(normalize-space(./STCC)))" />
+                                        <xsl:value-of select="concat('https://w3id.org/arco/objective/', arco-fn:urify(normalize-space(./STCC)))" />
                                     </xsl:when>
                                 </xsl:choose>
                             </xsl:attribute>
@@ -2564,9 +2654,9 @@
                         <xsl:when test="./STCC">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
-                                    <xsl:value-of select="concat('https://w3id.org/arco/cpdescription/', arco-fn:urify(normalize-space(./STCC)))" />
+                                    <xsl:value-of select="concat('https://w3id.org/arco/objective/', arco-fn:urify(normalize-space(./STCC)))" />
                                 </xsl:attribute>
-                                <rdf:type rdf:resource="https://w3id.org/arco/cpdescription/ConservationStatusType" />
+                                <rdf:type rdf:resource="https://w3id.org/arco/objective/ConservationStatusType" />
                                 <rdfs:label>
                                     <xsl:value-of select="normalize-space(./STCC)" />
                                 </rdfs:label>
@@ -3162,7 +3252,7 @@
                                 </xsl:attribute>
                                 <rdf:type>
                                     <xsl:attribute name="rdf:resource">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/SiteDefinition'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/SiteDefinition'" />
                                     </xsl:attribute>
                                 </rdf:type>
                                 <rdfs:label>
@@ -3178,7 +3268,7 @@
                                 </xsl:attribute>
                                 <rdf:type>
                                     <xsl:attribute name="rdf:resource">
-                                        <xsl:value-of select="'https://w3id.org/arco/cpdescription/SiteSpecification'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/objective/SiteSpecification'" />
                                     </xsl:attribute>
                                 </rdf:type>
                                 <rdfs:label>
@@ -3568,7 +3658,7 @@
                                     </xsl:attribute>
                                     <rdf:type>
                                         <xsl:attribute name="rdf:resource">
-                                            <xsl:value-of select="'https://w3id.org/arco/cpdescription/SiteDefinition'" />
+                                            <xsl:value-of select="'https://w3id.org/arco/objective/SiteDefinition'" />
                                         </xsl:attribute>
                                     </rdf:type>
                                     <rdfs:label>
@@ -3584,7 +3674,7 @@
                                     </xsl:attribute>
                                     <rdf:type>
                                         <xsl:attribute name="rdf:resource">
-                                            <xsl:value-of select="'https://w3id.org/arco/cpdescription/SiteSpecification'" />
+                                            <xsl:value-of select="'https://w3id.org/arco/objective/SiteSpecification'" />
                                         </xsl:attribute>
                                     </rdf:type>
                                     <rdfs:label>

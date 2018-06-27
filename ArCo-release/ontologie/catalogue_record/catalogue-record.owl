@@ -17,7 +17,6 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/catalogue/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -305,7 +304,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo ente/soggetto responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile</rdfs:label>
-        <owl:versionInfo xml:lang="en">has responsible agency or person</owl:versionInfo>
+        <rdfs:label xml:lang="en">has responsible agency or person</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>CM/AGG/AGGE</core:iccdNormTag>
