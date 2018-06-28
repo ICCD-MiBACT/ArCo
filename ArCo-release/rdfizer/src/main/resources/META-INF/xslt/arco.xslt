@@ -187,7 +187,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/arco/catalogue/CatalogueRecordVersion/'" />
+                            <xsl:value-of select="'https://w3id.org/arco/catalogue/CatalogueRecordVersion'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -940,7 +940,7 @@
                         </xsl:attribute>
                     </locgeoamm:hasTimeIndexedQualifiedLocation>
                 </xsl:if>
-                <xsl:for-each select="schede/*/LA">
+                <xsl:for-each select="schede/*/LA | schede/F/LR">
                     <locgeoamm:hasTimeIndexedQualifiedLocation>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-alternative-', position())" />
@@ -2705,7 +2705,6 @@
                             <xsl:value-of select="concat('Ubicazione originaria: ', normalize-space(schede/*/UB/UBO))" />
                         </arco:note>
                     </xsl:if>
-                    <!-- Valentina: in particolare controllare URI -->
                     <xsl:if test="schede/*/LC/LDC/LDCD">
                         <tiapit:atTime>
                             <xsl:attribute name="rdf:resource">
@@ -2731,8 +2730,8 @@
                     </tiapit:time>
                 </rdf:Description>
             </xsl:if>
-            <!-- fine Valentina -->
-            <xsl:for-each select="schede/*/LA">
+            <!-- alternative locations + shot location for F catalogue record -->
+            <xsl:for-each select="schede/*/LA | schede/F/LR">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
                         <xsl:value-of select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-alternative-', position())" />
@@ -2756,25 +2755,25 @@
                         <locgeoamm:hasLocationType>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:choose>
-                                    <xsl:when test="normalize-space(./TLC)='luogo di provenienza/collocazione precedente' or normalize-space(./TCL)='luogo di provenienza' or normalize-space(./TLC)='provenienza' or normalize-space(./TCL)='provenienza'">
+                                    <xsl:when test="lower-case(normalize-space(./TLC))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./TCL))='luogo di provenienza' or lower-case(normalize-space(./TLC))='provenienza' or lower-case(normalize-space(./TCL))='provenienza'">
                                         <xsl:value-of select="'https://w3id.org/arco/location/LastLocation'" />
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(./TLC)='luogo di produzione/realizzazione' or normalize-space(./TCL)='luogo di esecuzione/fabbricazione'">
+                                    <xsl:when test="lower-case(normalize-space(./TLC))='luogo di produzione/realizzazione' or lower-case(normalize-space(./TCL))='luogo di esecuzione/fabbricazione'">
                                         <xsl:value-of select="'https://w3id.org/arco/location/ProductionRealizationLocation'" />
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(./TLC)='luogo di reperimento' or normalize-space(./TCL)='luogo di reperimento' or normalize-space(./TLC)='reperimento' or normalize-space(./TCL)='reperimento'">
+                                    <xsl:when test="lower-case(normalize-space(./TLC))='luogo di reperimento' or lower-case(normalize-space(./TCL))='luogo di reperimento' or lower-case(normalize-space(./TLC))='reperimento' or lower-case(normalize-space(./TCL))='reperimento'">
                                         <xsl:value-of select="'https://w3id.org/arco/location/FindingLocation'" />
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(./TLC)='luogo di deposito' or normalize-space(./TCL)='luogo di deposito' or normalize-space(./TLC)='deposito temporaneo' or normalize-space(./TCL)='deposito temporaneo' or normalize-space(./TLC)='deposito' or normalize-space(./TCL)='deposito'">
+                                    <xsl:when test="lower-case(normalize-space(./TLC))='luogo di deposito' or lower-case(normalize-space(./TCL))='luogo di deposito' or lower-case(normalize-space(./TLC))='deposito temporaneo' or lower-case(normalize-space(./TCL))='deposito temporaneo' or lower-case(normalize-space(./TLC))='deposito' or lower-case(normalize-space(./TCL))='deposito'">
                                         <xsl:value-of select="'https://w3id.org/arco/location/StorageLocation'" />
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(./TLC)='luogo di esposizione' or normalize-space(./TCL)='luogo di esposizione' or normalize-space(./TLC)='espositiva' or normalize-space(./TCL)='espositiva' or normalize-space(./TLC)='espositivo' or normalize-space(./TCL)='espositivo' or normalize-space(./TLC)='esposizione' or normalize-space(./TCL)='esposizione'">
+                                    <xsl:when test="lower-case(normalize-space(./TLC))='luogo di esposizione' or lower-case(normalize-space(./TCL))='luogo di esposizione' or lower-case(normalize-space(./TLC))='espositiva' or lower-case(normalize-space(./TCL))='espositiva' or lower-case(normalize-space(./TLC))='espositivo' or lower-case(normalize-space(./TCL))='espositivo' or lower-case(normalize-space(./TLC))='esposizione' or lower-case(normalize-space(./TCL))='esposizione'">
                                         <xsl:value-of select="'https://w3id.org/arco/location/ExhibitionLocation'" />
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(./TLC)='luogo di rilevamento' or normalize-space(./TCL)='luogo di rilevamento' or normalize-space(./TCL)='di rilevamento' or normalize-space(./TLC)='di rilevamento' or normalize-space(./TCL)='localizzazione di rilevamento' or normalize-space(./TLC)='localizzazione di rilevamento'">
+                                    <xsl:when test="lower-case(normalize-space(./TLC))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='di rilevamento' or lower-case(normalize-space(./TLC))='di rilevamento' or lower-case(normalize-space(./TCL))='localizzazione di rilevamento' or lower-case(normalize-space(./TLC))='localizzazione di rilevamento'">
                                         <xsl:value-of select="'https://w3id.org/arco/location/ObservationLocation'" />
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(./TLC)='area rappresentata' or normalize-space(./TCL)='area rappresentata'">
+                                    <xsl:when test="lower-case(normalize-space(./TLC))='area rappresentata' or lower-case(normalize-space(./TCL))='area rappresentata'">
                                         <xsl:value-of select="'https://w3id.org/arco/location/SubjectLocation'" />
                                     </xsl:when>
                                     <xsl:when test="./TLC">
@@ -2799,13 +2798,13 @@
                 </rdf:Description>
                 <xsl:if test="./TLC or ./TCL">
                     <xsl:choose>
-                        <xsl:when test="normalize-space(./TLC)='luogo di provenienza/collocazione precedente' or normalize-space(./TCL)='luogo di provenienza' or normalize-space(./TLC)='provenienza' or normalize-space(./TCL)='provenienza'" />
-                        <xsl:when test="normalize-space(./TLC)='luogo di produzione/realizzazione' or normalize-space(./TCL)='luogo di esecuzione/fabbricazione'" />
-                        <xsl:when test="normalize-space(./TLC)='luogo di reperimento' or normalize-space(./TCL)='luogo di reperimento' or normalize-space(./TLC)='reperimento' or normalize-space(./TCL)='reperimento'" />
-                        <xsl:when test="normalize-space(./TLC)='luogo di deposito' or normalize-space(./TCL)='luogo di deposito' or normalize-space(./TLC)='deposito temporaneo' or normalize-space(./TCL)='deposito temporaneo' or normalize-space(./TLC)='deposito' or normalize-space(./TCL)='deposito'" />
-                        <xsl:when test="normalize-space(./TLC)='luogo di esposizione' or normalize-space(./TCL)='luogo di esposizione' or normalize-space(./TLC)='espositiva' or normalize-space(./TCL)='espositiva' or normalize-space(./TLC)='espositivo' or normalize-space(./TCL)='espositivo' or normalize-space(./TLC)='esposizione' or normalize-space(./TCL)='esposizione'" />
-                        <xsl:when test="normalize-space(./TLC)='luogo di rilevamento' or normalize-space(./TCL)='luogo di rilevamento' or normalize-space(./TCL)='di rilevamento' or normalize-space(./TLC)='di rilevamento' or normalize-space(./TCL)='localizzazione di rilevamento' or normalize-space(./TLC)='localizzazione di rilevamento'" />
-                        <xsl:when test="normalize-space(./TLC)='area rappresentata' or normalize-space(./TCL)='area rappresentata'" />
+                        <xsl:when test="lower-case(normalize-space(./TLC))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./TCL))='luogo di provenienza' or lower-case(normalize-space(./TLC))='provenienza' or lower-case(normalize-space(./TCL))='provenienza'" />
+                        <xsl:when test="lower-case(normalize-space(./TLC))='luogo di produzione/realizzazione' or lower-case(normalize-space(./TCL))='luogo di esecuzione/fabbricazione'" />
+                        <xsl:when test="lower-case(normalize-space(./TLC))='luogo di reperimento' or lower-case(normalize-space(./TCL))='luogo di reperimento' or lower-case(normalize-space(./TLC))='reperimento' or lower-case(normalize-space(./TCL))='reperimento'" />
+                        <xsl:when test="lower-case(normalize-space(./TLC))='luogo di deposito' or lower-case(normalize-space(./TCL))='luogo di deposito' or lower-case(normalize-space(./TLC))='deposito temporaneo' or lower-case(normalize-space(./TCL))='deposito temporaneo' or lower-case(normalize-space(./TLC))='deposito' or lower-case(normalize-space(./TCL))='deposito'" />
+                        <xsl:when test="lower-case(normalize-space(./TLC))='luogo di esposizione' or lower-case(normalize-space(./TCL))='luogo di esposizione' or lower-case(normalize-space(./TLC))='espositiva' or lower-case(normalize-space(./TCL))='espositiva' or lower-case(normalize-space(./TLC))='espositivo' or lower-case(normalize-space(./TCL))='espositivo' or lower-case(normalize-space(./TLC))='esposizione' or lower-case(normalize-space(./TCL))='esposizione'" />
+                        <xsl:when test="lower-case(normalize-space(./TLC))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='di rilevamento' or lower-case(normalize-space(./TLC))='di rilevamento' or lower-case(normalize-space(./TCL))='localizzazione di rilevamento' or lower-case(normalize-space(./TLC))='localizzazione di rilevamento'" />
+                        <xsl:when test="lower-case(normalize-space(./TLC))='area rappresentata' or lower-case(normalize-space(./TCL))='area rappresentata'" />
                         <xsl:when test="./TLC">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
@@ -2902,7 +2901,6 @@
                                     <xsl:value-of select="concat(', ', ./text())" />
                                 </xsl:otherwise>
                             </xsl:choose>
-                            <xsl:value-of select="normalize-space(schede/*/OG/OGD)" />
                         </xsl:for-each>
                     </rdfs:label>
                     <xsl:if test="schede/*/LC/PVL">
@@ -3419,7 +3417,6 @@
                                                 <xsl:value-of select="concat(', ', ./text())" />
                                             </xsl:otherwise>
                                         </xsl:choose>
-                                        <xsl:value-of select="normalize-space(schede/*/OG/OGD)" />
                                     </xsl:for-each>
                                 </rdfs:label>
                                 <!-- Aggiunto da Valentina - Address details <xsl:if test="schede/*/LC/PVC/PVCV"> 
@@ -4137,7 +4134,6 @@
                                                     <xsl:value-of select="concat(', ', ./text())" />
                                                 </xsl:otherwise>
                                             </xsl:choose>
-                                            <xsl:value-of select="normalize-space(schede/*/OG/OGD)" />
                                         </xsl:for-each>
                                     </rdfs:label>
                                     <!-- Aggiunto da Valentina - Address details <xsl:if test="schede/*/LC/PVC/PVCV"> 
