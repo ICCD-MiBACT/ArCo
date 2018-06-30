@@ -1,16 +1,13 @@
 FROM tenforce/virtuoso:1.3.1-virtuoso7.2.2
 
 
-#ADD http://stlab.istc.cnr.it/arco/docker_data/ontologies.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-
 # Add ontologies
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/Identificativi_bene_scheda/identifiers.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/bene_description/cp-description.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/catalogue_record/catalogue-record.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/event_exhibition/cultural-event.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/localizzazione/location.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/modulo_core/arco-core.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/MiBACT-LinkedOpenData/ArCo/master/ArCo-release/ontologie/cultural-definition/cultural-definition.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/objective/objective.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/culturalevent/culturalevent.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/subjective/subjective.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 
 # Add DB Unico
 ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-luoghi.ttl.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
