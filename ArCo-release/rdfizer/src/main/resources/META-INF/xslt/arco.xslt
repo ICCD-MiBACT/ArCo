@@ -2195,14 +2195,24 @@
                     <xsl:if test="./AUTN">
                         <culturaldefinition:hasAttributedAuthor>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:choose>
-                                    <xsl:when test="./AUTS">
-                                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTS)))" />
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
-                                    </xsl:otherwise>
-                                </xsl:choose>
+                            	<xsl:variable name="author">
+		                            <xsl:choose>
+		                                <xsl:when test="./AUTA">
+		                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
+		                                </xsl:otherwise>
+		                            </xsl:choose>
+	                            </xsl:variable>
+	                            <xsl:choose>
+	                                <xsl:when test="./AUTS">
+	                                    <xsl:value-of select="concat($author, '-', arco-fn:urify(normalize-space(./AUTS)))" />
+	                                </xsl:when>
+	                                <xsl:otherwise>
+	                                    <xsl:value-of select="$author" />
+	                                </xsl:otherwise>
+	                            </xsl:choose>
                             </xsl:attribute>
                         </culturaldefinition:hasAttributedAuthor>
                     </xsl:if>
@@ -2295,12 +2305,22 @@
                 <xsl:if test="./AUTN">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
+                        	<xsl:variable name="author">
+	                            <xsl:choose>
+	                                <xsl:when test="./AUTA">
+	                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
+	                                </xsl:when>
+	                                <xsl:otherwise>
+	                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
+	                                </xsl:otherwise>
+	                            </xsl:choose>
+                            </xsl:variable>
                             <xsl:choose>
                                 <xsl:when test="./AUTS">
-                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTS)))" />
+                                    <xsl:value-of select="concat($author, '-', arco-fn:urify(normalize-space(./AUTS)))" />
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
+                                    <xsl:value-of select="$author" />
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
@@ -2493,14 +2513,24 @@
                     </rdf:type>
                     <culturaldefinition:hasAttributedAuthor>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:choose>
-                                <xsl:when test="./AATN">
-                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AATN)))" />
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
-                                </xsl:otherwise>
-                            </xsl:choose>
+                        	<xsl:variable name="author">
+	                            <xsl:choose>
+	                                <xsl:when test="./AATN">
+		                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AATN)))" />
+		                            </xsl:when>
+		                            <xsl:otherwise>
+		                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+		                            </xsl:otherwise>
+	                            </xsl:choose>
+	                        </xsl:variable>
+	                        <xsl:choose>
+	                        	<xsl:when test="./AATA">
+	                            	<xsl:value-of select="concat($author, '-', arco-fn:urify(normalize-space(./AATA)))" />
+	                            </xsl:when>
+	                            <xsl:otherwise>
+	                            	<xsl:value-of select="$author" />
+	                            </xsl:otherwise>
+	                       </xsl:choose>
                         </xsl:attribute>
                     </culturaldefinition:hasAttributedAuthor>
                     <xsl:if test="./AATY">
@@ -2518,14 +2548,24 @@
                 </rdf:Description>
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
+                    	<xsl:variable name="author">
+                            <xsl:choose>
+                                <xsl:when test="./AATN">
+	                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AATN)))" />
+	                            </xsl:when>
+	                            <xsl:otherwise>
+	                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+	                            </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:variable>
                         <xsl:choose>
-                            <xsl:when test="./AATN">
-                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AATN)))" />
+                        	<xsl:when test="./AATA">
+                            	<xsl:value-of select="concat($author, '-', arco-fn:urify(normalize-space(./AATA)))" />
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+                            	<xsl:value-of select="$author" />
                             </xsl:otherwise>
-                        </xsl:choose>
+                       </xsl:choose>
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
