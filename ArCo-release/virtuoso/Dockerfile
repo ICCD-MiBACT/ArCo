@@ -11,6 +11,13 @@ ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontol
 
 # Add DB Unico
 ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-luoghi.ttl.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-th-ra.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-luoghi.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-eventi.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-anagrafeBiblioteche.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-contenitoriFisici.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 
 # Add ArCo data
 ADD http://stlab.istc.cnr.it/arco/docker_data/arco_dataset-v0.2.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/

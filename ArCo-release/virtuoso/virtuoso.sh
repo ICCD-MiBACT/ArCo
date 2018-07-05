@@ -82,6 +82,7 @@ then
 	pwd="dba" ;
 	echo "Loading DB Unico" ;
 	echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/', '*.gz', 'https://w3id.org/arco/dbunico');" >> /load_dbunico.sql
+	echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/', '*.ttl', 'https://w3id.org/arco/dbunico');" >> /load_dbunico.sql
     echo "rdf_loader_run();" >> /load_dbunico.sql
     echo "exec('checkpoint');" >> /load_dbunico.sql
     echo "WAIT_FOR_CHILDREN; " >> /load_dbunico.sql
