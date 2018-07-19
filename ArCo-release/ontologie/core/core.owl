@@ -721,8 +721,8 @@
         <rdfs:subClassOf rdf:resource="&arco;CulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&arco;isCulturalPropertyComponentOf"/>
-                <owl:someValuesFrom rdf:resource="&arco;CulturalProperty"/>
+                <owl:onProperty rdf:resource="&arco;hasCulturalPropertyComponent"/>
+                <owl:someValuesFrom rdf:resource="&arco;CulturalPropertyComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
