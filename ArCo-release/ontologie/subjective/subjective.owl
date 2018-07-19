@@ -19,7 +19,6 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/subjective/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -41,6 +40,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
     
 
 
@@ -136,9 +141,8 @@
     <!-- https://w3id.org/arco/subjective/hasBibliography -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasBibliography">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla bibliografia che riguarda il bene descritto in una scheda di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua bibliografia. Per esempio, nell&apos;ambito del Catalogo Generale, collega un bene culturale alla bibliografia che riguarda il bene stesso, descritto in una scheda di catalogo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha bibliografia</rdfs:label>
         <rdfs:label xml:lang="en">has bibliography</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -158,7 +162,7 @@
         <rdfs:label xml:lang="en">has commission circumstance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/CMM/CMMC</core:iccdNormTag>
+        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -324,6 +328,21 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale: DO/FTA/FTAF, DO/DRA/DRAF, DO/DNT/FNTR</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasFruition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasFruition">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/HistoricOrArtisticProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Fruition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un vestimento antico o contemporaneo a un&apos;occasione in cui è stato indossato da una o più persone.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha fruizione</rdfs:label>
+        <rdfs:label xml:lang="en">has fruition</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa VeAC: AU/FRU</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -529,6 +548,21 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasUser -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUser">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Fruition"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;occasione in cui un vestimento antico o contemporaneo è stato indossato da una persona al fruitore stesso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha fruitore</rdfs:label>
+        <rdfs:label xml:lang="en">has user</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa VeAC: AU/FRU/FRUF</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/isCollectionIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isCollectionIn">
@@ -603,6 +637,12 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale: DT/DTS/DTSI + DT/DTS/DTSV + DT/DTS/DTSF + DT/DTS/DTSL</core:iccdNormTag>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
     
 
 
@@ -1176,6 +1216,18 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/identifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/name -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/name"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1184,6 +1236,18 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/CollectionOfCulturalEntities -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities"/>
+    
+
+
+    <!-- http://dati.beniculturali.it/roapit/Role -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/roapit/Role"/>
     
 
 
@@ -1345,7 +1409,7 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <rdfs:label xml:lang="en">Bibliography</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">BIB</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1388,7 +1452,7 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <rdfs:label xml:lang="en">Circumstance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/CMM/CMMC</core:iccdNormTag>
+        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1727,6 +1791,37 @@ bene catalogato.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Fruition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Fruition">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasUser"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasCircumstance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Circumstance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSource"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione in cui il capo oggetto di catalogazione è stato indossato da una o più persone, sia perché ad esse destinato sia perché, ad esse pervenuto, hanno potuto riadattarlo a loro nuove esigenze.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fruition</rdfs:label>
+        <rdfs:label xml:lang="it">Fruizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa VeAC: AU/FRU</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/GraphicOrCartographicDocumentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/GraphicOrCartographicDocumentation">
@@ -1962,7 +2057,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="en">Source</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL</core:iccdNormTag>
+        <core:iccdNormTag>AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL; Normativa VeAC: AU/FRU/FRUF</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2049,6 +2144,42 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDN; DA/AID/AIDT - Normativa S e MI: OG/SGT/SGTP Normativa F: SG/SGL/SGLA; SG/SGL/SGLT; SG/SGL/SGLL - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTR; OG/SGT/SGTT</core:iccdNormTag>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Activity -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Activity"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Event -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Event"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Object -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Topic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Topic"/>
     
 
 

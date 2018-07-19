@@ -62,6 +62,12 @@
     
 
 
+    <!-- https://w3id.org/arco/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasType"/>
+    
+
+
     <!-- https://w3id.org/arco/objective/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasConservationStatus">
@@ -197,7 +203,7 @@
         <rdfs:label xml:lang="en">has measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -258,6 +264,20 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/hasVolumetricDiamensionsMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasVolumetricDiamensionsMeasurement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/objective/hasMeasurement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
+        <rdfs:label>ha misura di imgombro</rdfs:label>
+        <rdfs:label>has volumetric diamensions measurement</rdfs:label>
+        <rdfs:label xml:lang="it">provvisoria</rdfs:label>
+        <rdfs:label xml:lang="en">unstable</rdfs:label>
+        <core:iccdNormTag>Normativa VeAC: MT/MII</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -266,6 +286,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/arco/core/note -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/note"/>
     
 
 
@@ -352,6 +378,12 @@
     <!-- https://w3id.org/arco/core/HistoricOrArtisticProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/HistoricOrArtisticProperty"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/Type"/>
     
 
 
@@ -567,6 +599,12 @@
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Event -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Event"/>
     
 
 

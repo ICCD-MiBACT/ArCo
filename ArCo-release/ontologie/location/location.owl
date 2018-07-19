@@ -36,6 +36,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/core/iccdNormTag -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/core/iccdNormTag"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -87,6 +104,36 @@
     
 
 
+    <!-- https://w3id.org/arco/location/hasAltitude -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasAltitude">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la georeferenziazione di un oggetto (Geometry) alla sua altitudine.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha altitudine</rdfs:label>
+        <rdfs:label xml:lang="en">has altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI - GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasBaseMap -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasBaseMap">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/BaseMap"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione di un oggetto alla base cartografica eventualmente utilizzata.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha base cartografica</rdfs:label>
+        <rdfs:label xml:lang="en">has base map</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/location/hasContinent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasContinent">
@@ -112,6 +159,33 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>LC/PVC</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasGeometryMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasGeometryMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/GeometryMethod"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione al metodo utilizzato per il posizionamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha metodo di georeferenziazione</rdfs:label>
+        <rdfs:label xml:lang="en">has geometry method</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM - GA/GAM - GL/GLM</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasGeometryTechnique -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasGeometryTechnique">
+        <rdfs:label xml:lang="it">ha tecnica di georeferenziazione</rdfs:label>
+        <rdfs:label xml:lang="en">has geometry technique</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -238,6 +312,21 @@
     
 
 
+    <!-- https://w3id.org/arco/location/alt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/alt">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata z di un oggetto, che ne definisce l&apos;altitudine rispetto al livello del mare.</rdfs:comment>
+        <rdfs:label xml:lang="en">altitude</rdfs:label>
+        <rdfs:label xml:lang="it">altitudine</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ; normative precedenti: GP/GPC/GPCL</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/location/locationDetails -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/locationDetails">
@@ -250,6 +339,66 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>LC/PVC/PVCV</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/maxAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/maxAlt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/alt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="it">altitudine massima</rdfs:label>
+        <rdfs:label xml:lang="en">maximum altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAX; versioni precedenti: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/minAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/minAlt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/alt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="it">altitudine minima</rdfs:label>
+        <rdfs:label xml:lang="en">minimum altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAM; versioni precedenti: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/pointType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/pointType">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il tipo di punto che georeferenzia il bene catalogato. La definizione del tipo di punto non è univoca e dipende dalla tipologia e dalla conformazione del bene e dal tipo di localizzazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">point type</rdfs:label>
+        <rdfs:label xml:lang="it">tipo di punto</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">Normative di versioni precedenti alla 4.00: GP/GPC/GPCT</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/relativeAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/relativeAlt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/alt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="it">altitudine relativa</rdfs:label>
+        <rdfs:label xml:lang="en">relative altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTA/MTAR</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -267,6 +416,21 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>LC/LDC/LDCK; LA/PRC/PRCK</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/spacialReferenceSystem -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/spacialReferenceSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sistema di riferimento utilizzato per la georeferenziazione (es.: WGS84, WGS84 UTM32, ...)</rdfs:comment>
+        <rdfs:label xml:lang="it">sistema di riferimento</rdfs:label>
+        <rdfs:label xml:lang="en">spacial reference system</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP; versioni precedenti: GA/GAP - GL/GLP - GP/GPP</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -330,6 +494,49 @@
     
 
 
+    <!-- https://w3id.org/arco/location/Altitude -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/Altitude">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/alt"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;altitudine, ovvero l&apos;altezza di un oggetto rispetto al livello del mare, che può essere specificata da un&apos;altitudine massima, minima, relativa.</rdfs:comment>
+        <rdfs:label xml:lang="en">Altitude</rdfs:label>
+        <rdfs:label xml:lang="it">Altitudine</rdfs:label>
+        <core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/BaseMap -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/BaseMap">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dati.gov.it/onto/tiapit/date"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la base cartografica eventualmente utilizzata nelle attività di georeferenziazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Base cartografica</rdfs:label>
+        <rdfs:label xml:lang="en">Base map</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/location/Continent -->
 
     <owl:Class rdf:about="https://w3id.org/arco/location/Continent">
@@ -339,6 +546,32 @@
         <rdfs:label xml:lang="it">Continente</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/GeometryMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/GeometryMethod">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo utilizzato per il posizionamento (esatto, approssimato, con rappresentazione simbolica).</rdfs:comment>
+        <rdfs:label xml:lang="en">Geometry method</rdfs:label>
+        <rdfs:label xml:lang="it">Metodo di posizionamento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM -  GA/GAM - GL/GLM</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/GeometryTechnique -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/GeometryTechnique">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tecnica di georeferenziazione, utilizzata per l&apos;acquisizione delle coordinate (rilievo da cartografia con sopralluogo, rilievo da cartografia senza sopralluogo, rilievo da foto aerea con sopralluogo, rilievo da foto aerea senza sopralluogo, rilievo da satelliterilievo tradizionale, rilievo tramite GPS, rilievo tramite punti d&apos;appoggio fiduciali o trigonometrici, stereofotogrammetria).</rdfs:comment>
+        <rdfs:label xml:lang="en">Geometry technique</rdfs:label>
+        <rdfs:label xml:lang="it">Tecnica di georeferenziazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</core:iccdNormTag>
     </owl:Class>
     
 
@@ -486,6 +719,18 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>LC/PVZ; LA/PRZ</core:iccdNormTag>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Feature -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
     
 
 

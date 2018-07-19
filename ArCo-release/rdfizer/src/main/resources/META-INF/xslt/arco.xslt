@@ -1293,9 +1293,9 @@
                 </xsl:for-each>
                 <!-- NCTN Numero catalogo generale (schede/*/CD/NCT/NCTN) -->
                 <xsl:for-each select="schede/*/CD/NCT/NCTN">
-                    <arco:iccdNumber>
+                    <arco:catalogueNumber>
                         <xsl:value-of select="." />
-                    </arco:iccdNumber>
+                    </arco:catalogueNumber>
                 </xsl:for-each>
                 <!-- NCTS Suffisso (schede/*/CD/NCT/NCTS) -->
                 <xsl:for-each select="schede/*/CD/NCT/NCTS">
@@ -2101,6 +2101,18 @@
                             <xsl:value-of select="'https://w3id.org/arco/subjective/CulturalScopeAttribution'" />
                         </xsl:attribute>
                     </rdf:type>
+                    <rdfs:label xml:lang="it">
+                    	<xsl:value-of select="concat('Attribuzione di ambito culturale del bene: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="it">
+                    	<xsl:value-of select="concat('Attribuzione di ambito culturale del bene: ', $itemURI)" />
+                    </l0:name>
+                    <rdfs:label xml:lang="en">
+                    	<xsl:value-of select="concat('Cultural scope attribution of cultural property: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="en">
+                    	<xsl:value-of select="concat('Cultural scope attribution of cultural property: ', $itemURI)" />
+                    </l0:name>
                     <xsl:if test="./ATBD">
                         <culturaldefinition:hasCulturalScope>
                             <xsl:attribute name="rdf:resource">
@@ -2192,6 +2204,18 @@
                             <xsl:value-of select="'https://w3id.org/arco/subjective/PreferredAuthorshipAttribution'" />
                         </xsl:attribute>
                     </rdf:type>
+                    <rdfs:label xml:lang="it">
+                    	<xsl:value-of select="concat('Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="it">
+                    	<xsl:value-of select="concat('Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: ', $itemURI)" />
+                    </l0:name>
+                    <rdfs:label xml:lang="en">
+                    	<xsl:value-of select="concat('Preferred authorship attribution of cultural property: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="en">
+                    	<xsl:value-of select="concat('Preferred authorship attribution of cultural property: ', $itemURI)" />
+                    </l0:name>
                     <xsl:if test="./AUTN">
                         <culturaldefinition:hasAttributedAuthor>
                             <xsl:attribute name="rdf:resource">
@@ -2511,6 +2535,18 @@
                             <xsl:value-of select="'https://w3id.org/arco/subjective/AlternativeAuthorshipAttribution'" />
                         </xsl:attribute>
                     </rdf:type>
+                    <rdfs:label xml:lang="it">
+                    	<xsl:value-of select="concat('Attribuzione superata, alternativa o tradizionale di autore del bene: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="it">
+                    	<xsl:value-of select="concat('Attribuzione superata, alternativa o tradizionale di autore del bene: ', $itemURI)" />
+                    </l0:name>
+                    <rdfs:label xml:lang="en">
+                    	<xsl:value-of select="concat('Alternative authorship attribution of cultural property: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="en">
+                    	<xsl:value-of select="concat('Alternative authorship attribution of cultural property: ', $itemURI)" />
+                    </l0:name>
                     <culturaldefinition:hasAttributedAuthor>
                         <xsl:attribute name="rdf:resource">
                         	<xsl:variable name="author">
@@ -2720,6 +2756,18 @@
                             <xsl:value-of select="'https://w3id.org/arco/location/TimeIndexedQualifiedLocation'" />
                         </xsl:attribute>
                     </rdf:type>
+                    <rdfs:label xml:lang="it">
+                    	<xsl:value-of select="concat('Localizzazione fisica attuale del bene: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="it">
+                    	<xsl:value-of select="concat('Localizzazione fisica attuale del bene: ', $itemURI)" />
+                    </l0:name>
+                    <rdfs:label xml:lang="en">
+                    	<xsl:value-of select="concat('Current physical location of cultural property: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="en">
+                    	<xsl:value-of select="concat('Current physical location of cultural property: ', $itemURI)" />
+                    </l0:name>
                     <locgeoamm:hasLocationType>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="'https://w3id.org/arco/location/CurrentPhysicalLocation'" />
@@ -2781,6 +2829,18 @@
                             <xsl:value-of select="'https://w3id.org/arco/location/TimeIndexedQualifiedLocation'" />
                         </xsl:attribute>
                     </rdf:type>
+                    <rdfs:label xml:lang="it">
+                    	<xsl:value-of select="concat('Localizzazione alternativa ', position(), ' del bene: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="it">
+                    	<xsl:value-of select="concat('Localizzazione alternativa ', position(), ' del bene: ', $itemURI)" />
+                    </l0:name>
+                    <rdfs:label xml:lang="en">
+                    	<xsl:value-of select="concat('Alternative location ', position(), ' of cultural property: ', $itemURI)" />
+                    </rdfs:label>
+                    <l0:name xml:lang="en">
+                    	<xsl:value-of select="concat('Alternative location ', position(), ' of cultural property: ', $itemURI)" />
+                    </l0:name>
                     <xsl:if test="./PRC/PRCS">
                         <arco:specifications>
                             <xsl:value-of select="normalize-space(./PRC/PRCS)" />
@@ -2883,7 +2943,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'http://dati.beniculturali.it/cis/MonumentalArea/'" />
+                                <xsl:value-of select="'http://dati.beniculturali.it/cis/MonumentalArea'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -3545,6 +3605,7 @@
                                     </xsl:attribute>
                                 </rdf:type>
                                 <xsl:choose>
+                                <!-- Denominazione contenitore fisico in 4.00 -->
                                 	<xsl:when test="./PRC/PRCN">
                                 		<rdfs:label>
                                         	<xsl:value-of select="normalize-space(./PRC/PRCN)" />
@@ -3553,19 +3614,20 @@
                                         	<xsl:value-of select="normalize-space(./PRC/PRCN)" />
                                     	</l0:name>
                                 	</xsl:when>
+                                <!-- Denominazione contenitore fisico in normative precedenti a 4.00 -->
+                                	<xsl:when test="./PRC/PRCD">
+                                    	<rdfs:label>
+                                        	<xsl:value-of select="normalize-space(./PRC/PRCD)" />
+                                    	</rdfs:label>
+                                    	<l0:name>
+                                        	<xsl:value-of select="normalize-space(./PRC/PRCD)" />
+                                    	</l0:name>
+                                	</xsl:when>
                                 	<xsl:otherwise>
                                 		<rdfs:label>Contenitore fisico</rdfs:label>
                                     	<l0:name>Contenitore fisico</l0:name>
                                 	</xsl:otherwise>
                                 </xsl:choose>
-                                <xsl:if test="./PRC/PRCD">
-                                    <rdfs:label>
-                                        <xsl:value-of select="normalize-space(./PRC/PRCD)" />
-                                    </rdfs:label>
-                                    <l0:name>
-                                        <xsl:value-of select="normalize-space(./PRC/PRCD)" />
-                                    </l0:name>
-                                </xsl:if>
                                 <xsl:if test="./PRV/*">
                                     <cis:siteAddress>
                                         <xsl:attribute name="rdf:resource">
