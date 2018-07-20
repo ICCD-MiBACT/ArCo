@@ -646,8 +646,9 @@
                     </rdfs:label>
                 </rdf:Description>
             </xsl:if>
-            <!-- Funzionario responsabile - AGG -->
+            <!-- Funzionario responsabile - AGGF -->
             <xsl:for-each select="schede/*/CM/AGG">
+            	<xsl:if test="./AGGF">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
                         <xsl:value-of select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(./AGGF/@hint)), '-', arco-fn:urify(normalize-space(./AGGF)))" />
@@ -674,7 +675,7 @@
                         </xsl:attribute>
                     </roapit:isRoleInTimeOf>
                 </rdf:Description>
-                <!-- Agent: Funzionario responsabile -->
+                <!-- Agent: Funzionario responsabile AGGF -->
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
                         <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AGGF)))" />
@@ -688,8 +689,10 @@
                         <xsl:value-of select="normalize-space(./AGGF)" />
                     </rdfs:label>
                 </rdf:Description>
+                </xsl:if>
             </xsl:for-each>
             <!-- Role funzionario responsabile -->
+            <xsl:if test="./AGGF">
             <rdf:Description>
                     <xsl:attribute name="rdf:about">
                         <xsl:value-of select="concat($NS, 'Role/OfficialInCharge')" />
@@ -700,12 +703,13 @@
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label xml:lang="it">
-                        <xsl:value-of select="normalize-space(schede/*/CM/FUR/@hint)" />
+                        <xsl:value-of select="normalize-space(schede/*/CM/AGG/@hint)" />
                     </rdfs:label>
                     <rdfs:label xml:lang="en">
                         <xsl:value-of select="'Official in charge'" />
                     </rdfs:label>
                </rdf:Description>
+              </xsl:if>                
             <!-- Version time interval - CMD -->
             <xsl:if test="schede/*/CM/CMP/CMPD">
                 <rdf:Description>
@@ -1180,13 +1184,12 @@
                     <cpdescription:hasCulturalPropertyType>
                         <xsl:attribute name="rdf:resource">
                             <xsl:choose>
-                                <!-- Cambiati URI: tolto $itemURI -->
                                 <xsl:when test="./OGTT">
                                     <xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:urify(normalize-space(./OGTD)), '-', arco-fn:urify(normalize-space(./OGTT)))" />
                                 </xsl:when>
-                                <xsl:otherwise>
+                                <xsl:when test="./OGTD">
                                     <xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:urify(normalize-space(./OGTD)))" />
-                                </xsl:otherwise>
+                                </xsl:when>
                             </xsl:choose>
                         </xsl:attribute>
                     </cpdescription:hasCulturalPropertyType>
@@ -1544,7 +1547,8 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </culturaldefinition:hasEvent>
-                    <!-- Valentina aggiunto choose sia per hasSource sia per creazione risorse - testato  -->
+                    <!-- Source of dating -->
+                    <xsl:if test="./DTM and not(./DTM='NR' or ./DTM='NR (recupero pregresso)' or ./DTM/DTMM='NR' or ./DTM/DTMM='NR (recupero pregresso)')">
 					<culturaldefinition:hasSource>
                     <xsl:choose>
                         <xsl:when test="./DTM/DTMS">
@@ -1559,8 +1563,10 @@
                         </xsl:otherwise>
                     </xsl:choose>
                     </culturaldefinition:hasSource>
+                    </xsl:if>
                 </rdf:Description>
-                <xsl:if test="./DTM">
+                <!-- Source of dating as individual-->
+                <xsl:if test="./DTM and not(./DTM='NR' or ./DTM='N.R.' or ./DTM='NR (recupero pregresso)' or ./DTM/DTMM='NR' or ./DTM/DTMM='N.R.' or ./DTM/DTMM='NR (recupero pregresso)')">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
                             <xsl:choose>
@@ -1809,9 +1815,9 @@
                             <xsl:when test="./OGTT">
                                 <xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:urify(normalize-space(./OGTD)), '-', arco-fn:urify(normalize-space(./OGTT)))" />
                             </xsl:when>
-                            <xsl:otherwise>
+                            <xsl:when test="./OGTD">
                                 <xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:urify(normalize-space(./OGTD)))" />
-                            </xsl:otherwise>
+                            </xsl:when>
                         </xsl:choose>
                     </xsl:attribute>
                     <rdf:type>
@@ -1832,11 +1838,13 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </rdfs:label>
+                    <xsl:if test="./OGTD and not(./OGTD='NR' or ./OGTD='N.R.' or ./OGTD='NR (recupero pregresso)')">
                     <cpdescription:hasCulturalPropertyDefinition>
                         <xsl:attribute name="rdf:resource">
                             <xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
                         </xsl:attribute>
                     </cpdescription:hasCulturalPropertyDefinition>
+                    </xsl:if>
                     <xsl:if test="./OGTT">
                         <cpdescription:hasCulturalPropertySpecification>
                             <xsl:attribute name="rdf:resource">
@@ -1848,7 +1856,7 @@
             </xsl:for-each>
             <!-- We add the definition as an individual. The definition is associated 
 				with a Cultural Property Type by the property cpdescription:hasCulturalPropertyDefinition. -->
-            <xsl:if test="schede/*/OG/OGT/OGTD">
+            <xsl:if test="schede/*/OG/OGT/OGTD and not(schede/*/OG/OGT/OGTD='NR' or schede/*/OG/OGT/OGTD='N.R.' or schede/*/OG/OGT/OGTD='NR (recupero pregresso)')">">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
                         <xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTD)))" />
@@ -2132,7 +2140,7 @@
                             <xsl:value-of select="normalize-space(./ATBS)" />
                         </arco:note>
                     </xsl:if>
-                    <xsl:if test="./ATBM">
+                    <xsl:if test="./ATBM and not(./ATBM='NR' or ./ATBM='NR (recupero pregresso)')">
                         <culturaldefinition:hasSource>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./ATBM)))" />
@@ -2141,7 +2149,7 @@
                     </xsl:if>
                 </rdf:Description>
                 <!-- We add the cultural scope attribution source as an individual. -->
-                <xsl:if test="./ATBM">
+                <xsl:if test="./ATBM and not(./ATBM='NR' or ./ATBM='NR (recupero pregresso)')">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
                             <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./ATBM)))" />
@@ -2264,7 +2272,7 @@
                             </xsl:attribute>
                         </culturaldefinition:hasAuthorityFileCataloguingAgency>
                     </xsl:if>
-                    <xsl:if test="./AUTM">
+                    <xsl:if test="./AUTM and not(./AUTM='NR' or ./AUTM='NR (recupero pregresso)')">
                         <culturaldefinition:hasSource>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./AUTM)))" />
@@ -2290,7 +2298,7 @@
                         </l0:name>
                     </rdf:Description>
                 </xsl:if>
-                <xsl:if test="./AUTM">
+                <xsl:if test="./AUTM and not(./AUTM='NR' or ./AUTM='NR (recupero pregresso)')">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
                             <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./AUTM)))" />
@@ -2430,7 +2438,7 @@
                             </xsl:attribute>
                         </culturaldefinition:hasCircumstance>
                     </xsl:if>
-                    <xsl:if test="./CMMF">
+                    <xsl:if test="./CMMF and not(./CMMF='NR' or ./CMMF='NR (recupero pregresso)')">
                         <culturaldefinition:hasSource>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./CMMF)))" />
@@ -2470,7 +2478,7 @@
                         </tiapit:time>
                     </rdf:Description>
                 </xsl:if>
-                <xsl:if test="./CMMF">
+                <xsl:if test="./CMMF and not(./CMMF='NR' or ./CMMF='NR (recupero pregresso)')">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
                             <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./CMMF)))" />
@@ -2574,7 +2582,7 @@
                             <xsl:value-of select="normalize-space(./AATY)" />
                         </arco:note>
                     </xsl:if>
-                    <xsl:if test="./AATM">
+                    <xsl:if test="./AATM and not(./AATM='NR' or ./AATM='NR (recupero pregresso)')">
                         <culturaldefinition:hasSource>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./AATM)))" />
@@ -2634,7 +2642,7 @@
                         </culturaldefinition:authorDate>
                     </xsl:if>
                 </rdf:Description>
-                <xsl:if test="./AATM">
+                <xsl:if test="./AATM and not(./AATM='NR' or ./AATM='NR (recupero pregresso)')">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
                             <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./AATM)))" />
@@ -2851,7 +2859,7 @@
                             <xsl:value-of select="normalize-space(./LAN)" />
                         </arco:note>
                     </xsl:if>
-                    <xsl:if test="./TLC or ./TCL">
+                    <xsl:if test="./TLC or ./TCL and not(./TLC='.' or ./TCL='.' or ./TLC='-' or ./TCL='-' or ./TLC='/' or ./TCL='/')">
                         <locgeoamm:hasLocationType>
                             <xsl:attribute name="rdf:resource">
                                 <xsl:choose>
@@ -2905,7 +2913,7 @@
                         <xsl:when test="lower-case(normalize-space(./TLC))='luogo di esposizione' or lower-case(normalize-space(./TCL))='luogo di esposizione' or lower-case(normalize-space(./TLC))='espositiva' or lower-case(normalize-space(./TCL))='espositiva' or lower-case(normalize-space(./TLC))='espositivo' or lower-case(normalize-space(./TCL))='espositivo' or lower-case(normalize-space(./TLC))='esposizione' or lower-case(normalize-space(./TCL))='esposizione'" />
                         <xsl:when test="lower-case(normalize-space(./TLC))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='luogo di rilevamento' or lower-case(normalize-space(./TCL))='di rilevamento' or lower-case(normalize-space(./TLC))='di rilevamento' or lower-case(normalize-space(./TCL))='localizzazione di rilevamento' or lower-case(normalize-space(./TLC))='localizzazione di rilevamento'" />
                         <xsl:when test="lower-case(normalize-space(./TLC))='area rappresentata' or lower-case(normalize-space(./TCL))='area rappresentata'" />
-                        <xsl:when test="./TLC">
+                        <xsl:when test="./TLC and not(./TLC='.' or ./TLC='-' or ./TLC='/')">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
                                     <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./TLC)))" />
@@ -2919,7 +2927,7 @@
                                 </l0:name>
                             </rdf:Description>
                         </xsl:when>
-                        <xsl:when test="./TCL">
+                        <xsl:when test="./TCL and not(./TCL='.' or ./TCL='-' or ./TCL='/')">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
                                     <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./TCL)))" />
@@ -3017,12 +3025,12 @@
                             </xsl:attribute>
                         </locgeoamm:hasToponymInTime>
                     </xsl:if>
-                    <xsl:if test="schede/*/LC/PVC/PVCI">
+                    <xsl:if test="schede/*/LC/PVC/PVCI and not(schede/*/LC/PVC/PVCI='.' or schede/*/LC/PVC/PVCI='-' or schede/*/LC/PVC/PVCI='/')">
                         <clvapit:fullAddress>
                             <xsl:value-of select="normalize-space(schede/*/LC/PVC/PVCI)" />
                         </clvapit:fullAddress>
                     </xsl:if>
-                    <xsl:if test="schede/*/LC/LDC/LDCU">
+                    <xsl:if test="schede/*/LC/LDC/LDCU and not(schede/*/LC/LDC/LDCU='.' or schede/*/LC/LDC/LDCU='-' or schede/*/LC/LDC/LDCU='/')">
                         <clvapit:fullAddress>
                             <xsl:value-of select="normalize-space(schede/*/LC/LDC/LDCU)" />
                         </clvapit:fullAddress>
@@ -3567,12 +3575,12 @@
                                         </xsl:attribute>
                                     </clvapit:hasAddressArea>
                                 </xsl:if>
-                                <xsl:if test="schede/*/LC/PVC/PVCI">
+                                <xsl:if test="schede/*/LC/PVC/PVCI and not(schede/*/LC/PVC/PVCI='.' or schede/*/LC/PVC/PVCI='-' or schede/*/LC/PVC/PVCI='/')">
                         			<clvapit:fullAddress>
                             			<xsl:value-of select="normalize-space(schede/*/LC/PVC/PVCI)" />
                         			</clvapit:fullAddress>
                     			</xsl:if>
-                    			<xsl:if test="schede/*/LC/LDC/LDCU">
+                    			<xsl:if test="schede/*/LC/LDC/LDCU and not(schede/*/LC/LDC/LDCU='.' or schede/*/LC/LDC/LDCU='-' or schede/*/LC/LDC/LDCU='/')">
                         			<clvapit:fullAddress>
                             			<xsl:value-of select="normalize-space(schede/*/LC/LDC/LDCU)" />
                         			</clvapit:fullAddress>
@@ -3865,7 +3873,7 @@
                                             </xsl:attribute>
                                         </locgeoamm:hasToponymInTime>
                                     </xsl:if>
-                                    <xsl:if test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-')">
+                                    <xsl:if test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/')">
                                         <clvapit:fullAddress>
                                             <xsl:value-of select="normalize-space(./PRC/PRCU)" />
                                         </clvapit:fullAddress>
@@ -4301,7 +4309,7 @@
                                             </xsl:attribute>
                                         </clvapit:hasAddressArea>
                                     </xsl:if>
-                                    <xsl:if test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-')">
+                                    <xsl:if test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/')">
                                         <clvapit:fullAddress>
                                             <xsl:value-of select="normalize-space(./PRC/PRCU)" />
                                         </clvapit:fullAddress>
