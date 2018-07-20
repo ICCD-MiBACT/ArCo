@@ -1856,7 +1856,7 @@
             </xsl:for-each>
             <!-- We add the definition as an individual. The definition is associated 
 				with a Cultural Property Type by the property cpdescription:hasCulturalPropertyDefinition. -->
-            <xsl:if test="schede/*/OG/OGT/OGTD and not(schede/*/OG/OGT/OGTD='NR' or schede/*/OG/OGT/OGTD='N.R.' or schede/*/OG/OGT/OGTD='NR (recupero pregresso)')">">
+            <xsl:if test="schede/*/OG/OGT/OGTD and not(schede/*/OG/OGT/OGTD='NR' or schede/*/OG/OGT/OGTD='N.R.' or schede/*/OG/OGT/OGTD='NR (recupero pregresso)')">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
                         <xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTD)))" />
