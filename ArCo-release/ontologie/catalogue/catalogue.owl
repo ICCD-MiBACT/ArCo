@@ -17,7 +17,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/catalogue/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -107,6 +107,21 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>CM/CMP/CMPD; CM/RVM/RVMD; CM/AGG/AGGD</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/catalogue/hasAlternativeIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/hasAlternativeIdentifier">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/catalogue/AlternativeIdentifier"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una scheda di catalogo a un codice che identifica la scheda di catalogo nell&apos;ambito di altri sistemi informativi, assegnato da enti diversi da ICCD.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha altro codice identificativo</rdfs:label>
+        <rdfs:label xml:lang="en">has alternative identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: AC/ACC</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -448,6 +463,52 @@
     
 
 
+    <!-- https://w3id.org/arco/catalogue/deletedICCDIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/catalogue/deletedICCDIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un codice ICCD eventualmente soppresso per motivi di diversa natura, utile per poter ricercare e consultare le schede pregresse nell&apos;Archivio storico gestito dall&apos;Istituto o da altri Enti.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice ICCD soppresso</rdfs:label>
+        <rdfs:label xml:lang="en">deleted ICCD identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSP; versioni precedenti: RV/RVE/RVES</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/catalogue/recoveredData -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/catalogue/recoveredData">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali informazioni provenienti da schede pregresse redatte sulla base di standard obsoleti, per le quali non è stato possibile effettuare il trasferimento nel tracciato della scheda aggiornato, secondo la sintassi: “acronimocampo: valore; acronimocampo: valore”</rdfs:comment>
+        <rdfs:label xml:lang="it">dati pregressi recuperati</rdfs:label>
+        <rdfs:label xml:lang="en">recovered data</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AN/RDP</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/catalogue/referenceProject -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/catalogue/referenceProject">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/AlternativeIdentifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il progetto nell&apos;ambito del quale è stata prodotta la scheda, cui si associa un codice alternativo, assegnato da enti diversi da ICCD.</rdfs:comment>
+        <rdfs:label xml:lang="it">progetto di riferimento</rdfs:label>
+        <rdfs:label xml:lang="en">reference project</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/catalogue/systemRecordCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/catalogue/systemRecordCode">
@@ -481,6 +542,19 @@
     
 
 
+    <!-- https://w3id.org/arco/catalogue/AlternativeIdentifier -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/catalogue/AlternativeIdentifier">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un codice che identifica la scheda di catalogo nell&apos;ambito di altri sistemi informativi, assegnato da enti diversi da ICCD.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alternative Identifier</rdfs:label>
+        <rdfs:label xml:lang="it">Codice alternativo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/catalogue/CatalogueRecord -->
 
     <owl:Class rdf:about="https://w3id.org/arco/catalogue/CatalogueRecord">
@@ -500,6 +574,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/catalogue/catalogueRecordIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/catalogue/systemRecordCode"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
