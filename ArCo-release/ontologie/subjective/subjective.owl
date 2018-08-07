@@ -19,6 +19,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/subjective/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -141,6 +142,7 @@
     <!-- https://w3id.org/arco/subjective/hasBibliography -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasBibliography">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua bibliografia. Per esempio, nell&apos;ambito del Catalogo Generale, collega un bene culturale alla bibliografia che riguarda il bene stesso, descritto in una scheda di catalogo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha bibliografia</rdfs:label>
@@ -412,6 +414,19 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasMusicalInstrumentClassification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMusicalInstrumentClassification">
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/MusicalInstrumentClassification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a una classificazione con cui lo strumento può essere codificato.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha classificazione di strumento musicale</rdfs:label>
+        <rdfs:label xml:lang="en">has musical instrument classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasResponsibleForInsertion -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasResponsibleForInsertion">
@@ -672,6 +687,52 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     <!-- https://w3id.org/arco/core/specifications -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/specifications"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/HSDefinition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/HSDefinition">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/HornbostelSachsClassification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la definizione associata allo strumento musicale, secondo la classificazione Hornbostel-Sachs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs definition</rdfs:label>
+        <rdfs:label xml:lang="it">definizione Hornbostel-Sachs</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSD</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/HSEdition -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/HSEdition">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/HornbostelSachsClassification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;indicazione bibliografica dell&apos;edizione Hornbostel-Sachs utilizzata per la classificazione dello strumento musicale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs edition</rdfs:label>
+        <rdfs:label xml:lang="it">edizione Hornbostel-Sachs</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSE</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/HSNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/HSNumber">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/HornbostelSachsClassification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice numerico, secondo l&apos;edizione specifica Hornbostel-Sachs, associato allo strumento musicale nell&apos;ambito della classificazione Hornbostel-Sachs.</rdfs:comment>
+        <rdfs:label xml:lang="it">Codice numerico Hornbostel-Sachs</rdfs:label>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSN</core:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -1037,7 +1098,7 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la codifica iconclass che permette di descrivere, mediante un codice alfanumerico, il soggetto o il motivo decorativo rappresentato.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the Iconclass code, to describe the subject or ornamental motif represented by the cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the Iconclass code, for describing the subject or ornamental motif represented by the cultural property.</rdfs:comment>
         <rdfs:label xml:lang="it">Codifica Iconclass</rdfs:label>
         <rdfs:label xml:lang="en">Iconclass Code</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1201,6 +1262,21 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/taxon -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/taxon">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/AlternativeMusicalInstrumentClassification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice tassonomico e la definizione attribuite allo strumento musicale schedato nell&apos;ambito del sistema di classificazione preso in considerazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">taxon</rdfs:label>
+        <rdfs:label xml:lang="it">taxon</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: CL/CLA/CLAT</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/title -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/title">
@@ -1309,6 +1385,39 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>AU/AAT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/AlternativeMusicalInstrumentClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/AlternativeMusicalInstrumentClassification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/MusicalInstrumentClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasBibliography"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/taxon"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/subjective/HornbostelSachsClassification"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un sistema di classificazione diverso da quello Hornbostel-Sachs, con cui può essere codificato uno strumento musicale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alternative musical instrument classification</rdfs:label>
+        <rdfs:label xml:lang="it">Classificazione alternativa di strumento musicale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: CL/CLA</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1842,6 +1951,38 @@ bene catalogato.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/subjective/HornbostelSachsClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/HornbostelSachsClassification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/MusicalInstrumentClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/HSNumber"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/HSDefinition"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/HSEdition"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione Hornbostel-Sachs di uno strumento musicale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Classificazione Hornbostel-Sachs</rdfs:label>
+        <rdfs:label xml:lang="en">Hornbostel-Sachs classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: CL/CHS</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Intervention -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Intervention">
@@ -1953,6 +2094,19 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ADM (solo versioni 3.00 e 3.01)</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/MusicalInstrumentClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/MusicalInstrumentClassification">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione relativa a uno strumento musicale, secondo la classificazione di Hornbostel-Sachs ed eventualmente anche secondo altre classificazioni.</rdfs:comment>
+        <rdfs:label xml:lang="it">Classificazione di strumento musicale</rdfs:label>
+        <rdfs:label xml:lang="en">Musical instrument classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: CL</core:iccdNormTag>
     </owl:Class>
     
 
