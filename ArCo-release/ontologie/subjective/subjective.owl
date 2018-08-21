@@ -417,12 +417,43 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasMusicalInstrumentClassification -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMusicalInstrumentClassification">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/MusicalInstrumentClassification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a una classificazione con cui lo strumento può essere codificato.</rdfs:comment>
         <rdfs:label xml:lang="it">ha classificazione di strumento musicale</rdfs:label>
         <rdfs:label xml:lang="en">has musical instrument classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasResearch -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasResearch">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Research"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha ricerca</rdfs:label>
+        <rdfs:label xml:lang="en">has research</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR/DRT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasResearchScientificDirector -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasResearchScientificDirector">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Research"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una ricerca al responsabile scientifico della ricerca. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha responsabile scientifico della ricerca</rdfs:label>
+        <rdfs:label xml:lang="en">has research scientific director</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR/DRR</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -533,6 +564,51 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasSurvey -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurvey">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale al rilevamento del bene stesso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha rilevamento</rdfs:label>
+        <rdfs:label xml:lang="en">has survey</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasSurveyOperator -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurveyOperator">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale al rilevatore, ovvero all&apos;operatore del rilevamento. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha rilevatore</rdfs:label>
+        <rdfs:label xml:lang="en">has survey operator</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR/DRL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasSurveyResponsible -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurveyResponsible">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale all&apos;ente o al soggetto responsabile del rilevamento. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha responsabile del rilevamento</rdfs:label>
+        <rdfs:label xml:lang="en">has survey responsible</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa SM 4.00: DR/DRV</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasTitle -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasTitle">
@@ -619,6 +695,22 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>UB/COL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/isRelatedToResearch -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isRelatedToResearch">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Research"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related to research</rdfs:label>
+        <rdfs:label xml:lang="it">si riferisce a ricerca</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1354,6 +1446,12 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     <!-- https://w3id.org/arco/core/MovableCulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/MovableCulturalProperty"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/MusicHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/MusicHeritage"/>
     
 
 
@@ -2163,6 +2261,31 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Research -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Research">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasResearchScientificDirector"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la ricerca nell&apos;ambito della quale è stata redatta la scheda, intendendo con il termine “ricerca” vari e differenziati livelli, fra cui quello della campagna di catalogazione. La ricerca si può collegare al rilevamento di un bene musicale di interesse etno-organologico.</rdfs:comment>
+        <rdfs:label xml:lang="en">Research</rdfs:label>
+        <rdfs:label xml:lang="it">Ricerca</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR/DRT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/SECClassification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/SECClassification">
@@ -2252,6 +2375,37 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Survey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Survey">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyOperator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/isRelatedToResearch"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Research"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il rilevamento di un bene musicale di interesse etno-organologico.</rdfs:comment>
+        <rdfs:label xml:lang="it">Rilevamento</rdfs:label>
+        <rdfs:label xml:lang="en">Survey</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR</core:iccdNormTag>
     </owl:Class>
     
 
