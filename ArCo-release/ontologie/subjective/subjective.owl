@@ -20,8 +20,8 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/subjective/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
-        <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -1611,7 +1611,7 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative ai riferimenti bibliografici che riguardano il bene catalogato.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative ai riferimenti bibliografici che riguardano il bene catalogato, o una specifica informazione registrata nella scheda di catalogo.</rdfs:comment>
         <rdfs:label xml:lang="it">Bibliografia</rdfs:label>
         <rdfs:label xml:lang="en">Bibliography</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>

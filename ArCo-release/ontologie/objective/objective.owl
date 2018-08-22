@@ -241,6 +241,7 @@
     <!-- https://w3id.org/arco/objective/hasNameInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasNameInTime">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà è stata creata come proprietà generica per sottoproprietà più specifiche, per collegare un&apos;entità a una denominazione nel tempo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha nome nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has name in time</rdfs:label>

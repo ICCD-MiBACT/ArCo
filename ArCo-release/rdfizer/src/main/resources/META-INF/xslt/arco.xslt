@@ -1691,7 +1691,7 @@
                         </rdfs:label>
                         <l0:name>
                             <xsl:choose>
-                                <xsl:when test="./DTMS">
+                                <xsl:when test="./DTM/DTMS">
                                     <xsl:value-of select="normalize-space(./DTM/DTMM)" />
                                 </xsl:when>
                                 <xsl:otherwise>
