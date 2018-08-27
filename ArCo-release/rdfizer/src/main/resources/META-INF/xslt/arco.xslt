@@ -2565,68 +2565,72 @@
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
-                        	<xsl:if test="./AUTN">
-	                            <xsl:choose>
-	                                <xsl:when test="./AUTS">
-	                                    <xsl:value-of select="concat(normalize-space(./AUTN), ' (', normalize-space(./AUTS), ')')" />
-	                                </xsl:when>
-	                                <xsl:otherwise>
-	                                    <xsl:value-of select="normalize-space(./AUTN)" />
-	                                </xsl:otherwise>
-	                            </xsl:choose>
-                            </xsl:if>
-                            <xsl:if test="../AUF/AUFN">
-                            	<xsl:choose>
-	                                <xsl:when test="../AUF/AUFS">
-	                                	<xsl:value-of select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
-	                                </xsl:when>
-	                                <xsl:otherwise>
-	                                    <xsl:value-of select="normalize-space(./AUFN)" />
-	                                </xsl:otherwise>
-	                            </xsl:choose>                            
-                            </xsl:if>
-                            <xsl:if test="../AUF/AUFB">
-                            	<xsl:choose>
-	                                <xsl:when test="../AUF/AUFS">
-	                                	<xsl:value-of select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
-	                                </xsl:when>
-	                                <xsl:otherwise>
-	                                    <xsl:value-of select="normalize-space(./AUFB)" />
-	                                </xsl:otherwise>
-	                            </xsl:choose>                            
-                            </xsl:if>
-                        </rdfs:label>
+                        	<xsl:choose>
+                        		<xsl:when test="./AUTN">
+	                        		<xsl:choose>
+		                                <xsl:when test="./AUTS">
+		                                    <xsl:value-of select="concat(normalize-space(./AUTN), ' (', normalize-space(./AUTS), ')')" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of select="normalize-space(./AUTN)" />
+		                                </xsl:otherwise>
+		                            </xsl:choose>
+                        		</xsl:when>
+                        		<xsl:when test="../AUF/AUFN">
+	                        		<xsl:choose>
+		                                <xsl:when test="../AUF/AUFS">
+		                                	<xsl:value-of select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of select="normalize-space(./AUFN)" />
+		                                </xsl:otherwise>
+		                            </xsl:choose>
+                        		</xsl:when>
+                        		<xsl:when test="../AUF/AUFB">
+	                        		<xsl:choose>
+		                                <xsl:when test="../AUF/AUFS">
+		                                	<xsl:value-of select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of select="normalize-space(./AUFB)" />
+		                                </xsl:otherwise>
+	                           	 	</xsl:choose> 
+                        		</xsl:when>
+                        	</xsl:choose>
+                         </rdfs:label>
                         <l0:name>
-                            <xsl:if test="./AUTN">
-	                            <xsl:choose>
-	                                <xsl:when test="./AUTS">
-	                                    <xsl:value-of select="concat(normalize-space(./AUTN), ' (', normalize-space(./AUTS), ')')" />
-	                                </xsl:when>
-	                                <xsl:otherwise>
-	                                    <xsl:value-of select="normalize-space(./AUTN)" />
-	                                </xsl:otherwise>
-	                            </xsl:choose>
-                            </xsl:if>
-                            <xsl:if test="../AUF/AUFN">
-                            	<xsl:choose>
-	                                <xsl:when test="../AUF/AUFS">
-	                                	<xsl:value-of select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
-	                                </xsl:when>
-	                                <xsl:otherwise>
-	                                    <xsl:value-of select="normalize-space(./AUFN)" />
-	                                </xsl:otherwise>
-	                            </xsl:choose>                            
-                            </xsl:if>
-                            <xsl:if test="../AUF/AUFB">
-                            	<xsl:choose>
-	                                <xsl:when test="../AUF/AUFS">
-	                                	<xsl:value-of select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
-	                                </xsl:when>
-	                                <xsl:otherwise>
-	                                    <xsl:value-of select="normalize-space(./AUFB)" />
-	                                </xsl:otherwise>
-	                            </xsl:choose>                            
-                            </xsl:if>
+                            <xsl:choose>
+                        		<xsl:when test="./AUTN">
+	                        		<xsl:choose>
+		                                <xsl:when test="./AUTS">
+		                                    <xsl:value-of select="concat(normalize-space(./AUTN), ' (', normalize-space(./AUTS), ')')" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of select="normalize-space(./AUTN)" />
+		                                </xsl:otherwise>
+		                            </xsl:choose>
+                        		</xsl:when>
+                        		<xsl:when test="../AUF/AUFN">
+	                        		<xsl:choose>
+		                                <xsl:when test="../AUF/AUFS">
+		                                	<xsl:value-of select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of select="normalize-space(./AUFN)" />
+		                                </xsl:otherwise>
+		                            </xsl:choose>
+                        		</xsl:when>
+                        		<xsl:when test="../AUF/AUFB">
+	                        		<xsl:choose>
+		                                <xsl:when test="../AUF/AUFS">
+		                                	<xsl:value-of select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of select="normalize-space(./AUFB)" />
+		                                </xsl:otherwise>
+	                           	 	</xsl:choose> 
+                        		</xsl:when>
+                        	</xsl:choose>
                         </l0:name>
                         <xsl:if test="./AUTA">
                             <culturaldefinition:authorDate>
@@ -3207,6 +3211,14 @@
                             </xsl:attribute>
                         </tiapit:atTime>
                     </xsl:if>
+                    <!-- hasCircumstance for Shot Location (F) -->
+                    <xsl:if test="../../F/LR/LRO">
+                        <culturaldefinition:hasCircumstance>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="concat($NS, 'Circumstance/', arco-fn:urify(normalize-space(../../F/LR/LRO)))" />
+                            </xsl:attribute>
+                        </culturaldefinition:hasCircumstance>
+                    </xsl:if>
                 </rdf:Description>
                 <xsl:if test="./TLC or ./TCL">
                     <xsl:choose>
@@ -3246,6 +3258,25 @@
                             </rdf:Description>
                         </xsl:when>
                     </xsl:choose>
+                </xsl:if>
+                <!-- Circumstance as individual for Shot Location (F) -->
+                <xsl:if test="../../F/LR/LRO">
+                    <rdf:Description>
+                        <xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'Circumstance/', arco-fn:urify(normalize-space(../../F/LR/LRO)))" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/Circumstance'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <rdfs:label>
+                            <xsl:value-of select="normalize-space(../../F/LR/LRO)" />
+                        </rdfs:label>
+                        <l0:name>
+                            <xsl:value-of select="normalize-space(../../F/LR/LRO)" />
+                        </l0:name>
+                    </rdf:Description>
                 </xsl:if>
                 <!-- Monumental Area as individual in the scope of the Site of LA -->
                 <xsl:if test="./PRC/PRCC and not(lower-case(normalize-space(./PRC/PRCC))='nr' or lower-case(normalize-space(./PRC/PRCC))='n.r.' or lower-case(normalize-space(./PRC/PRCC))='nr (recupero pregresso)')">
@@ -4418,6 +4449,43 @@
                                     </xsl:if>
                                 </rdf:Description>
                             </xsl:if>
+                            <!-- Valentina - unfixed bug: it doesn't generate the resource ToponymInTime for LRL or LRCF (tested on ICCD8532322.xml -->
+                            <xsl:if test="../../F/LR/LRL">
+                                <rdf:Description>
+                                    <xsl:attribute name="rdf:about">
+                                       <xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(../../F/LR/LRL)))" />
+                                    </xsl:attribute>
+                                    <rdf:type>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/arco/location/ToponymInTime'" />
+                                        </xsl:attribute>
+                                    </rdf:type>
+                                    <rdfs:label>
+                                       <xsl:value-of select="normalize-space(../../F/LR/LRL)" />
+                                    </rdfs:label>
+                                    <l0:name>
+                                        <xsl:value-of select="normalize-space(../../F/LR/LRL)" />
+                                    </l0:name>
+                                </rdf:Description>
+                            </xsl:if>
+                            <xsl:if test="../../F/LR/LRC/LRCF">
+                                <rdf:Description>
+                                    <xsl:attribute name="rdf:about">
+                                       <xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(../../F/LR/LRC/LRCF)))" />
+                                    </xsl:attribute>
+                                    <rdf:type>
+                                        <xsl:attribute name="rdf:resource">
+                                            <xsl:value-of select="'https://w3id.org/arco/location/ToponymInTime'" />
+                                        </xsl:attribute>
+                                    </rdf:type>
+                                    <rdfs:label>
+                                       <xsl:value-of select="normalize-space(../../F/LR/LRC/LRCF)" />
+                                    </rdfs:label>
+                                    <l0:name>
+                                        <xsl:value-of select="normalize-space(../../F/LR/LRC/LRCF)" />
+                                    </l0:name>
+                                </rdf:Description>
+                            </xsl:if>
                             <!-- rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of 
 								select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-current')" 
 								/> </xsl:attribute> <locgeoamm:atSite> <xsl:attribute name="rdf:resource"> 
@@ -4527,7 +4595,7 @@
                                         </xsl:attribute>
                                     </locgeoamm:hasContinent>
                                 </xsl:if>
-                                <!--  <xsl:if test="./PRL">
+                                <xsl:if test="./PRL">
                                         <locgeoamm:hasToponymInTime>
                                             <xsl:attribute name="rdf:resource">
                                                 <xsl:choose>
@@ -4554,9 +4622,10 @@
                                             	<xsl:value-of select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(../../F/LR/LRC/LRCF)))" />
                                             </xsl:attribute>
                                         </locgeoamm:hasToponymInTime>
-                                    </xsl:if> -->
+                                    </xsl:if> 
                             </rdf:Description>
                             <!-- Continent as individual -->
+                            <xsl:if test="./PRT/PRTK">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
                                     <xsl:value-of select="concat($NS, 'Continent/', arco-fn:urify(arco-fn:md5(normalize-space(./PRT/PRTK))))" />
@@ -4573,6 +4642,7 @@
                                     <xsl:value-of select="concat($NS, 'Continent/', arco-fn:urify(arco-fn:md5(normalize-space(./PRT/PRTK))))" />
                                 </l0:name>
                             </rdf:Description>
+                            </xsl:if>
                             <xsl:if test="./PRV/* | ../../F/LR/LRC/*">
                                 <rdf:Description>
                                     <xsl:attribute name="rdf:about">

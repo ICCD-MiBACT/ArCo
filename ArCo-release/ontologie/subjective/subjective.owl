@@ -157,14 +157,14 @@
     <!-- https://w3id.org/arco/subjective/hasCircumstance -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCircumstance">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Commission"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Circumstance"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene indicata la committenza di un bene culturale all&apos;occasione che ha determinato quella committenza</rdfs:comment>
-        <rdfs:label xml:lang="it">ha circostanza di committenza</rdfs:label>
-        <rdfs:label xml:lang="en">has commission circumstance</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione all&apos;occasione che ha determinato quella situazione. Per esempio, può collegare una situazione in cui viene indicata la committenza di un bene culturale all&apos;occasione che ha determinato quella committenza, oppure un luogo di ripresa di un bene fotografico all&apos;occasione che ha determinato il motivo della ripresa.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha circostanza</rdfs:label>
+        <rdfs:label xml:lang="en">has circumstance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC</core:iccdNormTag>
+        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1654,12 +1654,12 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/Circumstance -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Circumstance">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;occasione per cui è stato commissionato un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione che ha determinato una certa situazione, per esempio l&apos;occasione per cui è stato commissionato un bene culturale, o l&apos;occasione che ha determinato la ripresa di un bene fotografico.</rdfs:comment>
         <rdfs:label xml:lang="it">Circostanza</rdfs:label>
         <rdfs:label xml:lang="en">Circumstance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC</core:iccdNormTag>
+        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</core:iccdNormTag>
     </owl:Class>
     
 

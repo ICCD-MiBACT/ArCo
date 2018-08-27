@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/arco/core/"
      xml:base="https://w3id.org/arco/core/"
      xmlns:locgeoamm="https://w3id.org/arco/location/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:subjective="https://w3id.org/arco/subjective/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
@@ -49,6 +50,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
     
 
 
@@ -241,6 +248,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasPart">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isPartOf"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
     </owl:ObjectProperty>
     
 
@@ -360,7 +368,9 @@
 
     <!-- https://w3id.org/arco/core/isPartOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isPartOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isPartOf">
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
+    </owl:ObjectProperty>
     
 
 
@@ -1303,6 +1313,12 @@ trovano.</rdfs:comment>
     <!-- https://w3id.org/arco/subjective/Title -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Title"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Feature -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
     
 
 
