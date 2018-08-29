@@ -1036,6 +1036,16 @@
                         </culturaldefinition:hasEdition>
                     </xsl:if>
                 </xsl:for-each>
+                <!-- member of collection -->
+                <xsl:for-each select="schede/*/UB/COL">
+	                <xsl:if test="./*">
+	                    <culturaldefinition:isMemberOfCollection>
+	                        <xsl:attribute name="rdf:resource">
+	                            <xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI, '-collection-membership-', position())" />
+	                        </xsl:attribute>
+	                    </culturaldefinition:isMemberOfCollection>
+	                </xsl:if>
+                </xsl:for-each>
                 <xsl:for-each select="schede/*/CO/STC">
 	                <xsl:if test="./*">
 	                    <cpdescription:hasConservationStatus>
@@ -1055,6 +1065,7 @@
                         <xsl:value-of select="normalize-space(schede/*/CO/STD)" />
                     </cpdescription:storageConditions>
                 </xsl:if>
+                <!-- heritage protection agency -->
                 <xsl:if test="schede/*/CD/ECP">
                     <arco:hasAgentRole>
                         <xsl:attribute name="rdf:resource">
@@ -1067,6 +1078,7 @@
                         </xsl:attribute>
                     </arco:hasHeritageProtectionAgency>
                 </xsl:if>
+                <!-- cataloguing agency -->
                 <xsl:if test="schede/*/CD/ESC">
                     <arco:hasAgentRole>
                         <xsl:attribute name="rdf:resource">
@@ -1313,7 +1325,15 @@
                 <xsl:for-each select="schede/*/OG/OGD">
                     <cpdescription:hasDesignationInTime>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat('https://w3id.org/arco/resource/NameInTime/', arco-fn:urify(arco-fn:md5(normalize-space(.))))" />
+                        	<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationInTime/', arco-fn:urify(normalize-space(./OGDN)))" />                      	                            
+                        </xsl:attribute>
+                    </cpdescription:hasDesignationInTime>
+                </xsl:for-each>
+                <!-- name in time (OG/OGT/OGTN) -->
+                <xsl:for-each select="schede/*/OG/OGT/OGTN">
+                    <cpdescription:hasDesignationInTime>
+                        <xsl:attribute name="rdf:resource">
+                        			<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationInTime/', arco-fn:urify(normalize-space(.)))" />   	                            
                         </xsl:attribute>
                     </cpdescription:hasDesignationInTime>
                 </xsl:for-each>
@@ -1451,19 +1471,20 @@
                     </xsl:if>
             	</rdf:Description>
             </xsl:if>
-            <xsl:for-each select="schede/*/OG/OGD">
+            <!-- ERROR, this element has already been created in another section of the sheet
+             <xsl:for-each select="schede/*/OG/OGD">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat('https://w3id.org/arco/resource/NameInTime/', arco-fn:urify(arco-fn:md5(normalize-space(.))))" />
+                        <xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationInTime/', arco-fn:urify(normalize-space(./OGDN)))" />
                     </xsl:attribute>
                     <rdfs:label>
-                        <xsl:value-of select="normalize-space(.)" />
+                        <xsl:value-of select="normalize-space(./OGDN)" />
                     </rdfs:label>
                     <l0:name>
-                        <xsl:value-of select="normalize-space(.)" />
+                        <xsl:value-of select="normalize-space(./ODGN)" />
                     </l0:name>
                 </rdf:Description>
-            </xsl:for-each>
+            </xsl:for-each>  -->
             <xsl:for-each select="schede/*/AU/EDT">
                 <xsl:if test="./EDTN">
                     <rdf:Description>
@@ -2126,28 +2147,79 @@
                 </rdf:Description>
             </xsl:if>
             <!-- Name in time -->
-            <xsl:if test="schede/*/OG/OGD">
+            <xsl:if test="schede/*/OG/OGD or schede/*/OG/OGT/OGTN">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat('https://w3id.org/arco/resource/NameInTime/', arco-fn:urify(arco-fn:md5(schede/*/OG/OGD)))" />
+                    <xsl:choose>
+                        <xsl:when test="schede/*/OG/OGD/OGDN">
+                        	<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationInTime/', arco-fn:urify(normalize-space(schede/*/OG/OGD/OGDN)))" />
+                        </xsl:when>
+                        <xsl:when test="schede/*/OG/OGT/OGTN">
+                        	<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationInTime/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTN)))" />
+                        </xsl:when>
+                    </xsl:choose>
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'http://dati.beniculturali.it/cis/NameInTime'" />
+                            <xsl:value-of select="'https://w3id.org/arco/objective/DesignationInTime'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
-                        <xsl:value-of select="normalize-space(schede/*/OG/OGD)" />
+                    	<xsl:choose>
+                    		<xsl:when test="schede/*/OG/OGD/OGDN">
+                    			<xsl:value-of select="normalize-space(schede/*/OG/OGD/OGDN)" />
+                    		</xsl:when>
+                    		<xsl:when test="schede/*/OG/OGT/OGTN">
+                    			<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTN)" />
+                    		</xsl:when>                    	
+                    	</xsl:choose>
                     </rdfs:label>
+                    <l0:name>
+                        <xsl:choose>
+                    		<xsl:when test="schede/*/OG/OGD/OGDN">
+                    			<xsl:value-of select="normalize-space(schede/*/OG/OGD/OGDN)" />
+                    		</xsl:when>
+                    		<xsl:when test="schede/*/OG/OGT/OGTN">
+                    			<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTN)" />
+                    		</xsl:when>                    	
+                    	</xsl:choose>
+                    </l0:name>
                     <xsl:if test="schede/*/OG/OGD/OGDR">
-                        <cis:isValidDuring>
-                            <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="concat('https://w3id.org/arco/resource/TimeInterval/', arco-fn:urify(schede/*/OG/OGD/OGDR))" />
-                            </xsl:attribute>
-                        </cis:isValidDuring>
+                        <tiapit:date>
+                           <xsl:value-of select="schede/*/OG/OGD/OGDR" />
+                        </tiapit:date>
+                    </xsl:if>
+                    <xsl:if test="schede/*/OG/OGD/OGDS">
+                        <arco:note>
+                           <xsl:value-of select="schede/*/OG/OGD/OGDS" />
+                        </arco:note>
+                    </xsl:if>
+                    <xsl:if test="schede/*/OG/OGD/OGDT">
+                        <cpdescription:hasDesignationType>
+                        	<xsl:attribute name="rdf:resource">
+                        		<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationType/', arco-fn:urify(normalize-space(schede/*/OG/OGD/OGDT)))"/>
+                        	</xsl:attribute>
+                        </cpdescription:hasDesignationType>
                     </xsl:if>
                 </rdf:Description>
-                <!-- Name in time - Time interval -->
+                </xsl:if>
+                <xsl:if test="schede/*/OG/OGD/OGDT">
+                    <rdf:Description>
+                       <xsl:attribute name="rdf:about">
+                        	<xsl:value-of select="concat('https://w3id.org/arco/resource/DesignationType/', arco-fn:urify(normalize-space(schede/*/OG/OGD/OGDT)))"/>
+                       </xsl:attribute>
+                       <rdf:type>
+                       		<xsl:value-of select="'https://w3id.org/arco/objective/DesignationType'" />
+                       </rdf:type>
+                       <rdfs:label>
+                       		<xsl:value-of select="schede/*/OG/OGD/OGDT" />
+                       </rdfs:label>
+                       <l0:name>
+                       		<xsl:value-of select="schede/*/OG/OGD/OGDT" />
+                       </l0:name>
+                     </rdf:Description>
+                 </xsl:if>
+                <!-- Name in time - Time interval - rules for previous model
                 <xsl:if test="schede/*/OG/OGD/OGDR">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
@@ -2164,9 +2236,9 @@
                         <tiapit:startTime>
                             <xsl:value-of select="schede/*/OG/OGD/OGDR" />
                         </tiapit:startTime>
-                    </rdf:Description>
-                </xsl:if>
-            </xsl:if>
+                    </rdf:Description> 
+                </xsl:if> -->
+            
             <!-- We add the scope of protection as an individual. The scope of protection 
 				is associated with a Cultural Property by the property cpdescription:hasMibactScopeOfProtection. 
 				ALERT: this part has been removed in version 0.2 as the Mibact Scope of Protection 
@@ -2982,6 +3054,191 @@
 				<rdf:type> <xsl:attribute name="rdf:resource"> <xsl:value-of select="'https://w3id.org/arco/culturaldefinition/Source'" 
 				/> </xsl:attribute> </rdf:type> <rdfs:label> <xsl:value-of select="normalize-space(schede/*/AU/ATB/ATBM)" 
 				/> </rdfs:label> </rdf:Description> </xsl:if -->
+            <!-- member of collection -->
+            <xsl:for-each select="schede/*/UB/COL">
+	            <xsl:if test="./*">
+	            	<rdf:Description>
+	            		<xsl:attribute name="rdf:about">
+                            <xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI, '-collection-membership-', position())" />
+                        </xsl:attribute>
+                        <rdf:type>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/arco/subjective/CollectionMembership'" />
+                            </xsl:attribute>
+                        </rdf:type>
+                        <culturaldefinition:hasCulturalProperty>
+                        	<xsl:attribute name="rdf:resource">
+                        		<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                        	</xsl:attribute>
+                        </culturaldefinition:hasCulturalProperty>
+                        <culturaldefinition:hasCollection>
+                        	<xsl:attribute name="rdf:resource">
+                        		<xsl:value-of select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+                        	</xsl:attribute>
+                        </culturaldefinition:hasCollection>
+                        <xsl:if test="./COLM">
+                        	<culturaldefinition:leavingReason>
+                        		<xsl:value-of select="./COLM" />
+                        	</culturaldefinition:leavingReason>
+                        </xsl:if>
+                        <xsl:if test="./COLI">
+                        	<culturaldefinition:unitInventoryIdentifier>
+                        		<xsl:value-of select="./COLI" />
+                        	</culturaldefinition:unitInventoryIdentifier>
+                        </xsl:if>
+                        <xsl:if test="./COLV">
+                        	<culturaldefinition:culturalPropertyValue>
+                        		<xsl:value-of select="./COLV" />
+                        	</culturaldefinition:culturalPropertyValue>
+                        </xsl:if>
+                        <xsl:if test="./COLU or ./COLA">
+                        	<tiapit:atTime>
+                        		<xsl:attribute name="rdf:resource">
+                        		<xsl:choose>
+                        			<xsl:when test="./COLU and ./COLA">
+                        				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./COLA)), '-', arco-fn:urify(normalize-space(./COLU)))" />
+                        			</xsl:when>
+                        			<xsl:when test="./COLU">
+                        				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./COLU)))" />
+                        			</xsl:when>
+                        			<xsl:when test="./COLA">
+                        				<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./COLA)))" />
+                        			</xsl:when>
+                        			</xsl:choose>
+                        		</xsl:attribute>
+                        	</tiapit:atTime>
+                        </xsl:if>
+	            	</rdf:Description>
+	             <!-- time interval of member of collection -->
+	            <xsl:if test="./COLA or ./COLU">
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:choose>
+                        	<xsl:when test="./COLU and ./COLA">
+                        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./COLA)), '-', arco-fn:urify(normalize-space(./COLU)))" />
+                        	</xsl:when>
+                        	<xsl:when test="./COLU">
+                        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./COLU)))" />
+                        	</xsl:when>
+                        	<xsl:when test="./COLA">
+                        		<xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./COLA)))" />
+                        	</xsl:when>
+                        	</xsl:choose>
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInteval'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <tiapit:startTime>
+                        <xsl:value-of select="normalize-space(./COLA)" />
+                    </tiapit:startTime>
+                    <tiapit:endTime>
+                        <xsl:value-of select="normalize-space(./COLU)" />
+                    </tiapit:endTime>
+                </rdf:Description>
+                </xsl:if>
+                <!-- collection of cultural entities -->
+                <rdf:Description>
+                	<xsl:attribute name="rdf:about">
+                		<xsl:value-of select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+                	</xsl:attribute>
+                	<rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'http://dati.beniculturali.it/cis/CollectionOfCulturalEntities'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label>
+                    	<xsl:choose>
+                    	<xsl:when test="./COLD">
+                    		<xsl:value-of select="./COLD" />
+                    	</xsl:when>
+                    	<xsl:otherwise>
+                    		<xsl:value-of select="concat('Collezione contenente il bene: ', $itemURI)" />
+                    	</xsl:otherwise>
+                    	</xsl:choose>
+                    </rdfs:label>
+                    <l0:name>
+                    	<xsl:choose>
+                    	<xsl:when test="./COLD">
+                    		<xsl:value-of select="./COLD" />
+                    	</xsl:when>
+                    	<xsl:otherwise>
+                    		<xsl:value-of select="concat('Collezione contenente il bene: ', $itemURI)" />
+                    	</xsl:otherwise>
+                    	</xsl:choose>
+                    </l0:name>
+                    <culturaldefinition:isCollectionIn>
+                    	<xsl:attribute name="rdf:resource">
+                    		<xsl:value-of select="concat($NS, 'CollectionMembership/', $itemURI, '-collection-membership-', position())" />
+                    	</xsl:attribute>
+                    </culturaldefinition:isCollectionIn>
+                    <xsl:if test="./COLS">
+                    	<arco:note>
+                    		<xsl:value-of select="./COLS" />
+                    	</arco:note>
+                    </xsl:if>
+                    <xsl:if test="./COLC or ./COLN">
+                    	<culturaldefinition:hasCollector>
+                    		<xsl:attribute name="rdf:resource">
+                    			<xsl:choose>
+                    				<xsl:when test="./COLC">
+                    					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./COLC)))" />
+                    				</xsl:when>
+                    				<xsl:otherwise>
+                    					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./COLN)))" />
+                    				</xsl:otherwise>
+                    			</xsl:choose>
+                    		</xsl:attribute>
+                    	</culturaldefinition:hasCollector>
+                    </xsl:if>
+                </rdf:Description>
+                <!-- collector of collection of cultural entities -->
+                <xsl:if test="./COLC or ./COLN">
+                <rdf:Description>	
+                	<xsl:attribute name="rdf:about">
+                		<xsl:choose>
+                    		<xsl:when test="./COLC">
+                    			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./COLC)))" />
+                    		</xsl:when>
+                    		<xsl:otherwise>
+                    			<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./COLN)))" />
+                    		</xsl:otherwise>
+                    	</xsl:choose>
+                    </xsl:attribute>
+                    	<rdf:type>
+                    		<xsl:attribute name="rdf:resource">
+                                <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+                            </xsl:attribute>
+                    	</rdf:type>		
+                    	<rdfs:label>
+                    	   <xsl:choose>
+	                    		<xsl:when test="./COLC">
+	                    			<xsl:value-of select="./COLC" />
+	                    		</xsl:when>
+	                    		<xsl:otherwise>
+	                    			<xsl:value-of select="./COLN" />
+	                    		</xsl:otherwise>
+                    		</xsl:choose>
+                        </rdfs:label>
+                        <l0:name>
+                             <xsl:choose>
+	                    		<xsl:when test="./COLC">
+	                    			<xsl:value-of select="./COLC" />
+	                    		</xsl:when>
+	                    		<xsl:otherwise>
+	                    			<xsl:value-of select="./COLN" />
+	                    		</xsl:otherwise>
+                    		</xsl:choose>
+                        </l0:name>
+                        <culturaldefinition:isCollectorOf>
+                        	<xsl:value-of select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+                        </culturaldefinition:isCollectorOf>                
+                </rdf:Description>
+                </xsl:if>
+            </xsl:if>
+	        </xsl:for-each>
+            <!-- conservation status -->
             <xsl:for-each select="schede/*/CO/STC">
                 <xsl:if test="./*">
                     <rdf:Description>

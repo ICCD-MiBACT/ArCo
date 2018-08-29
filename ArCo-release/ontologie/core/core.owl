@@ -740,7 +740,7 @@
         <rdfs:label xml:lang="en">Complex Cultural Property</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se viene valorizzato il campo OG/OGT/OGTP, i valori dei campi OGTD e OGTT si riferiscono a un bene culturale complesso, rappresentanto quindi per mezzo di questa classe, di cui OGTP è parte componente.</iccdNormTag>
+        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se viene valorizzato il campo OG/OGT/OGTP, i valori dei campi OGTD e OGTT si riferiscono a un bene culturale complesso, rappresentato quindi per mezzo di questa classe, di cui OGTP è parte componente.</iccdNormTag>
     </owl:Class>
     
 
