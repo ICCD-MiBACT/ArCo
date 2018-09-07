@@ -1047,18 +1047,6 @@
     
 
 
-    <!-- https://w3id.org/arco/objective/NR -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/NR">
-        <rdf:type rdf:resource="https://w3id.org/arco/objective/ConservationStatusType"/>
-        <rdfs:label xml:lang="en">NR</rdfs:label>
-        <rdfs:label xml:lang="it">NR (recupero pregresso)</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/arco/objective/OccupiedStorageSpace -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/OccupiedStorageSpace">

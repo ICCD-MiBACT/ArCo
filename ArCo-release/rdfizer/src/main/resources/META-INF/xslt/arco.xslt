@@ -3082,9 +3082,9 @@
                         	</culturaldefinition:leavingReason>
                         </xsl:if>
                         <xsl:if test="./COLI">
-                        	<culturaldefinition:unitInventoryIdentifier>
+                        	<culturaldefinition:collectionUnitIdentifier>
                         		<xsl:value-of select="./COLI" />
-                        	</culturaldefinition:unitInventoryIdentifier>
+                        	</culturaldefinition:collectionUnitIdentifier>
                         </xsl:if>
                         <xsl:if test="./COLV">
                         	<culturaldefinition:culturalPropertyValue>

@@ -690,7 +690,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/ArchaeologicalProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/TangibleCulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale archeologico</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale archeologico, che può essere un complesso archeologico, un monumento archeologico, un reperto archeologico, un reperto antropologico, un saggio stratigrafico, un sito archeologico, o una tabella materiali archeologici. Complessi archeologici: complessi monumentali costituiti da più unità edilizie (abitati, centri fortificati, santuari, complessi termali, ecc.), catalogati a prescindere dal loro attuale stato di conservazione. Monumenti archeologici: singole unità edilizie (una torre, una domus, un tempio, ecc.) catalogate a prescindere dal loro attuale stato di conservazione. Reperti antropologici: testimonianze biologiche in relazione con contesti archeologici e paleontologici. Reperti archeologici: beni mobili di provenienza archeologica (gioielli e monili, vestimenti, arredi, elementi architettonici, opere di pittura, reperti archeobotanici e archeozoologici, scultura, strumenti e oggetti d’uso, ecc.). Saggi stratigrafici: sequenze stratigrafiche rinvenute in contesti di scavo archeologico. Siti archeologici: porzioni di territorio che conservano testimonianze archeologiche. Tabella materiali archeologici: lotti di materiali di provenienza archeologica</rdfs:comment>
         <rdfs:label xml:lang="en">Archaeological Property</rdfs:label>
         <rdfs:label xml:lang="it">Bene Archeologico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -972,7 +972,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/DemoEthnoAnthropologicalHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale demoetnoantropologico</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale demoetnoantropologico, che può essere di tipo immateriale e materiale. I beni demoetnoantropologici immateriali sono beni consistenti in performance uniche e irrepetibili strutturalmente connesse al territorio e a prassi socialmente condivise trasmesse attraverso l’oralità e le tecniche corporali, tanto in ambito italiano quanto in ambito europeo ed extra-europeo (comunicazioni non verbali, danze, feste e cerimonie, giochi, letterature orali, musiche, norme consuetudinarie, rappresentazioni e spettacoli, saperi, tecniche). I beni demoetnoantropologici materiali sono beni la cui costruzione e/o il cui uso sono strutturalmente associati a prassi socialmente condivise, trasmesse attraverso l&apos;oralità e le tecniche corporali, tanto in ambito italiano quanto in ambito europeo ed extra-europeo (abbigliamento e ornamenti del corpo, arredi e suppellettili, mezzi di trasporto, ritualità, strumenti e accessori, beni sul territorio).</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Demoetnoantropologico</rdfs:label>
         <rdfs:label xml:lang="en">Demo-ethno-anthropological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -985,7 +985,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/HistoricOrArtisticProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale storico e artistico</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale storico e artistico, che può essere un disegno, una matrice incisa, un&apos;opera o oggetto d&apos;arte (contemporanea e non), una stampa, un vestimento antico o contemporaneo. Disegni: opere fatte a mano su qualsiasi supporto (carta, cartoncino, cartone, intonaco, legno, pergamena, pietra, seta, tavola, tela ecc.) e con particolari strumenti (carboncino, gessetto, inchiostro, lapis, matita, pastello, penna ecc.) e specifiche tecniche (acquarellatura, sanguigna ecc.). Matrici incise: lastre di vario materiale (acciaio, legno, linoleum, ottone, pietra, zinco rame ecc.) su cui vengono tracciate rappresentazioni pittoriche con particolari strumenti (bulino, punte di acciaio o di diamante, punzoni, raschietti ecc.) e con specifiche tecniche di incisione (acquaforte, acquatinta, litografia, mezzatinta, serigrafia, silografia, zincografia ecc.). Opere e oggetti d&apos;arte: beni mobili costituenti parte integrante di monumenti artistici e storici o provenienti dallo smembramento dei monumenti stessi, conservati in collezioni, musei e pinacoteche (armi ed armature, arredi civili e religiosi, oggetti per il culto, oggetti d&apos;uso, opere di pittura, tessuti e arazzi, sulture, ecc.). Opere e oggetti d&apos;arte contemporanea: opere rappresentative  delle nuove correnti artistiche dei secc. XX e  XXI (assemblaggio, computer art, istallazione, istallazione ambientale, istallazione audio, istallazione video, istallazione multimediale interattiva, opera cinetico-visuale, performance, ready made, realtà virtuale, video arte ecc.). Stampe: esemplari prodotti dall&apos;operazione mediante la quale da una matrice di incisione si ottengono copie uguali di rappresentazioni pittoriche su carta, cartoncino, cuoio,  pergamena, seta ecc. con varie tecniche di incisione (acquaforte, acquatinta, litografia, zincografia ecc.). Vestimenti antichi e contemporanei: abiti e costumi riguardanti l’abbigliamento maschile, femminile e infantile ad uso civile, connessi alle principali finalità d’uso e alle diverse occasioni della vita privata e sociale,  secondo le tipologie storiche dei secoli XVIII, XIX, XX  (abiti, biancheria intima, calzetteria, calzoni, camicie, costumi, cuffie, gonne, giacche, grembiuli, livree, maglie, mantelli, scialli, sciarpe, veli ecc.).</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Storico o Artistico</rdfs:label>
         <rdfs:label xml:lang="en">Historic Or Artistic Property</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1073,7 +1073,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/core/MusicHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale musicale</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale musicale. Strumenti musicali: oggetti nati appositamente per produrre suoni organizzati secondo le diverse culture musicali, senza limiti spazio-temporali (strumenti e accessori di interesse archeologico, storico artistico, etnoantropologico). Strumenti musicali-Organo: oggetto nato per produrre suoni,  costituito da una serie di canne metalliche,  di forma, lunghezza e diametro diversi, nelle quali viene immessa, per mezzo di un mantice o altro meccanismo, una quantità d’aria regolata da una o più tastiere e da una pedaliera (corredato da accessori), caratterizzato da specifici aspetti  morfologici-decorativi e fonico-strumentali (organo idraulico, organo positivo, organo portativo, organo elettronico ecc.)</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Musicale</rdfs:label>
         <rdfs:label xml:lang="en">Music Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1086,7 +1086,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/core/NaturalHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale naturalistico</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale naturalistico, relativo ai campi della botanica, della mineralogia, della paleontologia, della petrologia, della planetologia, della zoologia. Botanica: esemplari del mondo vegetale provenienti da collezioni di botanica  (raccolte di piante essiccate: erbari). Mineralogia: esemplari di minerali provenienti da collezioni di mineralogia (Augite, Goethite, scatola di quarzi ecc. ). Paleontologia: reperti fossili (animali, vegetali, ichnofossili, campioni e preparati per microscopio, ecc.). Petrologia: esemplari di rocce provenienti da collezioni (Riolite, Trachiandesite ecc). Planetologia: esemplari di meteoriti provenienti da collezioni ( Aubrite, Ureilite, Eucrite ecc.). Zoologia: esemplari del mondo animale provenienti da collezioni di zoologia (ustiolo, toporagno, mammifero, artropode, scatola di farfalle, collezione elmintologica, ecc.)</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Naturalistico</rdfs:label>
         <rdfs:label xml:lang="en">Natural Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1130,7 +1130,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/core/NumismaticProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale numismatico</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale numismatico, ovvero monete e altri oggetti di interesse numismatico (reperti premonetali e paramonetali, conii e punzoni monetali, pesi per il controllo monetale, sigilli e medaglie), pertinenti a  qualsiasi epoca.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic Property</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1143,7 +1143,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/core/PhotographicHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale fotografico</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale fotografico, che può essere una fotografia o un fondo fotografico. Beni fotografici: negativi, positivi, processi fotografici che danno origine a prodotti unici (dagherrotipi, ferrotipi, polaroid, chimigrammi, ecc.), fotografia digitale; elementi complessi come album, cartelle, fotomontaggi, panorami, porfolii. Fondi fotografici: entità concettuali che si caratterizzano per l&apos;accumulo di più unità fisiche omogenee o eterogenee dal punto di vista dei materiali che li compongono e che acquisiscono nella loro totalità valenza di bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1175,7 +1175,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/core/ScientificOrTechnologicalHeritage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
-        <rdfs:comment xml:lang="it">Rappresenta un bene culturale scientifico e tecnologico</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un bene culturale scientifico e tecnologico, ovvero strumenti di interesse per la storia della scienza e della tecnica (strumenti astronomici, di laboratorio, di misurazione ecc.) pertinenti a qualsiasi epoca e afferenti a specifiche discipline scientifiche ( apparecchio a specchi a piani rotanti, apparecchio per gli anelli colorati di Newton, campana di Savart, orologio di Farina, orologio solare, pendola, sestante, telescopio ecc.); macchine e macchinari, mezzi di trasporto ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Scientifico o Tecnologico</rdfs:label>
         <rdfs:label xml:lang="en">Scientific Or Technological Heritage</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
