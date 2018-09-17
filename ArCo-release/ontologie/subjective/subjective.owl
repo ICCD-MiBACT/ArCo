@@ -401,6 +401,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasInventory -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasInventory">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Inventory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un inventario che registra informazioni relative al bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to an inventory about it.</rdfs:comment>
@@ -408,8 +409,23 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="en">has inventory</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">UB/INV
-ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
+        <core:iccdNormTag>UB/INV; ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasInventoryIdentifierResponsible -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasInventoryIdentifierResponsible">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Inventory"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un inventario al contenitore giuridico che conserva attualmente il bene o che lo ha conservato in passato, e che è responsabile dell&apos;assegnazione del numero di inventario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an inventory to the juridical container responsible for the inventory identifier of the cultural property.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha responsabile di numero di inventario</rdfs:label>
+        <rdfs:label xml:lang="en">has inventory identifier responsible</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UB/INV/INVG</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -469,22 +485,6 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPE</core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/subjective/hasResponsibleInventoryIdentifier -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasResponsibleInventoryIdentifier">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Inventory"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un inventario al contenitore giuridico che conserva attualmente il bene o che lo ha conservato in passato, e che è responsabile dell&apos;assegnazione del numero di inventario.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an inventory to the juridical container responsible for the inventory identifier of the cultural property.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha responsabile di numero di inventario</rdfs:label>
-        <rdfs:label xml:lang="en">has responsible for inventory identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UB/INV/INVG</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -918,6 +918,7 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <rdfs:label xml:lang="it">codice ICCD dell&apos;autore</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTK</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -956,6 +957,7 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
         <rdfs:label xml:lang="it">codice identificativo locale dell&apos;autore</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTH; ICCD Normativa F 4.00: RO/CRF/CRFX; ICCD Normativa F 3.00: RO/CRF/CRFH</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1070,12 +1072,12 @@ ICCD Normativa Trasversale: UB/INP</core:iccdNormTag>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/culturalPropertyValue">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:modified>UB/COL/COLV; UB/INP/INP/INPA</dc:modified>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il valore economico di un bene culturale. Nel caso di una collezione, questa proprietà rappresenta il valore del bene desunto, quando presente, dall&apos;inventario della collezione o dal suo prezzo di acquisto o vendita. Nel caso di un inventario patrimoniale, questa proprietà rappresenta la stima patrimoniale del bene,. Il valore viene preceduto dalla specifica della valuta.</rdfs:comment>
         <rdfs:label xml:lang="en">cultural property value</rdfs:label>
         <rdfs:label xml:lang="it">valore del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>UB/COL/COLV; UB/INP/INP/INPA</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2164,7 +2166,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasResponsibleInventoryIdentifier"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasInventoryIdentifierResponsible"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2461,6 +2463,12 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDN; DA/AID/AIDT - Normativa S e MI: OG/SGT/SGTP Normativa F: SG/SGL/SGLA; SG/SGL/SGLT; SG/SGL/SGLL - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTR; OG/SGT/SGTT</core:iccdNormTag>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/Role -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/RO/Role"/>
     
 
 
