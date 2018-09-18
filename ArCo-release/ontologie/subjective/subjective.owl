@@ -73,6 +73,36 @@
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasAcquisition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAcquisition">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Acquisition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale coinvolto in un evento di acquisizione all&apos;acquisizione stessa.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha acquisizione</rdfs:label>
+        <rdfs:label xml:lang="en">has acquisition</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasAcquisitionType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAcquisitionType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Acquisition"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/AcquisitionType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;acquisizione di un bene culturale al tipo di acquisizione (es.: donazione, alienazione, confisca).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di acquisizione</rdfs:label>
+        <rdfs:label xml:lang="en">has acquisition type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasAttributedAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAttributedAuthor">
@@ -444,6 +474,22 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasPreviousOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasPreviousOwner">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/subjective/isPreviousOwnerOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Acquisition"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento di acquisizione di un bene culturale al soggetto fonte dell&apos;acquisizione.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha soggetto fonte dell&apos;acquisizione</rdfs:label>
+        <rdfs:label xml:lang="en">has previous owner</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasResearch -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasResearch">
@@ -695,6 +741,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>UB/COL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/isPreviousOwnerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isPreviousOwnerOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Acquisition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha soggetto fonte di acquisizione&quot;, collega il soggetto fonte dell&apos;acquisizione di un bene all&apos;acquisizione stessa.</rdfs:comment>
+        <rdfs:label xml:lang="en">is previous owner of</rdfs:label>
+        <rdfs:label xml:lang="it">è soggetto fonte dell&apos;acquisizione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1469,6 +1530,40 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Type"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Acquisition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Acquisition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAcquisitionType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/subjective/AcquisitionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un evento in cui un bene culturale è stato acquisito e si trova in una certa condizione giuridica.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acquisition</rdfs:label>
+        <rdfs:label xml:lang="it">Acquisizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/AcquisitionType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/AcquisitionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di acquisizione (es.: acquisto, alienazione, confisca, donazione) che ha interessato il bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acquisition type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di acquisizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQT</core:iccdNormTag>
+    </owl:Class>
     
 
 
