@@ -2125,10 +2125,10 @@
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
-                        <xsl:value-of select="normalize-space(.)" />
+                        <xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(.))" />
                     </rdfs:label>
                     <l0:name>
-                        <xsl:value-of select="normalize-space(.)" />
+                        <xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(.))" />
                     </l0:name>
                     <arco:isAgentOf>
                     	<xsl:attribute name="rdf:resource">
@@ -2195,10 +2195,10 @@
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
-                        <xsl:value-of select="normalize-space(schede/*/CD/ECP)" />
+                        <xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(schede/*/CD/ECP))" />
                     </rdfs:label>
                     <l0:name>
-                        <xsl:value-of select="normalize-space(schede/*/CD/ECP)" />
+                        <xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(schede/*/CD/ECP))" />
                     </l0:name>
                     <arco:isAgentOf>
                     	<xsl:attribute name="rdf:resource">

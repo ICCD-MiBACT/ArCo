@@ -262,8 +262,20 @@
     		<version>2.27</version>
 		</dependency>
 		
+		<dependency>
+    		<groupId>org.mapdb</groupId>
+    		<artifactId>mapdb</artifactId>
+    		<version>3.0.7</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+		<dependency>
+    		<groupId>com.opencsv</groupId>
+    		<artifactId>opencsv</artifactId>
+    		<version>4.2</version>
+		</dependency>
 		
 		
         
     </dependencies>
-</project>
+</project>	
