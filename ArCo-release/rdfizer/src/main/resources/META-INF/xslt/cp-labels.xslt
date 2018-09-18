@@ -43,6 +43,7 @@
 		<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
 		<xsl:variable name="cp-name" select="''"></xsl:variable>
 
+
 		<rdf:RDF>
 
 			<!-- labels of cultural property -->
