@@ -37,6 +37,43 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
+		
+		<!-- variable ogtt -->
+		<xsl:variable name="ogtt">
+			<xsl:choose>
+				<xsl:when test="schede/*/OG/OGT/OGTT">
+					<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/OGT/OGTT))" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="''" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+				
+			<!-- variable sgta -->	
+			<xsl:variable name="sgta">
+					<xsl:choose>
+						<xsl:when test="schede/*/OG/SGT/SGTA">
+							<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/SGT/SGTA))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="''" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				
+				<!-- variable sgti -->	
+				<xsl:variable name="sgti">
+					<xsl:choose>
+						<xsl:when test="schede/*/OG/SGT/SGTI">
+							<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTI)" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="''" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+
 
 		<!-- xsl:variable name="sheetType" select="schede/*/CD/TSK/text()"></xsl:variable -->
 		<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
@@ -55,26 +92,7 @@
 				ci sono entrambi -->
 
 			<xsl:if test="$sheetType='SMO'">
-				<xsl:variable name="sgta">
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTA">
-							<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/SGT/SGTA))" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="''" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
-				<xsl:variable name="sgti">
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTI">
-							<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTI)" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="''" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
+				
 				<xsl:variable name="ogtv">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
@@ -511,16 +529,7 @@
 				della label perché la virgola c'è solo se ci sono entrambe le variabili, 
 				le parentesi solo se ce ne sono entrambe o una delle due -->
 			<xsl:if test="$sheetType='NU'">
-				<xsl:variable name="ogtt">
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGT/OGTT">
-							<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/OGT/OGTT))" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="''" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
+				
 				<xsl:variable name="ogth">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTH">
