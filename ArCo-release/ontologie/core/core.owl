@@ -27,7 +27,6 @@
         <owl:imports rdf:resource="https://w3id.org/arco/culturalevent/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/objective/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/catalogue/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/subjective/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/location/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
@@ -291,7 +290,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasType">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a una sua tipologia. Per esempio, nell&apos;ambito delle normative dell&apos;ICCD, può collegare: uno stato di conservazione di un bene culturale a uno dei valori del tipo di stato di conservazione (buono, cattivo, mediocre, etc.); un bene culturale alla sua tipologia (OGTD + OGTT); una denominazione o dedicazione, o, per la normativa FF, il titolo nel tempo, al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.); una misura al tipo di misura (altezza, larghezza, diametro, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a una sua tipologia. Viene specializzata in sottoproprietà. Per esempio, nell&apos;ambito delle normative dell&apos;ICCD, può collegare: uno stato di conservazione di un bene culturale a uno dei valori del tipo di stato di conservazione (buono, cattivo, mediocre, etc.); un bene culturale alla sua tipologia (OGTD + OGTT); una denominazione o dedicazione, o, per la normativa FF, il titolo nel tempo, al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.); una misura al tipo di misura (altezza, larghezza, diametro, etc.).</rdfs:comment>
         <rdfs:label xml:lang="it">ha tipo</rdfs:label>
         <rdfs:label xml:lang="en">has type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>

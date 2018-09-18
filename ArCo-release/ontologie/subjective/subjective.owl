@@ -91,6 +91,7 @@
     <!-- https://w3id.org/arco/subjective/hasAcquisitionType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAcquisitionType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Acquisition"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/AcquisitionType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;acquisizione di un bene culturale al tipo di acquisizione (es.: donazione, alienazione, confisca).</rdfs:comment>
@@ -180,6 +181,51 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasBibliographyType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasBibliographyType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/BibliographyType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la bibliografia al tipo di riferimento bibliografico.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di bibliografia</rdfs:label>
+        <rdfs:label xml:lang="en">has bibliography type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>BIB/BIBF</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasChangeOfAvailability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasChangeOfAvailability">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ChangeOfAvailability"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale coinvolto in un un evento di mutamento di condizione materiale (furto, distruzione, recupero) all&apos;evento stesso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha mutamento condizione materiale</rdfs:label>
+        <rdfs:label xml:lang="en">has change of availability</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasChangeOfAvailabilityType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasChangeOfAvailabilityType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ChangeOfAvailability"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ChangeOfAvailabilityType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il mutamento di condizione materiale di un bene culturale al tipo di evento (es.: furto, distruzione, recupero)</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di mutamento condizione materiale</rdfs:label>
+        <rdfs:label xml:lang="en">has change of availability type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ALN/ALNT</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -316,6 +362,20 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: tutti i campi strutturati di DO tranne BIB</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasDocumentationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasDocumentationType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Documentation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/DocumentationType"/>
+        <rdfs:label xml:lang="it">ha tipo di documentazione</rdfs:label>
+        <rdfs:label xml:lang="en">has documentation type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>FTAP, DRAT, FNTP (+VDCP, REGP), ADMP (v. 3.00 e 3.01)</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -460,6 +520,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasMusicalEnsemble -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMusicalEnsemble">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale al gruppo di musicisti (bande, complessi musicali, associazioni corali, ecc.) in cui lo strumento assume, o ha assunto, abitualmente un ruolo esecutivo. Questa relazione è modellata anche, con maggiore potere espressivo, tramite il pattern AgentRole, che collega lo strumento musicale a una situazione in cui un agente ha rivestito un ruolo (in questo caso, organico musicale).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha organico musicale</rdfs:label>
+        <rdfs:label xml:lang="en">has musical ensemble</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: OS/OSD</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasMusicalInstrumentClassification -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMusicalInstrumentClassification">
@@ -470,6 +545,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="en">has musical instrument classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasMusician -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMusician">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale a una persona che assume - o ha assunto - un ruolo certo come esecutore dello strumento. Questa relazione è modellata anche, con maggiore potere espressivo, tramite il pattern AgentRole, che collega lo strumento musicale a una situazione in cui un agente ha rivestito un ruolo (in questo caso, chitarrista, flautista, pianista, ecc., o genericamente musicista).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha musicista</rdfs:label>
+        <rdfs:label xml:lang="en">has musician</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: MU/MUTN</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -917,6 +1007,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/acquisitionLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/acquisitionLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Acquisition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il luogo in cui è avvenuto un evento di acquisizione, generalmente espresso, in base ai dati disponibili, nella forma: &quot;Regione/sigla provincia/denominazione per esteso del Comune/località o toponimo&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">acquisition location</rdfs:label>
+        <rdfs:label xml:lang="it">luogo di acquisizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQL</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/agentDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/agentDate">
@@ -1111,6 +1216,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">BIBM, BIL (v. 3.00 e 3.01)</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/contacts -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/contacts">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta i contatti di riferimento di un agente (persona, organizzazione), es. indirizzo, numeri di telefono e di fax, indirizzi di posta elettronica, ecc.</rdfs:comment>
+        <rdfs:label xml:lang="en">contacts</rdfs:label>
+        <rdfs:label xml:lang="it">contatti</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: OS/OSE</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1543,6 +1663,12 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/subjective/AcquisitionType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasPreviousOwner"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento in cui un bene culturale è stato acquisito e si trova in una certa condizione giuridica.</rdfs:comment>
         <rdfs:label xml:lang="en">Acquisition</rdfs:label>
         <rdfs:label xml:lang="it">Acquisizione</rdfs:label>
@@ -1689,6 +1815,12 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Bibliography">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasBibliographyType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/BibliographyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/completeBibliographicReference"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -1753,6 +1885,40 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">BIBF</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ChangeOfAvailability -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ChangeOfAvailability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasChangeOfAvailabilityType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/subjective/ChangeOfAvailabilityType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un evento che modifica la disponibilità materiale del bene culturale (es. per distruzione, furto, perdita, recupero)</rdfs:comment>
+        <rdfs:label xml:lang="en">Change of availability</rdfs:label>
+        <rdfs:label xml:lang="it">Mutamento condizione materiale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ALN</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ChangeOfAvailabilityType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ChangeOfAvailabilityType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di mutamento di condizione materiale di un bene culturale (es.: furto, distruzione, recupero).</rdfs:comment>
+        <rdfs:label xml:lang="en">Change of availability type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di mutamento condizione materiale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ALN/ALNT</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1978,6 +2144,12 @@ bene catalogato.</rdfs:comment>
     <!-- https://w3id.org/arco/subjective/Documentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Documentation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasDocumentationType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/DocumentationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasFormat"/>

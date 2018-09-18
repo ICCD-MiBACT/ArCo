@@ -1009,7 +1009,7 @@
                 <xsl:for-each select="schede/*/AU/ATB">
                     <culturaldefinition:hasAuthorshipAttribution>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="concat($NS, 'CulturalScopeAttribution/', $itemURI, '-attribuzione-ambito-culturale-', position())" />
+                            <xsl:value-of select="concat($NS, 'CulturalScopeAttribution/', $itemURI, '-cultural-scope-attribution-', position())" />
                         </xsl:attribute>
                     </culturaldefinition:hasAuthorshipAttribution>
                 </xsl:for-each>
@@ -1081,7 +1081,7 @@
 	                <xsl:if test="./*">
 	                    <cpdescription:hasConservationStatus>
 	                        <xsl:attribute name="rdf:resource">
-	                            <xsl:value-of select="concat($NS, 'ConservationStatus/', $itemURI, '-stato-conservazione-', position())" />
+	                            <xsl:value-of select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
 	                        </xsl:attribute>
 	                    </cpdescription:hasConservationStatus>
 	                </xsl:if>
@@ -1140,7 +1140,7 @@
                                     <xsl:value-of select="'https://w3id.org/arco/location/Underwater'" />
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(.)))" />
+                                    <xsl:value-of select="concat($NS, 'TypeOfContext/', arco-fn:urify(normalize-space(.)))" />
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
@@ -1164,11 +1164,27 @@
                                     <xsl:value-of select="'https://w3id.org/arco/location/Underwater'" />
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(.)))" />
+                                    <xsl:value-of select="concat($NS, 'TypeOfContext/', arco-fn:urify(normalize-space(.)))" />
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
                     </locgeoamm:hasTypeOfContext>
+                </xsl:for-each>
+                <!-- Acquisition of cultural property -->
+                <xsl:for-each select="schede/*/TU/ACQ">
+                	<culturaldefinition:hasAcquisition>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'Acquisition/', $itemURI, '-acquisition-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasAcquisition>
+                </xsl:for-each>
+                <!-- Change of availability of cultural property -->
+                <xsl:for-each select="schede/*/TU/ALN">
+                	<culturaldefinition:hasChangeOfAvailability>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ChangeOfAvailability/', $itemURI, '-change-of-availability')" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasChangeOfAvailability>
                 </xsl:for-each>
                 <!-- Geometry of cultural property -->
                 	<xsl:for-each select="schede/*/GP">
@@ -1205,6 +1221,7 @@
                         <xsl:value-of select="arco-fn:getSpecificPropertyType($sheetType)" />
                     </xsl:attribute>
                 </rdf:type>
+                <!-- rdfs:label of cultural property -->
                 <rdfs:label>
                     <xsl:choose>
                         <xsl:when test="schede/*/OG/OGT/OGTT">
@@ -2207,6 +2224,159 @@
                     </arco:isAgentOf>
                 </rdf:Description>
             </xsl:if>
+            <!-- Acquisition of cultural property as an individual -->
+            <xsl:for-each select="schede/*/TU/ACQ">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'Acquisition/', $itemURI, '-acquisition-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/subjective/Acquisition'" />
+            			</xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Acquisizione ', position(), ' del bene culturale: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Acquisizione ', position(), ' del bene culturale: ', $itemURI)" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Acquisition ', position(), ' of cultural property: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Acquisition ', position(), ' of cultural property: ', $itemURI)" />
+            		</l0:name>
+            		<xsl:if test="./ACQT">
+            			<culturaldefinition:hasAcquisitionType>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(./ACQT)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasAcquisitionType>            		
+            		</xsl:if>
+            		<xsl:if test="./ACQN">
+            			<culturaldefinition:hasPreviousOwner>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ACQN)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasPreviousOwner>
+            		</xsl:if>
+            		<xsl:if test="./ACQD">
+            			<tiapit:date>
+            				<xsl:value-of select="./ACQD" />
+            			</tiapit:date>
+            		</xsl:if>
+            		<xsl:if test="./ACQE">
+            			<arco:note>
+            				<xsl:value-of select="./ACQE" />
+            			</arco:note>
+            		</xsl:if>
+            		<xsl:if test="./ACQL">
+            			<culturaldefinition:acquisitionLocation>
+            				<xsl:value-of select="./ACQL" />
+            			</culturaldefinition:acquisitionLocation>
+            		</xsl:if>
+            	</rdf:Description>
+            	<!-- acquisition type as an individual -->
+            	<xsl:if test="./ACQT">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'AcquisitionType/', arco-fn:urify(normalize-space(./ACQT)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/AcquisitionType'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="./ACQT" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="./ACQT" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- previous owner in acquisition as an individual -->
+            	<xsl:if test="./ACQN">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ACQN)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="./ACQN" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="./ACQN" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            </xsl:for-each>
+            <!-- Change of availability of cultural property as an individual -->
+            <xsl:for-each select="schede/*/TU/ALN">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'ChangeOfAvailability/', $itemURI, '-change-of-availability')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/subjective/ChangeOfAvailability'" />
+            			</xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Mutamento condizione materiale del bene culturale: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Mutamento condizione materiale del bene culturale: ', $itemURI)" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Change of availability of cultural property: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Change of availability of cultural property: ', $itemURI)" />
+            		</l0:name>
+            		<xsl:if test="./ALNT">
+            			<culturaldefinition:hasChangeOfAvailabilityType>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'ChangeOfAvailabilityType/', arco-fn:urify(normalize-space(./ALNT)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasChangeOfAvailabilityType>            		
+            		</xsl:if>
+            		<xsl:if test="./ALND">
+            			<tiapit:date>
+            				<xsl:value-of select="./ALND" />
+            			</tiapit:date>
+            		</xsl:if>
+            		<xsl:if test="./ALNN">
+            			<arco:note>
+            				<xsl:value-of select="./ALNN" />
+            			</arco:note>
+            		</xsl:if>
+            	</rdf:Description>
+            	<!-- acquisition type as an individual -->
+            	<xsl:if test="./ALNT">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'ChangeOfAvailabilityType/', arco-fn:urify(normalize-space(./ALNT)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/ChangeOfAvailabilityType'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="./ALNT" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="./ALNT" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            </xsl:for-each>
             <!-- Geometry of cultural property as an individual for GE (version 4.00)-->
             <xsl:for-each select="schede/*/GE | schede/*/MT/MTA/MTAR | schede/*/MT/MTA/MTAX / schede/*/MT/MTA/MTAM">
             <xsl:variable name="geometry-position" select="position()" />
@@ -2249,7 +2419,7 @@
                                     <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Line'" />
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./GET)))" />
+                                    <xsl:value-of select="concat($NS, 'GeometryType/', arco-fn:urify(normalize-space(./GET)))" />
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
@@ -2297,7 +2467,7 @@
                         <xsl:otherwise>
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
-                                    <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./GET)))" />
+                                    <xsl:value-of select="concat($NS, 'GeometryType/', arco-fn:urify(normalize-space(./GET)))" />
                                 </xsl:attribute>
                                 <rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/GeometryType" />
                                 <rdfs:label>
@@ -3477,7 +3647,7 @@
             <xsl:for-each select="schede/*/AU/ATB">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
-                        <xsl:value-of select="concat($NS, 'CulturalScopeAttribution/', $itemURI, '-attribuzione-ambito-culturale-', position())" />
+                        <xsl:value-of select="concat($NS, 'CulturalScopeAttribution/', $itemURI, '-cultural-scope-attribution-', position())" />
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
@@ -4608,7 +4778,7 @@
                 <xsl:if test="./*">
                     <rdf:Description>
                         <xsl:attribute name="rdf:about">
-                            <xsl:value-of select="concat($NS, 'ConservationStatus/', $itemURI, '-stato-conservazione-', position())" />
+                            <xsl:value-of select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
@@ -4635,7 +4805,7 @@
                                         <xsl:value-of select="'https://w3id.org/arco/objective/Unavailable'" />
                                     </xsl:when>
                                     <xsl:when test="./STCC">
-                                        <xsl:value-of select="concat('https://w3id.org/arco/objective/', arco-fn:urify(normalize-space(./STCC)))" />
+                                        <xsl:value-of select="concat($NS, 'ConservationStatusType/', arco-fn:urify(normalize-space(./STCC)))" />
                                     </xsl:when>
                                 </xsl:choose>
                             </xsl:attribute>
@@ -4662,7 +4832,7 @@
                         <xsl:when test="./STCC">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
-                                    <xsl:value-of select="concat('https://w3id.org/arco/objective/', arco-fn:urify(normalize-space(./STCC)))" />
+                                    <xsl:value-of select="concat($NS, 'ConservationStatusType/', arco-fn:urify(normalize-space(./STCC)))" />
                                 </xsl:attribute>
                                 <rdf:type rdf:resource="https://w3id.org/arco/objective/ConservationStatusType" />
                                 <rdfs:label>
@@ -4811,11 +4981,11 @@
                                     </xsl:when>
                                     <xsl:when test="./TLC">
                                         <xsl:variable name="tlc" select="normalize-space(./TLC)" />
-                                        <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./TLC)))" />
+                                        <xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./TLC)))" />
                                     </xsl:when>
                                     <xsl:when test="./TCL">
                                         <xsl:variable name="tcl" select="normalize-space(./TCL)" />
-                                        <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./TCL)))" />
+                                        <xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./TCL)))" />
                                     </xsl:when>
                                     <xsl:when test="../../F/LR">
                                     	<xsl:value-of select="'https://w3id.org/arco/location/ShotLocation'" />
@@ -4852,7 +5022,7 @@
                         <xsl:when test="./TLC and not(./TLC='.' or ./TLC='-' or ./TLC='/')">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
-                                    <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./TLC)))" />
+                                    <xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./TLC)))" />
                                 </xsl:attribute>
                                 <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType" />
                                 <rdfs:label>
@@ -4866,7 +5036,7 @@
                         <xsl:when test="./TCL and not(./TCL='.' or ./TCL='-' or ./TCL='/')">
                             <rdf:Description>
                                 <xsl:attribute name="rdf:about">
-                                    <xsl:value-of select="concat('https://w3id.org/arco/location/', arco-fn:urify(normalize-space(./TCL)))" />
+                                    <xsl:value-of select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./TCL)))" />
                                 </xsl:attribute>
                                 <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType" />
                                 <rdfs:label>
@@ -4956,7 +5126,7 @@
                     </xsl:attribute>
                     <rdf:type>
                         <xsl:attribute name="rdf:resource">
-                            <xsl:value-of select="'https://w3id.org/italia/onto/clv/Address'" />
+                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
                         </xsl:attribute>
                     </rdf:type>
                     <rdfs:label>
@@ -5091,7 +5261,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/italia/onto/clv/Country'" />
+                                <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Country'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -5110,7 +5280,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/italia/onto/clv/Region'" />
+                                <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Region'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -5129,7 +5299,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/italia/onto/clv/Province'" />
+                                <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Province'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -5148,7 +5318,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/italia/onto/clv/City'" />
+                                <xsl:value-of select="'https://w3id.org/italia/onto/CLV/City'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -5167,7 +5337,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/italia/onto/clv/AddressArea'" />
+                                <xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -5185,7 +5355,7 @@
                         </xsl:attribute>
                         <rdf:type>
                             <xsl:attribute name="rdf:resource">
-                                <xsl:value-of select="'https://w3id.org/italia/onto/clv/AddressArea'" />
+                                <xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
                             </xsl:attribute>
                         </rdf:type>
                         <rdfs:label>
@@ -5472,7 +5642,7 @@
                 				</xsl:attribute>
                                 <rdf:type>
                                     <xsl:attribute name="rdf:resource">
-                                        <xsl:value-of select="'https://w3id.org/italia/onto/clv/Address'" />
+                                        <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
                                     </xsl:attribute>
                                 </rdf:type>
                                 <rdfs:label>
@@ -5799,7 +5969,7 @@
                                     </xsl:attribute>
                                     <rdf:type>
                                         <xsl:attribute name="rdf:resource">
-                                            <xsl:value-of select="'https://w3id.org/italia/onto/clv/Address'" />
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
                                         </xsl:attribute>
                                     </rdf:type>
                                     <rdfs:label>
@@ -6280,7 +6450,7 @@
                                     </xsl:attribute>
                                     <rdf:type>
                                         <xsl:attribute name="rdf:resource">
-                                            <xsl:value-of select="'https://w3id.org/italia/onto/clv/Address'" />
+                                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Address'" />
                                         </xsl:attribute>
                                     </rdf:type>
                                     <rdfs:label>
