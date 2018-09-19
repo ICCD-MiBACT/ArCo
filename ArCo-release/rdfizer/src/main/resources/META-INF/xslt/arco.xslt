@@ -1186,6 +1186,46 @@
                 		</xsl:attribute>
                 	</culturaldefinition:hasChangeOfAvailability>
                 </xsl:for-each>
+                <!-- Photographic Documentation of cultural property -->
+                 <xsl:for-each select="schede/*/DO/FTA">
+                	<culturaldefinition:hasDocumentation>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-photographic-documentation-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasDocumentation>
+                </xsl:for-each>
+                <!-- Graphic or cartographic Documentation of cultural property -->
+                 <xsl:for-each select="schede/*/DO/DRA">
+                	<culturaldefinition:hasDocumentation>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'GraphicOrCartographicDocumentation/', $itemURI, '-graphic-cartographic-documentation-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasDocumentation>
+                </xsl:for-each>
+                <!-- Film Documentation of cultural property -->
+                 <xsl:for-each select="schede/*/DO/VDC">
+                	<culturaldefinition:hasDocumentation>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'FilmDocumentation/', $itemURI, '-film-documentation-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasDocumentation>
+                </xsl:for-each>
+                <!-- Audio Documentation of cultural property -->
+                 <xsl:for-each select="schede/*/DO/REG">
+                	<culturaldefinition:hasDocumentation>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'AudioDocumentation/', $itemURI, '-audio-documentation-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasDocumentation>
+                </xsl:for-each>
+                <!-- Sources and Documents of cultural property -->
+                 <xsl:for-each select="schede/*/DO/FNT">
+                	<culturaldefinition:hasDocumentation>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'SourcesAndDocuments/', $itemURI, '-sources-documents-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasDocumentation>
+                </xsl:for-each>
                 <!-- Geometry of cultural property -->
                 	<xsl:for-each select="schede/*/GP">
                 		<clvapit:hasGeometry>
@@ -2376,6 +2416,1342 @@
             			</l0:name>
             		</rdf:Description>
             	</xsl:if>
+            </xsl:for-each>
+            <!-- Photographic documentation of cultural property as an individual -->
+            <xsl:for-each select="schede/*/DO/FTA">
+            <xsl:variable name="photodocu-position">
+            		<xsl:value-of select="position()" />
+            	</xsl:variable>
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'PhotographicDocumentation/', $itemURI, '-photographic-documentation-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/subjective/PhotographicDocumentation'" />
+            			</xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Photographic documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Photographic documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</l0:name>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Documentazione fotografica ', position(), ' del bene culturale: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Documentazione fotografica ', position(), ' del bene culturale: ', $itemURI)" />
+            		</l0:name>
+            		<xsl:if test="FTAM">
+            			<culturaldefinition:documentationTitle>
+            				<xsl:value-of select="./FTAM" />
+            			</culturaldefinition:documentationTitle>
+            		</xsl:if>
+            		<xsl:if test="FTAM">
+            			<culturaldefinition:caption>
+            				<xsl:value-of select="./FTAM" />
+            			</culturaldefinition:caption>
+            		</xsl:if>
+            		<xsl:if test="./FTAN">
+            			<culturaldefinition:documentationIdentifier>
+            				<xsl:value-of select="./FTAN" />
+            			</culturaldefinition:documentationIdentifier>
+            		</xsl:if>
+            		<xsl:if test="./FTAD">
+            			<tiapit:date>
+            				<xsl:value-of select="./FTAD" />
+            			</tiapit:date>
+            		</xsl:if>
+            		<xsl:if test="./FTAC">
+            			<culturaldefinition:documentationLocation>
+            				<xsl:value-of select="./FTAC" />
+            			</culturaldefinition:documentationLocation>
+            		</xsl:if>
+            		<xsl:if test="./FTAS">
+            			<arco:specifications>
+            				<xsl:value-of select="./FTAS" />
+            			</arco:specifications>
+            		</xsl:if>
+            		<xsl:if test="./FTAK">
+            			<culturaldefinition:digitalFileName>
+            				<xsl:value-of select="./FTAK" />
+            			</culturaldefinition:digitalFileName>
+            		</xsl:if>
+            		<xsl:if test="./FTAT">
+            			<arco:note>
+            				<xsl:value-of select="./FTAT" />
+            			</arco:note>
+            		</xsl:if>
+            		<xsl:if test="./FTAW">
+            			<smapit:URL>
+            				<xsl:value-of select="./FTAW" />
+            			</smapit:URL>
+            		</xsl:if>
+            		<xsl:if test="./FTAY">
+            			<culturaldefinition:rights>
+            				<xsl:value-of select="./FTAY" />
+            			</culturaldefinition:rights>
+            		</xsl:if>
+            		<xsl:if test="./FTAR">
+            			<culturaldefinition:stripRunAndFrameNumber>
+            				<xsl:value-of select="./FTAR" />
+            			</culturaldefinition:stripRunAndFrameNumber>
+            		</xsl:if>
+            		<xsl:if test="./FTAX">
+            			<arco:hasCategory>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./FTAX)))" />
+            				</xsl:attribute>
+            			</arco:hasCategory>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FTAP">
+            			<culturaldefinition:hasDocumentationType>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./FTAP)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasDocumentationType>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FTAF">
+            			<culturaldefinition:hasFormat>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./FTAF)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasFormat>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FTAA">
+            			<culturaldefinition:hasAuthor>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Author/', arco-fn:urify(normalize-space(./FTAA)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasAuthor>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FTAE">
+            			<arco:hasAgentRole>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-photographic-documentation-', $photodocu-position, '-photographic-documentation-owner')" />
+            				</xsl:attribute>
+            			</arco:hasAgentRole>
+            		</xsl:if>
+            	</rdf:Description>
+            	<!-- documentation category of photographic documentation as an individual -->
+            	<xsl:if test="./FTAX">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./FTAX)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationCategory'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FTAX)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FTAX)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation type of photographic documentation as an individual -->
+            	<xsl:if test="./FTAP">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./FTAP)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationType'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FTAP)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FTAP)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation format of photographic documentation as an individual -->
+            	<xsl:if test="./FTAF">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./FTAF)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/Format'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FTAF)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FTAF)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation author of photographic documentation as an individual -->
+            	<xsl:if test="./FTAA">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./FTAA)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FTAA)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FTAA)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- agent role of photographic documentation as an individual -->
+            	<xsl:if test="./FTAE">
+		                		<rdf:Description>
+		                    		<xsl:attribute name="rdf:about">
+		                        		<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-photographic-documentation-', $photodocu-position, '-photographic-documentation-owner')" />
+		                    		</xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione fotografica ', $photodocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./FTAE))" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of photographic documentation ', $photodocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./FTAE))" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione fotografica ', $photodocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./FTAE))" />
+				                    </l0:name>
+				                    <l0:name xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of photographic documentation ', $photodocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./FTAE))" />
+				                    </l0:name>
+				                    <arco:hasRole>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                        </xsl:attribute>
+				                    </arco:hasRole>
+				                    <arco:hasAgent>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./FTAE)))" />
+				                        </xsl:attribute>
+				                    </arco:hasAgent>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="'Ente proprietario della documentazione'" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="'Owner of documentation'" />
+				                    </rdfs:label>
+				                    <arco:isRoleOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-photographic-documentation-', $photodocu-position, '-photographic-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isRoleOf>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./FTAE)))" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label>
+				                        <xsl:value-of select="normalize-space(./FTAE)" />
+				                    </rdfs:label>
+				                    <l0:name>
+				                        <xsl:value-of select="normalize-space(./FTAE)" />
+				                    </l0:name>
+				                    <arco:isAgentOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-photographic-documentation-', $photodocu-position, '-photographic-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isAgentOf>
+				                </rdf:Description>
+				             </xsl:if>
+            </xsl:for-each>
+            <!-- Graphic or cartographic documentation of cultural property as an individual -->
+            <xsl:for-each select="schede/*/DO/DRA">
+            <xsl:variable name="cartodocu-position">
+            		<xsl:value-of select="position()" />
+            	</xsl:variable>
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'GraphicOrCartographicDocumentation/', $itemURI, '-graphic-cartographic-documentation-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/subjective/GraphicOrCartographicDocumentation'" />
+            			</xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Graphic or cartographic documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Graphic or cartographic documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</l0:name>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Documentazione grafica o cartografica ', position(), ' del bene culturale: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Documentazione grafica o cartografica ', position(), ' del bene culturale: ', $itemURI)" />
+            		</l0:name>
+            		<xsl:if test="./DRAN">
+            			<culturaldefinition:documentationIdentifier>
+            				<xsl:value-of select="./DRAN" />
+            			</culturaldefinition:documentationIdentifier>
+            		</xsl:if>
+            		<xsl:if test="./DRAD">
+            			<tiapit:date>
+            				<xsl:value-of select="./DRAD" />
+            			</tiapit:date>
+            		</xsl:if>
+            		<xsl:if test="./DRAC">
+            			<culturaldefinition:documentationLocation>
+            				<xsl:value-of select="./DRAC" />
+            			</culturaldefinition:documentationLocation>
+            		</xsl:if>
+            		<xsl:if test="./DRAP">
+            			<arco:specifications>
+            				<xsl:value-of select="./DRAP" />
+            			</arco:specifications>
+            		</xsl:if>
+            		<xsl:if test="./DRAK">
+            			<culturaldefinition:digitalFileName>
+            				<xsl:value-of select="./DRAK" />
+            			</culturaldefinition:digitalFileName>
+            		</xsl:if>
+            		<xsl:if test="./DRAO">
+            			<arco:note>
+            				<xsl:value-of select="./DRAO" />
+            			</arco:note>
+            		</xsl:if>
+            		<xsl:if test="./DRAW">
+            			<smapit:URL>
+            				<xsl:value-of select="./DRAW" />
+            			</smapit:URL>
+            		</xsl:if>
+            		<xsl:if test="./DRAY">
+            			<culturaldefinition:rights>
+            				<xsl:value-of select="./DRAY" />
+            			</culturaldefinition:rights>
+            		</xsl:if>
+            		<xsl:if test="./DRAM">
+            			<culturaldefinition:documentationTitle>
+            				<xsl:value-of select="./DRAM" />
+            			</culturaldefinition:documentationTitle>
+            		</xsl:if>
+            		<xsl:if test="./DRAS">
+            			<culturaldefinition:hasScale>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Scale/', arco-fn:urify(normalize-space(./DRAS)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasScale> 
+            		</xsl:if>
+            		<xsl:if test="./DRAX">
+            			<arco:hasCategory>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./DRAX)))" />
+            				</xsl:attribute>
+            			</arco:hasCategory>            		            		
+            		</xsl:if>
+            		<xsl:if test="./DRAT">
+            			<culturaldefinition:hasDocumentationType>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./DRAT)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasDocumentationType>            		            		
+            		</xsl:if>
+            		<xsl:if test="./DRAF">
+            			<culturaldefinition:hasFormat>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./DRAF)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasFormat>            		            		
+            		</xsl:if>
+            		<xsl:if test="./DRAA">
+            			<culturaldefinition:hasAuthor>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Author/', arco-fn:urify(normalize-space(./DRAA)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasAuthor>            		            		
+            		</xsl:if>
+            		<xsl:if test="./DRAE">
+            			<arco:hasAgentRole>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-carto-graphic-documentation-', $cartodocu-position, '-carto-graphic-documentation-owner')" />
+            				</xsl:attribute>
+            			</arco:hasAgentRole>
+            		</xsl:if>
+            	</rdf:Description>
+            	<!-- documentation scale of graphic or cartographic documentation as an individual -->
+            	<xsl:if test="./DRAS">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Scale/', arco-fn:urify(normalize-space(./DRAS)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/Scale'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./DRAS)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./DRAS)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation category of graphic or cartographic documentation as an individual -->
+            	<xsl:if test="./DRAX">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./DRAX)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationCategory'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./DRAX)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./DRAX)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation type of graphic and cartographic documentation as an individual -->
+            	<xsl:if test="./DRAT">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./DRAT)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationType'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./DRAT)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./DRAT)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation format of graphic or cartographic documentation as an individual -->
+            	<xsl:if test="./DRAF">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./DRAF)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/Format'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./DRAF)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./DRAF)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation author of photographic documentation as an individual -->
+            	<xsl:if test="./DRAA">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./DRAA)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./DRAA)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./DRAA)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- agent role of graphic or cartographic documentation as an individual -->
+            	<xsl:if test="./DRAE">
+		                		<rdf:Description>
+		                    		<xsl:attribute name="rdf:about">
+		                        		<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-carto-graphic-documentation-', $cartodocu-position, '-carto-graphic-documentation-owner')" />
+		                    		</xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione grafica o cartografica ', $cartodocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./DRAE))" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of graphic or cartographic documentation ', $cartodocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./DRAE))" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione grafica o cartografica ', $cartodocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./DRAE))" />
+				                    </l0:name>
+				                    <l0:name xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of graphic or cartographic documentation ', $cartodocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./DRAE))" />
+				                    </l0:name>
+				                    <arco:hasRole>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                        </xsl:attribute>
+				                    </arco:hasRole>
+				                    <arco:hasAgent>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./DRAE)))" />
+				                        </xsl:attribute>
+				                    </arco:hasAgent>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="'Ente proprietario della documentazione'" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="'Owner of documentation'" />
+				                    </rdfs:label>
+				                    <arco:isRoleOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-carto-graphic-documentation-', $cartodocu-position, '-carto-graphic-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isRoleOf>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./DRAE)))" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label>
+				                        <xsl:value-of select="normalize-space(./DRAE)" />
+				                    </rdfs:label>
+				                    <l0:name>
+				                        <xsl:value-of select="normalize-space(./DRAE)" />
+				                    </l0:name>
+				                    <arco:isAgentOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-carto-graphic-documentation-', $cartodocu-position, '-carto-graphic-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isAgentOf>
+				                </rdf:Description>
+				             </xsl:if>
+            </xsl:for-each>
+            <!-- Film documentation of cultural property as an individual -->
+            <xsl:for-each select="schede/*/DO/VDC">
+            <xsl:variable name="filmdocu-position">
+            		<xsl:value-of select="position()" />
+            	</xsl:variable>
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'FilmDocumentation/', $itemURI, '-film-documentation-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/subjective/FilmDocumentation'" />
+            			</xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Film documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Film documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</l0:name>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Documentazione video-cinematografica ', position(), ' del bene culturale: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Documentazione video-cinematografica ', position(), ' del bene culturale: ', $itemURI)" />
+            		</l0:name>
+            		<xsl:if test="./VDCN">
+            			<culturaldefinition:documentationIdentifier>
+            				<xsl:value-of select="./VDCN" />
+            			</culturaldefinition:documentationIdentifier>
+            		</xsl:if>
+            		<xsl:if test="./VDCD">
+            			<tiapit:date>
+            				<xsl:value-of select="./VDCD" />
+            			</tiapit:date>
+            		</xsl:if>
+            		<xsl:if test="./VDCC">
+            			<culturaldefinition:documentationLocation>
+            				<xsl:value-of select="./VDCC" />
+            			</culturaldefinition:documentationLocation>
+            		</xsl:if>
+            		<xsl:if test="./VDCS">
+            			<arco:specifications>
+            				<xsl:value-of select="./VDCS" />
+            			</arco:specifications>
+            		</xsl:if>
+            		<xsl:if test="./VDCK">
+            			<culturaldefinition:digitalFileName>
+            				<xsl:value-of select="./VDCK" />
+            			</culturaldefinition:digitalFileName>
+            		</xsl:if>
+            		<xsl:if test="./VDCT">
+            			<arco:note>
+            				<xsl:value-of select="./VDCT" />
+            			</arco:note>
+            		</xsl:if>
+            		<xsl:if test="./VDCW">
+            			<smapit:URL>
+            				<xsl:value-of select="./VDCW" />
+            			</smapit:URL>
+            		</xsl:if>
+            		<xsl:if test="./VDCY">
+            			<culturaldefinition:rights>
+            				<xsl:value-of select="./VDCY" />
+            			</culturaldefinition:rights>
+            		</xsl:if>
+            		<xsl:if test="./VDCA">
+            			<culturaldefinition:documentationTitle>
+            				<xsl:value-of select="./VDCA" />
+            			</culturaldefinition:documentationTitle>
+            		</xsl:if>
+            		<xsl:if test="./VDCX">
+            			<arco:hasCategory>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./VDCX)))" />
+            				</xsl:attribute>
+            			</arco:hasCategory>            		            		
+            		</xsl:if>
+            		<xsl:if test="./VDCP">
+            			<culturaldefinition:hasDocumentationType>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./VDCP)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasDocumentationType>            		            		
+            		</xsl:if>
+            		<xsl:if test="./VDCP">
+            			<culturaldefinition:hasFormat>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./VDCP)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasFormat>            		            		
+            		</xsl:if>
+            		<xsl:if test="./VDCR">
+            			<culturaldefinition:hasAuthor>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Author/', arco-fn:urify(normalize-space(./VDCR)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasAuthor>            		            		
+            		</xsl:if>
+            		<xsl:if test="./VDCE">
+            			<arco:hasAgentRole>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-film-documentation-', $filmdocu-position, '-film-documentation-owner')" />
+            				</xsl:attribute>
+            			</arco:hasAgentRole>
+            		</xsl:if>
+            	</rdf:Description>
+            	<!-- documentation category of graphic or cartographic documentation as an individual -->
+            	<xsl:if test="./VDCX">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./VDCX)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationCategory'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./VDCX)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./VDCX)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation type of film documentation as an individual - for film documentation type and format are the same resource -->
+            	<xsl:if test="./VDCP">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./VDCP)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationType'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./VDCP)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./VDCP)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation format of film documentation as an individual - for film documentation type and format are the same resource -->
+            	<xsl:if test="./VDCP">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./VDCP)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/Format'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./VDCP)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./VDCP)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation author of FILM documentation as an individual -->
+            	<xsl:if test="./VDCR">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./VDCR)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./VDCR)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./VDCR)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- agent role of film documentation as an individual -->
+            	<xsl:if test="./VDCE">
+		                		<rdf:Description>
+		                    		<xsl:attribute name="rdf:about">
+		                        		<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-film-documentation-', $filmdocu-position, '-film-documentation-owner')" />
+		                    		</xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione video-cinematografica ', $filmdocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./VDCE))" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of film documentation ', $filmdocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./VDCE))" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione video-cinematografica ', $filmdocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./VDCE))" />
+				                    </l0:name>
+				                    <l0:name xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of film documentation ', $filmdocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./VDCE))" />
+				                    </l0:name>
+				                    <arco:hasRole>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                        </xsl:attribute>
+				                    </arco:hasRole>
+				                    <arco:hasAgent>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./VDCE)))" />
+				                        </xsl:attribute>
+				                    </arco:hasAgent>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="'Ente proprietario della documentazione'" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="'Owner of documentation'" />
+				                    </rdfs:label>
+				                    <arco:isRoleOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-film-documentation-', $filmdocu-position, '-film-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isRoleOf>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./DRAE)))" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label>
+				                        <xsl:value-of select="normalize-space(./DRAE)" />
+				                    </rdfs:label>
+				                    <l0:name>
+				                        <xsl:value-of select="normalize-space(./DRAE)" />
+				                    </l0:name>
+				                    <arco:isAgentOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-film-documentation-', $filmdocu-position, '-film-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isAgentOf>
+				                </rdf:Description>
+				             </xsl:if>
+            </xsl:for-each>
+            <!-- Audio documentation of cultural property as an individual -->
+            <xsl:for-each select="schede/*/DO/REG">
+            <xsl:variable name="audiodocu-position">
+            		<xsl:value-of select="position()" />
+            	</xsl:variable>
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'AudioDocumentation/', $itemURI, '-audio-documentation-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/subjective/AudioDocumentation'" />
+            			</xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Audio documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Audio documentation ', position(), ' of cultural property: ', $itemURI)" />
+            		</l0:name>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Documentazione audio ', position(), ' del bene culturale: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Documentazione audio ', position(), ' del bene culturale: ', $itemURI)" />
+            		</l0:name>
+            		<xsl:if test="./REGN">
+            			<culturaldefinition:documentationIdentifier>
+            				<xsl:value-of select="./REGN" />
+            			</culturaldefinition:documentationIdentifier>
+            		</xsl:if>
+            		<xsl:if test="./REGD">
+            			<tiapit:date>
+            				<xsl:value-of select="./REGD" />
+            			</tiapit:date>
+            		</xsl:if>
+            		<xsl:if test="./REGC">
+            			<culturaldefinition:documentationLocation>
+            				<xsl:value-of select="./REGC" />
+            			</culturaldefinition:documentationLocation>
+            		</xsl:if>
+            		<xsl:if test="./REGS">
+            			<arco:specifications>
+            				<xsl:value-of select="./REGS" />
+            			</arco:specifications>
+            		</xsl:if>
+            		<xsl:if test="./REGK">
+            			<culturaldefinition:digitalFileName>
+            				<xsl:value-of select="./REGK" />
+            			</culturaldefinition:digitalFileName>
+            		</xsl:if>
+            		<xsl:if test="./REGT">
+            			<arco:note>
+            				<xsl:value-of select="./REGT" />
+            			</arco:note>
+            		</xsl:if>
+            		<xsl:if test="./REGW">
+            			<smapit:URL>
+            				<xsl:value-of select="./REGW" />
+            			</smapit:URL>
+            		</xsl:if>
+            		<xsl:if test="./REGZ">
+            			<culturaldefinition:documentationTitle>
+            				<xsl:value-of select="./REGZ" />
+            			</culturaldefinition:documentationTitle>
+            		</xsl:if>
+            		<xsl:if test="./REGX">
+            			<arco:hasCategory>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./REGX)))" />
+            				</xsl:attribute>
+            			</arco:hasCategory>            		            		
+            		</xsl:if>
+            		<xsl:if test="./REGP">
+            			<culturaldefinition:hasDocumentationType>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./REGP)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasDocumentationType>            		            		
+            		</xsl:if>
+            		<xsl:if test="./REGP">
+            			<culturaldefinition:hasFormat>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./REGP)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasFormat>            		            		
+            		</xsl:if>
+            		<xsl:if test="./REGA">
+            			<culturaldefinition:hasAuthor>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Author/', arco-fn:urify(normalize-space(./REGA)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasAuthor>            		            		
+            		</xsl:if>
+            		<xsl:if test="./REGE">
+            			<arco:hasAgentRole>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-audio-documentation-', $audiodocu-position, '-audio-documentation-owner')" />
+            				</xsl:attribute>
+            			</arco:hasAgentRole>
+            		</xsl:if>
+            	</rdf:Description>
+            	<!-- documentation category of audio documentation as an individual -->
+            	<xsl:if test="./REGX">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./REGX)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationCategory'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./REGX)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./REGX)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation type of audio documentation as an individual - for audio documentation type and format are the same resource -->
+            	<xsl:if test="./REGP">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./REGP)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationType'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./REGP)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./REGP)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation format of audio documentation as an individual - for audio documentation type and format are the same resource -->
+            	<xsl:if test="./REGP">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./REGP)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/Format'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./REGP)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./REGP)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation author of audio documentation as an individual -->
+            	<xsl:if test="./REGA">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./REGA)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./REGA)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./REGA)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- agent role of audio documentation as an individual -->
+            	<xsl:if test="./REGE">
+		                		<rdf:Description>
+		                    		<xsl:attribute name="rdf:about">
+		                        		<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-audio-documentation-', $audiodocu-position, '-audio-documentation-owner')" />
+		                    		</xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione audio ', $audiodocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./REGE))" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of audio documentation ', $audiodocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./REGE))" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario della documentazione audio ', $audiodocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./REGE))" />
+				                    </l0:name>
+				                    <l0:name xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of audio documentation ', $audiodocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./REGE))" />
+				                    </l0:name>
+				                    <arco:hasRole>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                        </xsl:attribute>
+				                    </arco:hasRole>
+				                    <arco:hasAgent>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./REGE)))" />
+				                        </xsl:attribute>
+				                    </arco:hasAgent>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="'Ente proprietario della documentazione'" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="'Owner of documentation'" />
+				                    </rdfs:label>
+				                    <arco:isRoleOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-audio-documentation-', $audiodocu-position, '-audio-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isRoleOf>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./REGE)))" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label>
+				                        <xsl:value-of select="normalize-space(./REGE)" />
+				                    </rdfs:label>
+				                    <l0:name>
+				                        <xsl:value-of select="normalize-space(./REGE)" />
+				                    </l0:name>
+				                    <arco:isAgentOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-audio-documentation-', $audiodocu-position, '-audio-documentation-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isAgentOf>
+				                </rdf:Description>
+				             </xsl:if>
+            </xsl:for-each>
+            <!-- Sources and documents of cultural property as an individual -->
+            <xsl:for-each select="schede/*/DO/FNT">
+            <xsl:variable name="sourcedocu-position">
+            		<xsl:value-of select="position()" />
+            	</xsl:variable>
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'SourcesAndDocuments/', $itemURI, '-sources-documents-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/subjective/SourcesAndDocuments'" />
+            			</xsl:attribute>
+            		</rdf:type>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Sources and documents ', position(), ' of cultural property: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Sources and documents ', position(), ' of cultural property: ', $itemURI)" />
+            		</l0:name>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Fonti e documenti ', position(), ' del bene culturale: ', $itemURI)" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Fonti e documenti ', position(), ' del bene culturale: ', $itemURI)" />
+            		</l0:name>
+            		<xsl:if test="./FNTI">
+            			<culturaldefinition:documentationIdentifier>
+            				<xsl:value-of select="./FNTI" />
+            			</culturaldefinition:documentationIdentifier>
+            		</xsl:if>
+            		<xsl:if test="./FNTD">
+            			<tiapit:date>
+            				<xsl:value-of select="./FNTD" />
+            			</tiapit:date>
+            		</xsl:if>
+            		<xsl:if test="./FNTS and not(./FNTS='-' or ./FNTS='.')">
+            			<culturaldefinition:documentationLocation>
+            				<xsl:value-of select="./FNTS" />
+            			</culturaldefinition:documentationLocation>
+            		</xsl:if>
+            		<xsl:if test="./FNTF">
+            			<culturaldefinition:folio>
+            				<xsl:value-of select="./FNTF" />
+            			</culturaldefinition:folio>
+            		</xsl:if>
+            		<xsl:if test="./FNTY">
+            			<culturaldefinition:rights>
+            				<xsl:value-of select="./FNTY" />
+            			</culturaldefinition:rights>
+            		</xsl:if>
+            		<xsl:if test="./FNTK">
+            			<culturaldefinition:digitalFileName>
+            				<xsl:value-of select="./FNTK" />
+            			</culturaldefinition:digitalFileName>
+            		</xsl:if>
+            		<xsl:if test="./FNTO">
+            			<arco:note>
+            				<xsl:value-of select="./FNTO" />
+            			</arco:note>
+            		</xsl:if>
+            		<xsl:if test="./FNTW">
+            			<smapit:URL>
+            				<xsl:value-of select="./FNTW" />
+            			</smapit:URL>
+            		</xsl:if>
+            		<xsl:if test="./FNTT">
+            			<culturaldefinition:documentationTitle>
+            				<xsl:value-of select="./FNTT" />
+            			</culturaldefinition:documentationTitle>
+            		</xsl:if>
+            		<xsl:if test="./FNTX">
+            			<arco:hasCategory>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./FNTX)))" />
+            				</xsl:attribute>
+            			</arco:hasCategory>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FNTP">
+            			<culturaldefinition:hasDocumentationType>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./FNTP)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasDocumentationType>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FNTR">
+            			<culturaldefinition:hasFormat>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./FNTR)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasFormat>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FNTA">
+            			<culturaldefinition:hasAuthor>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'Author/', arco-fn:urify(normalize-space(./FNTA)))" />
+            				</xsl:attribute>
+            			</culturaldefinition:hasAuthor>            		            		
+            		</xsl:if>
+            		<xsl:if test="./FNTE">
+            			<arco:hasAgentRole>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-sources-documents-', $sourcedocu-position, '-sources-documents-owner')" />
+            				</xsl:attribute>
+            			</arco:hasAgentRole>
+            		</xsl:if>
+            	</rdf:Description>
+            	<!-- documentation category of sources and documents as an individual -->
+            	<xsl:if test="./FNTX">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationCategory/', arco-fn:urify(normalize-space(./FNTX)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationCategory'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FNTX)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FNTX)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation type of sources and documents as an individual -->
+            	<xsl:if test="./FNTP">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'DocumentationType/', arco-fn:urify(normalize-space(./FNTP)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/DocumentationType'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FNTP)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FNTP)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation format of sources and documents as an individual -->
+            	<xsl:if test="./FNTR">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Format/', arco-fn:urify(normalize-space(./FNTR)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/arco/subjective/Format'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FNTR)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FNTR)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- documentation author of sources and documents as an individual -->
+            	<xsl:if test="./FNTA">
+            		<rdf:Description>
+            			<xsl:attribute name="rdf:about">
+            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./FNTA)))" />
+            			</xsl:attribute>
+            			<rdf:type>
+            				<xsl:attribute name="rdf:resource">
+            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+            				</xsl:attribute>
+            			</rdf:type>
+            			<rdfs:label>
+            				<xsl:value-of select="normalize-space(./FNTA)" />
+            			</rdfs:label>
+            			<l0:name>
+            				<xsl:value-of select="normalize-space(./FNTA)" />
+            			</l0:name>
+            		</rdf:Description>
+            	</xsl:if>
+            	<!-- agent role of sources and documents as an individual -->
+            	<xsl:if test="./FNTE">
+		                		<rdf:Description>
+		                    		<xsl:attribute name="rdf:about">
+		                        		<xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-sources-documents-', $sourcedocu-position, '-sources-documents-owner')" />
+		                    		</xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario di fonti e documenti ', $sourcedocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./FNTE))" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of sources and documents ', $sourcedocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./FNTE))" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="it">
+				                        <xsl:value-of select="concat('Ente proprietario di fonti e documenti ', $sourcedocu-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./FNTE))" />
+				                    </l0:name>
+				                    <l0:name xml:lang="en">
+				                        <xsl:value-of select="concat('Owner agency of sources and documents ', $sourcedocu-position, ' of cultural property ', $itemURI, ': ', normalize-space(./FNTE))" />
+				                    </l0:name>
+				                    <arco:hasRole>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                        </xsl:attribute>
+				                    </arco:hasRole>
+				                    <arco:hasAgent>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./FNTE)))" />
+				                        </xsl:attribute>
+				                    </arco:hasAgent>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Role/Owner')" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="'Ente proprietario della documentazione'" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="'Owner of documentation'" />
+				                    </rdfs:label>
+				                    <arco:isRoleOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-sources-documents-', $sourcedocu-position, '-sources-documents-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isRoleOf>
+				                </rdf:Description>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./FNTE)))" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label>
+				                        <xsl:value-of select="normalize-space(./FNTE)" />
+				                    </rdfs:label>
+				                    <l0:name>
+				                        <xsl:value-of select="normalize-space(./FNTE)" />
+				                    </l0:name>
+				                    <arco:isAgentOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-sources-documents-', $sourcedocu-position, '-sources-documents-owner')" />
+				                        </xsl:attribute>
+				                    </arco:isAgentOf>
+				                </rdf:Description>
+				             </xsl:if>
             </xsl:for-each>
             <!-- Geometry of cultural property as an individual for GE (version 4.00)-->
             <xsl:for-each select="schede/*/GE | schede/*/MT/MTA/MTAR | schede/*/MT/MTA/MTAX / schede/*/MT/MTA/MTAM">
