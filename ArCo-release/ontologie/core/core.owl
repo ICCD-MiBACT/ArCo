@@ -28,12 +28,12 @@
         <owl:imports rdf:resource="https://w3id.org/arco/objective/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/catalogue/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/location/"/>
-        <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo è il modulo core della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al bene culturale, considerate centrali. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
-        <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
