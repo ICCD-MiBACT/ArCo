@@ -1,18 +1,11 @@
 package it.cnr.istc.stlab.arco;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.util.concurrent.ConcurrentMap;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -20,19 +13,9 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Option.Builder;
-import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.mapdb.DB;
-import org.mapdb.DBMaker;
-import org.mapdb.Serializer;
-
-import com.opencsv.CSVParser;
-import com.opencsv.CSVParserBuilder;
-import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderBuilder;
 
 public class XsltTransformer {
 
@@ -105,16 +88,8 @@ public class XsltTransformer {
 	        					if(outputSyntax == null)
 	        						outputSyntax = "TURTLE";
 	        					
-	        					ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
-								converter.convert(fileName, inputStream, byteArrayOut);
+	        					Model model = converter.convert(fileName, inputStream);
 								
-								String rdfSource = new String(byteArrayOut.toByteArray());
-								//System.out.println(rdfSource);
-								
-								ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
-								
-								Model model = ModelFactory.createDefaultModel();
-								model.read(in, null, "RDF/XML");
 								model.write(out, outputSyntax);
 	        				}
 	        				else System.err.println("The XML file provided as input is not XML: the application processes only file with .xml extension.");

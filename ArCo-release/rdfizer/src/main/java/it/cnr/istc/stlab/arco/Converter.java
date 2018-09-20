@@ -2,14 +2,17 @@ package it.cnr.istc.stlab.arco;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ConcurrentMap;
 
 import javax.xml.transform.stream.StreamSource;
@@ -41,12 +44,13 @@ import net.sf.saxon.s9api.XsltTransformer;
 
 public class Converter {
 
-	private static final String XSLT_LOCATION = "META-INF/xslt/arco.xslt";
+	//private static final String XSLT_LOCATION = "META-INF/xslt/arco.xslt";
+	private static final String XSLT_LOCATION = "META-INF/xslt";
 	
 	private static final String ENTI_SCHEDATORI_CSV = "META-INF/datasets/enti-schedatori.csv";
 	
 	private Processor proc;
-	private XsltExecutable exp;
+	private List<XsltExecutable> exps;
 	
 	private ConcurrentMap<String,String> entiSchedatori;
 	private DB db;
@@ -262,44 +266,83 @@ public class Converter {
 		proc.registerExtensionFunction(cataloguingEntity);
         XsltCompiler comp = proc.newXsltCompiler();
         
-        InputStream xsltInputStream = Converter.class.getClassLoader().getResourceAsStream(XSLT_LOCATION);
+        ClassLoader loader = Converter.class.getClassLoader();
+        
+        URL url = loader.getResource(XSLT_LOCATION);
+        File[] xsltFiles = new File(url.getPath()).listFiles();
+        for(File xsltFile : xsltFiles){
+        	XsltExecutable exp;
+			try {
+				exp = comp.compile(new StreamSource(xsltFile));
+				exps.add(exp);
+			} catch (SaxonApiException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	
+        }
+        /*
+        String path = url.getPath();
         try {
-			exp = comp.compile(new StreamSource(xsltInputStream));
+        	XsltExecutable exp = comp.compile(new StreamSource(xsltInputStream));
+        	exps.add(exp);
 			
 		} catch (SaxonApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
 	}
 	
-	public void convert(String item, InputStream sourceXml, OutputStream outRdf){
+	public Model convert(String item, InputStream sourceXml){
+		
+		Model model = ModelFactory.createDefaultModel();
         
         try {
         	StreamSource inputStreamSource = new StreamSource(sourceXml);
 			XdmNode source = proc.newDocumentBuilder().build(inputStreamSource);
 			
-			Serializer out = proc.newSerializer(outRdf);
+			//XsltTransformer trans = exp.load();
+			for(XsltExecutable exp : exps){
+				ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+				Serializer out = proc.newSerializer(byteArrayOut);
+				XsltTransformer trans = exp.load();
+				
+				QName qName = new QName("item");
+				XdmValue value = new XdmAtomicValue(item);
+				trans.setParameter(qName, value);
+	            trans.setInitialContextNode(source);
+	            trans.setDestination(out);
+	            trans.transform();
+	            trans.close();
+	            out.close();
+	            
+	            String rdfSource = new String(byteArrayOut.toByteArray());
+				
+				ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
+	            Model localModel = ModelFactory.createDefaultModel();
+	            localModel.read(in, null, "RDF/XML");
+	            
+	            model.add(localModel);
+			}
             
-			XsltTransformer trans = exp.load();
-			
-			QName qName = new QName("item");
-			XdmValue value = new XdmAtomicValue(item);
-			trans.setParameter(qName, value);
-            trans.setInitialContextNode(source);
-            trans.setDestination(out);
-            trans.transform();
-            trans.close();
-            out.close();
+            
+            
             
 		} catch (SaxonApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         
+        return model;
+        
 		
 	}
 	
 	private void init(){
+		
+		exps = new ArrayList<XsltExecutable>();
+		
     	db = DBMaker
     	        .fileDB("enti_schedatori.db")
     	        .fileMmapEnable()
@@ -343,16 +386,9 @@ public class Converter {
 	public static void main(String[] args) {
 		Converter converter = new Converter();
 		//converter.convert("ICCD3569822", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD3569822.xml"), System.out);
-		ByteArrayOutputStream out = new ByteArrayOutputStream();
-		converter.convert("ICCD10717180", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"), out);
-	
-		String sss = new String(out.toByteArray());
-		//System.out.println(sss);
 		
-		ByteArrayInputStream in = new ByteArrayInputStream(sss.getBytes());
-		
-		Model model = ModelFactory.createDefaultModel();
-		model.read(in, null, "RDF/XML");
+			
+		Model model = converter.convert("ICCD10717180", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
 		model.write(System.out, "TURTLE");
 		
 		converter.destroy();

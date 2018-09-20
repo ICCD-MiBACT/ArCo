@@ -19,69 +19,71 @@
 	<xsl:param name="item" />
 	<xsl:template match="/">
 
-		<xsl:variable name="NS" select="'https://w3id.org/arco/resource/'"></xsl:variable>
-		<!-- xsl:variable name="itemURI" select="arco-fn:urify($item)"></xsl:variable -->
-		<!-- This cannot be valid as schede/*/CD/NCT/NCTR and schede/*/CD/NCT/NCTN 
-			are not unique xsl:variable name="itemURI" select="concat(schede/*/CD/NCT/NCTR, 
-			schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)"></xsl:variable -->
-
 		<xsl:variable name="itemURI">
-			<xsl:choose>
-				<xsl:when test="schede/*/RV/RVE/RVEL">
-					<xsl:value-of
-						select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(schede/*/RV/RVE/RVEL)))" />
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of
-						select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
+            <xsl:choose>
+                <xsl:when test="schede/*/RV/RVE/RVEL">
+                    <xsl:value-of select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(schede/*/RV/RVE/RVEL)))" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        
+        <xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
+		<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
+		<xsl:variable name="cp-name" select="''"></xsl:variable>
+        
+        <xsl:variable name="NS" select="'https://w3id.org/arco/resource/'"></xsl:variable>
+        <xsl:variable name="culturalProperty">
+        	<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+        </xsl:variable>
+        
+
 		
 		<!-- variable ogtt -->
 		<xsl:variable name="ogtt">
 			<xsl:choose>
 				<xsl:when test="schede/*/OG/OGT/OGTT">
-					<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/OGT/OGTT))" />
+					<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTT)" />
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="''" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-				
-			<!-- variable sgta -->	
-			<xsl:variable name="sgta">
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTA">
-							<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/SGT/SGTA))" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="''" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
-				
-				<!-- variable sgti -->	
-				<xsl:variable name="sgti">
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTI">
-							<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTI)" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="''" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
 
+		<!-- variable sgta -->
+		<xsl:variable name="sgta">
+			<xsl:choose>
+				<xsl:when test="schede/*/OG/SGT/SGTA">
+					<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTA)" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="''" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
 
-		<!-- xsl:variable name="sheetType" select="schede/*/CD/TSK/text()"></xsl:variable -->
-		<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
-		<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
-		<xsl:variable name="cp-name" select="''"></xsl:variable>
+		<!-- variable sgti -->
+		<xsl:variable name="sgti">
+			<xsl:choose>
+				<xsl:when test="schede/*/OG/SGT/SGTI">
+					<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTI)" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="''" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+
 
 
 		<rdf:RDF>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="$culturalProperty" />
+				</xsl:attribute>
 
 			<!-- labels of cultural property -->
 
@@ -92,12 +94,12 @@
 				ci sono entrambi -->
 
 			<xsl:if test="$sheetType='SMO'">
-				
+
 				<xsl:variable name="ogtv">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -109,15 +111,15 @@
 					<xsl:choose>
 						<xsl:when test="$sgta and $sgti">
 							<xsl:value-of
-								select="CONCAT($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+								select="concat($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 						</xsl:when>
 						<xsl:when test="$sgta or $sgti">
 							<xsl:value-of
-								select="CONCAT($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+								select="concat($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -136,7 +138,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGD/OGDN">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGD/OGDN), ' (')" />
+								select="concat(normalize-space(schede/*/OG/OGD/OGDN), ' (')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -147,7 +149,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -158,7 +160,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTW">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTW))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTW))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -169,7 +171,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTP">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTP))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTP))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -181,11 +183,11 @@
 					<xsl:choose>
 						<xsl:when test="$ogdn">
 							<xsl:value-of
-								select="CONCAT($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
+								select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -198,12 +200,12 @@
 				inserire la parentesi di chiusura a seconda dell'esistenza o meno di $ogtn. 
 				La virgola tra ogtd e ogtt viene messa nella variabile ogtt perché c'è solo 
 				se c'è ogtt -->
-			<xsl:if test="$sheetType='PST' or 'SI'">
+			<xsl:if test="$sheetType='PST' or $sheetVersion='SI'">
 				<xsl:variable name="ogtn">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTN">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -214,7 +216,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTT">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -226,11 +228,11 @@
 					<xsl:choose>
 						<xsl:when test="$ogtn">
 							<xsl:value-of
-								select="CONCAT($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, ')')" />
+								select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtt)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -246,7 +248,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTT">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -257,7 +259,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTN">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTN))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTN))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -279,11 +281,11 @@
 					<xsl:choose>
 						<xsl:when test="$sgti">
 							<xsl:value-of
-								select="CONCAT($sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn, ')')" />
+								select="concat($sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -321,7 +323,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTT">
 							<xsl:value-of
-								select="CONCAT(' - ', normalize-space(schede/*/OG/OGT/OGTT))" />
+								select="concat(' - ', normalize-space(schede/*/OG/OGT/OGTT))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -332,7 +334,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -344,15 +346,15 @@
 					<xsl:choose>
 						<xsl:when test="$sgtt and $sgti">
 							<xsl:value-of
-								select="CONCAT($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
+								select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
 						</xsl:when>
 						<xsl:when test="$sgtt or $sgti">
 							<xsl:value-of
-								select="CONCAT($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
+								select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -368,7 +370,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -379,7 +381,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTW">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTW))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTW))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -390,7 +392,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTP">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTP))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTP))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -401,7 +403,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -411,7 +413,7 @@
 
 				<rdfs:label>
 					<xsl:value-of
-						select="CONCAT(normalize-space(schede/*/SG/SGT/SGTI), ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
+						select="concat(normalize-space(schede/*/SG/SGT/SGTI), ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -430,12 +432,12 @@
 				inserire la parentesi di chiusura a seconda dell'esistenza o meno di $ogtn. 
 				La virgola tra ogtd e ogtt viene messa nella variabile ogtc perché c'è solo 
 				se c'è ogtc -->
-			<xsl:if test="$sheetType='CA' or 'MA'">
+			<xsl:if test="$sheetType='CA' or $sheetVersion='MA'">
 				<xsl:variable name="ogtn">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTN">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -446,7 +448,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTC">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTC))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTC))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -458,11 +460,11 @@
 					<xsl:choose>
 						<xsl:when test="$ogtn">
 							<xsl:value-of
-								select="CONCAT($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, ')')" />
+								select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtc)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtc)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -488,7 +490,7 @@
 				<xsl:variable name="ogtp">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTP">
-							<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/OGT/OGTP))" />
+							<xsl:value-of select="concat(normalize-space(schede/*/OG/OGT/OGTP))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -500,15 +502,15 @@
 					<xsl:choose>
 						<xsl:when test="$ogtm and $ogtp">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, ', ', $ogtp, ')')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, ', ', $ogtp, ')')" />
 						</xsl:when>
 						<xsl:when test="$ogtm or $ogtp">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, $ogtp, ')')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, $ogtp, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT))" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT))" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -520,7 +522,7 @@
 			<xsl:if test="$sheetType='TMA'">
 				<rdfs:label>
 					<xsl:value-of
-						select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ' (', normalize-space(schede/*/OG/OGT/OGTM), ')')" />
+						select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', normalize-space(schede/*/OG/OGT/OGTM), ')')" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -529,7 +531,7 @@
 				della label perché la virgola c'è solo se ci sono entrambe le variabili, 
 				le parentesi solo se ce ne sono entrambe o una delle due -->
 			<xsl:if test="$sheetType='NU'">
-				
+
 				<xsl:variable name="ogth">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTH">
@@ -546,11 +548,11 @@
 					<xsl:choose>
 						<xsl:when test="$ogtt and $ogth">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogth, ')')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogth, ')')" />
 						</xsl:when>
 						<xsl:when test="$ogtt or $ogth">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogth, ')')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogth, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
@@ -568,7 +570,7 @@
 				<xsl:variable name="sgtt">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/SGT/SGTT">
-							<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/SGT/SGTT))" />
+							<xsl:value-of select="concat(normalize-space(schede/*/OG/SGT/SGTT))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -591,11 +593,11 @@
 					<xsl:choose>
 						<xsl:when test="$sgta and $sgti">
 							<xsl:value-of
-								select="CONCAT($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD) ')')" />
+								select="concat($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
 						</xsl:when>
 						<xsl:when test="$sgta or $sgti">
 							<xsl:value-of
-								select="CONCAT($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
+								select="concat($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
@@ -610,7 +612,7 @@
 				se c'è o sgta o sgti, mentre si mette la virgola tra sgta e sgti solo se 
 				ci sono entrambi -->
 
-			<xsl:if test="$sheetType='D' or 'MI' or 'S'">
+			<xsl:if test="$sheetType='D' or $sheetVersion='MI' or $sheetVersion='S'">
 				<xsl:variable name="sgtt">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/SGT/SGTT">
@@ -635,7 +637,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -647,15 +649,15 @@
 					<xsl:choose>
 						<xsl:when test="$sgtt and $sgti">
 							<xsl:value-of
-								select="CONCAT($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+								select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 						</xsl:when>
 						<xsl:when test="$sgtt or $sgti">
 							<xsl:value-of
-								select="CONCAT($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+								select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -674,7 +676,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTN">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -685,7 +687,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTC">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTC))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTC))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -696,7 +698,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTF">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTF))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTF))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -707,7 +709,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTG">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTG))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTG))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -719,11 +721,11 @@
 					<xsl:choose>
 						<xsl:when test="$ogtn">
 							<xsl:value-of
-								select="CONCAT($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg, ')')" />
+								select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg)" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</rdfs:label>
@@ -737,12 +739,12 @@
 				se c'è ogtq -->
 			<xsl:if test="$sheetType='A'">
 				<xsl:choose>
-					<xsl:when test="$sheetVersion='3.00_ICCD0' or '3.00'">
+					<xsl:when test="$sheetVersion='3.00_ICCD0' or $sheetVersion='3.00'">
 						<xsl:variable name="ogtn">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTN">
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGTN), ' (')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -753,7 +755,7 @@
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTQ">
 									<xsl:value-of
-										select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTQ))" />
+										select="concat(', ', normalize-space(schede/*/OG/OGT/OGTQ))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -765,11 +767,11 @@
 							<xsl:choose>
 								<xsl:when test="$ogtn">
 									<xsl:value-of
-										select="CONCAT($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')')" />
+										select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtq)" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtq)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
@@ -804,11 +806,11 @@
 							<xsl:choose>
 								<xsl:when test="$ogtt and $ogtq">
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtq, ')')" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtq, ')')" />
 								</xsl:when>
 								<xsl:when test="$ogtt or $ogtq">
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtq, ')')" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtq, ')')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
@@ -829,7 +831,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTQ">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTQ))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTQ))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -840,7 +842,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGA/OGAD">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGA/OGAD))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGA/OGAD))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -850,7 +852,7 @@
 
 				<rdfs:label>
 					<xsl:value-of
-						select="CONCAT(normalize-space(schede/*/OG/OGT/OGTN), ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')', $ogad)" />
+						select="concat(normalize-space(schede/*/OG/OGT/OGTN), ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')', $ogad)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -859,14 +861,14 @@
 			<xsl:if test="$sheetType='BDI'">
 				<xsl:choose>
 					<xsl:when
-						test="$sheetVersion='3.00_ICCD0' or '3.00' or '3.01_ICCD0' or '3.01'">
+						test="$sheetVersion='3.00_ICCD0' or $sheetVersion='3.00' or $sheetVersion='3.01_ICCD0' or $sheetVersion='3.01'">
 						<!-- la virgola tra dbd e dbl viene inserita nella variabile dbl perché 
 							c'è sempre se c'è dbl. Le parentesi di dbc vengono messe nella label perché 
 							dbd e dbc sono obbligatori quindi ci sono sempre -->
 						<xsl:variable name="dbl">
 							<xsl:choose>
 								<xsl:when test="schede/*/DB/DBL">
-									<xsl:value-of select="CONCAT(', ', normalize-space(schede/*/DB/DBL))" />
+									<xsl:value-of select="concat(', ', normalize-space(schede/*/DB/DBL))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -876,7 +878,7 @@
 
 						<rdfs:label>
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/DB/DBD), $dbl, ' (', normalize-space(schede/*/DB/DBC), ')')" />
+								select="concat(normalize-space(schede/*/DB/DBD), $dbl, ' (', normalize-space(schede/*/DB/DBC), ')')" />
 						</rdfs:label>
 					</xsl:when>
 					<xsl:otherwise>
@@ -889,7 +891,7 @@
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGD/OGDN">
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGDN), ' (')" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGDN), ' (')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -901,11 +903,11 @@
 							<xsl:choose>
 								<xsl:when test="$ogdn">
 									<xsl:value-of
-										select="CONCAT($ogdn, normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG), ')')" />
+										select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG), ')')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG))" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG))" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
@@ -918,7 +920,7 @@
 			<!-- BDM -->
 			<xsl:if test="$sheetType='BDM'">
 				<xsl:choose>
-					<xsl:when test="$sheetVersion='2.00_ICCD0' or '2.00'">
+					<xsl:when test="$sheetVersion='2.00_ICCD0' or $sheetVersion='2.00'">
 						<!-- la virgola tra ogtd o ogtt e ogtg viene inserita nella variabile 
 							ogtg perché c'è sempre se c'è ogtv. La virgola tra ogtd e ogtt viene inserita 
 							nella variabile ogtt perché c'è sempre se c'è ogtt. Invece, nella label si 
@@ -927,7 +929,7 @@
 						<xsl:variable name="sgtt">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/SGT/SGTT">
-									<xsl:value-of select="CONCAT(normalize-space(schede/*/OG/SGT/SGTT))" />
+									<xsl:value-of select="concat(normalize-space(schede/*/OG/SGT/SGTT))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -948,7 +950,7 @@
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTT">
 									<xsl:value-of
-										select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
+										select="concat(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -959,7 +961,7 @@
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTG">
 									<xsl:value-of
-										select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTG))" />
+										select="concat(', ', normalize-space(schede/*/OG/OGT/OGTG))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -971,15 +973,15 @@
 							<xsl:choose>
 								<xsl:when test="$sgtt and $sgti">
 									<xsl:value-of
-										select="CONCAT($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
+										select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
 								</xsl:when>
 								<xsl:when test="$sgtt or $sgti">
 									<xsl:value-of
-										select="CONCAT($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
+										select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg)" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
@@ -994,7 +996,7 @@
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGD/OGDN">
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGDN), ' (')" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGDN), ' (')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -1005,7 +1007,7 @@
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTT">
 									<xsl:value-of
-										select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
+										select="concat(', ', normalize-space(schede/*/OG/OGT/OGTT))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -1015,7 +1017,7 @@
 						<xsl:variable name="ctg">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/CTG">
-									<xsl:value-of select="CONCAT(', ', normalize-space(schede/*/OG/CTG))" />
+									<xsl:value-of select="concat(', ', normalize-space(schede/*/OG/CTG))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -1027,11 +1029,11 @@
 							<xsl:choose>
 								<xsl:when test="$ogdn">
 									<xsl:value-of
-										select="CONCAT($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg, ')')" />
+										select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg, ')')" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
-										select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg)" />
+										select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg)" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
@@ -1049,7 +1051,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/SB/NBN/NBNA">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/SB/NBN/NBNA), ' - ')" />
+								select="concat(normalize-space(schede/*/SB/NBN/NBNA), ' - ')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -1060,7 +1062,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTE">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTE))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTE))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -1071,7 +1073,7 @@
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTC">
 							<xsl:value-of
-								select="CONCAT(', ', normalize-space(schede/*/OG/OGT/OGTC))" />
+								select="concat(', ', normalize-space(schede/*/OG/OGT/OGTC))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -1081,19 +1083,19 @@
 
 				<rdfs:label>
 					<xsl:value-of
-						select="CONCAT($nbna, normalize-space(schede/*/OG/OGT/OGTD), $ogte, $ogtc)" />
+						select="concat($nbna, normalize-space(schede/*/OG/OGT/OGTD), $ogte, $ogtc)" />
 				</rdfs:label>
 			</xsl:if>
 
 			<!-- BNM or BNPE or BNZ or E -->
 			<!-- le parentesi vengono inserite nella variabile ogtv perché ci sono 
 				solo se c'è ogtv -->
-			<xsl:if test="$sheetType='BNPE' or 'BNM' or 'BNZ' or 'E'">
+			<xsl:if test="$sheetType='BNPE' or $sheetVersion='BNM' or $sheetVersion='BNZ' or $sheetVersion='E'">
 				<xsl:variable name="ogtv">
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/OGT/OGTV">
 							<xsl:value-of
-								select="CONCAT(' (', normalize-space(schede/*/OG/OGT/OGTV), ')')" />
+								select="concat(' (', normalize-space(schede/*/OG/OGT/OGTV), ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="''" />
@@ -1103,7 +1105,7 @@
 
 				<rdfs:label>
 					<xsl:value-of
-						select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
+						select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -1139,11 +1141,11 @@
 					<xsl:choose>
 						<xsl:when test="$ogtt and $ogtv">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtv, ')')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtv, ')')" />
 						</xsl:when>
 						<xsl:when test="$ogtt or $ogtv">
 							<xsl:value-of
-								select="CONCAT(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtv, ')')" />
+								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtv, ')')" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
@@ -1155,7 +1157,7 @@
 
 			<!-- FF -->
 			<!-- in attesa di indicazioni da Chiara Veninata -->
-
+			</rdf:Description>
 		</rdf:RDF>
 	</xsl:template>
 </xsl:stylesheet>

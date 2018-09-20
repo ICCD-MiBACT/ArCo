@@ -1,8 +1,6 @@
 package it.cnr.istc.stlab.arco;
 
 import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -54,7 +52,6 @@ public class Main {
 						List<File> rdfFiles = xmlList.parallelStream().map(f -> {
 							
 							File ret = null;
-							Model model = ModelFactory.createDefaultModel();
 							InputStream is = null;
 							try {
 								is = new FileInputStream(f);
@@ -65,20 +62,14 @@ public class Main {
 							
 							String itemName = f.getName().replace(".xml", "");
 							if(is != null){
-								ByteArrayOutputStream out = new ByteArrayOutputStream();
 								try{
-									converter.convert(itemName, is, out);
 									
-									ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
-									
-									model.read(in, null, "RDF/XML");
+									Model model = converter.convert(itemName, is);
 									
 									ret = new File(outSubFolder, itemName + ".ttl");
 									OutputStream modelOut = new FileOutputStream(ret);
 									model.write(modelOut, "TURTLE");
 									modelOut.close();
-									
-									
 									
 								} catch(Exception e){
 									try {

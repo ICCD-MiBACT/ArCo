@@ -1309,23 +1309,6 @@
                         <xsl:value-of select="arco-fn:getSpecificPropertyType($sheetType)" />
                     </xsl:attribute>
                 </rdf:type>
-                <!-- rdfs:label of cultural property -->
-                <rdfs:label>
-                    <xsl:choose>
-                        <xsl:when test="schede/*/OG/OGT/OGTT">
-                            <xsl:value-of select="concat(schede/*/OG/OGT/OGTD, ' ', schede/*/OG/OGT/OGTT)" />
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="schede/*/OG/OGT/OGTD" />
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:if test="schede/*/SGT/SGTI">
-                        <xsl:value-of select="concat(' ', schede/*/SGT/SGTI)" />
-                    </xsl:if>
-                    <xsl:if test="schede/*/DA/AID/AIDI">
-                        <xsl:value-of select="concat(' ', schede/*/DA/AID/AIDI)" />
-                    </xsl:if>
-                </rdfs:label>
                 <rdfs:comment>
                     <xsl:for-each select="schede/*/OG/OGT/*">
                         <xsl:choose>
