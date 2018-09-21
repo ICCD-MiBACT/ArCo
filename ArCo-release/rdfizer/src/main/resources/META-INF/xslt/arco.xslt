@@ -974,18 +974,18 @@
                 <!-- cultural property description -->
                 <xsl:if test="schede/*/DA/DES">
                 	<xsl:choose>
-                		<xsl:when test="schede/*/DA/DES/*">
+                		<xsl:when test="schede/*/DA/DES/DESO">
                 			<xsl:if test="not(lower-case(normalize-space(schede/*/DA/DES/DESO))='nr' or lower-case(normalize-space(schede/*/DA/DES/DESO))='n.r.' or lower-case(normalize-space(schede/*/DA/DES/DESO))='nr (recupero pregresso)')">
                 			<arco:description>
                 				<xsl:value-of select="normalize-space(schede/*/DA/DES/DESO)" />
                 			</arco:description>
                 			</xsl:if>
                 		</xsl:when>
-                		<xsl:otherwise>
+                		<xsl:when test="$sheetVersion='4.00' or $sheetVersion='4.00_ICCD0'">
                 			<arco:description>
                 				<xsl:value-of select="normalize-space(schede/*/DA/DES)" />
                 			</arco:description>
-                		</xsl:otherwise>                	
+                		</xsl:when>                	
                 	</xsl:choose>                
                 </xsl:if>
                 <!-- fruition (VeAC) -->
@@ -1309,8 +1309,20 @@
                         <xsl:value-of select="arco-fn:getSpecificPropertyType($sheetType)" />
                     </xsl:attribute>
                 </rdf:type>
+                <!-- rdfs:comment of cultural property -->
                 <rdfs:comment>
                     <xsl:for-each select="schede/*/OG/OGT/*">
+                        <xsl:choose>
+                            <xsl:when test="position() = 1">
+                                <xsl:value-of select="./text()" />
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="concat(', ', ./text())" />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
+                    <!-- comment for BDI 3.00 and 3.01 -->
+                    <xsl:for-each select="schede/*/DB/*">
                         <xsl:choose>
                             <xsl:when test="position() = 1">
                                 <xsl:value-of select="./text()" />
