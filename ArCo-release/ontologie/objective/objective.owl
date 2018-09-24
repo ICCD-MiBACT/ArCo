@@ -368,14 +368,30 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/digitalPhotographNote -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/objective/digitalPhotographNote">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/note"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative alla fotografia digitale. Può rappresentare informazioni utili a identificare le intenzioni dell&apos;autore in relazione alla visualizzazione o rioggettivazione della fotografia digitale, come la dimensione del quadro, la risoluzione di stampa e relativa unità di misura, altre indicazioni per la stampa (tipo stampante, correzioni cromatiche, ecc.), categoria, URL, ecc.</rdfs:comment>
+        <rdfs:label xml:lang="en">digital photograph note</rdfs:label>
+        <rdfs:label xml:lang="it">note sulla fotografia digitale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FVC/FVCV</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/objective/proposedIntervention -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/objective/proposedIntervention">
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali proposte per interventi conservativi, dopo aver valutato le condizioni del bene al momento della sua catalogazione.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha proposte di interventi</rdfs:label>
-        <rdfs:label xml:lang="en">has proposed intervention</rdfs:label>
+        <rdfs:label xml:lang="en">proposed intervention</rdfs:label>
+        <rdfs:label xml:lang="it">proposte di interventi</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>CO/STP</core:iccdNormTag>
@@ -390,8 +406,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta informazioni sulle condizioni ambientali e microclimatiche in cui si trova il bene al momento della catalogazione ed eventuali indicazioni per una sua corretta conservazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents informations about the storage conditions of a cultural property.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha modalità di conservazione</rdfs:label>
-        <rdfs:label xml:lang="en">has storage conditions</rdfs:label>
+        <rdfs:label xml:lang="it">modalità di conservazione</rdfs:label>
+        <rdfs:label xml:lang="en">storage conditions</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>CO/STD</core:iccdNormTag>
@@ -678,7 +694,7 @@
         <rdfs:label xml:lang="en">Technical Characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; MT/MTX; MT/FVM; MT/FRM;</core:iccdNormTag>
     </owl:Class>
     
 
@@ -919,6 +935,34 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/FileFormat -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/FileFormat">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato utilizzato per la scrittura di un&apos;immagine digitale su supporto informatico.</rdfs:comment>
+        <rdfs:label xml:lang="en">File Format</rdfs:label>
+        <rdfs:label xml:lang="it">Formato di compressione/estensione file</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FVC/FVCF</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/Filigree -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/Filigree">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la filigrana di un&apos;opera d&apos;arte, un disegno, una fotografia, una stampa.</rdfs:comment>
+        <rdfs:label xml:lang="it">Filigrana</rdfs:label>
+        <rdfs:label xml:lang="en">Filigree</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/objective/FrontTotalLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/FrontTotalLength">
@@ -1015,6 +1059,48 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/MassStorage -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/MassStorage">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la memoria di massa nella quale è stata memorizzata una fotografia digitale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mass storage</rdfs:label>
+        <rdfs:label xml:lang="it">Memoria di massa</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FVM</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/Material -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/Material">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la materia con cui è realizzato un oggetto, per esempio un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Materia</rdfs:label>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/MaterialOrTechnique -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/MaterialOrTechnique">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la materia e/o la tecnica con cui è realizzato un oggetto, per esempio un bene culturale. Nel dominio delle normative  ICCD per la catalogazione dei beni culturali, si rende necessario nei casi in cui materia e tecnica sono registrate nello stesso campo, nella forma &quot;materia/ tecnica&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="it">Materia o tecnica</rdfs:label>
+        <rdfs:label xml:lang="en">Material or Technique</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">MT/MTC (come campo semplice)</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/objective/MaximumMinimumWidth -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/MaximumMinimumWidth">
@@ -1087,6 +1173,62 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/PhotoColour -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/PhotoColour">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il colore della fotografia digitale, ovvero se trattasi di fotografia in bianco/nero o a colori.</rdfs:comment>
+        <rdfs:label xml:lang="it">Colore della fotografia</rdfs:label>
+        <rdfs:label xml:lang="en">Photo colour</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/MTX</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/PhotoProgram -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/PhotoProgram">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il programma di visualizzazione, memorizzazione ed elaborazione utilizzato per la fotografia digitale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photo program</rdfs:label>
+        <rdfs:label xml:lang="it">Programma per la fotografia digitale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FVC/FVCP</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/PhotoSize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/PhotoSize">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato di una fotografia digitale, inteso come la dimensione standardizzata dei materiali fotografici (negativi, positivi, ecc.).</rdfs:comment>
+        <rdfs:label xml:lang="it">Dimensioni della foto (Formato)</rdfs:label>
+        <rdfs:label xml:lang="en">Photo size</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FRM</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/PixelDimension -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/PixelDimension">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le dimensioni, in pixel, di una fotografia digitale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Dimensioni in pixel</rdfs:label>
+        <rdfs:label xml:lang="en">Pixel dimension</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FVC/FVCM</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/objective/Power -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/Power">
@@ -1099,6 +1241,34 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/Resolution -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/Resolution">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la risoluzione e il valore specifico utilizzati per la memorizzazione di una fotografia digitale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resolution</rdfs:label>
+        <rdfs:label xml:lang="it">Risoluzione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FVC/FVCU</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/Shape -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/Shape">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato di un oggetto, per oggetti bidimensionali (es.: ottagonale, tondo)</rdfs:comment>
+        <rdfs:label xml:lang="it">Formato</rdfs:label>
+        <rdfs:label xml:lang="en">Shape</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/objective/StorageCapacity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/StorageCapacity">
@@ -1107,6 +1277,34 @@
         <rdfs:label xml:lang="en">Storage capacity</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/StorageMethodColourDepth -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/StorageMethodColourDepth">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il metodo e la profondità di colore con cui è stata memorizzata la fotografia digitale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Metodo di memorizzazione e profondità di colore</rdfs:label>
+        <rdfs:label xml:lang="en">Storage method and colour depth</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa F: MT/FVC/FVCC</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/objective/Technique -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/objective/Technique">
+        <rdf:type rdf:resource="https://w3id.org/arco/objective/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la tecnica di esecuzione di un oggetto, per esempio un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technique</rdfs:label>
+        <rdfs:label xml:lang="it">Tecnica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCT</core:iccdNormTag>
     </owl:NamedIndividual>
     
 

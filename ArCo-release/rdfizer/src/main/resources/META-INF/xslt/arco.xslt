@@ -1298,6 +1298,124 @@
                 		</xsl:attribute>
                 	</culturaldefinition:hasProtectiveMeasure>                
                 </xsl:for-each>
+                <!-- material of cultural property (version 4.00) --> 
+                <xsl:for-each select="schede/*/MT/MTC/MTCM">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+	            </xsl:for-each>
+                <!-- technique of cultural property (4.00) --> 
+                <xsl:for-each select="schede/*/MT/MTC/MTCT">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:for-each>
+                <!-- materialOrTechnique of cultural property (previous versions) -->
+                <xsl:if test="not(schede/*/MT/MTC/*)">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-technique-', position())" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- shape of cultural property --> 
+                <xsl:if test="schede/*/MT/FRM and not(schede/F/MT/FRM)">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-shape')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- filigree of cultural property --> 
+                <xsl:if test="schede/*/MT/FIL">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-filigree')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- file format of photograph (F) --> 
+                <xsl:if test="schede/F/MT/FVC/FVCF">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-file-format')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- photo size of photograph (F) --> 
+                <xsl:if test="schede/F/MT/FRM">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-size')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- photo program of photograph (F) --> 
+                <xsl:if test="schede/F/MT/FVC/FVCP">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-program')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- storage method and colour depth of photograph (F) --> 
+                <xsl:if test="schede/F/MT/FVC/FVCC">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-storage-method-colour-depth')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- resolution of photograph (F) --> 
+                <xsl:if test="schede/F/MT/FVC/FVCU">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-resolution')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- pixel dimension of photograph (F) --> 
+                <xsl:for-each select="schede/F/MT/FVC/FVCM">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-pixel-dimension-', position())" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:for-each>
+                <!-- mass storage of photograph (F) --> 
+                <xsl:if test="schede/F/MT/FVM">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-mass-storage')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- colour of photograph (F) --> 
+                <xsl:if test="schede/F/MT/MTX">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-colour')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- digital photo note (F) -->
+                <xsl:if test="schede/F/MT/FVC/FVCV or schede/F/MT/FVC/FVCN">
+                	<cpdescription:digitalPhotographNote>
+                		<xsl:choose>
+                			<xsl:when test="schede/F/MT/FVC/FVCV">
+                				<xsl:value-of select="schede/F/MT/FVC/FVCV" />
+                			</xsl:when>
+                			<xsl:otherwise>
+                				<xsl:value-of select="schede/F/MT/FVC/FVCN" />
+                			</xsl:otherwise>
+                		</xsl:choose>
+                		<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCV)" />
+                	</cpdescription:digitalPhotographNote>
+                </xsl:if>
                 <!-- Geometry of cultural property -->
                 	<xsl:for-each select="schede/*/GP">
                 		<clvapit:hasGeometry>
@@ -4548,6 +4666,642 @@
 				                </rdf:Description>
 				             </xsl:if>
             </xsl:for-each>
+            <!-- material of cultural property (version 4.00) as an individual -->  
+            <xsl:for-each select="schede/*/MT/MTC/MTCM">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<xsl:if test="../MTCS">
+            			<arco:note>
+            				<xsl:value-of select="../MTCS" />
+            			</arco:note>
+            		</xsl:if>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/Material'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:for-each>
+            <!-- technique of cultural property (version 4.00) as an individual -->
+            <xsl:for-each select="schede/*/MT/MTC/MTCT">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Tecnica ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Tecnica ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Technique ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Technique ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<xsl:if test="../MTCS">
+            			<arco:note>
+            				<xsl:value-of select="../MTCS" />
+            			</arco:note>
+            		</xsl:if>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/Technique'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</l0:name>
+            	</rdf:Description>	
+            </xsl:for-each>
+            <!-- materialOrTechnique of cultural property (previous versions) as an individual -->
+            <xsl:if test="not(schede/*/MT/MTC/*)">
+             <xsl:for-each select="schede/*/MT/MTC">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-technique-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Materia e/o tecnica ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Materia e/o tecnica ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Material and/or technique ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Material and/or technique ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/MaterialOrTechnique'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:for-each>
+            </xsl:if>
+            <!-- shape of cultural property as an individual -->
+            <xsl:if test="schede/*/MT/FRM and not(schede/F/MT/FRM)">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-shape')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Formato del bene culturale ', $itemURI, ': ', normalize-space(schede/*/MT/FRM))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Formato del bene culturale ', $itemURI, ': ', normalize-space(schede/*/MT/FRM))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Shape of cultural property ', $itemURI, ': ', normalize-space(schede/*/MT/FRM))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Shape of cultural property ', $itemURI, ': ', normalize-space(schede/*/MT/FRM))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FRM))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/Shape'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FRM))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/*/MT/FRM)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/*/MT/FRM)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- filigree of cultural property as an individual -->
+            <xsl:if test="schede/*/MT/FIL">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-filigree')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Filigrana del bene culturale ', $itemURI, ': ', normalize-space(schede/*/MT/FIL))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Filigrana del bene culturale ', $itemURI, ': ', normalize-space(schede/*/MT/FIL))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Filigree of cultural property ', $itemURI, ': ', normalize-space(schede/*/MT/FIL))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Filigree of cultural property ', $itemURI, ': ', normalize-space(schede/*/MT/FIL))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FIL))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/Filigree'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FIL))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/*/MT/FIL)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/*/MT/FIL)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- file format of photograph (F) as an individual -->
+            <xsl:if test="schede/F/MT/FVC/FVCF">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-file-format')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Formato di compressione/estensione file del bene culturale ', $itemURI, ': ', normalize-space(schede/*/MT/FVC/FVCF))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Formato di compressione/estensione file del bene culturale ', $itemURI, ': ', normalize-space(schede/*/MT/FVC/FVCF))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('File format of cultural property ', $itemURI, ': ', normalize-space(schede/*/MT/FVC/FVCF))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('File format of cultural property ', $itemURI, ': ', normalize-space(schede/*/MT/FVC/FVCF))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FVC/FVCF))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/FileFormat'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FVC/FVCF))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/*/MT/FVC/FVCF)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/*/MT/FVC/FVCF)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- photo size of photograph (F) as an individual -->
+            <xsl:if test="schede/F/MT/FRM">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-size')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Formato (dimensione standard) del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FRM))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Formato (dimensione standard) del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FRM))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Photo size of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FRM))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Photo size of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FRM))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FRM))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/PhotoSize'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FRM))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FRM)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FRM)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- photo program of photograph (F) as an individual -->
+            <xsl:if test="schede/F/MT/FVC/FVCP">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-program')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Programma di visualizzazione, memorizzazione ed elaborazione del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCP))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Programma di visualizzazione, memorizzazione ed elaborazione del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCP))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Visualization, storage and processing program of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCP))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Visualization, storage and processing program of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCP))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCP))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/PhotoProgram'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCP))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCP)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCP)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- storage method and colour depth of photograph (F) as an individual -->
+            <xsl:if test="schede/F/MT/FVC/FVCC">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-storage-method-colour-depth')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Metodo di memorizzazione e profondità di colore del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCC))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Metodo di memorizzazione e profondità di colore del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCC))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Storage method and colour depth of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCC))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Storage method and colour depth of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCC))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCC))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/StorageMethodColourDepth'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCC))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCC)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCC)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- resolution of photograph (F) as an individual --> 
+            <xsl:if test="schede/F/MT/FVC/FVCU">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-resolution')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Risoluzione del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCU))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Risoluzione del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCU))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Resolution of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCU))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Resolution of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVC/FVCU))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCU))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/Resolution'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCU))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCU)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCU)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- pixel dimension of photograph (F) --> 
+            <xsl:for-each select="schede/F/MT/FVC/FVCM">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-pixel-dimension-', position())" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Dimensioni in pixel ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Dimensioni in pixel ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Pixel dimension ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Pixel dimension ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/PixelDimension'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(.)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:for-each>
+            <!-- mass storage of photograph (F) as an individual --> 
+            <xsl:if test="schede/F/MT/FVM">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-mass-storage')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Memoria di massa del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVM))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Memoria di massa del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/FVM))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Mass storage of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVM))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Mass storage of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/FVM))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVM))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/MassStorage'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVM))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVM)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/F/MT/FVM)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- colour of photograph (F) as an individual --> 
+            <xsl:if test="schede/F/MT/MTX">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-colour')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Colore del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/MTX))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Colore del bene culturale ', $itemURI, ': ', normalize-space(schede/F/MT/MTX))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Colour of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/MTX))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Colour of cultural property ', $itemURI, ': ', normalize-space(schede/F/MT/MTX))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/MTX))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/PhotoColour'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/MTX))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/F/MT/MTX)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/F/MT/MTX)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
             <!-- Geometry of cultural property as an individual for GE (version 4.00)-->
             <xsl:for-each select="schede/*/GE | schede/*/MT/MTA/MTAR | schede/*/MT/MTA/MTAX / schede/*/MT/MTA/MTAM">
             <xsl:variable name="geometry-position" select="position()" />
