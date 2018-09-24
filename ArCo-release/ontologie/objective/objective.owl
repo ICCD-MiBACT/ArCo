@@ -264,6 +264,21 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/hasTechnicalDetailOccurrence -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasTechnicalDetailOccurrence">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/objective/TechnicalDetailOccurrence"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un&apos;occorrenza di un dettaglio tecnico, cioè a una situazione in cui un dettaglio tecnico occorre nella realtà in un bene culturale specifico. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha occorrenza di dettaglio tecnico</rdfs:label>
+        <rdfs:label xml:lang="en">has technical detail occurrence</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/objective/hasVolumetricDiamensionsMeasurement -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasVolumetricDiamensionsMeasurement">
@@ -657,7 +672,8 @@
     <!-- https://w3id.org/arco/objective/TechnicalCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/objective/TechnicalCharacteristic">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una caratteristica tecnica, intesa come tipo particolare di concetto che definisce il contesto descrittivo rappresentato da un dettaglio tecnico (descrizione) relativo a un bene culturale. Per esempio, &quot;terracotta&quot; è una caratteristica tecnica che può essere utilizzata per la descrizione del dettaglio tecnico &quot;materia&quot; relativo a un bene culturale.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una caratteristica tecnica, intesa come tipo particolare di concetto che definisce il contesto descrittivo rappresentato da un dettaglio tecnico (descrizione) relativo a un bene culturale. Per esempio, &quot;materia&quot; è una caratteristica tecnica che può essere utilizzata per la descrizione del dettaglio tecnico &quot;terracotta&quot; relativo a un bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="it">Caratteristica tecnica</rdfs:label>
         <rdfs:label xml:lang="en">Technical Characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -670,7 +686,7 @@
     <!-- https://w3id.org/arco/objective/TechnicalDetail -->
 
     <owl:Class rdf:about="https://w3id.org/arco/objective/TechnicalDetail">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una descrizione di un dettaglio tecnico relativo a un bene culturale. Per esempio, può rappresentare la materia di cui è composto, la tecnica con cui è stato realizzato, la sua forma, il suo colore. Ogni dettaglio tecnico utilizza delle caratteristiche tecniche, cioè dei concetti, che lo definiscono (es.: &quot;terracotta&quot; è una caratteristica tecnica che definisce il dettaglio tecnico &quot;materia&quot;, relativamente a un bene culturale). Per ogni tipologia di bene culturale possono essere rilevati e registrati dettagli tecnici specifici. Questa classe è un tipo particolare di Description, la classe degli oggetti costruiti socialmente (testi, valori, categorie, relazioni, contesti), usati per descrivere qualcos&apos;altro in modo strutturato.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una descrizione di un dettaglio tecnico relativo a un bene culturale. Per esempio, può rappresentare una particolare materia di cui è composto, la tecnica con cui è stato realizzato, la sua forma, il suo colore. Ogni dettaglio tecnico utilizza delle caratteristiche tecniche, cioè dei concetti, che lo definiscono (es.: &quot;materia&quot; è una caratteristica tecnica che definisce il dettaglio tecnico &quot;terracotta&quot;, relativamente a un bene culturale). Per ogni tipologia di bene culturale possono essere rilevati e registrati dettagli tecnici specifici. Questa classe è un tipo particolare di Description, la classe degli oggetti costruiti socialmente (testi, valori, categorie, relazioni, contesti), usati per descrivere qualcos&apos;altro in modo strutturato.</rdfs:comment>
         <rdfs:label xml:lang="it">Dettaglio tecnico</rdfs:label>
         <rdfs:label xml:lang="en">Technical Detail</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -683,6 +699,7 @@
     <!-- https://w3id.org/arco/objective/TechnicalDetailOccurrence -->
 
     <owl:Class rdf:about="https://w3id.org/arco/objective/TechnicalDetailOccurrence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occorrenza di un dettaglio tecnico (una descrizione), cioè una situazione in cui un dettaglio tecnico occorre nella realtà in un bene culturale specifico. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta&quot;.</rdfs:comment>
         <rdfs:label xml:lang="it">Occorrenza di dettaglio tecnico</rdfs:label>
         <rdfs:label xml:lang="en">Technical detail Occurrence</rdfs:label>

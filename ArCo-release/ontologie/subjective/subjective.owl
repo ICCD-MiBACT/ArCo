@@ -1640,7 +1640,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="en">issue date</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCE</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCE; TU/ESP/ESPD</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3227,6 +3227,18 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/DeliveryConfirmationCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/DeliveryConfirmationCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Conferma di avvenuta spedizione</rdfs:label>
+        <rdfs:label xml:lang="en">Delivery confirmation certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/ExistingDocumentation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/ExistingDocumentation">
@@ -3234,6 +3246,30 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) della documentazione che viene solo citata: non è acclusa alla scheda di catalogo, ma si trova presso un luogo di conservazione (Archivio, Biblioteca, ecc.), anche “virtuale”, come nel caso delle risorse disponibili sul web e consultabili on line.</rdfs:comment>
         <rdfs:label xml:lang="it">Documentazione esistente</rdfs:label>
         <rdfs:label xml:lang="en">Existing documentation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/FreeMovementCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/FreeMovementCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Attestato di libera circolazione</rdfs:label>
+        <rdfs:label xml:lang="en">Free movement certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ImportConfirmationCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/ImportConfirmationCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Certificato di avvenuta importazione</rdfs:label>
+        <rdfs:label xml:lang="en">Import confirmation certification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -3250,6 +3286,18 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>Normativa F: SG/SGL/SGLL - Normative S e MI: OG/SGT/SGTR</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/PermanentExportLicense -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/PermanentExportLicense">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Licenza di esportazione definitiva</rdfs:label>
+        <rdfs:label xml:lang="en">Permanent export license</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -3275,6 +3323,30 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) relativa al genere di bibliografia che riguarda in modo specifico  il bene in esame.</rdfs:comment>
         <rdfs:label xml:lang="it">Bibliografia specifica</rdfs:label>
         <rdfs:label xml:lang="en">Specific bibliography</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/TemporaryExportLicense -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/TemporaryExportLicense">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Licenza di esportazione temporanea</rdfs:label>
+        <rdfs:label xml:lang="en">Temporary export license</rdfs:label>
+        <rdfs:label xml:lang="it">provvisoria</rdfs:label>
+        <rdfs:label xml:lang="en">unstable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/TemporaryMovementCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/TemporaryMovementCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Attestato di circolazione temporanea</rdfs:label>
+        <rdfs:label xml:lang="en">Temporary movement certification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
