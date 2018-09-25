@@ -24,7 +24,7 @@
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:comment xml:lang="it">Questo modulo comprende la modellazione delle informazioni ricavabili ricavabili dall&apos;osservazione diretta del bene culturale, e per questo oggettive, che si separano dalle informazioni soggettive, frutto dello studio.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo modulo comprende la modellazione delle informazioni ricavabili dall&apos;osservazione diretta del bene culturale, e per questo oggettive, che si separano dalle informazioni soggettive, frutto dello studio.</rdfs:comment>
         <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
