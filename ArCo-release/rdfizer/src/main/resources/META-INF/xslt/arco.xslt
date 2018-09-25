@@ -1298,8 +1298,8 @@
                 		</xsl:attribute>
                 	</culturaldefinition:hasProtectiveMeasure>                
                 </xsl:for-each>
-                <!-- material of cultural property (version 4.00) --> 
-                <xsl:for-each select="schede/*/MT/MTC/MTCM">
+                <!-- material of cultural property (version 4.00 and VeAC) --> 
+                <xsl:for-each select="schede/*/MT/MTC/MTCM | schede/VeAC/MT/MTC/MTCF">
                 	<cpdescription:hasTechnicalDetailOccurrence>
 	                	<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
@@ -1415,6 +1415,22 @@
                 		</xsl:choose>
                 		<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCV)" />
                 	</cpdescription:digitalPhotographNote>
+                </xsl:if>
+                <!-- colour of garment (VeAC) --> 
+                <xsl:if test="schede/VeAC/MT/MTC/MTCC">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-garment-colour')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- analysis of garment (VeAC) --> 
+                <xsl:if test="schede/VeAC/MT/MTC/MTCA">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-garment-analysis')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
                 </xsl:if>
                 <!-- Geometry of cultural property -->
                 	<xsl:for-each select="schede/*/GP">
@@ -4666,8 +4682,8 @@
 				                </rdf:Description>
 				             </xsl:if>
             </xsl:for-each>
-            <!-- material of cultural property (version 4.00) as an individual -->  
-            <xsl:for-each select="schede/*/MT/MTC/MTCM">
+            <!-- material of cultural property (version 4.00) and VeAC as an individual -->  
+            <xsl:for-each select="schede/*/MT/MTC/MTCM | schede/VeAC/MT/MTC/MTCF">
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
             			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
@@ -4675,26 +4691,51 @@
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
             		</rdf:type>
-            		<rdfs:label xml:lang="it">
-            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
-            		</rdfs:label>
-            		<l0:name xml:lang="it">
-            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
-            		</l0:name>
-            		<rdfs:label xml:lang="en">
-            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
-            		</rdfs:label>
-            		<l0:name xml:lang="en">
-            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
-            		</l0:name>
-            		<xsl:if test="../MTCS">
-            			<arco:note>
-            				<xsl:value-of select="../MTCS" />
-            			</arco:note>
-            		</xsl:if>
+            		<xsl:choose>
+            			<xsl:when test=".">
+            				<rdfs:label xml:lang="it">
+		            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+		            		</rdfs:label>
+		            		<l0:name xml:lang="it">
+		            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+		            		</l0:name>
+		            		<rdfs:label xml:lang="en">
+		            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+		            		</rdfs:label>
+		            		<l0:name xml:lang="en">
+		            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(.))" />
+		            		</l0:name>
+		            		<xsl:if test="../MTCS">
+		            			<arco:note>
+		            				<xsl:value-of select="../MTCS" />
+		            			</arco:note>
+		            		</xsl:if>
+            			</xsl:when>
+            			<xsl:when test="schede/VeAC/MT/MTC/MTCF">
+            				<rdfs:label xml:lang="it">
+		            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCF))" />
+		            		</rdfs:label>
+		            		<l0:name xml:lang="it">
+		            			<xsl:value-of select="concat('Materia ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCF))" />
+		            		</l0:name>
+		            		<rdfs:label xml:lang="en">
+		            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCF))" />
+		            		</rdfs:label>
+		            		<l0:name xml:lang="en">
+		            			<xsl:value-of select="concat('Material ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCF))" />
+		            		</l0:name>
+            			</xsl:when>
+            		</xsl:choose>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            				<xsl:choose>
+            					<xsl:when test=".">
+            						<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
+            					</xsl:when>
+            					<xsl:when test="schede/VeAC/MT/MTC/MTCF">
+            						<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCF)))" />
+            					</xsl:when>
+            				</xsl:choose>
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -4706,17 +4747,36 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			<xsl:choose>
+            				<xsl:when test=".">
+            					<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
+            				</xsl:when>
+            				<xsl:when test="schede/VeAC/MT/MTC/MTCF">
+            					<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCF)))" />
+            				</xsl:when>
+            			</xsl:choose>
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
             		</rdf:type>
-            		<rdfs:label>
-            			<xsl:value-of select="normalize-space(.)" />
-            		</rdfs:label>
-            		<l0:name>
-            			<xsl:value-of select="normalize-space(.)" />
-            		</l0:name>
+            		<xsl:choose>
+            			<xsl:when test=".">
+            				<rdfs:label>
+            					<xsl:value-of select="normalize-space(.)" />
+            				</rdfs:label>
+            				<l0:name>
+            					<xsl:value-of select="normalize-space(.)" />
+            				</l0:name>
+            			</xsl:when>
+            			<xsl:when test="schede/VeAC/MT/MTC/MTCF">
+            				<rdfs:label>
+            					<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCF)" />
+            				</rdfs:label>
+            				<l0:name>
+            					<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCF)" />
+            				</l0:name>
+            			</xsl:when>
+            		</xsl:choose>
             	</rdf:Description>
             </xsl:for-each>
             <!-- technique of cultural property (version 4.00) as an individual -->
@@ -4747,7 +4807,7 @@
             		</xsl:if>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -4759,7 +4819,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -4796,7 +4856,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -4808,7 +4868,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -4845,7 +4905,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FRM))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/*/MT/FRM)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -4857,7 +4917,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FRM))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/*/MT/FRM)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -4893,7 +4953,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FIL))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/*/MT/FIL)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -4905,7 +4965,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FIL))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/*/MT/FIL)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -4941,7 +5001,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FVC/FVCF))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/*/MT/FVC/FVCF)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -4953,7 +5013,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/*/MT/FVC/FVCF))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/*/MT/FVC/FVCF)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -4989,7 +5049,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FRM))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FRM)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -5001,7 +5061,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FRM))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FRM)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -5037,7 +5097,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCP))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCP)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -5049,7 +5109,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCP))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCP)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -5085,7 +5145,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCC))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCC)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -5097,7 +5157,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCC))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCC)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -5133,7 +5193,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCU))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCU)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -5145,7 +5205,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVC/FVCU))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCU)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -5181,7 +5241,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -5193,7 +5253,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(.))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -5229,7 +5289,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVM))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVM)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -5241,7 +5301,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/FVM))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVM)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -5277,7 +5337,7 @@
             		</l0:name>
             		<cpdescription:satisfiesTechnicalDetail>
             			<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/MTX))" />
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/MTX)))" />
             			</xsl:attribute>
             		</cpdescription:satisfiesTechnicalDetail>
             		<cpdescription:usesTechnicalCharacteristic>
@@ -5289,7 +5349,7 @@
             	<!-- Technical detail as an individual -->
             	<rdf:Description>
             		<xsl:attribute name="rdf:about">
-            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', normalize-space(schede/F/MT/MTX))" />
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/MTX)))" />
             		</xsl:attribute>
             		<rdf:type>
             			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
@@ -5299,6 +5359,102 @@
             		</rdfs:label>
             		<l0:name>
             			<xsl:value-of select="normalize-space(schede/F/MT/MTX)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- garment colour (VeAC) as an individual --> 
+            <xsl:if test="schede/VeAC/MT/MTC/MTCC">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-garment-colour')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Colore del bene culturale ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCC))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Colore del bene culturale ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCC))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Colour of cultural property ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCC))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Colour of cultural property ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCC))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCC)))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/GarmentColour'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCC)))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCC)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCC)" />
+            		</l0:name>
+            	</rdf:Description>
+            </xsl:if>
+            <!-- garment analysis (VeAC) as an individual --> 
+            <xsl:if test="schede/VeAC/MT/MTC/MTCA">
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-garment-analysis')" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetailOccurrence'" />
+            		</rdf:type>
+            		<rdfs:label xml:lang="it">
+            			<xsl:value-of select="concat('Analisi del bene culturale ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCA))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="it">
+            			<xsl:value-of select="concat('Analisi del bene culturale ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCA))" />
+            		</l0:name>
+            		<rdfs:label xml:lang="en">
+            			<xsl:value-of select="concat('Analysis of cultural property ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCA))" />
+            		</rdfs:label>
+            		<l0:name xml:lang="en">
+            			<xsl:value-of select="concat('Analysis of cultural property ', $itemURI, ': ', normalize-space(schede/VeAC/MT/MTC/MTCA))" />
+            		</l0:name>
+            		<cpdescription:satisfiesTechnicalDetail>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCA)))" />
+            			</xsl:attribute>
+            		</cpdescription:satisfiesTechnicalDetail>
+            		<cpdescription:usesTechnicalCharacteristic>
+            			<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/objective/GarmentAnalysis'" />
+            			</xsl:attribute>
+            		</cpdescription:usesTechnicalCharacteristic>
+            	</rdf:Description>	
+            	<!-- Technical detail as an individual -->
+            	<rdf:Description>
+            		<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCA)))" />
+            		</xsl:attribute>
+            		<rdf:type>
+            			<xsl:value-of select="'https://w3id.org/arco/objective/TechnicalDetail'" />
+            		</rdf:type>
+            		<rdfs:label>
+            			<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCA)" />
+            		</rdfs:label>
+            		<l0:name>
+            			<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCA)" />
             		</l0:name>
             	</rdf:Description>
             </xsl:if>
@@ -7007,14 +7163,14 @@
                         	</xsl:choose>
                         </l0:name>
                         <xsl:if test="./AUTA">
-                            <culturaldefinition:authorDate>
+                            <culturaldefinition:agentDate>
                                 <xsl:value-of select="normalize-space(./AUTA)" />
-                            </culturaldefinition:authorDate>
+                            </culturaldefinition:agentDate>
                         </xsl:if>
                         <xsl:if test="../AUF/AUFA">
-                            <culturaldefinition:authorDate>
+                            <culturaldefinition:agentDate>
                                 <xsl:value-of select="normalize-space(../AUF/AUFA)" />
-                            </culturaldefinition:authorDate>
+                            </culturaldefinition:agentDate>
                         </xsl:if>
                         <xsl:if test="./AUTH">
                             <culturaldefinition:authorLocalIdentifier>
@@ -7453,9 +7609,9 @@
                         </xsl:choose>
                     </l0:name>
                     <xsl:if test="./AATA">
-                        <culturaldefinition:authorDate>
+                        <culturaldefinition:agentDate>
                             <xsl:value-of select="normalize-space(./AATA)" />
-                        </culturaldefinition:authorDate>
+                        </culturaldefinition:agentDate>
                     </xsl:if>
                 </rdf:Description>
                 <xsl:if test="./AATM or ../AAF/AAFM and not(lower-case(normalize-space(./AATM))='nr' or lower-case(normalize-space(./AATM))='nr (recupero pregresso)' or lower-case(normalize-space(./AATM))='n.r.' or lower-case(normalize-space(./AATM))='n.r. (non rilevabile)' or lower-case(normalize-space(./AATM))='n.r. [non rilevabile]' or lower-case(normalize-space(../AAF/AAFM))='nr' or lower-case(normalize-space(../AAF/AAFM))='nr (recupero pregresso)' or lower-case(normalize-space(../AAF/AAFM))='n.r.' or lower-case(normalize-space(../AAF/AAFM))='n.r. (non rilevabile)' or lower-case(normalize-space(../AAF/AAFM))='n.r. [non rilevabile]')">
