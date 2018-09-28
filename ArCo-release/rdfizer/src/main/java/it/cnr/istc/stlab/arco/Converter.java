@@ -318,6 +318,8 @@ public class Converter {
 	            out.close();
 	            
 	            String rdfSource = new String(byteArrayOut.toByteArray());
+	            
+	            //System.out.println(rdfSource);
 				
 				ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
 	            Model localModel = ModelFactory.createDefaultModel();
