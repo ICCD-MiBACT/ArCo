@@ -83,9 +83,9 @@
     
 
 
-    <!-- http://dati.gov.it/onto/tiapit/atTime -->
+    <!-- https://w3id.org/italia/onto/TI/atTime -->
 
-    <owl:ObjectProperty rdf:about="http://dati.gov.it/onto/tiapit/atTime"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
     
 
 
@@ -343,9 +343,9 @@
     
 
 
-    <!-- http://dati.gov.it/onto/tiapit/date -->
+    <!-- https://w3id.org/italia/onto/TI/date -->
 
-    <owl:DatatypeProperty rdf:about="http://dati.gov.it/onto/tiapit/date"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/date"/>
     
 
 
@@ -543,9 +543,9 @@
     
 
 
-    <!-- http://dati.gov.it/onto/tiapit/TimeInterval -->
+    <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
 
-    <owl:Class rdf:about="http://dati.gov.it/onto/tiapit/TimeInterval"/>
+    <owl:Class rdf:about="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
     
 
 
@@ -583,7 +583,7 @@
     <owl:Class rdf:about="https://w3id.org/arco/location/BaseMap">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://dati.gov.it/onto/tiapit/date"/>
+                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/date"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:unionOf rdf:parseType="Collection">
@@ -742,8 +742,8 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/arco/location/TimeIndexedQualifiedLocation">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://dati.gov.it/onto/tiapit/atTime"/>
-                <owl:allValuesFrom rdf:resource="http://dati.gov.it/onto/tiapit/TimeInterval"/>
+                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -767,8 +767,8 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/arco/location/ToponymInTime">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://dati.gov.it/onto/tiapit/atTime"/>
-                <owl:allValuesFrom rdf:resource="http://dati.gov.it/onto/tiapit/TimeInterval"/>
+                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

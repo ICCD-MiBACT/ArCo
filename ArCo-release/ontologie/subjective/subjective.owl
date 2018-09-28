@@ -44,12 +44,6 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/modified -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
-    
-
-
     <!-- https://w3id.org/arco/core/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/core/iccdNormTag"/>
@@ -250,12 +244,12 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCircumstance">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Circumstance"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione all&apos;occasione che ha determinato quella situazione. Per esempio, può collegare una situazione in cui viene indicata la committenza di un bene culturale all&apos;occasione che ha determinato quella committenza, oppure un luogo di ripresa di un bene fotografico all&apos;occasione che ha determinato il motivo della ripresa.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione all&apos;occasione che ha determinato quella situazione. Per esempio, può collegare una situazione in cui viene indicata la committenza di un bene culturale all&apos;occasione che ha determinato quella committenza, oppure un luogo di ripresa di un bene fotografico all&apos;occasione che ha determinato il motivo della ripresa, o ancora l&apos;uso di un bene culturale all&apos;occasione d&apos;uso.</rdfs:comment>
         <rdfs:label xml:lang="it">ha circostanza</rdfs:label>
         <rdfs:label xml:lang="en">has circumstance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -282,7 +276,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/subjective/isCollectorOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un collezione di beni culturali al collezionista.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di beni culturali al collezionista.</rdfs:comment>
         <rdfs:label xml:lang="it">ha collezionista</rdfs:label>
         <rdfs:label xml:lang="en">has collector</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -310,6 +304,7 @@
     <!-- https://w3id.org/arco/subjective/hasCommittent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCommittent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/subjective/isCommittentIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Commission"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene indicata la committenza di un bene culturale alla persona o istituzione committente.</rdfs:comment>
@@ -317,7 +312,20 @@
         <rdfs:label xml:lang="en">has committent</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/CMM/CMMN</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasCulturalGeographicArea -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCulturalGeographicArea">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Use"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso del bene con la sua area geografico-culturale.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha area geografico-culturale</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural geographic area</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -420,6 +428,51 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasExportImportCertification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasExportImportCertification">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ExportImportCertification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una certificazione amministrativa per la circolazione e l&apos;esportazione/importazione che riguarda il bene stesso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha certificazione di esportazione/importazione</rdfs:label>
+        <rdfs:label xml:lang="en">has export/import certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasExportImportCertificationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasExportImportCertificationType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ExportImportCertification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una certificazione amministrativa di circolazione ed esportazione/importazione di un bene culturale alla sua tipologia (es.: attestato di libera circolazione, licenza di esportazione definitiva, ecc).</rdfs:comment>
+        <rdfs:comment xml:lang="it">ha tipo di certificazione di esportazione o importazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">has export import certification type</rdfs:comment>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasExportOffice -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasExportOffice">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/subjective/isExportOfficeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ExportImportCertification"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label xml:lang="it">ha ufficio esportazione</rdfs:label>
+        <rdfs:label xml:lang="en">has export office</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPU</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -535,6 +588,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasLegalSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasLegalSituation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/LegalSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla sua condizione giuridica.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha condizione giuridica</rdfs:label>
+        <rdfs:label xml:lang="en">has legal situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasMusicalEnsemble -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMusicalEnsemble">
@@ -579,6 +647,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasOwner">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/subjective/isOwnerIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/LegalSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label xml:lang="it">ha proprietario</rdfs:label>
+        <rdfs:label xml:lang="en">has owner</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasPreviousOwner -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasPreviousOwner">
@@ -591,6 +674,52 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasProfession -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasProfession">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Profession"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;utente del bene con il suo mestiere o la sua professione.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha professione</rdfs:label>
+        <rdfs:label xml:lang="en">has profession</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa BDM 2: UT/UTN/UTNM</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasProponentAgency -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasProponentAgency">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/subjective/isProponentAgencyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un provvedimento di tutela all&apos;ente proponente, ovvero al soggetto che ha proposto il provvedimento, identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha ente proponente</rdfs:label>
+        <rdfs:label xml:lang="en">has proponet agency</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasProtectiveMeasure -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasProtectiveMeasure">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un provvedimento di tutela nazionale o internazionale che lo ha interessato.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha provvedimento di tutela</rdfs:label>
+        <rdfs:label xml:lang="en">has protective measure</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -790,17 +919,76 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasUse -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUse">
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Use"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il bene culturale con il suo uso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha uso</rdfs:label>
+        <rdfs:label xml:lang="en">has use</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasUseType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUseType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Use"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/UseType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso del bene con il suo tipo (attuale, precedente, storico).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo d&apos;uso</rdfs:label>
+        <rdfs:label xml:lang="en">has use type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasUseTypeSpecification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUseTypeSpecification">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Use"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso del bene con le specifiche relative al tipo di utilizzo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha specifiche del tipo d&apos;uso</rdfs:label>
+        <rdfs:label xml:lang="en">has use type specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UT/UTUS</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasUser -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUser">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Fruition"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;occasione in cui un vestimento antico o contemporaneo è stato indossato da una persona al fruitore stesso.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha fruitore</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a un utente, inteso come agente che ha fatto uso di quell&apos;entità. Per esempio, può collegare un&apos;occasione in cui un vestimento antico o contemporaneo è stato indossato da una persona al fruitore stesso, oppure un particolare uso di un bene culturale al tipo di utente coinvolto in quell&apos;uso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha utente</rdfs:label>
         <rdfs:label xml:lang="en">has user</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa VeAC: AU/FRU/FRUF</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUN; Normativa VeAC: AU/FRU/FRUF</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasUserSocialCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUserSocialCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/UserSocialCategory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;utente di un bene culturale con la sua categoria sociale.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha categoria sociale dell&apos;utente</rdfs:label>
+        <rdfs:label xml:lang="en">has user social category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normative BDM 2.00: UT/UTN/UTNC</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -835,6 +1023,31 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/isCommittentIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isCommittentIn">
+        <rdfs:label xml:lang="en">is committent in</rdfs:label>
+        <rdfs:label xml:lang="it">è committente in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">Questa proprietà collega una persona o istituzione committente a una situazione in cui viene indicata la committenza di un bene culturale.</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/isExportOfficeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isExportOfficeOf">
+        <rdfs:label xml:lang="en">is export office of</rdfs:label>
+        <rdfs:label xml:lang="it">è ufficio esportazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPU</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/isMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isMemberOfCollection">
@@ -850,6 +1063,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/isOwnerIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isOwnerIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/LegalSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha proprietario&quot;, rappresenta la partecipazione di un agente alla condizione giuridica di un bene culturale, di cui l&apos;agente ha la proprietà.</rdfs:comment>
+        <rdfs:label xml:lang="en">is owner in</rdfs:label>
+        <rdfs:label xml:lang="it">è proprietario in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/isPreviousOwnerOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isPreviousOwnerOf">
@@ -861,6 +1089,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/isProponentAgencyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isProponentAgencyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega all&apos;ente proponente, ovvero il soggetto che ha proposto il provvedimento (identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto) al provvedimento di tutela. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="en">is proponent agency of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente proponente di</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1033,6 +1276,22 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQL</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/address -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/address">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/contacts"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;indirizzo di riferimento di un agente (persona, organizzazione), inteso come un tipo specifico di contatto presso il quale l&apos;agente è reperibile.</rdfs:comment>
+        <rdfs:label xml:lang="en">address</rdfs:label>
+        <rdfs:label xml:lang="it">indirizzo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGI</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1445,6 +1704,43 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/isKeptIn -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/isKeptIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Use"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la collocazione del bene nel suo ambiente, ovvero il luogo dove esso viene riposto quando non viene usato.</rdfs:comment>
+        <rdfs:label xml:lang="en">is kept in</rdfs:label>
+        <rdfs:label xml:lang="it">è mantenuto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa BDM 2.00: UT/UTA</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/issueDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/issueDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ExportImportCertification"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di emissione di un provvedimento amministrativo o di una certificazione (es.: per la circolazione, esportazione/importazione di un bene culturale)</rdfs:comment>
+        <rdfs:label xml:lang="it">data di emissione</rdfs:label>
+        <rdfs:label xml:lang="en">issue date</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCE; TU/ESP/ESPD</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/methodOfInsertion -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/methodOfInsertion">
@@ -1456,6 +1752,36 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPM</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/noticeDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/noticeDate">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data della notifica del provvedimento amministrativo al proprietario.</rdfs:comment>
+        <rdfs:label xml:lang="it">data di notifica</rdfs:label>
+        <rdfs:label xml:lang="en">notice date</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCD</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/openingNoticeDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/openingNoticeDate">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data della comunicazione di avvio del procedimento di dichiarazione di interesse al proprietario, possessore o detentore.</rdfs:comment>
+        <rdfs:label xml:lang="it">data di comunicazione di avvio</rdfs:label>
+        <rdfs:label xml:lang="en">opening notice date</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCI</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1503,6 +1829,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPP</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/registrationDateOrGU -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/registrationDateOrGU">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data dell&apos;avvenuta trascrizione al registro immobiliare, quando trattasi di vincoli imposti con leggi che richiedano la trascrizione, o il numero della Gazzetta Ufficiale su cui è stato pubblicato il decreto.</rdfs:comment>
+        <rdfs:label xml:lang="it">data di registrazione o gazzetta ufficiale</rdfs:label>
+        <rdfs:label xml:lang="en">registration date or official journal</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCR</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1593,6 +1934,37 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">Normativa trasversale: DA/AID/AIDT - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTT</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/useConditions -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/useConditions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Use"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="it">modalità di uso</rdfs:label>
+        <rdfs:label xml:lang="en">use conditions</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: UT/UTU/UTUM - BDM 2.00: UT/UTM - SMO, PTS 3.01: DA/UTM</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/useFunction -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/useFunction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Use"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la funzione che l&apos;oggetto ha o ha avuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">funzione d&apos;uso</rdfs:label>
+        <rdfs:label xml:lang="en">use function</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1941,12 +2313,12 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/Circumstance -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Circumstance">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione che ha determinato una certa situazione, per esempio l&apos;occasione per cui è stato commissionato un bene culturale, o l&apos;occasione che ha determinato la ripresa di un bene fotografico.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione che ha determinato una certa situazione, per esempio l&apos;occasione per cui è stato commissionato un bene culturale, o l&apos;occasione che ha determinato la ripresa di un bene fotografico, o l&apos;occasione d&apos;uso di un bene.</rdfs:comment>
         <rdfs:label xml:lang="it">Circostanza</rdfs:label>
         <rdfs:label xml:lang="en">Circumstance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2206,7 +2578,7 @@ bene catalogato.</rdfs:comment>
         <rdfs:label xml:lang="it">Documentazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">DO</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DO</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2247,6 +2619,45 @@ bene catalogato.</rdfs:comment>
         <rdfs:label xml:lang="it">Edizione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ExportImportCertification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ExportImportCertification">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasExportImportCertificationType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasExportOffice"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una certificazione amministrativa per la circolazione e l&apos;esportazione/importazione di un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Certificazione di importazione o esportazione</rdfs:label>
+        <rdfs:label xml:lang="en">Export import certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ExportImportCertificationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ExportImportCertificationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di certificazione amministrativa di circolazione ed esportazione/importazione di un bene culturale (es.: attestato di libera circolazione, licenza di esportazione definitiva, ecc).</rdfs:comment>
+        <rdfs:label xml:lang="en">Export import certification type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di certificazione di esportazione o importazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPT</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2475,6 +2886,32 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/LegalSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/LegalSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasOwner"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/note"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la condizione giuridica di un bene culturale, con riferimenti al proprietario, detentore o possessore.</rdfs:comment>
+        <rdfs:label xml:lang="en">Legal situation</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione giuridica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGG</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/MultimediaDocumentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/MultimediaDocumentation">
@@ -2550,6 +2987,68 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>AU/AUT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Profession -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Profession">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il mestiere o la professione dell&apos;utente del bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Profession</rdfs:label>
+        <rdfs:label xml:lang="it">Professione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa BDM 2: UT/UTN/UTNM</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ProtectiveMeasure -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ProtectiveMeasure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasProponentAgency"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/note"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/issueDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/noticeDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/openingNoticeDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/registrationDateOrGU"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un provvedimento di tutela nazionale o internazionale, che ha interessato un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Protective measure</rdfs:label>
+        <rdfs:label xml:lang="it">Provvedimento di tutela</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2748,6 +3247,89 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Use -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Use">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasCircumstance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Circumstance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasUseType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/UseType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasUseTypeSpecification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/useConditions"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/useFunction"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;uso del bene, che può variare nel corso del tempo, a seconda delle diverse occasioni e delle parti utilizzate del bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: UT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/UseType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/UseType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di uso del bene (attuale, precedente, storico o dato non disponibile).</rdfs:comment>
+        <rdfs:label xml:lang="it">Tipo d&apos;uso</rdfs:label>
+        <rdfs:label xml:lang="en">Use type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/UseTypeSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/UseTypeSpecification">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le specifiche sul tipo di uso del bene (reimpiego, edilizio, epigrafico, ornamentale, strumentale, strutturale).</rdfs:comment>
+        <rdfs:label xml:lang="it">Specifiche del tipo d&apos;uso</rdfs:label>
+        <rdfs:label xml:lang="en">Use type specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: UT/UTU/UTUS</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/UserSocialCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/UserSocialCategory">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria sociale a cui appartiene l&apos;utente del bene.</rdfs:comment>
+        <rdfs:label xml:lang="it">Categoria sociale dell&apos;utente</rdfs:label>
+        <rdfs:label xml:lang="en">User social category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normative BDM 2.00: UT/UTN/UTNC</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/italia/onto/RO/Role -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/RO/Role"/>
@@ -2855,6 +3437,19 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Building -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Building">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso edilizio di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+        <rdfs:label xml:lang="it">Edilizio</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/ComparativeBibliography -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/ComparativeBibliography">
@@ -2868,6 +3463,44 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Current -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Current">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso attuale di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="it">Attuale</rdfs:label>
+        <rdfs:label xml:lang="en">Current</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/DeliveryConfirmationCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/DeliveryConfirmationCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Conferma di avvenuta spedizione</rdfs:label>
+        <rdfs:label xml:lang="en">Delivery confirmation certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Epigraphic -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Epigraphic">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso epigrafico di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="it">Epigrafico</rdfs:label>
+        <rdfs:label xml:lang="en">Epigraphic</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/ExistingDocumentation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/ExistingDocumentation">
@@ -2875,6 +3508,69 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) della documentazione che viene solo citata: non è acclusa alla scheda di catalogo, ma si trova presso un luogo di conservazione (Archivio, Biblioteca, ecc.), anche “virtuale”, come nel caso delle risorse disponibili sul web e consultabili on line.</rdfs:comment>
         <rdfs:label xml:lang="it">Documentazione esistente</rdfs:label>
         <rdfs:label xml:lang="en">Existing documentation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/FreeMovementCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/FreeMovementCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Attestato di libera circolazione</rdfs:label>
+        <rdfs:label xml:lang="en">Free movement certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Historical -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Historical">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso storico di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Historical</rdfs:label>
+        <rdfs:label xml:lang="it">Storico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ImportConfirmationCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/ImportConfirmationCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Certificato di avvenuta importazione</rdfs:label>
+        <rdfs:label xml:lang="en">Import confirmation certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Instrumental -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Instrumental">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strumentale di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrumental</rdfs:label>
+        <rdfs:label xml:lang="it">Strumentale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisorio</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Ornamental -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Ornamental">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso ornamentale di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ornamental</rdfs:label>
+        <rdfs:label xml:lang="it">Ornamentale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -2895,6 +3591,31 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/PermanentExportLicense -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/PermanentExportLicense">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Licenza di esportazione definitiva</rdfs:label>
+        <rdfs:label xml:lang="en">Permanent export license</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Previous -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Previous">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso precedente di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="it">Precedente</rdfs:label>
+        <rdfs:label xml:lang="en">Previous</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Proper -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Proper">
@@ -2909,6 +3630,19 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Reuse -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Reuse">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche di riuso di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/SpecificBibliography -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/SpecificBibliography">
@@ -2916,6 +3650,56 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) relativa al genere di bibliografia che riguarda in modo specifico  il bene in esame.</rdfs:comment>
         <rdfs:label xml:lang="it">Bibliografia specifica</rdfs:label>
         <rdfs:label xml:lang="en">Specific bibliography</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Structural -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Structural">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseTypeSpecification"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strutturale di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural</rdfs:label>
+        <rdfs:label xml:lang="it">Strutturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/TemporaryExportLicense -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/TemporaryExportLicense">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Licenza di esportazione temporanea</rdfs:label>
+        <rdfs:label xml:lang="en">Temporary export license</rdfs:label>
+        <rdfs:label xml:lang="it">provvisoria</rdfs:label>
+        <rdfs:label xml:lang="en">unstable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/TemporaryMovementCertification -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/TemporaryMovementCertification">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/ExportImportCertificationType"/>
+        <rdfs:label xml:lang="it">Attestato di circolazione temporanea</rdfs:label>
+        <rdfs:label xml:lang="en">Temporary movement certification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/UseTypeUnavailable -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/UseTypeUnavailable">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/UseType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la mancanza di dati disponibili relativamente al tipo di uso di un bene.</rdfs:comment>
+        <rdfs:label xml:lang="it">Tipo di uso non disponibile</rdfs:label>
+        <rdfs:label xml:lang="en">Use type unavailable</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
