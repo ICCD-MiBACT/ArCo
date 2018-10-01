@@ -415,6 +415,18 @@
     
 
 
+    <!-- https://w3id.org/arco/objective/hasTechnicalDetailOccurrence -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/objective/hasTechnicalDetailOccurrence"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasAcquisition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAcquisition"/>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasAuthorshipAttribution -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAuthorshipAttribution"/>
@@ -424,6 +436,12 @@
     <!-- https://w3id.org/arco/subjective/hasBibliography -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasBibliography"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasChangeOfAvailability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasChangeOfAvailability"/>
     
 
 
@@ -445,9 +463,39 @@
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasExportImportCertification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasExportImportCertification"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasFruition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasFruition"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasIntervention -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasIntervention"/>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasInventory -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasInventory"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasLegalSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasLegalSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasProtectiveMeasure -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasProtectiveMeasure"/>
     
 
 
@@ -457,9 +505,27 @@
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasUrbanPlanningInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUrbanPlanningInstrument"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasUse -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUse"/>
+    
+
+
     <!-- https://w3id.org/arco/subjective/isMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isMemberOfCollection"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasGeometry"/>
     
 
 
@@ -811,6 +877,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/objective/hasTechnicalDetailOccurrence"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/objective/TechnicalDetailOccurrence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAcquisition"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Acquisition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAuthorshipAttribution"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/AuthorshipAttribution"/>
             </owl:Restriction>
@@ -819,6 +897,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasBibliography"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasChangeOfAvailability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/ChangeOfAvailability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -835,14 +919,62 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasExportImportCertification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/ExportImportCertification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasIntervention"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Intervention"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasInventory"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Inventory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasLegalSituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/LegalSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasProtectiveMeasure"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasTitle"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Title"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasUrbanPlanningInstrument"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/UrbanPlanningInstrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasUse"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/isMemberOfCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/CollectionMembership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -984,6 +1116,12 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/HistoricOrArtisticProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasFruition"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Fruition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale storico e artistico, che può essere un disegno, una matrice incisa, un&apos;opera o oggetto d&apos;arte (contemporanea e non), una stampa, un vestimento antico o contemporaneo. Disegni: opere fatte a mano su qualsiasi supporto (carta, cartoncino, cartone, intonaco, legno, pergamena, pietra, seta, tavola, tela ecc.) e con particolari strumenti (carboncino, gessetto, inchiostro, lapis, matita, pastello, penna ecc.) e specifiche tecniche (acquarellatura, sanguigna ecc.). Matrici incise: lastre di vario materiale (acciaio, legno, linoleum, ottone, pietra, zinco rame ecc.) su cui vengono tracciate rappresentazioni pittoriche con particolari strumenti (bulino, punte di acciaio o di diamante, punzoni, raschietti ecc.) e con specifiche tecniche di incisione (acquaforte, acquatinta, litografia, mezzatinta, serigrafia, silografia, zincografia ecc.). Opere e oggetti d&apos;arte: beni mobili costituenti parte integrante di monumenti artistici e storici o provenienti dallo smembramento dei monumenti stessi, conservati in collezioni, musei e pinacoteche (armi ed armature, arredi civili e religiosi, oggetti per il culto, oggetti d&apos;uso, opere di pittura, tessuti e arazzi, sulture, ecc.). Opere e oggetti d&apos;arte contemporanea: opere rappresentative  delle nuove correnti artistiche dei secc. XX e  XXI (assemblaggio, computer art, istallazione, istallazione ambientale, istallazione audio, istallazione video, istallazione multimediale interattiva, opera cinetico-visuale, performance, ready made, realtà virtuale, video arte ecc.). Stampe: esemplari prodotti dall&apos;operazione mediante la quale da una matrice di incisione si ottengono copie uguali di rappresentazioni pittoriche su carta, cartoncino, cuoio,  pergamena, seta ecc. con varie tecniche di incisione (acquaforte, acquatinta, litografia, zincografia ecc.). Vestimenti antichi e contemporanei: abiti e costumi riguardanti l’abbigliamento maschile, femminile e infantile ad uso civile, connessi alle principali finalità d’uso e alle diverse occasioni della vita privata e sociale,  secondo le tipologie storiche dei secoli XVIII, XIX, XX  (abiti, biancheria intima, calzetteria, calzoni, camicie, costumi, cuffie, gonne, giacche, grembiuli, livree, maglie, mantelli, scialli, sciarpe, veli ecc.).</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Storico o Artistico</rdfs:label>
         <rdfs:label xml:lang="en">Historic Or Artistic Property</rdfs:label>
@@ -1267,6 +1405,18 @@ trovano.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/objective/TechnicalDetailOccurrence -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/objective/TechnicalDetailOccurrence"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Acquisition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Acquisition"/>
+    
+
+
     <!-- https://w3id.org/arco/subjective/AuthorshipAttribution -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/AuthorshipAttribution"/>
@@ -1276,6 +1426,12 @@ trovano.</rdfs:comment>
     <!-- https://w3id.org/arco/subjective/Bibliography -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Bibliography"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ChangeOfAvailability -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ChangeOfAvailability"/>
     
 
 
@@ -1303,9 +1459,39 @@ trovano.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/subjective/ExportImportCertification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ExportImportCertification"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Fruition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Fruition"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Intervention -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Intervention"/>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Inventory -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Inventory"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/LegalSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/LegalSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ProtectiveMeasure -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
     
 
 
@@ -1315,9 +1501,27 @@ trovano.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/subjective/UrbanPlanningInstrument -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/UrbanPlanningInstrument"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Use -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Use"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/Feature -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Geometry -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Geometry"/>
     
 
 
@@ -1336,6 +1540,12 @@ trovano.</rdfs:comment>
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Description -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
     
 
 

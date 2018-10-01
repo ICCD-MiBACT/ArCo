@@ -122,8 +122,12 @@
 
 					<!-- labels of cultural property -->
 
+					<!-- SMO -->
+					<!-- la virgola tra ogtd e ogtv viene inserita nella variabile ogtv perché 
+						c'è sempre se c'è ogtv. Invece, nella label si mettono le parentesi solo 
+						se c'è o sgta o sgti, mentre si mette la virgola tra sgta e sgti solo se 
+						ci sono entrambi -->
 					<xsl:if test="$sheetType='SMO'">
-
 
 
 						<xsl:variable name="ogtv">
@@ -141,11 +145,11 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$sgta and $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTA and schede/*/OG/SGT/SGTI">
 										<xsl:value-of
 											select="concat($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 									</xsl:when>
-									<xsl:when test="$sgta or $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTA or schede/*/OG/SGT/SGTI">
 										<xsl:value-of
 											select="concat($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 									</xsl:when>
@@ -216,7 +220,7 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$ogdn">
+									<xsl:when test="schede/*/OG/OGD/OGDN">
 										<xsl:value-of
 											select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
 									</xsl:when>
@@ -237,7 +241,7 @@
 						inserire la parentesi di chiusura a seconda dell'esistenza o meno di $ogtn. 
 						La virgola tra ogtd e ogtt viene messa nella variabile ogtt perché c'è solo 
 						se c'è ogtt -->
-					<xsl:if test="$sheetType='PST' or $sheetVersion='SI'">
+					<xsl:if test="$sheetType='PST' or $sheetType='SI'">
 						<xsl:variable name="ogtn">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTN">
@@ -264,7 +268,7 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$ogtn">
+									<xsl:when test="schede/*/OG/OGT/OGTN">
 										<xsl:value-of
 											select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, ')')" />
 									</xsl:when>
@@ -320,7 +324,7 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTI">
 										<xsl:value-of
 											select="concat($sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn, ')')" />
 									</xsl:when>
@@ -388,11 +392,11 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$sgtt and $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI">
 										<xsl:value-of
 											select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
 									</xsl:when>
-									<xsl:when test="$sgtt or $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
 										<xsl:value-of
 											select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
 									</xsl:when>
@@ -468,7 +472,7 @@
 						inserire la parentesi di chiusura a seconda dell'esistenza o meno di $ogtn. 
 						La virgola tra ogtd e ogtt viene messa nella variabile ogtc perché c'è solo 
 						se c'è ogtc -->
-					<xsl:if test="$sheetType='CA' or $sheetVersion='MA'">
+					<xsl:if test="$sheetType='CA' or $sheetType='MA'">
 						<xsl:variable name="ogtn">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTN">
@@ -495,7 +499,7 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$ogtn">
+									<xsl:when test="schede/*/OG/OGT/OGTN">
 										<xsl:value-of
 											select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, ')')" />
 									</xsl:when>
@@ -519,7 +523,7 @@
 						<xsl:variable name="ogtm">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTM">
-									<xsl:value-of select="concat(normalize-space(schede/*/OG/OGT/OGTM))" />
+									<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTM)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -529,7 +533,7 @@
 						<xsl:variable name="ogtp">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTP">
-									<xsl:value-of select="concat(normalize-space(schede/*/OG/OGT/OGTP))" />
+									<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTP)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -540,11 +544,11 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$ogtm and $ogtp">
+									<xsl:when test="schede/*/OG/OGT/OGTM and schede/*/OG/OGT/OGTP">
 										<xsl:value-of
 											select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, ', ', $ogtp, ')')" />
 									</xsl:when>
-									<xsl:when test="$ogtm or $ogtp">
+									<xsl:when test="schede/*/OG/OGT/OGTM or schede/*/OG/OGT/OGTP">
 										<xsl:value-of
 											select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, $ogtp, ')')" />
 									</xsl:when>
@@ -563,8 +567,11 @@
 
 					<xsl:if test="$sheetType='TMA'">
 						<rdfs:label>
+						<xsl:variable name="tmpLabel">
 							<xsl:value-of
 								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', normalize-space(schede/*/OG/OGT/OGTM), ')')" />
+						</xsl:variable>
+						<xsl:value-of select="concat($tmpLabel, ' - ', $ogtp)" />
 						</rdfs:label>
 					</xsl:if>
 
@@ -589,11 +596,11 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$ogtt and $ogth">
+									<xsl:when test="schede/*/OG/OGT/OGTT and schede/*/OG/OGT/OGTH">
 										<xsl:value-of
 											select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogth, ')')" />
 									</xsl:when>
-									<xsl:when test="$ogtt or $ogth">
+									<xsl:when test="schede/*/OG/OGT/OGTT or schede/*/OG/OGT/OGTH">
 										<xsl:value-of
 											select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogth, ')')" />
 									</xsl:when>
@@ -615,7 +622,7 @@
 						<xsl:variable name="sgtt">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/SGT/SGTT">
-									<xsl:value-of select="concat(normalize-space(schede/*/OG/SGT/SGTT))" />
+									<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTT)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -637,13 +644,13 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$sgta and $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI">
 										<xsl:value-of
-											select="concat($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
+											select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
 									</xsl:when>
-									<xsl:when test="$sgta or $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
 										<xsl:value-of
-											select="concat($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
+											select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
@@ -660,7 +667,7 @@
 						solo se c'è o sgta o sgti, mentre si mette la virgola tra sgta e sgti solo 
 						se ci sono entrambi -->
 
-					<xsl:if test="$sheetType='D' or $sheetVersion='MI' or $sheetVersion='S'">
+					<xsl:if test="$sheetType='D' or $sheetType='MI' or $sheetType='S'">
 						<xsl:variable name="sgtt">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/SGT/SGTT">
@@ -696,11 +703,11 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$sgtt and $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI">
 										<xsl:value-of
 											select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 									</xsl:when>
-									<xsl:when test="$sgtt or $sgti">
+									<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
 										<xsl:value-of
 											select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
 									</xsl:when>
@@ -771,7 +778,7 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$ogtn">
+									<xsl:when test="schede/*/OG/OGT/OGTN">
 										<xsl:value-of
 											select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg, ')')" />
 									</xsl:when>
@@ -820,7 +827,7 @@
 								<rdfs:label>
 									<xsl:variable name="tmpLabel">
 										<xsl:choose>
-											<xsl:when test="$ogtn">
+											<xsl:when test="schede/*/OG/OGT/OGTN">
 												<xsl:value-of
 													select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')')" />
 											</xsl:when>
@@ -834,13 +841,13 @@
 								</rdfs:label>
 							</xsl:when>
 							<xsl:otherwise>
-								<!-- sia virgola tra ogtt e ogtq sia parentesi sono inserite nel 
-									choose della label perché la virgola c'è solo se ci sono entrambe le variabili, 
-									le parentesi solo se ce ne sono entrambe o una delle due -->
-								<xsl:variable name="ogtt">
+								<!-- la parentesi di chiusura è inserita nel choose della label perché c'è solo se c'è $ogtd; 
+						la parentesi di apertura è nella variabile $ogtd perché c'è solo se c'è $ogtd; la virgola tra OGTT e $ogtq è nella variabile
+						$ogtq perché c'è sempre se c'è ogtq -->
+								<xsl:variable name="ogtd">
 									<xsl:choose>
-										<xsl:when test="schede/*/OG/OGT/OGTT">
-											<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTT)" />
+										<xsl:when test="schede/*/OG/OGT/OGTD">
+											<xsl:value-of select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (')" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="''" />
@@ -850,7 +857,7 @@
 								<xsl:variable name="ogtq">
 									<xsl:choose>
 										<xsl:when test="schede/*/OG/OGT/OGTQ">
-											<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTQ)" />
+											<xsl:value-of select="concat(', ', normalize-space(schede/*/OG/OGT/OGTQ))" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="''" />
@@ -862,16 +869,13 @@
 								<rdfs:label>
 									<xsl:variable name="tmpLabel">
 										<xsl:choose>
-											<xsl:when test="$ogtt and $ogtq">
+											<xsl:when test="schede/*/OG/OGT/OGTD">
 												<xsl:value-of
-													select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtq, ')')" />
-											</xsl:when>
-											<xsl:when test="$ogtt or $ogtq">
-												<xsl:value-of
-													select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtq, ')')" />
+										select="concat($ogtd, normalize-space(schede/*/OG/OGT/OGTT), $ogtq, ')')" />
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
+												<xsl:value-of
+													select="concat(normalize-space(schede/*/OG/OGT/OGTT), $ogtq)" />
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:variable>
@@ -926,20 +930,25 @@
 									perché c'è sempre se c'è dbl. Le parentesi di dbc vengono messe nella label 
 									perché dbd e dbc sono obbligatori quindi ci sono sempre -->
 								<xsl:variable name="dbl">
-									<xsl:choose>
-										<xsl:when test="schede/*/DB/DBL">
-											<xsl:value-of
-												select="concat(', ', normalize-space(schede/*/DB/DBL))" />
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:value-of select="''" />
-										</xsl:otherwise>
-									</xsl:choose>
-								</xsl:variable>
+								<xsl:choose>
+									<xsl:when test="schede/*/DB/DBL">
+									<!-- si usa il for-each perché DBL è ripetitivo -->
+										<xsl:for-each select="schede/*/DB/DBL">
+											<xsl:value-of select="concat(', ', normalize-space(.))" />
+										</xsl:for-each>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="''" />
+									</xsl:otherwise>
+								</xsl:choose>
+						</xsl:variable>
 
 								<rdfs:label>
+								<xsl:variable name="tmpLabel">
 									<xsl:value-of
 										select="concat(normalize-space(schede/*/DB/DBD), $dbl, ' (', normalize-space(schede/*/DB/DBC), ')')" />
+								</xsl:variable>
+								<xsl:value-of select="concat($tmpLabel, ' - ', $ogtp)" />
 								</rdfs:label>
 							</xsl:when>
 							<xsl:otherwise>
@@ -963,7 +972,7 @@
 								<rdfs:label>
 									<xsl:variable name="tmpLabel">
 										<xsl:choose>
-											<xsl:when test="$ogdn">
+											<xsl:when test="schede/*/OG/OGD/OGDN">
 												<xsl:value-of
 													select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG), ')')" />
 											</xsl:when>
@@ -993,7 +1002,7 @@
 								<xsl:variable name="sgtt">
 									<xsl:choose>
 										<xsl:when test="schede/*/OG/SGT/SGTT">
-											<xsl:value-of select="concat(normalize-space(schede/*/OG/SGT/SGTT))" />
+											<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTT)" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="''" />
@@ -1036,11 +1045,11 @@
 								<rdfs:label>
 									<xsl:variable name="tmpLabel">
 										<xsl:choose>
-											<xsl:when test="$sgtt and $sgti">
+											<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI">
 												<xsl:value-of
 													select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
 											</xsl:when>
-											<xsl:when test="$sgtt or $sgti">
+											<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
 												<xsl:value-of
 													select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
 											</xsl:when>
@@ -1096,7 +1105,7 @@
 								<rdfs:label>
 									<xsl:variable name="tmpLabel">
 										<xsl:choose>
-											<xsl:when test="$ogdn">
+											<xsl:when test="schede/*/OG/OGD/OGDN">
 												<xsl:value-of
 													select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg, ')')" />
 											</xsl:when>
@@ -1162,7 +1171,7 @@
 					<!-- le parentesi vengono inserite nella variabile ogtv perché ci sono 
 						solo se c'è ogtv -->
 					<xsl:if
-						test="$sheetType='BNPE' or $sheetVersion='BNM' or $sheetVersion='BNZ' or $sheetVersion='E'">
+						test="$sheetType='BNPE' or $sheetType='BNM' or $sheetType='BNZ' or $sheetType='E'">
 						<xsl:variable name="ogtv">
 							<xsl:choose>
 								<xsl:when test="schede/*/OG/OGT/OGTV">
@@ -1212,11 +1221,11 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="$ogtt and $ogtv">
+									<xsl:when test="schede/*/OG/OGT/OGTT and schede/*/OG/OGT/OGTV">
 										<xsl:value-of
 											select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtv, ')')" />
 									</xsl:when>
-									<xsl:when test="$ogtt or $ogtv">
+									<xsl:when test="schede/*/OG/OGT/OGTT or schede/*/OG/OGT/OGTV">
 										<xsl:value-of
 											select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtv, ')')" />
 									</xsl:when>
@@ -1304,17 +1313,6 @@
 								select="concat($NS, 'Fruition/', $itemURI, '-', position())" />
 	                			</xsl:attribute>
 						</culturaldefinition:hasFruition>
-					</xsl:for-each>
-				</xsl:if>
-				<!-- alternative identifier (AC/ACC) -->
-				<xsl:if test="schede/*/AC/ACC">
-					<xsl:for-each select="schede/*/AC/ACC">
-						<cataloguerecord:hasAlternativeIdentifier>
-							<xsl:attribute name="rdf:resource">
-	                				<xsl:value-of
-								select="concat($NS, 'AlternativeIdentifier/', $itemURI, '-', position())" />
-	                			</xsl:attribute>
-						</cataloguerecord:hasAlternativeIdentifier>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- authorship attribution -->
@@ -1715,22 +1713,42 @@
 					<culturaldefinition:title>
 						<xsl:value-of select="normalize-space(.)" />
 					</culturaldefinition:title>
+					<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/DA/AID/AIDT">
 					<culturaldefinition:title>
 						<xsl:value-of select="normalize-space(.)" />
 					</culturaldefinition:title>
+					<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/DA/AID/AIDN">
 					<culturaldefinition:alternativeTitle>
 						<xsl:value-of select="normalize-space(.)" />
 					</culturaldefinition:alternativeTitle>
+					<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 				</xsl:for-each>
 				<!-- proper title -->
 				<xsl:for-each select="schede/*/OG/SGT/SGTP">
 					<culturaldefinition:properTitle>
 						<xsl:value-of select="normalize-space(.)" />
 					</culturaldefinition:properTitle>
+					<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 				</xsl:for-each>
 				<xsl:if
 					test="not(lower-case(normalize-space(schede/*/SG/SGL/SGLT))='nr' or lower-case(normalize-space(schede/*/SG/SGL/SGLT))='n.r.' or lower-case(normalize-space(schede/*/SG/SGL/SGLT))='nr (recupero pregresso)')">
@@ -1738,6 +1756,11 @@
 						<culturaldefinition:properTitle>
 							<xsl:value-of select="normalize-space(.)" />
 						</culturaldefinition:properTitle>
+						<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- parallel title -->
@@ -1745,6 +1768,11 @@
 					<culturaldefinition:parallelTitle>
 						<xsl:value-of select="normalize-space(.)" />
 					</culturaldefinition:parallelTitle>
+					<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 				</xsl:for-each>
 				<xsl:if
 					test="not(lower-case(normalize-space(schede/*/SG/SGL/SGLL))='nr' or lower-case(normalize-space(schede/*/SG/SGL/SGLL))='n.r.' or lower-case(normalize-space(schede/*/SG/SGL/SGLL))='nr (recupero pregresso)')">
@@ -1752,6 +1780,11 @@
 						<culturaldefinition:parallelTitle>
 							<xsl:value-of select="normalize-space(.)" />
 						</culturaldefinition:parallelTitle>
+						<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- attributed title -->
@@ -1761,6 +1794,11 @@
 						<culturaldefinition:attributedTitle>
 							<xsl:value-of select="normalize-space(.)" />
 						</culturaldefinition:attributedTitle>
+						<culturaldefinition:hasTitle>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						</xsl:attribute>
+					</culturaldefinition:hasTitle>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- name in time (OG/OGD) -->
@@ -1807,7 +1845,204 @@
 						<xsl:value-of select="." />
 					</arco:suffix>
 				</xsl:for-each>
-
+				<!-- Use of cultural property -->
+                <xsl:if test="not(schede/A/UT or schede/PG/UT)">
+	                <xsl:for-each select="schede/*/UT">
+	                	<culturaldefinition:hasUse>
+	                		<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-use-', position())" />
+	                		</xsl:attribute>
+	                	</culturaldefinition:hasUse>                
+	                </xsl:for-each>
+                </xsl:if>
+                <xsl:if test="schede/*/DA/UTF or schede/*/DA/UTM or schede/*/DA/UTS">
+                	<culturaldefinition:hasUse>
+                		<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-use')" />
+	                		</xsl:attribute>
+                	</culturaldefinition:hasUse>
+                </xsl:if>
+                <!-- material of cultural property (version 4.00 and VeAC) -->
+               <xsl:for-each select="schede/*/MT/MTC/MTCM | schede/VeAC/MT/MTC/MTCF">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+ 	            </xsl:for-each>
+                 <!-- technique of cultural property (4.00) --> 
+                 <xsl:for-each select="schede/*/MT/MTC/MTCT">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:for-each>
+                 <!-- materialOrTechnique of cultural property (previous versions) -->
+                 <xsl:if test="not(schede/*/MT/MTC/*)">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-technique-', position())" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- shape of cultural property --> 
+                 <xsl:if test="schede/*/MT/FRM and not(schede/F/MT/FRM)">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-shape')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- filigree of cultural property --> 
+                 <xsl:if test="schede/*/MT/FIL">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-filigree')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- file format of photograph (F) --> 
+                 <xsl:if test="schede/F/MT/FVC/FVCF">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-file-format')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- photo size of photograph (F) --> 
+                 <xsl:if test="schede/F/MT/FRM">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-size')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- photo program of photograph (F) --> 
+                 <xsl:if test="schede/F/MT/FVC/FVCP">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-program')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- storage method and colour depth of photograph (F) --> 
+                 <xsl:if test="schede/F/MT/FVC/FVCC">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-storage-method-colour-depth')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- resolution of photograph (F) --> 
+                 <xsl:if test="schede/F/MT/FVC/FVCU">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-resolution')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- pixel dimension of photograph (F) --> 
+                 <xsl:for-each select="schede/F/MT/FVC/FVCM">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-pixel-dimension-', position())" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:for-each>
+                 <!-- mass storage of photograph (F) --> 
+                 <xsl:if test="schede/F/MT/FVM">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-mass-storage')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- colour of photograph (F) --> 
+                 <xsl:if test="schede/F/MT/MTX">
+                 	<cpdescription:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-photo-colour')" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+                 </xsl:if>
+                 <!-- digital photo note (F) -->
+                 <xsl:if test="schede/F/MT/FVC/FVCV or schede/F/MT/FVC/FVCN">
+                 	<cpdescription:digitalPhotographNote>
+                 		<xsl:choose>
+                 			<xsl:when test="schede/F/MT/FVC/FVCV">
+                 				<xsl:value-of select="schede/F/MT/FVC/FVCV" />
+                 			</xsl:when>
+                 			<xsl:otherwise>
+                 				<xsl:value-of select="schede/F/MT/FVC/FVCN" />
+                 			</xsl:otherwise>
+                 		</xsl:choose>
+                		<xsl:value-of select="normalize-space(schede/F/MT/FVC/FVCV)" />
+                	</cpdescription:digitalPhotographNote>
+                </xsl:if>
+                <!-- colour of garment (VeAC) --> 
+                <xsl:if test="schede/VeAC/MT/MTC/MTCC">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-garment-colour')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- analysis of garment (VeAC) --> 
+                <xsl:if test="schede/VeAC/MT/MTC/MTCA">
+                	<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-garment-analysis')" />
+	                	</xsl:attribute>
+	                </cpdescription:hasTechnicalDetailOccurrence>
+                </xsl:if>
+                <!-- Legal situation of cultural property -->
+                <xsl:if test="schede/*/TU/CDG">
+                	<culturaldefinition:hasLegalSituation>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(schede/*/TU/CDG/CDGG)))" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasLegalSituation>                
+                </xsl:if>
+                <!-- Export import certification of cultural property -->
+                <xsl:for-each select="schede/*/TU/ESP">
+                	<culturaldefinition:hasExportImportCertification>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ExportImportCertification/', $itemURI, '-export-import-certification-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasExportImportCertification>                
+                </xsl:for-each>
+                <!-- Protective measures of cultural property -->
+                <xsl:for-each select="schede/*/TU/NVC">
+                	<culturaldefinition:hasProtectiveMeasure>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasProtectiveMeasure>                
+                </xsl:for-each>
+                <!-- Urban planning instrument of culturale property -->
+				<xsl:for-each select="schede/*/TU/STU">
+                	<culturaldefinition:hasUrbanPlanningInstrument>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'UrbanPlanningInstrument/', $itemURI, '-urban-planning-instrument-', position())" />
+                		</xsl:attribute>
+                	</culturaldefinition:hasUrbanPlanningInstrument>                
+                </xsl:for-each>
+                <!-- Other related agents of cultural property -->
+                <xsl:for-each select="schede/*/AU/NMC">
+                	<culturaldefinition:hasRelatedAgent>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:choose>
+                				<xsl:when test="./NMCA">
+                					<xsl:value-of select="concat($NS, 'RelatedAgent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)), '-', arco-fn:urify(normalize-space(./NMCA)))" />
+                				</xsl:when>
+                				<xsl:otherwise>
+                					<xsl:value-of select="concat($NS, 'RelatedAgent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)))" />
+                				</xsl:otherwise>
+                			</xsl:choose>
+                		</xsl:attribute>
+                	</culturaldefinition:hasRelatedAgent>                
+                </xsl:for-each>
 			</rdf:Description>
 		</rdf:RDF>
 

@@ -24,11 +24,11 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Ciascun contesto che lo interessa/lo ha interessato viene descritto nelle componenti &quot;spazio&quot;, &quot;tempo&quot;, &quot;evento&quot;, &quot;entità coinvolte&quot; (enti, persone, altri beni). Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:comment xml:lang="it">Questo modulo comprende la modellazione delle informazioni ricavabili dallo studio, e per questo soggettive, relative a un bene culturale, che si separano dalle informazioni oggettive ricavabili dall&apos;osservazione diretta del bene.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -417,6 +417,20 @@
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasEligibleIntervention -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasEligibleIntervention">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/UrbanPlanningInstrument"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/EligibleIntervention"/>
+        <rdfs:label xml:lang="it">ha intervento ammesso</rdfs:label>
+        <rdfs:label xml:lang="en">has eligible intervention</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasEvent">
@@ -588,6 +602,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasIssuingAgency -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasIssuingAgency">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/UrbanPlanningInstrument"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento urbanistico-territoriale con l&apos;ente o l&apos;amministrazione che ha emanato il provvedimento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha ente che ha emanato il provvedimento</rdfs:label>
+        <rdfs:label xml:lang="en">has issuing agency</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>TU/STU/STUE</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasLegalSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasLegalSituation">
@@ -662,6 +691,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasPlanningEnvironmentalRelationWith -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasPlanningEnvironmentalRelationWith">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
+        <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
+        <rdfs:label xml:lang="it">è in relazione urbanistico-ambientale con</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è in relazione urbanistico - ambientale con&apos; (versioni precedenti: &apos;relazione urbanistico ambientale&apos;)</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasPreviousOwner -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasPreviousOwner">
@@ -720,6 +764,20 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasRelatedAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasRelatedAgent">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a un agente che è collegato in qualche modo a quell&apos;entità. È una relazione generica che viene usata per quei casi in cui non sia possibile definire in maniera più precisa la natura della relazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha agente correlato</rdfs:label>
+        <rdfs:label xml:lang="en">has related agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale: AU/NMC</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -919,6 +977,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasUrbanPlanningInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUrbanPlanningInstrument">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/UrbanPlanningInstrument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a uno strumento urbanistico-territoriale, ovvero a un piano regolatore generale e particolareggiato o a un piano paesaggistico che interessa il bene stesso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha strumento urbanistico-territoriale</rdfs:label>
+        <rdfs:label xml:lang="en">has urban planning instrument</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasUse -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasUse">
@@ -1048,6 +1121,36 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/isInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
+        <rdfs:label xml:lang="en">is involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è coinvolto in&apos; (versioni precedenti: &apos;esecuzione/evento di riferimento&apos;)</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isLocatedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce il luogo di collocazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">is located in</rdfs:label>
+        <rdfs:label xml:lang="it">è contenuto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è contenuto in&apos; (versioni precedenti: &apos;luogo di collocazione/localizzazione&apos;; &apos;scheda contenitore&apos;)</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/isMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isMemberOfCollection">
@@ -1124,6 +1227,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/isReusedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isReusedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che lo riutilizza in tutto o in parte.</rdfs:comment>
+        <rdfs:label xml:lang="en">is reused by</rdfs:label>
+        <rdfs:label xml:lang="it">è riutilizzato in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è riutilizzato in&apos; (versioni precedenti: &apos;bene composto&apos;)</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/isSubjectOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isSubjectOf">
@@ -1152,6 +1270,51 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale: DT/DTS/DTSI + DT/DTS/DTSV + DT/DTS/DTSF + DT/DTS/DTSL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/wasCreatedAt -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasCreatedAt">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di produzione/realizzazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">was created at</rdfs:label>
+        <rdfs:label xml:lang="it">è stato realizzato in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato realizzato in&apos; (versioni precedenti: &apos;sede di realizzazione&apos;)</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/wasLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasLocatedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di provenienza, prima della sua attuale collocazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">era contenuto in</rdfs:label>
+        <rdfs:label xml:lang="en">was located in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;era contenuto in&apos; (versioni precedenti: &apos;sede di provenienza&apos;)</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/wasRediscoveredIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasRediscoveredIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di rinvenimento archeologico.</rdfs:comment>
+        <rdfs:label xml:lang="en">was rediscovered in</rdfs:label>
+        <rdfs:label xml:lang="it">è stato rinvenuto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato rinvenuto in&apos; (versioni precedenti: &apos;sede di rinvenimento&apos;)</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1301,7 +1464,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/agentDate">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà permette di associare delle indicazioni cronologiche generiche (le date di nascita e di morte o, quando queste sono ignote, le date di attività) a un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare delle indicazioni cronologiche generiche (le date di nascita e di morte o, quando queste sono ignote, le date di attività), anche sotto forma testuale, a un agente.</rdfs:comment>
         <rdfs:label xml:lang="en">agent date</rdfs:label>
         <rdfs:label xml:lang="it">indicazioni cronologiche relative a un agente</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -2623,6 +2786,19 @@ bene catalogato.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/subjective/EligibleIntervention -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/EligibleIntervention">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di intervento ammesso da una normativa specifica, ovvero da un piano regolatore generale e particolareggiato o da un piano paesaggistico che interessa un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eligible intervention</rdfs:label>
+        <rdfs:label xml:lang="it">Intervento ammesso</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU/STUN</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/ExportImportCertification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/ExportImportCertification">
@@ -3053,6 +3229,33 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/RelatedAgent -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/RelatedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un agente collegato in qualche modo a un&apos;entità. Quella tra l&apos;agente e l&apos;entità è una relazione generica che viene usata per quei casi in cui non sia possibile definire in maniera più precisa la natura della relazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Agente collegato</rdfs:label>
+        <rdfs:label xml:lang="en">Related agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/NMC</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/RelatedCulturalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/RelatedCulturalProperty">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale che ha una relazione con un altro bene culturale, descritto in una scheda di catalogo. La natura della relazione viene specificata attraverso l&apos;utilizzo di proprietà che collegano i due beni.</rdfs:comment>
+        <rdfs:label xml:lang="it">Bene culturale collegato</rdfs:label>
+        <rdfs:label xml:lang="en">Related cultural property</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RV/RSE</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Research -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Research">
@@ -3243,6 +3446,25 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDN; DA/AID/AIDT - Normativa S e MI: OG/SGT/SGTP Normativa F: SG/SGL/SGLA; SG/SGL/SGLT; SG/SGL/SGLL - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTR; OG/SGT/SGTT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/UrbanPlanningInstrument -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/UrbanPlanningInstrument">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasEligibleIntervention"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/EligibleIntervention"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno strumento urbanistico-territoriale, ovvero un piano regolatore generale e particolareggiato o un piano paesaggistico che interessa un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Strumento urbanistico-territoriale</rdfs:label>
+        <rdfs:label xml:lang="en">Urban planning instrument</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/STU</core:iccdNormTag>
     </owl:Class>
     
 
