@@ -1495,6 +1495,21 @@
 	                        </xsl:attribute>
 					</arco:hasCataloguingAgency>
 				</xsl:if>
+				<!-- proponent agency -->
+				<xsl:if test="schede/*/CD/EPR">
+					<arco:hasAgentRole>
+						<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of
+							select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
+	                        </xsl:attribute>
+					</arco:hasAgentRole>
+					<arco:hasProponentAgency>
+						<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of
+							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CD/EPR)))" />
+	                        </xsl:attribute>
+					</arco:hasProponentAgency>
+				</xsl:if>
 				<!-- Type of context for LC -->
 				<xsl:for-each select="schede/*/LC/PVZ">
 					<locgeoamm:hasTypeOfContext>
@@ -1845,6 +1860,12 @@
 						<xsl:value-of select="." />
 					</arco:suffix>
 				</xsl:for-each>
+				<!-- finding note (RE/RES) -->
+				<xsl:if test="schede/*/RE/RES">
+					<culturaldefinition:findingNote>
+						<xsl:value-of select="schede/*/RE/RES" />
+					</culturaldefinition:findingNote>
+				</xsl:if>
 				<!-- Use of cultural property -->
                 <xsl:if test="not(schede/A/UT or schede/PG/UT)">
 	                <xsl:for-each select="schede/*/UT">

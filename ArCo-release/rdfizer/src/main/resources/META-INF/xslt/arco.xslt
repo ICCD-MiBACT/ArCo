@@ -1962,7 +1962,7 @@
                     </rdfs:label>
                 </rdf:Description>
             </xsl:if>
-            <!-- Ente Schedatore - Role in time CD/ESC -->
+            <!-- Cataloguing Agency - Agent Role CD/ESC -->
             <xsl:for-each select="schede/*/CD/ESC">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
@@ -2033,6 +2033,78 @@
                     </arco:isAgentOf>
                 </rdf:Description>
             </xsl:for-each>
+            <!-- Proponent Agency - Agent Role CD/EPR -->
+            <xsl:for-each select="schede/*/CD/EPR">
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/arco/core/AgentRole'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="concat('Ente proponente del bene ', $itemURI, ': ', .)" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="concat('Proponent agency for cultural property ', $itemURI, ': ', .)" />
+                    </rdfs:label>
+                    <arco:hasRole>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'Role/ProponentAgency')" />
+                        </xsl:attribute>
+                    </arco:hasRole>
+                    <arco:hasAgent>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+                        </xsl:attribute>
+                    </arco:hasAgent>
+                </rdf:Description>
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'Role/ProponentAgency')" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/RO/Role'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label xml:lang="it">
+                        <xsl:value-of select="'Ente proponente'" />
+                    </rdfs:label>
+                    <rdfs:label xml:lang="en">
+                        <xsl:value-of select="'Proponent agency'" />
+                    </rdfs:label>
+                    <arco:isRoleOf>
+                    	<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
+                        </xsl:attribute>
+                    </arco:isRoleOf>
+                </rdf:Description>
+                <rdf:Description>
+                    <xsl:attribute name="rdf:about">
+                        <xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+                    </xsl:attribute>
+                    <rdf:type>
+                        <xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+                        </xsl:attribute>
+                    </rdf:type>
+                    <rdfs:label>
+                        <xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(.))" />
+                    </rdfs:label>
+                    <l0:name>
+                        <xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(.))" />
+                    </l0:name>
+                    <arco:isAgentOf>
+                    	<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
+                        </xsl:attribute>
+                    </arco:isAgentOf>
+                </rdf:Description>
+            </xsl:for-each>
+            <!-- Heritage Protection Agency - Agent Role CD/ECP -->
             <xsl:if test="schede/*/CD/ECP">
                 <rdf:Description>
                     <xsl:attribute name="rdf:about">
@@ -3702,9 +3774,9 @@
             			<xsl:value-of select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
             		</l0:name>
             		<xsl:if test="./BIBH">
-            			<culturaldefinition:bibliographyIdentifier>
+            			<culturaldefinition:bibliographyLocalIdentifier>
             				<xsl:value-of select="normalize-space(./BIBH)" />
-            			</culturaldefinition:bibliographyIdentifier>
+            			</culturaldefinition:bibliographyLocalIdentifier>
             		</xsl:if>
             		<xsl:if test="./BIBK or ./NCUN">
             			<culturaldefinition:bibliographyICCDIdentifier>
@@ -3758,11 +3830,11 @@
             			</smapit:URL>
             		</xsl:if>
             		<xsl:if test="./BIBJ">
-            			<cataloguerecord:hasCataloguingAgent>
+            			<culturaldefinition:hasAuthorityFileCataloguingAgency>
             				<xsl:attribute name="rdf:resource">
             					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./BIBJ)))" />
             				</xsl:attribute>
-            			</cataloguerecord:hasCataloguingAgent>
+            			</culturaldefinition:hasAuthorityFileCataloguingAgency>
             		</xsl:if>
             		<xsl:if test="./BIBX and not(lower-case(normalize-space(./BIBX))='nr' or lower-case(normalize-space(./BIBX))='n.r.' or lower-case(normalize-space(./BIBX))='nr (recupero pregresso)')">
                         <arco:hasCategory>
@@ -7524,14 +7596,14 @@
                             </culturaldefinition:agentDate>
                         </xsl:if>
                         <xsl:if test="./AUTH">
-                            <culturaldefinition:authorLocalIdentifier>
+                            <culturaldefinition:agentLocalIdentifier>
                                 <xsl:value-of select="normalize-space(./AUTH)" />
-                            </culturaldefinition:authorLocalIdentifier>
+                            </culturaldefinition:agentLocalIdentifier>
                         </xsl:if>
                         <xsl:if test="../AUF/AUFH">
-                            <culturaldefinition:authorLocalIdentifier>
+                            <culturaldefinition:agentLocalIdentifier>
                                 <xsl:value-of select="normalize-space(../AUF/AUFH)" />
-                            </culturaldefinition:authorLocalIdentifier>
+                            </culturaldefinition:agentLocalIdentifier>
                         </xsl:if>
                         <xsl:if test="./AUTK">
                             <culturaldefinition:authorICCDIdentifier>

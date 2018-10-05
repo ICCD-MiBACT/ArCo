@@ -98,6 +98,140 @@
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasActivityOperator -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasActivityOperator">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività (per esempio, un&apos;indagine o un intervento su un bene culturale) all&apos;operatore dell&apos;attività. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha operatore dell&apos;attività</rdfs:label>
+        <rdfs:label xml:lang="en">has activity operator</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale: RE/IND/INDN; CO/RST/RSTN - ICCD Normativa SM 4.00: DR/DRL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasActivityResponsible -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasActivityResponsible">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività (per esempio, un&apos;indagine o un intervento su un bene culturale) all&apos;ente o al soggetto responsabile del rilevamento. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha responsabile dell&apos;attività</rdfs:label>
+        <rdfs:label xml:lang="en">has activity responsible</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGR; RE/DSC/DSCF; RE/IND/INDE; RE/FOI/FOIE - Normativa SM 4.00: DR/DRV</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasActivitySponsor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasActivitySponsor">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività (per esempio, un&apos;indagine o un intervento su un bene culturale) all&apos;ente o al soggetto che ha finanziato l&apos;attività.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha finanziatore dell&apos;attività</rdfs:label>
+        <rdfs:label xml:lang="en">has activity sponsor</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RS/RST/RSTR; RE/IND/INDR</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasAnomaly -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAnomaly">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/PhotoInterpretationRendering"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Anomaly"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una fotointerpretazione o fotorestituzione a un&apos;anomalia rilevata nel corso dell&apos;indagine.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha anomalia</rdfs:label>
+        <rdfs:label xml:lang="en">has anomaly</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA + RE/FOI/FOIQ + RE/FOI/FOIF</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasAnomalyClassification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAnomalyClassification">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Anomaly"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/AnomalyClassification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;anomalia alla classificazione del tipo di anomalia.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha classificazione anomalia</rdfs:label>
+        <rdfs:label xml:lang="en">has anomaly classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIF</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasAnomalyOrigin -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAnomalyOrigin">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Anomaly"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/AnomalyOrigin"/>
+        <rdfs:label xml:lang="it">Questa proprietà collega un&apos;anomalia rilevata durante una fotointerpretazione o fotorestituzione all&apos;origine dell&apos;anomalia (naturale, antropica, incerta).</rdfs:label>
+        <rdfs:label xml:lang="it">ha origine dell&apos;anomalia</rdfs:label>
+        <rdfs:label xml:lang="en">has anomaly origin</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasAnomalyType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAnomalyType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Anomaly"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/AnomalyType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;anomalia rilevata nel corso di una fotointerpretazione o fotorestituzione al tipo di anomalia (puntuale, lineare, areale).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di anomalia</rdfs:label>
+        <rdfs:label xml:lang="en">has anomaly type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIQ</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasArchaeologicalPropertySurveyType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasArchaeologicalPropertySurveyType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalPropertySurvey"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalPropertySurveyType"/>
+        <rdfs:label xml:lang="it">ha tipo di indagine su bene archeologico</rdfs:label>
+        <rdfs:label xml:lang="en">has archaeological property survey type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa AT 3.00: IN/INI/INIT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasArchaeometricDiagnosticSurveyType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasArchaeometricDiagnosticSurveyType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurvey"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurveyType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine archeometrica e diagnostica al suo tipo (es.: analisi della malta, carotaggio, termografia, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di indagine archeometrica e diagnostica</rdfs:label>
+        <rdfs:label xml:lang="en">has archaeometric diagnostic survey type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND/INDI</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasArchive -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasArchive">
@@ -153,14 +287,14 @@
     <!-- https://w3id.org/arco/subjective/hasAuthorityFileCataloguingAgency -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasAuthorityFileCataloguingAgency">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/PreferredAuthorshipAttribution"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;attribuzione di un autore a un bene culturale all&apos;ente schedatore dell&apos;authority file relativo a quell&apos;autore. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega l&apos;attribuzione, l&apos;authority file, e l&apos;ente schedatore dell&apos;authority file.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità descritta in una scheda di Authority File all&apos;ente schedatore dell&apos;authority file stesso. Per esempio, l&apos;attribuzione di un autore a un bene culturale, uno scavo archeologico, una ricognizione archeologica, una bibliografia. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità, l&apos;authority file, e l&apos;ente schedatore dell&apos;authority file.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente schedatore dell&apos;authority file</rdfs:label>
         <rdfs:label xml:lang="en">has authority file cataloguing agency</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>AU/AUT/AUTJ</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTJ; DO/BIB/BIBJ; RE/RCG/RCGJ;  RE/DSC/DSCJ</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -573,9 +707,9 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasInventory -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasInventory">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Inventory"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un inventario che registra informazioni relative al bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale o una delle entità o attività collegate al bene culturale a un inventario che registra informazioni relative al bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to an inventory about it.</rdfs:comment>
         <rdfs:label xml:lang="it">ha inventario</rdfs:label>
         <rdfs:label xml:lang="en">has inventory</rdfs:label>
@@ -617,6 +751,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasLaboratoryTestType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasLaboratoryTestType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/LaboratoryTest"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/LaboratoryTestType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;analisi di laboratorio con il tipo di analisi (es.: analisi metallurgica, analisi chimica, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di analisi di laboratorio</rdfs:label>
+        <rdfs:label xml:lang="en">has laboratory test type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normative NU, RA, BNB, MA, CA: RS/ALB/ALBT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasLegalSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasLegalSituation">
@@ -628,6 +777,66 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMethod">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ArchaeologicalExcavation"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ArchaeologicalFieldSurvey"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Method"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno scavo archeologico o una ricognizione archeologica al metodo adottato nel corso dell&apos;indagine.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha metodo di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">has survey method</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGM; RE/DSC/DSCM</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasMotivation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMotivation">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ArchaeologicalExcavation"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ArchaeologicalFieldSurvey"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurvey"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/PhotoInterpretationRendering"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Motivation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno scavo archeologico, una ricognizione archeologica, un&apos;indagine archeometrica e diagnostica o una fotointerpretazione e fotorestituzione al motivo principale che li ha determinati.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha motivo di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">has survey motivation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasMusicHeritageSurvey -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasMusicHeritageSurvey">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/MusicHeritageSurvey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale al rilevamento del bene stesso.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha rilevamento di bene musicale</rdfs:label>
+        <rdfs:label xml:lang="en">has music heritage survey</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -741,14 +950,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasProponentAgency">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/subjective/isProponentAgencyOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ProtectiveMeasure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un provvedimento di tutela all&apos;ente proponente, ovvero al soggetto che ha proposto il provvedimento, identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, che può essere direttamente il bene culturale o specificamente il provvedimento di tutela relativo al bene culturale, all&apos;ente proponente, ovvero al soggetto che ha proposto il provvedimento, identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente proponente</rdfs:label>
         <rdfs:label xml:lang="en">has proponet agency</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA; Versioni precedenti: CD/EPR</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -778,6 +994,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale: AU/NMC</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasReliability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasReliability">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/PhotoInterpretationRendering"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Reliability"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una fotointerpretazione o fotorestituzione al livello di affidabilità delle informazioni rilevate nell&apos;indagine.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha affidabilità</rdfs:label>
+        <rdfs:label xml:lang="en">has reliability</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIO</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -885,6 +1116,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/hasStratigraphicUnit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasStratigraphicUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalExcavation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/StratigraphicUnit"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno scavo archeologico all&apos;unità stratigrafica dalla quale proviene il bene rinvenuto nello scavo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha unità stratigrafica</rdfs:label>
+        <rdfs:label xml:lang="en">has stratigraphic unit</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCU</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/hasSubject -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSubject">
@@ -905,44 +1151,58 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasSurvey -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurvey">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Survey"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale al rilevamento del bene stesso.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha rilevamento</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un&apos;indagine effettuata sul bene stesso, per la sua individuazione, per il suo studio e per l&apos;approfondimento delle sue caratteristiche tecniche.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa SM 4.00: DR</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE; CM/ISP - ICCD Normative NU, RA, BNB, MA, CA: RS/ALB - ICCD Normativa AT 3.00: IN/INI</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/arco/subjective/hasSurveyOperator -->
+    <!-- https://w3id.org/arco/subjective/hasSurveyImage -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurveyOperator">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Survey"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale al rilevatore, ovvero all&apos;operatore del rilevamento. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha rilevatore</rdfs:label>
-        <rdfs:label xml:lang="en">has survey operator</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurveyImage">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/PhotoInterpretationRendering"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/SurveyImage"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una fotointerpretazione o fotorestituzione all&apos;immagine presa in esame nel corso dell&apos;indagine.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha immagine di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">has survey image</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa SM 4.00: DR/DRL</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT + FOID</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/arco/subjective/hasSurveyResponsible -->
+    <!-- https://w3id.org/arco/subjective/hasSurveyImageType -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurveyResponsible">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Survey"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale all&apos;ente o al soggetto responsabile del rilevamento. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha responsabile del rilevamento</rdfs:label>
-        <rdfs:label xml:lang="en">has survey responsible</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurveyImageType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/SurveyImage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/SurveyImageType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una immagine di indagine al suo tipo (fotografia aerea o fotografia satellitare).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di immagine di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">has survey image type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa SM 4.00: DR/DRV</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasSurveyScientificDirector -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasSurveyScientificDirector">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:label xml:lang="it">ha responsabile scientifico dell&apos;indagine</rdfs:label>
+        <rdfs:label xml:lang="en">has survey scientific director</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGA; RE/DSC/DSCA; RE/FOI/FOIS</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -973,6 +1233,20 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>OG/SGT/SGTP; SG/SGL/SGLT; SG/SGL/SGLL; OG/SGT/SGTR; DA/AID/AIDN; SG/SGL/SGLA; DA/AID/AIDT; OG/SGT/SGTT</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasTomb -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasTomb">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalExcavation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Tomb"/>
+        <rdfs:label xml:lang="it">ha deposizione funeraria</rdfs:label>
+        <rdfs:label xml:lang="en">has tomb</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCS</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1215,7 +1489,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isRelatedToResearch">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/MusicHeritageSurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Research"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un rilevamento di un bene musicale alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
         <rdfs:label xml:lang="en">is related to research</rdfs:label>
@@ -1336,9 +1610,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/core/ICCDIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/ICCDIdentifier"/>
+    
+
+
     <!-- https://w3id.org/arco/core/description -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/description"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/localIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/localIdentifier"/>
     
 
 
@@ -1473,6 +1759,23 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/agentLocalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/agentLocalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/localIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice identificativo, che individua il riferimento autoriale in modo univoco nell&apos;ambito di un repertorio locale, di un agente, per esempio di un autore di un bene culturale o di un agente che riveste una responsabilità nei confronti del bene (es.: editore, stampatore, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="en">agent local identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice identificativo locale dell&apos;agente</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTH - ICCD Normativa F 4.00: RO/CRF/CRFX; PD/PDF/PDFH - ICCD Normativa F 3.00: RO/CRF/CRFH</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/alternativeTitle -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/alternativeTitle">
@@ -1488,9 +1791,93 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/archaeologicalExcavationICCDIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/archaeologicalExcavationICCDIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/ICCDIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalExcavation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, assegnato dall&apos;ICCD, che individua lo scavo archeologico in modo univoco a livello nazionale.</rdfs:comment>
+        <rdfs:label xml:lang="en">archaeological excavation ICCD identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice univoco ICCD dello scavo archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCK</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/archaeologicalExcavationLocalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/archaeologicalExcavationLocalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/localIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalExcavation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Questa proprietà rappresenta il codice identificativo, numerico o alfanumerico, che individua lo scavo archeologico in modo univoco nell&apos;ambito di un repertorio locale.</rdfs:comment>
+        <rdfs:label xml:lang="en">archaeological excavation local identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice identificativo locale dello scavo archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCH</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/archaeologicalFieldSurveyICCDIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/archaeologicalFieldSurveyICCDIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/ICCDIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalFieldSurvey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, assegnato dall&apos;ICCD, che individua il la ricognizione archeologica in modo univoco a livello nazionale.</rdfs:comment>
+        <rdfs:label xml:lang="en">archaeological field survey ICCD identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice univoco ICCD della ricognizione archeologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGK</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/archeologicalFieldSurveyLocalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/archeologicalFieldSurveyLocalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/localIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalFieldSurvey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice identificativo, numerico o alfanumerico, che individua la ricognizione archeologica in modo univoco nell&apos;ambito di un repertorio locale.</rdfs:comment>
+        <rdfs:label xml:lang="en">archaeological field survey local identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice identificativo locale della ricognizione archeologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGH</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/archiveName -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/archiveName"/>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/areaRoomSquare -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/areaRoomSquare">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalExcavation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno scavo archeologico alla successione delle denominazioni, assegnate nell&apos;ambito dello scavo, al settore (o
+l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">area room square</rdfs:label>
+        <rdfs:label xml:lang="it">settore ambiente quadrato</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCQ</core:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -1512,13 +1899,13 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/authorICCDIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/authorICCDIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/ICCDIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice univoco ICCD a un autore.</rdfs:comment>
         <rdfs:label xml:lang="en">author ICCD identifier</rdfs:label>
-        <rdfs:label xml:lang="it">codice ICCD dell&apos;autore</rdfs:label>
+        <rdfs:label xml:lang="it">codice univoco ICCD dell&apos;autore</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTK</core:iccdNormTag>
@@ -1548,51 +1935,36 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/subjective/authorLocalIdentifier -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/authorLocalIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice identificativo, che individua il riferimento autoriale in modo univoco nell&apos;ambito di un repertorio locale, a un autore.</rdfs:comment>
-        <rdfs:label xml:lang="en">author local identifier</rdfs:label>
-        <rdfs:label xml:lang="it">codice identificativo locale dell&apos;autore</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTH; ICCD Normativa F 4.00: RO/CRF/CRFX; ICCD Normativa F 3.00: RO/CRF/CRFH</core:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/subjective/bibliographyICCDIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/bibliographyICCDIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/ICCDIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, assegnato dall&apos;ICCD, che individua il riferimento bibliografico in modo univoco a livello nazionale.</rdfs:comment>
         <rdfs:label xml:lang="en">bibliography ICCD identifier</rdfs:label>
-        <rdfs:label xml:lang="it">codice univoco ICCD</rdfs:label>
+        <rdfs:label xml:lang="it">codice univoco ICCD della bibliografia</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">BIBK</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBK</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/arco/subjective/bibliographyIdentifier -->
+    <!-- https://w3id.org/arco/subjective/bibliographyLocalIdentifier -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/bibliographyIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/bibliographyLocalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/localIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Bibliography"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta una sequenza numerica o alfanumerica che identifica il riferimento bibliografico in modo univoco nell&apos;ambito di un repertorio locale.</rdfs:comment>
-        <rdfs:label xml:lang="en">bibliography identifier</rdfs:label>
-        <rdfs:label xml:lang="it">codice identificativo della bibliografia</rdfs:label>
+        <rdfs:label xml:lang="en">bibliography local identifier</rdfs:label>
+        <rdfs:label xml:lang="it">codice identificativo locale della bibliografia</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">BIBH</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/BIB/BIBH</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1608,6 +1980,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">FNTN</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/claySpecifications -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/claySpecifications">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/specifications"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/LaboratoryTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le specifiche su eventuali componenti significativi per lo studio del bene, nel caso di analisi su reperti in argilla.</rdfs:comment>
+        <rdfs:label xml:lang="en">clay specifications</rdfs:label>
+        <rdfs:label xml:lang="it">specifiche su pasta/argilla</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1789,6 +2176,38 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/environmentalState -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/environmentalState">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalFieldSurvey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una ricognizione archeologica alla situazione ambientale al momento della ricognizione.</rdfs:comment>
+        <rdfs:label xml:lang="en">environmental state</rdfs:label>
+        <rdfs:label xml:lang="it">situazione ambientale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGT - Versioni precedenti: RE/RCG/RCGU + RE/RCG/RCGC</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/findingNote -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/findingNote">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/note"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative alle modalità di individuazione e di reperimento del bene in esame, in forma di testo libero. Possono essere integrative rispetto a quanto rappresentato come Scavo Archeologico o Ricognizione Archeologica, oppure possono essere le uniche informazioni registrate sull&apos;individuazione e il reperimento del bene, in quelle situazioni in cui i dati a disposizione non consentono di compilare le schede di Authority file RCG-Ricognizione archeologica e/o DSC-Scavo archeologico. Vengono quindi collegate direttamente al bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">finding note</rdfs:label>
+        <rdfs:label xml:lang="it">note di reperimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RES</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/folio -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/folio">
@@ -1949,6 +2368,22 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/overlapSpecifications -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/overlapSpecifications">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/specifications"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/PhotoInterpretationRendering"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le specifiche per effettuare sovrapposizioni con altri documenti utili per la lettura e l&apos;interpretazione dell&apos;immagine analizzata durante uan fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="en">overlap specifications</rdfs:label>
+        <rdfs:label xml:lang="it">specifiche sulla sovrapposizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIP</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/parallelTitle -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/parallelTitle">
@@ -2026,6 +2461,28 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/report -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/report">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ArchaeologicalPropertySurvey"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurvey"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>ICCD Normativa Trasversale 4.00: RE/IND/INDT - ICCD Normativa AT 3.00: IN/INI/INIR</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il referto di un&apos;indagine archeometrica e diagnostica o di una tipologia particolare di bene archeologico, ovvero i reperti antropologici.</rdfs:comment>
+        <rdfs:label xml:lang="it">referto</rdfs:label>
+        <rdfs:label xml:lang="en">report</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/rights -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/rights">
@@ -2071,6 +2528,23 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/surveyImageIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/surveyImageIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/SurveyImage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice identificativo che individua l&apos;immagine presa in esame nel corso di un&apos;indagine di fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificativo immagine di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">survey image identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOID</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/taxon -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/taxon">
@@ -2082,6 +2556,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>Normativa SM 4.00: CL/CLA/CLAT</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/technicalDocumentation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/technicalDocumentation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalPropertySurvey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la documentazione relativa alle informazioni rilevate nel corso dell&apos;indagine su reperto antropologico.</rdfs:comment>
+        <rdfs:label xml:lang="it">documentazione tecnica</rdfs:label>
+        <rdfs:label xml:lang="en">technical documentation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa AT 3.01: IN/INI/INIZ</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2129,6 +2618,12 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</core:iccdNormTag>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/date -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/date"/>
     
 
 
@@ -2298,6 +2793,304 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>Normativa SM 4.00: CL/CLA</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Anomaly -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Anomaly">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAnomalyClassification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/AnomalyClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAnomalyOrigin"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/AnomalyOrigin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAnomalyType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/AnomalyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;anomalia rilevata nel corso di una fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Anomalia</rdfs:label>
+        <rdfs:label xml:lang="en">Anomaly</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA + RE/FOI/FOIQ + RE/FOI/FOIF</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/AnomalyClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/AnomalyClassification">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione del tipo di anomalia rilevata nell&apos;indagine di fotointerpretazione/fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anomaly classification</rdfs:label>
+        <rdfs:label xml:lang="it">Classificazione anomalia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIF</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/AnomalyOrigin -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/AnomalyOrigin">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;origine dell&apos;anomalia rilevata nell&apos;indagine di fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anomaly origin</rdfs:label>
+        <rdfs:label xml:lang="it">Origine dell&apos;anomalia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/AnomalyType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/AnomalyType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di anomalia (puntuale, lineare, areale) rilevata durante una fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anomaly type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di anomalia</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIQ</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ArchaeologicalExcavation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ArchaeologicalExcavation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasMotivation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Motivation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasStratigraphicUnit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/StratigraphicUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyScientificDirector"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasTomb"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Tomb"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/archaeologicalExcavationICCDIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/archaeologicalExcavationLocalIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/areaRoomSquare"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero uno scavo archeologico, intes come scavo stratigrafico.</rdfs:comment>
+        <rdfs:label xml:lang="en">Archaeological excavation</rdfs:label>
+        <rdfs:label xml:lang="it">Scavo archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ArchaeologicalFieldSurvey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ArchaeologicalFieldSurvey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyScientificDirector"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/archaeologicalFieldSurveyICCDIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/archeologicalFieldSurveyLocalIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/environmentalState"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero una ricognizione archeologica, intesa come ricognizione di superficie.</rdfs:comment>
+        <rdfs:label xml:lang="en">Archaeological field survey</rdfs:label>
+        <rdfs:label xml:lang="it">Ricognizione archeologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ArchaeologicalPropertySurvey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ArchaeologicalPropertySurvey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasArchaeologicalPropertySurveyType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/ArchaeologicalPropertySurveyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasMotivation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Motivation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/technicalDocumentation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;indagine su una tipologia particolare di bene archeologico, ovvero i reperti antropologici (es.: analisi istologica, analisi chimica, TC, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="en">Archaeological property survey</rdfs:label>
+        <rdfs:label xml:lang="it">Indagine su bene archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa AT 3.01: IN/INI</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ArchaeologicalPropertySurveyType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ArchaeologicalPropertySurveyType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:label xml:lang="en">Archaeological property survey type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di indagine su bene archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa AT 3.01: IN/INI/INIT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurvey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurvey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityOperator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivitySponsor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasArchaeometricDiagnosticSurveyType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurveyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasMotivation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Motivation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/report"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero un&apos;indagine archeometrica e diagnostica (carotaggi, prospezioni geofisiche, analisi di vario tipo).</rdfs:comment>
+        <rdfs:label xml:lang="en">Archaeometric and diagnostic survey</rdfs:label>
+        <rdfs:label xml:lang="it">Indagine archeometrica e diagnostica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurveyType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/ArchaeometricDiagnosticSurveyType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di indagine archeometrica e diagnostica (es.: analisi della malta, carotaggio, termografia, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">Archaeometric diagnostic survey type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di indagine archeometrica e diagnostica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND/INDI</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2961,6 +3754,26 @@ bene catalogato.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Inspection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Inspection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero un&apos;ispezione effettuata per constatare lo stato del bene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inspection</rdfs:label>
+        <rdfs:label xml:lang="it">Ispezione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: CM/ISP</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Intervention -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Intervention">
@@ -2969,6 +3782,24 @@ bene catalogato.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasAgentRole"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityOperator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivitySponsor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3001,7 +3832,7 @@ bene catalogato.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un intervento che ha interessato un bene culturale, a fini conservativi (per i quali si crea una sottoclasse di &quot;Intervento&quot;) oppure di altro tipo: restauri (termine obsoleto che attualmente corrisponde a &quot;intervento a fine conservativo&quot;), rilavorazioni, ripristini, trasformazioni per recuperare aspetto e funzionalità rispondenti ai mutati gusti, ecc.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un intervento che ha interessato un bene culturale, a fini conservativi (per i quali si crea una sottoclasse di &quot;Intervento&quot;) oppure di altro tipo: restauri (termine obsoleto che attualmente corrisponde a &quot;intervento a fine conservativo&quot;), rilavorazioni, ripristini, trasformazioni per recuperare aspetto e funzionalità rispondenti ai mutati gusti, ecc. In generale, per interventi si intendono attività che riguardano il bene, effettuate per la sua realizzazione/modifica e conservazione materiale.</rdfs:comment>
         <rdfs:label xml:lang="en">Intervention</rdfs:label>
         <rdfs:label xml:lang="it">Intervento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -3051,13 +3882,53 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un inventario, di vario tipo, relativo a un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an inventory about a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un inventario, di vario tipo, relativo a un bene culturale o relativo a una delle entità o attività collegate al bene culturale (per esempio un inventario di scavo archeologico).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an inventory about a cultural property or about an entity or an activity related to the cultural property.</rdfs:comment>
         <rdfs:label xml:lang="it">Inventario</rdfs:label>
         <rdfs:label xml:lang="en">Inventory</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e altre normative anche di versioni precedenti alla 4.00: UB/INV</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: UB/INV; ICCD Normativa RA 3.00 RE/DSC/DSCI</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/LaboratoryTest -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/LaboratoryTest">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasLaboratoryTestType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/LaboratoryTestType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/claySpecifications"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero un&apos;analisi di laboratorio.</rdfs:comment>
+        <rdfs:label xml:lang="it">Analisi di laboratorio</rdfs:label>
+        <rdfs:label xml:lang="en">Laboratory test</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normative NU, RA, BNB, MA, CA: RS/ALB</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/LaboratoryTestType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/LaboratoryTestType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di analisi di laboratorio (es.: analisi metallurgica, analisi chimica, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">Laboratory test type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di analisi di laboratorio</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normative NU, RA, BNB, MA, CA: RS/ALB/ALBT</core:iccdNormTag>
     </owl:Class>
     
 
@@ -3088,6 +3959,31 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Method -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Method">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo di scavo archeologico o di ricognizione archeologica adottato nel corso dell&apos;indagine. (es.: sondaggio, per strati stratigrafici, occasionale, sistematico, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="it">Metodo di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">Survey method</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGM; RE/DSC/DSCM</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Motivation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Motivation">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il motivo principale che ha determinato una ricognizione archeologica o uno scavo archeologico.</rdfs:comment>
+        <rdfs:label xml:lang="it">Motivo di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">Survey Motivation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/MultimediaDocumentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/MultimediaDocumentation">
@@ -3102,6 +3998,38 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/MusicHeritageSurvey -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/MusicHeritageSurvey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityOperator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/isRelatedToResearch"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Research"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene musicale, ovvero il rilevamento di un bene musicale di interesse etno-organologico.</rdfs:comment>
+        <rdfs:label xml:lang="en">Music heritage survey</rdfs:label>
+        <rdfs:label xml:lang="it">Rilevamento di bene musicale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa SM 4.00: DR</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/MusicalInstrumentClassification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/MusicalInstrumentClassification">
@@ -3111,6 +4039,62 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>Normativa SM 4.00: CL</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/PhotoInterpretationRendering -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/PhotoInterpretationRendering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/Survey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasActivityResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAnomaly"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Anomaly"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasMotivation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Motivation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasReliability"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Reliability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyImage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/SurveyImage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyScientificDirector"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/overlapSpecifications"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine su bene culturale, ovvero una fotointerpretazione e fotorestituzione, intesa come indagine territoriale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Fotointerpretazione e fotorestituzione</rdfs:label>
+        <rdfs:label xml:lang="en">Photo interpretation and rendering</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI</core:iccdNormTag>
     </owl:Class>
     
 
@@ -3256,6 +4240,19 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Reliability -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Reliability">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il livello di affidabilità delle informazioni rilevate nell&apos;indagine di fotointerpretazione/fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Affidabilità</rdfs:label>
+        <rdfs:label xml:lang="en">Reliability</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIO</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Research -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Research">
@@ -3271,7 +4268,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la ricerca nell&apos;ambito della quale è stata redatta la scheda, intendendo con il termine “ricerca” vari e differenziati livelli, fra cui quello della campagna di catalogazione. La ricerca si può collegare al rilevamento di un bene musicale di interesse etno-organologico.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la ricerca nell&apos;ambito della quale è stata redatta la scheda, intendendo con il termine &quot;ricerca&quot; vari e differenziati livelli, fra cui quello della campagna di catalogazione. La ricerca si può collegare al rilevamento di un bene musicale di interesse etno-organologico.</rdfs:comment>
         <rdfs:label xml:lang="en">Research</rdfs:label>
         <rdfs:label xml:lang="it">Ricerca</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -3360,6 +4357,19 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/StratigraphicUnit -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/StratigraphicUnit">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità stratigrafica dalla quale può provenire un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stratigraphic unit</rdfs:label>
+        <rdfs:label xml:lang="it">Unità stratigrafica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCU</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Subject -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Subject">
@@ -3377,30 +4387,53 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/Survey -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Survey">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyOperator"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyResponsible"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/isRelatedToResearch"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/Research"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il rilevamento di un bene musicale di interesse etno-organologico.</rdfs:comment>
-        <rdfs:label xml:lang="it">Rilevamento</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;indagine effettuata su un bene culturale. Per indagine, si intende un&apos;attività che riguarda il bene, effettuata per la sua individuazione (nel caso dei beni archeologici), per il suo studio e per l&apos;approfondimento delle sue caratteristiche tecniche (indagini di scavo, di ricognizione, indagini geognostiche, analisi di vario genere e tipo, etc.). Questa classe viene specializzata in sottoclassi, per la rappresentazione di tipologie di indagini specifiche.</rdfs:comment>
+        <rdfs:label xml:lang="it">Indagine</rdfs:label>
         <rdfs:label xml:lang="en">Survey</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa SM 4.00: DR</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE; CM/ISP - ICCD Normative NU, RA, BNB, MA, CA: RS/ALB - ICCD Normativa AT 3.00: IN/INI - ICCD Normativa SM: DR</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/SurveyImage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/SurveyImage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasSurveyImageType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/subjective/SurveyImageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/surveyImageIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;immagine presa in esame nel corso di una fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Immagine di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">Survey Image</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT + FOID</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/SurveyImageType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/SurveyImageType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo di immagine di indagine (fotografia aerea o fotografia satellitare).</rdfs:comment>
+        <rdfs:label xml:lang="en">Survey image type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di immagine di indagine</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIT</core:iccdNormTag>
     </owl:Class>
     
 
@@ -3446,6 +4479,20 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDN; DA/AID/AIDT - Normativa S e MI: OG/SGT/SGTP Normativa F: SG/SGL/SGLA; SG/SGL/SGLT; SG/SGL/SGLL - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTR; OG/SGT/SGTT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Tomb -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Tomb">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una deposizione funeraria.</rdfs:comment>
+        <rdfs:label xml:lang="it">Deposizione funeraria</rdfs:label>
+        <rdfs:label xml:lang="en">Tomb</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/DSC/DSCS</core:iccdNormTag>
     </owl:Class>
     
 
@@ -3618,6 +4665,16 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/AerialPhotograph -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/AerialPhotograph">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/SurveyImageType"/>
+        <rdfs:label xml:lang="en">Aerial photograph</rdfs:label>
+        <rdfs:label xml:lang="it">Fotografia aerea</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Alternative -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Alternative">
@@ -3628,6 +4685,16 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDN</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/AnthropicOrigin -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/AnthropicOrigin">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/AnomalyOrigin"/>
+        <rdfs:label xml:lang="en">Anthropic origin</rdfs:label>
+        <rdfs:label xml:lang="it">Origine antropica</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3698,6 +4765,16 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Decent -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Decent">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/Reliability"/>
+        <rdfs:label xml:lang="en">Decent</rdfs:label>
+        <rdfs:label xml:lang="it">Discreta</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/DeliveryConfirmationCertification -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/DeliveryConfirmationCertification">
@@ -3723,6 +4800,16 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Excellent -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Excellent">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/Reliability"/>
+        <rdfs:label xml:lang="en">Excellent</rdfs:label>
+        <rdfs:label xml:lang="it">Ottima</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/ExistingDocumentation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/ExistingDocumentation">
@@ -3744,6 +4831,16 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="en">Free movement certification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Good -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Good">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/Reliability"/>
+        <rdfs:label xml:lang="it">Buona</rdfs:label>
+        <rdfs:label xml:lang="en">Good</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3782,6 +4879,36 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="it">Strumentale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisorio</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Insufficient -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Insufficient">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/Reliability"/>
+        <rdfs:label xml:lang="en">Insufficient</rdfs:label>
+        <rdfs:label xml:lang="it">Scarsa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/LineAnomaly -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/LineAnomaly">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/AnomalyType"/>
+        <rdfs:label xml:lang="it">Anomalia lineare</rdfs:label>
+        <rdfs:label xml:lang="en">Line anomaly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/NaturalOrigin -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/NaturalOrigin">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/AnomalyOrigin"/>
+        <rdfs:label xml:lang="en">Natural origin</rdfs:label>
+        <rdfs:label xml:lang="it">Origine naturale</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3825,6 +4952,26 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/subjective/PointAnomaly -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/PointAnomaly">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/AnomalyType"/>
+        <rdfs:label xml:lang="it">Anomalia puntuale</rdfs:label>
+        <rdfs:label xml:lang="en">Point anomaly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/PolygonAnomaly -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/PolygonAnomaly">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/AnomalyType"/>
+        <rdfs:label xml:lang="it">Anomalia areale</rdfs:label>
+        <rdfs:label xml:lang="en">Polygon anomaly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/subjective/Previous -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/Previous">
@@ -3861,6 +5008,16 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/SatellitePhotograph -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/SatellitePhotograph">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/SurveyImageType"/>
+        <rdfs:label xml:lang="it">Fotografia satellitare</rdfs:label>
+        <rdfs:label xml:lang="en">Satellite photograph</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3911,6 +5068,16 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="en">Temporary movement certification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/UncertainOrigin -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/subjective/UncertainOrigin">
+        <rdf:type rdf:resource="https://w3id.org/arco/subjective/AnomalyOrigin"/>
+        <rdfs:label xml:lang="it">Origine incerta</rdfs:label>
+        <rdfs:label xml:lang="en">Uncertain origin</rdfs:label>
     </owl:NamedIndividual>
     
 
