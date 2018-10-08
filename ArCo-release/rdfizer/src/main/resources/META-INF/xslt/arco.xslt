@@ -4616,7 +4616,7 @@
 		                                        <xsl:value-of select="'https://w3id.org/arco/subjective/Instrumental'" />
 		                                    </xsl:when>
 		                                    <xsl:when test="lower-case(normalize-space(./UTU/UTUS))='reimpiego'">
-		                                        <xsl:value-of select="'https://w3id.org/arco/subjective/Reuse'" />
+		                                        <xsl:value-of select="'https://w3id.org/arco/subjective/Reusing'" />
 		                                    </xsl:when>
 		                                    <xsl:when test="./UTU/UTUS">
 		                                        <xsl:value-of select="concat($NS, 'UseTypeSpecification/', arco-fn:urify(normalize-space(./UTU/UTUS)))" />
