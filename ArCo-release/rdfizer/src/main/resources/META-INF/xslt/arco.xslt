@@ -1294,6 +1294,349 @@
             		</rdf:Description>
             	</xsl:for-each>
             </xsl:if>
+            <!-- relation with preparatory or final work (RO/ROF) -->
+				<xsl:if test="schede/*/RO/ROF">
+					<xsl:for-each select="schede/*/RO/ROF">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-preparatory-final-work-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Relation'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e opera originale o finale')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e opera originale o finale')" />
+							</l0:name>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and preparatory or final work')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and preparatory or final work')" />
+							</l0:name>
+							<xsl:choose>
+								<xsl:when test="lower-case(normalize-space(./ROFF))='calco' or lower-case(normalize-space(./ROFF))='calco parziale' or lower-case(normalize-space(./ROFF))='copia' or lower-case(normalize-space(./ROFF))='copia con varianti' or lower-case(normalize-space(./ROFF))='copia parziale' or lower-case(normalize-space(./ROFF))='derivazione' or lower-case(normalize-space(./ROFF))='derivazione con varianti' or lower-case(normalize-space(./ROFF))='derivazione parziale' or lower-case(normalize-space(./ROFF))='imitazione' or lower-case(normalize-space(./ROFF))='remake' or lower-case(normalize-space(./ROFF))='replica' or lower-case(normalize-space(./ROFF))='replica parziale' or lower-case(normalize-space(./ROFF))='replica con varianti'">
+									<culturaldefinition:hasRelatedWork>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'PreparatoryWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasRelatedWork>
+								</xsl:when>
+								<xsl:when test="lower-case(normalize-space(./ROFF))='bozzetto' or lower-case(normalize-space(./ROFF))='bozzetto parziale' or lower-case(normalize-space(./ROFF))='cartone' or lower-case(normalize-space(./ROFF))='cartone parziale' or lower-case(normalize-space(./ROFF))='disegno preparatorio parziale' or lower-case(normalize-space(./ROFF))='disegno preparatorio' or lower-case(normalize-space(./ROFF))='matrice' or lower-case(normalize-space(./ROFF))='matrice parziale' or lower-case(normalize-space(./ROFF))='modellino' or lower-case(normalize-space(./ROFF))='modellino parziale' or lower-case(normalize-space(./ROFF))='modello' or lower-case(normalize-space(./ROFF))='modello parziale' or lower-case(normalize-space(./ROFF))='modello in cera' or lower-case(normalize-space(./ROFF))='progetto' or lower-case(normalize-space(./ROFF))='prototipo' or lower-case(normalize-space(./ROFF))='prova' or lower-case(normalize-space(./ROFF))='schizzo' or lower-case(normalize-space(./ROFF))='sinopia' or lower-case(normalize-space(./ROFF))='sinopia parziale'">
+									<culturaldefinition:hasRelatedWork>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'FinalWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasRelatedWork>
+								</xsl:when>
+								<xsl:otherwise>
+									<culturaldefinition:hasRelatedWork>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'PreparatoryOrFinalWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasRelatedWork>
+								</xsl:otherwise>
+							</xsl:choose>
+							<xsl:if test="./ROFF">
+								<culturaldefinition:hasCulturalPropertyStage>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'CulturalPropertyStage/', arco-fn:urify(normalize-space(./ROFF)))" />
+									</xsl:attribute>
+								</culturaldefinition:hasCulturalPropertyStage>
+							</xsl:if>
+						</rdf:Description>
+						<!-- preparatory work, final work and preparatory or final work as individuals -->
+						<xsl:choose>
+							<!-- preparatory work as an individual -->
+							<xsl:when test="lower-case(normalize-space(./ROFF))='calco' or lower-case(normalize-space(./ROFF))='calco parziale' or lower-case(normalize-space(./ROFF))='copia' or lower-case(normalize-space(./ROFF))='copia con varianti' or lower-case(normalize-space(./ROFF))='copia parziale' or lower-case(normalize-space(./ROFF))='derivazione' or lower-case(normalize-space(./ROFF))='derivazione con varianti' or lower-case(normalize-space(./ROFF))='derivazione parziale' or lower-case(normalize-space(./ROFF))='imitazione' or lower-case(normalize-space(./ROFF))='remake' or lower-case(normalize-space(./ROFF))='replica' or lower-case(normalize-space(./ROFF))='replica parziale' or lower-case(normalize-space(./ROFF))='replica con varianti'">
+								<rdf:Description>	
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'PreparatoryWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+									</xsl:attribute>
+								<rdf:type>
+		            				<xsl:attribute name="rdf:resource">
+		                          		<xsl:value-of select="'https://w3id.org/arco/subjective/PreparatoryWork'" />
+		                       		</xsl:attribute>
+	            				</rdf:type>
+	            				<rdfs:label xml:lang="it">
+									<xsl:value-of select="concat('Opera originale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</rdfs:label>
+								<l0:name xml:lang="it">
+									<xsl:value-of select="concat('Opera originale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</l0:name>
+								<rdfs:label xml:lang="it">
+									<xsl:value-of select="concat('Preparatory work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</rdfs:label>
+								<l0:name xml:lang="it">
+									<xsl:value-of select="concat('Preparatory work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</l0:name>
+								<xsl:if test="./ROFS">
+									<culturaldefinition:hasSubject>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasSubject>
+								</xsl:if>
+								<xsl:if test="./ROFR">
+									<culturaldefinition:preparatoryOrFinalWorkPreviousLocation>
+										<xsl:value-of select="normalize-space(./ROFR)" />
+									</culturaldefinition:preparatoryOrFinalWorkPreviousLocation>
+								</xsl:if>
+								<xsl:if test="./ROFC">
+									<culturaldefinition:relatedWorkLocation>
+										<xsl:value-of select="normalize-space(./ROFC)" />
+									</culturaldefinition:relatedWorkLocation>
+								</xsl:if>
+								<xsl:if test="./ROFX">
+									<culturaldefinition:preparatoryOrFinalWorkRecordIdentifier>
+										<xsl:value-of select="normalize-space(./ROFX)" />
+									</culturaldefinition:preparatoryOrFinalWorkRecordIdentifier>
+								</xsl:if>
+								<xsl:if test="./ROFI">
+									<culturaldefinition:hasInventory>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasInventory>
+								</xsl:if>
+								<xsl:if test="./ROFT">
+									<culturaldefinition:hasTitle>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-preparatory-final-work-title-', arco-fn:urify(normalize-space(./ROFT)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasTitle>
+								</xsl:if>
+								</rdf:Description>
+							</xsl:when>
+						<!-- final work as an individual -->
+						<xsl:when test="lower-case(normalize-space(./ROFF))='bozzetto' or lower-case(normalize-space(./ROFF))='bozzetto parziale' or lower-case(normalize-space(./ROFF))='cartone' or lower-case(normalize-space(./ROFF))='cartone parziale' or lower-case(normalize-space(./ROFF))='disegno preparatorio parziale' or lower-case(normalize-space(./ROFF))='disegno preparatorio' or lower-case(normalize-space(./ROFF))='matrice' or lower-case(normalize-space(./ROFF))='matrice parziale' or lower-case(normalize-space(./ROFF))='modellino' or lower-case(normalize-space(./ROFF))='modellino parziale' or lower-case(normalize-space(./ROFF))='modello' or lower-case(normalize-space(./ROFF))='modello parziale' or lower-case(normalize-space(./ROFF))='modello in cera' or lower-case(normalize-space(./ROFF))='progetto' or lower-case(normalize-space(./ROFF))='prototipo' or lower-case(normalize-space(./ROFF))='prova' or lower-case(normalize-space(./ROFF))='schizzo' or lower-case(normalize-space(./ROFF))='sinopia' or lower-case(normalize-space(./ROFF))='sinopia parziale'">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'FinalWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+								</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/FinalWork'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+            				<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Opera finale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Opera finale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
+							</l0:name>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
+							</l0:name>
+								<xsl:if test="./ROFS">
+									<culturaldefinition:hasSubject>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasSubject>
+								</xsl:if>
+								<xsl:if test="./ROFR">
+									<culturaldefinition:preparatoryOrFinalWorkPreviousLocation>
+										<xsl:value-of select="normalize-space(./ROFR)" />
+									</culturaldefinition:preparatoryOrFinalWorkPreviousLocation>
+								</xsl:if>
+								<xsl:if test="./ROFC">
+									<culturaldefinition:relatedWorkLocation>
+										<xsl:value-of select="normalize-space(./ROFC)" />
+									</culturaldefinition:relatedWorkLocation>
+								</xsl:if>
+								<xsl:if test="./ROFX">
+									<culturaldefinition:preparatoryOrFinalWorkRecordIdentifier>
+										<xsl:value-of select="normalize-space(./ROFX)" />
+									</culturaldefinition:preparatoryOrFinalWorkRecordIdentifier>
+								</xsl:if>
+								<xsl:if test="./ROFI">
+									<culturaldefinition:hasInventory>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasInventory>
+								</xsl:if>
+								<xsl:if test="./ROFT">
+									<culturaldefinition:hasTitle>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-preparatory-final-work-title-', arco-fn:urify(normalize-space(./ROFT)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasTitle>
+								</xsl:if>
+							</rdf:Description>
+						</xsl:when>
+						<!-- final or preparatory work as an individual -->
+						<xsl:otherwise>
+							<rdf:Description>	
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'PreparatoryOrFinalWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+									</xsl:attribute>
+								<rdf:type>
+		            				<xsl:attribute name="rdf:resource">
+		                          		<xsl:value-of select="'https://w3id.org/arco/subjective/PreparatoryOrFinalWork'" />
+		                       		</xsl:attribute>
+	            				</rdf:type>
+	            				<rdfs:label xml:lang="it">
+									<xsl:value-of select="concat('Opera originale o finale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</rdfs:label>
+								<l0:name xml:lang="it">
+									<xsl:value-of select="concat('Opera originale o finale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</l0:name>
+								<rdfs:label xml:lang="it">
+									<xsl:value-of select="concat('Preparatory or final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</rdfs:label>
+								<l0:name xml:lang="it">
+									<xsl:value-of select="concat('Preparatory or final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
+								</l0:name>
+								<xsl:if test="./ROFS">
+									<culturaldefinition:hasSubject>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasSubject>
+								</xsl:if>
+								<xsl:if test="./ROFR">
+									<culturaldefinition:preparatoryOrFinalWorkPreviousLocation>
+										<xsl:value-of select="normalize-space(./ROFR)" />
+									</culturaldefinition:preparatoryOrFinalWorkPreviousLocation>
+								</xsl:if>
+								<xsl:if test="./ROFC">
+									<culturaldefinition:relatedWorkLocation>
+										<xsl:value-of select="normalize-space(./ROFC)" />
+									</culturaldefinition:relatedWorkLocation>
+								</xsl:if>
+								<xsl:if test="./ROFX">
+									<culturaldefinition:preparatoryOrFinalWorkRecordIdentifier>
+										<xsl:value-of select="normalize-space(./ROFX)" />
+									</culturaldefinition:preparatoryOrFinalWorkRecordIdentifier>
+								</xsl:if>
+								<xsl:if test="./ROFI">
+									<culturaldefinition:hasInventory>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasInventory>
+								</xsl:if>
+								<xsl:if test="./ROFT">
+									<culturaldefinition:hasTitle>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-preparatory-final-work-title-', arco-fn:urify(normalize-space(./ROFT)))" />
+										</xsl:attribute>
+									</culturaldefinition:hasTitle>
+								</xsl:if>
+								</rdf:Description>
+						</xsl:otherwise>
+						</xsl:choose>
+						<!-- cultural property stage as an individual -->
+						<xsl:if test="./ROFF">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'CulturalPropertyStage/', arco-fn:urify(normalize-space(./ROFF)))" />
+									</xsl:attribute>
+									<rdf:type>
+			            				<xsl:attribute name="rdf:resource">
+			                          		<xsl:value-of select="'https://w3id.org/arco/subjective/CulturalPropertyStage'" />
+			                       		</xsl:attribute>
+	            					</rdf:type>
+	            					<l0:name>
+	            						<xsl:value-of select="normalize-space(./ROFF)" />
+	            					</l0:name>
+	            					<rdfs:label>
+	            						<xsl:value-of select="normalize-space(./ROFF)" />
+	            					</rdfs:label>
+								</rdf:Description>
+							</xsl:if>
+							<!-- subject of preparatory or final work as an individual -->
+							<xsl:if test="./ROFS">
+								<rdf:Description>
+				            		<xsl:attribute name="rdf:about">
+				            			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+				            		</xsl:attribute>
+				            		<rdf:type>
+				            			<xsl:attribute name="rdf:resource">
+				                          <xsl:value-of select="'https://w3id.org/arco/subjective/Subject'" />
+				                        </xsl:attribute>
+				            		</rdf:type>
+				            		<rdfs:label>
+				                        <xsl:value-of select="normalize-space(./ROFS)" />
+				                    </rdfs:label>
+				                    <l0:name>
+				                        <xsl:value-of select="normalize-space(./ROFS)" />
+				                    </l0:name>
+				                    <culturaldefinition:isSubjectOf>
+				                    	<xsl:attribute name="rdf:resource">
+				                    		<xsl:choose>
+				                    			<xsl:when test="lower-case(normalize-space(./ROFF))='calco' or lower-case(normalize-space(./ROFF))='calco parziale' or lower-case(normalize-space(./ROFF))='copia' or lower-case(normalize-space(./ROFF))='copia con varianti' or lower-case(normalize-space(./ROFF))='copia parziale' or lower-case(normalize-space(./ROFF))='derivazione' or lower-case(normalize-space(./ROFF))='derivazione con varianti' or lower-case(normalize-space(./ROFF))='derivazione parziale' or lower-case(normalize-space(./ROFF))='imitazione' or lower-case(normalize-space(./ROFF))='remake' or lower-case(normalize-space(./ROFF))='replica' or lower-case(normalize-space(./ROFF))='replica parziale' or lower-case(normalize-space(./ROFF))='replica con varianti'">
+				                    				<xsl:value-of select="concat($NS, 'PreparatoryWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+				                    			</xsl:when>
+				                    			<xsl:when test="lower-case(normalize-space(./ROFF))='bozzetto' or lower-case(normalize-space(./ROFF))='bozzetto parziale' or lower-case(normalize-space(./ROFF))='cartone' or lower-case(normalize-space(./ROFF))='cartone parziale' or lower-case(normalize-space(./ROFF))='disegno preparatorio parziale' or lower-case(normalize-space(./ROFF))='disegno preparatorio' or lower-case(normalize-space(./ROFF))='matrice' or lower-case(normalize-space(./ROFF))='matrice parziale' or lower-case(normalize-space(./ROFF))='modellino' or lower-case(normalize-space(./ROFF))='modellino parziale' or lower-case(normalize-space(./ROFF))='modello' or lower-case(normalize-space(./ROFF))='modello parziale' or lower-case(normalize-space(./ROFF))='modello in cera' or lower-case(normalize-space(./ROFF))='progetto' or lower-case(normalize-space(./ROFF))='prototipo' or lower-case(normalize-space(./ROFF))='prova' or lower-case(normalize-space(./ROFF))='schizzo' or lower-case(normalize-space(./ROFF))='sinopia' or lower-case(normalize-space(./ROFF))='sinopia parziale'">
+				                    				<xsl:value-of select="concat($NS, 'FinalWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+				                    			</xsl:when>
+				                    			<xsl:otherwise>
+				                    				<xsl:value-of select="concat($NS, 'PreparatoryOrFinalWork/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+				                    			</xsl:otherwise>
+				                    		</xsl:choose>
+				                    	</xsl:attribute>
+				                    </culturaldefinition:isSubjectOf>
+				            	</rdf:Description>
+							</xsl:if>
+							<!-- inventory about preparatory or final work as an individual -->
+							<xsl:if test="./ROFI">
+								<rdf:Description>
+				            		<xsl:attribute name="rdf:about">
+				            			<xsl:value-of select="concat($NS, 'Inventory/', $itemURI, '-preparatory-final-work-inventory-', arco-fn:urify(normalize-space(./ROFI)))" />
+				            		</xsl:attribute>
+				            		<rdf:type>
+				            			<xsl:attribute name="rdf:resource">
+				                          <xsl:value-of select="'https://w3id.org/arco/subjective/Inventory'" />
+				                        </xsl:attribute>
+				            		</rdf:type>
+				            		<rdfs:label xml:lang="en">
+				            			<xsl:value-of select="concat('Inventory ', normalize-space(./ROFI), ' of preparatory or final work of cultural property ', $itemURI)" />
+				            		</rdfs:label>
+				            		<l0:name xml:lang="en">
+				            			<xsl:value-of select="concat('Inventory ', normalize-space(./ROFI), ' of preparatory or final work of cultural property ', $itemURI)" />
+				            		</l0:name>
+				            		<rdfs:label xml:lang="it">
+				            			<xsl:value-of select="concat('Inventario ', normalize-space(./ROFI), ' dell''opera originale o finale del bene ', $itemURI)" />
+				            		</rdfs:label>
+				            		<l0:name xml:lang="it">
+				            			<xsl:value-of select="concat('Inventory ', normalize-space(./ROFI), ' dell''opera originale o finale del bene ', $itemURI)" />
+				            		</l0:name>
+				            		<culturaldefinition:inventoryIdentifier>
+				            			<xsl:value-of select="normalize-space(./ROFI)" />
+				            		</culturaldefinition:inventoryIdentifier>
+				            	</rdf:Description>
+				            </xsl:if>
+				            <!-- preparatory or final work as an individual -->
+				            <xsl:if test="./ROFT">
+					            <rdf:Description>
+	            					<xsl:attribute name="rdf:about">
+	            						<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-preparatory-final-work-title-', arco-fn:urify(normalize-space(./ROFT)))" />
+	            					</xsl:attribute>
+	            					<rdfs:label>
+	            						<xsl:value-of select="normalize-space(./ROFT)" />
+	            					</rdfs:label>
+					            	<l0:name>
+					            		<xsl:value-of select="normalize-space(./ROFT)" />
+					            	</l0:name>
+					            	<culturaldefinition:hasTitleType>
+					            		<xsl:attribute name="rdf:resource">
+					            			<xsl:value-of select="'https://w3id.org/arco/subjective/Proper'" />
+					            		</xsl:attribute>
+					            	</culturaldefinition:hasTitleType>
+	            				</rdf:Description>
+            				</xsl:if>
+					</xsl:for-each>
+				</xsl:if>
             <!-- Number of components as an individual -->
             <xsl:if test="schede/*/OG/QNT/QNTN or schede/*/OG/QNT/QNTI or schede/*/OG/QNT/QNTS">
             	<rdf:Description>

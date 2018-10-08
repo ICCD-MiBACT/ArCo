@@ -1434,6 +1434,13 @@
 						</culturaldefinition:hasEdition>
 					</xsl:if>
 				</xsl:for-each>
+				<xsl:for-each select="schede/*/DT">
+					<culturaldefinition:hasDating>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />						
+						</xsl:attribute>
+					</culturaldefinition:hasDating>
+				</xsl:for-each>
 				<!-- member of collection -->
 				<xsl:for-each select="schede/*/UB/COL">
 					<xsl:if test="./*">
@@ -1804,7 +1811,7 @@
 				</xsl:if>
 				<!-- attributed title -->
 				<xsl:if
-					test="not(schede/*/SG/SGL/SGLA='NR' or schede/*/SG/SGL/SGLA='NR (recupero pregresso)')">
+					test="not(lower-case(normalize-space(schede/*/SG/SGL/SGLA))='nr' or lower-case(normalize-space(schede/*/SG/SGL/SGLA))='n.r.' or lower-case(normalize-space(schede/*/SG/SGL/SGLA))='nr (recupero pregresso)')">
 					<xsl:for-each select="schede/*/SG/SGL/SGLA">
 						<culturaldefinition:attributedTitle>
 							<xsl:value-of select="normalize-space(.)" />
@@ -1814,6 +1821,16 @@
 							<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 						</xsl:attribute>
 					</culturaldefinition:hasTitle>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- relation with preparatory or final work (RO/ROF) -->
+				<xsl:if test="schede/*/RO/ROF">
+					<xsl:for-each select="schede/*/RO/ROF">
+						<culturaldefinition:hasRelation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-preparatory-final-work-', position())" />
+							</xsl:attribute>
+						</culturaldefinition:hasRelation>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- name in time (OG/OGD) -->

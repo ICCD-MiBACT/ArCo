@@ -470,10 +470,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCorrelation">
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Correlation"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla correlazione tra il bene stesso e un&apos;altra opera che ne costituisce una fase preparatoria o che ne rappresenta la fase finale, e in riferimento alla quale il bene culturale si trova in un determinato stadio.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha correlazione</rdfs:label>
-        <rdfs:label xml:lang="en">has correlation</rdfs:label>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla relazione tra il bene stesso e un&apos;altra opera che ne costituisce una fase preparatoria o che ne rappresenta la fase finale, e in riferimento alla quale il bene culturale si trova in un determinato stadio.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha relazione</rdfs:label>
+        <rdfs:label xml:lang="en">has relation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -504,6 +504,21 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>UB/COL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasCulturalPropertyStage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCulturalPropertyStage">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/CulturalPropertyStage"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un bene culturale e un&apos;altra entità collegata (opera preparatoria o opera finale) allo stadio di realizzazione del bene stesso in rapporto a questa entità.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha fase di realizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural property stage</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -770,7 +785,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Inventory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale o una delle entità o attività collegate al bene culturale a un inventario che registra informazioni relative al bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural property to an inventory about it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property or an entity or an activity related to it to an inventory.</rdfs:comment>
         <rdfs:label xml:lang="it">ha inventario</rdfs:label>
         <rdfs:label xml:lang="en">has inventory</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1091,7 +1106,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasRelatedWork -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasRelatedWork">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Correlation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedWork"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un bene culturale e un&apos;opera collegata all&apos;opera stessa (es.: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.)</rdfs:comment>
         <rdfs:label xml:lang="it">ha opera collegata</rdfs:label>
@@ -1367,14 +1382,21 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasTitle -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasTitle">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/subjective/PreparatoryOrFinalWork"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Title"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al titolo (proprio, attribuito, parallelo, alternativo) del soggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale o un&apos;opera collegata al bene culturale perché sua fase finale o preparatoria, al titolo (proprio, attribuito, parallelo, alternativo) del soggetto.</rdfs:comment>
         <rdfs:label xml:lang="it">ha titolo</rdfs:label>
         <rdfs:label xml:lang="en">has title</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>OG/SGT/SGTP; SG/SGL/SGLT; SG/SGL/SGLL; OG/SGT/SGTR; DA/AID/AIDN; SG/SGL/SGLA; DA/AID/AIDT; OG/SGT/SGTT</core:iccdNormTag>
+        <core:iccdNormTag>OG/SGT/SGTP; SG/SGL/SGLT; SG/SGL/SGLL; OG/SGT/SGTR; DA/AID/AIDN; SG/SGL/SGLA; DA/AID/AIDT; OG/SGT/SGTT; RO/ROF/ROFT</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1493,21 +1515,6 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normative BDM 2.00: UT/UTN/UTNC</core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/subjective/hasWorkStage -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasWorkStage">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Correlation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/WorkStage"/>
-        <rdfs:comment xml:lang="it">Questa proprietà il rapporto tra un bene culturale e un&apos;altra entità collegata (opera preparatoria o opera finale) allo suo stadio di realizzazione del bene stesso in rapporto a questa entità.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha fase di realizzazione</rdfs:label>
-        <rdfs:label xml:lang="en">has work stage</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2634,6 +2641,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/subjective/preparatoryOrFinalWorkRecordIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/preparatoryOrFinalWorkRecordIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/PreparatoryOrFinalWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, qualora esista, che identifica la scheda relativa all&apos;opera finale o preparatoria in relazione con il bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice della scheda dell&apos;opera originale o finale</rdfs:label>
+        <rdfs:label xml:lang="en">preparatory or final work record identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFX</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/subjective/properTitle -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/subjective/properTitle">
@@ -3626,14 +3650,15 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
-    <!-- https://w3id.org/arco/subjective/Correlation -->
+    <!-- https://w3id.org/arco/subjective/CulturalPropertyStage -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/subjective/Correlation">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la correlazione, il rapporto, tra il bene culturale in esame e un&apos;altra opera. In riferimento a questo rapporto, si definisce lo stadio di realizzazione del bene culturale in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale.</rdfs:comment>
-        <rdfs:label xml:lang="en">Correlation</rdfs:label>
-        <rdfs:label xml:lang="it">Correlazione</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/CulturalPropertyStage">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stadio del bene catalogato in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cultural property stage</rdfs:label>
+        <rdfs:label xml:lang="it">Stadio del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</core:iccdNormTag>
     </owl:Class>
     
 
@@ -4550,6 +4575,12 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/preparatoryOrFinalWorkRecordIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità collegata a un bene culturale, che ne costituisce una fase preparatoria o una fase finale.</rdfs:comment>
         <rdfs:label xml:lang="it">Opera preparatoria o finale</rdfs:label>
         <rdfs:label xml:lang="en">Preparatory or final work</rdfs:label>
@@ -4713,6 +4744,18 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Relation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Relation">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la relazione, il rapporto, tra il bene culturale in esame e un&apos;altra opera. In riferimento a questo rapporto, si definisce lo stadio di realizzazione del bene culturale in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Rapporto</rdfs:label>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -5015,7 +5058,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il titolo del soggetto di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il titolo del soggetto di un bene culturale o di un&apos;opera collegata a un bene culturale in quanto sua fase preparatoria o finale.</rdfs:comment>
         <rdfs:label xml:lang="en">Title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -5151,19 +5194,6 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normative BDM 2.00: UT/UTN/UTNC</core:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/subjective/WorkStage -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/subjective/WorkStage">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stadio del bene catalogato in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale.</rdfs:comment>
-        <rdfs:label xml:lang="it">Stadio dell&apos;opera</rdfs:label>
-        <rdfs:label xml:lang="en">Work stage</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, F: RO/ROF/ROFF</core:iccdNormTag>
     </owl:Class>
     
 
