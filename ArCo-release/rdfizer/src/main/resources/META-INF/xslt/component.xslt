@@ -17,34 +17,50 @@
 
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
+	
+	<xsl:variable name="itemURI">
+		<xsl:choose>
+			<xsl:when test="schede/*/RV/RVE/RVEL">
+				<xsl:value-of
+					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(schede/*/RV/RVE/RVEL)))" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of
+					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
+	<xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" />
+	
+	<xsl:variable name="culturalPropertyComponent"
+			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
+
+		<xsl:variable name="culturalProperty"
+			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+	
+	<xsl:variable name="objectOfDescription">
+		<xsl:choose>
+			<xsl:when test="schede/*/OG/OGT/OGTP">
+				<xsl:value-of select="$culturalPropertyComponent" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$culturalProperty" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
+	<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
+	<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
+	<xsl:variable name="cp-name" select="''"></xsl:variable>
+	
+	<!-- xsl:import href="part.xsl" / -->
+	
 	<xsl:template match="/">
 
 		<xsl:variable name="ogtp"
 			select="normalize-space(schede/*/OG/OGT/OGTP)" />
 
-		<xsl:variable name="itemURI">
-			<xsl:choose>
-				<xsl:when test="schede/*/RV/RVE/RVEL">
-					<xsl:value-of
-						select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(schede/*/RV/RVE/RVEL)))" />
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of
-						select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
-		<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
-		<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
-		<xsl:variable name="cp-name" select="''"></xsl:variable>
-
-		<xsl:variable name="NS" select="'https://w3id.org/arco/resource/'"></xsl:variable>
-		<xsl:variable name="culturalPropertyComponent"
-			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />
-
-		<xsl:variable name="culturalProperty"
-			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 
 		<!-- variable ogtt -->
 		<xsl:variable name="ogtt">
@@ -78,17 +94,6 @@
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="''" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
-		<xsl:variable name="objectOfDescription">
-			<xsl:choose>
-				<xsl:when test="schede/*/OG/OGT/OGTP">
-					<xsl:value-of select="$culturalPropertyComponent" />
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$culturalProperty" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -1333,60 +1338,62 @@
 					</culturaldefinition:hasAuthorshipAttribution>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/AU/AUT | schede/F/AU/AUF">
-					<culturaldefinition:hasAuthorshipAttribution>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
-	                        </xsl:attribute>
-					</culturaldefinition:hasAuthorshipAttribution>
-					<arco:hasAuthor>
-						<xsl:attribute name="rdf:resource">
-	                    		<xsl:variable name="author">
+					<xsl:if test="not(./AUTW) or ./AUTW='intero bene'">
+						<culturaldefinition:hasAuthorshipAttribution>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
+		                        </xsl:attribute>
+						</culturaldefinition:hasAuthorshipAttribution>
+						<arco:hasAuthor>
+							<xsl:attribute name="rdf:resource">
+		                    		<xsl:variable name="author">
+				                            <xsl:choose>
+				                                <xsl:when test="./AUTA">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
+				                                </xsl:when>
+				                                <xsl:when
+								test="../AUF/AUFA and ../AUF/AUFN">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
+				                                </xsl:when>
+				                                <xsl:when
+								test="../AUF/AUFA and ../AUF/AUFB">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
+				                                </xsl:when>
+				                                <xsl:when test="../AUF/AUFB">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)))" />
+				                                </xsl:when>
+				                                <xsl:when test="../AUF/AUFN">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)))" />
+				                                </xsl:when>
+				                                <xsl:otherwise>
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
+				                                </xsl:otherwise>
+				                            </xsl:choose>
+			                            </xsl:variable>
 			                            <xsl:choose>
-			                                <xsl:when test="./AUTA">
+			                                <xsl:when test="./AUTS">
 			                                    <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
+								select="concat($author, '-', arco-fn:urify(normalize-space(./AUTS)))" />
 			                                </xsl:when>
-			                                <xsl:when
-							test="../AUF/AUFA and ../AUF/AUFN">
+			                                <xsl:when test="../AUF/AUFS">
 			                                    <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
-			                                </xsl:when>
-			                                <xsl:when
-							test="../AUF/AUFA and ../AUF/AUFB">
-			                                    <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
-			                                </xsl:when>
-			                                <xsl:when test="../AUF/AUFB">
-			                                    <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)))" />
-			                                </xsl:when>
-			                                <xsl:when test="../AUF/AUFN">
-			                                    <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)))" />
+								select="concat($author, '-', arco-fn:urify(normalize-space(../AUF/AUFS)))" />
 			                                </xsl:when>
 			                                <xsl:otherwise>
 			                                    <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
+								select="$author" />
 			                                </xsl:otherwise>
 			                            </xsl:choose>
-		                            </xsl:variable>
-		                            <xsl:choose>
-		                                <xsl:when test="./AUTS">
-		                                    <xsl:value-of
-							select="concat($author, '-', arco-fn:urify(normalize-space(./AUTS)))" />
-		                                </xsl:when>
-		                                <xsl:when test="../AUF/AUFS">
-		                                    <xsl:value-of
-							select="concat($author, '-', arco-fn:urify(normalize-space(../AUF/AUFS)))" />
-		                                </xsl:when>
-		                                <xsl:otherwise>
-		                                    <xsl:value-of
-							select="$author" />
-		                                </xsl:otherwise>
-		                            </xsl:choose>
-	                    	</xsl:attribute>
-					</arco:hasAuthor>
+		                    	</xsl:attribute>
+						</arco:hasAuthor>
+					</xsl:if>
 				</xsl:for-each>
 				<!-- inventory -->
 				<xsl:for-each select="schede/*/UB/INV">
@@ -1453,7 +1460,7 @@
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/CO/STC">
-					<xsl:if test="./*">
+					<xsl:if test="./* and (not(./STCP) or ./STCP='intero bene')">
 						<cpdescription:hasConservationStatus>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
@@ -1656,14 +1663,34 @@
 					</culturaldefinition:hasBibliography>
 				</xsl:for-each>
 				<!-- Geometry of cultural property -->
-				<xsl:for-each select="schede/*/GP">
-					<clvapit:hasGeometry>
-						<xsl:attribute name="rdf:resource">
-	                				<xsl:value-of
-							select="concat($NS, 'Geometry/', $itemURI, '-geometry-point-', position())" />
-	                			</xsl:attribute>
-					</clvapit:hasGeometry>
-				</xsl:for-each>
+				<xsl:choose>
+					<!-- if does not exist the element MTAP we refer the geometry directly to the cultural property.
+					Otherwise: 
+					(i) we generate a number of parts (i.e. the values for MTAP elements) - both here and in the rule below;
+					(ii) we associate each geometry value in MTAP to generated parts - see rule below;
+					(iii) we associate the cultural property to its parts - here.
+					 -->
+					<xsl:when test="not(schede/*/MT/MTA/MTAP) ">
+						<xsl:for-each select="schede/*/GP">
+							<clvapit:hasGeometry>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'Geometry/', $itemURI, '-geometry-point-', position())" />
+			                			</xsl:attribute>
+							</clvapit:hasGeometry>
+						</xsl:for-each>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:for-each select="schede/*/GP">
+							<arco:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', position())" />
+			                			</xsl:attribute>
+							</arco:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
 				<xsl:for-each select="schede/*/GA">
 					<clvapit:hasGeometry>
 						<xsl:attribute name="rdf:resource">

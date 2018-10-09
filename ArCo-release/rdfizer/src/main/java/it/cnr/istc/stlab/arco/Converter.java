@@ -271,14 +271,16 @@ public class Converter {
         URL url = loader.getResource(XSLT_LOCATION);
         File[] xsltFiles = new File(url.getPath()).listFiles();
         for(File xsltFile : xsltFiles){
-        	XsltExecutable exp;
-			try {
-				exp = comp.compile(new StreamSource(xsltFile));
-				exps.add(exp);
-			} catch (SaxonApiException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+        	if(xsltFile.getName().endsWith(".xslt")){
+	        	XsltExecutable exp;
+				try {
+					exp = comp.compile(new StreamSource(xsltFile));
+					exps.add(exp);
+				} catch (SaxonApiException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+        	}
         	
         }
         /*

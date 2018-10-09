@@ -2,6 +2,9 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:arco="https://w3id.org/arco/core/" xmlns:arco-fn="http://w3id.org/arco/saxon-extension" xmlns:cataloguerecord="https://w3id.org/arco/catalogue/" xmlns:cis="http://dati.beniculturali.it/cis/" xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:smapit="https://w3id.org/italia/onto/SM/" xmlns:cpdescription="https://w3id.org/arco/objective/" xmlns:culturaldefinition="https://w3id.org/arco/subjective/" xmlns:culturalevent="https://w3id.org/arco/culturalevent/" xmlns:dcterms="http://purl.org/dc/terms/creator" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:identifier="https://w3id.org/arco/identifier/" xmlns:l0="https://w3id.org/italia/onto/l0/" xmlns:locgeoamm="https://w3id.org/arco/location/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:php="http://php.net/xsl" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:roapit="https://w3id.org/italia/onto/RO/" xmlns:tiapit="https://w3id.org/italia/onto/TI/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" exclude-result-prefixes="xsl php">
     <xsl:output method="xml" encoding="utf-8" indent="yes" />
     <xsl:param name="item" />
+    
+    <!--  xsl:import href="test.xsl"/ -->
+    
     <xsl:template match="/">
         <xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" />
         <!-- xsl:variable name="itemURI" select="arco-fn:urify($item)"></xsl:variable -->
@@ -29,6 +32,7 @@
                 <xsl:attribute name="rdf:about">
                     <xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                 </xsl:attribute>
+                
                 <rdf:type>
                     <xsl:attribute name="rdf:resource">
                         <xsl:value-of select="concat('https://w3id.org/arco/catalogue/', 'CatalogueRecord', $sheetType)" />
