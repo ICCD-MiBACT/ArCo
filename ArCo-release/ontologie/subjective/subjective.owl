@@ -1739,7 +1739,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;evento (realizzazione, demolizione, etc.) cui si riferisce una specifica cronologia di un bene culturale alla cronologia specifica, cioè la cronologia in anni (anche a cavallo di secoli diversi) o con date precise (nella forma “aaaa/mm/gg”). Nel caso in cui la cronologia corrisponda ad uno specifico anno, l&apos;intervallo di tempo avrà lo stesso valore per data di inizio e data di fine.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;evento (realizzazione, demolizione, etc.) cui si riferisce una specifica cronologia di un bene culturale alla cronologia specifica, cioè la cronologia in anni (anche a cavallo di secoli diversi) o con date precise (nella forma &quot;aaaa/mm/gg&quot;). Nel caso in cui la cronologia corrisponda ad uno specifico anno, l&apos;intervallo di tempo avrà lo stesso valore per data di inizio e data di fine.</rdfs:comment>
         <rdfs:label xml:lang="it">cronologia specifica</rdfs:label>
         <rdfs:label xml:lang="en">specific time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -3775,7 +3775,7 @@ bene catalogato.</rdfs:comment>
         <rdfs:label xml:lang="en">Dating</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: DT - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: DT - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFD</core:iccdNormTag>
     </owl:Class>
     
 

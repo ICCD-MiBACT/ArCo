@@ -1410,6 +1410,13 @@
 										</xsl:attribute>
 									</culturaldefinition:hasTitle>
 								</xsl:if>
+								<xsl:if test="./ROFD">
+									<culturaldefinition:hasDating>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-preparatory-final-work')" />						
+										</xsl:attribute>
+									</culturaldefinition:hasDating>
+								</xsl:if>
 								</rdf:Description>
 							</xsl:when>
 						<!-- final work as an individual -->
@@ -1471,6 +1478,13 @@
 										</xsl:attribute>
 									</culturaldefinition:hasTitle>
 								</xsl:if>
+								<xsl:if test="./ROFD">
+									<culturaldefinition:hasDating>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-preparatory-final-work')" />						
+										</xsl:attribute>
+									</culturaldefinition:hasDating>
+								</xsl:if>
 							</rdf:Description>
 						</xsl:when>
 						<!-- final or preparatory work as an individual -->
@@ -1531,6 +1545,13 @@
 											<xsl:value-of select="concat($NS, 'Title/', $itemURI, '-preparatory-final-work-title-', arco-fn:urify(normalize-space(./ROFT)))" />
 										</xsl:attribute>
 									</culturaldefinition:hasTitle>
+								</xsl:if>
+								<xsl:if test="./ROFD">
+									<culturaldefinition:hasDating>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-preparatory-final-work')" />						
+										</xsl:attribute>
+									</culturaldefinition:hasDating>
 								</xsl:if>
 								</rdf:Description>
 						</xsl:otherwise>
