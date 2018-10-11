@@ -66,6 +66,7 @@
 
 	<xsl:template match="/">
 		<rdf:RDF>
+		<!-- part of cultural property when there is STCP (conservation status) -->
 			<xsl:for-each select="schede/*/CO/STC">
 				<xsl:variable name="conservationStatus">
 					<xsl:value-of
@@ -74,8 +75,9 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
+				<xsl:if test="not(./STCP='intero bene')">
 				<xsl:for-each select="./STCP">
-					<xsl:if test="not(.='intero bene')">
+					
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 						 		<xsl:value-of
@@ -94,19 +96,22 @@
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
 						</rdf:Description>
-					</xsl:if>
+					
 				</xsl:for-each>
+				</xsl:if>
 			</xsl:for-each>
 
+			<!-- part of cultural property when there is AUTP (author) -->
 			<xsl:for-each select="schede/*/AU/AUT">
 				<xsl:if test="./AUTW">
 					<xsl:variable name="part">
 						<xsl:value-of
-							select="concat($NS, 'CulturalPropertyPart', $itemURI, '-part-', arco-fn:urify(normalize-space(./AUTW)))" />
+							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./AUTW)))" />
 					</xsl:variable>
 					<xsl:variable name="partLabel">
 						<xsl:value-of select="normalize-space(./AUTW)" />
 					</xsl:variable>
+					<xsl:for-each select="./AUTW">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of select="$part" />
@@ -174,10 +179,186 @@
 			                            </xsl:choose>
 		                    	</xsl:attribute>
 						</arco:hasAuthor>
-
-					</rdf:Description>
+						</rdf:Description>
+						</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
+
+				<!-- part of cultural property when there is NVCP (protective measure) -->
+				<xsl:for-each select="schede/*/TU/NVC">
+				<xsl:variable name="protectiveMeasure">
+					<xsl:value-of
+						select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(./NVCP='intero bene')">
+				<xsl:for-each select="./NVCP">
+					
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<cpdescription:hasProtectiveMeasure>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$protectiveMeasure" />
+								</xsl:attribute>
+							</cpdescription:hasProtectiveMeasure>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					
+				</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			
+			<!-- part of cultural property when there is MTCP (4.00, material) -->
+				<xsl:for-each select="schede/*/MT/MTC/MTCM">
+				<xsl:variable name="material">
+					<xsl:value-of
+						select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(../MTCP='intero bene')">
+				<xsl:for-each select="../MTCP">
+					
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<cpdescription:hasTechnicalDetailOccurrence>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$material" />
+								</xsl:attribute>
+							</cpdescription:hasTechnicalDetailOccurrence>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					
+				</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			
+			<!-- part of cultural property when there is MTCP (4.00, technique) -->
+				<xsl:for-each select="schede/*/MT/MTC/MTCT">
+				<xsl:variable name="technique">
+					<xsl:value-of
+						select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(../MTCP='intero bene')">
+				<xsl:for-each select="../MTCP">
+					
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<cpdescription:hasTechnicalDetailOccurrence>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$technique" />
+								</xsl:attribute>
+							</cpdescription:hasTechnicalDetailOccurrence>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					
+				</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			
+			<!-- part of cultural property when there is DTP (4.00, dating) -->
+				<xsl:for-each select="schede/*/DT">
+				<xsl:variable name="dating">
+					<xsl:value-of
+						select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(./DTP='intero bene')">
+				<xsl:for-each select="./DTP">
+					
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<cpdescription:hasDating>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$dating" />
+								</xsl:attribute>
+							</cpdescription:hasDating>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					
+				</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			
+			<!-- part of cultural property when there is REIP (reuse) -->
+				<xsl:for-each select="schede/*/RO/REI">
+				<xsl:variable name="reuse">
+					<xsl:value-of
+						select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(./REIP='intero bene')">
+				<xsl:for-each select="./REIP">
+					
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<cpdescription:hasRelation>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$reuse" />
+								</xsl:attribute>
+							</cpdescription:hasRelation>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					
+				</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+					
 		</rdf:RDF>
 	</xsl:template>
 </xsl:stylesheet>

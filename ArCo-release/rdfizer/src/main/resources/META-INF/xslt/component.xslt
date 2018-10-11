@@ -1338,7 +1338,8 @@
 					</culturaldefinition:hasAuthorshipAttribution>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/AU/AUT | schede/F/AU/AUF">
-					<xsl:if test="not(./AUTW) or ./AUTW='intero bene'">
+				<xsl:choose>
+					<xsl:when test="not(./AUTW) or ./AUTW='intero bene'">
 						<culturaldefinition:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
@@ -1393,8 +1394,20 @@
 			                            </xsl:choose>
 		                    	</xsl:attribute>
 						</arco:hasAuthor>
-					</xsl:if>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="./AUTW">
+							<arco:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
 				</xsl:for-each>
+				
 				<!-- inventory -->
 				<xsl:for-each select="schede/*/UB/INV">
 					<xsl:if test="./*">
@@ -1442,11 +1455,26 @@
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/DT">
-					<culturaldefinition:hasDating>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />						
-						</xsl:attribute>
-					</culturaldefinition:hasDating>
+					<xsl:choose>
+						<xsl:when test="./* and (not(./DTP) or ./DTP='intero bene')">
+							<cpdescription:hasDating>
+								<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+			                        </xsl:attribute>
+							</cpdescription:hasDating>
+						</xsl:when>
+						<xsl:otherwise>
+						<xsl:for-each select="./DTP">
+								<arco:hasPart>
+									<xsl:attribute name="rdf:resource">
+				                				<xsl:value-of
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+				                	</xsl:attribute>
+								</arco:hasPart>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
 				</xsl:for-each>
 				<!-- member of collection -->
 				<xsl:for-each select="schede/*/UB/COL">
@@ -1460,14 +1488,26 @@
 					</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/CO/STC">
-					<xsl:if test="./* and (not(./STCP) or ./STCP='intero bene')">
+				<xsl:choose>
+					<xsl:when test="./* and (not(./STCP) or ./STCP='intero bene')">
 						<cpdescription:hasConservationStatus>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
 								select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
 		                        </xsl:attribute>
 						</cpdescription:hasConservationStatus>
-					</xsl:if>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="./STCP">
+							<arco:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
 				</xsl:for-each>
 				<xsl:if test="schede/*/CO/STP">
 					<cpdescription:proposedIntervention>
@@ -1860,6 +1900,97 @@
 						</culturaldefinition:hasRelation>
 					</xsl:for-each>
 				</xsl:if>
+				<!-- relation with copy (RO/COP) -->
+				<xsl:if test="schede/*/RO/COP or schede/*/RO/CRF/CRFT='copia'">
+					<xsl:for-each select="schede/*/RO/COP | schede/*/RO/CRF">
+						<culturaldefinition:hasRelation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-copy-', position())" />
+							</xsl:attribute>
+						</culturaldefinition:hasRelation>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- relation with a generic derivated work (if RO/CRF/CRFT != 'replica' or 'contraffazione' or 'controtipo' or 'reimpiego' or 'copia') -->
+				<xsl:if test="schede/*/RO/CRF and not(schede/*/RO/CRF/CRFT='copia' or schede/*/RO/CRF/CRFT='contraffazione' or schede/*/RO/CRF/CRFT='controtipo' or schede/*/RO/CRF/CRFT='replica' or schede/*/RO/CRF/CRFT='reimpiego')">
+					<xsl:for-each select="schede/*/RO/CRF">
+						<culturaldefinition:hasRelation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-derivated-work-', position())" />
+							</xsl:attribute>
+						</culturaldefinition:hasRelation>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- relation with a particular type of derivated work: forgery -->
+				<xsl:if test="schede/*/RO/CRF/CFRT='contraffazione'">
+					<xsl:for-each select="schede/*/RO/CRF">
+						<culturaldefinition:hasRelation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-forgery-', position())" />
+							</xsl:attribute>
+						</culturaldefinition:hasRelation>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- relation with a particular type of derivated work: facsimile -->
+				<xsl:if test="schede/*/RO/CRF/CFRT='controtipo'">
+					<xsl:for-each select="schede/*/RO/CRF">
+						<culturaldefinition:hasRelation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-facsimile-', position())" />
+							</xsl:attribute>
+						</culturaldefinition:hasRelation>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- relation with a particular type of derivated work: same author copy -->
+				<xsl:if test="schede/*/RO/CRF/CFRT='replica'">
+					<xsl:for-each select="schede/*/RO/CRF">
+						<culturaldefinition:hasRelation>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-same-author-copy-', position())" />
+							</xsl:attribute>
+						</culturaldefinition:hasRelation>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- relation with a particular type of derivated work: reuse -->
+				<xsl:if test="schede/*/RO/REI or schede/*/RO/RIU or schede/*/RO/CRF/CFRT='reimpiego'">
+					<xsl:for-each select="schede/*/RO/REI | schede/*/RO/RIU | schede/*/RO/CRF">
+					<xsl:choose>
+						<xsl:when test="./* and (not(./REIP) or ./REIP='intero bene')">
+							<culturaldefinition:hasRelation>
+								<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+			                        </xsl:attribute>
+							</culturaldefinition:hasRelation>
+						</xsl:when>
+						<xsl:when test="../RIU">
+							<culturaldefinition:hasRelation>
+								<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+			                        </xsl:attribute>
+							</culturaldefinition:hasRelation>
+						</xsl:when>
+						<xsl:when test="../CRF">
+							<culturaldefinition:hasRelation>
+								<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+			                        </xsl:attribute>
+							</culturaldefinition:hasRelation>
+						</xsl:when>
+						<xsl:otherwise>
+						<xsl:for-each select="./REIP">
+								<arco:hasPart>
+									<xsl:attribute name="rdf:resource">
+				                				<xsl:value-of
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+				                	</xsl:attribute>
+								</arco:hasPart>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
+					</xsl:for-each>
+				</xsl:if>
 				<!-- name in time (OG/OGD) -->
 				<xsl:for-each select="schede/*/OG/OGD">
 					<cpdescription:hasDesignationInTime>
@@ -1927,21 +2058,57 @@
 	                		</xsl:attribute>
                 	</culturaldefinition:hasUse>
                 </xsl:if>
-                <!-- material of cultural property (version 4.00 and VeAC) -->
-               <xsl:for-each select="schede/*/MT/MTC/MTCM | schede/VeAC/MT/MTC/MTCF">
-                	<cpdescription:hasTechnicalDetailOccurrence>
+                <!-- material of cultural property (version 4.00) -->
+               <xsl:for-each select="schede/*/MT/MTC/MTCM">
+ 	            <xsl:choose>
+					<xsl:when test="not(../MTCP) or ../MTCP='intero bene'">
+						<cpdescription:hasTechnicalDetailOccurrence>
 	                	<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
  	                	</xsl:attribute>
  	                </cpdescription:hasTechnicalDetailOccurrence>
- 	            </xsl:for-each>
-                 <!-- technique of cultural property (4.00) --> 
-                 <xsl:for-each select="schede/*/MT/MTC/MTCT">
-                 	<cpdescription:hasTechnicalDetailOccurrence>
- 	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="../MTCP">
+							<arco:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+				</xsl:for-each>
+				<!-- material of cultural property (VeAC) -->
+				<xsl:for-each select="schede/VeAC/MT/MTC/MTCF">
+					<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
  	                	</xsl:attribute>
  	                </cpdescription:hasTechnicalDetailOccurrence>
+ 	             </xsl:for-each>
+                 <!-- technique of cultural property (4.00) --> 
+                 <xsl:for-each select="schede/*/MT/MTC/MTCT">
+                 	 <xsl:choose>
+					<xsl:when test="not(../MTCP) or ../MTCP='intero bene'">
+						<cpdescription:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
+ 	                	</xsl:attribute>
+ 	                </cpdescription:hasTechnicalDetailOccurrence>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="../MTCP">
+							<arco:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
                  </xsl:for-each>
                  <!-- materialOrTechnique of cultural property (previous versions) -->
                  <xsl:if test="not(schede/*/MT/MTC/*)">
@@ -2079,12 +2246,25 @@
                 </xsl:for-each>
                 <!-- Protective measures of cultural property -->
                 <xsl:for-each select="schede/*/TU/NVC">
-                	<culturaldefinition:hasProtectiveMeasure>
+				<xsl:choose>
+					<xsl:when test="./* and (not(./NVCP) or ./NVCP='intero bene')">
+						<culturaldefinition:hasProtectiveMeasure>
                 		<xsl:attribute name="rdf:resource">
                 			<xsl:value-of select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
                 		</xsl:attribute>
-                	</culturaldefinition:hasProtectiveMeasure>                
-                </xsl:for-each>
+                	</culturaldefinition:hasProtectiveMeasure>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="./NVCP">
+							<arco:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+				</xsl:for-each>
                 <!-- Urban planning instrument of culturale property -->
 				<xsl:for-each select="schede/*/TU/STU">
                 	<culturaldefinition:hasUrbanPlanningInstrument>

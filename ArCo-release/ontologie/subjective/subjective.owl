@@ -978,7 +978,8 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasPlanningEnvironmentalRelationWith -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasPlanningEnvironmentalRelationWith">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
         <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
@@ -1059,21 +1060,6 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/subjective/hasPublicationTitle -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasPublicationTitle">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/PrintInPublication"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/PublicationTitle"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la pubblicazione di cui la stampa è, o è stata, parte integrante con il suo titolo.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha titolo della pubblicazione</rdfs:label>
-        <rdfs:label xml:lang="en">has publication title</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa S 3: RO/ADL/ADLT</core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/subjective/hasReferenceCatalogue -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasReferenceCatalogue">
@@ -1093,6 +1079,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasRelatedAgent">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedAgent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a un agente che è collegato in qualche modo a quell&apos;entità. È una relazione generica che viene usata per quei casi in cui non sia possibile definire in maniera più precisa la natura della relazione.</rdfs:comment>
         <rdfs:label xml:lang="it">ha agente correlato</rdfs:label>
         <rdfs:label xml:lang="en">has related agent</rdfs:label>
@@ -1577,7 +1564,8 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/isInvolvedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isInvolvedIn">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
         <rdfs:label xml:lang="en">is involved in</rdfs:label>
@@ -1592,7 +1580,8 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/isLocatedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isLocatedIn">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce il luogo di collocazione.</rdfs:comment>
         <rdfs:label xml:lang="en">is located in</rdfs:label>
@@ -1683,7 +1672,8 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/isReusedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isReusedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che lo riutilizza in tutto o in parte.</rdfs:comment>
         <rdfs:label xml:lang="en">is reused by</rdfs:label>
@@ -1752,7 +1742,8 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/wasCreatedAt -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasCreatedAt">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di produzione/realizzazione.</rdfs:comment>
         <rdfs:label xml:lang="en">was created at</rdfs:label>
@@ -1767,7 +1758,8 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/wasLocatedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasLocatedIn">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di provenienza, prima della sua attuale collocazione.</rdfs:comment>
         <rdfs:label xml:lang="it">era contenuto in</rdfs:label>
@@ -1782,7 +1774,8 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/wasRediscoveredIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasRediscoveredIn">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di rinvenimento archeologico.</rdfs:comment>
         <rdfs:label xml:lang="en">was rediscovered in</rdfs:label>
@@ -3640,12 +3633,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/Copy">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/DerivatedWork"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la copia di un bene culturale, per esempio di una fotografia o di una stampa. Nel caso della fotografia, in questo caso viene esplicitamente dichiarata la responsabilità del fotografo principale.</rdfs:comment>
         <rdfs:label xml:lang="it">Copia</rdfs:label>
         <rdfs:label xml:lang="en">Copy</rdfs:label>
-        <owl:versionInfo xml:lang="it">Questa classe rappresenta la copia di una stampa.</owl:versionInfo>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normative S 3: RO/COP</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa S 3: RO/COP; ICCD Normativa F: RO/CRF/CRFT = &apos;copia&apos;</core:iccdNormTag>
     </owl:Class>
     
 
@@ -3784,12 +3777,6 @@ bene catalogato.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/DerivatedWork">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/RelatedWork"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasDerivatedWorkType"/>
@@ -3967,6 +3954,20 @@ bene catalogato.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/subjective/Facsimile -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Facsimile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/DerivatedWork"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un controtipo di un bene culturale, specificamente di una fotografia, cioè una duplicazione realizzata nello stesso formato e nella stessa tecnica.</rdfs:comment>
+        <rdfs:label xml:lang="it">Controtipo</rdfs:label>
+        <rdfs:label xml:lang="en">Facsimile</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa F: RO/CRF/CRFT = &apos;controtipo&apos;</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/subjective/FilmDocumentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/FilmDocumentation">
@@ -4004,6 +4005,20 @@ bene catalogato.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: se RO/ROF/ROFF rappresenta uno stadio del bene catalogato riconducibile a una fase preparatoria, per cui è possibile dedurre che l&apos;opera collegata al bene è una sua fase finale.</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/Forgery -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/Forgery">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/DerivatedWork"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una contraffazione di un bene culturale, cioè una riproduzione di un bene culturale da parte di un autore che non dichiari l&apos;autore dell&apos;originale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contraffazione</rdfs:label>
+        <rdfs:label xml:lang="en">Forgery</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa F: RO/CRF/CRFT = &apos;contraffazione&apos;</core:iccdNormTag>
     </owl:Class>
     
 
@@ -4681,19 +4696,6 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/subjective/PublicationTitle -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/subjective/PublicationTitle">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il titolo della pubblicazione di cui la stampa è, o è stata, parte integrante.</rdfs:comment>
-        <rdfs:label xml:lang="en">Publication title</rdfs:label>
-        <rdfs:label xml:lang="it">Titolo della pubblicazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa S 3: RO/ADL/ADLT</core:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/subjective/ReferenceCatalogue -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/ReferenceCatalogue">
@@ -4738,6 +4740,18 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/RelatedWork -->
 
     <owl:Class rdf:about="https://w3id.org/arco/subjective/RelatedWork">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/subjective/relatedWorkLocation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;opera con cui il bene catalogato è in rapporto: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Opera correlata</rdfs:label>
         <rdfs:label xml:lang="en">Related work</rdfs:label>
@@ -4872,7 +4886,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - Normative CA, MA: RO/RIU</core:iccdNormTag>
+        <core:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</core:iccdNormTag>
     </owl:Class>
     
 
@@ -4900,6 +4914,20 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPS</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/SameAuthorCopy -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/SameAuthorCopy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/subjective/DerivatedWork"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una replica di un bene culturale, cioè una duplicazione dell&apos;originale da parte dello stesso autore.</rdfs:comment>
+        <rdfs:label xml:lang="it">Replica</rdfs:label>
+        <rdfs:label xml:lang="en">Same author copy</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa F: RO/CRF/CRFT = &apos;replica&apos;</core:iccdNormTag>
     </owl:Class>
     
 
@@ -5058,12 +5086,12 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il titolo del soggetto di un bene culturale o di un&apos;opera collegata a un bene culturale in quanto sua fase preparatoria o finale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il titolo del soggetto di un bene culturale o di un&apos;opera collegata a un bene culturale in quanto sua fase preparatoria o finale o in quanto pubblicazione contenente una stampa.</rdfs:comment>
         <rdfs:label xml:lang="en">Title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDN (titolo alternativo); DA/AID/AIDT (titolo) - Normativa S e MI: OG/SGT/SGTP (titolo proprio); Normativa F: SG/SGL/SGLA (titolo attribuito); SG/SGL/SGLT (titolo proprio); SG/SGL/SGLL (titolo parallelo); - Altre normative di versioni precedenti alla 4.00:  OG/SGT/SGTR (); OG/SGT/SGTT (titolo)</core:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDN (titolo alternativo); DA/AID/AIDT (titolo) - Normativa S e MI: OG/SGT/SGTP (titolo proprio); Normativa F: SG/SGL/SGLA (titolo attribuito); SG/SGL/SGLT (titolo proprio); SG/SGL/SGLL (titolo parallelo); - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTR (titolo parallelo); OG/SGT/SGTT (titolo); ICCD Normativa S 3: RO/ADL/ADLT</core:iccdNormTag>
     </owl:Class>
     
 

@@ -247,7 +247,15 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasPart">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una sua parte (es.: piano terra, manico, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="it">ha parte</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
     </owl:ObjectProperty>
     
 

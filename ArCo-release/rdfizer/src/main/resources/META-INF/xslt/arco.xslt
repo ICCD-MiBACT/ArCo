@@ -1316,10 +1316,10 @@
 							<l0:name xml:lang="it">
 								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e opera originale o finale')" />
 							</l0:name>
-							<rdfs:label xml:lang="it">
+							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and preparatory or final work')" />
 							</rdfs:label>
-							<l0:name xml:lang="it">
+							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and preparatory or final work')" />
 							</l0:name>
 							<xsl:choose>
@@ -1352,6 +1352,11 @@
 									</xsl:attribute>
 								</culturaldefinition:hasCulturalPropertyStage>
 							</xsl:if>
+							<xsl:if test="./ROFP">
+								<arco:note>
+									<xsl:value-of select="normalize-space(./ROFP)" />
+								</arco:note>
+							</xsl:if>
 						</rdf:Description>
 						<!-- preparatory work, final work and preparatory or final work as individuals -->
 						<xsl:choose>
@@ -1372,10 +1377,10 @@
 								<l0:name xml:lang="it">
 									<xsl:value-of select="concat('Opera originale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
 								</l0:name>
-								<rdfs:label xml:lang="it">
+								<rdfs:label xml:lang="en">
 									<xsl:value-of select="concat('Preparatory work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
 								</rdfs:label>
-								<l0:name xml:lang="it">
+								<l0:name xml:lang="en">
 									<xsl:value-of select="concat('Preparatory work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
 								</l0:name>
 								<xsl:if test="./ROFS">
@@ -1417,10 +1422,17 @@
 								<xsl:if test="./ROFD">
 									<culturaldefinition:hasDating>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-preparatory-final-work')" />						
+											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />						
 										</xsl:attribute>
 									</culturaldefinition:hasDating>
 								</xsl:if>
+								<xsl:if test="./ROFA">
+			            			<culturaldefinition:hasAuthor>
+			            				<xsl:attribute name="rdf:resource">
+			            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ROFA)))" />
+			            				</xsl:attribute>
+			            			</culturaldefinition:hasAuthor>            		            		
+            					</xsl:if>
 								</rdf:Description>
 							</xsl:when>
 						<!-- final work as an individual -->
@@ -1440,10 +1452,10 @@
 							<l0:name xml:lang="it">
 								<xsl:value-of select="concat('Opera finale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
 							</l0:name>
-							<rdfs:label xml:lang="it">
+							<rdfs:label xml:lang="en">
 								<xsl:value-of select="concat('Final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
 							</rdfs:label>
-							<l0:name xml:lang="it">
+							<l0:name xml:lang="en">
 								<xsl:value-of select="concat('Final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
 							</l0:name>
 								<xsl:if test="./ROFS">
@@ -1485,10 +1497,17 @@
 								<xsl:if test="./ROFD">
 									<culturaldefinition:hasDating>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-preparatory-final-work')" />						
+											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />						
 										</xsl:attribute>
 									</culturaldefinition:hasDating>
 								</xsl:if>
+								<xsl:if test="./ROFA">
+			            			<culturaldefinition:hasAuthor>
+			            				<xsl:attribute name="rdf:resource">
+			            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ROFA)))" />
+			            				</xsl:attribute>
+			            			</culturaldefinition:hasAuthor>            		            		
+            					</xsl:if>
 							</rdf:Description>
 						</xsl:when>
 						<!-- final or preparatory work as an individual -->
@@ -1508,10 +1527,10 @@
 								<l0:name xml:lang="it">
 									<xsl:value-of select="concat('Opera originale o finale ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./ROFO))" />
 								</l0:name>
-								<rdfs:label xml:lang="it">
+								<rdfs:label xml:lang="en">
 									<xsl:value-of select="concat('Preparatory or final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
 								</rdfs:label>
-								<l0:name xml:lang="it">
+								<l0:name xml:lang="en">
 									<xsl:value-of select="concat('Preparatory or final work ', position(), ' of cultural property ', $itemURI, ': ', normalize-space(./ROFO))" />
 								</l0:name>
 								<xsl:if test="./ROFS">
@@ -1553,10 +1572,17 @@
 								<xsl:if test="./ROFD">
 									<culturaldefinition:hasDating>
 										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-preparatory-final-work')" />						
+											<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />						
 										</xsl:attribute>
 									</culturaldefinition:hasDating>
 								</xsl:if>
+								<xsl:if test="./ROFA">
+			            			<culturaldefinition:hasAuthor>
+			            				<xsl:attribute name="rdf:resource">
+			            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ROFA)))" />
+			            				</xsl:attribute>
+			            			</culturaldefinition:hasAuthor>            		            		
+            					</xsl:if>
 								</rdf:Description>
 						</xsl:otherwise>
 						</xsl:choose>
@@ -1634,14 +1660,14 @@
 				            			<xsl:value-of select="concat('Inventario ', normalize-space(./ROFI), ' dell''opera originale o finale del bene ', $itemURI)" />
 				            		</rdfs:label>
 				            		<l0:name xml:lang="it">
-				            			<xsl:value-of select="concat('Inventory ', normalize-space(./ROFI), ' dell''opera originale o finale del bene ', $itemURI)" />
+				            			<xsl:value-of select="concat('Inventario ', normalize-space(./ROFI), ' dell''opera originale o finale del bene ', $itemURI)" />
 				            		</l0:name>
 				            		<culturaldefinition:inventoryIdentifier>
 				            			<xsl:value-of select="normalize-space(./ROFI)" />
 				            		</culturaldefinition:inventoryIdentifier>
 				            	</rdf:Description>
 				            </xsl:if>
-				            <!-- preparatory or final work as an individual -->
+				            <!-- preparatory or final work title as an individual -->
 				            <xsl:if test="./ROFT">
 					            <rdf:Description>
 	            					<xsl:attribute name="rdf:about">
@@ -1660,8 +1686,1125 @@
 					            	</culturaldefinition:hasTitleType>
 	            				</rdf:Description>
             				</xsl:if>
+            				<!-- dating as an individual -->
+            				<xsl:if test="./ROFD">
+            					<rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)))" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/arco/subjective/Dating'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                        <xsl:value-of select="concat('Cronologia dell''opera originale o finale ', position(), ' del bene ', $itemURI)" />
+				                    </rdfs:label>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="concat('Dating of preparatory or final work ', position(), ' of cultural property ', $itemURI)" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="it">
+				                        <xsl:value-of select="concat('Cronologia dell''opera originale o finale ', position(), ' del bene ', $itemURI)" />
+				                    </l0:name>
+				                    <rdfs:label xml:lang="en">
+				                        <xsl:value-of select="concat('Dating of preparatory or final work ', position(), ' of cultural property ', $itemURI)" />
+				                    </rdfs:label>
+				                    <culturaldefinition:hasEvent>
+				                        <xsl:attribute name="rdf:resource">
+				                           <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)), '-creation')" />
+				                        </xsl:attribute>
+				                    </culturaldefinition:hasEvent>
+				                    <!-- Source of dating -->
+				                    <xsl:if test="./ROFM and not(lower-case(normalize-space(./ROFM))='nr' or lower-case(normalize-space(./ROFM))='n.r.' or lower-case(normalize-space(./ROFM))='nr (recupero pregresso)' or lower-case(normalize-space(./ROFM))='nr' or lower-case(normalize-space(./ROFM))='n.r.' or lower-case(normalize-space(./ROFM))='nr (recupero pregresso)')">
+									<culturaldefinition:hasSource>
+				                         <xsl:attribute name="rdf:resource">
+				                              <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./ROFM)))" />
+				                         </xsl:attribute>
+				                    </culturaldefinition:hasSource>
+				                    </xsl:if>
+				                </rdf:Description>
+				                <!-- Source of dating as individual-->
+				                <xsl:if test="./ROFM and not(lower-case(normalize-space(./ROFM))='nr' or lower-case(normalize-space(./ROFM))='n.r.' or lower-case(normalize-space(./ROFM))='nr (recupero pregresso)' or lower-case(normalize-space(./ROFM))='nr' or lower-case(normalize-space(./ROFM))='n.r.' or lower-case(normalize-space(./ROFM))='nr (recupero pregresso)')">
+				                    <rdf:Description>
+				                        <xsl:attribute name="rdf:about">
+				                             <xsl:value-of select="concat($NS, 'Source/', arco-fn:urify(normalize-space(./ROFM)))" />
+				                        </xsl:attribute>
+				                        <rdf:type>
+				                            <xsl:attribute name="rdf:resource">
+				                                <xsl:value-of select="'https://w3id.org/arco/subjective/Source'" />
+				                            </xsl:attribute>
+				                        </rdf:type>
+				                        <rdfs:label>				                            
+				                           <xsl:value-of select="normalize-space(./ROFM)" />
+				                        </rdfs:label>
+				                        <l0:name>
+				                            <xsl:value-of select="normalize-space(./ROFM)" />
+				                        </l0:name>
+				                    </rdf:Description>
+				                </xsl:if>
+				                <rdf:Description>
+				                    <xsl:attribute name="rdf:about">
+				                        <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./ROFO)), '-creation')" />
+				                    </xsl:attribute>
+				                    <rdf:type>
+				                        <xsl:attribute name="rdf:resource">
+				                            <xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
+				                        </xsl:attribute>
+				                    </rdf:type>
+				                    <rdfs:label xml:lang="it">
+				                         <xsl:value-of select="concat('Realizzazione dell''opera originale o finale ', position(), ' del bene ', $itemURI)" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="it">
+				                         <xsl:value-of select="concat('Realizzazione dell''opera originale o finale ', position(), ' del bene ', $itemURI)" />
+				                    </l0:name>
+				                    <rdfs:label xml:lang="en">
+				                         <xsl:value-of select="concat('Creation of preparatory or final work ', position(), ' of cultural property ', $itemURI)" />
+				                    </rdfs:label>
+				                    <l0:name xml:lang="en">
+				                         <xsl:value-of select="concat('Creation of preparatory or final work ', position(), ' of cultural property ', $itemURI)" />
+				                    </l0:name>
+				                        <tiapit:atTime>
+				                            <xsl:attribute name="rdf:resource">
+				                                <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ROFD)))" />
+				                            </xsl:attribute>
+				                        </tiapit:atTime>
+				                </rdf:Description>
+				                <!-- Time interval as an individual -->
+				                    <rdf:Description>
+				                        <xsl:attribute name="rdf:about">
+				                            <xsl:value-of select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./ROFD)))" />
+				                        </xsl:attribute>
+				                        <rdf:type>
+				                            <xsl:attribute name="rdf:resource">
+				                                <xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+				                            </xsl:attribute>
+				                        </rdf:type>
+				                        <rdfs:label>
+				                            <xsl:value-of select="normalize-space(./ROFD)" />
+				                        </rdfs:label>
+				                        <l0:name>
+				                            <xsl:value-of select="normalize-space(./ROFD)" />
+				                        </l0:name>
+				                        <tiapit:time>
+				                        	<xsl:value-of select="normalize-space(./ROFD)" />
+				                        </tiapit:time>
+				                    </rdf:Description>
+				                </xsl:if>
+				                <xsl:if test="./ROFA">
+				                	<rdf:Description>
+				            			<xsl:attribute name="rdf:about">
+				            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ROFA)))" />
+				            			</xsl:attribute>
+				            			<rdf:type>
+				            				<xsl:attribute name="rdf:resource">
+				            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				            				</xsl:attribute>
+				            			</rdf:type>
+				            			<rdfs:label>
+				            				<xsl:value-of select="normalize-space(./ROFA)" />
+				            			</rdfs:label>
+				            			<l0:name>
+				            				<xsl:value-of select="normalize-space(./ROFA)" />
+				            			</l0:name>
+				            		</rdf:Description>
+				                </xsl:if>
 					</xsl:for-each>
 				</xsl:if>
+				 <!-- relation with copy (RO/COP) -->
+				<xsl:if test="schede/*/RO/COP or schede/*/RO/CRF/CRFT='copia'">
+					<xsl:for-each select="schede/*/RO/COP | schede/*/RO/CRF">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-copy-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Relation'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e copia')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e copia')" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and copy')" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and copy')" />
+							</l0:name>
+							<culturaldefinition:hasRelatedWork>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Copy/', $itemURI, '-copy-', position())" />
+								</xsl:attribute>
+							</culturaldefinition:hasRelatedWork>
+							<xsl:if test="../CRF/CRFS">
+								<arco:note>
+									<xsl:value-of select="normalize-space(../CRF/CRFS)" />
+								</arco:note>
+							</xsl:if>
+						</rdf:Description>
+						<!-- copy as an individual -->
+						<rdf:Description>	
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'Copy/', $itemURI, '-copy-', position())" />
+									</xsl:attribute>
+								<rdf:type>
+		            				<xsl:attribute name="rdf:resource">
+		                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Copy'" />
+		                       		</xsl:attribute>
+	            				</rdf:type>
+	            				<rdfs:label xml:lang="it">
+									<xsl:value-of select="concat('Copia ', position(), ' del bene culturale ', $itemURI)" />
+								</rdfs:label>
+								<l0:name xml:lang="it">
+									<xsl:value-of select="concat('Copia ', position(), ' del bene culturale ', $itemURI)" />
+								</l0:name>
+								<rdfs:label xml:lang="en">
+									<xsl:value-of select="concat('Copy ', position(), ' of cultural property ', $itemURI)" />
+								</rdfs:label>
+								<l0:name xml:lang="en">
+									<xsl:value-of select="concat('Copy ', position(), ' of cultural property ', $itemURI)" />
+								</l0:name>
+								<xsl:if test="./COPR">
+									<culturaldefinition:hasReferenceCatalogue>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'ReferenceCatalogue/', $itemURI, '-reference-catalogue-', position())" />
+										</xsl:attribute>
+									</culturaldefinition:hasReferenceCatalogue>
+								</xsl:if>
+								<xsl:if test="./COPA">
+			            			<culturaldefinition:hasAuthor>
+			            				<xsl:attribute name="rdf:resource">
+			            					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./COPA)))" />
+			            				</xsl:attribute>
+			            			</culturaldefinition:hasAuthor>            		            		
+            					</xsl:if>
+            					<xsl:if test="../CRF/CRFN or ../CRF/CRFB">
+			            			<culturaldefinition:hasAuthor>
+			            				<xsl:attribute name="rdf:resource">
+			            				<xsl:choose>
+			            					<xsl:when test="../CRF/CRFN">
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFN)))" />
+			            					</xsl:when>
+			            					<xsl:otherwise>
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFB)))" />
+			            					</xsl:otherwise>
+			            				</xsl:choose>
+			            				</xsl:attribute>
+			            			</culturaldefinition:hasAuthor>          		            		
+            					</xsl:if>
+            					<xsl:if test="../CRF/CRFC">
+	            						<culturaldefinition:relatedWorkLocation>
+	            							<xsl:value-of select="normalize-space(../CRF/CRFC)" />
+	            						</culturaldefinition:relatedWorkLocation>
+            						</xsl:if>  
+								</rdf:Description>
+								<!-- reference catalogue as an individual -->
+								<xsl:if test="./COPR">
+									<rdf:Description>
+										<xsl:attribute name="rdf:about">
+											<xsl:value-of select="concat($NS, 'ReferenceCatalogue/', $itemURI, '-reference-catalogue-', position())" />
+										</xsl:attribute>
+										<rdf:type>
+											<xsl:attribute name="rdf:resource">
+				            					<xsl:value-of select="'https://w3id.org/arco/subjective/ReferenceCatalogue'" />
+				            				</xsl:attribute>
+										</rdf:type>
+										<rdfs:label xml:lang="it">
+											<xsl:value-of select="concat('Repertorio della copia ', position(), ' del bene culturale ', $itemURI, ' : ', normalize-space(./COPR))" />
+										</rdfs:label>
+										<l0:name xml:lang="it">
+											<xsl:value-of select="concat('Repertorio della copia ', position(), ' del bene culturale ', $itemURI, ' : ', normalize-space(./COPR))" />
+										</l0:name>
+										<rdfs:label xml:lang="en">
+											<xsl:value-of select="concat('Reference catalogue of copy ', position(), ' of cultural property ', $itemURI, ' : ', normalize-space(./COPR))" />
+										</rdfs:label>
+										<l0:name xml:lang="en">
+											<xsl:value-of select="concat('Reference catalogue of copy ', position(), ' of cultural property ', $itemURI, ' : ', normalize-space(./COPR))" />
+										</l0:name>
+									</rdf:Description>
+								</xsl:if>
+								<!-- author of copy (RO/COP/COPA) as an individual -->
+								<xsl:if test="./COPA">
+				                	<rdf:Description>
+				            			<xsl:attribute name="rdf:about">
+				            				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./COPA)))" />
+				            			</xsl:attribute>
+				            			<rdf:type>
+				            				<xsl:attribute name="rdf:resource">
+				            					<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				            				</xsl:attribute>
+				            			</rdf:type>
+				            			<rdfs:label>
+				            				<xsl:value-of select="normalize-space(./COPA)" />
+				            			</rdfs:label>
+				            			<l0:name>
+				            				<xsl:value-of select="normalize-space(./COPA)" />
+				            			</l0:name>
+				            		</rdf:Description>
+				                </xsl:if>
+				                <!-- author of copy (RO/CRF/CRFN or RO/CRF/CRFB) as an individual -->
+				                <xsl:if test="../CRF/CRFN or ../CRF/CRFB">
+				                	<rdf:Description>
+				            			<xsl:attribute name="rdf:about">
+				            				<xsl:choose>
+			            					<xsl:when test="../CRF/CRFN">
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFN)))" />
+			            					</xsl:when>
+			            					<xsl:otherwise>
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFB)))" />
+			            					</xsl:otherwise>
+			            				</xsl:choose>
+				            			</xsl:attribute>
+				            			<rdf:type>
+				            				<xsl:attribute name="rdf:resource">
+				                                <xsl:choose>
+				                                	<xsl:when test="lower-case(normalize-space(../CRF/CRFP))='p'">
+                                        				<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                    				</xsl:when>
+				                                    <xsl:when test="lower-case(normalize-space(../CRF/CRFP))='e'">
+				                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+				                                    </xsl:when>
+				                                    <xsl:when test="../CRF/CRFN">
+				                                        <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+				                                    </xsl:when>
+				                                    <xsl:when test="../CRF/CRFB">
+				                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+				                                    </xsl:when>
+				                                    <xsl:otherwise>
+				                                    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				                                    </xsl:otherwise>
+				                                </xsl:choose>
+                            				</xsl:attribute>
+				            			</rdf:type>
+				            			<rdfs:label>
+				            				<xsl:choose>
+				            					<xsl:when test="../CRF/CRFN">
+					            					<xsl:value-of select="normalize-space(../CRF/CRFN)" />
+					            				</xsl:when>
+					            				<xsl:otherwise>
+				            						<xsl:value-of select="normalize-space(../CRF/CRFB)" />
+				            					</xsl:otherwise>
+			            					</xsl:choose>
+				            			</rdfs:label>
+				            			<l0:name>
+				            				<xsl:choose>
+				            					<xsl:when test="../CRF/CRFN">
+					            					<xsl:value-of select="normalize-space(../CRF/CRFN)" />
+					            				</xsl:when>
+					            				<xsl:otherwise>
+				            						<xsl:value-of select="normalize-space(../CRF/CRFB)" />
+				            					</xsl:otherwise>
+			            					</xsl:choose>
+				            			</l0:name>
+				            			<xsl:if test="./CRFH">
+				            				<culturaldefinition:agentLocalIdentifier>
+				            					<xsl:value-of select="../CRF/CRFH" />
+				            				</culturaldefinition:agentLocalIdentifier>
+				            			</xsl:if>
+				            		</rdf:Description>
+				            		</xsl:if>
+					</xsl:for-each>
+				</xsl:if>
+           		<!-- relation with a generic derivated work (if RO/CRF/CRFT != 'replica' or 'contraffazione' or 'controtipo' or 'reimpiego' or 'copia') -->
+           		<xsl:if test="schede/*/RO/CRF and not(schede/*/RO/CRF/CRFT='copia' or schede/*/RO/CRF/CRFT='contraffazione' or schede/*/RO/CRF/CRFT='controtipo' or schede/*/RO/CRF/CRFT='replica' or schede/*/RO/CRF/CRFT='reimpiego')">
+					<xsl:for-each select="schede/*/RO/CRF">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-derivated-work-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Relation'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e opera derivata')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e opera derivata')" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and derivated work')" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and derivated work')" />
+							</l0:name>
+							<culturaldefinition:hasRelatedWork>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'DerivatedWork/', $itemURI, '-derivated-work-', position())" />
+								</xsl:attribute>
+							</culturaldefinition:hasRelatedWork>
+							<xsl:if test="./CRFS">
+								<arco:note>
+									<xsl:value-of select="normalize-space(./CRFS)" />
+								</arco:note>
+							</xsl:if>
+						</rdf:Description>
+						<!-- derivated work as an individual -->
+						<rdf:Description>	
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'DerivatedWork/', $itemURI, '-derivated-work-', position())" />
+									</xsl:attribute>
+								<rdf:type>
+		            				<xsl:attribute name="rdf:resource">
+		                          		<xsl:value-of select="'https://w3id.org/arco/subjective/DerivatedWork'" />
+		                       		</xsl:attribute>
+	            				</rdf:type>
+	            				<rdfs:label xml:lang="it">
+									<xsl:value-of select="concat('Opera derivata ', position(), ' del bene culturale ', $itemURI)" />
+								</rdfs:label>
+								<l0:name xml:lang="it">
+									<xsl:value-of select="concat('Opera derivata ', position(), ' del bene culturale ', $itemURI)" />
+								</l0:name>
+								<rdfs:label xml:lang="en">
+									<xsl:value-of select="concat('Derivated work ', position(), ' of cultural property ', $itemURI)" />
+								</rdfs:label>
+								<l0:name xml:lang="en">
+									<xsl:value-of select="concat('Derivated work ', position(), ' of cultural property ', $itemURI)" />
+								</l0:name>
+								<xsl:if test="./CRFT">
+								<culturaldefinition:hasDerivatedWorkType>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space(./CRFT)))" />
+									</xsl:attribute>
+								</culturaldefinition:hasDerivatedWorkType>
+								</xsl:if>
+								<xsl:if test="./CRFN or ./CRFB">
+			            			<culturaldefinition:hasAuthor>
+			            				<xsl:attribute name="rdf:resource">
+			            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+			            					</xsl:when>
+			            					<xsl:otherwise>
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+			            					</xsl:otherwise>
+			            				</xsl:choose>
+			            				</xsl:attribute>
+			            			</culturaldefinition:hasAuthor>            		            		
+            					</xsl:if>
+            					<xsl:if test="./CRFC">
+            						<culturaldefinition:relatedWorkLocation>
+            							<xsl:value-of select="normalize-space(./CRFC)" />
+            						</culturaldefinition:relatedWorkLocation>
+            					</xsl:if>
+								</rdf:Description>
+								<!-- author of derivated work as an individual -->
+								<xsl:if test="./CRFN or ./CRFB">
+				                	<rdf:Description>
+				            			<xsl:attribute name="rdf:about">
+				            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+			            					</xsl:when>
+			            					<xsl:otherwise>
+			            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+			            					</xsl:otherwise>
+			            				</xsl:choose>
+				            			</xsl:attribute>
+				            			<rdf:type>
+				            				<xsl:attribute name="rdf:resource">
+				                                <xsl:choose>
+				                                	<xsl:when test="lower-case(normalize-space(./CRFP))='p'">
+                                        				<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                    				</xsl:when>
+				                                    <xsl:when test="lower-case(normalize-space(./CRFP))='e'">
+				                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+				                                    </xsl:when>
+				                                    <xsl:when test="./CRFN">
+				                                        <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+				                                    </xsl:when>
+				                                    <xsl:when test="./CRFB">
+				                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+				                                    </xsl:when>
+				                                    <xsl:otherwise>
+				                                    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+				                                    </xsl:otherwise>
+				                                </xsl:choose>
+                            				</xsl:attribute>
+				            			</rdf:type>
+				            			<rdfs:label>
+				            				<xsl:choose>
+				            					<xsl:when test="./CRFN">
+					            					<xsl:value-of select="normalize-space(./CRFN)" />
+					            				</xsl:when>
+					            				<xsl:otherwise>
+				            						<xsl:value-of select="normalize-space(./CRFB)" />
+				            					</xsl:otherwise>
+			            					</xsl:choose>
+				            			</rdfs:label>
+				            			<l0:name>
+				            				<xsl:choose>
+				            					<xsl:when test="./CRFN">
+					            					<xsl:value-of select="normalize-space(./CRFN)" />
+					            				</xsl:when>
+					            				<xsl:otherwise>
+				            						<xsl:value-of select="normalize-space(./CRFB)" />
+				            					</xsl:otherwise>
+			            					</xsl:choose>
+				            			</l0:name>
+				            			<xsl:if test="./CRFH">
+				            				<culturaldefinition:agentLocalIdentifier>
+				            					<xsl:value-of select="./CRFH" />
+				            				</culturaldefinition:agentLocalIdentifier>
+				            			</xsl:if>
+				            		</rdf:Description>
+				            		</xsl:if>
+				            		<!-- derivated work type as an individual -->
+				            		<xsl:if test="./CRFT">
+					                	<rdf:Description>
+					            			<xsl:attribute name="rdf:about">
+					            				<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space(./CRFT)))" />
+					            			</xsl:attribute>
+					            			<rdf:type>
+					            				<xsl:attribute name="rdf:resource">
+					            					<xsl:value-of select="'https://w3id.org/arco/subjective/DerivatedWorkType'" />
+					            				</xsl:attribute>
+					            			</rdf:type>
+					            			<rdfs:label>
+					            				<xsl:value-of select="normalize-space(./CRFT)" />
+					            			</rdfs:label>
+					            			<l0:name>
+					            				<xsl:value-of select="normalize-space(./CRFT)" />
+					            			</l0:name>
+					            		</rdf:Description>
+				            		</xsl:if>
+					</xsl:for-each>
+				</xsl:if>
+			<!-- relation with a particular type of derivated work: forgery -->
+			<xsl:if test="schede/*/RO/CRF/CFRT='contraffazione'">
+			<xsl:for-each select="schede/*/RO/CRF">
+				<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-forgery-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Relation'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e contraffazione')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e contraffazione')" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and forgery')" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and forgery')" />
+							</l0:name>
+							<culturaldefinition:hasRelatedWork>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Forgery/', $itemURI, '-forgery-', position())" />
+								</xsl:attribute>
+							</culturaldefinition:hasRelatedWork>
+							<xsl:if test="./CRFS">
+								<arco:note>
+									<xsl:value-of select="normalize-space(./CRFS)" />
+								</arco:note>
+							</xsl:if>
+						</rdf:Description>
+				<!-- forgery as an individual -->
+				<rdf:Description>	
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Forgery/', $itemURI, '-forgery-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Forgery'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+            				<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Contraffazione ', position(), ' del bene culturale ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Contraffazione ', position(), ' del bene culturale ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Forgery ', position(), ' of cultural property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Forgery ', position(), ' of cultural property ', $itemURI)" />
+							</l0:name>
+							<xsl:if test="./CRFN or ./CRFB">
+		            			<culturaldefinition:hasAuthor>
+		            				<xsl:attribute name="rdf:resource">
+		            				<xsl:choose>
+		            					<xsl:when test="./CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+		            				</xsl:attribute>
+		            			</culturaldefinition:hasAuthor>            		            		
+           					</xsl:if>
+           					<xsl:if test="./CRFC">
+           						<culturaldefinition:relatedWorkLocation>
+           							<xsl:value-of select="normalize-space(./CRFC)" />
+           						</culturaldefinition:relatedWorkLocation>
+           					</xsl:if>
+							</rdf:Description>
+							<!-- author of forgery as an individual -->
+							<xsl:if test="./CRFN or ./CRFB">
+			                	<rdf:Description>
+			            			<xsl:attribute name="rdf:about">
+			            				<xsl:choose>
+		            					<xsl:when test="./CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+			            			</xsl:attribute>
+			            			<rdf:type>
+			            				<xsl:attribute name="rdf:resource">
+			                                <xsl:choose>
+			                                	<xsl:when test="lower-case(normalize-space(./CRFP))='p'">
+                                       				<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                   				</xsl:when>
+			                                    <xsl:when test="lower-case(normalize-space(./CRFP))='e'">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="./CRFN">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="./CRFB">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:otherwise>
+			                                    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+			                                    </xsl:otherwise>
+			                                </xsl:choose>
+                           				</xsl:attribute>
+			            			</rdf:type>
+			            			<rdfs:label>
+			            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+				            					<xsl:value-of select="normalize-space(./CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(./CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</rdfs:label>
+			            			<l0:name>
+			            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+				            					<xsl:value-of select="normalize-space(./CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(./CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</l0:name>
+			            			<xsl:if test="./CRFH">
+				            				<culturaldefinition:agentLocalIdentifier>
+				            					<xsl:value-of select="./CRFH" />
+				            				</culturaldefinition:agentLocalIdentifier>
+				            			</xsl:if>
+			            		</rdf:Description>
+			            		</xsl:if>
+				</xsl:for-each>
+			</xsl:if>
+			<!-- relation with a particular type of derivated work: facsimile -->
+			<xsl:if test="schede/*/RO/CRF/CFRT='controtipo'">
+			<xsl:for-each select="schede/*/RO/CRF">
+				<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-facsimile-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Relation'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e controtipo')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e controtipo')" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and facsimile')" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and facsimile')" />
+							</l0:name>
+							<culturaldefinition:hasRelatedWork>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Facsimile/', $itemURI, '-facsimile-', position())" />
+								</xsl:attribute>
+							</culturaldefinition:hasRelatedWork>
+							<xsl:if test="./CRFS">
+								<arco:note>
+									<xsl:value-of select="normalize-space(./CRFS)" />
+								</arco:note>
+							</xsl:if>
+						</rdf:Description>
+				<!-- facsimile as an individual -->
+				<rdf:Description>	
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Facsimile/', $itemURI, '-facsimile-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Facsimile'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+            				<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Controtipo ', position(), ' del bene culturale ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Controtipo ', position(), ' del bene culturale ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Facsimile ', position(), ' of cultural property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Facsimile ', position(), ' of cultural property ', $itemURI)" />
+							</l0:name>
+							<xsl:if test="./CRFN or ./CRFB">
+		            			<culturaldefinition:hasAuthor>
+		            				<xsl:attribute name="rdf:resource">
+		            				<xsl:choose>
+		            					<xsl:when test="./CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+		            				</xsl:attribute>
+		            			</culturaldefinition:hasAuthor>            		            		
+           					</xsl:if>
+           					<xsl:if test="./CRFC">
+           						<culturaldefinition:relatedWorkLocation>
+           							<xsl:value-of select="normalize-space(./CRFC)" />
+           						</culturaldefinition:relatedWorkLocation>
+           					</xsl:if>
+							</rdf:Description>
+							<!-- author of facsimile as an individual -->
+							<xsl:if test="./CRFN or ./CRFB">
+			                	<rdf:Description>
+			            			<xsl:attribute name="rdf:about">
+			            				<xsl:choose>
+		            					<xsl:when test="./CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+			            			</xsl:attribute>
+			            			<rdf:type>
+			            				<xsl:attribute name="rdf:resource">
+			                                <xsl:choose>
+			                                	<xsl:when test="lower-case(normalize-space(./CRFP))='p'">
+                                       				<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                   				</xsl:when>
+			                                    <xsl:when test="lower-case(normalize-space(./CRFP))='e'">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="./CRFN">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="./CRFB">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:otherwise>
+			                                    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+			                                    </xsl:otherwise>
+			                                </xsl:choose>
+                           				</xsl:attribute>
+			            			</rdf:type>
+			            			<rdfs:label>
+			            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+				            					<xsl:value-of select="normalize-space(./CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(./CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</rdfs:label>
+			            			<l0:name>
+			            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+				            					<xsl:value-of select="normalize-space(./CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(./CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</l0:name>
+			            			<xsl:if test="./CRFH">
+				            				<culturaldefinition:agentLocalIdentifier>
+				            					<xsl:value-of select="./CRFH" />
+				            				</culturaldefinition:agentLocalIdentifier>
+				            			</xsl:if>
+			            		</rdf:Description>
+			            		</xsl:if>
+				</xsl:for-each>
+			</xsl:if>
+			<!-- relation with a particular type of derivated work: same author copy -->
+			<xsl:if test="schede/*/RO/CRF/CFRT='replica'">
+			<xsl:for-each select="schede/*/RO/CRF">
+				<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-same-author-copy-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Relation'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e replica')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e replica')" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and copy by the same author')" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and copy by the same author')" />
+							</l0:name>
+							<culturaldefinition:hasRelatedWork>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'SameAuthorCopy/', $itemURI, '-same-author-copy-', position())" />
+								</xsl:attribute>
+							</culturaldefinition:hasRelatedWork>
+							<xsl:if test="./CRFS">
+								<arco:note>
+									<xsl:value-of select="normalize-space(./CRFS)" />
+								</arco:note>
+							</xsl:if>
+						</rdf:Description>
+				<!-- same author copy as an individual -->
+				<rdf:Description>	
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'SameAuthorCopy/', $itemURI, '-same-author-copy-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/SameAuthorCopy'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+            				<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Replica ', position(), ' del bene culturale ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Replica ', position(), ' del bene culturale ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Copy ', position(), ' by the same author of cultural property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Copy ', position(), ' by the same author of cultural property ', $itemURI)" />
+							</l0:name>
+							<xsl:if test="./CRFN or ./CRFB">
+		            			<culturaldefinition:hasAuthor>
+		            				<xsl:attribute name="rdf:resource">
+		            				<xsl:choose>
+		            					<xsl:when test="./CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+		            				</xsl:attribute>
+		            			</culturaldefinition:hasAuthor>            		            		
+           					</xsl:if>
+           					<xsl:if test="./CRFC">
+           						<culturaldefinition:relatedWorkLocation>
+           							<xsl:value-of select="normalize-space(./CRFC)" />
+           						</culturaldefinition:relatedWorkLocation>
+           					</xsl:if>
+							</rdf:Description>
+							<!-- author of same author copy as an individual -->
+							<xsl:if test="./CRFN or ./CRFB">
+			                	<rdf:Description>
+			            			<xsl:attribute name="rdf:about">
+			            				<xsl:choose>
+		            					<xsl:when test="./CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+			            			</xsl:attribute>
+			            			<rdf:type>
+			            				<xsl:attribute name="rdf:resource">
+			                                <xsl:choose>
+			                                	<xsl:when test="lower-case(normalize-space(./CRFP))='p'">
+                                       				<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                   				</xsl:when>
+			                                    <xsl:when test="lower-case(normalize-space(./CRFP))='e'">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="./CRFN">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="./CRFB">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:otherwise>
+			                                    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+			                                    </xsl:otherwise>
+			                                </xsl:choose>
+                           				</xsl:attribute>
+			            			</rdf:type>
+			            			<rdfs:label>
+			            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+				            					<xsl:value-of select="normalize-space(./CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(./CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</rdfs:label>
+			            			<l0:name>
+			            				<xsl:choose>
+			            					<xsl:when test="./CRFN">
+				            					<xsl:value-of select="normalize-space(./CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(./CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</l0:name>
+			            			<xsl:if test="./CRFH">
+				            				<culturaldefinition:agentLocalIdentifier>
+				            					<xsl:value-of select="./CRFH" />
+				            				</culturaldefinition:agentLocalIdentifier>
+				            			</xsl:if>
+			            		</rdf:Description>
+			            		</xsl:if>
+				</xsl:for-each>
+			</xsl:if>
+			<!-- relation with a particular type of derivated work: reuse -->
+			<xsl:if test="schede/*/RO/REI or schede/*/RO/RIU or schede/*/RO/CRF/CFRT='reimpiego'">
+			<xsl:for-each select="schede/*/RO/REI | schede/*/RO/RIU | schede/*/RO/CRF">
+				<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Relation'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e riuso')" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Rapporto ', position(), ' tra il bene culturale ', $itemURI, ' e riuso')" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and reuse')" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and reuse')" />
+							</l0:name>
+							<culturaldefinition:hasRelatedWork>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Reuse/', $itemURI, '-reuse-', position())" />
+								</xsl:attribute>
+							</culturaldefinition:hasRelatedWork>
+							<xsl:if test="../CRF/CRFS">
+								<arco:note>
+									<xsl:value-of select="normalize-space(../CRF/CRFS)" />
+								</arco:note>
+							</xsl:if>
+							<xsl:if test="../REIS">
+								<arco:note>
+									<xsl:value-of select="normalize-space(./REIS)" />
+								</arco:note>
+							</xsl:if>
+						</rdf:Description>
+				<!-- reuse as an individual -->
+				<rdf:Description>	
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'Reuse/', $itemURI, '-reuse-', position())" />
+							</xsl:attribute>
+							<rdf:type>
+	            				<xsl:attribute name="rdf:resource">
+	                          		<xsl:value-of select="'https://w3id.org/arco/subjective/Reuse'" />
+	                       		</xsl:attribute>
+            				</rdf:type>
+            				<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Riuso ', position(), ' del bene culturale ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of select="concat('Riuso ', position(), ' del bene culturale ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Reuse ', position(), ' of cultural property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of select="concat('Reuse ', position(), ' of cultural property ', $itemURI)" />
+							</l0:name>
+							<xsl:if test="../CRF/CRFN or ../CRF/CRFB">
+		            			<culturaldefinition:hasAuthor>
+		            				<xsl:attribute name="rdf:resource">
+		            				<xsl:choose>
+		            					<xsl:when test="./CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+		            				</xsl:attribute>
+		            			</culturaldefinition:hasAuthor>            		            		
+           					</xsl:if>
+           					<xsl:if test="../CRF/CRFC">
+           						<culturaldefinition:relatedWorkLocation>
+           							<xsl:value-of select="normalize-space(../CRF/CRFC)" />
+           						</culturaldefinition:relatedWorkLocation>
+           					</xsl:if>
+           					<xsl:if test="./REID or ../RIU/RIUD">
+           						<tiapit:date>
+           							<xsl:choose>
+           								<xsl:when test="./REID">
+           									<xsl:value-of select="normalize-space(./REID)" />
+           								</xsl:when>
+           								<xsl:otherwise>
+           									<xsl:value-of select="normalize-space(../RIU/RIUD)" />
+           								</xsl:otherwise>
+           							</xsl:choose>
+           						</tiapit:date>
+           					</xsl:if>
+           					<xsl:if test="./REIT or ../RIU/RIUT">
+								<culturaldefinition:hasDerivatedWorkType>
+									<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./REIT">
+											<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space(./REIT)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space(../RIU/RIUT)))" />
+										</xsl:otherwise>
+									</xsl:choose>
+									</xsl:attribute>
+								</culturaldefinition:hasDerivatedWorkType>
+							</xsl:if>
+							</rdf:Description>
+							<!-- derivated work type as an individual -->
+				            		<xsl:if test="./REIT or ../RIU/RIUT">
+					                	<rdf:Description>
+					            			<xsl:attribute name="rdf:about">
+					            				<xsl:choose>
+													<xsl:when test="./REIT">
+														<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space(./REIT)))" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($NS, 'DerivatedWorkType/', arco-fn:urify(normalize-space(../RIU/RIUT)))" />
+													</xsl:otherwise>
+												</xsl:choose>
+					            			</xsl:attribute>
+					            			<rdf:type>
+					            				<xsl:attribute name="rdf:resource">
+					            					<xsl:value-of select="'https://w3id.org/arco/subjective/DerivatedWorkType'" />
+					            				</xsl:attribute>
+					            			</rdf:type>
+					            			<rdfs:label>
+					            				<xsl:choose>
+													<xsl:when test="./REIT">
+														<xsl:value-of select="normalize-space(./REIT)" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="normalize-space(../RIU/RIUD)" />
+													</xsl:otherwise>
+												</xsl:choose>
+					            			</rdfs:label>
+					            			<l0:name>
+					            				<xsl:choose>
+													<xsl:when test="./REIT">
+														<xsl:value-of select="normalize-space(./REIT)" />
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="normalize-space(../RIU/RIUD)" />
+													</xsl:otherwise>
+												</xsl:choose>
+					            			</l0:name>
+					            		</rdf:Description>
+				            		</xsl:if>
+							<!-- author of reuse as an individual -->
+							<xsl:if test="../CRF/CRFN or ../CRF/CRFB">
+			                	<rdf:Description>
+			            			<xsl:attribute name="rdf:about">
+			            				<xsl:choose>
+		            					<xsl:when test="../CRF/CRFN">
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFN)))" />
+		            					</xsl:when>
+		            					<xsl:otherwise>
+		            						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../CRF/CRFB)))" />
+		            					</xsl:otherwise>
+		            				</xsl:choose>
+			            			</xsl:attribute>
+			            			<rdf:type>
+			            				<xsl:attribute name="rdf:resource">
+			                                <xsl:choose>
+			                                	<xsl:when test="lower-case(normalize-space(../CRF/CRFP))='p'">
+                                       				<xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                   				</xsl:when>
+			                                    <xsl:when test="lower-case(normalize-space(../CRF/CRFP))='e'">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="../CRF/CRFN">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+			                                    </xsl:when>
+			                                    <xsl:when test="../CRF/CRFB">
+			                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
+			                                    </xsl:when>
+			                                    <xsl:otherwise>
+			                                    	<xsl:value-of select="'https://w3id.org/italia/onto/l0/Agent'" />
+			                                    </xsl:otherwise>
+			                                </xsl:choose>
+                           				</xsl:attribute>
+			            			</rdf:type>
+			            			<rdfs:label>
+			            				<xsl:choose>
+			            					<xsl:when test="../CRF/CRFN">
+				            					<xsl:value-of select="normalize-space(../CRF/CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(../CRF/CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</rdfs:label>
+			            			<l0:name>
+			            				<xsl:choose>
+			            					<xsl:when test="../CRF/CRFN">
+				            					<xsl:value-of select="normalize-space(../CRF/CRFN)" />
+				            				</xsl:when>
+				            				<xsl:otherwise>
+			            						<xsl:value-of select="normalize-space(../CRF/CRFB)" />
+			            					</xsl:otherwise>
+		            					</xsl:choose>
+			            			</l0:name>
+			            			<xsl:if test="../CRF/CRFH">
+				            				<culturaldefinition:agentLocalIdentifier>
+				            					<xsl:value-of select="../CRF/CRFH" />
+				            				</culturaldefinition:agentLocalIdentifier>
+				            			</xsl:if>
+			            		</rdf:Description>
+			            		</xsl:if>
+				</xsl:for-each>
+			</xsl:if>
             <!-- Number of components as an individual -->
             <xsl:if test="schede/*/OG/QNT/QNTN or schede/*/OG/QNT/QNTI or schede/*/OG/QNT/QNTS">
             	<rdf:Description>
@@ -1979,7 +3122,7 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:attribute name="rdf:resource">
-                                    <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-realizzazione-', position())" />
+                                    <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-creation-', position())" />
                                 </xsl:attribute>
                             </xsl:otherwise>
                         </xsl:choose>
@@ -2054,7 +3197,7 @@
                                 <xsl:value-of select="concat($NS, 'Event/', arco-fn:urify(normalize-space(./DTNS)))" />
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-realizzazione-', position())" />
+                                <xsl:value-of select="concat($NS, 'Event/', $itemURI, '-creation-', position())" />
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
@@ -2063,7 +3206,7 @@
                             <xsl:value-of select="'https://w3id.org/italia/onto/l0/Event'" />
                         </xsl:attribute>
                     </rdf:type>
-                    <rdfs:label>
+                    <rdfs:label xml:lang="it">
                         <xsl:choose>
                             <xsl:when test="./DTN/DTNS">
                                 <xsl:value-of select="normalize-space(./DTN/DTNS)" />
@@ -2073,13 +3216,33 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </rdfs:label>
-                    <l0:name>
+                    <l0:name xml:lang="it">
                         <xsl:choose>
                             <xsl:when test="./DTN/DTNS">
                                 <xsl:value-of select="normalize-space(./DTN/DTNS)" />
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:value-of select="concat('Realizzazione del bene ', $itemURI)" />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </l0:name>
+                    <rdfs:label xml:lang="en">
+                        <xsl:choose>
+                            <xsl:when test="./DTN/DTNS">
+                                <xsl:value-of select="normalize-space(./DTN/DTNS)" />
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="concat('Creation of cultural property ', $itemURI)" />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </rdfs:label>
+                    <l0:name xml:lang="en">
+                        <xsl:choose>
+                            <xsl:when test="./DTN/DTNS">
+                                <xsl:value-of select="normalize-space(./DTN/DTNS)" />
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="concat('Creation of cultural property ', $itemURI)" />
                             </xsl:otherwise>
                         </xsl:choose>
                     </l0:name>
@@ -7875,6 +9038,12 @@
                                     </xsl:when>
                                     <xsl:when test="../AUF/AUFN">
                                         <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                    </xsl:when>
+                                    <xsl:when test="./AUTN">
+                                        <xsl:value-of select="'https://w3id.org/italia/onto/CPV/Person'" />
+                                    </xsl:when>
+                                    <xsl:when test="./AUTB">
+                                        <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
                                     </xsl:when>
                                     <xsl:when test="../AUF/AUFB">
                                         <xsl:value-of select="'https://w3id.org/italia/onto/COV/Organization'" />
