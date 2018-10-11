@@ -324,11 +324,12 @@
 				</xsl:if>
 			</xsl:for-each>
 			
+			
 			<!-- part of cultural property when there is REIP (reuse) -->
 				<xsl:for-each select="schede/*/RO/REI">
 				<xsl:variable name="reuse">
 					<xsl:value-of
-						select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+						select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
 				</xsl:variable>
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
@@ -342,11 +343,11 @@
 									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
-							<cpdescription:hasRelation>
+							<cpdescription:hasRelatedWorkSituation>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$reuse" />
 								</xsl:attribute>
-							</cpdescription:hasRelation>
+							</cpdescription:hasRelatedWorkSituation>
 							<rdfs:label>
 								<xsl:value-of select="normalize-space(.)" />
 							</rdfs:label>

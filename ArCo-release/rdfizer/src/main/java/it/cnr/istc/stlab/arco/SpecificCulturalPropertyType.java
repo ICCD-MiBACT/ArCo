@@ -40,6 +40,7 @@ private static Map<String, String> sheetPropertyTypeMap;
 		sheetPropertyTypeMap.put("OAC", "http://www.w3id.org/arco/core/HistoricOrArtisticProperty");
 		sheetPropertyTypeMap.put("S", "http://www.w3id.org/arco/core/HistoricOrArtisticProperty");
 		sheetPropertyTypeMap.put("VeAC", "http://www.w3id.org/arco/core/HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("E", "http://www.w3id.org/arco/core/DemoEthnoAnthropologicalHeritage");
 
 	}
 	

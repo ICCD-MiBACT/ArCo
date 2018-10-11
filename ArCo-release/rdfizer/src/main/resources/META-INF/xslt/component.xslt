@@ -1255,7 +1255,18 @@
 					<xsl:value-of select="$objectOfDescription" />
 				</xsl:attribute>
 
-
+				<!-- Rule #RWS -->
+				<xsl:for-each select="schede/*/RV/RSE">
+					<xsl:if test="./*">
+						<culturaldefinition:hasRelatedWorkSituation>
+							<xsl:attribute name="rdf:resource">
+								<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-', position())" />
+							</xsl:attribute>
+						</culturaldefinition:hasRelatedWorkSituation>	
+					</xsl:if>
+				</xsl:for-each>
+				
 
 				<xsl:if test="schede/*/LC">
 					<locgeoamm:hasTimeIndexedQualifiedLocation>
@@ -1893,61 +1904,61 @@
 				<!-- relation with preparatory or final work (RO/ROF) -->
 				<xsl:if test="schede/*/RO/ROF">
 					<xsl:for-each select="schede/*/RO/ROF">
-						<culturaldefinition:hasRelation>
+						<culturaldefinition:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-preparatory-final-work-', position())" />
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-preparatory-final-work-', position())" />
 							</xsl:attribute>
-						</culturaldefinition:hasRelation>
+						</culturaldefinition:hasRelatedWorkSituation>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- relation with copy (RO/COP) -->
 				<xsl:if test="schede/*/RO/COP or schede/*/RO/CRF/CRFT='copia'">
 					<xsl:for-each select="schede/*/RO/COP | schede/*/RO/CRF">
-						<culturaldefinition:hasRelation>
+						<culturaldefinition:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-copy-', position())" />
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-copy-', position())" />
 							</xsl:attribute>
-						</culturaldefinition:hasRelation>
+						</culturaldefinition:hasRelatedWorkSituation>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- relation with a generic derivated work (if RO/CRF/CRFT != 'replica' or 'contraffazione' or 'controtipo' or 'reimpiego' or 'copia') -->
 				<xsl:if test="schede/*/RO/CRF and not(schede/*/RO/CRF/CRFT='copia' or schede/*/RO/CRF/CRFT='contraffazione' or schede/*/RO/CRF/CRFT='controtipo' or schede/*/RO/CRF/CRFT='replica' or schede/*/RO/CRF/CRFT='reimpiego')">
 					<xsl:for-each select="schede/*/RO/CRF">
-						<culturaldefinition:hasRelation>
+						<culturaldefinition:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-derivated-work-', position())" />
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-derivated-work-', position())" />
 							</xsl:attribute>
-						</culturaldefinition:hasRelation>
+						</culturaldefinition:hasRelatedWorkSituation>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- relation with a particular type of derivated work: forgery -->
 				<xsl:if test="schede/*/RO/CRF/CFRT='contraffazione'">
 					<xsl:for-each select="schede/*/RO/CRF">
-						<culturaldefinition:hasRelation>
+						<culturaldefinition:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-forgery-', position())" />
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-forgery-', position())" />
 							</xsl:attribute>
-						</culturaldefinition:hasRelation>
+						</culturaldefinition:hasRelatedWorkSituation>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- relation with a particular type of derivated work: facsimile -->
 				<xsl:if test="schede/*/RO/CRF/CFRT='controtipo'">
 					<xsl:for-each select="schede/*/RO/CRF">
-						<culturaldefinition:hasRelation>
+						<culturaldefinition:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-facsimile-', position())" />
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-facsimile-', position())" />
 							</xsl:attribute>
-						</culturaldefinition:hasRelation>
+						</culturaldefinition:hasRelatedWorkSituation>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- relation with a particular type of derivated work: same author copy -->
 				<xsl:if test="schede/*/RO/CRF/CFRT='replica'">
 					<xsl:for-each select="schede/*/RO/CRF">
-						<culturaldefinition:hasRelation>
+						<culturaldefinition:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Relation/', $itemURI, '-same-author-copy-', position())" />
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-same-author-copy-', position())" />
 							</xsl:attribute>
-						</culturaldefinition:hasRelation>
+						</culturaldefinition:hasRelatedWorkSituation>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- relation with a particular type of derivated work: reuse -->
@@ -1955,28 +1966,28 @@
 					<xsl:for-each select="schede/*/RO/REI | schede/*/RO/RIU | schede/*/RO/CRF">
 					<xsl:choose>
 						<xsl:when test="./* and (not(./REIP) or ./REIP='intero bene')">
-							<culturaldefinition:hasRelation>
+							<culturaldefinition:hasRelatedWorkSituation>
 								<xsl:attribute name="rdf:resource">
 			                            <xsl:value-of
-									select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+									select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
 			                        </xsl:attribute>
-							</culturaldefinition:hasRelation>
+							</culturaldefinition:hasRelatedWorkSituation>
 						</xsl:when>
 						<xsl:when test="../RIU">
-							<culturaldefinition:hasRelation>
+							<culturaldefinition:hasRelatedWorkSituation>
 								<xsl:attribute name="rdf:resource">
 			                            <xsl:value-of
-									select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+									select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
 			                        </xsl:attribute>
-							</culturaldefinition:hasRelation>
+							</culturaldefinition:hasRelatedWorkSituation>
 						</xsl:when>
 						<xsl:when test="../CRF">
-							<culturaldefinition:hasRelation>
+							<culturaldefinition:hasRelatedWorkSituation>
 								<xsl:attribute name="rdf:resource">
 			                            <xsl:value-of
-									select="concat($NS, 'Relation/', $itemURI, '-reuse-', position())" />
+									select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
 			                        </xsl:attribute>
-							</culturaldefinition:hasRelation>
+							</culturaldefinition:hasRelatedWorkSituation>
 						</xsl:when>
 						<xsl:otherwise>
 						<xsl:for-each select="./REIP">

@@ -27,6 +27,7 @@ import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 
+import it.cnr.istc.stlab.arco.xslt.RelatedPropertyFinder;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
@@ -264,6 +265,7 @@ public class Converter {
 		proc.registerExtensionFunction(sheetType2SpecificPropertyType);
 		proc.registerExtensionFunction(localName);
 		proc.registerExtensionFunction(cataloguingEntity);
+		proc.registerExtensionFunction(new RelatedPropertyFinder());
         XsltCompiler comp = proc.newXsltCompiler();
         
         ClassLoader loader = Converter.class.getClassLoader();

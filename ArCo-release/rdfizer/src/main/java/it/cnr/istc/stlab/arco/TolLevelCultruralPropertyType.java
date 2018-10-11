@@ -18,6 +18,7 @@ public class TolLevelCultruralPropertyType {
 		sheetPropertyTypeMap.put("SI", "http://www.w3id.org/arco/core/ImmovableCulturalProperty");
 		sheetPropertyTypeMap.put("TMA", "http://www.w3id.org/arco/core/MovableCulturalProperty");
 		sheetPropertyTypeMap.put("A", "http://www.w3id.org/arco/core/ImmovableCulturalProperty");
+		sheetPropertyTypeMap.put("A", "http://www.w3id.org/arco/core/MovableCulturalProperty");
 		sheetPropertyTypeMap.put("CNS", "http://www.w3id.org/arco/core/ImmovableCulturalProperty");
 		sheetPropertyTypeMap.put("PG", "http://www.w3id.org/arco/core/ImmovableCulturalProperty");
 		sheetPropertyTypeMap.put("BDI", "http://www.w3id.org/arco/core/IntangibleCulturalProperty");
