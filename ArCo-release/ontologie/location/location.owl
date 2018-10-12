@@ -83,12 +83,6 @@
     
 
 
-    <!-- https://w3id.org/italia/onto/TI/atTime -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
-    
-
-
     <!-- https://w3id.org/arco/location/atLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/atLocation">
@@ -236,6 +230,21 @@
     
 
 
+    <!-- https://w3id.org/arco/location/hasReferredLocationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasReferredLocationType">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione al tipo di localizzazione (fisica attuale, precedente, di rinvenimento, etc.) cui si riferisce.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di localizzazione cui si riferisce</rdfs:label>
+        <rdfs:label xml:lang="en">has referred location type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/location/hasSiteDefinition -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasSiteDefinition">
@@ -326,6 +335,18 @@
     
 
 
+    <!-- https://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
+    
+
+
+    <!-- ttps://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="ttps://w3id.org/italia/onto/TI/atTime"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -340,12 +361,6 @@
     <!-- http://dati.gov.it/onto/l0/name -->
 
     <owl:DatatypeProperty rdf:about="http://dati.gov.it/onto/l0/name"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/TI/date -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/date"/>
     
 
 
@@ -502,9 +517,21 @@
     
 
 
+    <!-- https://w3id.org/italia/onto/TI/date -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/date"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/l0/identifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    
+
+
+    <!-- ttps://w3id.org/italia/onto/TI/date -->
+
+    <owl:DatatypeProperty rdf:about="ttps://w3id.org/italia/onto/TI/date"/>
     
 
 
@@ -543,12 +570,6 @@
     
 
 
-    <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
-
-    <owl:Class rdf:about="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
-    
-
-
     <!-- https://w3id.org/arco/core/CulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
@@ -558,6 +579,12 @@
     <!-- https://w3id.org/arco/core/ImmovableCulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/ImmovableCulturalProperty"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/Type"/>
     
 
 
@@ -673,7 +700,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     <!-- https://w3id.org/arco/location/LocationType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/location/LocationType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di localizzazione di un bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="en">Location Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
@@ -714,7 +741,7 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
     <!-- https://w3id.org/arco/location/SiteType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/location/SiteType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasSiteDefinition"/>
@@ -742,14 +769,14 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/arco/location/TimeIndexedQualifiedLocation">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/atTime"/>
-                <owl:allValuesFrom rdf:resource="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasLocationType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/location/LocationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasLocationType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/location/LocationType"/>
+                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una localizzazione di un bene culturale, inserita in un arco temporale e qualificata in base al ruolo che la localizzazione riveste nei confronti del bene culturale.</rdfs:comment>
@@ -818,6 +845,12 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- ttps://w3id.org/italia/onto/TI/TimeInterval -->
+
+    <owl:Class rdf:about="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
     
 
 

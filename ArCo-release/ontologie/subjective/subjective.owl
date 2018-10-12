@@ -466,20 +466,6 @@
     
 
 
-    <!-- https://w3id.org/arco/subjective/hasCorrelation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCorrelation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/Relation"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla relazione tra il bene stesso e un&apos;altra opera che ne costituisce una fase preparatoria o che ne rappresenta la fase finale, e in riferimento alla quale il bene culturale si trova in un determinato stadio.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha relazione</rdfs:label>
-        <rdfs:label xml:lang="en">has relation</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/subjective/hasCulturalGeographicArea -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCulturalGeographicArea">
@@ -511,7 +497,7 @@
     <!-- https://w3id.org/arco/subjective/hasCulturalPropertyStage -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasCulturalPropertyStage">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/CulturalPropertyStage"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un bene culturale e un&apos;altra entità collegata (opera preparatoria o opera finale) allo stadio di realizzazione del bene stesso in rapporto a questa entità.</rdfs:comment>
         <rdfs:label xml:lang="it">ha fase di realizzazione</rdfs:label>
@@ -979,7 +965,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasPlanningEnvironmentalRelationWith">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
         <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
@@ -1093,7 +1079,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     <!-- https://w3id.org/arco/subjective/hasRelatedWork -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasRelatedWork">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedWork"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un bene culturale e un&apos;opera collegata all&apos;opera stessa (es.: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.)</rdfs:comment>
         <rdfs:label xml:lang="it">ha opera collegata</rdfs:label>
@@ -1101,6 +1087,20 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/subjective/hasRelatedWorkSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/hasRelatedWorkSituation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla relazione tra il bene stesso e un&apos;altra opera che ne costituisce una fase preparatoria o che ne rappresenta la fase finale, e in riferimento alla quale il bene culturale si trova in un determinato stadio.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha rapporto con opera collegata</rdfs:label>
+        <rdfs:label xml:lang="en">has related work situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1565,7 +1565,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isInvolvedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
         <rdfs:label xml:lang="en">is involved in</rdfs:label>
@@ -1581,7 +1581,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isLocatedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce il luogo di collocazione.</rdfs:comment>
         <rdfs:label xml:lang="en">is located in</rdfs:label>
@@ -1673,7 +1673,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/isReusedBy">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che lo riutilizza in tutto o in parte.</rdfs:comment>
         <rdfs:label xml:lang="en">is reused by</rdfs:label>
@@ -1743,7 +1743,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasCreatedAt">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di produzione/realizzazione.</rdfs:comment>
         <rdfs:label xml:lang="en">was created at</rdfs:label>
@@ -1759,7 +1759,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasLocatedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di provenienza, prima della sua attuale collocazione.</rdfs:comment>
         <rdfs:label xml:lang="it">era contenuto in</rdfs:label>
@@ -1775,7 +1775,7 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/subjective/wasRediscoveredIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/subjective/hasRelatedWork"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/Relation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/subjective/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/subjective/RelatedCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di rinvenimento archeologico.</rdfs:comment>
         <rdfs:label xml:lang="en">was rediscovered in</rdfs:label>
@@ -4762,12 +4762,13 @@ Normativa CA: RO/RIS (intervento successivo)</core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/subjective/Relation -->
+    <!-- https://w3id.org/arco/subjective/RelatedWorkSituation -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/subjective/Relation">
+    <owl:Class rdf:about="https://w3id.org/arco/subjective/RelatedWorkSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la relazione, il rapporto, tra il bene culturale in esame e un&apos;altra opera. In riferimento a questo rapporto, si definisce lo stadio di realizzazione del bene culturale in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale.</rdfs:comment>
-        <rdfs:label xml:lang="it">Rapporto</rdfs:label>
-        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <rdfs:label xml:lang="it">Rapporto con opera collegata</rdfs:label>
+        <rdfs:label xml:lang="en">Related work situation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
