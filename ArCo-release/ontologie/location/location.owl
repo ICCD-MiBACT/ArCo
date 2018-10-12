@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/location/"
      xml:base="https://w3id.org/arco/location/"
-     xmlns:locgeoamm="https://w3id.org/arco/location/"
+     xmlns:arco-location="https://w3id.org/arco/location/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cis="http://dati.beniculturali.it/cis/"
-     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
-     xmlns:core="https://w3id.org/arco/core/"
+     xmlns:clv="https://w3id.org/italia/onto/CLV/"
+     xmlns:arco-core="https://w3id.org/arco/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -93,7 +93,7 @@
         <rdfs:label xml:lang="it">presso luogo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>se LC senza sottoelemento LDC; se LA senza sottoelemento PRC</core:iccdNormTag>
+        <arco-core:iccdNormTag>se LC senza sottoelemento LDC; se LA senza sottoelemento PRC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -109,7 +109,7 @@
         <rdfs:label xml:lang="it">presso contenitore fisico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC; LA/PRC</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC; LA/PRC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -124,7 +124,7 @@
         <rdfs:label xml:lang="en">has altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI - GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI - GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -139,7 +139,7 @@
         <rdfs:label xml:lang="en">has base map</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -153,7 +153,7 @@
         <rdfs:label xml:lang="en">has continent</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LA/PRT/PRTK</core:iccdNormTag>
+        <arco-core:iccdNormTag>LA/PRT/PRTK</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -168,7 +168,7 @@
         <rdfs:label xml:lang="en">has coordinates</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>GP/GPD; GA/GAPD; GL/GLS, ICCD Normativa Trasversale: GE/GEC</core:iccdNormTag>
+        <arco-core:iccdNormTag>GP/GPD; GA/GAPD; GL/GLS, ICCD Normativa Trasversale: GE/GEC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -183,7 +183,7 @@
         <rdfs:label xml:lang="it">indirizzo del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/PVC</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/PVC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -198,7 +198,7 @@
         <rdfs:label xml:lang="en">has geometry method</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM - GA/GAM - GL/GLM</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM - GA/GAM - GL/GLM</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -210,7 +210,7 @@
         <rdfs:label xml:lang="en">has geometry technique</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -225,7 +225,7 @@
         <rdfs:label xml:lang="en">has location type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -240,7 +240,7 @@
         <rdfs:label xml:lang="en">has referred location type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -256,7 +256,7 @@
         <owl:versionInfo xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè la definizione.</owl:versionInfo>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC/LDCT</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC/LDCT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -272,7 +272,7 @@
         <owl:versionInfo xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè la qualificazione.</owl:versionInfo>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC/LDCQ</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -287,7 +287,7 @@
         <rdfs:label xml:lang="en">has site type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -301,7 +301,7 @@
         <rdfs:label xml:lang="en">has time indexed qualified location</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">LC; LA; per normativa F: anche LR</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">LC; LA; per normativa F: anche LR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -315,7 +315,7 @@
         <rdfs:label xml:lang="en">has toponym in time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/PVL; LA/PRL</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/PVL; LA/PRL</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -330,7 +330,7 @@
         <rdfs:label xml:lang="en">has type of geographical context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/PVZ; LA/PRZ</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/PVZ; LA/PRZ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -374,7 +374,7 @@
         <rdfs:label xml:lang="it">altitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ; normative precedenti: GP/GPC/GPCL</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ; normative precedenti: GP/GPC/GPCL</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -389,7 +389,7 @@
         <rdfs:label xml:lang="it">latitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY; ICCD Normativa Trasversale 4.00: GE/GEC/GECY</core:iccdNormTag>
+        <arco-core:iccdNormTag>GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY; ICCD Normativa Trasversale 4.00: GE/GEC/GECY</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -405,7 +405,7 @@
         <rdfs:label xml:lang="en">location details</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/PVC/PVCV</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/PVC/PVCV</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -420,7 +420,7 @@
         <rdfs:label xml:lang="it">longitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX; ICCD Normativa Trasversale 4.00: GE/GEC/GECX</core:iccdNormTag>
+        <arco-core:iccdNormTag>GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX; ICCD Normativa Trasversale 4.00: GE/GEC/GECX</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -435,7 +435,7 @@
         <rdfs:label xml:lang="en">maximum altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAX; versioni precedenti: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAX; versioni precedenti: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -450,7 +450,7 @@
         <rdfs:label xml:lang="en">minimum altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAM; versioni precedenti: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAM; versioni precedenti: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -465,7 +465,7 @@
         <rdfs:label xml:lang="it">tipo di punto</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">Normative di versioni precedenti alla 4.00: GP/GPC/GPCT</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">Normative di versioni precedenti alla 4.00: GP/GPC/GPCT</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -480,7 +480,7 @@
         <rdfs:label xml:lang="en">relative altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTA/MTAR</core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTA/MTAR</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -497,7 +497,7 @@
         <rdfs:label xml:lang="en">site identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC/LDCK; LA/PRC/PRCK</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC/LDCK; LA/PRC/PRCK</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -512,7 +512,7 @@
         <rdfs:label xml:lang="en">spacial reference system</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP; versioni precedenti: GA/GAP - GL/GLP - GP/GPP</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP; versioni precedenti: GA/GAP - GL/GLP - GP/GPP</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -600,7 +600,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;altitudine, ovvero l&apos;altezza di un oggetto rispetto al livello del mare, che può essere specificata da un&apos;altitudine massima, minima, relativa.</rdfs:comment>
         <rdfs:label xml:lang="en">Altitude</rdfs:label>
         <rdfs:label xml:lang="it">Altitudine</rdfs:label>
-        <core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -626,7 +626,7 @@
         <rdfs:label xml:lang="en">Base map</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -653,7 +653,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:label xml:lang="en">Coordinates</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>GP/GPD; GA/GAPD; GL/GLS, ICCD Normativa Trasversale: GE/GEC</core:iccdNormTag>
+        <arco-core:iccdNormTag>GP/GPD; GA/GAPD; GL/GLS, ICCD Normativa Trasversale: GE/GEC</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -666,7 +666,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:label xml:lang="it">Metodo di posizionamento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM -  GA/GAM - GL/GLM</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM -  GA/GAM - GL/GLM</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -679,7 +679,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:label xml:lang="it">Tecnica di georeferenziazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -706,7 +706,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -719,7 +719,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:label xml:lang="en">Site Definition</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC/LDCT</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC/LDCT</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -733,7 +733,7 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:label xml:lang="en">Site Specification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC/LDCQ</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -759,7 +759,7 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di Contenitore Fisico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -784,7 +784,7 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:label xml:lang="en">Time Indexed Qualified Location</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">LC; LA; per normativa F: anche LR</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">LC; LA; per normativa F: anche LR</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -810,7 +810,7 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:label xml:lang="en">Toponym in time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/PVL; LA/PRL</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/PVL; LA/PRL</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -825,7 +825,7 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:label xml:lang="en">Type of Geographic Context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>LC/PVZ; LA/PRZ</core:iccdNormTag>
+        <arco-core:iccdNormTag>LC/PVZ; LA/PRZ</arco-core:iccdNormTag>
     </owl:Class>
     
 

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3id.org/arco/culturalevent/"
-     xml:base="http://www.w3id.org/arco/culturalevent/"
-     xmlns:culturalevent="http://www.w3id.org/arco/culturalevent/"
+<rdf:RDF xmlns="https://w3id.org/arco/cultural-event/"
+     xml:base="https://w3id.org/arco/cultural-event/"
+     xmlns:culturalevent="https://w3id.org/arco/cultural-event/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -9,17 +9,17 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cis="http://dati.beniculturali.it/cis/"
-     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:clv="https://w3id.org/italia/onto/CLV/"
      xmlns:core="https://w3id.org/arco/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/culturalevent/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/cultural-event/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
@@ -62,10 +62,10 @@
     
 
 
-    <!-- https://w3id.org/arco/culturalevent/hasEventOrganiser -->
+    <!-- https://w3id.org/arco/cultural-event/hasEventOrganiser -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/culturalevent/hasEventOrganiser">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/culturalevent/hasRelatedAgent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/cultural-event/hasEventOrganiser">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/cultural-event/hasRelatedAgent"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
@@ -78,9 +78,9 @@
     
 
 
-    <!-- https://w3id.org/arco/culturalevent/hasRelatedAgent -->
+    <!-- https://w3id.org/arco/cultural-event/hasRelatedAgent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/culturalevent/hasRelatedAgent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/cultural-event/hasRelatedAgent">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -113,9 +113,9 @@
     
 
 
-    <!-- https://w3id.org/arco/culturalevent/eventTimeLocation -->
+    <!-- https://w3id.org/arco/cultural-event/eventTimeLocation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/culturalevent/eventTimeLocation">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/cultural-event/eventTimeLocation">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il luogo e il tempo di un evento culturale, quando espressi unitamente.</rdfs:comment>
@@ -151,9 +151,9 @@
     
 
 
-    <!-- https://w3id.org/arco/culturalevent/Exhibition -->
+    <!-- https://w3id.org/arco/cultural-event/Exhibition -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/culturalevent/Exhibition">
+    <owl:Class rdf:about="https://w3id.org/arco/cultural-event/Exhibition">
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una mostra, come sottocategoria di un generico evento culturale.</rdfs:comment>
         <rdfs:label xml:lang="en">Exhibition</rdfs:label>

@@ -8,8 +8,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
-     xmlns:catalogue="https://w3id.org/arco/catalogue/"
-     xmlns:core="https://w3id.org/arco/core/"
+     xmlns:arco-catalogue="https://w3id.org/arco/catalogue/"
+     xmlns:arco-core="https://w3id.org/arco/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -106,7 +106,7 @@
         <rdfs:label xml:lang="en">edited at time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/CMP/CMPD; CM/RVM/RVMD; CM/AGG/AGGD</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/CMP/CMPD; CM/RVM/RVMD; CM/AGG/AGGD</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -121,7 +121,7 @@
         <rdfs:label xml:lang="en">has alternative identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: AC/ACC</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: AC/ACC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -183,7 +183,7 @@
         <rdfs:label xml:lang="en">has cataloguing level</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CD/LIR</core:iccdNormTag>
+        <arco-core:iccdNormTag>CD/LIR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -199,7 +199,7 @@
         <rdfs:label xml:lang="en">has digital transcription operator</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/RVM/RVMN</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/RVM/RVMN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -215,7 +215,7 @@
         <rdfs:label xml:lang="en">has digital transcription responsible agent</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/RVM/RVME</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/RVM/RVME</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -245,7 +245,7 @@
         <rdfs:label xml:lang="en">has official in charge</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/FUR</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/FUR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -275,7 +275,7 @@
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/CMP/CMPN</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/CMP/CMPN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -291,7 +291,7 @@
         <rdfs:label xml:lang="en">has scientific director</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/RSR</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/RSR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -307,7 +307,7 @@
         <rdfs:label xml:lang="en">has update official in charge</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/AGG/AGGF</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/AGG/AGGF</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -323,7 +323,7 @@
         <rdfs:label xml:lang="en">has responsible agency or person</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/AGG/AGGE</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/AGG/AGGE</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -339,7 +339,7 @@
         <rdfs:label xml:lang="en">has update responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/AGG/AGGN</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/AGG/AGGN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -355,7 +355,7 @@
         <rdfs:label xml:lang="en">has update scientific revisor</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/AGG/AGGR</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/AGG/AGGR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -458,7 +458,7 @@
         <rdfs:label xml:lang="it">identificativo della scheda</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -474,7 +474,7 @@
         <rdfs:label xml:lang="en">deleted ICCD identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSP; versioni precedenti: RV/RVE/RVES</core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSP; versioni precedenti: RV/RVE/RVES</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -489,7 +489,7 @@
         <rdfs:label xml:lang="en">recovered data</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AN/RDP</core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AN/RDP</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -504,7 +504,7 @@
         <rdfs:label xml:lang="en">reference project</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP</core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -550,7 +550,7 @@
         <rdfs:label xml:lang="it">Codice alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC</core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -1041,7 +1041,7 @@
         <rdfs:label xml:lang="it">Versione della scheda</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CM/CMP; CM/RVM; CM/AGG</core:iccdNormTag>
+        <arco-core:iccdNormTag>CM/CMP; CM/RVM; CM/AGG</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -1064,7 +1064,7 @@
         <rdfs:label xml:lang="it">Livello catalogazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>CD/LIR</core:iccdNormTag>
+        <arco-core:iccdNormTag>CD/LIR</arco-core:iccdNormTag>
     </owl:Class>
     
 
