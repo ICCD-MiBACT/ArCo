@@ -125,6 +125,9 @@ public class Main {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		finally {
+			converter.destroy();
+		}
 		
 		
 	}

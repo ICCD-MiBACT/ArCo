@@ -3,7 +3,7 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
 	xmlns:arco-fn="http://w3id.org/arco/saxon-extension" 
-	xmlns:arco="https://w3id.org/arco/core/"
+	xmlns:arco-core="https://w3id.org/arco/core/"
 	xmlns:arco-ce="https://w3id.org/arco/cultural-event/"
 	xmlns:catalogue="https://w3id.org/arco/catalogue/"
 	xmlns:arco-dd="https://w3id.org/arco/denotative-description/" xmlns:cis="http://dati.beniculturali.it/cis/"

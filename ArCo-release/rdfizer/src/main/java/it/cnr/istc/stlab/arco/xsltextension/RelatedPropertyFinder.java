@@ -1,4 +1,4 @@
-package it.cnr.istc.stlab.arco.xslt;
+package it.cnr.istc.stlab.arco.xsltextension;
 
 import java.util.ArrayList;
 import java.util.List;

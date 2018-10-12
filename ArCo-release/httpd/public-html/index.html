@@ -115,8 +115,8 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/objective/objective.owl">
-              <div class="ontology-title text-center text-white"><h3>Objective information</h3></div>
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl">
+              <div class="ontology-title text-center text-white"><h3>Denotative description</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -139,7 +139,7 @@
           </div>
           <div class="row">
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/culturalevent/culturalevent.owl">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl">
               <div class="ontology-title text-center text-white"><h3>Cultural events &amp; exhibitions</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -161,8 +161,8 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/subjective/subjective.owl">
-              <div class="ontology-title text-center text-white"><h3>Subjective information</h3></div>
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">
+              <div class="ontology-title text-center text-white"><h3>Context description</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -241,12 +241,12 @@ WHERE{
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
+PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
 PREFIX roapit: &lt;https://w3id.org/italia/onto/RO/&gt;
 SELECT *
 WHERE{
-  ?entity catalogue:hasCatalogueRecordVersion ?record . 
-  ?record catalogue:hasCatalogueRecordRiT ?rit . 
+  ?entity arco-catalogue:hasCatalogueRecordVersion ?record . 
+  ?record arco-catalogue:hasCatalogueRecordRiT ?rit . 
   ?rit roapit:withRole ?role ;
     roapit:isRoleInTimeOf ?agent
 }
@@ -256,11 +256,11 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
+PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
 SELECT *
 WHERE{
-  ?record catalogue:hasCatalogueRecordVersion ?recordVersion . 
-  ?recordVersion catalogue:editedAtTime ?time .
+  ?record arco-catalogue:hasCatalogueRecordVersion ?recordVersion . 
+  ?recordVersion arco-catalogue:editedAtTime ?time .
   ?time rdfs:label ?timeLabel
 }
 limit 100</pre>
@@ -315,8 +315,8 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
-PREFIX location: &lt;https://w3id.org/arco/location/&gt;
+PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 PREFIX tiapit: &lt;https://w3id.org/italia/onto/TI/&gt;
 SELECT *
 WHERE{
@@ -332,8 +332,8 @@ limit 100
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
-PREFIX location: &lt;https://w3id.org/arco/location/&gt;
+PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 SELECT *
 WHERE {
   ?entity rdfs:label ?entityLabel ; 
@@ -347,7 +347,7 @@ limit 100
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX objective: &lt;https://w3id.org/arco/objective/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/objective/&gt;
 SELECT ?entity ?entityLabel ?conservation ?proposedIntervention
 WHERE{
   ?entity rdfs:label ?entityLabel ;
@@ -406,7 +406,7 @@ LIMIT 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX objective: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/core/&gt;
 SELECT ?entity ?entityLabel ?scope ?scopeLabel
 WHERE{
   ?entity objective:hasMibactScopeOfProtection ?scope ;
@@ -418,10 +418,10 @@ WHERE{
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
 SELECT ?entity ?id
 WHERE{
-  ?entity arco:uniqueIdentifier ?id 
+  ?entity arco-core:uniqueIdentifier ?id 
 }
 limit 100</pre>
             </div>
@@ -429,7 +429,7 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX subjective: &lt;https://w3id.org/arco/subjective/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/subjective/&gt;
 SELECT *
 WHERE{
   ?entity subjective:hasAuthorshipAttribution ?attribution .
@@ -488,7 +488,7 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX subjective: &lt;https://w3id.org/arco/subjective/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/subjective/&gt;
 SELECT *
 WHERE{
   ?entity 
