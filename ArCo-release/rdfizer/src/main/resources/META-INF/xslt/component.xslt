@@ -1419,7 +1419,15 @@
 					</xsl:otherwise>
 				</xsl:choose>
 				</xsl:for-each>
-				
+				<!-- responsibility (F and FF) -->
+				<xsl:for-each select="schede/*/PD/PDF">
+					<arco-cd:hasResponsibility>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat($NS, 'Responsibility/', $itemURI, '-', position())" />
+	                    </xsl:attribute>
+                    </arco-cd:hasResponsibility>
+				</xsl:for-each>
 				<!-- inventory -->
 				<xsl:for-each select="schede/*/UB/INV">
 					<xsl:if test="./*">
