@@ -261,7 +261,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(../MTCP='intero bene')">
+				<xsl:if test="not(../MTCP='intero bene' or $sheetType='VeAC')">
 				<xsl:for-each select="../MTCP">
 					
 						<rdf:Description>

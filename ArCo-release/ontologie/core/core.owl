@@ -26,6 +26,7 @@
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/cultural-event/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/catalogue/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/location/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>

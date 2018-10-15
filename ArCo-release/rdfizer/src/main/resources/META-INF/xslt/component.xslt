@@ -2011,6 +2011,17 @@
 					</xsl:choose>
 					</xsl:for-each>
 				</xsl:if>
+				<!-- relation with a particular type of derivated work: print in publication (S) -->
+				<xsl:if test="schede/*/RO/ADL">
+					<xsl:for-each select="schede/*/RO/ADL">
+						<arco-cd:hasRelatedWorkSituation>
+							<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-print-in-publication-', position())" />
+			                        </xsl:attribute>
+						</arco-cd:hasRelatedWorkSituation>
+					</xsl:for-each>
+				</xsl:if>
 				<!-- name in time (OG/OGD) -->
 				<xsl:for-each select="schede/*/OG/OGD">
 					<arco-dd:hasDesignationInTime>
@@ -2111,6 +2122,13 @@
                  <!-- technique of cultural property (4.00) --> 
                  <xsl:for-each select="schede/*/MT/MTC/MTCT">
                  	 <xsl:choose>
+                 	 <xsl:when test="$sheetType='VeAC'">
+						<arco-dd:hasTechnicalDetailOccurrence>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
+ 	                	</xsl:attribute>
+ 	                	</arco-dd:hasTechnicalDetailOccurrence>
+					</xsl:when>
 					<xsl:when test="not(../MTCP) or ../MTCP='intero bene'">
 						<arco-dd:hasTechnicalDetailOccurrence>
 	                	<xsl:attribute name="rdf:resource">
@@ -2285,7 +2303,7 @@
 					</xsl:otherwise>
 				</xsl:choose>
 				</xsl:for-each>
-                <!-- Urban planning instrument of culturale property -->
+                <!-- Urban planning instrument of cultural property -->
 				<xsl:for-each select="schede/*/TU/STU">
                 	<arco-cd:hasUrbanPlanningInstrument>
                 		<xsl:attribute name="rdf:resource">
@@ -2308,6 +2326,17 @@
                 		</xsl:attribute>
                 	</arco-cd:hasRelatedAgent>                
                 </xsl:for-each>
+               <!-- Surveys -->
+                <!-- Archaeological field survey of cultural property -->
+                <xsl:if test="not(schede/*/RE/RCG/RCGD='0000/00/00' or schede/*/RE/RCG/RCGD='/')">
+                <xsl:for-each select="schede/*/RE/RCG">
+                	<arco-cd:hasSurvey>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
+                		</xsl:attribute>
+                	</arco-cd:hasSurvey>
+                </xsl:for-each>
+                </xsl:if>
 			</rdf:Description>
 		</rdf:RDF>
 
