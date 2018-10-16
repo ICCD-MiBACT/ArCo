@@ -96,6 +96,7 @@
     <!-- https://w3id.org/arco/context-description/hasAcquisitionType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasAcquisitionType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Acquisition"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/AcquisitionType"/>
@@ -217,6 +218,7 @@
     <!-- https://w3id.org/arco/context-description/hasAnomalyType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasAnomalyType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Anomaly"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/AnomalyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;anomalia rilevata nel corso di una fotointerpretazione o fotorestituzione al tipo di anomalia (puntuale, lineare, areale).</rdfs:comment>
@@ -232,6 +234,7 @@
     <!-- https://w3id.org/arco/context-description/hasArchaeologicalPropertySurveyType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasArchaeologicalPropertySurveyType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchaeologicalPropertySurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ArchaeologicalPropertySurveyType"/>
         <rdfs:label xml:lang="it">ha tipo di indagine su bene archeologico</rdfs:label>
@@ -246,6 +249,7 @@
     <!-- https://w3id.org/arco/context-description/hasArchaeometricDiagnosticSurveyType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasArchaeometricDiagnosticSurveyType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchaeometricDiagnosticSurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ArchaeometricDiagnosticSurveyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine archeometrica e diagnostica al suo tipo (es.: analisi della malta, carotaggio, termografia, etc.)</rdfs:comment>
@@ -357,6 +361,7 @@
     <!-- https://w3id.org/arco/context-description/hasBibliographyType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasBibliographyType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Bibliography"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/BibliographyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la bibliografia al tipo di riferimento bibliografico.</rdfs:comment>
@@ -386,6 +391,7 @@
     <!-- https://w3id.org/arco/context-description/hasChangeOfAvailabilityType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasChangeOfAvailabilityType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ChangeOfAvailability"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ChangeOfAvailabilityType"/>
@@ -553,6 +559,7 @@
     <!-- https://w3id.org/arco/context-description/hasDerivatedWorkType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasDerivatedWorkType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/DerivatedWork"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/DerivatedWorkType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;opera derivata da un bene culturale al tipo di opera derivata.</rdfs:comment>
@@ -583,6 +590,7 @@
     <!-- https://w3id.org/arco/context-description/hasDocumentationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasDocumentationType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Documentation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/DocumentationType"/>
         <rdfs:label xml:lang="it">ha tipo di documentazione</rdfs:label>
@@ -670,6 +678,7 @@
     <!-- https://w3id.org/arco/context-description/hasExportImportCertificationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasExportImportCertificationType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ExportImportCertification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ExportImportCertificationType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una certificazione amministrativa di circolazione ed esportazione/importazione di un bene culturale alla sua tipologia (es.: attestato di libera circolazione, licenza di esportazione definitiva, ecc).</rdfs:comment>
@@ -762,6 +771,7 @@ Normativa CA: RO/RIS</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasInterventionType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasInterventionType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Intervention"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/InterventionType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un intervento, a fini conservativi o di altro tipo, che ha interessato un bene culturale al tipo di intervento.</rdfs:comment>
@@ -826,6 +836,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasLaboratoryTestType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasLaboratoryTestType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/LaboratoryTest"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/LaboratoryTestType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;analisi di laboratorio con il tipo di analisi (es.: analisi metallurgica, analisi chimica, etc.)</rdfs:comment>
@@ -1209,6 +1220,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasResponsibilityType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasResponsibilityType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ResponsibilityType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una responsabilità individuata relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici al tipo di responsabilità (es.: stampatori, ritoccatori, coloritori, ecc.).</rdfs:comment>
@@ -1366,6 +1378,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasSurveyImageType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasSurveyImageType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/SurveyImage"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/SurveyImageType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una immagine di indagine al suo tipo (fotografia aerea o fotografia satellitare).</rdfs:comment>
@@ -1417,6 +1430,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasTitleType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasTitleType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Title"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un titolo di un bene culturale al tipo di titolo.</rdfs:comment>
@@ -1475,6 +1489,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasUseType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasUseType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Use"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso del bene con il suo tipo (attuale, precedente, storico).</rdfs:comment>
@@ -1816,6 +1831,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/core/hasAgentRole -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasAgentRole"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasType"/>
     
 
 

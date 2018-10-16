@@ -2495,7 +2495,7 @@
 							</l0:name>
 							<xsl:if test="./CRFH">
 								<arco-cd:agentLocalIdentifier>
-									<xsl:value-of select="./CRFH" />
+									<xsl:value-of select="normalize-space(./CRFH)" />
 								</arco-cd:agentLocalIdentifier>
 							</xsl:if>
 						</rdf:Description>
@@ -2680,7 +2680,7 @@
 							</l0:name>
 							<xsl:if test="./CRFH">
 								<arco-cd:agentLocalIdentifier>
-									<xsl:value-of select="./CRFH" />
+									<xsl:value-of select="normalize-space(./CRFH)" />
 								</arco-cd:agentLocalIdentifier>
 							</xsl:if>
 						</rdf:Description>
@@ -2844,7 +2844,7 @@
 							</l0:name>
 							<xsl:if test="./CRFH">
 								<arco-cd:agentLocalIdentifier>
-									<xsl:value-of select="./CRFH" />
+									<xsl:value-of select="normalize-space(./CRFH)" />
 								</arco-cd:agentLocalIdentifier>
 							</xsl:if>
 						</rdf:Description>
@@ -3008,7 +3008,7 @@
 							</l0:name>
 							<xsl:if test="./CRFH">
 								<arco-cd:agentLocalIdentifier>
-									<xsl:value-of select="./CRFH" />
+									<xsl:value-of select="normalize-space(./CRFH)" />
 								</arco-cd:agentLocalIdentifier>
 							</xsl:if>
 						</rdf:Description>
@@ -3536,7 +3536,7 @@
 							</l0:name>
 							<xsl:if test="./ADLN">
 								<arco-cd:pageOrTableNumber>
-									<xsl:value-of select="./ADLN" />
+									<xsl:value-of select="normalize-space(./ADLN)" />
 								</arco-cd:pageOrTableNumber>
 							</xsl:if>
 						</rdf:Description>
@@ -4653,17 +4653,17 @@
 					</xsl:if>
 					<xsl:if test="./ACQD">
 						<tiapit:time>
-							<xsl:value-of select="./ACQD" />
+							<xsl:value-of select="normalize-space(./ACQD)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if test="./ACQE">
 						<arco-core:note>
-							<xsl:value-of select="./ACQE" />
+							<xsl:value-of select="normalize-space(./ACQE)" />
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="./ACQL">
 						<arco-cd:acquisitionLocation>
-							<xsl:value-of select="./ACQL" />
+							<xsl:value-of select="normalize-space(./ACQL)" />
 						</arco-cd:acquisitionLocation>
 					</xsl:if>
 				</rdf:Description>
@@ -4749,12 +4749,12 @@
 					</xsl:if>
 					<xsl:if test="./ALND">
 						<tiapit:time>
-							<xsl:value-of select="./ALND" />
+							<xsl:value-of select="normalize-space(./ALND)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if test="./ALNN">
 						<arco-core:note>
-							<xsl:value-of select="./ALNN" />
+							<xsl:value-of select="normalize-space(./ALNN)" />
 						</arco-core:note>
 					</xsl:if>
 				</rdf:Description>
@@ -4814,57 +4814,57 @@
 					</l0:name>
 					<xsl:if test="FTAM">
 						<arco-cd:documentationTitle>
-							<xsl:value-of select="./FTAM" />
+							<xsl:value-of select="normalize-space(./FTAM)" />
 						</arco-cd:documentationTitle>
 					</xsl:if>
 					<xsl:if test="FTAM">
 						<arco-cd:caption>
-							<xsl:value-of select="./FTAM" />
+							<xsl:value-of select="normalize-space(./FTAM)" />
 						</arco-cd:caption>
 					</xsl:if>
 					<xsl:if test="./FTAN">
 						<arco-cd:documentationIdentifier>
-							<xsl:value-of select="./FTAN" />
+							<xsl:value-of select="normalize-space(./FTAN)" />
 						</arco-cd:documentationIdentifier>
 					</xsl:if>
 					<xsl:if test="./FTAD">
 						<tiapit:time>
-							<xsl:value-of select="./FTAD" />
+							<xsl:value-of select="normalize-space(./FTAD)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if test="./FTAC and not(./FTAC='N/R')">
 						<arco-cd:documentationLocation>
-							<xsl:value-of select="./FTAC" />
+							<xsl:value-of select="normalize-space(./FTAC)" />
 						</arco-cd:documentationLocation>
 					</xsl:if>
 					<xsl:if test="./FTAS">
 						<arco-core:specifications>
-							<xsl:value-of select="./FTAS" />
+							<xsl:value-of select="normalize-space(./FTAS)" />
 						</arco-core:specifications>
 					</xsl:if>
 					<xsl:if test="./FTAK">
 						<arco-cd:digitalFileName>
-							<xsl:value-of select="./FTAK" />
+							<xsl:value-of select="normalize-space(./FTAK)" />
 						</arco-cd:digitalFileName>
 					</xsl:if>
 					<xsl:if test="./FTAT">
 						<arco-core:note>
-							<xsl:value-of select="./FTAT" />
+							<xsl:value-of select="normalize-space(./FTAT)" />
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="./FTAW">
 						<smapit:URL>
-							<xsl:value-of select="./FTAW" />
+							<xsl:value-of select="normalize-space(./FTAW)" />
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./FTAY">
 						<arco-cd:rights>
-							<xsl:value-of select="./FTAY" />
+							<xsl:value-of select="normalize-space(./FTAY)" />
 						</arco-cd:rights>
 					</xsl:if>
 					<xsl:if test="./FTAR">
 						<arco-cd:stripRunAndFrameNumber>
-							<xsl:value-of select="./FTAR" />
+							<xsl:value-of select="normalize-space(./FTAR)" />
 						</arco-cd:stripRunAndFrameNumber>
 					</xsl:if>
 					<xsl:if
@@ -5138,47 +5138,47 @@
 					</l0:name>
 					<xsl:if test="./DRAN">
 						<arco-cd:documentationIdentifier>
-							<xsl:value-of select="./DRAN" />
+							<xsl:value-of select="normalize-space(./DRAN)" />
 						</arco-cd:documentationIdentifier>
 					</xsl:if>
 					<xsl:if test="./DRAD">
 						<tiapit:time>
-							<xsl:value-of select="./DRAD" />
+							<xsl:value-of select="normalize-space(./DRAD)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if test="./DRAC and not(./DRAC='N/R')">
 						<arco-cd:documentationLocation>
-							<xsl:value-of select="./DRAC" />
+							<xsl:value-of select="normalize-space(./DRAC)" />
 						</arco-cd:documentationLocation>
 					</xsl:if>
 					<xsl:if test="./DRAP">
 						<arco-core:specifications>
-							<xsl:value-of select="./DRAP" />
+							<xsl:value-of select="normalize-space(./DRAP)" />
 						</arco-core:specifications>
 					</xsl:if>
 					<xsl:if test="./DRAK">
 						<arco-cd:digitalFileName>
-							<xsl:value-of select="./DRAK" />
+							<xsl:value-of select="normalize-space(./DRAK)" />
 						</arco-cd:digitalFileName>
 					</xsl:if>
 					<xsl:if test="./DRAO">
 						<arco-core:note>
-							<xsl:value-of select="./DRAO" />
+							<xsl:value-of select="normalize-space(./DRAO)" />
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="./DRAW">
 						<smapit:URL>
-							<xsl:value-of select="./DRAW" />
+							<xsl:value-of select="normalize-space(./DRAW)" />
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./DRAY">
 						<arco-cd:rights>
-							<xsl:value-of select="./DRAY" />
+							<xsl:value-of select="normalize-space(./DRAY)" />
 						</arco-cd:rights>
 					</xsl:if>
 					<xsl:if test="./DRAM">
 						<arco-cd:documentationTitle>
-							<xsl:value-of select="./DRAM" />
+							<xsl:value-of select="normalize-space(./DRAM)" />
 						</arco-cd:documentationTitle>
 					</xsl:if>
 					<xsl:if test="./DRAS">
@@ -5484,47 +5484,47 @@
 					</l0:name>
 					<xsl:if test="./VDCN">
 						<arco-cd:documentationIdentifier>
-							<xsl:value-of select="./VDCN" />
+							<xsl:value-of select="normalize-space(./VDCN)" />
 						</arco-cd:documentationIdentifier>
 					</xsl:if>
 					<xsl:if test="./VDCD">
 						<tiapit:time>
-							<xsl:value-of select="./VDCD" />
+							<xsl:value-of select="normalize-space(./VDCD)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if test="./VDCC and not(./VDCC='N/R')">
 						<arco-cd:documentationLocation>
-							<xsl:value-of select="./VDCC" />
+							<xsl:value-of select="normalize-space(./VDCC)" />
 						</arco-cd:documentationLocation>
 					</xsl:if>
 					<xsl:if test="./VDCS">
 						<arco-core:specifications>
-							<xsl:value-of select="./VDCS" />
+							<xsl:value-of select="normalize-space(./VDCS)" />
 						</arco-core:specifications>
 					</xsl:if>
 					<xsl:if test="./VDCK">
 						<arco-cd:digitalFileName>
-							<xsl:value-of select="./VDCK" />
+							<xsl:value-of select="normalize-space(./VDCK)" />
 						</arco-cd:digitalFileName>
 					</xsl:if>
 					<xsl:if test="./VDCT">
 						<arco-core:note>
-							<xsl:value-of select="./VDCT" />
+							<xsl:value-of select="normalize-space(./VDCT)" />
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="./VDCW">
 						<smapit:URL>
-							<xsl:value-of select="./VDCW" />
+							<xsl:value-of select="normalize-space(./VDCW)" />
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./VDCY">
 						<arco-cd:rights>
-							<xsl:value-of select="./VDCY" />
+							<xsl:value-of select="normalize-space(./VDCY)" />
 						</arco-cd:rights>
 					</xsl:if>
 					<xsl:if test="./VDCA">
 						<arco-cd:documentationTitle>
-							<xsl:value-of select="./VDCA" />
+							<xsl:value-of select="normalize-space(./VDCA)" />
 						</arco-cd:documentationTitle>
 					</xsl:if>
 					<xsl:if
@@ -5800,42 +5800,42 @@
 					</l0:name>
 					<xsl:if test="./REGN">
 						<arco-cd:documentationIdentifier>
-							<xsl:value-of select="./REGN" />
+							<xsl:value-of select="normalize-space(./REGN)" />
 						</arco-cd:documentationIdentifier>
 					</xsl:if>
 					<xsl:if test="./REGD">
 						<tiapit:time>
-							<xsl:value-of select="./REGD" />
+							<xsl:value-of select="normalize-space(./REGD)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if test="./REGC and not(./REGC='N/R')">
 						<arco-cd:documentationLocation>
-							<xsl:value-of select="./REGC" />
+							<xsl:value-of select="normalize-space(./REGC)" />
 						</arco-cd:documentationLocation>
 					</xsl:if>
 					<xsl:if test="./REGS">
 						<arco-core:specifications>
-							<xsl:value-of select="./REGS" />
+							<xsl:value-of select="normalize-space(./REGS)" />
 						</arco-core:specifications>
 					</xsl:if>
 					<xsl:if test="./REGK">
 						<arco-cd:digitalFileName>
-							<xsl:value-of select="./REGK" />
+							<xsl:value-of select="normalize-space(./REGK)" />
 						</arco-cd:digitalFileName>
 					</xsl:if>
 					<xsl:if test="./REGT">
 						<arco-core:note>
-							<xsl:value-of select="./REGT" />
+							<xsl:value-of select="normalize-space(./REGT)" />
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="./REGW">
 						<smapit:URL>
-							<xsl:value-of select="./REGW" />
+							<xsl:value-of select="normalize-space(./REGW)" />
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./REGZ">
 						<arco-cd:documentationTitle>
-							<xsl:value-of select="./REGZ" />
+							<xsl:value-of select="normalize-space(./REGZ)" />
 						</arco-cd:documentationTitle>
 					</xsl:if>
 					<xsl:if
@@ -6110,47 +6110,47 @@
 					</l0:name>
 					<xsl:if test="./FNTI">
 						<arco-cd:documentationIdentifier>
-							<xsl:value-of select="./FNTI" />
+							<xsl:value-of select="normalize-space(./FNTI)" />
 						</arco-cd:documentationIdentifier>
 					</xsl:if>
 					<xsl:if test="./FNTD">
 						<tiapit:time>
-							<xsl:value-of select="./FNTD" />
+							<xsl:value-of select="normalize-space(./FNTD)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if test="./FNTS and not(./FNTS='-' or ./FNTS='.' or ./FNTS='N/R')">
 						<arco-cd:documentationLocation>
-							<xsl:value-of select="./FNTS" />
+							<xsl:value-of select="normalize-space(./FNTS)" />
 						</arco-cd:documentationLocation>
 					</xsl:if>
 					<xsl:if test="./FNTF">
 						<arco-cd:folio>
-							<xsl:value-of select="./FNTF" />
+							<xsl:value-of select="normalize-space(./FNTF)" />
 						</arco-cd:folio>
 					</xsl:if>
 					<xsl:if test="./FNTY">
 						<arco-cd:rights>
-							<xsl:value-of select="./FNTY" />
+							<xsl:value-of select="normalize-space(./FNTY)" />
 						</arco-cd:rights>
 					</xsl:if>
 					<xsl:if test="./FNTK">
 						<arco-cd:digitalFileName>
-							<xsl:value-of select="./FNTK" />
+							<xsl:value-of select="normalize-space(./FNTK)" />
 						</arco-cd:digitalFileName>
 					</xsl:if>
 					<xsl:if test="./FNTO">
 						<arco-core:note>
-							<xsl:value-of select="./FNTO" />
+							<xsl:value-of select="normalize-space(./FNTO)" />
 						</arco-core:note>
 					</xsl:if>
 					<xsl:if test="./FNTW">
 						<smapit:URL>
-							<xsl:value-of select="./FNTW" />
+							<xsl:value-of select="normalize-space(./FNTW)" />
 						</smapit:URL>
 					</xsl:if>
 					<xsl:if test="./FNTT">
 						<arco-cd:documentationTitle>
-							<xsl:value-of select="./FNTT" />
+							<xsl:value-of select="normalize-space(./FNTT)" />
 						</arco-cd:documentationTitle>
 					</xsl:if>
 					<xsl:if
@@ -6946,7 +6946,7 @@
 						<xsl:value-of
 							select="concat('Provvedimento di tutela ', position(), ' del bene culturale ', $itemURI, ': ', normalize-space(./NVCT))" />
 					</l0:name>
-					<xsl:if test="./NVCE">
+					<xsl:if test="./NVCE and not(./NVCE='NR' or ./NVCE='NR (recupero pregresso)')">
 						<arco-cd:issueDate>
 							<xsl:value-of select="normalize-space(./NVCE)" />
 						</arco-cd:issueDate>
@@ -6956,7 +6956,7 @@
 							<xsl:value-of select="normalize-space(./NVCR)" />
 						</arco-cd:registrationDateOrGU>
 					</xsl:if>
-					<xsl:if test="./NVCI">
+					<xsl:if test="./NVCI and not(./NVCI='NR' or ./NVCI='NR (recupero pregresso)')">
 						<arco-cd:openingNoticeDate>
 							<xsl:value-of select="normalize-space(./NVCI)" />
 						</arco-cd:openingNoticeDate>
@@ -7476,7 +7476,7 @@
 	                			<xsl:value-of select="concat('Bibliography about archaeological field survey of cultural property ', $itemURI)" />
 	                		</l0:name>
 	                		<arco-cd:completeBibliographicReference>
-	                			<xsl:value-of select="./RCGS" />
+	                			<xsl:value-of select="normalize-space(./RCGS)" />
 	                		</arco-cd:completeBibliographicReference>
                 		</rdf:Description>
                 	</xsl:if>
@@ -7977,7 +7977,7 @@
 	                			<xsl:value-of select="concat('Bibliography about archaeological excavation of cultural property ', $itemURI)" />
 	                		</l0:name>
 	                		<arco-cd:completeBibliographicReference>
-	                			<xsl:value-of select="./DSCZ" />
+	                			<xsl:value-of select="normalize-space(./DSCZ)" />
 	                		</arco-cd:completeBibliographicReference>
                 		</rdf:Description>
                 	</xsl:if>
@@ -8006,7 +8006,7 @@
 	                			<xsl:value-of select="concat('Inventory about archaeological excavation of cultural property ', $itemURI)" />
 	                		</l0:name>
 	                		<arco-cd:completeBibliographicReference>
-	                			<xsl:value-of select="./DSCI" />
+	                			<xsl:value-of select="normalize-space(./DSCI)" />
 	                		</arco-cd:completeBibliographicReference>
                 		</rdf:Description>
                 	</xsl:if>
@@ -10015,7 +10015,7 @@
 					</xsl:for-each>
 					<xsl:if test="./GEP">
 						<arco-location:spacialReferenceSystem>
-							<xsl:value-of select="./GEP" />
+							<xsl:value-of select="normalize-space(./GEP)" />
 						</arco-location:spacialReferenceSystem>
 					</xsl:if>
 					<xsl:if test="./GPT">
@@ -10038,7 +10038,7 @@
 						<arco-location:hasBaseMap>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of
-								select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+								select="concat($NS, 'BaseMap/', $itemURI, '-geometry-', $geometry-position, '-base-map')" />
             				</xsl:attribute>
 						</arco-location:hasBaseMap>
 					</xsl:if>
@@ -10159,12 +10159,12 @@
 						</l0:name>
 						<xsl:if test="./GECX">
 							<arco-location:long>
-								<xsl:value-of select="./GECX" />
+								<xsl:value-of select="normalize-space(./GECX)" />
 							</arco-location:long>
 						</xsl:if>
 						<xsl:if test="./GECY">
 							<arco-location:lat>
-								<xsl:value-of select="./GECY" />
+								<xsl:value-of select="normalize-space(./GECY)" />
 							</arco-location:lat>
 						</xsl:if>
 						<xsl:if
@@ -10172,7 +10172,7 @@
 							<arco-location:hasAltitude>
 								<xsl:attribute name="rdf:resource">
             					<xsl:value-of
-									select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+									select="concat($NS, 'Altitude/', $itemURI, '-geometry-', $geometry-position, '-altitude')" />
             				</xsl:attribute>
 							</arco-location:hasAltitude>
 						</xsl:if>
@@ -10215,7 +10215,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
             			<xsl:value-of
-							select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+							select="concat($NS, 'BaseMap/', $itemURI, '-geometry-', $geometry-position, '-base-map')" />
             		</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/arco/location/BaseMap" />
 						<rdfs:label xml:lang="it">
@@ -10236,22 +10236,22 @@
 						</l0:name>
 						<xsl:if test="./GPB/GPBB">
 							<arco-core:description>
-								<xsl:value-of select="./GPB/GPBB" />
+								<xsl:value-of select="normalize-space(./GPB/GPBB)" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./GPB/GPBT">
 							<tiapit:time>
-								<xsl:value-of select="./GPB/GPBT" />
+								<xsl:value-of select="normalize-space(./GPB/GPBT)" />
 							</tiapit:time>
 						</xsl:if>
 						<xsl:if test="./GPB/GPBU">
 							<smapit:url>
-								<xsl:value-of select="./GPB/GPBU" />
+								<xsl:value-of select="normalize-space(./GPB/GPBU)" />
 							</smapit:url>
 						</xsl:if>
 						<xsl:if test="./GPB/GPBO">
 							<arco-core:note>
-								<xsl:value-of select="./GPB/GPBO" />
+								<xsl:value-of select="normalize-space(./GPB/GPBO)" />
 							</arco-core:note>
 						</xsl:if>
 					</rdf:Description>
@@ -10262,7 +10262,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
             			<xsl:value-of
-							select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+							select="concat($NS, 'Altitude/', $itemURI, '-geometry-', $geometry-position, '-altitude')" />
             		</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/arco/location/Altitude" />
 						<rdfs:label xml:lang="it">
@@ -10283,7 +10283,7 @@
 						</l0:name>
 						<xsl:if test="./GEC/GECZ">
 							<arco-location:alt>
-								<xsl:value-of select="./GEC/GECZ" />
+								<xsl:value-of select="normalize-space(./GEC/GECZ)" />
 							</arco-location:alt>
 						</xsl:if>
 						<xsl:if test="../MT/MTA/MTAR">
@@ -10361,12 +10361,12 @@
 					</xsl:for-each>
 					<xsl:if test="./GPP">
 						<arco-location:spacialReferenceSystem>
-							<xsl:value-of select="./GPP" />
+							<xsl:value-of select="normalize-space(./GPP)" />
 						</arco-location:spacialReferenceSystem>
 					</xsl:if>
 					<xsl:if test="./GPC/GPCT">
 						<arco-location:pointType>
-							<xsl:value-of select="./GPP" />
+							<xsl:value-of select="normalize-space(./GPC/GPCT)" />
 						</arco-location:pointType>
 					</xsl:if>
 					<xsl:if test="./GPT">
@@ -10389,7 +10389,7 @@
 						<arco-location:hasBaseMap>
 							<xsl:attribute name="rdf:resource">
             					<xsl:value-of
-								select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+								select="concat($NS, 'BaseMap/', $itemURI, '-geometry-point-', $geometry-position, '-base-map')" />
             				</xsl:attribute>
 						</arco-location:hasBaseMap>
 					</xsl:if>
@@ -10420,19 +10420,19 @@
 						</l0:name>
 						<xsl:if test="./GPDPX">
 							<arco-location:long>
-								<xsl:value-of select="./GPDPX" />
+								<xsl:value-of select="normalize-space(./GPDPX)" />
 							</arco-location:long>
 						</xsl:if>
 						<xsl:if test="./GPDPY">
 							<arco-location:lat>
-								<xsl:value-of select="./GPDPY" />
+								<xsl:value-of select="normalize-space(./GPDPY)" />
 							</arco-location:lat>
 						</xsl:if>
 						<xsl:if test="../../GPC/GPCL | ../../GPC/GPCI | ../../GPC/GPCS">
 							<arco-location:hasAltitude>
 								<xsl:attribute name="rdf:resource">
 	            					<xsl:value-of
-									select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+									select="concat($NS, 'Altitude/', $itemURI, '-geometry-point-', $geometry-position, '-altitude')" />
 	            				</xsl:attribute>
 							</arco-location:hasAltitude>
 						</xsl:if>
@@ -10475,7 +10475,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 	            			<xsl:value-of
-							select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+							select="concat($NS, 'BaseMap/', $itemURI, '-geometry-point-', $geometry-position, '-base-map')" />
 	            		</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/arco/location/BaseMap" />
 						<rdfs:label xml:lang="it">
@@ -10496,17 +10496,17 @@
 						</l0:name>
 						<xsl:if test="./GPB/GPBB">
 							<arco-core:description>
-								<xsl:value-of select="./GPB/GPBB" />
+								<xsl:value-of select="normalize-space(./GPB/GPBB)" />
 							</arco-core:description>
 						</xsl:if>
 						<xsl:if test="./GPB/GPBT">
 							<tiapit:time>
-								<xsl:value-of select="./GPB/GPBT" />
+								<xsl:value-of select="normalize-space(./GPB/GPBT)" />
 							</tiapit:time>
 						</xsl:if>
 						<xsl:if test="./GPB/GPBO">
 							<arco-core:note>
-								<xsl:value-of select="./GPB/GPBO" />
+								<xsl:value-of select="normalize-space(./GPB/GPBO)" />
 							</arco-core:note>
 						</xsl:if>
 					</rdf:Description>
@@ -10516,7 +10516,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
             			<xsl:value-of
-							select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+							select="concat($NS, 'Altitude/', $itemURI, '-geometry-point-', $geometry-position, '-altitude')" />
             		</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/arco/location/Altitude" />
 						<rdfs:label xml:lang="it">
@@ -10537,17 +10537,17 @@
 						</l0:name>
 						<xsl:if test="./GPC/GPCL">
 							<arco-location:alt>
-								<xsl:value-of select="./GPC/GPCL" />
+								<xsl:value-of select="normalize-space(./GPC/GPCL)" />
 							</arco-location:alt>
 						</xsl:if>
 						<xsl:if test="./GPC/GPCS">
 							<arco-location:maxAlt>
-								<xsl:value-of select="./GPC/GPCS" />
+								<xsl:value-of select="normalize-space(./GPC/GPCS)" />
 							</arco-location:maxAlt>
 						</xsl:if>
 						<xsl:if test="./GPC/GPCI">
 							<arco-location:minAlt>
-								<xsl:value-of select="./GPC/GPCI" />
+								<xsl:value-of select="normalize-space(./GPC/GPCI)" />
 							</arco-location:minAlt>
 						</xsl:if>
 					</rdf:Description>
@@ -10606,7 +10606,7 @@
 						</xsl:for-each>
 						<xsl:if test="./GLP">
 							<arco-location:spacialReferenceSystem>
-								<xsl:value-of select="./GLP" />
+								<xsl:value-of select="normalize-space(./GLP)" />
 							</arco-location:spacialReferenceSystem>
 						</xsl:if>
 						<xsl:if test="./GLT">
@@ -10629,7 +10629,7 @@
 							<arco-location:hasBaseMap>
 								<xsl:attribute name="rdf:resource">
             					<xsl:value-of
-									select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+									select="concat($NS, 'BaseMap/', $itemURI, '-geometry-line-', $geometry-position, '-base-map')" />
             				</xsl:attribute>
 							</arco-location:hasBaseMap>
 						</xsl:if>
@@ -10660,19 +10660,19 @@
 							</l0:name>
 							<xsl:if test="./GLDPX">
 								<arco-location:long>
-									<xsl:value-of select="./GLDPX" />
+									<xsl:value-of select="normalize-space(./GLDPX)" />
 								</arco-location:long>
 							</xsl:if>
 							<xsl:if test="./GLDPY">
 								<arco-location:lat>
-									<xsl:value-of select="./GLDPY" />
+									<xsl:value-of select="normalize-space(./GLDPY)" />
 								</arco-location:lat>
 							</xsl:if>
 							<xsl:if test="../../GLQ/GLQI | ../../GLQ/GLQS">
 								<arco-location:hasAltitude>
 									<xsl:attribute name="rdf:resource">
 	            					<xsl:value-of
-										select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+										select="concat($NS, 'Altitude/', $itemURI, '-geometry-line-', $geometry-position, '-altitude')" />
 	            				</xsl:attribute>
 								</arco-location:hasAltitude>
 							</xsl:if>
@@ -10715,7 +10715,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	            			<xsl:value-of
-								select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+								select="concat($NS, 'BaseMap/', $itemURI, '-geometry-line-', $geometry-position, '-base-map')" />
 	            		</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/location/BaseMap" />
 							<rdfs:label xml:lang="it">
@@ -10736,17 +10736,17 @@
 							</l0:name>
 							<xsl:if test="./GLB/GLBB">
 								<arco-core:description>
-									<xsl:value-of select="./GLB/GLBB" />
+									<xsl:value-of select="normalize-space(./GLB/GLBB)" />
 								</arco-core:description>
 							</xsl:if>
 							<xsl:if test="./GLB/GLBT">
 								<tiapit:time>
-									<xsl:value-of select="./GLB/GLBT" />
+									<xsl:value-of select="normalize-space(./GLB/GLBT)" />
 								</tiapit:time>
 							</xsl:if>
 							<xsl:if test="./GLB/GLBO">
 								<arco-core:note>
-									<xsl:value-of select="./GPB/GPBO" />
+									<xsl:value-of select="normalize-space(./GLB/GLBO)" />
 								</arco-core:note>
 							</xsl:if>
 						</rdf:Description>
@@ -10756,7 +10756,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	            			<xsl:value-of
-								select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+								select="concat($NS, 'Altitude/', $itemURI, '-geometry-line-', $geometry-position, '-altitude')" />
 	            		</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/location/Altitude" />
 							<rdfs:label xml:lang="it">
@@ -10777,12 +10777,12 @@
 							</l0:name>
 							<xsl:if test="./GLQ/GLQS">
 								<arco-location:maxAlt>
-									<xsl:value-of select="./GLQ/GLQS" />
+									<xsl:value-of select="normalize-space(./GLQ/GLQS)" />
 								</arco-location:maxAlt>
 							</xsl:if>
 							<xsl:if test="./GLQ/GLQI">
 								<arco-location:minAlt>
-									<xsl:value-of select="./GLQ/GLQI" />
+									<xsl:value-of select="normalize-space(./GLQ/GLQI)" />
 								</arco-location:minAlt>
 							</xsl:if>
 						</rdf:Description>
@@ -10842,7 +10842,7 @@
 						</xsl:for-each>
 						<xsl:if test="./GAP">
 							<arco-location:spacialReferenceSystem>
-								<xsl:value-of select="./GAP" />
+								<xsl:value-of select="normalize-space(./GAP)" />
 							</arco-location:spacialReferenceSystem>
 						</xsl:if>
 						<xsl:if test="./GAT">
@@ -10865,7 +10865,7 @@
 							<arco-location:hasBaseMap>
 								<xsl:attribute name="rdf:resource">
             					<xsl:value-of
-									select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+									select="concat($NS, 'BaseMap/', $itemURI, '-geometry-polygon-', $geometry-position, '-base-map')" />
             				</xsl:attribute>
 							</arco-location:hasBaseMap>
 						</xsl:if>
@@ -10896,19 +10896,19 @@
 							</l0:name>
 							<xsl:if test="./GADPX">
 								<arco-location:long>
-									<xsl:value-of select="./GADPX" />
+									<xsl:value-of select="normalize-space(./GADPX)" />
 								</arco-location:long>
 							</xsl:if>
 							<xsl:if test="./GADPY">
 								<arco-location:lat>
-									<xsl:value-of select="./GADPY" />
+									<xsl:value-of select="normalize-space(./GADPY)" />
 								</arco-location:lat>
 							</xsl:if>
 							<xsl:if test="../../GAQ/GAQI | ../../GAQ/GAQS">
 								<arco-location:hasAltitude>
 									<xsl:attribute name="rdf:resource">
 	            					<xsl:value-of
-										select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+										select="concat($NS, 'Altitude/', $itemURI, '-geometry-polygon-', $geometry-position, '-altitude')" />
 	            				</xsl:attribute>
 								</arco-location:hasAltitude>
 							</xsl:if>
@@ -10951,7 +10951,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	            			<xsl:value-of
-								select="concat($NS, 'BaseMap/', $itemURI, '-base-map')" />
+								select="concat($NS, 'BaseMap/', $itemURI, '-geometry-polygon-', $geometry-position, '-base-map')" />
 	            		</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/location/BaseMap" />
 							<rdfs:label xml:lang="it">
@@ -10972,17 +10972,17 @@
 							</l0:name>
 							<xsl:if test="./GAB/GABB">
 								<arco-core:description>
-									<xsl:value-of select="./GAB/GABB" />
+									<xsl:value-of select="normalize-space(./GAB/GABB)" />
 								</arco-core:description>
 							</xsl:if>
 							<xsl:if test="./GAB/GABT">
 								<tiapit:time>
-									<xsl:value-of select="./GAB/GABT" />
+									<xsl:value-of select="normalize-space(./GAB/GABT)" />
 								</tiapit:time>
 							</xsl:if>
 							<xsl:if test="./GAB/GABO">
 								<arco-core:note>
-									<xsl:value-of select="./GAB/GABO" />
+									<xsl:value-of select="normalize-space(./GAB/GABO)" />
 								</arco-core:note>
 							</xsl:if>
 						</rdf:Description>
@@ -10992,7 +10992,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	            			<xsl:value-of
-								select="concat($NS, 'Altitude/', $itemURI, '-altitude')" />
+								select="concat($NS, 'Altitude/', $itemURI, '-geometry-polygon-', $geometry-position, '-altitude')" />
 	            		</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/location/Altitude" />
 							<rdfs:label xml:lang="it">
@@ -11013,12 +11013,12 @@
 							</l0:name>
 							<xsl:if test="./GAQ/GAQS">
 								<arco-location:maxAlt>
-									<xsl:value-of select="./GLQ/GLQS" />
+									<xsl:value-of select="normalize-space(./GAQ/GAQS)" />
 								</arco-location:maxAlt>
 							</xsl:if>
 							<xsl:if test="./GAQ/GAQI">
 								<arco-location:minAlt>
-									<xsl:value-of select="./GLQ/GLQI" />
+									<xsl:value-of select="normalize-space(./GAQ/GAQI)" />
 								</arco-location:minAlt>
 							</xsl:if>
 						</rdf:Description>
@@ -11171,9 +11171,9 @@
 								select="concat('Fruition ', position(), ' of cultural property: ', $itemURI)" />
 						</l0:name>
 						<xsl:if test="./FRUD">
-							<tiapit:date>
-								<xsl:value-of select="./FRUD" />
-							</tiapit:date>
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./FRUD)" />
+							</tiapit:time>
 						</xsl:if>
 						<xsl:if test="./FRUN">
 							<arco-cd:hasUser>
@@ -12026,7 +12026,7 @@
 					</l0:name>
 					<xsl:if test="./PDFS">
 						<arco-core:note>
-							<xsl:value-of select="./PDFS" />
+							<xsl:value-of select="normalize-space(./PDFS)" />
 						</arco-core:note>
 					</xsl:if>
 						<arco-cd:hasAgentWithResponsibility>
@@ -12354,21 +12354,21 @@
 						</l0:name>
 						<xsl:if test="./INVC">
 							<arco-cd:inventoryLocation>
-								<xsl:value-of select="./INVC" />
+								<xsl:value-of select="normalize-space(./INVC)" />
 							</arco-cd:inventoryLocation>
 						</xsl:if>
 						<xsl:if test="./INVD">
 							<tiapit:time>
-								<xsl:value-of select="./INVD" />
+								<xsl:value-of select="normalize-space(./INVD)" />
 							</tiapit:time>
 						</xsl:if>
 						<xsl:if test="./INVS">
 							<arco-core:note>
-								<xsl:value-of select="./INVS" />
+								<xsl:value-of select="normalize-space(./INVS)" />
 							</arco-core:note>
 						</xsl:if>
 						<arco-cd:inventoryIdentifier>
-							<xsl:value-of select="./INVN" />
+							<xsl:value-of select="normalize-space(./INVN)" />
 						</arco-cd:inventoryIdentifier>
 						<!-- responsible of inventory identifier -->
 						<xsl:if test="./INVG">
@@ -12808,6 +12808,9 @@
 			<!-- member of collection -->
 			<xsl:for-each select="schede/*/UB/COL">
 				<xsl:if test="./*">
+				<xsl:variable name="collection-membership-position">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                             <xsl:value-of
@@ -12827,23 +12830,31 @@
 						</arco-cd:hasCulturalProperty>
 						<arco-cd:hasCollection>
 							<xsl:attribute name="rdf:resource">
-                        		<xsl:value-of
+								<xsl:choose>
+									<xsl:when test="./COLD">
+										<xsl:value-of
 								select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+								select="concat($NS, 'CollectionOfCulturalEntities/', $itemURI, '-', $collection-membership-position)" />
+									</xsl:otherwise>
+								</xsl:choose>
                         	</xsl:attribute>
 						</arco-cd:hasCollection>
 						<xsl:if test="./COLM">
 							<arco-cd:leavingReason>
-								<xsl:value-of select="./COLM" />
+								<xsl:value-of select="normalize-space(./COLM)" />
 							</arco-cd:leavingReason>
 						</xsl:if>
 						<xsl:if test="./COLI">
 							<arco-cd:collectionUnitIdentifier>
-								<xsl:value-of select="./COLI" />
+								<xsl:value-of select="normalize-space(./COLI)" />
 							</arco-cd:collectionUnitIdentifier>
 						</xsl:if>
 						<xsl:if test="./COLV">
 							<arco-cd:culturalPropertyValue>
-								<xsl:value-of select="./COLV" />
+								<xsl:value-of select="normalize-space(./COLV)" />
 							</arco-cd:culturalPropertyValue>
 						</xsl:if>
 						<xsl:if test="./COLU or ./COLA">
@@ -12889,7 +12900,7 @@
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-									select="'https://w3id.org/italia/onto/TI/TimeInteval'" />
+									select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
                         </xsl:attribute>
 							</rdf:type>
 							<arco-core:startTime>
@@ -12903,8 +12914,16 @@
 					<!-- collection of cultural entities -->
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-                		<xsl:value-of
-							select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+						<xsl:choose>
+									<xsl:when test="./COLD">
+										<xsl:value-of
+								select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+								select="concat($NS, 'CollectionOfCulturalEntities/', $itemURI, '-', $collection-membership-position)" />
+									</xsl:otherwise>
+						</xsl:choose>
                 	</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -12915,7 +12934,7 @@
 						<rdfs:label xml:lang="it">
 							<xsl:choose>
 								<xsl:when test="./COLD">
-									<xsl:value-of select="./COLD" />
+									<xsl:value-of select="normalize-space(./COLD)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
@@ -12926,7 +12945,7 @@
 						<l0:name xml:lang="it">
 							<xsl:choose>
 								<xsl:when test="./COLD">
-									<xsl:value-of select="./COLD" />
+									<xsl:value-of select="normalize-space(./COLD)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
@@ -12937,7 +12956,7 @@
 						<rdfs:label xml:lang="en">
 							<xsl:choose>
 								<xsl:when test="./COLD">
-									<xsl:value-of select="./COLD" />
+									<xsl:value-of select="normalize-space(./COLD)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
@@ -12948,7 +12967,7 @@
 						<l0:name xml:lang="en">
 							<xsl:choose>
 								<xsl:when test="./COLD">
-									<xsl:value-of select="./COLD" />
+									<xsl:value-of select="normalize-space(./COLD)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
@@ -13026,8 +13045,16 @@
 								</xsl:choose>
 							</l0:name>
 							<arco-cd:isCollectorOf>
-								<xsl:value-of
-									select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+								<xsl:choose>
+									<xsl:when test="./COLD">
+										<xsl:value-of
+								select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+								select="concat($NS, 'CollectionOfCulturalEntities/', $itemURI, '-', $collection-membership-position)" />
+									</xsl:otherwise>
+								</xsl:choose>
 							</arco-cd:isCollectorOf>
 						</rdf:Description>
 					</xsl:if>
@@ -15039,10 +15066,10 @@
 											</xsl:choose>
 										</xsl:for-each>
 									</rdfs:label>
-									<!-- Aggiunto da Valentina - Address details <xsl:if test="schede/*/LC/PVC/PVCV"> 
+									<!-- Address details <xsl:if test="schede/*/LC/PVC/PVCV"> 
 										<arco-location:addressDetails> <xsl:value-of select="normalize-space(schede/*/LC/PVC/PVCV)"" 
 										/> </arco-location:addressDetails> -->
-									<!-- Aggiunto da Valentina - Full Address - per issue github #8 
+									<!-- Full Address - per issue github #8 
 										<xsl:if test="schede/*/LC/PVC/PVCI"> <clvapit:fullAddress> <xsl:value-of 
 										select="normalize-space(schede/*/LC/PVC/PVCI)" /> </clvapit:fullAddress> 
 										</xsl:if> <xsl:if test="schede/*/LC/LDC/LDCU"> <clvapit:fullAddress> <xsl:value-of 
