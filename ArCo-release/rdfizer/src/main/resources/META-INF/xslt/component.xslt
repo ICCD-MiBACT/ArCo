@@ -1262,12 +1262,20 @@
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
-								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-', position())" />
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-typed-related-cultural-property-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>	
 					</xsl:if>
 				</xsl:for-each>
 				
+				<xsl:for-each select="schede/*/RV/ROZ">
+						<arco-cd:hasRelatedWorkSituation>
+							<xsl:attribute name="rdf:resource">
+								<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
+								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasRelatedWorkSituation>	
+				</xsl:for-each>
 
 				<xsl:if test="schede/*/LC">
 					<arco-location:hasTimeIndexedQualifiedLocation>
@@ -2328,11 +2336,21 @@
                 </xsl:for-each>
                <!-- Surveys -->
                 <!-- Archaeological field survey of cultural property -->
-                <xsl:if test="not(schede/*/RE/RCG/RCGD='0000/00/00' or schede/*/RE/RCG/RCGD='/')">
+                <xsl:if test="not(schede/*/RE/RCG/RCGD='0000/00/00' or schede/*/RE/RCG/RCGD='/') and schede/*/RE/RCG/*">
                 <xsl:for-each select="schede/*/RE/RCG">
                 	<arco-cd:hasSurvey>
                 		<xsl:attribute name="rdf:resource">
                 			<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
+                		</xsl:attribute>
+                	</arco-cd:hasSurvey>
+                </xsl:for-each>
+                </xsl:if>
+                <!-- Archaeological excavation of cultural property -->
+                <xsl:if test="not(schede/*/RE/DSC/DSCD='0000/00/00' or schede/*/RE/DSC/DSCD='/') and schede/*/RE/DSC/*">
+                <xsl:for-each select="schede/*/RE/DSC">
+                	<arco-cd:hasSurvey>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />
                 		</xsl:attribute>
                 	</arco-cd:hasSurvey>
                 </xsl:for-each>
