@@ -7427,24 +7427,24 @@
 						</arco-core:hasAgentRole>
 					</xsl:if>
 					<xsl:if test="./RCGR">
-						<arco-cd:hasSurveyScientificDirector>
+						<arco-cd:hasActivityResponsible>
 							<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RCGR)))" />
 	                			</xsl:attribute>
-						</arco-cd:hasSurveyScientificDirector>
+						</arco-cd:hasActivityResponsible>
 						<arco-core:hasAgentRole>
 							<xsl:value-of
 								select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-field-survey-', $survey-position, '-activity-responsible')" />
 						</arco-core:hasAgentRole>
 					</xsl:if>
 					<xsl:if test="./RCGJ">
-						<arco-cd:hasSurveyScientificDirector>
+						<arco-cd:hasAuthorityFileCataloguingAgency>
 							<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RCGJ)))" />
 	                			</xsl:attribute>
-						</arco-cd:hasSurveyScientificDirector>
+						</arco-cd:hasAuthorityFileCataloguingAgency>
 						<arco-core:hasAgentRole>
 							<xsl:value-of
 								select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-field-survey-', $survey-position, '-cataloguing-agency')" />
@@ -7928,24 +7928,24 @@
 						</arco-core:hasAgentRole>
 					</xsl:if>
 					<xsl:if test="./DSCF">
-						<arco-cd:hasSurveyScientificDirector>
+						<arco-cd:hasActivityResponsible>
 							<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./DSCF)))" />
 	                			</xsl:attribute>
-						</arco-cd:hasSurveyScientificDirector>
+						</arco-cd:hasActivityResponsible>
 						<arco-core:hasAgentRole>
 							<xsl:value-of
 								select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-excavation-', $survey-position, '-activity-responsible')" />
 						</arco-core:hasAgentRole>
 					</xsl:if>
 					<xsl:if test="./DSCJ">
-						<arco-cd:hasSurveyScientificDirector>
+						<arco-cd:hasAuthorityFileCataloguingAgency>
 							<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./DSCJ)))" />
 	                			</xsl:attribute>
-						</arco-cd:hasSurveyScientificDirector>
+						</arco-cd:hasAuthorityFileCataloguingAgency>
 						<arco-core:hasAgentRole>
 							<xsl:value-of
 								select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-excavation-', $survey-position, '-cataloguing-agency')" />

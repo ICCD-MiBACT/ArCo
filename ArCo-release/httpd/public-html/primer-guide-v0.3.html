@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>ArCo - Primer Guide v0.3</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+
+<!-- Plugin CSS -->
+<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"
+	type="text/css">
+
+<!-- Custom styles for this template -->
+<link href="css/freelancer.css" rel="stylesheet">
+</head>
+<body>
+	<nav
+		class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+		id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">ArCo - Primer Guide v0.3</a>
+			<button
+				class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
+				type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+						href="./index.html">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="primer">
+		<div class="container">
+			<h1>ArCo - Primer Guide v0.3</h1>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="intro">Introduzione</h2>
+			<p>Questo documento descrive brevemente le ontologie incluse
+				nella versione 0.3 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche a essi
+				associate, gestite con il sistema SIGEC dall'Istituto Centrale per
+				il Catalogo e la Documentazione.</p>
+			<p>
+				La versione v0.3 di ArCo &egrave; la terza a essere pubblicata. In questa versione non è stato introdotto nessun nuovo modulo. Sono però stati modificati i nomi di alcuni moduli (vd. tabella con prefissi e IRI). Si
+				rimanda al primer della <a href="./primer-guide.html">versione v0.1</a> per ulteriori dettagli
+				sull'interpretazione delle versioni.
+			</p>
+			<p>
+				Le ontologie ArCo sono pubblicate all'interno di un <i>docker</i>
+				che comprende:
+			</p>
+			<ul>
+				<li>Questa guida;</li>
+				<li>I moduli ontologici sviluppati;</li>
+				<li>Esempi di <i>competency questions</i> e loro traduzione
+					sotto forma di SPARQL query;
+				</li>
+				<li>Un campione dei dati del SIGEC trasformati in RDF secondo
+					le modellazioni di ArCo;</li>
+				<li>Un motore SPARQL basato su Virtuoso per permettere
+					l'interrogazione dei dati e delle ontologie.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2>Indice dei contenuti</h2>
+			<ol>
+				<li><a href="#rete">La rete di ontologie ArCo v0.3</a></li>
+				<li><a href="#moduli">I moduli di ArCo v0.3</a></li>
+			</ol>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="rete">La rete di ontologie ArCo v0.3</h2>
+			<p>
+				Questa terza versione della rete di ontologie ArCo rappresenta una
+				parte consistente della <a target="_blank"href"http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici">Normativa
+					Trasversale</a> e porzioni delle normative sui Beni Storici e Artistici, sui Beni Archeologici, sui Beni Fotografici. Di seguito si elencano i nuovi nuclei
+				informativi modellati in questa versione:
+			</p>
+			<ul>
+				<li>Collezioni e stime;</li>
+				<li>Documentazioni e bibliografia;</li>
+				<li>Parti componenti, residuali, "riferimenti alla parte";</li>
+				<li>Titoli (propri, attribuiti, paralleli, etc.) come risorse;</li>
+				<li>Misure;</li>
+				<li>Materia, tecnica, dati tecnici relativi a fotografie, opere d'arte e vestimenti;</li>
+				<li>Indagini;</li>
+				<li>Georeferenziazione;</li>
+				<li>Utilizzazioni e fruizione dei vestimenti;</li>
+				<li>Indagini (comprese quelle peculiari per alcune tipologie di beni);</li>
+				<li>Interventi (conservativi e non);</li>
+				<li>Acquisizioni, mutamenti della condizione materiale, condizione giuridica;</li>
+				<li>Provvedimenti di tutela, esportazioni, strumenti urbanistico-territoriali;</li>
+				<li>Relazioni dirette tra beni culturali, rapporto tra bene culturale e altre opere (opera finale/originale, riuso, copia, opera derivata, pubblicazione contenente una stampa);</li>
+				<li>Agenti collegati al bene culturale per i quali non è possibile definire la natura della relazione;</li>
+				<li>Responsabilità (editore, stampatore, etc.) relative ai processi di produzione e divulgazione dei beni fotografici;</li>
+				<li>Classificazione dei beni musicali;</li>
+				<li>Musicista e organico musicale correlati a uno strumento musicale;</li>
+				<li>Accessori dei beni musicali;</li>
+				<li>Codici alternativi della scheda di catalogo.</li>
+			</ul>
+			<p>Nella tabella seguente sono elencati gli IRI dei moduli
+				e delle ontologie riusate, ognuno associato a un prefisso.</p>
+			<table>
+				<tr>
+					<th>Prefisso</th>
+					<th>IRI</th>
+				</tr>
+				<tr>
+					<td>arco-core:</td>
+					<td>https://w3id.org/arco/core/</td>
+				</tr>
+				<tr>
+					<td>arco-ce:</td>
+					<td>https://w3id.org/arco/cultural-event/</td>
+				</tr>
+				<tr>
+					<td>arco-catalogue:</td>
+					<td>https://w3id.org/arco/catalogue/</td>
+				</tr>
+				<tr>
+					<td>arco-dd:</td>
+					<td>https://w3id.org/arco/denotative-description/</td>
+				</tr>
+				<tr>
+					<td>arco-location:</td>
+					<td>https://w3id.org/arco/location/</td>
+				</tr>
+				<tr>
+					<td>arco-cd:</td>
+					<td>https://w3id.org/arco/context-description/</td>
+				</tr>
+				<tr>
+					<td>cis:</td>
+					<td>http://dati.beniculturali.it/cis/</td>
+				</tr>
+				<tr>
+					<td>l0:</td>
+					<td>https://w3id.org/italia/onto/l0/</td>
+				</tr>
+				<tr>
+					<td>roapit:</td>
+					<td>https://w3id.org/italia/onto/RO/</td>
+				</tr>
+				<tr>
+					<td>tiapit:</td>
+					<td>https://w3id.org/italia/onto/TI/</td>
+				</tr>
+				<tr>
+					<td>clvapit:</td>
+					<td>https://w3id.org/italia/onto/CLV/</td>
+				</tr>
+				<tr>
+					<td>smapit:</td>
+					<td>https://w3id.org/italia/onto/SM/</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="moduli">I moduli di ArCo v0.3</h2>
+			<p>In questa sezione si illustrano sinteticamente i nuovi nuclei
+				concettuali principali introdotti nella terza versione della rete
+				ArCo. Per una loro descrizione dettagliata si rimanda alla sezione
+				"Ontologie" della pagina principale.</p>
+			<p>Sia le scelte di modellazione sia il vocabolario sono da
+				ritenersi provvisori.</p>
+
+
+			<h3>Modulo Core (arco-core:)</h3>
+			<p>Questo modulo modella le informazioni considerate "core" del dominio dei beni culturali. Il primo diagramma illustra la modellazione della relazione tra un agente e il ruolo che riveste; il secondo diagramma illustra le relazioni tra il bene culturale e le sue parti (componenti, residuali, generiche parti cui si riferisce una porzione specifica di informazione registrata nella scheda catalografica.</p>
+			<div class="text-center mt-4">
+				<img src="./img3/agentRole.png" /> <img
+					src="./img3/part-residual-component.png" />
+			</div>
+
+			<h3>Modulo Denotative Description (arco-dd:)</h3>
+			<p>Questo modulo (denotazione è inteso come l'atto di indicare una cosa attraverso segni esteriori) modella le informazioni che riguardano il bene culturale in sé, con i suoi attributi. I diagrammi seguenti illustrano la rappresentazione dell'insieme delle misure di un bene culturale, con unità di misura, valore, validità e la rappresentazione dei dettagli tecnici di un bene culturale (materia, tecnica, forma, colore, etc.).
+			<div class="text-center mt-4">
+				<img src="./img3/measurement.png" /> <img
+					src="./img3/technical-details.png" /> 
+			</div>
+
+			<h3>Modulo Context Description (arco-cd:)</h3>
+			<p>Questo modulo modella le informazioni che riguardano il contesto - inteso in senso ampio - in cui il bene culturale viene a trovarsi nel corso della sua storia: ciascun contesto che lo interessa o lo ha interessato viene descritto nelle componenti "spazio", "tempo", "evento", "entità coinvolte" (enti, persone, altri beni). Nei diagrammi si illustrano le rappresentazioni di: acquisizione; mutamento della condizione materiale; appartenenza a una collezione; documentazione e bibliografia; stima; certificati per la circolazione; esportazione e importazione; fruizione di un vestimento; interventi sul bene; inventari; condizione giuridica; provvedimenti di tutela; agenti correlati; rapporto del bene culturale con altre entità, compresi altri beni culturali; responsabilità nei confronti di un bene fotografico; indagini; titoli; strumenti urbanistico-territoriali; usi del bene.</p>
+			<div class="text-center mt-4">
+				<img src="./img3/acquisition.png" /> 
+				<img src="./img3/change-of-availability.png" />
+				<img src="./img3/collection.png" />
+				<img src="./img3/documentation-bibliography.png" />
+				<img src="./img3/estimate.png" />
+				<img src="./img3/export-import.png" />
+				<img src="./img3/fruition-VEAC.png" />
+				<img src="./img3/interventions.png" />
+				<img src="./img3/inventory.png" />
+				<img src="./img3/legal-situation.png" />
+				<img src="./img3/protective-measures.png" />
+				<img src="./img3/related-agents.png" />
+				<img src="./img3/related-works.png" />
+				<img src="./img3/responsibility.png" />
+				<img src="./img3/surveys.png" />
+				<img src="./img3/titles.png" />
+				<img src="./img3/urban-planning-instrument.png" />
+				<img src="./img3/use.png" />
+			</div>
+
+			<h3>Modulo Location (arco-location:)</h3>
+			<p>Questo modulo modella le informazioni relative alla localizzazione del bene culturale. Nel diagramma si illustra la rappresentazione delle informazioni di georeferenziazione.</p>
+			<div class="text-center mt-4">
+				<img src="./img3/geometry.png" />
+			</div>
+
+			<h3>Modulo Catalogue (arco-catalogue:)</h3>
+			<p>Questo modulo modella le informazioni relative al Catalogo dei Beni Culturali, e quindi alle schede di catalogo. Nel diagramma si illustra la rappresentazione di altri codici scheda assegnati da enti diversi da ICCD, del recupero di informazioni pregresse e di codici ICCD soppressi.</p>
+			<div class="text-center mt-4">
+				<img src="./img3/identifiers.png" />
+			</div>
+		</div>
+	</section>
+	
+	<div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>
+          <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">
+            <span class="cc-license-icons">
+              <span id="cc-logo" class="icon"><img alt="cc logo" class="cc" src="./img/cc_icon_white_x2.png"></span>
+              <span id="cc-attribution" class="icon"><img class="cc" src="./img/attribution_icon_white_x2.png"></span>
+            </span>
+          </a>
+        </small>
+      </div>
+    </div>
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.js"></script>
+</body>
+</html>
