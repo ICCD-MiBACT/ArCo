@@ -500,6 +500,7 @@
 
     <!-- https://w3id.org/arco/context-description/hasCopyrightHolder -->
 
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasCopyrightHolder">
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Copyright"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega i diritti d&apos;autore di un&apos;entità al titolare dei diritti d&apos;autore. Questa proprietà fornisce una rappresentazione semplificata della relazione, il cui valore viene esplicitato nel nome della proprietà. La stessa relazione viene anche modellata nell&apos;ontologia, in maniera più espressiva, per mezzo della classe AgentRole, che permette di collegare un agente al ruolo che ha rivestito (in questo caso, al ruolo di &quot;titolare dei diritti d&apos;autore&quot;).</rdfs:comment>
