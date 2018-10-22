@@ -101,7 +101,7 @@ echo "rdf_loader_run();" >> /load_arco_data1.sql
 echo "exec('checkpoint');" >> /load_arco_data1.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data1.sql
 echo "$(cat /load_arco_data1.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data1.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data1.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded1
 fi
@@ -114,7 +114,7 @@ echo "rdf_loader_run();" >> /load_arco_data2.sql
 echo "exec('checkpoint');" >> /load_arco_data2.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data2.sql
 echo "$(cat /load_arco_data2.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data2.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data2.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded2
 fi
@@ -127,7 +127,7 @@ echo "rdf_loader_run();" >> /load_arco_data3.sql
 echo "exec('checkpoint');" >> /load_arco_data3.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data3.sql
 echo "$(cat /load_arco_data3.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data3.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data3.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded3
 fi
@@ -140,7 +140,7 @@ echo "rdf_loader_run();" >> /load_arco_data4.sql
 echo "exec('checkpoint');" >> /load_arco_data4.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data4.sql
 echo "$(cat /load_arco_data4.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data4.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data4.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded4
 fi
@@ -153,7 +153,7 @@ echo "rdf_loader_run();" >> /load_arco_data5.sql
 echo "exec('checkpoint');" >> /load_arco_data5.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data5.sql
 echo "$(cat /load_arco_data5.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data5.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data5.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded5
 fi
@@ -166,7 +166,7 @@ echo "rdf_loader_run();" >> /load_arco_data6.sql
 echo "exec('checkpoint');" >> /load_arco_data6.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data6.sql
 echo "$(cat /load_arco_data6.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data6.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data6.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded6
 fi
@@ -179,7 +179,7 @@ echo "rdf_loader_run();" >> /load_arco_data7.sql
 echo "exec('checkpoint');" >> /load_arco_data7.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data7.sql
 echo "$(cat /load_arco_data7.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data7.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data7.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded7
 fi
@@ -192,7 +192,7 @@ echo "rdf_loader_run();" >> /load_arco_data8.sql
 echo "exec('checkpoint');" >> /load_arco_data8.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data8.sql
 echo "$(cat /load_arco_data8.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data8.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data8.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded8
 fi
@@ -205,7 +205,7 @@ echo "rdf_loader_run();" >> /load_arco_data9.sql
 echo "exec('checkpoint');" >> /load_arco_data9.sql
 echo "WAIT_FOR_CHILDREN; " >> /load_arco_data9.sql
 echo "$(cat /load_arco_data9.sql)"
-isql-v -U dba -P "$pwd" < /load_arco_data9.sql
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data9.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded9
 fi
