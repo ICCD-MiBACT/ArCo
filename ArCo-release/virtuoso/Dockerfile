@@ -20,7 +20,15 @@ ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /usr/l
 ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 
 # Add ArCo data
-ADD http://stlab.istc.cnr.it/arco/docker_data/arco_dataset-v0.3.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-1.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-2.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-3.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-4.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-5.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-6.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-7.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-8.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-9.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
 
 #RUN cd /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/ \
 #		&& tar -xvzf ontologies.tar.gz \
