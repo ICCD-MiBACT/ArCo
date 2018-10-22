@@ -92,20 +92,123 @@ then
     echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .dbunico_loaded
 fi
 
-if [ ! -f ".arco_data_loaded" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco/" ] ;
+if [ ! -f ".arco_data_loaded1" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco1/" ] ;
 then
-	pwd="dba" ;
-	echo "Loading DB ArCo data" ;
-	echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data.sql
-    echo "rdf_loader_run();" >> /load_arco_data.sql
-    echo "exec('checkpoint');" >> /load_arco_data.sql
-    echo "WAIT_FOR_CHILDREN; " >> /load_arco_data.sql
-    echo "$(cat /load_arco_data.sql)"
-    virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data.sql
-    kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
-    echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 1" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco1/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data1.sql
+echo "rdf_loader_run();" >> /load_arco_data1.sql
+echo "exec('checkpoint');" >> /load_arco_data1.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data1.sql
+echo "$(cat /load_arco_data1.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data1.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded1
 fi
-
+if [ ! -f ".arco_data_loaded2" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco2/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 2" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco2/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data2.sql
+echo "rdf_loader_run();" >> /load_arco_data2.sql
+echo "exec('checkpoint');" >> /load_arco_data2.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data2.sql
+echo "$(cat /load_arco_data2.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data2.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded2
+fi
+if [ ! -f ".arco_data_loaded3" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco3/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 3" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco3/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data3.sql
+echo "rdf_loader_run();" >> /load_arco_data3.sql
+echo "exec('checkpoint');" >> /load_arco_data3.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data3.sql
+echo "$(cat /load_arco_data3.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data3.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded3
+fi
+if [ ! -f ".arco_data_loaded4" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco4/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 4" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco4/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data4.sql
+echo "rdf_loader_run();" >> /load_arco_data4.sql
+echo "exec('checkpoint');" >> /load_arco_data4.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data4.sql
+echo "$(cat /load_arco_data4.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data4.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded4
+fi
+if [ ! -f ".arco_data_loaded5" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco5/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 5" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco5/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data5.sql
+echo "rdf_loader_run();" >> /load_arco_data5.sql
+echo "exec('checkpoint');" >> /load_arco_data5.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data5.sql
+echo "$(cat /load_arco_data5.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data5.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded5
+fi
+if [ ! -f ".arco_data_loaded6" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco6/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 6" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco6/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data6.sql
+echo "rdf_loader_run();" >> /load_arco_data6.sql
+echo "exec('checkpoint');" >> /load_arco_data6.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data6.sql
+echo "$(cat /load_arco_data6.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data6.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded6
+fi
+if [ ! -f ".arco_data_loaded7" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco7/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 7" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco7/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data7.sql
+echo "rdf_loader_run();" >> /load_arco_data7.sql
+echo "exec('checkpoint');" >> /load_arco_data7.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data7.sql
+echo "$(cat /load_arco_data7.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data7.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded7
+fi
+if [ ! -f ".arco_data_loaded8" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco8/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 8" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco8/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data8.sql
+echo "rdf_loader_run();" >> /load_arco_data8.sql
+echo "exec('checkpoint');" >> /load_arco_data8.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data8.sql
+echo "$(cat /load_arco_data8.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data8.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded8
+fi
+if [ ! -f ".arco_data_loaded9" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco9/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 9" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco9/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data9.sql
+echo "rdf_loader_run();" >> /load_arco_data9.sql
+echo "exec('checkpoint');" >> /load_arco_data9.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data9.sql
+echo "$(cat /load_arco_data9.sql)"
+isql-v -U dba -P "$pwd" < /load_arco_data9.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded9
+fi
 
 #crudini --set virtuoso.ini HTTPServer ServerPort ${VIRT_HTTPServer_ServerPort:-$original_port}
 
