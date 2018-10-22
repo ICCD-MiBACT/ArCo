@@ -5,7 +5,7 @@
 	xmlns:arco-fn="http://w3id.org/arco/saxon-extension" 
 	xmlns:arco-core="https://w3id.org/arco/core/"
 	xmlns:arco-ce="https://w3id.org/arco/cultural-event/"
-	xmlns:catalogue="https://w3id.org/arco/catalogue/"
+	xmlns:arco-catalogue="https://w3id.org/arco/catalogue/"
 	xmlns:arco-dd="https://w3id.org/arco/denotative-description/" xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:l0="https://w3id.org/italia/onto/l0/" xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
 	xmlns:tiapit="https://w3id.org/italia/onto/TI/" xmlns:roapit="https://w3id.org/italia/onto/RO/"
@@ -1250,6 +1250,20 @@
 				</rdf:Description>
 
 			</xsl:if>
+			
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+                    <xsl:value-of
+					select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
+                </xsl:attribute>
+                
+                <arco-catalogue:describes>
+					<xsl:attribute name="rdf:resource">
+                        <xsl:value-of
+							select="$objectOfDescription" />
+                    </xsl:attribute>
+				</arco-catalogue:describes>
+            </rdf:Description>
 
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -1258,7 +1272,8 @@
 
 				<!-- Rule #RWS -->
 				<xsl:for-each select="schede/*/RV/RSE">
-					<xsl:if test="./*">
+					<xsl:if test="./* 
+					and (not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')))">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->

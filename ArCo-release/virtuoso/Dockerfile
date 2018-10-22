@@ -2,12 +2,12 @@ FROM tenforce/virtuoso:1.3.1-virtuoso7.2.2
 
 
 # Add ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/objective/objective.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/culturalevent/culturalevent.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/subjective/subjective.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 
 # Add DB Unico
 ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-luoghi.ttl.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
@@ -20,7 +20,7 @@ ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /usr/l
 ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 
 # Add ArCo data
-ADD http://stlab.istc.cnr.it/arco/docker_data/arco_dataset-v0.2.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
+ADD http://stlab.istc.cnr.it/arco/docker_data/arco_dataset-v0.3.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco/
 
 #RUN cd /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/ \
 #		&& tar -xvzf ontologies.tar.gz \

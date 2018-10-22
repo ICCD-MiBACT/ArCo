@@ -64,12 +64,15 @@ public class Main {
 							if(is != null){
 								try{
 									
+									//System.out.println(itemName);
 									Model model = converter.convert(itemName, is);
 									
 									ret = new File(outSubFolder, itemName + ".ttl");
 									OutputStream modelOut = new FileOutputStream(ret);
 									model.write(modelOut, "TURTLE");
 									modelOut.close();
+									
+									
 									
 								} catch(Exception e){
 									try {
@@ -81,6 +84,8 @@ public class Main {
 										// TODO Auto-generated catch block
 										e1.printStackTrace();
 									}
+									System.err.println(itemName);
+									e.printStackTrace();
 								}
 								
 								
@@ -89,6 +94,7 @@ public class Main {
 							return ret;
 						}).collect(Collectors.toList());
 						
+						System.out.println("created");
 						
 						Model model = ModelFactory.createDefaultModel();
 						rdfFiles.forEach(rdfFile -> {
@@ -104,7 +110,8 @@ public class Main {
 								
 								rdfFile.delete();
 							} catch (Exception e) {
-								//e.printStackTrace();
+								System.err.println(rdfFile.getName());
+								e.printStackTrace();
 							}
 						});
 						

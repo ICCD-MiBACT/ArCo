@@ -1,8 +1,10 @@
 package it.cnr.istc.stlab.arco.xsltextension;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -10,9 +12,12 @@ import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.Syntax;
+import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.tdb.TDBFactory;
 
 import it.cnr.istc.stlab.arco.SpecificCulturalPropertyType;
+import it.cnr.istc.stlab.arco.Urifier;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
@@ -24,6 +29,28 @@ import net.sf.saxon.s9api.XdmAtomicValue;
 import net.sf.saxon.s9api.XdmValue;
 
 public class RelatedPropertyFinder implements ExtensionFunction {
+	
+	private static final String IDENTIFIERS = "META-INF/datasets/identifiers.ttl";
+	
+	private static RelatedPropertyFinder instance;
+	private Dataset dataset;
+	
+	private RelatedPropertyFinder() {
+		dataset = TDBFactory.createDataset("identifiers");
+		Model model = dataset.getDefaultModel();
+		if(model.isEmpty()){
+			
+			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(IDENTIFIERS);
+			model.read(inputStream, null, "TURTLE");
+			
+		}
+	}
+	
+	public static RelatedPropertyFinder getInstance(){
+		if(instance == null) 
+			instance = new RelatedPropertyFinder();
+		return instance;
+	}
 
 	@Override
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
@@ -34,7 +61,7 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 				+ "WHERE{ ?property <https://w3id.org/arco/core/uniqueIdentifier> '" + arg + "'}";
 		
 		Query query = QueryFactory.create(sparql, Syntax.syntaxARQ);
-		QueryExecution queryExecution = QueryExecutionFactory.createServiceRequest("http://wit.istc.cnr.it/arco/virtuoso/sparql", query);
+		QueryExecution queryExecution = QueryExecutionFactory.create(query, dataset.getDefaultModel());
 		ResultSet resultSet = queryExecution.execSelect();
 		
 		
@@ -52,7 +79,9 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 			String specificProperty = SpecificCulturalPropertyType.getPropertyType(type);
 			if(specificProperty == null || specificProperty.trim().isEmpty()) 
 				specificProperty = "CulturalProperty";
-			String uri = "https://w3id.org/arco/resource/" + specificProperty + "/" + arg;
+			
+		
+			String uri = "https://w3id.org/arco/resource/" + specificProperty + "/" + Urifier.toURI(arg);
 			uris.add(uri);
 		}
 		

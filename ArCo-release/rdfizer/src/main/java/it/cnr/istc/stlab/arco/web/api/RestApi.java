@@ -32,7 +32,13 @@ public class RestApi {
 		fileName = fileName.replace(".xml", "");
 		Converter converter = new Converter();
 		
-		Model model = converter.convert(fileName, xmlInputStream);
+		Model model = null;
+		try {
+			model = converter.convert(fileName, xmlInputStream);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return Response.ok(model).build();
 		

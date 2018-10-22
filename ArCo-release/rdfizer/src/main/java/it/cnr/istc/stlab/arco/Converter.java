@@ -17,6 +17,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
+import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
@@ -220,7 +221,8 @@ public class Converter {
 		proc.registerExtensionFunction(sheetType2SpecificPropertyType);
 		proc.registerExtensionFunction(localName);
 		proc.registerExtensionFunction(cataloguingEntityFinder);
-		proc.registerExtensionFunction(new RelatedPropertyFinder());
+		proc.registerExtensionFunction(DefinitionMatcherForRASheet.getInstance());
+		proc.registerExtensionFunction(RelatedPropertyFinder.getInstance());
         XsltCompiler comp = proc.newXsltCompiler();
         
         ClassLoader loader = Converter.class.getClassLoader();
@@ -253,47 +255,43 @@ public class Converter {
 		*/
 	}
 	
-	public Model convert(String item, InputStream sourceXml){
+	public Model convert(String item, InputStream sourceXml) throws Exception {
 		
 		Model model = ModelFactory.createDefaultModel();
         
-        try {
-        	StreamSource inputStreamSource = new StreamSource(sourceXml);
-			XdmNode source = proc.newDocumentBuilder().build(inputStreamSource);
+        StreamSource inputStreamSource = new StreamSource(sourceXml);
+		XdmNode source = proc.newDocumentBuilder().build(inputStreamSource);
+		
+		//XsltTransformer trans = exp.load();
+		for(XsltExecutable exp : exps){
+			ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+			Serializer out = proc.newSerializer(byteArrayOut);
+			XsltTransformer trans = exp.load();
 			
-			//XsltTransformer trans = exp.load();
-			for(XsltExecutable exp : exps){
-				ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
-				Serializer out = proc.newSerializer(byteArrayOut);
-				XsltTransformer trans = exp.load();
-				
-				QName qName = new QName("item");
-				XdmValue value = new XdmAtomicValue(item);
-				trans.setParameter(qName, value);
-	            trans.setInitialContextNode(source);
-	            trans.setDestination(out);
-	            trans.transform();
-	            trans.close();
-	            out.close();
-	            
-	            String rdfSource = new String(byteArrayOut.toByteArray());
-	            
-	            //System.out.println(rdfSource);
-				
-				ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
-	            Model localModel = ModelFactory.createDefaultModel();
-	            localModel.read(in, null, "RDF/XML");
-	            
-	            model.add(localModel);
-			}
+			QName qName = new QName("item");
+			XdmValue value = new XdmAtomicValue(item);
+			trans.setParameter(qName, value);
+            trans.setInitialContextNode(source);
+            trans.setDestination(out);
+            trans.transform();
+            trans.close();
+            out.close();
             
+            String rdfSource = new String(byteArrayOut.toByteArray());
             
+            //System.out.println(rdfSource);
+			
+			ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
+            Model localModel = ModelFactory.createDefaultModel();
+            localModel.read(in, null, "RDF/XML");
             
-            
-		} catch (SaxonApiException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+            model.add(localModel);
 		}
+            
+            
+            
+            
+		
         
         return model;
         
@@ -304,7 +302,6 @@ public class Converter {
 		
 		exps = new ArrayList<XsltExecutable>();
 		cataloguingEntityFinder = CataloguingEntityFinder.create();
-    	
     }
 	
 	public void destroy(){
@@ -316,7 +313,13 @@ public class Converter {
 		//converter.convert("ICCD3569822", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD3569822.xml"), System.out);
 		
 			
-		Model model = converter.convert("ICCD10717180", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
+		Model model = null;
+		try {
+			model = converter.convert("ICCD10717180", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		model.write(System.out, "TURTLE");
 		
 		converter.destroy();

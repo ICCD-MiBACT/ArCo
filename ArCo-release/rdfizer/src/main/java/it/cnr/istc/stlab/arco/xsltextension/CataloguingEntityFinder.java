@@ -26,7 +26,7 @@ import net.sf.saxon.s9api.XdmValue;
 
 public class CataloguingEntityFinder implements ExtensionFunction {
 	
-	private static final String ENTI_SCHEDATORI_CSV = "META-INF/datasets/enti-schedatori.csv";
+	private static final String ENTI_SCHEDATORI_CSV = "META-INF/datasets/enti-schedatori.tsv";
 	
 	private ConcurrentMap<String,String> entiSchedatori;
 	private DB db;
@@ -52,7 +52,7 @@ public class CataloguingEntityFinder implements ExtensionFunction {
 				r = null;
 			}
 			if(r != null){
-	    		CSVParser parser = new CSVParserBuilder().withSeparator(';').build();
+	    		CSVParser parser = new CSVParserBuilder().withSeparator('\t').build();
 	    		CSVReader reader = new CSVReaderBuilder(r).withCSVParser(parser).build();
 	    		
 	    		String[] row = null; 

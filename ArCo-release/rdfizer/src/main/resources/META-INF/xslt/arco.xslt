@@ -13,6 +13,7 @@
 	xmlns:php="http://php.net/xsl" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:roapit="https://w3id.org/italia/onto/RO/"
 	xmlns:tiapit="https://w3id.org/italia/onto/TI/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	version="1.0" exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
@@ -62,12 +63,7 @@
 				<rdfs:label xml:lang="it">
 					<xsl:value-of select="concat('Scheda catalografica n: ', $itemURI)" />
 				</rdfs:label>
-				<arco-catalogue:describes>
-					<xsl:attribute name="rdf:resource">
-                        <xsl:value-of
-						select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
-                    </xsl:attribute>
-				</arco-catalogue:describes>
+				
 				<!-- hasCataloguingLevel (schede/*/CD/LIR) -->
 				<xsl:for-each select="schede/*/CD/LIR">
 					<arco-catalogue:hasCataloguingLevel>
@@ -4333,6 +4329,16 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
 					</rdfs:label>
+					<xsl:if test="$sheetType='RA'">
+						<xsl:variable name="ra-definition" select="arco-fn:ra-definition(normalize-space(schede/*/OG/OGT/OGTD))" />
+						<xsl:if test="$ra-definition != ''">
+							<skos:closeMatch>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$ra-definition" />
+								</xsl:attribute>
+							</skos:closeMatch>
+						</xsl:if>
+					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
 			<!-- We add the cultural property specification as an individual. It's 
@@ -15855,7 +15861,8 @@
 			<!-- The individual typed as RelatedWorkSituation is created here (cf. 
 				rule #RWS in component.xslt). -->
 			<xsl:for-each select="schede/*/RV/RSE">
-				<xsl:if test="./*">
+				<xsl:if test="./* 
+				and (not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
@@ -15880,10 +15887,10 @@
 						</l0:name>
 
 						<xsl:choose>
-							<xsl:when test="lower-case(normalize-space(./RSER))='è in relazione con' 
+							<xsl:when test="(lower-case(normalize-space(./RSER))='è in relazione con' 
 							or lower-case(normalize-space(./RSER))='scheda altra fotografia'
 							or lower-case(normalize-space(./RSER))='scheda opera raffigurata'
-							or lower-case(normalize-space(./RSER))='nr (recupero pregresso)'">
+							or lower-case(normalize-space(./RSER))='nr (recupero pregresso)')">
 								<arco-cd:hasRelatedWork>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of
@@ -15891,9 +15898,9 @@
 									</xsl:attribute>
 								</arco-cd:hasRelatedWork>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='è contenuto in' 
+							<xsl:when test="(lower-case(normalize-space(./RSER))='è contenuto in' 
 							or lower-case(normalize-space(./RSER))='luogo di collocazione/localizzazione'
-							or lower-case(normalize-space(./RSER))='scheda contenitore'">
+							or lower-case(normalize-space(./RSER))='scheda contenitore')">
 								<arco-cd:isLocatedIn>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15901,8 +15908,8 @@
 								</xsl:attribute>
 							</arco-cd:isLocatedIn>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='era contenuto in' 
-							or lower-case(normalize-space(./RSER))='luogo di provenienza'">
+							<xsl:when test="(lower-case(normalize-space(./RSER))='era contenuto in' 
+							or lower-case(normalize-space(./RSER))='luogo di provenienza')">
 								<arco-cd:wasLocatedIn>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15910,8 +15917,8 @@
 								</xsl:attribute>
 							</arco-cd:wasLocatedIn>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='esecuzione/evento di riferimento' 
-							or lower-case(normalize-space(./RSER))='è coinvolto in'">
+							<xsl:when test="(lower-case(normalize-space(./RSER))='esecuzione/evento di riferimento' 
+							or lower-case(normalize-space(./RSER))='è coinvolto in')">
 								<arco-cd:isInvolvedIn>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15919,8 +15926,8 @@
 								</xsl:attribute>
 							</arco-cd:isInvolvedIn>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='sede di realizzazione' 
-							or lower-case(normalize-space(./RSER))='è stato realizzato in'">
+							<xsl:when test="(lower-case(normalize-space(./RSER))='sede di realizzazione' 
+							or lower-case(normalize-space(./RSER))='è stato realizzato in')">
 								<arco-cd:wasCreatedAt>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15928,8 +15935,8 @@
 								</xsl:attribute>
 							</arco-cd:wasCreatedAt>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='bene composto' 
-							or lower-case(normalize-space(./RSER))='è compreso in'">
+							<xsl:when test="(lower-case(normalize-space(./RSER))='bene composto' 
+							or lower-case(normalize-space(./RSER))='è compreso in')">
 								<arco-cd:isReusedBy>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15937,8 +15944,8 @@
 								</xsl:attribute>
 							</arco-cd:isReusedBy>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='fonte di rappresentazione' 
-							or lower-case(normalize-space(./RSER))='è rappresentato in'">
+							<xsl:when test="(lower-case(normalize-space(./RSER))='fonte di rappresentazione' 
+							or lower-case(normalize-space(./RSER))='è rappresentato in')">
 								<arco-cd:isSubjectOf>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15946,8 +15953,8 @@
 								</xsl:attribute>
 							</arco-cd:isSubjectOf>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='relazione urbanistico ambientale' 
-							or lower-case(normalize-space(./RSER))='è in relazione urbanistico - ambientale con'">
+							<xsl:when test="(lower-case(normalize-space(./RSER))='relazione urbanistico ambientale' 
+							or lower-case(normalize-space(./RSER))='è in relazione urbanistico - ambientale con')">
 								<arco-cd:hasUrbanPlanningEnvironmentalRelationWith>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15955,8 +15962,8 @@
 								</xsl:attribute>
 							</arco-cd:hasUrbanPlanningEnvironmentalRelationWith>
 							</xsl:when>
-							<xsl:when test="lower-case(normalize-space(./RSER))='sede di rinvenimento' 
-							or lower-case(normalize-space(./RSER))='è stato rinvenuto in'">
+							<xsl:when test="(lower-case(normalize-space(./RSER))='sede di rinvenimento' 
+							or lower-case(normalize-space(./RSER))='è stato rinvenuto in')">
 								<arco-cd:wasRediscoveredAt>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
@@ -15976,6 +15983,7 @@
 						
 						
 					</rdf:Description>
+				
 				</xsl:if>
 			</xsl:for-each>
 

@@ -50,8 +50,6 @@ public class XsltTransformer {
 	                                 .longOpt(OUTPUT_SYNTAX_LONG)
 	                                 .build();
 	        
-	        
-	        
 	        options.addOption(outputFileOption);
 	        options.addOption(outputSyntaxOption);
 	        
@@ -88,7 +86,13 @@ public class XsltTransformer {
 	        					if(outputSyntax == null)
 	        						outputSyntax = "TURTLE";
 	        					
-	        					Model model = converter.convert(fileName, inputStream);
+	        					Model model = null;
+								try {
+									model = converter.convert(fileName, inputStream);
+								} catch (Exception e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 								
 								model.write(out, outputSyntax);
 	        				}
