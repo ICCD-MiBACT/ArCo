@@ -19,6 +19,7 @@ import org.apache.jena.rdf.model.ModelFactory;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
+import it.cnr.istc.stlab.arco.xsltextension.Urify;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
@@ -47,35 +48,7 @@ public class Converter {
 		
 		init();
 		
-		ExtensionFunction urify = new ExtensionFunction()
-        {
-            public QName getName()
-            {
-                return new QName("http://w3id.org/arco/saxon-extension", "urify");
-            }
-            
-            public SequenceType getResultType()
-            {
-                return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
-            }
-            
-            public net.sf.saxon.s9api.SequenceType[] getArgumentTypes()
-            {
-                return new SequenceType[]
-                    {
-                        SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE)
-                    };
-            }
-
-            public XdmValue call(XdmValue[] arguments) throws SaxonApiException
-            {
-                String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                arg = Urifier.toURI(arg);
-                return new XdmAtomicValue(arg);
-            }
-        };
-        
-        ExtensionFunction md5 = new ExtensionFunction()
+		ExtensionFunction md5 = new ExtensionFunction()
         {
             public QName getName()
             {
@@ -215,7 +188,7 @@ public class Converter {
         };
         
         proc = new Processor(false);
-		proc.registerExtensionFunction(urify);
+		proc.registerExtensionFunction(new Urify());
 		proc.registerExtensionFunction(md5);
 		proc.registerExtensionFunction(sheetType2propertyType);
 		proc.registerExtensionFunction(sheetType2SpecificPropertyType);

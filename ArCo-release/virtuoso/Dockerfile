@@ -29,6 +29,7 @@ ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-6.n
 ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-7.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco7/
 ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-8.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco8/
 ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-9.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco9/
+ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.3/arco_dataset-part-10.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/arco10/
 
 #RUN cd /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/ \
 #		&& tar -xvzf ontologies.tar.gz \

@@ -209,6 +209,19 @@ virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data9.sql
 kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded9
 fi
+if [ ! -f ".arco_data_loaded10" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/arco10/" ] ;
+then
+pwd="dba" ;
+echo "Loading DB ArCo data - segment 10" ;
+echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/arco10/', '*.gz', 'https://w3id.org/arco/data');" >> /load_arco_data10.sql
+echo "rdf_loader_run();" >> /load_arco_data10.sql
+echo "exec('checkpoint');" >> /load_arco_data10.sql
+echo "WAIT_FOR_CHILDREN; " >> /load_arco_data10.sql
+echo "$(cat /load_arco_data10.sql)"
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data10.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .arco_data_loaded10
+fi
 
 #crudini --set virtuoso.ini HTTPServer ServerPort ${VIRT_HTTPServer_ServerPort:-$original_port}
 
