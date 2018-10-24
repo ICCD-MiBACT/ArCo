@@ -235,18 +235,19 @@ WHERE{
   ?event cis:involves ?culturalProperty ;
     l0:name ?eventName .
   ?culturalProperty rdfs:label ?culturalPropertyLabel
-}</pre>
+}
+limit 100</pre>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
+PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
 PREFIX roapit: &lt;https://w3id.org/italia/onto/RO/&gt;
 SELECT *
 WHERE{
-  ?entity catalogue:hasCatalogueRecordVersion ?record . 
-  ?record catalogue:hasCatalogueRecordRiT ?rit . 
+  ?entity arco-catalogue:hasCatalogueRecordVersion ?record . 
+  ?record arco-catalogue:hasCatalogueRecordRiT ?rit . 
   ?rit roapit:withRole ?role ;
     roapit:isRoleInTimeOf ?agent
 }
@@ -256,7 +257,7 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
+PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt;
 SELECT *
 WHERE{
   ?record catalogue:hasCatalogueRecordVersion ?recordVersion . 
@@ -315,15 +316,13 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
-PREFIX location: &lt;https://w3id.org/arco/location/&gt;
-PREFIX tiapit: &lt;https://w3id.org/italia/onto/TI/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 SELECT *
 WHERE{
   ?entity rdfs:label ?entityLabel ;
-    location:hasTimeIndexedQualifiedLocation ?location .
-  ?location location:hasLocationType ?locationType ;
-    location:atSite ?site .
+    arco-location:hasTimeIndexedQualifiedLocation ?location .
+  ?location arco-location:hasLocationType ?locationType ;
+    arco-location:atSite ?site .
 }
 limit 100
 </pre>
@@ -332,13 +331,12 @@ limit 100
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
-PREFIX location: &lt;https://w3id.org/arco/location/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 SELECT *
 WHERE {
   ?entity rdfs:label ?entityLabel ; 
-    locgeoamm:hasTimeIndexedQualifiedLocation ?location .
-  ?location locgeoamm:hasLocationType location:StorageLocation.
+    arco-location:hasTimeIndexedQualifiedLocation ?location .
+  ?location arco-location:hasLocationType arco-location:StorageLocation.
 }
 limit 100
 </pre>
@@ -347,12 +345,12 @@ limit 100
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX objective: &lt;https://w3id.org/arco/objective/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
 SELECT ?entity ?entityLabel ?conservation ?proposedIntervention
 WHERE{
   ?entity rdfs:label ?entityLabel ;
-    objective:proposedIntervention ?proposedIntervention ;
-    objective:hasConservationStatus ?conservation .
+    arco-dd:proposedIntervention ?proposedIntervention ;
+    arco-dd:hasConservationStatus ?conservation .
 }
 LIMIT 100</pre>
             </div>
@@ -382,7 +380,7 @@ LIMIT 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+objective%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fobjective%2F>%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fconservation+%3FproposedIntervention%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++objective%3AproposedIntervention+%3FproposedIntervention+%3B%0D%0A++++objective%3AhasConservationStatus+%3Fconservation+.%0D%0A%7D%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fconservation+%3FproposedIntervention%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++arco-dd%3AproposedIntervention+%3FproposedIntervention+%3B%0D%0A++++arco-dd%3AhasConservationStatus+%3Fconservation+.%0D%0A%7D%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -393,7 +391,7 @@ LIMIT 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Qual è l'ambito di tutela sotto il quale ricade il bene culturale X?</p>
+            <p class="lead">Qual è la documentazione fotografica allegata alla scheda del bene culturale X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">Qual è il codice univoco associato al bene culturale X?</p>
@@ -406,22 +404,15 @@ LIMIT 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX objective: &lt;https://w3id.org/arco/core/&gt;
-SELECT ?entity ?entityLabel ?scope ?scopeLabel
+PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+SELECT ?entity ?documentation
 WHERE{
-  ?entity objective:hasMibactScopeOfProtection ?scope ;
-    rdfs:label ?entityLabel .
-  ?scope rdfs:label ?scopeLabel
-}</pre>
-            </div>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <div class="mt-4">
-               <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
-SELECT ?entity ?id
-WHERE{
-  ?entity arco:uniqueIdentifier ?id 
+  
+ ?entity rdf:type/rdfs:subClassOf* arco-core:CulturalProperty ; arco-cd:hasDocumentation ?documentation .
+  ?documentation a arco-cd:PhotographicDocumentation 
+
+
 }
 limit 100</pre>
             </div>
@@ -429,12 +420,23 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX subjective: &lt;https://w3id.org/arco/subjective/&gt;
+PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+SELECT ?entity ?id
+WHERE{
+  ?entity arco-core:uniqueIdentifier ?id 
+}
+limit 100</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
 SELECT *
 WHERE{
-  ?entity subjective:hasAuthorshipAttribution ?attribution .
-  ?attribution subjective:hasInterventionRole ?role ;
-    subjective:hasSource ?attributionSource
+  ?entity arco-cd:hasAuthorshipAttribution ?attribution .
+  ?attribution arco-cd:hasInterventionRole ?role ;
+    arco-cd:hasSource ?attributionSource
 }
 limit 100</pre>
             </div>
@@ -444,7 +446,7 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+objective%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fscope+%3FscopeLabel%0D%0AWHERE%7B%0D%0A++%3Fentity+objective%3AhasMibactScopeOfProtection+%3Fscope+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+.%0D%0A++%3Fscope+rdfs%3Alabel+%3FscopeLabel%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+%3Fentity+%3Fdocumentation%0D%0AWHERE%7B%0D%0A++%0D%0A+%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B+arco-cd%3AhasDocumentation+%3Fdocumentation+.%0D%0A++%3Fdocumentation+a+arco-cd%3APhotographicDocumentation+%0D%0A%0D%0A%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -464,7 +466,7 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+<http%3A%2F%2Fwww.w3id.org%2Farco%2Fcore%2F>%0D%0APREFIX+subjective%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fsubjective%2F>%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+subjective%3AhasAuthorshipAttribution+%3Fattribution+.%0D%0A++%3Fattribution+subjective%3AhasInterventionRole+%3Frole+%3B%0D%0A++++subjective%3AhasSource+%3FattributionSource%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-cd%3AhasAuthorshipAttribution+%3Fattribution+.%0D%0A++%3Fattribution+arco-cd%3AhasInterventionRole+%3Frole+%3B%0D%0A++++arco-cd%3AhasSource+%3FattributionSource%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -478,30 +480,211 @@ limit 100</pre>
             <p class="lead">A quando risale la realizzazione del bene culturale X? E quale motivazione giustifica la cronologia?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+            <p class="lead">Quali sono le coordinate geografiche del bene culturale X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+             <p class="lead">Quali sono gli usi del bene culturale mobile X?</p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX subjective: &lt;https://w3id.org/arco/subjective/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
 SELECT *
-WHERE{
-  ?entity 
+WHERE{?entity rdf:type/rdfs:subClassOf* arco-core:CulturalProperty ;
     rdfs:label ?entityLabel ;
-  subjective:hasDating ?dating .
-  ?dating subjective:hasEvent ?event ;
-    subjective:hasSource ?source 
+  arco-dd:hasDating ?dating .
+  ?dating arco-cd:hasEvent ?event ;
+    arco-cd:hasSource ?source 
 }
 limit 100</pre>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
+PREFIX clvapit: &lt;https://w3id.org/italia/onto/CLV/&gt;
+SELECT *
+WHERE{
+  ?entity rdf:type/rdfs:subClassOf* arco-core:CulturalProperty ;
+  clvapit:hasGeometry ?geometry .
+  ?geometry arco-location:hasCoordinates ?coordinates .
+
+}
+limit 100</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco: &lt;https://w3id.org/arco/core/&gt;
+PREFIX context: &lt;https://w3id.org/arco/context-description/&gt;
+SELECT *
+WHERE{
+  ?entity a arco:MovableCulturalProperty ;
+  rdfs:label ?entityLabel ;
+  context:hasUse ?use .
+  
+}
+limit 100</pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-dd%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+arco-cd%3AhasEvent+%3Fevent+%3B%0D%0A++++arco-cd%3AhasSource+%3Fsource+%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+clvapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A%09%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B%0D%0A%09clvapit%3AhasGeometry+%3Fgeometry+.%0D%0A%09%3Fgeometry+arco-location%3AhasCoordinates+%3Fcoordinates+.%0D%0A%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+context%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A%09%3Fentity+a+arco%3AMovableCulturalProperty+%3B%0D%0A%09rdfs%3Alabel+%3FentityLabel+%3B%0D%0A%09context%3AhasUse+%3Fuse+.%0D%0A%09%0D%0A%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+          <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Quali sono i proprietari precedenti del bene culturale X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Quali sono le entità che rappresentano le fasi preparatorie del bene culturale X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+             <p class="lead">Quali sono i beni culturali costruiti con l'argilla?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+SELECT *
+WHERE{
+  ?entity rdfs:label ?entityLabel ;
+  arco-cd:hasAcquisition ?acquisition .
+  ?acquisition arco-cd:hasPreviousOwner ?previousOwner .
+
+}
+
+limit 100</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+SELECT *
+WHERE{
+  ?entity rdfs:label ?entityLabel ;
+  arco-cd:hasRelatedWorkSituation ?relatedWorkSituation .
+  ?relatedWorkSituation arco-cd:hasRelatedWork ?relatedWork .
+  ?relatedWork a arco-cd:PreparatoryWork .
+
+}
+
+Limit 100
+</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+SELECT ?entity ?entityLabel ?clay
+WHERE{
+  ?entity arco-dd:hasTechnicalDetailOccurrence ?occurrence ; rdfs:label ?entityLabel .
+?occurrence arco-dd:satisfiesTechnicalDetail ?clay .
+  FILTER regex(?clay, "argilla", "i") 
+
+}
+
+Limit 100</pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A%09%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A%09arco-cd%3AhasAcquisition+%3Facquisition+.%0D%0A%09%3Facquisition+arco-cd%3AhasPreviousOwner+%3FpreviousOwner+.%0D%0A%0D%0A%7D%0D%0A%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasRelatedWorkSituation+%3FrelatedWorkSituation+.%0D%0A++%3FrelatedWorkSituation+arco-cd%3AhasRelatedWork+%3FrelatedWork+.%0D%0A++%3FrelatedWork+a+arco-cd%3APreparatoryWork+.%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fclay%0D%0AWHERE%7B%0D%0A%09%3Fentity+arco-dd%3AhasTechnicalDetailOccurrence+%3Foccurrence+%3B+rdfs%3Alabel+%3FentityLabel+.%0D%0A%3Foccurrence+arco-dd%3AsatisfiesTechnicalDetail+%3Fclay+.%0D%0A%09FILTER+regex%28%3Fclay%2C+%22argilla%22%2C+%22i%22%29+%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Esegui!
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+          <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Allineamento della CulturalPropertyDefinition dei reperti archeologici con il thesaurus per la definizione del bene (scheda RA)</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
             
+          </div>
+          <div class="col-lg-4 mr-auto">
+             
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+SELECT DISTINCT *
+WHERE{
+?RAdefinition rdf:type/rdfs:subClassOf* arco-core:CulturalProperty ;
+ skos:closeMatch ?alignment}
+
+limit 100
+</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               
+            </div>
           </div>
           <div class="col-lg-4 mr-auto">
             
@@ -511,7 +694,7 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+subjective%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fsubjective%2F>%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++subjective%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+subjective%3AhasEvent+%3Fevent+%3B%0D%0A++++subjective%3AhasSource+%3Fsource+%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+DISTINCT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-cd%3AhasRelatedWorkSituation+%3Fsituation.+%0D%0A++%3Fsituation+arco-cd%3AhasUrbanPlanningEnvironmentalRelationWith+%3FrelatedCulturalProperty%7D%0D%0A%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -519,11 +702,14 @@ limit 100</pre>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+           
           </div>
           <div class="col-lg-4 mr-auto">
             
           </div>
+          </div>
+        </div>
+        </div>
         </div>
       </div>
     </section>
