@@ -672,12 +672,12 @@ Limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
 SELECT DISTINCT *
 WHERE{
-?RAdefinition rdf:type/rdfs:subClassOf* arco-core:CulturalProperty ;
- skos:closeMatch ?alignment}
-
-limit 100
+ ?definition rdf:type/rdfs:subClassOf* arco-dd:CulturalPropertyDefinition ;
+ skos:closeMatch ?alignment
+}
 </pre>
             </div>
           </div>
@@ -694,7 +694,7 @@ limit 100
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+DISTINCT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-cd%3AhasRelatedWorkSituation+%3Fsituation.+%0D%0A++%3Fsituation+arco-cd%3AhasUrbanPlanningEnvironmentalRelationWith+%3FrelatedCulturalProperty%7D%0D%0A%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+DISTINCT+*%0D%0AWHERE%7B%0D%0A%3Fdefinition+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-dd%3ACulturalPropertyDefinition+%3B%0D%0A+skos%3AcloseMatch+%3Falignment%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
