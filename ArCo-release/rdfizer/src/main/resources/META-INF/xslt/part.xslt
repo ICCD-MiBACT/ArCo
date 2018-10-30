@@ -73,7 +73,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./STCP='intero bene')">
+				<xsl:if test="not(./STCP='intero bene') and (not(starts-with(lower-case(normalize-space(./STCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./STCP)), 'n.r')))">
 				<xsl:for-each select="./STCP">
 					
 						<rdf:Description>
@@ -99,9 +99,13 @@
 				</xsl:if>
 			</xsl:for-each>
 
-			<!-- part of cultural property when there is AUTP (author) -->
+			<!-- part of cultural property when there is AUTW (author) -->
 			<xsl:for-each select="schede/*/AU/AUT">
-				<xsl:if test="./AUTW">
+			<xsl:variable name="authorAttribution">
+					<xsl:value-of
+						select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
+				</xsl:variable>
+				<xsl:if test="./AUTW and not(./AUTW='intero bene') and (not(starts-with(lower-case(normalize-space(./AUTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'n.r')))">
 					<xsl:variable name="part">
 						<xsl:value-of
 							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./AUTW)))" />
@@ -125,7 +129,7 @@
 						<arco-cd:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of
-								select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
+								select="$authorAttribution" />
 		                    </xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
 
@@ -191,7 +195,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./NVCP='intero bene')">
+				<xsl:if test="not(./NVCP='intero bene') and (not(starts-with(lower-case(normalize-space(./NVCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./NVCP)), 'n.r')))">
 				<xsl:for-each select="./NVCP">
 					
 						<rdf:Description>
@@ -218,6 +222,7 @@
 			</xsl:for-each>
 			
 			<!-- part of cultural property when there is MTCP (4.00, material) -->
+			<xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
 				<xsl:for-each select="schede/*/MT/MTC/MTCM">
 				<xsl:variable name="material">
 					<xsl:value-of
@@ -226,7 +231,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(../MTCP='intero bene')">
+				<xsl:if test="not(../MTCP='intero bene') and (not(starts-with(lower-case(normalize-space(../MTCP)), 'nr')) and not(starts-with(lower-case(normalize-space(../MTCP)), 'n.r')))">
 				<xsl:for-each select="../MTCP">
 					
 						<rdf:Description>
@@ -251,8 +256,10 @@
 				</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
+			</xsl:if>
 			
 			<!-- part of cultural property when there is MTCP (4.00, technique) -->
+			<xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
 				<xsl:for-each select="schede/*/MT/MTC/MTCT">
 				<xsl:variable name="technique">
 					<xsl:value-of
@@ -286,6 +293,7 @@
 				</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
+			</xsl:if>
 			
 			<!-- part of cultural property when there is DTP (4.00, dating) -->
 				<xsl:for-each select="schede/*/DT">
@@ -296,7 +304,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./DTP='intero bene')">
+				<xsl:if test="not(./DTP='intero bene') and (not(starts-with(lower-case(normalize-space(./DTP)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTP)), 'n.r')))">
 				<xsl:for-each select="./DTP">
 					
 						<rdf:Description>
@@ -305,11 +313,11 @@
 									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
-							<arco-dd:hasDating>
+							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="$dating" />
 								</xsl:attribute>
-							</arco-dd:hasDating>
+							</arco-cd:hasDating>
 							<rdfs:label>
 								<xsl:value-of select="normalize-space(.)" />
 							</rdfs:label>
