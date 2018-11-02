@@ -72,8 +72,8 @@
         <rdfs:comment xml:lang="en">This property was created as a generic property for specific subproperties, and represents the relationship between an entity that describes another entity.</rdfs:comment>
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <rdfs:label xml:lang="it">descrive</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -89,8 +89,8 @@
         <rdfs:comment xml:lang="it">Proprietà che consente di associare la scheda di catalogo al bene culturale che essa descrive.</rdfs:comment>
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <rdfs:label xml:lang="it">descrive</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -104,8 +104,8 @@
         <rdfs:comment xml:lang="it">Proprietà che associa una versione di una scheda di catalogo all&apos;intervallo temporale in cui è stata compilata.</rdfs:comment>
         <rdfs:label xml:lang="it">compilato al tempo</rdfs:label>
         <rdfs:label xml:lang="en">edited at time</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/CMP/CMPD; CM/RVM/RVMD; CM/AGG/AGGD</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -135,8 +135,8 @@
         <rdfs:comment xml:lang="it">Proprietà che permette di collegare una scheda di catalogo, intesa come oggetto informativo che descrive un bene culturale, a una sua versione (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione).</rdfs:comment>
         <rdfs:label xml:lang="it">ha versione</rdfs:label>
         <rdfs:label xml:lang="en">has version</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -144,13 +144,14 @@
     <!-- https://w3id.org/arco/catalogue/hasCatalogueRecordVersionRiT -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/hasCatalogueRecordVersionRiT">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/catalogue/isCatalogueRecordVersionRiTOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare una particolare versione di una scheda al ruolo nel tempo che un agente esercita nell&apos;ambito della redazione, dell&apos;aggiornamento o revisione della scheda.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ruolo nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has role in time</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -158,6 +159,7 @@
     <!-- https://w3id.org/arco/catalogue/hasCataloguingAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/hasCataloguingAgent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/catalogue/isCataloguingAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -167,8 +169,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione di una scheda di catalogo a un agente che riveste un ruolo nelle attività di catalogazione di quella scheda. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Questa relazione è poi specializzata da sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l’ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha agente coinvolto nella catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agent</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -181,8 +183,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare una scheda di catalogo al suo livello di catalogazione.</rdfs:comment>
         <rdfs:label xml:lang="it">ha livello di catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing level</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CD/LIR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -197,8 +199,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione, relativa a trascrizione per informatizzazione, di una scheda di catalogo al relativo operatore. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha operatore di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription operator</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/RVM/RVMN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -213,8 +215,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione, relativa a trascrizione per informatizzazione, di una scheda di catalogo al relativo ente/soggetto responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription responsible agent</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/RVM/RVME</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -224,14 +226,15 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/hasImmediatePreviousVersion">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/catalogue/hasPreviousVersion"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/catalogue/isImmediatePreviousVersionOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente precedente.</rdfs:comment>
         <rdfs:label xml:lang="it">ha la versione precedente</rdfs:label>
         <rdfs:label xml:lang="en">has immediate previous version</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -245,8 +248,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo funzionario responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha funzionario responsabile</rdfs:label>
         <rdfs:label xml:lang="en">has official in charge</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/FUR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -262,8 +265,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione precedente.</rdfs:comment>
         <rdfs:label xml:lang="it">ha versione precedente</rdfs:label>
         <rdfs:label xml:lang="en">has previous version</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -277,8 +280,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo responsabile ricerca e redazione. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha responsabile ricerca e redazione</rdfs:label>
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/CMP/CMPN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -293,8 +296,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo referente verifica scientifica. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha referente verifica scientifica</rdfs:label>
         <rdfs:label xml:lang="en">has scientific director</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/RSR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -309,8 +312,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo funzionario responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha funzionario responsabile di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update official in charge</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/AGG/AGGF</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -325,8 +328,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo ente/soggetto responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile</rdfs:label>
         <rdfs:label xml:lang="en">has responsible agency or person</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/AGG/AGGE</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -341,8 +344,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo responsabile ricerca e redazione. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha responsabile di ricerca e redazione di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update responsible research and compilation</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/AGG/AGGN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -357,8 +360,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo referente verifica scientifica. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha referente verifica scientifica di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update scientific revisor</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/AGG/AGGR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -372,8 +375,32 @@
         <rdfs:comment xml:lang="it">Proprietà, inversa di &quot;ha versione&quot;, che permette di collegare una versione  (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo alla scheda di catalogo intesa come oggetto informativo che descrive un bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="en">is catalogue record version of</rdfs:label>
         <rdfs:label xml:lang="it">è versione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/catalogue/isCatalogueRecordVersionRiTOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/isCatalogueRecordVersionRiTOf">
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha ruolo nel tempo&quot;, permette di associare il ruolo nel tempo che un agente esercita nell&apos;ambito della redazione, dell&apos;aggiornamento o revisione della scheda a una particolare versione di una scheda.</rdfs:comment>
+        <rdfs:label xml:lang="en">is role in time of</rdfs:label>
+        <rdfs:label xml:lang="it">è ruolo nel tempo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/catalogue/isCataloguingAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/isCataloguingAgentOf">
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente coinvolto nella catalogazione&quot;, rappresenta la relazione che collega un agente che riveste un ruolo nelle attività di catalogazione di una scheda di catalogo alla scheda stessa.</rdfs:comment>
+        <rdfs:label xml:lang="en">is cataloguing agent of</rdfs:label>
+        <rdfs:label xml:lang="it">è agente coinvolto nella catalogazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -387,8 +414,8 @@
         <rdfs:comment xml:lang="en">This property, inverse property of &quot;describes&quot;, was created as a generic property for specific subproperties, and represents the relationship between an entity described by another entity.</rdfs:comment>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -403,8 +430,8 @@
         <rdfs:comment xml:lang="en">This property, inverse of &quot;describes&quot;, is used to associate a cultural property with the catalogue record that describes it.</rdfs:comment>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -419,8 +446,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente successiva.</rdfs:comment>
         <rdfs:label xml:lang="en">is immediate previous version of</rdfs:label>
         <rdfs:label xml:lang="it">è la versione precedente di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -434,8 +461,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione successiva.</rdfs:comment>
         <rdfs:label xml:lang="en">is previous version of</rdfs:label>
         <rdfs:label xml:lang="it">è versione precedente di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -598,8 +625,8 @@
         <rdfs:comment xml:lang="it">Rappresenta una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni, e che può avere più versioni (in seguito ad aggiornamenti e revisioni).</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda di catalogo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1049,8 +1076,8 @@
         <rdfs:comment xml:lang="it">Rappresenta una versione (relativa a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni.</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue record version</rdfs:label>
         <rdfs:label xml:lang="it">Versione della scheda</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CM/CMP; CM/RVM; CM/AGG</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -1072,8 +1099,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta il livello catalogazione, cioè la sigla che individua il grado di approfondimento dell&apos;indagine condotta sul bene in esame (I corrisponde al livello di inventario, P al livello di precatalogo, C al livello di catalogo)</rdfs:comment>
         <rdfs:label xml:lang="en">Cataloguing level</rdfs:label>
         <rdfs:label xml:lang="it">Livello catalogazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CD/LIR</arco-core:iccdNormTag>
     </owl:Class>
     

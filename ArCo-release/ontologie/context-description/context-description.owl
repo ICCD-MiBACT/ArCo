@@ -305,10 +305,11 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una entità di qualsiasi tipo (documentazione, bene culturale, etc.) con il suo autore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its author.</rdfs:comment>
         <rdfs:label xml:lang="it">ha autore</rdfs:label>
         <rdfs:label xml:lang="en">has author</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale: DO/FTA/FTAA, DO/DRA/DRAA, DO/VDC/VDCR, DO/REG/REGA, DO/FNT/FNTA</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -336,9 +337,9 @@
         <rdfs:comment xml:lang="it">Proprietà che lega un oggetto culturale a un&apos;attribuzione di autore o di responsabilità relativa all&apos;oggetto.</rdfs:comment>
         <rdfs:label xml:lang="it">ha attribuzione di autore/responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has authorship attribution</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>AU/AUT; AU/ATB; AU/AAT</arco-core:iccdNormTag>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT; AU/ATB; AU/AAT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -413,8 +414,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione all&apos;occasione che ha determinato quella situazione. Per esempio, può collegare una situazione in cui viene indicata la committenza di un bene culturale all&apos;occasione che ha determinato quella committenza, oppure un luogo di ripresa di un bene fotografico all&apos;occasione che ha determinato il motivo della ripresa, o ancora l&apos;uso di un bene culturale all&apos;occasione d&apos;uso.</rdfs:comment>
         <rdfs:label xml:lang="it">ha circostanza</rdfs:label>
         <rdfs:label xml:lang="en">has circumstance</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -445,8 +446,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di beni culturali al collezionista.</rdfs:comment>
         <rdfs:label xml:lang="it">ha collezionista</rdfs:label>
         <rdfs:label xml:lang="en">has collector</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>UB/COL/COLN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -476,8 +477,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene indicata la committenza di un bene culturale alla persona o istituzione committente.</rdfs:comment>
         <rdfs:label xml:lang="it">ha committente</rdfs:label>
         <rdfs:label xml:lang="en">has committent</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -534,8 +535,8 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/core/MovableCulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha membro di collezione&quot;, collega l&apos;appartenenza di un bene culturale a una collezione in un certo intervallo di tempo al bene culturale mobile coinvolto nella relazione.</rdfs:comment>
         <rdfs:label xml:lang="en">has cultural property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>UB/COL</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -564,9 +565,9 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene attribuito un ambito culturale a un bene culturale all&apos;ambito culturale stesso.</rdfs:comment>
         <rdfs:label xml:lang="it">ambito culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural scope</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>AU/ATB</arco-core:iccdNormTag>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/ATB</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -577,6 +578,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Dating"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua cronologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its dating.</rdfs:comment>
         <rdfs:label xml:lang="it">ha cronologia</rdfs:label>
         <rdfs:label xml:lang="en">has dating</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -680,12 +682,13 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasEvent">
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Dating"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;evento relativo al bene culturale, cui si riferisce una specifica cronologia.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una cronologia a un evento relativo al bene culturale, cui si riferisce la specifica cronologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a dating to an event involving the cultural property, which the dating is about.</rdfs:comment>
         <rdfs:label xml:lang="en">has event related</rdfs:label>
         <rdfs:label xml:lang="it">relativa a evento</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;</arco-core:iccdNormTag>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -962,8 +965,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale al gruppo di musicisti (bande, complessi musicali, associazioni corali, ecc.) in cui lo strumento assume, o ha assunto, abitualmente un ruolo esecutivo. Questa relazione è modellata anche, con maggiore potere espressivo, tramite il pattern AgentRole, che collega lo strumento musicale a una situazione in cui un agente ha rivestito un ruolo (in questo caso, organico musicale).</rdfs:comment>
         <rdfs:label xml:lang="it">ha organico musicale</rdfs:label>
         <rdfs:label xml:lang="en">has musical ensemble</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa SM 4.00: OS/OSD</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -977,8 +980,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a una classificazione con cui lo strumento può essere codificato.</rdfs:comment>
         <rdfs:label xml:lang="it">ha classificazione di strumento musicale</rdfs:label>
         <rdfs:label xml:lang="en">has musical instrument classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -991,8 +994,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale a una persona che assume - o ha assunto - un ruolo certo come esecutore dello strumento. Questa relazione è modellata anche, con maggiore potere espressivo, tramite il pattern AgentRole, che collega lo strumento musicale a una situazione in cui un agente ha rivestito un ruolo (in questo caso, chitarrista, flautista, pianista, ecc., o genericamente musicista).</rdfs:comment>
         <rdfs:label xml:lang="it">ha musicista</rdfs:label>
         <rdfs:label xml:lang="en">has musician</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa SM 4.00: MU/MUTN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1076,8 +1079,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, che può essere direttamente il bene culturale o specificamente il provvedimento di tutela relativo al bene culturale, all&apos;ente proponente, ovvero al soggetto che ha proposto il provvedimento, identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente proponente</rdfs:label>
         <rdfs:label xml:lang="en">has proponet agency</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA; Versioni precedenti: CD/EPR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1325,13 +1328,14 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasSource -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasSource">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Source"/>
-        <rdfs:label xml:lang="it">Questa proprietà associa una attribuzione di autore/responsabilità, una cronologia, una committenza, alla motivazione o fonte che hanno determinato l&apos;attribuzione o l&apos;individuazione di una informazione.</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa proprietà associa una attribuzione di autore/responsabilità, una cronologia, una committenza, alla motivazione o fonte che hanno determinato l&apos;attribuzione o l&apos;individuazione di una informazione.</rdfs:comment>
         <rdfs:label xml:lang="it">ha motivazione</rdfs:label>
         <rdfs:label xml:lang="en">has source</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - ICCD Normativa F: PD/PDF/PDFM - ICCD Normativa VeAC: AU/FRU/FRUF - CCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFM</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1383,8 +1387,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un&apos;indagine effettuata sul bene stesso, per la sua individuazione, per il suo studio e per l&apos;approfondimento delle sue caratteristiche tecniche.</rdfs:comment>
         <rdfs:label xml:lang="it">ha indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE; CM/ISP - ICCD Normative NU, RA, BNB, MA, CA: RS/ALB - ICCD Normativa AT 3.00: IN/INI</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1428,8 +1432,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:label xml:lang="it">ha responsabile scientifico dell&apos;indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey scientific director</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGA; RE/DSC/DSCA; RE/FOI/FOIS</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1600,8 +1604,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha collezionista&quot;, collega un collezionista alla relativa collezione di beni culturali.</rdfs:comment>
         <rdfs:label xml:lang="en">is collector of</rdfs:label>
         <rdfs:label xml:lang="it">è collezionista di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>UB/COL/COLN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1612,8 +1616,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isCommittentIn">
         <rdfs:label xml:lang="en">is committent in</rdfs:label>
         <rdfs:label xml:lang="it">è committente in</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</arco-core:iccdNormTag>
         <arco-core:iccdNormTag xml:lang="it">Questa proprietà collega una persona o istituzione committente a una situazione in cui viene indicata la committenza di un bene culturale.</arco-core:iccdNormTag>
     </owl:ObjectProperty>
@@ -1672,8 +1676,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale mobile alla classe che rappresenta l&apos;appartenenza del bene culturale a una collezione in un certo intervallo di tempo.</rdfs:comment>
         <rdfs:label xml:lang="en">is member of collection</rdfs:label>
         <rdfs:label xml:lang="it">è membro di collezione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>UB/COL</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1713,12 +1717,19 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isProponentAgencyOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ProtectiveMeasure"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega all&apos;ente proponente, ovvero il soggetto che ha proposto il provvedimento (identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto) al provvedimento di tutela. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/context-description/ProtectiveMeasure"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">Questa proprietà collega all&apos;ente proponente, ovvero il soggetto che ha proposto il provvedimento (identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto) al provvedimento di tutela relativo al bene culturale, oppure direttamente al bene culturale. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
         <rdfs:label xml:lang="en">is proponent agency of</rdfs:label>
         <rdfs:label xml:lang="it">è ente proponente di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCA</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -1895,8 +1906,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la definizione associata allo strumento musicale, secondo la classificazione Hornbostel-Sachs.</rdfs:comment>
         <rdfs:label xml:lang="en">Hornbostel-Sachs definition</rdfs:label>
         <rdfs:label xml:lang="it">definizione Hornbostel-Sachs</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSD</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1910,8 +1921,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;indicazione bibliografica dell&apos;edizione Hornbostel-Sachs utilizzata per la classificazione dello strumento musicale.</rdfs:comment>
         <rdfs:label xml:lang="en">Hornbostel-Sachs edition</rdfs:label>
         <rdfs:label xml:lang="it">edizione Hornbostel-Sachs</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSE</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1921,13 +1932,14 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/HSNumber">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/HornbostelSachsClassification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice numerico, secondo l&apos;edizione specifica Hornbostel-Sachs, associato allo strumento musicale nell&apos;ambito della classificazione Hornbostel-Sachs.</rdfs:comment>
         <rdfs:label xml:lang="it">Codice numerico Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSN</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1985,8 +1997,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;indirizzo di riferimento di un agente (persona, organizzazione), inteso come un tipo specifico di contatto presso il quale l&apos;agente è reperibile.</rdfs:comment>
         <rdfs:label xml:lang="en">address</rdfs:label>
         <rdfs:label xml:lang="it">indirizzo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGI</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2027,12 +2039,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/alternativeTitle">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/context-description/title"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un altro titolo noto del soggetto, in alternativa o in aggiunta al titolo più noto o accreditato.</rdfs:comment>
         <rdfs:label xml:lang="en">alternative title</rdfs:label>
         <rdfs:label xml:lang="it">titolo alternativo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDN</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2132,12 +2145,13 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/attributedTitle">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/context-description/title"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un titolo attribuito di una fotografia, cioè un titolo desunto, se possibile, da fonti archivistiche, bibliografiche, orali o iconografiche (altri esemplari della stessa immagine) oppure creato in base al contenuto dell&apos;immagine (o della serie di immagini; è necessario nei casi in cui siano del tutto assenti titoli sul/nel documento, o su materiali ad esso complementari, e nel caso in cui tali titoli risultino errati.</rdfs:comment>
         <rdfs:label xml:lang="en">attributed title</rdfs:label>
         <rdfs:label xml:lang="it">titolo attribuito</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa F: SG/SGL/SGLA</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2153,8 +2167,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice univoco ICCD a un autore.</rdfs:comment>
         <rdfs:label xml:lang="en">author ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD dell&apos;autore</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTK</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2299,8 +2313,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta i contatti di riferimento di un agente (persona, organizzazione), es. indirizzo, numeri di telefono e di fax, indirizzi di posta elettronica, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">contacts</rdfs:label>
         <rdfs:label xml:lang="it">contatti</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa SM 4.00: OS/OSE</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2328,8 +2342,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il valore economico di un bene culturale. Nel caso di una collezione, questa proprietà rappresenta il valore del bene desunto, quando presente, dall&apos;inventario della collezione o dal suo prezzo di acquisto o vendita. Nel caso di un inventario patrimoniale, questa proprietà rappresenta la stima patrimoniale del bene. Il valore viene preceduto dalla specifica della valuta.</rdfs:comment>
         <rdfs:label xml:lang="en">cultural property value</rdfs:label>
         <rdfs:label xml:lang="it">valore del bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2682,13 +2696,14 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/parallelTitle">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/context-description/title"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un titolo parallelo, cioè lo stesso titolo principale tradotto in altre lingue e presentato come equivalente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the parallel title of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">parallel title</rdfs:label>
         <rdfs:label xml:lang="it">titolo parallelo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa F: SG/SGL/SGLL - Normative S e MI: OG/SGT/SGTR</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2730,13 +2745,14 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/properTitle">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/context-description/title"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Rappresenta il titolo proprio del soggetto di una stampa, di una matrice incisa o di una fotografia. Per titolo proprio di una stampa si intende il titolo principale nella forma in cui appare sulla stampa o sulla matrice stessa. Per titolo proprio (principale) di una fotografia, si intende nella forma in cui appare nell&apos;immagine (o su uno dei suoi supporti, o nelle schede a campi testuali, o nei commenti sonori presenti all&apos;interno del file contenente l&apos;immagine digitale). Per la normativa F, Il titolo proprio include anche ogni eventuale titolo alternativo (altre denominazioni dell&apos;opera che appaiano insieme al titolo principale) e, facoltativamente, i complementi del titolo proprio (ossia sottotitoli od ulteriori indicazioni che contribuiscono a qualificare più specificamente il contenuto dell&apos;immagine).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the proper title of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">propert title</rdfs:label>
         <rdfs:label xml:lang="it">titolo proprio</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normative S e MI: OG/SGT/SGTP - Normativa F: SG/SGL/SGLT</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2891,11 +2907,11 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/taxon">
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/AlternativeMusicalInstrumentClassification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice tassonomico e la definizione attribuite allo strumento musicale schedato nell&apos;ambito del sistema di classificazione preso in considerazione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice tassonomico e la definizione attribuiti allo strumento musicale schedato nell&apos;ambito del sistema di classificazione preso in considerazione.</rdfs:comment>
         <rdfs:label xml:lang="en">taxon</rdfs:label>
         <rdfs:label xml:lang="it">taxon</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa SM 4.00: CL/CLA/CLAT</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -2919,13 +2935,14 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/context-description/title -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/title">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il titolo del soggetto di un bene culturale. La proprietà viene specificata in sottoproprietà per esprimere tipologie di titolo specifiche. Per la normativa trasversale è il titolo più noto e accreditato; nelle altre normative si specifica che è il titolo dato dall&apos;autore o la denominazione tradizionale del soggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the title of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">title</rdfs:label>
         <rdfs:label xml:lang="it">titolo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">Normativa trasversale: DA/AID/AIDT - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTT</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -3086,8 +3103,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;attribuzione di autore superata, alternativa o tradizionale.</rdfs:comment>
         <rdfs:label xml:lang="en">Alternative Authorship Attribution</rdfs:label>
         <rdfs:label xml:lang="it">Attribuzione Alternativa di Autore</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>AU/AAT</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -3119,8 +3136,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa classe rappresenta un sistema di classificazione diverso da quello Hornbostel-Sachs, con cui può essere codificato uno strumento musicale.</rdfs:comment>
         <rdfs:label xml:lang="en">Alternative musical instrument classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione alternativa di strumento musicale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa SM 4.00: CL/CLA</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -3470,8 +3487,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attribuzione di un autore o di una responsabilità per la creazione di un bene culturale, cioè le informazioni relative ai soggetti (persone singole o enti collettivi) intervenuti nella realizzazione del bene e/o all&apos;ambito culturale di riferimento.</rdfs:comment>
         <rdfs:label xml:lang="it">Attribuzione di Autore o responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">Authorship Attribution</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale: AU/AAT; AU/ATB; AU/AUT</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -3596,8 +3613,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione che ha determinato una certa situazione, per esempio l&apos;occasione per cui è stato commissionato un bene culturale, o l&apos;occasione che ha determinato la ripresa di un bene fotografico, o l&apos;occasione d&apos;uso di un bene.</rdfs:comment>
         <rdfs:label xml:lang="it">Circostanza</rdfs:label>
         <rdfs:label xml:lang="en">Circumstance</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -3639,8 +3656,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;appartenenza di un bene culturale a una collezione, in un certo intervallo di tempo. Uno stesso bene culturale può aver fatto parte di più collezioni nel corso del tempo.</rdfs:comment>
         <rdfs:label xml:lang="it">Appartenenza a Collezione</rdfs:label>
         <rdfs:label xml:lang="en">Collection Membership</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>UB/COL</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -3665,9 +3682,9 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuazione della committenza relativa a un bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="en">Commission</rdfs:label>
         <rdfs:label xml:lang="it">Committenza</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>AU/CMM</arco-core:iccdNormTag>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -3729,14 +3746,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/context-description/CulturalScope -->
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/CulturalScope">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito culturale a cui può essere riferito un bene culturale. Per l&apos;ambito culturale si usano definizioni quali: ambito, cultura, periodo, produzione, scuola, manifattura, ecc.; a questi termini segue la qualificazione geografica o il nome dell&apos;ambito, della cultura, del periodo, della produzione, della scuola, della manifattura, ecc. 
-Nel caso della normativa VeAC, questa classe rappresenta l&apos;ambito sartoriale/di produzione, ovvero il contesto sartoriale (oppure la manifattura, la maestranza, ecc.) a cui può essere ricondotta la realizzazione del
-bene catalogato.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito culturale a cui può essere riferito un bene culturale. Per l&apos;ambito culturale si usano definizioni quali: ambito, cultura, periodo, produzione, scuola, manifattura, ecc.; a questi termini segue la qualificazione geografica o il nome dell&apos;ambito, della cultura, del periodo, della produzione, della scuola, della manifattura, ecc. Nel caso della normativa VeAC, questa classe rappresenta l&apos;ambito sartoriale/di produzione, ovvero il contesto sartoriale (oppure la manifattura, la maestranza, ecc.) a cui può essere ricondotta la realizzazione del bene catalogato.</rdfs:comment>
         <rdfs:label xml:lang="it">Ambito culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Scope</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>AU/ATB</arco-core:iccdNormTag>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/ATB</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -3754,8 +3769,8 @@ bene catalogato.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attribuzione di un ambito culturale a cui può essere riferito il bene culturale. Per l&apos;ambito culturale si usano definizioni quali: ambito, cultura, periodo, produzione, scuola, manifattura, ecc.; a questi termini segue la qualificazione geografica o il nome dell&apos;ambito, della cultura, del periodo, della produzione, della scuola, della manifattura, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Attribuzione di Ambito Culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Scope Attribution</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>AU/ATB</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -3831,8 +3846,8 @@ bene catalogato.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la cronologia di un&apos;entità, cioè i dati cronologici che riguardano la storia dell&apos;entità (es.: un bene culturale o un&apos;opera collegata a un bene culturale). In relazione alle diverse situazioni, indicheranno un periodo esteso nel tempo oppure una singola data. Per ciascun bene viene fornita la cronologia della sua realizzazione, o, nel caso di immobili che presentano diverse fasi edilizie o diversi momenti di vita, un arco cronologico di riferimento; possono essere fornite anche altre notizie cronologiche relative ad altri eventi che hanno riguardato il bene (demolizione, progettazione, rimaneggiamenti, etc.)</rdfs:comment>
         <rdfs:label xml:lang="it">Cronologia</rdfs:label>
         <rdfs:label xml:lang="en">Dating</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DT - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFD</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -4206,8 +4221,8 @@ bene catalogato.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione Hornbostel-Sachs di uno strumento musicale.</rdfs:comment>
         <rdfs:label xml:lang="it">Classificazione Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa SM 4.00: CL/CHS</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -4514,8 +4529,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione relativa a uno strumento musicale, secondo la classificazione di Hornbostel-Sachs ed eventualmente anche secondo altre classificazioni.</rdfs:comment>
         <rdfs:label xml:lang="it">Classificazione di strumento musicale</rdfs:label>
         <rdfs:label xml:lang="en">Musical instrument classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa SM 4.00: CL</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -4636,8 +4651,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attribuzione di autore maggiormente accreditata o convincente.</rdfs:comment>
         <rdfs:label xml:lang="it">Attribuzione Primaria di Autore</rdfs:label>
         <rdfs:label xml:lang="en">Preferred Authorship Attribution</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>AU/AUT</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -5044,10 +5059,11 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/Source">
         <rdfs:comment xml:lang="it">Questa classe rappresenta la motivazione o la fonte che ha determinato una certa attribuzione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the source that motivated an attribution.</rdfs:comment>
         <rdfs:label xml:lang="it">Motivazione</rdfs:label>
         <rdfs:label xml:lang="en">Source</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL; Normativa VeAC: AU/FRU/FRUF</arco-core:iccdNormTag>
     </owl:Class>
     

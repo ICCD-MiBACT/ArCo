@@ -203,10 +203,11 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/AgentRole"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all&apos;agente che lo ricopre.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role to that agent.</rdfs:comment>
         <rdfs:label xml:lang="it">ha agente</rdfs:label>
         <rdfs:label xml:lang="en">has agent</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -217,10 +218,11 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una situazione in cui un agente ricopre un ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to a situation in which an agent holds a role connected to that entity.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ruolo ricoperto da agente</rdfs:label>
         <rdfs:label xml:lang="en">has agent role</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -234,8 +236,9 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente schedatore. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente schedatore</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agency</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -263,8 +266,8 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalPropertyComponent"/>
         <rdfs:label xml:lang="it">ha parte componente di bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property component</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/OGT/OGTP</iccdNormTag>
     </owl:ObjectProperty>
     
@@ -286,8 +289,8 @@
         </rdfs:range>
         <rdfs:label xml:lang="it">ha parte residuale di bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property residual</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/OGT/OGTW</iccdNormTag>
     </owl:ObjectProperty>
     
@@ -302,8 +305,9 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente competente per la tutela. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente competente per la tutela</rdfs:label>
         <rdfs:label xml:lang="en">has heritage protection agency</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -311,12 +315,13 @@
     <!-- https://w3id.org/arco/core/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasLocation">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un&apos;entità a un&apos;area geografica in cui l&apos;entità è collocata.</rdfs:comment>
         <rdfs:label xml:lang="it">ha luogo</rdfs:label>
         <rdfs:label xml:lang="en">has location</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">DO/MST/MSTL (versioni precedenti a 4.00)</iccdNormTag>
     </owl:ObjectProperty>
     
@@ -328,10 +333,11 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/MibactScopeOfProtection"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale all&apos;ambito di tutela nel quale ricade.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to ist MiBACT scope of protection</rdfs:comment>
         <rdfs:label xml:lang="it">ha ambito di tutela</rdfs:label>
         <rdfs:label xml:lang="en">has MiBACT scope of protection</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -345,8 +351,8 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/core/NumberOfComponents"/>
         <rdfs:label xml:lang="it">ha numero di componenti</rdfs:label>
         <rdfs:label xml:lang="en">has number of components</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</iccdNormTag>
     </owl:ObjectProperty>
     
@@ -362,9 +368,9 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una sua parte (es.: piano terra, manico, etc.)</rdfs:comment>
         <rdfs:label xml:lang="it">ha parte</rdfs:label>
         <rdfs:label xml:lang="en">has part</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -372,6 +378,7 @@
     <!-- https://w3id.org/arco/core/hasRelatedAgency -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasRelatedAgency">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isRelatedAgencyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -381,8 +388,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale a un ente che riveste un ruolo nei suoi confronti. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. La proprietà è specializzata per mezzo di sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ente collegato</rdfs:label>
         <rdfs:label xml:lang="en">has related agency</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -394,10 +401,11 @@
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role to that role.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ruolo</rdfs:label>
         <rdfs:label xml:lang="en">has role</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -423,10 +431,27 @@
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente&quot;, collega un agente alla situazione in cui l&apos;agente ha ricoperto un ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an agent to a situation in which that agent holds a role.</rdfs:comment>
         <rdfs:label xml:lang="en">is agent of</rdfs:label>
         <rdfs:label xml:lang="it">è agente in</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/core/isCataloguingAgencyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isCataloguingAgencyOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isRelatedAgencyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un ente schedatore al relativo bene culturale che ha schedato. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="en">is cataloguing agency of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente schedatore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -468,6 +493,22 @@
     
 
 
+    <!-- https://w3id.org/arco/core/isHeritageProtectionAgencyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isHeritageProtectionAgencyOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isRelatedAgencyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un ente competente per la tutela al relativo bene culturale della cui tutela è competente. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
+        <rdfs:label xml:lang="en">is heritage protection agency of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente competente per la tutela di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/core/isNumberOfComponentsOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isNumberOfComponentsOf">
@@ -475,8 +516,8 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:label xml:lang="en">is number of components of</rdfs:label>
         <rdfs:label xml:lang="it">è numero di componenti di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</iccdNormTag>
     </owl:ObjectProperty>
     
@@ -485,7 +526,29 @@
     <!-- https://w3id.org/arco/core/isPartOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isPartOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una parte di un bene culturale (es.: piano terra, manico, etc.) al bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+        <rdfs:label xml:lang="it">è parte di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/core/isRelatedAgencyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isRelatedAgencyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha ente collegato&quot;, rappresenta la relazione che collega un ente che riveste un ruolo nei confronti di un bene culturale al bene culturale stesso. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. La proprietà è specializzata per mezzo di sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related agency of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente collegato a</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -493,11 +556,12 @@
     <!-- https://w3id.org/arco/core/isRoleOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isRoleOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a role to a situation in which an agent holds that role.</rdfs:comment>
         <rdfs:label xml:lang="en">is role of</rdfs:label>
         <rdfs:label xml:lang="it">è ruolo in</rdfs:label>
-        <owl:versionInfo xml:lang="it">Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -935,11 +999,12 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a situation in which an agent holds a role, regardless of the timing.</rdfs:comment>
         <rdfs:label xml:lang="en">Agent Role</rdfs:label>
         <rdfs:label xml:lang="it">Ruolo ricoperto da agente</rdfs:label>
-        <owl:versionInfo xml:lang="it">Concetto utilizzato per rappresentare una situazione relativa a un agente che ricopre un ruolo.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -951,8 +1016,8 @@
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale archeologico, che può essere un complesso archeologico, un monumento archeologico, un reperto archeologico, un reperto antropologico, un saggio stratigrafico, un sito archeologico, o una tabella materiali archeologici. Complessi archeologici: complessi monumentali costituiti da più unità edilizie (abitati, centri fortificati, santuari, complessi termali, ecc.), catalogati a prescindere dal loro attuale stato di conservazione. Monumenti archeologici: singole unità edilizie (una torre, una domus, un tempio, ecc.) catalogate a prescindere dal loro attuale stato di conservazione. Reperti antropologici: testimonianze biologiche in relazione con contesti archeologici e paleontologici. Reperti archeologici: beni mobili di provenienza archeologica (gioielli e monili, vestimenti, arredi, elementi architettonici, opere di pittura, reperti archeobotanici e archeozoologici, scultura, strumenti e oggetti d’uso, ecc.). Saggi stratigrafici: sequenze stratigrafiche rinvenute in contesti di scavo archeologico. Siti archeologici: porzioni di territorio che conservano testimonianze archeologiche. Tabella materiali archeologici: lotti di materiali di provenienza archeologica</rdfs:comment>
         <rdfs:label xml:lang="en">Archaeological Property</rdfs:label>
         <rdfs:label xml:lang="it">Bene Archeologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -964,8 +1029,8 @@
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale architettonico e paesaggistico</rdfs:comment>
         <rdfs:label xml:lang="en">Architectural or Landscape Heritage</rdfs:label>
         <rdfs:label xml:lang="it">Bene Architettonico o Paesaggistico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -996,8 +1061,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale complesso, cioè costituito da più parti componenti.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Culturale Complesso</rdfs:label>
         <rdfs:label xml:lang="en">Complex Cultural Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se viene valorizzato il campo OG/OGT/OGTP, i valori dei campi OGTD e OGTT si riferiscono a un bene culturale complesso, rappresentato quindi per mezzo di questa classe, di cui OGTP è parte componente.</iccdNormTag>
     </owl:Class>
     
@@ -1216,8 +1281,8 @@
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale, sia materiale che immateriale</rdfs:comment>
         <rdfs:label xml:lang="it">Bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1255,8 +1320,8 @@
         <rdfs:comment xml:lang="en">This class represents a component of a complex cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Property Component</rdfs:label>
         <rdfs:label xml:lang="it">Parte Componente di Bene Culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/OGT/OGTP</iccdNormTag>
     </owl:Class>
     
@@ -1270,8 +1335,8 @@
         <rdfs:comment xml:lang="en">This class represents a generic part of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Property Part</rdfs:label>
         <rdfs:label xml:lang="it">Parte di Bene Culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
     </owl:Class>
     
@@ -1291,8 +1356,8 @@
         <rdfs:comment xml:lang="en">This class represents the residual parte of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Property Residual</rdfs:label>
         <rdfs:label xml:lang="it">Parte Residuale di Bene Culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/OGT/OGTW</iccdNormTag>
     </owl:Class>
     
@@ -1305,8 +1370,8 @@
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale demoetnoantropologico, che può essere di tipo immateriale e materiale. I beni demoetnoantropologici immateriali sono beni consistenti in performance uniche e irrepetibili strutturalmente connesse al territorio e a prassi socialmente condivise trasmesse attraverso l’oralità e le tecniche corporali, tanto in ambito italiano quanto in ambito europeo ed extra-europeo (comunicazioni non verbali, danze, feste e cerimonie, giochi, letterature orali, musiche, norme consuetudinarie, rappresentazioni e spettacoli, saperi, tecniche). I beni demoetnoantropologici materiali sono beni la cui costruzione e/o il cui uso sono strutturalmente associati a prassi socialmente condivise, trasmesse attraverso l&apos;oralità e le tecniche corporali, tanto in ambito italiano quanto in ambito europeo ed extra-europeo (abbigliamento e ornamenti del corpo, arredi e suppellettili, mezzi di trasporto, ritualità, strumenti e accessori, beni sul territorio).</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Demoetnoantropologico</rdfs:label>
         <rdfs:label xml:lang="en">Demo-ethno-anthropological Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1324,8 +1389,8 @@
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale storico e artistico, che può essere un disegno, una matrice incisa, un&apos;opera o oggetto d&apos;arte (contemporanea e non), una stampa, un vestimento antico o contemporaneo. Disegni: opere fatte a mano su qualsiasi supporto (carta, cartoncino, cartone, intonaco, legno, pergamena, pietra, seta, tavola, tela ecc.) e con particolari strumenti (carboncino, gessetto, inchiostro, lapis, matita, pastello, penna ecc.) e specifiche tecniche (acquarellatura, sanguigna ecc.). Matrici incise: lastre di vario materiale (acciaio, legno, linoleum, ottone, pietra, zinco rame ecc.) su cui vengono tracciate rappresentazioni pittoriche con particolari strumenti (bulino, punte di acciaio o di diamante, punzoni, raschietti ecc.) e con specifiche tecniche di incisione (acquaforte, acquatinta, litografia, mezzatinta, serigrafia, silografia, zincografia ecc.). Opere e oggetti d&apos;arte: beni mobili costituenti parte integrante di monumenti artistici e storici o provenienti dallo smembramento dei monumenti stessi, conservati in collezioni, musei e pinacoteche (armi ed armature, arredi civili e religiosi, oggetti per il culto, oggetti d&apos;uso, opere di pittura, tessuti e arazzi, sulture, ecc.). Opere e oggetti d&apos;arte contemporanea: opere rappresentative  delle nuove correnti artistiche dei secc. XX e  XXI (assemblaggio, computer art, istallazione, istallazione ambientale, istallazione audio, istallazione video, istallazione multimediale interattiva, opera cinetico-visuale, performance, ready made, realtà virtuale, video arte ecc.). Stampe: esemplari prodotti dall&apos;operazione mediante la quale da una matrice di incisione si ottengono copie uguali di rappresentazioni pittoriche su carta, cartoncino, cuoio,  pergamena, seta ecc. con varie tecniche di incisione (acquaforte, acquatinta, litografia, zincografia ecc.). Vestimenti antichi e contemporanei: abiti e costumi riguardanti l’abbigliamento maschile, femminile e infantile ad uso civile, connessi alle principali finalità d’uso e alle diverse occasioni della vita privata e sociale,  secondo le tipologie storiche dei secoli XVIII, XIX, XX  (abiti, biancheria intima, calzetteria, calzoni, camicie, costumi, cuffie, gonne, giacche, grembiuli, livree, maglie, mantelli, scialli, sciarpe, veli ecc.).</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Storico o Artistico</rdfs:label>
         <rdfs:label xml:lang="en">Historic Or Artistic Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1339,8 +1404,8 @@
         <rdfs:comment xml:lang="it">Rappresenta un bene materiale immobile, cioè un bene agganciato e/o incorporato al suolo (edifici, complessi monumentali, spazi territoriali, ecc.) che presentano, in genere, un consistente sviluppo spaziale. Si intende come un particolare tipo di Site (contenitore fisico), in quanto luogo fisico georeferenziato che possiede esso stesso un interesse culturale.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene immobile</rdfs:label>
         <rdfs:label xml:lang="en">Immovable Cultural Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1355,8 +1420,8 @@
 rappresentata da performance effimere di manifestazioni tradizionali, tecniche, saperi (feste, esecuzioni musicali e coreutiche, rappresentazioni teatrali, tecniche artigianali, letteratura orale, ecc.), colte nel momento in cui avvengono e di cui è possibile mantenere memoria solo attraverso la ripresa audio-visiva che le fissa stabilmente, cristallizzandole.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene immateriale</rdfs:label>
         <rdfs:label xml:lang="en">Intangible Cultural Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1376,10 +1441,11 @@ rappresentata da performance effimere di manifestazioni tradizionali, tecniche, 
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Category"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito di tutela del MiBACT (archeologico, architettonico e paesaggistico, etnoantropologico, storico artistico), nel quale ricade il bene culturale in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the MiBACT scope of protection (historical artistic, ethoanthropological, architectural landscape, archaeological) of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="it">Ambito di tutela MiBACT</rdfs:label>
         <rdfs:label xml:lang="en">MiBACT Scope of protection</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1399,8 +1465,8 @@ rappresentata da performance effimere di manifestazioni tradizionali, tecniche, 
 trovano.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene mobile</rdfs:label>
         <rdfs:label xml:lang="en">Movable Cultural Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1412,8 +1478,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale musicale. Strumenti musicali: oggetti nati appositamente per produrre suoni organizzati secondo le diverse culture musicali, senza limiti spazio-temporali (strumenti e accessori di interesse archeologico, storico artistico, etnoantropologico). Strumenti musicali-Organo: oggetto nato per produrre suoni,  costituito da una serie di canne metalliche,  di forma, lunghezza e diametro diversi, nelle quali viene immessa, per mezzo di un mantice o altro meccanismo, una quantità d’aria regolata da una o più tastiere e da una pedaliera (corredato da accessori), caratterizzato da specifici aspetti  morfologici-decorativi e fonico-strumentali (organo idraulico, organo positivo, organo portativo, organo elettronico ecc.)</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Musicale</rdfs:label>
         <rdfs:label xml:lang="en">Music Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1425,8 +1491,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale naturalistico, relativo ai campi della botanica, della mineralogia, della paleontologia, della petrologia, della planetologia, della zoologia. Botanica: esemplari del mondo vegetale provenienti da collezioni di botanica  (raccolte di piante essiccate: erbari). Mineralogia: esemplari di minerali provenienti da collezioni di mineralogia (Augite, Goethite, scatola di quarzi ecc. ). Paleontologia: reperti fossili (animali, vegetali, ichnofossili, campioni e preparati per microscopio, ecc.). Petrologia: esemplari di rocce provenienti da collezioni (Riolite, Trachiandesite ecc). Planetologia: esemplari di meteoriti provenienti da collezioni ( Aubrite, Ureilite, Eucrite ecc.). Zoologia: esemplari del mondo animale provenienti da collezioni di zoologia (ustiolo, toporagno, mammifero, artropode, scatola di farfalle, collezione elmintologica, ecc.)</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Naturalistico</rdfs:label>
         <rdfs:label xml:lang="en">Natural Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1452,11 +1518,11 @@ trovano.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la quantità degli oggetti/elementi componenti di un bene culturale complesso.</rdfs:comment>
         <rdfs:label xml:lang="en">Number of Components</rdfs:label>
         <rdfs:label xml:lang="it">Numero di Componenti</rdfs:label>
-        <owl:versionInfo xml:lang="it">Questa classe rappresenta la quantità degli oggetti/elementi componenti di un bene culturale complesso.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</iccdNormTag>
     </owl:Class>
     
@@ -1469,8 +1535,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale numismatico, ovvero monete e altri oggetti di interesse numismatico (reperti premonetali e paramonetali, conii e punzoni monetali, pesi per il controllo monetale, sigilli e medaglie), pertinenti a  qualsiasi epoca.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1482,8 +1548,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale fotografico, che può essere una fotografia o un fondo fotografico. Beni fotografici: negativi, positivi, processi fotografici che danno origine a prodotti unici (dagherrotipi, ferrotipi, polaroid, chimigrammi, ecc.), fotografia digitale; elementi complessi come album, cartelle, fotomontaggi, panorami, porfolii. Fondi fotografici: entità concettuali che si caratterizzano per l&apos;accumulo di più unità fisiche omogenee o eterogenee dal punto di vista dei materiali che li compongono e che acquisiscono nella loro totalità valenza di bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1514,8 +1580,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un bene culturale scientifico e tecnologico, ovvero strumenti di interesse per la storia della scienza e della tecnica (strumenti astronomici, di laboratorio, di misurazione ecc.) pertinenti a qualsiasi epoca e afferenti a specifiche discipline scientifiche ( apparecchio a specchi a piani rotanti, apparecchio per gli anelli colorati di Newton, campana di Savart, orologio di Farina, orologio solare, pendola, sestante, telescopio ecc.); macchine e macchinari, mezzi di trasporto ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Bene Scientifico o Tecnologico</rdfs:label>
         <rdfs:label xml:lang="en">Scientific Or Technological Heritage</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1540,8 +1606,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the group of residual parts of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="it">Parti Residuali di Bene Culturale</rdfs:label>
         <rdfs:label xml:lang="en">Some Cultural Property Residuals</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/QNT/QNTR</iccdNormTag>
     </owl:Class>
     
@@ -1555,8 +1621,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un bene materiale, sia mobile che immobile</rdfs:comment>
         <rdfs:label xml:lang="it">Bene materiale</rdfs:label>
         <rdfs:label xml:lang="en">Tangible Cultural Property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1568,8 +1634,8 @@ trovano.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il concetto generico di tipologia.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo</rdfs:label>
         <rdfs:label xml:lang="en">Type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 

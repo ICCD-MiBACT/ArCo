@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/location/"
      xml:base="https://w3id.org/arco/location/"
-     xmlns:arco-location="https://w3id.org/arco/location/"
+     xmlns:arco-core="https://w3id.org/arco/core/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:arco-location="https://w3id.org/arco/location/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:clv="https://w3id.org/italia/onto/CLV/"
-     xmlns:arco-core="https://w3id.org/arco/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -93,7 +93,7 @@
         <rdfs:label xml:lang="it">presso luogo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>se LC senza sottoelemento LDC; se LA senza sottoelemento PRC</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">se LC senza sottoelemento LDC; se LA senza sottoelemento PRC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -147,12 +147,13 @@
     <!-- https://w3id.org/arco/location/hasContinent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasContinent">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/location/Continent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la localizzazione di un&apos;entità al continente in cui si trova.</rdfs:comment>
         <rdfs:label xml:lang="it">ha continente</rdfs:label>
         <rdfs:label xml:lang="en">has continent</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LA/PRT/PRTK</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -181,8 +182,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale all&apos;indirizzo della sua localizzazione fisica attuale, al momento della catalogazione. La relazione fornisce una rappresentazione semplificata, con ridotta espressività, della localizzazione attuale del bene culturale, e provoca la perdita delle altre informazioni che riguardano la collocazione del bene (eventuale contenitore fisico, continente, collocazione specifica nel contenitore fisico, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">cultural property address</rdfs:label>
         <rdfs:label xml:lang="it">indirizzo del bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/PVC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -223,8 +224,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione qualificata nel tempo al tipo di localizzazione.</rdfs:comment>
         <rdfs:label xml:lang="it">ha tipo di localizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has location type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -253,9 +254,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè alla definizione della sua tipologia.</rdfs:comment>
         <rdfs:label xml:lang="it">ha definizione del contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">has site definition</rdfs:label>
-        <owl:versionInfo xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè la definizione.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/LDC/LDCT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -269,9 +269,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè alle specifiche sulla sua tipologia.</rdfs:comment>
         <rdfs:label xml:lang="it">ha qualificazione del contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">has site specification</rdfs:label>
-        <owl:versionInfo xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè la qualificazione.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -285,8 +284,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega un contenitore fisico al tipo di contenitore fisico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
         <rdfs:label xml:lang="it">ha tipo di contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">has site type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -328,8 +327,8 @@
         <rdfs:comment xml:lang="en">This property relates a cultural property to the type of context in which the cultural property is located.</rdfs:comment>
         <rdfs:label xml:lang="it">ha tipo di contesto geografico</rdfs:label>
         <rdfs:label xml:lang="en">has type of geographical context</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/PVZ; LA/PRZ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -636,10 +635,11 @@
     <owl:Class rdf:about="https://w3id.org/arco/location/Continent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un Continente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a Continent.</rdfs:comment>
         <rdfs:label xml:lang="en">Continent</rdfs:label>
         <rdfs:label xml:lang="it">Continente</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -704,8 +704,8 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di localizzazione di un bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="en">Location Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -717,8 +717,8 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore fisico.</rdfs:comment>
         <rdfs:label xml:lang="it">Definizione di Contenitore Fisico</rdfs:label>
         <rdfs:label xml:lang="en">Site Definition</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/LDC/LDCT</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -727,12 +727,11 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     <!-- https://w3id.org/arco/location/SiteSpecification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/location/SiteSpecification">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche sulla qualificazione del contenitore fisico, cioè l&apos;aggettivo o la locuzione che, rispetto alla Site Definition, precisa, integra o caratterizza il contenitore fisico dal punto di vista della
-condizione giuridico-amministrativa o funzionale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche sulla qualificazione del contenitore fisico, cioè l&apos;aggettivo o la locuzione che, rispetto alla Site Definition, precisa, integra o caratterizza il contenitore fisico dal punto di vista della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:label xml:lang="it">Qualificazione del Contenitore Fisico</rdfs:label>
         <rdfs:label xml:lang="en">Site Specification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -757,8 +756,8 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contenitore fisico, cioè la tipologia del contenitore fisico ed eventuali aggettivi o locuzioni che precisano, integrano o caratterizzano il contenitore fisico dal punto di vistaq della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:label xml:lang="en">Site Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Contenitore Fisico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -823,8 +822,8 @@ condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of context, in which a cultural property is located.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di contesto geografico</rdfs:label>
         <rdfs:label xml:lang="en">Type of Geographic Context</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>LC/PVZ; LA/PRZ</arco-core:iccdNormTag>
     </owl:Class>
     

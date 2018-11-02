@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/arco/cultural-event/"
      xml:base="https://w3id.org/arco/cultural-event/"
      xmlns:culturalevent="https://w3id.org/arco/cultural-event/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -14,7 +15,6 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -62,6 +62,12 @@
     
 
 
+    <!-- http://dati.beniculturali.it/cis/isRelatedToRiT -->
+
+    <owl:ObjectProperty rdf:about="http://dati.beniculturali.it/cis/isRelatedToRiT"/>
+    
+
+
     <!-- https://w3id.org/arco/cultural-event/hasEventOrganiser -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/cultural-event/hasEventOrganiser">
@@ -70,11 +76,10 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
         <rdfs:label xml:lang="en">has event organiser</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</core:iccdNormTag>
     </owl:ObjectProperty>
-    
     
 
 
@@ -121,8 +126,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il luogo e il tempo di un evento culturale, quando espressi unitamente.</rdfs:comment>
         <rdfs:label xml:lang="en">event time and location</rdfs:label>
         <rdfs:label xml:lang="it">tempo e luogo dell&apos;evento</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e normative di versione 4.00: MS/MST/MSTL</core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -156,12 +161,19 @@
     <owl:Class rdf:about="https://w3id.org/arco/cultural-event/Exhibition">
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una mostra, come sottocategoria di un generico evento culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an exhibition, as a particular type of cultural event.</rdfs:comment>
         <rdfs:label xml:lang="en">Exhibition</rdfs:label>
         <rdfs:label xml:lang="it">Mostra</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e altre normative di versione 4.00: se MS/MST/MSTI= &quot;mostra&quot;</core:iccdNormTag>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
 </rdf:RDF>
 
 

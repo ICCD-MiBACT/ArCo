@@ -176,12 +176,12 @@
                         </xsl:attribute>
 					</arco-catalogue:isCatalogueRecordVersionOf>
 					<xsl:if test="schede/*/CM/CMP/CMPN and (not(starts-with(lower-case(normalize-space(schede/*/CM/CMP/CMPN)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CM/CMP/CMPN)), 'n.r')))">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-compilation-', arco-fn:urify(normalize-space(schede/*/CM/CMP/CMPN)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasResponsibleResearchAndCompilation>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -199,12 +199,12 @@
 					</xsl:if>
 					<!-- Referente verifica scientifica -->
 					<xsl:if test="schede/*/CM/RSR and (not(starts-with(lower-case(normalize-space(schede/*/CM/RSR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CM/RSR)), 'n.r')))">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(schede/*/CM/RSR/@hint)), '-', arco-fn:urify(normalize-space(schede/*/CM/RSR)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasScientificDirector>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -215,12 +215,12 @@
 					<!-- Funzionario responsabile -->
 					<xsl:if
 						test="schede/*/CM/FUR and (not(starts-with(lower-case(normalize-space(schede/*/CM/FUR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CM/FUR)), 'n.r')))">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(schede/*/CM/FUR/@hint)), '-', arco-fn:urify(normalize-space(schede/*/CM/FUR)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasOfficialInCharge>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -255,12 +255,12 @@
                         </xsl:attribute>
 					</arco-catalogue:isCatalogueRecordVersionOf>
 					<xsl:if test="schede/*/CM/RVM/RVMN">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVMN)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasDigitalTranscriptionOperator>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -269,12 +269,12 @@
 						</arco-catalogue:hasDigitalTranscriptionOperator>
 					</xsl:if>
 					<xsl:if test="schede/*/CM/RVM/RVME">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-rvm-', arco-fn:urify(normalize-space(schede/*/CM/RVM/RVME)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasDigitalTranscriptionResponsibleAgent>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -292,22 +292,22 @@
 					</xsl:if>
 					<!-- Referente verifica scientifica -->
 					<xsl:if test="schede/*/CM/RSR and (not(starts-with(lower-case(normalize-space(schede/*/CM/RSR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CM/RSR)), 'n.r')))">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(schede/*/CM/RSR/@hint)), '-', arco-fn:urify(normalize-space(schede/*/CM/RSR)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 					</xsl:if>
 					<!-- Funzionario responsabile -->
 					<xsl:if
 						test="schede/*/CM/FUR and (not(starts-with(lower-case(normalize-space(schede/*/CM/FUR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CM/FUR)), 'n.r')))">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(schede/*/CM/FUR/@hint)), '-', arco-fn:urify(normalize-space(schede/*/CM/FUR)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasOfficialInCharge>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -341,12 +341,12 @@
                         </xsl:attribute>
 					</arco-catalogue:isCatalogueRecordVersionOf>
 					<xsl:if test="./AGGN">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(./AGGN)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasUpdateResponsibleResearchAndCompilation>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -355,12 +355,12 @@
 						</arco-catalogue:hasUpdateResponsibleResearchAndCompilation>
 					</xsl:if>
 					<xsl:if test="./AGGR">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(./AGGR)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasUpdateScientificRevisor>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -369,12 +369,12 @@
 						</arco-catalogue:hasUpdateScientificRevisor>
 					</xsl:if>
 					<xsl:if test="./AGGE">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(./AGGE)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasUpdateResponsibleAgent>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -382,7 +382,7 @@
                             </xsl:attribute>
 						</arco-catalogue:hasUpdateResponsibleAgent>
 					</xsl:if>
-					<xsl:if test="./AGGD">
+					<xsl:if test="./AGGD and not(lower-case(normalize-space(./AGGD))='nr' or lower-case(normalize-space(./AGGD))='n.r.' or lower-case(normalize-space(./AGGD))='nr (recupero pregresso)')">
 						<arco-catalogue:editedAtTime>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -393,12 +393,12 @@
 					<!-- Funzionario responsabile -->
 					<xsl:if
 						test="./AGGF and not(lower-case(normalize-space(./AGGF))='nr' or lower-case(normalize-space(./AGGF))='n.r.' or lower-case(normalize-space(./AGGF))='nr (recupero pregresso)')">
-						<arco-catalogue:hasCatalogueRecordRiT>
+						<arco-catalogue:hasCatalogueRecordVersionRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(./AGGF/@hint)), '-', arco-fn:urify(normalize-space(./AGGF)))" />
                             </xsl:attribute>
-						</arco-catalogue:hasCatalogueRecordRiT>
+						</arco-catalogue:hasCatalogueRecordVersionRiT>
 						<arco-catalogue:hasUpdateOfficialInCharge>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -408,7 +408,7 @@
 					</xsl:if>
 				</rdf:Description>
 				<!-- Time interval -->
-				<xsl:if test="./AGGD">
+				<xsl:if test="./AGGD and not(lower-case(normalize-space(./AGGD))='nr' or lower-case(normalize-space(./AGGD))='n.r.' or lower-case(normalize-space(./AGGD))='nr (recupero pregresso)')">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                             <xsl:value-of
@@ -423,6 +423,9 @@
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(./AGGD)" />
 						</rdfs:label>
+						<tiapit:time>
+							<xsl:value-of select="normalize-space(./AGGD)" />
+						</tiapit:time>
 					</rdf:Description>
 				</xsl:if>
 				<!-- Participant role AGGN -->
@@ -865,6 +868,9 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(schede/*/CM/CMP/CMPD)" />
 					</rdfs:label>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(schede/*/CM/CMP/CMPD)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Version time interval - RVM -->
@@ -883,6 +889,9 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(schede/*/CM/RVM/RVMD)" />
 					</rdfs:label>
+					<tiapit:time>
+						<xsl:value-of select="normalize-space(schede/*/CM/RVM/RVMD)" />
+					</tiapit:time>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Participant role - Compilation -->
@@ -4450,6 +4459,12 @@
 					<l0:name>
 						<xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(.))" />
 					</l0:name>
+					<arco-core:isCataloguingAgencyOf>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                        </xsl:attribute>
+					</arco-core:isCataloguingAgencyOf>
 					<arco-core:isAgentOf>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
@@ -4533,6 +4548,12 @@
 					<l0:name>
 						<xsl:value-of select="arco-fn:cataloguing-entity(normalize-space(.))" />
 					</l0:name>
+					<arco-cd:isProponentAgencyOf>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                        </xsl:attribute>
+					</arco-cd:isProponentAgencyOf>
 					<arco-core:isAgentOf>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
@@ -4624,6 +4645,12 @@
 							select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
                         </xsl:attribute>
 					</arco-core:isAgentOf>
+					<arco-core:isHeritageProtectionAgencyOf>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                        </xsl:attribute>
+					</arco-core:isHeritageProtectionAgencyOf>
 				</rdf:Description>
 			</xsl:if>
 			<!-- Acquisition of cultural property as an individual -->
@@ -12171,12 +12198,12 @@
 					</xsl:if>
 					<xsl:if
 						test="./PDFC and not(lower-case(normalize-space(./PDFC))='nr' or lower-case(normalize-space(./PDFC))='nr (recupero pregresso)' or lower-case(normalize-space(./PDFC))='n.r.' or lower-case(normalize-space(./PDFC))='n.r. [non rilevabile]' or lower-case(normalize-space(./PDFM))='n.r. (non rilevabile)')">
-						<arco-cd:hasSource>
+						<arco-cd:hasCircumstance>
 							<xsl:attribute name="rdf:resource">
                             		<xsl:value-of
 								select="concat($NS, 'Circumstance/', arco-fn:urify(normalize-space(./PDFC)))" />
                             </xsl:attribute>
-						</arco-cd:hasSource>
+						</arco-cd:hasCircumstance>
 					</xsl:if>
 				</rdf:Description>
 				<xsl:if test="./PDFJ and (not(starts-with(lower-case(normalize-space(./PDFJ)), 'nr')) and not(starts-with(lower-case(normalize-space(./PDFJ)), 'n.r')))">

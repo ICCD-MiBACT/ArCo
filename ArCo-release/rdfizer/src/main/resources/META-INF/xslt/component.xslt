@@ -1257,12 +1257,12 @@
 					select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                 </xsl:attribute>
                 
-                <arco-catalogue:describes>
+                <arco-catalogue:describesCulturalProperty>
 					<xsl:attribute name="rdf:resource">
                         <xsl:value-of
 							select="$objectOfDescription" />
                     </xsl:attribute>
-				</arco-catalogue:describes>
+				</arco-catalogue:describesCulturalProperty>
             </rdf:Description>
 
 			<rdf:Description>
@@ -1291,7 +1291,15 @@
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>	
 				</xsl:for-each>
-
+				
+				<!-- isDescribedByCatalogueRecord -->
+				<arco-catalogue:isDescribedByCatalogueRecord>
+					<xsl:attribute name="rdf:resource">
+                    <xsl:value-of
+					select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
+                </xsl:attribute>
+				</arco-catalogue:isDescribedByCatalogueRecord>
+				<!-- current physical location -->
 				<xsl:if test="schede/*/LC">
 					<arco-location:hasTimeIndexedQualifiedLocation>
 						<xsl:attribute name="rdf:resource">
@@ -1300,6 +1308,7 @@
 	                        </xsl:attribute>
 					</arco-location:hasTimeIndexedQualifiedLocation>
 				</xsl:if>
+				<!-- alternative locations -->
 				<xsl:for-each select="schede/*/LA | schede/F/LR">
 					<arco-location:hasTimeIndexedQualifiedLocation>
 						<xsl:attribute name="rdf:resource">
@@ -1600,12 +1609,12 @@
 							select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
 	                        </xsl:attribute>
 					</arco-core:hasAgentRole>
-					<arco-core:hasProponentAgency>
+					<arco-cd:hasProponentAgency>
 						<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
 							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(schede/*/CD/EPR)))" />
 	                        </xsl:attribute>
-					</arco-core:hasProponentAgency>
+					</arco-cd:hasProponentAgency>
 				</xsl:if>
 				<!-- Type of context for LC -->
 				<xsl:for-each select="schede/*/LC/PVZ">

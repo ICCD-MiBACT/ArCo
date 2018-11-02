@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/denotative-description/"
      xml:base="https://w3id.org/arco/denotative-description/"
+     xmlns:arco-core="https://w3id.org/arco/core/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:arco-location="http://www.w3id.org/arco/location/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:clv="https://w3id.org/italia/onto/CLV/"
      xmlns:objective="https://w3id.org/arco/denotative-description/"
-     xmlns:arco-core="https://w3id.org/arco/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
-     xmlns:arco-location="http://www.w3id.org/arco/location/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -75,8 +75,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a un suo accessorio, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene.</rdfs:comment>
         <rdfs:label xml:lang="it">ha accessorio</rdfs:label>
         <rdfs:label xml:lang="en">has accessory</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -91,8 +91,8 @@
         <rdfs:comment xml:lang="en">This property relates the cultural property with its conservation status.</rdfs:comment>
         <rdfs:label xml:lang="it">ha stato di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has conservation status</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -107,8 +107,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà associa lo stato di conservazione a uno dei valori del tipo di stato di conservazione.</rdfs:comment>
         <rdfs:label xml:lang="it">ha tipo di stato di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has conservation status type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STC/STCC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -122,8 +122,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè la definizione.</rdfs:comment>
         <rdfs:label xml:lang="it">ha definizione del bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property definition</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>OG/OGT/OGTD</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -137,8 +137,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè alle specifiche morfologiche e funzionali.</rdfs:comment>
         <rdfs:label xml:lang="it">ha specifiche del bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property specification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>OG/OGT/OGTT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -153,8 +153,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al tipo di bene, per permettere la corretta e precisa individuazione del bene.</rdfs:comment>
         <rdfs:label xml:lang="it">ha tipo di bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>OG/OGT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -426,8 +426,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative agli aspetti acustici di uno strumento musicale, ed eventualmente anche relative ai rilevamenti e ai criteri adottati in sede di restauro.</rdfs:comment>
         <rdfs:label xml:lang="en">musical instrument note</rdfs:label>
         <rdfs:label xml:lang="it">note sullo strumento musicale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa SM 4.00: AA/AAS</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -441,8 +441,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali proposte per interventi conservativi, dopo aver valutato le condizioni del bene al momento della sua catalogazione.</rdfs:comment>
         <rdfs:label xml:lang="en">proposed intervention</rdfs:label>
         <rdfs:label xml:lang="it">proposte di interventi</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STP</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -457,8 +457,8 @@
         <rdfs:comment xml:lang="en">This property represents informations about the storage conditions of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="it">modalità di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">storage conditions</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STD</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -549,8 +549,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta un accessorio di un bene musicale, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene.</rdfs:comment>
         <rdfs:label xml:lang="it">Accessorio</rdfs:label>
         <rdfs:label xml:lang="en">Accessory</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -578,12 +578,12 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">It represents the conservation status of the cultural property.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato di conservazione di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the conservation status of the cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">Conservation Status</rdfs:label>
         <rdfs:label xml:lang="it">Stato di Conservazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STC</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -595,8 +595,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
         <rdfs:label xml:lang="en">Conservation Status Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di stato di conservazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STC/STCC</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -608,8 +608,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione di un bene culturale, cioè il termine o la locuzione che individua il bene che si sta catalogando.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Property Definition</rdfs:label>
         <rdfs:label xml:lang="it">Definizione del bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>OG/OGT/OGTD</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -621,8 +621,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche morfologiche o funzionali, utili a completare la definizione del bene per una sua più puntuale individuazione.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Property Specification</rdfs:label>
         <rdfs:label xml:lang="it">Specifiche del bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>OG/OGT/OGTT</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -647,8 +647,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di bene culturale, cioè il termine o la locuzione che individua il bene che si sta catalogando ed eventuali ulteriori specifiche sulla definizione del bene.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural property Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>OG/OGT</arco-core:iccdNormTag>
     </owl:Class>
     
@@ -758,8 +758,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;orientamento di un oggetto (NO, SE, etc.), secondo l&apos;asse principale individuato.</rdfs:comment>
         <rdfs:label xml:lang="it">Orientamento</rdfs:label>
         <rdfs:label xml:lang="en">Orientation</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</arco-core:iccdNormTag>
     </owl:Class>
     
