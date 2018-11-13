@@ -1506,6 +1506,7 @@
 						</arco-cd:hasEdition>
 					</xsl:if>
 				</xsl:for-each>
+				<!-- has dating -->
 				<xsl:for-each select="schede/*/DT">
 					<xsl:choose>
 						<xsl:when test="./* and (not(./DTP) or ./DTP='intero bene') or (starts-with(lower-case(normalize-space(./DTP)), 'nr')) or (starts-with(lower-case(normalize-space(./DTP)), 'n.r'))">
@@ -1520,6 +1521,29 @@
 						<xsl:for-each select="./DTP">
 								<arco-core:hasPart>
 									<xsl:attribute name="rdf:resource">
+				                				<xsl:value-of
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+				                	</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+				<!-- has dating for A norm -->
+				<xsl:for-each select="schede/A/RE">
+					<xsl:choose>
+						<xsl:when test="./* and (not(./REN/RENR) or ./REN/RENR='intero bene') or (starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) or (starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r'))">
+							<arco-cd:hasDating>
+								<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+			                        </xsl:attribute>
+							</arco-cd:hasDating>
+						</xsl:when>
+						<xsl:otherwise>
+						<xsl:for-each select="./REN/RENR">
+								<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
 				                				<xsl:value-of
 										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 				                	</xsl:attribute>

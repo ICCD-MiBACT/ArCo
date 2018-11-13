@@ -330,6 +330,40 @@
 				</xsl:if>
 			</xsl:for-each>
 			
+			<!-- part of cultural property when there is RE/REN/RENR (A and PG, dating) -->
+				<xsl:for-each select="schede/A/RE">
+				<xsl:variable name="dating">
+					<xsl:value-of
+						select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(./REN/RENR='intero bene') and (not(starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) or not(starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r')))">
+				<xsl:for-each select="./REN/RENR | ../../PG/RE/REN/RENR">
+					
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<arco-cd:hasDating>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$dating" />
+								</xsl:attribute>
+							</arco-cd:hasDating>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+					
+				</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
 			
 			<!-- part of cultural property when there is REIP (reuse) -->
 				<xsl:for-each select="schede/*/RO/REI">

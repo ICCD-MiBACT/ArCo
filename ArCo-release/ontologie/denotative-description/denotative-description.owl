@@ -298,11 +298,13 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasVolumetricDiamensionsMeasurement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/denotative-description/hasMeasurement"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Measurements"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
         <rdfs:label>ha misura di imgombro</rdfs:label>
         <rdfs:label>has volumetric diamensions measurement</rdfs:label>
-        <rdfs:label xml:lang="it">provvisoria</rdfs:label>
-        <rdfs:label xml:lang="en">unstable</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>Normativa VeAC: MT/MII</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
