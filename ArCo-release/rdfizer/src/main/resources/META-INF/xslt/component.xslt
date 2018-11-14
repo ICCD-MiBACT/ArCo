@@ -90,7 +90,7 @@
 		<!-- variable sgti -->
 		<xsl:variable name="sgti">
 			<xsl:choose>
-				<xsl:when test="schede/*/OG/SGT/SGTI">
+				<xsl:when test="schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) or not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
 					<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTI)" />
 				</xsl:when>
 				<xsl:otherwise>
@@ -354,7 +354,7 @@
 					<xsl:if test="$sheetType='OA'">
 						<xsl:variable name="sgtt">
 							<xsl:choose>
-								<xsl:when test="schede/*/OG/SGT/SGTT">
+								<xsl:when test="schede/*/OG/SGT/SGTT and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) or not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r')))">
 									<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTT)" />
 								</xsl:when>
 								<xsl:otherwise>
@@ -364,7 +364,7 @@
 						</xsl:variable>
 						<xsl:variable name="sgti">
 							<xsl:choose>
-								<xsl:when test="schede/*/OG/SGT/SGTI">
+								<xsl:when test="schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) or not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
 									<xsl:value-of select="normalize-space(schede/*/OG/SGT/SGTI)" />
 								</xsl:when>
 								<xsl:otherwise>
@@ -374,7 +374,7 @@
 						</xsl:variable>
 						<xsl:variable name="ogtt">
 							<xsl:choose>
-								<xsl:when test="schede/*/OG/OGT/OGTT">
+								<xsl:when test="schede/*/OG/OGT/OGTT and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'nr')) or not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'n.r')))">
 									<xsl:value-of
 										select="concat(' - ', normalize-space(schede/*/OG/OGT/OGTT))" />
 								</xsl:when>
@@ -385,7 +385,7 @@
 						</xsl:variable>
 						<xsl:variable name="ogtv">
 							<xsl:choose>
-								<xsl:when test="schede/*/OG/OGT/OGTV">
+								<xsl:when test="schede/*/OG/OGT/OGTV and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTV)), 'nr')) or not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTV)), 'n.r')))">
 									<xsl:value-of
 										select="concat(', ', normalize-space(schede/*/OG/OGT/OGTV))" />
 								</xsl:when>
@@ -398,7 +398,7 @@
 						<rdfs:label>
 							<xsl:variable name="tmpLabel">
 								<xsl:choose>
-									<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI">
+									<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) or not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) or not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
 										<xsl:value-of
 											select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
 									</xsl:when>
@@ -1383,7 +1383,7 @@
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/AU/AUT | schede/F/AU/AUF">
 				<xsl:choose>
-					<xsl:when test="not(./AUTW) or ./AUTW='intero bene' or (starts-with(lower-case(normalize-space(./AUTW)), 'nr')) or (starts-with(lower-case(normalize-space(./AUTW)), 'n.r'))">
+					<xsl:when test="(not(./AUTW) or lower-case(normalize-space(./AUTW))='intero bene' or lower-case(normalize-space(./AUTW))='tutta' or lower-case(normalize-space(./AUTW))='integrale' or lower-case(normalize-space(./AUTW))='totale' or (starts-with(lower-case(normalize-space(./AUTW)), 'nr')) or (starts-with(lower-case(normalize-space(./AUTW)), 'n.r')))">
 						<arco-cd:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
@@ -1509,7 +1509,7 @@
 				<!-- has dating -->
 				<xsl:for-each select="schede/*/DT">
 					<xsl:choose>
-						<xsl:when test="./* and (not(./DTP) or ./DTP='intero bene') or (starts-with(lower-case(normalize-space(./DTP)), 'nr')) or (starts-with(lower-case(normalize-space(./DTP)), 'n.r'))">
+						<xsl:when test="./* and not(./DTP) or lower-case(normalize-space(./DTP))='intero bene' or lower-case(normalize-space(./DTP))='integrale' or lower-case(normalize-space(./DTP))='tutta' or lower-case(normalize-space(./DTP))='totale' or (starts-with(lower-case(normalize-space(./DTP)), 'nr')) or (starts-with(lower-case(normalize-space(./DTP)), 'n.r'))">
 							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
 			                            <xsl:value-of
@@ -1532,7 +1532,7 @@
 				<!-- has dating for A norm -->
 				<xsl:for-each select="schede/A/RE">
 					<xsl:choose>
-						<xsl:when test="./* and (not(./REN/RENR) or ./REN/RENR='intero bene') or (starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) or (starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r'))">
+						<xsl:when test="./* and not(./REN/RENR) or lower-case(normalize-space(./REN/RENR))='intero bene' or lower-case(normalize-space(./REN/RENR))='integrale' or lower-case(normalize-space(./REN/RENR))='tutta' or lower-case(normalize-space(./REN/RENR))='totale' or (starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) or (starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r'))">
 							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
 			                            <xsl:value-of
@@ -1565,7 +1565,7 @@
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/CO/STC">
 				<xsl:choose>
-					<xsl:when test="./* and (not(./STCP) or ./STCP='intero bene') or (starts-with(lower-case(normalize-space(./STCP)), 'nr')) or (starts-with(lower-case(normalize-space(./STCP)), 'n.r'))">
+					<xsl:when test="./* and (not(./STCP) or lower-case(normalize-space(./STCP))='intero bene' or lower-case(normalize-space(./STCP))='tutta' or lower-case(normalize-space(./STCP))='integrale' or lower-case(normalize-space(./STCP))='totale' or (starts-with(lower-case(normalize-space(./STCP)), 'nr')) or (starts-with(lower-case(normalize-space(./STCP)), 'n.r')))">
 						<arco-dd:hasConservationStatus>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
@@ -2167,7 +2167,7 @@
                 <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
                <xsl:for-each select="schede/*/MT/MTC/MTCM">
  	            <xsl:choose>
-					<xsl:when test="not(../MTCP) or ../MTCP='intero bene'">
+					<xsl:when test="not(../MTCP) or lower-case(normalize-space(../MTCP))='intero bene' or lower-case(normalize-space(../MTCP))='integrale' or lower-case(normalize-space(../MTCP))='tutta' or lower-case(normalize-space(../MTCP))='totale'">
 						<arco-dd:hasTechnicalDetailOccurrence>
 	                	<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-', position())" />
@@ -2208,7 +2208,7 @@
  	                	</xsl:attribute>
  	                	</arco-dd:hasTechnicalDetailOccurrence>
 					</xsl:when>
-					<xsl:when test="not(../MTCP) or ../MTCP='intero bene' or (starts-with(lower-case(normalize-space(../MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(../MTCP)), 'n.r'))">
+					<xsl:when test="not(../MTCP) or lower-case(normalize-space(../MTCP))='intero bene' or lower-case(normalize-space(../MTCP))='integrale' or lower-case(normalize-space(../MTCP))='tutta' or lower-case(normalize-space(../MTCP))='totale' or (starts-with(lower-case(normalize-space(../MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(../MTCP)), 'n.r'))">
 						<arco-dd:hasTechnicalDetailOccurrence>
 	                	<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-technique-', position())" />
@@ -2385,7 +2385,7 @@
                 <!-- Protective measures of cultural property -->
                 <xsl:for-each select="schede/*/TU/NVC">
 				<xsl:choose>
-					<xsl:when test="./* and (not(./NVCP) or ./NVCP='intero bene') or (starts-with(lower-case(normalize-space(./NVCP)), 'nr')) or (starts-with(lower-case(normalize-space(./NVCP)), 'n.r'))">
+					<xsl:when test="./* and (not(./NVCP) or lower-case(normalize-space(./NVCP))='intero bene' or lower-case(normalize-space(./NVCP))='integrale' or lower-case(normalize-space(./NVCP))='tutta' or lower-case(normalize-space(./NVCP))='totale') or (starts-with(lower-case(normalize-space(./NVCP)), 'nr')) or (starts-with(lower-case(normalize-space(./NVCP)), 'n.r'))">
 						<arco-cd:hasProtectiveMeasure>
                 		<xsl:attribute name="rdf:resource">
                 			<xsl:value-of select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
@@ -2443,6 +2443,16 @@
                 	<arco-cd:hasSurvey>
                 		<xsl:attribute name="rdf:resource">
                 			<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />
+                		</xsl:attribute>
+                	</arco-cd:hasSurvey>
+                </xsl:for-each>
+                </xsl:if>
+                <!-- Inspection of cultural property -->
+                <xsl:if test="not(schede/*/CM/ISP/ISPD='0000/00/00' or schede/*/CM/ISP/ISPD='/') and schede/*/CM/ISP/*">
+                <xsl:for-each select="schede/*/CM/ISP">
+                	<arco-cd:hasSurvey>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'Inspection/', $itemURI, '-inspection-', position())" />
                 		</xsl:attribute>
                 	</arco-cd:hasSurvey>
                 </xsl:for-each>

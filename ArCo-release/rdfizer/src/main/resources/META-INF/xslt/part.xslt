@@ -73,7 +73,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./STCP='intero bene') and (not(starts-with(lower-case(normalize-space(./STCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./STCP)), 'n.r')))">
+				<xsl:if test="not(lower-case(normalize-space(./STCP))='intero bene') and not(lower-case(normalize-space(./STCP))='integrale') and not(lower-case(normalize-space(./STCP))='tutta') and not(lower-case(normalize-space(./STCP))='totale') and (not(starts-with(lower-case(normalize-space(./STCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./STCP)), 'n.r')))">
 				<xsl:for-each select="./STCP">
 					
 						<rdf:Description>
@@ -105,7 +105,7 @@
 					<xsl:value-of
 						select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 				</xsl:variable>
-				<xsl:if test="./AUTW and not(./AUTW='intero bene') and (not(starts-with(lower-case(normalize-space(./AUTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'n.r')))">
+				<xsl:if test="./AUTW and not(lower-case(normalize-space(./AUTW))='intero bene') and not(lower-case(normalize-space(./AUTW))='integrale') and not(lower-case(normalize-space(./AUTW))='tutta') and not(lower-case(normalize-space(./AUTW))='totale') and (not(starts-with(lower-case(normalize-space(./AUTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'n.r')))">
 					<xsl:variable name="part">
 						<xsl:value-of
 							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./AUTW)))" />
@@ -195,7 +195,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./NVCP='intero bene') and (not(starts-with(lower-case(normalize-space(./NVCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./NVCP)), 'n.r')))">
+				<xsl:if test="./NVCP and not(lower-case(normalize-space(./NVCP))='intero bene') and not(lower-case(normalize-space(./NVCP))='integrale') and not(lower-case(normalize-space(./NVCP))='tutta') and not(lower-case(normalize-space(./NVCP))='totale') and (not(starts-with(lower-case(normalize-space(./NVCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./NVCP)), 'n.r')))">
 				<xsl:for-each select="./NVCP">
 					
 						<rdf:Description>
@@ -231,7 +231,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(../MTCP='intero bene') and (not(starts-with(lower-case(normalize-space(../MTCP)), 'nr')) and not(starts-with(lower-case(normalize-space(../MTCP)), 'n.r')))">
+				<xsl:if test="not(lower-case(normalize-space(../MTCP))='intero bene' or lower-case(normalize-space(../MTCP))='intero bene'  or lower-case(normalize-space(../MTCP))='integrale' or lower-case(normalize-space(../MTCP))='tutta' or lower-case(normalize-space(../MTCP))='totale') and (not(starts-with(lower-case(normalize-space(../MTCP)), 'nr')) and not(starts-with(lower-case(normalize-space(../MTCP)), 'n.r')))">
 				<xsl:for-each select="../MTCP">
 					
 						<rdf:Description>
@@ -268,7 +268,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(../MTCP='intero bene' or $sheetType='VeAC')">
+				<xsl:if test="not(lower-case(normalize-space(../MTCP)='intero bene' or lower-case(normalize-space(../MTCP))='intero bene'  or lower-case(normalize-space(../MTCP))='integrale' or lower-case(normalize-space(../MTCP))='tutta' or lower-case(normalize-space(../MTCP))='totale') or $sheetType='VeAC')">
 				<xsl:for-each select="../MTCP">
 					
 						<rdf:Description>
@@ -304,7 +304,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./DTP='intero bene') and (not(starts-with(lower-case(normalize-space(./DTP)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTP)), 'n.r')))">
+				<xsl:if test="not(lower-case(normalize-space(./DTP))='intero bene') and not(lower-case(normalize-space(./DTP))='integrale') and not(lower-case(normalize-space(./DTP))='tutta') and not(lower-case(normalize-space(./DTP))='totale') and (not(starts-with(lower-case(normalize-space(./DTP)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTP)), 'n.r')))">
 				<xsl:for-each select="./DTP">
 					
 						<rdf:Description>
@@ -339,8 +339,8 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./REN/RENR='intero bene') and (not(starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) or not(starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r')))">
-				<xsl:for-each select="./REN/RENR | ../../PG/RE/REN/RENR">
+				<xsl:if test="not(lower-case(normalize-space(./REN/RENR))='intero bene') and not(lower-case(normalize-space(./REN/RENR))='integrale') and not(lower-case(normalize-space(./REN/RENR))='tutta') and not(lower-case(normalize-space(./REN/RENR))='totale') and (not(starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) or not(starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r')))">
+				<xsl:for-each select="./REN/RENR">
 					
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -374,7 +374,7 @@
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if test="not(./REIP='intero bene')">
+				<xsl:if test="not(lower-case(normalize-space(./REIP))='intero bene') and not(lower-case(normalize-space(./REIP))='integrale') and not(lower-case(normalize-space(./REIP))='tutta') and not(lower-case(normalize-space(./REIP))='totale') and (not(starts-with(lower-case(normalize-space(./REIP)), 'nr')) or not(starts-with(lower-case(normalize-space(./REIP)), 'n.r')))">
 				<xsl:for-each select="./REIP">
 					
 						<rdf:Description>

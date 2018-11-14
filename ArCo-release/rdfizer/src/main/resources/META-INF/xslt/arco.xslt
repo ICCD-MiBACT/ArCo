@@ -4957,6 +4957,27 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:choose>
+							<xsl:when test="./OGTT">
+								<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTT)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</l0:name>
+					<l0:name xml:lang="en">
+						<xsl:choose>
+							<xsl:when test="./OGTT">
+								<xsl:value-of
+									select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTT)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</l0:name>
 					<xsl:if
 						test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
 						<arco-dd:hasCulturalPropertyDefinition>
@@ -9057,6 +9078,149 @@
 					</xsl:if>
                 </xsl:for-each>
                </xsl:if>
+               <!-- Inspection of cultural property -->
+              	<xsl:if test="not(schede/*/CM/ISP/ISPD='0000/00/00' or schede/*/CM/ISP/ISPD='/') and schede/*/CM/ISP/*">
+                <xsl:for-each select="schede/*/CM/ISP">
+					<xsl:variable name="inspection-position">
+						<xsl:value-of select="position()" />
+					</xsl:variable>
+                	<rdf:Description>
+                		<xsl:attribute name="rdf:about">
+                			<xsl:value-of select="concat($NS, 'Inspection/', $itemURI, '-inspection-', position())" />
+                		</xsl:attribute>
+                		<rdf:type>
+                			<xsl:attribute name="rdf:resource">
+                				<xsl:value-of select="'https://w3id.org/arco/context-description/Inspection'" />
+                			</xsl:attribute>
+                		</rdf:type>
+                		<rdfs:label xml:lang="it">
+                			<xsl:value-of select="concat('Ispezione ' , position(), ' del bene ', $itemURI)" />
+                		</rdfs:label>
+                		<l0:name xml:lang="it">
+                			<xsl:value-of select="concat('Ispezione ' , position(), ' del bene ', $itemURI)" />
+                		</l0:name>
+                		<rdfs:label xml:lang="en">
+                			<xsl:value-of select="concat('Inspection ' , position(), ' of cultural property ', $itemURI)" />
+                		</rdfs:label>
+                		<l0:name xml:lang="en">
+                			<xsl:value-of select="concat('Inspection ' , position(), ' of cultural property ', $itemURI)" />
+                		</l0:name>
+                		<xsl:if test="./ISPS">
+                			<arco-core:note>
+                				<xsl:value-of select="normalize-space(./DSCN)" />
+                			</arco-core:note>
+                		</xsl:if>
+                		<xsl:if test="./ISPD and (not(starts-with(lower-case(normalize-space(./ISPD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISPD)), 'n.r')))">
+                			<tiapit:time>
+                				<xsl:value-of select="normalize-space(./ISPD)" />
+                			</tiapit:time>
+                		</xsl:if>
+                		<xsl:if test="./ISPN and (not(starts-with(lower-case(normalize-space(./ISPN)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISPN)), 'n.r')))">
+						<arco-cd:hasActivityResponsible>
+							<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ISPN)))" />
+	                			</xsl:attribute>
+						</arco-cd:hasActivityResponsible>
+						<arco-core:hasAgentRole>
+							<xsl:value-of
+								select="concat($NS, 'AgentRole/', $itemURI, '-inspection-', $inspection-position, '-activity-responsible')" />
+						</arco-core:hasAgentRole>
+					</xsl:if>
+                	</rdf:Description>
+                	<!-- agent role of activity responsible as an individual -->
+					<xsl:if test="./ISPN and (not(starts-with(lower-case(normalize-space(./ISPN)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISPN)), 'n.r')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+			                        		<xsl:value-of
+								select="concat($NS, 'AgentRole/', $itemURI, '-inspection-', $inspection-position, '-activity-responsible')" />
+			                    		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+					                            <xsl:value-of
+									select="'https://w3id.org/arco/core/AgentRole'" />
+					                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of
+									select="concat('Ente responsabile dell''ispezione ', $inspection-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./ISPN))" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of
+									select="concat('Ente responsabile dell''ispezione ', $inspection-position, ' del bene culturale ', $itemURI, ': ', normalize-space(./ISPN))" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of
+									select="concat('Responsible agency of inspection ', $inspection-position, ' of cultural property ', $itemURI, ': ', normalize-space(./ISPN))" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of
+									select="concat('Responsible agency of inspection ', $inspection-position, ' of cultural property ', $itemURI, ': ', normalize-space(./ISPN))" />
+							</l0:name>
+							<arco-core:hasRole>
+								<xsl:attribute name="rdf:resource">
+					                            <xsl:value-of
+									select="concat($NS, 'Role/ActivityResponsible')" />
+					                        </xsl:attribute>
+							</arco-core:hasRole>
+							<arco-core:hasAgent>
+								<xsl:attribute name="rdf:resource">
+					                            <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ISPN)))" />
+					                        </xsl:attribute>
+							</arco-core:hasAgent>
+						</rdf:Description>
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+					                        <xsl:value-of
+								select="concat($NS, 'Role/ActivityResponsible')" />
+					                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+					                            <xsl:value-of
+									select="'https://w3id.org/italia/onto/RO/Role'" />
+					                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="'Responsabile dell''attività'" />
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="'Activity Responsible'" />
+							</rdfs:label>
+							<arco-core:isRoleOf>
+								<xsl:attribute name="rdf:resource">
+					                            <xsl:value-of
+									select="concat($NS, 'AgentRole/', $itemURI, '-inspection-', $inspection-position, '-activity-responsible')" />
+					                        </xsl:attribute>
+							</arco-core:isRoleOf>
+						</rdf:Description>
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+					                        <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./ISPN)))" />
+					                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+					                            <xsl:value-of
+									select="'https://w3id.org/italia/onto/l0/Agent'" />
+					                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./ISPN)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./ISPN)" />
+							</l0:name>
+							<arco-core:isAgentOf>
+								<xsl:attribute name="rdf:resource">
+					                            <xsl:value-of
+									select="concat($NS, 'AgentRole/', $itemURI, '-inspection-', $inspection-position, '-activity-responsible')" />
+					                        </xsl:attribute>
+							</arco-core:isAgentOf>
+						</rdf:Description>
+					</xsl:if>
+                </xsl:for-each>
+                </xsl:if>
 			<!-- Use of cultural property -->
 			<xsl:if test="not(schede/A/UT or schede/PG/UT)">
 				<xsl:for-each select="schede/*/UT">
@@ -11230,7 +11394,94 @@
             				</xsl:attribute>
 						</arco-location:hasBaseMap>
 					</xsl:if>
+					<!-- has referred laction type -->
+					<xsl:if test="./GPL and not(./GPL='.' or ./GPL='-' or ./GPL='/') and (not(starts-with(lower-case(normalize-space(./GPL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPL)), 'n.r')))">
+						<arco-location:hasReferredLocationType>
+							<xsl:attribute name="rdf:resource">
+					                                <xsl:choose>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GPL))='luogo di provenienza' or lower-case(normalize-space(./GPL))='provenienza' or lower-case(normalize-space(./GPL))='provenienza'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/LastLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GPL))='luogo di esecuzione/fabbricazione'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ProductionRealizationLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='luogo di reperimento' or lower-case(normalize-space(./GPL))='luogo di reperimento' or lower-case(normalize-space(./GPL))='reperimento' or lower-case(normalize-space(./GPL))='reperimento'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/FindingLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='luogo di deposito' or lower-case(normalize-space(./GPL))='luogo di deposito' or lower-case(normalize-space(./GPL))='deposito temporaneo' or lower-case(normalize-space(./GPL))='deposito temporaneo' or lower-case(normalize-space(./GPL))='deposito' or lower-case(normalize-space(./GPL))='deposito'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/StorageLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='luogo di esposizione' or lower-case(normalize-space(./GPL))='luogo di esposizione' or lower-case(normalize-space(./GPL))='espositiva' or lower-case(normalize-space(./GPL))='espositiva' or lower-case(normalize-space(./GPL))='espositivo' or lower-case(normalize-space(./GPL))='espositivo' or lower-case(normalize-space(./GPL))='esposizione' or lower-case(normalize-space(./GPL))='esposizione'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ExhibitionLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='luogo di rilevamento' or lower-case(normalize-space(./GPL))='luogo di rilevamento' or lower-case(normalize-space(./GPL))='di rilevamento' or lower-case(normalize-space(./GPL))='di rilevamento' or lower-case(normalize-space(./GPL))='localizzazione di rilevamento' or lower-case(normalize-space(./GPL))='localizzazione di rilevamento'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ObservationLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='area rappresentata' or lower-case(normalize-space(./GPL))='area rappresentata'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/SubjectLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GPL))='localizzazione fisica'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/CurrentPhysicalLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when test="./GPL">
+					                                        <xsl:value-of
+								select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./GPL)))" />
+					                                    </xsl:when>
+					                                </xsl:choose>
+					                            </xsl:attribute>
+						</arco-location:hasReferredLocationType>
+					</xsl:if>
 				</rdf:Description>
+				<!-- referred location type for GE as an individual -->
+				<xsl:if test="./GPL and not(./GPL='.' or ./GPL='-' or ./GPL='/') and (not(starts-with(lower-case(normalize-space(./GPL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPL)), 'n.r')))">
+					<xsl:choose>
+						<xsl:when
+							test="lower-case(normalize-space(./GPL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GPL))='luogo di provenienza' or lower-case(normalize-space(./GPL))='provenienza' or lower-case(normalize-space(./GPL))='provenienza'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GPL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GPL))='luogo di esecuzione/fabbricazione'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GPL))='luogo di reperimento' or lower-case(normalize-space(./GPL))='luogo di reperimento' or lower-case(normalize-space(./GPL))='reperimento' or lower-case(normalize-space(./GPL))='reperimento'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GPL))='luogo di deposito' or lower-case(normalize-space(./GPL))='luogo di deposito' or lower-case(normalize-space(./GPL))='deposito temporaneo' or lower-case(normalize-space(./GPL))='deposito temporaneo' or lower-case(normalize-space(./GPL))='deposito' or lower-case(normalize-space(./GPL))='deposito'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GPL))='luogo di esposizione' or lower-case(normalize-space(./GPL))='luogo di esposizione' or lower-case(normalize-space(./GPL))='espositiva' or lower-case(normalize-space(./GPL))='espositiva' or lower-case(normalize-space(./GPL))='espositivo' or lower-case(normalize-space(./GPL))='espositivo' or lower-case(normalize-space(./GEL))='esposizione' or lower-case(normalize-space(./GPL))='esposizione'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GPL))='luogo di rilevamento' or lower-case(normalize-space(./GPL))='luogo di rilevamento' or lower-case(normalize-space(./GPL))='di rilevamento' or lower-case(normalize-space(./GPL))='di rilevamento' or lower-case(normalize-space(./GPL))='localizzazione di rilevamento' or lower-case(normalize-space(./GPL))='localizzazione di rilevamento'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GPL))='area rappresentata' or lower-case(normalize-space(./GPL))='area rappresentata'" />
+						<xsl:when test="./GPL">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+                                    <xsl:value-of
+									select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./GPL)))" />
+                                </xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/arco/location/LocationType" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./GPL)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./GPL)" />
+								</l0:name>
+							</rdf:Description>
+						</xsl:when>
+					</xsl:choose>
+				</xsl:if>
 				<!-- geometry coordinates for GP as an individual -->
 				<xsl:for-each select="./GPD/GPDP">
 					<rdf:Description>
@@ -11470,7 +11721,93 @@
             				</xsl:attribute>
 							</arco-location:hasBaseMap>
 						</xsl:if>
+						<xsl:if test="./GLL and not(./GLL='.' or ./GLL='-' or ./GLL='/') and (not(starts-with(lower-case(normalize-space(./GLL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GLL)), 'n.r')))">
+						<arco-location:hasReferredLocationType>
+							<xsl:attribute name="rdf:resource">
+					                                <xsl:choose>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GLL))='luogo di provenienza' or lower-case(normalize-space(./GLL))='provenienza' or lower-case(normalize-space(./GLL))='provenienza'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/LastLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GLL))='luogo di esecuzione/fabbricazione'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ProductionRealizationLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='luogo di reperimento' or lower-case(normalize-space(./GLL))='luogo di reperimento' or lower-case(normalize-space(./GLL))='reperimento' or lower-case(normalize-space(./GLL))='reperimento'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/FindingLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='luogo di deposito' or lower-case(normalize-space(./GLL))='luogo di deposito' or lower-case(normalize-space(./GLL))='deposito temporaneo' or lower-case(normalize-space(./GLL))='deposito temporaneo' or lower-case(normalize-space(./GLL))='deposito' or lower-case(normalize-space(./GLL))='deposito'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/StorageLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='luogo di esposizione' or lower-case(normalize-space(./GLL))='luogo di esposizione' or lower-case(normalize-space(./GLL))='espositiva' or lower-case(normalize-space(./GLL))='espositiva' or lower-case(normalize-space(./GLL))='espositivo' or lower-case(normalize-space(./GLL))='espositivo' or lower-case(normalize-space(./GLL))='esposizione' or lower-case(normalize-space(./GLL))='esposizione'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ExhibitionLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='luogo di rilevamento' or lower-case(normalize-space(./GLL))='luogo di rilevamento' or lower-case(normalize-space(./GLL))='di rilevamento' or lower-case(normalize-space(./GLL))='di rilevamento' or lower-case(normalize-space(./GLL))='localizzazione di rilevamento' or lower-case(normalize-space(./GLL))='localizzazione di rilevamento'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ObservationLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='area rappresentata' or lower-case(normalize-space(./GLL))='area rappresentata'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/SubjectLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GLL))='localizzazione fisica'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/CurrentPhysicalLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when test="./GLL">
+					                                        <xsl:value-of
+								select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./GLL)))" />
+					                                    </xsl:when>
+					                                </xsl:choose>
+					                            </xsl:attribute>
+						</arco-location:hasReferredLocationType>
+					</xsl:if>
 					</rdf:Description>
+					<!-- referred location type for GL as an individual -->
+				<xsl:if test="./GLL and not(./GLL='.' or ./GLL='-' or ./GLL='/') and (not(starts-with(lower-case(normalize-space(./GLL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GLL)), 'n.r')))">
+					<xsl:choose>
+						<xsl:when
+							test="lower-case(normalize-space(./GLL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GLL))='luogo di provenienza' or lower-case(normalize-space(./GLL))='provenienza' or lower-case(normalize-space(./GLL))='provenienza'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GLL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GLL))='luogo di esecuzione/fabbricazione'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GLL))='luogo di reperimento' or lower-case(normalize-space(./GLL))='luogo di reperimento' or lower-case(normalize-space(./GLL))='reperimento' or lower-case(normalize-space(./GLL))='reperimento'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GLL))='luogo di deposito' or lower-case(normalize-space(./GLL))='luogo di deposito' or lower-case(normalize-space(./GLL))='deposito temporaneo' or lower-case(normalize-space(./GLL))='deposito temporaneo' or lower-case(normalize-space(./GLL))='deposito' or lower-case(normalize-space(./GLL))='deposito'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GLL))='luogo di esposizione' or lower-case(normalize-space(./GLL))='luogo di esposizione' or lower-case(normalize-space(./GLL))='espositiva' or lower-case(normalize-space(./GLL))='espositiva' or lower-case(normalize-space(./GLL))='espositivo' or lower-case(normalize-space(./GLL))='espositivo' or lower-case(normalize-space(./GLL))='esposizione' or lower-case(normalize-space(./GLL))='esposizione'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GLL))='luogo di rilevamento' or lower-case(normalize-space(./GLL))='luogo di rilevamento' or lower-case(normalize-space(./GLL))='di rilevamento' or lower-case(normalize-space(./GLL))='di rilevamento' or lower-case(normalize-space(./GLL))='localizzazione di rilevamento' or lower-case(normalize-space(./GLL))='localizzazione di rilevamento'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GLL))='area rappresentata' or lower-case(normalize-space(./GLL))='area rappresentata'" />
+						<xsl:when test="./GLL">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+                                    <xsl:value-of
+									select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./GLL)))" />
+                                </xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/arco/location/LocationType" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./GLL)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./GLL)" />
+								</l0:name>
+							</rdf:Description>
+						</xsl:when>
+					</xsl:choose>
+				</xsl:if>
 					<!-- geometry coordinates for GL as an individual -->
 					<xsl:for-each select="./GLD/GLDP">
 						<rdf:Description>
@@ -11706,7 +12043,93 @@
             				</xsl:attribute>
 							</arco-location:hasBaseMap>
 						</xsl:if>
+						<xsl:if test="./GAL and not(./GAL='.' or ./GAL='-' or ./GAL='/') and (not(starts-with(lower-case(normalize-space(./GAL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GAL)), 'n.r')))">
+						<arco-location:hasReferredLocationType>
+							<xsl:attribute name="rdf:resource">
+					                                <xsl:choose>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GAL))='luogo di provenienza' or lower-case(normalize-space(./GAL))='provenienza' or lower-case(normalize-space(./GAL))='provenienza'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/LastLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GAL))='luogo di esecuzione/fabbricazione'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ProductionRealizationLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='luogo di reperimento' or lower-case(normalize-space(./GAL))='luogo di reperimento' or lower-case(normalize-space(./GAL))='reperimento' or lower-case(normalize-space(./GAL))='reperimento'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/FindingLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='luogo di deposito' or lower-case(normalize-space(./GAL))='luogo di deposito' or lower-case(normalize-space(./GAL))='deposito temporaneo' or lower-case(normalize-space(./GAL))='deposito temporaneo' or lower-case(normalize-space(./GAL))='deposito' or lower-case(normalize-space(./GAL))='deposito'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/StorageLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='luogo di esposizione' or lower-case(normalize-space(./GAL))='luogo di esposizione' or lower-case(normalize-space(./GAL))='espositiva' or lower-case(normalize-space(./GAL))='espositiva' or lower-case(normalize-space(./GAL))='espositivo' or lower-case(normalize-space(./GAL))='espositivo' or lower-case(normalize-space(./GAL))='esposizione' or lower-case(normalize-space(./GAL))='esposizione'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ExhibitionLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='luogo di rilevamento' or lower-case(normalize-space(./GAL))='luogo di rilevamento' or lower-case(normalize-space(./GAL))='di rilevamento' or lower-case(normalize-space(./GAL))='di rilevamento' or lower-case(normalize-space(./GAL))='localizzazione di rilevamento' or lower-case(normalize-space(./GAL))='localizzazione di rilevamento'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ObservationLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='area rappresentata' or lower-case(normalize-space(./GAL))='area rappresentata'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/SubjectLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when
+								test="lower-case(normalize-space(./GAL))='localizzazione fisica'">
+					                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/CurrentPhysicalLocation'" />
+					                                    </xsl:when>
+					                                    <xsl:when test="./GAL">
+					                                        <xsl:value-of
+								select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./GAL)))" />
+					                                    </xsl:when>
+					                                </xsl:choose>
+					                            </xsl:attribute>
+						</arco-location:hasReferredLocationType>
+					</xsl:if>
 					</rdf:Description>
+					<!-- referred location type for GA as an individual -->
+				<xsl:if test="./GAL and not(./GAL='.' or ./GAL='-' or ./GAL='/') and (not(starts-with(lower-case(normalize-space(./GAL)), 'nr')) and not(starts-with(lower-case(normalize-space(./GAL)), 'n.r')))">
+					<xsl:choose>
+						<xsl:when
+							test="lower-case(normalize-space(./GAL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GAL))='luogo di provenienza' or lower-case(normalize-space(./GAL))='provenienza' or lower-case(normalize-space(./GAL))='provenienza'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GAL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GAL))='luogo di esecuzione/fabbricazione'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GAL))='luogo di reperimento' or lower-case(normalize-space(./GAL))='luogo di reperimento' or lower-case(normalize-space(./GAL))='reperimento' or lower-case(normalize-space(./GAL))='reperimento'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GAL))='luogo di deposito' or lower-case(normalize-space(./GAL))='luogo di deposito' or lower-case(normalize-space(./GAL))='deposito temporaneo' or lower-case(normalize-space(./GAL))='deposito temporaneo' or lower-case(normalize-space(./GAL))='deposito' or lower-case(normalize-space(./GAL))='deposito'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GAL))='luogo di esposizione' or lower-case(normalize-space(./GAL))='luogo di esposizione' or lower-case(normalize-space(./GAL))='espositiva' or lower-case(normalize-space(./GAL))='espositiva' or lower-case(normalize-space(./GAL))='espositivo' or lower-case(normalize-space(./GAL))='espositivo' or lower-case(normalize-space(./GAL))='esposizione' or lower-case(normalize-space(./GAL))='esposizione'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GAL))='luogo di rilevamento' or lower-case(normalize-space(./GAL))='luogo di rilevamento' or lower-case(normalize-space(./GAL))='di rilevamento' or lower-case(normalize-space(./GAL))='di rilevamento' or lower-case(normalize-space(./GAL))='localizzazione di rilevamento' or lower-case(normalize-space(./GAL))='localizzazione di rilevamento'" />
+						<xsl:when
+							test="lower-case(normalize-space(./GAL))='area rappresentata' or lower-case(normalize-space(./GAL))='area rappresentata'" />
+						<xsl:when test="./GAL">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+                                    <xsl:value-of
+									select="concat($NS, 'LocationType/', arco-fn:urify(normalize-space(./GAL)))" />
+                                </xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/arco/location/LocationType" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./GAL)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./GAL)" />
+								</l0:name>
+							</rdf:Description>
+						</xsl:when>
+					</xsl:choose>
+				</xsl:if>
 					<!-- geometry coordinates for GL as an individual -->
 					<xsl:for-each select="./GAD/GADP">
 						<rdf:Description>
@@ -13324,6 +13747,22 @@
 							select="'https://w3id.org/arco/context-description/Commission'" />
                         </xsl:attribute>
 					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of
+							select="concat('Committenza ', position(), ' del bene ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of
+							select="concat('Commission ', position(), ' of cultural property ', $itemURI)" />
+					</l0:name>
+					<l0:name xml:lang="it">
+						<xsl:value-of
+							select="concat('Committenza ', position(), ' del bene ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of
+							select="concat('Commission ', position(), ' of cultural property ', $itemURI)" />
+					</rdfs:label>
 					<xsl:if test="./CMMN">
 						<arco-cd:hasCommittent>
 							<xsl:attribute name="rdf:resource">
