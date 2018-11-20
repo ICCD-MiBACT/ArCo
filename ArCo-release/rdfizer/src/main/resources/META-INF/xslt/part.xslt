@@ -335,6 +335,74 @@
 				</xsl:if>
 			</xsl:for-each>
 			
+			<!-- part for use (A and PG) -->
+			<xsl:for-each select="schede/*/US/USO">
+				<xsl:variable name="use">
+					<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if
+					test="not(lower-case(normalize-space(./USOR))='intero bene') and not(lower-case(normalize-space(./USOR))='integrale') and not(lower-case(normalize-space(./USOR))='tutta') and not(lower-case(normalize-space(./USOR))='totale') and (not(starts-with(lower-case(normalize-space(./USOR)), 'nr')) and not(starts-with(lower-case(normalize-space(./USOR)), 'n.r')))">
+					<xsl:for-each select="./USOR">
+
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<arco-cd:hasUse>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$use" />
+								</xsl:attribute>
+							</arco-cd:hasUse>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+
+					</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			<xsl:for-each select="schede/*/US/USA">
+				<xsl:variable name="use">
+					<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if
+					test="not(lower-case(normalize-space(./USAR))='intero bene') and not(lower-case(normalize-space(./USAR))='integrale') and not(lower-case(normalize-space(./USAR))='tutta') and not(lower-case(normalize-space(./USAR))='totale') and (not(starts-with(lower-case(normalize-space(./USAR)), 'nr')) and not(starts-with(lower-case(normalize-space(./USAR)), 'n.r')))">
+					<xsl:for-each select="./USAR">
+
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<arco-cd:hasUse>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$use" />
+								</xsl:attribute>
+							</arco-cd:hasUse>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+
+					</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			
 			<xsl:for-each select="schede/*/MT/MIS">
 				<xsl:variable name="measurementCollection">
 					<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />

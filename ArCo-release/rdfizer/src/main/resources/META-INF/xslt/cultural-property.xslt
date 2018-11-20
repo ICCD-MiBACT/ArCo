@@ -1565,12 +1565,12 @@
 							</arco-core:hasPart>
 						</xsl:when>
 						<xsl:otherwise>
-							<arco-dd:hasMeasurements>
+							<arco-dd:hasMeasurementCollection>
 								<xsl:attribute name="rdf:resource">
 				              		<xsl:value-of
 										select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
 				                </xsl:attribute>
-							</arco-dd:hasMeasurements>
+							</arco-dd:hasMeasurementCollection>
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
@@ -2185,6 +2185,48 @@
 	                		</xsl:attribute>
                 	</arco-cd:hasUse>
                 </xsl:if>
+                <xsl:for-each select="schede/*/US/USO">
+                	<xsl:choose>
+					<xsl:when test="not(./USOR) or lower-case(normalize-space(./USOR))='intero bene' or lower-case(normalize-space(./USOR))='integrale' or lower-case(normalize-space(./USOR))='tutta' or lower-case(normalize-space(./USOR))='totale'">
+						<arco-dd:hasUse>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
+ 	                	</xsl:attribute>
+ 	                </arco-dd:hasUse>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="./USOR">
+							<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+                </xsl:for-each>
+                <xsl:for-each select="schede/*/US/USA">
+                	<xsl:choose>
+					<xsl:when test="not(./USAR) or lower-case(normalize-space(./USAR))='intero bene' or lower-case(normalize-space(./USAR))='integrale' or lower-case(normalize-space(./USAR))='tutta' or lower-case(normalize-space(./USAR))='totale'">
+						<arco-dd:hasUse>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
+ 	                	</xsl:attribute>
+ 	                </arco-dd:hasUse>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="./USAR">
+							<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+                </xsl:for-each>
                 <!-- material of cultural property (version 4.00) -->
                 <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
                <xsl:for-each select="schede/*/MT/MTC/MTCM">

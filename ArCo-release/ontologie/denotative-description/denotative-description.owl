@@ -210,14 +210,29 @@
     <!-- https://w3id.org/arco/denotative-description/hasMeasurement -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasMeasurement">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Measurements"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
         <rdfs:label xml:lang="it">ha misura</rdfs:label>
         <rdfs:label xml:lang="en">has measurement</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/hasMeasurementCollection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasMeasurementCollection">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto all&apos;insieme delle misure osservate per quell&apos;oggetto.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha collezione di misure</rdfs:label>
+        <rdfs:label xml:lang="en">has measurement collection</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -231,23 +246,9 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega una misura al tipo di misura (altezza, larghezza, diametro, etc.)</rdfs:comment>
         <rdfs:label xml:lang="it">ha tipo di misura</rdfs:label>
         <rdfs:label xml:lang="en">has measurement type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/denotative-description/hasMeasurements -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasMeasurements">
-        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurements"/>
-        <rdfs:comment xml:lang="it">Questa classe collega un oggetto all&apos;insieme delle misure osservate per quell&apos;oggetto.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha misure</rdfs:label>
-        <rdfs:label xml:lang="en">has measurements</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -268,6 +269,7 @@
     <!-- https://w3id.org/arco/denotative-description/hasOrientation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasOrientation">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Orientation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al suo orientamento, secondo l&apos;asse principale individuato.</rdfs:comment>
         <rdfs:label xml:lang="it">ha orientamento</rdfs:label>
@@ -298,7 +300,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasVolumetricDiamensionsMeasurement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/denotative-description/hasMeasurement"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Measurements"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
         <rdfs:label>ha misura di imgombro</rdfs:label>
@@ -469,7 +471,7 @@
     <!-- https://w3id.org/arco/denotative-description/validity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/denotative-description/validity">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Measurements"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la validità, intesa come livello di accuratezza, di una misura osservata per un oggetto.</rdfs:comment>
         <rdfs:label xml:lang="en">validity</rdfs:label>
@@ -714,9 +716,28 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta una misura osservata per un oggetto. Le misure sono relative alle dimensioni del bene in esame. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
         <rdfs:label xml:lang="it">Misura</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">MT/MIS</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/MeasurementCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/MeasurementCollection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasMeasurement"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
+        <rdfs:label xml:lang="it">Collezione di misure</rdfs:label>
+        <rdfs:label xml:lang="en">Measurement collection</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -728,28 +749,9 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di misura osservata (larghezza, altezza, diametro, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Misura</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</arco-core:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/denotative-description/Measurements -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Measurements">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasMeasurement"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
-        <rdfs:label xml:lang="en">Measurements</rdfs:label>
-        <rdfs:label xml:lang="it">Misure</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco-core:iccdNormTag>
     </owl:Class>
     
 
