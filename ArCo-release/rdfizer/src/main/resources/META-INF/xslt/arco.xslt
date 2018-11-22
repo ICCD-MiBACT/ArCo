@@ -14555,18 +14555,18 @@
 					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
-			<!-- We create the Time Indexed Qualified Location associated with the 
+			<!-- We create the Time Indexed Typed Location associated with the 
 				Cultural Property -->
 			<xsl:if test="schede/*/LC">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-current')" />
+						select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/arco/location/TimeIndexedQualifiedLocation'" />
+							select="'https://w3id.org/arco/location/TimeIndexedTypedLocation'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -14646,12 +14646,12 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-alternative-', position())" />
+						select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/arco/location/TimeIndexedQualifiedLocation'" />
+							select="'https://w3id.org/arco/location/TimeIndexedTypedLocation'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -15394,7 +15394,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
                                 <xsl:value-of
-								select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-current')" />
+								select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
                             </xsl:attribute>
 							<arco-location:atSite>
 								<xsl:attribute name="rdf:resource">
@@ -15478,7 +15478,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
                                 <xsl:value-of
-								select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-current')" />
+								select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
                             </xsl:attribute>
 							<arco-location:atLocation>
 								<xsl:attribute name="rdf:resource">
@@ -15609,7 +15609,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                     <xsl:value-of
-									select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-alternative-', position())" />
+									select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
                                 </xsl:attribute>
 								<arco-location:atSite>
 									<xsl:attribute name="rdf:resource">
@@ -16262,7 +16262,7 @@
 								</rdf:Description>
 							</xsl:if>
 							<!-- rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of 
-								select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-current')" 
+								select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" 
 								/> </xsl:attribute> <arco-location:atSite> <xsl:attribute name="rdf:resource"> 
 								<xsl:value-of select="$site" /> </xsl:attribute> </arco-location:atSite> </rdf:Description -->
 							<!-- rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of 
@@ -16333,7 +16333,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                     <xsl:value-of
-									select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-alternative-', position())" />
+									select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
                                 </xsl:attribute>
 								<arco-location:atLocation>
 									<xsl:attribute name="rdf:resource">

@@ -1301,21 +1301,21 @@
 				</arco-catalogue:isDescribedByCatalogueRecord>
 				<!-- current physical location -->
 				<xsl:if test="schede/*/LC">
-					<arco-location:hasTimeIndexedQualifiedLocation>
+					<arco-location:hasTimeIndexedTypedLocation>
 						<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
-							select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-current')" />
+							select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" />
 	                        </xsl:attribute>
-					</arco-location:hasTimeIndexedQualifiedLocation>
+					</arco-location:hasTimeIndexedTypedLocation>
 				</xsl:if>
 				<!-- alternative locations -->
 				<xsl:for-each select="schede/*/LA | schede/F/LR">
-					<arco-location:hasTimeIndexedQualifiedLocation>
+					<arco-location:hasTimeIndexedTypedLocation>
 						<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
-							select="concat($NS, 'TimeIndexedQualifiedLocation/', $itemURI, '-alternative-', position())" />
+							select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
 	                        </xsl:attribute>
-					</arco-location:hasTimeIndexedQualifiedLocation>
+					</arco-location:hasTimeIndexedTypedLocation>
 				</xsl:for-each>
 				<xsl:if test="schede/*/LC/PVC/*">
 					<arco-location:hasCulturalPropertyAddress>

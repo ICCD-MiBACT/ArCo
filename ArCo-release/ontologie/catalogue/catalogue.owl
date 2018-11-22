@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/arco/catalogue/"
      xml:base="https://w3id.org/arco/catalogue/"
      xmlns:arco-core="https://w3id.org/arco/core/"
+     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -19,6 +20,7 @@
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
@@ -38,6 +40,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/opla/isNativeTo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/opla/isNativeTo"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
 
 
@@ -230,6 +244,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente precedente.</rdfs:comment>
         <rdfs:label xml:lang="it">ha la versione precedente</rdfs:label>
         <rdfs:label xml:lang="en">has immediate previous version</rdfs:label>
@@ -262,6 +277,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione precedente.</rdfs:comment>
         <rdfs:label xml:lang="it">ha versione precedente</rdfs:label>
         <rdfs:label xml:lang="en">has previous version</rdfs:label>
@@ -443,6 +459,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente successiva.</rdfs:comment>
         <rdfs:label xml:lang="en">is immediate previous version of</rdfs:label>
         <rdfs:label xml:lang="it">è la versione precedente di</rdfs:label>
@@ -458,6 +475,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/catalogue/CatalogueRecordVersion"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione successiva.</rdfs:comment>
         <rdfs:label xml:lang="en">is previous version of</rdfs:label>
         <rdfs:label xml:lang="it">è versione precedente di</rdfs:label>
@@ -493,8 +511,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare l&apos;identificativo a una scheda catalografica che descrive un bene culturale.</rdfs:comment>
         <rdfs:label xml:lang="en">catalogue record identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo della scheda</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -509,8 +527,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un codice ICCD eventualmente soppresso per motivi di diversa natura, utile per poter ricercare e consultare le schede pregresse nell&apos;Archivio storico gestito dall&apos;Istituto o da altri Enti.</rdfs:comment>
         <rdfs:label xml:lang="it">codice ICCD soppresso</rdfs:label>
         <rdfs:label xml:lang="en">deleted ICCD identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSP; versioni precedenti: RV/RVE/RVES</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -524,8 +542,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali informazioni provenienti da schede pregresse redatte sulla base di standard obsoleti, per le quali non è stato possibile effettuare il trasferimento nel tracciato della scheda aggiornato, secondo la sintassi: “acronimocampo: valore; acronimocampo: valore”</rdfs:comment>
         <rdfs:label xml:lang="it">dati pregressi recuperati</rdfs:label>
         <rdfs:label xml:lang="en">recovered data</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AN/RDP</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -556,8 +574,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo di sistema che viene associato all&apos;interno del sistema Sigec al file xml contenente una scheda di catalogo.</rdfs:comment>
         <rdfs:label xml:lang="it">identificativo di sistema</rdfs:label>
         <rdfs:label xml:lang="en">system record code</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -638,8 +656,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive architettura.</rdfs:comment>
         <rdfs:label xml:lang="en">A catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Architettura</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -651,8 +669,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti antropologici.</rdfs:comment>
         <rdfs:label xml:lang="en">AT catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Reperti antropologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -664,8 +682,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici immateriali.</rdfs:comment>
         <rdfs:label xml:lang="en">BDI catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici immateriali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -677,7 +695,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici materiali.</rdfs:comment>
         <rdfs:label xml:lang="en">BDM catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici materiali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
@@ -690,8 +708,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Botanica.</rdfs:comment>
         <rdfs:label xml:lang="en">BNB catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Botanica</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -703,8 +721,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Mineralogia.</rdfs:comment>
         <rdfs:label xml:lang="en">BNM catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Mineralogia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -716,8 +734,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Paleontologia.</rdfs:comment>
         <rdfs:label xml:lang="en">BNP catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Paleontologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -729,7 +747,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Petrologia.</rdfs:comment>
         <rdfs:label xml:lang="en">BNPE catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Petrologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
@@ -742,8 +760,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Planetologia.</rdfs:comment>
         <rdfs:label xml:lang="en">BNPL catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Planetologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -755,8 +773,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Zoologia.</rdfs:comment>
         <rdfs:label xml:lang="en">BNZ catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Zoologia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -768,8 +786,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive complessi archeologici.</rdfs:comment>
         <rdfs:label xml:lang="en">CA catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Complessi archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -781,7 +799,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive centri/nuclei storici.</rdfs:comment>
         <rdfs:label xml:lang="en">CNS catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Centri/nuclei storici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
@@ -794,8 +812,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive disegni.</rdfs:comment>
         <rdfs:label xml:lang="en">D catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Disegni</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -807,8 +825,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fotografia.</rdfs:comment>
         <rdfs:label xml:lang="en">F catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Fotografia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -820,8 +838,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fondi fotografici.</rdfs:comment>
         <rdfs:label xml:lang="en">FF catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Fondi fotografici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -833,7 +851,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive monumenti archeologici.</rdfs:comment>
         <rdfs:label xml:lang="en">MA catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Monumenti archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
@@ -846,8 +864,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive matrici incise.</rdfs:comment>
         <rdfs:label xml:lang="en">MI catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Matrici incise</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -859,8 +877,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni numismatici.</rdfs:comment>
         <rdfs:label xml:lang="en">NU catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni numismatici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -872,8 +890,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte.</rdfs:comment>
         <rdfs:label xml:lang="en">OA catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Opere/oggetti d&apos;arte</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -885,7 +903,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte contemporanea.</rdfs:comment>
         <rdfs:label xml:lang="en">OAC catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda opere/oggetti d&apos;arte contemporanea</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
@@ -898,8 +916,8 @@
         <rdfs:label xml:lang="en">PG catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Parchi/giardini</rdfs:label>
         <owl:versionInfo xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive parchi/giardini.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -911,8 +929,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive il patrimonio scientifico e tecnologico.</rdfs:comment>
         <rdfs:label xml:lang="en">PST catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Patrimonio scientifico e tecnologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -924,8 +942,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti archeologici.</rdfs:comment>
         <rdfs:label xml:lang="en">RA catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Reperti archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -937,7 +955,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive stampe.</rdfs:comment>
         <rdfs:label xml:lang="en">S catalogue record</rdfs:label>
         <rdfs:label xml:lang="en">Scheda Stampe</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
@@ -950,8 +968,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive saggi stratigrafici.</rdfs:comment>
         <rdfs:label xml:lang="en">SAS catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Saggi stratigrafici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -963,8 +981,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive siti archeologici.</rdfs:comment>
         <rdfs:label xml:lang="en">SI catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Siti archeologici</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -976,8 +994,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali.</rdfs:comment>
         <rdfs:label xml:lang="en">SM catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Strumenti musicali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -989,7 +1007,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali-organo.</rdfs:comment>
         <rdfs:label xml:lang="en">SMO catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Strumenti musicali-Organo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
@@ -1002,8 +1020,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive tabella materiali archeologici.</rdfs:comment>
         <rdfs:label xml:lang="it">Scheda Tabella materiali archeologici</rdfs:label>
         <rdfs:label xml:lang="en">TMA catalogue record</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1015,8 +1033,8 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive vestimenti antichi/contemporanei.</rdfs:comment>
         <rdfs:label xml:lang="it">Scheda Vestimenti antichi/contemporanei</rdfs:label>
         <rdfs:label xml:lang="en">VeAC catalogue record</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1159,8 +1177,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/catalogue/CataloguingLevel"/>
         <rdfs:label xml:lang="en">Detailed Level</rdfs:label>
         <rdfs:label xml:lang="it">Livello di Catalogo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -1171,8 +1189,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/catalogue/CataloguingLevel"/>
         <rdfs:label xml:lang="it">Livello di Inventario</rdfs:label>
         <rdfs:label xml:lang="en">Minimum Level</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -1183,8 +1201,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/catalogue/CataloguingLevel"/>
         <rdfs:label xml:lang="it">Livello di Precatalogo</rdfs:label>
         <rdfs:label xml:lang="en">Medium Level</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 

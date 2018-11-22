@@ -36,6 +36,7 @@
         <rdfs:comment xml:lang="it">Questo è il modulo core della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al bene culturale, considerate centrali. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
         <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
     </owl:Ontology>
@@ -56,6 +57,12 @@
     <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
 
 
