@@ -87,6 +87,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Accessory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a un suo accessorio, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha accessorio</rdfs:label>
         <rdfs:label xml:lang="en">has accessory</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -103,6 +104,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/ConservationStatus"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa il bene culturale al suo stato di conservazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the cultural property with its conservation status.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha stato di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has conservation status</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -119,6 +121,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/ConservationStatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/ConservationStatusType"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa lo stato di conservazione a uno dei valori del tipo di stato di conservazione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di stato di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has conservation status type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -134,6 +137,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/CulturalPropertyType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/CulturalPropertyDefinition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè la definizione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha definizione del bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property definition</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -149,6 +153,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/CulturalPropertyType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/CulturalPropertySpecification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè alle specifiche morfologiche e funzionali.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha specifiche del bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property specification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -165,6 +170,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/CulturalPropertyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al tipo di bene, per permettere la corretta e precisa individuazione del bene.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -177,10 +183,10 @@
     <!-- https://w3id.org/arco/denotative-description/hasDesignationInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasDesignationInTime">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/denotative-description/hasNameInTime"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/DesignationInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua denominazione e/o dedicazione o, per la normativa FF, titolo, nel corso del tempo.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha designazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -196,6 +202,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/DesignationInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/DesignationType"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di denominazione</rdfs:label>
         <rdfs:label xml:lang="en">has designation type</rdfs:label>
         <owl:versionInfo xml:lang="it">Questa proprietà collega una denominazione o dedicazione o, per la normativa FF, titolo nel tempo al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.)</owl:versionInfo>
@@ -212,6 +219,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;area rappresentata come soggetto di un bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha localizzazione rappresentata</rdfs:label>
         <rdfs:label xml:lang="en">has location as subject</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -227,6 +235,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha misura</rdfs:label>
         <rdfs:label xml:lang="en">has measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -242,6 +251,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto all&apos;insieme delle misure osservate per quell&apos;oggetto.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha collezione di misure</rdfs:label>
         <rdfs:label xml:lang="en">has measurement collection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -258,24 +268,12 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/MeasurementType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una misura al tipo di misura (altezza, larghezza, diametro, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di misura</rdfs:label>
         <rdfs:label xml:lang="en">has measurement type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/denotative-description/hasNameInTime -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasNameInTime">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">Questa proprietà è stata creata come proprietà generica per sottoproprietà più specifiche, per collegare un&apos;entità a una denominazione nel tempo.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha nome nel tempo</rdfs:label>
-        <rdfs:label xml:lang="en">has name in time</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -286,6 +284,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Orientation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al suo orientamento, secondo l&apos;asse principale individuato.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha orientamento</rdfs:label>
         <rdfs:label xml:lang="en">has orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -301,6 +300,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/TechnicalDetailOccurrence"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un&apos;occorrenza di un dettaglio tecnico, cioè a una situazione in cui un dettaglio tecnico occorre nella realtà in un bene culturale specifico. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha occorrenza di dettaglio tecnico</rdfs:label>
         <rdfs:label xml:lang="en">has technical detail occurrence</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -317,6 +317,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label>ha misura di imgombro</rdfs:label>
         <rdfs:label>has volumetric diamensions measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -334,6 +335,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/TechnicalDetail"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;usa caratteristica tecnica&quot;, collega una caratteristica tecnica, intesa come concetto, a un dettaglio tecnico di un bene culturale, inteso come descrizione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">is technical characteristic used by</rdfs:label>
         <rdfs:label xml:lang="it">è caratteristica tecnica usata da</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -350,6 +352,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/TechnicalDetailOccurrence"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;soddisfa dettaglio tecnico&quot;, collega una descrizione di un dettaglio tecnico a una delle sue occorrenze, relativamente a un bene culturale specifico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">is technical detail satisfied by</rdfs:label>
         <rdfs:label xml:lang="it">è dettaglio tecnico soddisfatto da</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -365,6 +368,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/TechnicalDetail"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;occorrenza di un dettaglio tecnico, relativamente a un bene culturale specifico, alla descrizione del dettaglio tecnico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">satisfies technical detail</rdfs:label>
         <rdfs:label xml:lang="it">soddisfa dettaglio tecnico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -380,6 +384,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un dettaglio tecnico di un bene culturale, inteso come descrizione, a una caratteristica tecnica, intesa come concetto, che ne definisce il contesto descrittivo.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">usa caratteristica tecnica</rdfs:label>
         <rdfs:label xml:lang="en">uses technical characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -412,6 +417,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Accessory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di costruzione di un accessorio di uno strumento musicale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">creation date</rdfs:label>
         <rdfs:label xml:lang="it">data di creazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -429,6 +435,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/PhotographicHeritage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative alla fotografia digitale. Può rappresentare informazioni utili a identificare le intenzioni dell&apos;autore in relazione alla visualizzazione o rioggettivazione della fotografia digitale, come la dimensione del quadro, la risoluzione di stampa e relativa unità di misura, altre indicazioni per la stampa (tipo stampante, correzioni cromatiche, ecc.), categoria, URL, ecc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">digital photograph note</rdfs:label>
         <rdfs:label xml:lang="it">note sulla fotografia digitale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -446,6 +453,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/MusicHeritage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative agli aspetti acustici di uno strumento musicale, ed eventualmente anche relative ai rilevamenti e ai criteri adottati in sede di restauro.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">musical instrument note</rdfs:label>
         <rdfs:label xml:lang="it">note sullo strumento musicale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -461,6 +469,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali proposte per interventi conservativi, dopo aver valutato le condizioni del bene al momento della sua catalogazione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">proposed intervention</rdfs:label>
         <rdfs:label xml:lang="it">proposte di interventi</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -477,6 +486,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta informazioni sulle condizioni ambientali e microclimatiche in cui si trova il bene al momento della catalogazione ed eventuali indicazioni per una sua corretta conservazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents informations about the storage conditions of a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">modalità di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">storage conditions</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -492,6 +502,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la validità, intesa come livello di accuratezza, di una misura osservata per un oggetto.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">validity</rdfs:label>
         <rdfs:label xml:lang="it">validità</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -569,6 +580,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un accessorio di un bene musicale, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Accessorio</rdfs:label>
         <rdfs:label xml:lang="en">Accessory</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -602,6 +614,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato di conservazione di un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the conservation status of the cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Conservation Status</rdfs:label>
         <rdfs:label xml:lang="it">Stato di Conservazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -615,6 +628,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/ConservationStatusType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Conservation Status Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di stato di conservazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -628,6 +642,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/CulturalPropertyDefinition">
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione di un bene culturale, cioè il termine o la locuzione che individua il bene che si sta catalogando.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Cultural Property Definition</rdfs:label>
         <rdfs:label xml:lang="it">Definizione del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -641,6 +656,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/CulturalPropertySpecification">
         <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche morfologiche o funzionali, utili a completare la definizione del bene per una sua più puntuale individuazione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Cultural Property Specification</rdfs:label>
         <rdfs:label xml:lang="it">Specifiche del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -667,6 +683,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di bene culturale, cioè il termine o la locuzione che individua il bene che si sta catalogando ed eventuali ulteriori specifiche sulla definizione del bene.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Cultural property Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -699,6 +716,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una denominazione e/o dedicazione attestata nel corso del tempo per il bene in esame. Per la normativa FF, la classe rappresenta nello specifico la  denominazione o il titolo del fondo attestati nel corso del tempo per il bene in esame; uno stesso fondo può avere più denominazioni/titoli nel corso del tempo.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Denominazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -713,6 +731,7 @@
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/DesignationType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di denominazione o dedicazione o, per la normativa FF, titolo, del bene (altra lingua, attribuita, attuale, dialettale, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Designation Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di denominazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -732,6 +751,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una misura osservata per un oggetto. Le misure sono relative alle dimensioni del bene in esame. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
         <rdfs:label xml:lang="it">Misura</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -751,6 +771,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Collezione di misure</rdfs:label>
         <rdfs:label xml:lang="en">Measurement collection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -765,6 +786,7 @@
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/MeasurementType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di misura osservata (larghezza, altezza, diametro, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Misura</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -778,6 +800,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Orientation">
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;orientamento di un oggetto (NO, SE, etc.), secondo l&apos;asse principale individuato.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Orientamento</rdfs:label>
         <rdfs:label xml:lang="en">Orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -793,6 +816,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
         <opla:isNativeTo rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una caratteristica tecnica, intesa come tipo particolare di concetto che definisce il contesto descrittivo rappresentato da un dettaglio tecnico (descrizione) relativo a un bene culturale. Per esempio, &quot;materia&quot; è una caratteristica tecnica che può essere utilizzata per la descrizione del dettaglio tecnico &quot;terracotta&quot; relativo a un bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Caratteristica tecnica</rdfs:label>
         <rdfs:label xml:lang="en">Technical Characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -808,6 +832,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <opla:isNativeTo rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una descrizione di un dettaglio tecnico relativo a un bene culturale. Per esempio, può rappresentare una particolare materia di cui è composto, la tecnica con cui è stato realizzato, la sua forma, il suo colore. Ogni dettaglio tecnico utilizza delle caratteristiche tecniche, cioè dei concetti, che lo definiscono (es.: &quot;terracotta&quot; è un dettaglio tecnico definito dalla caratteristica tecnica &quot;materia&quot;, relativamente a un bene culturale). Per ogni tipologia di bene culturale possono essere rilevati e registrati dettagli tecnici specifici. Questa classe è un tipo particolare di Description, la classe degli oggetti costruiti socialmente (testi, valori, categorie, relazioni, contesti), usati per descrivere qualcos&apos;altro in modo strutturato.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Dettaglio tecnico</rdfs:label>
         <rdfs:label xml:lang="en">Technical Detail</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -823,6 +848,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <opla:isNativeTo rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occorrenza di un dettaglio tecnico (una descrizione), cioè una situazione in cui un dettaglio tecnico occorre nella realtà in un bene culturale specifico. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Occorrenza di dettaglio tecnico</rdfs:label>
         <rdfs:label xml:lang="en">Technical detail Occurrence</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>

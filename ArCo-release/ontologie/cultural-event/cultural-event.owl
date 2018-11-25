@@ -22,7 +22,6 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/cultural-event/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
-        <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
@@ -74,6 +73,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/cultural-event/hasRelatedAgent"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/cultural-event/"/>
         <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
         <rdfs:label xml:lang="en">has event organiser</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -124,6 +124,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il luogo e il tempo di un evento culturale, quando espressi unitamente.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/cultural-event/"/>
         <rdfs:label xml:lang="en">event time and location</rdfs:label>
         <rdfs:label xml:lang="it">tempo e luogo dell&apos;evento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -162,6 +163,7 @@
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una mostra, come sottocategoria di un generico evento culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an exhibition, as a particular type of cultural event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/cultural-event/"/>
         <rdfs:label xml:lang="en">Exhibition</rdfs:label>
         <rdfs:label xml:lang="it">Mostra</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>

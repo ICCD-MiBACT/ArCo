@@ -407,7 +407,7 @@
 				<xsl:variable name="measurementCollection">
 					<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
 				</xsl:variable>
-				<xsl:if test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and./MISP">
+				<xsl:if test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and./MISP and not(lower-case(normalize-space(./MISP))='intero bene' or lower-case(normalize-space(./MISP))='integrale' or lower-case(normalize-space(./MISP))='tutta' or lower-case(normalize-space(./MISP))='totale' or (starts-with(lower-case(normalize-space(./MISP)), 'nr')) or (starts-with(lower-case(normalize-space(./MISP)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 					 		<xsl:value-of
@@ -424,6 +424,26 @@
 							</rdfs:label>
 							<l0:name>
 								<xsl:value-of select="normalize-space(./MISP)" />
+							</l0:name>
+						</rdf:Description>
+				</xsl:if>
+				<xsl:if test="$sheetType='F' and ./MISO and not(lower-case(normalize-space(./MISO))='intero bene' or lower-case(normalize-space(./MISO))='integrale' or lower-case(normalize-space(./MISO))='tutta' or lower-case(normalize-space(./MISO))='totale' or (starts-with(lower-case(normalize-space(./MISO)), 'nr')) or (starts-with(lower-case(normalize-space(./MISO)), 'n.r')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+					 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MISO)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<arco-cd:hasMeasurementCollection>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$measurementCollection" />
+								</xsl:attribute>
+							</arco-cd:hasMeasurementCollection>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./MISO)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./MISO)" />
 							</l0:name>
 						</rdf:Description>
 				</xsl:if>

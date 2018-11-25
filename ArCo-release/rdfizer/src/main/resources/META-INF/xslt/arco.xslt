@@ -3823,9 +3823,9 @@
 							</xsl:choose>
 						</l0:name>
 						<xsl:if test="./EDTE and (not(starts-with(lower-case(normalize-space(./EDTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTE)), 'n.r')))">
-							<arco-cd:editionDate>
+							<tiapit:time>
 								<xsl:value-of select="normalize-space(./EDTE)" />
-							</arco-cd:editionDate>
+							</tiapit:time>
 						</xsl:if>
 						<xsl:if test="./EDTL and (not(starts-with(lower-case(normalize-space(./EDTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTL)), 'n.r')))">
 							<arco-cd:editionLocation>
@@ -14633,7 +14633,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/italia/onto/TI/TimeInteval'" />
+							select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
                         </xsl:attribute>
 					</rdf:type>
 					<tiapit:time>
@@ -14859,7 +14859,7 @@
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
-								select="'https://w3id.org/italia/onto/TI/TimeInteval'" />
+								select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
                             </xsl:attribute>
 						</rdf:type>
 						<xsl:if test="PRD/PRDI and (not(starts-with(lower-case(normalize-space(./PRD/PRDI)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRD/PRDI)), 'n.r')))">
@@ -17487,7 +17487,7 @@
 									</xsl:attribute>
 								</arco-dd:hasMeasurement>
 							</xsl:if>
-							<xsl:if test="./MISO">
+							<xsl:if test="./MISO and $sheetType='VeAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
 										<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-edge-circumference')" />
@@ -17598,7 +17598,7 @@
 								<xsl:when test="./MISF">
 									<xsl:value-of select="'HipCircumference'" />
 								</xsl:when>
-								<xsl:when test="./MISO">
+								<xsl:when test="./MISO and $sheetType='VeAC'">
 									<xsl:value-of select="'EdgeCircumference'" />
 								</xsl:when>
 								<xsl:when test="./MISL">
@@ -17657,7 +17657,7 @@
 									<xsl:when test="./MISF">
 										<xsl:value-of select="normalize-space(./MISF)" />
 									</xsl:when>
-									<xsl:when test="./MISO">
+									<xsl:when test="./MISO and $sheetType='VeAC'">
 										<xsl:value-of select="normalize-space(./MISO)" />
 									</xsl:when>
 									<xsl:when test="./MISL">
@@ -17722,7 +17722,7 @@
 										<xsl:when test="./MISF">
 											<xsl:value-of select="normalize-space(./MISF)" />
 										</xsl:when>
-										<xsl:when test="./MISO">
+										<xsl:when test="./MISO and $sheetType='VeAC'">
 											<xsl:value-of select="normalize-space(./MISO)" />
 										</xsl:when>
 										<xsl:when test="./MISL">
@@ -17763,7 +17763,7 @@
 									<xsl:when test="./MISF">
 										<xsl:value-of select="normalize-space(./MISF)" />
 									</xsl:when>
-									<xsl:when test="./MISO">
+									<xsl:when test="./MISO and $sheetType='VeAC'">
 										<xsl:value-of select="normalize-space(./MISO)" />
 									</xsl:when>
 									<xsl:when test="./MISL">

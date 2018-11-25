@@ -1556,11 +1556,19 @@
 				<!-- Measurement -->
 				<xsl:for-each select="schede/*/MT/MIS">
 					<xsl:choose>
-						<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and./MISP">
+						<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP and not(lower-case(normalize-space(./MISP))='intero bene' or lower-case(normalize-space(./MISP))='integrale' or lower-case(normalize-space(./MISP))='tutta' or lower-case(normalize-space(./MISP))='totale' or (starts-with(lower-case(normalize-space(./MISP)), 'nr')) or (starts-with(lower-case(normalize-space(./MISP)), 'n.r')))">
 							<arco-core:hasPart>
 								<xsl:attribute name="rdf:resource">
 				              		<xsl:value-of
-										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MISP)))" />
+				                </xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:when>
+						<xsl:when test="$sheetType='F' and ./MISO and not(lower-case(normalize-space(./MISO))='intero bene' or lower-case(normalize-space(./MISO))='integrale' or lower-case(normalize-space(./MISO))='tutta' or lower-case(normalize-space(./MISO))='totale' or (starts-with(lower-case(normalize-space(./MISO)), 'nr')) or (starts-with(lower-case(normalize-space(./MISO)), 'n.r')))">
+							<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
+				              		<xsl:value-of
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MISO)))" />
 				                </xsl:attribute>
 							</arco-core:hasPart>
 						</xsl:when>
