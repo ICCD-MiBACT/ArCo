@@ -14,6 +14,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:arco-cd="https://w3id.org/arco/context-description/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -80,6 +81,12 @@
     <!-- http://dati.beniculturali.it/cis/isInSite -->
 
     <owl:ObjectProperty rdf:about="http://dati.beniculturali.it/cis/isInSite"/>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/hasLegalSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasLegalSituation"/>
     
 
 
@@ -171,6 +178,23 @@
     
 
 
+    <!-- https://w3id.org/arco/location/hasCadastrialCity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasCadastrialCity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/hasCadastrialEntity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/CadastrialIdentity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;identità catastale di un&apos;entità al comune a cui è intestato il foglio di mappa catastale, riportato nella forma attestata nel catasto.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
+        <rdfs:label xml:lang="it">ha città catastale</rdfs:label>
+        <rdfs:label xml:lang="en">has cadastrial city</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTSC</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/location/hasCadastrialEntity -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasCadastrialEntity">
@@ -182,6 +206,22 @@
         <rdfs:label xml:lang="en">has cadastrial entity</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasCadastrialIdentity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasCadastrialIdentity">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/CadastrialIdentity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale all&apos;insieme delle informazioni catastali che lo riguardano, relativamente a una delle sue localizzazioni (storica, attuale, di rinvenimento, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
+        <rdfs:label xml:lang="it">ha identità catastale</rdfs:label>
+        <rdfs:label xml:lang="en">has cadastrial identity</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: CS</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -283,9 +323,16 @@
     <!-- https://w3id.org/arco/location/hasReferredLocationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasReferredLocationType">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/location/CadastrialIdentity"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/Geometry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/location/LocationType"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione al tipo di localizzazione (fisica attuale, precedente, di rinvenimento, etc.) cui si riferisce.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione o un&apos;identità catastale al tipo di localizzazione (fisica attuale, precedente, di rinvenimento, etc.) cui si riferisce.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">ha tipo di localizzazione cui si riferisce</rdfs:label>
         <rdfs:label xml:lang="en">has referred location type</rdfs:label>
@@ -423,6 +470,22 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ; normative precedenti: GP/GPC/GPCL</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/cadastreName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/cadastreName">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione con cui è noto un catasto storico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
+        <rdfs:label xml:lang="en">cadastre name</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione del catasto</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/CSS/CSSD</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -627,6 +690,12 @@
     
 
 
+    <!-- https://w3id.org/arco/context-description/LegalSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/LegalSituation"/>
+    
+
+
     <!-- https://w3id.org/arco/core/CulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
@@ -726,6 +795,12 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/location/CadastrialFolio">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/location/CadastrialEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/time"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un foglio di mappa catastale, in cui ricadono una o più particelle.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Cadastrial map folio</rdfs:label>
@@ -750,6 +825,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasCadastrialEntity"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/location/CadastrialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasReferredLocationType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/location/LocationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasLegalSituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/LegalSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -867,6 +954,21 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/NeighbouringCadastrialEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/NeighbouringCadastrialEntity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/location/CadastrialEntity"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le entitò spaziali (particelle, strade, corsi d&apos;acqua, ecc.) confinanti con una o più particelle catastali.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
+        <rdfs:label xml:lang="it">Elemento di confine</rdfs:label>
+        <rdfs:label xml:lang="en">Neighbouring cadastrial entity</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTE</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -1001,6 +1103,12 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/italia/onto/CLV/City -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/City"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/Feature -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
@@ -1078,11 +1186,11 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/location/HistoricalLocation -->
+    <!-- https://w3id.org/arco/location/HistoricLocation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/HistoricalLocation">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/HistoricLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
-        <rdfs:label xml:lang="en">Historical Location</rdfs:label>
+        <rdfs:label xml:lang="en">Historic Location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione storica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>

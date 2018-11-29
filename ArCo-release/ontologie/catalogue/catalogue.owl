@@ -332,6 +332,22 @@
     
 
 
+    <!-- https://w3id.org/arco/catalogue/hasPrivacyReason -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/hasPrivacyReason">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/catalogue/AccessProfile"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/catalogue/PrivacyReason"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno specifico profilo d&apos;accesso ai dati di una scheda catalografica alla motivazione che ha determinato l&apos;adozione di quel profilo d&apos;accesso (es.: scheda contenente dati liberamente accessibili, scheda contenente dati personali, scheda di bene di proprietà privata, scheda di bene a rischio, scheda di bene non adeguatamente sorvegliabile)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/catalogue/"/>
+        <rdfs:label xml:lang="it">ha motivazione di riservatezza</rdfs:label>
+        <rdfs:label xml:lang="en">has privacy reason</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSM</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/catalogue/hasResponsibleResearchAndCompilation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/hasResponsibleResearchAndCompilation">
@@ -679,6 +695,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/catalogue/hasPrivacyLevel"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/catalogue/PrivacyLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/catalogue/hasPrivacyReason"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/catalogue/PrivacyReason"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

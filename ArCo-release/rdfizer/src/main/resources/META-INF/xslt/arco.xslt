@@ -7993,18 +7993,18 @@
                 			<xsl:choose>
                 				<xsl:when test="./NMCA">
                 					<xsl:value-of
-						select="concat($NS, 'RelatedAgent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)), '-', arco-fn:urify(normalize-space(./NMCA)))" />
+						select="concat($NS, 'Agent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)), '-', arco-fn:urify(normalize-space(./NMCA)))" />
                 				</xsl:when>
                 				<xsl:otherwise>
                 					<xsl:value-of
-						select="concat($NS, 'RelatedAgent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)))" />
+						select="concat($NS, 'Agent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)))" />
                 				</xsl:otherwise>
                 			</xsl:choose>
                 		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
-							select="'https://w3id.org/arco/context-description/RelatedAgent'" />
+							select="'https://w3id.org/arco/context-description/Agent'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -16215,7 +16215,7 @@
 									</l0:name>
 									<!-- TODO: PRL/PRLR never exists in XML data we have. -->
 									<xsl:if test="./PRL/PRLR">
-										<tiapit:atTime />
+										<tiapit:time />
 									</xsl:if>
 								</rdf:Description>
 							</xsl:if>

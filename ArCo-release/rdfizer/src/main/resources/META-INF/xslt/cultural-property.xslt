@@ -2489,10 +2489,10 @@
                 		<xsl:attribute name="rdf:resource">
                 			<xsl:choose>
                 				<xsl:when test="./NMCA">
-                					<xsl:value-of select="concat($NS, 'RelatedAgent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)), '-', arco-fn:urify(normalize-space(./NMCA)))" />
+                					<xsl:value-of select="concat($NS, 'Agent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)), '-', arco-fn:urify(normalize-space(./NMCA)))" />
                 				</xsl:when>
                 				<xsl:otherwise>
-                					<xsl:value-of select="concat($NS, 'RelatedAgent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)))" />
+                					<xsl:value-of select="concat($NS, 'Agent/', $itemURI, '-', arco-fn:urify(normalize-space(./NMCN)))" />
                 				</xsl:otherwise>
                 			</xsl:choose>
                 		</xsl:attribute>

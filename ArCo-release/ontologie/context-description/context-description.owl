@@ -76,7 +76,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+    <!-- https://w3id.org/arco/context-description/hasAlternativeDatingType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasAlternativeDatingType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/AlternativeDating"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/AlternativeDatingType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una datazione alternativa con la sua tipologia.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha datazione alternativa</rdfs:label>
+        <rdfs:label xml:lang="en">has alternative dating type</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
 
 
     <!-- https://w3id.org/arco/context-description/hasAcquisition -->
@@ -1430,7 +1441,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:label xml:lang="en">has secondary author</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSER.</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSER</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3261,6 +3272,37 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities"/>
     
 
+    <!-- https://w3id.org/arco/context-description/AlternativeDating -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/AlternativeDating">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/context-description/Dating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasAlternativeDatingType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/context-description/AlternativeDatingType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative a una eventuale altra datazione che può riguardare il bene in esame.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alternative dating</rdfs:label>
+        <rdfs:label xml:lang="it">Datazione alternativa</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT.</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/AlternativeDatingType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/AlternativeDatingType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe specifica le informazioni relative al tipo di datazione alternativa che può avere il bene in esame.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alternative dating type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di datazione alternativa</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco-core:iccdNormTag>
+    </owl:Class>
 
     <!-- https://w3id.org/arco/context-description/Acquisition -->
 
@@ -5813,6 +5855,43 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     </owl:NamedIndividual>
     
 
+     <!-- https://w3id.org/arco/context-description/DifferentDating -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/context-description/DifferentDating">
+        <rdf:type rdf:resource="https://w3id.org/arco/context-description/AlternativeDatingType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo di datazione differente rispetto a quella presente nelle informazioni della cronologia del bene in esame.</rdfs:comment>
+        <rdfs:label xml:lang="it">Datazione diversa</rdfs:label>
+        <rdfs:label xml:lang="en">Different dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="en">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco-core:iccdNormTag>
+    </owl:NamedIndividual>
+
+     <!-- https://w3id.org/arco/context-description/OtherMethodOfDating -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/context-description/OtherMethodOfDating">
+        <rdf:type rdf:resource="https://w3id.org/arco/context-description/AlternativeDatingType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo di metodo diverso di datazione rispetto a quella presente nelle informazioni della cronologia del bene in esame.</rdfs:comment>
+        <rdfs:label xml:lang="it">Altro metodo di datazione</rdfs:label>
+        <rdfs:label xml:lang="en">Other method of dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco-core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/OvercomeDating -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/context-description/OvercomeDating">
+        <rdf:type rdf:resource="https://w3id.org/arco/context-description/AlternativeDatingType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di datazione superata rispetto a quella presente nelle informazioni relative alla cronologia del bene in esame.</rdfs:comment>
+        <rdfs:label xml:lang="it">Datazione superata</rdfs:label>
+        <rdfs:label xml:lang="en">Overcome dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco-core:iccdNormTag>
+    </owl:NamedIndividual>
 
     <!-- https://w3id.org/arco/context-description/AerialPhotograph -->
 
@@ -6187,7 +6266,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/context-description/Secondary">
         <rdf:type rdf:resource="https://w3id.org/arco/context-description/TitleType"/>
-        <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di autore secondario di una pubblicazione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di titolo secondario di una pubblicazione.</rdfs:comment>
         <rdfs:label xml:lang="it">secondario</rdfs:label>
         <rdfs:label xml:lang="en">secondary</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
