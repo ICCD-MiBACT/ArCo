@@ -14206,12 +14206,12 @@
 							<xsl:value-of
 								select="concat('Collection membership ', position(), ' of cultural property: ', $itemURI)" />
 						</l0:name>
-						<arco-cd:hasCulturalProperty>
+						<arco-cd:hasMemberOfCollection>
 							<xsl:attribute name="rdf:resource">
                         		<xsl:value-of
 								select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
                         	</xsl:attribute>
-						</arco-cd:hasCulturalProperty>
+						</arco-cd:hasMemberOfCollection>
 						<arco-cd:hasCollection>
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
