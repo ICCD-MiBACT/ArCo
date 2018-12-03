@@ -459,6 +459,22 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/refersToAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/refersToAgent">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un uno stemma, un emblema, un timbro, etc., presente su un bene culturale, all&apos;agente (la famiglia, la fabbrica, la cava, l&apos;argentiere, etc.) a cui si riferisce l&apos;elemento.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">refers to agent</rdfs:label>
+        <rdfs:label xml:lang="it">si riferisce ad agente</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISES - Normative di versioni precedenti: DA/STM/STMI</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/satisfiesTechnicalDetail -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/satisfiesTechnicalDetail">
@@ -596,6 +612,22 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEQ - Normative di versioni precedenti: DA/STM/STMU</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/positionOnCulturalProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/denotative-description/positionOnCulturalProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione la posizione dell&apos;elemento (stemma, emblema, timbro, etc.) rispetto all&apos;intero bene o a una sua specifica parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">position on cultural property</rdfs:label>
+        <rdfs:label xml:lang="it">posizione su bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEP - Normative di versioni precedenti: DA/STM/STMP; DA/ISR/ISRP - Normativa A: LI/LSI/LSIU</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 

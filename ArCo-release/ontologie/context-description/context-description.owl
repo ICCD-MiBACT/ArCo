@@ -45,6 +45,12 @@
     
 
 
+    <!-- http://ontologydesignpatterns.org/opla#isNativeTo -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla#isNativeTo"/>
+    
+
+
     <!-- https://w3id.org/arco/core/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/core/iccdNormTag"/>
@@ -1549,6 +1555,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/context-description/isSubseriesOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Series"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Subseries"/>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una serie editoriale fotografica a una sottoserie, cioè a una partizione interna alla serie.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="it">ha sottoserie</rdfs:label>
@@ -2026,6 +2033,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isSubseriesOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Subseries"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Series"/>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una sottoserie, cioè a una partizione interna, a una serie editoriale fotografica.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="en">is subseries of</rdfs:label>
@@ -5618,6 +5626,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/SeriesMembership"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una serie editoriale fotografica, ovvero un insieme di immagini ideate o pubblicate come un&apos;unica entità, esplicitamente legate tra di loro da un titolo o da una numerazione progressiva o da altri elementi che ne individuino inequivocabilmente l&apos;unitarietà in senso biblioteconomico.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="it">Serie</rdfs:label>
@@ -5730,6 +5739,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/context-description/Series"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una sottoserie di una serie editoriale fotografica, ovvero una partizione interna alla serie.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="it">Sottoserie</rdfs:label>
