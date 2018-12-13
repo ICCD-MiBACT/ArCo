@@ -18,6 +18,7 @@ import org.apache.jena.rdf.model.ModelFactory;
 
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
+import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
 import it.cnr.istc.stlab.arco.xsltextension.Uncamelizer;
@@ -200,6 +201,7 @@ public class Converter {
 		proc.registerExtensionFunction(RelatedPropertyFinder.getInstance());
 		proc.registerExtensionFunction(MeasurementMapper.getInstance());
 		proc.registerExtensionFunction(Uncamelizer.getInstance());
+		proc.registerExtensionFunction(ImageFinder.getInstance());
         XsltCompiler comp = proc.newXsltCompiler();
         
         ClassLoader loader = Converter.class.getClassLoader();

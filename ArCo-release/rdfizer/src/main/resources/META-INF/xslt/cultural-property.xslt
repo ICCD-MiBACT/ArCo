@@ -2534,6 +2534,20 @@
                 </xsl:for-each>
                 </xsl:if>
 			</rdf:Description>
+			
+			<!-- Images retrieved from the OAI-PMH service -->
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+                	<xsl:value-of
+                		select="$objectOfDescription" />
+                </xsl:attribute>
+                <foaf:image>
+                	<xsl:attribute name="rdf:resource">
+                		<xsl:value-of
+                			select="arco-fn:find-image($item)" />
+                	</xsl:attribute>
+                </foaf:image>
+			</rdf:Description>
 		</rdf:RDF>
 
 	</xsl:template>
