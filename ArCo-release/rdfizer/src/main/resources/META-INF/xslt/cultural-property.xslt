@@ -2536,18 +2536,22 @@
 			</rdf:Description>
 			
 			<!-- Images retrieved from the OAI-PMH service -->
-			<rdf:Description>
-				<xsl:attribute name="rdf:about">
-                	<xsl:value-of
-                		select="$objectOfDescription" />
-                </xsl:attribute>
-                <foaf:image>
-                	<xsl:attribute name="rdf:resource">
+			
+			<xsl:variable name="image-link" select="arco-fn:find-image($item)" />
+			<xsl:if test="$image-link != ''">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
                 		<xsl:value-of
-                			select="arco-fn:find-image($item)" />
+                			select="$objectOfDescription" />
                 	</xsl:attribute>
-                </foaf:image>
-			</rdf:Description>
+                	<foaf:image>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of
+                				select="$image-link" />
+                		</xsl:attribute>
+                	</foaf:image>
+				</rdf:Description>
+			</xsl:if>
 		</rdf:RDF>
 
 	</xsl:template>

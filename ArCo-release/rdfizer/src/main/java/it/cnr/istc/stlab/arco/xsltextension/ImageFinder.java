@@ -44,7 +44,7 @@ public class ImageFinder implements ExtensionFunction {
 		return instance;
 	}
 	
-	public String getLink(String recordID) throws MalformedURLException, IOException, ParserConfigurationException, SAXException{
+	private String harvestLink(String recordID) throws MalformedURLException, IOException, ParserConfigurationException, SAXException{
 		
 		String link = null;
 		String identifierValue = IDENTIFIER_PREFIX_VALUE + "@" + recordID + "@";
@@ -75,11 +75,9 @@ public class ImageFinder implements ExtensionFunction {
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String recordID = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue().trim();
 		
-		System.out.println("RECORD ID: " + recordID);
-		
 		String link = null;
 		try {
-			link = getLink(recordID);
+			link = harvestLink(recordID);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -115,15 +113,6 @@ public class ImageFinder implements ExtensionFunction {
 	@Override
 	public SequenceType getResultType() {
 		return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
-	}
-	
-	public static void main(String[] args) {
-		try {
-			new ImageFinder().getLink("ICCD10006679");
-		} catch (IOException | ParserConfigurationException | SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 }
