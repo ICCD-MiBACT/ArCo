@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <A version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">A</TSK>
+         <LIR hint="Livello ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">20</NCTR>
+            <NCTN hint="Numero catalogo generale">00029936</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S10</ESC>
+         <ECP hint="Ente competente">S10</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione tipologica">villa</OGTD>
+            <OGTN hint="Denominazione">Villa Binaghi</OGTN>
+         </OGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Sardegna</PVCR>
+            <PVCP hint="Provincia">CA</PVCP>
+            <PVCC hint="Comune">Cagliari</PVCC>
+            <PVCI hint="Indirizzo">Viale Trento 98</PVCI>
+         </PVC>
+         <SET hint="SETTORE">
+            <SETT hint="Tipo">SU</SETT>
+         </SET>
+      </LC>
+      <CS hint="LOCALIZZAZIONE CATASTALE">
+         <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+         <CTS hint="LOCALIZZAZIONE CATASTALE">
+            <CTSC hint="Comune">Cagliari</CTSC>
+            <CTSF hint="Foglio/Data">18</CTSF>
+            <CTSN hint="Particelle">mapp. 467 sub 1 - 2 - 3</CTSN>
+         </CTS>
+      </CS>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <ATB hint="AMBITO CULTURALE">
+            <ATBR hint="Riferimento all'intervento">progetto</ATBR>
+            <ATBD hint="Denominazione">ing. Binaghi Roberto</ATBD>
+            <ATBM hint="Fonte dell'attribuzione">bibliografia</ATBM>
+         </ATB>
+      </AU>
+      <RE hint="NOTIZIE STORICHE">
+         <REN hint="NOTIZIA">
+            <RENR hint="Riferimento">intero bene</RENR>
+            <RENS hint="Notizia sintetica">costruzione</RENS>
+            <RENN hint="Notizia">L'edificio, che fa parte di un complesso costituito da due unità immobiliari inserite in un ampio giardino, risulta costruito tra il 1920 e il 1925.</RENN>
+            <RENF hint="Fonte">1999, Loddo G., Cagliari: Architetture dal 1900 al 1945</RENF>
+            <RENF hint="Fonte">2000, Sias M., Villini di Cagliari : forma urbana dell'architettura borghese</RENF>
+         </REN>
+         <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+            <RELS hint="Secolo">XX</RELS>
+            <RELI hint="Data">1920</RELI>
+         </REL>
+         <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+            <REVS hint="Secolo">XX</REVS>
+            <REVI hint="Data">1925</REVI>
+         </REV>
+      </RE>
+      <SI hint="SPAZI">
+         <SII hint="SUDDIVISIONE INTERNA">
+            <SIIR hint="Riferimento">intero bene</SIIR>
+            <SIIO hint="Tipo di suddivisione orizzontale">livelli continui</SIIO>
+            <SIIN hint="Numero di piani">+4</SIIN>
+            <SIIP hint="Tipo di piani">p. seminterrato; p.t.; p.1; p.2</SIIP>
+         </SII>
+      </SI>
+      <IS hint="IMPIANTO STRUTTURALE">
+         <IST hint="Configurazione strutturale primaria">edificio di forma rettangolare, con muri perimetrali in pietrame; solai in latero cemento; copertura piana e a tetto semplice a due falde.</IST>
+      </IS>
+      <PN hint="PIANTA">
+         <PNR hint="Riferimento alla parte">intero bene</PNR>
+         <PNT hint="PIANTA">
+            <PNTQ hint="Riferimento piano o quota">p.t.</PNTQ>
+            <PNTF hint="Forma">rettangolare</PNTF>
+         </PNT>
+      </PN>
+      <SV hint="STRUTTURE VERTICALI">
+         <SVC hint="TECNICA COSTRUTTIVA">
+            <SVCU hint="Ubicazione">muri perimetrali</SVCU>
+            <SVCT hint="Tipo di struttura">pareti</SVCT>
+            <SVCC hint="Genere">in muratura</SVCC>
+            <SVCM hint="Materiali">pietrame</SVCM>
+         </SVC>
+      </SV>
+      <SO hint="STRUTTURE DI ORIZZONTAMENTO">
+         <SOU hint="Ubicazione">intero bene</SOU>
+         <SOF hint="TIPO">
+            <SOFG hint="Genere">solaio</SOFG>
+         </SOF>
+         <SOE hint="STRUTTURA">
+            <SOEC hint="Tecnica costruttiva">non accertabile</SOEC>
+            <SOES hint="Specificazioni tecniche">latero-cemento</SOES>
+         </SOE>
+      </SO>
+      <CP hint="COPERTURE">
+         <CPU hint="Ubicazione">intero bene</CPU>
+         <CPF hint="CONFIGURAZIONE ESTERNA">
+            <CPFG hint="Genere">piana</CPFG>
+         </CPF>
+      </CP>
+      <SC hint="SCALE">
+         <SCL hint="SCALE">
+            <SCLU hint="Ubicazione">esterna</SCLU>
+            <SCLG hint="Genere">scala</SCLG>
+            <SCLO hint="Categoria">d'accesso</SCLO>
+            <SCLN hint="Quantita'">1</SCLN>
+            <SCLF hint="Forma planimetrica">a due rampe</SCLF>
+         </SCL>
+      </SC>
+      <SC hint="SCALE">
+         <SCL hint="SCALE">
+            <SCLU hint="Ubicazione">interna</SCLU>
+            <SCLG hint="Genere">scala</SCLG>
+            <SCLO hint="Categoria">di servizio</SCLO>
+            <SCLN hint="Quantita'">1</SCLN>
+            <SCLF hint="Forma planimetrica">a due rampe</SCLF>
+         </SCL>
+         <SCS hint="SCHEMA STRUTTURALE">
+            <SCSR hint="Riferimento">intera struttura</SCSR>
+            <SCSC hint="Tecnica">a collo</SCSC>
+         </SCS>
+      </SC>
+      <PV hint="PAVIMENTI E PAVIMENTAZIONI">
+         <PVM hint="PAVIMENTI E PAVIMENTAZIONI">
+            <PVMU hint="Ubicazione">intero bene</PVMU>
+            <PVMG hint="Genere">marmo</PVMG>
+         </PVM>
+      </PV>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCR hint="Riferimento alla parte">intero bene</STCR>
+            <STCC hint="Stato di conservazione">buono</STCC>
+         </STC>
+      </CO>
+      <RS hint="RESTAURI">
+         <RST hint="RESTAURI">
+            <RSTR hint="Riferimento alla parte">intero bene</RSTR>
+            <RSTI hint="Data inizio">1981/00/00</RSTI>
+            <RSTF hint="Data fine">non accertata</RSTF>
+            <RSTT hint="Tipo di intervento">Lavori realizzati in lotti per adattamento a nuova sede Soprintendenza con interventi di ristrutturazione completa di tutti gli spazi da destinare a uffici e depositi</RSTT>
+            <RSTT hint="Tipo di intervento">Restauro conservativo strutturale</RSTT>
+            <RSTT hint="Tipo di intervento">Restauro prospetti e tinteggiatura</RSTT>
+         </RST>
+      </RS>
+      <US hint="UTILIZZAZIONI">
+         <USA hint="USO ATTUALE">
+            <USAR hint="Riferimento alla parte">intero bene</USAR>
+            <USAD hint="Uso">uffici</USAD>
+         </USA>
+         <USO hint="USO STORICO">
+            <USOR hint="Riferimento alla parte">intero bene</USOR>
+            <USOC hint="Riferimento cronologico">destinazione originaria</USOC>
+            <USOD hint="Uso">abitazione</USOD>
+         </USO>
+      </US>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+            <CDGS hint="Indicazione specifica">Ente MiBAC in consegna a SOPRINTENDENZA PER I BENI ARCHITETTONICI PAESAGGISTICI STORICI ARTISTICI ED ETNOANTROPOLOGICI PER LE PROVINCE DI CAGLIARI E ORISTANO</CDGS>
+         </CDG>
+         <NVC hint="PROVVEDIMENTI DI TUTELA">
+            <NVCT hint="Tipo provvedimento">DM (L. n. 1089/1939, artt. 1, 4)</NVCT>
+            <NVCE hint="Estremi provvedimento">1980/07/31</NVCE>
+            <NVCR hint="Data di registrazione o G.U.">1981/03/31</NVCR>
+            <NVCP hint="Estensione del vincolo">intero bene</NVCP>
+         </NVC>
+         <ALN hint="MUTAMENTI TITOLARITA'/POSSESSO/DETENZIONE">
+            <ALNT hint="Tipo evento">acquisto</ALNT>
+            <ALND hint="Data evento">1983/11/15</ALND>
+            <ALNN hint="Note">Acquirente Ministero delle Finanze come da Verbale di presa di possesso per assunzione in consegna dei fabbricati</ALNN>
+         </ALN>
+         <STU hint="STRUMENTI URBANISTICI">
+            <STUT hint="Strumenti in vigore">P.U.C.</STUT>
+            <STUN hint="Sintesi normativa zona">interventi di restauro e risanamento conservativo/manutenzione ordinaria e straordinaria, così come definiti dalla legislazione vigente.</STUN>
+         </STU>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione esistente</FTAX>
+            <FTAP hint="Tipo">fotografia B/N</FTAP>
+            <FTAN hint="Codice identificativo">3 (S10 19948)</FTAN>
+            <FTAT hint="Note">Prospetto su Viale Trento (1982)</FTAT>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAA hint="Autore">Pintori, Giovanni</FTAA>
+            <FTAD hint="Data">2013</FTAD>
+            <FTAE hint="Ente proprietario">S10</FTAE>
+            <FTAN hint="Codice identificativo">New_1387271619416</FTAN>
+         </FTA>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTP hint="Tipo">progetti di restauro/ relazioni/ provvedimenti di</FNTP>
+            <FNTD hint="Data">dal 1980 al 1998</FNTD>
+            <FNTN hint="Nome archivio">Archivio Storico BAPSAE CA</FNTN>
+            <FNTS hint="Posizione">CA/11-(08)-09</FNTS>
+            <FNTI hint="Codice identificativo">ASBAPSAECA110809</FNTI>
+         </FNT>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <NCUN hint="Codice univoco ICCD">S10A0002</NCUN>
+            <BIBA hint="Autore">Loddo G.</BIBA>
+            <BIBD hint="Anno di edizione">1999</BIBD>
+            <BIBH hint="Sigla per citazione">S10A0002</BIBH>
+            <BIBN hint="V., pp., nn.">p.45</BIBN>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <NCUN hint="Codice univoco ICCD">S10A0047</NCUN>
+            <BIBA hint="Autore">Sias M.</BIBA>
+            <BIBD hint="Anno di edizione">2000</BIBD>
+            <BIBH hint="Sigla per citazione">S10A0047</BIBH>
+            <BIBN hint="V., pp., nn.">pp. 82..83</BIBN>
+         </BIB>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">1982</CMPD>
+            <CMPN hint="Nome">Ingegno A.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Ingegno A.</FUR>
+         <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+            <RVMD hint="Data">2006</RVMD>
+            <RVMN hint="Nome">Laconi P.</RVMN>
+         </RVM>
+         <AGG hint="AGGIORNAMENTO - REVISIONE">
+            <AGGD hint="Data">2013</AGGD>
+            <AGGN hint="Nome">Laconi, Patrizia</AGGN>
+            <AGGF hint="Funzionario responsabile">Fiorino, Donatella Rita</AGGF>
+         </AGG>
+      </CM>
+   </A>
+</schede>
