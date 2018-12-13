@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <base href="./">
     
     <link rel="shortcut icon" href="./img/logo-arco-con-trasparenza-520x416.png">
 
@@ -41,17 +42,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#guida">Guida</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#guida">Guide</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ontologie">Ontologie</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ontologie">Ontologies</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#dati">Dati</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#dati">Data</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#esempi">Esempi</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#esempi">Examples</a>
             </li>
+            <li class="nav-item mx-0 mx-lg-1 dropdown">
+				<a href="#" class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g id="Page-1" fill="none" fill-rule="evenodd"><g id="language-selection" fill="white"><path d="M21.047 20H23L18.443 5h-2.712l-4.774 15h1.953l1.302-4.05h5.424L21.047 20zM16.925 7.062l2.277 6.977h-4.556l2.279-6.975v-.002zM6.726 4c-.738 0-1.411-.187-1.735-.875L4.447 2h2.17l1.085 2h-.976zm4.126 9.926l-.544 1.685a11.228 11.228 0 0 1-3.797-2.024c-1.848 1.462-3.798 2.362-5.968 3.038L0 14.937c1.842-.675 3.687-1.35 5.208-2.588a14.16 14.16 0 0 1-3.038-5.29H.108V5H13.56l-.543 2.062h-2.17c-.382 1.71-1.556 3.802-3.038 5.29.872.674 1.846 1.237 3.042 1.574zM9.116 7.062H4.015c.434 1.576 1.41 3.038 2.496 4.163 1.148-1.286 2.005-2.516 2.603-4.162l.002-.001z"/></g></g></svg></a>
+				<ul class="dropdown-menu">
+					<li><a href="./index.php?lang=en">English</a></li>
+					<li><a href="./index.php?lang=it">Italiano</a></li>
+				</ul>					
+			</li>
           </ul>
         </div>
       </div>
@@ -61,7 +69,7 @@
     <header class="masthead bg-primary text-secondary text-center">
       <div class="container">
         <img class="img-fluid mb-5 d-block mx-auto" src="img/logo-arco-con-trasparenza-520x416.png" alt="">
-        <h1 class="text-uppercase mb-0">Architettura della Conoscenza</h1>
+        <h1 class="text-uppercase mb-0">Architecture of Knowledge</h1>
         <hr class="star-light">
         <span class="h2-span"><a href="http://stlab.istc.cnr.it/"><img id="stlab" src="./img/CNR.png" /></a></span>
         <span class="h2-span"><a href="http://www.iccd.beniculturali.it/"><img id="iccd" src="./img/iccd.jpg" /></a></span>
@@ -71,40 +79,32 @@
     <!-- Guida -->
     <section class="portfolio" id="guida">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Guida</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Guide</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-mt-4">
-          <p>Questo documento descrive brevemente le ontologie incluse nella versione v0.3 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche ad essi associate, gestite con il sistema SIGEC dall'Istituto Centrale per il Catalogo e la Documentazione.</p>
-      <p>La versione v0.3 di ArCo &egrave; la terza ad essere pubblicata. Fare riferimento a <a href="./primer-guide.html" target="_blank">questo documento</a> per la guida alla versione 0.1 e a <a href="./primer-guide-v0.2.html" target="_blank">questo documento</a> per la guida alla versione 0.2.</p>
+          <p>This document (Italian only) briefly describes the ontologies part of the version 0.3 of ArCo. 
+          The ontologies are organised in a network for modelling different kind of cultural properties and their corresponding catalog records.
+          Those cultural properties and records are currently managed by the SIGEC system of the Italian Central Institute for Cataloguing and Documentation.</p>
+      	  <p>Version 0.3 of ArCo is the third version to be published. Use <a href="./primer-guide.html" target="_blank">this document (Italian only)</a> for the guide associated with the version 0.1 and <a href="./primer-guide-v0.2.html" target="_blank">this document (Italian only)</a> for the guide of the version 0.2.</p>
       <div class="text-center mt-4">
               <a class="btn btn-xl btn-outline-light" href="./primer-guide-v0.2.html" target="_blank">
                 <i class="fa fa-search mr-2"></i>
-                Leggi di pi&ugrave;
+                Read more
               </a>
             </div>
-      <!-- p>Le ontologie ArCo sono pubblicate all’interno di un <i>docker</i> che comprende:
-        <ul>
-          <li>Questa guida;</li>
-        <li>I moduli ontologici sviluppati;</li>
-          <li>Esempi di <i>competency questions</i> e la loro traduzione sotto forma di SPARQL query, che mostrano le informazioni che possono essere estratte dai dati del SIGEC trasformati in RDF secondo la modellazione di ArCO;</li>
-          <li>L'ontologia Cultural-ON e un campione <b>non aggiornato</b>dei dati del DB Unico, avente unicamente lo scopo di permettere attività di analisi dei dati durante il meetup, al fine di evidenziare possibili problematiche relative all’entity linking;</li>
-          <li>Un campione dei dati del SIGEC trasformati in RDF secondo la modellazione ArCo</li>
-          <li>Un motore SPARQL basato su Virtuoso per permettere l'interrogazione dei dati e delle ontologie.</li>
-        </ul>
-      </p -->
       </div>
       </div>
       </div>
     </section>
-    <!-- Ontologie -->
+    <!-- Ontologies -->
     <section class="portfolio" id="ontologie">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Ontologie</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Ontologies</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl">
               <div class="ontology-title text-center text-white"><h3>Core ontology</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -115,7 +115,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl">
               <div class="ontology-title text-center text-white"><h3>Denotative description</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -126,7 +126,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-        <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl">
+        <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl">
               <div class="ontology-title text-center text-white"><h3>Catalogue &amp; catalogue records</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -139,7 +139,7 @@
           </div>
           <div class="row">
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl">
               <div class="ontology-title text-center text-white"><h3>Cultural events &amp; exhibitions</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -150,7 +150,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl"> 
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl"> 
               <div class="ontology-title text-center text-white"><h3>Locations &amp; geometry</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -161,7 +161,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl">
               <div class="ontology-title text-center text-white"><h3>Context description</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -180,24 +180,24 @@
     <!-- About Section -->
     <section class="bg-primary mb-0" id="dati">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Dati</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Data</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Il dataset di ArCo può essere scaricato in formato N-Triples in un unico dump compresso.</p>
+            <p class="lead">The ArCo dataset can be downloaded as a single N-Triples compressed dump.</p>
             <div class="text-center mt-4">
               <a class="btn btn-xl btn-outline-light" href="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz">
                 <i class="fa fa-download mr-2"></i>
-                Scarica!
+                Download!
               </a>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Usa lo SPARQL endpoint del progetto ArCo per interrogare i dati interattivamente.</p>
+            <p class="lead">Use the SPARQL endpoint of the ArCo project to query data interactively.</p>
             <div class="text-center mt-4">
               <a class="btn btn-xl btn-outline-light" href="http://localhost:8890/sparql" target="_blank">
                 <i class="fa fa-search mr-2"></i>
-                Interroga!
+                Query!
               </a>
             </div>
           </div>
@@ -211,17 +211,17 @@
     <!-- Query examples -->
     <section id="esempi">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Esempi (SPARQL)</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Examples (SPARQL)</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Quali eventi culturali hanno interessato il bene culturale X?</p>
+            <p class="lead">What are the cultural events related to the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quali sono le persone coinvolte nelle operazioni di redazione e aggiornamento della scheda sul bene culturale X, e con quali ruoli?</p>
+            <p class="lead">Who are the people involved in the editing and the updating of the catalogue record describing the cultural property X? What are their roles?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quando è stata redatta e aggiornata la scheda sul bene culturale X?</p>
+            <p class="lead">Whan was the catalogue record about the cultural property X edited or updated?</p>
           </div>
         </div>
         <div class="row">
@@ -274,7 +274,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+l0%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2Fl0%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+%3Fevent+%3FeventName+%3FculturalProperty+%3FculturalPropertyLabel%0D%0AWHERE%7B%0D%0A++%3Fevent+cis%3Ainvolves+%3FculturalProperty+%3B%0D%0A++++l0%3Aname+%3FeventName+.%0D%0A++%3FculturalProperty+rdfs%3Alabel+%3FculturalPropertyLabel%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -284,7 +284,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+catalogue%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+catalogue%3AhasCatalogueRecordRiT+%3Frit+.+%0D%0A++%3Frit+roapit%3AwithRole+%3Frole+%3B%0D%0A++++roapit%3AisRoleInTimeOf+%3Fagent%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -294,7 +294,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Frecord+catalogue%3AhasCatalogueRecordVersion+%3FrecordVersion+.+%0D%0A++%3FrecordVersion+catalogue%3AeditedAtTime+%3Ftime+.%0D%0A++%3Ftime+rdfs%3Alabel+%3FtimeLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -303,13 +303,13 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Quali sono tutte le localizzazioni in contenitori fisici che hanno riguardato il bene culturale X e di che tipo sono?</p>
+            <p class="lead">What are all the localisations of physical containers associated with the cultural property X? What are their types?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?</p>
+            <p class="lead">What are the places that have been used as storage area for a certain cultural property?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Qual è lo stato di conservazione del bene culturale X? E quali interventi sul bene sono stati proposti?</p>
+            <p class="lead">What is the conservation status of the cultural property X? Which interventions have been proposed?</p>
           </div>
         </div>
         <div class="row">
@@ -362,7 +362,7 @@ LIMIT 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+tiapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FTI%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++location%3AhasTimeIndexedQualifiedLocation+%3Flocation+.%0D%0A++%3Flocation+location%3AhasLocationType+%3FlocationType+%3B%0D%0A++++location%3AatSite+%3Fsite+.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -372,7 +372,7 @@ LIMIT 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fcore%2F>%0D%0APREFIX+location%3A+<https%3A%2F%2Fw3id.org%2Farco%2Flocation%2F>%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B+%0D%0A++++location%3AhasTimeIndexedQualifiedLocation+%3Flocation+.%0D%0A++%3Flocation+location%3AhasLocationType+location%3AStorageLocation.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -382,7 +382,7 @@ LIMIT 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fconservation+%3FproposedIntervention%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++arco-dd%3AproposedIntervention+%3FproposedIntervention+%3B%0D%0A++++arco-dd%3AhasConservationStatus+%3Fconservation+.%0D%0A%7D%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -391,13 +391,13 @@ LIMIT 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Qual è la documentazione fotografica allegata alla scheda del bene culturale X?</p>
+            <p class="lead">What is the photographic documentation attached to the catalogue record describing the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Qual è il codice univoco associato al bene culturale X?</p>
+            <p class="lead">What is the unique identifier of the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quali sono tutti gli autori o gli ambiti culturali attribuiti al bene culturale X? E con quale ruolo? E quale motivazione giustifica l'attribuzione?</p>
+            <p class="lead">Who are the authors and what are the cultural areas associated with the cultural property X? What is their role? What is the motivation that justifies the attribution?</p>
           </div>
         </div>
         <div class="row">
@@ -448,7 +448,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+%3Fentity+%3Fdocumentation%0D%0AWHERE%7B%0D%0A++%0D%0A+%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B+arco-cd%3AhasDocumentation+%3Fdocumentation+.%0D%0A++%3Fdocumentation+a+arco-cd%3APhotographicDocumentation+%0D%0A%0D%0A%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -458,7 +458,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fcore%2F>%0D%0ASELECT+%3Fentity+%3Fid%0D%0AWHERE%7B%0D%0A++%3Fentity+arco%3AuniqueIdentifier+%3Fid+%0D%0A%7D%0D%0A%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -468,7 +468,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-cd%3AhasAuthorshipAttribution+%3Fattribution+.%0D%0A++%3Fattribution+arco-cd%3AhasInterventionRole+%3Frole+%3B%0D%0A++++arco-cd%3AhasSource+%3FattributionSource%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -477,13 +477,13 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">A quando risale la realizzazione del bene culturale X? E quale motivazione giustifica la cronologia?</p>
+            <p class="lead">When was the cultural property X realised? What is the motivation that justifies the chronology?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quali sono le coordinate geografiche del bene culturale X?</p>
+            <p class="lead">What are the geographical coordinates of the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quali sono gli usi del bene culturale mobile X?</p>
+            <p class="lead">What are the usage associated to the movable cultural property X?</p>
           </div>
         </div>
         <div class="row">
@@ -537,7 +537,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-dd%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+arco-cd%3AhasEvent+%3Fevent+%3B%0D%0A++++arco-cd%3AhasSource+%3Fsource+%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -547,7 +547,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+clvapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A%09%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B%0D%0A%09clvapit%3AhasGeometry+%3Fgeometry+.%0D%0A%09%3Fgeometry+arco-location%3AhasCoordinates+%3Fcoordinates+.%0D%0A%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -557,7 +557,7 @@ limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+context%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A%09%3Fentity+a+arco%3AMovableCulturalProperty+%3B%0D%0A%09rdfs%3Alabel+%3FentityLabel+%3B%0D%0A%09context%3AhasUse+%3Fuse+.%0D%0A%09%0D%0A%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -566,13 +566,13 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Quali sono i proprietari precedenti del bene culturale X?</p>
+            <p class="lead">Who a the previous owner of the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Quali sono le entità che rappresentano le fasi preparatorie del bene culturale X?</p>
+            <p class="lead">What are the entities that represent the preparatory phases for the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-             <p class="lead">Quali sono i beni culturali costruiti con l'argilla?</p>
+             <p class="lead">What are the cultural properties made of clay?</p>
           </div>
         </div>
         <div class="row">
@@ -628,7 +628,7 @@ Limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A%09%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A%09arco-cd%3AhasAcquisition+%3Facquisition+.%0D%0A%09%3Facquisition+arco-cd%3AhasPreviousOwner+%3FpreviousOwner+.%0D%0A%0D%0A%7D%0D%0A%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -638,7 +638,7 @@ Limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasRelatedWorkSituation+%3FrelatedWorkSituation+.%0D%0A++%3FrelatedWorkSituation+arco-cd%3AhasRelatedWork+%3FrelatedWork+.%0D%0A++%3FrelatedWork+a+arco-cd%3APreparatoryWork+.%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -648,7 +648,7 @@ Limit 100</pre>
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fclay%0D%0AWHERE%7B%0D%0A%09%3Fentity+arco-dd%3AhasTechnicalDetailOccurrence+%3Foccurrence+%3B+rdfs%3Alabel+%3FentityLabel+.%0D%0A%3Foccurrence+arco-dd%3AsatisfiesTechnicalDetail+%3Fclay+.%0D%0A%09FILTER+regex%28%3Fclay%2C+%22argilla%22%2C+%22i%22%29+%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
@@ -657,7 +657,7 @@ Limit 100</pre>
           <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Allineamento della CulturalPropertyDefinition dei reperti archeologici con il thesaurus per la definizione del bene (scheda RA)</p>
+            <p class="lead">Alignment of the CulturalPropertyDefinition with the thesaurus used for providing definitions of the cultural properties (RA catalogue record type).</p>
           </div>
           <div class="col-lg-4 mr-auto">
             
@@ -694,7 +694,7 @@ WHERE{
         <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+DISTINCT+*%0D%0AWHERE%7B%0D%0A%3Fdefinition+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-dd%3ACulturalPropertyDefinition+%3B%0D%0A+skos%3AcloseMatch+%3Falignment%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
-                  Esegui!
+                  Run!
                 </a>
               </div>
             </div>
