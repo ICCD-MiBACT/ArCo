@@ -1366,12 +1366,14 @@
 				</xsl:if>
 				<!-- authorship attribution -->
 				<xsl:for-each select="schede/*/AU/ATB">
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(./ATBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ATBD)), 'n.r')))">
 					<arco-cd:hasAuthorshipAttribution>
 						<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
 							select="concat($NS, 'CulturalScopeAttribution/', $itemURI, '-cultural-scope-attribution-', position())" />
 	                        </xsl:attribute>
 					</arco-cd:hasAuthorshipAttribution>
+				</xsl:if>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/AU/AAT">
 					<arco-cd:hasAuthorshipAttribution>
@@ -1382,6 +1384,7 @@
 					</arco-cd:hasAuthorshipAttribution>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/AU/AUT | schede/F/AU/AUF">
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFN)), 'nr')))">
 				<xsl:choose>
 					<xsl:when test="(not(./AUTW) or lower-case(normalize-space(./AUTW))='intero bene' or lower-case(normalize-space(./AUTW))='tutta' or lower-case(normalize-space(./AUTW))='integrale' or lower-case(normalize-space(./AUTW))='totale' or (starts-with(lower-case(normalize-space(./AUTW)), 'nr')) or (starts-with(lower-case(normalize-space(./AUTW)), 'n.r')))">
 						<arco-cd:hasAuthorshipAttribution>
@@ -1394,17 +1397,17 @@
 							<xsl:attribute name="rdf:resource">
 		                    		<xsl:variable name="author">
 				                            <xsl:choose>
-				                                <xsl:when test="./AUTA">
+				                                <xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 				                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
 				                                </xsl:when>
 				                                <xsl:when
-								test="../AUF/AUFA and ../AUF/AUFN">
+								test="../AUF/AUFA and ../AUF/AUFN and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
 				                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
 				                                </xsl:when>
 				                                <xsl:when
-								test="../AUF/AUFA and ../AUF/AUFB">
+								test="../AUF/AUFA and ../AUF/AUFB and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
 				                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
 				                                </xsl:when>
@@ -1450,6 +1453,7 @@
 						</xsl:for-each>
 					</xsl:otherwise>
 				</xsl:choose>
+				</xsl:if>
 				</xsl:for-each>
 				<!-- responsibility (F and FF) -->
 				<xsl:for-each select="schede/*/PD/PDF">

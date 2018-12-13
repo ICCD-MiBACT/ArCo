@@ -1150,6 +1150,19 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/location/ArchivalLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/ArchivalLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="en">Archival location</rdfs:label>
+        <rdfs:label xml:lang="it">Localizzazione di archivio</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa BDM versioni precedenti alla 4.00: se TCL = &apos;di archivio&apos;</arco-core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/location/CurrentPhysicalLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/CurrentPhysicalLocation">
@@ -1186,11 +1199,11 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/location/HistoricLocation -->
+    <!-- https://w3id.org/arco/location/HistoricalLocation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/HistoricLocation">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/HistoricalLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
-        <rdfs:label xml:lang="en">Historic Location</rdfs:label>
+        <rdfs:label xml:lang="en">Historical Location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione storica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>

@@ -102,6 +102,38 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/hasAffixedElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasAffixedElement">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha elemento apposto sul bene</rdfs:label>
+        <rdfs:label xml:lang="en">has element affixed to cultural property</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/hasAffixedElementType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasAffixedElementType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/AffixedElementType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, un emblema, un timbro, uno stemma, etc., al suo tipo (es.: gentilizio, civile, religioso, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di elemento apposto</rdfs:label>
+        <rdfs:label xml:lang="en">has affixed element type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasConservationStatus">
@@ -221,7 +253,7 @@
     <!-- https://w3id.org/arco/denotative-description/hasFontStyle -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasFontStyle">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/FontStyle"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, uno stemma, un timbro, etc., al tipo di caratteri che viene adottato (es.: corsivo, grassetto, caratteri gotici, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
@@ -246,34 +278,6 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">se 4.00 LA/TLC o versioni precedenti a 4.00 LA/TCL = &quot;area rappresentata&quot;</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/denotative-description/hasMark -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasMark">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
-        <rdfs:label xml:lang="en">has mark</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/denotative-description/hasMarkType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasMarkType">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, un emblema, un timbro, uno stemma, etc., al suo tipo (es.: gentilizio, civile, religioso, etc.)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
-        <rdfs:label xml:lang="en">has mark type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -343,11 +347,45 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/hasSampleCollected -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasSampleCollected">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/ArchaeologicalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/SampleCollected"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene archeologico a un campione prelevato da esso.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha campione prelevato</rdfs:label>
+        <rdfs:label xml:lang="en">has sample collected</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/hasSampleCollectedType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasSampleCollectedType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/SampleCollected"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/SampleCollectedType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un campione prelevato da un bene archeologico al tipo di campione (es.: intonaco, carbone, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di campione prelevato</rdfs:label>
+        <rdfs:label xml:lang="en">has sample collected type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/hasSupport -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasSupport">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/denotative-description/isSupportOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Support"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una iscrizione, un timbro, un emblema, etc., rappresentato su un bene culturale al supporto su cui si trova l&apos;elemento.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
@@ -396,7 +434,7 @@
     <!-- https://w3id.org/arco/denotative-description/hasWritingSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasWritingSystem">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/WritingSystem"/>
         <rdfs:comment xml:lang="it">Questa classe collega una iscrizione, un timbro, uno stemma, etc., al sistema di scrittura/alfabeto adottati.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
@@ -413,7 +451,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/isSupportOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Support"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa di &quot;ha supporto&quot;, collega un supporto (es.: &quot;etichetta di carta&quot;) all&apos;elemento (timbro, emblema, iscrizione, marchio) che vi viene rappresentato.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description"/>
         <rdfs:label xml:lang="en">is support of</rdfs:label>
@@ -462,7 +500,7 @@
     <!-- https://w3id.org/arco/denotative-description/refersToAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/refersToAgent">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un uno stemma, un emblema, un timbro, etc., presente su un bene culturale, all&apos;agente (la famiglia, la fabbrica, la cava, l&apos;argentiere, etc.) a cui si riferisce l&apos;elemento.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
@@ -568,7 +606,7 @@
     <!-- https://w3id.org/arco/denotative-description/italianTranslation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/denotative-description/italianTranslation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la traduzione italiana della trascrizione di un testo contenuto in un&apos;iscrizione, un&apos;emblema, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
@@ -603,7 +641,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/denotative-description/occurrences">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le occorrenze di un emblema, marchio, iscrizione, etc., su uno stesso bene culturale, cioè quante volte l&apos;elemento descritto compare sul bene.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
@@ -619,15 +657,15 @@
     <!-- https://w3id.org/arco/denotative-description/positionOnCulturalProperty -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/denotative-description/positionOnCulturalProperty">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione la posizione dell&apos;elemento (stemma, emblema, timbro, etc.) rispetto all&apos;intero bene o a una sua specifica parte.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione la posizione di un oggetto (es.: elementi come stemmi, emblemi, timbri, etc., oppure i soggetti rappresentati) rispetto all&apos;intero bene o a una sua specifica parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">position on cultural property</rdfs:label>
         <rdfs:label xml:lang="it">posizione su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEP - Normative di versioni precedenti: DA/STM/STMP; DA/ISR/ISRP - Normativa A: LI/LSI/LSIU</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEP - Normative di versioni precedenti: DA/STM/STMP; DA/ISR/ISRP - Normativa A: LI/LSI/LSIU - Normativa PST: OG/SGT/SGTP - ICCD Normative MA, CA, SI, SAS: MC/CMN/CMNP</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -644,6 +682,24 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STP</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/sampleCollectedIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/denotative-description/sampleCollectedIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/SampleCollected"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero che identifica il campione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">identificativo del campione prelevato</rdfs:label>
+        <rdfs:label xml:lang="en">sample collected identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -669,7 +725,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/denotative-description/transcript">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, un emblema, etc., alla trascrizione del testo, utilizzando scioglimenti e integrazioni scientificamente accettati.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
@@ -697,6 +753,12 @@
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/identifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/l0/name -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/name"/>
@@ -717,6 +779,12 @@
     <!-- http://www.w3id.org/arco/location/TimeIndexedQualifiedLocation -->
 
     <owl:Class rdf:about="http://www.w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/ArchaeologicalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/ArchaeologicalProperty"/>
     
 
 
@@ -770,10 +838,65 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/AffixedElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/AffixedElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasSupport"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/Support"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasTechnicalDetailOccurrence"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/TechnicalDetailOccurrence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento (stemma, marchio, timbro, emblema, etc.) apposto su un bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Element affixed to cultural property</rdfs:label>
+        <rdfs:label xml:lang="it">Elemento apposto su bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/AffixedElementType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/AffixedElementType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo (es.: gentilizio, civile, religioso, etc.) di un&apos;iscrizione, un emblema, un timbro, uno stemma, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Affixed element type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di elemento apposto</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/Brand -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Brand">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un marchio, ovvero un segno, figura, simbolo impresso o applicato su qualcosa a scopo di distinzione e riconoscimento.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Brand</rdfs:label>
         <rdfs:label xml:lang="it">Marchio</rdfs:label>
@@ -787,7 +910,8 @@
     <!-- https://w3id.org/arco/denotative-description/CoatOfArms -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/CoatOfArms">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno stemma, ovvero un insieme di figure e simboli che, in araldica, vengono rappresentati secondo determinate regole per contrassegnare persone o enti.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Coat of arms</rdfs:label>
         <rdfs:label xml:lang="it">Stemma</rdfs:label>
@@ -923,7 +1047,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una denominazione e/o dedicazione attestata nel corso del tempo per il bene in esame. Per la normativa FF, la classe rappresenta nello specifico la  denominazione o il titolo del fondo attestati nel corso del tempo per il bene in esame; uno stesso fondo può avere più denominazioni/titoli nel corso del tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una denominazione e/o dedicazione attestata nel corso del tempo per il bene in esame. Per la normativa FF, la classe rappresenta nello specifico la denominazione o il titolo del fondo attestati nel corso del tempo per il bene in esame; uno stesso fondo può avere più denominazioni/titoli nel corso del tempo.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Denominazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
@@ -952,7 +1076,8 @@
     <!-- https://w3id.org/arco/denotative-description/Emblem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Emblem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un emblema, ovvero una figura o un&apos;immagine simbolica, talvolta accompagnata da un testo scritto (motto, testo in versi, ecc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Emblem</rdfs:label>
         <rdfs:label xml:lang="it">Emblema</rdfs:label>
@@ -977,10 +1102,26 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/HistoricalPlaque -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/HistoricalPlaque">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una lapide, intesa come una lastra di pietra o marmo recante iscrizioni, figure, simboli, a scopo commemorativo, celebrativo, ecc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Historical Plaque</rdfs:label>
+        <rdfs:label xml:lang="it">Lapide</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa A: LI/LSI/LSIG = &apos;lapide&apos;</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/Inscription -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Inscription">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;iscrizione, ovvero qualsiasi scritta o segno grafico volontario, realizzati con qualsiasi tecnica (incisione, pittura, stampa, ecc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Inscription</rdfs:label>
         <rdfs:label xml:lang="it">Iscrizione</rdfs:label>
@@ -991,52 +1132,18 @@
     
 
 
-    <!-- https://w3id.org/arco/denotative-description/Mark -->
+    <!-- https://w3id.org/arco/denotative-description/Logo -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Mark">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasSupport"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/Support"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasTechnicalDetailOccurrence"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/TechnicalDetailOccurrence"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/core/description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Logo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un logo, ovvero, in ambito commerciale e pubblicitario, scritta e/o simbolo grafico che identifica un prodotto,
+un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
-        <rdfs:label xml:lang="en">Mark</rdfs:label>
+        <rdfs:label xml:lang="en">Logo</rdfs:label>
+        <rdfs:label xml:lang="it">Logo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI</arco-core:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/denotative-description/MarkType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/MarkType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo (es.: gentilizio, civile, religioso, etc.) di un&apos;iscrizione, un emblema, un timbro, uno stemma, etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
-        <rdfs:label xml:lang="en">Mark type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;logo&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;logo&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;logo&apos;</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -1110,10 +1217,47 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/SampleCollected -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/SampleCollected">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/positionOnCulturalProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un campione prelevato da un bene archeologico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">Campione prelevato</rdfs:label>
+        <rdfs:label xml:lang="en">Sample collected</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/SampleCollectedType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/SampleCollectedType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di campione prelevato da un bene archeologico (es.: carbone, ceramica, intonaco, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Sample collected type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di campione prelevato</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/Stamp -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Stamp">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/Mark"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il segno impresso con un timbro, ovvero uno strumento di gomma o di metallo per imprimere segni a inchiostro oppure a secco.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Stamp</rdfs:label>
         <rdfs:label xml:lang="it">Timbro</rdfs:label>
@@ -1211,6 +1355,12 @@
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/l0/Description -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
@@ -1220,6 +1370,12 @@
     <!-- https://w3id.org/italia/onto/l0/Event -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Event"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Object -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
     
 
 

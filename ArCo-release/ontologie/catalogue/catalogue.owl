@@ -83,6 +83,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/catalogue/describes">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/catalogue/isDescribedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà è stata creata come proprietà generica di sottoproprietà specifiche, e rappresenta la relazione tra un&apos;entità che descrive un&apos;altra entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property was created as a generic property for specific subproperties, and represents the relationship between an entity that describes another entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/catalogue/"/>
@@ -616,6 +618,24 @@
     
 
 
+    <!-- https://w3id.org/arco/catalogue/internationalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/catalogue/internationalIdentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/ScientificOrTechnologicalHeritage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di codice internazionale che identifica un bene scientifico e tecnologico. All&apos;indirizzo http://www.isin.org/ è possibile reperire tutte le specifiche per
+l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il Registro Online è un database che raccoglie informazioni su strumenti scientifici di interesse storico promosso dal Museum of the History of Science di Oxford in collaborazione con la Commissione Strumenti Scientifici dell&apos;International Union of the History and Philosophy of Science.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/catalogue/"/>
+        <rdfs:label xml:lang="it">codice internazionale</rdfs:label>
+        <rdfs:label xml:lang="en">international identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa PST: AC/ACI</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/catalogue/recoveredData -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/catalogue/recoveredData">
@@ -723,6 +743,12 @@
     <!-- https://w3id.org/arco/catalogue/AlternativeIdentifier -->
 
     <owl:Class rdf:about="https://w3id.org/arco/catalogue/AlternativeIdentifier">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/catalogue/referenceProject"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un codice che identifica la scheda di catalogo nell&apos;ambito di altri sistemi informativi, assegnato da enti diversi da ICCD.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/catalogue/"/>
         <rdfs:label xml:lang="en">Alternative Identifier</rdfs:label>
@@ -1318,6 +1344,12 @@
     <!-- https://w3id.org/arco/core/CulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/ScientificOrTechnologicalHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/ScientificOrTechnologicalHeritage"/>
     
 
 

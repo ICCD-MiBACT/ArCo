@@ -1202,6 +1202,11 @@
 								select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
                     	</xsl:attribute>
 						</arco-cd:isSubjectOf>
+						<xsl:if test="../SGTP">
+							<arco-dd:positionOnCulturalProperty>
+								<xsl:value-of select="../SGTP" />
+							</arco-dd:positionOnCulturalProperty>
+						</xsl:if>
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
@@ -12795,6 +12800,7 @@
 			</xsl:if>
 			<!-- We add the cultural scope attribution as an individual. -->
 			<xsl:for-each select="schede/*/AU/ATB">
+			<xsl:if test="(not(starts-with(lower-case(normalize-space(./ATBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ATBD)), 'n.r')))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
@@ -12914,8 +12920,10 @@
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
+				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each select="schede/*/AU/AUT | schede/F/AU/AUF">
+			<xsl:if test="(not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFN)), 'nr')))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
@@ -12953,17 +12961,17 @@
 							<xsl:attribute name="rdf:resource">
                             	<xsl:variable name="author">
 		                            <xsl:choose>
-		                                <xsl:when test="./AUTA">
+		                                <xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 		                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
 		                                </xsl:when>
 		                                <xsl:when
-								test="../AUF/AUFA and ../AUF/AUFN">
+								test="../AUF/AUFA and ../AUF/AUFN and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
 		                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
 		                                </xsl:when>
 		                                <xsl:when
-								test="../AUF/AUFA and ../AUF/AUFB">
+								test="../AUF/AUFA and ../AUF/AUFB and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
 		                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
 		                                </xsl:when>
@@ -13157,21 +13165,22 @@
 					</rdf:Description>
 				</xsl:if>
 				<xsl:if test="./AUTN or ../AUF/AUFN or ../AUF/AUFB">
+				
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                         	<xsl:variable name="author">
 		                            <xsl:choose>
-		                                <xsl:when test="./AUTA">
+		                                <xsl:when test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 		                                    <xsl:value-of
 							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
 		                                </xsl:when>
 		                                <xsl:when
-							test="../AUF/AUFA and ../AUF/AUFN">
+							test="../AUF/AUFA and ../AUF/AUFN and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
 		                                    <xsl:value-of
 							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
 		                                </xsl:when>
 		                                <xsl:when
-							test="../AUF/AUFA and ../AUF/AUFB">
+							test="../AUF/AUFA and ../AUF/AUFB and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
 		                                    <xsl:value-of
 							select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
 		                                </xsl:when>
@@ -13313,12 +13322,12 @@
 								</xsl:when>
 							</xsl:choose>
 						</l0:name>
-						<xsl:if test="./AUTA">
+						<xsl:if test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 							<arco-cd:agentDate>
 								<xsl:value-of select="normalize-space(./AUTA)" />
 							</arco-cd:agentDate>
 						</xsl:if>
-						<xsl:if test="../AUF/AUFA">
+						<xsl:if test="../AUF/AUFA and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
 							<arco-cd:agentDate>
 								<xsl:value-of select="normalize-space(../AUF/AUFA)" />
 							</arco-cd:agentDate>
@@ -13344,6 +13353,7 @@
 							</arco-cd:authorICCDIdentifier>
 						</xsl:if>
 					</rdf:Description>
+				</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 			<!-- responsibility for cultural property (F and FF) -->
@@ -14689,6 +14699,11 @@
 								test="lower-case(normalize-space(./TLC))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./TCL))='luogo di provenienza' or lower-case(normalize-space(./TLC))='provenienza' or lower-case(normalize-space(./TCL))='provenienza'">
                                         <xsl:value-of
 								select="'https://w3id.org/arco/location/LastLocation'" />
+                                    </xsl:when>
+                                     <xsl:when
+								test="lower-case(normalize-space(./TLC))='di archivio' or lower-case(normalize-space(./TCL))='di archivio'">
+                                        <xsl:value-of
+								select="'https://w3id.org/arco/location/ArchivalLocation'" />
                                     </xsl:when>
                                     <xsl:when
 								test="lower-case(normalize-space(./TLC))='luogo di produzione/realizzazione' or lower-case(normalize-space(./TCL))='luogo di esecuzione/fabbricazione'">
