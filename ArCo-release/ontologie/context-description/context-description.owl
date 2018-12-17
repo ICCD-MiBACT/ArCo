@@ -28,6 +28,7 @@
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Ciascun contesto che lo interessa/lo ha interessato viene descritto nelle componenti &quot;spazio&quot;, &quot;tempo&quot;, &quot;evento&quot;, &quot;entità coinvolte&quot; (enti, persone, altri beni). Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:label>Context Description Ontology (ArCo network)</rdfs:label>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
     </owl:Ontology>
@@ -294,6 +295,23 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND/INDI</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/hasArchivalRecordSet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasArchivalRecordSet">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/context-description/isArchivalRecordSetIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSetMembership"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è unità archivistica complessa in&quot;, collega il rapporto tra una unità archivistica complessa e un bene culturale che ne fa parte alla unità archivistica stessa.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">ha unità archivistica complessa</rdfs:label>
+        <rdfs:label xml:lang="en">has archival record set</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1021,6 +1039,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/context-description/hasMemberOfArchivalRecordSet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasMemberOfArchivalRecordSet">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/context-description/isMemberOfArchivalRecordSet"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSetMembership"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di unità archivistica complessa&quot;, collega l&apos;appartenenza di un bene culturale a un&apos;unità archivistica al bene coinvolto nella relazione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">ha membro di unità archivistica complessa</rdfs:label>
+        <rdfs:label xml:lang="en">has member of archival record set</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/context-description/hasMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasMemberOfCollection">
@@ -1038,14 +1073,16 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/context-description/hasMemberOfSeries -->
+    <!-- https://w3id.org/arco/context-description/hasMemberOfPhotographicSeries -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasMemberOfSeries">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasMemberOfPhotographicSeries">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/context-description/isMemberOfPhotographicSeries"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/PhotographicHeritage"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di serie&quot;, collega l&apos;appartenenza di un bene fotografico a una serie editoriale al bene fotografico coinvolto nella relazione.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">ha membro di serie</rdfs:label>
-        <rdfs:label xml:lang="en">has member of series</rdfs:label>
+        <rdfs:label xml:lang="it">ha membro di serie fotografica</rdfs:label>
+        <rdfs:label xml:lang="en">has member of photographic series</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</arco-core:iccdNormTag>
@@ -1200,6 +1237,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/hasPhotographicSeries -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasPhotographicSeries">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/context-description/isPhotographicSeriesIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/PhotographicSeriesMembership"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/PhotographicSeries"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è serie in&quot;, collega il rapporto tra una serie e un bene fotografico che ne fa parte alla serie stessa.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">ha serie fotografica</rdfs:label>
+        <rdfs:label xml:lang="en">has photographic series</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale: PD/SFI; PD/SSI</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1549,22 +1603,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/context-description/hasSeries -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasSeries">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/SeriesMembership"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Series"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è serie in&quot;, collega il rapporto tra una serie e un bene fotografico che ne fa parte alla serie stessa.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">ha serie</rdfs:label>
-        <rdfs:label xml:lang="en">has series</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale: PD/SFI; PD/SSI</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/context-description/hasSource -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasSource">
@@ -1611,24 +1649,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/context-description/hasSubseries -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasSubseries">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/context-description/isSubseriesOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Series"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Subseries"/>
-        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una serie editoriale fotografica a una sottoserie, cioè a una partizione interna alla serie.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">ha sottoserie</rdfs:label>
-        <rdfs:label xml:lang="en">has subseries</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F: PD/SSI</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1873,6 +1893,22 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/context-description/isArchivalRecordSetIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isArchivalRecordSetIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSetMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha unità archivistica complessa&quot;, collega una unità archivistica complessa al rapporto tra l&apos;unità stessa e un bene culturale che ne fa parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">is archival record set in</rdfs:label>
+        <rdfs:label xml:lang="it">è unità archivistica complessa in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/context-description/isCollectionIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isCollectionIn">
@@ -1966,6 +2002,22 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/context-description/isMemberOfArchivalRecordSet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isMemberOfArchivalRecordSet">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchivalRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSetMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla classe che rappresenta l&apos;appartenenza del bene a una unità archivistica complessa.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/contex-description/"/>
+        <rdfs:label xml:lang="en">is member of archival record set</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di un&apos;unità archivistica complessa</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/context-description/isMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isMemberOfCollection">
@@ -1982,14 +2034,15 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/context-description/isMemberOfSeries -->
+    <!-- https://w3id.org/arco/context-description/isMemberOfPhotographicSeries -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isMemberOfSeries">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isMemberOfPhotographicSeries">
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/PhotographicHeritage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/PhotographicSeriesMembership"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene fotografico alla classe che rappresenta l&apos;appartenenza del bene a una serie editoriale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="en">is member of series</rdfs:label>
-        <rdfs:label xml:lang="it">è membro di serie</rdfs:label>
+        <rdfs:label xml:lang="en">is member of photographic series</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di serie fotografica</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</arco-core:iccdNormTag>
@@ -2009,6 +2062,22 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGS</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/isPhotographicSeriesIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isPhotographicSeriesIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/PhotographicSeries"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/PhotographicSeriesMembership"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha serie&quot;, collega una serie fotografica editoriale al rapporto tra la serie e un bene fotografico che ne fa parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">is photographic series in</rdfs:label>
+        <rdfs:label xml:lang="it">è serie fotografica in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale: PD/SFI; PD/SSI</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2086,22 +2155,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/context-description/isSeriesIn -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isSeriesIn">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Series"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/SeriesMembership"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha serie&quot;, collega una serie fotografica editoriale al rapporto tra la serie e un bene fotografico che ne fa parte.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="en">is series in</rdfs:label>
-        <rdfs:label xml:lang="it">è serie in</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale: PD/SFI; PD/SSI</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/context-description/isSubjectOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isSubjectOf">
@@ -2115,23 +2168,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/context-description/isSubseriesOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isSubseriesOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Subseries"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Series"/>
-        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una sottoserie, cioè a una partizione interna, a una serie editoriale fotografica.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="en">is subseries of</rdfs:label>
-        <rdfs:label xml:lang="it">è sottoserie di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F: PD/SSI</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2235,9 +2271,21 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/core/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasPart"/>
+    
+
+
     <!-- https://w3id.org/arco/core/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasType"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isPartOf"/>
     
 
 
@@ -2489,6 +2537,38 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGH</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/archivalRecordLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/archivalRecordLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSetMembership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la collocazione di un&apos;unità documentaria all&apos;interno di un&apos;unità archivistica complessa.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">archival record location</rdfs:label>
+        <rdfs:label xml:lang="it">collocazione di unità documentaria</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF/UBFC</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/archivalRecordSetTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/archivalRecordSetTitle">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSetMembership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il titolo dell&apos;unità archivistica complessa (fondo, serie, sottoserie, etc.) in cui si trova un&apos;unità documentaria.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">archival record set title</rdfs:label>
+        <rdfs:label xml:lang="it">titolo di unità archivistica complessa</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF/UBFU</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2789,11 +2869,11 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la collocazione del documento, che può anche essere espressa per mezzo della collocazione inventariale o dell&apos;identificativo (numerico o alfanumerico) della fonte o del documento.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">collocazione</rdfs:label>
-        <rdfs:label xml:lang="en">location</rdfs:label>
+        <rdfs:label xml:lang="it">collocazione della documentazione</rdfs:label>
+        <rdfs:label xml:lang="en">documentation location</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">FTAC, DRAC, VDCC, REGC, FNTS</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAC, DO/DRA/DRAC, DO/VDC/VDCC, DO/REG/REGC, DO/FNT/FNTS</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3051,6 +3131,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/context-description/numberInCirculation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/numberInCirculation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione dell&apos;esemplare della fotografia o della stampa all&apos;interno della tiratura e il numero complessivo degli esemplari tirati, qualora la fotografia o la stampa risalgano a una tiratura. Nel caso delle fotografie, per tiratura si intende un insieme prestabilito e limitato di esemplari (uguali) tratti dallo stesso negativo o dalla stessa, ovvero non modificata, fotografia digitale (o dalla stessa serie di matrici), numerati progressivamente.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">number in circulation</rdfs:label>
+        <rdfs:label xml:lang="it">numero nella tiratura</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: PD/TRT; ICCD Normativa S: PD/TRT/TRTN</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/context-description/openingNoticeDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/openingNoticeDate">
@@ -3120,19 +3217,36 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
-    <!-- https://w3id.org/arco/context-description/photographNumberInCirculation -->
+    <!-- https://w3id.org/arco/context-description/photographicSeriesItemNumber -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/photographNumberInCirculation">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/photographicSeriesItemNumber">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/PhotographicHeritage"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione dell&apos;esemplare della fotografia all&apos;interno della tiratura e il numero complessivo degli esemplari tirati, qualora al fotografia risalga a una tiratura. Per tiratura si intende un insieme prestabilito e limitato di esemplari (uguali) tratti dallo stesso negativo o dalla stessa, ovvero non modificata, fotografia digitale (o dalla stessa serie di matrici), numerati progressivamente.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione della fotografia all&apos;interno della serie fotografica editoriale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">numero della fotografia nella tiratura</rdfs:label>
-        <rdfs:label xml:lang="en">photograph number in circulation</rdfs:label>
+        <rdfs:label xml:lang="it">numero dell&apos;item all&apos;interno della serie</rdfs:label>
+        <rdfs:label xml:lang="en">series item number</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F: PD/TRT</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa F: PD/SFI/SFIN</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/photographicSubseriesItemNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/photographicSubseriesItemNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/PhotographicSeriesMembership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione della fotografia all&apos;interno della sottoserie fotografica editoriale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">numero dell&apos;item all&apos;interno della sottoserie fotografica</rdfs:label>
+        <rdfs:label xml:lang="en">photographic subseries item number</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: PD/SSI/SSIN</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3308,23 +3422,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
-    <!-- https://w3id.org/arco/context-description/seriesItemNumber -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/seriesItemNumber">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/SeriesMembership"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione della fotografia all&apos;interno della serie fotografica editoriale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">numero dell&apos;item all&apos;interno della serie</rdfs:label>
-        <rdfs:label xml:lang="en">series item number</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F: PD/SFI/SFIN</arco-core:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/context-description/stripRunAndFrameNumber -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/stripRunAndFrameNumber">
@@ -3353,23 +3450,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI</arco-core:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/context-description/subseriesItemNumber -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/subseriesItemNumber">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/SeriesMembership"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione della fotografia all&apos;interno della sottoserie fotografica editoriale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">numero dell&apos;item all&apos;interno della sottoserie</rdfs:label>
-        <rdfs:label xml:lang="en">subseries item number</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F: PD/SSI/SSIN</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3993,6 +4073,116 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND/INDI</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/ArchivalFond -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalFond">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+        <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un fondo archivistico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/contex-description/"/>
+        <rdfs:label xml:lang="en">Archival fond</rdfs:label>
+        <rdfs:label xml:lang="it">Fondo archivistico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF/UBFP</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/ArchivalRecord -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalRecord">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una unità documentaria che fa parte di una unità archivistica complessa.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">Archival record</rdfs:label>
+        <rdfs:label xml:lang="it">Unità documentaria</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/ArchivalRecordSet -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalRecordSet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/context-description/ArchivalRecord"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasPart"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;unità archivistica complessa (fondo, serie, sottoserie, etc.) di cui un bene culturale può fare parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/contex-description/"/>
+        <rdfs:label xml:lang="en">Archival record set</rdfs:label>
+        <rdfs:label xml:lang="it">Unità archivistica complessa</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/ArchivalRecordSetMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalRecordSetMembership">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;appartenenza di un bene culturale a un&apos;unità archivistica complessa (fondo, serie, sottoserie, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">Appartenenza a unità archivistica complessa</rdfs:label>
+        <rdfs:label xml:lang="en">Archival record set membership</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/ArchivalSeries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+        <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una serie archivistica.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/contex-description/"/>
+        <rdfs:label xml:lang="en">Archival series</rdfs:label>
+        <rdfs:label xml:lang="it">Serie archivistica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF/UBFS</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/ArchivalSubseries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalSubseries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una sottoserie archivistica, ovvero una partizione interna alla serie.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/contex-description/"/>
+        <rdfs:label xml:lang="en">Archival subseries</rdfs:label>
+        <rdfs:label xml:lang="it">Sottoserie archivistica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: UB/UBF/UBFT</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -5365,6 +5555,87 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/context-description/PhotographicSeries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/PhotographicSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/isPhotographicSeriesIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/PhotographicSeriesMembership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/PhotographicSubseries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una serie editoriale fotografica, ovvero un insieme di immagini ideate o pubblicate come un&apos;unica entità, esplicitamente legate tra di loro da un titolo o da una numerazione progressiva o da altri elementi che ne individuino inequivocabilmente l&apos;unitarietà in senso biblioteconomico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">Phtographical series</rdfs:label>
+        <rdfs:label xml:lang="it">Serie fotografica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: PD/SFI</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/PhotographicSeriesMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/PhotographicSeriesMembership">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasMemberOfPhotographicSeries"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/core/PhotographicHeritage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasPhotographicSeries"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/context-description/PhotographicSeries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/photographicSeriesItemNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;appartenenza di un bene fotografico a una serie editoriale, esplicitamente indicata da un titolo o da una numerazione progressiva o da altri elementi che ne individuino inequivocabilmente l&apos;appartenenza.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">Appartenenza a serie fotografica</rdfs:label>
+        <rdfs:label xml:lang="en">Photographic series membership</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/PhotographicSubseries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/PhotographicSubseries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/PhotographicSeries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una sottoserie di una serie editoriale fotografica, ovvero una partizione interna alla serie.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">Photographic subseries</rdfs:label>
+        <rdfs:label xml:lang="it">Sottoserie fotografica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: PD/SSI</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/context-description/PreferredAuthorshipAttribution -->
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/PreferredAuthorshipAttribution">
@@ -5794,60 +6065,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/context-description/Series -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/context-description/Series">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasSubseries"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/Subseries"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/isSeriesIn"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/SeriesMembership"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una serie editoriale fotografica, ovvero un insieme di immagini ideate o pubblicate come un&apos;unica entità, esplicitamente legate tra di loro da un titolo o da una numerazione progressiva o da altri elementi che ne individuino inequivocabilmente l&apos;unitarietà in senso biblioteconomico.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">Serie</rdfs:label>
-        <rdfs:label xml:lang="en">Series</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: PD/SFI</arco-core:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/context-description/SeriesMembership -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/context-description/SeriesMembership">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasMemberOfSeries"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/core/PhotographicHeritage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasSeries"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/context-description/Series"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;appartenenza di un bene fotografico a una serie editoriale, esplicitamente indicata da un titolo o da una numerazione progressiva o da altri elementi che ne individuino inequivocabilmente l&apos;appartenenza.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">Appartenenza a serie</rdfs:label>
-        <rdfs:label xml:lang="en">Series membership</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</arco-core:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/context-description/Source -->
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/Source">
@@ -5909,28 +6126,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</arco-core:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/context-description/Subseries -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/context-description/Subseries">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/isSubseriesOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/context-description/Series"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Born_Digital_Archives"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una sottoserie di una serie editoriale fotografica, ovvero una partizione interna alla serie.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
-        <rdfs:label xml:lang="it">Sottoserie</rdfs:label>
-        <rdfs:label xml:lang="en">Subseries</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F: PD/SSI</arco-core:iccdNormTag>
     </owl:Class>
     
 

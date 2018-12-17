@@ -1292,6 +1292,18 @@
 						</arco-cd:hasRelatedWorkSituation>	
 				</xsl:for-each>
 				
+				<!-- tiratura di una fotografia o di una stampa -->
+				<xsl:if test="schede/*/PD/TRT and (not(starts-with(lower-case(normalize-space(schede/*/PD/TRT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/PD/TRT)), 'n.r')))">
+					<arco-cd:numberInCirculation>
+						<xsl:value-of select="normalize-space(schede/*/PD/TRT)" />
+					</arco-cd:numberInCirculation>
+				</xsl:if>
+				<xsl:if test="schede/*/AU/TRT/TRTN and (not(starts-with(lower-case(normalize-space(schede/*/AU/TRT/TRTN)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/AU/TRT/TRTN)), 'n.r')))">
+					<arco-cd:numberInCirculation>
+						<xsl:value-of select="normalize-space(schede/*/AU/TRT/TRTN)" />
+					</arco-cd:numberInCirculation>
+				</xsl:if>
+				
 				<!-- isDescribedByCatalogueRecord -->
 				<arco-catalogue:isDescribedByCatalogueRecord>
 					<xsl:attribute name="rdf:resource">
@@ -1311,10 +1323,20 @@
 				<!-- alternative locations -->
 				<xsl:for-each select="schede/*/LA | schede/F/LR">
 					<arco-location:hasTimeIndexedTypedLocation>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
-	                        </xsl:attribute>
+						<xsl:choose>
+							<xsl:when test=".">
+								<xsl:attribute name="rdf:resource">
+									 <xsl:value-of
+								select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-', position())" />
+								</xsl:attribute>
+							</xsl:when>
+								<xsl:when test="../../F/LR">
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of
+								select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-alternative-shot-', position())" />
+								</xsl:attribute>
+								</xsl:when>
+							</xsl:choose>
 					</arco-location:hasTimeIndexedTypedLocation>
 				</xsl:for-each>
 				<xsl:if test="schede/*/LC/PVC/*">
@@ -1353,6 +1375,44 @@
 						</xsl:when>
 					</xsl:choose>
 				</xsl:if>
+				<!-- keywords (PST) -->
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(schede/*/CT/CTC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CT/CTC)), 'n.r')))">
+					<xsl:for-each select="schede/*/CT/CTC">
+						<arco-core:hasKeyword>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'Keyword/', arco-fn:urify(normalize-space(.)))" />
+		                	</xsl:attribute>
+						</arco-core:hasKeyword>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- main discipline (PST) -->
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(schede/*/CT/CTP)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CT/CTP)), 'n.r')))">
+					<xsl:for-each select="schede/*/CT/CTP">
+						<arco-core:hasMainDiscipline>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'SubjectDiscipline/', arco-fn:urify(normalize-space(.)))" />
+		                	</xsl:attribute>
+						</arco-core:hasMainDiscipline>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- alternative discipline (PST) -->
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(schede/*/CT/CTA)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CT/CTA)), 'n.r')))">
+					<xsl:for-each select="schede/*/CT/CTA">
+						<arco-core:hasAlternativeDiscipline>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'SubjectDiscipline/', arco-fn:urify(normalize-space(.)))" />
+		                	</xsl:attribute>
+						</arco-core:hasAlternativeDiscipline>
+					</xsl:for-each>
+				</xsl:if>
+				<!-- cadastrial identity -->
+				<xsl:for-each select="schede/*/CS">
+					<arco-location:hasCadastrialIdentity>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'CadastrialIdentity/', $itemURI, '-', position())" />
+		                	</xsl:attribute>
+					</arco-location:hasCadastrialIdentity>
+				</xsl:for-each>
 				<!-- fruition (VeAC) -->
 				<xsl:if test="schede/*/AU/FRU">
 					<xsl:for-each select="schede/*/AU/FRU">

@@ -29,6 +29,7 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa del bene culturale (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), include la modellazione delle informazioni che riguardano il bene culturale in sé, con i suoi attributi (rilevati/rilevabili al momento della catalogazione).</rdfs:comment>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <rdfs:label>Denotative Description Ontology (ArCo network)</rdfs:label>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
     </owl:Ontology>
     
@@ -436,7 +437,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasWritingSystem">
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/WritingSystem"/>
-        <rdfs:comment xml:lang="it">Questa classe collega una iscrizione, un timbro, uno stemma, etc., al sistema di scrittura/alfabeto adottati.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una iscrizione, un timbro, uno stemma, etc., al sistema di scrittura/alfabeto adottati.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha sistema di scrittura</rdfs:label>
         <rdfs:label xml:lang="en">has writing system</rdfs:label>
@@ -850,6 +851,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasFontStyle"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/FontStyle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasSupport"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/Support"/>
             </owl:Restriction>
@@ -862,7 +869,25 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasWritingSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/WritingSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/transcript"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/core/description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/italianTranslation"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1223,7 +1248,19 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasSampleCollectedType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/SampleCollectedType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/positionOnCulturalProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/sampleCollectedIdentifier"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1333,6 +1370,7 @@ un&apos;azienda, ecc.</rdfs:comment>
     <!-- https://w3id.org/arco/denotative-description/WritingSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/WritingSystem">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di scrittura/alfabeto adottati in una iscrizione, un timbro, uno stemma, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Sistema di scrittura</rdfs:label>
         <rdfs:label xml:lang="en">Writing system</rdfs:label>

@@ -32,6 +32,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/location/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:label>Core Ontology (ArCo network)</rdfs:label>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo è il modulo core della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al bene culturale, considerate centrali. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
@@ -429,10 +430,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasPart">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una sua parte (es.: piano terra, manico, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una sua parte. Per esempio, può collegare un bene culturale a una sua parte (es.: piano terra, manico, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
         <rdfs:label xml:lang="it">ha parte</rdfs:label>
         <rdfs:label xml:lang="en">has part</rdfs:label>
@@ -603,10 +604,10 @@
     <!-- https://w3id.org/arco/core/isPartOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isPartOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una parte di un bene culturale (es.: piano terra, manico, etc.) al bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una parte di un&apos;entità all&apos;entità. Per esempio, può essere usata per collegare una parte di un bene culturale (es.: piano terra, manico, etc.) al bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
         <rdfs:label xml:lang="it">è parte di</rdfs:label>

@@ -28,7 +28,9 @@
         <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.</rdfs:comment>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:label>Location Ontology (ArCo network)</rdfs:label>
     </owl:Ontology>
     
 
