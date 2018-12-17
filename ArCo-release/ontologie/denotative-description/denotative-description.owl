@@ -286,8 +286,10 @@
     <!-- https://w3id.org/arco/denotative-description/hasMeasurement -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasMeasurement">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/denotative-description/isMeasurementOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">ha misura</rdfs:label>
@@ -421,6 +423,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/denotative-description/hasMeasurement"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label>ha misura di imgombro</rdfs:label>
@@ -444,6 +447,23 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/isMeasurementOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/isMeasurementOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/MeasurementCollection"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha misura&quot;, collega una misura di un oggetto all&apos;insieme di misure osservate perl&apos;oggetto.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">is measurement of</rdfs:label>
+        <rdfs:label xml:lang="it">è misura di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1202,6 +1222,7 @@ un&apos;azienda, ecc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="it">Collezione di misure</rdfs:label>
