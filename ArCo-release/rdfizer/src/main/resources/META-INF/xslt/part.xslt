@@ -8,7 +8,7 @@
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:tiapit="https://w3id.org/italia/onto/TI/"
 	xmlns:roapit="https://w3id.org/italia/onto/RO/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:dcterms="http://purl.org/dc/terms/creator" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/creator" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:language="https://w3id.org/italia/onto/Language/"
 	xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:arco-cd="https://w3id.org/arco/context-description/"
 	exclude-result-prefixes="xsl php">
 
@@ -106,6 +106,7 @@
 						select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 				</xsl:variable>
 				<xsl:if
+					test="./AUTW and not(lower-case(normalize-space(./AUTW))='intero bene') and not(lower-case(normalize-space(./AUTW))='integrale') and not(lower-case(normalize-space(./AUTW))='tutta') and not(lower-case(normalize-space(./AUTW))='totale') and (not(starts-with(lower-case(normalize-space(./AUTW)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'intero')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'intera')) and not(starts-with(lower-case(normalize-space(./AUTW)), 'esemplar')))">
 					<xsl:variable name="part">
 						<xsl:value-of
 							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./AUTW)))" />
@@ -507,6 +508,65 @@
 									<xsl:value-of select="$reuse" />
 								</xsl:attribute>
 							</arco-dd:hasRelatedWorkSituation>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+
+					</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
+			
+			<!-- part of cultural property when there is ISER (4.00, affixed elements) -->
+			<xsl:for-each select="schede/*/DA/ISE">
+				<xsl:variable name="element">
+					<xsl:choose>
+							<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">
+								
+									<xsl:value-of select="concat($NS, 'Stamp/', $itemURI, '-affixed-element-', position())" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./ISED))='stemma'">
+								
+									<xsl:value-of select="concat($NS, 'CoatOfArms/', $itemURI, '-affixed-element-', position())" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./ISED))='emblema'">
+									<xsl:value-of select="concat($NS, 'Emblem/', $itemURI, '-affixed-element-', position())" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./ISED))='marchio'">
+									<xsl:value-of select="concat($NS, 'Brand/', $itemURI, '-affixed-element-', position())" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./ISED))='logo'">
+									<xsl:value-of select="concat($NS, 'Logo/', $itemURI, '-affixed-element-', position())" />
+							</xsl:when>
+							<xsl:when test="lower-case(normalize-space(./ISED))='iscrizione'">
+									<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
+							</xsl:when>
+							<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'AffixedElement/', $itemURI, '-affixed-element-', position())" />
+							</xsl:otherwise>
+						</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if
+					test="not(lower-case(normalize-space(./ISER))='intero bene') and not(lower-case(normalize-space(./ISER))='integrale') and not(lower-case(normalize-space(./ISER))='tutta') and not(lower-case(normalize-space(./ISER))='totale') and (not(starts-with(lower-case(normalize-space(./ISER)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISER)), 'n.r')) and not(starts-with(lower-case(normalize-space(./ISER)), 'intero')) and not(starts-with(lower-case(normalize-space(./ISER)), 'intera')) and not(starts-with(lower-case(normalize-space(./ISER)), 'esemplar')))">
+					<xsl:for-each select="./ISER">
+
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<arco-dd:hasAffixedElement>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$element" />
+								</xsl:attribute>
+							</arco-dd:hasAffixedElement>
 							<rdfs:label>
 								<xsl:value-of select="normalize-space(.)" />
 							</rdfs:label>
