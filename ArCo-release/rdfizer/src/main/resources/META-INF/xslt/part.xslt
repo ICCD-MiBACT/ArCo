@@ -46,9 +46,13 @@
 	<xsl:variable name="culturalProperty"
 		select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 
+	<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
+	<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
+	<xsl:variable name="cp-name" select="''"></xsl:variable>
+	
 	<xsl:variable name="objectOfDescription">
 		<xsl:choose>
-			<xsl:when test="schede/*/OG/OGT/OGTP">
+			<xsl:when test="schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:value-of select="$culturalPropertyComponent" />
 			</xsl:when>
 			<xsl:otherwise>
@@ -56,10 +60,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-
-	<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
-	<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
-	<xsl:variable name="cp-name" select="''"></xsl:variable>
 
 	<xsl:template match="/">
 		<rdf:RDF>
@@ -405,7 +405,20 @@
 			
 			<xsl:for-each select="schede/*/MT/MIS">
 				<xsl:variable name="measurementCollection">
-					<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
+					<xsl:choose>
+						<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP" >
+							<xsl:value-of
+									select="concat($NS, 'MeasurementCollection/', $itemURI, '-', arco-fn:urify(normalize-space(./MISP)))" />
+						</xsl:when>
+						<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and not(./MISP)" >
+							<xsl:value-of
+									select="concat($NS, 'MeasurementCollection/', $itemURI)" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of
+									select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
+						</xsl:otherwise>
+					</xsl:choose>
 				</xsl:variable>
 				<xsl:if test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP and not(lower-case(normalize-space(./MISP))='intero bene') and not(lower-case(normalize-space(./MISP))='integrale') and not(lower-case(normalize-space(./MISP))='tutta') and not(lower-case(normalize-space(./MISP))='totale') and not(starts-with(lower-case(normalize-space(./MISP)), 'nr')) and not(starts-with(lower-case(normalize-space(./MISP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./MISP)), 'esemplar')) and not(starts-with(lower-case(normalize-space(./MISP)), 'intero')) and not(starts-with(lower-case(normalize-space(./MISP)), 'intera'))">
 					<rdf:Description>

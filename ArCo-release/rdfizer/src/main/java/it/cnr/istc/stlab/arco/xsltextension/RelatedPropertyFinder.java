@@ -26,6 +26,7 @@ import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.SequenceType;
 import net.sf.saxon.s9api.XdmArray;
 import net.sf.saxon.s9api.XdmAtomicValue;
+import net.sf.saxon.s9api.XdmEmptySequence;
 import net.sf.saxon.s9api.XdmValue;
 
 public class RelatedPropertyFinder implements ExtensionFunction {
@@ -75,7 +76,9 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 			if(!found) found = true;
 		}
 		
+		/*
 		if(!found){
+			System.out.println(arg);
 			String specificProperty = SpecificCulturalPropertyType.getPropertyType(type);
 			if(specificProperty == null || specificProperty.trim().isEmpty()) 
 				specificProperty = "CulturalProperty";
@@ -84,9 +87,10 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 			String uri = "https://w3id.org/arco/resource/" + specificProperty + "/" + Urifier.toURI(arg);
 			uris.add(uri);
 		}
+		*/
 		
-		
-		return XdmArray.makeArray(uris.toArray());
+		if(uris.isEmpty()) return XdmEmptySequence.getInstance();
+		else return XdmArray.makeArray(uris.toArray());
 	}
 
 	@Override

@@ -40,9 +40,13 @@
 		<xsl:variable name="culturalProperty"
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 	
+	<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
+	<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
+	<xsl:variable name="cp-name" select="''"></xsl:variable>
+	
 	<xsl:variable name="objectOfDescription">
 		<xsl:choose>
-			<xsl:when test="schede/*/OG/OGT/OGTP">
+			<xsl:when test="schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:value-of select="$culturalPropertyComponent" />
 			</xsl:when>
 			<xsl:otherwise>
@@ -50,10 +54,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	
-	<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
-	<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
-	<xsl:variable name="cp-name" select="''"></xsl:variable>
 	
 	<!-- xsl:import href="part.xsl" / -->
 	
@@ -100,8 +100,8 @@
 		</xsl:variable>
 		
 		<rdf:RDF>
-
-			<xsl:if test="schede/*/OG/OGT/OGTP">
+			
+			<xsl:if test="schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$culturalProperty" />
@@ -119,6 +119,19 @@
 					</xsl:attribute>
 
 					<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyComponent" />
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+		                       <xsl:value-of
+							select="arco-fn:getPropertyType($sheetType)" />
+		                   </xsl:attribute>
+					</rdf:type>
+					<!-- rdf:type of cultural property -->
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+		                       <xsl:value-of
+							select="arco-fn:getSpecificPropertyType($sheetType)" />
+		                   </xsl:attribute>
+					</rdf:type>
 
 					<arco-core:isCulturalPropertyComponentOf>
 						<xsl:attribute name="rdf:resource">
@@ -1270,18 +1283,22 @@
 					<xsl:value-of select="$objectOfDescription" />
 				</xsl:attribute>
 
-				<!-- Rule #RWS -->
-				<xsl:for-each select="schede/*/RV/RSE">
-					<xsl:if test="./* 
-					and (not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')))">
-						<arco-cd:hasRelatedWorkSituation>
-							<xsl:attribute name="rdf:resource">
-								<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
-								<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-typed-related-cultural-property-', position())" />
-							</xsl:attribute>
-						</arco-cd:hasRelatedWorkSituation>	
-					</xsl:if>
-				</xsl:for-each>
+
+				<xsl:variable name="related-property" select="arco-fn:related-property(normalize-space(./RSEC), 'foaf')" />
+				<xsl:if test="count($related-property) > 0" >
+					<!-- Rule #RWS -->
+					<xsl:for-each select="schede/*/RV/RSE">
+						<xsl:if test="./* 
+						and (not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')))">
+							<arco-cd:hasRelatedWorkSituation>
+								<xsl:attribute name="rdf:resource">
+									<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
+									<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-typed-related-cultural-property-', position())" />
+								</xsl:attribute>
+							</arco-cd:hasRelatedWorkSituation>	
+						</xsl:if>
+					</xsl:for-each>
+				</xsl:if>
 				
 				<xsl:for-each select="schede/*/RV/ROZ">
 						<arco-cd:hasRelatedWorkSituation>
@@ -1646,12 +1663,28 @@
 							</arco-core:hasPart>
 						</xsl:when>
 						<xsl:otherwise>
+							<xsl:variable name="measurement-collection">
+								<xsl:choose>
+									<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP" >
+										<xsl:value-of
+												select="concat($NS, 'MeasurementCollection/', $itemURI, '-', arco-fn:urify(normalize-space(./MISP)))" />
+									</xsl:when>
+									<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and not(./MISP)" >
+										<xsl:value-of
+												select="concat($NS, 'MeasurementCollection/', $itemURI)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+												select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
 							<arco-dd:hasMeasurementCollection>
 								<xsl:attribute name="rdf:resource">
-				              		<xsl:value-of
-										select="concat($NS, 'MeasurementCollection/', $itemURI, '-', position())" />
-				                </xsl:attribute>
+									<xsl:value-of select="$measurement-collection" />
+				              	</xsl:attribute>
 							</arco-dd:hasMeasurementCollection>
+							
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
@@ -2775,7 +2808,7 @@
                 </xsl:if>
 			</rdf:Description>
 			
-			<!-- Images retrieved from the OAI-PMH service -->
+			<!-- Images retrieved from the OAI-PMH service of ICCD-MiBAC -->
 			
 			<xsl:variable name="image-link" select="arco-fn:find-image($item)" />
 			<xsl:if test="$image-link != ''">

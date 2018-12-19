@@ -41,7 +41,6 @@ private static Map<String, String> sheetPropertyTypeMap;
 		sheetPropertyTypeMap.put("S", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
 		sheetPropertyTypeMap.put("VeAC", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
 		sheetPropertyTypeMap.put("E", "https://w3id.org/arco/core/DemoEthnoAnthropologicalHeritage");
-
 	}
 	
 	public static String getPropertyType(String sheetType){

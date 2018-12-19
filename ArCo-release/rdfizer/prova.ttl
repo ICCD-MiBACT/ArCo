@@ -1,0 +1,991 @@
+@prefix arco-core: <https://w3id.org/arco/core/> .
+@prefix arco-location: <https://w3id.org/arco/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-event: <https://w3id.org/arco/cultural-event/> .
+@prefix arco-fn: <http://w3id.org/arco/saxon-extension> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix arco-catalogue: <https://w3id.org/arco/catalogue/> .
+@prefix arco-ce: <https://w3id.org/arco/cultural-event/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-cd: <https://w3id.org/arco/context-description/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-dd: <https://w3id.org/arco/denotative-description/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+
+<https://w3id.org/arco/resource/DocumentationType/planimetria>
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "planimetria" ;
+        l0:name     "planimetria" .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-7>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 7 of cultural property: 0100354491"@en , "Bibliografia 7 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1170" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        l0:name                "Bibliography 7 of cultural property: 0100354491"@en , "Bibliografia 7 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-20>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 20 of cultural property: 0100354491"@en , "Coordinate 20 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.585676183" ;
+        arco-location:long  "8.4151871993" ;
+        l0:name             "Coordinates 20 of cultural property: 0100354491"@en , "Coordinate 20 del bene culturale: 0100354491"@en .
+
+<file:///Users/andrea/git/ArCo/ArCo-release/rdfizer/stocazzo>
+        a       <file:///Users/andrea/git/ArCo/ArCo-release/rdfizer/Membro> .
+
+<https://w3id.org/arco/resource/TimeIndexedRole/0100354491-agg-1-quiri-elena>
+        a                      <https://w3id.org/italia/RO/TimeIndexedRole> ;
+        rdfs:label             "AGGIORNAMENTO-REVISIONE da Quiri, Elena"@it , "Update by Quiri, Elena"@en ;
+        roapit:isRoleInTimeOf  <https://w3id.org/arco/resource/Agent/quiri-elena> ;
+        roapit:withRole        <https://w3id.org/arco/resource/Role/UpdateResponsibleCompilation> .
+
+<https://w3id.org/arco/resource/Agent/ratto-stefania>
+        a           l0:Agent ;
+        rdfs:label  "Ratto, Stefania" .
+
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/acquedotto>
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "acquedotto" .
+
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100354491-current>
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0100354491"@it , "Current physical location of cultural property: 0100354491"@en ;
+        arco-location:atLocation       <https://w3id.org/arco/resource/Feature/ad7d3fadf0b673c539599de5ab142344> ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:locationDetails  "Greto del torrente Bormida e Valle del Torrente Erro (destra orografica). In territorio comunale di Acqui Terme, regione Marchiolli, Località La Maddalena, a mezza costa del pendio rivolto ad W di una piccola valletta percorsa da un rio tributario del Bormida." ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0100354491"@it , "Current physical location of cultural property: 0100354491"@en .
+
+<https://w3id.org/arco/resource/ProtectiveMeasure/0100354491-protective-measure-3>
+        a                  arco-cd:ProtectiveMeasure ;
+        rdfs:label         "Protective measure 3 of cultural property 0100354491: notificazione (L. n. 185/1902)"@en , "Provvedimento di tutela 3 del bene culturale 0100354491: notificazione (L. n. 185/1902)"@it ;
+        arco-cd:issueDate  "1908/09/04" ;
+        l0:name            "Protective measure 3 of cultural property 0100354491: notificazione (L. n. 185/1902)"@en , "Provvedimento di tutela 3 del bene culturale 0100354491: notificazione (L. n. 185/1902)"@it .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-18>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 18 of cultural property: 0100354491"@en , "Coordinate 18 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.595843389" ;
+        arco-location:long  "8.4174066251" ;
+        l0:name             "Coordinates 18 of cultural property: 0100354491"@en , "Coordinate 18 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Measurement/0100354491-3-width>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100354491: 4,40"@en , "Misura del bene culturale 0100354491: 4,40"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        mu:hasValue                 <https://w3id.org/arco/resource/Value/0100354491-3-width-440> ;
+        l0:name                     "Measurement of cultural property 0100354491: 4,40"@en , "Misura del bene culturale 0100354491: 4,40"@it .
+
+<https://w3id.org/arco/resource/Province/al>
+        a           clvapit:Province ;
+        rdfs:label  "AL" ;
+        l0:name     "AL" .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-1>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 1 of cultural property: 0100354491"@en , "Bibliografia 1 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1101" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        l0:name                "Bibliography 1 of cultural property: 0100354491"@en , "Bibliografia 1 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-7>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 7 of cultural property: 0100354491"@en , "Coordinate 7 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.660653019" ;
+        arco-location:long  "8.4423004113" ;
+        l0:name             "Coordinates 7 of cultural property: 0100354491"@en , "Coordinate 7 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-5-photographic-documentation-owner>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 5 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of photographic documentation 5 of cultural property 0100354491: SBAP-MAE"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/sbap-mae> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/Owner> ;
+        l0:name             "Ente proprietario della documentazione fotografica 5 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of photographic documentation 5 of cultural property 0100354491: SBAP-MAE"@en .
+
+<https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-4>
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 4 of cultural property: 0100354491"@en , "Documentazione fotografica 4 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1415788957549" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/fotografia-b-n> ;
+        arco-core:hasAgentRole        <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-4-photographic-documentation-owner> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 4 of cultural property: 0100354491"@en , "Documentazione fotografica 4 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Feature/ad7d3fadf0b673c539599de5ab142344>
+        a                   clvapit:Feature ;
+        rdfs:label          "ITALIA Piemonte AL Acqui Terme Greto del torrente Bormida e Valle del Torrente Erro (destra orografica). In territorio comunale di Acqui Terme, regione Marchiolli, Località La Maddalena, a mezza costa del pendio rivolto ad W di una piccola valletta percorsa da un rio tributario del Bormida." ;
+        clvapit:hasAddress  <https://w3id.org/arco/resource/Address/ea65408b78b19b9650952ac9d5611910> .
+
+<https://w3id.org/arco/resource/DocumentationType/rilievo>
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "rilievo" ;
+        l0:name     "rilievo" .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-1-carto-graphic-documentation-owner>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione grafica o cartografica 1 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of graphic or cartographic documentation 1 of cultural property 0100354491: SBAP-MAE"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/sbap-mae> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/Owner> ;
+        l0:name             "Ente proprietario della documentazione grafica o cartografica 1 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of graphic or cartographic documentation 1 of cultural property 0100354491: SBAP-MAE"@en .
+
+<https://w3id.org/arco/resource/TimeIndexedRole/0100354491-funzionario-responsabile-filippi-fedora>
+        a                      <https://w3id.org/italia/RO/TimeIndexedRole> ;
+        rdfs:label             "Funzionario responsabile: Filippi, Fedora"@it , "Official in charge: Filippi, Fedora"@en ;
+        roapit:isRoleInTimeOf  <https://w3id.org/arco/resource/Agent/filippi-fedora> ;
+        roapit:withRole        <https://w3id.org/arco/resource/Role/OfficialInCharge> .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-7>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Fonti e documenti 7 del bene culturale: 0100354491"@it , "Sources and documents 7 of cultural property: 0100354491"@en ;
+        arco-cd:documentationIdentifier
+                "New_1418137487718" ;
+        arco-cd:documentationTitle    "Strutture dell’acquedotto di età romana. Comune di Melazzo - Resti del serbatoio, pilastri di sostegno e condotto ipogeo dell’acquedotto (AL)" ;
+        arco-cd:hasArchive            <https://w3id.org/arco/resource/Agent/archivio-vincoli-beni-immobili-sbap-mae> ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/scheda-del-piano-paesaggistico-regionale> ;
+        tiapit:time                   "2014" ;
+        l0:name                       "Fonti e documenti 7 del bene culturale: 0100354491"@en , "Sources and documents 7 of cultural property: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-12>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 12 of cultural property: 0100354491"@en , "Coordinate 12 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.626803541" ;
+        arco-location:long  "8.4147615008" ;
+        l0:name             "Coordinates 12 of cultural property: 0100354491"@en , "Coordinate 12 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-1>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 1 of cultural property: 0100354491"@en , "Coordinate 1 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.668506527" ;
+        arco-location:long  "8.4692727052" ;
+        l0:name             "Coordinates 1 of cultural property: 0100354491"@en , "Coordinate 1 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Value/0100354491-3-height-1420>
+        a                      mu:Value ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/m> ;
+        mu:value               "14,20" .
+
+<https://w3id.org/arco/resource/Event/0100354491-creation-1>
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0100354491"@it , "Creation of cultural property 0100354491"@en ;
+        arco-cd:specificTime  <https://w3id.org/arco/resource/TimeInterval/ca-inizi-i-sec-ii-sec-dc> ;
+        tiapit:atTime         <https://w3id.org/arco/resource/TimeInterval/eta-romana-imperiale-inizio> ;
+        l0:name               "Realizzazione del bene 0100354491"@it , "Creation of cultural property 0100354491"@en .
+
+<https://w3id.org/arco/resource/ConservationStatus/0100354491-conservation-status-1>
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 0100354491"@it , "Conservation status 1 of cultural property: 0100354491"@en ;
+        arco-core:specifications  "Della porzione fuori terra si conservano 2 tratti di ponte-canale (15 piloni e 4 arcate)" ;
+        arco-dd:hasConservationStatusType
+                arco-dd:Good ;
+        l0:name                   "Stato di conservazione 1 del bene: 0100354491"@it , "Conservation status 1 of cultural property: 0100354491"@en .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-1>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Sources and documents 1 of cultural property: 0100354491"@en , "Fonti e documenti 1 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1415791538613" ;
+        arco-cd:hasArchive            <https://w3id.org/arco/resource/Agent/archivio-vincoli-beni-immobili-sbap-mae> ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/copia-del-provvedimento-di-tutela> ;
+        tiapit:time                   "1908" ;
+        l0:name                       "Sources and documents 1 of cultural property: 0100354491"@en , "Fonti e documenti 1 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/0100354491-graphic-cartographic-documentation-3>
+        a                             arco-cd:GraphicOrCartographicDocumentation ;
+        rdfs:label                    "Graphic or cartographic documentation 3 of cultural property: 0100354491"@en , "Documentazione grafica o cartografica 3 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1415789190598" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/disegno> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Graphic or cartographic documentation 3 of cultural property: 0100354491"@en , "Documentazione grafica o cartografica 3 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-6>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 6 of cultural property: 0100354491"@en , "Bibliografia 6 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1138" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        arco-core:note         "pp. 63-76" ;
+        l0:name                "Bibliography 6 of cultural property: 0100354491"@en , "Bibliografia 6 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/TimeInterval/1992>
+        a            tiapit:TimeInterval ;
+        rdfs:label   "1992" ;
+        tiapit:time  "1992" .
+
+<https://w3id.org/arco/resource/TimeInterval/eta-romana-imperiale-inizio>
+        a            tiapit:TimeInterval ;
+        rdfs:label   "Eta' romana imperiale inizio" ;
+        tiapit:time  "Eta' romana imperiale inizio" ;
+        l0:name      "Eta' romana imperiale inizio" .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-archaeological-excavation-1-activity-responsible>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente responsabile dello scavo archeologico 1 del bene culturale 0100354491: Soprintendenza per i Beni Archeologici del Piemonte e MAE"@it , "Responsible agency of archaeological excavation 1 of cultural property 0100354491: Soprintendenza per i Beni Archeologici del Piemonte e MAE"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/soprintendenza-per-i-beni-archeologici-del-piemonte-e-mae> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/ActivityResponsible> ;
+        l0:name             "Ente responsabile dello scavo archeologico 1 del bene culturale 0100354491: Soprintendenza per i Beni Archeologici del Piemonte e MAE"@it , "Responsible agency of archaeological excavation 1 of cultural property 0100354491: Soprintendenza per i Beni Archeologici del Piemonte e MAE"@en .
+
+<https://w3id.org/arco/resource/ProtectiveMeasure/0100354491-protective-measure-2>
+        a                  arco-cd:ProtectiveMeasure ;
+        rdfs:label         "Protective measure 2 of cultural property 0100354491: notificazione (L. n. 185/1902)"@en , "Provvedimento di tutela 2 del bene culturale 0100354491: notificazione (L. n. 185/1902)"@it ;
+        arco-cd:issueDate  "1908/09/04" ;
+        l0:name            "Protective measure 2 of cultural property 0100354491: notificazione (L. n. 185/1902)"@en , "Provvedimento di tutela 2 del bene culturale 0100354491: notificazione (L. n. 185/1902)"@it .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-17>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 17 of cultural property: 0100354491"@en , "Coordinate 17 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.601305456" ;
+        arco-location:long  "8.4188576321" ;
+        l0:name             "Coordinates 17 of cultural property: 0100354491"@en , "Coordinate 17 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100354491-agg-1>
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO-REVISIONE - 2014 Quiri, Elena Ratto, Stefania" ;
+        arco-catalogue:editedAtTime  <https://w3id.org/arco/resource/TimeInterval/2014> ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                <https://w3id.org/arco/resource/TimeIndexedRole/0100354491-agg-1-quiri-elena> , <https://w3id.org/arco/resource/TimeIndexedRole/0100354491-funzionario-responsabile-ratto-stefania> ;
+        arco-catalogue:hasUpdateOfficialInCharge
+                <https://w3id.org/arco/resource/Agent/ratto-stefania> ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                <https://w3id.org/arco/resource/Agent/quiri-elena> ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordMA/0100354491> .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-6>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 6 of cultural property: 0100354491"@en , "Coordinate 6 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.663571262" ;
+        arco-location:long  "8.4471713029" ;
+        l0:name             "Coordinates 6 of cultural property: 0100354491"@en , "Coordinate 6 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordMA/0100354491>
+        a               arco-catalogue:CatalogueRecordMA ;
+        rdfs:label      "Scheda catalografica n: 0100354491"@it , "Catalogue Record n: 0100354491"@en ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0100354491" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/ArchaeologicalProperty/0100354491> ;
+        arco-catalogue:hasAccessProfile
+                <https://w3id.org/arco/resource/AccessProfile/0100354491-1> ;
+        arco-catalogue:hasCatalogueRecordVersion
+                <https://w3id.org/arco/resource/CatalogueRecordVersion/0100354491-compilation> , <https://w3id.org/arco/resource/CatalogueRecordVersion/0100354491-agg-1> ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "ICCD11434956" ;
+        arco-core:note  "la localizzazione catastale si riferisce al 1995. Nel 2010 è stato realizzato una pisto ciclo-pedonale che segue il tracciato dell'acquedotto per km. 1,9." .
+
+<https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-3>
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 3 of cultural property: 0100354491"@en , "Documentazione fotografica 3 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1415788791042" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/fotografia-b-n> ;
+        arco-core:hasAgentRole        <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-3-photographic-documentation-owner> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 3 of cultural property: 0100354491"@en , "Documentazione fotografica 3 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-6>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Fonti e documenti 6 del bene culturale: 0100354491"@it , "Sources and documents 6 of cultural property: 0100354491"@en ;
+        arco-cd:documentationIdentifier
+                "New_1418137055237" ;
+        arco-cd:documentationTitle    "Strutture dell’acquedotto di età romana. Comune di Cartosio - Resti del serbatoio, pilastri di sostegno e condotto ipogeo dell’acquedotto (AL)" ;
+        arco-cd:hasArchive            <https://w3id.org/arco/resource/Agent/archivio-vincoli-beni-immobili-sbap-mae> ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/scheda-del-piano-paesaggistico-regionale> ;
+        tiapit:time                   "2014" ;
+        l0:name                       "Sources and documents 6 of cultural property: 0100354491"@en , "Fonti e documenti 6 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-11>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 11 of cultural property: 0100354491"@en , "Coordinate 11 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.631749535" ;
+        arco-location:long  "8.4178426884" ;
+        l0:name             "Coordinates 11 of cultural property: 0100354491"@en , "Coordinate 11 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/TimeIndexedRole/0100354491-funzionario-responsabile-ratto-stefania>
+        a                      <https://w3id.org/italia/RO/TimeIndexedRole> ;
+        rdfs:label             "Funzionario responsabile di aggiornamento: Ratto, Stefania"@it , "Update official in charge: Ratto, Stefania"@en ;
+        roapit:isRoleInTimeOf  <https://w3id.org/arco/resource/Agent/ratto-stefania> ;
+        roapit:withRole        <https://w3id.org/arco/resource/Role/OfficialInCharge> .
+
+<https://w3id.org/arco/resource/Role/CataloguinAgency>
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  <https://w3id.org/arco/resource/AgentRole/0100354491-cataloguing-agency> .
+
+<https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file>
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/DocumentationType/fotografia-b-n>
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia b/n" ;
+        l0:name     "fotografia b/n" .
+
+<https://w3id.org/arco/resource/Dating/0100354491-1>
+        a                  arco-cd:Dating ;
+        rdfs:label         "Cronologia 1 del bene 0100354491"@it , "Dating 1 of cultural property 0100354491"@en ;
+        arco-cd:hasEvent   <https://w3id.org/arco/resource/Event/0100354491-creation-1> ;
+        arco-cd:hasSource  <https://w3id.org/arco/resource/Source/contesto> ;
+        l0:name            "Dating 1 of cultural property 0100354491"@en , "Cronologia 1 del bene 0100354491"@it .
+
+<https://w3id.org/arco/resource/Region/piemonte>
+        a           clvapit:Region ;
+        rdfs:label  "Piemonte" ;
+        l0:name     "Piemonte" .
+
+<https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/0100354491-graphic-cartographic-documentation-2>
+        a                             arco-cd:GraphicOrCartographicDocumentation ;
+        rdfs:label                    "Graphic or cartographic documentation 2 of cultural property: 0100354491"@en , "Documentazione grafica o cartografica 2 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "inv. 12619" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/planimetria> ;
+        arco-cd:hasScale              <https://w3id.org/arco/resource/Scale/1%3A5000> ;
+        arco-core:hasAgentRole        <https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-2-carto-graphic-documentation-owner> ;
+        arco-core:hasCategory         arco-cd:ExistingDocumentation ;
+        arco-core:note                "Tracciato generale dell’acquedotto" ;
+        l0:name                       "Documentazione grafica o cartografica 2 del bene culturale: 0100354491"@en , "Graphic or cartographic documentation 2 of cultural property: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-5>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 5 of cultural property: 0100354491"@en , "Bibliografia 5 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1118" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        l0:name                "Bibliography 5 of cultural property: 0100354491"@en , "Bibliografia 5 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/ToponymInTime/melazzo-cartosio>
+        a           arco-location:ToponymInTime ;
+        rdfs:label  "Melazzo / Cartosio" ;
+        l0:name     "Melazzo / Cartosio" .
+
+<https://w3id.org/arco/resource/Geometry/0100354491-geometry-line-1>
+        a                             clvapit:Geometry ;
+        rdfs:label                    "Geometry (line) 1 of cultural property: 0100354491"@en , "Georeferenziazione (lineare) 1 del bene culturale: 0100354491"@it ;
+        arco-location:hasBaseMap      <https://w3id.org/arco/resource/BaseMap/0100354491-geometry-line-1-base-map> ;
+        arco-location:hasCoordinates  <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-11> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-7> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-16> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-10> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-23> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-8> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-17> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-19> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-18> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-1> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-12> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-2> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-4> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-13> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-9> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-3> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-14> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-15> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-20> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-21> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-5> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-22> , <https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-6> ;
+        arco-location:hasGeometryMethod
+                <https://w3id.org/arco/resource/GeometryMethod/sviluppo-approssimato> ;
+        arco-location:hasGeometryTechnique
+                <https://w3id.org/arco/resource/GeometryTechnique/rilievo-da-foto-aerea-senza-sopralluogo> ;
+        arco-location:hasReferredLocationType
+                arco-location:CurrentPhysicalLocation ;
+        arco-location:spacialReferenceSystem
+                "WGS84" ;
+        clvapit:hasGeometryType       clvapit:Line ;
+        clvapit:isGeometryFor         <https://w3id.org/arco/resource/ArchaeologicalProperty/0100354491> ;
+        l0:name                       "Geometry (line) 1 of cultural property: 0100354491"@en , "Georeferenziazione (lineare) 1 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/MeasurementCollection/0100354491-3>
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0100354491"@en , "Misure del bene culturale 0100354491"@it ;
+        arco-core:note          "zoccolo di fondazione dei piloni altezza 2,55" ;
+        arco-dd:hasMeasurement  <https://w3id.org/arco/resource/Measurement/0100354491-3-width> , <https://w3id.org/arco/resource/Measurement/0100354491-3-height> , <https://w3id.org/arco/resource/Measurement/0100354491-3-length> ;
+        arco-dd:validity        "ca" ;
+        l0:name                 "Measurements of cultural property 0100354491"@en , "Misure del bene culturale 0100354491"@it .
+
+<https://w3id.org/arco/resource/ProtectiveMeasure/0100354491-protective-measure-1>
+        a                  arco-cd:ProtectiveMeasure ;
+        rdfs:label         "Protective measure 1 of cultural property 0100354491: DM (L. n. 1089/1939)"@en , "Provvedimento di tutela 1 del bene culturale 0100354491: DM (L. n. 1089/1939)"@it ;
+        arco-cd:issueDate  "1995/03/20" ;
+        l0:name            "Protective measure 1 of cultural property 0100354491: DM (L. n. 1089/1939)"@en , "Provvedimento di tutela 1 del bene culturale 0100354491: DM (L. n. 1089/1939)"@it .
+
+<https://w3id.org/arco/resource/Measurement/0100354491-3-length>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100354491: 2,45"@en , "Misura del bene culturale 0100354491: 2,45"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Length ;
+        mu:hasValue                 <https://w3id.org/arco/resource/Value/0100354491-3-length-245> ;
+        l0:name                     "Measurement of cultural property 0100354491: 2,45"@en , "Misura del bene culturale 0100354491: 2,45"@it .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-16>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 16 of cultural property: 0100354491"@en , "Coordinate 16 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.608905831" ;
+        arco-location:long  "8.4097271202" ;
+        l0:name             "Coordinates 16 of cultural property: 0100354491"@en , "Coordinate 16 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Value/0100354491-2-height-160>
+        a                      mu:Value ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/m> ;
+        mu:value               "1,60" .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-5>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 5 of cultural property: 0100354491"@en , "Coordinate 5 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.663571262" ;
+        arco-location:long  "8.4497033082" ;
+        l0:name             "Coordinates 5 of cultural property: 0100354491"@en , "Coordinate 5 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/GeometryTechnique/rilievo-da-foto-aerea-senza-sopralluogo>
+        a           arco-location:GeometryTechnique ;
+        rdfs:label  "rilievo da foto aerea senza sopralluogo" ;
+        l0:name     "rilievo da foto aerea senza sopralluogo" .
+
+<https://w3id.org/arco/resource/City/acqui-terme>
+        a           clvapit:City ;
+        rdfs:label  "Acqui Terme" ;
+        l0:name     "Acqui Terme" .
+
+<https://w3id.org/arco/resource/Value/0100354491-2-width-120>
+        a                      mu:Value ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/m> ;
+        mu:value               "1,20" .
+
+<https://w3id.org/arco/resource/Agent/archivio-vincoli-beni-immobili-sbap-mae>
+        a           l0:Agent ;
+        rdfs:label  "Archivio Vincoli Beni Immobili SBAP-MAE" ;
+        l0:name     "Archivio Vincoli Beni Immobili SBAP-MAE" .
+
+<https://w3id.org/arco/resource/Role/OfficialInCharge>
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+<https://w3id.org/arco/resource/Source/contesto>
+        a           arco-cd:Source ;
+        rdfs:label  "contesto" ;
+        l0:name     "contesto" .
+
+<https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-2>
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 0100354491"@en , "Documentazione fotografica 2 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1413971059320" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 2 of cultural property: 0100354491"@en , "Documentazione fotografica 2 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-4-photographic-documentation-owner>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 4 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of photographic documentation 4 of cultural property 0100354491: SBAP-MAE"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/sbap-mae> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/Owner> ;
+        l0:name             "Ente proprietario della documentazione fotografica 4 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of photographic documentation 4 of cultural property 0100354491: SBAP-MAE"@en .
+
+<https://w3id.org/arco/resource/LocationType/localizzazione-fisica>
+        a           arco-location:LocationType ;
+        rdfs:label  "localizzazione fisica" ;
+        l0:name     "localizzazione fisica" .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-5>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Sources and documents 5 of cultural property: 0100354491"@en , "Fonti e documenti 5 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1418136914350" ;
+        arco-cd:documentationTitle    "Strutture dell’acquedotto di età romana. Comuni di Acqui Terme – Cartosio – Melazzo - Resti del serbatoio, pilastri di sostegno e condotto ipogeo dell’acquedotto (AL)" ;
+        arco-cd:hasArchive            <https://w3id.org/arco/resource/Agent/archivio-beni-immobili-sbap-mae> ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/scheda-del-piano-paesaggistico-regionale> ;
+        tiapit:time                   "2014" ;
+        l0:name                       "Fonti e documenti 5 del bene culturale: 0100354491"@en , "Sources and documents 5 of cultural property: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-10>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 10 of cultural property: 0100354491"@en , "Coordinate 10 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.644731426" ;
+        arco-location:long  "8.422803434" ;
+        l0:name             "Coordinates 10 of cultural property: 0100354491"@en , "Coordinate 10 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-23>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 23 of cultural property: 0100354491"@en , "Coordinate 23 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.57602396" ;
+        arco-location:long  "8.4190617524" ;
+        l0:name             "Coordinates 23 of cultural property: 0100354491"@en , "Coordinate 23 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Agent/soprintendenza-per-i-beni-archeologici-del-piemonte-e-mae>
+        a                    l0:Agent ;
+        rdfs:label           "Soprintendenza per i Beni Archeologici del Piemonte e MAE" ;
+        arco-core:isAgentOf  <https://w3id.org/arco/resource/AgentRole/0100354491-archaeological-excavation-1-activity-responsible> ;
+        l0:name              "Soprintendenza per i Beni Archeologici del Piemonte e MAE" .
+
+<https://w3id.org/arco/resource/Role/ActivityResponsible>
+        a                   roapit:Role ;
+        rdfs:label          "Responsabile dell'attività"@it , "Activity Responsible"@en ;
+        arco-core:isRoleOf  <https://w3id.org/arco/resource/AgentRole/0100354491-archaeological-excavation-1-activity-responsible> .
+
+<https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/0100354491-graphic-cartographic-documentation-1>
+        a                             arco-cd:GraphicOrCartographicDocumentation ;
+        rdfs:label                    "Graphic or cartographic documentation 1 of cultural property: 0100354491"@en , "Documentazione grafica o cartografica 1 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "inv. 12615-12620" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/rilievo> ;
+        arco-cd:hasScale              <https://w3id.org/arco/resource/Scale/1%3A20> ;
+        arco-core:hasAgentRole        <https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-1-carto-graphic-documentation-owner> ;
+        arco-core:hasCategory         arco-cd:ExistingDocumentation ;
+        arco-core:note                "Rilievi planimetrici dei tratti di condotto sotterraneo" ;
+        l0:name                       "Documentazione grafica o cartografica 1 del bene culturale: 0100354491"@en , "Graphic or cartographic documentation 1 of cultural property: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-4>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 4 of cultural property: 0100354491"@en , "Bibliografia 4 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1110" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        l0:name                "Bibliography 4 of cultural property: 0100354491"@en , "Bibliografia 4 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/MeasurementCollection/0100354491-2>
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0100354491"@en , "Misure del bene culturale 0100354491"@it ;
+        arco-core:note          "Specus del condotto: 1,20 di altezza e 0,42 di larghezza" ;
+        arco-dd:hasMeasurement  <https://w3id.org/arco/resource/Measurement/0100354491-2-width> , <https://w3id.org/arco/resource/Measurement/0100354491-2-height> ;
+        l0:name                 "Measurements of cultural property 0100354491"@en , "Misure del bene culturale 0100354491"@it .
+
+<https://w3id.org/arco/resource/Value/0100354491-3-length-245>
+        a                      mu:Value ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/m> ;
+        mu:value               "2,45" .
+
+<https://w3id.org/arco/resource/Agent/quiri-elena>
+        a           l0:Agent ;
+        rdfs:label  "Quiri, Elena" .
+
+<https://w3id.org/arco/resource/DocumentationType/copia-del-provvedimento-di-tutela>
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "copia del provvedimento di tutela" ;
+        l0:name     "copia del provvedimento di tutela" .
+
+<https://w3id.org/arco/resource/ArchaeologicalExcavation/0100354491-survey-1>
+        a                               arco-cd:ArchaeologicalExcavation ;
+        rdfs:label                      "Scavo archeologico 1 del bene 0100354491: Acquedotto di Aquae Statiellae"@it , "Archaeological excavation 1 of cultural property 0100354491: Acquedotto di Aquae Statiellae"@en ;
+        arco-cd:hasActivityResponsible  <https://w3id.org/arco/resource/Agent/soprintendenza-per-i-beni-archeologici-del-piemonte-e-mae> ;
+        arco-core:hasAgentRole          "https://w3id.org/arco/resource/AgentRole/0100354491-archaeological-excavation-1-activity-responsible" ;
+        tiapit:time                     "1990-1991" ;
+        l0:name                         "Scavo archeologico 1 del bene 0100354491: Acquedotto di Aquae Statiellae"@it , "Archaeological excavation 1 of cultural property 0100354491: Acquedotto di Aquae Statiellae"@en .
+
+<https://w3id.org/arco/resource/Role/UpdateResponsibleCompilation>
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+<https://w3id.org/arco/resource/Value/0100354491-3-width-440>
+        a                      mu:Value ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/m> ;
+        mu:value               "4,40" .
+
+<https://w3id.org/arco/resource/DesignationInTime/acquedotto-romano-resti-di-aquae-statiellae>
+        a           arco-dd:DesignationInTime ;
+        rdfs:label  "Acquedotto romano (resti) di Aquae Statiellae" ;
+        l0:name     "Acquedotto romano (resti) di Aquae Statiellae" .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-15>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 15 of cultural property: 0100354491"@en , "Coordinate 15 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.613120252" ;
+        arco-location:long  "8.4055423293" ;
+        l0:name             "Coordinates 15 of cultural property: 0100354491"@en , "Coordinate 15 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-heritage-protection-agency>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0100354491: S154"@it , "Heritage protection agency for cultural property 0100354491: S154"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/s154> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-4>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 4 of cultural property: 0100354491"@en , "Coordinate 4 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.664558315" ;
+        arco-location:long  "8.4518490754" ;
+        l0:name             "Coordinates 4 of cultural property: 0100354491"@en , "Coordinate 4 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/BaseMap/0100354491-geometry-line-1-base-map>
+        a                      arco-location:BaseMap ;
+        rdfs:label             "Base cartografica del bene culturale: 0100354491"@it , "Base map of cultural property: 0100354491"@en ;
+        arco-core:description  "ICCD1004366_OI.ORTOI" ;
+        arco-core:note         "(2322699) -ORTOFOTO 2006- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map) -OI.ORTOIMMAGINICOLORE.2006" ;
+        tiapit:time            "12-11-2014" ;
+        l0:name                "Base cartografica del bene culturale: 0100354491"@it , "Base map of cultural property: 0100354491"@en .
+
+<https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-1>
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 0100354491"@en , "Documentazione fotografica 1 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1418249827024" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "posizionamento delle strutture dell'acquedotto" ;
+        l0:name                       "Photographic documentation 1 of cultural property: 0100354491"@en , "Documentazione fotografica 1 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/GeometryMethod/sviluppo-approssimato>
+        a           arco-location:GeometryMethod ;
+        rdfs:label  "sviluppo approssimato" ;
+        l0:name     "sviluppo approssimato" .
+
+<https://w3id.org/arco/resource/Scale/1%3A20>
+        a           arco-cd:Scale ;
+        rdfs:label  "1:20" ;
+        l0:name     "1:20" .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-4>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Sources and documents 4 of cultural property: 0100354491"@en , "Fonti e documenti 4 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1418136599799" ;
+        arco-cd:hasArchive            <https://w3id.org/arco/resource/Agent/archivio-beni-immobili-sbap-mae> ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/scheda-del-piano-paesaggistico-regionale> ;
+        tiapit:time                   "2014" ;
+        l0:name                       "Sources and documents 4 of cultural property: 0100354491"@en , "Fonti e documenti 4 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili>
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-9>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 9 of cultural property: 0100354491"@en , "Bibliografia 9 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1237" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        arco-core:note         "pp. 129-130" ;
+        l0:name                "Bibliography 9 of cultural property: 0100354491"@en , "Bibliografia 9 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-22>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 22 of cultural property: 0100354491"@en , "Coordinate 22 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.578154179" ;
+        arco-location:long  "8.4157102982" ;
+        l0:name             "Coordinates 22 of cultural property: 0100354491"@en , "Coordinate 22 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/TimeInterval/ca-inizi-i-sec-ii-sec-dc>
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca inizi I sec. - II sec. d.C." ;
+        arco-core:endTime    "II sec. d.C." ;
+        arco-core:startTime  "ca inizi I sec." ;
+        l0:name              "ca inizi I sec. - II sec. d.C." .
+
+<https://w3id.org/arco/resource/TimeInterval/2014>
+        a            tiapit:TimeInterval ;
+        rdfs:label   "2014" ;
+        tiapit:time  "2014" .
+
+<https://w3id.org/arco/resource/ArchaeologicalProperty/0100354491>
+        a                               arco-core:ArchaeologicalProperty , arco-core:ImmovableCulturalProperty ;
+        rdfs:comment                    "acquedotto, infrastruttura idrica, Acquedotto romano (resti) di Aquae Statiellae" ;
+        rdfs:label                      "Acquedotto romano (resti) di Aquae Statiellae (acquedotto, infrastruttura idrica)" ;
+        foaf:image                      <http://www.catalogo.beniculturali.it/images/fullsize/ICCD1025649/ICCD11543699_Cattura.JPG> ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordMA/0100354491> ;
+        arco-cd:hasBibliography         <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-1> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-4> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-8> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-6> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-7> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-9> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-2> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-3> , <https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-5> ;
+        arco-cd:hasDating               <https://w3id.org/arco/resource/Dating/0100354491-1> ;
+        arco-cd:hasDocumentation        <https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-5> , <https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-6> , <https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-2> , <https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/0100354491-graphic-cartographic-documentation-1> , <https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-3> , <https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/0100354491-graphic-cartographic-documentation-3> , <https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-5> , <https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-1> , <https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-2> , <https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-7> , <https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-4> , <https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-3> , <https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/0100354491-graphic-cartographic-documentation-2> , <https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-4> , <https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-1> ;
+        arco-cd:hasLegalSituation       <https://w3id.org/arco/resource/LegalSituation/0100354491-legal-situation-proprieta-mista-pubblica-privata> ;
+        arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/0100354491-protective-measure-1> , <https://w3id.org/arco/resource/ProtectiveMeasure/0100354491-protective-measure-3> , <https://w3id.org/arco/resource/ProtectiveMeasure/0100354491-protective-measure-2> ;
+        arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/0100354491-survey-1> ;
+        arco-core:catalogueNumber       "00354491" ;
+        arco-core:description           "L’acquedotto romano di Aquae Statiellae rappresenta il monumento di questo genere meglio conservato in Piemonte ed è una delle più notevoli opere di ingegneria idraulica romana dell’intera Italia settentrionale. Risale alla prima età imperiale (inizio I sec. d.C.). Il suo tracciato è stato ricostruito per circa km. 12 e si sviluppa attraverso il territorio di tre diversi comuni della Provincia di Alessandria: Cartosio, Melazzo e Acqui Terme, con un salto di quota di circa m. 50, ma con pendenza costante. Il bacino di captazione è stato localizzato presso Cartosio (località Lagoscuro), in corrispondenza della prima strettoia di risalita del torrente Erro, dove il corso del torrente rallenta e viene a formarsi un piccolo bacino simile ad un laghetto (cat. F 13;I.G.M.F. Bistagno 81 NE – 32 TMQ53673770). L’acquedotto, prevalentemente in condotto sotterraneo visibile solo nei punti di imbocco, si rintraccia nel greto del torrente Erro, in regione Colombara, alla confluenza del rio San Martino (Cat. F 7 di Cartosio). La struttura, prosegue lungo la sponda orografica destra dell’Erro nel territorio comunale di Melazzo, dove è stato identificato in località Giardini (Cat. 12; I.G.M.F. Bistagno 81 I NE – 32TMQ54354372) e sulla sponda sinistra del rio Caliogna; raggiunge, a mezza costa in una valletta percorsa da un rio tributario del torrente Bormida, il territorio di Acqui Terme in regione Marchiolli, località la Maddalena (cat. F. 33, part. 85; I.G.M.F. Ponzone 82 IV, NO – 32TMQ5666834594, terreno di proprietà privata), fino al greto del torrente Bormida dove sono presenti – e ancora visibili - quindici piloni pertinenti alla porzione di elevato su ponte-canale. Nel punto terminale del condotto sotterraneo, sulla sponda del torrente Erro, un saggio di scavo ha permesso di individuare un secondo condotto che si innesta ortogonalmente al principale, che molto probabilmente riforniva un insediamento rurale individuato nel comune di Melazzo (F. 11 di Melazzo, mapp. 117), già segnalato come necropoli di età romana imperiale alla fine dell’Ottocento: nel corso di ricognizioni effettuate nel 1991 sono stati raccolti molti frammenti ceramici di età tardoromana, laterizi e materiali da costruzione romani. Il condotto sotterraneo dell’acquedotto, a sezione rettangolare, è realizzato in opera cementizia; i piedritti, in blocchetti di arenaria e ciottoli legati da malta biancastra, sono larghi m. 0,40, e sostengono una volta a botte realizzata in conci radiali o lastre di arenaria sovrapposte di piatto o disposte a doppio spiovente. Risulta intonacato o rivestito di cocciopesto al proprio interno. Il fondo del condotto è realizzato in sottili lastre di arenaria disposte di piatto. Esternamente il condotto misura m. 1,60 di altezza e m. 1,20 di larghezza; lo specus m. 1,20 di altezza e m. 0,42 di larghezza. La parte terminale dell’acquedotto, nei pressi della città di Acqui, è costituita da un ponte-canale con orientamento NE/SW, funzionale all’attraversamento del Bormida, su piloni collegati da archi su cui correva il condotto, in parte ancora visibili lungo la riva destra del fiume. In origine i piloni dovevano essere almeno una quarantina per garantire l’attraversamento del Bormida e l’ingresso nella città di Aquae Statiellae. Attualmente rimangono 15 piloni – conservati per due tratti rispettivamente di 7 e 8 piloni - in opera concreta, a base quadrangolare, che rastremano progressivamente verso l’alto mediante una serie di riseghe regolari; essi risultano alti m. 15 ca, con uno zoccolo di fondazione alto m. 2,55. L’interasse tra i piloni è di m. 8,00. I piloni reggono arcate a sesto ribassato (se ne conservano quattro) di m. 7 ca di diametro. Un ulteriore pilone è stato messo in luce in fondazione nel corso di una campagna di scavi nel 1991(regione Marchiolli ad Acqui Terme; Cat. F 34, part. 13; E.G.M.F. Ponzone 82 IV NO 32TMQ57584595): in opera a sacco con abbondante malta e ghiaia, conservato per tre corsi di lastre di arenaria, presenta una forma quadrangolare di m. 2,30 di lato e 0,60 d’altezza. A monte di questo pilone si è messo in luce un tratto, conservato per almeno m. 12, ma che prosegue al di sotto della strada provinciale per Sassello, che va ad inserirsi, mediante condotto sotterraneo, nel pendio a monte e si collega con il tratto sotterraneo già evidenziato in regione Marchiolli località La Maddalena. Il raccordo tra il condotto sotterraneo e l’elevato su piloni doveva essere stato risolto su muratura piena sui piedritti, con un restringimento di ca m. 0,50, lasciando invariate le dimensioni dello specus. In questo ultimo tratto di condotto sotterraneo il fondo del piano di scorrimento è realizzato in ciottoli legati con malta, mentre nel tratto a vista il condotto presenta un fondo in lastre di arenaria, il cui numero dei corsi aumenta progressivamente verso valle. Qui è presente anche un rivestimento in opus signinum posato su uno strato di ghiaia funzionale a regolarizzare la pendenza. In questo tratto la larghezza interna del condotto è maggiore rispetto a quella del condotto sotterraneo (m. 0,58), forse per poter sostenere un maggior apporto di acqua dalla vicina sorgente di Roccasorda." ;
+        arco-core:hasAgentRole          <https://w3id.org/arco/resource/AgentRole/0100354491-cataloguing-agency> , <https://w3id.org/arco/resource/AgentRole/0100354491-heritage-protection-agency> ;
+        arco-core:hasCataloguingAgency  <https://w3id.org/arco/resource/Agent/s154> ;
+        arco-core:hasHeritageProtectionAgency
+                <https://w3id.org/arco/resource/Agent/s154> ;
+        arco-core:regionIdentifier      "01" ;
+        arco-core:uniqueIdentifier      "0100354491" ;
+        arco-dd:hasConservationStatus   <https://w3id.org/arco/resource/ConservationStatus/0100354491-conservation-status-1> ;
+        arco-dd:hasCulturalPropertyType
+                <https://w3id.org/arco/resource/CulturalPropertyType/acquedotto> ;
+        arco-dd:hasDesignationInTime    <https://w3id.org/arco/resource/DesignationInTime/acquedotto-romano-resti-di-aquae-statiellae> ;
+        arco-dd:hasMeasurementCollection
+                <https://w3id.org/arco/resource/MeasurementCollection/0100354491-1> , <https://w3id.org/arco/resource/MeasurementCollection/0100354491-2> , <https://w3id.org/arco/resource/MeasurementCollection/0100354491-3> ;
+        arco-location:hasCulturalPropertyAddress
+                <https://w3id.org/arco/resource/Address/ea65408b78b19b9650952ac9d5611910> ;
+        arco-location:hasTimeIndexedTypedLocation
+                <https://w3id.org/arco/resource/TimeIndexedTypedLocation/0100354491-current> ;
+        clvapit:hasGeometry             <https://w3id.org/arco/resource/Geometry/0100354491-geometry-line-1> .
+
+<https://w3id.org/arco/resource/Address/ea65408b78b19b9650952ac9d5611910>
+        a                               clvapit:Address ;
+        rdfs:label                      "ITALIA, Piemonte, AL, Acqui Terme, Greto del torrente Bormida e Valle del Torrente Erro (destra orografica). In territorio comunale di Acqui Terme, regione Marchiolli, Località La Maddalena, a mezza costa del pendio rivolto ad W di una piccola valletta percorsa da un rio tributario del Bormida." ;
+        arco-location:hasToponymInTime  <https://w3id.org/arco/resource/ToponymInTime/melazzo-cartosio> ;
+        clvapit:hasCity                 <https://w3id.org/arco/resource/City/acqui-terme> ;
+        clvapit:hasCountry              <https://w3id.org/arco/resource/Country/italia> ;
+        clvapit:hasProvince             <https://w3id.org/arco/resource/Province/al> ;
+        clvapit:hasRegion               <https://w3id.org/arco/resource/Region/piemonte> .
+
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency>
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  <https://w3id.org/arco/resource/AgentRole/0100354491-heritage-protection-agency> .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-3>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 3 of cultural property: 0100354491"@en , "Bibliografia 3 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1105" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        l0:name                "Bibliography 3 of cultural property: 0100354491"@en , "Bibliografia 3 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Measurement/0100354491-2-width>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100354491: 1,20"@en , "Misura del bene culturale 0100354491: 1,20"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        mu:hasValue                 <https://w3id.org/arco/resource/Value/0100354491-2-width-120> ;
+        l0:name                     "Measurement of cultural property 0100354491: 1,20"@en , "Misura del bene culturale 0100354491: 1,20"@it .
+
+<https://w3id.org/arco/resource/CulturalPropertyType/acquedotto>
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: acquedotto"@it , "Cultural property type: acquedotto"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                <https://w3id.org/arco/resource/CulturalPropertyDefinition/acquedotto> ;
+        l0:name     "Tipo del bene: acquedotto"@it , "Cultural property type: acquedotto"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-9>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 9 of cultural property: 0100354491"@en , "Coordinate 9 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.65078249" ;
+        arco-location:long  "8.4255151473" ;
+        l0:name             "Coordinates 9 of cultural property: 0100354491"@en , "Coordinate 9 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/MeasurementCollection/0100354491-1>
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0100354491"@en , "Misure del bene culturale 0100354491"@it ;
+        arco-dd:hasMeasurement  <https://w3id.org/arco/resource/Measurement/0100354491-1-length> ;
+        arco-dd:validity        "ca" ;
+        l0:name                 "Measurements of cultural property 0100354491"@en , "Misure del bene culturale 0100354491"@it .
+
+<https://w3id.org/arco/resource/Agent/sbap-mae>
+        a                    l0:Agent ;
+        rdfs:label           "SBAP-MAE" ;
+        arco-core:isAgentOf  <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-3-photographic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-4-photographic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-5-photographic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-1-carto-graphic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-2-carto-graphic-documentation-owner> ;
+        l0:name              "SBAP-MAE" .
+
+<https://w3id.org/arco/resource/Measurement/0100354491-2-height>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100354491: 1,60"@en , "Misura del bene culturale 0100354491: 1,60"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        mu:hasValue                 <https://w3id.org/arco/resource/Value/0100354491-2-height-160> ;
+        l0:name                     "Measurement of cultural property 0100354491: 1,60"@en , "Misura del bene culturale 0100354491: 1,60"@it .
+
+<https://w3id.org/arco/resource/MeasurementUnit/m>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "m" ;
+        l0:name     "m" .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-14>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 14 of cultural property: 0100354491"@en , "Coordinate 14 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.615369284" ;
+        arco-location:long  "8.4086740598" ;
+        l0:name             "Coordinates 14 of cultural property: 0100354491"@en , "Coordinate 14 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Role/Owner>
+        a                   roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-3-photographic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-4-photographic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-5-photographic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-1-carto-graphic-documentation-owner> , <https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-2-carto-graphic-documentation-owner> .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-3>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 3 of cultural property: 0100354491"@en , "Coordinate 3 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.664257908" ;
+        arco-location:long  "8.4637366258" ;
+        l0:name             "Coordinates 3 of cultural property: 0100354491"@en , "Coordinate 3 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/AccessProfile/0100354491-1>
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0100354491: 1"@it , "Access profile to catalogue record of cultural property 0100354491: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumLevel ;
+        arco-catalogue:hasPrivacyReason
+                <https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0100354491: 1"@it , "Access profile to catalogue record of cultural property 0100354491: 1"@en .
+
+<https://w3id.org/arco/resource/Value/0100354491-1-length-1200>
+        a                      mu:Value ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/m> ;
+        mu:value               "1200" .
+
+<https://w3id.org/arco/resource/LegalSituation/0100354491-legal-situation-proprieta-mista-pubblica-privata>
+        a           "https://w3id.org/arco/context-description/LegalSituation" ;
+        rdfs:label  "Condizione giuridica del bene culturale 0100354491: proprietà mista pubblica/privata"@it , "Legal situation of cultural property 0100354491: proprietà mista pubblica/privata"@en ;
+        l0:name     "Condizione giuridica del bene culturale 0100354491: proprietà mista pubblica/privata"@it , "Legal situation of cultural property 0100354491: proprietà mista pubblica/privata"@en .
+
+<https://w3id.org/arco/resource/Agent/archivio-beni-immobili-sbap-mae>
+        a           l0:Agent ;
+        rdfs:label  "Archivio Beni Immobili SBAP-MAE" ;
+        l0:name     "Archivio Beni Immobili SBAP-MAE" .
+
+<https://w3id.org/arco/resource/Scale/1%3A5000>
+        a           arco-cd:Scale ;
+        rdfs:label  "1:5000" ;
+        l0:name     "1:5000" .
+
+<https://w3id.org/arco/resource/DocumentationType/disegno>
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "disegno" ;
+        l0:name     "disegno" .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-3>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Sources and documents 3 of cultural property: 0100354491"@en , "Fonti e documenti 3 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1418136365626" ;
+        arco-cd:hasArchive            <https://w3id.org/arco/resource/Agent/archivio-beni-immobili-sbap-mae> ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/copia-del-provvedimento-di-tutela> ;
+        tiapit:time                   "1995" ;
+        l0:name                       "Sources and documents 3 of cultural property: 0100354491"@en , "Fonti e documenti 3 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-3-photographic-documentation-owner>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 3 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of photographic documentation 3 of cultural property 0100354491: SBAP-MAE"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/sbap-mae> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/Owner> ;
+        l0:name             "Ente proprietario della documentazione fotografica 3 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of photographic documentation 3 of cultural property 0100354491: SBAP-MAE"@en .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-8>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 8 of cultural property: 0100354491"@en , "Bibliografia 8 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1219" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        arco-core:note         "pp. 30-54" ;
+        l0:name                "Bibliography 8 of cultural property: 0100354491"@en , "Bibliografia 8 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-21>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 21 of cultural property: 0100354491"@en , "Coordinate 21 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.582001011" ;
+        arco-location:long  "8.4161353943" ;
+        l0:name             "Coordinates 21 of cultural property: 0100354491"@en , "Coordinate 21 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation>
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-carto-graphic-documentation-2-carto-graphic-documentation-owner>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione grafica o cartografica 2 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of graphic or cartographic documentation 2 of cultural property 0100354491: SBAP-MAE"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/sbap-mae> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/Owner> ;
+        l0:name             "Ente proprietario della documentazione grafica o cartografica 2 del bene culturale 0100354491: SBAP-MAE"@it , "Owner agency of graphic or cartographic documentation 2 of cultural property 0100354491: SBAP-MAE"@en .
+
+<https://w3id.org/arco/resource/DocumentationType/scheda-del-piano-paesaggistico-regionale>
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "scheda del piano paesaggistico regionale" ;
+        l0:name     "scheda del piano paesaggistico regionale" .
+
+<https://w3id.org/arco/resource/Agent/filippi-fedora>
+        a           l0:Agent ;
+        rdfs:label  "Filippi, Fedora" .
+
+<https://w3id.org/arco/resource/Country/italia>
+        a           clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-19>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 19 of cultural property: 0100354491"@en , "Coordinate 19 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.590037999" ;
+        arco-location:long  "8.4164706023" ;
+        l0:name             "Coordinates 19 of cultural property: 0100354491"@en , "Coordinate 19 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Bibliography/0100354491-bibliography-2>
+        a                      arco-cd:Bibliography ;
+        rdfs:label             "Bibliography 2 of cultural property: 0100354491"@en , "Bibliografia 2 del bene culturale: 0100354491"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "1104" ;
+        arco-core:hasCategory  arco-cd:SpecificBibliography ;
+        arco-core:note         "pp. 15-28" ;
+        l0:name                "Bibliography 2 of cultural property: 0100354491"@en , "Bibliografia 2 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-8>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 8 of cultural property: 0100354491"@en , "Coordinate 8 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.658421421" ;
+        arco-location:long  "8.4348867856" ;
+        l0:name             "Coordinates 8 of cultural property: 0100354491"@en , "Coordinate 8 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/AgentRole/0100354491-cataloguing-agency>
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0100354491: S154"@it , "Cataloguing agency for cultural property 0100354491: S154"@en ;
+        arco-core:hasAgent  <https://w3id.org/arco/resource/Agent/s154> ;
+        arco-core:hasRole   <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+
+<https://w3id.org/arco/resource/PhotographicDocumentation/0100354491-photographic-documentation-5>
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 5 of cultural property: 0100354491"@en , "Documentazione fotografica 5 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1415789091076" ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/fotografia-b-n> ;
+        arco-core:hasAgentRole        <https://w3id.org/arco/resource/AgentRole/0100354491-photographic-documentation-5-photographic-documentation-owner> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 5 of cultural property: 0100354491"@en , "Documentazione fotografica 5 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Agent/s154>
+        a                    l0:Agent ;
+        rdfs:label           "Soprintendenza per i Beni Archeologici del Piemonte del Museo delle Antichita' Egizie" ;
+        arco-core:isAgentOf  <https://w3id.org/arco/resource/AgentRole/0100354491-cataloguing-agency> , <https://w3id.org/arco/resource/AgentRole/0100354491-heritage-protection-agency> ;
+        arco-core:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/ArchaeologicalProperty/0100354491> ;
+        arco-core:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/ArchaeologicalProperty/0100354491> ;
+        l0:name              "Soprintendenza per i Beni Archeologici del Piemonte del Museo delle Antichita' Egizie" .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-13>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 13 of cultural property: 0100354491"@en , "Coordinate 13 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.615404153" ;
+        arco-location:long  "8.4137358911" ;
+        l0:name             "Coordinates 13 of cultural property: 0100354491"@en , "Coordinate 13 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Coordinates/0100354491-geometry-line-1-coordinates-2>
+        a                   arco-location:Coordinates ;
+        rdfs:label          "Coordinates 2 of cultural property: 0100354491"@en , "Coordinate 2 del bene culturale: 0100354491"@it ;
+        arco-location:lat   "44.66580286" ;
+        arco-location:long  "8.4661828004" ;
+        l0:name             "Coordinates 2 of cultural property: 0100354491"@en , "Coordinate 2 del bene culturale: 0100354491"@en .
+
+<https://w3id.org/arco/resource/Measurement/0100354491-3-height>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100354491: 14,20"@en , "Misura del bene culturale 0100354491: 14,20"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        mu:hasValue                 <https://w3id.org/arco/resource/Value/0100354491-3-height-1420> ;
+        l0:name                     "Measurement of cultural property 0100354491: 14,20"@en , "Misura del bene culturale 0100354491: 14,20"@it .
+
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0100354491-compilation>
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1992 Filippi, Fedora" ;
+        arco-catalogue:editedAtTime  <https://w3id.org/arco/resource/TimeInterval/1992> ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                <https://w3id.org/arco/resource/TimeIndexedRole/0100354491-compilation-filippi-fedora> , <https://w3id.org/arco/resource/TimeIndexedRole/0100354491-funzionario-responsabile-filippi-fedora> ;
+        arco-catalogue:hasOfficialInCharge
+                <https://w3id.org/arco/resource/Agent/filippi-fedora> ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                <https://w3id.org/arco/resource/Agent/filippi-fedora> ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordMA/0100354491> .
+
+<https://w3id.org/arco/resource/Measurement/0100354491-1-length>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100354491: 1200"@en , "Misura del bene culturale 0100354491: 1200"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Length ;
+        mu:hasValue                 <https://w3id.org/arco/resource/Value/0100354491-1-length-1200> ;
+        l0:name                     "Measurement of cultural property 0100354491: 1200"@en , "Misura del bene culturale 0100354491: 1200"@it .
+
+<https://w3id.org/arco/resource/TimeIndexedRole/0100354491-compilation-filippi-fedora>
+        a                      <https://w3id.org/italia/RO/TimeIndexedRole> ;
+        rdfs:label             "Compilation by Filippi, Fedora"@en , "Compilazione da Filippi, Fedora"@it ;
+        roapit:isRoleInTimeOf  <https://w3id.org/arco/resource/Agent/filippi-fedora> ;
+        roapit:withRole        <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0100354491-source-document-2>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Sources and documents 2 of cultural property: 0100354491"@en , "Fonti e documenti 2 del bene culturale: 0100354491"@it ;
+        arco-cd:documentationIdentifier
+                "New_1415791652242" ;
+        arco-cd:hasArchive            <https://w3id.org/arco/resource/Agent/archivio-vincoli-beni-immobili-sbap-mae> ;
+        arco-cd:hasDocumentationType  <https://w3id.org/arco/resource/DocumentationType/copia-del-provvedimento-di-tutela> ;
+        tiapit:time                   "1908" ;
+        l0:name                       "Sources and documents 2 of cultural property: 0100354491"@en , "Fonti e documenti 2 del bene culturale: 0100354491"@en .

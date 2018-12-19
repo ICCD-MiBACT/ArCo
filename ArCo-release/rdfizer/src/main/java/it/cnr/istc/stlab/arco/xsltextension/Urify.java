@@ -2,13 +2,11 @@ package it.cnr.istc.stlab.arco.xsltextension;
 
 import it.cnr.istc.stlab.arco.Urifier;
 import net.sf.saxon.s9api.ExtensionFunction;
-import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
 import net.sf.saxon.s9api.QName;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.SequenceType;
-import net.sf.saxon.s9api.XdmArray;
 import net.sf.saxon.s9api.XdmAtomicValue;
 import net.sf.saxon.s9api.XdmValue;
 

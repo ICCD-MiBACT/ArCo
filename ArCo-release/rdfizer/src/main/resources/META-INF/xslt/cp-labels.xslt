@@ -407,10 +407,13 @@
 					</xsl:choose>
 				</xsl:variable>
 
-				<rdfs:label>
-					<xsl:value-of
-						select="concat(normalize-space(schede/*/SG/SGT/SGTI), ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
-				</rdfs:label>
+				<xsl:for-each select="schede/*/SG/SGT/SGTI">
+					<rdfs:label>
+						<xsl:value-of
+							select="concat(normalize-space(.), ' (', normalize-space(/schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
+					</rdfs:label>
+				</xsl:for-each>
+				
 			</xsl:if>
 
 
