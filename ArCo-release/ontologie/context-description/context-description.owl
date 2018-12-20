@@ -23,10 +23,10 @@
         <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Ciascun contesto che lo interessa/lo ha interessato viene descritto nelle componenti &quot;spazio&quot;, &quot;tempo&quot;, &quot;evento&quot;, &quot;entità coinvolte&quot; (enti, persone, altri beni). Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc.</rdfs:comment>
-        <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label>Context Description Ontology (ArCo network)</rdfs:label>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>ArCo - Primer Guide v0.4</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+
+<!-- Plugin CSS -->
+<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"
+	type="text/css">
+
+<!-- Custom styles for this template -->
+<link href="css/freelancer.css" rel="stylesheet">
+</head>
+<body>
+	<nav
+		class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+		id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">ArCo - Primer Guide v0.4</a>
+			<button
+				class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
+				type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+						href="./index.html">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="primer">
+		<div class="container">
+			<h1>ArCo - Primer Guide v0.4</h1>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="intro">Introduzione</h2>
+			<p>Questo documento descrive brevemente le ontologie incluse
+				nella versione 0.4 <i>alpha</i> di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche a essi associate, gestite con il sistema SIGEC dall'Istituto Centrale per il Catalogo e la Documentazione.</p>
+			<p>
+				La versione v0.4 di ArCo &egrave; la quarta a essere pubblicata. In questa versione non è stato introdotto nessun nuovo modulo. Si
+				rimanda al primer della <a href="./primer-guide.html">versione v0.1</a> per ulteriori dettagli
+				sull'interpretazione delle versioni. In questa versione sono stati anche aggiunti collegamenti alle fotografie dei beni culturali.
+			</p>
+			<p>
+				Le ontologie ArCo sono pubblicate all'interno di un <i>docker</i>
+				che comprende:
+			</p>
+			<ul>
+				<li>Questa guida;</li>
+				<li>I moduli ontologici sviluppati;</li>
+				<li>Esempi di <i>competency questions</i> e loro traduzione
+					sotto forma di SPARQL query;
+				</li>
+				<li>Un campione dei dati del SIGEC trasformati in RDF secondo
+					le modellazioni di ArCo;</li>
+				<li>Un motore SPARQL basato su Virtuoso per permettere
+					l'interrogazione dei dati e delle ontologie.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2>Indice dei contenuti</h2>
+			<ol>
+				<li><a href="#rete">La rete di ontologie ArCo v0.4</a></li>
+				<li><a href="#moduli">I moduli di ArCo v0.4</a></li>
+			</ol>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="rete">La rete di ontologie ArCo v0.4</h2>
+			<p>
+				Questa quarta versione della rete di ontologie ArCo rappresenta la quasi totalità della <a target="_blank"href"http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici">Normativa
+					Trasversale</a> e porzioni delle normative sui Beni Storici e Artistici, sui Beni Archeologici, sui Beni Fotografici, sui Beni Numismatici, sui Beni Musicali, sui Beni Architettonici e Paesaggistici, sui Beni Demoetnoantropologici, sui Beni Scientifici e Tecnologici. Di seguito si elencano i nuovi nuclei
+				informativi modellati in questa versione:
+			</p>
+			<ul>
+				<li>Datazione alternativa;</li>
+				<li>Denominazioni alternative;</li>
+				<li>Profilo d'accesso ai dati della scheda catalografica;</li>
+				<li>Elementi apposti sul bene (iscrizioni, stemmi, emblemi, marchi, loghi, lapidi, timbri);</li>
+				<li>Ubicazione in archivio (fondo, serie, sottoserie);</li>
+				<li>Serie e sottoserie editoriale fotografica;</li>
+				<li>Tiratura di una fotografia o di una stampa;</li>
+				<li>Emissione di moneta;</li>
+				<li>Diagnosi di paleopatologie di beni antropologici;</li>
+				<li>Campioni prelevati da beni archeologici;</li>
+				<li>Discipline di riferimento e parole chiave;</li>
+				<li>Localizzazione catastale;</li>
+				<li>Localizzazione storica.</li>
+			</ul>
+			<p>Nella tabella seguente sono elencati gli IRI dei moduli
+				e delle ontologie riusate, ognuno associato a un prefisso.</p>
+			<table>
+				<tr>
+					<th>Prefisso</th>
+					<th>IRI</th>
+				</tr>
+				<tr>
+					<td>arco-core:</td>
+					<td>https://w3id.org/arco/core/</td>
+				</tr>
+				<tr>
+					<td>arco-ce:</td>
+					<td>https://w3id.org/arco/cultural-event/</td>
+				</tr>
+				<tr>
+					<td>arco-catalogue:</td>
+					<td>https://w3id.org/arco/catalogue/</td>
+				</tr>
+				<tr>
+					<td>arco-dd:</td>
+					<td>https://w3id.org/arco/denotative-description/</td>
+				</tr>
+				<tr>
+					<td>arco-location:</td>
+					<td>https://w3id.org/arco/location/</td>
+				</tr>
+				<tr>
+					<td>arco-cd:</td>
+					<td>https://w3id.org/arco/context-description/</td>
+				</tr>
+				<tr>
+					<td>cis:</td>
+					<td>http://dati.beniculturali.it/cis/</td>
+				</tr>
+				<tr>
+					<td>l0:</td>
+					<td>https://w3id.org/italia/onto/l0/</td>
+				</tr>
+				<tr>
+					<td>roapit:</td>
+					<td>https://w3id.org/italia/onto/RO/</td>
+				</tr>
+				<tr>
+					<td>tiapit:</td>
+					<td>https://w3id.org/italia/onto/TI/</td>
+				</tr>
+				<tr>
+					<td>clvapit:</td>
+					<td>https://w3id.org/italia/onto/CLV/</td>
+				</tr>
+				<tr>
+					<td>smapit:</td>
+					<td>https://w3id.org/italia/onto/SM/</td>
+				</tr>
+				<tr>
+					<td>language:</td>
+					<td>https://w3id.org/italia/onto/Language/</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="moduli">I moduli di ArCo v0.4</h2>
+			<p>In questa sezione si illustrano sinteticamente i nuovi nuclei
+				concettuali principali introdotti nella terza versione della rete
+				ArCo. Per una loro descrizione dettagliata si rimanda alla sezione
+				"Ontologie" della pagina principale.</p>
+			<p>Sia le scelte di modellazione sia il vocabolario sono da
+				ritenersi provvisori.</p>
+
+
+			<h3>Modulo Core (arco-core:)</h3>
+			<p>Questo modulo modella le informazioni considerate "core" del dominio dei beni culturali. Il diagramma illustra la modellazione delle discipline di riferimento di un bene culturale e delle parole chiave che possono essere usate per la ricerca del bene.</p>
+			<div class="text-center mt-4">
+				<img src="./img4/discipline-keyword.png" /> 
+			</div>
+
+			<h3>Modulo Denotative Description (arco-dd:)</h3>
+			<p>Questo modulo (denotazione è inteso come l'atto di indicare una cosa attraverso segni esteriori) modella le informazioni che riguardano il bene culturale in sé, con i suoi attributi. I diagrammi seguenti illustrano la rappresentazione dei campioni estratti da un bene archeologico; degli elementi apposti su un bene culturale (iscrizioni, stemmi, emblemi, marchi, loghi, lapidi, timbri); delle denominazioni alternative di un bene.
+			<div class="text-center mt-4">
+				<img src="./img4/sample-collected.png" /> <img
+					src="./img4/affixed-elements.png" /> <img
+					src="./img4/designation-in-time.png" />
+			</div>
+
+			<h3>Modulo Context Description (arco-cd:)</h3>
+			<p>Questo modulo modella le informazioni che riguardano il contesto - inteso in senso ampio - in cui il bene culturale viene a trovarsi nel corso della sua storia: ciascun contesto che lo interessa o lo ha interessato viene descritto nelle componenti "spazio", "tempo", "evento", "entità coinvolte" (enti, persone, altri beni). Nei diagrammi si illustrano le rappresentazioni di: appartenenza di un bene fotografico a una serie editoriale e numero nella tiratura di una fotografia o di una stampa; appartenenza di un bene culturale a una unità archivistica complessa (fondo, serie, sottoserie); emissione di un bene numismatico; diagnosi di una patologia effettuata su un bene antropologico; datazioni alternative.</p>
+			<div class="text-center mt-4">
+				<img src="./img4/photographicseries-membership.png" /> 
+				<img src="./img4/archivalrecordset-membership.png" />
+				<img src="./img4/coin-issuance.png" />
+				<img src="./img4/paleopathology-survey.png" />
+				<img src="./img4/alternative-dating.png" />
+			</div>
+
+			<h3>Modulo Location (arco-location:)</h3>
+			<p>Questo modulo modella le informazioni relative alla localizzazione del bene culturale. Nel diagramma si illustra la rappresentazione della localizzazione catastale di un bene culturale.</p>
+			<div class="text-center mt-4">
+				<img src="./img4/cadastrial-location.png" />
+			</div>
+
+			<h3>Modulo Catalogue (arco-catalogue:)</h3>
+			<p>Questo modulo modella le informazioni relative al Catalogo dei Beni Culturali, e quindi alle schede di catalogo. Nel diagramma si illustra la rappresentazione del profilo di accesso (livello di riservatezza minimo, medio, massimo) ai dati di una scheda catalografica.</p>
+			<div class="text-center mt-4">
+				<img src="./img4/access-profile.png" />
+			</div>
+		</div>
+	</section>
+	
+	<div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>
+          <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">
+            <span class="cc-license-icons">
+              <span id="cc-logo" class="icon"><img alt="cc logo" class="cc" src="./img/cc_icon_white_x2.png"></span>
+              <span id="cc-attribution" class="icon"><img class="cc" src="./img/attribution_icon_white_x2.png"></span>
+            </span>
+          </a>
+        </small>
+      </div>
+    </div>
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.js"></script>
+</body>
+</html>

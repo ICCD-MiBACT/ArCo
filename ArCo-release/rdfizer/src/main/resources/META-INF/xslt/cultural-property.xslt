@@ -1688,6 +1688,66 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<!-- intervention (CO/RST) -->
+				<xsl:for-each select="schede/*/CO/RST">
+					<xsl:choose>
+						<xsl:when test="./* and (not(./RSTP) or ./RSTP='intero bene' or ./RSTP='integrale' or ./RSTP='tutta' or ./RSTP='totale') or (starts-with(lower-case(normalize-space(./RSTP)), 'nr')) or (starts-with(lower-case(normalize-space(./RSTP)), 'n.r')) or (starts-with(lower-case(normalize-space(./RSTP)), 'intero')) or (starts-with(lower-case(normalize-space(./RSTP)), 'intera')) or (starts-with(lower-case(normalize-space(./RSTP)), 'esemplar'))">
+							<arco-cd:hasIntervention>
+								<xsl:choose>
+									<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', position())" />
+										</xsl:attribute>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'Intervention/', $itemURI, '-intervention-', position())" />
+										</xsl:attribute>
+									</xsl:otherwise>
+								</xsl:choose>
+							</arco-cd:hasIntervention>
+						</xsl:when>
+						<xsl:otherwise>
+						<xsl:for-each select="./RSTP">
+								<arco-core:hasPart>
+									<xsl:attribute name="rdf:resource">
+				                				<xsl:value-of
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+				                	</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+				<!-- intervention (RS/RST) -->
+				<xsl:for-each select="schede/*/RS/RST">
+					<xsl:choose>
+						<xsl:when test="./* and $sheetType='A' and (not(./RSTR) or ./RSTR='intero bene' or ./RSTR='integrale' or ./RSTR='tutta' or ./RSTR='totale') or (starts-with(lower-case(normalize-space(./RSTR)), 'nr')) or (starts-with(lower-case(normalize-space(./RSTR)), 'n.r')) or (starts-with(lower-case(normalize-space(./RSTR)), 'intero')) or (starts-with(lower-case(normalize-space(./RSTR)), 'intera')) or (starts-with(lower-case(normalize-space(./RSTR)), 'esemplar'))">
+							<arco-cd:hasIntervention>
+								<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', position())" />
+										</xsl:attribute>
+							</arco-cd:hasIntervention>
+						</xsl:when>
+						<xsl:when test="$sheetType='A'">
+						<xsl:for-each select="./RSTR">
+								<arco-core:hasPart>
+									<xsl:attribute name="rdf:resource">
+				                				<xsl:value-of
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+				                	</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:for-each>
+						</xsl:when>
+						<xsl:when test="./*">
+							<arco-cd:hasIntervention>
+								<xsl:attribute name="rdf:resource">
+											<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', position())" />
+										</xsl:attribute>
+							</arco-cd:hasIntervention>
+						</xsl:when>
+					</xsl:choose>
+				</xsl:for-each>
 				<!-- member of collection -->
 				<xsl:for-each select="schede/*/UB/COL">
 					<xsl:if test="./*">

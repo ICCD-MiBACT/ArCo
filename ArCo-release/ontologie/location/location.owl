@@ -23,9 +23,9 @@
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.</rdfs:comment>
@@ -309,38 +309,15 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasLocationType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/location/TimeIndexedTypedLocation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/location/LocationType"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione tipizzata nel tempo al tipo di localizzazione, cioè al ruolo che quel luogo riveste nei confronti di un&apos;entità nel contesto di una situazione indicizzata nel tempo.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
-        <rdfs:label xml:lang="it">ha tipo di localizzazione</rdfs:label>
-        <rdfs:label xml:lang="en">has location type</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/location/hasReferredLocationType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasReferredLocationType">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/location/CadastrialIdentity"/>
-                    <rdf:Description rdf:about="https://w3id.org/italia/onto/CLV/Geometry"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/arco/location/LocationType"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione o un&apos;identità catastale al tipo di localizzazione (fisica attuale, precedente, di rinvenimento, etc.) cui si riferisce.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, per esempio un situazione in cui un luogo riveste un certo ruolo nei confronti di un bene culturale in un intervallo di tempo, o una georeferenziazione, o un&apos;identità catastale al ruolo della localizzazione (fisica attuale, precedente, di rinvenimento, etc.) cui si riferisce.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">ha tipo di localizzazione cui si riferisce</rdfs:label>
         <rdfs:label xml:lang="en">has referred location type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL</arco-core:iccdNormTag>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation) - Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -831,7 +808,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasReferredLocationType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasLocationType"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/location/LocationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1036,7 +1013,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasLocationType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/location/LocationType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/location/LocationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

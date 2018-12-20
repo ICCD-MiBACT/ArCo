@@ -16393,6 +16393,452 @@
 				/> </xsl:attribute> </rdf:type> <rdfs:label> <xsl:value-of select="normalize-space(schede/*/AU/ATB/ATBM)" 
 				/> </rdfs:label> </rdf:Description> </xsl:if -->
 			<!-- member of collection -->
+			<!-- intervention (CO/RST) -->
+			<xsl:for-each select="schede/*/CO/RST">
+					<rdf:Description>
+						<xsl:choose>
+							<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', position())" />
+								</xsl:attribute>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS, 'Intervention/', $itemURI, '-intervention-', position())" />
+								</xsl:attribute>
+							</xsl:otherwise>
+						</xsl:choose>
+						<rdf:type>
+							<xsl:choose>
+							<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/context-description/ConservationIntervention'" />
+								</xsl:attribute>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="'https://w3id.org/arco/context-description/Intervention'" />
+								</xsl:attribute>
+							</xsl:otherwise>
+						</xsl:choose>
+						</rdf:type>
+						<rdfs:label xml:lang="en">
+							<xsl:choose>
+								<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+									<xsl:value-of select="concat('Intervention ', position(), ' on cultural property ', $itemURI, ': conservation intervention')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat('Intervention ', position(), ' on cultural property ', $itemURI)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</rdfs:label>
+						<rdfs:label xml:lang="it">
+							<xsl:choose>
+								<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+									<xsl:value-of select="concat('Intervento ', position(), ' sul bene culturale ', $itemURI, ': intervento conservativo')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat('Intervento ', position(), ' sul bene culturale ', $itemURI)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:choose>
+								<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+									<xsl:value-of select="concat('Intervention ', position(), ' on cultural property ', $itemURI, ': conservation intervention')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat('Intervention ', position(), ' on cultural property ', $itemURI)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</l0:name>
+						<l0:name xml:lang="it">
+							<xsl:choose>
+								<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+									<xsl:value-of select="concat('Intervento ', position(), ' sul bene culturale ', $itemURI, ': intervento conservativo')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat('Intervento ', position(), ' sul bene culturale ', $itemURI)" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</l0:name>
+						<xsl:if test="./RSTO">
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(./RSTO)" />
+							</arco-core:note>
+						</xsl:if>
+						<xsl:if test="./RSTD">
+							<tiapit:atTime>
+							<xsl:attribute name="rdf:resource">
+                               	<xsl:value-of
+							select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTD)))" />
+                           	</xsl:attribute>
+						</tiapit:atTime>
+					</xsl:if>
+					<xsl:if test="./RSTI and (not(starts-with(lower-case(normalize-space(./RSTI)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTI)), 'n.r')))">
+						<arco-cd:hasInterventionType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(./RSTI)))" />
+							</xsl:attribute>
+						</arco-cd:hasInterventionType>
+					</xsl:if>
+					<xsl:if test="./RSTE">
+						<arco-cd:hasActivityResponsible>
+							<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTE)))" />
+	                			</xsl:attribute>
+						</arco-cd:hasActivityResponsible>
+					</xsl:if>
+					<xsl:if test="./RSTR">
+						<arco-cd:hasActivitySponsor>
+							<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTR)))" />
+	                			</xsl:attribute>
+						</arco-cd:hasActivitySponsor>
+					</xsl:if>
+					<xsl:if test="./RSTN">
+						<arco-cd:hasActivityOperator>
+							<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTN)))" />
+	                			</xsl:attribute>
+						</arco-cd:hasActivityOperator>
+					</xsl:if>
+				</rdf:Description>
+					<!-- intervention type as an individual -->
+					<xsl:if test="./RSTI and (not(starts-with(lower-case(normalize-space(./RSTI)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTI)), 'n.r')))">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+	                                <xsl:value-of
+											select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(./RSTI)))" />
+	                            </xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/arco/context-description/InterventionType" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./RSTI)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./RSTI)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- Time Interval for intervention as an individual -->
+					<xsl:if test="./RSTD">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTD)))" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./RSTD)" />
+							</tiapit:time>
+						</rdf:Description>
+					</xsl:if>
+					<!-- activiy responsible as an individual -->
+					<xsl:if test="./RSTE">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+						                        <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTE)))" />
+						                    </xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+						                            <xsl:value-of
+										select="'https://w3id.org/italia/onto/l0/Agent'" />
+						            </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./RSTE)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./RSTE)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- activiy sponsor as an individual -->
+					<xsl:if test="./RSTR">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+						                        <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTR)))" />
+						                    </xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+						                            <xsl:value-of
+										select="'https://w3id.org/italia/onto/l0/Agent'" />
+						            </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./RSTR)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./RSTR)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- activiy operator as an individual -->
+					<xsl:if test="./RSTN">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+						                        <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTN)))" />
+						                    </xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+						                            <xsl:value-of
+										select="'https://w3id.org/italia/onto/l0/Agent'" />
+						            </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./RSTN)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./RSTN)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:for-each>
+				<!-- intervention (RS/RST) -->
+			<xsl:for-each select="schede/*/RS/RST">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', position())" />
+						</xsl:attribute>
+						<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/context-description/ConservationIntervention'" />
+						</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Conservation intervention ', position(), ' on cultural property ', $itemURI)" />
+						</rdfs:label>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Intervento conservativo ', position(), ' sul bene culturale ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Conservation intervention ', position(), ' on cultural property ', $itemURI)" />
+						</l0:name>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Intervento conservativo ', position(), ' sul bene culturale ', $itemURI)" />
+						</l0:name>
+						<xsl:if test="./RSTO">
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(./RSTO)" />
+							</arco-core:note>
+						</xsl:if>
+						<xsl:if test="./RSTS">
+							<arco-cd:framework>
+								<xsl:value-of select="normalize-space(./RSTS)" />
+							</arco-cd:framework>
+						</xsl:if>
+						<xsl:if test="./RSTT and not($sheetType='A')">
+							<arco-core:description>
+								<xsl:value-of select="normalize-space(./RSTT)" />
+							</arco-core:description>
+						</xsl:if>
+						<xsl:if test="./RSTD">
+							<tiapit:atTime>
+							<xsl:attribute name="rdf:resource">
+                               	<xsl:value-of
+							select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTD)))" />
+                           	</xsl:attribute>
+						</tiapit:atTime>
+					</xsl:if>
+					<xsl:if test="./RSTI or ./RSTF and (not(starts-with(lower-case(normalize-space(./RSTI)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTI)), 'n.r')) and not(starts-with(lower-case(normalize-space(./RSTF)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTF)), 'n.r')))">
+							<tiapit:atTime>
+								<xsl:attribute name="rdf:resource">
+                        		<xsl:choose>
+                        			<xsl:when test="./RSTI and ./RSTF">
+                        				<xsl:value-of
+									select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTI)), '-', arco-fn:urify(normalize-space(./RSTF)))" />
+                        			</xsl:when>
+                        			<xsl:when test="./RSTI">
+                        				<xsl:value-of
+									select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTI)))" />
+                        			</xsl:when>
+                        			<xsl:when test="./RSTF">
+                        				<xsl:value-of
+									select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTF)))" />
+                        			</xsl:when>
+                        			</xsl:choose>
+                        		</xsl:attribute>
+							</tiapit:atTime>
+						</xsl:if>
+					<xsl:if test="./RSTT and $sheetType='A' and (not(starts-with(lower-case(normalize-space(./RSTT)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTT)), 'n.r')))">
+						<xsl:for-each select="./RSTT">
+						<arco-cd:hasInterventionType>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-cd:hasInterventionType>
+						</xsl:for-each>
+					</xsl:if>
+					<xsl:if test="./RSTE">
+						<arco-cd:hasActivityResponsible>
+							<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTE)))" />
+	                			</xsl:attribute>
+						</arco-cd:hasActivityResponsible>
+					</xsl:if>
+					<xsl:if test="./RSTR and not($sheetType='A')">
+						<arco-cd:hasActivitySponsor>
+							<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTR)))" />
+	                			</xsl:attribute>
+						</arco-cd:hasActivitySponsor>
+					</xsl:if>
+					<xsl:if test="./RSTN">
+						<arco-cd:hasActivityOperator>
+							<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTN)))" />
+	                			</xsl:attribute>
+						</arco-cd:hasActivityOperator>
+					</xsl:if>
+				</rdf:Description>
+					<!-- intervention type as an individual -->
+					<xsl:if test="./RSTT and $sheetType='A' and (not(starts-with(lower-case(normalize-space(./RSTT)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTT)), 'n.r')))">
+						<xsl:for-each select="./RSTT">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+	                                <xsl:value-of
+											select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(.)))" />
+	                            </xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/arco/context-description/InterventionType" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(.)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(.)" />
+								</l0:name>
+						</rdf:Description>
+						</xsl:for-each>
+					</xsl:if>
+					<!-- Time Interval for intervention as an individual -->
+					<xsl:if test="./RSTD">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTD)))" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./RSTD)" />
+							</tiapit:time>
+						</rdf:Description>
+					</xsl:if>
+					<!-- time interval for intervention as an individual -->
+					<xsl:if test="./RSTI or ./RSTF and (not(starts-with(lower-case(normalize-space(./RSTI)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTI)), 'n.r')) and not(starts-with(lower-case(normalize-space(./RSTF)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTF)), 'n.r')))">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+                        <xsl:choose>
+                        	<xsl:when test="./RSTI and ./RSTF">
+                        		<xsl:value-of
+								select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTI)), '-', arco-fn:urify(normalize-space(./RSTF)))" />
+                        	</xsl:when>
+                        	<xsl:when test="./RSTI">
+                        		<xsl:value-of
+								select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTI)))" />
+                        	</xsl:when>
+                        	<xsl:when test="./RSTF">
+                        		<xsl:value-of
+								select="concat($NS, 'TimeInterval/', arco-fn:urify(normalize-space(./RSTF)))" />
+                        	</xsl:when>
+                        	</xsl:choose>
+                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+									select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+                        </xsl:attribute>
+							</rdf:type>
+							<arco-core:startTime>
+								<xsl:value-of select="normalize-space(./RSTI)" />
+							</arco-core:startTime>
+							<arco-core:endTime>
+								<xsl:value-of select="normalize-space(./RSTF)" />
+							</arco-core:endTime>
+						</rdf:Description>
+					</xsl:if>
+					<!-- activiy responsible as an individual -->
+					<xsl:if test="./RSTE">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+						                        <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTE)))" />
+						                    </xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+						                            <xsl:value-of
+										select="'https://w3id.org/italia/onto/l0/Agent'" />
+						            </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./RSTE)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./RSTE)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- activiy sponsor as an individual -->
+					<xsl:if test="./RSTR and not($sheetType='A')">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+						                        <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTR)))" />
+						                    </xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+						                            <xsl:value-of
+										select="'https://w3id.org/italia/onto/l0/Agent'" />
+						            </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./RSTR)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./RSTR)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- activiy operator as an individual -->
+					<xsl:if test="./RSTN">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+						                        <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./RSTN)))" />
+						                    </xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+						                            <xsl:value-of
+										select="'https://w3id.org/italia/onto/l0/Agent'" />
+						            </xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./RSTN)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./RSTN)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:for-each>
+				<!-- collection membership -->
 			<xsl:for-each select="schede/*/UB/COL">
 				<xsl:if test="./*">
 				<xsl:variable name="collection-membership-position">

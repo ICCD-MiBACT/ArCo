@@ -24,9 +24,9 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali e alle schede di catalogo che descrivono un bene culturale.</rdfs:comment>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
         <rdfs:label>Catalogue Ontology (ArCo network)</rdfs:label>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>

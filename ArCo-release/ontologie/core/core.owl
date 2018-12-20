@@ -33,14 +33,15 @@
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label>Core Ontology (ArCo network)</rdfs:label>
+        <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo è il modulo core della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al bene culturale, considerate centrali. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
-        <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
     </owl:Ontology>
     
 
@@ -487,7 +488,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isTypeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Type"/>
-        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a una sua tipologia. Viene specializzata in sottoproprietà. Per esempio, nell&apos;ambito delle normative dell&apos;ICCD, può collegare: uno stato di conservazione di un bene culturale a uno dei valori del tipo di stato di conservazione (buono, cattivo, mediocre, etc.); un bene culturale alla sua tipologia (OGTD + OGTT); una denominazione o dedicazione, o, per la normativa FF, il titolo nel tempo, al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.); una misura al tipo di misura (altezza, larghezza, diametro, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
         <rdfs:label xml:lang="it">ha tipo</rdfs:label>
@@ -1783,7 +1784,7 @@ trovano.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Type">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il concetto generico di tipologia.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
         <rdfs:label xml:lang="it">Tipo</rdfs:label>
