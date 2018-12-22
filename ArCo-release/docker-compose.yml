@@ -5,6 +5,8 @@ services:
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "https://w3id.org/arco"
+    volumes:
+      - ./virtuoso/graphs:/graphs
     ports:
       - "8890:8890"
     restart: always

@@ -2868,7 +2868,7 @@
                 </xsl:if>
 			</rdf:Description>
 			
-			<!-- Images retrieved from the OAI-PMH service of ICCD-MiBAC -->
+			<!-- Images retrieved from the OAI-PMH service of ICCD-MiBAC >
 			
 			<xsl:variable name="image-link" select="arco-fn:find-image($item)" />
 			<xsl:if test="$image-link != ''">
@@ -2885,6 +2885,7 @@
                 	</foaf:image>
 				</rdf:Description>
 			</xsl:if>
+			-->
 		</rdf:RDF>
 
 	</xsl:template>

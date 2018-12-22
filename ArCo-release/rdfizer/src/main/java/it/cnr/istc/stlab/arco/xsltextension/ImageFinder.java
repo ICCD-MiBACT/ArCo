@@ -46,7 +46,7 @@ public class ImageFinder implements ExtensionFunction {
 	
 	private String harvestLink(String recordID) throws MalformedURLException, IOException, ParserConfigurationException, SAXException{
 		
-		String link = null;
+		String link = "";
 		String identifierValue = IDENTIFIER_PREFIX_VALUE + "@" + recordID + "@";
 		
 		String urlString = ENDPOINT + "?"
@@ -54,18 +54,23 @@ public class ImageFinder implements ExtensionFunction {
 				+ METADATA_PREFIX_FIELD + "=" + METADATA_PREFIX_VALUE + "&" 
 				+ IDENTIFIER_FIELD + "=" + identifierValue; 
 		
-		
-		URLConnection conn = new URL(urlString).openConnection();
-		conn.addRequestProperty("Accept", "application/xml");
-		
-		InputStream is = conn.getInputStream();
-		DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		Document doc = documentBuilder.parse(is);
-		NodeList nodeList = doc.getElementsByTagName("pico:preview");
-		
-		if(nodeList.getLength() > 0){
-			link = nodeList.item(0).getTextContent().replaceAll("^http://www.sigecweb.beniculturali.it", "http://www.catalogo.beniculturali.it");
+		try{
+			URLConnection conn = new URL(urlString).openConnection();
+			conn.addRequestProperty("Accept", "application/xml");
+			conn.setConnectTimeout(10000);
+			conn.setReadTimeout(20000);
 			
+			InputStream is = conn.getInputStream();
+			DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			Document doc = documentBuilder.parse(is);
+			NodeList nodeList = doc.getElementsByTagName("pico:preview");
+			
+			if(nodeList.getLength() > 0){
+				link = nodeList.item(0).getTextContent().replaceAll("^http://www.sigecweb.beniculturali.it", "http://www.catalogo.beniculturali.it");
+				
+			}
+		} catch(Exception e){
+			link = "";
 		}
 		
 		return link;

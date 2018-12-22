@@ -58,7 +58,7 @@
           <shadedArtifactAttached>false</shadedArtifactAttached>
           <transformers>
             <transformer>
-              <mainClass>it.cnr.istc.stlab.arco.XsltTransformer</mainClass>
+              <mainClass>it.cnr.istc.stlab.arco.SingleFileWriter</mainClass>
             </transformer>
             <transformer />
             <transformer />

@@ -37,7 +37,7 @@
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" />
 	
-	<xsl:import href="./prova.xsl" />
+	<!-- xsl:import href="./prova.xsl" / -->
 
 	<xsl:template match="/">
 		
@@ -17786,8 +17786,7 @@
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
-										select="'https://w3id.org/arco/denotative-
-										description/SiteSpecification'" />
+										select="'https://w3id.org/arco/denotative-description/SiteSpecification'" />
                                     </xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -20522,7 +20521,7 @@
 												<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type), '-', arco-fn:urify($mu-value))" />
 											</xsl:when>
 											<xsl:otherwise>
-												<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type), '-', normalize-space(../MISM))" />
+												<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type), '-', arco-fn:urify(normalize-space(../MISM)))" />
 											</xsl:otherwise>
 										</xsl:choose>
 										
@@ -20616,7 +20615,7 @@
 				
 				
 			
-			<xsl:apply-templates select="schede/*/MT/MIS" />
+			<!-- xsl:apply-templates select="schede/*/MT/MIS" / -->
 		</rdf:RDF>
 	</xsl:template>
 </xsl:stylesheet>

@@ -3,13 +3,23 @@ package it.cnr.istc.stlab.arco;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
 
 import javax.xml.transform.stream.StreamSource;
 
@@ -207,20 +217,37 @@ public class Converter {
         ClassLoader loader = Converter.class.getClassLoader();
         
         URL url = loader.getResource(XSLT_LOCATION);
-        File[] xsltFiles = new File(url.getPath()).listFiles();
-        for(File xsltFile : xsltFiles){
-        	if(xsltFile.getName().endsWith(".xslt")){
-	        	XsltExecutable exp;
-				try {
-					exp = comp.compile(new StreamSource(xsltFile));
-					exps.add(exp);
-				} catch (SaxonApiException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-        	}
-        	
-        }
+        URI uri;
+		try {
+			uri = url.toURI();
+			Path xsltPath = null; 
+	        if(uri.getScheme().equals("jar")){
+	        	FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.<String, Object>emptyMap());
+	        	xsltPath = fileSystem.getPath(XSLT_LOCATION);
+	        }
+	        else xsltPath = Paths.get(XSLT_LOCATION);
+	        
+	        Files.walk(xsltPath, 1).forEach(path -> {
+	        	
+	        	if(path.toString().endsWith(".xslt")){
+		        	XsltExecutable exp;
+		        	
+					try {
+						System.out.println("-- " + path.toString());
+						exp = comp.compile(new StreamSource(Files.newInputStream(path)));
+						exps.add(exp);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+	        	}
+	        });
+	        
+		} catch (URISyntaxException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        
         /*
         String path = url.getPath();
         try {
