@@ -255,7 +255,7 @@ PREFIX roapit: &lt;https://w3id.org/italia/onto/RO/&gt;
 SELECT *
 WHERE{
   ?entity arco-catalogue:hasCatalogueRecordVersion ?record . 
-  ?record arco-catalogue:hasCatalogueRecordRiT ?rit . 
+  ?record arco-catalogue:hasCatalogueRecordVersionRiT ?rit . 
   ?rit roapit:withRole ?role ;
     roapit:isRoleInTimeOf ?agent
 }
@@ -290,7 +290,7 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+catalogue%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+catalogue%3AhasCatalogueRecordRiT+%3Frit+.+%0D%0A++%3Frit+roapit%3AwithRole+%3Frole+%3B%0D%0A++++roapit%3AisRoleInTimeOf+%3Fagent%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E%0D%0APREFIX+roapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FRO%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-catalogue%3AhasCatalogueRecordVersion+%3Frecord+.+%0D%0A++%3Frecord+arco-catalogue%3AhasCatalogueRecordVersionRiT+%3Frit+.+%0D%0A++%3Frit+roapit%3AwithRole+%3Frole+%3B%0D%0A++++roapit%3AisRoleInTimeOf+%3Fagent%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -328,7 +328,7 @@ PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 SELECT *
 WHERE{
   ?entity rdfs:label ?entityLabel ;
-    arco-location:hasTimeIndexedQualifiedLocation ?location .
+    arco-location:hasTimeIndexedTypedLocation ?location .
   ?location arco-location:hasLocationType ?locationType ;
     arco-location:atSite ?site .
 }
@@ -343,7 +343,7 @@ PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 SELECT *
 WHERE {
   ?entity rdfs:label ?entityLabel ; 
-    arco-location:hasTimeIndexedQualifiedLocation ?location .
+    arco-location:hasTimeIndexedTypedLocation ?location .
   ?location arco-location:hasLocationType arco-location:StorageLocation.
 }
 limit 100
@@ -368,7 +368,7 @@ LIMIT 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+tiapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FTI%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++location%3AhasTimeIndexedQualifiedLocation+%3Flocation+.%0D%0A++%3Flocation+location%3AhasLocationType+%3FlocationType+%3B%0D%0A++++location%3AatSite+%3Fsite+.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-location%3A+<https%3A%2F%2Fw3id.org%2Farco%2Flocation%2F>%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++arco-location%3AhasTimeIndexedTypedLocation+%3Flocation+.%0D%0A++%3Flocation+arco-location%3AhasLocationType+%3FlocationType+%3B%0D%0A++++arco-location%3AatSite+%3Fsite+.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -378,7 +378,7 @@ LIMIT 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fcore%2F>%0D%0APREFIX+location%3A+<https%3A%2F%2Fw3id.org%2Farco%2Flocation%2F>%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B+%0D%0A++++location%3AhasTimeIndexedQualifiedLocation+%3Flocation+.%0D%0A++%3Flocation+location%3AhasLocationType+location%3AStorageLocation.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B+%0D%0A++++arco-location%3AhasTimeIndexedTypedLocation+%3Flocation+.%0D%0A++%3Flocation+arco-location%3AhasLocationType+arco-location%3AStorageLocation.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -504,7 +504,7 @@ PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
 SELECT *
 WHERE{?entity rdf:type/rdfs:subClassOf* arco-core:CulturalProperty ;
     rdfs:label ?entityLabel ;
-  arco-dd:hasDating ?dating .
+  arco-cd:hasDating ?dating .
   ?dating arco-cd:hasEvent ?event ;
     arco-cd:hasSource ?source 
 }
@@ -543,7 +543,7 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-dd%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+arco-cd%3AhasEvent+%3Fevent+%3B%0D%0A++++arco-cd%3AhasSource+%3Fsource+%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-core%3ACulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+arco-cd%3AhasEvent+%3Fevent+%3B%0D%0A++++arco-cd%3AhasSource+%3Fsource+%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
