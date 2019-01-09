@@ -268,6 +268,55 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/hasFunctionalPurpose -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasFunctionalPurpose">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/FunctionalPurpose"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto (es apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione) al suo scopo funzionale (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha scopo funzionale</rdfs:label>
+        <rdfs:label xml:lang="en">has functional purpose</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/hasIconographicOrDecorativeApparatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasIconographicOrDecorativeApparatus">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatus"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al suo apparato iconografico e/o decorativo, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche e/o delle decorazioni presenti sul bene.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha apparato iconografico e decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">has iconographic or decorative apparatus</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/hasIconographicOrDecorativeApparatusType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasIconographicOrDecorativeApparatusType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasType"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatus"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatusType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un apparato iconografico e decorativo di un bene culturale al tipo di apparato (iconografico, decorativo, iconografico-decorativo).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di apparato iconografico e decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">has iconographic or decorative apparatus type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/hasLocationSubject -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasLocationSubject">
@@ -347,6 +396,21 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/hasOrnamentalMotif -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/denotative-description/hasOrnamentalMotif">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatus"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/denotative-description/OrnamentalMotif"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;apparato iconografico e decorativo di un bene culturale al motivo decorativo (antropomorfo, zoomorfo, geometrico) rappresentato.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:isDefinedBy xml:lang="it">provvisoria</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">unstable</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="it">ha motivo decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">has ornamental motif</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -878,6 +942,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasFunctionalPurpose"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/FunctionalPurpose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasSupport"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/Support"/>
             </owl:Restriction>
@@ -1148,6 +1218,20 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/FunctionalPurpose -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/FunctionalPurpose">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo scopo funzionale (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere, di un oggetto (es apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Functional purpose</rdfs:label>
+        <rdfs:label xml:lang="it">Scopo funzionale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/HistoricalPlaque -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/HistoricalPlaque">
@@ -1159,6 +1243,53 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa A: LI/LSI/LSIG = &apos;lapide&apos;</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatus">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasIconographicOrDecorativeApparatusType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatusType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasFunctionalPurpose"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/FunctionalPurpose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/hasOrnamentalMotif"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/denotative-description/OrnamentalMotif"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;apparato iconografico e/o decorativo di un bene culturale, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche e/o delle decorazioni presenti sul bene.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">Apparato iconografico e decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">Iconographic or Decorative Apparatus</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatusType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatusType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo (iconografico, decorativo, iconografico-decorativo) di apparato iconografico e decorativo di un bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Iconographic Or Decorative Apparatus Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di apparato iconografico e decorativo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID/AIDO</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -1260,6 +1391,19 @@ un&apos;azienda, ecc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/OrnamentalMotif -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/OrnamentalMotif">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il motivo decorativo (antropomorfo, zoomorfo, geometrico) rappresentato da un apparato iconografico e decorativo di un bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">Motivo decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">Ornamental Motif</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1620,6 +1764,16 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/Decorative -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/denotative-description/Decorative">
+        <rdf:type rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatusType"/>
+        <rdfs:label xml:lang="en">Decorative</rdfs:label>
+        <rdfs:label xml:lang="it">Decorativo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/Depth -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/denotative-description/Depth">
@@ -1884,6 +2038,26 @@ un&apos;azienda, ecc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco-core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/Iconographic -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/denotative-description/Iconographic">
+        <rdf:type rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatusType"/>
+        <rdfs:label xml:lang="it">Iconografico</rdfs:label>
+        <rdfs:label xml:lang="en">Iconographic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/IconographicAndDecorative -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/denotative-description/IconographicAndDecorative">
+        <rdf:type rdf:resource="https://w3id.org/arco/denotative-description/IconographicOrDecorativeApparatusType"/>
+        <rdfs:label xml:lang="it">Iconografico e decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">Iconographic and Decorative</rdfs:label>
     </owl:NamedIndividual>
     
 

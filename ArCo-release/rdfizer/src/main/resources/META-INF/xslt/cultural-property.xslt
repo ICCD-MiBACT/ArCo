@@ -1421,22 +1421,22 @@
 						</arco-core:hasAlternativeDiscipline>
 					</xsl:for-each>
 				</xsl:if>
-				<!-- cadastrial identity -->
+				<!-- cadastral identity -->
 				<xsl:for-each select="schede/*/CS">
-					<arco-location:hasCadastrialIdentity>
+					<arco-location:hasCadastralIdentity>
 							<xsl:attribute name="rdf:resource">
-		                		<xsl:value-of select="concat($NS, 'CadastrialIdentity/', $itemURI, '-', position())" />
+		                		<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
 		                	</xsl:attribute>
-					</arco-location:hasCadastrialIdentity>
+					</arco-location:hasCadastralIdentity>
 				</xsl:for-each>
-				<!-- historical cadastrial identity -->
+				<!-- historical cadastral identity -->
 				<xsl:if test="schede/*/LS/CSS/*">
 				<xsl:for-each select="schede/*/LS/CSS">
-					<arco-location:hasCadastrialIdentity>
+					<arco-location:hasCadastralIdentity>
 							<xsl:attribute name="rdf:resource">
-		                		<xsl:value-of select="concat($NS, 'CadastrialIdentity/', $itemURI, '-historical-', position())" />
+		                		<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-historical-', position())" />
 		                	</xsl:attribute>
-					</arco-location:hasCadastrialIdentity>
+					</arco-location:hasCadastralIdentity>
 				</xsl:for-each>
 				</xsl:if>
 				<!-- fruition (VeAC) -->
