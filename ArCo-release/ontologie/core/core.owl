@@ -428,10 +428,28 @@
     
 
 
+    <!-- https://w3id.org/arco/core/hasNumberOfCulturalPropertyPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasNumberOfCulturalPropertyPart">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isNumberOfCulturalPropertyPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/NumberOfCulturalPropertyPart"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla quantità associata a una specifica parte del bene stesso (es.: il numero di denti di un reperto antropologico, dove il numero viene associato alla parte &quot;dente&quot;, per quantificarla).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="it">ha numero di parte di bene culturale</rdfs:label>
+        <rdfs:label xml:lang="en">has number of cultural property part</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/core/hasPart -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasPart">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
@@ -605,6 +623,22 @@
     
 
 
+    <!-- https://w3id.org/arco/core/isNumberOfCulturalPropertyPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isNumberOfCulturalPropertyPartOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/NumberOfCulturalPropertyPart"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha numero di parte di bene culturale&quot;, collega la quantità associata a una specifica parte di un bene culturale al bene stesso.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">is number of cultural property part of</rdfs:label>
+        <rdfs:label xml:lang="it">è numero di parte di bene culturale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/core/isPartOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isPartOf">
@@ -663,6 +697,22 @@
         <rdfs:label xml:lang="it">è tipo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/core/refersToCulturalPropertyPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/refersToCulturalPropertyPart">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/NumberOfCulturalPropertyPart"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la quantità associata a una specifica parte di un bene culturale alla parte stessa (es.: il numero di denti di un reperto antropologico viene collegata alla parte &quot;dente&quot;, per quantificarla).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">refers to cultural property part</rdfs:label>
+        <rdfs:label xml:lang="it">è relativo a parte di bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa AT 3.01: EL/ELE</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -838,6 +888,7 @@
     <!-- https://w3id.org/arco/core/numberOfComponents -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/numberOfComponents">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/NumberOfComponents"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di esemplari/oggetti/elementi componenti di un bene culturale. Nel caso di un bene complesso identificato come serie o come insieme, si usa per specificare il numero, espresso in cifre, degli esemplari o degli oggetti componenti, oppure degli elementi componenti nel caso in cui il bene sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi. Il range della proprietà è rdfs:Literal perché, nei casi in cui non sia stato possibile rilevare per motivi pratici la consistenza numerica, il valore della proprietà sarà &quot;QNR&quot;.</rdfs:comment>
@@ -851,9 +902,27 @@
     
 
 
+    <!-- https://w3id.org/arco/core/numberOfCulturalPropertyPart -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/numberOfCulturalPropertyPart">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/NumberOfCulturalPropertyPart"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di esemplari di una stessa parte di un bene culturale (es.: il numero di denti di un reperto antropologico)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">number of cultural property part</rdfs:label>
+        <rdfs:label xml:lang="it">numero di parte di bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/core/numberOfResiduals -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/core/numberOfResiduals">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/SomeCulturalPropertyResiduals"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment>OG/QNT/QNTR</rdfs:comment>
@@ -1464,7 +1533,7 @@
         <rdfs:label xml:lang="it">Parte di Bene Culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
+        <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD - ICCD Normativa AT 3.01: EL/ELE</iccdNormTag>
     </owl:Class>
     
 
@@ -1673,6 +1742,20 @@ trovano.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/core/NumberOfCulturalPropertyPart -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/NumberOfCulturalPropertyPart">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la quantità associata a una specifica parte di un bene culturale (es.: il numero di denti di un reperto antropologico, dove il numero viene associato alla parte &quot;dente&quot;, per quantificarla).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">Number of cultural property part</rdfs:label>
+        <rdfs:label xml:lang="it">Numero di parte di bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</iccdNormTag>
     </owl:Class>
     
 

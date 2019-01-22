@@ -1376,7 +1376,7 @@
 				<!-- cultural property description -->
 				<xsl:if test="schede/*/DA/DES">
 					<xsl:choose>
-						<xsl:when test="schede/*/DA/DES/DESO">
+						<xsl:when test="schede/*/DA/DES/DESO and not($sheetType='NU')">
 							<xsl:if
 								test="not(lower-case(normalize-space(schede/*/DA/DES/DESO))='nr' or lower-case(normalize-space(schede/*/DA/DES/DESO))='n.r.' or lower-case(normalize-space(schede/*/DA/DES/DESO))='nr (recupero pregresso)')">
 								<arco-core:description>
@@ -1561,6 +1561,15 @@
 						</arco-cd:hasInventory>
 					</xsl:if>
 				</xsl:for-each>
+				<!-- Estimate for versione 2.00 -->
+				<xsl:if test="schede/*/UB/INV/INVS and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
+					<arco-cd:hasEstimate>
+						<xsl:attribute name="rdf:resource">
+	                            <xsl:value-of
+							select="concat($NS, 'Estimate/', $itemURI)" />
+	                        </xsl:attribute>
+					</arco-cd:hasEstimate>
+				</xsl:if>
 				<!-- commission -->
 				<xsl:for-each select="schede/*/AU/CMM">
 					<arco-dd:hasCommission>
@@ -1791,6 +1800,11 @@
 						<xsl:value-of select="normalize-space(schede/*/CO/STD)" />
 					</arco-dd:storageConditions>
 				</xsl:if>
+				<xsl:if test="schede/*/CO/STC/STCM">
+					<arco-dd:storageConditions>
+						<xsl:value-of select="normalize-space(schede/*/CO/STC/STCM)" />
+					</arco-dd:storageConditions>
+				</xsl:if>
 				<!-- heritage protection agency -->
 				<xsl:if test="schede/*/CD/ECP">
 					<arco-core:hasAgentRole>
@@ -1902,6 +1916,14 @@
 	                        </xsl:attribute>
 					</arco-location:hasTypeOfContext>
 				</xsl:for-each>
+				<xsl:if test="schede/*/OG/CTG">
+				<arco-core:hasCulturalPropertyCategory>
+					<xsl:attribute name="rdf:resource">
+                        <xsl:value-of
+						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/*/OG/CTG)))" />
+                    </xsl:attribute>
+					</arco-core:hasCulturalPropertyCategory>
+			</xsl:if>
 				<!-- Acquisition of cultural property -->
 				<xsl:for-each select="schede/*/TU/ACQ">
 					<arco-cd:hasAcquisition>
@@ -2084,6 +2106,14 @@
 					test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 					<arco-cd:iconclassCode>
 						<xsl:value-of select="normalize-space(.)" />
+					</arco-cd:iconclassCode>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="schede/F/SG/SGS">
+					<xsl:if
+					test="not(starts-with(lower-case(normalize-space(./SGSI)), 'nr')) and not(starts-with(lower-case(normalize-space(./SGSI)), 'n.r'))">
+					<arco-cd:iconclassCode>
+						<xsl:value-of select="normalize-space(./SGSI)" />
 					</arco-cd:iconclassCode>
 					</xsl:if>
 				</xsl:for-each>

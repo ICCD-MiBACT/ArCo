@@ -225,7 +225,9 @@ public class Converter {
 	        	FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.<String, Object>emptyMap());
 	        	xsltPath = fileSystem.getPath(XSLT_LOCATION);
 	        }
-	        else xsltPath = Paths.get(XSLT_LOCATION);
+	        else {
+	        	xsltPath = Paths.get(uri);
+	        }
 	        
 	        Files.walk(xsltPath, 1).forEach(path -> {
 	        	

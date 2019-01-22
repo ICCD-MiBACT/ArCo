@@ -172,6 +172,21 @@
 						<xsl:value-of select="concat('ROCI: ', normalize-space(schede/*/DR/ROC/ROCI))" />
 					</arco-catalogue:recoveredData>
 				</xsl:if>
+				<xsl:if test="schede/*/DO/VDS/VDST">
+						<arco-catalogue:recoveredData>
+							<xsl:value-of select="concat('VDST: ', normalize-space(schede/*/DO/VDS/VDST))" />
+						</arco-catalogue:recoveredData>
+				</xsl:if>
+				<xsl:if test="schede/*/DO/VDS/VDSI">
+						<arco-catalogue:recoveredData>
+							<xsl:value-of select="concat('VDSI: ', normalize-space(schede/*/DO/VDS/VDSI))" />
+						</arco-catalogue:recoveredData>
+				</xsl:if>
+				<xsl:if test="schede/*/DO/VDS/VDSP">
+						<arco-catalogue:recoveredData>
+							<xsl:value-of select="concat('VDSP: ', normalize-space(schede/*/DO/VDS/VDSP))" />
+						</arco-catalogue:recoveredData>
+				</xsl:if>
 			</rdf:Description>
 			<!-- This block introduces the triples about the sheet versions. I.e. 
 				sub-elements of schede/*/CM -->
@@ -6284,6 +6299,7 @@
 							<xsl:value-of select="normalize-space(./VDCT)" />
 						</arco-core:note>
 					</xsl:if>
+					
 					<xsl:if test="./VDCW and (not(starts-with(lower-case(normalize-space(./VDCW)), 'nr')) and not(starts-with(lower-case(normalize-space(./VDCW)), 'n.r')))">
 						<smapit:URL>
 							<xsl:value-of select="normalize-space(./VDCW)" />
@@ -15936,7 +15952,7 @@
 								<xsl:value-of select="normalize-space(./INVD)" />
 							</tiapit:time>
 						</xsl:if>
-						<xsl:if test="./INVS">
+						<xsl:if test="./INVS and not($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
 							<arco-core:note>
 								<xsl:value-of select="normalize-space(./INVS)" />
 							</arco-core:note>
@@ -16046,6 +16062,47 @@
 					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
+			<!-- Estimate for version 2.00 -->
+			<xsl:if test="schede/*/UB/INV/INVS and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+	                            <xsl:value-of
+							select="concat($NS, 'Estimate/', $itemURI)" />
+	                 </xsl:attribute>
+	                 <rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/context-description/Estimate'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of
+							select="concat('Stima del bene ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of
+							select="concat('Estimate of cultural property ', $itemURI)" />
+					</l0:name>
+					<l0:name xml:lang="it">
+						<xsl:value-of
+							select="concat('Stima del bene ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of
+							select="concat('Estimate of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<arco-cd:hasSource>
+							<xsl:attribute name="rdf:resource">
+                                <xsl:value-of
+								select="concat($NS, 'Source/inventario-patrimoniale')" />
+                            </xsl:attribute>
+					</arco-cd:hasSource>
+					<arco-cd:culturalPropertyValue>
+						<xsl:value-of select="normalize-space(schede/*/UB/INV/INVS)" />
+					</arco-cd:culturalPropertyValue>
+				</rdf:Description>
+				
+			</xsl:if>
 			<!-- commission as an individual -->
 			<xsl:for-each select="schede/*/AU/CMM">
 				<rdf:Description>
@@ -17186,10 +17243,20 @@
 								<xsl:value-of select="normalize-space(./STCS)" />
 							</arco-core:specifications>
 						</xsl:if>
+						<xsl:if test="./STCO">
+							<arco-core:specifications>
+								<xsl:value-of select="normalize-space(./STCO)" />
+							</arco-core:specifications>
+						</xsl:if>
 						<xsl:if test="./STCN">
 							<arco-core:note>
 								<xsl:value-of select="normalize-space(./STCN)" />
 							</arco-core:note>
+						</xsl:if>
+						<xsl:if test="./STCD">
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./STCD)" />
+							</tiapit:time>
 						</xsl:if>
 					</rdf:Description>
 					<xsl:if
@@ -17353,6 +17420,14 @@
                             </xsl:attribute>
 						</arco-location:hasToponymInTime>
 					</xsl:if>
+					<xsl:if test="schede/*/LC/PVC/PVCF">
+						<arco-location:hasToponymInTime>
+							<xsl:attribute name="rdf:resource">
+                                        <xsl:value-of
+								select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(schede/*/LC/PVC/PVCF)))" />
+                            </xsl:attribute>
+						</arco-location:hasToponymInTime>
+					</xsl:if>
 					<xsl:if
 						test="schede/*/LC/PVC/PVCI and not(schede/*/LC/PVC/PVCI='.' or schede/*/LC/PVC/PVCI='-' or schede/*/LC/PVC/PVCI='/') and (not(starts-with(lower-case(normalize-space(schede/*/LC/PVC/PVCI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/LC/PVC/PVCI)), 'n.r')))">
 						<clvapit:fullAddress>
@@ -17459,6 +17534,27 @@
 									<xsl:value-of select="normalize-space(schede/*/LC/PVL)" />
 								</xsl:otherwise>
 							</xsl:choose>
+						</l0:name>
+					</rdf:Description>
+				</xsl:if>
+				<!-- Toponym in Time (version 2.00) as individual -->
+				<xsl:if test="schede/*/LC/PVC/PVCF">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+                                    <xsl:value-of
+							select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(schede/*/LC/PVC/PVCF)))" />
+                        </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+                                <xsl:value-of
+								select="'https://w3id.org/arco/location/ToponymInTime'" />
+                            </xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+									<xsl:value-of select="normalize-space(schede/*/LC/PVC/PVCF)" />
+						</rdfs:label>
+						<l0:name>
+								<xsl:value-of select="normalize-space(schede/*/LC/PVC/PVCF)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -18859,6 +18955,27 @@
 									</xsl:if>
 								</rdf:Description>
 							</xsl:if>
+							<!-- Toponym in Time as individual -->
+							<xsl:if test="./PRV/PRVF">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                                <xsl:value-of
+										select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(./PRV/PRVF)))" />
+                                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+                                            <xsl:value-of
+											select="'https://w3id.org/arco/location/ToponymInTime'" />
+                                        </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./PRV/PRVF)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./PRV/PRVF)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:if>
 							<!-- rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of 
 								select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-current')" 
 								/> </xsl:attribute> <arco-location:atSite> <xsl:attribute name="rdf:resource"> 
@@ -18933,6 +19050,14 @@
 											select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(./PRL)))" />
                                                     </xsl:otherwise>
                                                 </xsl:choose>
+                                            </xsl:attribute>
+									</arco-location:hasToponymInTime>
+								</xsl:if>
+								<xsl:if test="./PRVF">
+									<arco-location:hasToponymInTime>
+										<xsl:attribute name="rdf:resource">
+                                                        <xsl:value-of
+											select="concat($NS, 'ToponymInTime/', arco-fn:urify(normalize-space(./PRVF)))" />
                                             </xsl:attribute>
 									</arco-location:hasToponymInTime>
 								</xsl:if>

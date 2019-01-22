@@ -131,7 +131,7 @@
         <rdfs:label xml:lang="en">has activity operator</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale: RE/IND/INDN; CO/RST/RSTN - ICCD Normativa SM e BDM 4.00: DR/DRL</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: RE/IND/INDN; CO/RST/RSTN - ICCD Normativa SM e BDM 4.00: DR/DRL - ICCD normative di versioni precedenti: RE/AIN/AINR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -294,7 +294,7 @@
         <rdfs:label xml:lang="en">has archaeometric diagnostic survey type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND/INDI</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RE/IND/INDI - ICCD normative di versioni precedenti: RE/AIN/AINT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -367,7 +367,7 @@
         <rdfs:label xml:lang="en">has author</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DO/FTA/FTAA, DO/DRA/DRAA, DO/VDC/VDCR, DO/REG/REGA, DO/FNT/FNTA, DO/BIB/BIBA - Normativa S 3: RO/ADL/ADLA - Normative VeAC e AT 3.01: DO/BSE/BSEA.</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DO/FTA/FTAA, DO/DRA/DRAA, DO/VDC/VDCR, DO/REG/REGA, DO/FNT/FNTA, DO/BIB/BIBA - Normativa S 3: RO/ADL/ADLA - Normative VeAC e AT 3.01: DO/BSE/BSEA - Normativa MI 3.00: AU/DDC/DDCN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -480,7 +480,7 @@
         <rdfs:label xml:lang="en">has circumstance</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO - ICCD Normativa MI: AU/DDC/DDCC</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -496,7 +496,8 @@
         <rdfs:label xml:lang="en">has coin issuance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa NU: DA/AUE</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la
+catalogazione di monete e medaglie): AU/EDT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -579,7 +580,7 @@
         <rdfs:label xml:lang="en">has copyright</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F 4.00: TU/CPR</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -595,7 +596,7 @@
         <rdfs:label xml:lang="en">has copyright holder</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F 4.00: TU/CPR/CPRN</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR/CPRN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -604,6 +605,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasCulturalGeographicArea">
         <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Use"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso del bene con la sua area geografico-culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="it">ha area geografico-culturale</rdfs:label>
@@ -768,7 +770,38 @@
         <rdfs:label xml:lang="en">has estimate</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/STI</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/STI - ICCD Normative di versione 2.00: UB/INV/INVS</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/hasEstimatedAgeOfDeath -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasEstimatedAgeOfDeath">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/ArchaeologicalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/EstimatedAgeOfDeath"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">Questa proprietà collega un reperto antropologico alla stima dell&apos;età della morte.</rdfs:label>
+        <rdfs:label xml:lang="it">ha età della morte stimata</rdfs:label>
+        <rdfs:label xml:lang="en">has estimated age of death</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/hasEstimatedSex -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasEstimatedSex">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/ArchaeologicalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/EstimatedSex"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un reperto antropologico alla stima del sesso.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">ha sesso stimato</rdfs:label>
+        <rdfs:label xml:lang="en">has estimated sex</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa AT: DA/STS</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -969,7 +1002,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:label xml:lang="en">has issuer</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa NU: DA/AUE/AUEE</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUEE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTN</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1001,7 +1034,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:label xml:lang="en">has issuing State</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa NU: DA/AUE/AUES</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUES - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTA</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1117,7 +1150,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:label xml:lang="en">has mint</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa NU: DA/ZEC</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/ZEC - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTZ</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1241,6 +1274,38 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/context-description/hasPhotographicHeritageClassification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasPhotographicHeritageClassification">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/PhotographicHeritage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/PhotographicHeritageClassification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene fotografico a una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">ha classificazione di bene fotografico</rdfs:label>
+        <rdfs:label xml:lang="en">has photographic heritage classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/hasPhotographicHeritageClassificationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasPhotographicHeritageClassificationType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/PhotographicHeritageClassification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/PhotographicHeritageClassificationType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione di un bene fotografico al tipo di classificazione, relativamente a un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di classificazione di bene fotografico</rdfs:label>
+        <rdfs:label xml:lang="en">has photographic heritage classification type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/context-description/hasPhotographicSeries -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasPhotographicSeries">
@@ -1297,13 +1362,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasProfession">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Profession"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;utente del bene con il suo mestiere o la sua professione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un agente al suo mestiere o professione, per esempio l&apos;utente del bene oppure il responsabile della fabbricazione di un bene con il suo mestiere o la sua professione.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="it">ha professione</rdfs:label>
         <rdfs:label xml:lang="en">has profession</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa BDM 2: UT/UTN/UTNM</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa BDM 2.00: UT/UTN/UTNM - ICCD Normativa BDM 4.00: AU/AUT/AUTE</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1816,6 +1881,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/hasUse -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasUse">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Use"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il bene culturale con il suo uso.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
@@ -1944,13 +2010,15 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/context-description/isCommittentIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/isCommittentIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/Commission"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una persona o istituzione committente a una situazione in cui viene indicata la committenza di un bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="en">is committent in</rdfs:label>
         <rdfs:label xml:lang="it">è committente in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/CMM/CMMN</arco-core:iccdNormTag>
-        <arco-core:iccdNormTag xml:lang="it">Questa proprietà collega una persona o istituzione committente a una situazione in cui viene indicata la committenza di un bene culturale.</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2700,6 +2768,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/context-description/classifiedSubject -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/classifiedSubject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/PhotographicHeritageClassification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione codificata del/i soggetto/i raffigurato/i nell&apos;opera secondo il sistema di classificazione scelto dall&apos;Ente schedatore, in alternativa e/o in aggiunta ad Iconclass.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">classified subject</rdfs:label>
+        <rdfs:label xml:lang="it">soggetto classificato</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00: SG/CLF/CLFS</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/context-description/claySpecifications -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/claySpecifications">
@@ -2938,7 +3023,24 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="en">expiry date</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F 4.00: TU/CPR/CPRD</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR/CPRD</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/explanationNote -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/explanationNote">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/note"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di rappresentare l&apos;interpretazione di un bene culturale, ricavabile dall&apos;osservazione diretta e dai dati conoscitivi disponibili.</rdfs:comment>
+        <rdfs:label xml:lang="en">explanation note</rdfs:label>
+        <rdfs:label xml:lang="it">note interpretative</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa CA: DA/INT - ICCD Normativa TMA: DA/DES/DESI - ICCD Normativa SI: DA/NCS</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3004,6 +3106,21 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/context-description/historicalInformation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/historicalInformation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">historical information</rdfs:label>
+        <rdfs:label xml:lang="it">informazioni storiche</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/NSC</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/context-description/iconclassCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/iconclassCode">
@@ -3017,6 +3134,22 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="en">Iconclass Code</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/informationGatheredOnSite -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/informationGatheredOnSite">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni raccolte sul luogo dove si trova il bene o sul luogo dove il bene è stato rilevato.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">information gathered on site</rdfs:label>
+        <rdfs:label xml:lang="it">informazioni raccolte sul luogo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/NRL</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3409,15 +3542,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/context-description/rights -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/rights">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/context-description/Documentation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/context-description/Documentation"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni a testo libero sulla gestione dei diritti.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni a testo libero sulla gestione dei diritti. Nel caso di un bene culturale, permette di rappresentare indicazioni sulla presenza dei privilegi, autorizzazioni, licenze, specificando il concedente, eventualmente riportando anche il periodo di tempo della privativa.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="it">gestione diritti</rdfs:label>
         <rdfs:label xml:lang="en">rights</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">FTAY, DRAY, VDCY, REGY, FNTY, BIBY</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa MI 3.00: DA/PLC</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4057,7 +4198,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="it">Indagine archeometrica e diagnostica</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RE/IND - ICCD normative di versioni precedenti: RE/AIN</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -4072,19 +4213,20 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="it">Tipo di indagine archeometrica e diagnostica</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/IND/INDI</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RE/IND/INDI - ICCD normative di versioni precedenti: RE/AIN/AINT</arco-core:iccdNormTag>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/arco/context-description/ArchivalFond -->
+    <!-- https://w3id.org/arco/context-description/ArchivalFonds -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalFond">
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalFonds">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
         <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un fondo archivistico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an archival fonds.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/contex-description/"/>
-        <rdfs:label xml:lang="en">Archival fond</rdfs:label>
+        <rdfs:label xml:lang="en">Archival fonds</rdfs:label>
         <rdfs:label xml:lang="it">Fondo archivistico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -4120,15 +4262,10 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <owl:Class rdf:about="https://w3id.org/arco/context-description/ArchivalRecordSet">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/context-description/ArchivalRecord"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasPart"/>
-                        <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/ArchivalRecordSet"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;unità archivistica complessa (fondo, serie, sottoserie, etc.) di cui un bene culturale può fare parte.</rdfs:comment>
@@ -4401,7 +4538,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="it">Emissione di moneta</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa NU: DA/AUE</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la
+catalogazione di monete e medaglie): AU/EDT</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -4522,7 +4660,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="it">Diritti d&apos;autore</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F 4.00: TU/CPR</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -4866,6 +5004,36 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/context-description/EstimatedAgeOfDeath -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/EstimatedAgeOfDeath">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/context-description/Interpretation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la stima dell&apos;età della morte di un reperto antropologico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">Estimated age of death</rdfs:label>
+        <rdfs:label xml:lang="it">Età della morte stimata</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa AT: DA/SEM</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/EstimatedSex -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/EstimatedSex">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/context-description/Interpretation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la stima del sesso di un reperto antropologico.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">Estimated sex</rdfs:label>
+        <rdfs:label xml:lang="it">Sesso stimato</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa AT: DA/STS</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/context-description/ExpiredCopyright -->
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/ExpiredCopyright">
@@ -4876,7 +5044,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="en">Expired Copyright</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa F 4.00: TU/CPR (if CPRD = &apos;scaduti&apos; or &apos;diritti scaduti&apos; or &apos;in pubblico dominio&apos;)</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR (if CPRD = &apos;scaduti&apos; or &apos;diritti scaduti&apos; or &apos;in pubblico dominio&apos;)</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -5555,6 +5723,35 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/context-description/PhotographicHeritageClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/PhotographicHeritageClassification">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">Classificazione del bene fotografico</rdfs:label>
+        <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/PhotographicHeritageClassificationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/PhotographicHeritageClassificationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di classificazione di un bene fotografico, relativamente a un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">Photographic heritage classification type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di classificazione di bene fotografico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/context-description/PhotographicSeries -->
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/PhotographicSeries">
@@ -6075,7 +6272,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
         <rdfs:label xml:lang="en">Source</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL; Normativa VeAC: AU/FRU/FRUF</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - Normativa VeAC: AU/FRU/FRUF - Normativa MI 3.00: AU/DC/DDCF</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -6362,6 +6559,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/core/ArchaeologicalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/ArchaeologicalProperty"/>
+    
+
+
     <!-- https://w3id.org/arco/core/Category -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Category"/>
@@ -6407,6 +6610,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Type"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Feature -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
     
 
 
