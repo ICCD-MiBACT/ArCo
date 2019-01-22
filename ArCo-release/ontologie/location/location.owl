@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://w3id.org/arco/location/"
      xml:base="https://w3id.org/arco/location/"
      xmlns:arco-core="https://w3id.org/arco/core/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla#"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:arco-location="https://w3id.org/arco/location/"
@@ -23,6 +24,7 @@
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
@@ -31,6 +33,7 @@
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.</rdfs:comment>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label>Location Ontology (ArCo network)</rdfs:label>
+        <rdfs:comment xml:lang="en">This module models information related to the localization and georeferencing of a cultural property.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -830,6 +833,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;altitudine, ovvero l&apos;altezza di un oggetto rispetto al livello del mare, che può essere specificata da un&apos;altitudine massima, minima, relativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the altitude, that is the height of an object above the sea level, which can be specified as maximum, minimum and relative altitude.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Altitude</rdfs:label>
         <rdfs:label xml:lang="it">Altitudine</rdfs:label>
@@ -857,6 +861,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la base cartografica eventualmente utilizzata nelle attività di georeferenziazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the base map possibly used for georeferencing activities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">Base cartografica</rdfs:label>
         <rdfs:label xml:lang="en">Base map</rdfs:label>
@@ -872,6 +877,7 @@
     <owl:Class rdf:about="https://w3id.org/arco/location/CadastralEntity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/SpatialObject"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità catastale, intesa come un oggetto che può avere una rappresentazione spaziale, relativamente alla ripartizione catastale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a cadastral entity, which is intended as an object that can have a spatial representation related to the cadastral allocation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Cadastral Entity</rdfs:label>
         <rdfs:label xml:lang="it">Entità catastale</rdfs:label>
@@ -893,6 +899,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un foglio di mappa catastale, in cui ricadono una o più particelle.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a folio of a cadastral map, which contains one or more cadastral parcels.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Cadastral map folio</rdfs:label>
         <rdfs:label xml:lang="it">Foglio di mappa catastale</rdfs:label>
@@ -936,8 +943,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;identità catastale di un&apos;entità, intesa come l&apos;insieme delle informazioni di localizzazione che riguardano il bene con
-riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di un&apos;entità può avere un riferimento cronologico, che indica l&apos;epoca alla quale risalgono i dati catastali.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;identità catastale di un&apos;entità, intesa come l&apos;insieme delle informazioni di localizzazione che riguardano il bene con riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di un&apos;entità può avere un riferimento cronologico, che indica l&apos;epoca alla quale risalgono i dati catastali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the cadastral identity of an entity, which is intended as a set of location information concerning the property with reference to the national cadastral allocation. The cadastral identity can have a chronological reference indicating the dating of cadastral data.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Cadastral identity</rdfs:label>
         <rdfs:label xml:lang="it">Identità catastale</rdfs:label>
@@ -952,6 +959,7 @@ riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di
     <owl:Class rdf:about="https://w3id.org/arco/location/CadastralUnitCollection">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/location/CadastralEntity"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una o più particelle catastali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one or more cadastral parcels.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Cadastral unit collection</rdfs:label>
         <rdfs:label xml:lang="it">Collezione di particelle catastali</rdfs:label>
@@ -966,7 +974,8 @@ riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di
 
     <owl:Class rdf:about="https://w3id.org/arco/location/CadastreType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di catasto (es.: catasto terreni, catasto fabbricati, catasto misto)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di catasto (ad es. catasto terreni, catasto fabbricati, catasto misto).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of cadastre (e.g. land cadastre, building cadastre, mixed cadastre).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Cadastre type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di catasto</rdfs:label>
@@ -995,8 +1004,8 @@ riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di
     <!-- https://w3id.org/arco/location/Coordinates -->
 
     <owl:Class rdf:about="https://w3id.org/arco/location/Coordinates">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle coordinate, geografiche o proiettate, che permettono la georeferenziazione di un oggetto. Per la georeferenziazione puntuale sarà presente soltanto una coppia di coordinate; per la georeferenziazione lineare e areale saranno presenti più coppie di coordinate che individuano i punti che definiscono la linea o
-l&apos;area che rappresenta il bene.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle coordinate, geografiche o proiettate, che permettono la georeferenziazione di un oggetto. Per la georeferenziazione puntuale sarà presente soltanto una coppia di coordinate; per la georeferenziazione lineare e areale saranno presenti più coppie di coordinate che individuano i punti che definiscono la linea o l&apos;area che rappresenta il bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the set of coordinates, geographic or projected, which allows the georeferencing of an object. For the punctual georeferencing there is only a pair of coordinates. For the linear and areal georeferencing there are more pairs of coordinates identifying those points of the line or area representing the object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">Coordinate</rdfs:label>
         <rdfs:label xml:lang="en">Coordinates</rdfs:label>
@@ -1011,6 +1020,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/location/GeometryMethod">
         <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo utilizzato per il posizionamento (esatto, approssimato, con rappresentazione simbolica).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the method used for the object positioning (i.e. exact, approximate, with a symbolic representation).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Geometry method</rdfs:label>
         <rdfs:label xml:lang="it">Metodo di posizionamento</rdfs:label>
@@ -1024,7 +1034,8 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     <!-- https://w3id.org/arco/location/GeometryTechnique -->
 
     <owl:Class rdf:about="https://w3id.org/arco/location/GeometryTechnique">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la tecnica di georeferenziazione, utilizzata per l&apos;acquisizione delle coordinate (rilievo da cartografia con sopralluogo, rilievo da cartografia senza sopralluogo, rilievo da foto aerea con sopralluogo, rilievo da foto aerea senza sopralluogo, rilievo da satelliterilievo tradizionale, rilievo tramite GPS, rilievo tramite punti d&apos;appoggio fiduciali o trigonometrici, stereofotogrammetria).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tecnica di georeferenziazione, utilizzata per l&apos;acquisizione delle coordinate (rilievo da cartografia con sopralluogo, rilievo da cartografia senza sopralluogo, rilievo da foto aerea con sopralluogo, rilievo da foto aerea senza sopralluogo, rilievo da satellite, rilievo tradizionale, rilievo tramite GPS, rilievo tramite punti d&apos;appoggio fiduciali o trigonometrici, stereofotogrammetria).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the technique of georeferencing, used for the acquisition of coordinates (i.e. survey from cartography with or without inspection, survey from aerial photos with or without inspection, satellite survey, traditional survey, survey via GPS, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Geometry technique</rdfs:label>
         <rdfs:label xml:lang="it">Tecnica di georeferenziazione</rdfs:label>
@@ -1055,7 +1066,8 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/location/NeighbouringCadastralEntity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/location/CadastralEntity"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta le entitò spaziali (particelle, strade, corsi d&apos;acqua, ecc.) confinanti con una o più particelle catastali.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le entità spaziali (particelle, strade, corsi d&apos;acqua, ecc.) confinanti con una o più particelle catastali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents spatial entities (i.e. roads, waterways, etc.) that border one or more cadastral parcels.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">Elemento di confine</rdfs:label>
         <rdfs:label xml:lang="en">Neighbouring cadastral entity</rdfs:label>
@@ -1070,6 +1082,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/location/SiteDefinition">
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore fisico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type definition of a physical container.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">Definizione di Contenitore Fisico</rdfs:label>
         <rdfs:label xml:lang="en">Site Definition</rdfs:label>
@@ -1084,6 +1097,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/location/SiteSpecification">
         <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche sulla qualificazione del contenitore fisico, cioè l&apos;aggettivo o la locuzione che, rispetto alla Site Definition, precisa, integra o caratterizza il contenitore fisico dal punto di vista della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents specifications about the physical container, i.e. the adjective or the phrase that with respect to the Site Definition specifies, integrates or characterizes the physical container from the point of view of the legal-administrative or functional condition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">Qualificazione del Contenitore Fisico</rdfs:label>
         <rdfs:label xml:lang="en">Site Specification</rdfs:label>
@@ -1111,6 +1125,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contenitore fisico, cioè la tipologia del contenitore fisico ed eventuali aggettivi o locuzioni che precisano, integrano o caratterizzano il contenitore fisico dal punto di vista della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of a physical container, i.e. it contains adjectives or phrases that specify, integrate or characterize the physical container from the point of view of the legal-administrative or functional condition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="en">Site Type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di Contenitore Fisico</rdfs:label>
@@ -1137,6 +1152,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una localizzazione di un bene culturale, inserita in un arco temporale e qualificata in base al ruolo che la localizzazione riveste nei confronti del bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a localization of a cultural property, within a timeframe and qualified according to the role that the localization plays in relation to the cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">Localizzazione tipizzata nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Time Indexed Typed Location</rdfs:label>
@@ -1179,7 +1195,7 @@ l&apos;area che rappresenta il bene.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/arco/location/TypeOfContext">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contesto in cui si trova un bene culturale (urbano, suburbano, territoriale, subacqueo).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of context, in which a cultural property is located.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of context, in which a cultural property is located (i.e. urban, suburban, territorial, underwater).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:label xml:lang="it">Tipo di contesto geografico</rdfs:label>
         <rdfs:label xml:lang="en">Type of Geographic Context</rdfs:label>
