@@ -1287,9 +1287,8 @@
 				<xsl:variable name="related-property" select="arco-fn:related-property(normalize-space(./RSEC), 'foaf')" />
 				<xsl:if test="count($related-property) > 0" >
 					<!-- Rule #RWS -->
-					<xsl:for-each select="schede/*/RV/RSE">
-						<xsl:if test="./* 
-						and (not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')))">
+					<xsl:for-each select="schede/*/*/RSE">
+						<xsl:if test="./* and not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')) and not(lower-case(normalize-space(./RSER))='scheda storica')">
 							<arco-cd:hasRelatedWorkSituation>
 								<xsl:attribute name="rdf:resource">
 									<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
@@ -1469,8 +1468,9 @@
 	                        </xsl:attribute>
 					</arco-cd:hasAuthorshipAttribution>
 				</xsl:for-each>
-				<xsl:for-each select="schede/*/AU/AUT | schede/F/AU/AUF">
-				<xsl:if test="(not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(../AUF/AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFN)), 'nr')))">
+				<!-- AU/AUT -->
+				<xsl:for-each select="schede/*/AU/AUT">
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')))">
 				<xsl:choose>
 					<xsl:when test="./* and (not(./AUTW) or ./AUTW='intero bene' or ./AUTW='integrale' or ./AUTW='tutta' or ./AUTW='totale') or (starts-with(lower-case(normalize-space(./AUTW)), 'nr')) or (starts-with(lower-case(normalize-space(./AUTW)), 'n.r')) or (starts-with(lower-case(normalize-space(./AUTW)), 'intero')) or (starts-with(lower-case(normalize-space(./AUTW)), 'intera')) or (starts-with(lower-case(normalize-space(./AUTW)), 'esemplar'))">
 						<arco-cd:hasAuthorshipAttribution>
@@ -1487,24 +1487,6 @@
 				                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
 				                                </xsl:when>
-				                                <xsl:when
-								test="../AUF/AUFA and ../AUF/AUFN and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
-				                                    <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
-				                                </xsl:when>
-				                                <xsl:when
-								test="../AUF/AUFA and ../AUF/AUFB and (not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(../AUF/AUFA)), 'n.r')))">
-				                                    <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
-				                                </xsl:when>
-				                                <xsl:when test="../AUF/AUFB">
-				                                    <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)))" />
-				                                </xsl:when>
-				                                <xsl:when test="../AUF/AUFN">
-				                                    <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)))" />
-				                                </xsl:when>
 				                                <xsl:otherwise>
 				                                    <xsl:value-of
 								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
@@ -1515,10 +1497,6 @@
 			                                <xsl:when test="./AUTS">
 			                                    <xsl:value-of
 								select="concat($author, '-', arco-fn:urify(normalize-space(./AUTS)))" />
-			                                </xsl:when>
-			                                <xsl:when test="../AUF/AUFS">
-			                                    <xsl:value-of
-								select="concat($author, '-', arco-fn:urify(normalize-space(../AUF/AUFS)))" />
 			                                </xsl:when>
 			                                <xsl:otherwise>
 			                                    <xsl:value-of
@@ -1539,6 +1517,54 @@
 						</xsl:for-each>
 					</xsl:otherwise>
 				</xsl:choose>
+				</xsl:if>
+				</xsl:for-each>
+				<!-- AU/AUF (F version 2.00, 3.00) -->
+				<xsl:for-each select="schede/F/AU/AUF">
+				<xsl:if test="./* and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
+				
+						<arco-cd:hasAuthorshipAttribution>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-photographer-', position())" />
+		                        </xsl:attribute>
+						</arco-cd:hasAuthorshipAttribution>
+						<arco-core:hasAuthor>
+							<xsl:attribute name="rdf:resource">
+		                    		<xsl:variable name="author">
+				                            <xsl:choose>
+				                                <xsl:when
+								test="./AUFA and ./AUFN and (not(starts-with(lower-case(normalize-space(./AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFA)), 'n.r')))">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUFN)), '-', arco-fn:urify(normalize-space(./AUFA)))" />
+				                                </xsl:when>
+				                                <xsl:when
+								test="./AUFA and ./AUFB and (not(starts-with(lower-case(normalize-space(./AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFA)), 'n.r')))">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUFB)), '-', arco-fn:urify(normalize-space(./AUFA)))" />
+				                                </xsl:when>
+				                                <xsl:when test="./AUFB">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUFB)))" />
+				                                </xsl:when>
+				                                <xsl:when test="./AUFN">
+				                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUFN)))" />
+				                                </xsl:when>
+				                            </xsl:choose>
+			                            </xsl:variable>
+			                            <xsl:choose>
+			                                <xsl:when test="./AUFS">
+			                                    <xsl:value-of
+								select="concat($author, '-', arco-fn:urify(normalize-space(./AUFS)))" />
+			                                </xsl:when>
+			                                <xsl:otherwise>
+			                                    <xsl:value-of
+								select="$author" />
+			                                </xsl:otherwise>
+			                            </xsl:choose>
+		                    	</xsl:attribute>
+						</arco-core:hasAuthor>
 				</xsl:if>
 				</xsl:for-each>
 				<!-- responsibility (F and FF) -->
@@ -1697,6 +1723,58 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<!-- mibact scope of protection (AMB) -->
+                <xsl:if test="schede/*/OG/AMB">
+                    <xsl:for-each select="schede/*/OG/AMB">
+                        <arco-core:hasMibacScopeOfProtection>
+                            <xsl:attribute name="rdf:resource">
+                                <xsl:choose>
+                                    <xsl:when test="lower-case(normalize-space(.))='archeologico'">
+                                        <xsl:value-of select="'https://w3id.org/arco/core/Archaeological'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(.))='architettonico e paesaggistico'">
+                                        <xsl:value-of select="'https://w3id.org/arco/core/ArchitecturalLandscape'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(.))='etnoantropologico'">
+                                        <xsl:value-of select="'https://w3id.org/arco/core/EthnoAnthropological'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(.))='storico artistico'">
+                                        <xsl:value-of select="'https://w3id.org/arco/core/HistoricalArtistic'" />
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="concat($NS, 'MibacScopeOfProtection/', arco-fn:urify(normalize-space(.)))" />
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:attribute>
+                        </arco-core:hasMibacScopeOfProtection>
+                        <!-- mibact scope of protection as an individual -->
+                        <xsl:choose>
+							<xsl:when
+								test="lower-case(normalize-space(.))='archeologico'" />
+							<xsl:when test="lower-case(normalize-space(.))='architettonico e paesaggistico'" />
+							<xsl:when
+								test="lower-case(normalize-space(.))='etnoantropologico'" />
+							<xsl:when
+								test="lower-case(normalize-space(.))='storico artistico'" />
+							<xsl:when test=".">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+                                    <xsl:value-of
+										select="concat($NS, 'MibacScopeOfProtection/', arco-fn:urify(normalize-space(.)))" />
+                                </xsl:attribute>
+									<rdf:type
+										rdf:resource="https://w3id.org/arco/core/MibacScopeOfProtection" />
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(.)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(.)" />
+									</l0:name>
+								</rdf:Description>
+							</xsl:when>
+						</xsl:choose>
+                    </xsl:for-each>
+                </xsl:if>
 				<!-- intervention (CO/RST) -->
 				<xsl:for-each select="schede/*/CO/RST">
 					<xsl:choose>
