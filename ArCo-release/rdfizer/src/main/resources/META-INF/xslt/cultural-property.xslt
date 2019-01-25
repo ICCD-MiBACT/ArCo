@@ -2127,8 +2127,25 @@
 	                			</xsl:attribute>
 					</clvapit:hasGeometry>
 				</xsl:for-each>
-
-
+				<!-- Geometry for RA 2.00 -->
+				<xsl:if test="schede/*/RP/LGI">
+					<clvapit:hasGeometry>
+						<xsl:attribute name="rdf:resource">
+	            			<xsl:value-of
+							select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
+	            		</xsl:attribute>
+	            	</clvapit:hasGeometry>
+	            </xsl:if>
+	            <!-- Geometry for A 2.00 -->
+				<xsl:if test="schede/*/CR">
+				<clvapit:hasGeometry>
+						<xsl:attribute name="rdf:resource">
+	            			<xsl:value-of
+							select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
+	            		</xsl:attribute>
+	            	</clvapit:hasGeometry>
+	            </xsl:if>
+	            
 				<xsl:for-each select="schede/*/*/SGT/SGTI">
 					<xsl:if
 						test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
@@ -2461,9 +2478,28 @@
 				<!-- finding note (RE/RES) -->
 				<xsl:if test="schede/*/RE/RES">
 					<arco-cd:findingNote>
-						<xsl:value-of select="schede/*/RE/RES" />
+						<xsl:value-of select="normalize-space(schede/*/RE/RES)" />
 					</arco-cd:findingNote>
 				</xsl:if>
+				<!-- finding note (RP/SPR, norm RA 2.00) -->
+				<xsl:if test="schede/*/RP/SPR">
+					<arco-cd:findingNote>
+						<xsl:value-of select="normalize-space(schede/*/RP/SPR)" />
+					</arco-cd:findingNote>
+				</xsl:if>
+				<!-- finding note (RP/ROC, norm RA 2.00) -->
+				<xsl:for-each select="schede/*/RP/ROC">
+					<arco-cd:findingNote>
+						<xsl:choose>
+							<xsl:when test="./ROCC and ./ROCI">
+								<xsl:value-of select="concat(normalize-space(./ROCC), ' | ', normalize-space(./ROCI))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat(normalize-space(./ROCC), normalize-space(./ROCI))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</arco-cd:findingNote>
+				</xsl:for-each>
 				<!-- inscription (DA/ISR) -->
 				<xsl:if test="schede/*/DA/ISR/*">
 					<xsl:for-each select="schede/*/DA/ISR">
@@ -2920,6 +2956,27 @@
 					</xsl:otherwise>
 				</xsl:choose>
 				</xsl:for-each>
+				<!-- Protective Measure for A 2.00 -->
+				 <xsl:for-each select="schede/*/TU/VIN">
+					<xsl:choose>
+					<xsl:when test="./* and (not(./VINE) or ./VINE='intero bene' or ./VINE='integrale' or ./VINE='tutta' or ./VINE='totale') or (starts-with(lower-case(normalize-space(./VINE)), 'nr')) or (starts-with(lower-case(normalize-space(./VINE)), 'n.r')) or (starts-with(lower-case(normalize-space(./NVCP)), 'intero')) or (starts-with(lower-case(normalize-space(./NVCP)), 'intera')) or (starts-with(lower-case(normalize-space(./NVCP)), 'esemplar'))">
+						<arco-cd:hasProtectiveMeasure>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
+                		</xsl:attribute>
+                	</arco-cd:hasProtectiveMeasure>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="./VINE">
+							<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+				</xsl:for-each>
                 <!-- Urban planning instrument of cultural property -->
 				<xsl:for-each select="schede/*/TU/STU">
                 	<arco-cd:hasUrbanPlanningInstrument>
@@ -2955,8 +3012,8 @@
                 </xsl:for-each>
                 </xsl:if>
                 <!-- Archaeological excavation of cultural property -->
-                <xsl:if test="not(schede/*/RE/DSC/DSCD='0000/00/00' or schede/*/RE/DSC/DSCD='/') and schede/*/RE/DSC/*">
-                <xsl:for-each select="schede/*/RE/DSC">
+                <xsl:if test="not(schede/*/*/DSC/DSCD='0000/00/00' or schede/*/*/DSC/DSCD='/') and schede/*/*/DSC/*">
+                <xsl:for-each select="schede/*/*/DSC">
                 	<arco-cd:hasSurvey>
                 		<xsl:attribute name="rdf:resource">
                 			<xsl:value-of select="concat($NS, 'ArchaeologicalExcavation/', $itemURI, '-survey-', position())" />

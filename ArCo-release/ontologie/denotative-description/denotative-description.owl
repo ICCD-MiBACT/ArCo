@@ -88,6 +88,12 @@
     
 
 
+    <!-- https://w3id.org/arco/context-description/hasCoinIssuance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasCoinIssuance"/>
+    
+
+
     <!-- https://w3id.org/arco/context-description/hasSource -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasSource"/>
@@ -935,6 +941,12 @@
     
 
 
+    <!-- https://w3id.org/arco/context-description/CoinIssuance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/CoinIssuance"/>
+    
+
+
     <!-- https://w3id.org/arco/context-description/Source -->
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/Source"/>
@@ -1039,12 +1051,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/transcript"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/core/description"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -1055,7 +1061,13 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento (stemma, marchio, timbro, emblema, etc.) apposto su un bene culturale.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/denotative-description/transcript"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento (stemma, marchio, timbro, emblema, logo, iscrizione, etc.) apposto su un bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
         <rdfs:label xml:lang="en">Element affixed to cultural property</rdfs:label>
         <rdfs:label xml:lang="it">Elemento apposto su bene culturale</rdfs:label>
@@ -1111,6 +1123,38 @@
     
 
 
+    <!-- https://w3id.org/arco/denotative-description/CoinDesign -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/CoinDesign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la raffigurazione presente sul dritto o sul rovescio di un bene numismatico, intesa come l&apos;insieme degli elementi grafici, che, uniti a una legenda (lettere e parole), fa parte dell&apos;impronta della moneta.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the design on the reverse or the obverse of a numismatic property, as the graphical part of what is represented on a side of a coin, together with the legend (lettering and wording).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Coin design</rdfs:label>
+        <rdfs:label xml:lang="it">Raffigurazione su moneta</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DESA; DA/DES/DESM</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/CoinLegend -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/CoinLegend">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/Inscription"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme di lettere e parole presenti sul dritto o sul rovescio di un bene numismatico, che, unito alla raffigurazione, fa parte dell&apos;impronta della moneta.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the lettering and wording on the reverse or the obverse of a numismatic property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="en">Coin legend</rdfs:label>
+        <rdfs:label xml:lang="it">Legenda della moneta</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/denotative-description/ConservationStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/denotative-description/ConservationStatus">
@@ -1143,6 +1187,28 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CO/STC/STCC</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/Counterstamp -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Counterstamp">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/denotative-description/AffixedElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/context-description/hasCoinIssuance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/context-description/CoinIssuance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una contromarca, ovvero una lettera o un altro segno punzonato su una moneta. Una contromarca viene apposta tramite un apposito punzone. La maggior parte delle monete vengono contromarcate per cambiarne il valore in seguito a una riforma monetaria. La contromarca è quindi un segno apposto dall&apos;autorità emittente nel dritto o nel rovescio della moneta in epoca posteriore alla sua emissione, per aumentarne o diminuirne il valore e, in caso di necessità, per rimettere in circolazione monete già ritirate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represent a counterstamp (or countermark), that is a partial or complete over-stamping of a coin, generally affixed in order to change its value or issuing authority.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description/"/>
+        <rdfs:label xml:lang="it">Contromarca</rdfs:label>
+        <rdfs:label xml:lang="en">Counterstamp</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa NU 4.00: DA/CON</arco-core:iccdNormTag>
     </owl:Class>
     
 

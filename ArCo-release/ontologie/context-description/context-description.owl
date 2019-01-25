@@ -488,16 +488,22 @@
     <!-- https://w3id.org/arco/context-description/hasCoinIssuance -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasCoinIssuance">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/NumismaticProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/core/NumismaticProperty"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/denotative-description/Counterstamp"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/context-description/CoinIssuance"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene numismatico alla sua emissione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene numismatico alla sua emissione, o una contromarca a una nuova emissione che sostituisce nominale, autorità emittente, zecca e cronologia della moneta originari.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
         <rdfs:label xml:lang="it">ha emissione di moneta</rdfs:label>
         <rdfs:label xml:lang="en">has coin issuance</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la
-catalogazione di monete e medaglie): AU/EDT</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE; DA/CON/CONN; DA/CON/CONZ; DA/CON/CONA; DA/CON/CONC - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3032,7 +3038,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/explanationNote">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/note"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di rappresentare l&apos;interpretazione di un bene culturale, ricavabile dall&apos;osservazione diretta e dai dati conoscitivi disponibili.</rdfs:comment>
@@ -3049,7 +3054,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/context-description/findingNote">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/note"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative alle modalità di individuazione e di reperimento del bene in esame, in forma di testo libero. Possono essere integrative rispetto a quanto rappresentato come Scavo Archeologico o Ricognizione Archeologica, oppure possono essere le uniche informazioni registrate sull&apos;individuazione e il reperimento del bene, in quelle situazioni in cui i dati a disposizione non consentono di compilare le schede di Authority file RCG-Ricognizione archeologica e/o DSC-Scavo archeologico. Vengono quindi collegate direttamente al bene.</rdfs:comment>
@@ -3058,7 +3062,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="it">note di reperimento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RES</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RES - ICCD Normativa RA 2.00: RP/SPR; RP/ROC/ROCC; RP/ROC/ROCI</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -4538,8 +4542,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="it">Emissione di moneta</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la
-catalogazione di monete e medaglie): AU/EDT</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -6610,6 +6613,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Type"/>
+    
+
+
+    <!-- https://w3id.org/arco/denotative-description/Counterstamp -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/denotative-description/Counterstamp"/>
     
 
 

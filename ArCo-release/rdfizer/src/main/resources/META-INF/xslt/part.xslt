@@ -221,6 +221,42 @@
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
+			
+			<!-- part of cultural property when there is VINE (protective measure for A 2.00) -->
+			<xsl:for-each select="schede/*/TU/VIN">
+				<xsl:variable name="protectiveMeasure">
+					<xsl:value-of
+						select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if
+					test="./VINE and not(lower-case(normalize-space(./VINE))='intero bene') and not(lower-case(normalize-space(./VINE))='integrale') and not(lower-case(normalize-space(./VINE))='tutta') and not(lower-case(normalize-space(./VINE))='totale') and (not(starts-with(lower-case(normalize-space(./VINE)), 'nr')) and not(starts-with(lower-case(normalize-space(./VINE)), 'n.r')) and not(starts-with(lower-case(normalize-space(./VINE)), 'intero')) and not(starts-with(lower-case(normalize-space(./VINE)), 'intera')) and not(starts-with(lower-case(normalize-space(./VINE)), 'esemplar')))">
+					<xsl:for-each select="./VINE">
+
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyPart" />
+							<arco-dd:hasProtectiveMeasure>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$protectiveMeasure" />
+								</xsl:attribute>
+							</arco-dd:hasProtectiveMeasure>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+						</rdf:Description>
+
+					</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
 
 			<!-- part of cultural property when there is MTCP (4.00, material) -->
 			<xsl:if
