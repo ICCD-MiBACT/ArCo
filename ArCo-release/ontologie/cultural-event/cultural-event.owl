@@ -153,12 +153,6 @@
     
 
 
-    <!-- http://dati.beniculturali.it/cis/GeographicalFeature -->
-
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/GeographicalFeature"/>
-    
-
-
     <!-- https://w3id.org/arco/cultural-event/Exhibition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/cultural-event/Exhibition">
