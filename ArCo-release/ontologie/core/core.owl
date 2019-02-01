@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/core/"
-     xml:base="https://w3id.org/arco/core/"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/core/"
+     xml:base="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,7 +11,7 @@
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:ro="https://w3id.org/italia/onto/RO/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/core">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core/">
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -57,15 +57,15 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasAgent -->
+    <!-- https://w3id.org/arco/ontology/core/hasAgent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasAgent">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isAgentOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasAgent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente all&apos;agente che lo ricopre.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role to that agent.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha agente</rdfs:label>
         <rdfs:label xml:lang="en">has agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -74,16 +74,16 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasAgentRole -->
+    <!-- https://w3id.org/arco/ontology/core/hasAgentRole -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasAgentRole">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasSituation"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isAgentRoleOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentRoleOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una situazione in cui un agente ricopre un ruolo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to a situation in which an agent holds a role connected to that entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha ruolo ricoperto da agente</rdfs:label>
         <rdfs:label xml:lang="en">has agent role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -92,16 +92,16 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasCategory -->
+    <!-- https://w3id.org/arco/ontology/core/hasCategory -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasCategory">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasConcept"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isCategoryOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasCategory">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/Category"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a una categoria.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates any object with a category.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha categoria</rdfs:label>
         <rdfs:label xml:lang="en">has category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -110,13 +110,13 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasClassification -->
+    <!-- https://w3id.org/arco/ontology/core/hasClassification -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasClassification">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasSituation"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isClassificationOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isClassificationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/Classification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:comment xml:lang="it">La object property che permette di aggiungere una classificazione a un qualsiasi oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that allows to add a classification to any object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
@@ -126,12 +126,12 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasConcept -->
+    <!-- https://w3id.org/arco/ontology/core/hasConcept -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasConcept">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isConceptOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasConcept">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a un concetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates any object with a concept.</rdfs:comment>
@@ -144,12 +144,12 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasCulturalEntityCharacteristic -->
+    <!-- https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasCulturalEntityCharacteristic">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isCulturalEntityCharacteristicOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isCulturalEntityCharacteristicOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalEntityCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
         <rdfs:comment xml:lang="it">La object property che collega una cultural entity a una sua caratteristica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that links a cultural entity to one of its characteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
@@ -161,15 +161,15 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasRole -->
+    <!-- https://w3id.org/arco/ontology/core/hasRole -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasRole">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isRoleOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasRole">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isRoleOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role to that role.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha ruolo</rdfs:label>
         <rdfs:label xml:lang="en">has role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -178,12 +178,12 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasSituation -->
+    <!-- https://w3id.org/arco/ontology/core/hasSituation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasSituation">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isSituationOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasSituation">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/Situation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:comment xml:lang="it">La proprietà che collega un qualsiasi oggetto a una situazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links any object to a situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
@@ -193,16 +193,16 @@
     
 
 
-    <!-- https://w3id.org/arco/core/hasType -->
+    <!-- https://w3id.org/arco/ontology/core/hasType -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasType">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasConcept"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isTypeOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a un tipo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates any object with a type.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha tipo</rdfs:label>
         <rdfs:label xml:lang="en">has type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -211,14 +211,14 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isAgentOf -->
+    <!-- https://w3id.org/arco/ontology/core/isAgentOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isAgentOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente&quot;, collega un agente alla situazione in cui l&apos;agente ha ricoperto un ruolo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an agent to a situation in which that agent holds a role.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is agent of</rdfs:label>
         <rdfs:label xml:lang="it">è agente in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -227,15 +227,15 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isAgentRoleOf -->
+    <!-- https://w3id.org/arco/ontology/core/isAgentRoleOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isAgentRoleOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentRoleOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un agente ricopre un ruolo relativo a un&apos;entità all&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role connected to an entity to that entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is agent role of</rdfs:label>
         <rdfs:label xml:lang="it">è ruolo ricoperto da agente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -244,15 +244,15 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isCategoryOf -->
+    <!-- https://w3id.org/arco/ontology/core/isCategoryOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isCategoryOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isConceptOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isCategoryOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/Category"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:comment xml:lang="it">La object property che associa una categoria a un qualunque oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates a category to any object.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -261,11 +261,11 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isClassificationOf -->
+    <!-- https://w3id.org/arco/ontology/core/isClassificationOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isClassificationOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isSituationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/Classification"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassificationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">La proprietà inversa di hasClassification, che collega un oggetto a una sua classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The inverse object property of hasClassification, that links an object to a classification.</rdfs:comment>
@@ -278,10 +278,10 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isConceptOf -->
+    <!-- https://w3id.org/arco/ontology/core/isConceptOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isConceptOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/Concept"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isConceptOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="it">La proprietà inversa di hasConcept, che collega un concetto a un qualunque oggetto.</rdfs:comment>
@@ -295,14 +295,14 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isCulturalEntityCharacteristicOf -->
+    <!-- https://w3id.org/arco/ontology/core/isCulturalEntityCharacteristicOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isCulturalEntityCharacteristicOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalEntityCharacteristic"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isCulturalEntityCharacteristicOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">La object property che collega una caratteristica di una cultural entity alla cultural entity.</rdfs:comment>
         <rdfs:comment xml:lang="it">The object property that links a cultural entity characteristic to the cultural entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is cultural entity characteristic of</rdfs:label>
         <rdfs:label xml:lang="it">è caratteristica di entità culturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -311,14 +311,14 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isRoleOf -->
+    <!-- https://w3id.org/arco/ontology/core/isRoleOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isRoleOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isRoleOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a role to a situation in which an agent holds that role.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is role of</rdfs:label>
         <rdfs:label xml:lang="it">è ruolo in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -327,10 +327,10 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isSituationOf -->
+    <!-- https://w3id.org/arco/ontology/core/isSituationOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isSituationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/Situation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isSituationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">La proprietà che collega una situazione ad un qualsiasi oggetto. La proprietà è modellata come proprietà inversa di hasSituation.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links a property to any object. The property is modelled as inverse object property of hasSituation.</rdfs:comment>
@@ -343,15 +343,15 @@
     
 
 
-    <!-- https://w3id.org/arco/core/isTypeOf -->
+    <!-- https://w3id.org/arco/ontology/core/isTypeOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isTypeOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isConceptOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/core/Type"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">La object property che associa un tipo a un qualunque oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that associates a type to any object.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -382,7 +382,7 @@
     <!-- http://dati.beniculturali.it/cis/CulturalEvent -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEvent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <owl:disjointWith rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
     </owl:Class>
@@ -400,7 +400,7 @@
     <!-- http://dati.beniculturali.it/cis/NameInTime -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/NameInTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
     </owl:Class>
     
@@ -414,25 +414,25 @@
     
 
 
-    <!-- https://w3id.org/arco/core/AgentRole -->
+    <!-- https://w3id.org/arco/ontology/core/AgentRole -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/core/AgentRole">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Situation"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasAgent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasAgent"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/core/hasRole"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasRole"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a situation in which an agent holds a role, regardless of the timing.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">Agent Role</rdfs:label>
         <rdfs:label xml:lang="it">Ruolo ricoperto da agente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -441,10 +441,10 @@
     
 
 
-    <!-- https://w3id.org/arco/core/Category -->
+    <!-- https://w3id.org/arco/ontology/core/Category -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/core/Category">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Concept"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Category">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta una categoria.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing a category.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
@@ -456,10 +456,10 @@
     
 
 
-    <!-- https://w3id.org/arco/core/Classification -->
+    <!-- https://w3id.org/arco/ontology/core/Classification -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/core/Classification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Situation"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Classification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta il concetto di classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class the models the concept of classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
@@ -471,9 +471,9 @@
     
 
 
-    <!-- https://w3id.org/arco/core/Concept -->
+    <!-- https://w3id.org/arco/ontology/core/Concept -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/core/Concept">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta un concetto.</rdfs:comment>
@@ -487,9 +487,9 @@
     
 
 
-    <!-- https://w3id.org/arco/core/CulturalEntityCharacteristic -->
+    <!-- https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/core/CulturalEntityCharacteristic">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta una caratteristica di un&apos;entità di carattere culturale come ad esempio un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the characteristic of a cultural entity (e.g. a cultural property).</rdfs:comment>
@@ -502,9 +502,9 @@
     
 
 
-    <!-- https://w3id.org/arco/core/Situation -->
+    <!-- https://w3id.org/arco/ontology/core/Situation -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/core/Situation">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta il generico concetto di situazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the generic concept of situation.</rdfs:comment>
@@ -517,10 +517,10 @@
     
 
 
-    <!-- https://w3id.org/arco/core/Type -->
+    <!-- https://w3id.org/arco/ontology/core/Type -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/core/Type">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Concept"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Classe che rappresenta il concetto di tipo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the concept of type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>

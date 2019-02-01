@@ -17568,9 +17568,9 @@
                         	</xsl:attribute>
 						</arco-cd:hasCollection>
 						<xsl:if test="./COLM and (not(starts-with(lower-case(normalize-space(./COLM)), 'nr')) and not(starts-with(lower-case(normalize-space(./COLM)), 'n.r')))">
-							<arco-cd:leavingReason>
+							<arco-cd:collectionLeavingReason>
 								<xsl:value-of select="normalize-space(./COLM)" />
-							</arco-cd:leavingReason>
+							</arco-cd:collectionLeavingReason>
 						</xsl:if>
 						<xsl:if test="./COLI and (not(starts-with(lower-case(normalize-space(./COLI)), 'nr')) and not(starts-with(lower-case(normalize-space(./COLI)), 'n.r')))">
 							<arco-cd:collectionUnitIdentifier>
