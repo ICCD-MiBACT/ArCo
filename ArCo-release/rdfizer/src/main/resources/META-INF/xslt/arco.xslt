@@ -14519,6 +14519,7 @@
 				/> </rdfs:label> </rdf:Description> </xsl:if -->
 			<!-- We add the category as an individual. The category is associated 
 				with a Cultural Property by the property arco-dd:hasCategory. -->
+				<!-- Cultural property category -->
 			<xsl:if test="schede/*/OG/CTG">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -14534,6 +14535,111 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(schede/*/OG/CTG)" />
 					</rdfs:label>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/RA/OG/CLS">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of
+						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/RA/OG/CLS)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/core/CulturalPropertyCategory'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/RA/OG/CLS)" />
+					</rdfs:label>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/MA/OG/OGT/OGTC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of
+						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/MA/OG/OGT/OGTC)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/core/CulturalPropertyCategory'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/MA/OG/OGT/OGTC)" />
+					</rdfs:label>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/CA/OG/OGT/OGTC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of
+						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/CA/OG/OGT/OGTC)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/core/CulturalPropertyCategory'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/CA/OG/OGT/OGTC)" />
+					</rdfs:label>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/VeAC/OG/OGT/OGTC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of
+						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/VeAC/OG/OGT/OGTC)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/core/CulturalPropertyCategory'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/VeAC/OG/OGT/OGTC)" />
+					</rdfs:label>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/AT/OG/OGT/OGTP">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of
+						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/AT/OG/OGT/OGTP)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/core/CulturalPropertyCategory'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/AT/OG/OGT/OGTP)" />
+					</rdfs:label>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/*/OG/OGM">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        <xsl:value-of
+						select="concat('https://w3id.org/arco/resource/DetectionMethod/', arco-fn:urify(normalize-space(schede/*/OG/OGM)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/context-description/DetectionMethod'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/*/OG/OGM)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(schede/*/OG/OGM)" />
+					</l0:name>
 				</rdf:Description>
 			</xsl:if>
 			<!-- keywords (PST) as an individual -->

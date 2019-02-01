@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/core/"
      xml:base="https://w3id.org/arco/core/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -8,8 +9,40 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cis="http://dati.beniculturali.it/cis/"
-     xmlns:ro="https://w3id.org/italia/onto/RO/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/core"/>
+     xmlns:ro="https://w3id.org/italia/onto/RO/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/core">
+        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -45,6 +78,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasAgentRole">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isAgentRoleOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una situazione in cui un agente ricopre un ruolo.</rdfs:comment>
@@ -65,6 +99,13 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isCategoryOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Category"/>
+        <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a una categoria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates any object with a category.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="it">ha categoria</rdfs:label>
+        <rdfs:label xml:lang="en">has category</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -76,7 +117,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isClassificationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Classification"/>
-        <rdfs:comment xml:lang="it">La object property che permette di aggiungere una classificazione ad un qualsiasi oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La object property che permette di aggiungere una classificazione a un qualsiasi oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that allows to add a classification to any object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">ha classificazione</rdfs:label>
@@ -91,11 +132,14 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isConceptOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Concept"/>
-        <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto ad un concetto.</rdfs:comment>
-        <rdfs:comment xml:lang="en">the object property that associates any object with a concept.</rdfs:comment>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
+        <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a un concetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates any object with a concept.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">ha concetto</rdfs:label>
         <rdfs:label xml:lang="en">has concept</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -106,11 +150,13 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isCulturalEntityCharacteristicOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/CulturalEntityCharacteristic"/>
+        <rdfs:comment xml:lang="it">La object property che collega una cultural entity a una sua caratteristica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that links a cultural entity to one of its characteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
-        <rdfs:label xml:lang="it">La object property che collega una cultural entity ad una sua caratteristica.</rdfs:label>
-        <rdfs:label xml:lang="en">The object property that links a cultural entity to one of its characteristics.</rdfs:label>
         <rdfs:label xml:lang="it">ha caratteristica di entità culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural entity characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -119,8 +165,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/hasRole">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isRoleOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un ruolo viene ricoperto da un agente al ruolo stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role to that role.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
@@ -138,7 +184,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isSituationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Situation"/>
-        <rdfs:comment xml:lang="it">La proprietà che collega un qualsiasi oggetto ad una situazione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La proprietà che collega un qualsiasi oggetto a una situazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links any object to a situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">ha situazione</rdfs:label>
@@ -154,6 +200,13 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/core/isTypeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a un tipo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates any object with a type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="it">ha tipo</rdfs:label>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -178,6 +231,15 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isAgentRoleOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/AgentRole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui un agente ricopre un ruolo relativo a un&apos;entità all&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a situation in which an agent holds a role connected to an entity to that entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">is agent role of</rdfs:label>
+        <rdfs:label xml:lang="it">è ruolo ricoperto da agente di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -188,6 +250,13 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isConceptOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/core/Category"/>
+        <rdfs:comment xml:lang="it">La object property che associa una categoria a un qualunque oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates a category to any object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">is category of</rdfs:label>
+        <rdfs:label xml:lang="it">è categoria di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -198,11 +267,13 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isSituationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/Classification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">La proprietà inversa di hasClassification.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The inverse object property of hasClassification.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La proprietà inversa di hasClassification, che collega un oggetto a una sua classificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse object property of hasClassification, that links an object to a classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="en">is classification of</rdfs:label>
         <rdfs:label xml:lang="it">è classificazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -212,24 +283,39 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isConceptOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/Concept"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">La proprietà inversa di hasConcept.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The inverse property of hasConcept.</rdfs:comment>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
+        <rdfs:comment xml:lang="it">La proprietà inversa di hasConcept, che collega un concetto a un qualunque oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse property of hasConcept, that relates a concept to any object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="en">is concept of</rdfs:label>
         <rdfs:label xml:lang="it">è concetto di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/arco/core/isCulturalEntityCharacteristicOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isCulturalEntityCharacteristicOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isCulturalEntityCharacteristicOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalEntityCharacteristic"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">La object property che collega una caratteristica di una cultural entity alla cultural entity.</rdfs:comment>
+        <rdfs:comment xml:lang="it">The object property that links a cultural entity characteristic to the cultural entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">is cultural entity characteristic of</rdfs:label>
+        <rdfs:label xml:lang="it">è caratteristica di entità culturale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/arco/core/isRoleOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isRoleOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/core/AgentRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un ruolo a una situazione in cui il ruolo viene ricoperto da un agente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a role to a situation in which an agent holds that role.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
@@ -246,11 +332,13 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/core/isSituationOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/Situation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">La proprietà che collega una situazione ad un qualsiasi oggetto. La proprietà è modellata come proprietà iversa di hasSituation.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La proprietà che collega una situazione ad un qualsiasi oggetto. La proprietà è modellata come proprietà inversa di hasSituation.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links a property to any object. The property is modelled as inverse object property of hasSituation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="en">is situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -261,6 +349,13 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/core/isConceptOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/core/Type"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">La object property che associa un tipo a un qualunque oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates a type to any object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
+        <rdfs:label xml:lang="en">is type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -337,6 +432,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una situazione relativa a un agente che ricopre un ruolo, senza la specificazione della dimensione tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a situation in which an agent holds a role, regardless of the timing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core/"/>
         <rdfs:label xml:lang="en">Agent Role</rdfs:label>
         <rdfs:label xml:lang="it">Ruolo ricoperto da agente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -349,11 +445,13 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Category">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Concept"/>
-        <rdfs:comment xml:lang="it">Il concetto di categoria.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The concept of category.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe che rappresenta una categoria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class representing a category.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">Categoria</rdfs:label>
         <rdfs:label xml:lang="en">Category</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -367,6 +465,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="en">Classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -375,11 +475,14 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Concept">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta un concetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing a concept.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
-        <rdfs:label xml:lang="it">Categoria</rdfs:label>
-        <rdfs:label xml:lang="en">Category</rdfs:label>
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+        <rdfs:label xml:lang="it">Concetto</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -388,11 +491,13 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/CulturalEntityCharacteristic">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <rdfs:comment xml:lang="it">La classe che rappresenta una caratteristica di un entità di carattere culturale come ad esempio un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe che rappresenta una caratteristica di un&apos;entità di carattere culturale come ad esempio un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class representing the characteristic of a cultural entity (e.g. a cultural property).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">Caratteristica di Entità Culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Entity Characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -402,10 +507,12 @@
     <owl:Class rdf:about="https://w3id.org/arco/core/Situation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta il generico concetto di situazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The generico concept of situation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class representing the generic concept of situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="en">Situation</rdfs:label>
         <rdfs:label xml:lang="it">Situazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -414,11 +521,13 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/core/Type">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Concept"/>
-        <rdfs:comment xml:lang="it">Classe che rappresenta il concetto di tipo</rdfs:comment>
-        <rdfs:comment xml:lang="en">The concept of type.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Classe che rappresenta il concetto di tipo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class representing the concept of type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">Tipo</rdfs:label>
         <rdfs:label xml:lang="en">Type</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 

@@ -1994,14 +1994,64 @@
 	                        </xsl:attribute>
 					</arco-location:hasTypeOfContext>
 				</xsl:for-each>
+				<!-- Cultural property category -->
 				<xsl:if test="schede/*/OG/CTG">
-				<arco-core:hasCulturalPropertyCategory>
-					<xsl:attribute name="rdf:resource">
-                        <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/*/OG/CTG)))" />
-                    </xsl:attribute>
-					</arco-core:hasCulturalPropertyCategory>
-			</xsl:if>
+					<arco-core:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/*/OG/CTG)))" />
+	                    </xsl:attribute>
+						</arco-core:hasCulturalPropertyCategory>
+				</xsl:if>
+				<xsl:if test="schede/RA/OG/CLS">
+					<arco-core:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/RA/OG/CLS)))" />
+	                    </xsl:attribute>
+						</arco-core:hasCulturalPropertyCategory>
+				</xsl:if>
+				<xsl:if test="schede/MA/OG/OGT/OGTC">
+					<arco-core:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/MA/OG/OGT/OGTC)))" />
+	                    </xsl:attribute>
+						</arco-core:hasCulturalPropertyCategory>
+				</xsl:if>
+				<xsl:if test="schede/CA/OG/OGT/OGTC">
+					<arco-core:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/CA/OG/OGT/OGTC)))" />
+	                    </xsl:attribute>
+						</arco-core:hasCulturalPropertyCategory>
+				</xsl:if>
+				<xsl:if test="schede/VeAC/OG/OGT/OGTC">
+					<arco-core:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/VeAC/OG/OGT/OGTC)))" />
+	                    </xsl:attribute>
+						</arco-core:hasCulturalPropertyCategory>
+				</xsl:if>
+				<xsl:if test="schede/AT/OG/OGT/OGTP">
+					<arco-core:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(schede/AT/OG/OGT/OGTP)))" />
+	                    </xsl:attribute>
+						</arco-core:hasCulturalPropertyCategory>
+				</xsl:if>
+				<!-- detection method -->
+				<xsl:if test="schede/*/OG/OGM">
+					<arco-cd:hasDetectionMethod>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/DetectionMethod/', arco-fn:urify(normalize-space(schede/*/OG/OGM)))" />
+	                    </xsl:attribute>
+						</arco-cd:hasDetectionMethod>
+				</xsl:if>
 				<!-- Acquisition of cultural property -->
 				<xsl:for-each select="schede/*/TU/ACQ">
 					<arco-cd:hasAcquisition>

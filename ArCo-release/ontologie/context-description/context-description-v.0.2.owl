@@ -10,6 +10,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:cis="http://dati.benicultural.it/cis/"
      xmlns:context-description="https://w3id.org/arco/context-description/"
      xmlns:arco="https://w3id.org/arco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -685,6 +686,23 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa F: RO/CRF/CRFT - Normativa S: RO/ADL/ADLL - Normative RA, SMO, PST, S, OA, MI, D, NU: RO/REI/REIT - Normative CA, MA: RO/RIU/RIUT</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/hasDetectionMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/context-description/hasDetectionMethod">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/context-description/DetectionMethod"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla modalità di individuazione che ne ha permesso l&apos;individuazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to the detection method that allowed the detection of the cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="it">ha metodo di individuazione</rdfs:label>
+        <rdfs:label xml:lang="en">has detection method</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGM</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3777,6 +3795,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
+    
+
+
     <!-- https://w3id.org/arco/context-description/Acquisition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/context-description/Acquisition">
@@ -4835,6 +4859,21 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa F: RO/CRF/CRFT - Normativa S: RO/ADL/ADLL - Normative RA, SMO, PST, S, OA, MI, D, NU: RO/REI/REIT - Normative CA, MA: RO/RIU/RIUT</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/context-description/DetectionMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/context-description/DetectionMethod">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la modalità di individuazione che ha consentito l&apos;individuazione di un bene culturale e che è indicativa della tipologia e della consistenza di alcune informazioni presenti nella scheda di catalogo che lo descrive (es.: carotaggio, dati di archivio, fonti orali).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the method of detection that allowed the detection of a cultural property and which is indicative of the type and consistency of some information in the catalogue record that describes it (e.g.: coring, archive data, oral sources).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/context-description/"/>
+        <rdfs:label xml:lang="en">Detection Method</rdfs:label>
+        <rdfs:label xml:lang="it">Metodo di individuazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGM</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -6596,6 +6635,24 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/core/Classification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/Classification"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/Concept"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/CulturalEntityCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/CulturalEntityCharacteristic"/>
+    
+
+
     <!-- https://w3id.org/arco/core/HistoricOrArtisticProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/HistoricOrArtisticProperty"/>
@@ -6623,6 +6680,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco-core:iccdNormTag>
     <!-- https://w3id.org/arco/core/PhotographicHeritage -->
 
     <owl:Class rdf:about="https://w3id.org/arco/core/PhotographicHeritage"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/Situation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/Situation"/>
     
 
 
