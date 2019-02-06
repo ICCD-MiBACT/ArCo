@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-24.owl#"
+     xml:base="https://w3id.org/arco/test/testcase-24.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-24.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+onto-mu%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FMU%2F%3E%0D%0A%0D%0Aselect++%3Fphoto+%3Fmeastype+%3Fmeasvalue+%3Fmeasunit%0D%0A%0D%0Awhere+%7B%0D%0A++%3Fphoto+a+arco-core%3APhotographicHeritage+.%0D%0A++%3Fphoto+arco-dd%3AhasMeasurementCollection+%3Fmeascoll+.%0D%0A++%3Fmeascoll+arco-dd%3AhasMeasurement+%3Fmeas+.%0D%0A++%3Fmeas+arco-dd%3AhasMeasurementType+%3Fmeastype+.+%0D%0A++%3Fmeas+onto-mu%3AhasValue+%3Fmeasvalue+.+%0D%0A++%3Fmeasvalue+onto-mu%3AhasMeasurementUnit+%3Fmeasunit.+%0D%0A%0D%0A++%0D%0A%7D+%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono le dimensioni della fotografia X?
+
+(analogico)</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;photo&quot;, &quot;meastype&quot;, &quot;measvalue&quot;, &quot;measunit&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430373&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Height&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430373-1-height-63&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430373&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Width&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430373-1-width-485&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430377&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Width&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430377-1-width-41&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430379&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Height&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430379-1-height-59&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430388&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Height&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430388-1-height-235&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430388&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Width&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430388-1-width-18&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430390&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Height&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430390-1-height-23&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430390&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Width&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430390-1-width-17&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430488&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Height&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430488-1-height-8&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }},
+    { &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800430820&quot; }        , &quot;meastype&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/denotative-description/Height&quot; }        , &quot;measvalue&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Value/0800430820-1-height-75&quot; }        , &quot;measunit&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/MeasurementUnit/cm&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+PREFIX onto-mu: &lt;https://w3id.org/italia/onto/MU/&gt;
+
+select  ?photo ?meastype ?measvalue ?measunit
+
+where {
+  ?photo a arco-core:PhotographicHeritage .
+  ?photo arco-dd:hasMeasurementCollection ?meascoll .
+  ?meascoll arco-dd:hasMeasurement ?meas .
+  ?meas arco-dd:hasMeasurementType ?meastype . 
+  ?meas onto-mu:hasValue ?measvalue . 
+  ?measvalue onto-mu:hasMeasurementUnit ?measunit
+
+  
+} 
+LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
