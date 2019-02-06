@@ -34,6 +34,7 @@ WHERE{
 } 
 
 limit 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
     </owl:Ontology>
 </rdf:RDF>
 
