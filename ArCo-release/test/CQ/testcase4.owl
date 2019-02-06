@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/ICCD-MiBACT/ArCo/blob/master/ArCo-release/test/CQ/testcase4.owl#"
-     xml:base="https://github.com/ICCD-MiBACT/ArCo/blob/master/ArCo-release/test/CQ/testcase4.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-04.owl#"
+     xml:base="https://w3id.org/arco/test/testcase-04.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://github.com/ICCD-MiBACT/ArCo/blob/master/ArCo-release/test/CQ/testcase4.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-04.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++++arco-location%3AhasTimeIndexedTypedLocation+%3Flocation+.%0D%0A++%3Flocation+arco-location%3AhasLocationType+%3FlocationType+%3B%0D%0A++++arco-location%3AatSite+%3Fsite+.%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasCQ xml:lang="it">Quali sono tutte le localizzazioni in contenitori fisici che hanno riguardato il bene culturale X e di che tipo sono?</testannotationschema:hasCQ>
@@ -32,6 +32,8 @@ WHERE { ?entity rdfs:label ?entityLabel ; arco-location:hasTimeIndexedTypedLocat
 } 
 
 limit 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
     </owl:Ontology>
 </rdf:RDF>
