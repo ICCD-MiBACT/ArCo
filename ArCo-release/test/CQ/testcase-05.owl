@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase5.owl#"
-     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase5.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-05.owl#"
+     xml:base="https://w3id.org/arco/test/testcase-05.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase5.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-05.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 SELECT *
@@ -32,6 +32,8 @@ limit 100</testannotationschema:hasSPARQLQueryUnitTest>
     { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238081&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: arco provvisorio a porta Orientale a Milano - prospetto del fronte (seconda variante) (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238081-alternative-2&quot; }},
     { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238265&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: sezione di edificio religioso (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238265-alternative-2&quot; }} ] } }</testannotationschema:hasExpectedResult>
         <testannotationschema:hasCQ xml:lang="it">Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?</testannotationschema:hasCQ>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
     </owl:Ontology>
 </rdf:RDF>
 
