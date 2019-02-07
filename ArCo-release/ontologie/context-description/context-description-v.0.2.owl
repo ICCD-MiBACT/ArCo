@@ -1888,6 +1888,15 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasUseFunction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUseFunction">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasUseType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUseType">
@@ -3613,7 +3622,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/useFunction">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la funzione che l&apos;oggetto ha o ha avuto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6062,6 +6071,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/SECIdentifier -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SECIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il codice patrimoniale del bene (SEC - Modello 15), con riferimento alla classificazione del Sistema Europeo dei Conti 1995.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Codice SEC</rdfs:label>
@@ -6143,6 +6153,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/StratigraphicUnit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/StratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità stratigrafica dalla quale può provenire un bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Stratigraphic unit</rdfs:label>
@@ -6332,6 +6343,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCircumstance"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
             </owl:Restriction>
@@ -6367,6 +6384,20 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: UT</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/UseFunction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/useFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

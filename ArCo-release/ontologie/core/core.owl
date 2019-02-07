@@ -551,7 +551,7 @@
     <!-- https://w3id.org/italia/onto/RO/Role -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/RO/Role">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
     </owl:Class>
     
 
