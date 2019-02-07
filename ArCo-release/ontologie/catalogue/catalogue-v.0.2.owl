@@ -21,8 +21,8 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue/">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali e alle schede di catalogo che descrivono un bene culturale.</rdfs:comment>
-        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <rdfs:comment xml:lang="en">The Catalogue module allows the description of concepts related to the General Catalogue, and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</rdfs:comment>
         <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
@@ -108,6 +108,7 @@
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="en">Property used to associate the catalogue record with the cultural property that the catalogue record describes.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà che consente di associare la scheda di catalogo al bene culturale che essa descrive.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <rdfs:label xml:lang="it">descrive</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -229,6 +230,24 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag>CD/LIR</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/hasCulturalPropertyRecordResponsibleAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCulturalPropertyRecordResponsibleAgent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isResponsibleAgentOfCulturalPropertyRecord"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una scheda in cui si analizza un bene culturale per finalità diverse da quella della catalogazione del patrimonio all&apos;Ente o al soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property record to the agency or the person that created that record or manages the database where the record is.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="it">ha agente responsabile della scheda su bene culturale</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural property record responsible agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -564,6 +583,40 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isRelatedToInformationForm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isRelatedToInformationForm">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un modulo informativo in relazione con il bene in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to an information form.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">is related to information form</rdfs:label>
+        <rdfs:label xml:lang="it">è collegato a modulo informativo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isResponsibleAgentOfCulturalPropertyRecord -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isResponsibleAgentOfCulturalPropertyRecord">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente responsabile di scheda su bene culturale&quot;, collega l&apos;Ente o il soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte alla scheda stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property, inverse of &quot;has cultural property record responsible agent&quot;, relates the agency or the person that created the record or manages the database where the record is to the record itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">is responsible agent of cultural property record</rdfs:label>
+        <rdfs:label xml:lang="it">è ente responsabile della scheda su bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/italia/onto/RO/isRoleInTimeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
@@ -598,6 +651,21 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/culturalPropertyRecordIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/culturalPropertyRecordIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare l&apos;identificativo a una scheda in cui si analizza un bene culturale per finalità diverse da quella specificazione della catalogazione del patrimonio culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">cultural property record identifier</rdfs:label>
+        <rdfs:label xml:lang="it">identificativo di scheda su bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSC</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/deletedICCDIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/deletedICCDIdentifier">
@@ -611,6 +679,25 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSP; versioni precedenti: RV/RVE/RVES</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/informationFormIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/informationFormIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare l&apos;identificativo a un modulo informativo che è collegato a un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links an identifier to an information form related to a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="it">identificativo del modulo informativo</rdfs:label>
+        <rdfs:label xml:lang="en">information form identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/MOD/MODI</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -634,15 +721,23 @@
     <!-- https://w3id.org/arco/ontology/catalogue/referenceProject -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/referenceProject">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il progetto nell&apos;ambito del quale è stata prodotta la scheda, cui si associa un codice alternativo, assegnato da enti diversi da ICCD.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il progetto nell&apos;ambito del quale è stata prodotta una scheda, quella a cui si associa un codice alternativo, assegnato da enti diversi da ICCD, o quella che analizza un bene culturale per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the reference project of a record about a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="it">progetto di riferimento</rdfs:label>
         <rdfs:label xml:lang="en">reference project</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP</arco-core:iccdNormTag>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP; AC/ACS/ACSP</arco-core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -781,6 +876,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
         <rdfs:comment xml:lang="it">Rappresenta una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni, e che può avere più versioni (in seguito ad aggiornamenti e revisioni).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="en">Catalogue record</rdfs:label>
@@ -1298,6 +1394,62 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/culturalPropertyRecordIdentifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una scheda che analizza il bene in esame per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a record describing a cultural property for purposes other than cataloguing cultural heritage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">Catalogue property record</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda su bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/InformationForm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/InformationForm">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/informationFormIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un modulo informativo, uno standard ICCD per attività di censimento e segnalazione di beni culturali, utilizzato per acquisire informazioni per qualsiasi tipo di entità, con un set minimo di dati standardizzati obbligatori.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an information form, an ICCD standard for cultural heritage census and reporting activities, used to acquire information for any type of entity, with a minimum set of mandatory standardized data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">Information form</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo informativo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/PrivacyLevel -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/PrivacyLevel">
@@ -1456,6 +1608,8 @@
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

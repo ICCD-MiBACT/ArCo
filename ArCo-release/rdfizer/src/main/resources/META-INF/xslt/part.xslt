@@ -2,14 +2,14 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
-	xmlns:arco-fn="http://w3id.org/arco/saxon-extension" xmlns:arco-core="https://w3id.org/arco/core/"
-	xmlns:arco-event="https://w3id.org/arco/cultural-event/" xmlns:arco-dd="https://w3id.org/arco/denotative-description/"
+	xmlns:arco-fn="http://w3id.org/arco/saxon-extension" xmlns:arco-core="https://w3id.org/arco/ontology/core/"
+	xmlns:arco-event="https://w3id.org/arco/ontology/cultural-event/" xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
 	xmlns:cis="http://dati.beniculturali.it/cis/" xmlns:l0="https://w3id.org/italia/onto/l0/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:tiapit="https://w3id.org/italia/onto/TI/"
 	xmlns:roapit="https://w3id.org/italia/onto/RO/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:dcterms="http://purl.org/dc/terms/creator" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:language="https://w3id.org/italia/onto/Language/"
-	xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:arco-cd="https://w3id.org/arco/context-description/"
+	xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
 	exclude-result-prefixes="xsl php">
 
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
