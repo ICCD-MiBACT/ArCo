@@ -14,8 +14,10 @@
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ti="https://w3id.org/italia/onto/TI/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:adms-1="http://www.w3.org/ns/adms#"
+     xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -1166,7 +1168,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMethod">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Method"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine al metodo adottato nel corso dell&apos;indagine.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha metodo di indagine</rdfs:label>
@@ -3872,7 +3874,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMethod"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Method"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3941,7 +3943,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMethod"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Method"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4326,7 +4328,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/BibliographyCategory -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BibliographyCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il Genere della bibliografia che ha un vocabolario chiuso definito in tre tipi: bibliografia specifica, bibliografia di confronto e bibliografia di corredo.</rdfs:comment>
         <rdfs:label xml:lang="en">Bibliography category</rdfs:label>
@@ -4531,6 +4533,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/Copyright -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Copyright">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasCopyright"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/expiryDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta i diritti d&apos;autore detenuti da un agente su un oggetto, per esempio un bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Copyright</rdfs:label>
@@ -4545,6 +4564,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/CulturalPropertyStage -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stadio del bene catalogato in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Cultural property stage</rdfs:label>
@@ -4559,6 +4579,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/CulturalScope -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalScope">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambito culturale a cui può essere riferito un bene culturale. Per l&apos;ambito culturale si usano definizioni quali: ambito, cultura, periodo, produzione, scuola, manifattura, ecc.; a questi termini segue la qualificazione geografica o il nome dell&apos;ambito, della cultura, del periodo, della produzione, della scuola, della manifattura, ecc. Nel caso della normativa VeAC, questa classe rappresenta l&apos;ambito sartoriale/di produzione, ovvero il contesto sartoriale (oppure la manifattura, la maestranza, ecc.) a cui può essere ricondotta la realizzazione del bene catalogato.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Ambito culturale</rdfs:label>
@@ -4708,6 +4729,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/DetectionMethod -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/DetectionMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la modalità di individuazione che ha consentito l&apos;individuazione di un bene culturale e che è indicativa della tipologia e della consistenza di alcune informazioni presenti nella scheda di catalogo che lo descrive (es.: carotaggio, dati di archivio, fonti orali).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the method of detection that allowed the detection of a cultural property and which is indicative of the type and consistency of some information in the catalogue record that describes it (e.g.: coring, archive data, oral sources).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -4786,7 +4808,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/DocumentationCategory -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/DocumentationCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il Genere della documentazione che ha un vocabolario chiuso definito in due tipi: documentazione allegata e documentazione esistente.</rdfs:comment>
         <rdfs:label xml:lang="en">Documentation category</rdfs:label>
         <rdfs:label xml:lang="it">Genere della documentazione</rdfs:label>
@@ -4815,6 +4837,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/Edition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Edition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
@@ -4865,6 +4888,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/EligibleIntervention -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/EligibleIntervention">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di intervento ammesso da una normativa specifica, ovvero da un piano regolatore generale e particolareggiato o da un piano paesaggistico che interessa un bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Eligible intervention</rdfs:label>
@@ -4945,6 +4969,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/ExportImportCertification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ExportImportCertification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasExportImportCertificationType"/>
@@ -5059,6 +5084,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/Format -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Format">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative al formato della documentazione che nella normativa consiste di un vocabolario aperto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Format</rdfs:label>
@@ -5358,23 +5384,10 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Method -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Method">
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo di scavo archeologico o di ricognizione archeologica adottato nel corso dell&apos;indagine. (es.: sondaggio, per strati stratigrafici, occasionale, sistematico, etc.)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">Metodo di indagine</rdfs:label>
-        <rdfs:label xml:lang="en">Survey method</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGM; RE/DSC/DSCM</arco:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/Motivation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Motivation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il motivo principale che ha determinato una ricognizione archeologica o uno scavo archeologico.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Motivo di indagine</rdfs:label>
@@ -5467,7 +5480,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMethod"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Method"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5762,6 +5775,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Profession -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Profession">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il mestiere o la professione dell&apos;utente del bene.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Profession</rdfs:label>
@@ -5776,6 +5790,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/ProtectiveMeasure -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProponentAgency"/>
@@ -5820,6 +5835,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/ReferenceCatalogue -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative al repertorio che cita la copia della stampa in oggetto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Reference catalogue</rdfs:label>
@@ -5890,6 +5906,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Reliability -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Reliability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il livello di affidabilità delle informazioni rilevate nell&apos;indagine di fotointerpretazione/fotorestituzione.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Affidabilità</rdfs:label>
@@ -5904,6 +5921,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Reproduction -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Reproduction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasReproductionPosition"/>
@@ -5924,6 +5942,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/ReproductionPosition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ReproductionPosition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la posizione fisica della riproduzione della stampa all&apos;interno della pubblicazione, che rappresenta quindi una derivazione della stampa stessa.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Posizione della riproduzione</rdfs:label>
@@ -5938,6 +5957,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Research -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Research">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearchScientificDirector"/>
@@ -6071,6 +6091,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Scale -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Scale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le indicazioni sulla scala di rappresentazione della documentazione grafica e cartografica.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Scala</rdfs:label>
@@ -6085,6 +6106,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Source -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Source">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la motivazione o la fonte che ha determinato una certa attribuzione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the source that motivated an attribution.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6135,6 +6157,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Subject -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Subject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il soggetto rappresentato da un bene culturale o il suo motivo decorativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the subject of a cultural property, or its ornamental motif.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6204,9 +6227,25 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/SurveyMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SurveyMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo di scavo archeologico o di ricognizione archeologica adottato nel corso dell&apos;indagine. (es.: sondaggio, per strati stratigrafici, occasionale, sistematico, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Metodo di indagine</rdfs:label>
+        <rdfs:label xml:lang="en">Survey method</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGM; RE/DSC/DSCM</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Title -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Title">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSource"/>
@@ -6269,6 +6308,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEligibleIntervention"/>
@@ -6289,6 +6329,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/Use -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Use">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCircumstance"/>
@@ -6348,6 +6389,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/UseTypeSpecification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseTypeSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le specifiche sul tipo di uso del bene (reimpiego, edilizio, epigrafico, ornamentale, strumentale, strutturale).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Specifiche del tipo d&apos;uso</rdfs:label>
@@ -6455,6 +6497,14 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/italia/onto/l0/Collection -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Description -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </rdf:Description>
     
 
 

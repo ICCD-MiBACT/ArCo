@@ -502,6 +502,22 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/CulturalEntityClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityClassification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Method -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Situation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation">
@@ -549,6 +565,14 @@
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Description -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
     
 
 
