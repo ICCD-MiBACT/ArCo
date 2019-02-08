@@ -23,6 +23,7 @@ WHERE{
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;definition&quot;, &quot;alignment&quot;] },
   &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
     { &quot;definition&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyDefinition/accetta-a-codolo&quot; }	, &quot;alignment&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;http://dati.beniculturali.it/vocabularies/reperti_archeologici/def/009.000.000.001.002&quot; }} ] } }</testannotationschema:hasExpectedResult>
+         <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
     </owl:Ontology>
 </rdf:RDF>
 
