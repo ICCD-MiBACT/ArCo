@@ -5751,7 +5751,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/PhotographicSubseries -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSubseries">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/isPartOf"/>

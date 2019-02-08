@@ -898,6 +898,14 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/ArchivalRecordSet -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Circumstance -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Circumstance"/>
@@ -907,6 +915,14 @@
     <!-- https://w3id.org/arco/ontology/context-description/CoinIssuance -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/PhotographicSeries -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+    </rdf:Description>
     
 
 
@@ -1667,7 +1683,7 @@ un&apos;azienda, ecc.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/denotative-description/WritingSystem -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/WritingSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di scrittura/alfabeto adottati in una iscrizione, un timbro, uno stemma, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">Sistema di scrittura</rdfs:label>
@@ -1718,6 +1734,12 @@ un&apos;azienda, ecc.</rdfs:comment>
     <!-- https://w3id.org/italia/onto/l0/Object -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/System -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/System"/>
     
 
 
