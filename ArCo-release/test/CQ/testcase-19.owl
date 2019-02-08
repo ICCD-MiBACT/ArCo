@@ -32,6 +32,7 @@ Limit 100</testannotationschema:hasSPARQLQueryUnitTest>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasCQ xml:lang="it">Quali sono i beni culturali corredati di documentazione video-cinematografica?</testannotationschema:hasCQ>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0APREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0A%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A+++%3Fcultprop+arco-cd%3AhasDocumentation+%3Fdocum+.%0D%0A+++%3Fdocum+a+arco-cd%3AFilmDocumentation%0D%0A+%0D%0A%7D%0D%0A%0D%0ALimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
     </owl:Ontology>
 </rdf:RDF>
