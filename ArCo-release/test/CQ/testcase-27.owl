@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase15.owl#"
+     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase15.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase27.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasExpectedResult xml:lang="it">{
+  &quot;head&quot;: {
+    &quot;vars&quot;: [ &quot;bencult&quot; , &quot;ele&quot; , &quot;agent&quot; ]
+  } ,
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty1&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element1&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee1&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty2&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element2&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee2&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty3&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element3&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee3&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty4&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element4&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee4&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty5&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element5&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee5&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty6&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element6&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee6&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty7&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element7&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee7&quot; }
+      }
+    ]
+  }
+}</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+
+select *
+where {
+ ?bencult arco-dd:hasAffixedElement ?ele.
+ ?ele a arco-dd:Dedication.
+ ?ele arco-dd:hasDedicatee ?agent
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ27.ttl"/>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasCQ xml:lang="it">Qual è il dedicatario della dedica presente sul bene X?</testannotationschema:hasCQ>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testannotationschema:testDate xml:lang="en">2019-02-08</testannotationschema:testDate>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
