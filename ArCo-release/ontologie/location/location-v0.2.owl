@@ -1406,56 +1406,56 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/Suburban -->
+    <!-- https://w3id.org/arco/ontology/location/SuburbanContext -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Suburban">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/SuburbanContext">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="en">It represents a specific type of context, that is Suburban Context.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta uno specifico tipo di contesto, cioè un contesto suburbano.</rdfs:comment>
-        <rdfs:label xml:lang="en">Suburban</rdfs:label>
-        <rdfs:label xml:lang="it">Suburbano</rdfs:label>
+        <rdfs:label xml:lang="it">Contesto suburbano</rdfs:label>
+        <rdfs:label xml:lang="en">Suburban context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/Territorial -->
+    <!-- https://w3id.org/arco/ontology/location/TerritorialContext -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Territorial">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/TerritorialContext">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="en">It represents a specific type of context, that is Territorial.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta uno specifico tipo di contesto, cioè un contesto territoriale.</rdfs:comment>
-        <rdfs:label xml:lang="en">Territorial</rdfs:label>
-        <rdfs:label xml:lang="it">Territoriale</rdfs:label>
+        <rdfs:label xml:lang="it">Contesto territoriale</rdfs:label>
+        <rdfs:label xml:lang="en">Territorial context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/Underwater -->
+    <!-- https://w3id.org/arco/ontology/location/UnderwaterContext -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Underwater">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/UnderwaterContext">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="en">It represents a specific type of context, that is Underwater.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un particolare tipo di contesto, cioè un contesto subacqueo.</rdfs:comment>
-        <rdfs:label xml:lang="it">Subacqueo</rdfs:label>
-        <rdfs:label xml:lang="en">Underwater</rdfs:label>
-        <rdfs:label xml:lang="it">provvisoria</rdfs:label>
+        <rdfs:label xml:lang="it">Contesto subacqueo</rdfs:label>
+        <rdfs:label xml:lang="en">Underwater context</rdfs:label>
         <rdfs:label xml:lang="en">unstable</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/Urban -->
+    <!-- https://w3id.org/arco/ontology/location/UrbanContext -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/Urban">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/UrbanContext">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="en">It represents a specific type of context, that is Urban Context</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta uno specifico tipo di contesto, cioè un contesto urbano.</rdfs:comment>
-        <rdfs:label xml:lang="en">Urban</rdfs:label>
-        <rdfs:label xml:lang="it">Urbano</rdfs:label>
+        <rdfs:label xml:lang="it">Contesto urbano</rdfs:label>
+        <rdfs:label xml:lang="en">Urban context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>

@@ -14,10 +14,8 @@
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:ti="https://w3id.org/italia/onto/TI/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:adms-1="http://www.w3.org/ns/adms#"
-     xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -499,6 +497,24 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO - ICCD Normativa MI: AU/DDC/DDCC</arco:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasCircumstanceType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCircumstanceType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CircumstanceType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;occasione con il tipo di occasione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the circumstance to its type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di circostanza</rdfs:label>
+        <rdfs:label xml:lang="en">has circumstance type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CA/CAR; CA/CAC</arco:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1893,6 +1909,14 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUseFunction">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua funzione d&apos;uso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its use function.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha funzione d&apos;uso</rdfs:label>
+        <rdfs:label xml:lang="en">has use function</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</arco:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -4405,13 +4429,29 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Circumstance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione che ha determinato una certa situazione, per esempio l&apos;occasione per cui è stato commissionato un bene culturale, o l&apos;occasione che ha determinato la ripresa di un bene fotografico, o l&apos;occasione d&apos;uso di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione che ha determinato una certa situazione, per esempio l&apos;occasione per cui è stato commissionato un bene culturale, l&apos;occasione che ha determinato la ripresa di un bene fotografico, l&apos;occasione d&apos;uso di un bene, l&apos;occasione di un bene demoetnoantropologico immateriale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">Circostanza</rdfs:label>
         <rdfs:label xml:lang="en">Circumstance</rdfs:label>
+        <rdfs:label xml:lang="it">Occasione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO; normativa BDM: UT/UTO; AU/CMM/CMMC; normativa VeAC: AU/FRU/FRUC; normativa F: LR/LRO</arco:iccdNormTag>
+        <arco:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUO - Normativa BDM: UT/UTO; AU/CMM/CMMC - Normativa VeAC: AU/FRU/FRUC - Normativa F: LR/LRO - Normativa BDI: CA</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CircumstanceType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CircumstanceType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di occasione (es.: civile, religiosa).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the circumstance type (e.g.: civil, religious)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Circumstance type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di circostanza</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CA/CAR; CA/CAC</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -5032,6 +5072,22 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/FairMarketCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FairMarketCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione connessa a fiere, mercati, sagre.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a circumstance related to fairs, markets, festivals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Fair market circumstance</rdfs:label>
+        <rdfs:label xml:lang="it">Occasione legata a fiere e mercati</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOF</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/FilmDocumentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FilmDocumentation">
@@ -5149,6 +5205,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">DRA</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/IndeterminateCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/IndeterminateCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione indeterminata, cioè quando il bene non è in rapporto con una precisa occasione o scadenza, ma si realizza in modo del tutto estemporaneo e contingente. Occasioni indeterminate possono essere, per esempio, un&apos;esecuzione musicale, una narrazione, un
+gioco, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an indeterminate circumstance, when the cultural property is not related to a determinate circumstance, but takes place in an extemporaneous and contingent way (e.g.: a musical performance, a narration, a game).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Indeterminate circumstance</rdfs:label>
+        <rdfs:label xml:lang="it">Occasione indeterminata</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOI</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -5381,6 +5454,22 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGG</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/LifeCycleCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LifeCycleCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione legata ai cicli della vita (cerimonie, riti, feste).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a circumstance related to life cycles (ceremonies, custom, celebration)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Life cycle circumstance</rdfs:label>
+        <rdfs:label xml:lang="it">Occasione legata al ciclo della vita</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOV</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -5781,6 +5870,22 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/ProductionCycleCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ProductionCycleCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione connessa ai cicli produttivi (bachicoltura, cerealicoltura, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a circumstance related to production cycles (sericulture, cereal crop, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Occasione legata al ciclo produttivo</rdfs:label>
+        <rdfs:label xml:lang="en">Production cycle circumstance</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOP</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Profession -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Profession">
@@ -6042,13 +6147,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/DerivatedWork"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -6109,6 +6207,38 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">DRAS</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SeasonCycleCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SeasonCycleCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione legata ai cicli stagionali, ovvero cicli che si riferiscono a: oggetto di concezioni, credenze, mito, scienza, di elaborazione in poesia, prosa, canto, arte e di culto; riferimento di attività, pratiche, comportamenti, di dati o fenomeni a particolari cicli, giorni, settimane, lunazioni, mesi, stagioni ecc.; giorni e periodi fausti e infausti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a circumstance related to seasonal cycles, referred to: subject of popular belief, myth, science; poetry, prose, songs, art, ritual; practical activities, behaviour, phenomena connected to specific cycles, days, months, seasons; fortunate or unfortunate days and periods.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Occasione legata al ciclo stagionale</rdfs:label>
+        <rdfs:label xml:lang="en">Season cycle circumstance</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOS</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SocialInteractionCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SocialInteractionCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione connessa alla socialità quotidiana (balli, caffè, veglie, osterie)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a circumstance related to social interaction (dances, pubs, wakes)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Occasione legata alla socialità quotidiana</rdfs:label>
+        <rdfs:label xml:lang="en">Social interaction circumstance</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOQ</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -6398,6 +6528,14 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la funzione d&apos;uso che ha un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the use function of an object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Funzione d&apos;uso</rdfs:label>
+        <rdfs:label xml:lang="en">Use function</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa Trasversale: UT/UTU/UTUF; LC/LDC/LDCF; LA/PRC/PRCF - BDM 2.00:UT/UTF - PST 3.01: DA/UTF</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -6443,6 +6581,38 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normative BDM 2.00: UT/UTN/UTNC</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/WorkCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/WorkCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione connessa al lavoro (es.: panificazione, agricoltura)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a circumstance related to work (e.g.: agriculture, bakery)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Occasione legata al lavoro</rdfs:label>
+        <rdfs:label xml:lang="en">Work circumstance</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOL</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/YearCycleCircumstance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/YearCycleCircumstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occasione legata ai cicli dell&apos;anno (es.: equinozio autunno, capodanno, Quaresima, Ramadan, carnevale, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a circumstance related to year cycles (e.g.: autumnal equinox, New Year&apos;s Eve, Lent, Ramadan, carnival, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Occasione legata al ciclo dell&apos;anno</rdfs:label>
+        <rdfs:label xml:lang="en">Year cycle circumstance</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOA</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -6591,13 +6761,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Alternative -->
+    <!-- https://w3id.org/arco/ontology/context-description/AlternativeTitle -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Alternative">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Rappresenta un altro titolo noto del soggetto, in alternativa o in aggiunta al titolo più noto o accreditato.</rdfs:comment>
-        <rdfs:label xml:lang="en">Alternative</rdfs:label>
-        <rdfs:label xml:lang="it">Alternativo</rdfs:label>
+        <rdfs:label xml:lang="en">Alternative title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDN</arco:iccdNormTag>
@@ -6628,13 +6798,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Attributed -->
+    <!-- https://w3id.org/arco/ontology/context-description/AttributedTitle -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Attributed">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AttributedTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Rappresenta un titolo attribuito di una fotografia, cioè un titolo desunto, se possibile, da fonti archivistiche, bibliografiche, orali o iconografiche (altri esemplari della stessa immagine) oppure creato in base al contenuto dell&apos;immagine (o della serie di immagini; è necessario nei casi in cui siano del tutto assenti titoli sul/nel documento, o su materiali ad esso complementari, e nel caso in cui tali titoli risultino errati.</rdfs:comment>
-        <rdfs:label xml:lang="it">Attribuito</rdfs:label>
-        <rdfs:label xml:lang="en">Attributed</rdfs:label>
+        <rdfs:label xml:lang="en">Attributed title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo attribuito</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>Normativa F: SG/SGL/SGLA</arco:iccdNormTag>
@@ -6642,15 +6812,25 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Building -->
+    <!-- https://w3id.org/arco/ontology/context-description/BuildingUse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Building">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/BuildingUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso edilizio di un bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Building</rdfs:label>
-        <rdfs:label xml:lang="it">Edilizio</rdfs:label>
+        <rdfs:label xml:lang="en">Building use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso edilizio</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CivilCircumstance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/CivilCircumstance">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/CircumstanceType"/>
+        <rdfs:label xml:lang="en">Civil circumstance</rdfs:label>
+        <rdfs:label xml:lang="it">Occasione civile</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6668,25 +6848,25 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Current -->
+    <!-- https://w3id.org/arco/ontology/context-description/CurrentUse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Current">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/CurrentUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso attuale di un bene.</rdfs:comment>
-        <rdfs:label xml:lang="it">Attuale</rdfs:label>
-        <rdfs:label xml:lang="en">Current</rdfs:label>
+        <rdfs:label xml:lang="en">Current use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Decent -->
+    <!-- https://w3id.org/arco/ontology/context-description/DecentReliability -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Decent">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/DecentReliability">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
-        <rdfs:label xml:lang="en">Decent</rdfs:label>
-        <rdfs:label xml:lang="it">Discreta</rdfs:label>
+        <rdfs:label xml:lang="en">Decent reliability</rdfs:label>
+        <rdfs:label xml:lang="it">Discreta affidabilità</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6717,9 +6897,9 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Epigraphic -->
+    <!-- https://w3id.org/arco/ontology/context-description/EpigraphicUse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Epigraphic">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/EpigraphicUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso epigrafico di un bene.</rdfs:comment>
         <rdfs:label xml:lang="it">Epigrafico</rdfs:label>
@@ -6730,12 +6910,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Excellent -->
+    <!-- https://w3id.org/arco/ontology/context-description/ExcellentReliability -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Excellent">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ExcellentReliability">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
-        <rdfs:label xml:lang="en">Excellent</rdfs:label>
-        <rdfs:label xml:lang="it">Ottima</rdfs:label>
+        <rdfs:label xml:lang="en">Excellent reliability</rdfs:label>
+        <rdfs:label xml:lang="it">Ottima affidabilità</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6765,23 +6945,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Good -->
+    <!-- https://w3id.org/arco/ontology/context-description/GoodReliability -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Good">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/GoodReliability">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
-        <rdfs:label xml:lang="it">Buona</rdfs:label>
-        <rdfs:label xml:lang="en">Good</rdfs:label>
+        <rdfs:label xml:lang="it">Buona affidabilità</rdfs:label>
+        <rdfs:label xml:lang="en">Good reliability</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Historical -->
+    <!-- https://w3id.org/arco/ontology/context-description/HistoricalUse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Historical">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/HistoricalUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso storico di un bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Historical</rdfs:label>
-        <rdfs:label xml:lang="it">Storico</rdfs:label>
+        <rdfs:label xml:lang="en">Historical use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso storico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -6800,9 +6980,9 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Instrumental -->
+    <!-- https://w3id.org/arco/ontology/context-description/InstrumentalUse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Instrumental">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/InstrumentalUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strumentale di un bene.</rdfs:comment>
         <rdfs:label xml:lang="en">Instrumental</rdfs:label>
@@ -6813,12 +6993,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Insufficient -->
+    <!-- https://w3id.org/arco/ontology/context-description/InsufficientReliability -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Insufficient">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/InsufficientReliability">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
-        <rdfs:label xml:lang="en">Insufficient</rdfs:label>
-        <rdfs:label xml:lang="it">Scarsa</rdfs:label>
+        <rdfs:label xml:lang="en">Insufficient reliability</rdfs:label>
+        <rdfs:label xml:lang="it">Scarsa affidabilità</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6833,13 +7013,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Main -->
+    <!-- https://w3id.org/arco/ontology/context-description/MainTitle -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Main">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/MainTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il titolo principale di una pubblicazione.</rdfs:comment>
-        <rdfs:label xml:lang="en">Main</rdfs:label>
-        <rdfs:label xml:lang="it">Principale</rdfs:label>
+        <rdfs:label xml:lang="en">Main title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo principale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normative VeAC e AT 3.01: DO/BSE/BSET</arco:iccdNormTag>
@@ -6857,9 +7037,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Ornamental -->
+    <!-- https://w3id.org/arco/ontology/context-description/ObsoleteDating -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Ornamental">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ObsoleteDating">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di datazione superata rispetto a quella presente nelle informazioni relative alla cronologia del bene in esame.</rdfs:comment>
+        <rdfs:label xml:lang="it">Datazione superata</rdfs:label>
+        <rdfs:label xml:lang="en">Obsolete dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/OrnamentalUse -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/OrnamentalUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso ornamentale di un bene.</rdfs:comment>
         <rdfs:label xml:lang="en">Ornamental</rdfs:label>
@@ -6884,27 +7078,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/OvercomeDating -->
+    <!-- https://w3id.org/arco/ontology/context-description/ParallelTitle -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/OvercomeDating">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
-        <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di datazione superata rispetto a quella presente nelle informazioni relative alla cronologia del bene in esame.</rdfs:comment>
-        <rdfs:label xml:lang="it">Datazione superata</rdfs:label>
-        <rdfs:label xml:lang="en">Overcome dating</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco:iccdNormTag>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/Parallel -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Parallel">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ParallelTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Rappresenta un titolo parallelo, cioè lo stesso titolo principale tradotto in altre lingue e presentato come equivalente.</rdfs:comment>
-        <rdfs:label xml:lang="en">Parallel</rdfs:label>
-        <rdfs:label xml:lang="it">Parallelo</rdfs:label>
+        <rdfs:label xml:lang="en">Parallel title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo parallelo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>Normativa F: SG/SGL/SGLL - Normative S e MI: OG/SGT/SGTR</arco:iccdNormTag>
@@ -6944,26 +7124,26 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Previous -->
+    <!-- https://w3id.org/arco/ontology/context-description/PreviousUse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Previous">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/PreviousUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso precedente di un bene.</rdfs:comment>
-        <rdfs:label xml:lang="it">Precedente</rdfs:label>
-        <rdfs:label xml:lang="en">Previous</rdfs:label>
+        <rdfs:label xml:lang="en">Previous use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso precedente</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Proper -->
+    <!-- https://w3id.org/arco/ontology/context-description/ProperTitle -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Proper">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ProperTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Rappresenta il titolo proprio del soggetto di una stampa, di una matrice incisa o di una fotografia. Per titolo proprio di una stampa si intende il titolo principale nella forma in cui appare sulla stampa o sulla matrice stessa. Per titolo proprio (principale) di una fotografia, si intende nella forma in cui appare nell&apos;immagine (o su uno dei suoi supporti, o nelle schede a campi testuali, o nei commenti sonori presenti all&apos;interno del file contenente l&apos;immagine digitale). Per la normativa F, Il titolo proprio include anche ogni eventuale titolo alternativo (altre denominazioni dell&apos;opera che appaiano insieme al titolo principale) e, facoltativamente, i complementi del titolo proprio (ossia sottotitoli od ulteriori indicazioni che contribuiscono a qualificare più specificamente il contenuto dell&apos;immagine).</rdfs:comment>
-        <rdfs:label xml:lang="en">Proper</rdfs:label>
-        <rdfs:label xml:lang="it">Proprio</rdfs:label>
+        <rdfs:label xml:lang="en">Proper title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo proprio</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>Normative S e MI: OG/SGT/SGTP - Normativa F: SFG/SGL/SGLT</arco:iccdNormTag>
@@ -6971,13 +7151,20 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Reusing -->
+    <!-- https://w3id.org/arco/ontology/context-description/ReligiousCircumstance -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Reusing">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ReligiousCircumstance">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/CircumstanceType"/>
+        <rdfs:label xml:lang="it">Occasione religiosa</rdfs:label>
+        <rdfs:label xml:lang="en">Religious circumstance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Reuse -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
-        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche di riuso di un bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reusing</rdfs:label>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6992,13 +7179,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Secondary -->
+    <!-- https://w3id.org/arco/ontology/context-description/SecondaryTitle -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Secondary">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/SecondaryTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di titolo secondario di una pubblicazione.</rdfs:comment>
-        <rdfs:label xml:lang="it">secondario</rdfs:label>
-        <rdfs:label xml:lang="en">secondary</rdfs:label>
+        <rdfs:label xml:lang="en">Secondary title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo secondario</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSEC</arco:iccdNormTag>
@@ -7019,13 +7206,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Structural -->
+    <!-- https://w3id.org/arco/ontology/context-description/StructuralUse -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/Structural">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/StructuralUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strutturale di un bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Structural</rdfs:label>
-        <rdfs:label xml:lang="it">Strutturale</rdfs:label>
+        <rdfs:label xml:lang="en">Structural use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso strutturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -7076,6 +7263,27 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche di riuso di un bene.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <arco:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</arco:iccdNormTag>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

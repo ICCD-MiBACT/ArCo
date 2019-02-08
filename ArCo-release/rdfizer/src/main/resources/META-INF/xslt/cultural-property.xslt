@@ -1260,7 +1260,11 @@
 
 
 					<!-- FF -->
-					<!-- in attesa di indicazioni da Chiara Veninata -->
+					<xsl:if test="$sheetType='FF'">
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(schede/*/OG/OGD/OGDN)" />
+						</rdfs:label>
+					</xsl:if>
 				</rdf:Description>
 
 			</xsl:if>

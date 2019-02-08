@@ -916,6 +916,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Situation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
@@ -1244,7 +1262,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/l0/name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1732,13 +1750,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Assigned -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/AssignedDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Assigned">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AssignedDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Assigned</rdfs:label>
-        <rdfs:label xml:lang="it">Attribuita</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione attribuita.</rdfs:comment>
+        <rdfs:label xml:lang="en">Assigned designation</rdfs:label>
+        <rdfs:label xml:lang="it">Denominazione attribuita</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco:iccdNormTag>
@@ -1784,12 +1802,12 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Bad -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/BadConservationStatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Bad">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/BadConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
-        <rdfs:label xml:lang="en">Bad</rdfs:label>
-        <rdfs:label xml:lang="it">Cattivo</rdfs:label>
+        <rdfs:label xml:lang="en">Bad conservation status</rdfs:label>
+        <rdfs:label xml:lang="it">Stato di conservazione cattivo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -1854,13 +1872,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Current -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/CurrentDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Current">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CurrentDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="it">Attuale</rdfs:label>
-        <rdfs:label xml:lang="en">Current</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta la denominazione attuale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Current designation</rdfs:label>
+        <rdfs:label xml:lang="it">Denominazione attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normativa A 3: OGA/OGAG.</arco:iccdNormTag>
@@ -1868,13 +1886,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Customary -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/CustomaryDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Customary">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CustomaryDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="it">Consuetudinaria</rdfs:label>
-        <rdfs:label xml:lang="en">Customary</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione consuetudinaria.</rdfs:comment>
+        <rdfs:label xml:lang="en">Customary designation</rdfs:label>
+        <rdfs:label xml:lang="it">Denominazione consuetudinaria</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
@@ -1882,12 +1900,12 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Decent -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/DecentConservationStatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Decent">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DecentConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
-        <rdfs:label xml:lang="en">Decent</rdfs:label>
-        <rdfs:label xml:lang="it">Discreto</rdfs:label>
+        <rdfs:label xml:lang="en">Decent conservation status</rdfs:label>
+        <rdfs:label xml:lang="it">Stato di conservazione discreto</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -1904,12 +1922,12 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Decorative -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Decorative">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DecorativeApparatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
-        <rdfs:label xml:lang="en">Decorative</rdfs:label>
-        <rdfs:label xml:lang="it">Decorativo</rdfs:label>
+        <rdfs:label xml:lang="it">Apparato decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">Decorative apparatus</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1938,13 +1956,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Dialectal -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/DialectalDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Dialectal">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DialectalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Dialectal</rdfs:label>
-        <rdfs:label xml:lang="it">Dialettale</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione dialettale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione dialettale</rdfs:label>
+        <rdfs:label xml:lang="en">Dialectal designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco:iccdNormTag>
@@ -2096,12 +2114,12 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Good -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Good">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
-        <rdfs:label xml:lang="it">Buono</rdfs:label>
-        <rdfs:label xml:lang="en">Good</rdfs:label>
+        <rdfs:label xml:lang="en">Good conservation status</rdfs:label>
+        <rdfs:label xml:lang="it">Stato di conservazione buono</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -2178,13 +2196,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Historical -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/HistoricalDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Historical">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HistoricalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Historical</rdfs:label>
-        <rdfs:label xml:lang="it">Storica</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione storica.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione storica</rdfs:label>
+        <rdfs:label xml:lang="en">Historical designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
@@ -2192,33 +2210,33 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Iconographic -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Iconographic">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorativeApparatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
-        <rdfs:label xml:lang="it">Iconografico</rdfs:label>
-        <rdfs:label xml:lang="en">Iconographic</rdfs:label>
+        <rdfs:label xml:lang="it">Apparato iconografico e decorativo</rdfs:label>
+        <rdfs:label xml:lang="en">Iconographic and Decorative apparatus</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorative -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicApparatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicAndDecorative">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicApparatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
-        <rdfs:label xml:lang="it">Iconografico e decorativo</rdfs:label>
-        <rdfs:label xml:lang="en">Iconographic and Decorative</rdfs:label>
+        <rdfs:label xml:lang="it">Apparato iconografico</rdfs:label>
+        <rdfs:label xml:lang="en">Iconographic apparatus</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Idiomatic -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/IdiomaticDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Idiomatic">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IdiomaticDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Idiomatic</rdfs:label>
-        <rdfs:label xml:lang="it">Idiomatica</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione idiomatica.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione idiomatica</rdfs:label>
+        <rdfs:label xml:lang="en">Idiomatic designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
@@ -2248,13 +2266,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Local -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/LocalDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Local">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/LocalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Local</rdfs:label>
-        <rdfs:label xml:lang="it">Locale</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione locale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione locale</rdfs:label>
+        <rdfs:label xml:lang="en">Local designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco:iccdNormTag>
@@ -2350,12 +2368,12 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Mediocre -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/MediocreConservationStatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Mediocre">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MediocreConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
-        <rdfs:label xml:lang="en">Mediocre</rdfs:label>
-        <rdfs:label xml:lang="it">Mediocre</rdfs:label>
+        <rdfs:label xml:lang="en">Mediocre conservation status</rdfs:label>
+        <rdfs:label xml:lang="it">Stato di conservazione mediocre</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -2374,13 +2392,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Original -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/OriginalDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Original">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/OriginalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="en">Original</rdfs:label>
-        <rdfs:label xml:lang="it">Originaria</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione originaria.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione originaria</rdfs:label>
+        <rdfs:label xml:lang="en">Original designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
@@ -2388,13 +2406,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/OtherLanguage -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/OtherLanguageDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/OtherLanguage">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/OtherLanguageDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="it">Altra lingua</rdfs:label>
-        <rdfs:label xml:lang="en">Other language</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione in altra lingua.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione in altra lingua</rdfs:label>
+        <rdfs:label xml:lang="en">Other language designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco:iccdNormTag>
@@ -2510,13 +2528,13 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Slang -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/SlangDesignation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Slang">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/SlangDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
-        <rdfs:comment xml:lang="it">Questo individuo precisa le informazioni relative al tipo di denominazione o dedicazione del bene.</rdfs:comment>
-        <rdfs:label xml:lang="it">Gergale</rdfs:label>
-        <rdfs:label xml:lang="en">Slang</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione gergale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denominazione gergale</rdfs:label>
+        <rdfs:label xml:lang="en">Slang designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco:iccdNormTag>
@@ -2604,12 +2622,12 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/Unavailable -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/UnavailableConservationStatus -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Unavailable">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/UnavailableConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
-        <rdfs:label xml:lang="en">Data unavailable</rdfs:label>
-        <rdfs:label xml:lang="it">Dato non disponibile</rdfs:label>
+        <rdfs:label xml:lang="en">Data on conservation status unavailable</rdfs:label>
+        <rdfs:label xml:lang="it">Dato sullo stato di conservazione non disponibile</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>

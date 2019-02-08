@@ -402,6 +402,10 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isRelatedAgencyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgent"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale a un ente che riveste un ruolo nei suoi confronti. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. La proprietà è specializzata per mezzo di sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to an agency that plays a role related to the cultural property. The relation is declared in the name of the property, but within the ontology this relation is also modeled, in a more expressive way, through the class AgentRole.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
@@ -562,6 +566,7 @@
     <!-- https://w3id.org/arco/ontology/arco/isPartOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
