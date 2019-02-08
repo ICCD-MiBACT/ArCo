@@ -12,6 +12,7 @@
         <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+cont%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Ftitle+%3Freproduction+%3Fposition%0D%0A%0D%0AWHERE+%7B%0D%0A%0D%0A%3Fpublication+cont%3AhasTitle+%3Fpubtitle+.+%0D%0A%3Fpubtitle+rdfs%3Alabel+%3Ftitle++.+%0D%0A%3Fpublication+cont%3AhasReproduction+%3Freproduction+.%0D%0A%3Freproduction+cont%3AhasReproductionPosition+%3Fposition+%0D%0A%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasCQ xml:lang="it">In quale posizione (es.: frontespizio, copertina, etc.) di una specifica pubblicazione è stata riprodotta la stampa X?</testannotationschema:hasCQ>
+        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX cont: &lt;https://w3id.org/arco/context-description/&gt;
 
