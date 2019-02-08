@@ -2,36 +2,36 @@
 @prefix arcodd: <https://w3id.org/arco/denotative-description/>.
 
 
-:CalturalProperty1 arcodd:hasAffixedElement :element1.
+:CulturalProperty1 arcodd:hasAffixedElement :element1.
 :element1 a arcodd:Dedication;
      arcodd:hasDedicatee "dedicatee1".
 
 
-:CalturalProperty2 arcodd:hasAffixedElement :element2.
+:CulturalProperty2 arcodd:hasAffixedElement :element2.
 :element2 a arcodd:Dedication;
      arcodd:hasDedicatee "dedicatee2".
 
 
-:CalturalProperty3 arcodd:hasAffixedElement :element3.
+:CulturalProperty3 arcodd:hasAffixedElement :element3.
 :element3 a arcodd:Dedication;
      arcodd:hasDedicatee "dedicatee3".
 
 
-:CalturalProperty4 arcodd:hasAffixedElement :element4.
+:CulturalProperty4 arcodd:hasAffixedElement :element4.
 :element4 a arcodd:Dedication;
      arcodd:hasDedicatee "dedicatee4".
 
 
-:CalturalProperty5 arcodd:hasAffixedElement :element5.
+:CulturalProperty5 arcodd:hasAffixedElement :element5.
 :element5 a arcodd:Dedication;
      arcodd:hasDedicatee "dedicatee5".
 
 
-:CalturalProperty6 arcodd:hasAffixedElement :element6.
+:CulturalProperty6 arcodd:hasAffixedElement :element6.
 :element6 a arcodd:Dedication;
      arcodd:hasDedicatee "dedicatee6".
 
 
-:CalturalProperty7 arcodd:hasAffixedElement :element7.
+:CulturalProperty7 arcodd:hasAffixedElement :element7.
 :element7 a arcodd:Dedication;
      arcodd:hasDedicatee "dedicatee7".
