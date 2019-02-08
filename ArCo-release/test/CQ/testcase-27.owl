@@ -16,37 +16,37 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty1&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty1&quot; } ,
         &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element1&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee1&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty2&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty2&quot; } ,
         &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element2&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee2&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty3&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty3&quot; } ,
         &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element3&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee3&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty4&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty4&quot; } ,
         &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element4&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee4&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty5&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty5&quot; } ,
         &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element5&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee5&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty6&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty6&quot; } ,
         &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element6&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee6&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CalturalProperty7&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty7&quot; } ,
         &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element7&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee7&quot; }
       }
