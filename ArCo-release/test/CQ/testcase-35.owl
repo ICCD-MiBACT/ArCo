@@ -35,6 +35,7 @@ where {
 } LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0A%0D%0Aselect++%3Fbencult+%3Freason%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-catalogue%3AisDescribedByCatalogueRecord+%3Fcat.%0D%0A+%3Fcat+arco-catalogue%3AhasAccessProfile+%3Fprofile.%0D%0A+%3Fprofile+arco-catalogue%3AhasPrivacyLevel+arco-catalogue%3AMediumLevel.%0D%0A+%3Fprofile+arco-catalogue%3AhasPrivacyReason+%3Freason.%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=100000000000&amp;debug=on"/>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
     </owl:Ontology>
