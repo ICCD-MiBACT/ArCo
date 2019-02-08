@@ -36,6 +36,7 @@ where {
         <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
     </owl:Ontology>
 </rdf:RDF>
 
