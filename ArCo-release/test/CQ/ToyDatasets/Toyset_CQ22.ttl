@@ -21,35 +21,35 @@
     ti:atTime :TimeInterval . 
 :TimeInterval arcocore:startTime "2016-10-01"^^xsd:date . 
 
-:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+:CulturalProperty3  arcocd:hasIntervention :Intervention3 ;
     arcolocation:hasCulturalPropertyAddress :City . 
 :City  rdfs:label "Roma" . 
 :Intervention  a arcocd:ConservationIntervention ;
     ti:atTime :TimeInterval . 
 :TimeInterval arcocore:startTime "2016-11-25"^^xsd:date .
 
-:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+:CulturalProperty3  arcocd:hasIntervention :Intervention4 ;
     arcolocation:hasCulturalPropertyAddress :City . 
 :City  rdfs:label "Milano" . 
 :Intervention  a arcocd:ConservationIntervention ;
     ti:atTime :TimeInterval . 
 :TimeInterval arcocore:startTime "2017-1-21"^^xsd:date .
 
-:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+:CulturalProperty3  arcocd:hasIntervention :Intervention5 ;
     arcolocation:hasCulturalPropertyAddress :City . 
 :City  rdfs:label "Amatrice" . 
 :Intervention  a arcocd:ConservationIntervention ;
     ti:atTime :TimeInterval . 
 :TimeInterval arcocore:startTime "2015-05-21"^^xsd:date .
 
-:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+:CulturalProperty3  arcocd:hasIntervention :Intervention6 ;
     arcolocation:hasCulturalPropertyAddress :City . 
 :City  rdfs:label "Amatrice" . 
 :Intervention  a arcocd:ConservationIntervention ;
     ti:atTime :TimeInterval . 
 :TimeInterval arcocore:startTime "2018-01-19"^^xsd:date .
 
-:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+:CulturalProperty3  arcocd:hasIntervention :Intervention7 ;
     arcolocation:hasCulturalPropertyAddress :City . 
 :City  rdfs:label "Bologna" . 
 :Intervention  a arcocd:ConservationIntervention ;
