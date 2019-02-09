@@ -1,0 +1,31 @@
+@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ26b/>.
+@prefix arcocore: <https://w3id.org/arco/core/> . 
+@prefix arcodd: <https://w3id.org/arco/denotative-description/>.
+
+:Photo1 a arcocore:PhotographicHeritage .
+:PhotoSize1 a arcodd:PhotoSize .
+:Photo1 arcodd:TechnicalCharacteristic :PhotoSize1 . 
+
+:Photo2 a arcocore:PhotographicHeritage .
+:PhotoSize2 a arcodd:PhotoSize .
+:Photo2 arcodd:TechnicalCharacteristic :PhotoSize2 . 
+
+:Photo3 a arcocore:PhotographicHeritage .
+:PhotoSize2 a arcodd:PhotoSize .
+:Photo3 arcodd:TechnicalCharacteristic :PhotoSize3 . 
+
+:Photo4 a arcocore:PhotographicHeritage .
+:PhotoSize4 a arcodd:PhotoSize .
+:Photo4 arcodd:TechnicalCharacteristic :PhotoSize4 . 
+
+:Photo5 a arcocore:PhotographicHeritage .
+:PhotoSize5 a arcodd:PhotoSize .
+:Photo5 arcodd:TechnicalCharacteristic :PhotoSize5 . 
+
+:Photo6 a arcocore:PhotographicHeritage .
+:PhotoSize6 a arcodd:PhotoSize .
+:Photo6 arcodd:TechnicalCharacteristic :PhotoSize6 . 
+
+:Photo7 a arcocore:PhotographicHeritage .
+:PhotoSize7 a arcodd:PhotoSize .
+:Photo7 arcodd:TechnicalCharacteristic :PhotoSize7 . 
