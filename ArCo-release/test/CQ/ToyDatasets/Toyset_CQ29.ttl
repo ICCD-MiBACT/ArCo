@@ -1,0 +1,30 @@
+@prefix arcocore: <https://w3id.org/arco/core/> .
+@prefix arcodd: <https://w3id.org/arco/denotative-description/> .
+
+:Coin1 a arcocore:NumismaticProperty ; 
+    arcodd:hasConservationStatus :Status1 .
+:Status1 arcodd:hasLegibility arcodd:ImpossibleLegibility .
+
+:Coin2 a arcocore:NumismaticProperty ; 
+    arcodd:hasConservationStatus :Status2 .
+:Status2 arcodd:hasLegibility arcodd:ImpossibleLegibility .
+
+:Coin3 a arcocore:NumismaticProperty ; 
+    arcodd:hasConservationStatus :Status3 .
+:Status3 arcodd:hasLegibility arcodd:ImpossibleLegibility .
+
+:Coin4 a arcocore:NumismaticProperty ; 
+    arcodd:hasConservationStatus :Status4 .
+:Status4 arcodd:hasLegibility arcodd:ImpossibleLegibility .
+
+:Coin5 a arcocore:NumismaticProperty ; 
+    arcodd:hasConservationStatus :Status5 .
+:Status5 arcodd:hasLegibility arcodd:ImpossibleLegibility .
+
+:Coin6 a arcocore:NumismaticProperty ; 
+    arcodd:hasConservationStatus :Status6 .
+:Status6 arcodd:hasLegibility arcodd:ImpossibleLegibility .
+
+:Coin7 a arcocore:NumismaticProperty ; 
+    arcodd:hasConservationStatus :Status7 .
+:Status7 arcodd:hasLegibility arcodd:ImpossibleLegibility .
