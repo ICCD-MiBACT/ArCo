@@ -1,0 +1,63 @@
+@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ22/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
+@prefix arcocore: <https://w3id.org/arco/core/> .
+@prefix arcocd: <https://w3id.org/arco/context-description/> .
+@prefix ti:<https://w3id.org/italia/onto/TI/> . 
+@prefix arcolocation: <https://w3id.org/arco/location/> . 
+
+
+:CulturalProperty1  arcocd:hasIntervention :Intervention1 ;
+    arcolocation:hasCulturalPropertyAddress :City . 
+:City  rdfs:label "Amatrice" . 
+:Intervention  a arcocd:ConservationIntervention ;
+    ti:atTime :TimeInterval . 
+:TimeInterval arcocore:startTime "2016-09-22"^^xsd:date . 
+
+:CulturalProperty1  arcocd:hasIntervention :Intervention2 ;
+    arcolocation:hasCulturalPropertyAddress :City . 
+:City  rdfs:label "Amatrice" . 
+:Intervention  a arcocd:ConservationIntervention ;
+    ti:atTime :TimeInterval . 
+:TimeInterval arcocore:startTime "2016-10-01"^^xsd:date . 
+
+:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+    arcolocation:hasCulturalPropertyAddress :City . 
+:City  rdfs:label "Roma" . 
+:Intervention  a arcocd:ConservationIntervention ;
+    ti:atTime :TimeInterval . 
+:TimeInterval arcocore:startTime "2016-11-25"^^xsd:date .
+
+:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+    arcolocation:hasCulturalPropertyAddress :City . 
+:City  rdfs:label "Milano" . 
+:Intervention  a arcocd:ConservationIntervention ;
+    ti:atTime :TimeInterval . 
+:TimeInterval arcocore:startTime "2017-1-21"^^xsd:date .
+
+:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+    arcolocation:hasCulturalPropertyAddress :City . 
+:City  rdfs:label "Amatrice" . 
+:Intervention  a arcocd:ConservationIntervention ;
+    ti:atTime :TimeInterval . 
+:TimeInterval arcocore:startTime "2015-05-21"^^xsd:date .
+
+:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+    arcolocation:hasCulturalPropertyAddress :City . 
+:City  rdfs:label "Amatrice" . 
+:Intervention  a arcocd:ConservationIntervention ;
+    ti:atTime :TimeInterval . 
+:TimeInterval arcocore:startTime "2018-01-19"^^xsd:date .
+
+:CulturalProperty3  arcocd:hasIntervention :Intervention1 ;
+    arcolocation:hasCulturalPropertyAddress :City . 
+:City  rdfs:label "Bologna" . 
+:Intervention  a arcocd:ConservationIntervention ;
+    ti:atTime :TimeInterval . 
+:TimeInterval arcocore:startTime "2017-12-04"^^xsd:date .
+
+
+
+
+
+
