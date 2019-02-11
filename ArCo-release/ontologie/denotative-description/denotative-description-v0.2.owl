@@ -153,6 +153,41 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale immateriale a una modalità comunicativa mediante la quale il bene viene veicolato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an intangible cultural property to a communication medium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha modalità comunicativa</rdfs:label>
+        <rdfs:label xml:lang="en">has communication medium</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCommunicationMediumType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMediumType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una modalità comunicativa di un oggetto al tipo di modalità comunicativa (verbale, strumentale, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a communication medium to its type (e.g.: verbal, singing, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di modalità comunicativa</rdfs:label>
+        <rdfs:label xml:lang="en">has communication medium type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus">
@@ -346,6 +381,22 @@
         <rdfs:label xml:lang="en">has iconographic or decorative apparatus type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasImplementationMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasImplementationMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ImplementationMethod"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una modalità comunicativa verbale o musicale vocale o musicale strumentale alla modalità esecutiva associata (es.: polifonica).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a verbal or singing or instrumental communication medium to its implementation method (e.g.: polyphonic) associated to it.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha modalità esecutiva</rdfs:label>
+        <rdfs:label xml:lang="en">has implementation method</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</arco:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -565,6 +616,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/involvesAgeRange -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesAgeRange">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una modalità comunicativa (prossemica, cinesica) alla fascia d&apos;età delle persone che attuano la comunicazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a communication medium (proxemics, kinesic) to the age range of the participants to the communication.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">coinvolge fascia d&apos;età</rdfs:label>
+        <rdfs:label xml:lang="en">involves age range</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUC/CUCE; CU/CUP/CUPE</arco:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurementOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementOf">
@@ -736,6 +804,60 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfChildParticipants -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfChildParticipants">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero dei bambini che attuano una comunicazione (verbale, musicale vocale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of the child participants to a communication (verbal, singing).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of the female participants to a communication (verbal, singing, kinesic).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">number of child participants</rdfs:label>
+        <rdfs:label xml:lang="it">numero di partecipanti infantili</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVI; CU/CUM/CUMI</arco:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero delle persone di sesso femminile che attuano una comunicazione (verbale, musicale vocale, cinesica).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">number of female participants</rdfs:label>
+        <rdfs:label xml:lang="it">numero di partecipanti femminili</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</arco:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfMaleParticipants -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfMaleParticipants">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero delle persone di sesso maschile che attuano una comunicazione (verbale, musicale vocale, cinesica)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of the male participants to a communication (verbal, singing, kinesic).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">number of male participants</rdfs:label>
+        <rdfs:label xml:lang="it">numero di partecipanti maschili</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVM; CU/CUM/CUMM; CU/CUC/CUCM</arco:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/occurrences -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/occurrences">
@@ -900,9 +1022,9 @@
 
     <!-- https://w3id.org/arco/ontology/context-description/ArchivalRecordSet -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -920,9 +1042,9 @@
 
     <!-- https://w3id.org/arco/ontology/context-description/PhotographicSeries -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSeries">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSeries">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -941,6 +1063,12 @@
     <!-- https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Method -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method"/>
     
 
 
@@ -1061,6 +1189,22 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/AgeRange -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AgeRange">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la fascia d&apos;età (bambino, ragazzo, adulto  anziano) di una persona.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the age range (child, teenager, adult, old person) of a person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Age range</rdfs:label>
+        <rdfs:label xml:lang="it">Fascia d&apos;età</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUC/CUCE; CU/CUP/CUPE</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Brand -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Brand">
@@ -1119,6 +1263,38 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMedium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la modalità comunicativa di un oggetto, definita dal tipo di modalità (es.: verbale, scritta, strumentale), la modalità esecutiva, il numero di voci e strumenti coinvolti, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the communication medium of an object, defined by the communication medium type (e.g.: verbal, written, instrumental), the implementation method, the number of voices or instruments involved, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Communication medium</rdfs:label>
+        <rdfs:label xml:lang="it">Modalità comunicativa</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di modalità comunicativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of communication medium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Communication medium type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di modalità comunicativa</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1417,6 +1593,21 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID/AIDO</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/ImplementationMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ImplementationMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la modalità esecutiva (es.: alternanza, polifonia) associata a una modalità comunicativa (verbale, musicale vocale, musicale strumentale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the implementation method (e.g.: polyphonic) associated to a verbale or singing or instrumental communication medium.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implementation method</rdfs:label>
+        <rdfs:label xml:lang="it">Modalità esecutiva</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -2276,6 +2467,26 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/InstrumentalCommunication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/InstrumentalCommunication">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+        <rdfs:label xml:lang="it">Comunicazione musicale strumentale</rdfs:label>
+        <rdfs:label xml:lang="en">Instrumental communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/KinesicCommunication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/KinesicCommunication">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+        <rdfs:label xml:lang="it">Comunicazione cinesica</rdfs:label>
+        <rdfs:label xml:lang="en">Kinesic communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Length -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Length">
@@ -2522,6 +2733,16 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/ProxemicsCommunication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/ProxemicsCommunication">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+        <rdfs:label xml:lang="it">Comunicazione prossemica</rdfs:label>
+        <rdfs:label xml:lang="en">Proxemics communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Resolution -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Resolution">
@@ -2546,6 +2767,16 @@ un&apos;azienda, ecc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM</arco:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SingingCommunication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/SingingCommunication">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+        <rdfs:label xml:lang="it">Comunicazione musicale vocale</rdfs:label>
+        <rdfs:label xml:lang="en">Singing communication</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2680,6 +2911,16 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/VerbalCommunication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VerbalCommunication">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+        <rdfs:label xml:lang="it">Comunicazione verbale</rdfs:label>
+        <rdfs:label xml:lang="en">Verbal communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/VibratingLenght -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VibratingLenght">
@@ -2750,6 +2991,16 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Width</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/WrittenCommunication -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/WrittenCommunication">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+        <rdfs:label xml:lang="it">Comunicazione scritta</rdfs:label>
+        <rdfs:label xml:lang="en">Written communication</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 

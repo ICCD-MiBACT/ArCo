@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/catalogue/"
-     xml:base="https://w3id.org/arco/catalogue/"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/catalogue/"
+     xml:base="https://w3id.org/arco/ontology/catalogue/"
      xmlns:arco-core="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
@@ -13,7 +13,6 @@
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:prov="http://www.w3.org/ns/prov#"
@@ -146,6 +145,40 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/hasAdditionalFormResponsibleAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAdditionalFormResponsibleAgent">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento all&apos;ente/il soggetto responsabile nel SIGECweb della redazione del modulo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an additional form to the responsible agent of that form in the SIGECweb.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="it">ha responsabile di modulo di approfondimento</rdfs:label>
+        <rdfs:label xml:lang="en">has additional form responsible agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPE</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/hasAdditionalFormType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAdditionalFormType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento al tipo di modulo (Unità Stratigrafica, Tipo Murario, Epigrafia).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an additional form to its type (Stratigraphic Unit, Epigraphy, Wall Typology).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="it">ha tipo di modulo di approfondimento</rdfs:label>
+        <rdfs:label xml:lang="en">has additional form type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPT</arco-core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -583,6 +616,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isRelatedToAdditionalForm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isRelatedToAdditionalForm">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un modulo di approfondimento in relazione con il bene in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to an additional form.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">is related to additional form</rdfs:label>
+        <rdfs:label xml:lang="it">è collegato a modulo di approfondimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/isRelatedToInformationForm -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isRelatedToInformationForm">
@@ -634,6 +684,25 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/additionalFormIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/additionalFormIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare un identificativo a un modulo di approfondimento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the additional form identifier.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">additional form identifier</rdfs:label>
+        <rdfs:label xml:lang="it">identificativo del modulo di approfondimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPC</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier">
@@ -643,7 +712,7 @@
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare l&apos;identificativo a una scheda catalografica che descrive un bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="en">catalogue record identifier</rdfs:label>
-        <rdfs:label xml:lang="it">identificativo della scheda</rdfs:label>
+        <rdfs:label xml:lang="it">identificativo della scheda di catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-core:iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</arco-core:iccdNormTag>
@@ -817,6 +886,56 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/AdditionalForm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AdditionalForm">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/describes"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/hasAdditionalFormType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/additionalFormIdentifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un modulo di approfondimento, utile a trattare secondo un approccio specialistico specifici aspetti del bene in esame (Documenti Epigrafici; Tipi Murari, Unità Stratigrafiche)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an additional form, that describes specific information about a cultural property (epigraphic documents, stratigraphy, unit, wall typology)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">Additional form</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo di approfondimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/AdditionalFormType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AdditionalFormType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di modulo di approfondimento (Unità Stratigrafica, Tipo Murario, Epigrafia)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the additional form type (Stratigraphic Unit, Wall Typology, Epigraphy)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">Additional form type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di modulo di approfondimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPT</arco-core:iccdNormTag>
     </owl:Class>
     
 
@@ -1539,6 +1658,16 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/EpigraphyForm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/EpigraphyForm">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+        <rdfs:label xml:lang="en">Epigraphy form</rdfs:label>
+        <rdfs:label xml:lang="it">Modulo sull&apos;epigrafia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/I -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/I">
@@ -1589,6 +1718,26 @@
         <rdfs:label xml:lang="en">Medium Level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/StratigraphicUnitForm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/StratigraphicUnitForm">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+        <rdfs:label xml:lang="it">Modulo sull&apos;Unità Stratigrafica</rdfs:label>
+        <rdfs:label xml:lang="en">Stratigraphic Unit form</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/WallTypologyForm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/catalogue/WallTypologyForm">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+        <rdfs:label xml:lang="it">Modulo sul Tipo Murario</rdfs:label>
+        <rdfs:label xml:lang="en">Wall Typology form</rdfs:label>
     </owl:NamedIndividual>
     
 
