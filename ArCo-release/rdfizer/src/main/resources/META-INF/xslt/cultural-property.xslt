@@ -2108,6 +2108,15 @@
 	                    </xsl:attribute>
 						</arco-cd:hasDetectionMethod>
 				</xsl:if>
+				<!-- detection method for SI -->
+				<xsl:if test="schede/SI/OG/OGT/OGTA">
+					<arco-cd:hasDetectionMethod>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/DetectionMethod/', arco-fn:urify(normalize-space(schede/SI/OG/OGT/OGTA)))" />
+	                    </xsl:attribute>
+						</arco-cd:hasDetectionMethod>
+				</xsl:if>
 				<!-- Acquisition of cultural property -->
 				<xsl:for-each select="schede/*/TU/ACQ">
 					<arco-cd:hasAcquisition>
@@ -2643,6 +2652,30 @@
 						</arco-arco:hasPhotographicHeritageClassification>
 					</xsl:for-each>
 				</xsl:if>
+				<!-- cultural property classification based on inventory -->
+				<xsl:if test="schede/*/OG/OGT/OGTS and not($sheetType='NU' or $sheetType='VeAC' or $sheetType='F' or $sheetType='BNB')">
+						<arco-arco:hasCulturalPropertyInventoryClassification>
+							<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'CulturalPropertyInventoryClassification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTS)))" />
+								</xsl:attribute>
+						</arco-arco:hasCulturalPropertyInventoryClassification>
+				</xsl:if>
+				<!-- numismatic property classification -->
+				<xsl:if test="schede/NU/OG/OGT/OGTH">
+					<arco-arco:hasNumismaticPropertyClassification>
+						<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'NumismaticPropertyClassification/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
+							</xsl:attribute>
+					</arco-arco:hasNumismaticPropertyClassification>
+				</xsl:if>
+				<!-- copyright -->
+				<xsl:for-each select="schede/*/TU/CPR">
+					<arco-cd:hasCopyright>
+						<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Copyright/', $itemURI, '-copyright-', position())" />
+							</xsl:attribute>
+					</arco-cd:hasCopyright>
+				</xsl:for-each>
 				<!-- dedication (DA/DDC) -->
 				<xsl:if test="schede/*/AU/DDC/*">
 					<xsl:for-each select="schede/*/AU/DDC">
@@ -2937,6 +2970,16 @@
                  <!-- materialOrTechnique of cultural property (previous versions) -->
                  <xsl:if test="not(schede/*/MT/MTC/*) and (not(starts-with(lower-case(normalize-space(schede/*/MT/MTC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC)), 'n.r')))">
                  	<xsl:for-each select="schede/*/MT/MTC">
+                 	<arco-dd:hasTechnicalDetailOccurrence>
+ 	                	<xsl:attribute name="rdf:resource">
+ 	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-technique-', position())" />
+ 	                	</xsl:attribute>
+ 	                </arco-dd:hasTechnicalDetailOccurrence>
+ 	               </xsl:for-each>
+                 </xsl:if>
+                  <!-- materialOrTechnique of cultural property (OAC) -->
+                 <xsl:if test="not(starts-with(lower-case(normalize-space(schede/OAC/MT/MTC/MTCI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/OAC/MT/MTC/MTCI)), 'n.r'))">
+                 	<xsl:for-each select="schede/OAC/MT/MTC/MTCI">
                  	<arco-dd:hasTechnicalDetailOccurrence>
  	                	<xsl:attribute name="rdf:resource">
  	                		<xsl:value-of select="concat($NS, 'TechnicalDetailOccurrence/', $itemURI, '-material-technique-', position())" />
