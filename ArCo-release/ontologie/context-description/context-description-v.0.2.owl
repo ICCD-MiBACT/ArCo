@@ -1300,6 +1300,24 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasObservationSurveyType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasObservationSurveyType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurveyType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine di rilevamento al tipo di indagine di rilevamento (nel contesto/decontestualizzato)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an observation survey to the type of observation survey (in the context, out of context)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di indagine di rilevamento</rdfs:label>
+        <rdfs:label xml:lang="en">has observation survey type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: LA/PRM</arco:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasOwner -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasOwner">
@@ -5544,6 +5562,12 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasObservationSurveyType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurveyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyPhotographer"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
@@ -5560,13 +5584,29 @@ Normativa CA: RO/RIS (intervento successivo)</arco:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine, ovvero il rilevamento (l&apos;indagine in occasione della quale è stato rilevato, individuato, osservato il bene) di un bene musicale di interesse etno-organologico o di un bene demoetno-antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo particolare di indagine, ovvero il rilevamento (l&apos;occasione o l&apos;indagine in occasione della quale è stato rilevato, individuato, osservato il bene) di un bene musicale di interesse etno-organologico o di un bene demoetno-antropologico.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Indagine di rilevamento</rdfs:label>
         <rdfs:label xml:lang="en">Observation survey</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco:iccdNormTag>ICCD Normativa SM e BDM 4.00: DR</arco:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ObservationSurveyType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ObservationSurveyType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di indagine di rilevamento (rilevamento nel contesto/ rilevamento decontestualizzato).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of observation survey (in the context / out of the context).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Observation survey type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di indagine di rilevamento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco:iccdNormTag>ICCD Normativa BDI 4.00: LA/PRM</arco:iccdNormTag>
     </owl:Class>
     
 
