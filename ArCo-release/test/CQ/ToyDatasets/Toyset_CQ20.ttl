@@ -1,0 +1,30 @@
+@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ/36>.
+@prefix arcocd: <https://w3id.org/arco/context-description/> .
+@prefix arcocore: <https://w3id.org/arco/core/> .
+
+:ArchivalRecordSetMembership1 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty1 ; 
+    arcocd:hasArchivalRecordSet :ArchivalSetRecord1 .   
+
+:ArchivalRecordSetMembership2 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty2 ; 
+    arcocd:hasArchivalRecordSet :ArchivalSetRecord2 . 
+:ArchivalSetRecord2 a arcocd:ArchivalFonds .  
+
+:ArchivalRecordSetMembership3 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty3 ; 
+    arcocd:hasArchivalRecordSet :ArchivalSetRecord3.  
+:ArchivalSetRecord3 a arcocd:ArchivalSeries . 
+
+:ArchivalRecordSetMembership4 arcocd:hasMemberOfArchivalRecordSet :CulturalProperty4 ; 
+    arcocd:hasArchivalRecordSet :ArchivalSetRecord4 .
+:ArchivalSetRecord4 a arcocd:ArchivalSubseries . 
+
+:ArchivalRecordSetMembership5 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty5 ; 
+    arcocd:hasArchivalRecordSet :ArchivalSetRecord5 . 
+:ArchivalSetRecord5 a arcocd:ArchivalFonds .  
+
+:ArchivalRecordSetMembership6 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty6 ; 
+    arcocd:hasArchivalRecordSet :ArchivalSetRecord6 .
+:ArchivalSetRecord6 a arcocd:ArchivalSeries .   
+
+:ArchivalRecordSetMembership7 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty7 ; 
+    arcocd:hasArchivalRecordSet :ArchivalSetRecord7 .  
+:ArchivalSetRecord7 a arcocd:ArchivalSubseries . 
