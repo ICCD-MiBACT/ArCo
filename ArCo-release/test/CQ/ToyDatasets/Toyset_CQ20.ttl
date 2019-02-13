@@ -2,14 +2,14 @@
 @prefix arcocd: <https://w3id.org/arco/context-description/> .
 @prefix arcocore: <https://w3id.org/arco/core/> .
 
-:ArchivalRecordSetMembership1 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty1 ; 
+:ArchivalRecordSetMembership1 arcocd:hasMemberOfArchivalRecordSet :CulturalProperty1 ; 
     arcocd:hasArchivalRecordSet :ArchivalSetRecord1 .   
 
-:ArchivalRecordSetMembership2 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty2 ; 
+:ArchivalRecordSetMembership2 arcocd:hasMemberOfArchivalRecordSet :CulturalProperty2 ; 
     arcocd:hasArchivalRecordSet :ArchivalSetRecord2 . 
 :ArchivalSetRecord2 a arcocd:ArchivalFonds .  
 
-:ArchivalRecordSetMembership3 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty3 ; 
+:ArchivalRecordSetMembership3 arcocd:hasMemberOfArchivalRecordSet :CulturalProperty3 ; 
     arcocd:hasArchivalRecordSet :ArchivalSetRecord3.  
 :ArchivalSetRecord3 a arcocd:ArchivalSeries . 
 
@@ -17,14 +17,14 @@
     arcocd:hasArchivalRecordSet :ArchivalSetRecord4 .
 :ArchivalSetRecord4 a arcocd:ArchivalSubseries . 
 
-:ArchivalRecordSetMembership5 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty5 ; 
+:ArchivalRecordSetMembership5 arcocd:hasMemberOfArchivalRecordSet :CulturalProperty5 ; 
     arcocd:hasArchivalRecordSet :ArchivalSetRecord5 . 
 :ArchivalSetRecord5 a arcocd:ArchivalFonds .  
 
-:ArchivalRecordSetMembership6 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty6 ; 
+:ArchivalRecordSetMembership6 arcocd:hasMemberOfArchivalRecordSet :CulturalProperty6 ; 
     arcocd:hasArchivalRecordSet :ArchivalSetRecord6 .
 :ArchivalSetRecord6 a arcocd:ArchivalSeries .   
 
-:ArchivalRecordSetMembership7 arcocd:conthasMemberOfArchivalRecordSet :CulturalProperty7 ; 
+:ArchivalRecordSetMembership7 arcocd:hasMemberOfArchivalRecordSet :CulturalProperty7 ; 
     arcocd:hasArchivalRecordSet :ArchivalSetRecord7 .  
 :ArchivalSetRecord7 a arcocd:ArchivalSubseries . 
