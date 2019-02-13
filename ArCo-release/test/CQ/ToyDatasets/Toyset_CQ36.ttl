@@ -74,29 +74,3 @@
 :Date7 arcocd:hasEvent :Event7 .
 :Event7 ti:atTime :Time7 .
 :Time7 ti:time "VI a.C." .
-
-
-
-
-
-
-
-
-
-
-
-
-select ?sistema
-where {
- ?bencult arco-location:hasCulturalPropertyAddress ?address.
- ?address CLV:hasRegion ?region.
- ?region rdfs:label ?regNome.
- ?bencult arco-dd:hasAffixedElement ?ele.
- ?ele arco-dd:hasWritingSystem ?sistema.
- ?bencult arco-cd:hasDating ?date.
- ?date arco-cd:hasEvent ?event.
- ?event ti:atTime ?tempo.
- ?tempo ti:time ?value
- FILTER regex(?regNome, "Puglia", "i")
- FILTER regex(?value, "VI a.c.", "i")
-} LIMIT 100
