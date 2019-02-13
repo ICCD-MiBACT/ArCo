@@ -612,11 +612,12 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa il numero d&apos;ordine che identifica una località intesa come unità amministrativa, ovvero un centro storico, una zona urbana e un settore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property associates the order number that identifies a location intended as an administrative unit, i.e. an old town, an urban area and a sector.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Administrative order number</rdfs:label>
         <rdfs:label xml:lang="it">Numero d&apos;ordine amministrativo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTN; LC/ZUR/ZURN; LC/SET/SETN.</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTN; LC/ZUR/ZURN; LC/SET/SETN</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -627,12 +628,13 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata z di un oggetto, che ne definisce l&apos;altitudine rispetto al livello del mare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the z coordinate of an object, which defines its altitude above sea level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">altitude</rdfs:label>
         <rdfs:label xml:lang="it">altitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ; normative precedenti: GP/GPC/GPCL</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ - Normative precedenti: GP/GPC/GPCL</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -643,6 +645,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/name"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la denominazione con cui è noto un catasto storico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the designation of a historical cadastre.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">cadastre name</rdfs:label>
         <rdfs:label xml:lang="it">denominazione del catasto</rdfs:label>
@@ -662,11 +665,12 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare un contenitore giuridico al codice assegnatogli dall&apos;ICCD.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property allows to associate a legal container to its code assigned by the ICCD.</rdfs:comment>
         <rdfs:label xml:lang="en">cultural institute or site identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del contenitore giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>LC/LDC/LDCG; LA/PRC/PRCG</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCG; LA/PRC/PRCG</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -679,11 +683,12 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero progressivo che individua il settore dove si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the progressive number that identifies the district where the cultural property is located.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">District number</rdfs:label>
         <rdfs:label xml:lang="it">Numero del settore</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/SET/SETP.</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/SET/SETP</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -694,12 +699,13 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Coordinates"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata y, ovvero la latitudine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the y coordinate, that is the latitude.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">latitude</rdfs:label>
         <rdfs:label xml:lang="it">latitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY; ICCD Normativa Trasversale 4.00: GE/GEC/GECY</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECY - Normative precedenti: GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -716,7 +722,7 @@
         <rdfs:label xml:lang="en">location details</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>LC/PVC/PVCV</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVC/PVCV</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -727,12 +733,13 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Coordinates"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata x, ovvero la longitudine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the x coordinate, that is the longitude.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">longitude</rdfs:label>
         <rdfs:label xml:lang="it">longitudine</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX; ICCD Normativa Trasversale 4.00: GE/GEC/GECX</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECX - Normative precedenti: GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -743,12 +750,14 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/location/alt"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;altitudine massima assoluta rispetto al livello del mare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the absolute maximum altitude above sea level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine massima</rdfs:label>
         <rdfs:label xml:lang="en">maximum altitude</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAX; versioni precedenti: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAX - Normative precedenti: GP/GPC/GPCS; GA/GAQS; GL/GLQ/GLQS</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -759,6 +768,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/location/alt"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;altitudine minima assoluta rispetto al livello del mare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the absolute minimum altitude above sea level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine minima</rdfs:label>
         <rdfs:label xml:lang="en">minimum altitude</rdfs:label>
@@ -775,12 +786,13 @@
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il tipo di punto che georeferenzia il bene catalogato. La definizione del tipo di punto non è univoca e dipende dalla tipologia e dalla conformazione del bene e dal tipo di localizzazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the type of point that georeferences the catalogued cultural property. The definition of the point type is not univocal and depends on the cultural property&apos;s type and conformation as well as on the type of location.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">point type</rdfs:label>
         <rdfs:label xml:lang="it">tipo di punto</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">Normative di versioni precedenti alla 4.00: GP/GPC/GPCT</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">Normative precedenti alla 4.00: GP/GPC/GPCT</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -791,6 +803,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/location/alt"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;altezza relativa dell&apos;oggetto rispetto a un punto, un elemento o una situazione da specificare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the object relative height by reference to a point or an element or a situation to be specified.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine relativa</rdfs:label>
         <rdfs:label xml:lang="en">relative altitude</rdfs:label>
@@ -809,12 +823,13 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/Site"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare un contenitore fisico al codice assegnatogli dall&apos;ICCD.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property allows to associate a physical container to its code assigned by the ICCD.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">identificativo del contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">site identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>LC/LDC/LDCK; LA/PRC/PRCK</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCK; LA/PRC/PRCK</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -824,13 +839,14 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/location/spacialReferenceSystem">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sistema di riferimento utilizzato per la georeferenziazione (es.: WGS84, WGS84 UTM32, ...)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sistema di riferimento utilizzato per la georeferenziazione (ad es. WGS84, WGS84 UTM32, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the reference system used for the object georeferencing (e.g. WGS84, WGS84 UTM32, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">sistema di riferimento</rdfs:label>
         <rdfs:label xml:lang="en">spacial reference system</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP; versioni precedenti: GA/GAP - GL/GLP - GP/GPP</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP - Normative precedenti: GA/GAP; GL/GLP; GP/GPP</arco:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1115,7 +1131,7 @@
         <rdfs:label xml:lang="en">Coordinates</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>GP/GPD; GA/GAPD; GL/GLS, ICCD Normativa Trasversale: GE/GEC</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - Normative precedenti: GP/GPD; GA/GAPD; GL/GLS</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1130,7 +1146,7 @@
         <rdfs:label xml:lang="it">Metodo di posizionamento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM -  GA/GAM - GL/GLM</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa trasversale 4.00: GE/GPM - Normative precedenti: GP/GPM;  GA/GAM; GL/GLM</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1145,7 +1161,7 @@
         <rdfs:label xml:lang="it">Tecnica di georeferenziazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT - Normative precedenti: GP/GPT; GA/GAT; GL/GLT</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1161,7 +1177,7 @@
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation)</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1224,7 +1240,7 @@
         <rdfs:label xml:lang="en">Site Definition</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>LC/LDC/LDCT</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCT</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1239,7 +1255,7 @@
         <rdfs:label xml:lang="en">Site Specification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>LC/LDC/LDCQ</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCQ</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1337,7 +1353,7 @@
         <rdfs:label xml:lang="en">Type of geographic context</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT.</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT</arco:iccdNormTag>
     </owl:Class>
     
 
@@ -1463,6 +1479,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ArchivalLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione di archivio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the archival location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Archival location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione di archivio</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1478,6 +1497,7 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza un centro storico, ovvero il capoluogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes an old town, that is the chief town.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Capoluogo</rdfs:label>
         <rdfs:label xml:lang="en">Chief town</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1491,6 +1511,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/CurrentPhysicalLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione fisica attuale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the current physical location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Current Physical Location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione fisica attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1503,6 +1526,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ExhibitionLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di esposizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the exhibition location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Exhibition Location</rdfs:label>
         <rdfs:label xml:lang="it">Luogo di esposizione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1517,11 +1543,12 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto, ovvero il contesto extraurbano dove si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, that is the extra-urban context where the cultural property is located.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto extraurbano</rdfs:label>
         <rdfs:label xml:lang="en">Extra-urban context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">ustable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/SET/SETT (sigla TP).</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/SET/SETT (sigla TP)</arco:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -1530,6 +1557,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/FindingLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di ritrovamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the finding location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Finding Location</rdfs:label>
         <rdfs:label xml:lang="it">Luogo di reperimento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1542,6 +1572,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/HistoricalLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero la localizzazione storica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the historical location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Historical Location</rdfs:label>
         <rdfs:label xml:lang="it">Localizzazione storica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1556,11 +1589,12 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza un centro storico, ovvero la denominazione di &apos;centro inglobato&apos;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes the old town, that is the denomination of &apos;incorporated area&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Centro inglobato</rdfs:label>
         <rdfs:label xml:lang="en">Incorporated area</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA.</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</arco:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -1569,6 +1603,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/LastLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di provenienza o collocazione precedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the place of origin or last location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di provenienza / Collocazione precedente</rdfs:label>
         <rdfs:label xml:lang="en">Place of Origin / Last Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1583,6 +1620,7 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza il centro storico, ovvero la località.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes the old town, that is the locality.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Locality</rdfs:label>
         <rdfs:label xml:lang="it">Località</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -1596,6 +1634,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ObservationLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di rilevamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the location of observation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di rilevamento</rdfs:label>
         <rdfs:label xml:lang="en">Observation Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1608,7 +1649,10 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ProductionRealizationLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
-        <rdfs:label xml:lang="it">Luogo di produzione/realizzazione</rdfs:label>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di posizione, ovvero il luogo di produzione o realizzazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the production or realization location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
+        <rdfs:label xml:lang="it">Luogo di produzione / realizzazione</rdfs:label>
         <rdfs:label xml:lang="en">Production or Realization Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -1616,12 +1660,15 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/ShotLocation -->
+    <!-- https://w3id.org/arco/ontology/location/ShootingLocation -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ShotLocation">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/ShootingLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di posizione, ovvero il luogo della ripresa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the shooting location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo della ripresa</rdfs:label>
-        <rdfs:label xml:lang="en">Shot Location</rdfs:label>
+        <rdfs:label xml:lang="en">Shooting Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -1632,6 +1679,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/StorageLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di localizzazione, ovvero il luogo di deposito.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the storage location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Luogo di deposito</rdfs:label>
         <rdfs:label xml:lang="en">Storage Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1644,6 +1694,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/SubjectLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo specifico di localizzazione, ovvero l&apos;area rappresentata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of localization, that is the subject location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Area rappresentata</rdfs:label>
         <rdfs:label xml:lang="en">Subject Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1658,11 +1711,12 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto geografico, ovvero un contesto suburbano che si trova nella zona intermedia tra il contesto urbano e quello extraurbano.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of geographical context, that is a suburban context, which is located in the intermediate area between the urban and extraurban context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto suburbano</rdfs:label>
         <rdfs:label xml:lang="en">Suburban context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU anomalo).</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU anomalo)</arco:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -1673,11 +1727,12 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto, ovvero il contesto territoriale in cui si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, i.e. the territorial context where the cultural property is located.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto territoriale</rdfs:label>
         <rdfs:label xml:lang="en">Territorial context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ.</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ</arco:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -1688,11 +1743,12 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTownAdmistrativeType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di riferimento amministrativo che caratterizza centro storico, ovvero la frazione cittadina.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of administrative reference that characterizes the old town, i.e. the town fraction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Frazione del centro urbano</rdfs:label>
         <rdfs:label xml:lang="en">Town fraction</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA.</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</arco:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -1703,11 +1759,12 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un particolare tipo di contesto, ovvero il contesto subacqueo nel quale si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, that is the underwater context where the cultural property is located.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto subacqueo</rdfs:label>
         <rdfs:label xml:lang="en">Underwater context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ.</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ</arco:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -1718,11 +1775,12 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di contesto, ovvero il contesto urbano nel quale si trova il bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of context, that is the urban context where the cultural asset is located.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto urbano</rdfs:label>
         <rdfs:label xml:lang="en">Urban context</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU).</arco:iccdNormTag>
+        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU)</arco:iccdNormTag>
     </owl:NamedIndividual>
 </rdf:RDF>
 
