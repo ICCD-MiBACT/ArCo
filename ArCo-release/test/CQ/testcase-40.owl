@@ -21,7 +21,7 @@
     { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319549&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319549&quot; }},
     { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319551&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319551&quot; }},
     { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319552&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319552&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:testDate xml:lang="en">2019-01-15</testannotationschema:testDate>
+        <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasCQ xml:lang="it">Quali sono i beni culturali che hanno BNB come tipo di scheda catalografica?</testannotationschema:hasCQ>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
