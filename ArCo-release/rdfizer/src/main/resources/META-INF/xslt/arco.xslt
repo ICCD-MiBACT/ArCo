@@ -8602,12 +8602,12 @@
                 			</arco-cd:hasBibliography>
                 		</xsl:if>
                 		<xsl:if test="./RCGM and (not(starts-with(lower-case(normalize-space(./RCGM)), 'nr')) and not(starts-with(lower-case(normalize-space(./RCGM)), 'n.r')))">
-                			<arco-cd:hasMethod>
+                			<arco-cd:hasSurveyMethod>
                 				<xsl:attribute name="rdf:resource">
 	                			<xsl:value-of
-							select="concat($NS, 'Method/', arco-fn:urify(normalize-space(./RCGM)))" />
+							select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./RCGM)))" />
 	                		</xsl:attribute>
-                			</arco-cd:hasMethod>
+                			</arco-cd:hasSurveyMethod>
                 		</xsl:if>
                 		<xsl:if test="./RCGA and (not(starts-with(lower-case(normalize-space(./RCGA)), 'nr')) and not(starts-with(lower-case(normalize-space(./RCGA)), 'n.r')))">
 						<arco-cd:hasSurveyScientificDirector>
@@ -8680,8 +8680,13 @@
                 		<rdf:Description>
                 			<xsl:attribute name="rdf:about">
 	                			<xsl:value-of
-							select="concat($NS, 'Method/', arco-fn:urify(normalize-space(./RCGM)))" />
+							select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./RCGM)))" />
 	                		</xsl:attribute>
+	                		<rdf:type>
+	                			<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMethod'" />
+		                        </xsl:attribute>
+	                		</rdf:type>
 	                		<rdfs:label>
 	                			<xsl:value-of select="normalize-space(./RCGM)" />
 	                		</rdfs:label>
@@ -9088,12 +9093,12 @@
                 			</arco-cd:hasInventory>
                 		</xsl:if>
                 		<xsl:if test="./DSCM and (not(starts-with(lower-case(normalize-space(./DSCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCM)), 'n.r')))">
-                			<arco-cd:hasMethod>
+                			<arco-cd:hasSurveyMethod>
                 				<xsl:attribute name="rdf:resource">
 	                			<xsl:value-of
-							select="concat($NS, 'Method/', arco-fn:urify(normalize-space(./DSCM)))" />
+							select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./DSCM)))" />
 	                		</xsl:attribute>
-                			</arco-cd:hasMethod>
+                			</arco-cd:hasSurveyMethod>
                 		</xsl:if>
                 		<xsl:if test="./DSCT and (not(starts-with(lower-case(normalize-space(./DSCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCT)), 'n.r')))">
                 			<arco-cd:hasMotivation>
@@ -9248,8 +9253,13 @@
                 		<rdf:Description>
                 			<xsl:attribute name="rdf:about">
 	                			<xsl:value-of
-							select="concat($NS, 'Method/', arco-fn:urify(normalize-space(./DSCM)))" />
+							select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./DSCM)))" />
 	                		</xsl:attribute>
+	                		<rdf:type>
+	                			<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMethod'" />
+		                        </xsl:attribute>
+	                		</rdf:type>
 	                		<rdfs:label>
 	                			<xsl:value-of select="normalize-space(./DSCM)" />
 	                		</rdfs:label>
@@ -9265,6 +9275,11 @@
 	                			<xsl:value-of
 							select="concat($NS, 'Motivation/', arco-fn:urify(normalize-space(./DSCT)))" />
 	                		</xsl:attribute>
+	                		<rdf:type>
+	                			<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Motivation'" />
+		                        </xsl:attribute>
+	                		</rdf:type>
 	                		<rdfs:label>
 	                			<xsl:value-of select="normalize-space(./DSCT)" />
 	                		</rdfs:label>
@@ -9280,6 +9295,11 @@
 	                			<xsl:value-of
 							select="concat($NS, 'StratigraphicUnit/', arco-fn:urify(normalize-space(./DSCU)))" />
 	                		</xsl:attribute>
+	                		<rdf:type>
+	                			<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/StratigraphicUnit'" />
+		                        </xsl:attribute>
+	                		</rdf:type>
 	                		<rdfs:label>
 	                			<xsl:value-of select="normalize-space(./DSCU)" />
 	                		</rdfs:label>
@@ -9295,6 +9315,11 @@
 	                			<xsl:value-of
 							select="concat($NS, 'Tomb/', arco-fn:urify(normalize-space(./DSCS)))" />
 	                		</xsl:attribute>
+	                		<rdf:type>
+	                			<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Tomb'" />
+		                        </xsl:attribute>
+	                		</rdf:type>
 	                		<rdfs:label>
 	                			<xsl:value-of select="normalize-space(./DSCS)" />
 	                		</rdfs:label>
@@ -20901,16 +20926,16 @@
 					</l0:name>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of
-							select="concat('Shot location of cultural property: ', $itemURI)" />
+							select="concat('Shooting location of cultural property: ', $itemURI)" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
 						<xsl:value-of
-							select="concat('Shot location of cultural property: ', $itemURI)" />
+							select="concat('Shooting location of cultural property: ', $itemURI)" />
 					</l0:name>
 						<arco-location:hasLocationType>
 							<xsl:attribute name="rdf:resource">
                                     	<xsl:value-of
-								select="'https://w3id.org/arco/ontology/location/ShotLocation'" />
+								select="'https://w3id.org/arco/ontology/location/ShootingLocation'" />
                             </xsl:attribute>
 						</arco-location:hasLocationType>
 					<xsl:if test="schede/F/LR/LRD and (not(starts-with(lower-case(normalize-space(schede/F/LR/LRD)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/LR/LRD)), 'n.r')))">

@@ -2743,6 +2743,17 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/QualityLevel -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/QualityLevel">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Livello di qualità</rdfs:comment>
+        <rdfs:comment xml:lang="en">Quality level</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il livello di qualità di una risorsa digitale (es.: alta risoluzione, bassa risoluzione, preview)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Resolution -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Resolution">
