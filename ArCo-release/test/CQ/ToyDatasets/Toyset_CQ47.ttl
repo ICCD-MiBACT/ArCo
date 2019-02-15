@@ -1,0 +1,24 @@
+@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ26b/> .
+@prefix arcolocation: <https://w3id.org/arco/location/> .
+
+:CulturalProperty1 arcolocation:hasCulturalPropertyAddress :Address1 .
+:Address1 arcolocation:hasHistoricalArea :HistoricalArea1 .
+
+:CulturalProperty2 arcolocation:hasCulturalPropertyAddress :Address2 .
+:Address2 arcolocation:hasHistoricalArea :HistoricalArea2 .
+
+:CulturalProperty3 arcolocation:hasCulturalPropertyAddress :Address3 .
+:Address3 arcolocation:hasHistoricalArea :HistoricalArea3 .
+
+:CulturalProperty4 arcolocation:hasCulturalPropertyAddress :Address4 .
+:Address4 arcolocation:hasHistoricalArea :HistoricalArea4 .
+
+:CulturalProperty5 arcolocation:hasCulturalPropertyAddress :Address5 .
+:Address5 arcolocation:hasHistoricalArea :HistoricalArea5 .
+
+:CulturalProperty6 arcolocation:hasCulturalPropertyAddress :Address6 .
+:Address6 arcolocation:hasHistoricalArea :HistoricalArea6 .
+
+:CulturalProperty7 arcolocation:hasCulturalPropertyAddress :Address7 .
+:Address7 arcolocation:hasHistoricalArea :HistoricalArea7 .
+
