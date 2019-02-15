@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-47.owl#"
+     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-47.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-47.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
+        <testannotationschema:hasExpectedResult xml:lang="it">{
+  &quot;head&quot;: {
+    &quot;vars&quot;: [ &quot;cultpro&quot; , &quot;address&quot; , &quot;type&quot; ]
+  } ,
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
+      {
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty4&quot; } ,
+        &quot;address&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/Address4&quot; } ,
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/HistoricalArea4&quot; }
+      } ,
+      {
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty5&quot; } ,
+        &quot;address&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/Address5&quot; } ,
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/HistoricalArea5&quot; }
+      } ,
+      {
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty2&quot; } ,
+        &quot;address&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/Address2&quot; } ,
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/HistoricalArea2&quot; }
+      } ,
+      {
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty3&quot; } ,
+        &quot;address&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/Address3&quot; } ,
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/HistoricalArea3&quot; }
+      } ,
+      {
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty1&quot; } ,
+        &quot;address&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/Address1&quot; } ,
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/HistoricalArea1&quot; }
+      } ,
+      {
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty6&quot; } ,
+        &quot;address&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/Address6&quot; } ,
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/HistoricalArea6&quot; }
+      } ,
+      {
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty7&quot; } ,
+        &quot;address&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/Address7&quot; } ,
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/HistoricalArea7&quot; }
+      }
+    ]
+  }
+}</testannotationschema:hasExpectedResult>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testannotationschema:hasCQ xml:lang="it">Qual&apos;è l&apos;area storica-geografica del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
+PREFIX CLV: &lt;https://w3id.org/italia/onto/CLV/&gt;
+
+SELECT  *
+WHERE {
+
+ ?cultpro arco-location:hasCulturalPropertyAddress ?address.
+ ?address arco-location:hasHistoricalArea ?type.
+} 
+
+LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ47.ttl"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
