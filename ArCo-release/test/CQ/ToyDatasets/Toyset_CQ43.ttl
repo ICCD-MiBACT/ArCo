@@ -1,0 +1,30 @@
+@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ26b/> .
+@prefix arcocatalogue: <https://w3id.org/arco/catalogue/> . 
+
+:CulturalProperty1 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord1 .
+:CatalogueRecord1  arcocatalogue:hasCatalogueRecordVersion :CatalogueRecordVersion1 .
+:CatalogueRecordVersion1 arcocatalogue:hasCataloguingAgent :Agent1 . 
+
+:CulturalProperty2 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord2 .
+:CatalogueRecord2  arcocatalogue:hasCatalogueRecordVersion :CatalogueRecordVersion2 .
+:CatalogueRecordVersion2 arcocatalogue:hasCataloguingAgent :Agent2 . 
+
+:CulturalProperty3 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord3 .
+:CatalogueRecord3  arcocatalogue:hasCatalogueRecordVersion :CatalogueRecordVersion3 .
+:CatalogueRecordVersion3 arcocatalogue:hasCataloguingAgent :Agent3 . 
+
+:CulturalProperty4 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord4 .
+:CatalogueRecord4  arcocatalogue:hasCatalogueRecordVersion :CatalogueRecordVersion4 .
+:CatalogueRecordVersion4 arcocatalogue:hasCataloguingAgent :Agent4 . 
+
+:CulturalProperty5 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord5 .
+:CatalogueRecord5  arcocatalogue:hasCatalogueRecordVersion :CatalogueRecordVersion5 .
+:CatalogueRecordVersion5 arcocatalogue:hasCataloguingAgent :Agent5 . 
+
+:CulturalProperty6 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord6 .
+:CatalogueRecord6  arcocatalogue:hasCatalogueRecordVersion :CatalogueRecordVersion6 .
+:CatalogueRecordVersion6 arcocatalogue:hasCataloguingAgent :Agent6 . 
+
+:CulturalProperty7 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord7 .
+:CatalogueRecord7  arcocatalogue:hasCatalogueRecordVersion :CatalogueRecordVersion7 .
+:CatalogueRecordVersion7 arcocatalogue:hasCataloguingAgent :Agent7 . 
