@@ -11,6 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -18,6 +19,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue/">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali e alle schede di catalogo che descrivono un bene culturale.</rdfs:comment>
         <dc:creator>Margherita Porena (MiBACT, ICCD)</dc:creator>
@@ -58,9 +60,17 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/core/iccdNormTag -->
+    <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/iccdNormTag"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag">
+        <rdfs:comment xml:lang="it">Questa proprietà permette di annotare il campo o i campi della normativa ICCD corrispondenti a una determinata classe o proprietà dell&apos;ontologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property annotates the field or the fields of the ICCD regulation to which a specific class or property refers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="en">ICCD norm tag</rdfs:label>
+        <rdfs:label xml:lang="it">acronimo normativa ICCD</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:AnnotationProperty>
     
 
 
@@ -128,7 +138,7 @@
         <rdfs:label xml:lang="en">edited at time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/CMP/CMPD; CM/RVM/RVMD; CM/AGG/AGGD</arco-core:iccdNormTag>
+        <iccdNormTag>CM/CMP/CMPD; CM/RVM/RVMD; CM/AGG/AGGD</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -136,6 +146,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasAccessProfile -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAccessProfile">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una scheda di catalogo al profilo di accesso ai dati (basso, medio, alto).</rdfs:comment>
@@ -144,7 +155,7 @@
         <rdfs:label xml:lang="en">has access profile</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -152,6 +163,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasAdditionalFormResponsibleAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAdditionalFormResponsibleAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento all&apos;ente/il soggetto responsabile nel SIGECweb della redazione del modulo.</rdfs:comment>
@@ -161,7 +173,7 @@
         <rdfs:label xml:lang="en">has additional form responsible agent</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPE</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPE</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -178,7 +190,7 @@
         <rdfs:label xml:lang="en">has additional form type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPT</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPT</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -194,7 +206,7 @@
         <rdfs:label xml:lang="en">has alternative identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: AC/ACC</arco-core:iccdNormTag>
+        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: AC/ACC</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -234,6 +246,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -254,6 +267,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare una scheda di catalogo al suo livello di catalogazione.</rdfs:comment>
@@ -262,7 +276,7 @@
         <rdfs:label xml:lang="en">has cataloguing level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CD/LIR</arco-core:iccdNormTag>
+        <iccdNormTag>CD/LIR</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -270,6 +284,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasCulturalPropertyRecordResponsibleAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCulturalPropertyRecordResponsibleAgent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isResponsibleAgentOfCulturalPropertyRecord"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
@@ -280,7 +295,7 @@
         <rdfs:label xml:lang="en">has cultural property record responsible agent</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -297,7 +312,7 @@
         <rdfs:label xml:lang="en">has digital transcription operator</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/RVM/RVMN</arco-core:iccdNormTag>
+        <iccdNormTag>CM/RVM/RVMN</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -314,7 +329,7 @@
         <rdfs:label xml:lang="en">has digital transcription responsible agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/RVM/RVME</arco-core:iccdNormTag>
+        <iccdNormTag>CM/RVM/RVME</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -350,7 +365,7 @@
         <rdfs:label xml:lang="en">has official in charge</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/FUR</arco-core:iccdNormTag>
+        <iccdNormTag>CM/FUR</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -376,6 +391,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasPrivacyLevel -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasPrivacyLevel">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il profilo di accesso di una scheda catalografica al livello di riservatezza dei dati contenutevi (basso livello di riservatezza, alto livello di riservatezza, medio livello di riservatezza).</rdfs:comment>
@@ -384,7 +400,7 @@
         <rdfs:label xml:lang="en">has privacy level</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -392,6 +408,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasPrivacyReason -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasPrivacyReason">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyReason"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno specifico profilo d&apos;accesso ai dati di una scheda catalografica alla motivazione che ha determinato l&apos;adozione di quel profilo d&apos;accesso (es.: scheda contenente dati liberamente accessibili, scheda contenente dati personali, scheda di bene di proprietà privata, scheda di bene a rischio, scheda di bene non adeguatamente sorvegliabile)</rdfs:comment>
@@ -400,7 +417,7 @@
         <rdfs:label xml:lang="en">has privacy reason</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSM</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSM</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -417,7 +434,7 @@
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/CMP/CMPN</arco-core:iccdNormTag>
+        <iccdNormTag>CM/CMP/CMPN</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -434,7 +451,7 @@
         <rdfs:label xml:lang="en">has scientific director</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/RSR</arco-core:iccdNormTag>
+        <iccdNormTag>CM/RSR</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -451,7 +468,7 @@
         <rdfs:label xml:lang="en">has update official in charge</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/AGG/AGGF</arco-core:iccdNormTag>
+        <iccdNormTag>CM/AGG/AGGF</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -468,7 +485,7 @@
         <rdfs:label xml:lang="en">has responsible agency or person</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/AGG/AGGE</arco-core:iccdNormTag>
+        <iccdNormTag>CM/AGG/AGGE</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -485,7 +502,7 @@
         <rdfs:label xml:lang="en">has update responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/AGG/AGGN</arco-core:iccdNormTag>
+        <iccdNormTag>CM/AGG/AGGN</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -502,7 +519,7 @@
         <rdfs:label xml:lang="en">has update scientific revisor</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/AGG/AGGR</arco-core:iccdNormTag>
+        <iccdNormTag>CM/AGG/AGGR</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -538,6 +555,8 @@
     <!-- https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente coinvolto nella catalogazione&quot;, rappresenta la relazione che collega un agente che riveste un ruolo nelle attività di catalogazione di una scheda di catalogo alla scheda stessa.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="en">is cataloguing agent of</rdfs:label>
@@ -628,7 +647,7 @@
         <rdfs:label xml:lang="it">è collegato a modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -645,7 +664,7 @@
         <rdfs:label xml:lang="it">è collegato a modulo informativo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -662,7 +681,7 @@
         <rdfs:label xml:lang="it">è ente responsabile della scheda su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSE</iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -698,7 +717,7 @@
         <rdfs:label xml:lang="it">identificativo del modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPC</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPC</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -715,7 +734,7 @@
         <rdfs:label xml:lang="it">identificativo della scheda di catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</arco-core:iccdNormTag>
+        <iccdNormTag xml:lang="it">Concatenazione dei sottocampi di CD/NCT (NCTR, NCTN, NCTS) e RV/RVE/RVEL</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -730,7 +749,7 @@
         <rdfs:label xml:lang="it">identificativo di scheda su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSC</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS/ACSC</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -747,7 +766,7 @@
         <rdfs:label xml:lang="en">deleted ICCD identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSP; versioni precedenti: RV/RVE/RVES</arco-core:iccdNormTag>
+        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSP; versioni precedenti: RV/RVE/RVES</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -766,7 +785,7 @@
         <rdfs:label xml:lang="en">information form identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/MOD/MODI</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/MOD/MODI</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -782,7 +801,7 @@
         <rdfs:label xml:lang="en">recovered data</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AN/RDP</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AN/RDP</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -806,7 +825,7 @@
         <rdfs:label xml:lang="en">reference project</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP; AC/ACS/ACSP</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC/ACCP; AC/ACS/ACSP</iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -885,7 +904,7 @@
         <rdfs:label xml:lang="it">Profilo di accesso</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS</iccdNormTag>
     </owl:Class>
     
 
@@ -919,7 +938,7 @@
         <rdfs:label xml:lang="it">Modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP</iccdNormTag>
     </owl:Class>
     
 
@@ -935,7 +954,7 @@
         <rdfs:label xml:lang="it">Tipo di modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPT</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: DA/APP/APPT</iccdNormTag>
     </owl:Class>
     
 
@@ -956,7 +975,7 @@
         <rdfs:label xml:lang="it">Codice alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACC</iccdNormTag>
     </owl:Class>
     
 
@@ -1484,7 +1503,7 @@
         <rdfs:label xml:lang="it">Versione della scheda</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CM/CMP; CM/RVM; CM/AGG</arco-core:iccdNormTag>
+        <iccdNormTag>CM/CMP; CM/RVM; CM/AGG</iccdNormTag>
     </owl:Class>
     
 
@@ -1508,7 +1527,7 @@
         <rdfs:label xml:lang="it">Livello catalogazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-core:iccdNormTag>CD/LIR</arco-core:iccdNormTag>
+        <iccdNormTag>CD/LIR</iccdNormTag>
     </owl:Class>
     
 
@@ -1536,7 +1555,7 @@
         <rdfs:label xml:lang="it">Scheda su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AC/ACS</iccdNormTag>
     </owl:Class>
     
 
@@ -1564,7 +1583,7 @@
         <rdfs:label xml:lang="it">Modulo informativo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasvesale 4.00: AC/MOD</iccdNormTag>
     </owl:Class>
     
 
@@ -1579,7 +1598,7 @@
         <rdfs:label xml:lang="en">Privacy level</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSP</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSP</iccdNormTag>
     </owl:Class>
     
 
@@ -1594,7 +1613,7 @@
         <rdfs:label xml:lang="en">Privacy reason</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSM</arco-core:iccdNormTag>
+        <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSM</iccdNormTag>
     </owl:Class>
     
 

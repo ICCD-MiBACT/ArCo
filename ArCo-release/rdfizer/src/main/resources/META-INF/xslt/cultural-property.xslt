@@ -1409,11 +1409,9 @@
 				<!-- keywords (PST) -->
 				<xsl:if test="(not(starts-with(lower-case(normalize-space(schede/*/CT/CTC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CT/CTC)), 'n.r')))">
 					<xsl:for-each select="schede/*/CT/CTC">
-						<arco-arco:hasKeyword>
-							<xsl:attribute name="rdf:resource">
-		                		<xsl:value-of select="concat($NS, 'Keyword/', arco-fn:urify(normalize-space(.)))" />
-		                	</xsl:attribute>
-						</arco-arco:hasKeyword>
+						<arco-core:keyword>
+		                		<xsl:value-of select="normalize-space(.)" />
+						</arco-core:keyword>
 					</xsl:for-each>
 				</xsl:if>
 				<!-- main discipline (PST) -->
@@ -1603,12 +1601,12 @@
 						</arco-cd:hasInventory>
 					</xsl:if>
 				</xsl:for-each>
-				<!-- Estimate for versione 2.00 -->
+				<!-- Estimate for version 2.00 -->
 				<xsl:if test="schede/*/UB/INV/INVS and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
 					<arco-cd:hasEstimate>
 						<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
-							select="concat($NS, 'Estimate/', $itemURI)" />
+							select="concat($NS, 'CulturalPropertyEstimate/', $itemURI)" />
 	                        </xsl:attribute>
 					</arco-cd:hasEstimate>
 				</xsl:if>

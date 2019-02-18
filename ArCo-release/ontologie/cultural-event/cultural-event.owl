@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/cultural-event/"
      xml:base="https://w3id.org/arco/ontology/cultural-event/"
-     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
+     xmlns:arco-core="https://w3id.org/arco/ontology/core/" xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
@@ -23,6 +23,8 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <rdfs:label>Cultural event Ontology (ArCo network)</rdfs:label>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -36,20 +38,6 @@
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco/iccdNormTag -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/arco/iccdNormTag"/>
     
 
 
@@ -70,25 +58,10 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser -->
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasAgentRelatedToCulturalEvent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasRelatedAgent"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
-        <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
-        <rdfs:label xml:lang="en">has event organiser</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</arco:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/cultural-event/hasRelatedAgent -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasRelatedAgent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasAgentRelatedToCulturalEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -96,10 +69,26 @@
             <rdf:Description rdf:about="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un evento culturale a un agente che riveste un ruolo relativo all&apos;evento. La relazione tra il ruolo e l’agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. La relazione è poi specializzata da sottoproprietà. Nell’ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l’ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha agente</rdfs:label>
-        <rdfs:label xml:lang="en">has agent</rdfs:label>
+        <rdfs:label xml:lang="it">ha agente collegato a evento culturale</rdfs:label>
+        <rdfs:label xml:lang="en">has agent related to cultural event</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasAgentRelatedToCulturalEvent"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
+        <rdfs:label xml:lang="en">has event organiser</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag xml:lang="it">Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -132,7 +121,7 @@
         <rdfs:label xml:lang="it">tempo e luogo dell&apos;evento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e normative di versione 4.00: MS/MST/MSTL</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e normative di versione 4.00: MS/MST/MSTL</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -165,7 +154,7 @@
         <rdfs:label xml:lang="it">Mostra</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e altre normative di versione 4.00: se MS/MST/MSTI= &quot;mostra&quot;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e altre normative di versione 4.00: se MS/MST/MSTI= &quot;mostra&quot;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 

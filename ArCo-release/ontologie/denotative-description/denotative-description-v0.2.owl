@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/denotative-description/"
      xml:base="https://w3id.org/arco/ontology/denotative-description/"
-     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
+     xmlns:arco-core="https://w3id.org/arco/ontology/core/" xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco-location="https://w3id.org/arco/ontology/location/"
@@ -58,9 +58,7 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/iccdNormTag -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/arco/iccdNormTag"/>
+   
     
 
 
@@ -116,7 +114,7 @@
         <rdfs:label xml:lang="en">has accessory</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -131,7 +129,7 @@
         <rdfs:label xml:lang="en">has element affixed to cultural property</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI - ICCD Normativa MI: AU/DDC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI - ICCD Normativa MI: AU/DDC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -148,7 +146,7 @@
         <rdfs:label xml:lang="en">has affixed element type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -165,7 +163,7 @@
         <rdfs:label xml:lang="en">has communication medium</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -183,7 +181,7 @@
         <rdfs:label xml:lang="en">has communication medium type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -200,7 +198,7 @@
         <rdfs:label xml:lang="en">has conservation status</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>CO/STC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>CO/STC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -217,7 +215,7 @@
         <rdfs:label xml:lang="en">has conservation status type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>CO/STC/STCC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>CO/STC/STCC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -233,7 +231,7 @@
         <rdfs:label xml:lang="en">has cultural property definition</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>OG/OGT/OGTD</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTD</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -249,7 +247,7 @@
         <rdfs:label xml:lang="en">has cultural property specification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>OG/OGT/OGTT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -266,7 +264,7 @@
         <rdfs:label xml:lang="en">has cultural property type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>OG/OGT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -282,7 +280,7 @@
         <rdfs:label xml:lang="en">has dedicatee</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa MI 3.00: AU/DDC/DDCM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa MI 3.00: AU/DDC/DDCM</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -298,7 +296,7 @@
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -315,7 +313,7 @@
         <owl:versionInfo xml:lang="it">Questa proprietà collega una denominazione o dedicazione o, per la normativa FF, titolo nel tempo al tipo di denominazione del bene (altra lingua, attribuita, attuale, dialettale, etc.)</owl:versionInfo>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD/OGDT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD/OGDT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -331,7 +329,7 @@
         <rdfs:label xml:lang="en">has font style</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: DA/ISE/ISET - Normative di versioni precedenti: DA/ISR/ISRT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: DA/ISE/ISET - Normative di versioni precedenti: DA/ISR/ISRT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -347,7 +345,7 @@
         <rdfs:label xml:lang="en">has functional purpose</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -363,7 +361,7 @@
         <rdfs:label xml:lang="en">has iconographic or decorative apparatus</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -396,7 +394,7 @@
         <rdfs:label xml:lang="en">has implementation method</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -412,7 +410,7 @@
         <rdfs:label xml:lang="en">has legibility</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa NU: CO/STC/STCL</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU: CO/STC/STCL</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -428,7 +426,7 @@
         <rdfs:label xml:lang="en">has location as subject</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">se 4.00 LA/TLC o versioni precedenti a 4.00 LA/TCL = &quot;area rappresentata&quot;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">se 4.00 LA/TLC o versioni precedenti a 4.00 LA/TCL = &quot;area rappresentata&quot;</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -446,7 +444,7 @@
         <rdfs:label xml:lang="en">has measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -462,7 +460,7 @@
         <rdfs:label xml:lang="en">has measurement collection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -479,7 +477,7 @@
         <rdfs:label xml:lang="en">has measurement type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -495,7 +493,7 @@
         <rdfs:label xml:lang="en">has orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -526,7 +524,7 @@
         <rdfs:label xml:lang="en">has sample collected</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -544,7 +542,7 @@
         <rdfs:label xml:lang="en">has sample collected type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -561,7 +559,7 @@
         <rdfs:label xml:lang="en">has support</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISES</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISES</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -577,7 +575,7 @@
         <rdfs:label xml:lang="en">has technical detail occurrence</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -595,7 +593,7 @@
         <rdfs:label>has volumetric diamensions measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>Normativa VeAC: MT/MII</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa VeAC: MT/MII</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -611,7 +609,7 @@
         <rdfs:label xml:lang="en">has writing system</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -628,7 +626,7 @@
         <rdfs:label xml:lang="en">involves age range</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUC/CUCE; CU/CUP/CUPE</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU/CUC/CUCE; CU/CUP/CUPE</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -645,7 +643,7 @@
         <rdfs:label xml:lang="it">è misura di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -661,7 +659,7 @@
         <rdfs:label xml:lang="it">è supporto di</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISES</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISES</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -711,7 +709,7 @@
         <rdfs:label xml:lang="it">si riferisce ad agente</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISES - Normative di versioni precedenti: DA/STM/STMI</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISES - Normative di versioni precedenti: DA/STM/STMI</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -783,7 +781,7 @@
         <rdfs:label xml:lang="it">data di creazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASSD</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASSD</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -799,7 +797,7 @@
         <rdfs:label xml:lang="it">traduzione italiana</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEB</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEB</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -818,7 +816,7 @@
         <rdfs:label xml:lang="it">numero di partecipanti infantili</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVI; CU/CUM/CUMI</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVI; CU/CUM/CUMI</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -835,7 +833,7 @@
         <rdfs:label xml:lang="it">numero di partecipanti femminili</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -853,7 +851,7 @@
         <rdfs:label xml:lang="it">numero di partecipanti maschili</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVM; CU/CUM/CUMM; CU/CUC/CUCM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVM; CU/CUM/CUMM; CU/CUC/CUCM</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -870,7 +868,7 @@
         <rdfs:label xml:lang="en">occurrences</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEQ - Normative di versioni precedenti: DA/STM/STMU</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEQ - Normative di versioni precedenti: DA/STM/STMU</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -887,7 +885,7 @@
         <rdfs:label xml:lang="it">posizione rispetto al bene culturale complesso</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normative OA e RA: OG/OGT/OGTP</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normative OA e RA: OG/OGT/OGTP</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -903,7 +901,7 @@
         <rdfs:label xml:lang="it">posizione su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEP - Normative di versioni precedenti: DA/STM/STMP; DA/ISR/ISRP - Normativa A: LI/LSI/LSIU - Normativa PST: OG/SGT/SGTP - ICCD Normative MA, CA, SI, SAS: MC/CMN/CMNP</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEP - Normative di versioni precedenti: DA/STM/STMP; DA/ISR/ISRP - Normativa A: LI/LSI/LSIU - Normativa PST: OG/SGT/SGTP - ICCD Normative MA, CA, SI, SAS: MC/CMN/CMNP</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -919,7 +917,7 @@
         <rdfs:label xml:lang="it">proposte di interventi</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>CO/STP</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>CO/STP</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -937,7 +935,7 @@
         <rdfs:label xml:lang="en">sample collected identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -954,7 +952,7 @@
         <rdfs:label xml:lang="en">storage conditions</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>CO/STD</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>CO/STD</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -971,7 +969,7 @@
         <rdfs:label xml:lang="it">trascrizione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEI - Normative di versioni precedenti: DA/ISR/ISRI</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEI - Normative di versioni precedenti: DA/ISR/ISRI</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1100,7 +1098,7 @@
         <rdfs:label xml:lang="en">Accessory</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AS/ASS/ASST</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1169,7 +1167,7 @@
         <rdfs:label xml:lang="it">Elemento apposto su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1184,7 +1182,7 @@
         <rdfs:label xml:lang="it">Tipo di elemento apposto</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEE - Normative di versioni precedenti: DA/STM/STMQ</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1200,7 +1198,7 @@
         <rdfs:label xml:lang="it">Fascia d&apos;età</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUC/CUCE; CU/CUP/CUPE</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU/CUC/CUCE; CU/CUP/CUPE</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1215,7 +1213,7 @@
         <rdfs:label xml:lang="it">Marchio</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;marchio&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;marchio&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;marchio&apos;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;marchio&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;marchio&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;marchio&apos;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1230,7 +1228,7 @@
         <rdfs:label xml:lang="it">Stemma</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;stemma&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;stemma&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;stemma&apos;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;stemma&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;stemma&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;stemma&apos;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1246,7 +1244,7 @@
         <rdfs:label xml:lang="it">Raffigurazione su moneta</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DESA; DA/DES/DESM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DESA; DA/DES/DESM</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1262,7 +1260,7 @@
         <rdfs:label xml:lang="it">Legenda della moneta</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1278,7 +1276,7 @@
         <rdfs:label xml:lang="it">Modalità comunicativa</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1294,7 +1292,7 @@
         <rdfs:label xml:lang="it">Tipo di modalità comunicativa</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1316,7 +1314,7 @@
         <rdfs:label xml:lang="it">Stato di Conservazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>CO/STC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>CO/STC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1330,7 +1328,7 @@
         <rdfs:label xml:lang="it">Tipo di stato di conservazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>CO/STC/STCC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>CO/STC/STCC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1352,7 +1350,7 @@
         <rdfs:label xml:lang="en">Counterstamp</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa NU 4.00: DA/CON</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: DA/CON</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1367,7 +1365,7 @@
         <rdfs:label xml:lang="it">Definizione del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>OG/OGT/OGTD</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTD</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1382,7 +1380,7 @@
         <rdfs:label xml:lang="it">Specifiche del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>OG/OGT/OGTT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1409,7 +1407,7 @@
         <rdfs:label xml:lang="it">Tipo di bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag>OG/OGT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1436,7 +1434,7 @@
         <rdfs:label xml:lang="en">Dedication</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa MI 3.00: AU/DDC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa MI 3.00: AU/DDC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1469,7 +1467,7 @@
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD - Normative A, BDM, PG 3: OG/OGA.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD - Normative A, BDM, PG 3: OG/OGA.</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1484,7 +1482,7 @@
         <rdfs:label xml:lang="it">Tipo di denominazione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1499,7 +1497,7 @@
         <rdfs:label xml:lang="it">Emblema</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;emblema&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;emblema&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;emblema&apos;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;emblema&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;emblema&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;emblema&apos;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1514,7 +1512,7 @@
         <rdfs:label xml:lang="it">Tipo di caratteri</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: DA/ISE/ISET - Normative di versioni precedenti: DA/ISR/ISRT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: DA/ISE/ISET - Normative di versioni precedenti: DA/ISR/ISRT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1529,7 +1527,7 @@
         <rdfs:label xml:lang="it">Scopo funzionale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative MA e CA: OG/OGT/OGTF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/ISE/ISEC - Normative di versioni precedenti: DA/ISR/ISRC; DA/APF/APFF - Normative MA e CA: OG/OGT/OGTF</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1544,7 +1542,7 @@
         <rdfs:label xml:lang="it">Lapide</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa A: LI/LSI/LSIG = &apos;lapide&apos;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa A: LI/LSI/LSIG = &apos;lapide&apos;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1577,7 +1575,7 @@
         <rdfs:label xml:lang="en">Iconographic or Decorative Apparatus</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID - ICCD Normative PST e BDM: DA/APF</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1592,7 +1590,7 @@
         <rdfs:label xml:lang="it">Tipo di apparato iconografico e decorativo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID/AIDO</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/AID/AIDO</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1607,7 +1605,7 @@
         <rdfs:label xml:lang="it">Modalità esecutiva</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI: CU/CUM/CUMD; CU/CUS/CUSD</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1622,7 +1620,7 @@
         <rdfs:label xml:lang="it">Iscrizione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;iscrizione&apos; - ICCD versioni precedenti: DA/ISR - ICCD Normativa A: LI/LSI/LSIG = &apos;iscrizione&apos;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;iscrizione&apos; - ICCD versioni precedenti: DA/ISR - ICCD Normativa A: LI/LSI/LSIG = &apos;iscrizione&apos;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1637,7 +1635,7 @@
         <rdfs:label xml:lang="en">Legibility</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa NU: CO/STC/STCL</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU: CO/STC/STCL</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1653,7 +1651,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Logo</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;logo&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;logo&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;logo&apos;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;logo&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;logo&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;logo&apos;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1674,7 +1672,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Misura</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">MT/MIS</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">MT/MIS</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1696,7 +1694,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement collection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MII e MT/MIM</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1711,7 +1709,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di Misura</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/MIS/MISZ; MT/MNR - Per versioni di normativa precedenti alla 4.00: MT/MIS/MISA; MT/MIS/MISD; MT/MIS/MISL; MT/MIS/MISN; MT/MIS/MISG; MT/MIS/MISP; MT/MIS/MISS; MT/MIS/MISR; MT/MIS/MISV - ICCD scheda VeAC: MT/MII/MIIA; MT/MII/MIIL; MT/MII/MIIP; MT/MIS/MISR; MT/MIS/MISD; MT/MIS/MISS; MT/MIS/MISP; MT/MIS/MISV; MT/MIS/MISF; MT/MIS/MISO</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1726,7 +1724,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1773,7 +1771,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Sample collected</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1788,7 +1786,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di campione prelevato</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1803,7 +1801,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Timbro</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;timbro&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;timbro&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;timbro&apos;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;timbro&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;timbro&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;timbro&apos;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1818,7 +1816,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Supporto</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISES</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISES</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1834,7 +1832,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Technical Characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; MT/MTX; MT/FVM; MT/FRM;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; MT/MTX; MT/FVM; MT/FRM;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1850,7 +1848,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Technical Detail</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1866,7 +1864,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Technical detail Occurrence</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1881,7 +1879,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Writing system</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1972,7 +1970,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione attribuita</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -1986,7 +1984,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Note produbicili</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AA/AAN</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAN</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2094,7 +2092,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normativa A 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normativa A 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2108,7 +2106,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione consuetudinaria</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2178,7 +2176,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Dialectal designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2204,7 +2202,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Diapason</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AA/AAC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAC</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2242,7 +2240,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Extension</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAE</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2268,7 +2266,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Formato di compressione/estensione file</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/FVC/FVCF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVC/FVCF</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2282,7 +2280,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Filigree</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normative OA, D, F, S: MT/FIL</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2308,7 +2306,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Garment analysis</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCA</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCA</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2322,7 +2320,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Garment colour</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa VeAC: MT/MTC/MTCC</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2418,7 +2416,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Historical designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2452,7 +2450,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Idiomatic designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2508,7 +2506,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Local designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2532,7 +2530,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Memoria di massa</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/FVM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVM</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2546,7 +2544,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Material</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; ICCD Normativa VeAC: MT/MTC/MTCF</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; ICCD Normativa VeAC: MT/MTC/MTCF</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2560,7 +2558,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Material or Technique</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">MT/MTC (come campo semplice)</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">MT/MTC (come campo semplice)</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2634,7 +2632,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Original designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2648,7 +2646,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Other language designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2674,7 +2672,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Photo colour</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/MTX</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/MTX</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2688,7 +2686,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Programma per la fotografia digitale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/FVC/FVCP</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVC/FVCP</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2702,7 +2700,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Photo size</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/FRM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FRM</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2716,7 +2714,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Pixel dimension</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/FVC/FVCM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVC/FVCM</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2763,7 +2761,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Risoluzione</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/FVC/FVCU</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVC/FVCU</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2777,7 +2775,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Shape</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2801,7 +2799,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Slang designation</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2827,7 +2825,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Storage method and colour depth</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa F: MT/FVC/FVCC</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVC/FVCC</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2841,7 +2839,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Tecnica</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCT</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCT</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2855,7 +2853,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="it">Temperamento</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAP</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2881,7 +2879,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Tuning</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAA</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -2941,7 +2939,7 @@ un&apos;azienda, ecc.</rdfs:comment>
         <rdfs:label xml:lang="en">Vibrating lenght</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</arco:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAL</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 

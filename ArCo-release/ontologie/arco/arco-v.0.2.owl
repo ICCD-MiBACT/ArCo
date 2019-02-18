@@ -71,19 +71,6 @@
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
-
-
-    <!-- https://w3id.org/arco/ontology/arco/iccdNormTag -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/arco/iccdNormTag">
-        <rdfs:comment xml:lang="it">Questa proprietà permette di annotare il campo o i campi della normativa ICCD corrispondenti a una determinata classe o proprietà dell&apos;ontologia.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property annotates the field or the fields of the ICCD regulation to which a specific class or property refers.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="en">ICCD norm tag</rdfs:label>
-        <rdfs:label xml:lang="it">acronimo normativa ICCD</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:AnnotationProperty>
     
 
 
@@ -116,7 +103,7 @@
         <rdfs:label xml:lang="en">has alternative discipline</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa PST: CT/CTA</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa PST: CT/CTA</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -134,7 +121,7 @@
         <rdfs:label xml:lang="en">has cataloguing agency</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -153,7 +140,7 @@
         <rdfs:label xml:lang="en">has cultural property component</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>OG/OGT/OGTP</iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTP</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -172,7 +159,7 @@
         <rdfs:label xml:lang="en">has cultural property inventory classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -190,7 +177,7 @@
         <rdfs:label xml:lang="en">has cultural property residual</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>OG/OGT/OGTW</iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTW</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -208,7 +195,7 @@
         <rdfs:label xml:lang="en">has heritage protection agency</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -225,7 +212,7 @@
         <rdfs:label xml:lang="en">has location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">DO/MST/MSTL (versioni precedenti a 4.00)</iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">DO/MST/MSTL (versioni precedenti a 4.00)</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -242,7 +229,7 @@
         <rdfs:label xml:lang="en">has main discipline</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa PST: CT/CTP</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa PST: CT/CTP</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -259,7 +246,7 @@
         <rdfs:label xml:lang="en">has MiBAC scope of protection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/AMB</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/AMB</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -295,7 +282,7 @@
         <rdfs:label xml:lang="en">has numismatic property classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -313,7 +300,7 @@
         <rdfs:label xml:lang="en">has photographic heritage classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa F 4.00: SG/CLF</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -329,7 +316,7 @@
         <rdfs:label xml:lang="en">has photographic heritage classification type</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -368,7 +355,7 @@
         <rdfs:label xml:lang="it">è ente schedatore di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ESC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -386,7 +373,7 @@
         <rdfs:label xml:lang="it">è parte componente di bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>OG/OGT/OGTP</iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTP</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -403,7 +390,7 @@
         <rdfs:label xml:lang="it">è classificazione basata su repertorio di</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -420,7 +407,7 @@
         <rdfs:label xml:lang="it">è parte residuale di bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>OG/OGT/OGTW</iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTW</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -438,7 +425,7 @@
         <rdfs:label xml:lang="it">è ente competente per la tutela di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -470,7 +457,7 @@
         <rdfs:label xml:lang="it">è numero di parte di bene culturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -487,7 +474,7 @@
         <rdfs:label xml:lang="it">è classificazione di bene numismatico di</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -702,7 +689,7 @@
         <rdfs:label xml:lang="it">definizione Hornbostel-Sachs</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>Normativa SM 4.00: CL/CHS/CHSD</iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSD</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -718,7 +705,7 @@
         <rdfs:label xml:lang="it">edizione Hornbostel-Sachs</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>Normativa SM 4.00: CL/CHS/CHSE</iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSE</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -736,7 +723,7 @@
         <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>Normativa SM 4.00: CL/CHS/CHSN</iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL/CHS/CHSN</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -789,7 +776,7 @@
         <rdfs:label xml:lang="it">soggetto classificato</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa F 4.00: SG/CLF/CLFS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F 4.00: SG/CLF/CLFS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -807,7 +794,7 @@
         <rdfs:label xml:lang="it">note sulla fotografia digitale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa F: MT/FVC/FVCV</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVC/FVCV</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -842,7 +829,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="en">international identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa PST: AC/ACI</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa PST: AC/ACI</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -878,7 +865,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">note sullo strumento musicale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa SM 4.00: AA/AAS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SM 4.00: AA/AAS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -897,7 +884,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">numero di oggetti/elementi componenti</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -916,7 +903,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">numero di parte di bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -935,7 +922,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">numero di membri</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -969,7 +956,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">numero di parti residuali di bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>OG/QNT/QNTR</iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/QNT/QNTR</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1038,7 +1025,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>Normativa SM 4.00: CL/CLA/CLAT</iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL/CLA/CLAT</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1149,7 +1136,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">Classificazione alternativa di strumento musicale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>Normativa SM 4.00: CL/CLA</iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL/CLA</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1224,7 +1211,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="en">Complex Cultural Property</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se viene valorizzato il campo OG/OGT/OGTP, i valori dei campi OGTD e OGTT si riferiscono a un bene culturale complesso, rappresentato quindi per mezzo di questa classe, di cui OGTP è parte componente.</iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se viene valorizzato il campo OG/OGT/OGTP, i valori dei campi OGTD e OGTT si riferiscono a un bene culturale complesso, rappresentato quindi per mezzo di questa classe, di cui OGTP è parte componente.</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1567,7 +1554,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="en">Cultural Property Category</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC</iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/CTG -  Normativa AT: OG/OGT/OGTP - Normativa RA: OG/CLS - Normative CA e MA e Normativa VeAC: OG/OGT/OGTC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1582,6 +1569,12 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale complesso, quando questo si configuri come una serie o un insieme.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a complex cultural property, when it is a series or a set.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cultural Property Collection</rdfs:label>
+        <rdfs:label xml:lang="it">Insieme di beni culturali</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1609,7 +1602,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">Parte Componente di Bene Culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>OG/OGT/OGTP</iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTP</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1625,7 +1618,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="en">Cultural property inventory classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1647,7 +1640,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">Parte di Bene Culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD - ICCD Normativa AT 3.01: EL/ELE</iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD - ICCD Normativa AT 3.01: EL/ELE</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1669,7 +1662,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="it">Parte Residuale di Bene Culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>OG/OGT/OGTW</iccdNormTag>
+        <arco-catalogue:iccdNormTag>OG/OGT/OGTW</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1750,7 +1743,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="en">Hornbostel-Sachs classification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>Normativa SM 4.00: CL/CHS</iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL/CHS</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1784,10 +1777,6 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
-    
-
-
-    
     
 
 
@@ -1897,7 +1886,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:label xml:lang="en">Musical instrument classification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>Normativa SM 4.00: CL</iccdNormTag>
+        <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1956,7 +1945,7 @@ o alla committenza del bene catalogato, secondo le classificazioni più consuete
         <rdfs:label xml:lang="en">Numismatic property classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -2021,7 +2010,7 @@ o alla committenza del bene catalogato, secondo le classificazioni più consuete
         <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa F 4.00: SG/CLF</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -2036,7 +2025,7 @@ o alla committenza del bene catalogato, secondo le classificazioni più consuete
         <rdfs:label xml:lang="it">Tipo di classificazione di bene fotografico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -2057,7 +2046,7 @@ o alla committenza del bene catalogato, secondo le classificazioni più consuete
         <rdfs:label xml:lang="en">RFId Identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa Trasversale 4.00: RF/RFI</iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RF/RFI</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 

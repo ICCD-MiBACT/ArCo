@@ -9101,12 +9101,12 @@
                 			</arco-cd:hasSurveyMethod>
                 		</xsl:if>
                 		<xsl:if test="./DSCT and (not(starts-with(lower-case(normalize-space(./DSCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCT)), 'n.r')))">
-                			<arco-cd:hasMotivation>
+                			<arco-cd:hasSurveyMotivation>
                 				<xsl:attribute name="rdf:resource">
 	                			<xsl:value-of
-							select="concat($NS, 'Motivation/', arco-fn:urify(normalize-space(./DSCT)))" />
+							select="concat($NS, 'SurveyMotivation/', arco-fn:urify(normalize-space(./DSCT)))" />
 	                		</xsl:attribute>
-                			</arco-cd:hasMotivation>
+                			</arco-cd:hasSurveyMotivation>
                 		</xsl:if>
                 		<xsl:if test="./DSCU and (not(starts-with(lower-case(normalize-space(./DSCU)), 'nr')) and not(starts-with(lower-case(normalize-space(./DSCU)), 'n.r')))">
                 			<arco-cd:hasStratigraphicUnit>
@@ -9273,7 +9273,7 @@
                 		<rdf:Description>
                 			<xsl:attribute name="rdf:about">
 	                			<xsl:value-of
-							select="concat($NS, 'Motivation/', arco-fn:urify(normalize-space(./DSCT)))" />
+							select="concat($NS, 'SurveyMotivation/', arco-fn:urify(normalize-space(./DSCT)))" />
 	                		</xsl:attribute>
 	                		<rdf:type>
 	                			<xsl:attribute name="rdf:resource">
@@ -15458,28 +15458,6 @@
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
-			<!-- keywords (PST) as an individual -->
-			<xsl:if test="(not(starts-with(lower-case(normalize-space(schede/*/CT/CTC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CT/CTC)), 'n.r')))">
-					<xsl:for-each select="schede/*/CT/CTC">
-						<rdf:Description>
-							<xsl:attribute name="rdf:about">
-		                		<xsl:value-of select="concat($NS, 'Keyword/', arco-fn:urify(normalize-space(.)))" />
-		                	</xsl:attribute>
-		                	<rdf:type>
-							<xsl:attribute name="rdf:resource">
-	                                <xsl:value-of
-								select="'https://w3id.org/arco/ontology/arco/Keyword'" />
-	                            </xsl:attribute>
-						</rdf:type>
-						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
-						</rdfs:label>
-						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
-						</l0:name>
-					</rdf:Description>
-					</xsl:for-each>
-				</xsl:if>
 			<!-- main discipline (PST) as an individual -->
 			<xsl:if test="(not(starts-with(lower-case(normalize-space(schede/*/CT/CTP)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CT/CTP)), 'n.r')))">
 					<xsl:for-each select="schede/*/CT/CTP">
@@ -17498,12 +17476,12 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 	                            <xsl:value-of
-							select="concat($NS, 'Estimate/', $itemURI)" />
+							select="concat($NS, 'CulturalPropertyEstimate/', $itemURI)" />
 	                 </xsl:attribute>
 	                 <rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/arco/ontology/context-description/Estimate'" />
+							select="'https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -21368,7 +21346,8 @@
 						</rdfs:label>
 					</xsl:if>
 					<!-- Event organizer -->
-					<xsl:for-each select="./MSTE and (not(starts-with(lower-case(normalize-space(./MSTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTE)), 'n.r')))">
+					<xsl:if test="(not(starts-with(lower-case(normalize-space(./MSTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTE)), 'n.r')))">
+					<xsl:for-each select="./MSTE">
 						<cis:isRelatedToRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -21382,6 +21361,7 @@
                             </xsl:attribute>
 						</arco-ce:hasEventOrganiser>
 					</xsl:for-each>
+					</xsl:if>
 					<!-- Event location and time -->
 					<xsl:for-each select="./MSTL and (not(starts-with(lower-case(normalize-space(./MSTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTL)), 'n.r')))">
 						<arco-ce:eventTimeLocation>
@@ -21396,7 +21376,8 @@
 					</xsl:if>
 				</rdf:Description>
 				<!-- Event organizer - Time Indexed Role -->
-				<xsl:for-each select="./MSTE and (not(starts-with(lower-case(normalize-space(./MSTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTES)), 'n.r')))">
+				<xsl:if test=" and (not(starts-with(lower-case(normalize-space(./MSTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTES)), 'n.r')))">
+				<xsl:for-each select="./MSTE">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                             <xsl:value-of
@@ -21466,6 +21447,7 @@
 						</l0:name>
 					</rdf:Description>
 				</xsl:for-each>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- We create the cultural event or the exhibition - norm version 3.00 -->
 			<xsl:for-each select="schede/*/DO/MST">
