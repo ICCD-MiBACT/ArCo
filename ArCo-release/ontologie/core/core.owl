@@ -3,15 +3,22 @@
      xml:base="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cis="http://dati.beniculturali.it/cis/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:ADMS="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:ro="https://w3id.org/italia/onto/RO/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core/">
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -659,6 +666,39 @@
     
 
 
+    <!-- http://dati.gov.it/onto/dcatapit#Agent -->
+
+    <rdf:Description rdf:about="http://dati.gov.it/onto/dcatapit#Agent">
+        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Organization -->
+
+    <rdf:Description rdf:about="http://dati.gov.it/onto/dcatapit#Organization">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Organization -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/AgentRole -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/AgentRole">
@@ -809,44 +849,6 @@
     </owl:Class>
     
 
-
-    <!-- https://w3id.org/italia/onto/l0/Agent -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Characteristic -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Description -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Event -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Event">
-        <owl:disjointWith rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Location -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/l0/Object -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
 </rdf:RDF>
 
 

@@ -4,7 +4,6 @@
      xmlns:arco-core="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://ontologydesignpatterns.org/opla#"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
-     xmlns:arco-location="https://w3id.org/arco/ontology/location/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
@@ -16,8 +15,9 @@
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ti="https://w3id.org/italia/onto/TI/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:arco-dd="https://w3id.org/arco/ontology/context-description/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -894,7 +894,17 @@
 
     <!-- http://dati.beniculturali.it/cis/ClericalAdministrativeArea -->
 
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/ClericalAdministrativeArea"/>
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/ClericalAdministrativeArea">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/GeographicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/CollectionOfCulturalEntities -->
+
+    <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+    </rdf:Description>
     
 
 
@@ -912,13 +922,17 @@
 
     <!-- http://dati.beniculturali.it/cis/GeographicalFeature -->
 
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/GeographicalFeature"/>
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/GeographicalFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+    </owl:Class>
     
 
 
     <!-- http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea -->
 
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea"/>
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/GovernamentalAdministrativeArea">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/GeographicalFeature"/>
+    </owl:Class>
     
 
 
@@ -1032,6 +1046,7 @@
     <!-- https://w3id.org/arco/ontology/location/CadastralIdentity -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralIdentity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralEntity"/>
@@ -1109,7 +1124,7 @@
     <!-- https://w3id.org/arco/ontology/location/Continent -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Continent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un Continente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a Continent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
@@ -1124,6 +1139,7 @@
     <!-- https://w3id.org/arco/ontology/location/Coordinates -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Coordinates">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle coordinate, geografiche o proiettate, che permettono la georeferenziazione di un oggetto. Per la georeferenziazione puntuale sarà presente soltanto una coppia di coordinate; per la georeferenziazione lineare e areale saranno presenti più coppie di coordinate che individuano i punti che definiscono la linea o l&apos;area che rappresenta il bene.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the set of coordinates, geographic or projected, which allows the georeferencing of an object. For the punctual georeferencing there is only a pair of coordinates. For the linear and areal georeferencing there are more pairs of coordinates identifying those points of the line or area representing the object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
@@ -1139,6 +1155,8 @@
     <!-- https://w3id.org/arco/ontology/location/GeometryMethod -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeometryMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/location/GeometryTechnique"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo utilizzato per il posizionamento (esatto, approssimato, con rappresentazione simbolica).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the method used for the object positioning (i.e. exact, approximate, with a symbolic representation).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
@@ -1154,6 +1172,7 @@
     <!-- https://w3id.org/arco/ontology/location/GeometryTechnique -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/GeometryTechnique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tecnica di georeferenziazione, utilizzata per l&apos;acquisizione delle coordinate (rilievo da cartografia con sopralluogo, rilievo da cartografia senza sopralluogo, rilievo da foto aerea con sopralluogo, rilievo da foto aerea senza sopralluogo, rilievo da satellite, rilievo tradizionale, rilievo tramite GPS, rilievo tramite punti d&apos;appoggio fiduciali o trigonometrici, stereofotogrammetria).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the technique of georeferencing, used for the acquisition of coordinates (i.e. survey from cartography with or without inspection, survey from aerial photos with or without inspection, satellite survey, traditional survey, survey via GPS, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
@@ -1233,6 +1252,7 @@
     <!-- https://w3id.org/arco/ontology/location/SiteDefinition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/SiteDefinition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore fisico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type definition of a physical container.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
@@ -1248,6 +1268,7 @@
     <!-- https://w3id.org/arco/ontology/location/SiteSpecification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/SiteSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche sulla qualificazione del contenitore fisico, cioè l&apos;aggettivo o la locuzione che, rispetto alla Site Definition, precisa, integra o caratterizza il contenitore fisico dal punto di vista della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents specifications about the physical container, i.e. the adjective or the phrase that with respect to the Site Definition specifies, integrates or characterizes the physical container from the point of view of the legal-administrative or functional condition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
@@ -1291,6 +1312,7 @@
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasLocationType"/>
@@ -1318,6 +1340,7 @@
     <!-- https://w3id.org/arco/ontology/location/ToponymInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ToponymInTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
@@ -1377,19 +1400,25 @@
 
     <!-- https://w3id.org/italia/onto/CLV/Address -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent">
+<<<<<<< Updated upstream
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/administrativeOrderNumber"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+=======
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+>>>>>>> Stashed changes
     </owl:Class>
     
 
@@ -1399,6 +1428,7 @@
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/City">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent"/>
     </owl:Class>
+<<<<<<< Updated upstream
     
 
 
@@ -1413,6 +1443,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+=======
+>>>>>>> Stashed changes
     
 
 
