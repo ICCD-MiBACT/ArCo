@@ -440,7 +440,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una delle misure.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha misura</rdfs:label>
@@ -589,7 +589,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurement"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label>ha misura di imgombro</rdfs:label>
@@ -639,7 +639,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha misura&quot;, collega una misura di un oggetto all&apos;insieme di misure osservate perl&apos;oggetto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is measurement of</rdfs:label>
@@ -1707,7 +1707,7 @@ un&apos;azienda, ecc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/object-collection/"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">Collezione di misure</rdfs:label>
@@ -1845,7 +1845,7 @@ un&apos;azienda, ecc.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una caratteristica tecnica, intesa come tipo particolare di concetto che definisce il contesto descrittivo rappresentato da un dettaglio tecnico (descrizione) relativo a un&apos;entità per esempio a un bene culturale. Per esempio, &quot;materia&quot; è una caratteristica tecnica che può essere utilizzata per la descrizione del dettaglio tecnico &quot;terracotta&quot; relativo a un bene culturale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">Caratteristica tecnica</rdfs:label>

@@ -106,6 +106,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/hasArchaeologicalMaterialCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasArchaeologicalMaterialCategory">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterialCategory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un materiale archeologico alla sua categoria (es.: ceramiche, industria litica, intonaco, legno, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the archaeological material to its category (e.g.: ceramics, plaster, lithic materials, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">ha categoria di materiale archeologico</rdfs:label>
+        <rdfs:label xml:lang="en">has archaeological material category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACC</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/hasCataloguingAgency -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCataloguingAgency">
@@ -906,6 +924,25 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/numberOfArchaeologicalMaterials -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfArchaeologicalMaterials">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la quantità complessiva di uno stesso materiale archeologico componente di un lotto di materiali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the total quantity of an archaeological material that is part of a lot of archaeological materials.</rdfs:comment>
+        <rdfs:comment xml:lang="it">numero di materiali archeologici componenti</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">number of archeological materials</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACQ</arco-catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/numberOfComponents -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfComponents">
@@ -984,7 +1021,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyResidual"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di parti residuali, nel caso in cui si stia descrivendo un bene di cui si conservano più parti residuali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the number of residuals (only if more than one) of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
@@ -1173,6 +1210,38 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>Normativa SM 4.00: CL/CLA</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un materiale archeologico, che è una parte di un lotto di materiali archeologici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an archaeological material, that is a part of a lot of archaeological materials.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">Archaeological material</rdfs:label>
+        <rdfs:label xml:lang="it">Materiale archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/ArchaeologicalMaterialCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterialCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria di materiale, parte di un lotto di materiali archeologici. (es.: ceramiche, industria litica, intonaco, legno, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the category of an archaeological material, that is part of a lot of archaeological materials (e.g.: ceramics, plaster, lithic materials, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">Archaeological material category</rdfs:label>
+        <rdfs:label xml:lang="it">Categoria del materiale archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1693,7 +1762,7 @@
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/numberOfCulturalPropertyParts"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>

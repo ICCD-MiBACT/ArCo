@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/object-collection/"
-     xml:base="https://w3id.org/arco/object-collection/"
+<rdf:RDF xmlns="https://w3id.org/arco/pattern/object-collection/"
+     xml:base="https://w3id.org/arco/pattern/object-collection/"
      xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/object-collection/">
-        <rdfs:comment xml:lang="en">This module contains the pattern &quot;object collection&quot;, whose classes and properties are defined in the module https://w3id.org/arco/denotative-description/. This pattern is a specialization of the pattern http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl and represents a collection of similar objects, described as a unit, for example a collection of all the measurements of a cultural property observed.</rdfs:comment>
+    <owl:Ontology rdf:about="https://w3id.org/arco/pattern/object-collection/">
+        <rdfs:comment xml:lang="en">This module contains the pattern &quot;object collection&quot;, whose classes and properties are defined in the module https://w3id.org/arco/ontology/denotative-description/. This pattern is a specialization of the pattern http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl and represents a collection of similar objects, described as a unit, for example a collection of all the measurements of a cultural property observed.</rdfs:comment>
         <opla:specializationOfPattern>http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl</opla:specializationOfPattern>
     </owl:Ontology>
     

@@ -342,7 +342,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente precedente.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="it">ha la versione precedente</rdfs:label>
@@ -377,7 +377,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione precedente.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="it">ha versione precedente</rdfs:label>
@@ -607,7 +607,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente successiva.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="en">is immediate previous version of</rdfs:label>
@@ -624,7 +624,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <opla:isNativeTo rdf:resource="https://w3id.org/arco/catalogue-record-sequence/"/>
+        <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione successiva.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="en">is previous version of</rdfs:label>
