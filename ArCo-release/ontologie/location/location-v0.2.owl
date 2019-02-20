@@ -12,6 +12,7 @@
      xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:clv="https://w3id.org/italia/onto/CLV/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -1409,16 +1410,7 @@
     <!-- https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent">
-<<<<<<< Updated upstream
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/administrativeOrderNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-=======
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
->>>>>>> Stashed changes
     </owl:Class>
     
 
@@ -1428,7 +1420,6 @@
     <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/City">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent"/>
     </owl:Class>
-<<<<<<< Updated upstream
     
 
 
@@ -1443,8 +1434,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-=======
->>>>>>> Stashed changes
     
 
 

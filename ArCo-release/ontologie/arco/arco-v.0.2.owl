@@ -29,7 +29,6 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
@@ -70,7 +69,6 @@
     <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
-    
     
 
 
@@ -126,6 +124,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/hasCulturalPropertyCataloguingCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCulturalPropertyCataloguingCategory">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyCataloguingCategory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una categoria basata su una valutazione soggettiva del catalogatore durante il processo di catalogazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to a category based on a subjective evaluation of the cataloguing agent, during the cataloguing process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">ha categoria di bene culturale basata su catalogazione</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural property cataloguing category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTV</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/hasCulturalPropertyComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCulturalPropertyComponent">
@@ -145,18 +161,18 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/hasCulturalPropertyInventoryClassification -->
+    <!-- https://w3id.org/arco/ontology/arco/hasCulturalPropertyInventoryCategory -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCulturalPropertyInventoryClassification">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasClassification"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isCulturalPropertyInventoryClassificationOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCulturalPropertyInventoryCategory">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isCulturalPropertyInventoryCategoryOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryClassification"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una classificazione basata su un repertorio riconosciuto dallo specifico ambito disciplinare.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural property to a classification based on an inventory approved by the specific subject area.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryCategory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una categoria basata su una classificazione relativa a un repertorio riconosciuto dallo specifico ambito disciplinare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to a category based on a classification related to an inventory approved by the specific subject area.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="it">ha classificazione basata su repertorio</rdfs:label>
-        <rdfs:label xml:lang="en">has cultural property inventory classification</rdfs:label>
+        <rdfs:label xml:lang="it">ha categoria basata su repertorio</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural property inventory category</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
@@ -268,18 +284,18 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/hasNumismaticPropertyClassification -->
+    <!-- https://w3id.org/arco/ontology/arco/hasNumismaticPropertyCategory -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasNumismaticPropertyClassification">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasClassification"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isNumismaticPropertyClassificationOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasNumismaticPropertyCategory">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isNumismaticPropertyCategoryOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticPropertyClassification"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene numismatico a una sua classificazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a numismatic property to one of its classification.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene numismatico a una sua categoria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a numismatic property to one of its categories.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="it">ha classificazione di bene numismatico</rdfs:label>
-        <rdfs:label xml:lang="en">has numismatic property classification</rdfs:label>
+        <rdfs:label xml:lang="it">ha categoria di bene numismatico</rdfs:label>
+        <rdfs:label xml:lang="en">has numismatic property category</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
@@ -317,6 +333,25 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/hasReferenceCoinLegend -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasReferenceCoinLegend">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/ReferenceCoinLegend"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene numismatico alla sua legenda tipo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a numismatic property with its reference coin legend.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">ha legenda tipo</rdfs:label>
+        <rdfs:label xml:lang="en">has reference coin legend</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTL</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -378,16 +413,17 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/isCulturalPropertyInventoryClassificationOf -->
+    <!-- https://w3id.org/arco/ontology/arco/isCulturalPropertyInventoryCategoryOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isCulturalPropertyInventoryClassificationOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryClassification"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isCulturalPropertyInventoryCategoryOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryCategory"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione basata su un repertorio riconosciuto dallo specifico ambito disciplinare a un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a classification based on an inventory approved by the specific subject area to a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una categoria basata su una classificazione relativa a un repertorio riconosciuto dallo specifico ambito disciplinare a un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a category based on a classification related to an inventory approved by the specific subject area to a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="en">is cultural property inventory classification of</rdfs:label>
-        <rdfs:label xml:lang="it">è classificazione basata su repertorio di</rdfs:label>
+        <rdfs:label xml:lang="en">is cultural property inventory category of</rdfs:label>
+        <rdfs:label xml:lang="it">è categoria basata su repertorio di</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
@@ -462,16 +498,16 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/isNumismaticPropertyClassificationOf -->
+    <!-- https://w3id.org/arco/ontology/arco/isNumismaticPropertyCategoryOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isNumismaticPropertyClassificationOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassificationOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticPropertyClassification"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isNumismaticPropertyCategoryOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione di bene numismatico al bene numismatico cui si riferisce.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una categoria di bene numismatico al bene numismatico cui si riferisce.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="en">is numismatic property classification of</rdfs:label>
-        <rdfs:label xml:lang="it">è classificazione di bene numismatico di</rdfs:label>
+        <rdfs:label xml:lang="en">is numismatic property category of</rdfs:label>
+        <rdfs:label xml:lang="it">è categoria di bene numismatico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
@@ -728,20 +764,21 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/ICCDIdentifier -->
+    <!-- https://w3id.org/arco/ontology/arco/archaeologicalSiteIdentifier -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/ICCDIdentifier">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/archaeologicalSiteIdentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un codice assegnato a un&apos;entità dall&apos;ICCD. Si specializza in sottoproprietà (es.: codice univoco ICCD dell&apos;autore, codice univoco ICCD del riferimento bibliografico, etc.)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the identifier assigned to a cultural property by ICCD.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la sigla del saggio stratigrafico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the archaeological site identifier.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="en">ICCD identifier</rdfs:label>
-        <rdfs:label xml:lang="it">codice univoco ICCD</rdfs:label>
+        <rdfs:label xml:lang="en">archaeological site identifier</rdfs:label>
+        <rdfs:label xml:lang="it">sigla identificativa del saggio stratigrafico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTI</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -777,6 +814,23 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F 4.00: SG/CLF/CLFS</arco-catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/definitionAndPositionOfComponents -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/definitionAndPositionOfComponents">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni sulla definizione e posizione delle parti componenti di un bene culturale complesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents information on definition and position of the components of a complex cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">definition and position of components</rdfs:label>
+        <rdfs:label xml:lang="it">definizione e posizione delle parti componenti</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGC/OGCD</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -819,35 +873,17 @@
     <!-- https://w3id.org/arco/ontology/arco/internationalIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/internationalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ScientificOrTechnologicalHeritage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di codice internazionale che identifica un bene scientifico e tecnologico. All&apos;indirizzo http://www.isin.org/ è possibile reperire tutte le specifiche per
-l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il Registro Online è un database che raccoglie informazioni su strumenti scientifici di interesse storico promosso dal Museum of the History of Science di Oxford in collaborazione con la Commissione Strumenti Scientifici dell&apos;International Union of the History and Philosophy of Science.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/arco/"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di codice internazionale che identifica un bene scientifico e tecnologico. All&apos;indirizzo http://www.isin.org/ è possibile reperire tutte le specifiche per l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il Registro Online è un database che raccoglie informazioni su strumenti scientifici di interesse storico promosso dal Museum of the History of Science di Oxford in collaborazione con la Commissione Strumenti Scientifici dell&apos;International Union of the History and Philosophy of Science.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">codice internazionale</rdfs:label>
         <rdfs:label xml:lang="en">international identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa PST: AC/ACI</arco-catalogue:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco/localIdentifier -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/localIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un identificativo che individua un&apos;entità in modo univoco nell&apos;ambito di un repertorio locale. Si specializza in sottoproprietà (es.: identificativo dell&apos;autore nell&apos;ambito di un repertorio locale, identificativo dell&apos;indagine archeologica nell&apos;ambito di un repertorio locale, etc.)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents a unique identifier of an entity, within a local inventory.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="it">identificativo di repertorio locale</rdfs:label>
-        <rdfs:label xml:lang="it">local identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1147,14 +1183,20 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/TangibleCulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimatedAgeOfDeath"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/EstimatedAgeOfDeath"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimatedSex"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/EstimatedSex"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSexEstimate"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1163,8 +1205,14 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale archeologico, che può essere un complesso archeologico, un monumento archeologico, un reperto archeologico, un reperto antropologico, un saggio stratigrafico, un sito archeologico, o una tabella materiali archeologici. Complessi archeologici: complessi monumentali costituiti da più unità edilizie (abitati, centri fortificati, santuari, complessi termali, ecc.), catalogati a prescindere dal loro attuale stato di conservazione. Monumenti archeologici: singole unità edilizie (una torre, una domus, un tempio, ecc.) catalogate a prescindere dal loro attuale stato di conservazione. Reperti antropologici: testimonianze biologiche in relazione con contesti archeologici e paleontologici. Reperti archeologici: beni mobili di provenienza archeologica (gioielli e monili, vestimenti, arredi, elementi architettonici, opere di pittura, reperti archeobotanici e archeozoologici, scultura, strumenti e oggetti d’uso, ecc.). Saggi stratigrafici: sequenze stratigrafiche rinvenute in contesti di scavo archeologico. Siti archeologici: porzioni di territorio che conservano testimonianze archeologiche. Tabella materiali archeologici: lotti di materiali di provenienza archeologica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an archaeological cultural property, consisting of archaeological complexes, archaeological monuments, archaeological materials, archaeological objects, stratigraphic records, archaeological sites, archaeological materials tables. Archaeological complexes: monumental complexes consisting of several building units (inhabited areas, fortified centers, sanctuaries, thermal complexes, etc.), catalogued regardless of their current conservation status. Archaeological monuments: single building units (a tower, a domus, a temple, etc.) catalogued regardless of their current conservation status. Archaeological materials: biological evidence related to archaeological and paleontological contexts. Archaeological objects: movable properties of archaeological origin (jewelry and jewelry, clothing, furnishings, architectural elements, paintings, archeobotanical and archeozoological objects, sculpture, tools and everyday objects, etc.). Stratigraphic records: stratigraphic sequences found in archaeological excavation contexts. Archaeological sites: portions of territory that preserve archaeological evidence. Archaeological materials tables: lots of archaeological materials.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents an archaeological cultural property, consisting of archaeological complexes, archaeological monuments, anthropological materials, archaeological objects, stratigraphic records, archaeological sites, archaeological materials tables. Archaeological complexes: monumental complexes consisting of several building units (inhabited areas, fortified centers, sanctuaries, thermal complexes, etc.), catalogued regardless of their current conservation status. Archaeological monuments: single building units (a tower, a domus, a temple, etc.) catalogued regardless of their current conservation status. Anthropological materials: biological evidence related to archaeological and paleontological contexts. Archaeological objects: movable properties of archaeological origin (jewelry and jewelry, clothing, furnishings, architectural elements, paintings, archeobotanical and archeozoological objects, sculpture, tools and everyday objects, etc.). Stratigraphic records: stratigraphic sequences found in archaeological excavation contexts. Archaeological sites: portions of territory that preserve archaeological evidence. Archaeological materials tables: lots of archaeological materials.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Archaeological Property</rdfs:label>
         <rdfs:label xml:lang="it">Bene Archeologico</rdfs:label>
@@ -1537,6 +1585,22 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/CulturalPropertyCataloguingCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalPropertyCataloguingCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una categoria di un bene culturale basata su una valutazione soggettiva del catalogatore durante il processo di catalogazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a cultural property category based on a subjective evaluation of the cataloguing agent, during the cataloguing process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">Categoria di bene culturale basata su catalogazione</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural property cataloguing category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTV</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/CulturalPropertyCategory -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalPropertyCategory">
@@ -1607,15 +1671,15 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryClassification -->
+    <!-- https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryCategory -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryClassification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione che si basa su un repertorio riconosciuto nello specifico ambito disciplinare.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a classification based on an inventory approved by the specific subject area.</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria di un bene numismatico, in riferimento a una classificazione che si basa su un repertorio riconosciuto nello specifico ambito disciplinare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a category of a numismatic property, related to a classification based on an inventory approved by the specific subject area.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="it">Classificazione basata su repertorio</rdfs:label>
-        <rdfs:label xml:lang="en">Cultural property inventory classification</rdfs:label>
+        <rdfs:label xml:lang="it">Categoria di bene culturale basata su repertorio</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural property inventory category</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
@@ -1912,7 +1976,7 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/MovableCulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasNumismaticPropertyClassification"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasNumismaticPropertyCategory"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1933,13 +1997,12 @@ l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il 
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/NumismaticPropertyClassification -->
+    <!-- https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/NumismaticPropertyClassification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione funzionale di un bene numismatico, in riferimento alla funzione, o alla destinazione,
-o alla committenza del bene catalogato, secondo le classificazioni più consuete.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a functional classification of a numismatic property, referring to the function or the commission of the cultural property, according to the most common classifications.</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria funzionale di un bene numismatico, in riferimento a una classificazione relativa alla funzione, o alla destinazione, o alla committenza del bene catalogato, secondo le classificazioni più consuete.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a functional category of a numismatic property, referring to a classification related to the function or the commission of the cultural property, according to the most common classifications.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Classificazione di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic property classification</rdfs:label>
@@ -2047,6 +2110,22 @@ o alla committenza del bene catalogato, secondo le classificazioni più consuete
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RF/RFI</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/ReferenceCoinLegend -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/ReferenceCoinLegend">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la legenda tipo di un bene numismatico, inteso come parametro di classificazione attestato nei repertori di riferimento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the reference coin legend.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">Legenda tipo</rdfs:label>
+        <rdfs:label xml:lang="en">Reference coin legend</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTL</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 

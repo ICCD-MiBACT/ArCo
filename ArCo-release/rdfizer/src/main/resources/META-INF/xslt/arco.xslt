@@ -10899,11 +10899,11 @@
 				<xsl:if test="schede/*/OG/OGT/OGTS and not($sheetType='NU' or $sheetType='VeAC' or $sheetType='F' or $sheetType='BNB')">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'CulturalPropertyInventoryClassification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTS)))" />
+							<xsl:value-of select="concat($NS, 'CulturalPropertyInventoryCategory/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTS)))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryClassification'" />
+								<xsl:value-of select="'https://w3id.org/arco/ontology/arco/CulturalPropertyInventoryCategory'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
@@ -10914,15 +10914,15 @@
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
-				<!-- numismatic property classification -->
+				<!-- numismatic property category -->
 				<xsl:if test="schede/NU/OG/OGT/OGTH">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'NumismaticPropertyClassification/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
+							<xsl:value-of select="concat($NS, 'NumismaticPropertyCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="'https://w3id.org/arco/ontology/arco/NumismaticPropertyClassification'" />
+								<xsl:value-of select="'https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory'" />
 							</xsl:attribute>
 						</rdf:type>
 						<rdfs:label>

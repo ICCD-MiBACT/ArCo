@@ -180,8 +180,8 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
-        <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a un concetto.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The object property that associates any object with a concept.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La object property che associa un qualunque oggetto a un concetto, che lo classifica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates any object with a concept, classifying it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">ha concetto</rdfs:label>
         <rdfs:label xml:lang="en">has concept</rdfs:label>
@@ -668,34 +668,34 @@
 
     <!-- http://dati.gov.it/onto/dcatapit#Agent -->
 
-    <rdf:Description rdf:about="http://dati.gov.it/onto/dcatapit#Agent">
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent">
         <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://dati.gov.it/onto/dcatapit#Organization -->
 
-    <rdf:Description rdf:about="http://dati.gov.it/onto/dcatapit#Organization">
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization">
         <owl:equivalentClass rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/2006/vcard/ns#Organization -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Organization">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
         <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -849,6 +849,40 @@
     </owl:Class>
     
 
+
+    <!-- https://w3id.org/italia/onto/l0/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Description -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Event -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Event"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Location -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Object -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
 </rdf:RDF>
 
 

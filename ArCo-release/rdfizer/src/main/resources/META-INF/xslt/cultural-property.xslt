@@ -2652,19 +2652,19 @@
 				</xsl:if>
 				<!-- cultural property classification based on inventory -->
 				<xsl:if test="schede/*/OG/OGT/OGTS and not($sheetType='NU' or $sheetType='VeAC' or $sheetType='F' or $sheetType='BNB')">
-						<arco-arco:hasCulturalPropertyInventoryClassification>
+						<arco-arco:hasCulturalPropertyInventoryCategory>
 							<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'CulturalPropertyInventoryClassification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTS)))" />
+									<xsl:value-of select="concat($NS, 'CulturalPropertyInventoryCategory/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTS)))" />
 								</xsl:attribute>
-						</arco-arco:hasCulturalPropertyInventoryClassification>
+						</arco-arco:hasCulturalPropertyInventoryCategory>
 				</xsl:if>
 				<!-- numismatic property classification -->
 				<xsl:if test="schede/NU/OG/OGT/OGTH">
-					<arco-arco:hasNumismaticPropertyClassification>
+					<arco-arco:hasNumismaticPropertyCategory>
 						<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'NumismaticPropertyClassification/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
+								<xsl:value-of select="concat($NS, 'NumismaticPropertyCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
 							</xsl:attribute>
-					</arco-arco:hasNumismaticPropertyClassification>
+					</arco-arco:hasNumismaticPropertyCategory>
 				</xsl:if>
 				<!-- copyright -->
 				<xsl:for-each select="schede/*/TU/CPR">

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/context-description/"
      xml:base="https://w3id.org/arco/ontology/context-description/"
-     xmlns:arco-core="https://w3id.org/arco/ontology/core/" xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
@@ -9,13 +9,14 @@
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -24,6 +25,7 @@
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
@@ -52,9 +54,6 @@
     <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
-    
-
-
     
 
 
@@ -172,6 +171,22 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Questa proprietà collega un reperto antropologico alla stima dell&apos;età della morte.</rdfs:label>
+        <rdfs:label xml:lang="it">ha età della morte stimata</rdfs:label>
+        <rdfs:label xml:lang="en">has estimated age of death</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility">
@@ -219,23 +234,6 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA + RE/FOI/FOIQ + RE/FOI/FOIF</arco-catalogue:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasAnomalyClassification -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAnomalyClassification">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasClassification"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyClassification"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;anomalia alla classificazione del tipo di anomalia.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">ha classificazione anomalia</rdfs:label>
-        <rdfs:label xml:lang="en">has anomaly classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIF</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -446,6 +444,24 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>BIB/BIBF</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasClassification"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità biologica a una tassonomia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a biological entity to a taxonomy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha tassonomia biologica</rdfs:label>
+        <rdfs:label xml:lang="en">has biological taxonomy</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -843,37 +859,6 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/STI - ICCD Normative di versione 2.00: UB/INV/INVS</arco-catalogue:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasEstimatedAgeOfDeath -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEstimatedAgeOfDeath">
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">Questa proprietà collega un reperto antropologico alla stima dell&apos;età della morte.</rdfs:label>
-        <rdfs:label xml:lang="it">ha età della morte stimata</rdfs:label>
-        <rdfs:label xml:lang="en">has estimated age of death</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasEstimatedSex -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEstimatedSex">
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un reperto antropologico alla stima del sesso.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">ha sesso stimato</rdfs:label>
-        <rdfs:label xml:lang="en">has estimated sex</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa AT: DA/STS</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1626,15 +1611,16 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasSECClassification -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasSECCategory -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSECClassification">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSECCategory">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SECClassification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un inventario patrimoniale alla categoria SEC attribuita al bene.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha categoria SEC</rdfs:label>
-        <rdfs:label xml:lang="en">has SEC Classification</rdfs:label>
+        <rdfs:label xml:lang="en">has SEC category</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1687,6 +1673,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSER</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSexEstimate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexEstimate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un reperto antropologico alla stima del sesso.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha sesso stimato</rdfs:label>
+        <rdfs:label xml:lang="en">has estimated sex</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: DA/STS</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2501,18 +2504,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/ICCDIdentifier -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/ICCDIdentifier"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco/localIdentifier -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/localIdentifier"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/RCSReason -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/RCSReason">
@@ -2594,7 +2585,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/agentLocalIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/agentLocalIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/localIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/localIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2629,7 +2620,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/archaeologicalExcavationICCDIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/archaeologicalExcavationICCDIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/ICCDIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/ICCDIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2647,7 +2638,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/archaeologicalExcavationLocalIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/archaeologicalExcavationLocalIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/localIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/localIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2665,7 +2656,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/archaeologicalFieldSurveyICCDIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/archaeologicalFieldSurveyICCDIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/ICCDIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/ICCDIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2683,7 +2674,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/archeologicalFieldSurveyLocalIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/archeologicalFieldSurveyLocalIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/localIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/localIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2767,7 +2758,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/authorICCDIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/authorICCDIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/ICCDIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/ICCDIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2808,7 +2799,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/bibliographyICCDIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/bibliographyICCDIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/ICCDIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/ICCDIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2826,7 +2817,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/localIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/localIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -2971,22 +2962,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/culturalPropertyValue -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/culturalPropertyValue">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il valore economico di un bene culturale. Nel caso di una collezione, questa proprietà rappresenta il valore del bene desunto, quando presente, dall&apos;inventario della collezione o dal suo prezzo di acquisto o vendita. Nel caso di un inventario patrimoniale, questa proprietà rappresenta la stima patrimoniale del bene. Il valore viene preceduto dalla specifica della valuta.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="en">cultural property value</rdfs:label>
-        <rdfs:label xml:lang="it">valore del bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI</arco-catalogue:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/diagnosis -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/diagnosis">
@@ -3105,6 +3080,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/estimatedAgeOfDeath -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/estimatedAgeOfDeath">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedValue"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -3118,9 +3094,27 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/estimatedCulturalPropertyValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/estimatedCulturalPropertyValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedValue"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il valore economico di un bene culturale. Nel caso di una collezione, questa proprietà rappresenta il valore del bene desunto, quando presente, dall&apos;inventario della collezione o dal suo prezzo di acquisto o vendita. Nel caso di un inventario patrimoniale, questa proprietà rappresenta la stima patrimoniale del bene. Il valore viene preceduto dalla specifica della valuta.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">cultural property value</rdfs:label>
+        <rdfs:label xml:lang="it">valore del bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI</arco-catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/estimatedSex -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/estimatedSex">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedValue"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -3130,6 +3124,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="it">sesso stimato</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/estimatedValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/estimatedValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il valore stimato durante il processo di stima di un&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the value estimated in the context of an estimate process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">estimated value</rdfs:label>
+        <rdfs:label xml:lang="it">valore stimato</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -3735,6 +3746,24 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/taxonomyAuthorAndDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/taxonomyAuthorAndDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;autore che ha descritto la specie e l&apos;anno di descrizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the author and the date of the species description.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">autore e data della tassonomia</rdfs:label>
+        <rdfs:label xml:lang="en">taxonomy author and date</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSA</arco-catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/technicalDocumentation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/technicalDocumentation">
@@ -3985,12 +4014,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAnomalyClassification"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyClassification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAnomalyOrigin"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyOrigin"/>
             </owl:Restriction>
@@ -4007,33 +4030,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="en">Anomaly</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA + RE/FOI/FOIQ + RE/FOI/FOIF</arco-catalogue:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/AnomalyClassification -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AnomalyClassification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasAnomalyClassification"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/SECClassification"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione del tipo di anomalia rilevata nell&apos;indagine di fotointerpretazione/fotorestituzione.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="en">Anomaly classification</rdfs:label>
-        <rdfs:label xml:lang="it">Classificazione anomalia</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIF</arco-catalogue:iccdNormTag>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/FOI/FOIA</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -4591,6 +4588,40 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una tassonomia biologica, ossia i criteri con cui si ordinano gli organismi in un sistema di classificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a biological taxonomy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Biological taxonomy</rdfs:label>
+        <rdfs:label xml:lang="it">Tassonomia biologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ChangeOfAvailability -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ChangeOfAvailability">
@@ -4709,7 +4740,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/culturalPropertyValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedCulturalPropertyValue"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4824,7 +4855,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/culturalPropertyValue"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedCulturalPropertyValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4917,8 +4948,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSECClassification"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SECClassification"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSECCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5198,6 +5229,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Estimate">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il concetto di stima di un&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the concept of estimate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -5393,6 +5430,28 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>Normativa VeAC: AU/FRU</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Genus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Genus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero il genere.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxonomy, the genus.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Genere</rdfs:label>
+        <rdfs:label xml:lang="en">Genus</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -6392,15 +6451,15 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/SECClassification -->
+    <!-- https://w3id.org/arco/ontology/context-description/SECCategory -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SECClassification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SECCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSECClassification"/>
+                        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSECCategory"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
@@ -6409,7 +6468,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria patrimoniale del bene, con riferimento alla classificazione del Sistema Europeo dei Conti 1995</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Categoria SEC</rdfs:label>
-        <rdfs:label xml:lang="en">SEC Classification</rdfs:label>
+        <rdfs:label xml:lang="en">SEC Category</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPZ</arco-catalogue:iccdNormTag>
@@ -6546,6 +6605,28 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Species -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Species">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la specie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxonomy, the species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Specie</rdfs:label>
+        <rdfs:label xml:lang="en">Species</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/StratigraphicUnit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/StratigraphicUnit">
@@ -6583,6 +6664,28 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Subspecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la sottospecie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a biological taxonomy, the subspecies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Sottospecie</rdfs:label>
+        <rdfs:label xml:lang="en">Subspecies</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -7581,10 +7684,10 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
+        <arco-catalogue:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <arco-catalogue:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>

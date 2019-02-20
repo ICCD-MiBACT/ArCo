@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/denotative-description/"
      xml:base="https://w3id.org/arco/ontology/denotative-description/"
-     xmlns:arco-core="https://w3id.org/arco/ontology/core/" xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco-location="https://w3id.org/arco/ontology/location/"
@@ -17,6 +17,7 @@
      xmlns:core="https://w3id.org/arco/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
@@ -58,7 +59,9 @@
     
 
 
-   
+    <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
     
 
 
@@ -766,6 +769,23 @@
     <!-- https://w3id.org/arco/ontology/core/note -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/note"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la morfologia di un reperto antropologico (es.: morfologia naturale; morfologia alterata intra-vitam per cause naturali e/o per intervento antropico; morfologia/ struttura alterata post-mortem per cause naturali).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the morphology of an anthropological material.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">anthropological material morphology</rdfs:label>
+        <rdfs:label xml:lang="it">morfologia di reperto antropologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
     
 
 
