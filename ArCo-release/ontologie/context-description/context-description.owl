@@ -2708,6 +2708,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo di un&apos;unità documentaria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the identifier of an archival record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">archival record identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo di unità documentaria</rdfs:label>
@@ -2741,6 +2743,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo di un&apos;unità archivistica complessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the identifier of an archival record set.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">archival record set identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo di unità archivistica complessa</rdfs:label>
@@ -4382,6 +4386,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/archivalRecordIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una unità documentaria che fa parte di una unità archivistica complessa.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -4415,6 +4425,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/archivalRecordSetIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
@@ -7236,8 +7252,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="it">Rappresenta un altro titolo noto del soggetto, in alternativa o in aggiunta al titolo più noto o accreditato.</rdfs:comment>
         <rdfs:label xml:lang="en">Alternative title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo alternativo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDN</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -7273,9 +7287,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="it">Rappresenta un titolo attribuito di una fotografia, cioè un titolo desunto, se possibile, da fonti archivistiche, bibliografiche, orali o iconografiche (altri esemplari della stessa immagine) oppure creato in base al contenuto dell&apos;immagine (o della serie di immagini; è necessario nei casi in cui siano del tutto assenti titoli sul/nel documento, o su materiali ad esso complementari, e nel caso in cui tali titoli risultino errati.</rdfs:comment>
         <rdfs:label xml:lang="en">Attributed title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo attribuito</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>Normativa F: SG/SGL/SGLA</arco-catalogue:iccdNormTag>
+        <arco-catalogue:iccdNormTag xml:lang="it">Normativa F: SG/SGL/SGLA - Normativa FF: se PA/PAC/PACG = &apos;attribuita&apos;</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -7436,6 +7448,17 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/HistoricizedTitle -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/HistoricizedTitle">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
+        <rdfs:label xml:lang="en">Historicized title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo storicizzato</rdfs:label>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa FF: se PA/PAC/PACG = &apos;storicizzata&apos;</arco-catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ImportConfirmationCertification -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ImportConfirmationCertification">
@@ -7488,8 +7511,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il titolo principale di una pubblicazione.</rdfs:comment>
         <rdfs:label xml:lang="en">Main title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo principale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normative VeAC e AT 3.01: DO/BSE/BSET</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -7515,6 +7536,17 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DT/ADT/ADTT.</arco-catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/OriginalTitle -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/OriginalTitle">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
+        <rdfs:label xml:lang="en">Original title</rdfs:label>
+        <rdfs:label xml:lang="it">Titolo originario</rdfs:label>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa FF: se PA/PAC/PACG = &apos;originaria&apos;</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -7553,8 +7585,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="it">Rappresenta un titolo parallelo, cioè lo stesso titolo principale tradotto in altre lingue e presentato come equivalente.</rdfs:comment>
         <rdfs:label xml:lang="en">Parallel title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo parallelo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>Normativa F: SG/SGL/SGLL - Normative S e MI: OG/SGT/SGTR</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -7654,8 +7684,6 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di titolo secondario di una pubblicazione.</rdfs:comment>
         <rdfs:label xml:lang="en">Secondary title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo secondario</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSEC</arco-catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
