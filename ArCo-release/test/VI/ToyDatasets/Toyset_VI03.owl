@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/Toyset_VI03#"
+     xml:base="https://w3id.org/arco/test/VI/Toyset_VI03"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:denotative-description="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Elemento_affisso_su_stele -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Elemento_affisso_su_stele">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Inscription"/>
+        <denotative-description:hasAffixedElementType rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Religioso"/>
+        <denotative-description:refersToAgent rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Papa_Pio_XI"/>
+        <denotative-description:positionOnCulturalProperty>In alto a destra</denotative-description:positionOnCulturalProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Epigrafe -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Epigrafe">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Epigrafe_Religiosa -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Epigrafe_Religiosa">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+        <denotative-description:hasCulturalPropertyDefinition rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Epigrafe"/>
+        <denotative-description:hasCulturalPropertyDefinition rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Religiosa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Incisione -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Incisione">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
+        <denotative-description:usesTechnicalCharacteristic rdf:resource="https://w3id.org/arco/ontology/denotative-description/Technique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Materiale_Stele -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Materiale_Stele">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence"/>
+        <denotative-description:satisfiesTechnicalDetail rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Pietra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Papa_Pio_XI -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Papa_Pio_XI">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Pietra -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Pietra">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
+        <denotative-description:usesTechnicalCharacteristic rdf:resource="https://w3id.org/arco/ontology/denotative-description/Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Religiosa -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Religiosa">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Religioso -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Religioso">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Stato_di_conservazione_Stele -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Stato_di_conservazione_Stele">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+        <denotative-description:hasConservationStatusType rdf:resource="https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Stele_Medievale -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Stele_Medievale">
+        <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <denotative-description:hasAffixedElement rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Elemento_affisso_su_stele"/>
+        <denotative-description:hasConservationStatus rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Stato_di_conservazione_Stele"/>
+        <denotative-description:hasCulturalPropertyType rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Epigrafe_Religiosa"/>
+        <denotative-description:hasTechnicalDetailOccurrence rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Materiale_Stele"/>
+        <denotative-description:hasTechnicalDetailOccurrence rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Tecnica_Stele"/>
+        <denotative-description:proposedIntervention>Spolveratura</denotative-description:proposedIntervention>
+        <denotative-description:storageConditions>Conservato in locale non climatizzato</denotative-description:storageConditions>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/Toyset_VI03#Tecnica_Stele -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI03#Tecnica_Stele">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence"/>
+        <denotative-description:satisfiesTechnicalDetail rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI03#Incisione"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
