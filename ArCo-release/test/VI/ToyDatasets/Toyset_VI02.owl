@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/Toyset_VI02#"
+     xml:base="https://w3id.org/arco/test/VI/Toyset_VI02"
+     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Compilazione_da_Rossi_M -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Compilazione_da_Rossi_M">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Funzionario_responsabile_Verdi_L -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Funzionario_responsabile_Verdi_L">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#OssoDinosauro -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#OssoDinosauro">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalProperty"/>
+        <catalogue:isDescribedByCatalogueRecord rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Scheda_catalografica_0736"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Profilo_accesso_0736 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Profilo_accesso_0736">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+        <catalogue:hasPrivacyLevel rdf:resource="https://w3id.org/arco/ontology/catalogue/MinimumPrivacy"/>
+        <catalogue:hasPrivacyReason rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#dati_pubblicabili"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Rossi_Mario -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Rossi_Mario">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Scheda_catalografica_0736 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Scheda_catalografica_0736">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordBNP"/>
+        <catalogue:hasAccessProfile rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Profilo_accesso_0736"/>
+        <catalogue:hasCatalogueRecordVersion rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#0736-Compilazione"/>
+        <catalogue:hasCataloguingLevel rdf:resource="https://w3id.org/arco/ontology/catalogue/C"/>
+        <catalogue:catalogueRecordIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0736</catalogue:catalogueRecordIdentifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Verdi_Luigi -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Verdi_Luigi">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#dati_pubblicabili -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#dati_pubblicabili">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyReason"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#0736-Compilazione -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#0736-Compilazione">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <catalogue:editedAtTime rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#1993"/>
+        <catalogue:hasCatalogueRecordVersionRiT rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Compilazione_da_Rossi_M"/>
+        <catalogue:hasCatalogueRecordVersionRiT rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Funzionario_responsabile_Verdi_L"/>
+        <catalogue:hasOfficialInCharge rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Verdi_Luigi"/>
+        <catalogue:hasResponsibleResearchAndCompilation rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Rossi_Mario"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#1993 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#1993">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
