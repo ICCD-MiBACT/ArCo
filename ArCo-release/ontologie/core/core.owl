@@ -160,11 +160,13 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasComponent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isComponentOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <opla:isNativeTo xml:lang="it">Questa proprietà collega, in maniera non-transitiva, un&apos;entità a un suo componente.</opla:isNativeTo>
         <opla:isNativeTo xml:lang="en">This property relates, non-transitively, an entity to a component.</opla:isNativeTo>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha componente</rdfs:label>
         <rdfs:label xml:lang="en">has component</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -203,6 +205,24 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/core"/>
         <rdfs:label xml:lang="it">ha caratteristica di entità culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural entity characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isLocationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <rdfs:comment xml:lang="it">La object property che collega un&apos;entità a un luogo in cui si trova.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates an entity to a location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <rdfs:label xml:lang="it">ha luogo</rdfs:label>
+        <rdfs:label xml:lang="en">has location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -388,6 +408,7 @@
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <opla:isNativeTo xml:lang="it">Questa proprietà collega, in maniera non-transitiva, un componente a un&apos;entità di cui è componente.</opla:isNativeTo>
         <opla:isNativeTo xml:lang="en">This property relates, non-transitively, a component to an entity of which it is component.</opla:isNativeTo>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is component of</rdfs:label>
         <rdfs:label xml:lang="it">è componente di</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
@@ -424,6 +445,23 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is cultural entity characteristic of</rdfs:label>
         <rdfs:label xml:lang="it">è caratteristica di entità culturale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isLocationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <rdfs:comment xml:lang="it">La object property che collega un luogo a un&apos;entità che si trova in quel luogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that associates a location to an entity located there.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <rdfs:label xml:lang="en">is location of</rdfs:label>
+        <rdfs:label xml:lang="it">è luogo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>

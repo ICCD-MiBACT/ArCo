@@ -18,14 +18,13 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ti="https://w3id.org/italia/onto/TI/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:arco-dd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
@@ -476,6 +475,60 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasStratigraphicArea -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasStratigraphicArea">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLocation"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un saggio stratigrafico all&apos;ambiente in un il saggio è stato effettuato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a stratigraphic record to the area in which it took place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
+        <rdfs:label xml:lang="it">ha ambiente</rdfs:label>
+        <rdfs:label xml:lang="en">has stratigraphic area</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTX</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasStratigraphicRoom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasStratigraphicRoom">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLocation"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un saggio stratigrafico al settore in un il saggio è stato effettuato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a stratigraphic record to the room in which it took place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
+        <rdfs:label xml:lang="it">ha settore</rdfs:label>
+        <rdfs:label xml:lang="en">has stratigraphic room</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTY</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasStratigraphicSquare -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasStratigraphicSquare">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLocation"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un saggio stratigrafico al quadrato in un il saggio è stato effettuato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a stratigraphic record to the square in which it took place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
+        <rdfs:label xml:lang="it">ha quadrato</rdfs:label>
+        <rdfs:label xml:lang="en">has stratigraphic square</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTZ</catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/hasTerritorialArea -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTerritorialArea">
@@ -903,9 +956,9 @@
 
     <!-- http://dati.beniculturali.it/cis/CollectionOfCulturalEntities -->
 
-    <rdf:Description rdf:about="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities">
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -1470,6 +1523,12 @@
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
     
 
 

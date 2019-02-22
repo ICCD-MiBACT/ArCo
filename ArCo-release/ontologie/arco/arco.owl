@@ -29,6 +29,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
@@ -230,23 +231,6 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/ECP</arco-catalogue:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/arco/hasLocation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasLocation">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
-        <rdfs:comment xml:lang="it">Questa proprietà associa un&apos;entità a un&apos;area geografica in cui l&apos;entità è collocata.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an entity to the geographic area in which that entity is located.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="it">ha luogo</rdfs:label>
-        <rdfs:label xml:lang="en">has location</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag xml:lang="it">DO/MST/MSTL (versioni precedenti a 4.00)</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -565,9 +549,33 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isRelatedToAdditionalForm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isRelatedToAdditionalForm"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isRelatedToInformationForm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isRelatedToInformationForm"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAcquisition -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
     
 
 
@@ -583,9 +591,21 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasChangeOfAvailability -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasChangeOfAvailability"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasCoinIssuance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCoinIssuance"/>
     
 
 
@@ -601,9 +621,21 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasDetectionMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDetectionMethod"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasDocumentation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDocumentation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasEstimate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
     
 
 
@@ -637,9 +669,51 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasMusicalEnsemble -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMusicalEnsemble"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasMusician -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMusician"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasProtectiveMeasure -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasProtectiveMeasure"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasResearch -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResearch"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasResponsibility -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSexEstimate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexEstimate"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSubject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSubject"/>
     
 
 
@@ -673,9 +747,57 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasAccessory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAccessory"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasAffixedElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAffixedElement"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasLocationSubject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLocationSubject"/>
     
 
 
@@ -688,6 +810,12 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasOrientation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasSampleCollected -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSampleCollected"/>
     
 
 
@@ -1121,6 +1249,30 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/historicalInformation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/historicalInformation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/informationGatheredOnSite -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/informationGatheredOnSite"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/numberInCirculation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberInCirculation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/rights -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/rights"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/subject -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/subject"/>
@@ -1130,6 +1282,30 @@
     <!-- https://w3id.org/arco/ontology/context-description/title -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/title"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/positionInComplexCulturalProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/positionInComplexCulturalProperty"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/proposedIntervention -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/proposedIntervention"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/storageConditions -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/storageConditions"/>
     
 
 
@@ -1264,6 +1440,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFindingContext"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSexEstimate"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
             </owl:Restriction>
@@ -1272,6 +1454,24 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSampleCollected"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasStratigraphicArea"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasStratigraphicRoom"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasStratigraphicSquare"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2106,6 +2306,19 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecord"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/numberInCirculation"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -2229,9 +2442,27 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/AdditionalForm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/InformationForm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Acquisition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
     
 
 
@@ -2247,9 +2478,21 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ChangeOfAvailability -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ChangeOfAvailability"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CoinIssuance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
     
 
 
@@ -2271,9 +2514,21 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/DetectionMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/DetectionMethod"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Documentation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Documentation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Estimate -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Estimate"/>
     
 
 
@@ -2307,9 +2562,45 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ProtectiveMeasure -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/RelatedWorkSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Research -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Research"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Responsibility -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Responsibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SexEstimate -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Subject -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Subject"/>
     
 
 
@@ -2337,9 +2628,45 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Accessory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Accessory"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/AffixedElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/ConservationStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/DesignationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
     
 
 
@@ -2352,6 +2679,12 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/Orientation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SampleCollected -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
     
 
 

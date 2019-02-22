@@ -339,6 +339,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasAssociatedObject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAssociatedObject">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il contesto di rinvenimento di un bene culturale (in particolare, un reperto antropologico) a un elemento associato al bene in quel contesto (es.: orecchini, scudo, resti di tessuto).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a finding context of a cultural property (in particular, an anthropological material) to an object associated to the cultural property (e.g: earrings, shield, cloth, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha elemento associato</rdfs:label>
+        <rdfs:label xml:lang="en">has associated object</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC/OGCE</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAttributedAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAttributedAuthor">
@@ -928,6 +945,42 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ESP/ESPU</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasFindingContext -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFindingContext">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale, in particolare un reperto antropologico, al suo contesto di rinvenimento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property, and in particular an anthropological material, to its finding context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha contesto di rinvenimento</rdfs:label>
+        <rdfs:label xml:lang="en">has finding context</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasFindingContextType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFindingContextType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContextType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il contesto di rinvenimento di un bene culturale, e in particolare di un reperto antropologico, al tipo di contesto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property (anthropological material) finding context to the type of context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha tipo di contesto di rinvenimento</rdfs:label>
+        <rdfs:label xml:lang="en">has finding context type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC/OGCT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2952,6 +3005,8 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/collectionUnitIdentifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice d&apos;inventario attribuito al bene nella collezione.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -5452,6 +5507,56 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/FindingContext -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FindingContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFindingContextType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContextType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAssociatedObject"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/specifications"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il contesto di ritrovamento (tipo di contesto, elementi associati) di un bene culturale, e in particolare di un reperto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the context (type of context, associated objects) in which a cultural property (in particular, an anthropological material) is found.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Contesto di rinvenimento</rdfs:label>
+        <rdfs:label xml:lang="en">Finding context</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/FindingContextType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FindingContextType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contesto di rinvenimento di un bene culturale, e in particolare di un reperto antropologico (es.: sepoltura collettiva, sepoltura singola primaria, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of finding context of a cultural property, and in particular of an anthropological material (e.g.: individual burial, common burial, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Finding context type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di contesto di rinvenimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: OG/OGC/OGCT</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Forgery -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Forgery">
@@ -5817,6 +5922,13 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Membership">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il concetto di appartenenza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the concept of membership.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">Appartenenza</rdfs:label>
+        <rdfs:label xml:lang="en">Membership</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 

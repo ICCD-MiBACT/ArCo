@@ -21513,12 +21513,12 @@
 									</arco-ce:eventTimeLocation>
 								</xsl:when>
 								<xsl:otherwise>
-									<arco-arco:hasLocation>
+									<clvapit:hasSpatialCoverage>
 										<xsl:attribute name="rdf:resource">
 		                                   <xsl:value-of
 											select="concat($NS, 'GeographicalFeature/', arco-fn:urify(normalize-space(.)))" />
 		                               </xsl:attribute>
-									</arco-arco:hasLocation>
+									</clvapit:hasSpatialCoverage>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:for-each>
