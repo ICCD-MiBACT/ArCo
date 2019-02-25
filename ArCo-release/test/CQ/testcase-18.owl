@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-18.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-18.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-18.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:testDate xml:lang="en">2019-02-25</testannotationschema:testDate>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arcocd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+select *
+
+where {
+ ?collection a cis:CollectionOfCulturalEntities.
+ ?collection arcocd:isCollectionIn ?collectionitems.
+ ?collection arcocd:collectionIdentifier ?id.  
+ ?collectionitems arcocd:hasMemberOfCollection ?item.
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:hasCQ xml:lang="it">Qual è il codice identificativo della collezione X? E quali beni ne fanno parte?</testannotationschema:hasCQ>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ18.ttl"/>
+        <testannotationschema:hasExpectedResult xml:lang="it">{
+  &quot;head&quot;: {
+    &quot;vars&quot;: [ &quot;collection&quot; , &quot;collectionitems&quot; , &quot;id&quot; , &quot;item&quot; ]
+  } ,
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection4&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection4items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection4&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item4a&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection4&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection4items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection4&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item4c&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection4&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection4items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection4&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item4b&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection6&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection6items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection6&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item6c&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection6&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection6items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection6&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item6b&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection6&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection6items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection6&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item6a&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection3&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection3items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection3&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item3b&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection3&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection3items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection3&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item3c&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection3&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection3items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection3&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item3a&quot; }
+      } ,
+      {
+        &quot;collection&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection2&quot; } ,
+        &quot;collectionitems&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/Collection2items&quot; } ,
+        &quot;id&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Collection2&quot; } ,
+        &quot;item&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ18/item2a&quot; }
+      }
+    ]
+  }
+}</testannotationschema:hasExpectedResult>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
