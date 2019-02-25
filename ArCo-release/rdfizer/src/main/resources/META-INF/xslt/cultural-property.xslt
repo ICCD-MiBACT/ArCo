@@ -1487,6 +1487,20 @@
 					</arco-location:hasCadastralIdentity>
 				</xsl:for-each>
 				</xsl:if>
+				<xsl:for-each select="schede/A/UB/CTS">
+					<arco-location:hasCadastralIdentity>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
+		                	</xsl:attribute>
+					</arco-location:hasCadastralIdentity>
+				</xsl:for-each>
+				<xsl:for-each select="schede/*/RP/LGC">
+					<arco-location:hasCadastralIdentity>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-', position())" />
+		                	</xsl:attribute>
+					</arco-location:hasCadastralIdentity>
+				</xsl:for-each>
 				<!-- fruition (VeAC) -->
 				<xsl:if test="schede/*/AU/FRU">
 					<xsl:for-each select="schede/*/AU/FRU">
