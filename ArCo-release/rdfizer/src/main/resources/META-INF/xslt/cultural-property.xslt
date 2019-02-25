@@ -1434,6 +1434,41 @@
 						</arco-arco:hasAlternativeDiscipline>
 					</xsl:for-each>
 				</xsl:if>
+				<!-- archaeological material (TMA) -->
+				<xsl:for-each select="schede/TMA/MA">
+				<xsl:if test="(not(starts-with(lower-case(normalize-space(./MAC/MACC)), 'nr')) and not(starts-with(lower-case(normalize-space(./MAC/MACC)), 'n.r')))">
+					<arco-core:hasPart>
+						<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="./MAC/MACD">
+									<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MACC)), arco-fn:urify(normalize-space(./MACD)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'ArchaeologicalMaterial/', $itemURI, '-', position(), arco-fn:urify(normalize-space(./MACC)))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
+					</arco-core:hasPart>
+					</xsl:if>
+				</xsl:for-each>
+				<!-- AT -->
+				<xsl:if test="schede/AT/OG/OGT/OGTM">
+					<arco-dd:anthropologicalMaterialMorphology>
+						<xsl:value-of select="normalize-space(schede/AT/OG/OGT/OGTM)" />
+					</arco-dd:anthropologicalMaterialMorphology>
+				</xsl:if>
+				<!-- OGCD -->
+				<xsl:if test="not($sheetType='AT') and schede/*/OG/OGC/OGCD">
+					<arco-arco:definitionAndPositionOfComponents>
+						<xsl:value-of select="normalize-space(schede/*/OG/OGC/OGCD)" />
+					</arco-arco:definitionAndPositionOfComponents>
+				</xsl:if>
+				<!-- international identifier -->
+				<xsl:for-each select="schede/*/AC/ACI">
+					<arco-arco:internationalIdentifier>
+						<xsl:value-of select="normalize-space(schede/*/AC/ACI)" />
+					</arco-arco:internationalIdentifier>
+				</xsl:for-each>
 				<!-- cadastral identity -->
 				<xsl:for-each select="schede/*/CS">
 					<arco-location:hasCadastralIdentity>
@@ -2833,6 +2868,14 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<!-- finding context (AT) -->
+				<xsl:if test="schede/AT/OG/OGC and (not(starts-with(lower-case(normalize-space(schede/AT/OG/OGC/OGCT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/AT/OG/OGC/OGCT)), 'n.r')))">
+					<arco-cd:hasFindingContext>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'FindingContext/', $itemURI, '-', arco-fn:urify(normalize-space(schede/AT/OG/OGC/OGCT)))" />
+						</xsl:attribute>
+					</arco-cd:hasFindingContext>
+				</xsl:if>
 				<!-- coin issuance (NU) -->
 				<xsl:for-each select="schede/*/DA/AUE">
 					<arco-cd:hasCoinIssuance>

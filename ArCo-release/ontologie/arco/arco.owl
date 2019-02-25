@@ -1394,6 +1394,18 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterial">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasArchaeologicalMaterialCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalMaterialCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/numberOfArchaeologicalMaterials"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un materiale archeologico, che è una parte di un lotto di materiali archeologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an archaeological material, that is a part of a lot of archaeological materials.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>

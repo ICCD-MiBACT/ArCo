@@ -34,6 +34,7 @@
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:comment xml:lang="en">In the Denotative Description module are modelled pieces of information regarding the characteristics and qualities of a cultural property, as detectable and/or detected during the cataloguing process. Examples are: measurements, materials, technique, conservation status.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa del bene culturale (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), include la modellazione delle informazioni che riguardano il bene culturale in sé, con i suoi attributi (rilevati/rilevabili al momento della catalogazione).</rdfs:comment>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <rdfs:label>Denotative Description Ontology (ArCo network)</rdfs:label>
@@ -785,6 +786,7 @@
         <rdfs:label xml:lang="it">morfologia di reperto antropologico</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: OG/OGT/OGTM</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
