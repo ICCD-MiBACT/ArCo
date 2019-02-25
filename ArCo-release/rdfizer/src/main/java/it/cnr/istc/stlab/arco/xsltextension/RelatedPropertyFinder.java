@@ -103,7 +103,7 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 
 	@Override
 	public QName getName() {
-		return new QName("http://w3id.org/arco/saxon-extension", "related-property");
+		return new QName("https://w3id.org/arco/saxon-extension", "related-property");
 	}
 
 	@Override

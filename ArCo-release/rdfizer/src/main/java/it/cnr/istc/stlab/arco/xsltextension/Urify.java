@@ -14,7 +14,7 @@ public class Urify implements ExtensionFunction {
     
 	public QName getName()
     {
-        return new QName("http://w3id.org/arco/saxon-extension", "urify");
+        return new QName("https://w3id.org/arco/saxon-extension", "urify");
     }
     
     public SequenceType getResultType()

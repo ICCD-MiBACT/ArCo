@@ -46,7 +46,7 @@ public class Uncamelizer implements ExtensionFunction {
 
 	@Override
 	public QName getName() {
-		return new QName("http://w3id.org/arco/saxon-extension", "uncamelize");
+		return new QName("https://w3id.org/arco/saxon-extension", "uncamelize");
 	}
 
 	@Override

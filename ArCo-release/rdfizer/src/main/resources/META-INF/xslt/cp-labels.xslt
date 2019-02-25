@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
-	xmlns:arco-fn="http://w3id.org/arco/saxon-extension" 
+	xmlns:arco-fn="https://w3id.org/arco/saxon-extension" 
 	xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:l0="https://w3id.org/italia/onto/l0/" xmlns:clvapit="https://w3id.org/italia/onto/CLV/"
 	xmlns:tiapit="https://w3id.org/italia/onto/TI/" xmlns:roapit="https://w3id.org/italia/onto/RO/"

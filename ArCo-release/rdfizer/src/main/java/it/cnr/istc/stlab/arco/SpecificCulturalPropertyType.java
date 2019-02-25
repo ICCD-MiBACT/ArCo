@@ -5,42 +5,44 @@ import java.util.Map;
 
 public class SpecificCulturalPropertyType {
 	
-private static Map<String, String> sheetPropertyTypeMap;
+	private static Map<String, String> sheetPropertyTypeMap;
+
+	private static final String NAMESPACE = "https://w3id.org/arco/ontology/arco/";
 	
 	static{
 		sheetPropertyTypeMap = new HashMap<String, String>();
 		
-		sheetPropertyTypeMap.put("AT", "https://w3id.org/arco/core/ArchaeologicalProperty");
-		sheetPropertyTypeMap.put("CA", "https://w3id.org/arco/core/ArchaeologicalProperty");
-		sheetPropertyTypeMap.put("MA", "https://w3id.org/arco/core/ArchaeologicalProperty");
-		sheetPropertyTypeMap.put("RA", "https://w3id.org/arco/core/ArchaeologicalProperty");
-		sheetPropertyTypeMap.put("SAS", "https://w3id.org/arco/core/ArchaeologicalProperty");
-		sheetPropertyTypeMap.put("SI", "https://w3id.org/arco/core/ArchaeologicalProperty");
-		sheetPropertyTypeMap.put("TMA", "https://w3id.org/arco/core/ArchaeologicalProperty");
-		sheetPropertyTypeMap.put("A", "https://w3id.org/arco/core/ArchitecturalOrLandscapeHeritage");
-		sheetPropertyTypeMap.put("CNS", "https://w3id.org/arco/core/ArchitecturalOrLandscapeHeritage");
-		sheetPropertyTypeMap.put("PG", "https://w3id.org/arco/core/ArchitecturalOrLandscapeHeritage");
-		sheetPropertyTypeMap.put("BDI", "https://w3id.org/arco/core/DemoEthnoAnthropologicalHeritage");
-		sheetPropertyTypeMap.put("BDM", "https://w3id.org/arco/core/DemoEthnoAnthropologicalHeritage");
-		sheetPropertyTypeMap.put("F", "https://w3id.org/arco/core/PhotographicHeritage");
-		sheetPropertyTypeMap.put("FF", "https://w3id.org/arco/core/PhotographicHeritage");
-		sheetPropertyTypeMap.put("SM", "https://w3id.org/arco/core/MusicHeritage");
-		sheetPropertyTypeMap.put("SMO", "https://w3id.org/arco/core/MusicHeritage");
-		sheetPropertyTypeMap.put("BNB", "https://w3id.org/arco/core/NaturalHeritage");
-		sheetPropertyTypeMap.put("BNM", "https://w3id.org/arco/core/NaturalHeritage");
-		sheetPropertyTypeMap.put("BNP", "https://w3id.org/arco/core/NaturalHeritage");
-		sheetPropertyTypeMap.put("BNPE", "https://w3id.org/arco/core/NaturalHeritage");
-		sheetPropertyTypeMap.put("BNPL", "https://w3id.org/arco/core/NaturalHeritage");
-		sheetPropertyTypeMap.put("BNZ", "https://w3id.org/arco/core/NaturalHeritage");
-		sheetPropertyTypeMap.put("NU", "https://w3id.org/arco/core/NumismaticProperty");
-		sheetPropertyTypeMap.put("PST", "https://w3id.org/arco/core/ScientificOrTechnologicalHeritage");
-		sheetPropertyTypeMap.put("D", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
-		sheetPropertyTypeMap.put("MI", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
-		sheetPropertyTypeMap.put("OA", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
-		sheetPropertyTypeMap.put("OAC", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
-		sheetPropertyTypeMap.put("S", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
-		sheetPropertyTypeMap.put("VeAC", "https://w3id.org/arco/core/HistoricOrArtisticProperty");
-		sheetPropertyTypeMap.put("E", "https://w3id.org/arco/core/DemoEthnoAnthropologicalHeritage");
+		sheetPropertyTypeMap.put("AT", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("CA", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("MA", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("RA", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("SAS", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("SI", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("TMA", NAMESPACE + "ArchaeologicalProperty");
+		sheetPropertyTypeMap.put("A", NAMESPACE + "ArchitecturalOrLandscapeHeritage");
+		sheetPropertyTypeMap.put("CNS", NAMESPACE + "ArchitecturalOrLandscapeHeritage");
+		sheetPropertyTypeMap.put("PG", NAMESPACE + "ArchitecturalOrLandscapeHeritage");
+		sheetPropertyTypeMap.put("BDI", NAMESPACE + "DemoEthnoAnthropologicalHeritage");
+		sheetPropertyTypeMap.put("BDM", NAMESPACE + "DemoEthnoAnthropologicalHeritage");
+		sheetPropertyTypeMap.put("F", NAMESPACE + "PhotographicHeritage");
+		sheetPropertyTypeMap.put("FF", NAMESPACE + "PhotographicHeritage");
+		sheetPropertyTypeMap.put("SM", NAMESPACE + "MusicHeritage");
+		sheetPropertyTypeMap.put("SMO", NAMESPACE + "MusicHeritage");
+		sheetPropertyTypeMap.put("BNB", NAMESPACE + "NaturalHeritage");
+		sheetPropertyTypeMap.put("BNM", NAMESPACE + "NaturalHeritage");
+		sheetPropertyTypeMap.put("BNP", NAMESPACE + "NaturalHeritage");
+		sheetPropertyTypeMap.put("BNPE", NAMESPACE + "NaturalHeritage");
+		sheetPropertyTypeMap.put("BNPL", NAMESPACE + "NaturalHeritage");
+		sheetPropertyTypeMap.put("BNZ", NAMESPACE + "NaturalHeritage");
+		sheetPropertyTypeMap.put("NU", NAMESPACE + "NumismaticProperty");
+		sheetPropertyTypeMap.put("PST", NAMESPACE + "ScientificOrTechnologicalHeritage");
+		sheetPropertyTypeMap.put("D", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("MI", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("OA", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("OAC", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("S", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("VeAC", NAMESPACE + "HistoricOrArtisticProperty");
+		sheetPropertyTypeMap.put("E", NAMESPACE + "DemoEthnoAnthropologicalHeritage");
 	}
 	
 	public static String getPropertyType(String sheetType){

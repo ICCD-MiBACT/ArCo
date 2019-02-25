@@ -112,7 +112,7 @@ public class ImageFinder implements ExtensionFunction {
 
 	@Override
 	public QName getName() {
-		return new QName("http://w3id.org/arco/saxon-extension", "find-image");
+		return new QName("https://w3id.org/arco/saxon-extension", "find-image");
 	}
 
 	@Override

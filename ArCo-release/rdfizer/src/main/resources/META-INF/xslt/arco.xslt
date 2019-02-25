@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:arco-core="https://w3id.org/arco/ontology/core/" xmlns:arco-arco="https://w3id.org/arco/ontology/arco/" xmlns:arco-fn="http://w3id.org/arco/saxon-extension"
+	xmlns:arco-core="https://w3id.org/arco/ontology/core/" xmlns:arco-arco="https://w3id.org/arco/ontology/arco/" 
+	xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/" xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:smapit="https://w3id.org/italia/onto/SM/"
 	xmlns:arco-dd="https://w3id.org/arco/ontology/denotative-description/"
@@ -7548,7 +7549,7 @@
 						<xsl:value-of
 							select="concat('Bibliografia ', position(), ' del bene culturale: ', $itemURI)" />
 					</l0:name>
-					<xsl:if test="./BIBH">
+					<xsl:if test="./BIBH and (not(starts-with(lower-case(normalize-space(./BIBH)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBH)), 'n.r')))">
 						<arco-cd:bibliographyLocalIdentifier>
 							<xsl:value-of select="normalize-space(./BIBH)" />
 						</arco-cd:bibliographyLocalIdentifier>
@@ -7565,7 +7566,9 @@
 							</xsl:choose>
 						</arco-cd:bibliographyICCDIdentifier>
 					</xsl:if>
-					<xsl:if test="./BIBM or ../BIL and (not(starts-with(lower-case(normalize-space(./BIBM)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBM)), 'n.r')) and not(starts-with(lower-case(normalize-space(../BIL)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIL)), 'n.r')))">
+					<xsl:if test="../BIL and (not(starts-with(lower-case(normalize-space(../BIL)), 'nr')) and not(starts-with(lower-case(normalize-space(../BIL)), 'n.r')))
+					or
+					(./BIBM and (not(starts-with(lower-case(normalize-space(./BIBM)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBM)), 'n.r'))))">
 						<arco-cd:completeBibliographicReference>
 							<xsl:choose>
 								<xsl:when test="./BIBM">
@@ -15674,7 +15677,7 @@
 					</xsl:for-each>					
 				<!-- cadastral identity -->
 				<xsl:for-each select="schede/*/CS">
-				<xsl:variable name="parentPosition">
+						<xsl:variable name="parentPosition">
 							<xsl:value-of select="position()" />
 						</xsl:variable>
 						<rdf:Description>
@@ -19140,7 +19143,34 @@
                             </xsl:attribute>
 						</clvapit:hasAddressArea>
 					</xsl:if>
+					<!-- ClericalAdministrativeArea -->
+					<xsl:if test="schede/*/LC/PVE">
+						<arco-location:hasClericalAdministrativeArea>
+							<xsl:attribute name="rdf:resource">
+                                <xsl:value-of
+								select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(schede/*/LC/PVE))" />
+                            </xsl:attribute>
+						</arco-location:hasClericalAdministrativeArea>
+					</xsl:if>
 				</rdf:Description>
+				
+				<!-- Clerical Administrative Area : if any exists -->
+				<xsl:if test="schede/*/LC/PVE">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of
+								select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(schede/*/LC/PVE))" />
+		                </xsl:attribute>
+		                <rdfs:label>
+		                	<xsl:value-of select="normalize-space(schede/*/LC/PVE)" />
+		                </rdfs:label>
+		                <l0:name>
+		                	<xsl:value-of select="normalize-space(schede/*/LC/PVE)" />
+		                </l0:name>
+		                <rdf:type rdf:resource="http://dati.beniculturali.it/cis/ClericalAdministrativeArea" />
+					</rdf:Description>
+				</xsl:if>
+				
 				<!-- Toponym in Time as individual -->
 				<xsl:if test="schede/*/LC/PVL">
 					<rdf:Description>
@@ -19422,6 +19452,12 @@
                                         </xsl:choose>
                                     </xsl:attribute>
 								</arco-location:hasSiteType>
+							</xsl:if>
+							<!-- culturalInstituteOrSiteIdentifier -->
+							<xsl:if test="schede/*/LC/LDC/LDCG">
+								<arco-location:culturalInstituteOrSiteIdentifier>
+									<xsl:value-of select="normalize-space(schede/*/LC/LDC/LDCG)" />
+								</arco-location:culturalInstituteOrSiteIdentifier>
 							</xsl:if>
 						</rdf:Description>
 						<!-- site use function as an individual -->
@@ -20469,7 +20505,36 @@
                                             </xsl:attribute>
 										</clvapit:hasAddressArea>
 									</xsl:if>
+									<!-- Test per ClericalAdministrativeArea -->
+									<xsl:if test="./PRE">
+										<arco-location:hasClericalAdministrativeArea>
+											<xsl:attribute name="rdf:resource">
+                                                <xsl:value-of
+                                                	select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(./PRE))" />
+                                            </xsl:attribute>
+										</arco-location:hasClericalAdministrativeArea>
+									</xsl:if>
 								</rdf:Description>
+								
+								<!-- Clerical Administrative Area : if any exists -->
+								<xsl:if test="./PRE">
+									<rdf:Description>
+										<xsl:attribute name="rdf:about">
+											<xsl:value-of
+												select="concat($NS, 'ClericalAdministrativeArea/', arco-fn:urify(./PRE))" />
+                                        </xsl:attribute>
+                                        <rdfs:label>
+                                        	<xsl:value-of
+												select="normalize-space(./PRE)" />
+                                        </rdfs:label>
+                                        <l0:name>
+                                        	<xsl:value-of
+												select="normalize-space(./PRE)" />
+                                        </l0:name>
+                                        <rdf:type rdf:resource="http://dati.beniculturali.it/cis/ClericalAdministrativeArea"/>
+									</rdf:Description>
+								</xsl:if>
+								
 								<!-- Country -->
 								<xsl:if test="./PRV/PRVS and (not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./PRV/PRVS)), 'n.r')))">
 									<rdf:Description>
@@ -21286,8 +21351,33 @@
                                             </xsl:attribute>
 										</clvapit:hasAddressArea>
 									</xsl:if>
+									<!-- HistoricalArea -->
+									<xsl:if test="schede/F/LR/LRG">
+										<arco-location:hasHistoricalArea>
+											<xsl:attribute name="rdf:resource">
+												<xsl:value-of select="concat($NS, 'AdministrativeUnitComponent/', arco-fn:urify(schede/F/LR/LRG))" />
+											</xsl:attribute>
+										</arco-location:hasHistoricalArea>
+									</xsl:if>
 								</rdf:Description>
 							</xsl:if>
+							
+							<!-- Historical Area : if any exists -->
+							<xsl:if test="schede/F/LR/LRG">
+								<rdf:Description>
+									<xsl:attribute name="rdf:about">
+										<xsl:value-of select="concat($NS, 'AdministrativeUnitComponent/', arco-fn:urify(schede/F/LR/LRG))" />
+									</xsl:attribute>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(schede/F/LR/LRG)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(schede/F/LR/LRG)" />
+									</l0:name>
+									<rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/AdministrativeUnitComponent" />
+								</rdf:Description>
+							</xsl:if>
+							
 							<!-- Country LR -->
 							<xsl:if test="schede/F/LR/LRC/LRCS and (not(starts-with(lower-case(normalize-space(schede/F/LR/LRC/LRCS)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/LR/LRC/LRCS)), 'n.r')))">
 								<rdf:Description>

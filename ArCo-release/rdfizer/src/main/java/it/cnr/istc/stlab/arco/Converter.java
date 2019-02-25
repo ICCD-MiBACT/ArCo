@@ -65,7 +65,7 @@ public class Converter {
         {
             public QName getName()
             {
-                return new QName("http://w3id.org/arco/saxon-extension", "md5");
+                return new QName("https://w3id.org/arco/saxon-extension", "md5");
             }
             
             public SequenceType getResultType()
@@ -109,7 +109,7 @@ public class Converter {
         {
             public QName getName()
             {
-                return new QName("http://w3id.org/arco/saxon-extension", "getPropertyType");
+                return new QName("https://w3id.org/arco/saxon-extension", "getPropertyType");
             }
             
             public SequenceType getResultType()
@@ -128,9 +128,9 @@ public class Converter {
             public XdmValue call(XdmValue[] arguments) throws SaxonApiException
             {
                 String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                arg = TolLevelCultruralPropertyType.getPropertyType(arg);
+                arg = TopLevelCultruralPropertyType.getPropertyType(arg);
                 
-                if(arg == null) arg = "http://www.w3id.org/arco/core/CulturalProperty";
+                if(arg == null) arg = "https://www.w3id.org/arco/ontology/core/CulturalProperty";
                 return new XdmAtomicValue(arg);
             }
         };
@@ -139,7 +139,7 @@ public class Converter {
         {
             public QName getName()
             {
-                return new QName("http://w3id.org/arco/saxon-extension", "getSpecificPropertyType");
+                return new QName("https://w3id.org/arco/saxon-extension", "getSpecificPropertyType");
             }
             
             public SequenceType getResultType()
@@ -169,7 +169,7 @@ public class Converter {
         {
             public QName getName()
             {
-                return new QName("http://w3id.org/arco/saxon-extension", "local-name");
+                return new QName("https://w3id.org/arco/saxon-extension", "local-name");
             }
             
             public SequenceType getResultType()

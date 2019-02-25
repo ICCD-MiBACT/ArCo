@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:arco-core="https://w3id.org/arco/core/" xmlns:arco-fn="http://w3id.org/arco/saxon-extension"
+	xmlns:arco-core="https://w3id.org/arco/core/" xmlns:arco-fn="https://w3id.org/arco/saxon-extension"
 	xmlns:arco-catalogue="https://w3id.org/arco/catalogue/" xmlns:cis="http://dati.beniculturali.it/cis/"
 	xmlns:clvapit="https://w3id.org/italia/onto/CLV/" xmlns:smapit="https://w3id.org/italia/onto/SM/"
 	xmlns:arco-dd="https://w3id.org/arco/denotative-description/"

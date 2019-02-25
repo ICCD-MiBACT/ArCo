@@ -79,7 +79,7 @@ public class CataloguingEntityFinder implements ExtensionFunction {
 	@Override
 	public QName getName()
     {
-        return new QName("http://w3id.org/arco/saxon-extension", "cataloguing-entity");
+        return new QName("https://w3id.org/arco/saxon-extension", "cataloguing-entity");
     }
     
 	@Override
