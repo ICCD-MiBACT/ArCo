@@ -14,17 +14,8 @@ import java.util.stream.Collectors;
 
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.jena.query.Dataset;
-import org.apache.jena.query.ParameterizedSparqlString;
-import org.apache.jena.query.QueryExecution;
-import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QuerySolution;
-import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.tdb.TDBFactory;
-import org.apache.jena.vocabulary.SKOS;
 
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
@@ -41,21 +32,21 @@ import net.sf.saxon.s9api.XsltCompiler;
 import net.sf.saxon.s9api.XsltExecutable;
 import net.sf.saxon.s9api.XsltTransformer;
 
-public class DefinitionMatcherForRASheet implements ExtensionFunction {
+public class DefinitionMatcherForRASheet extends SKOSThesaurusLinker implements ExtensionFunction {
 
-	private static final String RA_THESAURUS = "META-INF/datasets/ra-thesaurus.rdf";
+	private static final String THESAURUS = "META-INF/datasets/ra-thesaurus.rdf";
+	private static final String KB_NAMED_MODEL = "ra-definitions";
 	
 	private static DefinitionMatcherForRASheet instance;
-	private Dataset dataset;
 	
 	private DefinitionMatcherForRASheet(){
-		dataset = TDBFactory.createDataset("ra-definitions");
-		Model model = dataset.getDefaultModel();
-		if(model.isEmpty()){
-			
-			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(RA_THESAURUS);
+		super();
+		if(!kbManager.modelExists(KB_NAMED_MODEL)) {
+			Model model = ModelFactory.createDefaultModel();
+			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(THESAURUS);
 			model.read(inputStream, null, "RDF/XML");
 			
+			kbManager.addNamedModel(KB_NAMED_MODEL, model);
 		}
 	}
 	
@@ -69,46 +60,14 @@ public class DefinitionMatcherForRASheet implements ExtensionFunction {
 	@Override
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue().trim();
-		
-		/*
-		String sparql = "PREFIX skos: <" + SKOS.uri + "> "
-				+ "SELECT ?definition "
-				+ "WHERE{ "
-				+ "?definition skos:prefLabel ?label "
-				+ "FILTER(REGEX(STR(?label), '^" + arg + "$', 'i')) "
-				+ "} "
-				+ "LIMIT 1";
-		*/
-		
-		String sparql = "SELECT ?definition "
-				+ "WHERE{ "
-				+ "?definition skos:prefLabel ?label "
-				+ "FILTER(REGEX(STR(?label), ?x, 'i')) "
-				+ "} "
-				+ "LIMIT 1";
-		
-		ParameterizedSparqlString pss = new ParameterizedSparqlString();
-		pss.setCommandText(sparql);
-		pss.setNsPrefix("skos", SKOS.uri);
-		pss.setLiteral("x", "^" + arg + "$");
-		
-		QueryExecution queryExecution = QueryExecutionFactory.create(pss.asQuery(), dataset.getDefaultModel());
-		ResultSet resultSet = queryExecution.execSelect();
-		
-		if(resultSet.hasNext()){
-			QuerySolution querySolution = resultSet.next();
-			Resource definition = querySolution.getResource("definition");
-			return new XdmAtomicValue(definition.getURI());
-		}
-		else return new XdmAtomicValue(new String());
+		return link(arg);
 	}
 
 	@Override
 	public SequenceType[] getArgumentTypes() {
-		return new SequenceType[]
-				{
-	                SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE)
-	            };
+		return new SequenceType[]{
+			SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE)
+		};
 	}
 
 	@Override
@@ -249,6 +208,11 @@ public class DefinitionMatcherForRASheet implements ExtensionFunction {
         } catch(Exception e){
         	e.printStackTrace();
         }
+	}
+
+	@Override
+	protected String getNamedModel() {
+		return KB_NAMED_MODEL;
 	}
 	
 }

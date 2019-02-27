@@ -31,6 +31,7 @@ import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
 import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
+import it.cnr.istc.stlab.arco.xsltextension.ScientificPropertyDefinitionLinker;
 import it.cnr.istc.stlab.arco.xsltextension.Uncamelizer;
 import it.cnr.istc.stlab.arco.xsltextension.Urify;
 import net.sf.saxon.s9api.ExtensionFunction;
@@ -208,6 +209,7 @@ public class Converter {
 		proc.registerExtensionFunction(localName);
 		proc.registerExtensionFunction(cataloguingEntityFinder);
 		proc.registerExtensionFunction(DefinitionMatcherForRASheet.getInstance());
+		proc.registerExtensionFunction(ScientificPropertyDefinitionLinker.getInstance());
 		proc.registerExtensionFunction(RelatedPropertyFinder.getInstance());
 		proc.registerExtensionFunction(MeasurementMapper.getInstance());
 		proc.registerExtensionFunction(Uncamelizer.getInstance());
