@@ -4418,6 +4418,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalFonds">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasComponent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalSeries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un fondo archivistico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an archival fonds.</rdfs:comment>
@@ -4543,6 +4549,12 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalSeries">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasComponent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalSubseries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una serie archivistica.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>

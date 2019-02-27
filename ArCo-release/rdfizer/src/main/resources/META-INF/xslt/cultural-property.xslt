@@ -1639,6 +1639,40 @@
 						</arco-arco:hasAuthor>
 				</xsl:if>
 				</xsl:for-each>
+				<!-- author for BDM < 4.00 -->
+				<xsl:for-each select="schede/BDM/AU/AUF">
+				<xsl:if test="./* and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
+						<arco-cd:hasAuthorshipAttribution>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, position())" />
+		                        </xsl:attribute>
+						</arco-cd:hasAuthorshipAttribution>
+						<arco-arco:hasAuthor>
+							<xsl:attribute name="rdf:resource">
+		                                   <xsl:choose>
+		                                <xsl:when test="./AUFA and (not(starts-with(lower-case(normalize-space(./AUFA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFA)), 'n.r')))">
+		                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUFN)), '-', arco-fn:urify(normalize-space(./AUFA)))" />
+		                                </xsl:when>
+		                                <xsl:otherwise>
+		                                    <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUFN)))" />
+		                                </xsl:otherwise>
+		                            </xsl:choose>
+                            </xsl:attribute>
+						</arco-arco:hasAuthor>
+				</xsl:if>
+				</xsl:for-each>
+				<!-- archivalrecordset membership -->
+				<xsl:if test="schede/*/UB/UBF/*">
+						<arco-cd:isMemberOfArchivalRecordSet>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'ArchivalRecordSetMembership/', $itemURI)" />
+		                        </xsl:attribute>
+						</arco-cd:isMemberOfArchivalRecordSet>
+				</xsl:if>
 				<!-- responsibility (F and FF) -->
 				<xsl:for-each select="schede/*/PD/PDF">
 					<arco-cd:hasResponsibility>
@@ -1728,6 +1762,15 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<!-- has dating for BDM < 4.00 norm -->
+				<xsl:for-each select="schede/BDM/AU/DTF">
+					<arco-cd:hasDating>
+								<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+			                        </xsl:attribute>
+							</arco-cd:hasDating>
+				</xsl:for-each>
 				<!-- has dating for A norm -->
 				<xsl:for-each select="schede/A/RE">
 					<xsl:choose>
@@ -1751,6 +1794,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<!-- has author for BDM < 4.00 -->
 				
 				<!-- Measurement -->
 				<xsl:for-each select="schede/*/MT/MIS">
