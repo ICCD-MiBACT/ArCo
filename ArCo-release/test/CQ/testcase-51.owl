@@ -13,7 +13,7 @@
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasCQ xml:lang="en">What is the medium and implementation method of the cultural entity x and what is the number of male, female and children partecipants?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="it">Qual&apos;è il medium e il metodo di implementazione di un bene culturale x e qual&apos;è il numero di partecipanti di sesso maschile, femminile e bambini?</testannotationschema:hasCQ>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI06.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI07.owl"/>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
 
 SELECT *
