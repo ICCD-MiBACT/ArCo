@@ -663,9 +663,7 @@
 
     <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
 
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity"/>
     
 
 

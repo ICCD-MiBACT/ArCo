@@ -158,6 +158,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale immateriale a una modalità comunicativa mediante la quale il bene viene veicolato.</rdfs:comment>
@@ -193,6 +194,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa il bene culturale al suo stato di conservazione.</rdfs:comment>
@@ -220,6 +222,42 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>CO/STC/STCC</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAccessibility -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAccessibility">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il bene culturale alla sua accessibilità, ovvero la possibilità di accedere al bene, in tutto o in parte, per esempio per effettuare un esame diretto finalizzato alla catalogazione (es.: un bene immobile posto in un luogo recintato non accessibile, un bene mobile che non si può osservare da vicino perché posto troppo in alto su una parete; un bene totalmente accessibile, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the cultural property to its accessibility, that is the possibility to reach or enter that cultural property, for example for cataloguing activities (e.g.: an immovable cultural property located in a walled area, a movable cultural property located on the top shelf, a totally accessible cultural property, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha accessibilità</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural property accessibility</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: LC/ACB</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAvailability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAvailability">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il bene culturale alla sua disponibilità materiale, ovvero se il bene è materialmente disponibile, per esempio per attività di catalogazione, o se non è disponibile (es.: furto, distruzione)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class relates the cultural property to its availability, that is wheter the cultural property is available or not (e.g.: theft, destruction) for example for cataloguing activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">ha disponibilità materiale</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural property availability</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGR</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -341,6 +379,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto (es bene culturale, apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione) al suo scopo funzionale (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere.</rdfs:comment>
@@ -406,6 +445,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasLegibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLegibility">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega lo stato di conservazione di un bene numismatico al suo stato di leggibilità.</rdfs:comment>
@@ -829,10 +869,9 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfChildParticipants">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero dei bambini che attuano una comunicazione (verbale, musicale vocale).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the number of the child participants to a communication (verbal, singing).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the number of the female participants to a communication (verbal, singing, kinesic).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of the child participants to a communication (verbal, singing, kinesic).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">number of child participants</rdfs:label>
         <rdfs:label xml:lang="it">numero di partecipanti infantili</rdfs:label>
@@ -848,8 +887,9 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero delle persone di sesso femminile che attuano una comunicazione (verbale, musicale vocale, cinesica).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of the male participants to a communication (verbal, singing, kinesic).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">number of female participants</rdfs:label>
         <rdfs:label xml:lang="it">numero di partecipanti femminili</rdfs:label>
@@ -865,7 +905,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfMaleParticipants">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero delle persone di sesso maschile che attuano una comunicazione (verbale, musicale vocale, cinesica)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the number of the male participants to a communication (verbal, singing, kinesic).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -1291,6 +1331,42 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMediumType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasImplementationMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ImplementationMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/involvesAgeRange"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfChildParticipants"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/numberOfMaleParticipants"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la modalità comunicativa di un oggetto, definita dal tipo di modalità (es.: verbale, scritta, strumentale), la modalità esecutiva, il numero di voci e strumenti coinvolti, etc.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the communication medium of an object, defined by the communication medium type (e.g.: verbal, written, instrumental), the implementation method, the number of voices or instruments involved, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -1373,6 +1449,38 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: DA/CON</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;accessibilità di un bene culturale, ovvero la possibilità di accedere al bene, in tutto o in parte, per esempio per effettuare un esame diretto finalizzato alla catalogazione (es.: un bene immobile posto in un luogo recintato non accessibile, un bene mobile che non si può osservare da vicino perché posto troppo in alto su una parete; un bene totalmente accessibile, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the cultural property accessibility, that is the possibility to reach or enter that cultural property, for example for cataloguing activities (e.g.: an immovable cultural property located in a walled area, a movable cultural property located on the top shelf, a totally accessible cultural property, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">Accessibilità del bene culturale</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural property accessibility</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: LC/ACB</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la disponibilità materiale di un bene culturale, ovvero se il bene è materialmente disponibile, per esempio per attività di catalogazione, o se non è disponibile (es.: furto, distruzione)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the availability of a cultural property, wheter the cultural property is available or not (e.g.: theft, destruction) for example for cataloguing activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Cultural Property Availability</rdfs:label>
+        <rdfs:label xml:lang="it">Disponsibilità materiale del bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGR</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -1971,6 +2079,16 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Accessible -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Accessible">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
+        <rdfs:label xml:lang="it">Accessibile</rdfs:label>
+        <rdfs:label xml:lang="en">Accessible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Area -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Area">
@@ -1993,6 +2111,16 @@ un&apos;azienda, ecc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Available -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Available">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
+        <rdfs:label xml:lang="en">Available</rdfs:label>
+        <rdfs:label xml:lang="it">Disponibile</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2487,6 +2615,16 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Inaccessible -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Inaccessible">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
+        <rdfs:label xml:lang="it">Inaccessibile</rdfs:label>
+        <rdfs:label xml:lang="en">Inaccessible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/InstrumentalCommunication -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/InstrumentalCommunication">
@@ -2633,6 +2771,16 @@ un&apos;azienda, ecc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/NoLongerAvailable -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/NoLongerAvailable">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
+        <rdfs:label xml:lang="en">No longer available</rdfs:label>
+        <rdfs:label xml:lang="it">Non più disponibile</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/OccupiedStorageSpace -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/OccupiedStorageSpace">
@@ -2669,6 +2817,16 @@ un&apos;azienda, ecc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A, BDM, PG 3: OGA/OGAG.</arco-catalogue:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/PartiallyAccessible -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/PartiallyAccessible">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
+        <rdfs:label xml:lang="en">Partially accessible</rdfs:label>
+        <rdfs:label xml:lang="it">Parzialmente accessibile</rdfs:label>
     </owl:NamedIndividual>
     
 
