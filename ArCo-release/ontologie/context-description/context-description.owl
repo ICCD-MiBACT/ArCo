@@ -6165,7 +6165,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una serie editoriale fotografica, ovvero un insieme di immagini ideate o pubblicate come un&apos;unica entità, esplicitamente legate tra di loro da un titolo o da una numerazione progressiva o da altri elementi che ne individuino inequivocabilmente l&apos;unitarietà in senso biblioteconomico.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="en">Phtographical series</rdfs:label>
+        <rdfs:label xml:lang="en">Photographic series</rdfs:label>
         <rdfs:label xml:lang="it">Serie fotografica</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>

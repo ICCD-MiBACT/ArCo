@@ -1361,6 +1361,15 @@
 								</xsl:attribute>
 					</arco-location:hasTimeIndexedTypedLocation>
 				</xsl:for-each>
+				<!-- production realization location for BDM < version 4.00 -->
+				<xsl:for-each select="schede/BDM/AU/LDF">
+					<arco-location:hasTimeIndexedTypedLocation>
+								<xsl:attribute name="rdf:resource">
+									 <xsl:value-of
+								select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-production-realization-', position())" />
+								</xsl:attribute>
+					</arco-location:hasTimeIndexedTypedLocation>
+				</xsl:for-each>
 				<!-- shot location -->
 				<xsl:if test="schede/F/LR">
 					<arco-location:hasTimeIndexedTypedLocation>
