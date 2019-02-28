@@ -185,7 +185,9 @@
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
-
+			
+			
+			
 			<!-- part of cultural property when there is NVCP (protective measure) -->
 			<xsl:for-each select="schede/*/TU/NVC">
 				<xsl:variable name="protectiveMeasure">

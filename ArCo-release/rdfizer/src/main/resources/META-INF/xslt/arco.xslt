@@ -20035,6 +20035,178 @@
 						</xsl:choose>
 					</rdf:Description>
 				</xsl:if>
+				<!-- numismatic property counterstamp -->
+				<xsl:for-each select="schede/NU/DA/CON">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'Counterstamp/', $itemURI, '-counterstamp')" />
+						</xsl:attribute>
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Counterstamp" />
+					<rdfs:label xml:lang="en">
+						<xsl:value-of select="concat('Counterstamp of cultural property ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of select="concat('Counterstamp of cultural property ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of select="concat('Contromarca del bene culturale ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of select="concat('Contromarca del bene culturale ', $itemURI)" />
+					</l0:name>
+					<xsl:if test="./CONA or ./CONC">
+					<xsl:if test="(not(starts-with(lower-case(normalize-space(./CONA)), 'nr')) and not(starts-with(lower-case(normalize-space(./CONA)), 'n.r')))">
+						<arco-cd:hasCoinIssuance>
+							<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-counterstamp')" />
+						</xsl:attribute>
+						</arco-cd:hasCoinIssuance>
+						</xsl:if>
+					</xsl:if>
+					</rdf:Description>
+					<xsl:if test="./CONA or ./CONC">
+					<xsl:if test="(not(starts-with(lower-case(normalize-space(./CONA)), 'nr')) and not(starts-with(lower-case(normalize-space(./CONA)), 'n.r')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'CoinIssuance/', $itemURI, '-counterstamp')" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+	            				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CoinIssuance'" />
+	            			</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of
+								select="concat('Coin issuance of counterstamp of cultural property ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of
+								select="concat('Coin issuance of counterstamp of cultural property ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Emissione di contromarca del bene culturale ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of
+								select="concat('Emissione di contromarca del bene culturale ', $itemURI)" />
+						</l0:name>
+						<xsl:if test="./CONC">
+							<tiapit:time>
+								<xsl:value-of select="normalize-space(./CONC)" />
+							</tiapit:time>
+						</xsl:if>
+						<!-- has issuer -->
+						<xsl:for-each select="./CONA">
+							<xsl:if test="(not(starts-with(lower-case(normalize-space(./CONA)), 'nr')) and not(starts-with(lower-case(normalize-space(./CONA)), 'n.r')))">
+							<arco-core:hasAgentRole>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of
+									select="concat($NS, 'AgentRole/', $itemURI, '-counterstamp-issuer-', position())" />
+                        		</xsl:attribute>
+							</arco-core:hasAgentRole>
+							<arco-cd:hasIssuer>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+                        		</xsl:attribute>
+							</arco-cd:hasIssuer>
+						</xsl:if>
+						</xsl:for-each>
+						</rdf:Description>
+						<xsl:for-each select="./CONA">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat($NS, 'AgentRole/', $itemURI, '-counterstamp-issuer-', position())" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/arco/ontology/core/AgentRole'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of
+									select="concat('Soggetto emittente ', position(), ' della contromarca del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of
+									select="concat('Issuer ', position(), ' of counterstamp of cultural property ', $itemURI, ': ', normalize-space(.))" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of
+									select="concat('Soggetto emittente ', position(), ' della contromarca del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+							</l0:name>
+							<l0:name xml:lang="en">
+								<xsl:value-of
+									select="concat('Issuer ', position(), ' of counterstamp of cultural property ', $itemURI, ': ', normalize-space(.))" />
+							</l0:name>
+							<arco-core:hasRole>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="concat($NS, 'Role/Issuer')" />
+		                        </xsl:attribute>
+							</arco-core:hasRole>
+							<arco-core:hasAgent>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+		                        </xsl:attribute>
+							</arco-core:hasAgent>
+						</rdf:Description>
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat($NS, 'Role/Issuer')" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/italia/onto/RO/Role'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="'Soggetto emittente di moneta'" />
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="'Coin issuer'" />
+							</rdfs:label>
+							<arco-core:isRoleOf>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="concat($NS, 'AgentRole/', $itemURI, '-counterstamp-issuer-', position())" />
+		                        </xsl:attribute>
+							</arco-core:isRoleOf>
+						</rdf:Description>
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(.)))" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/italia/onto/l0/Agent'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+							<arco-core:isAgentOf>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="concat($NS, 'AgentRole/', $itemURI, '-counterstamp-issuer-', position())" />
+		                        </xsl:attribute>
+							</arco-core:isAgentOf>
+						</rdf:Description>
+						</xsl:for-each>
+						</xsl:if>
+					</xsl:if>
+				</xsl:for-each>
 			<!-- We create the Time Indexed Typed Location associated with the 
 				Cultural Property -->
 			<xsl:if test="schede/*/LC">

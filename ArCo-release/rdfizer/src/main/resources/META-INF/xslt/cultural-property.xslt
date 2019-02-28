@@ -2631,6 +2631,14 @@
 						</xsl:choose>
 					</arco-dd:hasCulturalPropertyAccessibility>
 				</xsl:if>
+				<!-- numismatic property counterstamp -->
+				<xsl:for-each select="schede/NU/DA/CON">
+					<arco-dd:hasAffixedElement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Counterstamp/', $itemURI, '-counterstamp')" />
+						</xsl:attribute>
+					</arco-dd:hasAffixedElement>
+				</xsl:for-each>
 				<!-- cultural property cataloguing category -->
 				<xsl:if test="schede/*/OG/OGT/OGTV">
 					<arco-arco:hasCulturalPropertyCataloguingCategory>
