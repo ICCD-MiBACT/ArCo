@@ -1020,6 +1020,26 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasGenus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasGenus">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isGenusIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia biologica al genere, che è uno dei concetti della tassonomia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a biological taxonomy to the genus, that is one of the concept of the taxonomy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha genere</rdfs:label>
+        <rdfs:label xml:lang="en">has genus</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasIntervention -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasIntervention">
@@ -1668,7 +1688,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasSECCategory -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSECCategory">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un inventario patrimoniale alla categoria SEC attribuita al bene.</rdfs:comment>
@@ -1765,6 +1785,26 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasSpecies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSpecies">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpeciesIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia biologica alla specie, che è uno dei concetti della tassonomia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a biological taxonomy to the subspecies, that is one of the concept of the taxonomy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha specie</rdfs:label>
+        <rdfs:label xml:lang="en">has species</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasStratigraphicUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasStratigraphicUnit">
@@ -1795,6 +1835,26 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasSubspecies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSubspecies">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSubspeciesIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia biologica alla sottospecie, che è uno dei concetti della tassonomia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a biological taxonomy to the subspecies, that is one of the concept of the taxonomy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha sottospecie</rdfs:label>
+        <rdfs:label xml:lang="en">has subspecies</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2200,6 +2260,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isGenusIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isGenusIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un genere alla tassonomia in cui è classificato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a genus to the biological taxonomy in which it is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is genus in</rdfs:label>
+        <rdfs:label xml:lang="it">è genere in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy">
@@ -2419,6 +2496,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isSpeciesIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSpeciesIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una specie alla tassonomia in cui è classificata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a species to the biological taxonomy in which it is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is species in</rdfs:label>
+        <rdfs:label xml:lang="it">è specie in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isSubjectOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSubjectOf">
@@ -2432,6 +2526,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isSubspeciesIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSubspeciesIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una sottospecie alla tassonomia in cui è classificata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a subspecies to the biological taxonomy in which it is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is subspecies in</rdfs:label>
+        <rdfs:label xml:lang="it">è sottospecie in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4737,20 +4848,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasGenus"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSpecies"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSubspecies"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una tassonomia biologica, ossia i criteri con cui si ordinano gli organismi in un sistema di classificazione.</rdfs:comment>
@@ -5633,7 +5747,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isGenusIn"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -6811,7 +6925,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSpeciesIn"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -6874,7 +6988,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSubspeciesIn"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
