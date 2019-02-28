@@ -41,10 +41,8 @@
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="en">The ArCo module is the central node of the network ArCo - Architecture of Knowledge. It imports all the other modules and the ontologies directly reused, and models core information about cultural heritage.</rdfs:comment>
     </owl:Ontology>
     
@@ -121,6 +119,60 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACC</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/hasCartographicClassification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCartographicClassification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasClassification"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CartographicClassification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla sua classificazione cartografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to its cartographic classification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">ha classificazione cartografica</rdfs:label>
+        <rdfs:label xml:lang="en">has cartographic classification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/hasCartographicSymbol -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCartographicSymbol">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CartographicClassification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CartographicSymbol"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione cartografica di un bene cultural al simbolo cartografico, in riferimento al tema.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cartographic classification of a cultural property to the cartographic symbol related to the theme.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">ha simbolo cartografico</rdfs:label>
+        <rdfs:label xml:lang="en">has cartographic symbol</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMD</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/hasCartographicTheme -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCartographicTheme">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CartographicClassification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CartographicTheme"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione cartografica di un bene culturale al tema di riferimento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cartographic classification of a cultural property to the cartographic theme.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">ha tema cartografico</rdfs:label>
+        <rdfs:label xml:lang="en">has cartographic theme</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -375,6 +427,24 @@
         <rdfs:label xml:lang="en">has related agency</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/hasThematicCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasThematicCategory">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CartographicClassification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/ThematicCategory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione cartografica di un bene culturale alla categoria tematica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cartographic classification of a cultural property to the thematic category.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">ha categoria tematica</rdfs:label>
+        <rdfs:label xml:lang="en">has thematic category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -925,6 +995,24 @@
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTI</arco-catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/cartographicSymbolIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/cartographicSymbolIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CartographicSymbol"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice identificativo attribuito al simbolo cartografico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the identifier associated to the cartographic symbol.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">cartographic symbol identifier</rdfs:label>
+        <rdfs:label xml:lang="it">identificativo del simbolo cartografico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1514,6 +1602,78 @@
         <rdfs:label xml:lang="it">Bene Architettonico o Paesaggistico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/CartographicClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CartographicClassification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasCartographicSymbol"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CartographicSymbol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasCartographicTheme"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/CartographicTheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasThematicCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/ThematicCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione di un bene culturale relativamente alla rappresentazione cartografica del bene su specifici livelli tematici, con riferimento a uno standard oppure a un&apos;organizzazione logica predefinita dall&apos;Ente responsabile dell&apos;attività di catalogazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a cartographic classification of a cultural property, referring to the cartographic representation on specific thematic levels, based on a standard or a classification defined by the cataloguing agency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">Cartographic classification</rdfs:label>
+        <rdfs:label xml:lang="it">Classificazione cartografica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale: CT</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/CartographicSymbol -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CartographicSymbol">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/cartographicSymbolIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il simbolo con cui si rappresenta il bene su una base cartografica in relazione al tema di interesse.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the symbol used to represent the cultural property on a cartographic base map, referring to the cartographic theme.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">Cartographic symbol</rdfs:label>
+        <rdfs:label xml:lang="it">Simbolo cartografico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMD</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/CartographicTheme -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CartographicTheme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tema di riferimento associato a una classificazione cartografica di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the cartographic theme associated to a cartographic classification of a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="en">Cartographic theme</rdfs:label>
+        <rdfs:label xml:lang="it">Tema cartografico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
@@ -2367,6 +2527,7 @@
     <!-- https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/hasPhotographicHeritageClassificationType"/>
@@ -2468,6 +2629,22 @@
         <rdfs:label xml:lang="en">Tangible Cultural Property</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/ThematicCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/ThematicCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria tematica associata alla classificazione cartografica di un bene culturale (es.: Architetture, Emergenze Archeologiche)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the thematic category associated to a cartographic classification of a cultural property (e.g.: Architecture).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <rdfs:label xml:lang="it">Categoria tematica</rdfs:label>
+        <rdfs:label xml:lang="en">Thematic category</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 

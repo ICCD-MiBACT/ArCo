@@ -30,7 +30,6 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <owl:versionInfo xml:lang="it">Versione 0.4 alpha</owl:versionInfo>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
@@ -50,12 +49,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://ontologydesignpatterns.org/opla#reusesPatternAsTemplate -->
-
-    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla#reusesPatternAsTemplate"/>
     
 
 
