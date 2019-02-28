@@ -1441,6 +1441,24 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasPrimaryDocumentation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPrimaryDocumentation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasDocumentation"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene demoetnoantropologico immateriale alla sua documentazione primaria, ovvero la documentazione che restituisce il bene immateriale e ritenuta più rappresentativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an intangible demoethnoanthropological property to its primary documentation, that is the documentation more representative of the intangible heritage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha documentazione primaria</rdfs:label>
+        <rdfs:label xml:lang="en">has primary documentation</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa BDI 4.00: DU, DV, DF</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasProfession -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasProfession">

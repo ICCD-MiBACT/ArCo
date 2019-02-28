@@ -2196,6 +2196,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasPrimaryDocumentation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearch"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
             </owl:Restriction>
