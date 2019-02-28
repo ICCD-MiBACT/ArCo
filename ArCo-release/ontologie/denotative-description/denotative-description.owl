@@ -36,6 +36,7 @@
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="en">In the Denotative Description module are modelled pieces of information regarding the characteristics and qualities of a cultural property, as detectable and/or detected during the cataloguing process. Examples are: measurements, materials, technique, conservation status.</rdfs:comment>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa del bene culturale (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), include la modellazione delle informazioni che riguardano il bene culturale in sé, con i suoi attributi (rilevati/rilevabili al momento della catalogazione).</rdfs:comment>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <rdfs:label>Denotative Description Ontology (ArCo network)</rdfs:label>
@@ -58,6 +59,12 @@
     <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
 
 

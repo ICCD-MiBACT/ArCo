@@ -28,10 +28,11 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:comment xml:lang="en">This module models information on cultural events involving cultural properties.</rdfs:comment>
         <rdfs:label>Cultural event Ontology (ArCo network)</rdfs:label>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo xml:lang="it">Versione 0.2 beta</owl:versionInfo>
+        <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative agli eventi culturali che possono aver coinvolto un bene culturale.</rdfs:comment>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
