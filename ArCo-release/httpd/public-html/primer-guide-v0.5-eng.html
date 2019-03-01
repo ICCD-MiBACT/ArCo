@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>ArCo - Primer Guide v0.5</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+
+<!-- Plugin CSS -->
+<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"
+	type="text/css">
+
+<!-- Custom styles for this template -->
+<link href="css/freelancer.css" rel="stylesheet">
+</head>
+<body>
+	<nav
+		class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+		id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">ArCo - Primer Guide v0.5</a>
+			<button
+				class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
+				type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+						href="./index.html">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="primer">
+		<div class="container">
+			<h1>ArCo - Primer Guide v0.5</h1>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="intro">Introduction</h2>
+			<p>This document briefly describes the ontologies part of the 0.5 <i>alpha</i> version of ArCo. The ontologies are organised in a network for modelling different kind of cultural properties and their corresponding catalog records. Those cultural properties and records are currently managed by the SIGEC system of the <i>Italian Central Institute for Cataloguing and Documentation</i> (ICCD).
+			</p>
+			<p>ArCo v0.5 is the fifth version to be published. In this version the organization of the modules has been partially modified: <i>core</i> has become the module containing the modeling of toplevel concepts, which are used in all other modules; while <i>arco</i> is the new module representing the entire network (i.e. it imports all the other modules) and containing central concepts related to cultural heritage (e.g. the hierarchy of the various types of cultural property). For more information on the versions of ArCo ontologies please refer to the <a href="./primer-guide.html">Primer Guide v0.1</a>.
+			</p>
+			<p>ArCo ontologies are published in a <i>docker</i> including:
+			</p>
+			<ul>
+				<li>This guide;</li>
+				<li>The ontological models so far developed;</li>
+				<li>Examples of <i>competency questions</i> in the form of SPARQL queries;
+				</li>
+				<li>A sample of SIGEC data transformed into RDF according to ArCo modeling;</li>
+				<li>A SPARQL engine based on Virtuoso to allow the interrogation of data and ontologies.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2>Table of contents</h2>
+			<ol>
+				<li><a href="#rete">ArCo v0.5 ontology network</a></li>
+				<li><a href="#moduli">ArCo v0.5 modules</a></li>
+			</ol>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="rete">ArCo v0.5 ontology network</h2>
+			<p>
+				This fifth version of the ArCo ontology network represents all the information contained in the <a target="_blank"href"http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici">Normativa Trasversale</a> and main information from the directives related to each type of cultural property. The new main information modeled in this version are listed below:
+			</p>
+			<ul>
+				<li>Recurrent events;</li>
+				<li>circumstances involving a cultural property;</li>
+				<li>Estimation of sex and age of death of an anthropological finding;</li>
+				<li>Communication methods that convey an intangible cultural property;</li>
+				<li>Biological taxonomy (genus, species, subspecies);</li>
+				<li>Stratigraphic area, room and square;</li>
+				<li>Information and deepening modules;</li>
+				<li>Material composing a batch of archaeological materials;</li>
+				<li>Material accessibility and availability of the cultural property;</li>
+				<li>Various types of specific classifications for individual types of cultural property;</li>
+				<li>Cartographic classification;</li>
+				<li>Primary documentation of an intangible cultural property.</li>
+			</ul>
+			<p>The following table lists the IRIs of the reused modules and ontologies with an associated prefix.</p>
+			<table>
+				<tr>
+					<th>Prefix</th>
+					<th>IRI</th>
+				</tr>
+				<tr>
+					<td>arco-arco:</td>
+					<td>https://w3id.org/arco/ontology/arco/</td>
+				</tr>
+				<tr>
+					<td>arco-core:</td>
+					<td>https://w3id.org/arco/ontology/core/</td>
+				</tr>
+				<tr>
+					<td>arco-ce:</td>
+					<td>https://w3id.org/arco/ontology/cultural-event/</td>
+				</tr>
+				<tr>
+					<td>arco-catalogue:</td>
+					<td>https://w3id.org/arco/ontology/catalogue/</td>
+				</tr>
+				<tr>
+					<td>arco-dd:</td>
+					<td>https://w3id.org/arco/ontology/denotative-description/</td>
+				</tr>
+				<tr>
+					<td>arco-location:</td>
+					<td>https://w3id.org/arco/ontology/location/</td>
+				</tr>
+				<tr>
+					<td>arco-cd:</td>
+					<td>https://w3id.org/arco/ontology/context-description/</td>
+				</tr>
+				<tr>
+					<td>cis:</td>
+					<td>http://dati.beniculturali.it/cis/</td>
+				</tr>
+				<tr>
+					<td>l0:</td>
+					<td>https://w3id.org/italia/onto/l0/</td>
+				</tr>
+				<tr>
+					<td>roapit:</td>
+					<td>https://w3id.org/italia/onto/RO/</td>
+				</tr>
+				<tr>
+					<td>tiapit:</td>
+					<td>https://w3id.org/italia/onto/TI/</td>
+				</tr>
+				<tr>
+					<td>clvapit:</td>
+					<td>https://w3id.org/italia/onto/CLV/</td>
+				</tr>
+				<tr>
+					<td>smapit:</td>
+					<td>https://w3id.org/italia/onto/SM/</td>
+				</tr>
+				<tr>
+					<td>language:</td>
+					<td>https://w3id.org/italia/onto/Language/</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="moduli">ArCo v0.5 modules</h2>
+			<p>This section briefly illustrates the new main concepts introduced in the fifth version of the ArCo network. For a detailed description, refer to the "Ontologies" section of the main page.</p>
+			<p>Both the modeling choices and the vocabulary are to be considered unstable.</p>
+
+			<h3>Core module (arco-core:)</h3>
+			<p>This module models the information considered as toplevel (e.g. the relationship between the whole and its part, between an entity and its characteristics, between an entity and a generic place, etc.). It is imported by all other modules of the network.</p>
+
+			<h3>ArCo module (arco-arco:)</h3>
+			<p>This module models the information considered as central concepts in the Cultural Heritage domain. The diagram illustrates the modeling of the material composing a batch of archaeological materials.</p>
+			<div class="text-center mt-4">
+				<img src="./img5/archaeological-material.png" /> 
+			</div>
+
+			<h3>Denotative Description module (arco-dd:)</h3>
+			<p>This module models (denotation refers to the act of indicating something through external signs) information regarding the cultural property in itself, with its attributes. The diagram illustrates the modeling of the communication methods through which an immaterial demo-ethno-anthropological asset is conveyed.
+			<div class="text-center mt-4">
+				<img src="./img5/communication-medium.png" />
+			</div>
+
+			<h3>Context Description module (arco-cd:)</h3>
+			<p>This module models the information regarding the context - in a broad sense - of a cultural property in the course of its history: each context, which interests him or has interested him, is described in the components "space", "time", "event", "entities involved" (bodies, people, other resources). The diagrams show the representations of: the estimation of sex and the age of death of an anthropological finding; the circumstances of realization of an immaterial demo-etno-anthropological asset; the taxonomy related to an anthropological finding.</p>
+			<div class="text-center mt-4">
+				<img src="./img5/sex-ageofdeath-estimate.png" /> 
+				<img src="./img5/BDI-circumstance.png" />
+				<img src="./img5/biological-taxonomy.png" />
+			</div>
+
+			<h3>Location module (arco-location:)</h3>
+			<p>This module models information related to the location of a cultural property. The diagram illustrates the representation of elements that allow the correct identification of the location of a stratigraphic record: area, room, square.</p>
+			<div class="text-center mt-4">
+				<img src="./img5/stratigraphic-arearoomsquare.png" />
+			</div>
+
+			<h3>Catalogue module(arco-catalogue:)</h3>
+			<p>This module models the information related to the Catalogue of Cultural Heritage, and therefore to the catalogue records. The diagram illustrates the representation of informative and deepening modules, which can refer to a cultural property and be mentioned in the catalogue.</p>
+			<div class="text-center mt-4">
+				<img src="./img5/information-additional-form.png" />
+			</div>
+
+			<h3>Cultural Event module(arco-ce:)</h3>
+			<p>This module models information about events involving a cultural property. The diagram represents the recurrent events, understood as collections of events occurring with a certain periodicity. Recurrent events can be both special types of immaterial demo-ethno-anthropological assets and events involving other cultural assets.</p>
+			<div class="text-center mt-4">
+				<img src="./img5/recurrent-event.png" />
+			</div>
+		</div>
+	</section>
+	
+	<div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>
+          <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">
+            <span class="cc-license-icons">
+              <span id="cc-logo" class="icon"><img alt="cc logo" class="cc" src="./img/cc_icon_white_x2.png"></span>
+              <span id="cc-attribution" class="icon"><img class="cc" src="./img/attribution_icon_white_x2.png"></span>
+            </span>
+          </a>
+        </small>
+      </div>
+    </div>
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.js"></script>
+</body>
+</html>
