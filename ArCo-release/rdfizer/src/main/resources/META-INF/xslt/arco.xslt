@@ -23653,7 +23653,7 @@
 									<arco-dd:hasMeasurementType>
 										<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', $measurement-type)" />
 									</arco-dd:hasMeasurementType>
-									<mu:hasValue>
+									<arco-dd:hasValue>
 										<xsl:choose>
 											<xsl:when test="not($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 												<xsl:variable name="mu-value">
@@ -23694,7 +23694,7 @@
 											</xsl:otherwise>
 										</xsl:choose>
 										
-									</mu:hasValue>
+									</arco-dd:hasValue>
 								</rdf:Description>
 									
 								<rdf:Description>
@@ -23890,7 +23890,7 @@
 									<arco-dd:hasMeasurementType>
 										<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', $measurement-type)" />
 									</arco-dd:hasMeasurementType>
-									<mu:hasValue>
+									<arco-dd:hasValue>
 												<xsl:variable name="mu-value">
 													<xsl:choose>
 														<xsl:when test="$tag-name='MIFL'">
@@ -23906,7 +23906,7 @@
 												</xsl:variable>	
 												<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type), '-', arco-fn:urify($mu-value))" />
 											
-									</mu:hasValue>
+									</arco-dd:hasValue>
 								</rdf:Description>
 									
 								<rdf:Description>

@@ -140,11 +140,11 @@
 									<xsl:value-of select="concat('https://w3id.org/arco/ontology/denotative-description/', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))))" />
 								</xsl:attribute>
 							</arco-dd:hasMeasurementType>
-							<mu:hasValue>
+							<arco-dd:hasValue>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Value/', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))), '-', arco-fn:urify(normalize-space(./VMCV)), '-', arco-fn:urify(normalize-space(./VMCU)))" />
 								</xsl:attribute>
-							</mu:hasValue>
+							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
@@ -235,11 +235,11 @@
 									<xsl:value-of select="concat('https://w3id.org/arco/ontology/denotative-description/', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))))" />
 								</xsl:attribute>
 							</arco-dd:hasMeasurementType>
-							<mu:hasValue>
+							<arco-dd:hasValue>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Value/', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))), '-', arco-fn:urify(normalize-space(./VMCV)), '-', arco-fn:urify(normalize-space(./VMCU)))" />
 								</xsl:attribute>
-							</mu:hasValue>
+							</arco-dd:hasValue>
 						</rdf:Description>
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
