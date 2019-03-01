@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-42.owl#"
-     xml:base="https://w3id.org/arco/test/testcase-42.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-42.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-42.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-42.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-42.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
 
@@ -23,6 +23,7 @@ LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
         <testannotationschema:hasCQ xml:lang="it">Quali sono tutte le versioni della scheda catalografica di un bene culturale x e in che anno sono state fatte?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are all the catalogue record versions of the cultural property x? When have they been filled out?</testannotationschema:hasCQ>
         <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;CultProp&quot;, &quot;CatRecord&quot;, &quot;Version&quot;, &quot;time&quot;] },
   &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
