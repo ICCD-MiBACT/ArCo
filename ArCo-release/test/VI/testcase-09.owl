@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-48.owl#"
-     xml:base="https://w3id.org/arco/test/testcase-48.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/testcase-09.owl#"
+     xml:base="https://w3id.org/arco/test/VI/testcase-09.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -16,6 +16,10 @@
 -Il bene culturale è stato recuperato per tradizione orale
 -Il suo autore è Antonio Mennillo
 -L&apos;assegnazione dell&apos;autore ha come fonte la ricerca bibliografia</testannotationschema:hasInferenceRequirement>
+<testannotationschema:hasInferenceRequirement xml:lang="en">-The nursery rhyme Ambarabaccicciccocco is cultural entity.
+-The cultural entity has been recovered by oral tradition
+-The author is Antonio Mennillo
+-The authorhip assignment has as source bibliography</testannotationschema:hasInferenceRequirement>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
     </owl:Ontology>
