@@ -20,6 +20,17 @@
 -è stata realizzata incidendo la pietra
 -è conservata in un locale non climatizzato
 -è stato proposto un intervento di spolveratura</testannotationschema:hasInferenceRequirement>
+     <testannotationschema:hasInferenceRequirement xml:lang="en">
+     
+A medieval stele:
+- has a good state of conservation.
+- has a religious engraving on the other right attributable to Pope Pius XI.
+- is a religious epigraph
+- It was made by engraving the stone
+-is stored in not air-conditioned room
+- a dusting operation has been proposed
+     
+     </testannotationschema:hasInferenceRequirement>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
     </owl:Ontology>
 </rdf:RDF>
