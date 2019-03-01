@@ -26,7 +26,8 @@
     ]
   }
 }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasCQ xml:lang="it">Qual&apos;è il modulo di approfondimento e di informazioni del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="it">Qual è il modulo di approfondimento e di informazioni del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the cultural property X additional form and Information form?</testannotationschema:hasCQ>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI05.owl"/>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/ontology/catalogue/&gt;
 
