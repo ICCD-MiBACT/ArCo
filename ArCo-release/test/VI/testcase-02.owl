@@ -17,6 +17,14 @@
 -ha una sola versione, compilata nel 1993 da Mario Rossi e dal Funzionario Luigi Verdi.
 -ha un livello di catalogazione C.
 -ha un profilo d&apos;accesso di privacy minima, i dati sono pubblicabili.</testannotationschema:hasInferenceRequirement>
+         <testannotationschema:hasInferenceRequirement xml:lang="en">
+         Catalog record 0736:
+-Describes the archaeological good "dinosaur bone".
+- It is a Naturalistic-Paleontology record.
+- has only one version, compiled in 1993 by Mario Rossi and the Luigi Verdi functionary.
+- has a cataloging level C.
+- has a profile of minimum privacy access, data can be published.
+         </testannotationschema:hasInferenceRequirement>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI02.owl"/>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
