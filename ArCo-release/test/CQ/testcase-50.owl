@@ -24,6 +24,7 @@
 }</testannotationschema:hasExpectedResult>
         <testannotationschema:hasCQ xml:lang="en">What are the coins which have inscriptions on them?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="it">Quali sono le monete che hanno delle iscrizioni?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the coins which have inscriptions on them?</testannotationschema:hasCQ>
         <testannotationschema:testDate xml:lang="en">2019-02-27</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI06.owl"/>
