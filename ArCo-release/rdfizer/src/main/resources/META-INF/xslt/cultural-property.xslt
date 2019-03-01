@@ -118,8 +118,10 @@
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$culturalPropertyComponent" />
 					</xsl:attribute>
-
-					<rdf:type rdf:resource="https://w3id.org/arco/core/CulturalPropertyComponent" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTP)" />
+					</rdfs:label>
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent" />
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
 		                       <xsl:value-of
@@ -1860,16 +1862,16 @@
                             <xsl:attribute name="rdf:resource">
                                 <xsl:choose>
                                     <xsl:when test="lower-case(normalize-space(.))='archeologico'">
-                                        <xsl:value-of select="'https://w3id.org/arco/core/Archaeological'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchaeologicalScope'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(.))='architettonico e paesaggistico'">
-                                        <xsl:value-of select="'https://w3id.org/arco/core/ArchitecturalLandscape'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/arco/ArchitecturalLandscapeScope'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(.))='etnoantropologico'">
-                                        <xsl:value-of select="'https://w3id.org/arco/core/EthnoAnthropological'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/arco/EthnoAnthropologicalScope'" />
                                     </xsl:when>
                                     <xsl:when test="lower-case(normalize-space(.))='storico artistico'">
-                                        <xsl:value-of select="'https://w3id.org/arco/core/HistoricalArtistic'" />
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/arco/HistoricalArtisticScope'" />
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:value-of select="concat($NS, 'MibacScopeOfProtection/', arco-fn:urify(normalize-space(.)))" />
@@ -1893,7 +1895,7 @@
 										select="concat($NS, 'MibacScopeOfProtection/', arco-fn:urify(normalize-space(.)))" />
                                 </xsl:attribute>
 									<rdf:type
-										rdf:resource="https://w3id.org/arco/core/MibacScopeOfProtection" />
+										rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection" />
 									<rdfs:label>
 										<xsl:value-of select="normalize-space(.)" />
 									</rdfs:label>
@@ -2104,22 +2106,22 @@
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto urbano'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Urban'" />
+							select="'https://w3id.org/arco/ontology/location/Urban'" />
 	                                </xsl:when>
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto suburbano'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Suburban'" />
+							select="'https://w3id.org/arco/ontology/location/Suburban'" />
 	                                </xsl:when>
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto territoriale'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Territorial'" />
+							select="'https://w3id.org/arco/ontology/location/Territorial'" />
 	                                </xsl:when>
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto subacqueo'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Underwater'" />
+							select="'https://w3id.org/arco/ontology/location/Underwater'" />
 	                                </xsl:when>
 	                                <xsl:otherwise>
 	                                    <xsl:value-of
@@ -2137,22 +2139,22 @@
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto urbano'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Urban'" />
+							select="'https://w3id.org/arco/ontology/location/Urban'" />
 	                                </xsl:when>
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto suburbano'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Suburban'" />
+							select="'https://w3id.org/arco/ontology/location/Suburban'" />
 	                                </xsl:when>
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto territoriale'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Territorial'" />
+							select="'https://w3id.org/arco/ontology/location/Territorial'" />
 	                                </xsl:when>
 	                                <xsl:when
 							test="lower-case(normalize-space(.)) = 'contesto subacqueo'">
 	                                    <xsl:value-of
-							select="'https://w3id.org/arco/location/Underwater'" />
+							select="'https://w3id.org/arco/ontology/location/Underwater'" />
 	                                </xsl:when>
 	                                <xsl:otherwise>
 	                                    <xsl:value-of

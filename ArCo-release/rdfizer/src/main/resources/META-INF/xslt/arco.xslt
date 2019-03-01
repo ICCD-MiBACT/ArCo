@@ -4421,7 +4421,7 @@
 							<xsl:when test="./DTN/DTNS and (not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'n.r')))">
 								<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
-									select="concat($NS, 'Event/', arco-fn:urify(normalize-space(./DTN/DTNS)))" />
+									select="concat($NS, 'Event/', $itemURI, arco-fn:urify(normalize-space(./DTN/DTNS)))" />
                                 </xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
@@ -4507,7 +4507,7 @@
                         <xsl:choose>
                             <xsl:when test="./DTN/DTNS and (not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'n.r')))">
                                 <xsl:value-of
-						select="concat($NS, 'Event/', arco-fn:urify(normalize-space(./DTNS)))" />
+						select="concat($NS, 'Event/', $itemURI, arco-fn:urify(normalize-space(./DTNS)))" />
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:value-of
@@ -4768,7 +4768,7 @@
 							<xsl:when test="./REN/RENS and (not(starts-with(lower-case(normalize-space(./REN/RENS)), 'nr')) and not(starts-with(lower-case(normalize-space(./REN/RENS)), 'n.r')))">
 								<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
-									select="concat($NS, 'Event/', arco-fn:urify(normalize-space(./REN/RENS)))" />
+									select="concat($NS, 'Event/', $itemURI, arco-fn:urify(normalize-space(./REN/RENS)))" />
                                 </xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
@@ -4820,7 +4820,7 @@
                         <xsl:choose>
                             <xsl:when test="./REN/RENS and (not(starts-with(lower-case(normalize-space(./REN/RENS)), 'nr')) and not(starts-with(lower-case(normalize-space(./REN/RENS)), 'n.r')))">
                                 <xsl:value-of
-						select="concat($NS, 'Event/', arco-fn:urify(normalize-space(./REN/RENS)))" />
+						select="concat($NS, 'Event/', $itemURI, arco-fn:urify(normalize-space(./REN/RENS)))" />
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:value-of
@@ -19332,7 +19332,7 @@
 								<xsl:value-of select="normalize-space(./RSTS)" />
 							</arco-cd:framework>
 						</xsl:if>
-						<xsl:if test="./RSTT and not($sheetType='A')">
+						<xsl:if test="./RSTT">
 							<arco-core:description>
 								<xsl:value-of select="normalize-space(./RSTT)" />
 							</arco-core:description>
@@ -19365,15 +19365,6 @@
                         		</xsl:attribute>
 							</tiapit:atTime>
 						</xsl:if>
-					<xsl:if test="./RSTT and $sheetType='A' and (not(starts-with(lower-case(normalize-space(./RSTT)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTT)), 'n.r')))">
-						<xsl:for-each select="./RSTT">
-						<arco-cd:hasInterventionType>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(.)))" />
-							</xsl:attribute>
-						</arco-cd:hasInterventionType>
-						</xsl:for-each>
-					</xsl:if>
 					<xsl:if test="./RSTE">
 						<arco-cd:hasActivityResponsible>
 							<xsl:attribute name="rdf:resource">
@@ -19399,24 +19390,7 @@
 						</arco-cd:hasActivityOperator>
 					</xsl:if>
 				</rdf:Description>
-					<!-- intervention type as an individual -->
-					<xsl:if test="./RSTT and $sheetType='A' and (not(starts-with(lower-case(normalize-space(./RSTT)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSTT)), 'n.r')))">
-						<xsl:for-each select="./RSTT">
-						<rdf:Description>
-								<xsl:attribute name="rdf:about">
-	                                <xsl:value-of
-											select="concat($NS, 'InterventionType/', arco-fn:urify(normalize-space(.)))" />
-	                            </xsl:attribute>
-								<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType" />
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(.)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(.)" />
-								</l0:name>
-						</rdf:Description>
-						</xsl:for-each>
-					</xsl:if>
+					
 					<!-- Time Interval for intervention as an individual -->
 					<xsl:if test="./RSTD">
 						<rdf:Description>

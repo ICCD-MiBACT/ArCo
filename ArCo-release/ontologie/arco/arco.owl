@@ -2315,10 +2315,10 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/Archaeological"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/ArchitecturalLandscape"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/EthnoAnthropological"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/HistoricalArtistic"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/ArchaeologicalScope"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/ArchitecturalLandscapeScope"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/EthnoAnthropologicalScope"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/HistoricalArtisticScope"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -2978,9 +2978,9 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/Archaeological -->
+    <!-- https://w3id.org/arco/ontology/arco/ArchaeologicalScope -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/Archaeological">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/ArchaeologicalScope">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Archeaological</rdfs:label>
         <rdfs:label xml:lang="it">Archeologico</rdfs:label>
@@ -2990,9 +2990,9 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/ArchitecturalLandscape -->
+    <!-- https://w3id.org/arco/ontology/arco/ArchitecturalLandscapeScope -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/ArchitecturalLandscape">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/ArchitecturalLandscapeScope">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Architectural or Landscape</rdfs:label>
         <rdfs:label xml:lang="it">Architettonico o Paesaggistico</rdfs:label>
@@ -3002,9 +3002,9 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/EthnoAnthropological -->
+    <!-- https://w3id.org/arco/ontology/arco/EthnoAnthropologicalScope -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/EthnoAnthropological">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/EthnoAnthropologicalScope">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Ethno-anthropological</rdfs:label>
         <rdfs:label xml:lang="it">Etnoantropologico</rdfs:label>
@@ -3014,9 +3014,9 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/HistoricalArtistic -->
+    <!-- https://w3id.org/arco/ontology/arco/HistoricalArtisticScope -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/HistoricalArtistic">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/arco/HistoricalArtisticScope">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Historical Artistic</rdfs:label>
         <rdfs:label xml:lang="it">Storico Artistico</rdfs:label>
