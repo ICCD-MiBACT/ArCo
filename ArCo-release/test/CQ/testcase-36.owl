@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-36.owl#"
-     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-36.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-36.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-36.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-36.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-36.owl#">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
@@ -35,6 +35,7 @@ where {
 } LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasCQ xml:lang="it">Quali sono i sistemi di scrittura che sono stati adottati in elementi apposti (iscrizioni, stemmi, marchi, emblemi, etc.) sui beni culturali conservati nella regione Puglia e la cui creazione risale al VI secolo a.C.?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="it">What are the writing systems which has been used in affixed elements (i.e. inscriptions, crests, trademarks, emblems) on cultural properties and that are located in Puglia and that their creation goes back to the VI century b.C.? </testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult xml:lang="it">{
   &quot;head&quot;: {
     &quot;vars&quot;: [ &quot;sistema&quot; ]
