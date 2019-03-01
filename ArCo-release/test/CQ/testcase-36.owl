@@ -35,7 +35,7 @@ where {
 } LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasCQ xml:lang="it">Quali sono i sistemi di scrittura che sono stati adottati in elementi apposti (iscrizioni, stemmi, marchi, emblemi, etc.) sui beni culturali conservati nella regione Puglia e la cui creazione risale al VI secolo a.C.?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="it">What are the writing systems which has been used in affixed elements (i.e. inscriptions, crests, trademarks, emblems) on cultural properties and that are located in Puglia and that their creation goes back to the VI century b.C.? </testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the writing systems which has been used in affixed elements (i.e. inscriptions, crests, trademarks, emblems) on cultural properties and that are located in Puglia and that their creation goes back to the VI century b.C.? </testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult xml:lang="it">{
   &quot;head&quot;: {
     &quot;vars&quot;: [ &quot;sistema&quot; ]
