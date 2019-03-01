@@ -3422,6 +3422,14 @@
                 	</arco-cd:hasRelatedAgent>                
                 </xsl:for-each>
                <!-- Surveys -->
+               <!-- observation survey of cultural property -->
+                <xsl:if test="schede/*/DR/DRV and not($sheetVersion='4.00') and not($sheetVersion='4.00_ICCD0')">
+                	<arco-cd:hasSurvey>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ObservationSurvey/', $itemURI)" />
+                		</xsl:attribute>
+                	</arco-cd:hasSurvey>
+                </xsl:if>
                 <!-- Archaeological field survey of cultural property -->
                 <xsl:if test="not(schede/*/RE/RCG/RCGD='0000/00/00' or schede/*/RE/RCG/RCGD='/') and schede/*/RE/RCG/*">
                 <xsl:for-each select="schede/*/RE/RCG">
