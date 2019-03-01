@@ -10,10 +10,15 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/testcase-08.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasInferenceRequirement xml:lang="it">-I reperti di Lucy sono una cultural entity.
--Il sesso del reperto è stimato come appartenente ad individuo femminile
--L&apos;età di morte di Lucy è stimata sui 21 anni
--Il contesto di ritrovamento è una sepoltura individuale
+-Il sesso del reperto è stimato come appartenente ad individuo femminile.
+-L&apos;età di morte di Lucy è stimata sui 21 anni.
+-Il contesto di ritrovamento è una sepoltura individuale.
 -La tassonomia del reperto è: Australopithecus Africanus (genere) Paranthropus (specie)</testannotationschema:hasInferenceRequirement>
+        <testannotationschema:hasInferenceRequirement xml:lang="it">-Lucy&apos;s finds are cultural entities.
+-The artifact&apos;s has been estimated as belonging to a female individual.
+-Lucy&apos;s date of death has been estimated at 21 years old.
+-The finding context is individual burial. 
+-The artifact&apos;s taxonomy is: Australopithecus Africanus (genus), Paranthropus (species)</testannotationschema:hasInferenceRequirement>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI08.owl"/>
         <testannotationschema:testDate xml:lang="en">2019-02-27</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
