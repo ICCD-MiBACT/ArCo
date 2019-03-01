@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-37.owl#"
-     xml:base="https://w3id.org/arco/test/testcase-37.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-37.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-37.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-37.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-37.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0A%0D%0Aselect++%3Fbencult+%3Fx%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-core%3AhasNumberOfComponents+%3Fcomp.%0D%0A+%3Fcomp+arco-core%3AnumberOfComponents+%3Fx%0D%0A++FILTER+%28xsd%3Ainteger%28%3Fx%29+%3E+2%29%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasCQ xml:lang="it">Quali sono i beni culturali complessi con un numero di elementi componenti superiore a 2?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the complex cultural properties which have a number of components greater than 2?</testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;x&quot;] },
   &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
     { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0100036413-2&quot; }        , &quot;x&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;5&quot; }},
