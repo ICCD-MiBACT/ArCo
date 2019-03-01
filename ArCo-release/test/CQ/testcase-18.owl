@@ -21,6 +21,7 @@ where {
  ?collectionitems arcocd:hasMemberOfCollection ?item.
 } LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:hasCQ xml:lang="it">Qual è il codice identificativo della collezione X? E quali beni ne fanno parte?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the ID of the X collection? And what cultural entities belong to the collection?</testannotationschema:hasCQ>        
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ18.ttl"/>
         <testannotationschema:hasExpectedResult xml:lang="it">{
