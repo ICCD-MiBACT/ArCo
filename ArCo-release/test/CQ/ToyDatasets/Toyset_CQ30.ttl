@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ/36> . 
+@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ30/> . 
 @prefix arcocore: <https://w3id.org/arco/core/> .
 @prefix arcodd: <https://w3id.org/arco/denotative-description/> .
 
