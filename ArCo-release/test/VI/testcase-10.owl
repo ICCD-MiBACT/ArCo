@@ -16,6 +16,9 @@
         <testannotationschema:hasInferenceRequirement xml:lang="it">-Il saggio stratigrafico è presso la città romana di Ostia
 -Il saggio è stato fatto nella stanza delle Terme del Nuotatore
 -Il saggio è diviso in 3 quadranti</testannotationschema:hasInferenceRequirement>
+        <testannotationschema:hasInferenceRequirement xml:lang="en">-The stratigraphic property is located in the roman city Ostia.
+-The property is located in the &quotTerme del Nuotatore;&quot;&apos;s room.
+The property is composed by 3 squares. </testannotationschema:hasInferenceRequirement>  
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
     </owl:Ontology>
 </rdf:RDF>
