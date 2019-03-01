@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-13.owl#"
-     xml:base="https://w3id.org/arco/test/testcase-13.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-13.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-13.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-13.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-13.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasAcquisition+%3Facquisition+.%0D%0A++%3Facquisition+arco-cd%3AhasPreviousOwner+%3FpreviousOwner+.%0D%0A%0D%0A%7D%0D%0A%0D%0Alimit+100&amp;format=text%2Fhtml&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasCQ xml:lang="it">Quali sono i proprietari precedenti del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">Who a the previous owner of the cultural property X?</testannotationschema:hasCQ>
         <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
