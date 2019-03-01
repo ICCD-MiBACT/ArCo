@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-47.owl#"
-     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-47.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-45.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-45.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/testcase-47.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-45.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
@@ -56,7 +56,8 @@
   }
 }</testannotationschema:hasExpectedResult>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasCQ xml:lang="it">Qual&apos;è l&apos;area storica-geografica del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="it">Qual è l&apos;area storica-geografica del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the historical-geographic are where the cultural property X was located?</testannotationschema:hasCQ>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
 PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 PREFIX CLV: &lt;https://w3id.org/italia/onto/CLV/&gt;
