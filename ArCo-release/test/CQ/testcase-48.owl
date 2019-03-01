@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-48.owl#"
-     xml:base="https://w3id.org/arco/test/testcase-48.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-48.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-48.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-48.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-48.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
 PREFIX CLV: &lt;https://w3id.org/italia/onto/CLV/&gt;
@@ -34,7 +34,8 @@ LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+CLV%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0A%0D%0A%0D%0A%0D%0ASELECT+distinct+*%0D%0AWHERE+%7B%0D%0A+%3Fcultpro+CLV%3AhasGeometry+%3Fgeom.%0D%0A+%3Fgeom+arco-location%3AhasCoordinates+%3Fcoord.%0D%0A+%3Fcoord+arco-location%3AhasAltitude+%3Faltitude.%0D%0A+%3Faltitude+arco-location%3Aalt+%3Falt.%0D%0A+%3Fcultpro+arco-dd%3AhasConservationStatus+%3Fstatus.%0D%0A+%3Fstatus+arco-dd%3AhasConservationStatusType+arco-dd%3AGood.%0D%0A+%3Fcultpro+arco-catalogue%3AisDescribedByCatalogueRecord+%3Frec.%0D%0A+%3Fcultpro+arco-cd%3AhasAcquisition+%3Facqui.%0D%0A+%3Facqui+arco-cd%3AhasAcquisitionType+%3Facquitype.%0D%0A+FILTER+%28xsd%3Ainteger%28%3Falt%29+%3C+100%29%0D%0A%7D%0D%0ALIMIT+100&amp;format=text%2Fhtml&amp;timeout=0&amp;debug=on"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
-        <testannotationschema:hasCQ xml:lang="it">Qual&apos;è il bene culturale che è stato acquisito ad un&apos;altitudine inferiore a 100m ed ha uno stato di conservazione &quot;buono&quot;? Intoltre di che tipo è la sua scheda catalografica e come è stato acquisito?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="it">Qual è il bene culturale che è stato acquisito ad un&apos;altitudine inferiore a 100m ed ha uno stato di conservazione &quot;buono&quot;? Intoltre di che tipo è la sua scheda catalografica e come è stato acquisito?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the cultural property which has been acquired at an altitude lesser than 100m and has a conservation status considered as &quot;good&quot;? Then, what is its catalographic record type? How was it acquired?</testannotationschema:hasCQ>
         <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;cultpro&quot;, &quot;geom&quot;, &quot;coord&quot;, &quot;altitude&quot;, &quot;alt&quot;, &quot;status&quot;, &quot;rec&quot;, &quot;acqui&quot;, &quot;acquitype&quot;] },
