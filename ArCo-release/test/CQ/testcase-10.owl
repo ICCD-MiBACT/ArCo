@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-10.owl#"
-     xml:base="https://w3id.org/arco/test/testcase-10.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-10.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-10.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-10.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-10.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;entityLabel&quot;, &quot;dating&quot;, &quot;event&quot;, &quot;source&quot;] },
   &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
@@ -35,6 +35,7 @@ WHERE{?entity rdfs:label ?entityLabel ;
 }
 limit 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:hasCQ xml:lang="it">A quando risale la realizzazione del bene culturale X? E quale motivazione giustifica la cronologia?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">When was the cultural property X realised? What is the motivation that justifies the chronology?</testannotationschema:hasCQ>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+arco-cd%3AhasEvent+%3Fevent+%3B%0D%0A++++arco-cd%3AhasSource+%3Fsource+%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
     </owl:Ontology>
