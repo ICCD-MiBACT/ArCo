@@ -9,11 +9,19 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/testcase-04.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasInferenceRequirement xml:lang="it">-Il sito archeologico della città di Atlantide è presso l&apos;isola di Atlantide (sul fondo dell&apos;Ocenao Atlantico).
+        <testannotationschema:hasInferenceRequirement xml:lang="it">-Il sito archeologico della città di Atlantide è presso l&apos;isola di Atlantide (sul fondo dell&apos;Oceano Atlantico).
 -L&apos;isola di Atlantide è in un contesto subacqueo.
 -L&apos;isola di Atlantide ha come area Storica la Città di Atlantide.
 -La Città di Atlantide è un Centro Storico
 -La Città di Atlantide è un Capoluogo</testannotationschema:hasInferenceRequirement>
+<testannotationschema:hasInferenceRequirement xml:lang="en">
+
+-The archaeological site of the city of Atlantis is at the island of Atlantis (at the bottom of the Atlantic Ocean).
+-The island of Atlantis is in an underwater context.
+-The island of Atlantis has the City of Atlantis as Historical area.
+-The City of Atlantis is a Historic Center
+-The City of Atlantis is a capital
+</testannotationschema:hasInferenceRequirement>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testDate xml:lang="en">2019-02-22</testannotationschema:testDate>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI04.owl"/>
