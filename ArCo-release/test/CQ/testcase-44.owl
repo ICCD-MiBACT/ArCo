@@ -59,7 +59,8 @@ LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
 }</testannotationschema:hasExpectedResult>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ44.ttl"/>
-        <testannotationschema:hasCQ xml:lang="it">Qual&apos;è il progetto di riferimento nel quale è stata prodotta la scheda del bene culturale x?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="it">Qual è il progetto di riferimento nel quale è stata prodottala scheda del bene culturale x?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the reference project in which has been created the catalogue record of the cultural entity X?</testannotationschema:hasCQ>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
     </owl:Ontology>
 </rdf:RDF>
