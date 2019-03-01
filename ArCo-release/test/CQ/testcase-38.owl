@@ -37,6 +37,7 @@ LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasCQ xml:lang="it">Quali sono stati gli organizzatori degli eventi del bene x?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the events&apos; organizers of the cultural entity X? </testannotationschema:hasCQ>
     </owl:Ontology>
 </rdf:RDF>
 
