@@ -10,7 +10,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-35.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasCQ xml:lang="it">Per quale motivo l’accesso ai dati contenuti nella scheda del bene X ha un livello di privacy media?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What is the reason why the access profile's privacy of the cultural property X is labelled as &quot;medium level&quot; in its catalogue record?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the reason why the access profile&apos;s privacy of the cultural property X is labelled as &quot;medium level&quot; in its catalogue record?</testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;reason&quot;] },
   &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
     { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071541&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
