@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/Vi/testcase-06.owl#"
-     xml:base="https://w3id.org/arco/test/Vi/testcase-06.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/testcase-06.owl#"
+     xml:base="https://w3id.org/arco/test/VI/testcase-06.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -14,6 +14,11 @@
 -La moneta ha una legenda.
 -La legenda è in aramaico con font Gotico Superiore.
 -La moneta ha legibilità decente.</testannotationschema:hasInferenceRequirement>
+        <testannotationschema:hasInferenceRequirement xml:lang="it">-The &quot;Baiocco&quot; coin is a cultural entity.
+-The coin&apos;s design has Saint Sebastiano&apos;s head.
+-The coin has a legend.
+-La legenda è in aramaico con font Gotico Superiore. The legend is in Aramaic with Upper Gothic .font-style 
+-The coin has a decent legibility.</testannotationschema:hasInferenceRequirement>
         <testannotationschema:testDate xml:lang="en">2019-02-27</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI06.owl"/>
