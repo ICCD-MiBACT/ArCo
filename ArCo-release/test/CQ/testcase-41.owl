@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/testcase-41.owl#"
-     xml:base="https://w3id.org/arco/test/testcase-41.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-41.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-41.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-41.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-41.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;catrec&quot;, &quot;vers&quot;, &quot;year&quot;, &quot;lab&quot;] },
@@ -38,6 +38,8 @@ LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+%3Fcatrec+arco-catalogue%3AhasCatalogueRecordVersion+%3Fvers.%0D%0A+%3Fvers+arco-catalogue%3AeditedAtTime+%3Fyear.%0D%0A+%3Fyear+rdfs%3Alabel+%3Flab%0D%0A+FILTER+%28xsd%3Aint%28%3Flab%29+%3E+2012%29+%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasCQ xml:lang="it">Quali sono le schede catalografiche che sono state editate dal 2012 in poi?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the catalogue records which has been edited from 2012?</testannotationschema:hasCQ>
+    
     </owl:Ontology>
 </rdf:RDF>
 
