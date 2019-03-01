@@ -17,6 +17,15 @@
 -ha una cronologia ottenuta da un&apos;analisi tipologica.
 -è stata ottenuta da un acquisto.
 -ha una documentazione fotografica composta da una foto in bianco/nero</testannotationschema:hasInferenceRequirement>
+         <testannotationschema:hasInferenceRequirement xml:lang="en">
+A Roman coin:
+- is a numismatic property.
+- has "Julius Caesar" as subject.
+- is in possession of an Italian municipality.
+- has a chronology obtained from a typological analysis.
+- was obtained from a purchase.
+- has a photographic documentation made up of a black / white photo
+         </testannotationschema:hasInferenceRequirement>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI01.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
