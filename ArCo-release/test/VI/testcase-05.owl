@@ -14,6 +14,10 @@
         <testannotationschema:hasInferenceRequirement xml:lang="it">-L&apos;Epigrafe PicenoCarnica è una cultural entity.
 -L&apos;epigrafe è descritta da un modulo di approfondimento che ne certifica la tipologia epigrafe.
 -Questa cultural identity è descritta da un modulo informativo  caratterizzato da un codice ICCD</testannotationschema:hasInferenceRequirement>
+<testannotationschema:hasInferenceRequirement xml:lang="en">
+-The Epigraph PicenoCarnica is a cultural entity.
+-The epigraph is described by a deepening form that certifies the type of inscription.
+-This cultural identity is described by an information module characterized by an ICCD code</testannotationschema:hasInferenceRequirement>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI05.owl"/>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
