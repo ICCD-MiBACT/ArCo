@@ -10,6 +10,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/test/testcase-07.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasCQ xml:lang="it">Qual è la documentazione fotografica allegata alla scheda del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the photographic documentation attached to the catalogue record describing the cultural property X?</testannotationschema:hasCQ>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;documentation&quot;] },
   &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
