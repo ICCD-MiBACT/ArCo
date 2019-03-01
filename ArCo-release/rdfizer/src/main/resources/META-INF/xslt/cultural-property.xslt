@@ -1978,6 +1978,16 @@
 						</arco-cd:isMemberOfCollection>
 					</xsl:if>
 				</xsl:for-each>
+				<!-- other cultural property records -->
+				<xsl:for-each select="schede/*/AC/ACS">
+					<xsl:if test="./*">
+						<arco-catalogue:isDescribedBy>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyRecord/', $itemURI, '-', position())" />
+							</xsl:attribute>
+						</arco-catalogue:isDescribedBy>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- conservation status -->
 				<xsl:for-each select="schede/*/CO/STC">
 				<xsl:choose>
