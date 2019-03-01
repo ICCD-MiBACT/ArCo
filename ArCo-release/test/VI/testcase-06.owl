@@ -17,7 +17,7 @@
         <testannotationschema:hasInferenceRequirement xml:lang="en">-The &quot;Baiocco&quot; coin is a cultural entity.
 -The coin&apos;s design has Saint Sebastiano&apos;s head.
 -The coin has a legend.
--The legend is in Aramaic with Upper Gothic .font-style 
+-The legend is in Aramaic with Upper Gothic font-style. 
 -The coin has a decent legibility.</testannotationschema:hasInferenceRequirement>
         <testannotationschema:testDate xml:lang="en">2019-02-27</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
