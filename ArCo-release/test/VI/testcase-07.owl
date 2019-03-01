@@ -12,6 +12,10 @@
         <testannotationschema:hasInferenceRequirement xml:lang="it">-La canzone ViaPetroni di S.B. è una cultural entity.
 -La comunicazione è implementata tramite la polifonia.
 -La Comunicazione è eseguita da una donna, un uomo e un bambino.</testannotationschema:hasInferenceRequirement>
+<testannotationschema:hasInferenceRequirement xml:lang="en">
+-The song ViaPetroni di S.B. is a cultural entity.
+- Communication is implemented through polyphony.
+- Communication is performed by a woman, a man and a child.</testannotationschema:hasInferenceRequirement>
         <testannotationschema:testDate xml:lang="en">2019-02-27</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
