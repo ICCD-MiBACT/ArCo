@@ -3931,7 +3931,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <rdfs:label xml:lang="en">rights</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa MI 3.00: DA/PLC</arco-catalogue:iccdNormTag>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     

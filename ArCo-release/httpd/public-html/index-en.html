@@ -113,6 +113,25 @@
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-md-6 col-lg-4">
+            
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl">
+              <div class="ontology-title text-center text-white"><h3>ArCo ontology</h3></div>
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/arco-arco.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+        
+          </div>
+          </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
             <a class="portfolio-item d-block mx-auto" href="http://localhost:9090/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl">
               <div class="ontology-title text-center text-white"><h3>Core ontology</h3></div>
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
@@ -230,7 +249,7 @@
             <p class="lead">Who are the people involved in the editing and the updating of the catalogue record describing the cultural property X? What are their roles?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Whan was the catalogue record about the cultural property X edited or updated?</p>
+            <p class="lead">When was the catalogue record about the cultural property X edited or updated?</p>
           </div>
         </div>
         <div class="row">
@@ -312,10 +331,10 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">What are all the localisations of physical containers associated with the cultural property X? What are their types?</p>
+            <p class="lead">What are all the locations in cultural sites associated with the cultural property X? What are their types?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">What are the places that have been used as storage area for a certain cultural property?</p>
+            <p class="lead">What are the places that have been used as storage location for a cultural property?</p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">What is the conservation status of the cultural property X? Which interventions have been proposed?</p>
@@ -406,7 +425,7 @@ LIMIT 100</pre>
             <p class="lead">What is the unique identifier of the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Who are the authors and what are the cultural areas associated with the cultural property X? What is their role? What is the motivation that justifies the attribution?</p>
+            <p class="lead">Who are the authors and what are the cultural scopes attributed to the cultural property X? What is their role? What is the source of the attribution?</p>
           </div>
         </div>
         <div class="row">
@@ -486,13 +505,13 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">When was the cultural property X realised? What is the motivation that justifies the chronology?</p>
+            <p class="lead">When was the cultural property X realised? What is the source of the dating?</p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">What are the geographical coordinates of the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">What are the usage associated to the movable cultural property X?</p>
+            <p class="lead">What are the uses associated to the movable cultural property X?</p>
           </div>
         </div>
         <div class="row">
@@ -575,7 +594,7 @@ limit 100</pre>
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Who a the previous owner of the cultural property X?</p>
+            <p class="lead">Who was the previous owner of the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">What are the entities that represent the preparatory phases for the cultural property X?</p>
@@ -670,10 +689,10 @@ Limit 100</pre>
             <p class="lead">Alignment of the CulturalPropertyDefinition with the thesaurus used for providing definitions of the cultural properties (RA catalogue record type).</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+             <p class="lead">What are the archaeological field surveys on the cultural property X?</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+            <p class="lead">In which position (eg: title page, cover, etc.) of a specific publication was the X print reproduced?</p>
           </div>
         </div>
         <div class="row">
@@ -691,11 +710,29 @@ WHERE{
           </div>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
-               
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+SELECT DISTINCT *
+WHERE{
+ ?cultProp arco-cd:hasSurvey ?survey . ?survey rdf:type arco-cd:ArchaeologicalFieldSurvey .
+ 
+}
+LIMIT 100
+</pre>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+SELECT ?title ?reproduction ?position
+WHERE {?publication arco-cd:hasTitle ?pubtitle .
+?pubtitle rdfs:label ?title .
+?publication arco-cd:hasReproduction ?reproduction .
+?reproduction arco-cd:hasReproductionPosition ?position }
+LIMIT 100
+</pre>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -710,14 +747,219 @@ WHERE{
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0ASELECT+DISTINCT+*%0D%0AWHERE%7B%0D%0A+%3FcultProp+arco-cd%3AhasSurvey+%3Fsurvey+.+%3Fsurvey+rdf%3Atype+arco-cd%3AArchaeologicalFieldSurvey+.%0D%0A+%0D%0A%7D%0D%0ALIMIT+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
           </div>
           <div class="col-lg-4 mr-auto">
-            
+             <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Ftitle+%3Freproduction+%3Fposition%0D%0AWHERE+%7B%3Fpublication+arco-cd%3AhasTitle+%3Fpubtitle+.%0D%0A%3Fpubtitle+rdfs%3Alabel+%3Ftitle+.%0D%0A%3Fpublication+arco-cd%3AhasReproduction+%3Freproduction+.%0D%0A%3Freproduction+arco-cd%3AhasReproductionPosition+%3Fposition+%7D%0D%0ALIMIT+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
+
           </div>
           </div>
+
+          <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">On what support is the iscription of the cultural property X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+             <p class="lead">How many cultural entities of the "church" type are located in Emilia-Romagna?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">What cultural properties are members of the collection X?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
+SELECT *
+WHERE {
+ ?cultpro arco-dd:hasAffixedElement ?elem.
+ ?elem a arco-dd:Inscription.
+ ?elem arco-dd:hasSupport ?supp
+} LIMIT 100
+
+</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/ontology/location/&gt;
+PREFIX CLV: &lt;https://w3id.org/italia/onto/CLV/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
+SELECT  (count(distinct ?cultpro) as ?count)
+WHERE {
+ ?cultpro a arco-arco:ArchitecturalOrLandscapeHeritage.
+ ?cultpro arco-location:hasCulturalPropertyAddress ?address.
+ ?address CLV:hasRegion ?region.
+ ?region rdfs:label ?regNome.
+ ?cultpro arco-dd:hasCulturalPropertyType ?type.
+ ?type arco-dd:hasCulturalPropertyDefinition ?def
+ FILTER regex(?regNome, "Emilia-Romagna", "i")
+ FILTER regex(?def, "chiesa", "i") } 
+</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+SELECT ?collection ?item
+WHERE {
+ ?collection a cis:CollectionOfCulturalEntities.
+ ?collection arco-cd:isCollectionIn ?collectionmemb.
+ ?collectionmemb arco-cd:hasMemberOfCollection ?item.
+} LIMIT 100
+
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0A%0D%0Aselect+*%0D%0Awhere+%7B%0D%0A+%3Fcultpro+arco-dd%3AhasAffixedElement+%3Felem.%0D%0A+%3Felem+a+arco-dd%3AInscription.%0D%0A+%3Felem+arco-dd%3AhasSupport+%3Fsupp%0D%0A%7D+LIMIT+100%0D%0A&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Flocation%2F%3E%0D%0APREFIX+CLV%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0A%0D%0Aselect++%28count%28distinct+%3Fcultpro%29+as+%3Fcount%29%0D%0Awhere+%7B%0D%0A+%3Fcultpro+a+arco%3AArchitecturalOrLandscapeHeritage.%0D%0A+%3Fcultpro+arco-location%3AhasCulturalPropertyAddress+%3Faddress.%0D%0A+%3Faddress+CLV%3AhasRegion+%3Fregion.%0D%0A+%3Fregion+rdfs%3Alabel+%3FregNome.%0D%0A+%3Fcultpro+arco-dd%3AhasCulturalPropertyType+%3Ftype.%0D%0A+%3Ftype+arco-dd%3AhasCulturalPropertyDefinition+%3Fdef%0D%0A+FILTER+regex%28%3FregNome%2C+%22Emilia-Romagna%22%2C+%22i%22%29%0D%0A+FILTER+regex%28%3Fdef%2C+%22chiesa%22%2C+%22i%22%29%0D%0A%7D+%0D%0A%0D%0A&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+             <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+%3Fcollection+%3Fitem%0D%0AWHERE+%7B%0D%0A+%3Fcollection+a+cis%3ACollectionOfCulturalEntities.%0D%0A+%3Fcollection+arco-cd%3AisCollectionIn+%3Fcollectionmemb.%0D%0A+%3Fcollectionmemb+arco-cd%3AhasMemberOfCollection+%3Fitem.%0D%0A%7D+LIMIT+100%0D%0A&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
+
+          </div>
+          </div>
+
+          <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">What are the dimensions of photography X?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+             <p class="lead">What cultural properties have the Sphinx as their subject?</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">In which position (eg: title page, cover, etc.) of a specific publication was the X print reproduced?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/ontology/denotative-description&gt;
+PREFIX muapit: &lt;https://w3id.org/italia/onto/MU/&gt;
+SELECT ?photo ?meastype ?value ?unit
+WHERE {
+ ?photo a arco-arco:PhotographicHeritage.
+  ?photo arco-dd:hasMeasurementCollection ?meascoll .
+  ?meascoll arco-dd:hasMeasurement ?meas .
+  ?meas arco-dd:hasMeasurementType ?meastype . 
+  ?meas arco-dd:hasValue ?measvalue .
+  ?measvalue muapit:value ?value .
+  ?measvalue muapit:hasMeasurementUnit ?unit } LIMIT 100
+</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+SELECT *
+WHERE {
+ ?cultpro rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-cd:hasSubject ?sub
+ FILTER regex(?sub, "sfinge", "i")
+
+} LIMIT 100
+</pre>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+               <pre class="prettyprint lang-sparql sparql-example">
+PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+
+SELECT *
+WHERE {
+ ?cultpro rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-cd:rights ?right .
+} LIMIT 100
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0APREFIX+onto-mu%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FMU%2F%3E%0D%0A%0D%0Aselect+%3Fphoto+%3Fmeastype+%3Fvalue+%3Funit%0D%0Awhere+%7B%0D%0A+%3Fphoto+a+arco%3APhotographicHeritage.%0D%0A++%3Fphoto+arco-dd%3AhasMeasurementCollection+%3Fmeascoll+.%0D%0A++%3Fmeascoll+arco-dd%3AhasMeasurement+%3Fmeas+.%0D%0A++%3Fmeas+arco-dd%3AhasMeasurementType+%3Fmeastype+.+%0D%0A++%3Fmeas+arco-dd%3AhasValue+%3Fmeasvalue+.%0D%0A++%3Fmeasvalue+onto-mu%3Avalue+%3Fvalue+.%0D%0A++%3Fmeasvalue+onto-mu%3AhasMeasurementUnit+%3Funit%0D%0A++%0D%0A%0D%0A++%0D%0A%7D+%0D%0ALIMIT+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0ASELECT+DISTINCT+*%0D%0AWHERE%7B%0D%0A+%3FcultProp+arco-cd%3AhasSurvey+%3Fsurvey+.+%3Fsurvey+rdf%3Atype+arco-cd%3AArchaeologicalFieldSurvey+.%0D%0A+%0D%0A%7D%0D%0ALIMIT+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto">
+             <div class="mt-4">
+        <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Ftitle+%3Freproduction+%3Fposition%0D%0AWHERE+%7B%3Fpublication+arco-cd%3AhasTitle+%3Fpubtitle+.%0D%0A%3Fpubtitle+rdfs%3Alabel+%3Ftitle+.%0D%0A%3Fpublication+arco-cd%3AhasReproduction+%3Freproduction+.%0D%0A%3Freproduction+arco-cd%3AhasReproductionPosition+%3Fposition+%7D%0D%0ALIMIT+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                  <i class="fa fa-search mr-2"></i>
+                  Run!
+                </a>
+              </div>
+            </div>
+
+          </div>
+          </div>
+
         </div>
         </div>
+
       </div>
     </section>
 
