@@ -14,7 +14,7 @@ public class KBManager {
 	private Dataset dataset;
 	
 	private KBManager() {
-		dataset = TDBFactory.createDataset("ArCo-KB");
+		
 	}
 	
 	public void addNamedModel(String name, Model model) {
@@ -35,9 +35,14 @@ public class KBManager {
 		return dataset.containsNamedModel(name);
 	}
 	
+	private void init() {
+		dataset = TDBFactory.createDataset("ArCo-KB");
+	}
+	
 	
 	public static KBManager getInstance() {
 		if(singleton == null) singleton = new KBManager();
+		singleton.init();
 		return singleton;
 	}
 }

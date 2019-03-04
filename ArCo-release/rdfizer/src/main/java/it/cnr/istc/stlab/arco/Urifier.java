@@ -31,6 +31,7 @@ public class Urifier {
 		label = label.replaceAll("\\-$", "");
         
         label = label.replaceAll("(\\-)+", "-");
+       
 
 		try {
 			

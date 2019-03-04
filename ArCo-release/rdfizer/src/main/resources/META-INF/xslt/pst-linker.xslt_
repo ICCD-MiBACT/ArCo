@@ -169,29 +169,29 @@
 								</xsl:choose>
 							</xsl:attribute>
 							<rdf:type>
-							<xsl:attribute name="rdf:resource">
-	                                <xsl:value-of
-								select="'https://w3id.org/arco/ontology/location/CadastralFolio'" />
-	                            </xsl:attribute>
-						</rdf:type>
-						<rdfs:label xml:lang="it">
-							<xsl:value-of select="concat('Foglio di mappa catastale del bene culturale ', $itemURI, ': ', normalize-space(./LGCM))" />
-						</rdfs:label>
-						<l0:name  xml:lang="it">
-							<xsl:value-of select="concat('Foglio di mappa catastale del bene culturale ', $itemURI, ': ', normalize-space(./LGCM))" />
-						</l0:name>
-						<rdfs:label xml:lang="en">
-							<xsl:value-of select="concat('Cadastral folio of cultural property ', $itemURI, ': ', normalize-space(./LGCM))" />
-						</rdfs:label>
-						<l0:name  xml:lang="en">
-							<xsl:value-of select="concat('Cadastral folio of cultural property ', $itemURI, ': ', normalize-space(./LGCM))" />
-						</l0:name>
+								<xsl:attribute name="rdf:resource">
+		                                <xsl:value-of
+									select="'https://w3id.org/arco/ontology/location/CadastralFolio'" />
+		                            </xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="concat('Foglio di mappa catastale del bene culturale ', $itemURI, ': ', normalize-space(./LGCM))" />
+							</rdfs:label>
+							<l0:name  xml:lang="it">
+								<xsl:value-of select="concat('Foglio di mappa catastale del bene culturale ', $itemURI, ': ', normalize-space(./LGCM))" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="concat('Cadastral folio of cultural property ', $itemURI, ': ', normalize-space(./LGCM))" />
+							</rdfs:label>
+							<l0:name  xml:lang="en">
+								<xsl:value-of select="concat('Cadastral folio of cultural property ', $itemURI, ': ', normalize-space(./LGCM))" />
+							</l0:name>
+							<xsl:if test="./LGCA">
+								<tiapit:time>
+									<xsl:value-of select="normalize-space(./LGCA)" />
+								</tiapit:time>
+							</xsl:if>
 						</rdf:Description>
-						<xsl:if test="./LGCA">
-							<tiapit:time>
-								<xsl:value-of select="normalize-space(./LGCA)" />
-							</tiapit:time>
-						</xsl:if>
 					</xsl:if>
 				<!-- CadastralLegalSituation with LGCO -->
 				<xsl:if test="./LGCO">

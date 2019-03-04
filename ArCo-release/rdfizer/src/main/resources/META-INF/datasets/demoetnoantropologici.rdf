@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:schema="http://schema.org/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:org="http://www.w3.org/ns/org#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:th-bdm="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+	xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#">
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<dc:date xml:lang="it">settembre 2018</dc:date>
+	<dc:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A33_CCBYSA30IT"/>
+	<dct:creator xml:lang="it">Roberta Tucci</dct:creator>
+	<dct:description xml:lang="it">Strumenti terminologici. Scheda BDM - Beni demoetnoantropologici. Thesaurus per la compilazione del campo CTG-Categoria. Versione 4.00</dct:description>
+	<dct:title xml:lang="it">Thesaurus per la compilazione del campo CTG-Categoria</dct:title>
+	<owl:versionInfo xml:lang="it">Versione 4.00</owl:versionInfo>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.005"/>
+	<skos:prefLabel xml:lang="it">ABBIGLIAMENTO E ORNAMENTI DEL CORPO</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">ACCESSORI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">CALZATURE</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">COPRICAPI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">GIOIELLI E MONILI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">VESTIMENTI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002.002"/>
+	<skos:prefLabel xml:lang="it">ARREDI E SUPPELLETTILI</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">CONTENITORI, RECIPIENTI E OGGETTI DI USO DOMESTICO</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/002"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">MOBILI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003.003"/>
+	<skos:prefLabel xml:lang="it">MEZZI DI TRASPORTO</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">MEZZI DI TRASPORTO A FORZA ANIMALE</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">MEZZI DI TRASPORTO A FORZA MECCANICA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/003"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">MEZZI DI TRASPORTO A FORZA UMANA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004.002"/>
+	<skos:prefLabel xml:lang="it">RAPPRESENTAZIONI</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">RAPPRESENTAZIONI PROFANE</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/004"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">RAPPRESENTAZIONI SACRE</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005.003"/>
+	<skos:prefLabel xml:lang="it">RITUALITA'</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">ABITI MAGICO-RITUALI-CERIMONIALI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">OGGETTI DEVOZIONALI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">OGGETTI MAGICO-RITUALI-CERIMONIALI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.005"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.006"/>
+	<skos:prefLabel xml:lang="it">STRUMENTI E ACCESSORI</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">STRUMENTI E ACCESSORI AGRO-SILVO-PASTORALI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">ARMI E ARMATURE</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">STRUMENTI E ACCESSORI ARTIGIANALI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">CACCIA E PESCA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">STRUMENTI E ACCESSORI LUDICI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006.006">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/006"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">STRUMENTI E ACCESSORI MUSICALI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007.002"/>
+	<skos:prefLabel xml:lang="it">BENI SUL TERRITORIO</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">BENI SUL TERRITORIO AGRO-SILVO-PASTORALI, CACCIA E PESCA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/007"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/beni_demoetnoantropologici/def/"/>
+	<skos:prefLabel xml:lang="it">BENI SUL TERRITORIO RELIGIOSI</skos:prefLabel>
+</rdf:Description>
+
+</rdf:RDF>

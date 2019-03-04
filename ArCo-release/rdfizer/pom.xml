@@ -275,6 +275,26 @@
     		<version>4.2</version>
 		</dependency>
 		
+		<!-- Apache Lucene -->
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-core</artifactId>
+		    <version>7.7.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-analyzers-common</artifactId>
+		    <version>7.7.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-queryparser</artifactId>
+		    <version>7.7.1</version>
+		</dependency>
+				
+				
+				
+		
 		
         
     </dependencies>

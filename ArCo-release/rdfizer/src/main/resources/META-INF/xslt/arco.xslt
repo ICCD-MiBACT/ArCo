@@ -5786,6 +5786,9 @@
 								<xsl:when test="$sheetType='PST'">
 									 <xsl:value-of select="arco-fn:pst-definition(normalize-space(schede/*/OG/OGT/OGTD))" />
 								</xsl:when>
+								<xsl:when test="$sheetType='A' or $sheetType='PG'">
+									 <xsl:value-of select="arco-fn:a-definition(normalize-space(schede/*/OG/OGT/OGTD))" />
+								</xsl:when>
 							</xsl:choose>
 						</xsl:variable>
 						<xsl:if test="$skos-term != ''">
@@ -5795,6 +5798,7 @@
 								</xsl:attribute>
 							</skos:closeMatch>
 						</xsl:if>
+						
 						</rdf:Description>
 					</xsl:if>
 				</xsl:when>
@@ -13495,6 +13499,32 @@
 								select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
             			</xsl:attribute>
 						</arco-dd:usesTechnicalCharacteristic>
+						
+						<!-- Mapping with the thesaurus of find materials -->
+						<xsl:variable name="material-method-ra1">
+							<xsl:if test="$sheetType='RA' and starts-with($sheetVersion, '3.00')">
+								<xsl:value-of select="arco-fn:mtc-definition(normalize-space(.))" />
+							</xsl:if>
+						</xsl:variable>
+						<xsl:variable name="material-method-ra2">
+							<xsl:if test="$sheetType='RA' and starts-with($sheetVersion, '3.00')">
+								<xsl:value-of select="arco-fn:mtc2-definition(normalize-space(.))" />
+							</xsl:if>
+						</xsl:variable>
+						<xsl:if test="$material-method-ra1 != ''">
+							<skos:relatedMatch>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$material-method-ra1" />
+								</xsl:attribute>
+							</skos:relatedMatch>
+						</xsl:if>
+						<xsl:if test="$material-method-ra2 != ''">
+							<skos:relatedMatch>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$material-method-ra2" />
+								</xsl:attribute>
+							</skos:relatedMatch>
+						</xsl:if>
 					</rdf:Description>
 					<!-- Technical detail as an individual -->
 					<rdf:Description>
@@ -16900,6 +16930,20 @@
 					<rdfs:label>
 						<xsl:value-of select="normalize-space(schede/*/OG/CTG)" />
 					</rdfs:label>
+					<!-- xsl:variable name="skos-term">
+						<xsl:choose>
+							<xsl:when test="$sheetType='BDM' and starts-with($sheetVersion, '4')">
+								 <xsl:value-of select="arco-fn:bdm-definition(normalize-space(schede/*/OG/CTG))" />
+							</xsl:when>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:if test="$skos-term != ''">
+						<skos:closeMatch>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$skos-term" />
+							</xsl:attribute>
+						</skos:closeMatch>
+					</xsl:if -->
 				</rdf:Description>
 			</xsl:if>
 			<xsl:if test="schede/RA/OG/CLS">

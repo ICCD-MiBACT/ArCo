@@ -2,7 +2,6 @@ package it.cnr.istc.stlab.arco;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -19,7 +18,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Stream;
 
 import javax.xml.transform.stream.StreamSource;
 
@@ -27,7 +25,10 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
+import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
+import it.cnr.istc.stlab.arco.xsltextension.FindMaterialAndTechniqueLinker;
+import it.cnr.istc.stlab.arco.xsltextension.FindMaterialLinker;
 import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
@@ -55,7 +56,7 @@ public class Converter {
 	private static final String XSLT_LOCATION = "META-INF/xslt";
 	
 	private Processor proc;
-	private List<XsltExecutable> exps;
+	private List<XSLTConverter> exps;
 	private CataloguingEntityFinder cataloguingEntityFinder;
 	
 	public Converter() {
@@ -209,7 +210,11 @@ public class Converter {
 		proc.registerExtensionFunction(localName);
 		proc.registerExtensionFunction(cataloguingEntityFinder);
 		proc.registerExtensionFunction(DefinitionMatcherForRASheet.getInstance());
+		proc.registerExtensionFunction(DefinitionMatcherForASheet.getInstance());
+		//proc.registerExtensionFunction(DefinitionMatcherForBDMSheet.getInstance());
 		proc.registerExtensionFunction(ScientificPropertyDefinitionLinker.getInstance());
+		proc.registerExtensionFunction(FindMaterialLinker.getInstance());
+		proc.registerExtensionFunction(FindMaterialAndTechniqueLinker.getInstance());
 		proc.registerExtensionFunction(RelatedPropertyFinder.getInstance());
 		proc.registerExtensionFunction(MeasurementMapper.getInstance());
 		proc.registerExtensionFunction(Uncamelizer.getInstance());
@@ -239,7 +244,7 @@ public class Converter {
 					try {
 						System.out.println("-- " + path.toString());
 						exp = comp.compile(new StreamSource(Files.newInputStream(path)));
-						exps.add(exp);
+						exps.add(new XSLTConverter(path.toString(), exp));
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -273,10 +278,10 @@ public class Converter {
 		XdmNode source = proc.newDocumentBuilder().build(inputStreamSource);
 		
 		//XsltTransformer trans = exp.load();
-		for(XsltExecutable exp : exps){
+		for(XSLTConverter exp : exps){
 			ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
 			Serializer out = proc.newSerializer(byteArrayOut);
-			XsltTransformer trans = exp.load();
+			XsltTransformer trans = exp.executable.load();
 			
 			QName qName = new QName("item");
 			XdmValue value = new XdmAtomicValue(item);
@@ -310,7 +315,7 @@ public class Converter {
 	
 	private void init(){
 		
-		exps = new ArrayList<XsltExecutable>();
+		exps = new ArrayList<XSLTConverter>();
 		cataloguingEntityFinder = CataloguingEntityFinder.create();
     }
 	
@@ -333,6 +338,16 @@ public class Converter {
 		model.write(System.out, "TURTLE");
 		
 		converter.destroy();
+	}
+	
+	class XSLTConverter {
+		String name;
+		XsltExecutable executable;
+		
+		public XSLTConverter(String name, XsltExecutable executable) {
+			this.name = name;
+			this.executable = executable;
+		}
 	}
 	
 }
