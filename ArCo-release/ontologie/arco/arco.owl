@@ -554,22 +554,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco/isNumberOfCulturalPropertyPartOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isNumberOfCulturalPropertyPartOf">
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha numero di parte di bene culturale&quot;, collega la quantità associata a una specifica parte di un bene culturale al bene stesso.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property, inverse of &quot;has number of cultural property part&quot;, relates the quantity associated to a specific cultural property part to the cultural property itself.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
-        <rdfs:label xml:lang="en">is number of cultural property part of</rdfs:label>
-        <rdfs:label xml:lang="it">è numero di parte di bene culturale di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</arco-catalogue:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/arco/isNumismaticPropertyCategoryOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isNumismaticPropertyCategoryOf">
