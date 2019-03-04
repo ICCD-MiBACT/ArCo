@@ -1392,12 +1392,22 @@
 				<!-- has number of components -->
 				<xsl:if
 					test="schede/*/OG/QNT/QNTN or schede/*/OG/QNT/QNTI or schede/*/OG/QNT/QNTS">
-					<arco-arco:hasNumberOfComponents>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'NumberOfComponents/', $itemURI, '-quantity')" />
-	                        </xsl:attribute>
-					</arco-arco:hasNumberOfComponents>
+					<arco-arco:numberOfComponents>
+					<xsl:choose>
+						<xsl:when test="schede/*/OG/QNT/QNTN">
+							 <xsl:value-of
+							select="normalize-space(schede/*/OG/QNT/QNTN)" />
+						</xsl:when>
+						<xsl:when test="schede/*/OG/QNT/QNTI">
+							 <xsl:value-of
+							select="normalize-space(schede/*/OG/QNT/QNTI)" />
+						</xsl:when>
+						<xsl:when test="schede/*/OG/QNT/QNTS">
+							 <xsl:value-of
+							select="normalize-space(schede/*/OG/QNT/QNTS)" />
+						</xsl:when>
+					</xsl:choose>
+					</arco-arco:numberOfComponents>
 				</xsl:if>
 				<!-- cultural property description -->
 				<xsl:if test="schede/*/DA/DES">
