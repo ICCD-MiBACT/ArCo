@@ -907,6 +907,7 @@ WHERE {
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+PREFIX arco-arco: &lt;https://w3id.org/arco/ontology/arco/&gt; 
 SELECT *
 
 WHERE {
@@ -921,7 +922,7 @@ WHERE {
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
 PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
-
+PREFIX arco-arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 SELECT *
 WHERE {
  ?cultpro rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-cd:rights ?right .
@@ -944,7 +945,7 @@ WHERE {
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0ASELECT+DISTINCT+*%0D%0AWHERE%7B%0D%0A+%3FcultProp+arco-cd%3AhasSurvey+%3Fsurvey+.+%3Fsurvey+rdf%3Atype+arco-cd%3AArchaeologicalFieldSurvey+.%0D%0A+%0D%0A%7D%0D%0ALIMIT+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+arco-arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E+%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A+%3Fcultpro+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-arco%3ACulturalProperty+%3B+arco-cd%3AhasSubject+%3Fsub%0D%0A+FILTER+regex%28%3Fsub%2C+%22sfinge%22%2C+%22i%22%29%0D%0A%0D%0A%7D+LIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
@@ -954,7 +955,7 @@ WHERE {
           <div class="col-lg-4 mr-auto">
              <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Ftitle+%3Freproduction+%3Fposition%0D%0AWHERE+%7B%3Fpublication+arco-cd%3AhasTitle+%3Fpubtitle+.%0D%0A%3Fpubtitle+rdfs%3Alabel+%3Ftitle+.%0D%0A%3Fpublication+arco-cd%3AhasReproduction+%3Freproduction+.%0D%0A%3Freproduction+arco-cd%3AhasReproductionPosition+%3Fposition+%7D%0D%0ALIMIT+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+arco-arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A+%3Fcultpro+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-arco%3ACulturalProperty+%3B+arco-cd%3Arights+%3Fright+.%0D%0A%7D+LIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Esegui!
                 </a>
