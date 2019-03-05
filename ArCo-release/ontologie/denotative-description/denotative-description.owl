@@ -1500,7 +1500,7 @@
         <rdfs:comment xml:lang="en">This class represents the availability of a cultural property, wheter the cultural property is available or not (e.g.: theft, destruction) for example for cataloguing activities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">Cultural Property Availability</rdfs:label>
-        <rdfs:label xml:lang="it">Disponsibilità materiale del bene culturale</rdfs:label>
+        <rdfs:label xml:lang="it">Disponibilità materiale del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGR</arco-catalogue:iccdNormTag>
