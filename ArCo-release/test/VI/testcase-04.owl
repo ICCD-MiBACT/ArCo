@@ -24,7 +24,7 @@
 </testannotationschema:hasInferenceRequirement>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testDate xml:lang="en">2019-02-22</testannotationschema:testDate>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI04.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI04.owl"/>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
     </owl:Ontology>
