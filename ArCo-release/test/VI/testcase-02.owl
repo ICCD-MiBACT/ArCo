@@ -26,7 +26,7 @@
 - has a profile of minimum privacy access, data can be published.
          </testannotationschema:hasInferenceRequirement>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI02.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource=" https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI02.owl"/>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
     </owl:Ontology>
 </rdf:RDF>
