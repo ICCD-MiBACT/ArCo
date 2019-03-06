@@ -10,7 +10,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/testcase-01.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:testDate>06-03-2019</testannotationschema:testDate>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/EP/ToyDatasets/Toyset_EP01.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl"/>
         <testannotationschema:hasRequirement xml:lang="it">L&apos;entità Gatto non può essere sia Genere, sia Specie, sia Sottospecie.</testannotationschema:hasRequirement>
         <testannotationschema:testedBy>Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasExpectedResult xml:lang="en">Inconsistent</testannotationschema:hasExpectedResult>
