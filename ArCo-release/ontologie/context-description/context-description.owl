@@ -585,6 +585,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasCoinMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCoinMember">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCoinMemberOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una serie di monete a una moneta che ne è membro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a numismatic series to a coin that is member of it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha moneta membro</rdfs:label>
+        <rdfs:label xml:lang="en">has coin member</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCollection">
@@ -2216,6 +2233,22 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F: UB/UBF</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isCoinMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCoinMemberOf">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una moneta a una serie di monete di cui è membro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a coin to a numismatic series which is member of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is coin member of</rdfs:label>
+        <rdfs:label xml:lang="it">è moneta membro di</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3901,6 +3934,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFC - Normativa S: RO/COP/COPC - Normativa F: RO/CRF/CRFC</arco-catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/relatedWorkNote -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relatedWorkNote">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/note"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta note generali sulle relazioni instaurate fra il bene in esame e altre opere.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">note su opere collegate</rdfs:label>
+        <rdfs:label xml:lang="en">related work note</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RV/REZ</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6214,6 +6264,22 @@ gioco, etc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa S 3: RO/ADL/ADLS</arco-catalogue:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/NumismaticSeries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/NumismaticSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la serie della quale una moneta fa parte (es.: Greca, Romana Repubblicana, Barbarica).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the series which a particular coin is part of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">Numismatic series</rdfs:label>
+        <rdfs:label xml:lang="it">Serie numismatica</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTR</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
