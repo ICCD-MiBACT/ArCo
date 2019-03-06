@@ -10,7 +10,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/testcase-06.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:testDate>06-03-2019</testannotationschema:testDate>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/EP/ToyDatasets/Toyset_EP06.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP06.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy>Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasRequirement xml:lang="en">The instance Elegible1 belongs to both ElegibleIntervention and Intervention.</testannotationschema:hasRequirement>
