@@ -14,7 +14,7 @@
         <testannotationschema:hasRequirement xml:lang="it">L&apos;istanza Elegible1 appartiene ad entrambe le classi ElegibleIntervention ed Intervention.</testannotationschema:hasRequirement>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy>Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasActualResult xml:lang="en">true</testannotationschema:hasActualResult>
+        <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
         <testannotationschema:hasRequirement xml:lang="en">The instance Elegible1 belongs to both ElegibleIntervention and Intervention.</testannotationschema:hasRequirement>
         <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/EP/ToyDatasets/Toyset_EP05.owl"/>
     </owl:Ontology>
