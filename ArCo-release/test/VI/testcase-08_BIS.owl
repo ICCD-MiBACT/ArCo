@@ -20,7 +20,7 @@
 -Lucy's death age is estimated at 21 years
 -The find context is an individual burial
 -The taxonomy of the find is: Australopithecus Africanus (genus) Paranthropus (species)</testannotationschema:hasInferenceRequirement>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI08_BIS.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl"/>
         <testannotationschema:testDate xml:lang="en">2019-03-01</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
