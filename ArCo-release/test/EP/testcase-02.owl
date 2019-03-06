@@ -16,6 +16,7 @@
         <testannotationschema:hasExpectedResult xml:lang="en">Inconsistent</testannotationschema:hasExpectedResult>
         <testannotationschema:hasRequirement xml:lang="en">The instance ArchivalEntity can not be both ArchivalSeries, ArchivalSubseries, ArchivalFonds.</testannotationschema:hasRequirement>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</testannotationschema:hasActualResult>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
     </owl:Ontology>
 </rdf:RDF>
 
