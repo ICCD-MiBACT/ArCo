@@ -113,10 +113,11 @@
     <!-- https://w3id.org/arco/ontology/location/atLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/atLocation">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isLocationIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione tipizzata nel tempo al luogo cui si riferisce.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property links a typified location over time to its related geographical entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a typed location over time to its related geographical entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">at location</rdfs:label>
         <rdfs:label xml:lang="it">presso luogo</rdfs:label>
@@ -635,6 +636,39 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isLocationIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isLocationIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un luogo fisico a una localizzazione tipizzata nel tempo che si riferisce a quel luogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a geographical feature to a time indexed typed location that refers to that feature.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
+        <rdfs:isDefinedBy xml:lang="it">provvisoria</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">unstable</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">is location in</rdfs:label>
+        <rdfs:label xml:lang="it">è luogo in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isSiteIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isSiteIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/location/isLocationIn"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/Site"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un contenitore fisico a una localizzazione tipizzata nel tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural site to the time indexed typed location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
+        <rdfs:label xml:lang="en">is site in</rdfs:label>
+        <rdfs:label xml:lang="it">è contenitore fisico in</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/italia/onto/CLV/hasAddressComponent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
@@ -929,12 +963,6 @@
     
 
 
-    <!-- ttps://w3id.org/italia/onto/TI/date -->
-
-    <owl:DatatypeProperty rdf:about="ttps://w3id.org/italia/onto/TI/date"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1036,7 +1064,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/date"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/date"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
                         <owl:unionOf rdf:parseType="Collection">

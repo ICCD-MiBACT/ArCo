@@ -5096,6 +5096,30 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CoinIssuance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasIssuer"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasIssuingState"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMint"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasMinter"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;emissione di una moneta, intesa come un evento collocato nel tempo, cui partecipano diversi agenti con diversi ruoli (Stato emittente, Zecca, Monetiere, etc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the issuance of a coin, at a particular time and with different agents participanting to it (Mint, Issuing State, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -7105,8 +7129,8 @@ gioco, etc.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Source">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la motivazione o la fonte che ha determinato una certa attribuzione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the source that motivated an attribution.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la motivazione o la fonte che ha determinato una certa interpretazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the source that motivated an interpretation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Motivazione</rdfs:label>
         <rdfs:label xml:lang="en">Source</rdfs:label>
