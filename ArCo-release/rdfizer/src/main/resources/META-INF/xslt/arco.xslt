@@ -13089,6 +13089,78 @@
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
+			<!-- paleopathology survey -->
+			<xsl:for-each select="schede/*/PT/PTC">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PaleopathologySurvey/', $itemURI, '-survey-', position())" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/PaleopathologySurvey'" />
+ 	                	</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="en">
+                		<xsl:value-of select="concat('Paleopathology survey of cultural property ', $itemURI)" />
+                	</rdfs:label>
+                	<l0:name xml:lang="en">
+                		<xsl:value-of select="concat('Paleopathology survey of cultural property ', $itemURI)" />
+                	</l0:name>
+                	<rdfs:label xml:lang="it">
+                		<xsl:value-of select="concat('Indagine su paleopatologia del bene culturale ', $itemURI)" />
+                	</rdfs:label>
+                	<l0:name xml:lang="it">
+                		<xsl:value-of select="concat('Indagine su paleopatologia del bene culturale ', $itemURI)" />
+                	</l0:name>
+                	<xsl:if test="./PTCM">
+                		<arco-cd:hasSurveyMethod>
+                			<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./PTCM)))" />
+ 	                		</xsl:attribute>
+                		</arco-cd:hasSurveyMethod>
+                	</xsl:if>
+                	<xsl:if test="./PTCD">
+                		<arco-cd:diagnosis>
+                			<xsl:value-of select="normalize-space(./PTCD)" />
+                		</arco-cd:diagnosis>
+                	</xsl:if>
+                	<xsl:if test="./PTCI">
+                		<arco-cd:refersToSurvey>
+                			<xsl:value-of select="normalize-space(./PTCI)" />
+                		</arco-cd:refersToSurvey>
+                	</xsl:if>
+                	<xsl:if test="./PTCZ or ./PTCN">
+                		<arco-core:note>
+                			<xsl:choose>
+                				<xsl:when test="./PTCZ and ./PTCN">
+                					<xsl:value-of select="concat(normalize-space(./PTCN), ' ', normalize-space(./PTCZ))" />
+                				</xsl:when>
+                				<xsl:otherwise>
+                					<xsl:value-of select="concat(normalize-space(./PTCN), normalize-space(./PTCZ))" />
+                				</xsl:otherwise>
+                			</xsl:choose>
+                		</arco-core:note>
+                	</xsl:if>
+				</rdf:Description>
+				<xsl:if test="./PTCM">
+               		<rdf:Description>
+               			<xsl:attribute name="rdf:about">
+                			<xsl:value-of select="concat($NS, 'SurveyMethod/', arco-fn:urify(normalize-space(./PTCM)))" />
+	                	</xsl:attribute>
+	                	<rdf:type>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SurveyMethod'" />
+	 	                	</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./PTCM)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./PTCM)" />
+						</l0:name>
+               		</rdf:Description>
+               	</xsl:if>
+			</xsl:for-each>
 			<!-- A and PG - Use of cultural property -->
 			<!-- USO -->
 			<xsl:for-each select="schede/*/US/USO">

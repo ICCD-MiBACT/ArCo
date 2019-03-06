@@ -3137,6 +3137,28 @@
 					</xsl:otherwise>
 				</xsl:choose>
                 </xsl:for-each>
+                <!-- paleopathology survey -->
+                <xsl:for-each select="schede/*/PT/PTC">
+                	<xsl:choose>
+					<xsl:when test="./* and (not(./PTCE) or ./PTCE='intero bene' or ./PTCE='integrale' or ./PTCE='tutta' or ./PTCE='totale') or (starts-with(lower-case(normalize-space(./PTCE)), 'nr')) or (starts-with(lower-case(normalize-space(./PTCE)), 'n.r')) or (starts-with(lower-case(normalize-space(./PTCE)), 'intero')) or (starts-with(lower-case(normalize-space(./PTCE)), 'intera')) or (starts-with(lower-case(normalize-space(./PTCE)), 'esemplar'))">
+						<arco-cd:hasSurvey>
+	                	<xsl:attribute name="rdf:resource">
+	                		<xsl:value-of select="concat($NS, 'PaleopathologySurvey/', $itemURI, '-survey-', position())" />
+ 	                	</xsl:attribute>
+ 	                </arco-cd:hasSurvey>
+					</xsl:when>
+					<xsl:otherwise>
+					<xsl:for-each select="./PTCE">
+							<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+                </xsl:for-each>
                 <!-- material of cultural property (version 4.00) -->
                 <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
                <xsl:for-each select="schede/*/MT/MTC/MTCM">
