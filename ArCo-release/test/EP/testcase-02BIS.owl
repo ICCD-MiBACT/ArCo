@@ -15,7 +15,7 @@
         <testannotationschema:hasRequirement xml:lang="it">L&apos;istanza unità archivistica non può essere sia serie archivistica, che sottoserie archivistica, che fondo archivistico.</testannotationschema:hasRequirement>
         <testannotationschema:hasExpectedResult xml:lang="en">Inconsistent</testannotationschema:hasExpectedResult>
         <testannotationschema:hasRequirement xml:lang="en">The instance ArchivalEntity can not be both ArchivalSeries, ArchivalSubseries, ArchivalFonds.</testannotationschema:hasRequirement>
-        <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</testannotationschema:hasActualResult>
+        <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
         <owl:priorVersion rdf:resource="https://w3id.org/arco/test/EP/testcase-02.owl"/>
     </owl:Ontology>
 </rdf:RDF>
