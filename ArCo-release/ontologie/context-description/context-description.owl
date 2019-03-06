@@ -5650,7 +5650,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/EligibleIntervention -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/EligibleIntervention">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionEligibleBy"/>
@@ -6099,7 +6099,6 @@ gioco, etc.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un intervento che ha interessato un bene culturale, a fini conservativi (per i quali si crea una sottoclasse di &quot;Intervento&quot;) oppure di altro tipo: restauri (termine obsoleto che attualmente corrisponde a &quot;intervento a fine conservativo&quot;), rilavorazioni, ripristini, trasformazioni per recuperare aspetto e funzionalità rispondenti ai mutati gusti, ecc. In generale, per interventi si intendono attività che riguardano il bene, effettuate per la sua realizzazione/modifica e conservazione materiale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an intervention on a cultural property, that is an activity carried out for its conservation or for other purposes: conservation interventions, reprocessing, restoring, etc.</rdfs:comment>
@@ -8370,6 +8369,16 @@ gioco, etc.</rdfs:comment>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/DocumentationCategory"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SECCategory"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SECIdentifier"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/UserSocialCategory"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/DocumentationCategory"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SECIdentifier"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/UserSocialCategory"/>
         </owl:members>
@@ -8389,6 +8398,14 @@ gioco, etc.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Genus"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Intervention"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Research"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Survey"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
