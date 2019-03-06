@@ -8341,6 +8341,14 @@ gioco, etc.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalFonds"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalSeries"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalSubseries"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecord"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Copyright"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reproduction"/>
@@ -8373,6 +8381,14 @@ gioco, etc.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Source"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Use"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Genus"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
