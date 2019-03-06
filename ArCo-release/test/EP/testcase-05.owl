@@ -16,7 +16,7 @@
         <testannotationschema:testedBy>Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
         <testannotationschema:hasRequirement xml:lang="en">The instance Elegible1 belongs to both ElegibleIntervention and Intervention.</testannotationschema:hasRequirement>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/EP/ToyDatasets/Toyset_EP05.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP05.owl"/>
     </owl:Ontology>
 </rdf:RDF>
 
