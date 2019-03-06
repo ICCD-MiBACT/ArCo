@@ -11,7 +11,7 @@
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:testDate xml:lang="en">2019-02-27</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI09.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl"/>
         <testannotationschema:hasInferenceRequirement xml:lang="it">-La filastrocca Ambarabaccicciccocco è cultural entity.
 -Il bene culturale è stato recuperato per tradizione orale
 -Il suo autore è Antonio Mennillo
