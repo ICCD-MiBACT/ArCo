@@ -15,7 +15,7 @@
         <testannotationschema:hasExpectedResult xml:lang="en">Inconsistent</testannotationschema:hasExpectedResult>
         <testannotationschema:hasRequirement xml:lang="it">L&apos;istanza bibliografia ha una documentazione che è docuementazione allegata (derivante dalla classe DocumentationCategory).</testannotationschema:hasRequirement>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/EP/ToyDatasets/Toyset_EP03.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP03.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
     </owl:Ontology>
 </rdf:RDF>
