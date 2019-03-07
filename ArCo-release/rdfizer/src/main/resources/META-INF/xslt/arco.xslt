@@ -8896,6 +8896,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			<!-- Surveys -->
+			<!-- observation survey -->
 			 <xsl:if test="schede/*/DR/DRV/* and not($sheetVersion='4.00') and not($sheetVersion='4.00_ICCD0')">
                 	<rdf:Description>
                 		<xsl:attribute name="rdf:about">
@@ -9157,6 +9158,94 @@
 						</rdf:Description>
 						</xsl:if>
 					</xsl:if>
+                </xsl:if>
+                <!-- Archaeometric and diagnostic survey -->
+                <xsl:if test="not(schede/*/RE/AIN/AIND='0000/00/00' or schede/*/RE/AIN/AIND='/') and schede/*/RE/AIN/*">
+                <xsl:for-each select="schede/*/RE/AIN">
+                	<xsl:variable name="survey-position">
+						<xsl:value-of select="position()" />
+					</xsl:variable>
+                	<rdf:Description>
+                		<xsl:attribute name="rdf:about">
+                			<xsl:value-of select="concat($NS, 'ArchaeometricDiagnosticSurvey/', $itemURI, '-survey-', position())" />
+                		</xsl:attribute>
+                		<rdf:type>
+                			<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurvey'" />
+                		</xsl:attribute>
+                		</rdf:type>
+                		<rdfs:label xml:lang="en">
+	                		<xsl:value-of select="concat('Archaeometric and diagnostic survey of cultural property ', $itemURI)" />
+	                	</rdfs:label>
+	                	<l0:name xml:lang="en">
+	                		<xsl:value-of select="concat('Archaeometric and diagnostic survey of cultural property ', $itemURI)" />
+	                	</l0:name>
+	                	<rdfs:label xml:lang="it">
+	                		<xsl:value-of select="concat('Indagine archeometrica e diagnostica del bene culturale ', $itemURI)" />
+	                	</rdfs:label>
+	                	<l0:name xml:lang="it">
+	                		<xsl:value-of select="concat('Indagine archeometrica e diagnostica del bene culturale ', $itemURI)" />
+	                	</l0:name>
+	                	<xsl:if test="./AIND and (not(starts-with(lower-case(normalize-space(./AIND)), 'nr')) and not(starts-with(lower-case(normalize-space(./AIND)), 'n.r')))">
+                			<tiapit:time>
+                				<xsl:value-of select="normalize-space(./AIND)" />
+                			</tiapit:time>
+                		</xsl:if>
+                		<xsl:if test="./AINT">
+                			<arco-cd:hasArchaeometricDiagnosticSurveyType>
+                				<xsl:attribute name="rdf:resource">
+                					<xsl:value-of select="concat($NS, 'ArchaeometricDiagnosticSurveyType/', arco-fn:urify(normalize-space(./AINT)))" />
+                				</xsl:attribute>
+                			</arco-cd:hasArchaeometricDiagnosticSurveyType>
+                		</xsl:if>
+                		<xsl:if test="./AINS">
+                			<xsl:value-of select="normalize-space(./AINS)" />
+                		</xsl:if>
+                		<xsl:if test="./AINR">
+							<arco-cd:hasActivityOperator>
+								<xsl:attribute name="rdf:resource">
+		                				<xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AINR)))" />
+		                			</xsl:attribute>
+							</arco-cd:hasActivityOperator>
+						</xsl:if>
+                	</rdf:Description>
+                	<xsl:if test="./AINT">
+                			<rdf:Description>
+                				<xsl:attribute name="rdf:about">
+                					<xsl:value-of select="concat($NS, 'ArchaeometricDiagnosticSurveyType/', arco-fn:urify(normalize-space(./AINT)))" />
+                				</xsl:attribute>
+                				<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType" />
+                				<rdfs:label>
+                					<xsl:value-of select="normalize-space(./AINT)" />
+                				</rdfs:label>
+                				<l0:name>
+                					<xsl:value-of select="normalize-space(./AINT)" />
+                				</l0:name>
+                			</rdf:Description>
+                		</xsl:if>
+					<!-- activiy operator as an individual -->
+						<xsl:if test="./AINR">
+							<rdf:Description>
+									<xsl:attribute name="rdf:about">
+							                        <xsl:value-of
+										select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AINR)))" />
+							                    </xsl:attribute>
+									<rdf:type>
+										<xsl:attribute name="rdf:resource">
+							                            <xsl:value-of
+											select="'https://w3id.org/italia/onto/l0/Agent'" />
+							            </xsl:attribute>
+									</rdf:type>
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(./AINR)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(./AINR)" />
+									</l0:name>
+							</rdf:Description>
+						</xsl:if>
+                </xsl:for-each>
                 </xsl:if>
                 <!-- Archaeological field survey of cultural property -->
                 <xsl:if test="not(schede/*/RE/RCG/RCGD='0000/00/00' or schede/*/RE/RCG/RCGD='/') and schede/*/RE/RCG/*">
@@ -11204,7 +11293,7 @@
 						<rdf:Description>
 								<xsl:attribute name="rdf:about">
 	                                <xsl:value-of
-											select="concat($NS, 'AffixedElementType/', arco-fn:urify(normalize-space(./ISEF)))" />
+											select="concat($NS, 'WritingSystem/', arco-fn:urify(normalize-space(./ISEF)))" />
 	                            </xsl:attribute>
 								<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem" />
 								<rdfs:label>
@@ -13249,6 +13338,333 @@
 						</arco-cd:hasUseType>
 					</rdf:Description>
 				</xsl:for-each>
+				<!-- obverse of coin -->
+                <xsl:if test="schede/NU/DA/DES/DESA or schede/NU/DA/DES/DESL or schede/NU/DA/DES/DESN or schede/NU/DA/DES/DESF">
+                	<rdf:Description>
+						<xsl:attribute name="rdf:about">
+	                				<xsl:value-of
+							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-obverse')" />
+	                	</xsl:attribute>
+	                	<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+	                	<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Dritto del bene numismatico ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of
+								select="concat('Dritto del bene numismatico ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of
+								select="concat('Obverse of numismatic property ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of
+								select="concat('Obverse of numismatic property ', $itemURI)" />
+						</l0:name>
+						<xsl:if test="schede/NU/DA/DES/DESA">
+							<arco-cd:hasAffixedElement>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'CoinDesign/', $itemURI, '-obverse-design')" />
+								</xsl:attribute>
+							</arco-cd:hasAffixedElement>
+						</xsl:if>
+						<xsl:if test="schede/NU/DA/DES/DESN or schede/NU/DA/DES/DESF or schede/NU/DA/DES/DESL">
+							<arco-cd:hasAffixedElement>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'CoinLegend/', $itemURI, '-obverse-legend')" />
+								</xsl:attribute>
+							</arco-cd:hasAffixedElement>
+						</xsl:if>
+					</rdf:Description>
+					</xsl:if>
+					<!-- coin design -->
+					<xsl:if test="schede/NU/DA/DES/DESA">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'CoinDesign/', $itemURI, '-obverse-design')" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinDesign" />
+							<arco-core:description>
+								<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESA)" />
+							</arco-core:description>
+							<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Raffigurazione presente sul dritto del bene numismatico ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of
+									select="concat('Raffigurazione presente sul dritto del bene numismatico ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of
+									select="concat('Design on obverse of numismatic property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of
+									select="concat('Design on obverse of numismatic property ', $itemURI)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- coin legend -->
+					<xsl:if test="schede/NU/DA/DES/DESN or schede/NU/DA/DES/DESF or schede/NU/DA/DES/DESL">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'CoinLegend/', $itemURI, '-obverse-legend')" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinLegend" />
+							<xsl:if test="schede/NU/DA/DES/DESL">
+							<arco-dd:transcript>
+								<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESL)" />
+							</arco-dd:transcript>
+							</xsl:if>
+							<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Legenda presente sul dritto del bene numismatico ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of
+									select="concat('Legenda presente sul dritto del bene numismatico ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of
+									select="concat('Legend on obverse of numismatic property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of
+									select="concat('Legend on obverse of numismatic property ', $itemURI)" />
+							</l0:name>
+							<xsl:if test="schede/NU/DA/DES/DESF and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESF)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESF)), 'n.r')))">
+								<arco-dd:hasWritingSystem>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'WritingSystem/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DESF)))" />
+									</xsl:attribute>
+								</arco-dd:hasWritingSystem>
+							</xsl:if>
+							<xsl:if test="schede/NU/DA/DES/DESN and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESN)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESN)), 'n.r')))">
+								<language:hasLanguage>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Language/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DESN)))" />
+									</xsl:attribute>
+								</language:hasLanguage>
+							</xsl:if>
+						</rdf:Description>
+						<xsl:if test="schede/NU/DA/DES/DESF and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESF)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESF)), 'n.r')))">
+							<rdf:Description>
+									<xsl:attribute name="rdf:about">
+		                                <xsl:value-of
+												select="concat($NS, 'WritingSystem/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DESF)))" />
+		                            </xsl:attribute>
+									<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem" />
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESF)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESF)" />
+									</l0:name>
+							</rdf:Description>
+						</xsl:if>
+						<xsl:if test="schede/NU/DA/DES/DESN and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESN)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESN)), 'n.r')))">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+	                                <xsl:value-of
+											select="concat($NS, 'Language/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DESN)))" />
+	                            </xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/italia/onto/Language/Language" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESN)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESN)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+                </xsl:if>
+                <!-- reverse of coin -->
+                <xsl:if test="schede/NU/DA/DES/DESM or schede/NU/DA/DES/DESG or schede/NU/DA/DES/DESR or schede/NU/DA/DES/DEST">
+                	<rdf:Description>
+						<xsl:attribute name="rdf:about">
+	                				<xsl:value-of
+							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-reverse')" />
+	                	</xsl:attribute>
+	                	<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+	                	<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Rovescio del bene numismatico ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of
+								select="concat('Rovescio del bene numismatico ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of
+								select="concat('Reverse of numismatic property ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of
+								select="concat('Reverse of numismatic property ', $itemURI)" />
+						</l0:name>
+						<xsl:if test="schede/NU/DA/DES/DESM">
+							<arco-cd:hasAffixedElement>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'CoinDesign/', $itemURI, '-reverse-design')" />
+								</xsl:attribute>
+							</arco-cd:hasAffixedElement>
+						</xsl:if>
+						<xsl:if test="schede/NU/DA/DES/DESG or schede/NU/DA/DES/DESR or schede/NU/DA/DES/DEST">
+							<arco-cd:hasAffixedElement>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'CoinLegend/', $itemURI, '-reverse-legend')" />
+								</xsl:attribute>
+							</arco-cd:hasAffixedElement>
+						</xsl:if>
+					</rdf:Description>
+					</xsl:if>
+					<!-- coin design -->
+					<xsl:if test="schede/NU/DA/DES/DESM">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'CoinDesign/', $itemURI, '-reverse-design')" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinDesign" />
+							<arco-core:description>
+								<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESM)" />
+							</arco-core:description>
+							<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Raffigurazione presente sul rovescio del bene numismatico ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of
+									select="concat('Raffigurazione presente sul rovescio del bene numismatico ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of
+									select="concat('Design on reverse of numismatic property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of
+									select="concat('Design on reverse of numismatic property ', $itemURI)" />
+							</l0:name>
+						</rdf:Description>
+					</xsl:if>
+					<!-- coin legend -->
+					<xsl:if test="schede/NU/DA/DES/DESG or schede/NU/DA/DES/DESR or schede/NU/DA/DES/DEST">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+								<xsl:value-of select="concat($NS, 'CoinLegend/', $itemURI, '-reverse-legend')" />
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinLegend" />
+							<xsl:if test="schede/NU/DA/DES/DESG">
+							<arco-dd:transcript>
+								<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESG)" />
+							</arco-dd:transcript>
+							</xsl:if>
+							<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Legenda presente sul rovescio del bene numismatico ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:value-of
+									select="concat('Legenda presente sul rovescio del bene numismatico ', $itemURI)" />
+							</l0:name>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of
+									select="concat('Legend on reverse of numismatic property ', $itemURI)" />
+							</rdfs:label>
+							<l0:name xml:lang="en">
+								<xsl:value-of
+									select="concat('Legend on reverse of numismatic property ', $itemURI)" />
+							</l0:name>
+							<xsl:if test="schede/NU/DA/DES/DEST and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DEST)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DEST)), 'n.r')))">
+								<arco-dd:hasWritingSystem>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'WritingSystem/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DEST)))" />
+									</xsl:attribute>
+								</arco-dd:hasWritingSystem>
+							</xsl:if>
+							<xsl:if test="schede/NU/DA/DES/DESR and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESR)), 'n.r')))">
+								<language:hasLanguage>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, 'Language/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DESR)))" />
+									</xsl:attribute>
+								</language:hasLanguage>
+							</xsl:if>
+						</rdf:Description>
+						<xsl:if test="schede/NU/DA/DES/DEST and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DEST)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DEST)), 'n.r')))">
+							<rdf:Description>
+									<xsl:attribute name="rdf:about">
+		                                <xsl:value-of
+												select="concat($NS, 'WritingSystem/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DEST)))" />
+		                            </xsl:attribute>
+									<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem" />
+									<rdfs:label>
+										<xsl:value-of select="normalize-space(schede/NU/DA/DES/DEST)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of select="normalize-space(schede/NU/DA/DES/DEST)" />
+									</l0:name>
+							</rdf:Description>
+						</xsl:if>
+						<xsl:if test="schede/NU/DA/DES/DESR and (not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/NU/DA/DES/DESR)), 'n.r')))">
+						<rdf:Description>
+								<xsl:attribute name="rdf:about">
+	                                <xsl:value-of
+											select="concat($NS, 'Language/', arco-fn:urify(normalize-space(schede/NU/DA/DES/DESR)))" />
+	                            </xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/italia/onto/Language/Language" />
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESR)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(schede/NU/DA/DES/DESR)" />
+								</l0:name>
+						</rdf:Description>
+					</xsl:if>
+                </xsl:if>
+                <!-- parts of anthropological material -->
+                <xsl:for-each select="schede/AT/EL/ELE">
+                	<rdf:Description>
+						<xsl:attribute name="rdf:about">
+	                				<xsl:value-of
+							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./ELEE)))" />
+	                	</xsl:attribute>
+	                	<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+	                	<rdfs:label>
+							<xsl:value-of select="normalize-space(./ELEE)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./ELEE)" />
+						</l0:name>
+						<xsl:if test="./ELEM and (not(starts-with(lower-case(normalize-space(./ELEM)), 'nr')) and not(starts-with(lower-case(normalize-space(./ELEM)), 'n.r')) and not(./ELEM='-'))">
+							<arco-arco:numberOfCulturalPropertyParts>
+								<xsl:value-of select="normalize-space(./ELEM)" />
+							</arco-arco:numberOfCulturalPropertyParts>
+						</xsl:if>
+						<xsl:if test="./ELES and (not(starts-with(lower-case(normalize-space(./ELES)), 'nr')) and not(starts-with(lower-case(normalize-space(./ELES)), 'n.r')) and not(./ELES='-'))">
+							<arco-core:specifications>
+								<xsl:value-of select="normalize-space(./ELES)" />
+							</arco-core:specifications>
+						</xsl:if>
+						<xsl:choose>
+							<xsl:when test="./ELEN and ./ELEZ">
+								<arco-core:note>
+									<xsl:value-of select="concat(normalize-space(./ELEN), ' - Documentazione: ', normalize-space(./ELEZ))" />
+								</arco-core:note>
+							</xsl:when>
+							<xsl:when test="./ELEZ">
+								<arco-core:note>
+									<xsl:value-of select="concat('Documentazione: ', normalize-space(./ELEZ))" />
+								</arco-core:note>
+							</xsl:when>
+							<xsl:when test="./ELEN">
+								<arco-core:note>
+									<xsl:value-of select="normalize-space(./ELEN)" />
+								</arco-core:note>
+							</xsl:when>
+						</xsl:choose>
+					</rdf:Description>
+                </xsl:for-each>
 				<!-- sex estimate -->
                 <xsl:if test="schede/AT/DA/STS">
                 	<rdf:Description>

@@ -3159,6 +3159,33 @@
 					</xsl:otherwise>
 				</xsl:choose>
                 </xsl:for-each>
+                <!-- obverse of coin -->
+                <xsl:if test="schede/NU/DA/DES/DESA or schede/NU/DA/DES/DESL or schede/NU/DA/DES/DESN or schede/NU/DA/DES/DESF">
+                	<arco-core:hasPart>
+						<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-obverse')" />
+	                	</xsl:attribute>
+					</arco-core:hasPart>
+                </xsl:if>
+                <!-- reverse of coin -->
+                <xsl:if test="schede/NU/DA/DES/DESM or schede/NU/DA/DES/DESG or schede/NU/DA/DES/DESR or schede/NU/DA/DES/DEST">
+                	<arco-core:hasPart>
+						<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-reverse')" />
+	                	</xsl:attribute>
+					</arco-core:hasPart>
+                </xsl:if>
+                <!-- parts of anthropological material -->
+                <xsl:for-each select="schede/AT/EL/ELE">
+                	<arco-core:hasPart>
+						<xsl:attribute name="rdf:resource">
+	                				<xsl:value-of
+							select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./ELEE)))" />
+	                	</xsl:attribute>
+					</arco-core:hasPart>
+                </xsl:for-each>
                 <!-- sex estimate -->
                 <xsl:if test="schede/AT/DA/STS">
                 	<arco-cd:hasSexEstimate>
@@ -3484,6 +3511,16 @@
                 	<arco-cd:hasSurvey>
                 		<xsl:attribute name="rdf:resource">
                 			<xsl:value-of select="concat($NS, 'ArchaeologicalFieldSurvey/', $itemURI, '-survey-', position())" />
+                		</xsl:attribute>
+                	</arco-cd:hasSurvey>
+                </xsl:for-each>
+                </xsl:if>
+                <!-- Archaeometric and diagnostic survey -->
+                <xsl:if test="not(schede/*/RE/AIN/AIND='0000/00/00' or schede/*/RE/AIN/AIND='/') and schede/*/RE/AIN/*">
+                <xsl:for-each select="schede/*/RE/AIN">
+                	<arco-cd:hasSurvey>
+                		<xsl:attribute name="rdf:resource">
+                			<xsl:value-of select="concat($NS, 'ArchaeometricDiagnosticSurvey/', $itemURI, '-survey-', position())" />
                 		</xsl:attribute>
                 	</arco-cd:hasSurvey>
                 </xsl:for-each>
