@@ -16,39 +16,39 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36ArchaeologicalProperty1&quot; } ,
-        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Sample1&quot; } ,
-        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Position_x&quot; }
+        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#ArchaeologicalProperty1&quot; } ,
+        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Sample1&quot; } ,
+        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Position_x&quot; }
       } ,
       {
-        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36ArchaeologicalProperty2&quot; } ,
-        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Sample2&quot; } ,
-        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Position_y&quot; }
+        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#ArchaeologicalProperty2&quot; } ,
+        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Sample2&quot; } ,
+        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Position_y&quot; }
       } ,
       {
-        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36ArchaeologicalProperty7&quot; } ,
-        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Sample7&quot; } ,
-        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Position_k&quot; }
+        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#ArchaeologicalProperty7&quot; } ,
+        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Sample7&quot; } ,
+        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Position_k&quot; }
       } ,
       {
-        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36ArchaeologicalProperty3&quot; } ,
-        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Sample3&quot; } ,
-        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Position_z&quot; }
+        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#ArchaeologicalProperty3&quot; } ,
+        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Sample3&quot; } ,
+        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Position_z&quot; }
       } ,
       {
-        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36ArchaeologicalProperty6&quot; } ,
-        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Sample6&quot; } ,
-        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Position_m&quot; }
+        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#ArchaeologicalProperty6&quot; } ,
+        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Sample6&quot; } ,
+        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Position_m&quot; }
       } ,
       {
-        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36ArchaeologicalProperty4&quot; } ,
-        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Sample4&quot; } ,
-        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Position_w&quot; }
+        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#ArchaeologicalProperty4&quot; } ,
+        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Sample4&quot; } ,
+        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Position_w&quot; }
       } ,
       {
-        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36ArchaeologicalProperty5&quot; } ,
-        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Sample5&quot; } ,
-        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36Position_x&quot; }
+        &quot;arcprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#ArchaeologicalProperty5&quot; } ,
+        &quot;sample&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Sample5&quot; } ,
+        &quot;pos&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl#Position_x&quot; }
       }
     ]
   }
@@ -70,7 +70,7 @@ where {
 
 LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ30.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ30.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 
