@@ -8167,8 +8167,10 @@
 							<xsl:value-of select="normalize-space(schede/*/TU/CDG/CDGS)" />
 						</l0:name>
 						<rdf:type>
+							<xsl:attribute name="rdf:resource">
 							<xsl:value-of
 								select="'https://w3id.org/italia/onto/l0/Agent'" />
+							</xsl:attribute>
 						</rdf:type>
 						<xsl:if test="schede/*/TU/CDG/CDGI ">
 							<arco-cd:address>
