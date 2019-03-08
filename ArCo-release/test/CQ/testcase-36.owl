@@ -43,27 +43,27 @@ where {
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36WritingSystem4&quot; }
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem4&quot; }
       } ,
       {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36WritingSystem5&quot; }
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem5&quot; }
       } ,
       {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36WritingSystem6&quot; }
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem6&quot; }
       } ,
       {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36WritingSystem2&quot; }
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem2&quot; }
       } ,
       {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36WritingSystem1&quot; }
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem1&quot; }
       } ,
       {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36WritingSystem3&quot; }
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem3&quot; }
       }
     ]
   }
 }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ36.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 
