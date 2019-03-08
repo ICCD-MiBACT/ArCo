@@ -13,7 +13,7 @@
         <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP06.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy>Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasRequirement xml:lang="en">The instance Elegible1 belongs to both ElegibleIntervention and Intervention.</testannotationschema:hasRequirement>
+        <testannotationschema:hasRequirement xml:lang="en">The instance Research1 belongs to both classes Research and Survey</testannotationschema:hasRequirement>
         <testannotationschema:hasExpectedResult xml:lang="en">Inconsistent</testannotationschema:hasExpectedResult>
         <testannotationschema:hasRequirement xml:lang="it">L&apos;istanza Research1 appartiene ad entrambe le classi Research e Survey.</testannotationschema:hasRequirement>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</testannotationschema:hasActualResult>
