@@ -18,39 +18,39 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/CulturalProperty1&quot; } ,
-        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Copyright1&quot; } ,
-        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Agent1&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#CulturalProperty1&quot; } ,
+        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Copyright1&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Agent1&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/CulturalProperty7&quot; } ,
-        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Copyright7&quot; } ,
-        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Agent7&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#CulturalProperty7&quot; } ,
+        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Copyright7&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Agent7&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/CulturalProperty4&quot; } ,
-        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Copyright4&quot; } ,
-        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Agent4&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#CulturalProperty4&quot; } ,
+        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Copyright4&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Agent4&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/CulturalProperty3&quot; } ,
-        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Copyright3&quot; } ,
-        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Agent3&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#CulturalProperty3&quot; } ,
+        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Copyright3&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Agent3&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/CulturalProperty6&quot; } ,
-        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Copyright6&quot; } ,
-        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Agent6&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#CulturalProperty6&quot; } ,
+        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Copyright6&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Agent6&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/CulturalProperty2&quot; } ,
-        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Copyright2&quot; } ,
-        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Agent2&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#CulturalProperty2&quot; } ,
+        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Copyright2&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Agent2&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/CulturalProperty5&quot; } ,
-        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Copyright5&quot; } ,
-        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ17/Agent5&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#CulturalProperty5&quot; } ,
+        &quot;right&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Copyright5&quot; } ,
+        &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl#Agent5&quot; }
       }
     ]
   }
@@ -67,7 +67,7 @@ where {
 } LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ17.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ17.ttl"/>
         <testannotationschema:testDate xml:lang="en">2019-02-08</testannotationschema:testDate>
     </owl:Ontology>
 </rdf:RDF>
