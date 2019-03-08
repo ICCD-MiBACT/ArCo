@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/VI/Toyset_VI04.owl#"
-     xml:base="https://w3id.org/arco/test/VI/Toyset_VI04.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI04.owl#"
+     xml:base="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI04.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/Toyset_VI04.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI04.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
     </owl:Ontology>
     
@@ -26,41 +26,41 @@
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI04#Città_di_Atlantide -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Città_di_Atlantide -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI04#Città_di_Atlantide">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Città_di_Atlantide">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/OldTown"/>
         <location:hasOldTownAdministrativeType rdf:resource="https://w3id.org/arco/ontology/location/ChiefTown"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI04#Isola_di_Atlantide -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Isola_di_Atlantide -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI04#Isola_di_Atlantide">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Isola_di_Atlantide">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
-        <location:hasHistoricalArea rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI04#Città_di_Atlantide"/>
+        <location:hasHistoricalArea rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Città_di_Atlantide"/>
         <location:hasTypeOfContext rdf:resource="https://w3id.org/arco/ontology/location/UnderwaterContext"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI04#Localizzazione_fisica_attuale_del_Sito -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Localizzazione_fisica_attuale_del_Sito -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI04#Localizzazione_fisica_attuale_del_Sito">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Localizzazione_fisica_attuale_del_Sito">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-        <location:atLocation rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI04#Isola_di_Atlantide"/>
+        <location:atLocation rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Isola_di_Atlantide"/>
         <location:hasLocationType rdf:resource="https://w3id.org/arco/ontology/location/CurrentPhysicalLocation"/>
         <location:locationDetails>Sul fondo all&apos;Oceano Atlantico</location:locationDetails>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI04#Sito_archeologico_Atlantide -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Sito_archeologico_Atlantide -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI04#Sito_archeologico_Atlantide">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Sito_archeologico_Atlantide">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <location:hasTimeIndexedTypedLocation rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI04#Localizzazione_fisica_attuale_del_Sito"/>
+        <location:hasTimeIndexedTypedLocation rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Localizzazione_fisica_attuale_del_Sito"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
