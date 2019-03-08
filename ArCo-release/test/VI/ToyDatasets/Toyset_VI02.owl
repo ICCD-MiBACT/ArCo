@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/VI/Toyset_VI02.owl#"
-     xml:base="https://w3id.org/arco/test/VI/Toyset_VI02.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI02.owl#"
+     xml:base="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI02.owl"
      xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -10,7 +10,7 @@
      xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI02.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/arco/"/>
     </owl:Ontology>
@@ -28,93 +28,93 @@
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#Compilazione_da_Rossi_M -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Compilazione_da_Rossi_M -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#Compilazione_da_Rossi_M">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Compilazione_da_Rossi_M">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#Funzionario_responsabile_Verdi_L -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Funzionario_responsabile_Verdi_L -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#Funzionario_responsabile_Verdi_L">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Funzionario_responsabile_Verdi_L">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#OssoDinosauro -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#OssoDinosauro -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#OssoDinosauro">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#OssoDinosauro">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/ArchaeologicalProperty"/>
-        <catalogue:isDescribedByCatalogueRecord rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#Scheda_catalografica_0736"/>
+        <catalogue:isDescribedByCatalogueRecord rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Scheda_catalografica_0736"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#Profilo_accesso_0736 -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Profilo_accesso_0736 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#Profilo_accesso_0736">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Profilo_accesso_0736">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <catalogue:hasPrivacyLevel rdf:resource="https://w3id.org/arco/ontology/catalogue/MinimumPrivacy"/>
-        <catalogue:hasPrivacyReason rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#dati_pubblicabili"/>
+        <catalogue:hasPrivacyReason rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#dati_pubblicabili"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#Rossi_Mario -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Rossi_Mario -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#Rossi_Mario">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Rossi_Mario">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#Scheda_catalografica_0736 -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Scheda_catalografica_0736 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#Scheda_catalografica_0736">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Scheda_catalografica_0736">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordBNP"/>
-        <catalogue:hasAccessProfile rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#Profilo_accesso_0736"/>
-        <catalogue:hasCatalogueRecordVersion rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#0736-Compilazione"/>
+        <catalogue:hasAccessProfile rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Profilo_accesso_0736"/>
+        <catalogue:hasCatalogueRecordVersion rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#0736-Compilazione"/>
         <catalogue:hasCataloguingLevel rdf:resource="https://w3id.org/arco/ontology/catalogue/C"/>
         <catalogue:catalogueRecordIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0736</catalogue:catalogueRecordIdentifier>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#Verdi_Luigi -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Verdi_Luigi -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#Verdi_Luigi">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Verdi_Luigi">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#dati_pubblicabili -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#dati_pubblicabili -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#dati_pubblicabili">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#dati_pubblicabili">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyReason"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#0736-Compilazione -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#0736-Compilazione -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#0736-Compilazione">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#0736-Compilazione">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
-        <catalogue:editedAtTime rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#1993"/>
-        <catalogue:hasCatalogueRecordVersionRiT rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#Compilazione_da_Rossi_M"/>
-        <catalogue:hasCatalogueRecordVersionRiT rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#Funzionario_responsabile_Verdi_L"/>
-        <catalogue:hasOfficialInCharge rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#Verdi_Luigi"/>
-        <catalogue:hasResponsibleResearchAndCompilation rdf:resource="https://w3id.org/arco/test/VI/Toyset_VI02#Rossi_Mario"/>
+        <catalogue:editedAtTime rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#1993"/>
+        <catalogue:hasCatalogueRecordVersionRiT rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Compilazione_da_Rossi_M"/>
+        <catalogue:hasCatalogueRecordVersionRiT rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Funzionario_responsabile_Verdi_L"/>
+        <catalogue:hasOfficialInCharge rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Verdi_Luigi"/>
+        <catalogue:hasResponsibleResearchAndCompilation rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Rossi_Mario"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/Toyset_VI02#1993 -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#1993 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/Toyset_VI02#1993">
+    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#1993">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
     </owl:NamedIndividual>
 </rdf:RDF>
