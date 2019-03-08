@@ -31,31 +31,31 @@ where {
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36CulturalProperty3&quot; }
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty3&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36CulturalProperty2&quot; }
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty2&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36CulturalProperty5&quot; }
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty5&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36CulturalProperty1&quot; }
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty1&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36CulturalProperty7&quot; }
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty7&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36CulturalProperty4&quot; }
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty4&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ/36CulturalProperty6&quot; }
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty6&quot; }
       }
     ]
   }
 }</testannotationschema:hasExpectedResult>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ23.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 
