@@ -16,35 +16,35 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty1&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty1&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Suburban&quot; }
       } ,
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty5&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty5&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Suburban&quot; }
       } ,
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty8&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty8&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Urban&quot; }
       } ,
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty4&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty4&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Urban&quot; }
       } ,
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty2&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty2&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Territorial&quot; }
       } ,
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty6&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty6&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Territorial&quot; }
       } ,
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty3&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty3&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Underwater&quot; }
       } ,
       {
-        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ26b/CulturalProperty7&quot; } ,
+        &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty7&quot; } ,
         &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Underwater&quot; }
       }
     ]
@@ -63,7 +63,7 @@ WHERE {
 
 LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ45.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/CQ/ToyDatasets/Toyset_CQ45.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 
