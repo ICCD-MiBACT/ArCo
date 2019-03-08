@@ -17,23 +17,23 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ32/CulturalProperty4&quot; } ,
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty4&quot; } ,
         &quot;purpose&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Magic&quot; }
       } ,
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ32/CulturalProperty2&quot; } ,
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty2&quot; } ,
         &quot;purpose&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Magico&quot; }
       } ,
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ32/CulturalProperty5&quot; } ,
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty5&quot; } ,
         &quot;purpose&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Magiche&quot; }
       } ,
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ32/CulturalProperty1&quot; } ,
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty1&quot; } ,
         &quot;purpose&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Magica&quot; }
       } ,
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ32/CulturalProperty3&quot; } ,
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty3&quot; } ,
         &quot;purpose&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;Magici&quot; }
       }
     ]
@@ -55,7 +55,7 @@ where {
 } 
 
 LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ32.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 
