@@ -16,38 +16,38 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty1&quot; } ,
-        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element1&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#CulturalProperty1&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#element1&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee1&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty2&quot; } ,
-        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element2&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#CulturalProperty2&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#element2&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee2&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty3&quot; } ,
-        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element3&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#CulturalProperty3&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#element3&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee3&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty4&quot; } ,
-        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element4&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#CulturalProperty4&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#element4&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee4&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty5&quot; } ,
-        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element5&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#CulturalProperty5&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#element5&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee5&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty6&quot; } ,
-        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element6&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#CulturalProperty6&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#element6&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee6&quot; }
       } ,
       {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/CulturalProperty7&quot; } ,
-        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ27/element7&quot; } ,
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#CulturalProperty7&quot; } ,
+        &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl#element7&quot; } ,
         &quot;agent&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;dedicatee7&quot; }
       }
     ]
@@ -62,7 +62,7 @@ where {
  ?ele a arco-dd:Dedication.
  ?ele arco-dd:hasDedicatee ?agent
 } LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ27.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ27.ttl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasCQ xml:lang="it">Qual è il dedicatario della dedica presente sul bene X?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">What is the dedication's dedicatee present on the cultural entity X?</testannotationschema:hasCQ>
