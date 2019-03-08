@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/EP/Toyset_EP04.owl#"
-     xml:base="https://w3id.org/arco/test/EP/Toyset_EP04.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#"
+     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/Toyset_EP04.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
     </owl:Ontology>
     
