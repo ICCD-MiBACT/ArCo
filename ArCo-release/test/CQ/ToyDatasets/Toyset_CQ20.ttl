@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/arco/test/CQ/Toyset_CQ20>.
+@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl>.
 @prefix arcocd: <https://w3id.org/arco/context-description/> .
 @prefix arcocore: <https://w3id.org/arco/core/> .
 
