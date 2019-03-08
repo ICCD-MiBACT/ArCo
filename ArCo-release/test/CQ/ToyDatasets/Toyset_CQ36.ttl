@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl>.
+@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#>.
 @prefix arcolocation: <https://w3id.org/arco/location/> .
 @prefix CLV: <https://w3id.org/italia/onto/CLV/> .
 @prefix arcodd: <https://w3id.org/arco/denotative-description/> .
