@@ -16,19 +16,19 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;int&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ22/Intervention1&quot; }
+        &quot;int&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ22.ttl#Intervention1&quot; }
       } ,
       {
-        &quot;int&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ22/Intervention2&quot; }
+        &quot;int&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ22.ttl#Intervention2&quot; }
       } ,
       {
-        &quot;int&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ22/Intervention6&quot; }
+        &quot;int&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ22.ttl#Intervention6&quot; }
       }
     ]
   }
 }</testannotationschema:hasExpectedResult>
         <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ22.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ22.ttl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasCQ xml:lang="it">Quali interventi conservativi e non sono stati effettuati sui beni dopo l’estate del 2016 nel comune di Amatrice?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">What conservation interventions have not been carried out on cultural assets in the municipality of Amatrice after the summer of 2016?</testannotationschema:hasCQ>
