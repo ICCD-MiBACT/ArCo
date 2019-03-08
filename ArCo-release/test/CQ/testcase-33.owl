@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-33.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/Toyset_CQ33.ttl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl"/>
         <testannotationschema:hasCQ xml:lang="it">Quali sono gli accessori del bene musicale X?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">What are the accessories of the musical good X?</testannotationschema:hasCQ>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
@@ -28,32 +28,32 @@ where {
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/CulturalProperty3&quot; } ,
-        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/Accessory3&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty3&quot; } ,
+        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#Accessory3&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/CulturalProperty7&quot; } ,
-        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/Accessory7&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty7&quot; } ,
+        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#Accessory7&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/CulturalProperty2&quot; } ,
-        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/Accessory2&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty2&quot; } ,
+        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#Accessory2&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/CulturalProperty6&quot; } ,
-        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/Accessory6&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty6&quot; } ,
+        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#Accessory6&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/CulturalProperty5&quot; } ,
-        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/Accessory5&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty5&quot; } ,
+        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#Accessory5&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/CulturalProperty1&quot; } ,
-        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/Accessory1&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty1&quot; } ,
+        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#Accessory1&quot; }
       } ,
       {
-        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/CulturalProperty4&quot; } ,
-        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/Toyset_CQ33/Accessory4&quot; }
+        &quot;CultPro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#CulturalProperty4&quot; } ,
+        &quot;Accessory&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#Accessory4&quot; }
       }
     ]
   }
