@@ -97,6 +97,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAcquisitionOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale coinvolto in un evento di acquisizione all&apos;acquisizione stessa.</rdfs:comment>
@@ -2220,6 +2221,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isAcquisitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAcquisitionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento di acquisizione al bene culturale coinvolto nell&apos;acquisizione.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is acquisition of</rdfs:label>
+        <rdfs:label xml:lang="it">è acquisizione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isArchivalRecordSetIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isArchivalRecordSetIn">
@@ -4223,8 +4241,26 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isAcquisitionOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasPreviousOwner"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/acquisitionLocation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/time"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento in cui un bene culturale è stato acquisito e si trova in una certa condizione giuridica.</rdfs:comment>

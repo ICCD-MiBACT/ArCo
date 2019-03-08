@@ -11758,11 +11758,11 @@
 							</arco-core:note>
 						</xsl:if>
 						<xsl:if test="./CPRN">
-							<arco-cd:hasCopyrightOwner>
+							<arco-cd:hasCopyrightHolder>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./CPRN)))" />
 								</xsl:attribute>
-							</arco-cd:hasCopyrightOwner>
+							</arco-cd:hasCopyrightHolder>
 						</xsl:if>
 					</rdf:Description>
 					<xsl:if test="./CPRN">
