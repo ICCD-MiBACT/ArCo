@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ18.ttl> .
+@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ18.ttl#> .
 @prefix arcocd: <https://w3id.org/arco/ontology/context-description/> .
 @prefix arcocore: <https://w3id.org/arco/core/> .
 @prefix cis: <http://dati.beniculturali.it/cis/> .
