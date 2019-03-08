@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ43.ttl> .
+@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ43.ttl#> .
 @prefix arcocatalogue: <https://w3id.org/arco/catalogue/> . 
 
 :CulturalProperty1 arcocatalogue:isDescribedByCatalogueRecord :CatalogueRecord1 .
