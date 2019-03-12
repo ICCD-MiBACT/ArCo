@@ -230,6 +230,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/RO/hasRiT"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionRiTOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
