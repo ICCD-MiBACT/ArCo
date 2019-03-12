@@ -334,6 +334,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Dedication"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una dedica al dedicatario, cioè alla persona o ente cui è rivolta la dedica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a dedication to its dedicaatee, which is the person or institution to whom the dedication is addressed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha dedicatario</rdfs:label>
         <rdfs:label xml:lang="en">has dedicatee</rdfs:label>
@@ -350,6 +351,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua denominazione e/o dedicazione o, per la normativa FF, titolo, nel corso del tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a cultural entity to its denomination and/or dedication, or title (for FF legislation) over time.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha designazione nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
