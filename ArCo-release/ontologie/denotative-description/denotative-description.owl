@@ -385,6 +385,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, uno stemma, un timbro, etc., al tipo di caratteri che viene adottato (es.: corsivo, grassetto, caratteri gotici, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an inscription or emblem, postmark, crest, etc. to the font style which has been adopted (e.g.: italic, bold, gothic etc).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di caratteri</rdfs:label>
         <rdfs:label xml:lang="en">has font style</rdfs:label>
