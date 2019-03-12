@@ -127,6 +127,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Accessory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a un suo accessorio, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical good to one of its accessories. In other words, it is an object linkable to a musical object, whether it is functional to the sound production, or if it is the sound&apos;s production or conservation medium.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha accessorio</rdfs:label>
         <rdfs:label xml:lang="en">has accessory</rdfs:label>
@@ -282,6 +283,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè la definizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s typology to one of its components, i.e.  its definition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha definizione del bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property definition</rdfs:label>
@@ -298,6 +300,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè alle specifiche morfologiche e funzionali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s typology to its components, i.e. morphological and functional specifications.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha specifiche del bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property specification</rdfs:label>
@@ -397,6 +400,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto (es bene culturale, apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione) al suo scopo funzionale (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property realtes an object (e.g. cultural entity, iconographic/decorative apparatus, affixed element like an inscription) to its functional purpose, intended as the function the object has to perform (decorative, religious, symbolic, magic-offensive etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha scopo funzionale</rdfs:label>
         <rdfs:label xml:lang="en">has functional purpose</rdfs:label>
@@ -463,6 +467,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega lo stato di conservazione di un bene numismatico al suo stato di leggibilità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a numismatic entity&apos;s conservation status to its legibility status.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha leggibilità</rdfs:label>
         <rdfs:label xml:lang="en">has legibility</rdfs:label>
