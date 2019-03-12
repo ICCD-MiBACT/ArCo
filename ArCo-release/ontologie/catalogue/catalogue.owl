@@ -230,6 +230,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/RO/hasRiT"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionRiTOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
@@ -251,7 +252,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://dati.beniculturali.it/cis/isRelatedToRiT"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/onto/RO/hasRiT"/>
             <rdf:Description rdf:about="https://w3id.org/italia/onto/RO/isRoleInTimeOf"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione di una scheda di catalogo a un agente che riveste un ruolo nelle attività di catalogazione di quella scheda. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Questa relazione è poi specializzata da sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l’ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -689,6 +690,12 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasRelatedAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/RO/hasRiT -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/hasRiT"/>
     
 
 
