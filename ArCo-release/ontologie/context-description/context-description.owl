@@ -5861,6 +5861,7 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FinalWork">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryWork"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità collegata a un bene culturale, che ne costituisce la fase finale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an entity related to a cultural property, as its final stage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
