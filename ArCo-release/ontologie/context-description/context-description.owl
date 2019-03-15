@@ -1420,7 +1420,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPlanningEnvironmentalRelationWith">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
@@ -1567,7 +1567,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedWork">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWork"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un bene culturale e un&apos;opera collegata all&apos;opera stessa (es.: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the situation in which a cultural property is related to another work with the related work itself (e.g.: a preparatory work, a prototype, a copy, a reuse, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -2489,7 +2489,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInvolvedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is involved in</rdfs:label>
@@ -2506,7 +2506,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLocatedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce il luogo di collocazione.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is located in</rdfs:label>
@@ -2736,7 +2736,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isReusedBy">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che lo riutilizza in tutto o in parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is reused by</rdfs:label>
@@ -2904,7 +2904,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/wasCreatedAt">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di produzione/realizzazione.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">was created at</rdfs:label>
@@ -2921,7 +2921,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/wasLocatedIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di provenienza, prima della sua attuale collocazione.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">era contenuto in</rdfs:label>
@@ -2938,7 +2938,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/wasRediscoveredIn">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di rinvenimento archeologico.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">was rediscovered in</rdfs:label>
@@ -3498,6 +3498,22 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/derivatedWorkLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/derivatedWorkLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/DerivatedWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la localizzazione geografica e collocazione specifica dell&apos;opera derivata dal bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">collocazione dell&apos;opera derivata</rdfs:label>
+        <rdfs:label xml:lang="en">derivated work location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFC - Normativa S: RO/COP/COPC - Normativa F: RO/CRF/CRFC</arco-catalogue:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/diagnosis -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/diagnosis">
@@ -4052,6 +4068,19 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la localizzazione geografica e collocazione specifica dell&apos;opera derivata dal bene culturale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">collocazione dell&apos;opera preparatoria o finale</rdfs:label>
+        <rdfs:label xml:lang="en">preparatory or final work location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkPreviousLocation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkPreviousLocation">
@@ -4148,22 +4177,6 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/NVC/NVCR</arco-catalogue:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/relatedWorkLocation -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/relatedWorkLocation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWork"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni realtive alla localizzazione geografica e collocazione specifica dell’oggetto con cui il bene in esame è in rapporto.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">Collocazione dell&apos;opera correlata</rdfs:label>
-        <rdfs:label xml:lang="en">Related work location</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFC - Normativa S: RO/COP/COPC - Normativa F: RO/CRF/CRFC</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5709,11 +5722,23 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
     <!-- https://w3id.org/arco/ontology/context-description/DerivatedWork -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/DerivatedWork">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWork"/>
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDerivatedWorkType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/DerivatedWorkType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/derivatedWorkLocation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una derivazione del bene catalogato (reimpiego, copia, contraffazione, replica, controtipo) prodotta dallo stesso o da altro autore.</rdfs:comment>
@@ -6864,7 +6889,13 @@ gioco, etc.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWork"/>
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDating"/>
@@ -6881,6 +6912,12 @@ gioco, etc.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTitle"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Title"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/preparatoryOrFinalWorkLocation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7029,50 +7066,6 @@ gioco, etc.</rdfs:comment>
         <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa S 3: RO/COP/COPR</arco-catalogue:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RelatedCulturalProperty">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWork"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale che ha una relazione con un altro bene culturale, descritto in una scheda di catalogo. La natura della relazione viene specificata attraverso l&apos;utilizzo di proprietà che collegano i due beni.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a cultural property related to another cultural property. The type of the relationship is specified by the object properties used to relate the two entities.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">Bene culturale collegato</rdfs:label>
-        <rdfs:label xml:lang="en">Related cultural property</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RV/RSE</arco-catalogue:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/RelatedWork -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RelatedWork">
-        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/relatedWorkLocation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;opera con cui il bene catalogato è in rapporto: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a work related with a cultural property: a preparatory work, a prototype, a copy, a reuse, etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="it">Opera correlata</rdfs:label>
-        <rdfs:label xml:lang="en">Related work</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</arco-catalogue:iccdNormTag>
     </owl:Class>
     
 
