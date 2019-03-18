@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/context-description-aligns/"
+     xml:base="https://w3id.org/arco/ontology/context-description-aligns/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description-aligns/">
+        <owl:imports rdf:resource="http://id.loc.gov/ontologies/bibframe-2-0-1/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">These are the alignments of Context Description module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
+        <dc:creator>STLab (ISTC-CNR)</dc:creator>
+        <rdfs:label xml:lang="it">Questi sono gli allineamenti del modulo Context Description (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAcquisition -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/immediateAcquisition"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasCopyright -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyright">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/copyrightRegistration"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasPreviousOwner -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasPreviousOwner">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/acquisitionSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasScale -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasScale">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/scale"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasTitle -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasTitle">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/documentationLocation -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/documentationLocation">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/physicalLocation"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Acquisition -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ImmediateAcquisition"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Copyright -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Copyright">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/CopyrightRegistration"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Scale -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Scale">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Scale"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Title -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Title">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

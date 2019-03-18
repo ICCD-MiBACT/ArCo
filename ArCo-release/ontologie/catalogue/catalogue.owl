@@ -1403,7 +1403,7 @@
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive stampe.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <rdfs:label xml:lang="en">S catalogue record</rdfs:label>
-        <rdfs:label xml:lang="en">Scheda Stampe</rdfs:label>
+        <rdfs:label xml:lang="it">Scheda Stampe</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
