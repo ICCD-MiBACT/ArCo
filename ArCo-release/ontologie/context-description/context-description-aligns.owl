@@ -13,6 +13,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:context="https://w3id.org/arco/ontology/context-description/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description-aligns/">
         <owl:imports rdf:resource="http://id.loc.gov/ontologies/bibframe-2-0-1/"/>
@@ -35,62 +36,198 @@
     
 
 
+    <!-- http://id.loc.gov/ontologies/bibframe/acquisitionSource -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/acquisitionSource"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/copyrightRegistration -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/copyrightRegistration"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/immediateAcquisition -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/immediateAcquisition"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/physicalLocation -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/physicalLocation"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/scale -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/scale"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/title -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/title"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P31_has_modified -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasOwner"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/documentationLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/documentationLocation">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/physicalLocation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAcquisition -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition">
         <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/immediateAcquisition"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasActivityOperator -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasActivityOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasActivityResponsible -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasActivityResponsible">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasActivitySponsor -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasActivitySponsor">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
     </rdf:Description>
     
 
 
     <!-- https://w3id.org/arco/ontology/context-description/hasCopyright -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyright">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyright">
         <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/copyrightRegistration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasCopyrightHolder -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyrightHolder">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by"/>
     </rdf:Description>
     
 
 
     <!-- https://w3id.org/arco/ontology/context-description/hasPreviousOwner -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasPreviousOwner">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPreviousOwner">
         <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/acquisitionSource"/>
-    </rdf:Description>
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/arco/ontology/context-description/hasScale -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasScale">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasScale">
         <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/scale"/>
-    </rdf:Description>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/arco/ontology/context-description/hasTitle -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasTitle">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTitle">
         <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isAcquisitionOf -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isAcquisitionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of"/>
     </rdf:Description>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- https://w3id.org/arco/ontology/context-description/isInterventionOn -->
 
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified"/>
+    </rdf:Description>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/documentationLocation -->
+    <!-- https://w3id.org/arco/ontology/context-description/isPreviousOwnerOf -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/documentationLocation">
-        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/physicalLocation"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPreviousOwnerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through"/>
+    </owl:ObjectProperty>
     
 
 
@@ -105,10 +242,43 @@
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E11_Modification -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E11_Modification"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E30_Right -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E30_Right"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E35_Title -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E35_Title"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Acquisition -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition">
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ImmediateAcquisition"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ArchivalRecord -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecord">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Archival"/>
     </rdf:Description>
     
 
@@ -117,6 +287,15 @@
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Copyright">
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/CopyrightRegistration"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E30_Right"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Intervention -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Intervention">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E11_Modification"/>
     </rdf:Description>
     
 
@@ -133,6 +312,7 @@
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Title">
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E35_Title"/>
     </rdf:Description>
 </rdf:RDF>
 

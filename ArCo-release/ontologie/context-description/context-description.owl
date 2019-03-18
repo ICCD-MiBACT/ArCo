@@ -2615,8 +2615,8 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is previous owner of</rdfs:label>
         <rdfs:label xml:lang="it">è soggetto fonte dell&apos;acquisizione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
