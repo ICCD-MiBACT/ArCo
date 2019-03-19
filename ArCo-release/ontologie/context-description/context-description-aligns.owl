@@ -291,6 +291,12 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#EntityInfluence -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#EntityInfluence"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Acquisition -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition">
@@ -321,6 +327,14 @@
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Intervention">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E11_Modification"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/RelatedWorkSituation -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#EntityInfluence"/>
     </rdf:Description>
     
 
