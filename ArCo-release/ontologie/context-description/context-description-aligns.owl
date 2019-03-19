@@ -72,6 +72,23 @@
     
 
 
+    <!-- http://purl.org/vocab/frbr/core#creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#creator"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#owner -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#owner">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasOwner"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
@@ -162,6 +179,14 @@
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasActivitySponsor">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAuthor -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#creator"/>
     </rdf:Description>
     
 
