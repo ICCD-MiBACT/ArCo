@@ -170,8 +170,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">at location</rdfs:label>
         <rdfs:label xml:lang="it">presso luogo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: se LC senza sottoelemento LDC; se LA senza sottoelemento PRC.</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -189,8 +189,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">at site</rdfs:label>
         <rdfs:label xml:lang="it">presso contenitore fisico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC; LA/PRC</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -207,8 +207,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha altitudine</rdfs:label>
         <rdfs:label xml:lang="en">has altitude</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI - GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -225,8 +225,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha base cartografica</rdfs:label>
         <rdfs:label xml:lang="en">has base map</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -243,8 +243,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha città catastale</rdfs:label>
         <rdfs:label xml:lang="en">has cadastral city</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: CS/CTS/CTSC</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -261,8 +261,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha entità catastale</rdfs:label>
         <rdfs:label xml:lang="en">has cadastral entity</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: CS/CTS; LS/CSS</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -279,8 +279,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha identità catastale</rdfs:label>
         <rdfs:label xml:lang="en">has cadastral identity</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CS</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -299,8 +299,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tipo di catasto</rdfs:label>
         <rdfs:label xml:lang="en">has cadastre type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -317,8 +317,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area amministrativa ecclesiastica</rdfs:label>
         <rdfs:label xml:lang="en">has clerical administrative area</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: LC/PVE; LA/PRE</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -352,8 +352,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha coordinate</rdfs:label>
         <rdfs:label xml:lang="en">has coordinates</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - versioni precedenti: GP/GPD; GA/GAPD; GL/GLS</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -388,8 +388,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha metodo di georeferenziazione</rdfs:label>
         <rdfs:label xml:lang="en">has geometry method</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM - GA/GAM - GL/GLM</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -406,8 +406,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha tecnica di georeferenziazione</rdfs:label>
         <rdfs:label xml:lang="en">has geometry technique</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -425,8 +425,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area di appartenenza amministrativa</rdfs:label>
         <rdfs:label xml:lang="en">has governamental administrative area</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/LCS/LCSA; LA/PRT/PRTR</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -444,8 +444,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area storica</rdfs:label>
         <rdfs:label xml:lang="en">has historical area</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -481,8 +481,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Old town administrative type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo amministrativo del centro storico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -555,8 +555,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha ambiente</rdfs:label>
         <rdfs:label xml:lang="en">has stratigraphic area</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTX</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -574,8 +574,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha settore</rdfs:label>
         <rdfs:label xml:lang="en">has stratigraphic room</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTY</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -593,8 +593,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha quadrato</rdfs:label>
         <rdfs:label xml:lang="en">has stratigraphic square</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTZ</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -612,8 +612,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha area di appartenenza territoriale</rdfs:label>
         <rdfs:label xml:lang="en">has territorial area</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/LCS/LCSR</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -631,8 +631,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha ripartizione territoriale</rdfs:label>
         <rdfs:label xml:lang="en">has territorial division</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/LCS/LCST</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -667,8 +667,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha toponimo nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has toponym in time</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVL; LA/PRL</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -705,8 +705,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">ha zona urbana</rdfs:label>
         <rdfs:label xml:lang="en">has urban area</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/ZUR/ZURD.</catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -721,8 +721,8 @@
         <rdfs:comment xml:lang="en">This property links the georeferencing coordinates of the altitude to an object (Geometry).</rdfs:comment>
         <rdfs:label xml:lang="en">is altitude of</rdfs:label>
         <rdfs:label xml:lang="it">è altitudine di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -736,8 +736,8 @@
         <rdfs:comment xml:lang="en">This property links a base map to an object georeferencing.</rdfs:comment>
         <rdfs:label xml:lang="en">is base map of</rdfs:label>
         <rdfs:label xml:lang="it">è base cartografica di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -918,8 +918,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">is site in</rdfs:label>
         <rdfs:label xml:lang="it">è contenitore fisico in</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1093,8 +1093,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Administrative order number</rdfs:label>
         <rdfs:label xml:lang="it">Numero d&apos;ordine amministrativo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTN; LC/ZUR/ZURN; LC/SET/SETN</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1110,8 +1110,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">altitude</rdfs:label>
         <rdfs:label xml:lang="it">altitudine</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ - Normative precedenti: GP/GPC/GPCL</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1127,8 +1127,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">cadastre name</rdfs:label>
         <rdfs:label xml:lang="it">denominazione del catasto</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: LS/CSS/CSSD</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1146,8 +1146,8 @@
         <rdfs:comment xml:lang="en">This property allows to associate a legal container to its code assigned by the ICCD.</rdfs:comment>
         <rdfs:label xml:lang="en">cultural institute or site identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del contenitore giuridico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCG; LA/PRC/PRCG</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1164,8 +1164,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">District number</rdfs:label>
         <rdfs:label xml:lang="it">Numero del settore</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/SET/SETP</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1181,8 +1181,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">latitude</rdfs:label>
         <rdfs:label xml:lang="it">latitudine</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECY - Normative precedenti: GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1198,8 +1198,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">dettagli della localizzazione</rdfs:label>
         <rdfs:label xml:lang="en">location details</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVC/PVCV</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1215,8 +1215,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">longitude</rdfs:label>
         <rdfs:label xml:lang="it">longitudine</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECX - Normative precedenti: GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1233,8 +1233,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine massima</rdfs:label>
         <rdfs:label xml:lang="en">maximum altitude</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAX - Normative precedenti: GP/GPC/GPCS; GA/GAQS; GL/GLQ/GLQS</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1251,8 +1251,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine minima</rdfs:label>
         <rdfs:label xml:lang="en">minimum altitude</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAM; versioni precedenti: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1268,8 +1268,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">point type</rdfs:label>
         <rdfs:label xml:lang="it">tipo di punto</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">Normative precedenti alla 4.00: GP/GPC/GPCT</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1286,8 +1286,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">altitudine relativa</rdfs:label>
         <rdfs:label xml:lang="en">relative altitude</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTA/MTAR</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1305,8 +1305,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">identificativo del contenitore fisico</rdfs:label>
         <rdfs:label xml:lang="en">site identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/LDC/LDCK; LA/PRC/PRCK</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1322,8 +1322,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">sistema di riferimento</rdfs:label>
         <rdfs:label xml:lang="en">spacial reference system</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP - Normative precedenti: GA/GAP; GL/GLP; GP/GPP</catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1482,8 +1482,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Base cartografica</rdfs:label>
         <rdfs:label xml:lang="en">Base map</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1498,8 +1498,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral Entity</rdfs:label>
         <rdfs:label xml:lang="it">Entità catastale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: CS/CTS; LS/CSS</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1520,8 +1520,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral map folio</rdfs:label>
         <rdfs:label xml:lang="it">Foglio di mappa catastale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTSF ; LS/CSS/CSSF</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1567,8 +1567,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral identity</rdfs:label>
         <rdfs:label xml:lang="it">Identità catastale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1582,8 +1582,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastral unit collection</rdfs:label>
         <rdfs:label xml:lang="it">Collezione di particelle catastali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Traversale 4.00: CS/CTS/CTSN; LS/CSS/CSSN</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1598,8 +1598,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Cadastre type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di catasto</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTST</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1648,8 +1648,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Coordinate</rdfs:label>
         <rdfs:label xml:lang="en">Coordinates</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - Normative precedenti: GP/GPD; GA/GAPD; GL/GLS</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1665,8 +1665,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geometry method</rdfs:label>
         <rdfs:label xml:lang="it">Metodo di posizionamento</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa trasversale 4.00: GE/GPM - Normative precedenti: GP/GPM;  GA/GAM; GL/GLM</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1681,8 +1681,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Geometry technique</rdfs:label>
         <rdfs:label xml:lang="it">Tecnica di georeferenziazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT - Normative precedenti: GP/GPT; GA/GAT; GL/GLT</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1713,8 +1713,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Elemento di confine</rdfs:label>
         <rdfs:label xml:lang="en">Neighbouring cadastral entity</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTE</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1729,8 +1729,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Centro storico</rdfs:label>
         <rdfs:label xml:lang="en">Old town</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD normative A e PG: LC/CST</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1745,8 +1745,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Old town administrative type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di carattere amministrativo del centro storico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1861,8 +1861,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Toponimo nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">Toponym in time</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVL; LA/PRL</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1894,8 +1894,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Urban area</rdfs:label>
         <rdfs:label xml:lang="it">Zona urbana</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/ZUR/ZURD.</catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2035,8 +2035,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Capoluogo</rdfs:label>
         <rdfs:label xml:lang="en">Chief town</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA.</catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -2081,7 +2081,7 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto extraurbano</rdfs:label>
         <rdfs:label xml:lang="en">Extra-urban context</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">ustable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/SET/SETT (sigla TP)</catalogue:iccdNormTag>
     </owl:NamedIndividual>
@@ -2127,8 +2127,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Centro inglobato</rdfs:label>
         <rdfs:label xml:lang="en">Incorporated area</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -2158,8 +2158,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="en">Locality</rdfs:label>
         <rdfs:label xml:lang="it">Località</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA.</catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -2249,8 +2249,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto suburbano</rdfs:label>
         <rdfs:label xml:lang="en">Suburban context</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU anomalo)</catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -2265,8 +2265,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto territoriale</rdfs:label>
         <rdfs:label xml:lang="en">Territorial context</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ</catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -2281,8 +2281,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Frazione del centro urbano</rdfs:label>
         <rdfs:label xml:lang="en">Town fraction</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normative A e PG: LC/CST/CSTA</catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -2297,8 +2297,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto subacqueo</rdfs:label>
         <rdfs:label xml:lang="en">Underwater context</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ</catalogue:iccdNormTag>
     </owl:NamedIndividual>
     
@@ -2313,8 +2313,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>
         <rdfs:label xml:lang="it">Contesto urbano</rdfs:label>
         <rdfs:label xml:lang="en">Urban context</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVZ; LA/PRZ - Normative A e PG: LC/SET/SETT (sigla SU)</catalogue:iccdNormTag>
     </owl:NamedIndividual>
 </rdf:RDF>

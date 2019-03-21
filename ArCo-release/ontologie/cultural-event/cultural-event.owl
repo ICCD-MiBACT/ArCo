@@ -95,8 +95,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">ha agente collegato a evento culturale</rdfs:label>
         <rdfs:label xml:lang="en">has agent related to cultural event</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -128,8 +128,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">ha evento membro</rdfs:label>
         <rdfs:label xml:lang="en">has member event</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -148,8 +148,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">ha periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">has time period</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -164,8 +164,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">ha periodo di tempo prima di evento successivo</rdfs:label>
         <rdfs:label xml:lang="en">has time period before next event</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -181,8 +181,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">ha unità di misura di periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">has time period measurement unit</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -198,8 +198,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">ha fattore unificante</rdfs:label>
         <rdfs:label xml:lang="en">has unifying factor</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -214,8 +214,8 @@
         <rdfs:isDefinedBy xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the recurrent event that is member of.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">is event member of</rdfs:label>
         <rdfs:label xml:lang="it">è evento membro di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -264,8 +264,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="en">time period value</rdfs:label>
         <rdfs:label xml:lang="it">valore del periodo di tempo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -338,8 +338,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">Evento ricorrente</rdfs:label>
         <rdfs:label xml:lang="en">Recurrent event</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa BDI 4.00: RC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -365,8 +365,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">Periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">Time period</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -380,8 +380,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="en">Time period measurement unit</rdfs:label>
         <rdfs:label xml:lang="it">Unità di misura del periodo di tempo</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -395,8 +395,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">Fattore unificante</rdfs:label>
         <rdfs:label xml:lang="en">Unifying factor</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 

@@ -182,8 +182,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha componente</rdfs:label>
         <rdfs:label xml:lang="en">has component</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -424,8 +424,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is component of</rdfs:label>
         <rdfs:label xml:lang="it">è componente di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -610,8 +610,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">description</rdfs:label>
         <rdfs:label xml:lang="it">descrizione</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -624,8 +624,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">keyword</rdfs:label>
         <rdfs:label xml:lang="it">parola chiave</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa PST: CT/CTC</iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -641,8 +641,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">note</rdfs:label>
         <rdfs:label xml:lang="it">note</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -657,8 +657,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">specifications</rdfs:label>
         <rdfs:label xml:lang="it">specifiche</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 

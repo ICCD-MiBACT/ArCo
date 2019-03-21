@@ -98,8 +98,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha altra disciplina</rdfs:label>
         <rdfs:label xml:lang="en">has alternative discipline</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa PST: CT/CTA</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -116,8 +116,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha categoria di materiale archeologico</rdfs:label>
         <rdfs:label xml:lang="en">has archaeological material category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -134,8 +134,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha classificazione cartografica</rdfs:label>
         <rdfs:label xml:lang="en">has cartographic classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -152,8 +152,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha simbolo cartografico</rdfs:label>
         <rdfs:label xml:lang="en">has cartographic symbol</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMD</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -170,8 +170,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha tema cartografico</rdfs:label>
         <rdfs:label xml:lang="en">has cartographic theme</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -206,8 +206,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha categoria di bene culturale basata su catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property cataloguing category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTV</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -244,8 +244,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha categoria basata su repertorio</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property inventory category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -297,8 +297,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha disciplina principale</rdfs:label>
         <rdfs:label xml:lang="en">has main discipline</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa PST: CT/CTP</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -350,8 +350,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha categoria di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">has numismatic property category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -368,8 +368,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">has photographic heritage classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -384,8 +384,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha tipo di classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">has photographic heritage classification type</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -403,8 +403,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha legenda tipo</rdfs:label>
         <rdfs:label xml:lang="en">has reference coin legend</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTL</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -442,8 +442,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha categoria tematica</rdfs:label>
         <rdfs:label xml:lang="en">has thematic category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMC</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -478,8 +478,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">is cultural property component of</rdfs:label>
         <rdfs:label xml:lang="it">è parte componente di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>OG/OGT/OGTP</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -496,8 +496,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">is cultural property inventory category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria basata su repertorio di</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -513,8 +513,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">is cultural property residual of</rdfs:label>
         <rdfs:label xml:lang="it">è parte residuale di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>OG/OGT/OGTW</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -564,8 +564,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">is numismatic property category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria di bene numismatico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
     </owl:ObjectProperty>
     
@@ -581,8 +581,8 @@
         <rdfs:label xml:lang="en">is photographic heritage classification of</rdfs:label>
         <rdfs:label xml:lang="it">è classificazione di bene fotografico di</rdfs:label>
         <owl:versionInfo xml:lang="it">Questa proprietà, inversa a &quot;ha classificazione di bene fotografico&quot;, collega una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, a un bene fotografico.</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -976,8 +976,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">archaeological site identifier</rdfs:label>
         <rdfs:label xml:lang="it">sigla identificativa del saggio stratigrafico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa SAS: OG/OGT/OGTI</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -994,8 +994,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">cartographic symbol identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del simbolo cartografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1013,8 +1013,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">catalogue number</rdfs:label>
         <rdfs:label xml:lang="it">numero catalogo generale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1030,8 +1030,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">classified subject</rdfs:label>
         <rdfs:label xml:lang="it">soggetto classificato</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F 4.00: SG/CLF/CLFS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1047,8 +1047,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">definition and position of components</rdfs:label>
         <rdfs:label xml:lang="it">definizione e posizione delle parti componenti</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGC/OGCD</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1065,8 +1065,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">digital photograph note</rdfs:label>
         <rdfs:label xml:lang="it">note sulla fotografia digitale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F: MT/FVC/FVCV</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1083,8 +1083,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">data di fine</rdfs:label>
         <rdfs:label xml:lang="en">end time</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1137,8 +1137,8 @@
         <rdfs:comment xml:lang="it">numero di materiali archeologici componenti</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">number of archeological materials</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACQ</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1156,8 +1156,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">number of components</rdfs:label>
         <rdfs:label xml:lang="it">numero di oggetti/elementi componenti</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1175,8 +1175,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">number of cultural property part</rdfs:label>
         <rdfs:label xml:lang="it">numero di parte di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa AT 3.01: EL/ELE/ELEM</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1194,8 +1194,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">number of members</rdfs:label>
         <rdfs:label xml:lang="it">numero di membri</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1210,8 +1210,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">number of parts</rdfs:label>
         <rdfs:label xml:lang="it">numero di parti</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1228,8 +1228,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">number of cultural property residual parts</rdfs:label>
         <rdfs:label xml:lang="it">numero di parti residuali di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>OG/QNT/QNTR</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1247,8 +1247,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">codice regione</rdfs:label>
         <rdfs:label xml:lang="en">region identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1265,8 +1265,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">data di inizio</rdfs:label>
         <rdfs:label xml:lang="en">start time</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1283,8 +1283,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">suffisso</rdfs:label>
         <rdfs:label xml:lang="en">suffix</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTS</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1318,8 +1318,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">codice univoco</rdfs:label>
         <rdfs:label xml:lang="en">unique identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: concat(CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS)</arco-catalogue:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1487,8 +1487,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Archaeological material</rdfs:label>
         <rdfs:label xml:lang="it">Materiale archeologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1503,8 +1503,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Archaeological material category</rdfs:label>
         <rdfs:label xml:lang="it">Categoria del materiale archeologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa TMA: MA/MAC/MACC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1621,8 +1621,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Cartographic classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione cartografica</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale: CT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1643,8 +1643,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Cartographic symbol</rdfs:label>
         <rdfs:label xml:lang="it">Simbolo cartografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMD</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -1659,8 +1659,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Cartographic theme</rdfs:label>
         <rdfs:label xml:lang="it">Tema cartografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2035,8 +2035,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Categoria di bene culturale basata su catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">Cultural property cataloguing category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTV</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2078,8 +2078,8 @@
         <rdfs:comment xml:lang="en">This class represents a complex cultural property, when it is a series or a set.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Property Collection</rdfs:label>
         <rdfs:label xml:lang="it">Insieme di beni culturali</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2121,8 +2121,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Categoria di bene culturale basata su repertorio</rdfs:label>
         <rdfs:label xml:lang="en">Cultural property inventory category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGT/OGTS</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2465,8 +2465,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Classificazione di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic property classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2544,8 +2544,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F 4.00: SG/CLF</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2559,8 +2559,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Photographic heritage classification type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di classificazione di bene fotografico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa F: SG/CLF/CLFT</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2580,8 +2580,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Identificativo RFId</rdfs:label>
         <rdfs:label xml:lang="en">RFId Identifier</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: RF/RFI</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2596,8 +2596,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Legenda tipo</rdfs:label>
         <rdfs:label xml:lang="en">Reference coin legend</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa NU: OG/OGT/OGTL</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2642,8 +2642,8 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Categoria tematica</rdfs:label>
         <rdfs:label xml:lang="en">Thematic category</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMC</arco-catalogue:iccdNormTag>
     </owl:Class>
     
@@ -2978,8 +2978,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Archeaological</rdfs:label>
         <rdfs:label xml:lang="it">Archeologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -2990,8 +2990,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Architectural or Landscape</rdfs:label>
         <rdfs:label xml:lang="it">Architettonico o Paesaggistico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -3002,8 +3002,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Ethno-anthropological</rdfs:label>
         <rdfs:label xml:lang="it">Etnoantropologico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -3014,8 +3014,8 @@
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MibacScopeOfProtection"/>
         <rdfs:label xml:lang="en">Historical Artistic</rdfs:label>
         <rdfs:label xml:lang="it">Storico Artistico</rdfs:label>
-        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
 </rdf:RDF>
 
