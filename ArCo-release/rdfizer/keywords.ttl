@@ -1,0 +1,315 @@
+<https://w3id.org/arco/resource/Keyword/matrici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "matrici"@it .
+
+<https://w3id.org/arco/resource/Keyword/strumenti-musicali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "strumenti musicali"@it .
+
+<https://w3id.org/arco/resource/Keyword/struttura>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "struttura"@it .
+
+<https://w3id.org/arco/resource/Keyword/schema>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schema"@it .
+
+<https://w3id.org/arco/resource/Keyword/maggio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "maggio"@it .
+
+<https://w3id.org/arco/resource/Keyword/entrale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "entrale"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-smo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda smo"@it .
+
+<https://w3id.org/arco/resource/Keyword/vestimenti-antichi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vestimenti antichi"@it .
+
+<https://w3id.org/arco/resource/Keyword/culturale-x>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "culturale x"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/nqual%5C>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nqual\\"@it .
+
+<https://w3id.org/arco/resource/Keyword/culturali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "culturali"@it .
+
+<https://w3id.org/arco/resource/Keyword/turismo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "turismo"@it .
+
+<https://w3id.org/arco/resource/Keyword/trumenti-musicali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trumenti musicali"@it .
+
+<https://w3id.org/arco/resource/Keyword/stituto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stituto"@it .
+
+<https://w3id.org/arco/resource/Keyword/ttivita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ttività"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-catalografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda catalografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/complessi-archeologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "complessi archeologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/pg-%C5%93-p>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pg œ p"@it .
+
+<https://w3id.org/arco/resource/Keyword/organo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "organo"@it .
+
+<https://w3id.org/arco/resource/Keyword/tabella-materiali-archeologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tabella materiali archeologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/saggi-stratigrafici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "saggi stratigrafici"@it .
+
+<https://w3id.org/arco/resource/Keyword/contemporanei>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contemporanei"@it .
+
+<https://w3id.org/arco/resource/Keyword/xc3%5Cxa8>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "xc3\\xa8"@it .
+
+<https://w3id.org/arco/resource/Keyword/urismo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "urismo"@it .
+
+<https://w3id.org/arco/resource/Keyword/ministero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ministero"@it .
+
+<https://w3id.org/arco/resource/Keyword/20042004ministero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "20042004ministero"@it .
+
+<https://w3id.org/arco/resource/Keyword/compilazion>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "compilazion"@it .
+
+<https://w3id.org/arco/resource/Keyword/2016-ministero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "2016 ministero"@it .
+
+<https://w3id.org/arco/resource/Keyword/incise>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "incise"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-veac>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda veac"@it .
+
+<https://w3id.org/arco/resource/Keyword/aprile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aprile"@it .
+
+<https://w3id.org/arco/resource/Keyword/dicembre>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dicembre"@it .
+
+<https://w3id.org/arco/resource/Keyword/immateriali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "immateriali"@it .
+
+<https://w3id.org/arco/resource/Keyword/archeologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archeologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede"@it .
+
+<https://w3id.org/arco/resource/Keyword/inistero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inistero"@it .
+
+<https://w3id.org/arco/resource/Keyword/versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/normativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "normativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/archi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archi"@it .
+
+<https://w3id.org/arco/resource/Keyword/architettura>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "architettura"@it .
+
+<https://w3id.org/arco/resource/Keyword/oggetti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "oggetti"@it .
+
+<https://w3id.org/arco/resource/Keyword/ottobre>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ottobre"@it .
+
+<https://w3id.org/arco/resource/Keyword/marzo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "marzo"@it .
+
+<https://w3id.org/arco/resource/Keyword/atalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "atalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/stampe>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stampe"@it .
+
+<https://w3id.org/arco/resource/Keyword/novembre>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "novembre"@it .
+
+<https://w3id.org/arco/resource/Keyword/qual%5C>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "qual\\"@it .
+
+<https://w3id.org/arco/resource/Keyword/ersione-3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ersione 3"@it .
+
+<https://w3id.org/arco/resource/Keyword/eni-demoetnoantropologici-materiali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eni demoetnoantropologici materiali"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-demoetnoantropologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni demoetnoantropologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/nqual-%5Cxc3%5Cxa8>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nqual \\xc3\\xa8"@it .
+
+<https://w3id.org/arco/resource/Keyword/normativa-trasversale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "normativa trasversale"@it .
+
+<https://w3id.org/arco/resource/Keyword/cheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/nquali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nquali"@it .
+
+<https://w3id.org/arco/resource/Keyword/reperti-archeologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "reperti archeologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/istituto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "istituto"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività"@it .
+
+<https://w3id.org/arco/resource/Keyword/ulturali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ulturali"@it .
+
+<https://w3id.org/arco/resource/Keyword/monumenti-archeologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "monumenti archeologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/disegni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "disegni"@it .
+
+<https://w3id.org/arco/resource/Keyword/norme>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "norme"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-culturali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività  culturali"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggiornamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aggiornamento"@it .
+
+<https://w3id.org/arco/resource/Keyword/ocumentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ocumentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/giardini>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "giardini"@it .
+
+<https://w3id.org/arco/resource/Keyword/ff-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ff  versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/istituto-centrale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "istituto centrale"@it .
+
+<https://w3id.org/arco/resource/Keyword/compilazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "compilazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilasciata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rilasciata"@it .
+
+<https://w3id.org/arco/resource/Keyword/opere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opere"@it .
+
+<https://w3id.org/arco/resource/Keyword/versione-3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "versione 3"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivite-culturali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attivitë culturali"@it .
+
+<https://w3id.org/arco/resource/Keyword/strutturazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "strutturazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/centrale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "centrale"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivite>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attivitë"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-nubeni-numismatici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda nubeni numismatici"@it .
