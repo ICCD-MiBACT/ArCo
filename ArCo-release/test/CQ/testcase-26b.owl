@@ -16,54 +16,45 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#Photo1&quot; } ,
-        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#PhotoSize1&quot; }
+        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photo5&quot; } ,
+        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photosize5&quot; }
       } ,
       {
-        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#Photo3&quot; } ,
-        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#PhotoSize3&quot; }
+        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photo4&quot; } ,
+        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photosize4&quot; }
       } ,
       {
-        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#Photo4&quot; } ,
-        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#PhotoSize4&quot; }
+        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photo1&quot; } ,
+        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photosize1&quot; }
       } ,
       {
-        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#Photo2&quot; } ,
-        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#PhotoSize2&quot; }
+        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photo2&quot; } ,
+        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photosize2&quot; }
       } ,
       {
-        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#Photo7&quot; } ,
-        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#PhotoSize7&quot; }
-      } ,
-      {
-        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#Photo6&quot; } ,
-        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#PhotoSize6&quot; }
-      } ,
-      {
-        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#Photo5&quot; } ,
-        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#PhotoSize5&quot; }
+        &quot;photo&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photo3&quot; } ,
+        &quot;photosize&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#photosize3&quot; }
       }
     ]
   }
-}</testannotationschema:hasExpectedResult>
+}
+</testannotationschema:hasExpectedResult>
         <testannotationschema:hasCQ xml:lang="it">Quali sono le dimensioni digitali della fotografia X?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">What are the digital dimensions of photography X?</testannotationschema:hasCQ>
         <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
-PREFIX onto-mu: &lt;https://w3id.org/italia/onto/MU/&gt;
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+PREFIX dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;  
 
-select ?photo ?photosize
+SELECT ?photo ?photosize
+{
+?photo a arco:PhotographicHeritage .
+?photo dd:hasTechnicalDetailOccurrence ?techdetocc .
+?techdetocc dd:satisfiesTechnicalDetail ?photosize .
+?photosize dd:usesTechnicalCharacteristic dd:PhotoSize . 
 
-where {
-  ?photo a arco-core:PhotographicHeritage .
-  ?photosize a arco-dd:PhotoSize .
-  ?photo arco-dd:TechnicalCharacteristic ?photosize 
-  
-} 
-LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testDate xml:lang="en">2019-02-08</testannotationschema:testDate>
     </owl:Ontology>
 </rdf:RDF>
