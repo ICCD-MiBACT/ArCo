@@ -1,31 +1,29 @@
 @prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ26b.ttl#>.
-@prefix arcocore: <https://w3id.org/arco/core/> . 
+@prefix arco: <https://w3id.org/arco/ontology/arco/> . 
 @prefix arcodd: <https://w3id.org/arco/denotative-description/>.
 
-:Photo1 a arcocore:PhotographicHeritage .
-:PhotoSize1 a arcodd:PhotoSize .
-:Photo1 arcodd:TechnicalCharacteristic :PhotoSize1 . 
+:photo1 a arco:PhotographicHeritage .
+:photo1 arcodd:hasTechnicalDetailOccurrence :techdetocc1 .
+:techdetocc1 arcodd:satisfiesTechnicalDetail :photosize1 .
+:photosize1 arcodd:usesTechnicalCharacteristic arcodd:PhotoSize .
 
-:Photo2 a arcocore:PhotographicHeritage .
-:PhotoSize2 a arcodd:PhotoSize .
-:Photo2 arcodd:TechnicalCharacteristic :PhotoSize2 . 
 
-:Photo3 a arcocore:PhotographicHeritage .
-:PhotoSize2 a arcodd:PhotoSize .
-:Photo3 arcodd:TechnicalCharacteristic :PhotoSize3 . 
+:photo2 a arco:PhotographicHeritage .
+:photo2 arcodd:hasTechnicalDetailOccurrence :techdetocc2 .
+:techdetocc2 arcodd:satisfiesTechnicalDetail :photosize2 .
+:photosize2 arcodd:usesTechnicalCharacteristic arcodd:PhotoSize .
 
-:Photo4 a arcocore:PhotographicHeritage .
-:PhotoSize4 a arcodd:PhotoSize .
-:Photo4 arcodd:TechnicalCharacteristic :PhotoSize4 . 
+:photo3 a arco:PhotographicHeritage .
+:photo3 arcodd:hasTechnicalDetailOccurrence :techdetocc3 .
+:techdetocc3 arcodd:satisfiesTechnicalDetail :photosize3 .
+:photosize3 arcodd:usesTechnicalCharacteristic arcodd:PhotoSize .
 
-:Photo5 a arcocore:PhotographicHeritage .
-:PhotoSize5 a arcodd:PhotoSize .
-:Photo5 arcodd:TechnicalCharacteristic :PhotoSize5 . 
+:photo4 a arco:PhotographicHeritage .
+:photo4 arcodd:hasTechnicalDetailOccurrence :techdetocc4 .
+:techdetocc4 arcodd:satisfiesTechnicalDetail :photosize4 .
+:photosize4 arcodd:usesTechnicalCharacteristic arcodd:PhotoSize .
 
-:Photo6 a arcocore:PhotographicHeritage .
-:PhotoSize6 a arcodd:PhotoSize .
-:Photo6 arcodd:TechnicalCharacteristic :PhotoSize6 . 
-
-:Photo7 a arcocore:PhotographicHeritage .
-:PhotoSize7 a arcodd:PhotoSize .
-:Photo7 arcodd:TechnicalCharacteristic :PhotoSize7 . 
+:photo5 a arco:PhotographicHeritage .
+:photo5 arcodd:hasTechnicalDetailOccurrence :techdetocc5 .
+:techdetocc5 arcodd:satisfiesTechnicalDetail :photosize5 .
+:photosize5 arcodd:usesTechnicalCharacteristic arcodd:PhotoSize .
