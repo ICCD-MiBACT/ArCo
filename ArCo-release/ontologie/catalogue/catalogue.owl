@@ -1692,6 +1692,12 @@ resource:CatalogueRecordS/0500212038
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/referenceProject"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una scheda che analizza il bene in esame per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a record describing a cultural property for purposes other than cataloguing cultural heritage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>

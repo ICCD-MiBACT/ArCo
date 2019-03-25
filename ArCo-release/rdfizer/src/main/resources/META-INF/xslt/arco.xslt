@@ -1895,12 +1895,7 @@
 										select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(./APFE)))" />
 		            			</xsl:attribute>
 								</arco-dd:satisfiesTechnicalDetail>
-								<arco-dd:usesTechnicalCharacteristic>
-									<xsl:attribute name="rdf:resource">
-		            				<xsl:value-of
-										select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
-		            			</xsl:attribute>
-								</arco-dd:usesTechnicalCharacteristic>
+								
 							</rdf:Description>
 							<!-- Technical detail as an individual -->
 							<rdf:Description>
@@ -1919,6 +1914,12 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(./APFE)" />
 								</l0:name>
+								<arco-dd:usesTechnicalCharacteristic>
+									<xsl:attribute name="rdf:resource">
+		            				<xsl:value-of
+										select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
+		            			</xsl:attribute>
+								</arco-dd:usesTechnicalCharacteristic>
 							</rdf:Description>
 					</xsl:if>
 				</xsl:for-each>
@@ -10904,12 +10905,7 @@
 								select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 						</arco-dd:satisfiesTechnicalDetail>
-						<arco-dd:usesTechnicalCharacteristic>
-							<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-								select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
-            			</xsl:attribute>
-						</arco-dd:usesTechnicalCharacteristic>
+						
 					</rdf:Description>
 					<!-- Technical detail as an individual -->
 					<rdf:Description>
@@ -10928,6 +10924,12 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
+						<arco-dd:usesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+								select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
+            			</xsl:attribute>
+						</arco-dd:usesTechnicalCharacteristic>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -10967,12 +10969,7 @@
 								select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 						</arco-dd:satisfiesTechnicalDetail>
-						<arco-dd:usesTechnicalCharacteristic>
-							<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-								select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
-            			</xsl:attribute>
-						</arco-dd:usesTechnicalCharacteristic>
+						
 					</rdf:Description>
 					<!-- Technical detail as an individual -->
 					<rdf:Description>
@@ -10991,6 +10988,12 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
+						<arco-dd:usesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+								select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
+            			</xsl:attribute>
+						</arco-dd:usesTechnicalCharacteristic>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -11378,12 +11381,7 @@
 									select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
 	            			</xsl:attribute>
 							</arco-dd:satisfiesTechnicalDetail>
-							<arco-dd:usesTechnicalCharacteristic>
-								<xsl:attribute name="rdf:resource">
-	            				<xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
-	            			</xsl:attribute>
-							</arco-dd:usesTechnicalCharacteristic>
+							
 						</rdf:Description>
 						<!-- Technical detail as an individual -->
 						<rdf:Description>
@@ -11402,6 +11400,12 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-dd:usesTechnicalCharacteristic>
+								<xsl:attribute name="rdf:resource">
+	            				<xsl:value-of
+									select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
+	            			</xsl:attribute>
+							</arco-dd:usesTechnicalCharacteristic>
 						</rdf:Description>
 					</xsl:for-each>
 				</xsl:if>
@@ -11577,12 +11581,7 @@
 								select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 						</arco-dd:satisfiesTechnicalDetail>
-						<arco-dd:usesTechnicalCharacteristic>
-							<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-								select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
-            			</xsl:attribute>
-						</arco-dd:usesTechnicalCharacteristic>
+						
 					</rdf:Description>
 					<!-- Technical detail as an individual -->
 					<rdf:Description>
@@ -11601,6 +11600,12 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
+						<arco-dd:usesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+								select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
+            			</xsl:attribute>
+						</arco-dd:usesTechnicalCharacteristic>
 					</rdf:Description>
 				</xsl:for-each>
 				</xsl:if>
@@ -13860,12 +13865,7 @@
             				</xsl:choose>
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/Material'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -13904,6 +13904,12 @@
 							</l0:name>
 						</xsl:when>
 					</xsl:choose>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/Material'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:for-each>
 			</xsl:if>
@@ -13948,12 +13954,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -13972,6 +13973,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:for-each>
 			</xsl:if>
@@ -14012,12 +14019,7 @@
 								select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 						</arco-dd:satisfiesTechnicalDetail>
-						<arco-dd:usesTechnicalCharacteristic>
-							<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-								select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
-            			</xsl:attribute>
-						</arco-dd:usesTechnicalCharacteristic>
+						
 						
 						<!-- Mapping with the thesaurus of find materials -->
 						<xsl:variable name="material-method-ra1">
@@ -14062,6 +14064,12 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
+						<arco-dd:usesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+								select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
+            			</xsl:attribute>
+						</arco-dd:usesTechnicalCharacteristic>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14102,12 +14110,7 @@
 								select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 						</arco-dd:satisfiesTechnicalDetail>
-						<arco-dd:usesTechnicalCharacteristic>
-							<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-								select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
-            			</xsl:attribute>
-						</arco-dd:usesTechnicalCharacteristic>
+						
 					</rdf:Description>
 					<!-- Technical detail as an individual -->
 					<rdf:Description>
@@ -14126,6 +14129,12 @@
 						<l0:name>
 							<xsl:value-of select="normalize-space(.)" />
 						</l0:name>
+						<arco-dd:usesTechnicalCharacteristic>
+							<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+								select="'https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique'" />
+            			</xsl:attribute>
+						</arco-dd:usesTechnicalCharacteristic>
 					</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14165,11 +14174,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/*/MT/FRM)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Shape'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14188,6 +14193,11 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(schede/*/MT/FRM)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Shape'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:if>
 			</xsl:if>
@@ -14227,12 +14237,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/Filigree'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14251,6 +14256,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/Filigree'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14290,12 +14301,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/FileFormat'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14314,6 +14320,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/FileFormat'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14353,12 +14365,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/PhotoSize'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14377,6 +14384,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/PhotoSize'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14416,12 +14429,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/PhotoProgram'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14440,6 +14448,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/PhotoProgram'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14479,12 +14493,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/StorageMethodColourDepth'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14503,6 +14512,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/StorageMethodColourDepth'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14542,12 +14557,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/Resolution'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14566,6 +14576,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/Resolution'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 				</xsl:for-each>
 			</xsl:if>
@@ -14605,12 +14621,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/PixelDimension'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14629,6 +14640,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/PixelDimension'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:for-each>
 			</xsl:if>
@@ -14667,12 +14684,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/FVM)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/MassStorage'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14691,6 +14703,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(schede/F/MT/FVM)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/MassStorage'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:if>
 			<!-- colour of photograph (F) as an individual -->
@@ -14728,12 +14746,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/F/MT/MTX)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/PhotoColour'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14752,6 +14765,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(schede/F/MT/MTX)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/PhotoColour'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:if>
 			<!-- garment colour (VeAC) as an individual -->
@@ -14789,12 +14808,7 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCC)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/GarmentColour'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
+					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14813,6 +14827,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCC)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/GarmentColour'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:if>
 			<!-- garment analysis (VeAC) as an individual -->
@@ -14850,12 +14870,6 @@
 							select="concat($NS, 'TechnicalDetail/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCA)))" />
             			</xsl:attribute>
 					</arco-dd:satisfiesTechnicalDetail>
-					<arco-dd:usesTechnicalCharacteristic>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/denotative-description/GarmentAnalysis'" />
-            			</xsl:attribute>
-					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14876,6 +14890,12 @@
 					<l0:name>
 						<xsl:value-of select="normalize-space(schede/VeAC/MT/MTC/MTCA)" />
 					</l0:name>
+					<arco-dd:usesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/GarmentAnalysis'" />
+            			</xsl:attribute>
+					</arco-dd:usesTechnicalCharacteristic>
 				</rdf:Description>
 			</xsl:if>
 			<!-- archivalrecordset membership -->
@@ -14906,6 +14926,12 @@
 								<xsl:value-of
 									select="concat('Archival record set membership of cultural property: ', $itemURI)" />
 							</l0:name>
+							<arco-cd:hasMemberOfArchivalRecordSet>
+								<xsl:attribute name="rdf:resource">
+			                            <xsl:value-of
+									select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+			                        </xsl:attribute>
+							</arco-cd:hasMemberOfArchivalRecordSet>
 							<xsl:if test="schede/*/UB/UBF/UBFC">
 								<arco-cd:archivalRecordLocation>
 									<xsl:value-of select="normalize-space(schede/*/UB/UBF/UBFC)" />

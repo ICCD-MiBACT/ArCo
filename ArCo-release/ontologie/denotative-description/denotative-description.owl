@@ -2115,18 +2115,24 @@ resource:MeasurementCollection/1200865132-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/satisfiesTechnicalDetail"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
         <dc:description xml:lang="en">An example of usage of the class &apos;Techinical detail occurrence&apos; is the following:
 resource:TechnicalDetailOccurrence/1200865306-shape
         a      dd:TechnicalDetailOccurrence ;
         rdfs:label &quot;Shape of cultural property 1200865306: oval&quot;@it ;
-        dd:satisfiesTechnicalDetail resource/TechnicalDetail:oval ;
+        dd:satisfiesTechnicalDetail resource:TechnicalDetail/oval ;
         dd:usesTechnicalCharacteristic dd:Shape .</dc:description>
         <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Occorrenza di dettaglio tecnico&quot; è il seguente:
 resource:TechnicalDetailOccurrence/1200865306-shape
         a      dd:TechnicalDetailOccurrence ;
         rdfs:label &quot;Formato del bene culturale 1200865306: ovale&quot;@it ;
-        dd:satisfiesTechnicalDetail resource/TechnicalDetail:ovale ;
+        dd:satisfiesTechnicalDetail resource:TechnicalDetail/ovale ;
         dd:usesTechnicalCharacteristic dd:Shape .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occorrenza di un dettaglio tecnico (una descrizione), cioè una situazione in cui un dettaglio tecnico occorre nella realtà in un&apos;entità specifica, come un bene culturale. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a techincal detail&apos;s occurrence (a description), that is a situation where a technical detail occurrs in a specific entity (like a cultural property). For instance, techincal detail&apos;s occurrence is: &quot;the cultural property X realized with pottery material&quot;</rdfs:comment>
@@ -2559,7 +2565,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/FileFormat">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato utilizzato per la scrittura di un&apos;immagine digitale su supporto informatico.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato utilizzato per la scrittura di una risorsa digitale su supporto informatico.</rdfs:comment>
         <rdfs:label xml:lang="en">File Format</rdfs:label>
         <rdfs:label xml:lang="it">Formato di compressione/estensione file</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3073,9 +3079,9 @@ resource:TechnicalDetailOccurrence/1200865306-shape
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/QualityLevel">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:comment xml:lang="it">Livello di qualità</rdfs:comment>
-        <rdfs:comment xml:lang="en">Quality level</rdfs:comment>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il livello di qualità di una risorsa digitale (es.: alta risoluzione, bassa risoluzione, preview)</rdfs:comment>
+        <rdfs:label xml:lang="it">Livello di qualità</rdfs:label>
+        <rdfs:label xml:lang="en">Quality level</rdfs:label>
     </owl:NamedIndividual>
     
 
