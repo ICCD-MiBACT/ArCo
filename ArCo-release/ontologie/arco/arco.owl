@@ -920,6 +920,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/HornbostelSachsClassification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la definizione associata allo strumento musicale, secondo la classificazione Hornbostel-Sachs.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the definition associated to a musical instrument, according to the Hornbostel-Sachs classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Hornbostel-Sachs definition</rdfs:label>
         <rdfs:label xml:lang="it">definizione Hornbostel-Sachs</rdfs:label>
@@ -936,6 +937,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/HornbostelSachsClassification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;indicazione bibliografica dell&apos;edizione Hornbostel-Sachs utilizzata per la classificazione dello strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the edition Horbonstel-Sachs used for classifying a musical instrument.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Hornbostel-Sachs edition</rdfs:label>
         <rdfs:label xml:lang="it">edizione Hornbostel-Sachs</rdfs:label>
@@ -954,6 +956,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/HornbostelSachsClassification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice numerico, secondo l&apos;edizione specifica Hornbostel-Sachs, associato allo strumento musicale nell&apos;ambito della classificazione Hornbostel-Sachs.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the numerical code associated to a musical instrument according to a specific edition of the Hornbostel-Sachs classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Codice numerico Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs number</rdfs:label>
@@ -1027,6 +1030,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione codificata del/i soggetto/i raffigurato/i nell&apos;opera secondo il sistema di classificazione scelto dall&apos;Ente schedatore, in alternativa e/o in aggiunta ad Iconclass.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the subject of a photographic heritage as described in a photographic heritage classification other than Iconclass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">classified subject</rdfs:label>
         <rdfs:label xml:lang="it">soggetto classificato</rdfs:label>
@@ -1062,6 +1066,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/PhotographicHeritage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative alla fotografia digitale. Può rappresentare informazioni utili a identificare le intenzioni dell&apos;autore in relazione alla visualizzazione o rioggettivazione della fotografia digitale, come la dimensione del quadro, la risoluzione di stampa e relativa unità di misura, altre indicazioni per la stampa (tipo stampante, correzioni cromatiche, ecc.), categoria, URL, ecc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents notes on a digital photograph.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">digital photograph note</rdfs:label>
         <rdfs:label xml:lang="it">note sulla fotografia digitale</rdfs:label>
@@ -1097,6 +1102,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ScientificOrTechnologicalHeritage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di codice internazionale che identifica un bene scientifico e tecnologico. All&apos;indirizzo http://www.isin.org/ è possibile reperire tutte le specifiche per l&apos;adesione al progetto e l&apos;attribuzione del codice internazionale. Il Registro Online è un database che raccoglie informazioni su strumenti scientifici di interesse storico promosso dal Museum of the History of Science di Oxford in collaborazione con la Commissione Strumenti Scientifici dell&apos;International Union of the History and Philosophy of Science.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the international identifier of a scientific or technological heritage. More info can be found at https://www.isin.org/</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">codice internazionale</rdfs:label>
         <rdfs:label xml:lang="en">international identifier</rdfs:label>
@@ -1115,6 +1121,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/MusicHeritage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative agli aspetti acustici di uno strumento musicale, ed eventualmente anche relative ai rilevamenti e ai criteri adottati in sede di restauro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents notes on a musical instrument.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">musical instrument note</rdfs:label>
         <rdfs:label xml:lang="it">note sullo strumento musicale</rdfs:label>
@@ -1207,6 +1214,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di parti di un&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of parts of an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">number of parts</rdfs:label>
         <rdfs:label xml:lang="it">numero di parti</rdfs:label>
@@ -1296,6 +1305,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/AlternativeMusicalInstrumentClassification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice tassonomico e la definizione attribuiti allo strumento musicale schedato nell&apos;ambito del sistema di classificazione preso in considerazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the taxon code and the taxon definition associated to the musical instrument, according to a musical instrument classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">taxon</rdfs:label>
         <rdfs:label xml:lang="it">taxon</rdfs:label>

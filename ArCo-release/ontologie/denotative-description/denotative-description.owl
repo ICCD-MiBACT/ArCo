@@ -505,7 +505,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurement -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurement">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
@@ -718,16 +718,16 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurementOf -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurementIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementIn">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha misura&quot;, collega una misura di un oggetto all&apos;insieme di misure osservate perl&apos;oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha misura&quot;, collega una misura di un oggetto all&apos;insieme di misure osservate per l&apos;oggetto.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="en">is measurement of</rdfs:label>
-        <rdfs:label xml:lang="it">è misura di</rdfs:label>
+        <rdfs:label xml:lang="en">is measurement in collection</rdfs:label>
+        <rdfs:label xml:lang="it">è misura in collezione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">MT/MIS - Normativa VeAC: anche MT/MIM</arco-catalogue:iccdNormTag>

@@ -2390,7 +2390,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isDocumentationOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione che riguarda il bene descritto in una scheda di catalogo al bene stesso.</rdfs:comment>
         <rdfs:label xml:lang="en">is documentation of</rdfs:label>
