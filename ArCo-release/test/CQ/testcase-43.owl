@@ -23,7 +23,7 @@ WHERE {
 } 
 
 LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcatalogue%2F%3E%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+%3Fcultpro+arco-catalogue%3AisDescribedByCatalogueRecord+%3Fcatrec.%0D%0A+%3Fcatrec++arco-catalogue%3AhasCatalogueRecordVersion+%3Fcatrecver.%0D%0A+%3Fcatrecver+%3Fprop+%3Fagent+.+%3Fprop+rdfs%3AsubPropertyOf*+arco-catalogue%3AhasCataloguingAgent%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on"/>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcatalogue%2F%3E%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+%3Fcultpro+arco-catalogue%3AisDescribedByCatalogueRecord+%3Fcatrec.%0D%0A+%3Fcatrec++arco-catalogue%3AhasCatalogueRecordVersion+%3Fcatrecver.%0D%0A+%3Fcatrecver+%3Fprop+%3Fagent+.+%3Fprop+rdfs%3AsubPropertyOf*+arco-catalogue%3AhasCataloguingAgent%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&amp;should-sponge=&amp;format=text%2Fhtml&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasExpectedResult xml:lang="it">
         { &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;cultpro&quot;, &quot;catrec&quot;, &quot;catrecver&quot;, &quot;prop&quot;, &quot;agent&quot;] },
   &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
