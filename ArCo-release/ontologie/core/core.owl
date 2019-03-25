@@ -19,18 +19,18 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core/">
         <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
-        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label>Core Ontology (ArCo network)</rdfs:label>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
     </owl:Ontology>

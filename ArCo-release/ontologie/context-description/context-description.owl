@@ -65,6 +65,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -629,6 +635,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CollectionOfCulturalEntities"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una collezione di beni culturali al collezionista.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a collection of cultural properties to its collector.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha collezionista</rdfs:label>
         <rdfs:label xml:lang="en">has collector</rdfs:label>
@@ -1553,6 +1560,7 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/hasAgent"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità di qualsiasi tipo a un agente che è collegato in qualche modo a quell&apos;entità. È una relazione generica che viene usata per quei casi in cui non sia possibile definire in maniera più precisa la natura della relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is used to associate an entity of any kind to an agent related to that entity in some way. It is used when it is not possible to express the relation in a more specific way.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha agente correlato</rdfs:label>
         <rdfs:label xml:lang="en">has related agent</rdfs:label>
@@ -2244,7 +2252,17 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un agente che è collegato in qualche modo a un&apos;entità di qualsiasi tipo a quell&apos;entità. È una relazione generica che viene usata per quei casi in cui non sia possibile definire in maniera più precisa la natura della relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is used to associate an agent related in some way to an entity of any kind to that entity. It is used when it is not possible to express the relation in a more specific way.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is agent related to</rdfs:label>
+        <rdfs:label xml:lang="it">è agente correlato a</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -4491,6 +4509,20 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Acquisition&apos; is the following:
+resource:Acquisition/1200865053-acquisition-1
+        a  cd:Acquisition ;
+        rdfs:label  &quot;Acquisition 1 of cultural property: 1200865053&quot;@it ;
+        cd:hasAcquisitionType resource_AcquisitionType/donazione ;
+        cd:hasPreviousOwner resource:Agent/auriti-giacinto ;
+        tiapit:time &quot;1963&quot; .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &apos;Acquisizione&apos; è il seguente:
+resource:Acquisition/1200865053-acquisition-1
+        a  cd:Acquisition ;
+        rdfs:label  &quot;Acquisizione 1 del bene culturale: 1200865053&quot;@it ;
+        cd:hasAcquisitionType resource_AcquisitionType/donazione ;
+        cd:hasPreviousOwner resource:Agent/auriti-giacinto ;
+        tiapit:time &quot;1963&quot; .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento in cui un bene culturale è stato acquisito e si trova in una certa condizione giuridica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an event in which a cultural property is acquired, passing from an owner to another, and has a particular legal situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -4992,6 +5024,18 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla:isNativeTo rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <dc:description xml:lang="en">An example of usage of on of the subclasses of the class &apos;Archival Record Set&apos; is the following:
+resource:ArchivalSubseries/museo-civico-romano
+        a           cd:ArchivalSubseries ;
+        rdfs:label  &quot;Museo Civico Romano&quot; ;
+        cd:isArchivalRecordSetIn resource:ArchivalRecordSetMembership/1201251092 ;
+        core:isComponentOf resource:ArchivalSeries/brescia .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi di &apos;Unità archivistica complessa&apos; è il seguente:
+resource:ArchivalSubseries/museo-civico-romano
+        a           cd:ArchivalSubseries ;
+        rdfs:label  &quot;Museo Civico Romano&quot; ;
+        cd:isArchivalRecordSetIn resource:ArchivalRecordSetMembership/1201251092 ;
+        core:isComponentOf resource:ArchivalSeries/brescia .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;unità archivistica complessa (fondo, serie, sottoserie, etc.) di cui un bene culturale può fare parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an archival record set (fonds, series, subseries) of which a cultural property can be member.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -5295,6 +5339,16 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Change of availability&apos; is the following: resource:ChangeOfAvailability/0900041230-change-of-availability
+        a  cd:ChangeOfAvailability ;
+        rdfs:label &quot;Change of availability of cultural property: 0900041230&quot;@en ;
+        cd:hasChangeOfAvailabilityType resource:ChangeOfAvailabilityType/furto ;
+        tiapit:time &quot;1998/11/15&quot; .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &apos;Mutamento condizione materiale&apos; è il seguente: resource:ChangeOfAvailability/0900041230-change-of-availability
+        a  cd:ChangeOfAvailability ;
+        rdfs:label &quot;Mutamento condizione materiale del bene culturale: 0900041230&quot;@it ;
+        cd:hasChangeOfAvailabilityType resource:ChangeOfAvailabilityType/furto ;
+        tiapit:time &quot;1998/11/15&quot; .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento che modifica la disponibilità materiale del bene culturale (es. per distruzione, furto, perdita, recupero)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the change of availability of a cultural property (e.g.: theft, distruction, rescue, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -5834,6 +5888,22 @@ l&apos;area), all&apos;ambiente e al quadrato da cui proviene il bene.</rdfs:com
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Documentation&apos; is the following:
+resource:AudioDocumentation/1200924650-audio-documentation-1
+        a   cd:AudioDocumentation ;
+        rdfs:label  &quot;Audio documentation 1 of cultural property: 1200924650&quot;@en ;
+        cd:documentationIdentifier &quot;New_1401358982589&quot; ;
+        cd:hasDocumentationType resource:DocumentationType/cassetta-dat ;
+        cd:hasFormat resource:Format/cassetta-dat ;
+        core:hasCategory cd:AttachedDocumentation .</dc:description>
+        <dc:description xml:lang="en">Un esempio d&apos;uso di una delle sottoclassi della classe &apos;Documentazione&apos; è il seguente:
+resource:AudioDocumentation/1200924650-audio-documentation-1
+        a   cd:AudioDocumentation ;
+        rdfs:label  &quot;Documentazione audio 1 del bene culturale: 1200924650&quot;@it ;
+        cd:documentationIdentifier &quot;New_1401358982589&quot; ;
+        cd:hasDocumentationType resource:DocumentationType/cassetta-dat ;
+        cd:hasFormat resource:Format/cassetta-dat ;
+        core:hasCategory cd:AttachedDocumentation .</dc:description>
         <rdfs:comment xml:lang="it">Classe che rappresenta la documentazione, specializzata nelle sottoclassi che rappresentano tipi specifici di documentazione di corredo (immagini, disegni e rilievi, cartografia, documenti audio e video, fonti e documenti editi e inediti, referenze bibliografiche).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the documentation, with subclasses for each specific type of documentation (images, drawings, audio, video, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6313,6 +6383,16 @@ gioco, etc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Interpretation&apos; is the following:
+resource:PreferredAuthorshipAttribution/1200865600-1 a           cd:PreferredAuthorshipAttribution ;
+        rdfs:label  &quot;Preferred authorship attribution of cultural property: 1200865600&quot;@en ;
+        cd:hasAttributedAuthor resource:Agent/cavaceppi-bartolomeo-1717-1799 ;
+        cd:hasSource resource:Source/documentation .</dc:description>
+        <dc:description xml:lang="it">Un esempio di utilizzo di una delle sottoclassi della classe &quot;Interpretazione&quot; è il seguente:
+resource:PreferredAuthorshipAttribution/1200865600-1 a           cd:PreferredAuthorshipAttribution ;
+        rdfs:label &quot;Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1200865600&quot;@it ;
+        cd:hasAttributedAuthor resource:Agent/cavaceppi-bartolomeo-1717-1799 ;
+        cd:hasSource resource:Source/documentazione .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una situazione in cui viene individuata e registrata da un agente una certa informazione o un gruppo di informazioni relativamente a un oggetto, per esempio a un bene culturale o a una sua parte, supportata da una fonte o motivazione. Per esempio, l&apos;attribuzione di autore, l&apos;individuazione della committenza o delle entità responsabili di fasi successive alla creazione di un bene culturale sono tutte interpretazioni basate su fonti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a situation in which pieces of information related to an object (e.g.: a cultural property) are detected and recorded by an agent, based on a specific source or motivation (e.g.:ithe authorship attribution, commission, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6383,6 +6463,22 @@ gioco, etc.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Intervention&apos; is the following:
+resource:Intervention/0800640527-10-intervention-1
+        a           cd:Intervention ;
+        rdfs:label  &quot;Intervention 1 on cultural property 0800640527-10&quot;@en ;
+        cd:hasActivityOperator resource:Agent/tonelli-elvira ;
+        cd:hasActivityResponsible resource:Agent/soprintendenza-per-i-beni-ambientali-ed-architettonici-di-bologna-modena-e-reggio-emilia ;
+        cd:hasInterventionType resource:InterventionType/restauro ;
+        tiapit:atTime resource:TimeInterval/1994 .</dc:description>
+        <dc:description xml:lang="it">Un esempio di utilizzo della classe &quot;Intervento&quot; è il seguente:
+resource:Intervention/0800640527-10-intervention-1
+        a           cd:Intervention ;
+        rdfs:label  &quot;Intervento 1 sul bene culturale 0800640527-10&quot;@it ;
+        cd:hasActivityOperator resource:Agent/tonelli-elvira ;
+        cd:hasActivityResponsible resource:Agent/soprintendenza-per-i-beni-ambientali-ed-architettonici-di-bologna-modena-e-reggio-emilia ;
+        cd:hasInterventionType resource:InterventionType/restauro ;
+        tiapit:atTime resource:TimeInterval/1994 .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un intervento che ha interessato un bene culturale, a fini conservativi (per i quali si crea una sottoclasse di &quot;Intervento&quot;) oppure di altro tipo: restauri (termine obsoleto che attualmente corrisponde a &quot;intervento a fine conservativo&quot;), rilavorazioni, ripristini, trasformazioni per recuperare aspetto e funzionalità rispondenti ai mutati gusti, ecc. In generale, per interventi si intendono attività che riguardano il bene, effettuate per la sua realizzazione/modifica e conservazione materiale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an intervention on a cultural property, that is an activity carried out for its conservation or for other purposes: conservation interventions, reprocessing, restoring, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6499,6 +6595,16 @@ gioco, etc.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &quot;Legal situation&quot; is the following:
+resource:LegalSituation/1400054721-legal-situation-proprieta-stato
+        a  cd:LegalSituation ;
+        rdfs:label  &quot;Legal situation of cultural property 1400054721: State property&quot;@en ;
+        cd:hasOwner resource:Agent/ministero-beni-culturali .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Condizione giuridica&quot; è il seguente:
+resource:LegalSituation/1400054721-legal-situation-proprieta-stato
+        a  cd:LegalSituation ;
+        rdfs:label  &quot;Condizione giuridica del bene culturale 1400054721: proprietà Stato&quot;@it ;
+        cd:hasOwner resource:Agent/ministero-beni-culturali .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la condizione giuridica di un bene culturale, con riferimenti al proprietario, detentore o possessore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the legal situation of a cultural property, related to the owner.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6531,6 +6637,18 @@ gioco, etc.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Membership">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Membership&apos; is the following: resource:CollectionMembership/0300633618-collection-membership-1
+        a    cd:CollectionMembership ;
+        rdfs:label  &quot;Collection membership 1 of cultural property: 0300633618&quot;@en ;
+        cd:hasCollection resource:CollectionOfCulturalEntities/collezione-mingozzi ;
+        cd:hasMemberOfCollection resource:ScientificOrTechnologicalHeritage/0300633618 ;
+        tiapit:atTime resource:TimeInterval/1967 .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi della classe &apos;Appartenenza&apos; è il seguente: resource:CollectionMembership/0300633618-collection-membership-1
+        a    cd:CollectionMembership ;
+        rdfs:label  &quot;Appartenenza a collezione 1 del bene culturale: 0300633618&quot;@it ;
+        cd:hasCollection resource:CollectionOfCulturalEntities/collezione-mingozzi ;
+        cd:hasMemberOfCollection resource:ScientificOrTechnologicalHeritage/0300633618 ;
+        tiapit:atTime resource:TimeInterval/1967 .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il concetto di appartenenza.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the concept of membership.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -6935,6 +7053,18 @@ gioco, etc.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Preparatory or final work&apos; is the following::
+resource:PreparatoryOrFinalWork/0500212038-disegno
+        a           cd:PreparatoryOrFinalWork ;
+        rdfs:label  &quot;Preparatory or final work 1 of cultural property 0500212038: disegno&quot;@en ;
+        cd:hasAuthor resource:Agent/tiziano-vecellio ;
+        cd:hasDating resoruce:Dating/0500212038-disegno .</dc:description>
+        <dc:description xml:lang="it">Un esempio di utilizzo della classe &quot;Opera preparatoria o finale&quot; è il seguente:
+resource:PreparatoryOrFinalWork/0500212038-disegno
+        a           cd:PreparatoryOrFinalWork ;
+        rdfs:label  &quot;Opera originale o finale 1 del bene culturale 0500212038: disegno&quot;@it ;
+        cd:hasAuthor resource:Agent/tiziano-vecellio ;
+        cd:hasDating resoruce:Dating/0500212038-disegno .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;entità collegata a un bene culturale, che ne costituisce una fase preparatoria o una fase finale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an entity related to a cultural property, that is its preparatory or final stage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -7077,6 +7207,30 @@ gioco, etc.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalPropertyStage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
+                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Related work situation&apos; is the following:
+resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
+        a  cd:RelatedWorkSituation ;
+        rdfs:label  &quot;Relation 1 between the cultural property 0300199368 and preparatory or final work&quot;@en  ;
+      cd:hasCulturalPropertyStage resource:CulturalPropertyStage/bozzetto ;
+        cd:hasRelatedWork resource:FinalWork/0300199368-dipinto .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &apos;Rapporto con opera collegata&apos; è il seguente:
+resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
+        a  cd:RelatedWorkSituation ;
+        rdfs:label  &quot;Relation 1 between the cultural property 0300199368 and preparatory or final work&quot;@en , &quot;Rapporto 1 tra il bene culturale 0300199368 e opera originale o finale&quot;@it ;
+      cd:hasCulturalPropertyStage resource:CulturalPropertyStage/bozzetto ;
+        cd:hasRelatedWork resource:FinalWork/0300199368-dipinto .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la relazione, il rapporto, tra il bene culturale in esame e un&apos;altra opera, che può anche essere un bene culturale. In riferimento a questo rapporto, si definisce lo stadio di realizzazione del bene culturale in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale o che ne rappresenta una derivazione. Nel caso di una relazione tra un bene culturale e un altro bene culturale, in riferimento a questo rapporto si definisce, se possibile, il tipo di relazione tra i due beni (es.: luogo di realizzazione, luogo di ritrovamento, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a situation in which a cultural property is related to another work, that could even be another cultural property. The cultural property stage is defined referring to this relationship with a related work, that can represent a preparatory, a final phase or a derivation of the cultural property. When the relationship is between two cultural properties, when possible, the nature of the relationship is specified (e.g.: finding location)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -7502,6 +7656,26 @@ gioco, etc.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Survey">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+        <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Survey&apos; is the following:
+resource:ArchaeologicalExcavation/0500590557-survey-1
+        a           cd:ArchaeologicalExcavation ;
+        rdfs:label  &quot;Archaeological excavation 1 of cultural property 0500590557: Monselice, via Valli&quot;@en ;
+        cd:hasActivityResponsible resource:Agent/sba ;
+        cd:hasStratigraphicUnit resource:StratigraphicUnit/325 ;
+        cd:hasSurveyMethod resource:SurveyMethod/scavo-stratigrafico ;
+        cd:hasSurveyMotivation resource:SurveyMotivation/opere-pubbliche ; cd:hasSurveyScientificDirector resource:Agent/bianchin-citton-elodia ;
+        core:hasAgentRole resource:AgentRole/0500590557-archaeological-excavation-1-activity-responsible , resource:AgentRole/0500590557-archaeological-excavation-1-scientific-director ;
+        tiapit:time &quot;2004&quot; .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi della classe &quot;Indagine&quot; è il seguente:
+resource:ArchaeologicalExcavation/0500590557-survey-1
+        a           cd:ArchaeologicalExcavation ;
+        rdfs:label  &quot;Scavo archeologico 1 del bene 0500590557: Monselice, via Valli&quot;@it ;
+        cd:hasActivityResponsible resource:Agent/sba ;
+        cd:hasStratigraphicUnit resource:StratigraphicUnit/325 ;
+        cd:hasSurveyMethod resource:SurveyMethod/scavo-stratigrafico ;
+        cd:hasSurveyMotivation resource:SurveyMotivation/opere-pubbliche ; cd:hasSurveyScientificDirector resource:Agent/bianchin-citton-elodia ;
+        core:hasAgentRole resource:AgentRole/0500590557-archaeological-excavation-1-activity-responsible , resource:AgentRole/0500590557-archaeological-excavation-1-scientific-director ;
+        tiapit:time &quot;2004&quot; .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;indagine effettuata su un bene culturale. Per indagine, si intende un&apos;attività che riguarda il bene, effettuata per la sua individuazione (nel caso dei beni archeologici), per il suo studio e per l&apos;approfondimento delle sue caratteristiche tecniche (indagini di scavo, di ricognizione, indagini geognostiche, analisi di vario genere e tipo, etc.). Questa classe viene specializzata in sottoclassi, per la rappresentazione di tipologie di indagini specifiche.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a survey carried out on a cultural property, that is an activity related to a cultural property and carried out for its identification, study or observation of its technical characteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -8516,13 +8690,13 @@ gioco, etc.</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <arco-catalogue:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</arco-catalogue:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>

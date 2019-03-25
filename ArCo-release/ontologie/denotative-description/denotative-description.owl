@@ -1,45 +1,45 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/denotative-description/"
      xml:base="https://w3id.org/arco/ontology/denotative-description/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:cis="http://dati.beniculturali.it/cis/"
-     xmlns:clv="https://w3id.org/italia/onto/CLV/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
-     xmlns:arco="https://w3id.org/arco/ontology/arco/"
-     xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:arco-location="https://w3id.org/arco/ontology/location/"
+     xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:opla1="http://ontologydesignpatterns.org/opla/"
+     xmlns:cis="http://dati.beniculturali.it/cis/"
+     xmlns:clv="https://w3id.org/italia/onto/CLV/"
+     xmlns:arco="https://w3id.org/arco/ontology/arco/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
-     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
-     xmlns:arco-location="https://w3id.org/arco/ontology/location/"
-     xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/">
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description/">
         <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
-        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
-        <rdfs:comment xml:lang="en">In the Denotative Description module are modelled pieces of information regarding the characteristics and qualities of a cultural property, as detectable and/or detected during the cataloguing process. Examples are: measurements, materials, technique, conservation status.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa del bene culturale (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), include la modellazione delle informazioni che riguardano il bene culturale in sé, con i suoi attributi (rilevati/rilevabili al momento della catalogazione).</rdfs:comment>
-        <rdfs:label>Denotative Description Ontology (ArCo network)</rdfs:label>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:comment xml:lang="en">In the Denotative Description module are modelled pieces of information regarding the characteristics and qualities of a cultural property, as detectable and/or detected during the cataloguing process. Examples are: measurements, materials, technique, conservation status.</rdfs:comment>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
+        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa del bene culturale (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), include la modellazione delle informazioni che riguardano il bene culturale in sé, con i suoi attributi (rilevati/rilevabili al momento della catalogazione).</rdfs:comment>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <rdfs:label>Denotative Description Ontology (ArCo network)</rdfs:label>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
     </owl:Ontology>
     
 
@@ -58,6 +58,12 @@
     <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -1257,6 +1263,24 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Affixed element&apos; is the following:
+resource:Inscription/1200865151-inscription-1
+        a   dd:Inscription ;
+        rdfs:label &quot;Inscription 1 of cultural property 1200865151&quot;@en ;
+        dd:hasFontStyle resource:FontStyle/lettere-capitali ;
+        dd:hasTechnicalDetailOccurrence resource:TechnicalDetailOccurrence/1200865151-inscription-1-material-technique-1 ;
+        dd:positionOnCulturalProperty &quot;in the middle&quot; ;
+        dd:transcript &quot;PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCLXVII&quot; ;
+        language:hasLanguage resource:Language/latino .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso di una delle sottoclassi della classe &quot;Elemento apposto su bene culturale&quot; è il seguente:
+resource:Inscription/1200865151-inscription-1
+        a   dd:Inscription ;
+        rdfs:label &quot;Iscrizione 1 del bene culturale 1200865151&quot;@en ;
+        dd:hasFontStyle resource:FontStyle/lettere-capitali ;
+        dd:hasTechnicalDetailOccurrence resource:TechnicalDetailOccurrence/1200865151-inscription-1-material-technique-1 ;
+        dd:positionOnCulturalProperty &quot;al centro&quot; ;
+        dd:transcript &quot;PAVLVS VENETVS PAPA SECVNDVS SVIS IMPENSIS FIERI FECIT ANNO CRISTI MCCCLXVII&quot; ;
+        language:hasLanguage resource:Language/latino .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento (stemma, marchio, timbro, emblema, logo, iscrizione, etc.) apposto su un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an element (i.e. crest, trademark, postmark, inscription) which is affixed on a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -1441,6 +1465,26 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasLegibility"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Conservation status&apos; is the following:
+resource:ConservationStatus/0900750201-conservation-status-1
+        a   dd:ConservationStatus ;
+        rdfs:label  &quot;Conservation status 1 of cultural property: 0900750201&quot;@en ;
+        core:specifications  &quot;Stains at the lining, along the neckline.&quot; ;
+       dd:hasConservationStatusType dd:GoodConservationStatus ;
+        tiapit:time   &quot;2014&quot; .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Stato di conservazione&quot; è il seguente:
+resource:ConservationStatus/0900750201-conservation-status-1
+        a   dd:ConservationStatus ;
+        rdfs:label  &quot;Stato di conservazione 1 del bene: 0900750201&quot;@it ;
+        core:specifications  &quot;Macchie in corrispondenza della fodera, lungo lo scollo.&quot; ;
+       dd:hasConservationStatusType dd:GoodConservationStatus ;
+        tiapit:time   &quot;2014&quot; .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato di conservazione di un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the conservation status of the cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -1848,6 +1892,18 @@ un&apos;azienda, ecc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/MU/Value"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Measurement&apos; is the following:
+resource:Measurement/0500212021-1-height
+        a  dd:Measurement ;
+        rdfs:label  &quot;Measurement of cultural property 0500212021: 795mm.&quot;@en ;
+        dd:hasMeasurementType dd:Height ;
+        dd:hasValue resource:Value/0500212021-1-height-795 .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Misura&quot; è il seguente:
+resource:Measurement/0500212021-1-height
+        a  dd:Measurement ;
+        rdfs:label  &quot;Misura del bene culturale 0500212021: 795mm.&quot;@it ;
+        dd:hasMeasurementType dd:Height ;
+        dd:hasValue resource:Value/0500212021-1-height-795 .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una misura osservata per un oggetto. Le misure sono relative alle dimensioni del bene in esame. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a measurement of an object. Measurements realte to the cultural property&apos;s dimensions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -1871,6 +1927,16 @@ un&apos;azienda, ecc.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Measurement collection&apos; is the following:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label &quot;Measurements of cultural property 1200865132 7&quot;@en ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Collezione di misure&quot; è il seguente:
+resource:MeasurementCollection/1200865132-1
+        a  dd:MeasurementCollection ;
+        rdfs:label &quot;Misure del bene culturale 1200865132 7&quot;@it ;
+        dd:hasMeasurement resource:Measurement/1200865132-1-width , resource:Measurement/1200865132-1-height , resource:Measurement/1200865132-1-depth .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle misurazioni osservate per un oggetto. Per la normativa F, le misure possono essere relative anche a supporti secondari, custodie, cornici, singoli fotogrammi, ecc. Per la normativa VeAC, le misure possono essere relative all&apos;ingombro per l&apos;immagazzinaggio; alla base (individuano l&apos;oggetto e la conformazione fisica del proprietario e sono fondamentali per l&apos;allestimento museale, per individuare i tipi di supporti necessari per l&apos;esposizione); alle maniche.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the set of measurments observed for an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -2050,6 +2116,18 @@ un&apos;azienda, ecc.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Techinical detail occurrence&apos; is the following:
+resource:TechnicalDetailOccurrence/1200865306-shape
+        a      dd:TechnicalDetailOccurrence ;
+        rdfs:label &quot;Shape of cultural property 1200865306: oval&quot;@it ;
+        dd:satisfiesTechnicalDetail resource/TechnicalDetail:oval ;
+        dd:usesTechnicalCharacteristic dd:Shape .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Occorrenza di dettaglio tecnico&quot; è il seguente:
+resource:TechnicalDetailOccurrence/1200865306-shape
+        a      dd:TechnicalDetailOccurrence ;
+        rdfs:label &quot;Formato del bene culturale 1200865306: ovale&quot;@it ;
+        dd:satisfiesTechnicalDetail resource/TechnicalDetail:ovale ;
+        dd:usesTechnicalCharacteristic dd:Shape .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;occorrenza di un dettaglio tecnico (una descrizione), cioè una situazione in cui un dettaglio tecnico occorre nella realtà in un&apos;entità specifica, come un bene culturale. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a techincal detail&apos;s occurrence (a description), that is a situation where a technical detail occurrs in a specific entity (like a cultural property). For instance, techincal detail&apos;s occurrence is: &quot;the cultural property X realized with pottery material&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
@@ -3290,5 +3368,5 @@ un&apos;azienda, ecc.</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 

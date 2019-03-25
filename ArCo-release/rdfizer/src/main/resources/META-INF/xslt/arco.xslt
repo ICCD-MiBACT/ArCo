@@ -8137,8 +8137,10 @@
 							select="concat('Legal situation of cultural property ', $itemURI, ': ', normalize-space(schede/*/TU/CDG/CDGG))" />
 					</l0:name>
 					<rdf:type>
+						<xsl:attribute name="rdf:resource">
 						<xsl:value-of
 							select="'https://w3id.org/arco/ontology/context-description/LegalSituation'" />
+						</xsl:attribute>
 					</rdf:type>
 					<xsl:if test="schede/*/TU/CDG/CDGN">
 						<arco-core:note>
@@ -17968,8 +17970,10 @@
 									select="concat('Cadastral legal situation of cultural property ', $itemURI)" />
 							</l0:name>
 							<rdf:type>
+							<xsl:attribute name="rdf:resource">
 								<xsl:value-of
 									select="'https://w3id.org/arco/ontology/context-description/LegalSituation'" />
+							</xsl:attribute>
 							</rdf:type>
 							<xsl:for-each select="./CTS/CTSP">
 								<arco-cd:hasOwner>
@@ -18147,8 +18151,10 @@
 									select="concat('Cadastral historical legal situation of cultural property ', $itemURI)" />
 							</l0:name>
 							<rdf:type>
+							<xsl:attribute name="rdf:resource">
 								<xsl:value-of
 									select="'https://w3id.org/arco/ontology/context-description/LegalSituation'" />
+							</xsl:attribute>
 							</rdf:type>
 								<arco-cd:hasOwner>
 									<xsl:attribute name="rdf:resource">
