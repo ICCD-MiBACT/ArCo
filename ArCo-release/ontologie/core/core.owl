@@ -674,6 +674,16 @@
     
 
 
+    <!-- http://dati.beniculturali.it/cis/CISNameInTime -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/CISNameInTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <owl:disjointWith rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
+    </owl:Class>
+    
+
+
     <!-- http://dati.beniculturali.it/cis/CulturalEntity -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEntity">
@@ -687,7 +697,6 @@
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEvent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
-        <owl:disjointWith rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
     </owl:Class>
     
 
@@ -696,15 +705,6 @@
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalInstituteOrSite">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://dati.beniculturali.it/cis/NameInTime -->
-
-    <owl:Class rdf:about="http://dati.beniculturali.it/cis/NameInTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
     </owl:Class>
     
 

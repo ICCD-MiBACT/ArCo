@@ -4378,12 +4378,12 @@
 							</xsl:choose>
 						</rdfs:label>
 						<xsl:if test="./EDTN">
-							<roapit:forAgent>
+							<roapit:isRoleInTimeOf>
 								<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
 									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./EDTN)))" />
                                 </xsl:attribute>
-							</roapit:forAgent>
+							</roapit:isRoleInTimeOf>
 						</xsl:if>
 						<xsl:if test="./EDTR and (not(starts-with(lower-case(normalize-space(./EDTR)), 'nr')) and not(starts-with(lower-case(normalize-space(./EDTR)), 'n.r')))">
 							<roapit:withRole>
@@ -20573,11 +20573,11 @@
 								<xsl:choose>
 									<xsl:when test="./COLD and (not(starts-with(lower-case(normalize-space(./COLD)), 'nr')) and not(starts-with(lower-case(normalize-space(./COLD)), 'n.r')))">
 										<xsl:value-of
-								select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+								select="concat($NS, 'CollectionCulEnt/', arco-fn:urify(normalize-space(./COLD)))" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of
-								select="concat($NS, 'CollectionOfCulturalEntities/', $itemURI, '-', $collection-membership-position)" />
+								select="concat($NS, 'CollectionCulEnt/', $itemURI, '-', $collection-membership-position)" />
 									</xsl:otherwise>
 								</xsl:choose>
                         	</xsl:attribute>
@@ -20657,18 +20657,18 @@
 						<xsl:choose>
 									<xsl:when test="./COLD and (not(starts-with(lower-case(normalize-space(./COLD)), 'nr')) and not(starts-with(lower-case(normalize-space(./COLD)), 'n.r')))">
 										<xsl:value-of
-								select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+								select="concat($NS, 'CollectionCulEnt/', arco-fn:urify(normalize-space(./COLD)))" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of
-								select="concat($NS, 'CollectionOfCulturalEntities/', $itemURI, '-', $collection-membership-position)" />
+								select="concat($NS, 'CollectionCulEnt/', $itemURI, '-', $collection-membership-position)" />
 									</xsl:otherwise>
 						</xsl:choose>
                 	</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-								select="'http://dati.beniculturali.it/cis/CollectionOfCulturalEntities'" />
+								select="'http://dati.beniculturali.it/cis/CollectionCulEnt'" />
                         </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -20788,11 +20788,11 @@
 								<xsl:choose>
 									<xsl:when test="./COLD">
 										<xsl:value-of
-								select="concat($NS, 'CollectionOfCulturalEntities/', arco-fn:urify(normalize-space(./COLD)))" />
+								select="concat($NS, 'CollectionCulEnt/', arco-fn:urify(normalize-space(./COLD)))" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of
-								select="concat($NS, 'CollectionOfCulturalEntities/', $itemURI, '-', $collection-membership-position)" />
+								select="concat($NS, 'CollectionCulEnt/', $itemURI, '-', $collection-membership-position)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</arco-cd:isCollectorOf>
@@ -21926,12 +21926,12 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(schede/*/LC/LDC/LDCM)" />
 								</l0:name>
-								<cis:hasNameInTime>
+								<cis:hasCISNameInTime>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
-										select="concat($NS, 'NameInTime/', arco-fn:urify(normalize-space(schede/*/LC/LDC/LDCM)))" />
+										select="concat($NS, 'CISNameInTime/', arco-fn:urify(normalize-space(schede/*/LC/LDC/LDCM)))" />
                                     </xsl:attribute>
-								</cis:hasNameInTime>
+								</cis:hasCISNameInTime>
 								<cis:hasSite>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
@@ -21943,12 +21943,12 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                     <xsl:value-of
-									select="concat($NS, 'NameInTime/', arco-fn:urify(normalize-space(schede/*/LC/LDC/LDCM)))" />
+									select="concat($NS, 'CISNameInTime/', arco-fn:urify(normalize-space(schede/*/LC/LDC/LDCM)))" />
                                 </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
-										select="'http://dati.beniculturali.it/cis/NameInTime'" />
+										select="'http://dati.beniculturali.it/cis/CISNameInTime'" />
                                     </xsl:attribute>
 								</rdf:type>
 								<rdfs:label xml:lang="it">
@@ -21967,9 +21967,9 @@
 									<xsl:value-of
 										select="concat('Name in time: ', normalize-space(schede/*/LC/LDC/LDCM))" />
 								</l0:name>
-								<cis:institutionalName>
+								<cis:institutionalCISName>
 									<xsl:value-of select="normalize-space(schede/*/LC/LDC/LDCM)" />
-								</cis:institutionalName>
+								</cis:institutionalCISName>
 							</rdf:Description>
 						</xsl:if>
 					</xsl:when>
@@ -22479,12 +22479,12 @@
 									<l0:name>
 										<xsl:value-of select="normalize-space(./PRC/PRCM)" />
 									</l0:name>
-									<cis:hasNameInTime>
+									<cis:hasCISNameInTime>
 										<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
-											select="concat($NS, 'NameInTime/', arco-fn:urify(normalize-space(./PRC/PRCM)))" />
+											select="concat($NS, 'CISNameInTime/', arco-fn:urify(normalize-space(./PRC/PRCM)))" />
                                         </xsl:attribute>
-									</cis:hasNameInTime>
+									</cis:hasCISNameInTime>
 									<cis:hasSite>
 										<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
@@ -22496,17 +22496,17 @@
 								<rdf:Description>
 									<xsl:attribute name="rdf:about">
                                         <xsl:value-of
-										select="concat($NS, 'NameInTime/', arco-fn:urify(normalize-space(./PRC/PRCM)))" />
+										select="concat($NS, 'CISNameInTime/', arco-fn:urify(normalize-space(./PRC/PRCM)))" />
                                     </xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
-											select="'http://dati.beniculturali.it/cis/NameInTime'" />
+											select="'http://dati.beniculturali.it/cis/CISNameInTime'" />
                                         </xsl:attribute>
 									</rdf:type>
-									<cis:institutionalName>
+									<cis:institutionalCISName>
 										<xsl:value-of select="normalize-space(./PRC/PRCM)" />
-									</cis:institutionalName>
+									</cis:institutionalCISName>
 								</rdf:Description>
 							</xsl:if>
 							<!-- Site Type as an individual -->
@@ -23852,12 +23852,12 @@
 							</rdf:type>
 						</xsl:otherwise>
 					</xsl:choose>
-					<cis:involves>
+					<cis:involvesCulturalEntity>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
 							select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
                         </xsl:attribute>
-					</cis:involves>
+					</cis:involvesCulturalEntity>
 					<!-- Event name -->
 					<xsl:if test="./MSTT">
 						<l0:name>
@@ -23870,12 +23870,12 @@
 					<!-- Event organizer -->
 					<xsl:if test="(not(starts-with(lower-case(normalize-space(./MSTE)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTE)), 'n.r')))">
 					<xsl:for-each select="./MSTE">
-						<cis:isRelatedToRiT>
+						<roapit:hasRiT>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
                             </xsl:attribute>
-						</cis:isRelatedToRiT>
+						</roapit:hasRiT>
 						<arco-ce:hasEventOrganiser>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
@@ -23985,12 +23985,12 @@
 								select="'http://dati.beniculturali.it/cis/CulturalEvent'" />
                             </xsl:attribute>
 						</rdf:type>
-						<cis:involves>
+						<cis:involvesCulturalEntity>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
 								select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
                             </xsl:attribute>
-						</cis:involves>
+						</cis:involvesCulturalEntity>
 						<!-- Event name -->
 						<xsl:if test="./MSTT">
 							<l0:name>
@@ -24003,12 +24003,12 @@
 						<!-- Event organizer -->
 						<xsl:if test="(not(starts-with(lower-case(normalize-space(./MSTO)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTO)), 'n.r')))">
 							<xsl:for-each select="./MSTO">
-								<cis:isRelatedToRiT>
+								<roapit:hasRiT>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
 										select="concat($NS, 'TimeIndexedRole/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
                                     </xsl:attribute>
-								</cis:isRelatedToRiT>
+								</roapit:hasRiT>
 								<arco-ce:hasEventOrganiser>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
@@ -24048,12 +24048,12 @@
 						<!-- Event site -->
 						<xsl:if test="(not(starts-with(lower-case(normalize-space(./MSTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTS)), 'n.r')))">
 						<xsl:for-each select="./MSTS">
-							<cis:isHostedBy>
+							<cis:isHostedBySite>
 								<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
 									select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(normalize-space(.))))" />
                                 </xsl:attribute>
-							</cis:isHostedBy>
+							</cis:isHostedBySite>
 						</xsl:for-each>
 						</xsl:if>
 					</rdf:Description>

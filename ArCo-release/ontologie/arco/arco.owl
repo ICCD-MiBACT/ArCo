@@ -2025,8 +2025,8 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale, sia materiale che immateriale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a cultural property, both tangible and intangible.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale, sia materiale che immateriale. Un bene culturale è una testimonianza materiale o immateriale, riconosciuta come parte del patrimonio culturale nazionale in quanto utile alla conoscenza e alla ricostruzione della storia e del paesaggio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a cultural property, both tangible and intangible. A cultural property is the legacy, tangible or intangible, recognised as part of the national cultural heritage, since it helps know and reconstruct the history and the landscape.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">Cultural Property</rdfs:label>
