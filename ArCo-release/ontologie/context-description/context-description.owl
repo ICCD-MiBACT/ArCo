@@ -400,6 +400,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthor">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAuthorOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una entità di qualsiasi tipo (documentazione, bene culturale, etc.) con il suo autore.</rdfs:comment>
@@ -435,6 +436,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthorshipAttribution">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
         <rdfs:comment xml:lang="it">Proprietà che lega un oggetto culturale a un&apos;attribuzione di autore o di responsabilità relativa all&apos;oggetto.</rdfs:comment>
@@ -729,6 +731,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasCulturalPropertyEstimate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCulturalPropertyEstimate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla stima effettuata sul bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to the estimate of that cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="it">ha stima di bene culturale</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural property estimate</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasCulturalPropertyStage -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCulturalPropertyStage">
@@ -906,6 +925,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEstimate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isEstimateOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una sua stima.</rdfs:comment>
@@ -2283,6 +2303,41 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAuthorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un agent a una entità di qualsiasi tipo (documentazione, bene culturale, etc.) di cui quell&apos;agente è autore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an agent to an entity the agent is author of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is author of</rdfs:label>
+        <rdfs:label xml:lang="it">è autore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="en">Property that links an authorship attribution referred to a cultural entity to that cultural entity.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Proprietà che lega un&apos;attribuzione di autore o di responsabilità relativa a un&apos;entità culturale all&apos;entità culturale stessa.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is authorship attribution of</rdfs:label>
+        <rdfs:label xml:lang="it">è attribuzione di autore/responsabilità di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <arco-catalogue:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT; AU/ATB; AU/AAT</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isBibliographyOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBibliographyOf">
@@ -2414,6 +2469,23 @@ Normativa CA: RO/RIS (intervento successivo)</arco-catalogue:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normative VeAC e AT 3.01: DO/BSE/BSEN - Normativa S 3.00: RO/ADL/ADLE.</arco-catalogue:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isEstimateOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isEstimateOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una stima di un&apos;entità all&apos;entità stimata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an estimate of an entity to that entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is estimate of</rdfs:label>
+        <rdfs:label xml:lang="it">è stima di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 

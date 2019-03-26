@@ -86,12 +86,6 @@
     
 
 
-    <!-- http://dati.beniculturali.it/cis/isInSite -->
-
-    <owl:ObjectProperty rdf:about="http://dati.beniculturali.it/cis/isInSite"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasLegalSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
@@ -131,19 +125,6 @@
     <!-- https://w3id.org/arco/ontology/core/isTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTypeOf"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/location/IsCadastralCityOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/IsCadastralCityOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/location/isCadastralEntityOf"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralCity"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
-        <rdfs:label xml:lang="en">is cadastral city of</rdfs:label>
-        <rdfs:label xml:lang="it">è città catastale di</rdfs:label>
-    </owl:ObjectProperty>
     
 
 
@@ -236,6 +217,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCadastralCity">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/location/hasCadastralEntity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isCadastralCityOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;identità catastale di un&apos;entità al comune a cui è intestato il foglio di mappa catastale, riportato nella forma attestata nel catasto.</rdfs:comment>
@@ -659,7 +641,7 @@
     <!-- https://w3id.org/arco/ontology/location/hasToponymInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasToponymInTime">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isToponymInTime"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isToponymInTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/ToponymInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di collegare un luogo a una denominazione che cambia nel tempo.</rdfs:comment>
@@ -738,6 +720,18 @@
         <rdfs:label xml:lang="it">è base cartografica di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isCadastralCityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isCadastralCityOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/location/isCadastralEntityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/City"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
+        <rdfs:label xml:lang="en">is cadastral city of</rdfs:label>
+        <rdfs:label xml:lang="it">è città catastale di</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -930,7 +924,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/SiteSpecification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/SiteType"/>
         <rdfs:label xml:lang="en">is site specification of</rdfs:label>
-        <rdfs:label xml:lang="it">è specificazione del contenitore fisico di</rdfs:label>
+        <rdfs:label xml:lang="it">è specificazione di contenitore fisico</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1018,9 +1012,9 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/location/isToponymInTime -->
+    <!-- https://w3id.org/arco/ontology/location/isToponymInTimeOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isToponymInTime">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isToponymInTimeOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/ToponymInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:label xml:lang="en">is toponym in time of</rdfs:label>
