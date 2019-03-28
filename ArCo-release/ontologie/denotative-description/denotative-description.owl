@@ -36,8 +36,8 @@
         <rdfs:comment xml:lang="en">In the Denotative Description module are modelled pieces of information regarding the characteristics and qualities of a cultural property, as detectable and/or detected during the cataloguing process. Examples are: measurements, materials, technique, conservation status.</rdfs:comment>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa del bene culturale (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), include la modellazione delle informazioni che riguardano il bene culturale in sé, con i suoi attributi (rilevati/rilevabili al momento della catalogazione).</rdfs:comment>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <rdfs:label>Denotative Description Ontology (ArCo network)</rdfs:label>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
     </owl:Ontology>
     
@@ -526,6 +526,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto all&apos;insieme delle misure osservate per quell&apos;oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an object to the collection of observed measures on it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha collezione di misure</rdfs:label>
         <rdfs:label xml:lang="en">has measurement collection</rdfs:label>
@@ -559,6 +560,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al suo orientamento, secondo l&apos;asse principale individuato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an object to its orientation, considering its major axis.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha orientamento</rdfs:label>
         <rdfs:label xml:lang="en">has orientation</rdfs:label>
@@ -575,6 +577,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/OrnamentalMotif"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;apparato iconografico e decorativo di un bene culturale al motivo decorativo (antropomorfo, zoomorfo, geometrico) rappresentato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a cultural entity&apos;s iconographic or decorative apparatus to its ornamental motif (anthropomorphic, zoomorphic, geometric).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:isDefinedBy xml:lang="it">provvisoria</rdfs:isDefinedBy>
         <rdfs:isDefinedBy xml:lang="en">unstable</rdfs:isDefinedBy>
@@ -590,6 +593,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene archeologico a un campione prelevato da esso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a archaeological entity to a sample collected from it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">has sample collected</rdfs:label>
@@ -625,6 +629,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Support"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una iscrizione, un timbro, un emblema, etc., rappresentato su un bene culturale al supporto su cui si trova l&apos;elemento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an inscription, stamp, emblem etc., represented on a cultural entity to the support on which the entity is located.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha supporto</rdfs:label>
         <rdfs:label xml:lang="en">has support</rdfs:label>
@@ -641,6 +646,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità (per esempio, un bene culturale) a un&apos;occorrenza di un dettaglio tecnico, cioè a una situazione in cui un dettaglio tecnico occorre nella realtà in un&apos;entità specifica. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an entity (e.g. cultural entity) to the occurrence of a technical detail, that is a situation where a techincal detail occurres on a specific entity. For example, an occurrence of a technical detail is: &quot;the cultural entity X made with clay&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha occorrenza di dettaglio tecnico</rdfs:label>
         <rdfs:label xml:lang="en">has technical detail occurrence</rdfs:label>
@@ -674,6 +680,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un insieme di misure osservate per un oggetto a una dell misure, quando questa sia relativa all&apos;ingombro di un vestimento antico o contemporaneo. Le misure ingombro determinano l&apos;ingombro per l&apos;immagazzinaggio e si possono quindiconsiderare le coordinate ortogonali dell&apos;oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a collection of observed measures on an object to one of these measures, when the latter is relative to an ancient or contemporary apparel&apos;s size. The volumetric dimensions measurements determine the size for storage and can be considered as the object&apos;s orthogonal coordinates.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label>ha misura di imgombro</rdfs:label>
         <rdfs:label>has volumetric diamensions measurement</rdfs:label>
@@ -690,6 +697,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una iscrizione, un timbro, uno stemma, etc., al sistema di scrittura/alfabeto adottati.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an inscription, stamp, crest etc., to the adopted writing system or alphabet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha sistema di scrittura</rdfs:label>
         <rdfs:label xml:lang="en">has writing system</rdfs:label>
@@ -724,6 +732,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha misura&quot;, collega una misura di un oggetto all&apos;insieme di misure osservate per l&apos;oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an object&apos;s measure to the observed measures&apos; collection of that object. It is the inverse property of hasMeasurement.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is measurement in collection</rdfs:label>
         <rdfs:label xml:lang="it">è misura in collezione</rdfs:label>
@@ -740,6 +749,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Support"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa di &quot;ha supporto&quot;, collega un supporto (es.: &quot;etichetta di carta&quot;) all&apos;elemento (timbro, emblema, iscrizione, marchio) che vi viene rappresentato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a support (e.g. &quot;paper label&quot;) to an element (stamp, embelem, inscription, mark) which has been represented on it. It is the inverse property of hasSupport.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/denotative-description"/>
         <rdfs:label xml:lang="en">is support of</rdfs:label>
         <rdfs:label xml:lang="it">è supporto di</rdfs:label>
@@ -758,6 +768,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;usa caratteristica tecnica&quot;, collega una caratteristica tecnica, intesa come concetto, a un dettaglio tecnico di un&apos;entità - come un bene culturale - inteso come descrizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a techical characteristic (intended as a concept) to an entity&apos;s techinical detail as a cultural entity (intended as a description). It is the inverse property of usesTechincalCharacteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is technical characteristic used by</rdfs:label>
         <rdfs:label xml:lang="it">è caratteristica tecnica usata da</rdfs:label>
@@ -774,6 +785,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;soddisfa dettaglio tecnico&quot;, collega una descrizione di un dettaglio tecnico a una delle sue occorrenze, relativamente a un&apos;entità specifica - come bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects the description a techincal detail&apos;s description to one of its occurrences, with respect to a specific entity (as a cultural entity). It is the inverse property of satisfiesTechinicalDetail.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
         <rdfs:label xml:lang="en">is technical detail satisfied by</rdfs:label>
@@ -790,6 +802,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un uno stemma, un emblema, un timbro, etc., presente su un bene culturale, all&apos;agente (la famiglia, la fabbrica, la cava, l&apos;argentiere, etc.) a cui si riferisce l&apos;elemento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a crest, emblem, postmark etc., located on a cultural entity to the agent (e.g. family, factory, cave, silversmith) to which it refers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">refers to agent</rdfs:label>
         <rdfs:label xml:lang="it">si riferisce ad agente</rdfs:label>
@@ -807,6 +820,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;occorrenza di un dettaglio tecnico, relativamente a un&apos;entità specifica, come un bene culturale, alla descrizione del dettaglio tecnico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a technical detail&apos;s occurrence, with respect to a specific entity (as a cultual entity) to the techincal detail&apos;s description.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">satisfies technical detail</rdfs:label>
         <rdfs:label xml:lang="it">soddisfa dettaglio tecnico</rdfs:label>
@@ -823,6 +837,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/technical-detail-characteristic/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un dettaglio tecnico di un&apos;entità - come un bene culturale - inteso come descrizione, a una caratteristica tecnica, intesa come concetto, che ne definisce il contesto descrittivo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an entity&apos;s techincal detail (intended as a description) to a technical characteristic (inteded as a concept), which defines the entity&apos;s descriptive context.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
         <rdfs:label xml:lang="it">usa caratteristica tecnica</rdfs:label>
         <rdfs:label xml:lang="en">uses technical characteristic</rdfs:label>
