@@ -70,6 +70,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -328,6 +334,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/MusicHeritage"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/MusicalInstrumentClassification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a una classificazione con cui lo strumento può essere codificato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a cultural entity to a classification through which the instrument can be coded.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/arco/"/>
         <rdfs:label xml:lang="it">ha classificazione di strumento musicale</rdfs:label>
         <rdfs:label xml:lang="en">has musical instrument classification</rdfs:label>
@@ -364,6 +371,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/PhotographicHeritage"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene fotografico a una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a photographic property to a photographic property&apos;s classification, according to to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">has photographic heritage classification</rdfs:label>
@@ -380,6 +388,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassificationType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione di un bene fotografico al tipo di classificazione, relativamente a un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a photographic property&apos;s classification to the classification type, according to to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">ha tipo di classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">has photographic heritage classification type</rdfs:label>
@@ -698,6 +707,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasFindingContext -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFindingContext"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasFruition -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFruition"/>
@@ -731,6 +746,12 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasMusician -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMusician"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasPrimaryDocumentation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPrimaryDocumentation"/>
     
 
 
@@ -794,6 +815,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isCoinMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCoinMemberOf"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfCollection"/>
@@ -803,6 +830,66 @@
     <!-- https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasAgent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasAgentRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasAgentRole"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasCategory"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasClassification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasClassification"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasComponent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasConcept -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasConcept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasPart"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isCategoryOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isCategoryOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isClassificationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isClassificationOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isPartOf"/>
     
 
 
@@ -821,6 +908,18 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAccessibility -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAccessibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAvailability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAvailability"/>
     
 
 
@@ -875,6 +974,36 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalDetailOccurrence -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalDetailOccurrence"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasCadastralIdentity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCadastralIdentity"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasStratigraphicArea -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasStratigraphicArea"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasStratigraphicRoom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasStratigraphicRoom"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasStratigraphicSquare -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasStratigraphicSquare"/>
     
 
 
@@ -1370,6 +1499,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/note -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/note"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/anthropologicalMaterialMorphology"/>
@@ -1465,6 +1600,7 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/arco/HornbostelSachsClassification"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un sistema di classificazione diverso da quello Hornbostel-Sachs, con cui può essere codificato uno strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a classification different from the Hornbostel-Sachs classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Alternative musical instrument classification</rdfs:label>
         <rdfs:label xml:lang="it">Classificazione alternativa di strumento musicale</rdfs:label>
@@ -2264,6 +2400,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la classificazione Hornbostel-Sachs di uno strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the Hornbostel-Sachs classification of a musical instrument.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Classificazione Hornbostel-Sachs</rdfs:label>
         <rdfs:label xml:lang="en">Hornbostel-Sachs classification</rdfs:label>
@@ -2407,6 +2544,7 @@
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/MusicalInstrumentClassification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione relativa a uno strumento musicale, secondo la classificazione di Hornbostel-Sachs ed eventualmente anche secondo altre classificazioni.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a classification concerning a musical instrument, concerning the Hornbostel-Sachs classification or possibily other classifications.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Classificazione di strumento musicale</rdfs:label>
         <rdfs:label xml:lang="en">Musical instrument classification</rdfs:label>
@@ -2550,6 +2688,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione di un bene fotografico secondo un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a photographic entity&apos;s classification accorting to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="it">Classificazione di bene fotografico</rdfs:label>
         <rdfs:label xml:lang="en">Photographic heritage classification</rdfs:label>
@@ -2565,6 +2704,7 @@
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PhotographicHeritageClassificationType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di classificazione di un bene fotografico, relativamente a un sistema di classificazione alternativo a Iconclass, che sia comunque riconosciuto e utilizzato a livello nazionale, o preferibilmente internazionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents photographic property&apos;s classification type,, according to to other classification systems as Iconclass. The system has to be recognised and used at national or preferably international level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Photographic heritage classification type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di classificazione di bene fotografico</rdfs:label>
@@ -2682,6 +2822,18 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/ArchivalRecord -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecord"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ArchivalRecordSet -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/AuthorshipAttribution -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
@@ -2754,6 +2906,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/FindingContext -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FindingContext"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Fruition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Fruition"/>
@@ -2775,6 +2933,12 @@
     <!-- https://w3id.org/arco/ontology/context-description/LegalSituation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/NumismaticSeries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
     
 
 
@@ -2844,6 +3008,30 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Category -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Category"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/CulturalEntityClassification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Accessory -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Accessory"/>
@@ -2859,6 +3047,18 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/ConservationStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAvailability"/>
     
 
 
@@ -2910,6 +3110,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/CadastralIdentity -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
@@ -2919,6 +3125,12 @@
     <!-- https://w3id.org/arco/ontology/location/TypeOfContext -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TypeOfContext"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Address -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address"/>
     
 
 
@@ -2958,9 +3170,21 @@
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/l0/Description -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Location -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Location"/>
     
 
 
