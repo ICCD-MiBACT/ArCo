@@ -895,6 +895,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Accessory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di costruzione di un accessorio di uno strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the date of construction of a musical instrument&apos;s accessory.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">creation date</rdfs:label>
         <rdfs:label xml:lang="it">data di creazione</rdfs:label>
@@ -911,6 +912,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la traduzione italiana della trascrizione di un testo contenuto in un&apos;iscrizione, un&apos;emblema, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the italian translation of a text transcription contained in an inscription, emblem etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">italian translation</rdfs:label>
         <rdfs:label xml:lang="it">traduzione italiana</rdfs:label>
@@ -982,6 +984,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le occorrenze di un emblema, marchio, iscrizione, etc., su uno stesso bene culturale, cioè quante volte l&apos;elemento descritto compare sul bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the occurrences of an affixed element on a cultular entity, that is how many times the outlined element appears on the cultual entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">occorrenze</rdfs:label>
         <rdfs:label xml:lang="en">occurrences</rdfs:label>
@@ -999,6 +1002,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione di un bene rispetto al bene complesso di cui è parte componente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a cultural entity&apos;s position with respect to a complex entity to which it belongs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">position in complex cultural property</rdfs:label>
         <rdfs:label xml:lang="it">posizione rispetto al bene culturale complesso</rdfs:label>
@@ -1014,7 +1018,8 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/positionOnCulturalProperty">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione la posizione di un oggetto (es.: elementi come stemmi, emblemi, timbri, etc., oppure i soggetti rappresentati) rispetto all&apos;intero bene o a una sua specifica parte.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione di un oggetto (es.: elementi come stemmi, emblemi, timbri, etc., oppure i soggetti rappresentati) rispetto all&apos;intero bene o a una sua specifica parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a cultural entity&apos;s postion (e.g. elements like crests, emblems, stamps or the depicted subjects), with respect to the whole entity or to its specific part.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">position on cultural property</rdfs:label>
         <rdfs:label xml:lang="it">posizione su bene culturale</rdfs:label>
@@ -1031,6 +1036,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali proposte per interventi conservativi, dopo aver valutato le condizioni del bene al momento della sua catalogazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents potential proposals for conservative interventions after evaluating the cultual entity&apos;s conditions at time of its cataloguing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">proposed intervention</rdfs:label>
         <rdfs:label xml:lang="it">proposte di interventi</rdfs:label>
@@ -1083,6 +1089,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, un emblema, etc., alla trascrizione del testo, utilizzando scioglimenti e integrazioni scientificamente accettati.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects an inscription, emblem etc., to the text&apos;s transcription, using scientifically accepted integrations.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">transcript</rdfs:label>
         <rdfs:label xml:lang="it">trascrizione</rdfs:label>
@@ -1099,6 +1106,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la validità, intesa come livello di accuratezza, di una misura osservata per un oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the validity, intended as accurancy level, of an observed measure for an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">validity</rdfs:label>
         <rdfs:label xml:lang="it">validità</rdfs:label>
@@ -2274,6 +2282,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AssignedDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione attribuita.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents an attributed denomination.</rdfs:comment>
         <rdfs:label xml:lang="en">Assigned designation</rdfs:label>
         <rdfs:label xml:lang="it">Denominazione attribuita</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2298,6 +2307,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/AvailableNotes">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le note producibili da uno strumento musicale, dal grave all&apos;acuto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents playable notes by a musical instrument, from low to high.</rdfs:comment>
         <rdfs:label xml:lang="en">Available notes</rdfs:label>
         <rdfs:label xml:lang="it">Note produbicili</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2406,6 +2416,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CurrentDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la denominazione attuale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the current designation.</rdfs:comment>
         <rdfs:label xml:lang="en">Current designation</rdfs:label>
         <rdfs:label xml:lang="it">Denominazione attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2420,6 +2431,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/CustomaryDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione consuetudinaria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the usual designation.</rdfs:comment>
         <rdfs:label xml:lang="en">Customary designation</rdfs:label>
         <rdfs:label xml:lang="it">Denominazione consuetudinaria</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2490,6 +2502,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DialectalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione dialettale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the dialect designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione dialettale</rdfs:label>
         <rdfs:label xml:lang="en">Dialectal designation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2516,6 +2529,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Diapason">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il corista rilevato (nota, temperatura ed eventualmente umidità ambientale al momento della rilevazione).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the identified chorister (note, temperature and eventually humidity during the detection).</rdfs:comment>
         <rdfs:label xml:lang="it">Corista</rdfs:label>
         <rdfs:label xml:lang="en">Diapason</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2554,6 +2568,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Extension">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;estensione musicale di uno strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a musical instrument&apos;s musical extension.</rdfs:comment>
         <rdfs:label xml:lang="it">Estensione</rdfs:label>
         <rdfs:label xml:lang="en">Extension</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2580,6 +2595,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/FileFormat">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato utilizzato per la scrittura di una risorsa digitale su supporto informatico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the format used to write a digital image on a data medium.</rdfs:comment>
         <rdfs:label xml:lang="en">File Format</rdfs:label>
         <rdfs:label xml:lang="it">Formato di compressione/estensione file</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2594,6 +2610,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Filigree">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la filigrana di un&apos;opera d&apos;arte, un disegno, una fotografia, una stampa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the filigree of a piece of art, painting, photography, print.</rdfs:comment>
         <rdfs:label xml:lang="it">Filigrana</rdfs:label>
         <rdfs:label xml:lang="en">Filigree</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2620,6 +2637,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/GarmentAnalysis">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione tecnica completa dei tessuti, secondo le norme fornite dal C.I.E.T.A., o dei merletti, oppure rappresenta la distinzione fra tessuto unito e tessuto operato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the techincal definition of textured fabrics, according to the standard provided by C.I.E.T.A., or laces. It can also represent the dinstrinction between plain fabric and textured fabric.</rdfs:comment>
         <rdfs:label xml:lang="it">Analisi del vestimento</rdfs:label>
         <rdfs:label xml:lang="en">Garment analysis</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2634,6 +2652,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/GarmentColour">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il colore dominante, di solito quello del fondo del tessuto, o quello risultante dall&apos;intreccio, di un vestimento antico o contemporaneoi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the dominant color of a ancient and contemporary vestment, usually it is base fabric&apos;s color, or the interlaced decoration&apos;s color.</rdfs:comment>
         <rdfs:label xml:lang="it">Colore del vestimento</rdfs:label>
         <rdfs:label xml:lang="en">Garment colour</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2730,6 +2749,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HistoricalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione storica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a historical designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione storica</rdfs:label>
         <rdfs:label xml:lang="en">Historical designation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2764,6 +2784,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/IdiomaticDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione idiomatica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents an idiomatic designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione idiomatica</rdfs:label>
         <rdfs:label xml:lang="en">Idiomatic designation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2830,6 +2851,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/LocalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione locale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents an local designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione locale</rdfs:label>
         <rdfs:label xml:lang="en">Local designation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2854,6 +2876,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MassStorage">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la memoria di massa nella quale è stata memorizzata una fotografia digitale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the mass storage where a digital photograph is stored.</rdfs:comment>
         <rdfs:label xml:lang="en">Mass storage</rdfs:label>
         <rdfs:label xml:lang="it">Memoria di massa</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2868,6 +2891,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Material">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la materia con cui è realizzato un oggetto, per esempio un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the material through which an object has been realized, e.g. a cultural entity.</rdfs:comment>
         <rdfs:label xml:lang="it">Materia</rdfs:label>
         <rdfs:label xml:lang="en">Material</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2882,6 +2906,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la materia e/o la tecnica con cui è realizzato un oggetto, per esempio un bene culturale. Nel dominio delle normative  ICCD per la catalogazione dei beni culturali, si rende necessario nei casi in cui materia e tecnica sono registrate nello stesso campo, nella forma &quot;materia/ tecnica&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the material or technique through which an object has been realized, e.g. a cultural entity. In ICCD standard for cataloguing cultural entities, this label is necessary when material and techinque are registered in the same field.</rdfs:comment>
         <rdfs:label xml:lang="it">Materia o tecnica</rdfs:label>
         <rdfs:label xml:lang="en">Material or Technique</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2966,6 +2991,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/OriginalDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione originaria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents original designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione originaria</rdfs:label>
         <rdfs:label xml:lang="en">Original designation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2980,6 +3006,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/OtherLanguageDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione in altra lingua.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a designation in other language.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione in altra lingua</rdfs:label>
         <rdfs:label xml:lang="en">Other language designation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3016,6 +3043,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/PhotoColour">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il colore della fotografia digitale, ovvero se trattasi di fotografia in bianco/nero o a colori.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a digital photograph&apos;s colour, i.e. black and white or colours.</rdfs:comment>
         <rdfs:label xml:lang="it">Colore della fotografia</rdfs:label>
         <rdfs:label xml:lang="en">Photo colour</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3030,6 +3058,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/PhotoProgram">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il programma di visualizzazione, memorizzazione ed elaborazione utilizzato per la fotografia digitale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the visualization, storage and processing program used for a digital photograph.</rdfs:comment>
         <rdfs:label xml:lang="en">Photo program</rdfs:label>
         <rdfs:label xml:lang="it">Programma per la fotografia digitale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3044,6 +3073,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/PhotoSize">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato di una fotografia digitale, inteso come la dimensione standardizzata dei materiali fotografici (negativi, positivi, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a digital photograph format, intended as the photogrphic material&apos;s standardised size (e.g. negative, positives).</rdfs:comment>
         <rdfs:label xml:lang="it">Dimensioni della foto (Formato)</rdfs:label>
         <rdfs:label xml:lang="en">Photo size</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3058,6 +3088,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/PixelDimension">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le dimensioni, in pixel, di una fotografia digitale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a digital photograph size in pixels.</rdfs:comment>
         <rdfs:label xml:lang="it">Dimensioni in pixel</rdfs:label>
         <rdfs:label xml:lang="en">Pixel dimension</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3094,6 +3125,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/QualityLevel">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il livello di qualità di una risorsa digitale (es.: alta risoluzione, bassa risoluzione, preview)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a digital resource&apos;s quality level, e.g. high-resolution, low-resolution, preview.</rdfs:comment>
         <rdfs:label xml:lang="it">Livello di qualità</rdfs:label>
         <rdfs:label xml:lang="en">Quality level</rdfs:label>
     </owl:NamedIndividual>
@@ -3105,6 +3137,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Resolution">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la risoluzione e il valore specifico utilizzati per la memorizzazione di una fotografia digitale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the specific value and resolution used for store a digital photograph.</rdfs:comment>
         <rdfs:label xml:lang="en">Resolution</rdfs:label>
         <rdfs:label xml:lang="it">Risoluzione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3119,6 +3152,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Shape">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il formato di un oggetto, per oggetti bidimensionali (es.: ottagonale, tondo)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents an object&apos;s format. It is used for bidimensional objects, e.g. octagonal or round shape.</rdfs:comment>
         <rdfs:label xml:lang="it">Formato</rdfs:label>
         <rdfs:label xml:lang="en">Shape</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3143,6 +3177,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/SlangDesignation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta una denominazione gergale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a slang designation.</rdfs:comment>
         <rdfs:label xml:lang="it">Denominazione gergale</rdfs:label>
         <rdfs:label xml:lang="en">Slang designation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3169,6 +3204,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/StorageMethodColourDepth">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il metodo e la profondità di colore con cui è stata memorizzata la fotografia digitale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the method and color depth through which a digital photograph has been stored.</rdfs:comment>
         <rdfs:label xml:lang="it">Metodo di memorizzazione e profondità di colore</rdfs:label>
         <rdfs:label xml:lang="en">Storage method and colour depth</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3183,6 +3219,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Technique">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la tecnica di esecuzione di un oggetto, per esempio un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents an object&apos;s execution technique.</rdfs:comment>
         <rdfs:label xml:lang="en">Technique</rdfs:label>
         <rdfs:label xml:lang="it">Tecnica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3197,6 +3234,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Temperament">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il temperamento adottato, soprattutto in caso di oggetto in condizioni originali, o dopo un restauro, di uno strumento musicale. Per gli idiofoni a tasti fissi (come xilofoni, litofoni, metallofoni) rappresenta la successione degli intervalli.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a musical instrument adopted temperament, especially in relation to an object in its original conditions, or after its restoration. For idiophones with fixed keys (e.g. xylophone, litophone, metallophone) the temperament represents the succession of intervals.</rdfs:comment>
         <rdfs:label xml:lang="en">Temperament</rdfs:label>
         <rdfs:label xml:lang="it">Temperamento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3223,6 +3261,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Tuning">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;accordatura di uno strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a musical instrument tuning.</rdfs:comment>
         <rdfs:label xml:lang="it">Accordatura</rdfs:label>
         <rdfs:label xml:lang="en">Tuning</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -3283,6 +3322,7 @@ resource:TechnicalDetailOccurrence/1200865306-shape
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VibratingLenght">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la lunghezza vibrante di uno strumento, in particolare di un cordofono.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a musical instrument vibrating length, in particular a chordophone.</rdfs:comment>
         <rdfs:label xml:lang="it">Lunghezza vibrante</rdfs:label>
         <rdfs:label xml:lang="en">Vibrating lenght</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
