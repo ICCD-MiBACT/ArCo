@@ -1,31 +1,30 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/cultural-event/"
      xml:base="https://w3id.org/arco/ontology/cultural-event/"
-     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:clv="https://w3id.org/italia/onto/CLV/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:arco-catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:arco-ce="https://w3id.org/arco/ontology/cultural-event/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event/">
-        <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="en">This module models information on cultural events involving cultural properties.</rdfs:comment>
@@ -109,7 +108,7 @@
         <rdfs:label xml:lang="en">has event organiser</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag xml:lang="it">Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</arco-catalogue:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">Versioni 4.00 e ICCD Normativa Trasversale: MS/MST/MSTE - Versioni precedenti a 4.00: DO/MST/MSTO</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -252,7 +251,7 @@
         <rdfs:label xml:lang="it">tempo e luogo dell&apos;evento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e normative di versione 4.00: MS/MST/MSTL</arco-catalogue:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e normative di versione 4.00: MS/MST/MSTL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -302,7 +301,7 @@
         <rdfs:label xml:lang="it">Mostra</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e altre normative di versione 4.00: se MS/MST/MSTI= &quot;mostra&quot;</arco-catalogue:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale e altre normative di versione 4.00: se MS/MST/MSTI= &quot;mostra&quot;</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -344,7 +343,7 @@
         <rdfs:label xml:lang="en">Recurrent event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <arco-catalogue:iccdNormTag>ICCD Normativa BDI 4.00: RC</arco-catalogue:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: RC</a-cat:iccdNormTag>
     </owl:Class>
     
 

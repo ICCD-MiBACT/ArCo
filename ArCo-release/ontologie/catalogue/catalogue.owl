@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/catalogue/"
      xml:base="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:arco-core="https://w3id.org/arco/ontology/core/"
+     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
@@ -12,10 +12,10 @@
      xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue/">

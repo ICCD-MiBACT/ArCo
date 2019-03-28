@@ -93,6 +93,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -126,6 +131,11 @@
 							<l0:name>
 								<xsl:value-of select="$partLabel" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 
 							<arco-cd:hasAuthorshipAttribution>
 								<xsl:attribute name="rdf:resource">
@@ -218,6 +228,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -254,6 +269,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -292,6 +312,11 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(.)" />
 								</l0:name>
+								<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 							</rdf:Description>
 
 						</xsl:for-each>
@@ -331,6 +356,11 @@
 								<l0:name>
 									<xsl:value-of select="normalize-space(.)" />
 								</l0:name>
+								<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 							</rdf:Description>
 
 						</xsl:for-each>
@@ -367,6 +397,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -408,6 +443,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 					</xsl:for-each>
 				</xsl:if>
@@ -440,6 +480,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 					</xsl:for-each>
 				</xsl:if>
@@ -475,6 +520,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -510,6 +560,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -543,6 +598,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -584,6 +644,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./MISP)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 				</xsl:if>
 				<xsl:if test="$sheetType='F' and ./MISO and not(lower-case(normalize-space(./MISO))='intero bene') and not(lower-case(normalize-space(./MISO))='integrale') and not(lower-case(normalize-space(./MISO))='tutta') and not(lower-case(normalize-space(./MISO))='totale') and not(starts-with(lower-case(normalize-space(./MISO)), 'nr')) and not(starts-with(lower-case(normalize-space(./MISO)), 'n.r')) and not(starts-with(lower-case(normalize-space(./MISO)), 'esemplar')) and not(starts-with(lower-case(normalize-space(./MISO)), 'intero')) and not(starts-with(lower-case(normalize-space(./MISO)), 'intera'))">
@@ -604,6 +669,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(./MISO)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
@@ -637,6 +707,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -673,6 +748,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
@@ -732,6 +812,11 @@
 							<l0:name>
 								<xsl:value-of select="normalize-space(.)" />
 							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
 						</rdf:Description>
 
 					</xsl:for-each>
