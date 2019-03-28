@@ -164,6 +164,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, un emblema, un timbro, uno stemma, etc., al suo tipo (es.: gentilizio, civile, religioso, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relatesan inscription (or an emblem, a mark, etc.) to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di elemento apposto</rdfs:label>
         <rdfs:label xml:lang="en">has affixed element type</rdfs:label>
@@ -235,6 +236,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa lo stato di conservazione a uno dei valori del tipo di stato di conservazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a conservation status to one of its type&apos;s values.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di stato di conservazione</rdfs:label>
         <rdfs:label xml:lang="en">has conservation status type</rdfs:label>
@@ -322,6 +324,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al tipo di bene, per permettere la corretta e precisa individuazione del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property type</rdfs:label>
@@ -372,6 +375,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationType"/>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity designation to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di denominazione</rdfs:label>
         <rdfs:label xml:lang="en">has designation type</rdfs:label>
@@ -424,6 +428,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al suo apparato iconografico e/o decorativo, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche e/o delle decorazioni presenti sul bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural enitity to its iconographic or decorative apparatus.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha apparato iconografico e decorativo</rdfs:label>
         <rdfs:label xml:lang="en">has iconographic or decorative apparatus</rdfs:label>
@@ -442,6 +447,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un apparato iconografico e decorativo di un bene culturale al tipo di apparato (iconografico, decorativo, iconografico-decorativo).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a iconographic or decorative apparatus to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di apparato iconografico e decorativo</rdfs:label>
         <rdfs:label xml:lang="en">has iconographic or decorative apparatus type</rdfs:label>
@@ -491,6 +497,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;area rappresentata come soggetto di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represent the location as a subject of a cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha localizzazione rappresentata</rdfs:label>
         <rdfs:label xml:lang="en">has location as subject</rdfs:label>
@@ -544,6 +551,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una misura al tipo di misura (altezza, larghezza, diametro, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a measurement to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di misura</rdfs:label>
         <rdfs:label xml:lang="en">has measurement type</rdfs:label>
@@ -612,6 +620,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollectedType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un campione prelevato da un bene archeologico al tipo di campione (es.: intonaco, carbone, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a sample collected to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha tipo di campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">has sample collected type</rdfs:label>
@@ -1055,6 +1064,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero che identifica il campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the seample collected identifier.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">identificativo del campione prelevato</rdfs:label>
         <rdfs:label xml:lang="en">sample collected identifier</rdfs:label>
