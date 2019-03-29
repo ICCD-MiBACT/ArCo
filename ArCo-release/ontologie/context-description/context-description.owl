@@ -8516,6 +8516,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AccompanyingBibliography">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) relativa al genere di bibliografia che riguarda in modo più generico il contesto in cui si è venuto a trovare il bene nel corso della sua storia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the definition relative to the genre of bibliography.</rdfs:comment>
         <rdfs:label xml:lang="en">Accompanying bibliography</rdfs:label>
         <rdfs:label xml:lang="it">Bibliografia di corredo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8539,6 +8540,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AlternativeTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Rappresenta un altro titolo noto del soggetto, in alternativa o in aggiunta al titolo più noto o accreditato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents subject&apos;s alternative title.</rdfs:comment>
         <rdfs:label xml:lang="en">Alternative title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo alternativo</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDN</a-cat:iccdNormTag>
@@ -8561,6 +8563,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AttachedDocumentation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) della documentazione acclusa alla scheda di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents documenation definition included inside catalog.</rdfs:comment>
         <rdfs:label xml:lang="en">Attached documentation</rdfs:label>
         <rdfs:label xml:lang="it">Documentazione allegata</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8574,6 +8577,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/AttributedTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Rappresenta un titolo attribuito di una fotografia, cioè un titolo desunto, se possibile, da fonti archivistiche, bibliografiche, orali o iconografiche (altri esemplari della stessa immagine) oppure creato in base al contenuto dell&apos;immagine (o della serie di immagini; è necessario nei casi in cui siano del tutto assenti titoli sul/nel documento, o su materiali ad esso complementari, e nel caso in cui tali titoli risultino errati.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents an attributed title of a photograph, that is a title taken from archival, bibliographic, oral or iconographic sources, or created based on picture contents.</rdfs:comment>
         <rdfs:label xml:lang="en">Attributed title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo attribuito</rdfs:label>
         <a-cat:iccdNormTag xml:lang="it">Normativa F: SG/SGL/SGLA - Normativa FF: se PA/PAC/PACG = &apos;attribuita&apos;</a-cat:iccdNormTag>
@@ -8586,6 +8590,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/BuildingUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso edilizio di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural entity  building use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Building use</rdfs:label>
         <rdfs:label xml:lang="it">Uso edilizio</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8609,6 +8614,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ComparativeBibliography">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) relativa al genere di bibliografia utilizzata per confronti (stilistici, tipologici, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the definition relative to the kind of bibliography used for comparisons.</rdfs:comment>
         <rdfs:label xml:lang="it">Bibliografia di confronto</rdfs:label>
         <rdfs:label xml:lang="en">Comparative bibliography</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8622,6 +8628,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/CurrentUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso attuale di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural entity current use.</rdfs:comment>
         <rdfs:label xml:lang="en">Current use</rdfs:label>
         <rdfs:label xml:lang="it">Uso attuale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8657,6 +8664,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/DifferentDating">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo di datazione differente rispetto a quella presente nelle informazioni della cronologia del bene in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a different type of dating than the one present in cultural entity&apos;s chronological information.</rdfs:comment>
         <rdfs:label xml:lang="it">Datazione diversa</rdfs:label>
         <rdfs:label xml:lang="en">Different dating</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8671,6 +8679,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/EpigraphicUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso epigrafico di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural entity&apos;s epigraphic use.</rdfs:comment>
         <rdfs:label xml:lang="it">Epigrafico</rdfs:label>
         <rdfs:label xml:lang="en">Epigraphic</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8694,6 +8703,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ExistingDocumentation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione (vocabolario chiuso) della documentazione che viene solo citata: non è acclusa alla scheda di catalogo, ma si trova presso un luogo di conservazione (Archivio, Biblioteca, ecc.), anche “virtuale”, come nel caso delle risorse disponibili sul web e consultabili on line.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents documentation definition that is only mentioned.</rdfs:comment>
         <rdfs:label xml:lang="it">Documentazione esistente</rdfs:label>
         <rdfs:label xml:lang="en">Existing documentation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8729,6 +8739,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/HistoricalUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso storico di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural enity&apos;s historical use.</rdfs:comment>
         <rdfs:label xml:lang="en">Historical use</rdfs:label>
         <rdfs:label xml:lang="it">Uso storico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8765,6 +8776,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/InstrumentalUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strumentale di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural entity instrumental use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Instrumental</rdfs:label>
         <rdfs:label xml:lang="it">Strumentale</rdfs:label>
         <owl:versionInfo xml:lang="it">provvisorio</owl:versionInfo>
@@ -8798,6 +8810,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/MainTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il titolo principale di una pubblicazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents publication main title.</rdfs:comment>
         <rdfs:label xml:lang="en">Main title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo principale</rdfs:label>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normative VeAC e AT 3.01: DO/BSE/BSET</a-cat:iccdNormTag>
@@ -8820,6 +8833,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ObsoleteDating">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di datazione superata rispetto a quella presente nelle informazioni relative alla cronologia del bene in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents an obsolete dating.</rdfs:comment>
         <rdfs:label xml:lang="it">Datazione superata</rdfs:label>
         <rdfs:label xml:lang="en">Obsolete dating</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8845,6 +8859,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/OrnamentalUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso ornamentale di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural entity&apos;s ornamental use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Ornamental</rdfs:label>
         <rdfs:label xml:lang="it">Ornamentale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8858,6 +8873,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/OtherMethodOfDating">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta un tipo di metodo diverso di datazione rispetto a quella presente nelle informazioni della cronologia del bene in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a different type of dating method than the one present in cultural entity&apos;s chronological information.</rdfs:comment>
         <rdfs:label xml:lang="it">Altro metodo di datazione</rdfs:label>
         <rdfs:label xml:lang="en">Other method of dating</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8871,6 +8887,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ParallelTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
+        <rdfs:comment xml:lang="en">I represents a parallel title, that is main title translated into other languages and presented as equivalent.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta un titolo parallelo, cioè lo stesso titolo principale tradotto in altre lingue e presentato come equivalente.</rdfs:comment>
         <rdfs:label xml:lang="en">Parallel title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo parallelo</rdfs:label>
@@ -8916,6 +8933,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/PreviousUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta l&apos;uso precedente di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural enity&apos;s previous use.</rdfs:comment>
         <rdfs:label xml:lang="en">Previous use</rdfs:label>
         <rdfs:label xml:lang="it">Uso precedente</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8928,6 +8946,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/ProperTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
+        <rdfs:comment xml:lang="en">It represents the title proper to subject of a print, an engraved matrix or a photograph.</rdfs:comment>
         <rdfs:comment xml:lang="it">Rappresenta il titolo proprio del soggetto di una stampa, di una matrice incisa o di una fotografia. Per titolo proprio di una stampa si intende il titolo principale nella forma in cui appare sulla stampa o sulla matrice stessa. Per titolo proprio (principale) di una fotografia, si intende nella forma in cui appare nell&apos;immagine (o su uno dei suoi supporti, o nelle schede a campi testuali, o nei commenti sonori presenti all&apos;interno del file contenente l&apos;immagine digitale). Per la normativa F, Il titolo proprio include anche ogni eventuale titolo alternativo (altre denominazioni dell&apos;opera che appaiano insieme al titolo principale) e, facoltativamente, i complementi del titolo proprio (ossia sottotitoli od ulteriori indicazioni che contribuiscono a qualificare più specificamente il contenuto dell&apos;immagine).</rdfs:comment>
         <rdfs:label xml:lang="en">Proper title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo proprio</rdfs:label>
@@ -8971,6 +8990,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/SecondaryTitle">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta il tipo di titolo secondario di una pubblicazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents publication&apos;s secondary title.</rdfs:comment>
         <rdfs:label xml:lang="en">Secondary title</rdfs:label>
         <rdfs:label xml:lang="it">Titolo secondario</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normative VeAC e AT 3.01: DO/BSE/BSEC</a-cat:iccdNormTag>
@@ -8983,6 +9003,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/SpecificBibliography">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la definizione relativa al genere di bibliografia che riguarda in modo specifico il bene in esame.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the definition related to the kind of bibliography that specifically concerns the subject under examination.</rdfs:comment>
         <rdfs:label xml:lang="it">Bibliografia specifica</rdfs:label>
         <rdfs:label xml:lang="en">Specific bibliography</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -8996,6 +9017,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/StructuralUse">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta le specifiche d&apos;uso strutturale di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents cultural entity&apos;s structural use specifications.</rdfs:comment>
         <rdfs:label xml:lang="en">Structural use</rdfs:label>
         <rdfs:label xml:lang="it">Uso strutturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -9043,6 +9065,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/context-description/UseTypeUnavailable">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta la mancanza di dati disponibili relativamente al tipo di uso di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents the lack of available data regarding the type of use of a cultural entity.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di uso non disponibile</rdfs:label>
         <rdfs:label xml:lang="en">Use type unavailable</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -9066,6 +9089,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
