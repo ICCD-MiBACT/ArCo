@@ -3288,6 +3288,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice della causale RCS (Ragioneria Centrale dello Stato) di aumento o diminuzione del valore del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code of the RCS causal (Central State Accounting Office) of increasing or decreasing property value.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">RCS reason</rdfs:label>
         <rdfs:label xml:lang="it">causale RCS</rdfs:label>
@@ -3372,6 +3373,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice identificativo, che individua il riferimento autoriale in modo univoco nell&apos;ambito di un repertorio locale, di un agente, per esempio di un autore di un bene culturale o di un agente che riveste una responsabilità nei confronti del bene (es.: editore, stampatore, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the identification code, which identifies the author&apos;s reference unambiguously in the context of a local repertoire, of an agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">agent local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale dell&apos;agente</rdfs:label>
@@ -3389,6 +3391,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un altro titolo noto del soggetto, in alternativa o in aggiunta al titolo più noto o accreditato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an entity&apos;s alternative title.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">alternative title</rdfs:label>
         <rdfs:label xml:lang="it">titolo alternativo</rdfs:label>
@@ -3407,6 +3410,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, assegnato dall&apos;ICCD, che individua lo scavo archeologico in modo univoco a livello nazionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code, assigned by the ICCD, which identifies the archaeological excavation unequivocally at national level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">archaeological excavation ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD dello scavo archeologico</rdfs:label>
@@ -3425,6 +3429,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">Questa proprietà rappresenta il codice identificativo, numerico o alfanumerico, che individua lo scavo archeologico in modo univoco nell&apos;ambito di un repertorio locale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the identification code, numeric or alphanumeric, which identifies the archaeological excavation unambiguously in the context of a local repertoire.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">archaeological excavation local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale dello scavo archeologico</rdfs:label>
@@ -3443,6 +3448,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, assegnato dall&apos;ICCD, che individua il la ricognizione archeologica in modo univoco a livello nazionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code, assigned by the ICCD, which identifies the field survey unequivocally at national level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">archaeological field survey ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD della ricognizione archeologica</rdfs:label>
@@ -3461,6 +3467,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice identificativo, numerico o alfanumerico, che individua la ricognizione archeologica in modo univoco nell&apos;ambito di un repertorio locale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the identification code, numeric or alphanumeric, which identifies the field survey unambiguously in the context of a local repertoire.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">archaeological field survey local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale della ricognizione archeologica</rdfs:label>
@@ -3569,6 +3576,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un titolo attribuito di una fotografia, cioè un titolo desunto, se possibile, da fonti archivistiche, bibliografiche, orali o iconografiche (altri esemplari della stessa immagine) oppure creato in base al contenuto dell&apos;immagine (o della serie di immagini; è necessario nei casi in cui siano del tutto assenti titoli sul/nel documento, o su materiali ad esso complementari, e nel caso in cui tali titoli risultino errati.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an attributed title of a photograph, that is a title taken from archival, bibliographic, oral or iconographic sources, or created based on picture contents.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">attributed title</rdfs:label>
         <rdfs:label xml:lang="it">titolo attribuito</rdfs:label>
@@ -3587,6 +3595,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare il codice univoco ICCD a un autore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property allows you to associate the unique ICCD code with an author.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">author ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD dell&apos;autore</rdfs:label>
@@ -3629,6 +3638,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, assegnato dall&apos;ICCD, che individua il riferimento bibliografico in modo univoco a livello nazionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code, assigned by the ICCD, which identifies the bibliographic reference uniquely at national level.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">bibliography ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD della bibliografia</rdfs:label>
@@ -3647,6 +3657,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta una sequenza numerica o alfanumerica che identifica il riferimento bibliografico in modo univoco nell&apos;ambito di un repertorio locale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a numerical or alphanumeric sequence that uniquely identifies the bibliographic reference within a local repertoire.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">bibliography local identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice identificativo locale della bibliografia</rdfs:label>
@@ -3681,6 +3692,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTest"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le specifiche su eventuali componenti significativi per lo studio del bene, nel caso di analisi su reperti in argilla.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents specifications on any significant components for the study of the entity, in case of analysis on clay findings.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">clay specifications</rdfs:label>
         <rdfs:label xml:lang="it">specifiche su pasta/argilla</rdfs:label>
@@ -3733,6 +3745,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice d&apos;inventario attribuito al bene nella collezione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the inventory code assigned to the cultural entity inside a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">codice inventario bene in collezione</rdfs:label>
         <rdfs:label xml:lang="en">collection unit inventory identifier</rdfs:label>
@@ -3835,6 +3848,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il nome del file digitale che riproduce il documento, nel caso della documentazione allegata alla scheda di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the name of the digital file that reproduces the document.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">digital filename</rdfs:label>
         <rdfs:label xml:lang="it">nome del file digitale</rdfs:label>
@@ -3853,6 +3867,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta una sequenza numerica o alfanumerica che identifica la scheda a cui il documento si riferisce.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a numeric or alphanumeric sequence that identifies the record to which the document refers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">codice identificativo della documentazione</rdfs:label>
         <rdfs:label xml:lang="en">documentation identifier</rdfs:label>
@@ -4009,6 +4024,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta una data di scadenza, per esempio la data di scadenza dei diritti d&apos;autore su un oggetto (come un bene culturale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an expiration date.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">data di scadenza</rdfs:label>
         <rdfs:label xml:lang="en">expiry date</rdfs:label>
@@ -4026,6 +4042,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di rappresentare l&apos;interpretazione di un bene culturale, ricavabile dall&apos;osservazione diretta e dai dati conoscitivi disponibili.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a cultural asset interpretation.</rdfs:comment>
         <rdfs:label xml:lang="en">explanation note</rdfs:label>
         <rdfs:label xml:lang="it">note interpretative</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4042,6 +4059,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le note relative alle modalità di individuazione e di reperimento del bene in esame, in forma di testo libero. Possono essere integrative rispetto a quanto rappresentato come Scavo Archeologico o Ricognizione Archeologica, oppure possono essere le uniche informazioni registrate sull&apos;individuazione e il reperimento del bene, in quelle situazioni in cui i dati a disposizione non consentono di compilare le schede di Authority file RCG-Ricognizione archeologica e/o DSC-Scavo archeologico. Vengono quindi collegate direttamente al bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents notes relating to methods for identifying and finding the cultural property in question.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">finding note</rdfs:label>
         <rdfs:label xml:lang="it">note di reperimento</rdfs:label>
@@ -4075,6 +4093,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ConservationIntervention"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la situazione in cui si svolge l&apos;intervento di restauro. Nel caso in cui l’intervento sul bene sia in corso al momento della schedatura e non risulti ancora concluso, il valore di questa proprietà sarà &quot;intervento in corso&quot; con l&apos;eventuale indicazione del luogo presso cui si sta effettuando.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the framework in which the restoration is carried out.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">framework</rdfs:label>
         <rdfs:label xml:lang="it">situazione</rdfs:label>
@@ -4091,6 +4110,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta informazioni di natura storico biografica relative a un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents historical biographical information about an agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
     </owl:DatatypeProperty>
     
@@ -4134,6 +4154,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni raccolte sul luogo dove si trova il bene o sul luogo dove il bene è stato rilevato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents information collected on the place where the cultural entity is located or on the place where it was detected.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">information gathered on site</rdfs:label>
         <rdfs:label xml:lang="it">informazioni raccolte sul luogo</rdfs:label>
@@ -4185,6 +4206,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la collocazione del bene nel suo ambiente, ovvero il luogo dove esso viene riposto quando non viene usato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the location of the asset in its environment, i.e. the place where it is stored when not in use.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is kept in</rdfs:label>
         <rdfs:label xml:lang="it">è mantenuto in</rdfs:label>
@@ -4227,6 +4249,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta, a testo libero, le modalità di acquisizione del bene nel patrimonio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents how the cultural entity was inserted inside a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">method of insertion</rdfs:label>
         <rdfs:label xml:lang="it">modalità di acquisizione</rdfs:label>
@@ -4263,6 +4286,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione dell&apos;esemplare della fotografia o della stampa all&apos;interno della tiratura e il numero complessivo degli esemplari tirati, qualora la fotografia o la stampa risalgano a una tiratura. Nel caso delle fotografie, per tiratura si intende un insieme prestabilito e limitato di esemplari (uguali) tratti dallo stesso negativo o dalla stessa, ovvero non modificata, fotografia digitale (o dalla stessa serie di matrici), numerati progressivamente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents photograph copies numbering.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">number in circulation</rdfs:label>
         <rdfs:label xml:lang="it">numero nella tiratura</rdfs:label>
@@ -4299,6 +4323,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le specifiche per effettuare sovrapposizioni con altri documenti utili per la lettura e l&apos;interpretazione dell&apos;immagine analizzata durante uan fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents specifications to make overlaps with other documents useful for reading and interpreting image analyzed during a photointerpretation or photo-repayment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">overlap specifications</rdfs:label>
         <rdfs:label xml:lang="it">specifiche sulla sovrapposizione</rdfs:label>
@@ -4315,6 +4340,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ReproductionPosition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni relative al numero della pagina o numero della tavola della pubblicazione in cui compare la stampa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents information about page number or table number of publication in which the print appears.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">numero di pagina o tavola</rdfs:label>
         <rdfs:label xml:lang="en">page or table number</rdfs:label>
@@ -4350,6 +4376,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione della fotografia all&apos;interno della serie fotografica editoriale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents numbering of the photograph within editorial photographic series.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">numero dell&apos;item all&apos;interno della serie</rdfs:label>
         <rdfs:label xml:lang="en">series item number</rdfs:label>
@@ -4367,6 +4394,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la numerazione della fotografia all&apos;interno della sottoserie fotografica editoriale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents numbering of the photograph within the editorial photographic subseries.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">numero dell&apos;item all&apos;interno della sottoserie fotografica</rdfs:label>
         <rdfs:label xml:lang="en">photographic subseries item number</rdfs:label>
@@ -4383,6 +4411,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la localizzazione geografica e collocazione specifica dell&apos;opera derivata dal bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents geographical location and specific location of the work derived from the cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">collocazione dell&apos;opera preparatoria o finale</rdfs:label>
         <rdfs:label xml:lang="en">preparatory or final work location</rdfs:label>
@@ -4399,6 +4428,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni relative all&apos;antica o precedente l&apos;attuale collocazione dell&apos;opera da cui è tratta la matrice o la stampa presso collezioni, palazzi, chiese, ecc., quando questa è segnalata sulla matrice/stampa o sicuramente deducibile dalle fonti bibliografiche.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents information relating to ancient or previous location of the work from which the matrix or print is ​​drawn.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">collocazione precedente dell&apos;opera preparatoria o finale</rdfs:label>
         <rdfs:label xml:lang="en">preparatory or final work previous location</rdfs:label>
@@ -4417,6 +4447,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PreparatoryOrFinalWork"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice, qualora esista, che identifica la scheda relativa all&apos;opera finale o preparatoria in relazione con il bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code which identifies the record relating to the final or preparatory work in relation with the cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">codice della scheda dell&apos;opera originale o finale</rdfs:label>
         <rdfs:label xml:lang="en">preparatory or final work record identifier</rdfs:label>
@@ -4451,6 +4482,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta, a testo libero, la provenienza del bene acquisito nel patrimonio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents origin of the cultural entity acquired in the heritage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">provenance</rdfs:label>
         <rdfs:label xml:lang="it">provenienza</rdfs:label>
@@ -4467,6 +4499,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PaleopathologySurvey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta altre indagini cui fa riferimento un&apos;indagine volta a elaborare una diagnosi di una paleopatologia rilevata in un reperto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents other investigations referred to in a survey aimed at developing a diagnosis of a paleopathology found in an anthropological finding.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">fa riferimento a indagini</rdfs:label>
         <rdfs:label xml:lang="en">refers to surveys</rdfs:label>
@@ -4483,6 +4516,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data dell&apos;avvenuta trascrizione al registro immobiliare, quando trattasi di vincoli imposti con leggi che richiedano la trascrizione, o il numero della Gazzetta Ufficiale su cui è stato pubblicato il decreto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the date of the registration or the number of the Official Journal on which the decree was published.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">data di registrazione o gazzetta ufficiale</rdfs:label>
         <rdfs:label xml:lang="en">registration date or official journal</rdfs:label>
@@ -4500,6 +4534,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta note generali sulle relazioni instaurate fra il bene in esame e altre opere.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents general notes on the relationships established between the property in question and other works.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">note su opere collegate</rdfs:label>
         <rdfs:label xml:lang="en">related work note</rdfs:label>
@@ -4516,6 +4551,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta, a testo libero, eventuali riferimenti a documenti (atti amministrativi; riproduzioni digitali di registri inventariali, ecc.) che interessano l&apos;acquisizione del bene nel patrimonio. Rappresenta anche i dati relativi ai registri inventariali in vigore, ma comunque dotati di qualità storica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents any references to documents that affect cultural entity acquisition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">relevant legal act</rdfs:label>
         <rdfs:label xml:lang="it">riferimento agli atti</rdfs:label>
@@ -4540,6 +4576,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>ICCD Normativa Trasversale 4.00: RE/IND/INDT - ICCD Normativa AT 3.00: IN/INI/INIR</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il referto di un&apos;indagine archeometrica e diagnostica o di una tipologia particolare di bene archeologico, ovvero i reperti antropologici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the report of a anthropological finding&apos;s archaeometric and diagnostic investigation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">referto</rdfs:label>
         <rdfs:label xml:lang="en">report</rdfs:label>
@@ -4562,6 +4599,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta le informazioni a testo libero sulla gestione dei diritti. Nel caso di un bene culturale, permette di rappresentare indicazioni sulla presenza dei privilegi, autorizzazioni, licenze, specificando il concedente, eventualmente riportando anche il periodo di tempo della privativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents information on rights management.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">gestione diritti</rdfs:label>
         <rdfs:label xml:lang="en">rights</rdfs:label>
@@ -4578,6 +4616,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicDocumentation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta, per le foto aeree, le informazioni relative alla strisciata e al fotogramma.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents aerial photos information about run and frame.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">strip run/frame number</rdfs:label>
         <rdfs:label xml:lang="it">strisciata/numero fotogramma</rdfs:label>
@@ -4613,6 +4652,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice identificativo che individua l&apos;immagine presa in esame nel corso di un&apos;indagine di fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the identification code that identifies the image examined during a photo-interpretation or photo-restoration investigation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">identificativo immagine di indagine</rdfs:label>
         <rdfs:label xml:lang="en">survey image identifier</rdfs:label>
@@ -4647,6 +4687,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la documentazione relativa alle informazioni rilevate nel corso dell&apos;indagine su reperto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents documentation relating to information collected during survey on anthropological evidence.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">documentazione tecnica</rdfs:label>
         <rdfs:label xml:lang="en">technical documentation</rdfs:label>
@@ -4697,6 +4738,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la funzione che l&apos;oggetto ha o ha avuto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents object function.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">funzione d&apos;uso</rdfs:label>
         <rdfs:label xml:lang="en">use function</rdfs:label>
