@@ -112,6 +112,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale coinvolto in un evento di acquisizione all&apos;acquisizione stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultual property involved in an acquisition event to the actual acquisition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha acquisizione</rdfs:label>
         <rdfs:label xml:lang="en">has acquisition</rdfs:label>
@@ -130,6 +131,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AcquisitionType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;acquisizione di un bene culturale al tipo di acquisizione (es.: donazione, alienazione, confisca).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s acquisition to its acquisition type (i.e. donation, seizure).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di acquisizione</rdfs:label>
         <rdfs:label xml:lang="en">has acquisition type</rdfs:label>
@@ -147,6 +149,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività (per esempio, un&apos;indagine o un intervento su un bene culturale) all&apos;operatore dell&apos;attività. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an activity to the agent who performed the activity. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha operatore dell&apos;attività</rdfs:label>
         <rdfs:label xml:lang="en">has activity operator</rdfs:label>
@@ -164,6 +167,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività (per esempio, un&apos;indagine o un intervento su un bene culturale) all&apos;ente o al soggetto responsabile del rilevamento. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an activity to the institution or the survey&apos;s responsible entity. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha responsabile dell&apos;attività</rdfs:label>
         <rdfs:label xml:lang="en">has activity responsible</rdfs:label>
@@ -181,6 +185,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;attività (per esempio, un&apos;indagine o un intervento su un bene culturale) all&apos;ente o al soggetto che ha finanziato l&apos;attività.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an activity to its investor. The investor may be an institution or an agent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha finanziatore dell&apos;attività</rdfs:label>
         <rdfs:label xml:lang="en">has activity sponsor</rdfs:label>
@@ -197,6 +202,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
+        <rdfs:comment xml:lang="en">This property relates an antropologic artifact to its age of death estimate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Questa proprietà collega un reperto antropologico alla stima dell&apos;età della morte.</rdfs:label>
         <rdfs:label xml:lang="it">ha età della morte stimata</rdfs:label>
@@ -214,6 +220,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;individuazione di una responsabilità relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici all&apos;agente che ha quella specifica responsabilità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the responsibility&apos;s identification to the agent which has that specific responsibility, focusing on the production process and dissemination of the photographic heritage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha agente con responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has agent with responsibility</rdfs:label>
@@ -231,6 +238,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDating"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una datazione alternativa con la sua tipologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an alternative dating to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha datazione alternativa</rdfs:label>
         <rdfs:label xml:lang="en">has alternative dating type</rdfs:label>
@@ -248,6 +256,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una fotointerpretazione o fotorestituzione a un&apos;anomalia rilevata nel corso dell&apos;indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a photo interepretation rendering to an anomaly revealed by a survey.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha anomalia</rdfs:label>
         <rdfs:label xml:lang="en">has anomaly</rdfs:label>
@@ -283,6 +292,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;anomalia rilevata nel corso di una fotointerpretazione o fotorestituzione al tipo di anomalia (puntuale, lineare, areale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an anomaly revealed by a photo interpretation rendering to its anomaly type (line, point, poligony anomaly).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di anomalia</rdfs:label>
         <rdfs:label xml:lang="en">has anomaly type</rdfs:label>
@@ -316,6 +326,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine archeometrica e diagnostica al suo tipo (es.: analisi della malta, carotaggio, termografia, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an arecheometric diagnostic survey to its type (i.e. thermal imaging, coring).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di indagine archeometrica e diagnostica</rdfs:label>
         <rdfs:label xml:lang="en">has archaeometric diagnostic survey type</rdfs:label>
@@ -333,6 +344,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSetMembership"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è unità archivistica complessa in&quot;, collega il rapporto tra una unità archivistica complessa e un bene culturale che ne fa parte alla unità archivistica stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the relationship of an archival set and a one of its belonging cultural entities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha unità archivistica complessa</rdfs:label>
         <rdfs:label xml:lang="en">has archival record set</rdfs:label>
@@ -350,6 +362,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SourceAndDocument"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione costituita da fonti e documenti all&apos;archivio e/o istituzione conservativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the documentation made of sources and documents to the archive or conservative institution.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha archivio</rdfs:label>
         <rdfs:label xml:lang="en">has archive</rdfs:label>
@@ -391,6 +404,7 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene attribuito un autore a un bene culturale all&apos;autore stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a situation where an autorship is attributed to a cultural entity&apos;s author.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha autore attribuito</rdfs:label>
         <rdfs:label xml:lang="en">has attributed author</rdfs:label>
@@ -409,6 +423,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una entità di qualsiasi tipo (documentazione, bene culturale, etc.) con il suo autore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a entity (i.e. documentation, cultural entity, etc.) to its author.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to its author.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha autore</rdfs:label>
@@ -427,6 +442,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità descritta in una scheda di Authority File all&apos;ente schedatore dell&apos;authority file stesso. Per esempio, l&apos;attribuzione di un autore a un bene culturale, uno scavo archeologico, una ricognizione archeologica, una bibliografia. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità, l&apos;authority file, e l&apos;ente schedatore dell&apos;authority file.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity described in a authority file to the file&apos;s cataloguing institution.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha ente schedatore dell&apos;authority file</rdfs:label>
         <rdfs:label xml:lang="en">has authority file cataloguing agency</rdfs:label>
@@ -445,6 +461,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
         <rdfs:comment xml:lang="it">Proprietà che lega un oggetto culturale a un&apos;attribuzione di autore o di responsabilità relativa all&apos;oggetto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to an authorship or resposibility attribution of the entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha attribuzione di autore/responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has authorship attribution</rdfs:label>
@@ -462,6 +479,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua bibliografia. Per esempio, nell&apos;ambito del Catalogo Generale, collega un bene culturale alla bibliografia che riguarda il bene stesso, descritto in una scheda di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its bibliography.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha bibliografia</rdfs:label>
         <rdfs:label xml:lang="en">has bibliography</rdfs:label>
@@ -479,6 +497,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la bibliografia al tipo di riferimento bibliografico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a bibliography to its bibliography type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di bibliografia</rdfs:label>
         <rdfs:label xml:lang="en">has bibliography type</rdfs:label>
@@ -514,6 +533,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailability"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale coinvolto in un un evento di mutamento di condizione materiale (furto, distruzione, recupero) all&apos;evento stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural enity involved in a change of availability event (i.e. theft, destruction, recovery) to the event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha mutamento condizione materiale</rdfs:label>
         <rdfs:label xml:lang="en">has change of availability</rdfs:label>
@@ -531,6 +551,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailability"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il mutamento di condizione materiale di un bene culturale al tipo di evento (es.: furto, distruzione, recupero)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s change of availability to the event type (i.e. theft, destruction, recovery).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di mutamento condizione materiale</rdfs:label>
         <rdfs:label xml:lang="en">has change of availability type</rdfs:label>
@@ -548,6 +569,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione all&apos;occasione che ha determinato quella situazione. Per esempio, può collegare una situazione in cui viene indicata la committenza di un bene culturale all&apos;occasione che ha determinato quella committenza, oppure un luogo di ripresa di un bene fotografico all&apos;occasione che ha determinato il motivo della ripresa, o ancora l&apos;uso di un bene culturale all&apos;occasione d&apos;uso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a situation to the circumstance which led to the situation. For example it can connect a situation where is indicated a cultural entity&apos;s committment to its circumstance.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha circostanza</rdfs:label>
         <rdfs:label xml:lang="en">has circumstance</rdfs:label>
@@ -590,6 +612,7 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene numismatico alla sua emissione, o una contromarca a una nuova emissione che sostituisce nominale, autorità emittente, zecca e cronologia della moneta originari.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a numismatic entity to its issuance.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha emissione di moneta</rdfs:label>
         <rdfs:label xml:lang="en">has coin issuance</rdfs:label>
@@ -624,6 +647,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CollectionCulEnt"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;appartenenza di un bene culturale a una collezione in un intervallo di tempo alla collezione coinvolta nella relazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to the collection to which it belongs in a time span.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha collezione</rdfs:label>
         <rdfs:label xml:lang="en">has collection</rdfs:label>
@@ -660,6 +684,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Commission"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla sua committenza.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to its commission.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/arco/context-description/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="it">ha committenza</rdfs:label>
         <rdfs:label xml:lang="en">has commission</rdfs:label>
@@ -678,6 +703,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Commission"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene indicata la committenza di un bene culturale alla persona o istituzione committente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a situation where it is indicated a cultural entity&apos;s commission to the investor agent or institution.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha committente</rdfs:label>
         <rdfs:label xml:lang="en">has committent</rdfs:label>
@@ -694,6 +720,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, per esempio un bene fotografico, ai diritti d&apos;autore detenuti da un agente, o allo stato di &quot;in pubblico dominio&quot; relativo all&apos;entità stessa, qualora i diritti siano scaduti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to copiright held by an agent or its &quot;public domain&quot; condition, if it is out of copyright.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha diritti d&apos;autore</rdfs:label>
         <rdfs:label xml:lang="en">has copyright</rdfs:label>
@@ -711,6 +738,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega i diritti d&apos;autore di un&apos;entità al titolare dei diritti d&apos;autore. Questa proprietà fornisce una rappresentazione semplificata della relazione, il cui valore viene esplicitato nel nome della proprietà. La stessa relazione viene anche modellata nell&apos;ontologia, in maniera più espressiva, per mezzo della classe AgentRole, che permette di collegare un agente al ruolo che ha rivestito (in questo caso, al ruolo di &quot;titolare dei diritti d&apos;autore&quot;).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity&apos;s copyright to its copyright holder. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha titolare dei diritti d&apos;autore</rdfs:label>
         <rdfs:label xml:lang="en">has copyright holder</rdfs:label>
@@ -727,6 +755,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso del bene con la sua area geografico-culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s use to its cultural geographical area.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha area geografico-culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural geographic area</rdfs:label>
@@ -779,6 +808,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScopeAttribution"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una situazione in cui viene attribuito un ambito culturale a un bene culturale all&apos;ambito culturale stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a situation, where a cultural scope is attributed to a cultural entity, to the cultural scope.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha ambito culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural scope</rdfs:label>
@@ -814,6 +844,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/DerivatedWork"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/DerivatedWorkType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;opera derivata da un bene culturale al tipo di opera derivata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a work derivated from a cultural entity to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di opera derivata</rdfs:label>
         <rdfs:label xml:lang="en">has derivated work type</rdfs:label>
@@ -849,6 +880,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla documentazione che riguarda il bene descritto in una scheda di catalogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to the documentation related to the cutultural entity described in a catalogue record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha documentazione</rdfs:label>
         <rdfs:label xml:lang="en">has documentation</rdfs:label>
@@ -882,6 +914,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una sua edizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its edition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha edizione</rdfs:label>
         <rdfs:label xml:lang="en">has edition</rdfs:label>
@@ -899,6 +932,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;edizione all&apos;editore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an edition to its editor.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha editore</rdfs:label>
         <rdfs:label xml:lang="en">has editor</rdfs:label>
@@ -934,6 +968,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una sua stima.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its estimate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha stima</rdfs:label>
         <rdfs:label xml:lang="en">has estimate</rdfs:label>
@@ -968,6 +1003,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a una certificazione amministrativa per la circolazione e l&apos;esportazione/importazione che riguarda il bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to its import-export certification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha certificazione di esportazione/importazione</rdfs:label>
         <rdfs:label xml:lang="en">has export/import certification</rdfs:label>
@@ -1003,6 +1039,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertification"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una certificazione di importazione/esportazione al&apos;Ufficio Esportazione che ha emesso la certificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an export/import certification to the certifying Export Department.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha ufficio esportazione</rdfs:label>
         <rdfs:label xml:lang="en">has export office</rdfs:label>
@@ -1056,6 +1093,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Format"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la documentazione con il suo formato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the documentation to its format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha formato</rdfs:label>
         <rdfs:label xml:lang="en">has format</rdfs:label>
@@ -1073,6 +1111,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Fruition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un vestimento antico o contemporaneo a un&apos;occasione in cui è stato indossato da una o più persone.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates garment to the context in which it has been worn.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha fruizione</rdfs:label>
         <rdfs:label xml:lang="en">has fruition</rdfs:label>
@@ -1110,6 +1149,7 @@
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale con un intervento, a fini conservativi o di altro tipo, che lo ha interessato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a intervention on it, for conservational or other purposes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha intervento</rdfs:label>
         <rdfs:label xml:lang="en">has intervention</rdfs:label>
@@ -1126,6 +1166,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un&apos;attribuzione di autore/responsabilità al ruolo rivestito dall&apos;autore o dall&apos;ambito culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an authorship attribution to the agent&apos;s role.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">intervention role</rdfs:label>
         <rdfs:label xml:lang="it">ruolo nell&apos;intervento</rdfs:label>
@@ -1198,6 +1239,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta al soggetto emittente. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates to coin&apos;s issuance to the issuer agent. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha soggetto emittente</rdfs:label>
         <rdfs:label xml:lang="en">has issuer</rdfs:label>
@@ -1215,6 +1257,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento urbanistico-territoriale con l&apos;ente o l&apos;amministrazione che ha emanato il provvedimento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an urban-planning instrument to the institution which issued the provision.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha ente che ha emanato il provvedimento</rdfs:label>
         <rdfs:label xml:lang="en">has issuing agency</rdfs:label>
@@ -1232,6 +1275,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta alla realtà statuale emittente, coeva all&apos;emissione della moneta. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the coin issuance to the issuing State of that historic period. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha Stato emittente</rdfs:label>
         <rdfs:label xml:lang="en">has issuing State</rdfs:label>
@@ -1266,6 +1310,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, per esempio un bene culturale, alla sua condizione giuridica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity, for example a cultural entity, to its legal situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha condizione giuridica</rdfs:label>
         <rdfs:label xml:lang="en">has legal situation</rdfs:label>
@@ -1283,6 +1328,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSetMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di unità archivistica complessa&quot;, collega l&apos;appartenenza di un bene culturale a un&apos;unità archivistica al bene coinvolto nella relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the membership of a cultural entity to an archival record set. It is the inverse property of &quot;isMemberofArchivalRecordSet&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha membro di unità archivistica complessa</rdfs:label>
         <rdfs:label xml:lang="en">has member of archival record set</rdfs:label>
@@ -1300,6 +1346,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di collezione&quot;, collega l&apos;appartenenza di un bene culturale a una collezione in un certo intervallo di tempo al bene culturale mobile coinvolto nella relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the membership of a movable cultural entity to a collection in a time interval. It is the inverse property of &quot;isMemberofCollection&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha membro di collezione</rdfs:label>
         <rdfs:label xml:lang="en">has member of collection</rdfs:label>
@@ -1317,6 +1364,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di serie&quot;, collega l&apos;appartenenza di un bene fotografico a una serie editoriale al bene fotografico coinvolto nella relazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the membership of a cultural entity (e.g. photographic heritage) to its photographic series. It is the inverse property of &quot;isMemberPhotographicSeries&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha membro di serie fotografica</rdfs:label>
         <rdfs:label xml:lang="en">has member of photographic series</rdfs:label>
@@ -1334,6 +1382,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta alla Zecca. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the coin issuance to the Mint. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha zecca</rdfs:label>
         <rdfs:label xml:lang="en">has mint</rdfs:label>
@@ -1351,6 +1400,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;emissione della moneta allo zecchiere, monetiere, maestro di zecca. Questa proprietà, esprimendo il significato della relazione nel nome, dà una rappresentazione semplificata della relazione che lega questa entità e l&apos;agente; la stessa relazione è rappresentata attraverso una n-ary relation, arco-core:AgentRole, che permette di collegare l&apos;agente al ruolo che riveste nei confronti dell&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the coin issuance to the minter. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha zecchiere</rdfs:label>
         <rdfs:label xml:lang="en">has minter</rdfs:label>
@@ -1368,6 +1418,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale al gruppo di musicisti (bande, complessi musicali, associazioni corali, ecc.) in cui lo strumento assume, o ha assunto, abitualmente un ruolo esecutivo. Questa relazione è modellata anche, con maggiore potere espressivo, tramite il pattern AgentRole, che collega lo strumento musicale a una situazione in cui un agente ha rivestito un ruolo (in questo caso, organico musicale).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an musical instrument to the musical ensamble where the instument is (or were) played. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha organico musicale</rdfs:label>
         <rdfs:label xml:lang="en">has musical ensemble</rdfs:label>
@@ -1385,6 +1436,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale a una persona che assume - o ha assunto - un ruolo certo come esecutore dello strumento. Questa relazione è modellata anche, con maggiore potere espressivo, tramite il pattern AgentRole, che collega lo strumento musicale a una situazione in cui un agente ha rivestito un ruolo (in questo caso, chitarrista, flautista, pianista, ecc., o genericamente musicista).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a musical instrument to the person who plays (in the present or past) a certain role as the instrument&apos;s exectutor. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha musicista</rdfs:label>
         <rdfs:label xml:lang="en">has musician</rdfs:label>
@@ -1437,6 +1489,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è serie in&quot;, collega il rapporto tra una serie e un bene fotografico che ne fa parte alla serie stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a photographic series a the cultural entity which belongs to it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha serie fotografica</rdfs:label>
         <rdfs:label xml:lang="en">has photographic series</rdfs:label>
@@ -1454,6 +1507,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, con cui è in relazione urbanistico-ambientale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to another cultural entity, in an planning environmental relation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">has planning environmental relation with</rdfs:label>
         <rdfs:label xml:lang="it">è in relazione urbanistico-ambientale con</rdfs:label>
@@ -1472,6 +1526,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento di acquisizione di un bene culturale al soggetto fonte dell&apos;acquisizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the event of a cultural entity&apos;s acquisition to the agent which is the source of the acquisition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha soggetto fonte dell&apos;acquisizione</rdfs:label>
         <rdfs:label xml:lang="en">has previous owner</rdfs:label>
@@ -1506,6 +1561,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Profession"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un agente al suo mestiere o professione, per esempio l&apos;utente del bene oppure il responsabile della fabbricazione di un bene con il suo mestiere o la sua professione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an agent to its job. For example the agent responsible of the production of a cultual entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha professione</rdfs:label>
         <rdfs:label xml:lang="en">has profession</rdfs:label>
@@ -1531,6 +1587,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, che può essere direttamente il bene culturale o specificamente il provvedimento di tutela relativo al bene culturale, all&apos;ente proponente, ovvero al soggetto che ha proposto il provvedimento, identificato per mezzo della denominazione per esteso oppure, nel caso di Enti accreditati dall&apos;ICCD, del relativo codice assegnato dall&apos;Istituto. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity (e.g a cultural entity or a cultual entity&apos;s protective measure) to the proposing institution. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha ente proponente</rdfs:label>
         <rdfs:label xml:lang="en">has proponet agency</rdfs:label>
@@ -1564,6 +1621,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la copia della stampa con il suo repertorio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a print&apos;s copy to its reference catalogue.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha repertorio</rdfs:label>
         <rdfs:label xml:lang="en">has reference catalogue</rdfs:label>
@@ -1653,6 +1711,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PrintInPublication"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Reproduction"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la pubblicazione con la riproduzione della stampa che ne è, o è stata, parte integrante.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a publication to the print reproduction which is or was part of it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha riproduzione</rdfs:label>
         <rdfs:label xml:lang="en">has reproduction</rdfs:label>
@@ -1669,6 +1728,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Reproduction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ReproductionPosition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la riproduzione di una stampa all&apos;interno di una pubblicazione con la posizione fisica nella pubblicazione stessa (es.: frontespizio, copertina, colophon, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the print reproduction in a publication to the position in the publication.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha posizione della riproduzione</rdfs:label>
         <rdfs:label xml:lang="en">has reproduction position</rdfs:label>
@@ -1686,6 +1746,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla ricerca nell&apos;ambito della quale è stata redatta la scheda.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a culural entity to the research, which is the context where the enity&apos;s cataloguing record has been produced.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha ricerca</rdfs:label>
         <rdfs:label xml:lang="en">has research</rdfs:label>
@@ -1703,6 +1764,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una ricerca al responsabile scientifico della ricerca. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a research to the research&apos;s scientific responsible. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha responsabile scientifico della ricerca</rdfs:label>
         <rdfs:label xml:lang="en">has research scientific director</rdfs:label>
@@ -1720,6 +1782,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene fotografico (fotografia o fondo fotografico) all&apos;individuazione di una responsabilità attribuibile a un agente relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici, quindi alle diverse personalità responsabili, a vario titolo, del ciclo produttivo del bene in esame, oltre che della sua circolazione, divulgazione, commercializzazione e promozione (committenti, stampatori, ritoccatori, coloritori, editori, distributori, sponsor, curatori e responsabili di edizioni e di serie, dedicanti e dedicatari, responsabili di collezioni e di collazioni, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a photographic cultural entity (photography or photographic fond) to the responsibility attribution of an agent. The agent is in charge of the production or disclosure process which characterises photographic heritage (i.e. printers, editors, distributors, sposors, collection responsibles etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:isDefinedBy xml:lang="en">This property relates a photographic heritage to the the attribution of a responsibility to an agent, relating to the activities of production and dissemination of photographic heritage (e.g.: committent, editor, printer, dedicatee, etc.).</rdfs:isDefinedBy>
         <rdfs:label xml:lang="it">ha responsabilità</rdfs:label>
@@ -1755,6 +1818,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà, rappresentazione semplificata della relazione n-ary Agent Role, che rappresenta una situazione in cui un agente riveste un ruolo, collega un inventario patrimoniale al responsabile dell&apos;inventariazione patrimoniale del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a current inventory to the agent responsible for the cultural entity&apos;s inventory. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha responsabile dell&apos;immissione in patrimonio</rdfs:label>
         <rdfs:label xml:lang="en">has responsible for insertion</rdfs:label>
@@ -1807,6 +1871,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Scale"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la documentazione grafica e cartografica alla sua scala di rappresentazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the graphic or cartographic documentation to its representation scale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha scala</rdfs:label>
         <rdfs:label xml:lang="en">has scale</rdfs:label>
@@ -1824,6 +1889,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al suo autore secondario, come ad esempio l&apos;autore di un contributo o una parte di una pubblicazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its secondary authors. For example an author of a publication&apos;s contribution or section.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha autore secondario</rdfs:label>
         <rdfs:label xml:lang="en">has secondary author</rdfs:label>
@@ -1841,6 +1907,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un reperto antropologico alla stima del sesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an antropologic artifact to its sex estimate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha sesso stimato</rdfs:label>
         <rdfs:label xml:lang="en">has estimated sex</rdfs:label>
@@ -1858,6 +1925,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa una attribuzione di autore/responsabilità, una cronologia, una committenza, alla motivazione o fonte che hanno determinato l&apos;attribuzione o l&apos;individuazione di una informazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an authorship, history or commissioning to the reasons or sources which led to one of this concepts.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha motivazione</rdfs:label>
         <rdfs:label xml:lang="en">has source</rdfs:label>
@@ -1895,6 +1963,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/StratigraphicUnit"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno scavo archeologico all&apos;unità stratigrafica dalla quale proviene il bene rinvenuto nello scavo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an archeological excavation to the stratigraphic unit from which a cultural property has been found.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha unità stratigrafica</rdfs:label>
         <rdfs:label xml:lang="en">has stratigraphic unit</rdfs:label>
@@ -1950,6 +2019,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un&apos;indagine effettuata sul bene stesso, per la sua individuazione, per il suo studio e per l&apos;approfondimento delle sue caratteristiche tecniche.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s acquisition to its acquisition type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey</rdfs:label>
@@ -1966,6 +2036,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImage"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una fotointerpretazione o fotorestituzione all&apos;immagine presa in esame nel corso dell&apos;indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a photo interpretation rendering to the survey image.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha immagine di indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey image</rdfs:label>
@@ -2000,6 +2071,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine al metodo adottato nel corso dell&apos;indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a survey to the method adopted in the the survey.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha metodo di indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey method</rdfs:label>
@@ -2026,6 +2098,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno scavo archeologico, una ricognizione archeologica, un&apos;indagine archeometrica e diagnostica o una fotointerpretazione e fotorestituzione al motivo principale che li ha determinati.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an archeological, archaeometric or diagnostic survey or a photo interpretation rendering to the the main motivation that led to it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha motivo di indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey motivation</rdfs:label>
@@ -2042,6 +2115,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine di rilevamento di un bene demo-etno-antropologico al fotografo professionista (diverso dal rilevatore) che ha effettuato la ripresa. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an observation survey of a demo-etno-antropologic entity to the professional photographer who took the shot. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha fotografo dell&apos;indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey photographer</rdfs:label>
@@ -2075,6 +2149,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine di rilevamento di un bene demo-etno-antropologico al fonico professionista (diverso dal rilevatore) che ha effettuato la registrazione sonora. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;agente e il suo ruolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an observation survey of a demo-etno-antropologic entity to the sound engineer who recorded it. In the ontology this relationship is modelled also by the class AgentRole which allows more expressiveness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha fonico dell&apos;indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey sound engineer</rdfs:label>
@@ -2162,6 +2237,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il bene culturale con il suo uso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to its use.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha uso</rdfs:label>
         <rdfs:label xml:lang="en">has use</rdfs:label>
@@ -2230,6 +2306,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a un utente, inteso come agente che ha fatto uso di quell&apos;entità. Per esempio, può collegare un&apos;occasione in cui un vestimento antico o contemporaneo è stato indossato da una persona al fruitore stesso, oppure un particolare uso di un bene culturale al tipo di utente coinvolto in quell&apos;uso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the user, intended as the agent who employed the entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha utente</rdfs:label>
         <rdfs:label xml:lang="en">has user</rdfs:label>
@@ -2586,6 +2663,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, di tipo immateriale, in cui è coinvolto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to another involved  cultural entity (e.g. immaterial).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is involved in</rdfs:label>
         <rdfs:label xml:lang="it">è coinvolto in</rdfs:label>
@@ -2603,6 +2681,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce il luogo di collocazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes its location area.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is located in</rdfs:label>
         <rdfs:label xml:lang="it">è contenuto in</rdfs:label>
@@ -2833,6 +2912,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che lo riutilizza in tutto o in parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which reuse it or a part of it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is reused by</rdfs:label>
         <rdfs:label xml:lang="it">è riutilizzato in</rdfs:label>
@@ -3001,6 +3081,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di produzione/realizzazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes its production site.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">was created at</rdfs:label>
         <rdfs:label xml:lang="it">è stato realizzato in</rdfs:label>
@@ -3018,6 +3099,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di provenienza, prima della sua attuale collocazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes its provenance location before its current position.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">era contenuto in</rdfs:label>
         <rdfs:label xml:lang="en">was located in</rdfs:label>
@@ -3035,6 +3117,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di rinvenimento archeologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity to a connected cultural entity which constitutes the site where it was rediscovered.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">was rediscovered in</rdfs:label>
         <rdfs:label xml:lang="it">è stato rinvenuto in</rdfs:label>
@@ -4882,6 +4965,7 @@ resource:Acquisition/1200865053-acquisition-1
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;origine dell&apos;anomalia rilevata nell&apos;indagine di fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the anomaly origin of the photo interpretation rendering.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Anomaly origin</rdfs:label>
         <rdfs:label xml:lang="it">Origine dell&apos;anomalia</rdfs:label>
@@ -5845,6 +5929,7 @@ resource:ArchivalSubseries/museo-civico-romano
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lo stadio del bene catalogato in rapporto con l&apos;oggetto che ne costituisce una fase preparatoria o che ne rappresenta la fase finale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the stage of the catalogued cultural property related to the object which constitutes its preparatory or final stage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Cultural property stage</rdfs:label>
         <rdfs:label xml:lang="it">Stadio del bene culturale</rdfs:label>
@@ -7337,6 +7422,7 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il mestiere o la professione dell&apos;utente del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the role of a cultural entity&apos;s user.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Profession</rdfs:label>
         <rdfs:label xml:lang="it">Professione</rdfs:label>
@@ -7463,6 +7549,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il livello di affidabilità delle informazioni rilevate nell&apos;indagine di fotointerpretazione/fotorestituzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the reliability level of detected information relative to photo interpretation rendering.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Affidabilità</rdfs:label>
         <rdfs:label xml:lang="en">Reliability</rdfs:label>
@@ -7507,6 +7594,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/StratigraphicUnit"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la posizione fisica della riproduzione della stampa all&apos;interno della pubblicazione, che rappresenta quindi una derivazione della stampa stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the phisical position of a printed reproduction in a publication.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Posizione della riproduzione</rdfs:label>
         <rdfs:label xml:lang="en">Reproduction position</rdfs:label>
@@ -7810,6 +7898,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità stratigrafica dalla quale può provenire un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a stratigraphic unit from which a cultural property may come from.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">Stratigraphic unit</rdfs:label>
         <rdfs:label xml:lang="it">Unità stratigrafica</rdfs:label>
@@ -7943,6 +8032,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SurveyMethod">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo di scavo archeologico o di ricognizione archeologica adottato nel corso dell&apos;indagine. (es.: sondaggio, per strati stratigrafici, occasionale, sistematico, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the archeological survey method adopted.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">Metodo di indagine</rdfs:label>
         <rdfs:label xml:lang="en">Survey method</rdfs:label>
