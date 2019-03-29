@@ -1021,6 +1021,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertificationType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una certificazione amministrativa di circolazione ed esportazione/importazione di un bene culturale alla sua tipologia (es.: attestato di libera circolazione, licenza di esportazione definitiva, ecc).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a import-export certification of a cultural entity to its type (i.e. delivery confirmation certification, free movement certification etc).</rdfs:comment>
         <rdfs:comment xml:lang="it">ha tipo di certificazione di esportazione o importazione</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">has export import certification type</rdfs:label>
@@ -1184,6 +1185,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un intervento, a fini conservativi o di altro tipo, che ha interessato un bene culturale al tipo di intervento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s finding context, particularly an antropologic artefact, to its context type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di intervento</rdfs:label>
         <rdfs:label xml:lang="en">has intervention type</rdfs:label>
@@ -1293,6 +1295,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTest"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTestType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;analisi di laboratorio con il tipo di analisi (es.: analisi metallurgica, analisi chimica, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a laboratory test to its test type (i.e. chemical or metallurgical analysis).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di analisi di laboratorio</rdfs:label>
         <rdfs:label xml:lang="en">has laboratory test type</rdfs:label>
@@ -1801,6 +1804,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una responsabilità individuata relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici al tipo di responsabilità (es.: stampatori, ritoccatori, coloritori, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a resposibility relative to some production or disclosure process which characterise photographic artefacts, to its responsibility type (i.e. printers, retouchers).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di responsabilità</rdfs:label>
         <rdfs:label xml:lang="en">has responsibility type</rdfs:label>
@@ -2054,6 +2058,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImage"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImageType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una immagine di indagine al suo tipo (fotografia aerea o fotografia satellitare).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a survey image to its type (i.e. aerial photograph, Satellite photograph).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di immagine di indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey image type</rdfs:label>
@@ -2185,6 +2190,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Title"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un titolo di un bene culturale al tipo di titolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s title to its title type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di titolo</rdfs:label>
         <rdfs:label xml:lang="en">has title type</rdfs:label>
@@ -2272,6 +2278,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso del bene con il suo tipo (attuale, precedente, storico).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s use to its use type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo d&apos;uso</rdfs:label>
         <rdfs:label xml:lang="en">has use type</rdfs:label>
@@ -2342,6 +2349,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento di acquisizione al bene culturale coinvolto nell&apos;acquisizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an acquisition event to the cultural entity involved in the acquisition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is acquisition of</rdfs:label>
         <rdfs:label xml:lang="it">è acquisizione di</rdfs:label>
@@ -2530,6 +2538,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione che riguarda il bene descritto in una scheda di catalogo al bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a documentation concerning a cultural property described in a catalogue record to the cultural entity.</rdfs:comment>
         <rdfs:label xml:lang="en">is documentation of</rdfs:label>
         <rdfs:label xml:lang="it">è documentazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2545,6 +2554,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Edition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;edizione di un&apos;entità all&apos;entità stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity&apos;s edition to the entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is edition of</rdfs:label>
         <rdfs:label xml:lang="it">è edizione di</rdfs:label>
@@ -2827,6 +2837,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un provvedimento di tutela nazionale o internazionale al bene culturale cui si applica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an international or national protective measure to the cultural enitity to which it is applied.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is protective measure of</rdfs:label>
         <rdfs:label xml:lang="it">è provvedimento di tutela di</rdfs:label>
@@ -2879,6 +2890,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà la ricerca nell&apos;ambito della quale è stata redatta la scheda su un bene culturale al bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a research from which has been produced a cultural entity&apos;s catalogue record, to the cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is research on</rdfs:label>
         <rdfs:label xml:lang="it">è ricerca su</rdfs:label>
@@ -2929,6 +2941,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Scale"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la scala di rappresentazione alla documentazione grafica e cartografica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the representation scale to its graphic or cartographic representation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is scale of</rdfs:label>
         <rdfs:label xml:lang="it">è scala di</rdfs:label>
@@ -2995,6 +3008,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine effettuata su un bene culturale al bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s survey to the cultural entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="en">is survey on</rdfs:label>
         <rdfs:label xml:lang="it">è indagine su</rdfs:label>
