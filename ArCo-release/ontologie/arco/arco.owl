@@ -2221,6 +2221,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale complesso, quando questo si configuri come una serie o un insieme.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a complex cultural property, when it is a series or a set.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <rdfs:label xml:lang="en">Cultural Property Collection</rdfs:label>
         <rdfs:label xml:lang="it">Insieme di beni culturali</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>

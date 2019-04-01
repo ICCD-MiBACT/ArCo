@@ -52,6 +52,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
@@ -1614,6 +1620,20 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Cadastral Identity&apos; is the following:
+resource:CadastralIdentity/1400055239-1
+        a a-loc:CadastralIdentity ;
+        rdfs:label  &quot;Cadastral identity 1 of cultural property: 1400055239&quot;@en ;
+        a-cd:hasLegalSituation resource:LegalSituation/1400055239-cadastral-legal-situation-1 ;
+        a-loc:hasCadastralCity resource:City/s-martino-in-pensilis ;
+        a-loc:hasCadastralEntity resource:CadastralUnitCollection/1400055239-207 , resource:CadastralFolio/1400055239-8 .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Identità catastale&quot; è il seguente:
+resource:CadastralIdentity/1400055239-1
+        a a-loc:CadastralIdentity ;
+        rdfs:label  &quot;Identità catastale 1 del bene culturale: 1400055239&quot;@en ;
+        a-cd:hasLegalSituation resource:LegalSituation/1400055239-cadastral-legal-situation-1 ;
+        a-loc:hasCadastralCity resource:City/s-martino-in-pensilis ;
+        a-loc:hasCadastralEntity resource:CadastralUnitCollection/1400055239-207 , resource:CadastralFolio/1400055239-8 .</dc:description>
         <rdfs:comment xml:lang="it">ICCD Normativa Traversale 4.00: CS; LS</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;identità catastale di un&apos;entità, intesa come l&apos;insieme delle informazioni di localizzazione che riguardano il bene con riferimento alla ripartizione catastale nazionale. L&apos;identità catastale di un&apos;entità può avere un riferimento cronologico, che indica l&apos;epoca alla quale risalgono i dati catastali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cadastral identity of an entity, which is intended as a set of location information concerning the property with reference to the national cadastral allocation. The cadastral identity can have a chronological reference indicating the dating of cadastral data.</rdfs:comment>
@@ -1881,6 +1901,19 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:description xml:lang="en">An example of usage of the class &apos;Time Indexed Typed Location&apos; is the following:
+resource:TimeIndexedTypedLocation/0800055566-alternative-1
+        a  a-loc:TimeIndexedTypedLocation ;
+        rdfs:label &quot;Alternative location 1 of cultural property: 0800055566&quot;@en ;  a-loc:atSite  resource:Site/7761991208459c29ef5c7cee8ff29deb ;
+        a-loc:hasLocationType a-loc:LastLocation ;
+        tiapit:atTime resource:TimeInterval/2002 .</dc:description>
+        <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Localizzazione tipizzata nel tempo&apos; è il seguente:
+resource:TimeIndexedTypedLocation/0800055566-alternative-1
+        a           a-loc:TimeIndexedTypedLocation ;
+        rdfs:label &quot;Localizzazione alternativa 1 del bene culturale: 0800055566&quot;@en ;
+       a-loc:atSite  resource:Site/7761991208459c29ef5c7cee8ff29deb ;
+        a-loc:hasLocationType a-loc:LastLocation ;
+        tiapit:atTime resource:TimeInterval/2002 .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una localizzazione di un bene culturale, inserita in un arco temporale e qualificata in base al ruolo che la localizzazione riveste nei confronti del bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a localization of a cultural property, within a timeframe and qualified according to the role that the localization plays in relation to the cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location/"/>

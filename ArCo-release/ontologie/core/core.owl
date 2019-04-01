@@ -248,6 +248,8 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isMethodOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
+        <rdfs:comment xml:lang="it">L&apos;object property che collega un&apos;entità a un metodo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that links an entity to a method.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="it">ha metodo</rdfs:label>
         <rdfs:label xml:lang="en">has method</rdfs:label>
@@ -486,6 +488,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">L&apos;object property che collega un metodo a un&apos;entità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property that links a method to an entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is method of</rdfs:label>
         <rdfs:label xml:lang="it">è metodo di</rdfs:label>
