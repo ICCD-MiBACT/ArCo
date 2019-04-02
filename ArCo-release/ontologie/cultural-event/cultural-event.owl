@@ -41,6 +41,7 @@
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <rdfs:label xml:lang="en">Cultural Event Ontology (ArCo network)</rdfs:label>

@@ -27,28 +27,29 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location/">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:title xml:lang="it">Ontologia della Localizzazione (ArCo network)</dc:title>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <rdfs:label xml:lang="en">Location Ontology (ArCo network)</rdfs:label>
+        <dc:title xml:lang="en">Location Ontology (ArCo network)</dc:title>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
-        <dc:title xml:lang="it">Ontologia della Localizzazione (ArCo network)</dc:title>
         <rdfs:label xml:lang="it">Ontologia della Localizzazione (ArCo network)</rdfs:label>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">The module Location models information related to the localization and georeferencing of a cultural property.</rdfs:comment>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
-        <rdfs:label xml:lang="en">Location Ontology (ArCo network)</rdfs:label>
-        <dc:title xml:lang="en">Location Ontology (ArCo network)</dc:title>
     </owl:Ontology>
     
 

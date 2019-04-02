@@ -37,6 +37,7 @@
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
         <dc:title xml:lang="it">Ontologia del Catalogo (ArCo network)</dc:title>
         <rdfs:label xml:lang="it">Ontologia del Catalogo (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
