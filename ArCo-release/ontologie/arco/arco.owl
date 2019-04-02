@@ -49,6 +49,7 @@
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <dc:title xml:lang="en">ArCo Ontology (ArCo network)</dc:title>
@@ -92,6 +93,12 @@
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
