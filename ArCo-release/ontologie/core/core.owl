@@ -19,21 +19,31 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core/">
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <rdfs:label xml:lang="it">Ontologia Core (ArCo network)</rdfs:label>
+        <rdfs:comment xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</rdfs:comment>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
-        <rdfs:label>Core Ontology (ArCo network)</rdfs:label>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+        <rdfs:comment xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).</rdfs:comment>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
+        <rdfs:label xml:lang="en">Core Ontology (ArCo network)</rdfs:label>
+        <dc:title xml:lang="en">Core Ontology (ArCo network)</dc:title>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
-        <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:description xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</dc:description>
+        <dc:title xml:lang="it">Ontologia Core (ArCo network)</dc:title>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <dc:description xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).</dc:description>
     </owl:Ontology>
     
 
@@ -64,6 +74,24 @@
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 

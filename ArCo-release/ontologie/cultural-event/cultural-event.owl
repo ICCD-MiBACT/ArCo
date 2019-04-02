@@ -25,18 +25,26 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event/">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:label xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</rdfs:label>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <rdfs:comment xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</rdfs:comment>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:comment xml:lang="en">This module models information on cultural events involving cultural properties.</rdfs:comment>
-        <rdfs:label>Cultural event Ontology (ArCo network)</rdfs:label>
+        <dc:description xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</dc:description>
+        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <rdfs:comment xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</rdfs:comment>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:title xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</dc:title>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative agli eventi culturali che possono aver coinvolto un bene culturale.</rdfs:comment>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <rdfs:label xml:lang="en">Cultural Event Ontology (ArCo network)</rdfs:label>
+        <dc:title xml:lang="en">Cultural Event Ontology (ArCo network)</dc:title>
+        <dc:description xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</dc:description>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
     </owl:Ontology>
     
@@ -50,6 +58,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 

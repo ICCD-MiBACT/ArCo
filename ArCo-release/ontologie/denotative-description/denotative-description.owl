@@ -27,21 +27,29 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
-        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <dc:description xml:lang="it">Questo modulo, detto della descrizione denotativa (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.</dc:description>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
-        <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
+        <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
+        <dc:title xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</dc:title>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.</rdfs:comment>
+        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:comment xml:lang="en">In the Denotative Description module are modelled pieces of information regarding the characteristics and qualities of a cultural property, as detectable and/or detected during the cataloguing process. Examples are: measurements, materials, technique, conservation status.</rdfs:comment>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
-        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa del bene culturale (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), include la modellazione delle informazioni che riguardano il bene culturale in sé, con i suoi attributi (rilevati/rilevabili al momento della catalogazione).</rdfs:comment>
-        <rdfs:label>Denotative Description Ontology (ArCo network)</rdfs:label>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <dc:description xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.</dc:description>
+        <rdfs:comment xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.</rdfs:comment>
+        <dc:title xml:lang="en">Denotative Description Ontology (ArCo network)</dc:title>
+        <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
     </owl:Ontology>
     
 
@@ -66,6 +74,18 @@
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 

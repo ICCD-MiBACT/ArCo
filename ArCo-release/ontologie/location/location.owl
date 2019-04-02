@@ -26,7 +26,6 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location/">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
-        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
@@ -34,14 +33,21 @@
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <dc:title xml:lang="it">Ontologia della Localizzazione (ArCo network)</dc:title>
+        <rdfs:label xml:lang="it">Ontologia della Localizzazione (ArCo network)</rdfs:label>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The module Location models information related to the localization and georeferencing of a cultural property.</rdfs:comment>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
-        <rdfs:label>Location Ontology (ArCo network)</rdfs:label>
-        <rdfs:comment xml:lang="en">This module models information related to the localization and georeferencing of a cultural property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location Ontology (ArCo network)</rdfs:label>
+        <dc:title xml:lang="en">Location Ontology (ArCo network)</dc:title>
     </owl:Ontology>
     
 
@@ -60,6 +66,18 @@
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
