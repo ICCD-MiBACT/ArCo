@@ -35,12 +35,17 @@
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al bene culturale, considerate centrali. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <rdfs:label>ArCo Ontology (ArCo network)</rdfs:label>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="en">The ArCo module is the central node of the network ArCo - Architecture of Knowledge. It imports all the other modules and the ontologies directly reused, and models core information about cultural heritage.</rdfs:comment>
     </owl:Ontology>

@@ -19,10 +19,12 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core/">
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <rdfs:label>Core Ontology (ArCo network)</rdfs:label>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -159,6 +161,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isClassificationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <rdfs:comment xml:lang="it">La object property che permette di aggiungere una classificazione a un qualsiasi oggetto.</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property that allows to add a classification to any object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
@@ -312,6 +315,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasTimeIndexedSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTimeIndexedSituation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTimeIndexedSituationOf"/>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
+        <rdfs:comment xml:lang="it">La proprietà che collega un qualsiasi oggetto a una situazione indicizzata nel tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that links any object to a time indexed situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <rdfs:label xml:lang="it">ha situazione nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has time indexed situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType">
@@ -402,6 +422,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <rdfs:comment xml:lang="it">La proprietà inversa di hasClassification, che collega un oggetto a una sua classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The inverse object property of hasClassification, that links an object to a classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
@@ -541,10 +562,26 @@
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <rdfs:comment xml:lang="it">La proprietà che collega una situazione ad un qualsiasi oggetto. La proprietà è modellata come proprietà inversa di hasSituation.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The property that links a property to any object. The property is modelled as inverse object property of hasSituation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that links a situation to any object. The property is modelled as inverse object property of hasSituation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">is situation of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isTimeIndexedSituationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTimeIndexedSituationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
+        <rdfs:comment xml:lang="it">La proprietà che collega una situazione indicizzata nel tempo ad un qualsiasi oggetto. La proprietà è modellata come proprietà inversa di hasTimeIndexedSituation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that links a time indexed situation to any object. The property is modelled as inverse object property of hasTimeIndexedSituation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <rdfs:label xml:lang="en">is time indexed situation of</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione nel tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -800,6 +837,7 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Classification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta il concetto di classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The class that models the concept of classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
@@ -880,6 +918,22 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <rdfs:label xml:lang="en">Situation</rdfs:label>
         <rdfs:label xml:lang="it">Situazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/TimeIndexedSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
+        <rdfs:comment xml:lang="it">La classe che rappresenta il generico concetto di situazione indicizzata nel tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class representing the generic concept of time indexed situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <rdfs:label xml:lang="it">Situazione nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">Time indexed situation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>

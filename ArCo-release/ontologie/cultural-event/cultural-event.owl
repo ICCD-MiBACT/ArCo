@@ -25,6 +25,7 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event/">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="en">This module models information on cultural events involving cultural properties.</rdfs:comment>
@@ -35,6 +36,7 @@
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative agli eventi culturali che possono aver coinvolto un bene culturale.</rdfs:comment>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
     </owl:Ontology>
     
@@ -113,6 +115,42 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasImmediateNextEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasImmediateNextEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextEvent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, all&apos;evento immediatamente successivo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to the immediate next event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:label xml:lang="it">ha evento immediatamente successivo</rdfs:label>
+        <rdfs:label xml:lang="en">has immediate next event</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasImmediatePreviousEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasImmediatePreviousEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, all&apos;evento immediatamente precedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to the immediate previous event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:label xml:lang="it">ha evento immediatamente precedente</rdfs:label>
+        <rdfs:label xml:lang="en">has immediate previous event</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/hasMemberEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent">
@@ -124,6 +162,42 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
         <rdfs:label xml:lang="it">ha evento membro</rdfs:label>
         <rdfs:label xml:lang="en">has member event</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasNextEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasNextEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/precedes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, a uno degli eventi successivi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the next events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:label xml:lang="it">ha evento successivo</rdfs:label>
+        <rdfs:label xml:lang="en">has next event</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/follows"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, a uno degli eventi precedenti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the previous events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:label xml:lang="it">ha evento precedente</rdfs:label>
+        <rdfs:label xml:lang="en">has previous event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -228,6 +302,18 @@
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/follows -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/follows"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/precedes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/precedes"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -309,6 +395,25 @@
     <!-- https://w3id.org/arco/ontology/cultural-event/RecurrentEvent -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextEvent"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -319,14 +424,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasTimePeriod"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriod"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasTimePeriod"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

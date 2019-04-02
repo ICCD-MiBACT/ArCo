@@ -28,13 +28,18 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.</rdfs:comment>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <rdfs:label>Location Ontology (ArCo network)</rdfs:label>
         <rdfs:comment xml:lang="en">This module models information related to the localization and georeferencing of a cultural property.</rdfs:comment>
     </owl:Ontology>
@@ -1888,7 +1893,7 @@ resource:CadastralIdentity/1400055239-1
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasLocationType"/>
@@ -1929,7 +1934,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     <!-- https://w3id.org/arco/ontology/location/ToponymInTime -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/ToponymInTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>

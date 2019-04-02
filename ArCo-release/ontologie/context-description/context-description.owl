@@ -27,16 +27,22 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <rdfs:comment xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property.</rdfs:comment>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Ciascun contesto che lo interessa/lo ha interessato viene descritto nelle componenti &quot;spazio&quot;, &quot;tempo&quot;, &quot;evento&quot;, &quot;entità coinvolte&quot; (enti, persone, altri beni). Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc.</rdfs:comment>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
         <rdfs:label>Context Description Ontology (ArCo network)</rdfs:label>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
     </owl:Ontology>
     
 
