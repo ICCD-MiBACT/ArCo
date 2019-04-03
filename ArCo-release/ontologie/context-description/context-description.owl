@@ -30,16 +30,16 @@
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
         <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:description xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</dc:description>
-        <dc:description rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
-        <dc:description rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</rdfs:comment>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
@@ -343,6 +343,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine su un bene archeologico al tipo di indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a survey on an archaeological property to the survey type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di indagine su bene archeologico</rdfs:label>
         <rdfs:label xml:lang="en">has archaeological property survey type</rdfs:label>
@@ -931,12 +933,14 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione al tipo di documentazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a documentation to the documentation type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di documentazione</rdfs:label>
         <rdfs:label xml:lang="en">has documentation type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>FTAP, DRAT, FNTP (+VDCP, REGP), ADMP (v. 3.00 e 3.01)</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>DO/FTA/FTAP, DO/DRA/DRAT, DO/FNT/FNTP (+VDCP, REGP), DO/ADM/ADMP (v. 3.00 e 3.01)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1509,6 +1513,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isOwnerIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una condizione giuridica al proprietario dell&apos;oggetto che si trova in quella condizione giuridica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a legual situation to the owner of the object involved in that legal situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha proprietario</rdfs:label>
         <rdfs:label xml:lang="en">has owner</rdfs:label>
@@ -2171,6 +2177,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine al responsabile scientifico di quell&apos;indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a survey to the scientific director of that survey.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha responsabile scientifico dell&apos;indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey scientific director</rdfs:label>

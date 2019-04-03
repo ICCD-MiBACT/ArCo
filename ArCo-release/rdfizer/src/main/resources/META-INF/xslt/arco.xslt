@@ -23004,7 +23004,7 @@
 									<rdf:Description>
 										<xsl:attribute name="rdf:about">
                                             <xsl:value-of
-											select="concat($NS, 'Region/', arco-fn:urify(./PRV/PRVC))" />
+											select="concat($NS, 'City/', arco-fn:urify(./PRV/PRVC))" />
                                         </xsl:attribute>
 										<rdf:type>
 											<xsl:attribute name="rdf:resource">
@@ -23437,7 +23437,7 @@
 								<rdf:Description>
 									<xsl:attribute name="rdf:about">
                                         <xsl:value-of
-										select="concat($NS, 'Region/', arco-fn:urify(./PRV/PRVC))" />
+										select="concat($NS, 'City/', arco-fn:urify(./PRV/PRVC))" />
                                     </xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
@@ -23852,7 +23852,7 @@
 								<rdf:Description>
 									<xsl:attribute name="rdf:about">
                                         <xsl:value-of
-										select="concat($NS, 'Region/', arco-fn:urify(schede/F/LR/LRC/LRCC))" />
+										select="concat($NS, 'City/', arco-fn:urify(schede/F/LR/LRC/LRCC))" />
                                     </xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
