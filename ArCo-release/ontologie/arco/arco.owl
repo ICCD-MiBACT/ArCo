@@ -35,8 +35,8 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
         <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -3295,6 +3295,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/CulturalPropertyCollection"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecordSet"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/location/Coordinates"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
