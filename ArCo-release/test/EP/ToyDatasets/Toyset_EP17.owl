@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP17.owl#"
-     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP17.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP18.owl#"
+     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP18.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,7 +12,7 @@
      xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP17.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP18.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/arco/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
@@ -35,9 +35,9 @@
 
 
 
-    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP17.owl#Location_Test_1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP18.owl#Location_Test_1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP17.owl#Location_Test_1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP18.owl#Location_Test_1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ReproductionPosition"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/StratigraphicUnit"/>
     </owl:NamedIndividual>
