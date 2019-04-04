@@ -1878,6 +1878,7 @@ resource:Inscription/1200865151-inscription-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CoinDesign">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinLegend"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la raffigurazione presente sul dritto o sul rovescio di un bene numismatico, intesa come l&apos;insieme degli elementi grafici, che, uniti a una legenda (lettere e parole), fa parte dell&apos;impronta della moneta.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the design on the reverse or the obverse of a numismatic property, as the graphical part of what is represented on a side of a coin, together with the legend (lettering and wording).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
