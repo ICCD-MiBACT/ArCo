@@ -35,9 +35,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl#Test_1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl#Test_1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
@@ -51,9 +51,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_2 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl#Test_2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_2">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl#Test_2">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
@@ -67,9 +67,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_3 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl#Test_3 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_3">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl#Test_3">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
