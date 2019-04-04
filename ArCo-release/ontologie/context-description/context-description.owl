@@ -344,7 +344,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine su un bene archeologico al tipo di indagine.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a survey on an archaeological property to the survey type.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a survey on an archaeological property to the type of survey.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di indagine su bene archeologico</rdfs:label>
         <rdfs:label xml:lang="en">has archaeological property survey type</rdfs:label>
@@ -934,13 +934,13 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione al tipo di documentazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a documentation to the documentation type.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a documentation to its type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha tipo di documentazione</rdfs:label>
         <rdfs:label xml:lang="en">has documentation type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>DO/FTA/FTAP, DO/DRA/DRAT, DO/FNT/FNTP (+VDCP, REGP), DO/ADM/ADMP (v. 3.00 e 3.01)</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>FTAP, DRAT, FNTP (+VDCP, REGP), ADMP (v. 3.00 e 3.01)</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1513,8 +1513,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isOwnerIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una condizione giuridica al proprietario dell&apos;oggetto che si trova in quella condizione giuridica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a legual situation to the owner of the object involved in that legal situation.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una condizione giuridica al proprietario dell&apos;oggetto che si trova in quella condizione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a legal situation to the owner of the object that is in that legal situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha proprietario</rdfs:label>
         <rdfs:label xml:lang="en">has owner</rdfs:label>
@@ -2177,8 +2177,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine al responsabile scientifico di quell&apos;indagine.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a survey to the scientific director of that survey.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine al suo responsabile scientifico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a survey to its scientific director.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <rdfs:label xml:lang="it">ha responsabile scientifico dell&apos;indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey scientific director</rdfs:label>
