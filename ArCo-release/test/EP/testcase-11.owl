@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/EP/testcase-01.owl#"
-     xml:base="https://w3id.org/arco/test/EP/testcase-01.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/EP/testcase-11.owl#"
+     xml:base="https://w3id.org/arco/test/EP/testcase-11.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/testcase-01.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/testcase-11.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</testannotationschema:hasActualResult>
         <testannotationschema:hasExpectedResult xml:lang="en">Inconsistent</testannotationschema:hasExpectedResult>
