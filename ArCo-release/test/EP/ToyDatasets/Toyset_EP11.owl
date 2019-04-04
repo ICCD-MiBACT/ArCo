@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl#"
+     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP11.owl">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_2">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentina/ontologies/2019/3/untitled-ontology-61#Test_3">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Altitude"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
