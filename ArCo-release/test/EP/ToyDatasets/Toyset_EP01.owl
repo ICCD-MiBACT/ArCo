@@ -27,9 +27,9 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Gatto -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Gatto -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Gatto">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Gatto">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
@@ -37,13 +37,13 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Tassonomia1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Tassonomia1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Tassonomia1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Tassonomia1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
-        <context-description:hasGenus rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Gatto"/>
-        <context-description:hasSpecies rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Gatto"/>
-        <context-description:hasSubspecies rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Gatto"/>
+        <context-description:hasGenus rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Gatto"/>
+        <context-description:hasSpecies rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Gatto"/>
+        <context-description:hasSubspecies rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Gatto"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

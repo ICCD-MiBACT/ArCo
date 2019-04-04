@@ -26,36 +26,36 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CategoryBibliography1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#CategoryBibliography1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CategoryBibliography1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#CategoryBibliography1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyCategory"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#DocumentationCategory1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#DocumentationCategory1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#DocumentationCategory1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#DocumentationCategory1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationCategory"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#SECIdentifier1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#SECIdentifier1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#SECIdentifier1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#SECIdentifier1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/SECIdentifier"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#UserSocialCategory1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#UserSocialCategory1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#UserSocialCategory1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP04.owl#UserSocialCategory1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/SECCategory"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/UserSocialCategory"/>
     </owl:NamedIndividual>

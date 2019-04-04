@@ -27,9 +27,9 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ArchivalEntity -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP03.owl#ArchivalEntity -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ArchivalEntity">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP03.owl#ArchivalEntity">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalFonds"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalSeries"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalSubseries"/>
@@ -37,9 +37,9 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#BibliographyEntity -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP03.owl#BibliographyEntity -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#BibliographyEntity">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP03.owl#BibliographyEntity">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
         <core:hasCategory rdf:resource="https://w3id.org/arco/ontology/context-description/AttachedDocumentation"/>
     </owl:NamedIndividual>

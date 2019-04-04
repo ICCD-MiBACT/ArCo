@@ -27,18 +27,18 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CatalogueRecordX -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP08.owl#CatalogueRecordX -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CatalogueRecordX">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP08.owl#CatalogueRecordX">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
-        <core:hasCharacteristic rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CharacteristicX"/>
+        <core:hasCharacteristic rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP08.owl#CharacteristicX"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CharacteristicX -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP08.owl#CharacteristicX -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CharacteristicX">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP08.owl#CharacteristicX">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>

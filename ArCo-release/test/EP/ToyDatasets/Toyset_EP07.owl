@@ -28,18 +28,18 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CulturalEntityX -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl#CulturalEntityX -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CulturalEntityX">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl#CulturalEntityX">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <context-description:hasIntervention rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EligibleInterventionX"/>
+        <context-description:hasIntervention rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl#EligibleInterventionX"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EligibleInterventionX -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl#EligibleInterventionX -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EligibleInterventionX">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl#EligibleInterventionX">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
     </owl:NamedIndividual>
 </rdf:RDF>

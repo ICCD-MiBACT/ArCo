@@ -26,18 +26,18 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CulturalEntityX -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP10.owl#CulturalEntityX -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CulturalEntityX">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP10.owl#CulturalEntityX">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <catalogue:isDescribedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ObjectX"/>
+        <catalogue:isDescribedBy rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP10.owl#ObjectX"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ObjectX -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP10.owl#ObjectX -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ObjectX">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP10.owl#ObjectX">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordFF"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
         <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Object"/>

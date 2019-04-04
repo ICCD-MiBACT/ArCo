@@ -26,9 +26,9 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EligibleIntervention -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP05.owl#EligibleIntervention -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EligibleIntervention">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP05.owl#EligibleIntervention">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/EligibleIntervention"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
     </owl:NamedIndividual>
