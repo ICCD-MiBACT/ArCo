@@ -23,25 +23,25 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:label xml:lang="it">Ontologia Core (ArCo network)</rdfs:label>
         <rdfs:comment xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</rdfs:comment>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).</rdfs:comment>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label xml:lang="en">Core Ontology (ArCo network)</rdfs:label>
-        <dc:title xml:lang="en">Core Ontology (ArCo network)</dc:title>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:title xml:lang="en">Core Ontology (ArCo network)</dc:title>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <dc:description xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</dc:description>
         <dc:title xml:lang="it">Ontologia Core (ArCo network)</dc:title>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
+        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
@@ -761,7 +761,6 @@
     <!-- http://dati.beniculturali.it/cis/CulturalEvent -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEvent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <owl:disjointWith rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
     </owl:Class>
