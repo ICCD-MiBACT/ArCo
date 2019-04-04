@@ -12,7 +12,7 @@
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</testannotationschema:hasActualResult>
         <testannotationschema:hasExpectedResult xml:lang="en">Inconsistent</testannotationschema:hasExpectedResult>
         <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP15.owl"/>
-        <testannotationschema:hasRequirement xml:lang="it">L&apos;entità Classification_1 appartiene alla seguenti classi: 
+        <testannotationschema:hasRequirement xml:lang="it">L&apos;entità Classification_1 appartiene alle seguenti classi: 
 - arco: CartographicClassification
 - arco: MusicalInstrumentClassification
 - arco: PhotographicHeritageClassification</testannotationschema:hasRequirement>
