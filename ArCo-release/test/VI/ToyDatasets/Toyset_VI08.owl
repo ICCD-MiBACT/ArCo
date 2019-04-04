@@ -28,73 +28,73 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AustralopithecusAfricanus -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#AustralopithecusAfricanus -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AustralopithecusAfricanus">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#AustralopithecusAfricanus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EstimateAgeDeathLucy -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#EstimateAgeDeathLucy -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EstimateAgeDeathLucy">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#EstimateAgeDeathLucy">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
         <context-description:estimatedAgeOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</context-description:estimatedAgeOfDeath>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#IndividualBurial -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#IndividualBurial -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#IndividualBurial">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#IndividualBurial">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContextType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Lucy -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#Lucy -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Lucy">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#Lucy">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <context-description:hasAgeOfDeathEstimate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EstimateAgeDeathLucy"/>
-        <context-description:hasBiologicalTaxonomy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyTaxonomy"/>
-        <context-description:hasFindingContext rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyFindingContext"/>
-        <context-description:hasSexEstimate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#SexEstimateLucy"/>
+        <context-description:hasAgeOfDeathEstimate rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#EstimateAgeDeathLucy"/>
+        <context-description:hasBiologicalTaxonomy rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#LucyTaxonomy"/>
+        <context-description:hasFindingContext rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#LucyFindingContext"/>
+        <context-description:hasSexEstimate rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#SexEstimateLucy"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyFindingContext -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#LucyFindingContext -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyFindingContext">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#LucyFindingContext">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
-        <context-description:hasFindingContextType rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#IndividualBurial"/>
+        <context-description:hasFindingContextType rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#IndividualBurial"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyTaxonomy -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#LucyTaxonomy -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyTaxonomy">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#LucyTaxonomy">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
-        <core:hasConcept rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AustralopithecusAfricanus"/>
-        <core:hasConcept rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Paranthropus"/>
+        <core:hasConcept rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#AustralopithecusAfricanus"/>
+        <core:hasConcept rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#Paranthropus"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Paranthropus -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#Paranthropus -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Paranthropus">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#Paranthropus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#SexEstimateLucy -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#SexEstimateLucy -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#SexEstimateLucy">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl#SexEstimateLucy">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
         <context-description:estimatedSex>F</context-description:estimatedSex>
     </owl:NamedIndividual>

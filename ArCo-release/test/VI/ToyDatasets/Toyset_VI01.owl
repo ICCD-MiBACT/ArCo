@@ -28,92 +28,92 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AcquisizioneMonetaRomana -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#AcquisizioneMonetaRomana -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AcquisizioneMonetaRomana">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#AcquisizioneMonetaRomana">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
-        <context-description:hasAcquisitionType rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Acquistata"/>
+        <context-description:hasAcquisitionType rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#Acquistata"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Acquistata -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#Acquistata -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Acquistata">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#Acquistata">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AcquisitionType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Analisi_Tipologica -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#Analisi_Tipologica -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Analisi_Tipologica">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#Analisi_Tipologica">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ComuneItaliano -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#ComuneItaliano -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ComuneItaliano">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#ComuneItaliano">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CondizioneGiuridicaMonetaRomana -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#CondizioneGiuridicaMonetaRomana -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CondizioneGiuridicaMonetaRomana">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#CondizioneGiuridicaMonetaRomana">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation"/>
-        <context-description:hasOwner rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ComuneItaliano"/>
+        <context-description:hasOwner rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#ComuneItaliano"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CronologiaMonetaRomana -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#CronologiaMonetaRomana -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CronologiaMonetaRomana">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#CronologiaMonetaRomana">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
-        <context-description:hasSource rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Analisi_Tipologica"/>
+        <context-description:hasSource rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#Analisi_Tipologica"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#DocumentazioneMonetaRomana -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#DocumentazioneMonetaRomana -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#DocumentazioneMonetaRomana">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#DocumentazioneMonetaRomana">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
-        <context-description:hasDocumentationType rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#B/N_Foto"/>
+        <context-description:hasDocumentationType rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#B/N_Foto"/>
         <context-description:documentationIdentifier>123provaprova</context-description:documentationIdentifier>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#GiulioCesare -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#GiulioCesare -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#GiulioCesare">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#GiulioCesare">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Subject"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MonetaRomana -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#MonetaRomana -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MonetaRomana">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#MonetaRomana">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
-        <context-description:hasAcquisition rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AcquisizioneMonetaRomana"/>
-        <context-description:hasDating rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CronologiaMonetaRomana"/>
-        <context-description:hasDocumentation rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#DocumentazioneMonetaRomana"/>
-        <context-description:hasLegalSituation rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#CondizioneGiuridicaMonetaRomana"/>
-        <context-description:hasSubject rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#GiulioCesare"/>
+        <context-description:hasAcquisition rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#AcquisizioneMonetaRomana"/>
+        <context-description:hasDating rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#CronologiaMonetaRomana"/>
+        <context-description:hasDocumentation rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#DocumentazioneMonetaRomana"/>
+        <context-description:hasLegalSituation rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#CondizioneGiuridicaMonetaRomana"/>
+        <context-description:hasSubject rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#GiulioCesare"/>
         <context-description:subject>Giulio Cesare</context-description:subject>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#B/N_Foto -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#BN_Foto -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#B/N_Foto">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI01.owl#BN_Foto">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationType"/>
     </owl:NamedIndividual>
 </rdf:RDF>

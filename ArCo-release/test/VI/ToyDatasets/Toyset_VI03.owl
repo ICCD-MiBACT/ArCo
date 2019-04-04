@@ -27,115 +27,115 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Elemento_affisso_su_stele -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Elemento_affisso_su_stele -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Elemento_affisso_su_stele">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Elemento_affisso_su_stele">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Inscription"/>
-        <denotative-description:hasAffixedElementType rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Religioso"/>
-        <denotative-description:refersToAgent rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Papa_Pio_XI"/>
+        <denotative-description:hasAffixedElementType rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Religioso"/>
+        <denotative-description:refersToAgent rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Papa_Pio_XI"/>
         <denotative-description:positionOnCulturalProperty>In alto a destra</denotative-description:positionOnCulturalProperty>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Epigrafe -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Epigrafe -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Epigrafe">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Epigrafe">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Epigrafe_Religiosa -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Epigrafe_Religiosa -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Epigrafe_Religiosa">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Epigrafe_Religiosa">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
-        <denotative-description:hasCulturalPropertyDefinition rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Epigrafe"/>
-        <denotative-description:hasCulturalPropertyDefinition rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Religiosa"/>
+        <denotative-description:hasCulturalPropertyDefinition rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Epigrafe"/>
+        <denotative-description:hasCulturalPropertyDefinition rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Religiosa"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Incisione -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Incisione -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Incisione">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Incisione">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
         <denotative-description:usesTechnicalCharacteristic rdf:resource="https://w3id.org/arco/ontology/denotative-description/Technique"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Materiale_Stele -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Materiale_Stele -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Materiale_Stele">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Materiale_Stele">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence"/>
-        <denotative-description:satisfiesTechnicalDetail rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Pietra"/>
+        <denotative-description:satisfiesTechnicalDetail rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Pietra"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Papa_Pio_XI -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Papa_Pio_XI -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Papa_Pio_XI">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Papa_Pio_XI">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Pietra -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Pietra -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Pietra">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Pietra">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetail"/>
         <denotative-description:usesTechnicalCharacteristic rdf:resource="https://w3id.org/arco/ontology/denotative-description/Material"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Religiosa -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Religiosa -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Religiosa">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Religiosa">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Religioso -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Religioso -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Religioso">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Religioso">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElementType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Stato_di_conservazione_Stele -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Stato_di_conservazione_Stele -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Stato_di_conservazione_Stele">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Stato_di_conservazione_Stele">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <denotative-description:hasConservationStatusType rdf:resource="https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Stele_Medievale -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Stele_Medievale -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Stele_Medievale">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Stele_Medievale">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <denotative-description:hasAffixedElement rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Elemento_affisso_su_stele"/>
-        <denotative-description:hasConservationStatus rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Stato_di_conservazione_Stele"/>
-        <denotative-description:hasCulturalPropertyType rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Epigrafe_Religiosa"/>
-        <denotative-description:hasTechnicalDetailOccurrence rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Materiale_Stele"/>
-        <denotative-description:hasTechnicalDetailOccurrence rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Tecnica_Stele"/>
+        <denotative-description:hasAffixedElement rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Elemento_affisso_su_stele"/>
+        <denotative-description:hasConservationStatus rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Stato_di_conservazione_Stele"/>
+        <denotative-description:hasCulturalPropertyType rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Epigrafe_Religiosa"/>
+        <denotative-description:hasTechnicalDetailOccurrence rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Materiale_Stele"/>
+        <denotative-description:hasTechnicalDetailOccurrence rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Tecnica_Stele"/>
         <denotative-description:proposedIntervention>Spolveratura</denotative-description:proposedIntervention>
         <denotative-description:storageConditions>Conservato in locale non climatizzato</denotative-description:storageConditions>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Tecnica_Stele -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Tecnica_Stele -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Tecnica_Stele">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Tecnica_Stele">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence"/>
-        <denotative-description:satisfiesTechnicalDetail rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Incisione"/>
+        <denotative-description:satisfiesTechnicalDetail rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI03.owl#Incisione"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

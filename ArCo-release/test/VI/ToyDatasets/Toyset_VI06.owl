@@ -27,55 +27,55 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Aramaico -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#Aramaico -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Aramaico">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#Aramaico">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#GoticoSuperiore -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#GoticoSuperiore -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#GoticoSuperiore">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#GoticoSuperiore">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LegendaMonetaBaiocco -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#LegendaMonetaBaiocco -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LegendaMonetaBaiocco">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#LegendaMonetaBaiocco">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinLegend"/>
-        <denotative-description:hasFontStyle rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#GoticoSuperiore"/>
-        <denotative-description:hasWritingSystem rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Aramaico"/>
+        <denotative-description:hasFontStyle rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#GoticoSuperiore"/>
+        <denotative-description:hasWritingSystem rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#Aramaico"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MonetaBaiocco -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#MonetaBaiocco -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MonetaBaiocco">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#MonetaBaiocco">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <denotative-description:hasAffixedElement rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LegendaMonetaBaiocco"/>
-        <denotative-description:hasAffixedElement rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#TestaSanSebastiano"/>
-        <denotative-description:hasConservationStatus rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#StatoConservazioneMoneta"/>
+        <denotative-description:hasAffixedElement rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#LegendaMonetaBaiocco"/>
+        <denotative-description:hasAffixedElement rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#TestaSanSebastiano"/>
+        <denotative-description:hasConservationStatus rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#StatoConservazioneMoneta"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#StatoConservazioneMoneta -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#StatoConservazioneMoneta -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#StatoConservazioneMoneta">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#StatoConservazioneMoneta">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <denotative-description:hasLegibility rdf:resource="https://w3id.org/arco/ontology/denotative-description/DecentLegibility"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#TestaSanSebastiano -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#TestaSanSebastiano -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#TestaSanSebastiano">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#TestaSanSebastiano">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinDesign"/>
     </owl:NamedIndividual>
 </rdf:RDF>
