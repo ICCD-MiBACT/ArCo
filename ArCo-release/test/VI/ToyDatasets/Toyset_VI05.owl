@@ -26,28 +26,28 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AdditionalFormEpigrafePicenoCarnica -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#AdditionalFormEpigrafePicenoCarnica -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AdditionalFormEpigrafePicenoCarnica">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#AdditionalFormEpigrafePicenoCarnica">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <catalogue:hasAdditionalFormType rdf:resource="https://w3id.org/arco/ontology/catalogue/EpigraphyForm"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EpigrafePicenoCarnica -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#EpigrafePicenoCarnica -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EpigrafePicenoCarnica">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#EpigrafePicenoCarnica">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <catalogue:isDescribedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AdditionalFormEpigrafePicenoCarnica"/>
-        <catalogue:isDescribedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#InformationFormEpigrafePicenoCarnica"/>
+        <catalogue:isDescribedBy rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#AdditionalFormEpigrafePicenoCarnica"/>
+        <catalogue:isDescribedBy rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#InformationFormEpigrafePicenoCarnica"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#InformationFormEpigrafePicenoCarnica -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#InformationFormEpigrafePicenoCarnica -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#InformationFormEpigrafePicenoCarnica">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#InformationFormEpigrafePicenoCarnica">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
         <catalogue:informationFormIdentifier>ICCD07360433</catalogue:informationFormIdentifier>
     </owl:NamedIndividual>

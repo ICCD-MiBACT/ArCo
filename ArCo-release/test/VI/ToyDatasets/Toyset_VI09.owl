@@ -27,45 +27,45 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AmbarabacciccicoccoAttribuzione -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#AmbarabacciccicoccoAttribuzione -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AmbarabacciccicoccoAttribuzione">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#AmbarabacciccicoccoAttribuzione">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
-        <context-description:hasAttributedAuthor rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AntonioMennillo"/>
-        <context-description:hasSource rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Bibliografia"/>
+        <context-description:hasAttributedAuthor rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#AntonioMennillo"/>
+        <context-description:hasSource rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#Bibliografia"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AntonioMennillo -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#AntonioMennillo -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AntonioMennillo">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#AntonioMennillo">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Bibliografia -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#Bibliografia -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Bibliografia">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#Bibliografia">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#FilastroccaAmbarabacciccicocco -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#FilastroccaAmbarabacciccicocco -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#FilastroccaAmbarabacciccicocco">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#FilastroccaAmbarabacciccicocco">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <context-description:hasAuthorshipAttribution rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AmbarabacciccicoccoAttribuzione"/>
-        <context-description:hasDetectionMethod rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#FonteOrale"/>
+        <context-description:hasAuthorshipAttribution rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#AmbarabacciccicoccoAttribuzione"/>
+        <context-description:hasDetectionMethod rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#FonteOrale"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#FonteOrale -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#FonteOrale -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#FonteOrale">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#FonteOrale">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/DetectionMethod"/>
     </owl:NamedIndividual>
 </rdf:RDF>

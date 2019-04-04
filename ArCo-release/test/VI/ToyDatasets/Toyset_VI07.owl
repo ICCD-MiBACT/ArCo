@@ -27,11 +27,11 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MezzoComunicazioneCanzone -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#MezzoComunicazioneCanzone -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MezzoComunicazioneCanzone">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#MezzoComunicazioneCanzone">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
-        <denotative-description:hasImplementationMethod rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Polifonia"/>
+        <denotative-description:hasImplementationMethod rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#Polifonia"/>
         <denotative-description:numberOfChildParticipants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</denotative-description:numberOfChildParticipants>
         <denotative-description:numberOfFemaleParticipants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</denotative-description:numberOfFemaleParticipants>
         <denotative-description:numberOfMaleParticipants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</denotative-description:numberOfMaleParticipants>
@@ -39,19 +39,19 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Polifonia -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#Polifonia -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Polifonia">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#Polifonia">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ImplementationMethod"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ViaPetroniBySB -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#ViaPetroniBySB -->
 
-    <owl:NamedIndividual rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#ViaPetroniBySB">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#ViaPetroniBySB">
         <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <denotative-description:hasCommunicationMedium rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MezzoComunicazioneCanzone"/>
+        <denotative-description:hasCommunicationMedium rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI07.owl#MezzoComunicazioneCanzone"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
