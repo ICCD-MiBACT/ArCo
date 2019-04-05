@@ -242,24 +242,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasCPTechnicalStatus -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCPTechnicalStatus">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCPTechnicalStatusFor"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è stato tecnico di bene culturale per&quot;, collega una caratteristica tecnica specifica (es.: marmo) allo stato di un bene culturale che ha quella caratteristica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a technical characteristic (e.g. marble) to the status of a cultural property that has that characteristic.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
-        <rdfs:label xml:lang="it">ha stato tecnico di bene culturale</rdfs:label>
-        <rdfs:label xml:lang="en">has cultural property technical status</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium">
@@ -328,6 +310,24 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>CO/STC/STCC</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalEntityTechnicalStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalEntityTechnicalStatus">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è stato tecnico di entità culturale per&quot;, collega una caratteristica tecnica specifica (es.: marmo) allo stato di un&apos;entità culturale che ha quella caratteristica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a technical characteristic (e.g. marble) to the status of a cultural entity that has that characteristic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
+        <rdfs:label xml:lang="it">ha stato tecnico di entità culturale</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural entity technical status</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1186,33 +1186,17 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isCPTechnicalStatusFor -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCPTechnicalStatusFor">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega lo stato tecnico di un bene culturale a una delle caratteristiche tecniche del bene relativamente a quello stato.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property connects a technical detail&apos;s occurrence, with respect to a specific entity (as a cultual entity) to the techincal detail&apos;s description.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega lo stato tecnico di un&apos;entità culturale a una delle caratteristiche tecniche dell&apos;entità relativamente a quello stato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a technical status, with respect to a specific entity (as a cultural entity) to one of the technical characteristics related to that status.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is cultural property technical status for</rdfs:label>
-        <rdfs:label xml:lang="it">è stato tecnico di bene culturale per</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/isCPTechnicalStatusValidUntil -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCPTechnicalStatusValidUntil">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega uno stato tecnico di un bene culturale all&apos;intervallo temporale entro il quale è valido, relativamente al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural property technical status to the time interval until which that status is valid, with regard to the moment in which the characteristics are observed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="en">is cultural property technical status valid until</rdfs:label>
-        <rdfs:label xml:lang="it">è stato tecnico di bene culturale valido fino a</rdfs:label>
+        <rdfs:label xml:lang="it">è stato tecnico di entità culturale per</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1236,16 +1220,16 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isInCPTechnicalStatus -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/isInCulturalEntityTechnicalStatus -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isInCPTechnicalStatus">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isInCulturalEntityTechnicalStatus">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al suo stato tecnico, valido fino a determinato momento, che è rappresentato dalle caratteristiche tecniche che il bene culturale ha in quel momento.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property connects a cultural property to its technical status, valid until a specific moment, that is represented by the technical characteristics that a cultural property has in that moment.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità culturale al suo stato tecnico, valido fino a determinato momento, che è rappresentato dalle caratteristiche tecniche che il bene culturale ha in quel momento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a cultural entity to its technical status, valid until a specific moment, that is represented by the technical characteristics that a cultural entity has in that moment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="en">is cultural property in technical status</rdfs:label>
-        <rdfs:label xml:lang="it">è bene culturale in stato tecnico</rdfs:label>
+        <rdfs:label xml:lang="en">is cultural entity in technical status</rdfs:label>
+        <rdfs:label xml:lang="it">è entità culturale in stato tecnico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
@@ -1462,12 +1446,28 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalConceptUsedIn">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/usesTechnicalConcept"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalDescription"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalDescription"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un concetto tecnico (es.: materia) usato nella descrizione tecnica di un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a technical concept (e.g. material) used in the technical description of a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is technical concept used in</rdfs:label>
         <rdfs:label xml:lang="it">è concetto tecnico usato in</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusValidUntil -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusValidUntil">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno stato tecnico di un&apos;entità culturale all&apos;intervallo temporale entro il quale è valido, relativamente al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity technical status to the time interval until which that status is valid, with regard to the moment in which the characteristics are observed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is cultural entity technical status valid until</rdfs:label>
+        <rdfs:label xml:lang="it">è stato tecnico di entità culturale valido fino a</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1511,7 +1511,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/usesTechnicalConcept -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/usesTechnicalConcept">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalDescription"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalDescription"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una descrizione tecnica di un bene culturale a uno dei concetti usati in quella descrizione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a technical description of a cultural property to one of the concepts used in that description.</rdfs:comment>
@@ -1941,8 +1941,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isInCPTechnicalStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isInCulturalEntityTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2037,44 +2037,6 @@ resource:Inscription/1200865151-inscription-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;marchio&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;marchio&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;marchio&apos;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/CPTechnicalDescription -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CPTechnicalDescription">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la descrizione tecnica di un bene culturale, la quale utilizza tutti i concetti tecnici che possono classificare caratteristiche tecniche possedute da un bene culturale. Questa classe è un tipo particolare di Description, la classe degli oggetti costruiti socialmente (testi, valori, categorie, relazioni, contesti), usati per descrivere qualcos&apos;altro in modo strutturato.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the technical description of a cultural property, which uses all the technical concepts classifying the technical characteristics that a cultural property can have. This class is a particular type of the class Description, which is the class for socially constructed objects (i.e. texts, values, categories, relations, contexts) used to describe other objects in a structured manner.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="en">Cultural property technical description</rdfs:label>
-        <rdfs:label xml:lang="it">Descrizione tecnica di bene culturale</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCPTechnicalStatusFor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un bene culturale, cioè una situazione in cui un bene culturale ha associate una serie di caratteristiche tecniche. Lo stato di un bene ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta e di forma cilindrica&quot;.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the technical status of a cultural property, that is a situation in which the cultural property is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed. For instance, a cultural property techncal status is: &quot;the cultural property X realized with pottery material and cylindrical in shape&quot;.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="it">Stato tecnico del bene culturale</rdfs:label>
-        <rdfs:label xml:lang="en">Technical status of cultural property</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2269,6 +2231,44 @@ resource:ConservationStatus/0900750201-conservation-status-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/CON</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalDescription -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalDescription">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la descrizione tecnica di un&apos;entità culturale, la quale utilizza tutti i concetti tecnici che possono classificare caratteristiche tecniche possedute da un&apos;entità culturale. Questa classe è un tipo particolare di Description, la classe degli oggetti costruiti socialmente (testi, valori, categorie, relazioni, contesti), usati per descrivere qualcos&apos;altro in modo strutturato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the technical description of a cultural entity, which uses all the technical concepts classifying the technical characteristics that a cultural entity can have. This class is a particular type of the class Description, which is the class for socially constructed objects (i.e. texts, values, categories, relations, contexts) used to describe other objects in a structured manner.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">Cultural entity technical description</rdfs:label>
+        <rdfs:label xml:lang="it">Descrizione tecnica di entità culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-detail-characteristic/"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo stato tecnico di un&apos;entità culturale, cioè una situazione in cui un&apos;entità culturale ha associate una serie di caratteristiche tecniche. Lo stato di un&apos;entità ha associata una validità temporale, relativa al momento in cui quelle caratteristiche sono state rilevate. Per esempio, una occorrenza di un dettaglio tecnico è: &quot;bene culturale X realizzato con la materia terracotta e di forma cilindrica&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the technical status of a cultural entity, that is a situation in which the cultural entity is associated to technical characteristics. The technical status has a temporal validity, related to the moment when the characteristics were observed. For instance, a cultural property techncal status is: &quot;the cultural property X realized with pottery material and cylindrical in shape&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">Stato tecnico di entità culturale</rdfs:label>
+        <rdfs:label xml:lang="en">Technical status of cultural entity</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2822,8 +2822,8 @@ resource:MeasurementCollection/1200865132-1
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCPTechnicalStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CPTechnicalStatus"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCulturalEntityTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

@@ -14136,19 +14136,19 @@
 						</rdf:type>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of
-								select="concat('Stato tecnico del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+								select="concat('Stato tecnico del bene culturale ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
 							<xsl:value-of
-								select="concat('Stato tecnico del bene culturale ', $itemURI, ': ', normalize-space(.))" />
+								select="concat('Stato tecnico del bene culturale ', $itemURI)" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of
-								select="concat('Technical statusw of cultural property ', $itemURI, ': ', normalize-space(.))" />
+								select="concat('Technical statusw of cultural property ', $itemURI)" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
 							<xsl:value-of
-								select="concat('Technical statusw of cultural property ', $itemURI, ': ', normalize-space(.))" />
+								select="concat('Technical statusw of cultural property ', $itemURI)" />
 						</l0:name>
 						<arco-dd:isCPTechnicalStatusFor>
 							<xsl:attribute name="rdf:resource">
