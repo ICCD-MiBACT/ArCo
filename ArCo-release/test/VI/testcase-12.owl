@@ -9,7 +9,7 @@
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/testcase-12.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
+        <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</testannotationschema:hasActualResult>
         <testannotationschema:hasInferenceRequirement xml:lang="en">- The cultural entity has a comunication medium; 
 - The cultural entity has a conservation status which has good legibility; 
 - The cultural entity is accessible;
