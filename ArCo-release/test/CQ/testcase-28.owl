@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-28.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-28.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-28.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-28.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-28.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+Lan%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FLanguage%2F%3E%0D%0Aselect+distinct+*%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-dd%3AhasAffixedElement+%3Fele.%0D%0A+%3Fele+a+arco-dd%3AInscription.%0D%0A+%3Fele+Lan%3AhasLanguage+%3Flan.%0D%0A%0D%0A+FILTER+regex%28%3Flan%2C+%22italiano%22%2C+%22i%22%29%0D%0A%0D%0A%7D+LIMIT+100&amp;format=text%2Fhtml&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasCQ xml:lang="it">Quali beni hanno iscrizioni in lingua italiana? E quali in lingue diverse dall’italiano?</testannotationschema:hasCQ>
