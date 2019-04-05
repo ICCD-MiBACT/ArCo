@@ -9,7 +9,7 @@
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/testcase-17.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
+        <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</testannotationschema:hasActualResult>
         <testannotationschema:hasInferenceRequirement xml:lang="en">- The cultural entity has a coin issuance, which has an issuer; 
 - The cultural entity is coin member of a numismatic serie; 
 - The cultural entity has an affixed coin design, which subject is the coin issuer; 
