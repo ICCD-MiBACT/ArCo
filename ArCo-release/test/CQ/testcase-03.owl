@@ -7,7 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-03.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-03.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0ASELECT+*+%0D%0A%0D%0AWHERE%7B+%0D%0A%3Frecord+arco-catalogue%3AhasCatalogueRecordVersion+%3FrecordVersion+.+%0D%0A%3FrecordVersion+arco-catalogue%3AeditedAtTime+%3Ftime+.+%0D%0A%3Ftime+rdfs%3Alabel+%3FtimeLabel+%0D%0A%7D+%0D%0A%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
