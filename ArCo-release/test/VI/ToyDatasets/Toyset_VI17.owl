@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#"
+     xml:base="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:denotative-description="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:context-description="https://w3id.org/arco/ontology/context-description/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/arco/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntity">
+        <rdf:type rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
+        <context-description:hasCoinIssuance rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinIssuance"/>
+        <context-description:isCoinMemberOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityNumismaticSerie"/>
+        <denotative-description:hasAffixedElement rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinDesign"/>
+        <denotative-description:hasAffixedElement rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinLegend"/>
+        <denotative-description:hasConservationStatus rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityConservationStatus"/>
+        <denotative-description:hasCulturalPropertyAccessibility rdf:resource="https://w3id.org/arco/ontology/denotative-description/Accessible"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinDesign -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinDesign">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinDesign"/>
+        <context-description:hasSubject rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityIssuer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinIssuance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinIssuance">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/CoinIssuance"/>
+        <context-description:hasIssuer rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityIssuer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinLegend -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityCoinLegend">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CoinLegend"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityConservationStatus -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityConservationStatus">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+        <denotative-description:hasLegibility rdf:resource="https://w3id.org/arco/ontology/denotative-description/ImpossibleLegibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityIssuer -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityIssuer">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityNumismaticSerie -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI17.owl#CulturalEntityNumismaticSerie">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
