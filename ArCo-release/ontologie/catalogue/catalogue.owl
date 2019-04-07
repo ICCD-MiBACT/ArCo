@@ -19,7 +19,6 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue/">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
@@ -735,6 +734,12 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasRelatedAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
     
 
 

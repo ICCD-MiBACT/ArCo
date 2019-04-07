@@ -31,8 +31,8 @@
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
         <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:description xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</dc:description>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</rdfs:comment>
@@ -412,6 +412,7 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasAssociatedObject -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAssociatedObject">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isObjectAssociatedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il contesto di rinvenimento di un bene culturale (in particolare, un reperto antropologico) a un elemento associato al bene in quel contesto (es.: orecchini, scudo, resti di tessuto).</rdfs:comment>
@@ -753,6 +754,7 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasCopyright -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyright">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCopyrightOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità, per esempio un bene fotografico, ai diritti d&apos;autore detenuti da un agente, o allo stato di &quot;in pubblico dominio&quot; relativo all&apos;entità stessa, qualora i diritti siano scaduti.</rdfs:comment>
@@ -1202,13 +1204,14 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasInterventionRole -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasInterventionRole">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionRoleIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un&apos;attribuzione di autore/responsabilità al ruolo rivestito dall&apos;autore o dall&apos;ambito culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an authorship attribution to the agent&apos;s role.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:label xml:lang="en">intervention role</rdfs:label>
-        <rdfs:label xml:lang="it">ruolo nell&apos;intervento</rdfs:label>
+        <rdfs:label xml:lang="it">ha ruolo nell&apos;intervento</rdfs:label>
+        <rdfs:label xml:lang="en">has intervention role</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>AU/ATB/ATBR; AU/AUT/AUTR</a-cat:iccdNormTag>
@@ -1584,6 +1587,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPrimaryDocumentation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasDocumentation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPrimaryDocumentationOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene demoetnoantropologico immateriale alla sua documentazione primaria, ovvero la documentazione che restituisce il bene immateriale e ritenuta più rappresentativa.</rdfs:comment>
@@ -2556,6 +2560,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isCopyrightOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCopyrightOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copyright"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha diritti d&apos;autore&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;is copyright of&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is copyright of</rdfs:label>
+        <rdfs:label xml:lang="it">sono diritti d&apos;autore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isCulturalPropertyStageIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalPropertyStageIn">
@@ -2692,6 +2712,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isInterventionRoleIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionRoleIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha ruolo nell&apos;intervento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has intervention role&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is intervention role in</rdfs:label>
+        <rdfs:label xml:lang="it">è ruolo nell&apos;intervento</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isInventoryOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInventoryOf">
@@ -2795,6 +2831,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isObjectAssociatedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isObjectAssociatedTo">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietò inversa a &quot;ha oggetto associato&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has associated object&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is object associated to</rdfs:label>
+        <rdfs:label xml:lang="it">è oggetto associato a</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isOwnerIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isOwnerIn">
@@ -2844,6 +2896,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/ACQ/ACQN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isPrimaryDocumentationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPrimaryDocumentationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isDocumentationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha documentazione primaria&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has primary documentation&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">is primary documentation of</rdfs:label>
+        <rdfs:label xml:lang="it">è documentazione primaria di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
