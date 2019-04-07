@@ -314,24 +314,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalEntityTechnicalStatus -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalEntityTechnicalStatus">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è stato tecnico di entità culturale per&quot;, collega una caratteristica tecnica specifica (es.: marmo) allo stato di un&apos;entità culturale che ha quella caratteristica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a technical characteristic (e.g. marble) to the status of a cultural entity that has that characteristic.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="it">ha stato tecnico di entità culturale</rdfs:label>
-        <rdfs:label xml:lang="en">has cultural entity technical status</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAccessibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAccessibility">
@@ -1187,6 +1169,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega lo stato tecnico di un&apos;entità culturale a una delle caratteristiche tecniche dell&apos;entità relativamente a quello stato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a technical status, with respect to a specific entity (as a cultural entity) to one of the technical characteristics related to that status.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="it">include caratteristica tecnica</rdfs:label>
+        <rdfs:label xml:lang="en">includes technical characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/involvesAgeRange -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesAgeRange">
@@ -1221,23 +1221,6 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
-        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega lo stato tecnico di un&apos;entità culturale a una delle caratteristiche tecniche dell&apos;entità relativamente a quello stato.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property connects a technical status, with respect to a specific entity (as a cultural entity) to one of the technical characteristics related to that status.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="en">is cultural property technical status for</rdfs:label>
-        <rdfs:label xml:lang="it">è stato tecnico di entità culturale per</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/isFileFormatOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isFileFormatOf">
@@ -1249,6 +1232,23 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is file format of</rdfs:label>
         <rdfs:label xml:lang="it">è formato di estensione/compressione del file di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+        <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;include caratteristica tecnica&quot;, collega una caratteristica tecnica specifica (es.: marmo) allo stato di un&apos;entità culturale che ha quella caratteristica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a technical characteristic (e.g. marble) to the status of a cultural entity that includes that characteristic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is included in technical status</rdfs:label>
+        <rdfs:label xml:lang="it">è inclusa in stato tecnico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2288,7 +2288,7 @@ resource:ConservationStatus/0900750201-conservation-status-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCulturalEntityTechnicalStatusFor"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2855,14 +2855,14 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCulturalEntityTechnicalStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>

@@ -315,18 +315,18 @@
 								select="concat('Technical status of part of cultural property ', $itemURI)" />
 						</l0:name>
 						<xsl:for-each select="../MTCM">
-							<arco-dd:isCulturalEntityTechnicalStatusFor>
+							<arco-dd:includesTechnicalCharacteristic>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
-							</arco-dd:isCulturalEntityTechnicalStatusFor>
+							</arco-dd:includesTechnicalCharacteristic>
 						</xsl:for-each>
 						<xsl:for-each select="../MTCT">
-							<arco-dd:isCulturalEntityTechnicalStatusFor>
+							<arco-dd:includesTechnicalCharacteristic>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 								</xsl:attribute>
-							</arco-dd:isCulturalEntityTechnicalStatusFor>
+							</arco-dd:includesTechnicalCharacteristic>
 						</xsl:for-each>
 					</rdf:Description>
 					</xsl:for-each>

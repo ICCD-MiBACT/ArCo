@@ -11447,12 +11447,12 @@
 									select="concat('Technical status of element ', $parentPosition, ' affixed to cultural property ', $itemURI)" />
 							</l0:name>
 							<xsl:for-each select="./ISEM">
-							<arco-dd:isCulturalEntityTechnicalStatusFor>
+							<arco-dd:includesTechnicalCharacteristic>
 								<xsl:attribute name="rdf:resource">
 	            				<xsl:value-of
 									select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
 	            			</xsl:attribute>
-							</arco-dd:isCulturalEntityTechnicalStatusFor>
+							</arco-dd:includesTechnicalCharacteristic>
 							</xsl:for-each>
 						</rdf:Description>
 						<!-- Technical detail as an individual -->
@@ -11658,12 +11658,12 @@
 								select="concat('Technical status of inscription ', $parentPosition, ' of cultural property ', $itemURI)" />
 						</l0:name>
 						<xsl:for-each select="./ISRS">
-						<arco-dd:isCulturalEntityTechnicalStatusFor>
+						<arco-dd:includesTechnicalCharacteristic>
 							<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 								select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
-						</arco-dd:isCulturalEntityTechnicalStatusFor>
+						</arco-dd:includesTechnicalCharacteristic>
 						</xsl:for-each>						
 					</rdf:Description>
 					<!-- Technical detail as an individual -->
@@ -13937,7 +13937,7 @@
 							</l0:name>
 						</xsl:when>
 					</xsl:choose>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:choose>
             					<xsl:when test="schede/*/MT/MTC/MTCM">
@@ -13950,7 +13950,7 @@
             					</xsl:when>
             				</xsl:choose>
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 				</rdf:Description>
 				<!-- Technical characteristic as an individual -->
 				<rdf:Description>
@@ -14008,12 +14008,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/*/MT/MTC/MTCT)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14073,12 +14073,12 @@
 							<xsl:value-of
 								select="concat('Technical status of cultural property ', $itemURI)" />
 						</l0:name>
-						<arco-dd:isCulturalEntityTechnicalStatusFor>
+						<arco-dd:includesTechnicalCharacteristic>
 							<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 								select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/*/MT/MTC)))" />
             			</xsl:attribute>
-						</arco-dd:isCulturalEntityTechnicalStatusFor>
+						</arco-dd:includesTechnicalCharacteristic>
 						
 						
 						<!-- Mapping with the thesaurus of find materials -->
@@ -14165,12 +14165,12 @@
 							<xsl:value-of
 								select="concat('Technical status of cultural property ', $itemURI)" />
 						</l0:name>
-						<arco-dd:isCulturalEntityTechnicalStatusFor>
+						<arco-dd:includesTechnicalCharacteristic>
 							<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 								select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/OAC/MT/MTC/MTCI)))" />
             			</xsl:attribute>
-						</arco-dd:isCulturalEntityTechnicalStatusFor>
+						</arco-dd:includesTechnicalCharacteristic>
 					</rdf:Description>
 					<!-- Technical detail as an individual -->
 					<rdf:Description>
@@ -14206,12 +14206,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/*/MT/FRM)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14247,12 +14247,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/*/MT/FIL)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14290,12 +14290,12 @@
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
 					
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCF)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14332,12 +14332,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/FRM)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14373,12 +14373,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCP)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14414,12 +14414,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCC)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14456,12 +14456,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCU)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
@@ -14497,12 +14497,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/FVC/FVCM)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14538,12 +14538,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/FVM)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14578,12 +14578,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/F/MT/MTX)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14618,12 +14618,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCC)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 					
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
@@ -14658,12 +14658,12 @@
             			<xsl:value-of
 						select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
             		</xsl:attribute>
-					<arco-dd:isCulturalEntityTechnicalStatusFor>
+					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
 							select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCA)))" />
             			</xsl:attribute>
-					</arco-dd:isCulturalEntityTechnicalStatusFor>
+					</arco-dd:includesTechnicalCharacteristic>
 				</rdf:Description>
 				<!-- Technical detail as an individual -->
 				<rdf:Description>
