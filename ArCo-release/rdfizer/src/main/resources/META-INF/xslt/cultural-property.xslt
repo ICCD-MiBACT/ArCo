@@ -3207,11 +3207,11 @@
                <xsl:if test="schede/*/MT/MTC/MTCM">
  	            <xsl:choose>
 					<xsl:when test="(not(schede/*/MT/MTC/MTCP) or schede/*/MT/MTC/MTCP='intero bene' or schede/*/MT/MTC/MTCP='integrale' or schede/*/MT/MTC/MTCP='tutta' or schede/*/MT/MTC/MTCP='totale') or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'esemplar'))">
-						<arco-dd:isInCPTechnicalStatus>
+						<arco-dd:hasTechnicalStatus>
 	                	<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasMaterial>
  	                	<xsl:attribute name="rdf:resource">
             					<xsl:value-of
@@ -3235,11 +3235,11 @@
 				<!-- material of cultural property (VeAC) -->
 				<xsl:if test="not(starts-with(lower-case(normalize-space(schede/VeAC/MT/MTC/MTCF)), 'nr'))">
 				<xsl:if test="schede/VeAC/MT/MTC/MTCF">
-					<arco-dd:isInCPTechnicalStatus>
+					<arco-dd:hasTechnicalStatus>
 	                	<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasMaterial>
  	                <xsl:attribute name="rdf:resource">
  	                	<xsl:value-of
@@ -3249,15 +3249,15 @@
  	             </xsl:if>
  	             </xsl:if>
                  <!-- technique of cultural property (4.00) --> 
-                 <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
+                 <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'n.r'))">
                  <xsl:if test="schede/*/MT/MTC/MTCT">
                  	 <xsl:choose>
                  	 <xsl:when test="$sheetType='VeAC'">
-						<arco-dd:isInCPTechnicalStatus>
+						<arco-dd:hasTechnicalStatus>
 	                	<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                	</arco-dd:isInCPTechnicalStatus>
+ 	                	</arco-dd:hasTechnicalStatus>
  	                	<arco-dd:hasTechnique>
 		 	                <xsl:attribute name="rdf:resource">
 		 	                	<xsl:value-of
@@ -3266,11 +3266,11 @@
             			</arco-dd:hasTechnique>
 					</xsl:when>
 					<xsl:when test="(not(schede/*/MT/MTC/MTCP)) or schede/*/MT/MTC/MTCP='intero bene' or schede/*/MT/MTC/MTCP='integrale' or schede/*/MT/MTC/MTCP='tutta' or schede/*/MT/MTC/MTCP='totale' or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'esemplar'))">
-						<arco-dd:isInCPTechnicalStatus>
+						<arco-dd:hasTechnicalStatus>
 	                	<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasTechnique>
 		 	                <xsl:attribute name="rdf:resource">
 		 	                	<xsl:value-of
@@ -3294,11 +3294,11 @@
                  <!-- materialOrTechnique of cultural property (previous versions) -->
                  <xsl:if test="not(schede/*/MT/MTC/*) and (not(starts-with(lower-case(normalize-space(schede/*/MT/MTC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC)), 'n.r')))">
                  	<xsl:if test="schede/*/MT/MTC">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasMaterialOrTechnique>
 		 	                <xsl:attribute name="rdf:resource">
 		 	                	<xsl:value-of
@@ -3310,11 +3310,11 @@
                   <!-- materialOrTechnique of cultural property (OAC) -->
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/OAC/MT/MTC/MTCI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/OAC/MT/MTC/MTCI)), 'n.r'))">
                  	<xsl:if test="schede/OAC/MT/MTC/MTCI">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasMaterialOrTechnique>
 		 	                <xsl:attribute name="rdf:resource">
 		 	                	<xsl:value-of
@@ -3327,11 +3327,11 @@
                  <xsl:if test="schede/*/MT/FRM and not(schede/F/MT/FRM)">
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/FRM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/FRM)), 'n.r'))">
                  	<xsl:if test="schede/*/MT/FRM">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasShape>
  	                	<xsl:attribute name="rdf:resource">
 		 	                	<xsl:value-of
@@ -3344,11 +3344,11 @@
                  <!-- filigree of cultural property --> 
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/FIL)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/FIL)), 'n.r'))">
                  <xsl:if test="schede/*/MT/FIL">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasFiligree>
  	                	<xsl:attribute name="rdf:resource">
 		 	                	<xsl:value-of
@@ -3360,11 +3360,11 @@
                  <!-- file format of photograph (F) --> 
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCF)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCF)), 'n.r'))">
                  <xsl:if test="schede/F/MT/FVC/FVCF">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                 <arco-dd:hasFileFormat>
  	                	<xsl:attribute name="rdf:resource">
 		 	                	<xsl:value-of
@@ -3376,11 +3376,11 @@
                  <!-- photo size of photograph (F) --> 
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/F/MT/FRM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/FRM)), 'n.r'))">
                  <xsl:if test="schede/F/MT/FRM">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasPhotoSize>
  	                	<xsl:attribute name="rdf:resource">
             				<xsl:value-of
@@ -3392,11 +3392,11 @@
                  <!-- photo program of photograph (F) --> 
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCP)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCP)), 'n.r'))">
 					<xsl:if test="schede/F/MT/FVC/FVCP">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasPhotoProgram>
  	                	<xsl:attribute name="rdf:resource">
             				<xsl:value-of
@@ -3408,11 +3408,11 @@
                  <!-- storage method and colour depth of photograph (F) --> 
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCC)), 'n.r'))">
                  <xsl:if test="schede/F/MT/FVC/FVCC">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasStorageMethodOrColourDepth>
  	                	<xsl:attribute name="rdf:resource">
             				<xsl:value-of
@@ -3424,11 +3424,11 @@
                  <!-- resolution of photograph (F) --> 
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCU)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCU)), 'n.r'))">
                  <xsl:if test="schede/F/MT/FVC/FVCU">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasResolution>
  	                	<xsl:attribute name="rdf:resource">
             				<xsl:value-of
@@ -3440,11 +3440,11 @@
                  <!-- pixel dimension of photograph (F) --> 
                  <xsl:if test="not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/FVC/FVCM)), 'n.r'))">
                  <xsl:if test="schede/F/MT/FVC/FVCM">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasPixelDimension>
  	                	<xsl:attribute name="rdf:resource">
             				<xsl:value-of
@@ -3455,11 +3455,11 @@
                  </xsl:if>
                  <!-- mass storage of photograph (F) --> 
                  <xsl:if test="schede/F/MT/FVM and (not(starts-with(lower-case(normalize-space(schede/F/MT/FVM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/FVM)), 'n.r')))">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasMassStorage>
  	                	<xsl:attribute name="rdf:resource">
             			<xsl:value-of
@@ -3469,11 +3469,11 @@
                  </xsl:if>
                  <!-- colour of photograph (F) --> 
                  <xsl:if test="schede/F/MT/MTX and (not(starts-with(lower-case(normalize-space(schede/F/MT/MTX)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/F/MT/MTX)), 'n.r')))">
-                 	<arco-dd:isInCPTechnicalStatus>
+                 	<arco-dd:hasTechnicalStatus>
  	                	<xsl:attribute name="rdf:resource">
- 	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+ 	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
  	                	</xsl:attribute>
- 	                </arco-dd:isInCPTechnicalStatus>
+ 	                </arco-dd:hasTechnicalStatus>
  	                <arco-dd:hasPhotoColour>
  	                	<xsl:attribute name="rdf:resource">
             			<xsl:value-of
@@ -3497,11 +3497,11 @@
                 </xsl:if>
                 <!-- colour of garment (VeAC) --> 
                 <xsl:if test="schede/VeAC/MT/MTC/MTCC and (not(starts-with(lower-case(normalize-space(schede/VeAC/MT/MTC/MTCC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/VeAC/MT/MTC/MTCC)), 'n.r')))">
-                	<arco-dd:isInCPTechnicalStatus>
+                	<arco-dd:hasTechnicalStatus>
 	                	<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 	                	</xsl:attribute>
-	                </arco-dd:isInCPTechnicalStatus>
+	                </arco-dd:hasTechnicalStatus>
 	                 <arco-dd:hasGarmentColour>
  	                	<xsl:attribute name="rdf:resource">
             			<xsl:value-of
@@ -3511,11 +3511,11 @@
                 </xsl:if>
                 <!-- analysis of garment (VeAC) --> 
                 <xsl:if test="schede/VeAC/MT/MTC/MTCA and (not(starts-with(lower-case(normalize-space(schede/VeAC/MT/MTC/MTCA)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/VeAC/MT/MTC/MTCA)), 'n.r')))">
-                	<arco-dd:isInCPTechnicalStatus>
+                	<arco-dd:hasTechnicalStatus>
 	                	<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of select="concat($NS, 'CPTechnicalStatus/', $itemURI)" />
+	                		<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
 	                	</xsl:attribute>
-	                </arco-dd:isInCPTechnicalStatus>
+	                </arco-dd:hasTechnicalStatus>
 	                <arco-dd:hasGarmentAnalysis>
  	                	<xsl:attribute name="rdf:resource">
             			<xsl:value-of

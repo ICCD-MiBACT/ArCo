@@ -298,7 +298,12 @@ public class Converter {
 			
 			ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
             Model localModel = ModelFactory.createDefaultModel();
-            localModel.read(in, null, "RDF/XML");
+            try {
+            	localModel.read(in, null, "RDF/XML");
+            } catch(Exception e) {
+            	//System.out.println(rdfSource);
+            	//System.exit(-1);
+            }
             
             model.add(localModel);
 		}
