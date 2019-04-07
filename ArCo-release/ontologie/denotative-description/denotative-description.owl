@@ -178,6 +178,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasAccessory -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAccessory">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAccessoryOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Accessory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene musicale a un suo accessorio, ovvero un oggetto collegabile al bene musicale, sia nel caso in cui sia funzionale alla produzione del suono, sia nel caso in cui sia di supporto alla produzione del suono o alla conservazione o alla prassi musicale del bene.</rdfs:comment>
@@ -195,8 +196,11 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasAffixedElement -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasAffixedElement">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un elemento apposto sul bene (es.: emblema, timbro, iscrizione, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to an element affixed on it (e.g. inscription, stamp, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="it">ha elemento apposto sul bene</rdfs:label>
         <rdfs:label xml:lang="en">has element affixed to cultural property</rdfs:label>
@@ -405,6 +409,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasDedicatee -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasDedicatee">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isDedicateeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Dedication"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una dedica al dedicatario, cioè alla persona o ente cui è rivolta la dedica.</rdfs:comment>
@@ -422,6 +427,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa un bene culturale alla sua denominazione e/o dedicazione o, per la normativa FF, titolo, nel corso del tempo.</rdfs:comment>
@@ -526,6 +532,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasFontStyle -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFontStyle">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isFontStyleOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;iscrizione, uno stemma, un timbro, etc., al tipo di caratteri che viene adottato (es.: corsivo, grassetto, caratteri gotici, etc.).</rdfs:comment>
@@ -664,6 +671,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasLocationSubject -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLocationSubject">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isLocationSubjectOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;area rappresentata come soggetto di un bene culturale.</rdfs:comment>
@@ -1104,6 +1112,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasValue -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasValue">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isValueOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/MU/Value"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una misura al suo valore.</rdfs:comment>
@@ -1155,6 +1164,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasWritingSystem -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasWritingSystem">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isWritingSystemOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una iscrizione, un timbro, uno stemma, etc., al sistema di scrittura/alfabeto adottati.</rdfs:comment>
@@ -1204,6 +1214,22 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isAccessoryOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAccessoryOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Accessory"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha accessorio&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has accessory&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is accessory of</rdfs:label>
+        <rdfs:label xml:lang="it">è accessorio di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isClassifiedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy">
@@ -1215,6 +1241,54 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is classified by</rdfs:label>
         <rdfs:label xml:lang="it">è classificato da</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isDedicateeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDedicateeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Dedication"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha dedicatario&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has dedicatee&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is dedicatee of</rdfs:label>
+        <rdfs:label xml:lang="it">è dedicatario di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDesignationInTimeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/DesignationInTime"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha designazione nel tempo&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has designation in time&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is designation in time of</rdfs:label>
+        <rdfs:label xml:lang="it">è denominazione nel tempo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha elemento affisso&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has affixed element&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is element affixed on</rdfs:label>
+        <rdfs:label xml:lang="it">è elemento apposto su</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1238,6 +1312,22 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isFontStyleOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isFontStyleOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha tipo di caratteri&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has font style&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is font style of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di caratteri di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isIncludedInTechnicalStatus">
@@ -1249,6 +1339,22 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is included in technical status</rdfs:label>
         <rdfs:label xml:lang="it">è inclusa in stato tecnico</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isLocationSubjectOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isLocationSubjectOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha localizzazione rappresentata&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has location subject&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is location subject of</rdfs:label>
+        <rdfs:label xml:lang="it">è localizzazione rappresentata da</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1502,6 +1608,38 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
         <rdfs:label xml:lang="en">is technique of</rdfs:label>
         <rdfs:label xml:lang="it">è tecnica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isValueOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isValueOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/MU/Value"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha valore&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has value&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is value of</rdfs:label>
+        <rdfs:label xml:lang="it">è valore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isWritingSystemOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isWritingSystemOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/WritingSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha sistema di scrittura&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has writing system&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is writing system of</rdfs:label>
+        <rdfs:label xml:lang="it">è sistema di scrittura di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2016,7 +2154,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:comment xml:lang="it">Questa classe rappresenta un elemento (stemma, marchio, timbro, emblema, logo, iscrizione, etc.) apposto su un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an element (i.e. crest, trademark, postmark, inscription) which is affixed on a cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <rdfs:label xml:lang="en">Element affixed to cultural property</rdfs:label>
+        <rdfs:label xml:lang="en">Element affixed on cultural property</rdfs:label>
         <rdfs:label xml:lang="it">Elemento apposto su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
