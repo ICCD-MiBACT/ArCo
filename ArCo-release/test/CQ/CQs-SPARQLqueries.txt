@@ -1,0 +1,214 @@
+CQ1@en:
+CQ1@it: Quali eventi culturali hanno interessato il bene culturale X?
+SPARQL1:
+
+CQ2@en:
+CQ2: Quali sono le persone coinvolte nelle operazioni di redazione e aggiornamento della scheda sul bene culturale X e con quali ruoli?
+SPARQL2:
+
+CQ3@en:
+CQ3: Quando è stata redatta e aggiornata la scheda sul bene culturale X?
+SPARQL3:
+
+CQ4@en:
+CQ4@it: Quali sono tutte le localizzazioni in contenitori fisici che hanno riguardato il bene culturale X e di che tipo sono?
+SPARQL4:
+
+CQ5@en:
+CQ5@it: Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?
+SPARQL5:
+
+CQ6@en:
+CQ6@it: Qual è lo stato di conservazione del bene culturale X? E quali interventi sul bene sono stati proposti?
+SPARQL6:
+
+CQ7@en:
+CQ7@it: Qual è la documentazione fotografica allegata alla scheda del bene culturale X?
+SPARQL7:
+
+CQ8@en:
+CQ8@it: Qual è il codice univoco associato al bene culturale X?
+SPARQL8:
+
+CQ9@en:
+CQ9@it: Quali sono tutti gli autori o gli ambiti culturali attribuiti al bene culturale X? E con quale ruolo? E quale motivazione giustifica l'attribuzione?
+SPARQL9:
+
+CQ10@en:
+CQ10@it: A quando risale la realizzazione del bene culturale X? E quale motivazione giustifica la cronologia?
+SPARQL10:
+
+CQ11@en:
+CQ11@it: Quali sono le coordinate geografiche del bene culturale X?
+SPARQL11:
+
+CQ12@en:
+CQ12@it: Quali sono gli usi del bene culturale mobile X?
+SPARQL12:
+
+CQ13@en:
+CQ13@it: Quali sono i proprietari precedenti del bene culturale X?
+SPARQL13:
+
+CQ14@en:
+CQ14@it Quali sono le entità che rappresentano le fasi preparatorie del bene culturale X?
+SPARQL14:
+
+CQ15@en:
+CQ15@it: Quali sono i beni culturali costruiti con l'argilla?
+SPARQL15:
+
+CQ16@en:
+CQ16@it: Allineamento della CulturalPropertyDefinition dei reperti archeologici con il thesaurus per la definizione del bene (scheda RA)
+SPARQL16:
+
+CQ17@en:
+CQ17@it: Chi detiene i diritti d’autore della fotografia X?
+SPARQL17:
+
+CQ18@en:
+CQ18@it: Qual è il codice identificativo della collezione X? E quali beni ne fanno parte?
+SPARQL18:
+
+CQ19@en:
+CQ19@it: Quali sono i beni culturali corredati di documentazione video-cinematografica?
+SPARQL19:
+
+CQ20@en:
+CQ20@it: Di quale unità archivistica (fondo e/o serie e/o sottoserie) fa parte il bene culturale X?
+In quale posizione (es.: frontespizio, copertina, etc.) di una specifica pubblicazione è stata riprodotta la stampa X?
+SPARQL20:
+
+CQ21@en:
+CQ21@it: Quali interventi conservativi e non sono stati effettuati sui beni dopo l’estate del 2016 nel comune di Amatrice? 
+SPARQL21:
+
+CQ22@en:
+CQ22@it: Quali beni hanno subito delle contraffazioni?
+SPARQL22:
+
+CQ23@en:
+CQ23@it: Quali beni hanno come soggetto la Sfinge?
+SPARQL23:
+
+CQ24@en:
+CQ24@it: Quali sono le licenze, privilegi, autorizzazioni di un bene culturale X?
+SPARQL24:
+
+CQ25@en:
+CQ25@it: Quali sono le dimensioni della fotografia X? (analogico)
+SPARQL25:
+
+CQ26@en:
+CQ26@it: Quali sono le dimensioni della fotografia X? (digitali)
+SPARQL26:
+
+CQ27@en:
+CQ27@it: Qual è il dedicatario della dedica presente sul bene X?
+SPARQL27:
+
+CQ28@en:
+CQ28@it: Quali beni hanno iscrizioni in lingua italiana? E quali in lingue diverse dall'italiano?
+SPARQL28:
+
+CQ29@en:
+CQ29@it: Quali monete hanno uno stato di conservazione che ne impedisce la leggibilità?
+SPARQL29:
+
+CQ30@en:
+CQ30@it: Da dove è stato estratto il campione dal bene archeologico X?
+SPARQL30:
+
+CQ31@en:
+CQ31@it: Su quale supporto si trova l’iscrizione del bene X?
+SPARQL31:
+
+CQ32@en:
+CQ32@it: Di che tipologia sono i beni culturali che hanno uno scopo funzionale magico?
+SPARQL32:
+
+CQ33@en:
+CQ33@it: Quali sono gli accessori del bene musicale X?
+SPARQL33:
+
+CQ34@en:
+CQ34@it: Quanti beni culturali di tipo “chiesa” ci sono nella regione Emilia-Romagna?
+SPARQL34:
+
+CQ35@en:
+CQ35@it: Per quale motivo l'accesso ai dati contenuti nella scheda del bene X ha un livello di privacy media?
+SPARQL35:
+
+CQ36@en:
+CQ36@it: Quali sono i sistemi di scrittura che sono stati adottati in elementi apposti (iscrizioni, stemmi, marchi, emblemi, etc.) sui beni culturali conservati nella regione Puglia e la cui creazione risale al VI secolo a.C.?
+SPARQL36:
+
+CQ37@en:
+CQ37@it: Quali sono i beni culturali complessi con un numero di elementi componenti superiore a 2?
+SPARQL37:
+
+CQ38@en:
+CQ38@it: Quali sono stati gli organizzatori degli eventi del bene x?
+SPARQL38:
+
+CQ39@en:
+CQ39@it: Qual è il tempo e il luogo di un esibizione che ha compreso il bene culturale x?
+SPARQL39:
+
+CQ40@en:
+CQ40@it: Quali sono i beni culturali che hanno BNB come tipo di scheda catalografica?
+SPARQL40:
+
+CQ41@en:
+CQ41@en:
+CQ41@it: Quali sono le schede catalografiche che sono state editate dal 2012 in poi?
+SPARQL41:
+
+CQ42@en:
+CQ42@it: Quali sono tutte le versioni della scheda catalografica di un bene culturale x e in che anno sono state fatte?
+SPARQL42:
+
+CQ43@en:
+CQ43@it: Quali sono gli operatori (persone) che hanno lavorato alla scheda catalografica del bene culturale x nella sua storia?
+SPARQL43:
+
+CQ44@en:
+CQ44@it: Qual è il progetto di riferimento nel quale è stata prodotta la scheda del bene culturale x?
+SPARQL44:
+
+CQ45@en:
+CQ45@it: Qual è il tipo di contesto geografico nel quale è allocato il bene culturale x?
+SPARQL45:
+
+CQ46@en:
+CQ46@it: Quali sono i beni culturali che hanno un contesto geografico subacqueo?
+SPARQL46:
+
+CQ47@en:
+CQ47@it: Qual è l'area storica-geografica del bene culturale X?
+SPARQL47:
+
+CQ48@en:
+CQ48@it: Qual è il bene culturale che è stato acquisito ad un'altitudine inferiore a 100m ed ha uno stato di conservazione "buono"? Inoltre di che tipo è la sua scheda catalografica e come è stato acquisito?
+SPARQL48:
+
+CQ49@en:
+CQ49@it: Quali sono le monete che hanno hanno delle iscrizioni?
+SPARQL49:
+
+CQ50@en:
+CQ50@it: Qual è il medium e il metodo di implementazione di un bene culturale x e qual è il numero di partecipanti di sesso maschile, femminile e bambini?
+SPARQL50:
+
+CQ51@en:
+CQ51@it: Qual è il reperto antropologico che appartiene ad un individuo di sesso femminile, che è morto all'età di 21 anni? Qual è la sua tassonomia e qual è il contesto in cui è stato ritrovato? 
+SPARQL51:
+
+CQ52@en:
+CQ52@it: Quale bene culturale x è stato ritrovato tramite fonte orale?
+SPARQL52:
+
+CQ53@en:
+CQ53@it: Qual è il reperto antropologico che appartiene ad un individuo di sesso femminile, che è morto all'età di 21 anni? Qual'è la sua tassonomia e qual è il contesto in cui è stato ritrovato? 
+SPARQL53:
+ 
