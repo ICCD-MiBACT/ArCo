@@ -543,7 +543,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFunctionalPurpose">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto (es bene culturale, apparato iconografico/decorativo o elemento apposto su un bene culturale come un&apos;iscrizione) al suo scopo funzionale (decorativo, religioso, simbolico, magico-offensivo, etc.), inteso come funzione che deve svolgere.</rdfs:comment>
@@ -646,7 +646,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasLegibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLegibility">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega lo stato di conservazione di un bene numismatico al suo stato di leggibilità.</rdfs:comment>
