@@ -3,11 +3,11 @@ CQ1@it: Quali eventi culturali hanno interessato il bene culturale X?
 SPARQL1:
 
 CQ2@en:
-CQ2: Quali sono le persone coinvolte nelle operazioni di redazione e aggiornamento della scheda sul bene culturale X e con quali ruoli?
+CQ2@it: Quali sono le persone coinvolte nelle operazioni di redazione e aggiornamento della scheda sul bene culturale X e con quali ruoli?
 SPARQL2:
 
 CQ3@en:
-CQ3: Quando è stata redatta e aggiornata la scheda sul bene culturale X?
+CQ3@it: Quando è stata redatta e aggiornata la scheda sul bene culturale X?
 SPARQL3:
 
 CQ4@en:
@@ -209,6 +209,6 @@ CQ52@it: Quale bene culturale x è stato ritrovato tramite fonte orale?
 SPARQL52:
 
 CQ53@en:
-CQ53@it: Qual è il reperto antropologico che appartiene ad un individuo di sesso femminile, che è morto all'età di 21 anni? Qual'è la sua tassonomia e qual è il contesto in cui è stato ritrovato? 
+CQ53@it: Qual è il reperto antropologico che appartiene ad un individuo di sesso femminile, che è morto all'età di 21 anni? Qual è la sua tassonomia e qual è il contesto in cui è stato ritrovato? 
 SPARQL53:
  
