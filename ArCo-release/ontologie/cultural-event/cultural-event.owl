@@ -116,7 +116,7 @@
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un evento culturale a un agente che riveste un ruolo relativo all&apos;evento. La relazione tra il ruolo e l’agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. La relazione è poi specializzata da sottoproprietà. Nell’ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l’ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class relates a cultural event to an agent playing a role related to that cultural event.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha agente collegato a evento culturale</rdfs:label>
         <rdfs:label xml:lang="en">has agent related to cultural event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -133,7 +133,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento culturale all&apos;ente o soggetto che ha organizzato quell&apos;evento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural evento to the agency or person that is the organiser of that event.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha ente o soggetto organizzatore</rdfs:label>
         <rdfs:label xml:lang="en">has event organiser</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -152,7 +152,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, all&apos;evento immediatamente successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to the immediate next event.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento immediatamente successivo</rdfs:label>
         <rdfs:label xml:lang="en">has immediate next event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -170,7 +170,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, all&apos;evento immediatamente precedente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to the immediate previous event.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento immediatamente precedente</rdfs:label>
         <rdfs:label xml:lang="en">has immediate previous event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -187,7 +187,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente, inteso come collezione di eventi, a uno degli eventi membri della collezione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recurrent event, as a collection of events, to one of its member events.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento membro</rdfs:label>
         <rdfs:label xml:lang="en">has member event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -205,7 +205,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, a uno degli eventi successivi.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the next events.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento successivo</rdfs:label>
         <rdfs:label xml:lang="en">has next event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -223,7 +223,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, a uno degli eventi precedenti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the previous events.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha evento precedente</rdfs:label>
         <rdfs:label xml:lang="en">has previous event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -243,7 +243,7 @@
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente al periodo di tempo massimo che intercorre tra uno dei suoi eventi membri e quello successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recurrent event to the maximum time period that elapses between one of its member events and the next one.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">has time period</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -259,7 +259,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriod"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come collezione di eventi, al periodo di tempo che intercorre tra l&apos;evento stesso e l&apos;evento successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the time period that is between that event and the next one.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha periodo di tempo prima di evento successivo</rdfs:label>
         <rdfs:label xml:lang="en">has time period before next event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -276,7 +276,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il periodo di tempo massimo che intercorre tra un evento membro di un evento ricorrente, inteso come collezione di eventi, e un evento membro successivo alla sua unità di misura.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the maximum time period that elapses between one of the member events of a recurrent event, as a collection of events, and the next one, to the unit of measurement associated to it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha unità di misura di periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">has time period measurement unit</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -293,7 +293,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/UnifyingFactor"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente a un fattore unificante.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recurrent event to a unifying factor.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">ha fattore unificante</rdfs:label>
         <rdfs:label xml:lang="en">has unifying factor</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -307,7 +307,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isEventMemberOf">
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:isDefinedBy xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come una collezione di eventi, all&apos;evento ricorrente di cui è membro.</rdfs:isDefinedBy>
         <rdfs:isDefinedBy xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the recurrent event that is member of.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">is event member of</rdfs:label>
@@ -360,7 +360,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il luogo e il tempo di un evento culturale, quando espressi unitamente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the time and location of a cultural event, when they are recorded together.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">event time and location</rdfs:label>
         <rdfs:label xml:lang="it">tempo e luogo dell&apos;evento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -378,7 +378,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il valore del periodo di tempo massimo che intercorre tra il verificarsi di due eventi membri di un evento ricorrente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the value associated to the maximum time period that elapses between one of the member events of a recurrent event, as a collection of events, and the next one.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">time period value</rdfs:label>
         <rdfs:label xml:lang="it">valore del periodo di tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -410,7 +410,7 @@
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEvent"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una mostra, come sottocategoria di un generico evento culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an exhibition, as a particular type of cultural event.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">Exhibition</rdfs:label>
         <rdfs:label xml:lang="it">Mostra</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -471,7 +471,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento ricorrente, ovvero un evento inteso come collezione di eventi, posti in una sequenza temporale, e caratterizzato da almeno un fattore unificante (es.: il topic, il luogo).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a recurrent event, that is an event as a collection of sequential events and identified by at least one unifying factor (e.g.: topic, place).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">Evento ricorrente</rdfs:label>
         <rdfs:label xml:lang="en">Recurrent event</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -498,7 +498,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il periodo di tempo massimo che intercorre tra un evento membro di un evento ricorrente, inteso come collezione di eventi, e un evento membro successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the maximum time period that elapses between one of the member events of a recurrent event, as a collection of events, and the next one.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">Periodo di tempo</rdfs:label>
         <rdfs:label xml:lang="en">Time period</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -513,7 +513,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità di misura associata al periodo di tempo massimo che intercorre tra un evento membro di un evento ricorrente, inteso come collezione di eventi, e un evento membro successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the unit of measurement associated to the maximum time period that elapses between one of the member events of a recurrent event, as a collection of events, and the next one.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="en">Time period measurement unit</rdfs:label>
         <rdfs:label xml:lang="it">Unità di misura del periodo di tempo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -528,7 +528,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un fattore unificante, ovvero un fattore che rappresenta un invariante comune a tutti gli eventi che sono membri dell&apos;evento ricorrente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a unifying factor, that is a factor that represents an invariant common to all the events that are members of the recurrent event.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:label xml:lang="it">Fattore unificante</rdfs:label>
         <rdfs:label xml:lang="en">Unifying factor</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>

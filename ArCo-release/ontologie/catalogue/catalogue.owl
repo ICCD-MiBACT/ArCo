@@ -99,7 +99,7 @@
     <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag">
         <rdfs:comment xml:lang="it">Questa proprietà permette di annotare il campo o i campi della normativa ICCD corrispondenti a una determinata classe o proprietà dell&apos;ontologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property annotates the field or the fields of the ICCD regulation to which a specific class or property refers.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">ICCD norm tag</rdfs:label>
         <rdfs:label xml:lang="it">acronimo normativa ICCD</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -127,7 +127,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà è stata creata come proprietà generica di sottoproprietà specifiche, e rappresenta la relazione tra un&apos;entità che descrive un&apos;altra entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property was created as a generic property for specific subproperties, and represents the relationship between an entity that describes another entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <rdfs:label xml:lang="it">descrive</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -145,7 +145,7 @@
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="en">Property used to associate the catalogue record with the cultural property that the catalogue record describes.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà che consente di associare la scheda di catalogo al bene culturale che essa descrive.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <rdfs:label xml:lang="it">descrive</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -161,7 +161,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record version with the time interval in which it was edited.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà che associa una versione di una scheda di catalogo all&apos;intervallo temporale in cui è stata compilata.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">compilato al tempo</rdfs:label>
         <rdfs:label xml:lang="en">edited at time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -178,7 +178,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una scheda di catalogo al profilo di accesso ai dati (basso, medio, alto).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha profilo di accesso</rdfs:label>
         <rdfs:label xml:lang="en">has access profile</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -196,7 +196,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento all&apos;ente/il soggetto responsabile nel SIGECweb della redazione del modulo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an additional form to the responsible agent of that form in the SIGECweb.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile di modulo di approfondimento</rdfs:label>
         <rdfs:label xml:lang="en">has additional form responsible agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -213,7 +213,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento al tipo di modulo (Unità Stratigrafica, Tipo Murario, Epigrafia).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an additional form to its type (Stratigraphic Unit, Epigraphy, Wall Typology).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha tipo di modulo di approfondimento</rdfs:label>
         <rdfs:label xml:lang="en">has additional form type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -230,7 +230,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record with an identifier created in the context of information systems other than ICCD&apos;s SIGECweb.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà collega una scheda di catalogo a un codice che identifica la scheda di catalogo nell&apos;ambito di altri sistemi informativi, assegnato da enti diversi da ICCD.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha altro codice identificativo</rdfs:label>
         <rdfs:label xml:lang="en">has alternative identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -248,7 +248,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record to one of its versions (e.g. after update)</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà che permette di collegare una scheda di catalogo, intesa come oggetto informativo che descrive un bene culturale, a una sua versione (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha versione</rdfs:label>
         <rdfs:label xml:lang="en">has version</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -266,7 +266,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/RO/TimeIndexedRole"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare una particolare versione di una scheda al ruolo nel tempo che un agente esercita nell&apos;ambito della redazione, dell&apos;aggiornamento o revisione della scheda.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to associate a particular version of a catalogue record to the role in time of an agent that plays a role in updating the catalogue record.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ruolo nel tempo</rdfs:label>
         <rdfs:label xml:lang="en">has role in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -288,7 +288,7 @@
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione di una scheda di catalogo a un agente che riveste un ruolo nelle attività di catalogazione di quella scheda. La relazione tra il ruolo e l&apos;agente che lo riveste è espressa, in maniera generica, nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Questa relazione è poi specializzata da sottoproprietà. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l’ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to associate a catalogue record to an agent playing a role in cataloguing activities.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha agente coinvolto nella catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -304,7 +304,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare una scheda di catalogo al suo livello di catalogazione.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha livello di catalogazione</rdfs:label>
         <rdfs:label xml:lang="en">has cataloguing level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -323,7 +323,7 @@
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una scheda in cui si analizza un bene culturale per finalità diverse da quella della catalogazione del patrimonio all&apos;Ente o al soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property record to the agency or the person that created that record or manages the database where the record is.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha agente responsabile della scheda su bene culturale</rdfs:label>
         <rdfs:label xml:lang="en">has cultural property record responsible agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -340,7 +340,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione, relativa a trascrizione per informatizzazione, di una scheda di catalogo al relativo operatore. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha operatore di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription operator</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -357,7 +357,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione, relativa a trascrizione per informatizzazione, di una scheda di catalogo al relativo ente/soggetto responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile di trascrizione per informatizzazione</rdfs:label>
         <rdfs:label xml:lang="en">has digital transcription responsible agent</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -378,7 +378,7 @@
         <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record version to its immediate previous version.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente precedente.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha la versione precedente</rdfs:label>
         <rdfs:label xml:lang="en">has immediate previous version</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -394,7 +394,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo funzionario responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha funzionario responsabile</rdfs:label>
         <rdfs:label xml:lang="en">has official in charge</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -415,7 +415,7 @@
         <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record version to its previous version.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione precedente.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha versione precedente</rdfs:label>
         <rdfs:label xml:lang="en">has previous version</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -431,7 +431,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il profilo di accesso di una scheda catalografica al livello di riservatezza dei dati contenutevi (basso livello di riservatezza, alto livello di riservatezza, medio livello di riservatezza).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">halivello di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">has privacy level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -448,7 +448,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyReason"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno specifico profilo d&apos;accesso ai dati di una scheda catalografica alla motivazione che ha determinato l&apos;adozione di quel profilo d&apos;accesso (es.: scheda contenente dati liberamente accessibili, scheda contenente dati personali, scheda di bene di proprietà privata, scheda di bene a rischio, scheda di bene non adeguatamente sorvegliabile)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha motivazione di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">has privacy reason</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -465,7 +465,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo responsabile ricerca e redazione. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile ricerca e redazione</rdfs:label>
         <rdfs:label xml:lang="en">has responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -482,7 +482,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo referente verifica scientifica. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha referente verifica scientifica</rdfs:label>
         <rdfs:label xml:lang="en">has scientific director</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -499,7 +499,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo funzionario responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha funzionario responsabile di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update official in charge</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -516,7 +516,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo ente/soggetto responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha ente o soggetto responsabile</rdfs:label>
         <rdfs:label xml:lang="en">has responsible agency or person</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -533,7 +533,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo responsabile ricerca e redazione. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha responsabile di ricerca e redazione di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update responsible research and compilation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -550,7 +550,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo referente verifica scientifica. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">ha referente verifica scientifica di aggiornamento</rdfs:label>
         <rdfs:label xml:lang="en">has update scientific revisor</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -567,7 +567,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="en">Property, inverse of &quot;has catalogue record version&quot;, used to associate a catalogue record version (e.g. after update) to the catalogue record.</rdfs:comment>
         <rdfs:comment xml:lang="it">Proprietà, inversa di &quot;ha versione&quot;, che permette di collegare una versione  (corrispondente a un particolare stato dovuto a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo alla scheda di catalogo intesa come oggetto informativo che descrive un bene culturale.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is catalogue record version of</rdfs:label>
         <rdfs:label xml:lang="it">è versione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -583,7 +583,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:comment xml:lang="en">Property, inverse of &quot;has catalogue record version role in time&quot;, used to associate a role in time to the agent playing that role, in the updating of a particular version of a catalogue record.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha ruolo nel tempo&quot;, permette di associare il ruolo nel tempo che un agente esercita nell&apos;ambito della redazione, dell&apos;aggiornamento o revisione della scheda a una particolare versione di una scheda.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is role in time of</rdfs:label>
         <rdfs:label xml:lang="it">è ruolo nel tempo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -600,7 +600,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente coinvolto nella catalogazione&quot;, rappresenta la relazione che collega un agente che riveste un ruolo nelle attività di catalogazione di una scheda di catalogo alla scheda stessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has cataloguin agent&quot;, is used to associate an agent playing a role in cataloguing activities to the catalogue record.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is cataloguing agent of</rdfs:label>
         <rdfs:label xml:lang="it">è agente coinvolto nella catalogazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -616,7 +616,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa della proprietà &quot;descrive&quot;, è stata creata come proprietà generica di sottoproprietà specifiche, e rappresenta la relazione tra un&apos;entità descritta da un&apos;altra entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse property of &quot;describes&quot;, was created as a generic property for specific subproperties, and represents the relationship between an entity described by another entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -633,7 +633,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa di &quot;descrive&quot;, permette di associare un bene culturale alla scheda di catalogo che lo descrive.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;describes&quot;, is used to associate a cultural property with the catalogue record that describes it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
         <rdfs:label xml:lang="it">è descritto da</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -652,7 +652,7 @@
         <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record version to its immediate next version.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda alla sua versione immediatamente successiva.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is immediate previous version of</rdfs:label>
         <rdfs:label xml:lang="it">è la versione precedente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -671,7 +671,7 @@
         <opla:isNativeTo rdf:resource="https://w3id.org/arco/pattern/catalogue-record-sequence/"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record version one of its next version.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa proprietà associa una versione di una scheda a una sua versione successiva.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is previous version of</rdfs:label>
         <rdfs:label xml:lang="it">è versione precedente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -687,7 +687,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un modulo di approfondimento in relazione con il bene in esame.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to an additional form.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is related to additional form</rdfs:label>
         <rdfs:label xml:lang="it">è collegato a modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -704,7 +704,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un modulo informativo in relazione con il bene in esame.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to an information form.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is related to information form</rdfs:label>
         <rdfs:label xml:lang="it">è collegato a modulo informativo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -721,7 +721,7 @@
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha agente responsabile di scheda su bene culturale&quot;, collega l&apos;Ente o il soggetto che ha prodotto la scheda o che gestisce la banca dati di cui la scheda fa parte alla scheda stessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has cultural property record responsible agent&quot;, relates the agency or the person that created the record or manages the database where the record is to the record itself.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is responsible agent of cultural property record</rdfs:label>
         <rdfs:label xml:lang="it">è ente responsabile della scheda su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -787,7 +787,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un codice assegnato a un&apos;entità dall&apos;ICCD. Si specializza in sottoproprietà (es.: codice univoco ICCD dell&apos;autore, codice univoco ICCD del riferimento bibliografico, etc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the identifier assigned to a cultural property by ICCD.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">ICCD identifier</rdfs:label>
         <rdfs:label xml:lang="it">codice univoco ICCD</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -805,7 +805,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare un identificativo a un modulo di approfondimento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the additional form identifier.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">additional form identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -824,7 +824,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare l&apos;identificativo a una scheda catalografica che descrive un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the identifier of a catalogue record describing a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">catalogue record identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo della scheda di catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -859,7 +859,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un codice ICCD eventualmente soppresso per motivi di diversa natura, utile per poter ricercare e consultare le schede pregresse nell&apos;Archivio storico gestito dall&apos;Istituto o da altri Enti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the ICCD&apos;s identifier deleted for many reasons, used to search for obsolete catalogue records.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">codice ICCD soppresso</rdfs:label>
         <rdfs:label xml:lang="en">deleted ICCD identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -878,7 +878,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare l&apos;identificativo a un modulo informativo che è collegato a un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property links an identifier to an information form related to a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">identificativo del modulo informativo</rdfs:label>
         <rdfs:label xml:lang="en">information form identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -897,7 +897,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta un identificativo che individua un&apos;entità in modo univoco nell&apos;ambito di un repertorio locale. Si specializza in sottoproprietà (es.: identificativo dell&apos;autore nell&apos;ambito di un repertorio locale, identificativo dell&apos;indagine archeologica nell&apos;ambito di un repertorio locale, etc.)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents a unique identifier of an entity, within a local inventory.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">identificativo di repertorio locale</rdfs:label>
         <rdfs:label xml:lang="it">local identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -913,7 +913,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali informazioni provenienti da schede pregresse redatte sulla base di standard obsoleti, per le quali non è stato possibile effettuare il trasferimento nel tracciato della scheda aggiornato, secondo la sintassi: “acronimocampo: valore; acronimocampo: valore”</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents information extracted from versions of a catalogue record using obsolete standards.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">dati pregressi recuperati</rdfs:label>
         <rdfs:label xml:lang="en">recovered data</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -937,7 +937,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il progetto nell&apos;ambito del quale è stata prodotta una scheda, quella a cui si associa un codice alternativo, assegnato da enti diversi da ICCD, o quella che analizza un bene culturale per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the reference project of a record about a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">progetto di riferimento</rdfs:label>
         <rdfs:label xml:lang="en">reference project</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -956,7 +956,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo di sistema che viene associato all&apos;interno del sistema Sigec al file xml contenente una scheda di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the identifier associated in the context of the SIGECweb to the xml file containing a catalogue record.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">identificativo di sistema</rdfs:label>
         <rdfs:label xml:lang="en">system record code</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1018,7 +1018,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il profilo di accesso ai dati contenuti in una scheda catalografica, con cui si forniscono indicazioni circa la diffusione pubblica dei dati catalografici sul web.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the access profile to the data recorded in a catalogue record, giving instructions for public dissemination of data on the web.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Access profile</rdfs:label>
         <rdfs:label xml:lang="it">Profilo di accesso</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1053,7 +1053,7 @@
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/catalogue/InformationForm"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un modulo di approfondimento, utile a trattare secondo un approccio specialistico specifici aspetti del bene in esame (Documenti Epigrafici; Tipi Murari, Unità Stratigrafiche)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an additional form, that describes specific information about a cultural property (epigraphic documents, stratigraphy, unit, wall typology)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Additional form</rdfs:label>
         <rdfs:label xml:lang="it">Modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1069,7 +1069,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di modulo di approfondimento (Unità Stratigrafica, Tipo Murario, Epigrafia)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the additional form type (Stratigraphic Unit, Wall Typology, Epigraphy)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Additional form type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di modulo di approfondimento</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1091,7 +1091,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un codice che identifica la scheda di catalogo nell&apos;ambito di altri sistemi informativi, assegnato da enti diversi da ICCD.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an identifier of a catalogue record in information systems other than ICCD.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Alternative Identifier</rdfs:label>
         <rdfs:label xml:lang="it">Codice alternativo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1161,7 +1161,7 @@ resource:CatalogueRecordS/0500212038
         core:note  &quot;Numero di negativo del Museo Civico: MCBas G/ DLXXXIX/ 3775&quot; .</dc:description>
         <rdfs:comment xml:lang="it">Rappresenta una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni, e che può avere più versioni (in seguito ad aggiornamenti e revisioni).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a catalogue record, that is a descriptive model collecting and organising information on a cultural property, and which can have more than one version (after editing and updating).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda di catalogo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1176,7 +1176,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive architettura.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Architecture.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Architecture catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Architettura</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1191,7 +1191,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti antropologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Anthropological materials.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Anthropological materials catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Reperti antropologici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1206,7 +1206,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici immateriali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Intangible demo-ethno-anthropological heritage.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Intangible demo-ethno-anthropological heritage catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici immateriali</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1221,7 +1221,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni demoetnoantropologici materiali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Tangible demo-ethno-anthropological heritage.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">Scheda Beni demoetnoantropologici materiali</rdfs:label>
         <rdfs:label xml:lang="en">Tangible demo-ethno-anthropological heritage catalogue record</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1236,7 +1236,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Botanica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - botany.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Natural heritage - botany catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Botanica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1251,7 +1251,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Mineralogia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - mineralogy.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Natural heritage - mineralogy catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Mineralogia</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1266,7 +1266,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Paleontologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - paleontology.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Natural heritage - paleontology catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Paleontologia</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1281,7 +1281,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Petrologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - petrology.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Natural heritage - petrology catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Petrologia</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1296,7 +1296,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Planetologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - planetary science.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Natural heritage - planetary science catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Planetologia</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1311,7 +1311,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni naturalistici-Zoologia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - zoology.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Natural heritage - zoology catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni naturalistici-Zoologia</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1326,7 +1326,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive complessi archeologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - archaeological complexes.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Archaeological complexes catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Complessi archeologici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1341,7 +1341,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive centri/nuclei storici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - historic cities / town centres.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Historic cities / town centres catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Centri/nuclei storici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1356,7 +1356,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive disegni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - drawings.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Drawings catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Disegni</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1371,7 +1371,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fotografia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Photography.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Photograph catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Fotografia</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1386,7 +1386,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive fondi fotografici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Photographic Fonds.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Photographic Fonds catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Fondi fotografici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1401,7 +1401,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive monumenti archeologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Archaeological monuments.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Archaeological monuments catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Monumenti archeologici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1416,7 +1416,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive matrici incise.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Printing plates.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Printing plates catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Matrici incise</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1431,7 +1431,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive beni numismatici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Numismatic properties.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Numismatic properties catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Beni numismatici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1446,7 +1446,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Artworks.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Artworks catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Opere/oggetti d&apos;arte</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1461,7 +1461,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive opere/oggetti d&apos;arte contemporanea.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Contemporary artworks.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Contemporary artworks catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda opere/oggetti d&apos;arte contemporanea</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1476,7 +1476,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive parchi/giardini.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Parks / Gardens.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Parks/Gardens catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Parchi/giardini</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1491,7 +1491,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive il patrimonio scientifico e tecnologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Scientific and technological heritage.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">Scheda Patrimonio scientifico e tecnologico</rdfs:label>
         <rdfs:label xml:lang="en">Scientific and technological heritage catalogue record</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1506,7 +1506,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive reperti archeologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Archaeological objects.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Archaeological objects catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Reperti archeologici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1521,7 +1521,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive stampe.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Prints.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Prints catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Stampe</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1536,7 +1536,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive saggi stratigrafici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Stratigraphic records.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">Scheda Saggi stratigrafici</rdfs:label>
         <rdfs:label xml:lang="en">Stratigraphic records catalogue record</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1551,7 +1551,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive siti archeologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Archaeological sites.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Archaeological sites catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Siti archeologici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1566,7 +1566,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Musical instruments.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Musical instruments catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Strumenti musicali</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1581,7 +1581,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive strumenti musicali-organo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Organs.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Musical instruments - Organs catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Strumenti musicali-Organo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1596,7 +1596,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive tabella materiali archeologici.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Archaeological materials tables.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Archaeological materials tables catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Tabella materiali archeologici</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1611,7 +1611,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive vestimenti antichi/contemporanei.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the catalogue record describing Historic and contemporary garments.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Historic and contemporary garments catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Vestimenti antichi/contemporanei</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1674,7 +1674,7 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Rappresenta una versione (relativa a operazioni di redazione, aggiornamento, revisione) di una scheda di catalogo, cioè un modello descrittivo che raccoglie in modo organizzato le informazioni sui beni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a version (after creation, editing, updating) of a catalogue record on a cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Catalogue record version</rdfs:label>
         <rdfs:label xml:lang="it">Versione della scheda</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1699,7 +1699,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il livello catalogazione, cioè la sigla che individua il grado di approfondimento dell&apos;indagine condotta sul bene in esame (I corrisponde al livello di inventario, P al livello di precatalogo, C al livello di catalogo)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cataloguing level, defining the level of detail of the survey carried out on the cultural property (Minimum, Medium, Detailed)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Cataloguing level</rdfs:label>
         <rdfs:label xml:lang="it">Livello catalogazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1715,7 +1715,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una scheda catalografica che descrive un bene culturale complesso, a prescindere dal trattamento catalografico applicato (scheda unica/scheda d&apos;insieme).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a catalogue record describing a complex cultural property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Complex cultural property catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda catalografica su bene culturale complesso</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1748,7 +1748,7 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una scheda che analizza il bene in esame per finalità diverse da quella specifica della catalogazione del patrimonio culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a record describing a cultural property for purposes other than cataloguing cultural heritage.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Catalogue property record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda su bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1776,7 +1776,7 @@ resource:CatalogueRecordS/0500212038
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un modulo informativo, uno standard ICCD per attività di censimento e segnalazione di beni culturali, utilizzato per acquisire informazioni per qualsiasi tipo di entità, con un set minimo di dati standardizzati obbligatori.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an information form, an ICCD standard for cultural heritage census and reporting activities, used to acquire information for any type of entity, with a minimum set of mandatory standardized data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Information form</rdfs:label>
         <rdfs:label xml:lang="it">Modulo informativo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1792,7 +1792,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il livello di riservatezza dei dati contenuti in una scheda catalografica (1 livello basso di riservatezza, 2 livello medio di riservatezza, 3 livello alto di riservatezza)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the privacy level of the data recorded in a catalogue record (Minimum, Medium, Maximum).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">Livello di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Privacy level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1808,7 +1808,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la motivazione che ha determinato l&apos;adozione di un profilo di accesso relativamente ai dati contenuti in una scheda catalografica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reason for the adoption of a specific access profile for a catalogue record.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">Motivo di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">Privacy reason</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
