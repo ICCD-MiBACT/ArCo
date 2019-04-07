@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/arco/pattern/technical-detail-characteristic/">
         <opla:specializationOfPattern rdf:resource="http://ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
-        <rdfs:comment xml:lang="en">This module contains the pattern &quot;technical detail characteristic&quot;, whose classes and properties are defined in the module https://w3id.org/arco/ontology/denotative-description/. This pattern is a specialization of the pattern http://ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl and represents descriptions of technical details occurring in an object and corresponding situations (occurrences of those technical details), in relation with a technical characteristic (concept).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This module contains the pattern &quot;technical characteristic&quot;, whose classes and properties are defined in the module https://w3id.org/arco/ontology/denotative-description/. This pattern is a specialization of the pattern http://ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl and represents descriptions of the technical status of a cultural entity, which includes technical characteristics classified by technical concepts, and corresponding situations.</rdfs:comment>
     </owl:Ontology>
     
 

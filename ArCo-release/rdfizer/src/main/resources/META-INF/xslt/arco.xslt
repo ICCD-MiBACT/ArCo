@@ -491,7 +491,7 @@
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
-								select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+								select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                             </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -560,7 +560,7 @@
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
-								select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+								select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                             </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -628,7 +628,7 @@
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
-								select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+								select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                             </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="it">
@@ -697,7 +697,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+							select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -768,7 +768,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+							select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -841,7 +841,7 @@
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-									select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+									select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                         </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
@@ -957,7 +957,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+							select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -1029,7 +1029,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+							select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -1100,7 +1100,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+							select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -23772,7 +23772,7 @@
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
-								select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+								select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                             </xsl:attribute>
 						</rdf:type>
 						<roapit:withRole>
@@ -23797,7 +23797,7 @@
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
-								select="'https://w3id.org/italia/RO/Role'" />
+								select="'https://w3id.org/italia/onto/RO/Role'" />
                             </xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="en">
@@ -23955,7 +23955,7 @@
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
-									select="'https://w3id.org/italia/RO/TimeIndexedRole'" />
+									select="'https://w3id.org/italia/onto/RO/TimeIndexedRole'" />
                                 </xsl:attribute>
 							</rdf:type>
 							<roapit:withRole>
@@ -23980,7 +23980,7 @@
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
-									select="'https://w3id.org/italia/RO/Role'" />
+									select="'https://w3id.org/italia/onto/RO/Role'" />
                                 </xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
