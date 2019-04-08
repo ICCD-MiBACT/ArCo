@@ -35,8 +35,8 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
         <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -1320,7 +1320,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di esemplari/oggetti/elementi componenti di un bene culturale. Nel caso di un bene complesso identificato come serie o come insieme, si usa per specificare il numero, espresso in cifre, degli esemplari o degli oggetti componenti, oppure degli elementi componenti nel caso in cui il bene sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi. Il range della proprietà è rdfs:Literal perché, nei casi in cui non sia stato possibile rilevare per motivi pratici la consistenza numerica, il valore della proprietà sarà &quot;QNR&quot;.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the number of components of a cultural property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of components of a complex cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">number of components</rdfs:label>
         <rdfs:label xml:lang="it">numero di oggetti/elementi componenti</rdfs:label>

@@ -1028,6 +1028,10 @@
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una caratteristica tecnica (es.: materia, tecnica, colore, livello di qualità, formato).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an entity to a technical characteristic (e.g. material, technique, colour, quality level).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>

@@ -5,259 +5,259 @@ SPARQL1: PREFIX l0: <https://w3id.org/italia/onto/l0/>  PREFIX cis: <http://dati
 
 CQ2@en: Who are the people involved in the editing and the updating of the catalogue record describing the cultural property X? What are their roles?
 CQ2@it: Quali sono le persone coinvolte nelle operazioni di redazione e aggiornamento della scheda sul bene culturale X, e con quali ruoli?
-SPARQL2: PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>  PREFIX roapit: <https://w3id.org/italia/onto/RO/>   SELECT *   WHERE{ ?entity arco-catalogue:hasCatalogueRecordVersion ?record .  ?record arco-catalogue:hasCatalogueRecordVersionRiT ?rit . ?rit roapit:withRole ?role ; roapit:isRoleInTimeOf ?agent }   limit 100
+SPARQL2: PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>  PREFIX roapit: <https://w3id.org/italia/onto/RO/>   SELECT *   WHERE{ ?entity a-cat:hasCatalogueRecordVersion ?record .  ?record a-cat:hasCatalogueRecordVersionRiT ?rit . ?rit roapit:withRole ?role ; roapit:isRoleInTimeOf ?agent }   limit 100
 
 
-CQ3@en: Whan was the catalogue record about the cultural property X edited or updated?
+CQ3@en: When was the catalogue record about the cultural property X edited or updated?
 CQ3@it: Quando è stata redatta e aggiornata la scheda sul bene culturale X?
-SPARQL3: PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>   SELECT *   WHERE{  ?record arco-catalogue:hasCatalogueRecordVersion ?recordVersion .  ?recordVersion arco-catalogue:editedAtTime ?time .  ?time rdfs:label ?timeLabel  }   limit 100
+SPARQL3: PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>   SELECT *   WHERE{  ?record a-cat:hasCatalogueRecordVersion ?recordVersion .  ?recordVersion a-cat:editedAtTime ?time .  ?time rdfs:label ?timeLabel  }   limit 100
 
 
-CQ4@en: What are all the localisations of physical containers associated with the cultural property X? What are their types?
+CQ4@en: What are all the locations in cultural sites associated with the cultural property X? What are their types?
 CQ4@it: Quali sono tutte le localizzazioni in contenitori fisici che hanno riguardato il bene culturale X e di che tipo sono?
-SPARQL4: PREFIX arco-location: <https://w3id.org/arco/location/>  SELECT *   WHERE { ?entity rdfs:label ?entityLabel ; arco-location:hasTimeIndexedTypedLocation ?location .  ?location arco-location:hasLocationType arco-location:StorageLocation.  }   limit 100
+SPARQL4: PREFIX a-loc: <https://w3id.org/arco/ontology/location/>  SELECT *   WHERE { ?entity rdfs:label ?entityLabel ; a-loc:hasTimeIndexedTypedLocation ?location .  ?location a-loc:hasLocationType a-loc:StorageLocation.  }   limit 100
 
 
-CQ5@en: What are the places that have been used as storage area for a certain cultural property?
+CQ5@en: What are the locations that have been used as storage area for a certain cultural property?
 CQ5@it: Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?
-SPARQL5: PREFIX arco-location: <https://w3id.org/arco/location/> SELECT * WHERE {   ?entity rdfs:label ?entityLabel ;      arco-location:hasTimeIndexedTypedLocation ?location .   ?location arco-location:hasLocationType arco-location:StorageLocation. } limit 100
+SPARQL5: PREFIX a-loc: <https://w3id.org/arco/ontology/location/> SELECT * WHERE {   ?entity rdfs:label ?entityLabel ;      a-loc:hasTimeIndexedTypedLocation ?location .   ?location a-loc:hasLocationType a-loc:StorageLocation. } limit 100
 
 
 CQ6@en: What is the conservation status of the cultural property X? Which interventions have been proposed?
 CQ6@it: Qual è lo stato di conservazione del bene culturale X? E quali interventi sul bene sono stati proposti?
-SPARQL6: PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> SELECT ?entity ?entityLabel ?conservation ?proposedIntervention WHERE{   ?entity rdfs:label ?entityLabel ;     arco-dd:proposedIntervention ?proposedIntervention ;     arco-dd:hasConservationStatus ?conservation . } LIMIT 100
+SPARQL6: PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> SELECT ?entity ?entityLabel ?conservation ?proposedIntervention WHERE{   ?entity rdfs:label ?entityLabel ;     a-dd:proposedIntervention ?proposedIntervention ;     a-dd:hasConservationStatus ?conservation . } LIMIT 100
 
 
 CQ7@en: What is the photographic documentation attached to the catalogue record describing the cultural property X?
 CQ7@it: Qual è la documentazione fotografica allegata alla scheda del bene culturale X?
-SPARQL7: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT ?entity ?documentation WHERE{      ?entity arco-cd:hasDocumentation ?documentation .   ?documentation a arco-cd:PhotographicDocumentation    } limit 100
+SPARQL7: PREFIX arco: <https://w3id.org/arco/ontology/catalogue/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> SELECT ?entity ?documentation WHERE{      ?entity rdf:type/rdfs:subClassOf* arco:CulturalProperty ; a-cd:hasDocumentation ?documentation .   ?documentation a a-cd:PhotographicDocumentation    } limit 100
 
 
 CQ8@en: What is the unique identifier of the cultural property X?
 CQ8@it: Qual è il codice univoco associato al bene culturale X?
-SPARQL8: PREFIX arco-core: <https://w3id.org/arco/core/> SELECT ?entity ?id WHERE{   ?entity arco-core:uniqueIdentifier ?id  } limit 100
+SPARQL8: PREFIX arco: <https://w3id.org/arco/ontology/arco/> SELECT ?entity ?id WHERE{   ?entity arco:uniqueIdentifier ?id  } limit 100
 
 
 CQ9@en: Who are the authors and what are the cultural areas associated with the cultural property X? What is their role? What is the motivation that justifies the attribution?
 CQ9@it: Quali sono tutti gli autori o gli ambiti culturali attribuiti al bene culturale X? E con quale ruolo? E quale motivazione giustifica l'attribuzione?
-SPARQL9: PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{   ?entity arco-cd:hasAuthorshipAttribution ?attribution .   ?attribution arco-cd:hasInterventionRole ?role ;     arco-cd:hasSource ?attributionSource } limit 100
+SPARQL9: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> SELECT * WHERE{   ?entity a-cd:hasAuthorshipAttribution ?attribution .   ?attribution a-cd:hasInterventionRole ?role ;     a-cd:hasSource ?attributionSource } limit 100
 
 
-CQ10@en: When was the cultural property X realised? What is the motivation that justifies the chronology?A
+CQ10@en: When was the cultural property X realised? What is the motivation that justifies its dating?
 CQ10@it: A quando risale la realizzazione del bene culturale X? E quale motivazione giustifica la cronologia?
-SPARQL10: PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> PREFIX arco-core: <https://w3id.org/arco/core/> SELECT * WHERE{?entity rdfs:label ?entityLabel ;   arco-cd:hasDating ?dating .   ?dating arco-cd:hasEvent ?event ;     arco-cd:hasSource ?source  } limit 100
+SPARQL10: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX arco: <https://w3id.org/arco/ontology/arco/> SELECT * WHERE{?entity rdfs:label ?entityLabel ;   a-cd:hasDating ?dating .   ?dating a-cd:hasEvent ?event ;   a-cd:hasSource ?source  } limit 100
 
 
 CQ11@en: What are the geographical coordinates of the cultural property X?
 CQ11@it: Quali sono le coordinate geografiche del bene culturale X?
-SPARQL11: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-location: <https://w3id.org/arco/location/> PREFIX clvapit: <https://w3id.org/italia/onto/CLV/> SELECT * WHERE{   ?entity clvapit:hasGeometry ?geometry .   ?geometry arco-location:hasCoordinates ?coordinates .  } limit 100
+SPARQL11: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-loc: <https://w3id.org/arco/ontology/location/> PREFIX clvapit: <https://w3id.org/italia/onto/CLV/> SELECT * WHERE{   ?entity rdf:type/rdfs:subClassOf* arco:CulturalProperty ; clvapit:hasGeometry ?geometry .   ?geometry a-loc:hasCoordinates ?coordinates .  } limit 100
 
 
 CQ12@en: What are the usage associated to the movable cultural property X?
 CQ12@it: Quali sono gli usi del bene culturale mobile X?
-SPARQL12: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{   ?entity a arco-core:MovableCulturalProperty ;   rdfs:label ?entityLabel ;   arco-cd:hasUse ?use .  } limit 100
+SPARQL12: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> SELECT * WHERE{   ?entity a arco:MovableCulturalProperty ;   rdfs:label ?entityLabel ;   a-cd:hasUse ?use .  } limit 100
 
 
-CQ13@en: Who a the previous owner of the cultural property X?
+CQ13@en: Who is the previous owner of the cultural property X?
 CQ13@it: Quali sono i proprietari precedenti del bene culturale X?
-SPARQL13: PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{   ?entity rdfs:label ?entityLabel ;   arco-cd:hasAcquisition ?acquisition .   ?acquisition arco-cd:hasPreviousOwner ?previousOwner .  }  limit 100
+SPARQL13: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> SELECT * WHERE{   ?entity rdfs:label ?entityLabel ;   a-cd:hasAcquisition ?acquisition .   ?acquisition a-cd:hasPreviousOwner ?previousOwner .  }  limit 100
 
 
 CQ14@en: What are the entities that represent the preparatory phases for the cultural property X?
 CQ14@it: Quali sono le entità che rappresentano le fasi preparatorie del bene culturale X?
-SPARQL14: PREFIX arco-cd: <https://w3id.org/arco/context-description/> SELECT * WHERE{   ?entity rdfs:label ?entityLabel ;   arco-cd:hasRelatedWorkSituation ?relatedWorkSituation .   ?relatedWorkSituation arco-cd:hasRelatedWork ?relatedWork .   ?relatedWork a arco-cd:PreparatoryWork .  }  Limit 100
+SPARQL14: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> SELECT * WHERE{   ?entity rdfs:label ?entityLabel ;   a-cd:hasRelatedWorkSituation ?relatedWorkSituation .   ?relatedWorkSituation a-cd:hasRelatedWork ?relatedWork .   ?relatedWork a a-cd:PreparatoryWork .  }  Limit 100
 
 
 CQ15@en: What are the cultural properties made of clay?
 CQ15@it: Quali sono i beni culturali costruiti con l'argilla?
-SPARQL15: PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> SELECT ?entity ?entityLabel ?clay WHERE{   ?entity arco-dd:hasTechnicalDetailOccurrence ?occurrence ; rdfs:label ?entityLabel . ?occurrence arco-dd:satisfiesTechnicalDetail ?clay .   FILTER regex(?clay, "argilla", "i")   }  Limit 100
+SPARQL15: PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> SELECT ?entity ?entityLabel ?clay WHERE{   ?entity a-dd:hasTechnicalStatus ?status ; rdfs:label ?entityLabel . ?status a-dd:includesTechnicalCharacteristic ?clay .   FILTER regex(?clay, "argilla", "i")   }  Limit 100
 
 
 CQ16@en: Alignment of the CulturalPropertyDefinition with the thesaurus used for providing definitions of the cultural properties (RA catalogue record type).
 CQ16@it: Allineamento della CulturalPropertyDefinition dei reperti archeologici con il thesaurus per la definizione del bene (scheda RA)
-SPARQL16: PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> SELECT DISTINCT * WHERE{  ?definition rdf:type/rdfs:subClassOf* arco-dd:CulturalPropertyDefinition ;  skos:closeMatch ?alignment }
+SPARQL16: PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> SELECT DISTINCT * WHERE{  ?definition rdf:type/rdfs:subClassOf* a-dd:CulturalPropertyDefinition ;  skos:closeMatch ?alignment }
 
 
-CQ17@en: Who holds the copyright of a X photography?
-CQ17@it: Chi detiene i diritti d’autore della fotografia X?
-SPARQL17: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> select *  where {  ?CultPro a arco-core:PhotographicHeritage.  ?CultPro arco-cd:hasCopyright ?right.  ?right arco-cd:hasCopyrightHolder ?agent. } LIMIT 100
+CQ17@en: Who holds the copyright of a X photograph?
+CQ17@it: Chi detiene i diritti d'autore della fotografia X?
+SPARQL17: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> select *  where {  ?CultPro a arco:PhotographicHeritage.  ?CultPro a-cd:hasCopyright ?right.  ?right a-cd:hasCopyrightHolder ?agent. } LIMIT 100
 
 
-CQ18@en: What is theID of the X collection? And what cultural entities belong to the collection?
+CQ18@en: What is the ID of the X collection? And what cultural entities belong to the collection?
 CQ18@it: Qual è il codice identificativo della collezione X? E quali beni ne fanno parte?
-SPARQL18: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> select ?collezione ?oggetto  where {  ?collezione a cis:CollectionOfCulturalEntities.  ?collezione arco-cd:isCollectionIn ?concettocollezione.  ?concettocollezione arco-cd:hasMemberOfCollection ?oggetto. } LIMIT 100
+SPARQL18: PREFIX arco: <https://w3id.org/arco/core/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> select ?collezione ?oggetto  where {  ?collezione a cis:CollectionOfCulturalEntities.  ?collezione a-cd:isCollectionIn ?appartenenzacollezione.  ?appartenenzacollezione a-cd:hasMemberOfCollection ?oggetto. } LIMIT 100
 
 
 CQ19@en: What are the cultural entities supplied by video-cinematographic documentation?
 CQ19@it: Quali sono i beni culturali corredati di documentazione video-cinematografica?
-SPARQL19: PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX cis: <http://dati.beniculturali.it/cis/>  SELECT * WHERE{    ?cultprop arco-cd:hasDocumentation ?docum .    ?docum a arco-cd:FilmDocumentation   }  Limit 100
+SPARQL19: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX cis: <http://dati.beniculturali.it/cis/>  SELECT * WHERE{    ?cultprop a-cd:hasDocumentation ?docum .    ?docum a a-cd:FilmDocumentation   }  Limit 100
 
 
-CQ20@en: Which archival record set (fund and / or series and / or subseries) is part of the cultural entitiy X?
+CQ20@en: Which archival record set (fonds and / or series and / or subseries) is part of the cultural entity X?
 CQ20@it: Di quale unità archivistica (fondo e/o serie e/o sottoserie) fa parte il bene culturale X?
-SPARQL20: PREFIX arcocd: <https://w3id.org/arco/context-description/>  SELECT ?CultProp ?Ars  WHERE { ?arsm arcocd:conthasMemberOfArchivalRecordSet ?CultProp ;     arcocd:hasArchivalRecordSet ?ars   }   LIMIT 100
+SPARQL20: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>  SELECT ?CultProp ?Ars  WHERE { ?arsm a-cd:conthasMemberOfArchivalRecordSet ?CultProp ;    a-cd:hasArchivalRecordSet ?ars   }   LIMIT 100
 
 
-CQ21@en: In which position (eg: title page, cover, etc.) of a specific publication was the X print reproduced?
+CQ21@en: In which position (e.g. title page, cover, etc.) of a specific publication was the X print reproduced?
 CQ21@it:  In quale posizione (es.: frontespizio, copertina, etc.) di una specifica pubblicazione è stata riprodotta la stampa X?
-SPARQL21: PREFIX cont: <https://w3id.org/arco/context-description/>  SELECT ?title ?reproduction ?position  WHERE {  ?publication cont:hasTitle ?pubtitle .  ?pubtitle rdfs:label ?title  .  ?publication cont:hasReproduction ?reproduction . ?reproduction cont:hasReproductionPosition ?position   }   LIMIT 100
+SPARQL21: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>  SELECT ?title ?reproduction ?position  WHERE {  ?publication a-cd:hasTitle ?pubtitle .  ?pubtitle rdfs:label ?title  .  ?publication a-cd:hasReproduction ?reproduction . ?reproduction a-cd:hasReproductionPosition ?position   }   LIMIT 100
 
 
-CQ22@en: What conservation interventions have not been carried out on cultural assets in the municipality of Amatrice after the summer of 2016?
-CQ22@it: Quali interventi conservativi e non sono stati effettuati sui beni dopo l’estate del 2016 nel comune di Amatrice? 
-SPARQL22: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> PREFIX ti:<https://w3id.org/italia/onto/TI/> PREFIX arco-location: <https://w3id.org/arco/location/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema/> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> select ?int  where {  ?cp arco-cd:hasIntervention ?int.  ?int a arco-cd:ConservationIntervention.  ?int ti:atTime ?tempo.  ?tempo arco-core:startTime ?startdate.  ?cp arco-location:hasCulturalPropertyAddress ?città.  ?città rdfs:label ?nome.   FILTER regex(?nome, "amatrice", "i").   FILTER (xsd:int(replace(xsd:string(?startdate),"-","","i")) > 20160824) } LIMIT 100
+CQ22@en: What conservation interventions have been carried out on cultural properties in the municipality of Amatrice after the summer of 2016?
+CQ22@it: Quali interventi sono stati effettuati sui beni dopo l'estate del 2016 nel comune di Amatrice? 
+SPARQL22: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX cis: <http://dati.beniculturali.it/cis/> PREFIX ti: <https://w3id.org/italia/onto/TI/> PREFIX a-loc: <https://w3id.org/arco/ontology/location/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema/> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> select ?int  where {  ?cp a-cd:hasIntervention ?int.  ?int a a-cd:ConservationIntervention.  ?int ti:atTime ?tempo.  ?tempo arco:startTime ?startdate.  ?cp a-loc:hasCulturalPropertyAddress ?città.  ?città rdfs:label ?nome.   FILTER regex(?nome, "amatrice", "i").   FILTER (xsd:int(replace(xsd:string(?startdate),"-","","i")) > 20160824) } LIMIT 100
 
 
-CQ23@en: What cultural assets have been forged?
+CQ23@en: What cultural properties have been forged?
 CQ23@it: Quali beni hanno subito delle contraffazioni?
-SPARQL23: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/>  select ?bencult  where {  ?bencult arco-cd:hasRelatedWorkSituation ?situa.  ?situa arco-cd:hasRelatedWork ?rel.  ?rel a arco-cd:Forgery.  } LIMIT 100
+SPARQL23: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>  select ?bencult  where {  ?bencult a-cd:hasRelatedWorkSituation ?situa.  ?situa a-cd:hasRelatedWork ?rel.  ?rel a a-cd:Forgery.  } LIMIT 100
 
 
-CQ24@en: What assets have the Sphinx as their subject?
+CQ24@en: What cultural properties have the Sphinx as their subject?
 CQ24@it: Quali beni hanno come soggetto la Sfinge?
-SPARQL24: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/>  select ?bencult  where {  ?bencult arco-cd:hasSubject ?sog  FILTER regex(?sog, "sfinge", "i")  } LIMIT 100
+SPARQL24: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>  select ?bencult  where {  ?bencult a-cd:hasSubject ?sog  FILTER regex(?sog, "sfinge", "i")  } LIMIT 100
 
 
-CQ25@en: What are the licenses, privileges, authorizations of the cultural entity X?
+CQ25@en: What are the licenses, privileges, authorizations of the cultural property X?
 CQ25@it: Quali sono le licenze, privilegi, autorizzazioni di un bene culturale X?
-SPARQL25: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-cd: <https://w3id.org/arco/context-description/>  select ?bencult ?rig  where {{  ?bencult arco-cd:hasDocumentation ?doc.  ?doc arco-cd:rights ?rig.}  UNION  {?bencult arco-cd:hasBibliography ?bibl.  ?bibl arco-cd:rights ?rig} } LIMIT 100
+SPARQL25: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>  select ?bencult ?rig  where {{  ?bencult a-cd:hasDocumentation ?doc.  ?doc a-cd:rights ?rig.}  UNION  {?bencult a-cd:hasBibliography ?bibl.  ?bibl a-cd:rights ?rig} } LIMIT 100
 
 
-CQ26a@en: What are the dimensions of photography X? (analog)
+CQ26a@en: What are the dimensions of photograph X? (analog)
 CQ26a@it: Quali sono le dimensioni della fotografia X? (analogico)
-SPARQL26a: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> PREFIX onto-mu: <https://w3id.org/italia/onto/MU/>  select  ?photo ?meastype ?measvalue ?measunit  where {   ?photo a arco-core:PhotographicHeritage .   ?photo arco-dd:hasMeasurementCollection ?meascoll .   ?meascoll arco-dd:hasMeasurement ?meas .   ?meas arco-dd:hasMeasurementType ?meastype .    ?meas onto-mu:hasValue ?measvalue .    ?measvalue onto-mu:hasMeasurementUnit ?measunit     }  LIMIT 100
+SPARQL26a: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX onto-mu: <https://w3id.org/italia/onto/MU/>  select  ?photo ?meastype ?measvalue ?measunit  where {   ?photo a arco:PhotographicHeritage .   ?photo a-dd:hasMeasurementCollection ?meascoll .   ?meascoll a-dd:hasMeasurement ?meas .   ?meas a-dd:hasMeasurementType ?meastype .    ?meas onto-mu:hasValue ?measvalue .    ?measvalue onto-mu:hasMeasurementUnit ?measunit     }  LIMIT 100
 
 
-CQ26b@en: What are the dimensions of photography X? (digital)
+CQ26b@en: What are the dimensions of photograph X? (digital)
 CQ26b@it: Quali sono le dimensioni della fotografia X? (digitali)
-SPARQL26b: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> PREFIX onto-mu: <https://w3id.org/italia/onto/MU/>  select ?photo ?photosize  where {   ?photo a arco-core:PhotographicHeritage .   ?photosize a arco-dd:PhotoSize .   ?photo arco-dd:TechnicalCharacteristic ?photosize     }  LIMIT 100
+SPARQL26b: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX onto-mu: <https://w3id.org/italia/onto/MU/>  select ?photo ?photosize  where {   ?photo a arco:PhotographicHeritage .   ?photosize a a-dd:PhotoSize .   ?photo a-dd:TechnicalCharacteristic ?photosize     }  LIMIT 100
 
 
-CQ27@en: What is the dedication's dedicatee present on the cultural entity X?
+CQ27@en: What is the dedication's dedicatee present on the cultural property X?
 CQ27@it: Qual è il dedicatario della dedica presente sul bene X?
-SPARQL27: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  select ?agent  where {  ?bencult arco-dd:hasAffixedElement ?ele.  ?ele a arco-dd:Dedication.  ?ele arco-dd:hasDedicatee ?agent } LIMIT 100 
+SPARQL27: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  select ?agent  where {  ?bencult a-dd:hasAffixedElement ?ele.  ?ele a a-dd:Dedication.  ?ele a-dd:hasDedicatee ?agent } LIMIT 100 
 
 
 CQ28@en: Which cultural properties have Italian inscriptions? And which in languages ​​other than Italian?
-CQ28@it: Quali beni hanno iscrizioni in lingua italiana? E quali in lingue diverse dall’italiano?
-SPARQL28: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> PREFIX Lan: <https://w3id.org/italia/onto/Language/> select distinct * where {  ?bencult arco-dd:hasAffixedElement ?ele.  ?ele a arco-dd:Inscription.  ?ele Lan:hasLanguage ?lan.   FILTER regex(?lan, "italiano", "i")  } LIMIT 100
+CQ28@it: Quali beni hanno iscrizioni in lingua italiana? E quali in lingue diverse dall'italiano?
+SPARQL28: PREFIX arco: <https://w3id.org/arco/core/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX lan: <https://w3id.org/italia/onto/Language/> select distinct * where {  ?bencult a-dd:hasAffixedElement ?ele.  ?ele a a-dd:Inscription.  ?ele lan:hasLanguage ?lan.   FILTER regex(?lan, "italiano", "i")  } LIMIT 100
 
 
 CQ29@en: Which coins have a conservation status that prevents their readability?
 CQ29@it:  Quali monete hanno uno stato di conservazione che ne impedisce la leggibilità?
-SPARQL29: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  select ?mon where {  ?mon a arco-core:NumismaticProperty.  ?mon arco-dd:hasConservationStatus ?status.  ?status arco-dd:hasLegibility arco-dd:ImpossibleLegibility. } LIMIT 100
+SPARQL29: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  select ?mon where {  ?mon a arco:NumismaticProperty.  ?mon a-dd:hasConservationStatus ?status.  ?status a-dd:hasLegibility a-dd:ImpossibleLegibility. } LIMIT 100
 
 
-CQ30@en: From where was the sample extracted from the archaeological property X?
+CQ30@en: Where was the sample of the archaeological property X extracted from?
 CQ30@it: Da dove è stato estratto il campione dal bene archeologico X?
-SPARQL30: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  select  *  where {   ?arcprop a arco-core:ArchaeologicalProperty.    ?arcprop arco-dd:hasSampleCollected ?sample.   ?sample  arco-dd:positionOnCulturalProperty ?pos. }   LIMIT 100 
+SPARQL30: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  select  *  where {   ?arcprop a arco:ArchaeologicalProperty.    ?arcprop a-dd:hasSampleCollected ?sample.   ?sample  a-dd:positionOnCulturalProperty ?pos. }   LIMIT 100 
 
 
-CQ31@en: On what support is the iscription of the good X?
-CQ31@it: Su quale supporto si trova l’iscrizione del bene X?
-SPARQL31: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  select * where {  ?bencult arco-dd:hasAffixedElement ?isc.  ?isc a arco-dd:Inscription.  ?isc arco-dd:hasSupport ?supp } LIMIT 100 
+CQ31@en: On what support is the inscription of the cultural property X?
+CQ31@it: Su quale supporto si trova l'iscrizione del bene X?
+SPARQL31: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  select * where {  ?bencult a-dd:hasAffixedElement ?isc.  ?isc a a-dd:Inscription.  ?isc a-dd:hasSupport ?supp } LIMIT 100 
 
 
-CQ32@en: What is the typology of cultural properties which have a magical functional purpose?
+CQ32@en: What are the typologies of cultural properties which have a magical functional purpose?
 CQ32@it: Di che tipologia sono i beni culturali che hanno uno scopo funzionale magico?
-SPARQL32: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  select  *  where {   {?cultprop arco-dd:hasFunctionalPurpose ?purpose    FILTER regex(?purpose, "magic", "i")}   UNION   {?cultprop arco-dd:hasFunctionalPurpose ?purpose     FILTER regex(?purpose, "magico", "i")}    }   LIMIT 100
+SPARQL32: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  select  *  where {   {?cultprop a-dd:hasFunctionalPurpose ?purpose    FILTER regex(?purpose, "magic", "i")}   UNION   {?cultprop a-dd:hasFunctionalPurpose ?purpose     FILTER regex(?purpose, "magico", "i")}    }   LIMIT 100
 
 
-CQ33@en: What are the accessories of the musical good X?
+CQ33@en: What are the accessories of the musical property X?
 CQ33@it: Quali sono gli accessori del bene musicale X?
-SPARQL33: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  select * where {  ?bencult a arco-core:MusicHeritage.  ?bencult arco-dd:hasAccessory ?acc. } LIMIT 100
+SPARQL33: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  select * where {  ?bencult a arco:MusicHeritage.  ?bencult a-dd:hasAccessory ?acc. } LIMIT 100
 
 
 CQ34@en: How many cultural entities of the "church" type are located in Emilia-Romagna?
-CQ34@it: Quanti beni culturali di tipo “chiesa” ci sono nella regione Emilia-Romagna?
-SPARQL34: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-location: <https://w3id.org/arco/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  select  (count(distinct ?bencult) as ?count) where {  ?bencult a arco-core:ArchitecturalOrLandscapeHeritage.  ?bencult arco-location:hasCulturalPropertyAddress ?address.  ?address CLV:hasRegion ?region.  ?region rdfs:label ?regNome.  ?bencult arco-dd:hasCulturalPropertyType ?type.  ?type arco-dd:hasCulturalPropertyDefinition ?def  FILTER regex(?regNome, "Emilia-Romagna", "i")  FILTER regex(?def, "chiesa", "i") } 
+CQ34@it: Quanti beni culturali di tipo "chiesa" ci sono nella regione Emilia-Romagna?
+SPARQL34: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-loc: <https://w3id.org/arco/ontology/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  select  (count(distinct ?bencult) as ?count) where {  ?bencult a arco:ArchitecturalOrLandscapeHeritage.  ?bencult a-loc:hasCulturalPropertyAddress ?address.  ?address CLV:hasRegion ?region.  ?region rdfs:label ?regNome.  ?bencult a-dd:hasCulturalPropertyType ?type.  ?type a-dd:hasCulturalPropertyDefinition ?def  FILTER regex(?regNome, "Emilia-Romagna", "i")  FILTER regex(?def, "chiesa", "i") } 
 
 
 CQ35@en: What is the reason why the access profile's privacy of the cultural property X is labelled as "medium level" in its catalogue record?
 CQ35@it: Per quale motivo l’accesso ai dati contenuti nella scheda del bene X ha un livello di privacy media?
-SPARQL35: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>    select  ?bencult ?reason where {  ?bencult arco-catalogue:isDescribedByCatalogueRecord ?cat.  ?cat arco-catalogue:hasAccessProfile ?profile.  ?profile arco-catalogue:hasPrivacyLevel arco-catalogue:MediumLevel.  ?profile arco-catalogue:hasPrivacyReason ?reason. } LIMIT 100
+SPARQL35: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>    select  ?bencult ?reason where {  ?bencult a-cat:isDescribedByCatalogueRecord ?cat.  ?cat a-cat:hasAccessProfile ?profile.  ?profile a-cat:hasPrivacyLevel a-cat:MediumLevel.  ?profile a-cat:hasPrivacyReason ?reason. } LIMIT 100
 
 
-CQ36@en: What are the writing systems which has been used in affixed elements (i.e. inscriptions, crests, trademarks, emblems) on cultural properties and that are located in Puglia and that their creation goes back to the VI century b.C.? 
+CQ36@en: What are the writing systems which have been used in affixed elements (inscriptions, crests, trademarks, emblems, etc.) on cultural properties, that are located in Puglia and the creation of which goes back to the VI century b.C.? 
 CQ36@it: Quali sono i sistemi di scrittura che sono stati adottati in elementi apposti (iscrizioni, stemmi, marchi, emblemi, etc.) sui beni culturali conservati nella regione Puglia e la cui creazione risale al VI secolo a.C.?
-SPARQL36: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-location: <https://w3id.org/arco/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> PREFIX arco-cd: <https://w3id.org/arco/context-description/> PREFIX ti:<https://w3id.org/italia/onto/TI/>  select ?sistema where {  ?bencult arco-location:hasCulturalPropertyAddress ?address.  ?address CLV:hasRegion ?region.  ?region rdfs:label ?regNome.  ?bencult arco-dd:hasAffixedElement ?ele.  ?ele arco-dd:hasWritingSystem ?sistema.  ?bencult arco-cd:hasDating ?date.  ?date arco-cd:hasEvent ?event.  ?event ti:atTime ?tempo.  ?tempo ti:time ?value  FILTER regex(?regNome, "Puglia", "i")  FILTER regex(?value, "VI a ", "i") } LIMIT 100
+SPARQL36: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-loc: <https://w3id.org/arco/ontology/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/> PREFIX ti:<https://w3id.org/italia/onto/TI/>  select ?sistema where {  ?bencult a-loc:hasCulturalPropertyAddress ?address.  ?address CLV:hasRegion ?region.  ?region rdfs:label ?regNome.  ?bencult a-dd:hasAffixedElement ?ele.  ?ele a-dd:hasWritingSystem ?sistema.  ?bencult a-cd:hasDating ?date.  ?date a-cd:hasEvent ?event.  ?event ti:atTime ?tempo.  ?tempo ti:time ?value  FILTER regex(?regNome, "Puglia", "i")  FILTER regex(?value, "VI a ", "i") } LIMIT 100
 
 
 CQ37@en: What are the complex cultural properties which have a number of components greater than 2?
 CQ37@it: Quali sono i beni culturali complessi con un numero di elementi componenti superiore a 2?
-SPARQL37: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>    select  ?bencult ?x where {  ?bencult arco-core:hasNumberOfComponents ?comp.  ?comp arco-core:numberOfComponents ?x   FILTER (xsd:integer(?x) > 2) } LIMIT 100
+SPARQL37: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>    select  ?bencult ?x where {  ?bencult arco:numberOfComponents ?x   FILTER (xsd:integer(?x) > 2) } LIMIT 100
 
 
-CQ38@en: What are the events' organizers of the cultural entity X? 
+CQ38@en: What are the events' organizers of the cultural property X? 
 CQ38@it: Quali sono stati gli organizzatori degli eventi del bene x?
-SPARQL38: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-event: <https://w3id.org/arco/cultural-event/> PREFIX cis: <http://dati.beniculturali.it/cis/>  SELECT  * WHERE {  ?event cis:involves ?culturalProperty.  ?event arco-event:hasEventOrganiser ?agent } LIMIT 100
+SPARQL38: PREFIX arco: <https://w3id.org/arco/ontology/arco/> PREFIX a-ce: <https://w3id.org/arco/ontology/cultural-event/> PREFIX cis: <http://dati.beniculturali.it/cis/>  SELECT  * WHERE {  ?event cis:involves ?culturalProperty.  ?event a-ce:hasEventOrganiser ?agent } LIMIT 100
 
 
-CQ39@en: What is the place and time of the exhibition which includes the cultural entity X?
-CQ39@it: Qual'è il tempo e il luogo di un esibizione che ha compreso il bene culturale x?
-SPARQL39: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-event: <https://w3id.org/arco/cultural-event/> PREFIX cis: <http://dati.beniculturali.it/cis/>  SELECT  * WHERE {    ?event arco-event:eventTimeLocation ?timeloco } LIMIT 100
+CQ39@en: What is the place and time of the exhibition which includes the cultural property X?
+CQ39@it: Qual è il tempo e il luogo di un esibizione che ha compreso il bene culturale x?
+SPARQL39: PREFIX arco: <https://w3id.org/arco/ontology/arco> PREFIX arco-event: <https://w3id.org/arco/ontology/cultural-event/> PREFIX cis: <http://dati.beniculturali.it/cis/>  SELECT  * WHERE {    ?event arco-event:eventTimeLocation ?timeloco } LIMIT 100
 
 
 CQ40@en: What are the cultural properties which have "BNB" as catalogue record type? 
 CQ40@it: Quali sono i beni culturali che hanno BNB come tipo di scheda catalografica?
-SPARQL40: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>   SELECT  * WHERE {    ?CultProp arco-catalogue:isDescribedByCatalogueRecord ?CatRec .     ?CatRec a arco-catalogue:CatalogueRecordBNB . }   LIMIT 100
+SPARQL40: PREFIX arco: <https://w3id.org/arco/core/> PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>   SELECT  * WHERE {    ?CultProp a-cat:isDescribedByCatalogueRecord ?CatRec .     ?CatRec a a-cat:CatalogueRecordBNB . }   LIMIT 100
 
 
-CQ41@en: What are the catalogue records which has been edited from 2012?
+CQ41@en: What are the catalogue records which have been edited from 2012?
 CQ41@it: Quali sono le schede catalografiche che sono state editate dal 2012 in poi?
-SPARQL41: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>   SELECT  * WHERE {  ?catrec arco-catalogue:hasCatalogueRecordVersion ?vers.  ?vers arco-catalogue:editedAtTime ?year.  ?year rdfs:label ?lab  FILTER (xsd:int(?lab) > 2012)  }   LIMIT 100
+SPARQL41: PREFIX arco: <https://w3id.org/arco/ontology/arco> PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>   SELECT  * WHERE {  ?catrec a-cat:hasCatalogueRecordVersion ?vers.  ?vers a-cat:editedAtTime ?year.  ?year rdfs:label ?lab  FILTER (xsd:int(?lab) > 2012)  }   LIMIT 100
 
 
 CQ42@en: What are all the catalogue record versions of the cultural property x? When have they been filled out?
-CQ42@it: Quali sono tutte le versioni della scheda catalografica di un bene culturale x e in che anno sono state fatte?
-SPARQL42: PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>   SELECT  * WHERE {     ?CultProp arco-catalogue:isDescribedByCatalogueRecord ?CatRecord .     ?CatRecord arco-catalogue:hasCatalogueRecordVersion ?Version .      ?Version arco-catalogue:editedAtTime ?time.       }    LIMIT 100
+CQ42@it: Quali sono tutte le versioni della scheda catalografica di un bene culturale x e in che anno sono state compilate?
+SPARQL42: PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>   SELECT  * WHERE {     ?CultProp a-cat:isDescribedByCatalogueRecord ?CatRecord .     ?CatRecord a-cat:hasCatalogueRecordVersion ?Version .      ?Version a-cat:editedAtTime ?time.       }    LIMIT 100
 
 
 CQ43@en: What are the operators (agents) which have been worked on the catalogue record of the cultural property X in its history?
 CQ43@it: Quali sono gli operatori (persone) che hanno lavorato alla scheda catalografica del bene culturale x nella sua storia?
-SPARQL43: PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>   SELECT  * WHERE {  ?cultpro arco-catalogue:isDescribedByCatalogueRecord ?catrec.  ?catrec  arco-catalogue:hasCatalogueRecordVersion ?catrecver.  ?catrecver arco-catalogue:hasCataloguingAgent ?agent }   LIMIT 100
+SPARQL43: PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>   SELECT  * WHERE {  ?cultpro a-cat:isDescribedByCatalogueRecord ?catrec.  ?catrec  a-cat:hasCatalogueRecordVersion ?catrecver.  ?catrecver a-cat:hasCataloguingAgent ?agent }   LIMIT 100
 
 
 CQ44@en: What is the reference project in which has been created the catalogue record of the cultural entity X?
-CQ44@it: Qual'è il progetto di riferimento nel quale è stata prodotta la scheda del bene culturale x?
-SPARQL44: PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/>  SELECT ?CatRecord ?RefProject  WHERE {    ?CatRecord arco-catalogue:hasAlternativeIdentifier ?AlternativeIdentifier .    ?AlternativeIdentifier arco-catalogue:referenceProject ?RefProject .  }  LIMIT 100
+CQ44@it: Qual è il progetto di riferimento nel quale è stata prodotta la scheda del bene culturale x?
+SPARQL44: PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/>  SELECT ?CatRecord ?RefProject  WHERE {    ?CatRecord a-cat:hasAlternativeIdentifier ?AlternativeIdentifier .    ?AlternativeIdentifier a-cat:referenceProject ?RefProject .  }  LIMIT 100
 
 
 CQ45@en: What is the geographic context type where the cultural property X is located?
-CQ45@it: Qual'è il tipo di contesto geografico nel quale è allocato il bene culturale x?
-SPARQL45: PREFIX arco-location: <https://w3id.org/arco/location/>  SELECT  * WHERE {  ?cultpro arco-location:hasTypeOfContext ?type. }   LIMIT 100
+CQ45@it: Qual è il tipo di contesto geografico nel quale è allocato il bene culturale x?
+SPARQL45: PREFIX a-loc: <https://w3id.org/arco/ontology/location/>  SELECT  * WHERE {  ?cultpro a-loc:hasTypeOfContext ?type. }   LIMIT 100
 
 
 CQ46@en: What are the cultural properties which have an underwater geographic context?
 CQ46@it: Quali sono i beni culturali che hanno un contesto geografico subacqueo?
-SPARQL46: PREFIX arco-location: <https://w3id.org/arco/ontology/location/>   SELECT  * WHERE {     ?cultprop arco-location:hasTypeOfContext ?TypeOfGeoCont .      ?TypeOfGeoCont a arco-location:Underwater .           }    LIMIT 100
+SPARQL46: PREFIX a-loc: <https://w3id.org/arco/ontology/location/>   SELECT  * WHERE {     ?cultprop a-loc:hasTypeOfContext ?TypeOfGeoCont .      ?TypeOfGeoCont a a-loc:Underwater .           }    LIMIT 100
 
 
-CQ47@en: What is the historical-geographic are where the cultural property X was located?
-CQ47@it: Qual'è l'area storica-geografica del bene culturale X?
-SPARQL47: PREFIX arco-core: <https://w3id.org/arco/core/> PREFIX arco-location: <https://w3id.org/arco/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/>  SELECT  * WHERE {   ?cultpro arco-location:hasCulturalPropertyAddress ?address.  ?address arco-location:hasHistoricalArea ?type. }   LIMIT 100
+CQ47@en: What is the historical-geographic area where the cultural property X was located?
+CQ47@it: Qual è l'area storica-geografica del bene culturale X?
+SPARQL47: PREFIX arco: <https://w3id.org/arco/ontology/arco> PREFIX a-loc: <https://w3id.org/arco/ontology/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/>  SELECT  * WHERE {   ?cultpro a-loc:hasCulturalPropertyAddress ?address.  ?address a-loc:hasHistoricalArea ?type. }   LIMIT 100
 
 
-CQ48@en: What is the cultural property which has been acquired at an altitude lesser than 100m and has a conservation status considered as "good"? Then, what is its catalographic record type? How was it acquired?
-CQ48@it: Qual'è il bene culturale che è stato acquisito ad un'altitudine inferiore a 100m ed ha uno stato di conservazione "buono"? Intoltre di che tipo è la sua scheda catalografica e come è stato acquisito?
-SPARQL48: PREFIX arco-location: <https://w3id.org/arco/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/> PREFIX arco-catalogue: <https://w3id.org/arco/catalogue/> PREFIX arco-dd: <https://w3id.org/arco/denotative-description/> PREFIX arco-cd: <https://w3id.org/arco/context-description/>    SELECT distinct * WHERE {  ?cultpro CLV:hasGeometry ?geom.  ?geom arco-location:hasCoordinates ?coord.  ?coord arco-location:hasAltitude ?altitude.  ?altitude arco-location:alt ?alt.  ?cultpro arco-dd:hasConservationStatus ?status.  ?status arco-dd:hasConservationStatusType arco-dd:Good.  ?cultpro arco-catalogue:isDescribedByCatalogueRecord ?rec.  ?cultpro arco-cd:hasAcquisition ?acqui.  ?acqui arco-cd:hasAcquisitionType ?acquitype.  FILTER (xsd:integer(?alt) < 100) } LIMIT 100
+CQ48@en: What is the cultural property which has been acquired at an altitude lesser than 100m and has a conservation status considered as "good"? Then, what is its catalogue record type? How was it acquired?
+CQ48@it: Qual è il bene culturale che è stato acquisito ad un'altitudine inferiore a 100m ed ha uno stato di conservazione "buono"? Intoltre di che tipo è la sua scheda catalografica e come è stato acquisito?
+SPARQL48: PREFIX a-loc: <https://w3id.org/arco/ontology/location/> PREFIX CLV: <https://w3id.org/italia/onto/CLV/> PREFIX a-cat: <https://w3id.org/arco/ontology/catalogue/> PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/> PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>    SELECT distinct * WHERE {  ?cultpro CLV:hasGeometry ?geom.  ?geom a-loc:hasCoordinates ?coord.  ?coord a-loc:hasAltitude ?altitude.  ?altitude a-loc:alt ?alt.  ?cultpro a-dd:hasConservationStatus ?status.  ?status a-dd:hasConservationStatusType a-dd:Good.  ?cultpro a-cat:isDescribedByCatalogueRecord ?rec.  ?cultpro a-cd:hasAcquisition ?acqui.  ?acqui a-cd:hasAcquisitionType ?acquitype.  FILTER (xsd:integer(?alt) < 100) } LIMIT 100
 
 
-CQ49@en: What are the coins which have inscriptions on them?
-CQ49@it: Quali sono le monete che hanno hanno delle iscrizioni?
-SPARQL49: PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  SELECT * WHERE{   ?cultprop arco-dd:hasAffixedElement ?AffElem.   ?AffElem a arco-dd:CoinLegend .    } LIMIT 100
+CQ49@en: What are the coins which have a legend on them (letters and words)?
+CQ49@it: Quali sono le monete che hanno una legenda (lettere e parole)?
+SPARQL49: PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  SELECT * WHERE{   ?cultprop a-dd:hasAffixedElement ?AffElem.   ?AffElem a a-dd:CoinLegend .    } LIMIT 100
 
 
-CQ50@en: What is the medium and implementation method of the cultural entity x and what is the number of male, female and children partecipants?
-CQ50@it: Qual'è il medium e il metodo di implementazione di un bene culturale x e qual'è il numero di partecipanti di sesso maschile, femminile e bambini?
-SPARQL50: PREFIX arco-dd: <https://w3id.org/arco/denotative-description/>  SELECT * WHERE{   ?cultprop arco-dd:hasCommunicationMethod ?CultEntityCharac.   ?CultEntityCharac a arco-dd:CommunicationMedium;       arco-dd:hasImplementationMethod ?Implementation;      arco-dd:numberOfMaleParticipants ?NMale;       arco-dd:numberOfFemaleParticipants ?NFmale;      arco-dd:numberOfChildParticipants ?NChild.     } LIMIT 100
+CQ50@en: What is the medium and implementation method of the cultural property x and what is the number of male, female and children participants?
+CQ50@it: Qual è il medium e il metodo di implementazione di un bene culturale x e qual'è il numero di partecipanti di sesso maschile, femminile e bambini?
+SPARQL50: PREFIX a-dd: <https://w3id.org/arco/ontology/denotative-description/>  SELECT * WHERE{   ?cultprop a-dd:hasCommunicationMethod ?CultEntityCharac.   ?CultEntityCharac a a-dd:CommunicationMedium;       a-dd:hasImplementationMethod ?Implementation;      a-dd:numberOfMaleParticipants ?NMale;       a-dd:numberOfFemaleParticipants ?NFmale;      a-dd:numberOfChildParticipants ?NChild.     } LIMIT 100
 
 
-CQ51@en: What is the archaeological artifact belonging to a female individual who is dead at the age of 21 years old? What is its finding context and taxonomy?
-CQ51@it: Qual'è il reperto antropologico che appartiene ad un individuo di sesso femminile, che è morto all'età di 21 anni? Qual'è la sua tassonomia e qual'è il contesto in cui è stato ritrovato?  
-SPARQL51: PREFIX arco-cd: <https://w3id.org/arco/ontology/context-description/>  SELECT * WHERE{   ?cultprop arco-cd:hasSexEstimate ?SexEst .   ?SexEst arco-cd:estimatedSex "F" .    ?cultprop arco-cd:hasAgeOfDeathEstimate ?DeathAge .    ?DeathAge arco-cd:estimatedAgeOfDeath "21" .   ?cultprop arco-cd:hasFindingContext ?Context .   ?Context arco-cd:hasFindingContextType ?ContextType ;        arco-cd:hasBiologicalTaxonomy ?BioTax .   ?BioTax arco-cd:hasConcept ?Specie .     ?Specie a arco-cd:Species .      } LIMIT 100
+CQ51@en: What is the archaeological object belonging to a female individual who is dead at the age of 21 years old? What is its finding context and taxonomy?
+CQ51@it: Qual è il reperto antropologico che appartiene ad un individuo di sesso femminile, che è morto all'età di 21 anni? Qual è la sua tassonomia e qual è il contesto in cui è stato ritrovato?  
+SPARQL51: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>  SELECT * WHERE{   ?cultprop a-cd:hasSexEstimate ?SexEst .   ?SexEst a-cd:estimatedSex "F" .    ?cultprop a-cd:hasAgeOfDeathEstimate ?DeathAge .    ?DeathAge a-cd:estimatedAgeOfDeath "21" .   ?cultprop a-cd:hasFindingContext ?Context .   ?Context a-cd:hasFindingContextType ?ContextType ;        a-cd:hasBiologicalTaxonomy ?BioTax .   ?BioTax a-cd:hasConcept ?Specie .     ?Specie a a-cd:Species .      } LIMIT 100
 
 
-CQ52@en: What cultural entity x has been found through oral sources?
+CQ52@en: What cultural property x has been found through oral sources?
 CQ52@it: Quale bene culturale x è stato ritrovato tramite fonte orale?
-SPARQL52: PREFIX arco-cd: <https://w3id.org/arco/ontology/context-description/>  SELECT * WHERE{   ?cultprop arco-cd:hasDetectionMethod ?DetMethod   FILTER regex(?DetMethod, "fonte orale", "i")   } LIMIT 100
+SPARQL52: PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>  SELECT * WHERE{   ?cultprop a-cd:hasDetectionMethod ?DetMethod   FILTER regex(?DetMethod, "fonte orale", "i")   } LIMIT 100
