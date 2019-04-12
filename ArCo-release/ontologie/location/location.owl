@@ -24,8 +24,8 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location/">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <dc:title xml:lang="it">Ontologia della Localizzazione (ArCo network)</dc:title>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>

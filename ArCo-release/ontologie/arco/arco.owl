@@ -26,12 +26,12 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:a-loc="https://w3id.org/arco/ontology/location/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco/">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
