@@ -22,9 +22,9 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event/">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</rdfs:label>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</rdfs:comment>

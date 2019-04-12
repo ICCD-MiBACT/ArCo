@@ -17,7 +17,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core">
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
@@ -356,6 +356,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTimeIndexedSituation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTimeIndexedSituationOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
         <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <rdfs:comment xml:lang="it">La proprietà che collega un qualsiasi oggetto a una situazione indicizzata nel tempo.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links any object to a time indexed situation.</rdfs:comment>
@@ -612,6 +614,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTimeIndexedSituationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <opla:isNativeTo rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <rdfs:comment xml:lang="it">La proprietà che collega una situazione indicizzata nel tempo ad un qualsiasi oggetto. La proprietà è modellata come proprietà inversa di hasTimeIndexedSituation.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that links a time indexed situation to any object. The property is modelled as inverse object property of hasTimeIndexedSituation.</rdfs:comment>
@@ -695,6 +699,8 @@
     <!-- https://w3id.org/arco/ontology/core/keyword -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/keyword">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta una parola chiave relativa a un&apos;entità, che può essere utilizzata per la ricerca dell&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents a keyword related to an entity, used to search for that entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>

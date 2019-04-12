@@ -24,10 +24,10 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description/">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
         <dc:description xml:lang="it">Questo modulo, detto della descrizione denotativa (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.</dc:description>

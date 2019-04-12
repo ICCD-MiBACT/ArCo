@@ -18,6 +18,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:a-ce="https://w3id.org/arco/ontology/cultural-event/"
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/"
@@ -26,17 +27,17 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:a-loc="https://w3id.org/arco/ontology/location/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco/">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event/"/>
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
+        <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -219,6 +220,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasCataloguingAgency">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/hasRelatedAgency"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente schedatore. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
@@ -295,6 +297,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isCulturalPropertyResidualOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyResidual"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla/alle sua/e parte/i residuale/i.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to its residual.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
@@ -311,6 +314,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/hasRelatedAgency"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale al relativo ente competente per la tutela. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe AgentRole, che permette di collegare l&apos;ente e il suo ruolo.</rdfs:comment>
@@ -548,6 +552,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/arco/isCulturalPropertyResidualOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyResidual"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;ha parte residuale&quot;, collega una parte residuale di un bene culturale al bene culturale stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property, inverse of &quot;has residual&quot;, relates a residual of a cultural property to the cultural property.</rdfs:comment>
@@ -2087,8 +2092,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalDetailOccurrence"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalDetailOccurrence"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
