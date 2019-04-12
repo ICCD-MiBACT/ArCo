@@ -218,13 +218,13 @@
 						<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/LegalSituation" />
 						<arco-cd:hasOwner>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(./LGCO))" />
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./LGCO))" />
 							</xsl:attribute>
 						</arco-cd:hasOwner>	
 					</rdf:Description>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(./LGCO))" />
+							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./LGCO))" />
 						</xsl:attribute>
 						<rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent" />
 						<rdfs:label>

@@ -149,44 +149,41 @@
 				                            <xsl:choose>
 				                                <xsl:when test="./AUTA">
 				                                    <xsl:value-of
-									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)), '-', arco-fn:urify(normalize-space(./AUTA)))" />
+									select="concat(./AUTN, '-', ./AUTA)" />
 				                                </xsl:when>
 				                                <xsl:when
 									test="../AUF/AUFA and ../AUF/AUFN">
 				                                    <xsl:value-of
-									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
+									select="concat(../AUF/AUFN, '-', ../AUF/AUFA)" />
 				                                </xsl:when>
 				                                <xsl:when
 									test="../AUF/AUFA and ../AUF/AUFB">
 				                                    <xsl:value-of
-									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)), '-', arco-fn:urify(normalize-space(../AUF/AUFA)))" />
+									select="concat(../AUF/AUFB, '-', ../AUF/AUFA)" />
 				                                </xsl:when>
 				                                <xsl:when test="../AUF/AUFB">
 				                                    <xsl:value-of
-									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFB)))" />
+									select="../AUF/AUFB" />
 				                                </xsl:when>
 				                                <xsl:when test="../AUF/AUFN">
 				                                    <xsl:value-of
-									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(../AUF/AUFN)))" />
+									select="../AUF/AUFN" />
 				                                </xsl:when>
 				                                <xsl:otherwise>
 				                                    <xsl:value-of
-									select="concat($NS, 'Agent/', arco-fn:urify(normalize-space(./AUTN)))" />
+									select="./AUTN" />
 				                                </xsl:otherwise>
 				                            </xsl:choose>
 			                            </xsl:variable>
 			                            <xsl:choose>
 			                                <xsl:when test="./AUTS">
-			                                    <xsl:value-of
-									select="concat($author, '-', arco-fn:urify(normalize-space(./AUTS)))" />
+			                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat($author, '-', ./AUTS)))" />
 			                                </xsl:when>
 			                                <xsl:when test="../AUF/AUFS">
-			                                    <xsl:value-of
-									select="concat($author, '-', arco-fn:urify(normalize-space(../AUF/AUFS)))" />
+			                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(concat($author, '-', ../AUF/AUFS)))" />
 			                                </xsl:when>
 			                                <xsl:otherwise>
-			                                    <xsl:value-of
-									select="$author" />
+			                                    <xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy($author))" />
 			                                </xsl:otherwise>
 			                            </xsl:choose>
 		                    	</xsl:attribute>
