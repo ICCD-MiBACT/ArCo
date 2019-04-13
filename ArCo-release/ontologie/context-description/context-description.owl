@@ -22,9 +22,9 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <dc:title xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</dc:title>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
@@ -38,11 +38,11 @@
         <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</rdfs:comment>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
         <dc:title xml:lang="en">Context Description Ontology (ArCo network)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
@@ -51,8 +51,8 @@
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <rdfs:comment xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</rdfs:comment>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
     </owl:Ontology>
     
 
@@ -729,6 +729,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCommission">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCommissionOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Commission"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla sua committenza.</rdfs:comment>
@@ -819,6 +820,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCulturalPropertyEstimate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCulturalPropertyEstimateOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla stima effettuata sul bene stesso.</rdfs:comment>
@@ -887,6 +889,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasDatingEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDatingEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una cronologia a un evento relativo al bene culturale, cui si riferisce la specifica cronologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a dating to an event involving the cultural property, which the dating is about.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha evento relativo a datazione</rdfs:label>
+        <rdfs:label xml:lang="en">has event related to dating</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasDerivatedWorkType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDerivatedWorkType">
@@ -927,7 +946,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDocumentation">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isDocumentationOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla documentazione che riguarda il bene descritto in una scheda di catalogo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural entity to the documentation related to the cutultural entity described in a catalogue record.</rdfs:comment>
@@ -1028,23 +1047,6 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/STI - ICCD Normative di versione 2.00: UB/INV/INVS</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasEvent -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEvent">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una cronologia a un evento relativo al bene culturale, cui si riferisce la specifica cronologia.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a dating to an event involving the cultural property, which the dating is about.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">has event related</rdfs:label>
-        <rdfs:label xml:lang="it">relativa a evento</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">DTN/DTNS; se non c&apos;è, Event = &quot;realizzazione&quot;</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1162,6 +1164,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasFruition">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isFruitionOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Fruition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un vestimento antico o contemporaneo a un&apos;occasione in cui è stato indossato da una o più persone.</rdfs:comment>
@@ -1192,6 +1195,25 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInterpretationCriterionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
+        <rdfs:comment xml:lang="it">Questa proprietà associa una attribuzione di autore/responsabilità, una cronologia, una committenza, o altre situazioni che prevedono una interpretazione, alla motivazione o criterio che hanno determinato quella interpretazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an authorship, dating, commission, or other interpretation situations, to the reason or criterion which led to that interpretation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha criterio interpretativo</rdfs:label>
+        <rdfs:label xml:lang="en">has interpretation criterion</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - ICCD Normativa F: PD/PDF/PDFM - ICCD Normativa VeAC: AU/FRU/FRUF - CCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1685,6 +1707,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasReferenceCatalogue -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasReferenceCatalogue">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isReferenceCatalogueOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Copy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la copia della stampa con il suo repertorio.</rdfs:comment>
@@ -1775,6 +1798,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasReproduction -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasReproduction">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isReproductionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PrintInPublication"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Reproduction"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la pubblicazione con la riproduzione della stampa che ne è, o è stata, parte integrante.</rdfs:comment>
@@ -1986,24 +2010,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasSource -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSource">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
-        <rdfs:comment xml:lang="it">Questa proprietà associa una attribuzione di autore/responsabilità, una cronologia, una committenza, alla motivazione o fonte che hanno determinato l&apos;attribuzione o l&apos;individuazione di una informazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an authorship, history or commissioning to the reasons or sources which led to one of this concepts.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha motivazione</rdfs:label>
-        <rdfs:label xml:lang="en">has source</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - ICCD Normativa F: PD/PDF/PDFM - ICCD Normativa VeAC: AU/FRU/FRUF - CCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFM</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasSpecies -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSpecies">
@@ -2101,6 +2107,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasSurveyImage -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSurveyImage">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSurveyImageOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImage"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una fotointerpretazione o fotorestituzione all&apos;immagine presa in esame nel corso dell&apos;indagine.</rdfs:comment>
@@ -2270,6 +2277,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasTomb -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTomb">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isTombOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Tomb"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno scavo archeologico alla deposizione funeraria individuata durante l&apos;indagine.</rdfs:comment>
@@ -2699,6 +2707,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isCommissionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCommissionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Commission"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;individuazione di una committenza all&apos;entità culturale che è stata commissionata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a commission to the cultural entity that was commissioned.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is commission of</rdfs:label>
+        <rdfs:label xml:lang="it">è committenza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isCommittentIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCommittentIn">
@@ -2750,6 +2775,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isCulturalPropertyEstimateOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalPropertyEstimateOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isEstimateOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una stima di un bene culturale al bene culturale stimato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property estimate to the estimated cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is cultural property estimate of</rdfs:label>
+        <rdfs:label xml:lang="it">è stima del bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isCulturalPropertyStageIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCulturalPropertyStageIn">
@@ -2788,10 +2830,10 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isDocumentationOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione che riguarda il bene descritto in una scheda di catalogo al bene stesso.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a documentation concerning a cultural property described in a catalogue record to the cultural entity.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una documentazione a un&apos;entità che viene documentata. Per esempio, può collega una documentazione che riguarda il bene descritto in una scheda di catalogo al bene stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a documentation to an entity. For example, it can relates a documentation concerning a cultural property described in a catalogue record to that cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is documentation of</rdfs:label>
         <rdfs:label xml:lang="it">è documentazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -2886,6 +2928,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isFruitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isFruitionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Fruition"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una fruizione di un vestimento al vestimento stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the fruition of a garment to that garment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is fruition of</rdfs:label>
+        <rdfs:label xml:lang="it">è fruizione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isGenusIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isGenusIn">
@@ -2897,6 +2956,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is genus in</rdfs:label>
         <rdfs:label xml:lang="it">è genere in</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isInterpretationCriterionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterpretationCriterionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un criterio interpretativo all&apos;interpretazione che si è basata su quel criterio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an interpretation criterion to the interpretation that was based on that criterion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is interpretation criterion of</rdfs:label>
+        <rdfs:label xml:lang="it">è criterio interpretativo di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3301,6 +3377,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isReferenceCatalogueOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isReferenceCatalogueOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Copy"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha repertorio di riferimento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has reference catalogue&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is reference catalogue of</rdfs:label>
+        <rdfs:label xml:lang="it">è repertorio di riferimento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isRelatedToResearch -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRelatedToResearch">
@@ -3333,6 +3425,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa S 3: RO/ADL</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isReproductionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isReproductionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Reproduction"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PrintInPublication"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha riproduzione&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has reproduction&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is reproduction of</rdfs:label>
+        <rdfs:label xml:lang="it">è riproduzione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3455,6 +3563,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isSurveyImageOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSurveyImageOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha immagine di indagine&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has survey image&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is survey image of</rdfs:label>
+        <rdfs:label xml:lang="it">è immagine di indagine</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isSurveyOn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isSurveyOn">
@@ -3485,6 +3609,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>OG/SGT/SGTP; SG/SGL/SGLT; SG/SGL/SGLL; OG/SGT/SGTR; DA/AID/AIDN; SG/SGL/SGLA; DA/AID/AIDT; OG/SGT/SGTT; RO/ROF/ROFT; DO/BSE/BSET; DO/BSE/BSEC.</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isTombOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isTombOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Tomb"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha deposizione funeraria&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has tomb&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is tomb of</rdfs:label>
+        <rdfs:label xml:lang="it">è deposizione funeraria di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3709,6 +3849,12 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/italia/onto/l0/hasTopic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasTopic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/isDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
     
 
 
@@ -5372,7 +5518,7 @@ resource:Acquisition/1200865053-acquisition-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAttributedAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5973,8 +6119,26 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAttributedAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalScope"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5999,6 +6163,12 @@ resource:ArchivalSubseries/museo-civico-romano
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Bibliography">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBibliographyOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographyType"/>
@@ -6307,6 +6477,12 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCommissionOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCircumstance"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
             </owl:Restriction>
@@ -6379,11 +6555,7 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasCopyright"/>
-                    </rdf:Description>
-                </owl:onProperty>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCopyrightOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -6409,6 +6581,12 @@ resource:ArchivalSubseries/museo-civico-romano
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalPropertyEstimate">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isCulturalPropertyEstimateOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedCulturalPropertyValue"/>
@@ -6482,7 +6660,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalScope"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attribuzione di un ambito culturale a cui può essere riferito il bene culturale. Per l&apos;ambito culturale si usano definizioni quali: ambito, cultura, periodo, produzione, scuola, manifattura, ecc.; a questi termini segue la qualificazione geografica o il nome dell&apos;ambito, della cultura, del periodo, della produzione, della scuola, della manifattura, ecc.</rdfs:comment>
@@ -6560,7 +6738,13 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEvent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isDatingOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDatingEvent"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -6646,6 +6830,12 @@ resource:ArchivalSubseries/museo-civico-romano
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Documentation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isDocumentationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDocumentationType"/>
@@ -6751,6 +6941,12 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Edition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isEditionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
@@ -7075,6 +7271,12 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isFruitionOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCircumstance"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
             </owl:Restriction>
@@ -7186,8 +7388,8 @@ gioco, etc.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSource"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Interpretation&apos; is the following:
@@ -7207,6 +7409,28 @@ resource:PreferredAuthorshipAttribution/1200865600-1 a           cd:PreferredAut
         <rdfs:label xml:lang="it">Interpretazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/InterpretationCriterion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/InterpretationCriterion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isInterpretationCriterionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il criterio o la motivazione che ha determinato una certa interpretazione (es.: bibliografia, documentazione, iscrizione).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the criterion that motivated an interpretation (e.g. inscription, bibliography, documentation).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Criterio interpretativo</rdfs:label>
+        <rdfs:label xml:lang="en">Interpretation criterion</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - Normativa VeAC: AU/FRU/FRUF - Normativa MI 3.00: AU/DC/DDCF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -7320,6 +7544,12 @@ resource:Intervention/0800640527-10-intervention-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isInventoryOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInventoryIdentifierResponsible"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
@@ -7396,6 +7626,12 @@ resource:Intervention/0800640527-10-intervention-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LegalSituation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isLegalSituationOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasOwner"/>
@@ -7800,7 +8036,7 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAttributedAuthor"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -7961,6 +8197,12 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isProtectiveMeasureOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProponentAgency"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
@@ -8005,6 +8247,12 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isReferenceCatalogueOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Copy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il repertorio che cita la copia di una stampa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reference catalogue that cites the copy of a print.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -8023,14 +8271,14 @@ resource:PreparatoryOrFinalWork/0500212038-disegno
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalPropertyStage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
-                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalPropertyStage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Related work situation&apos; is the following:
@@ -8086,6 +8334,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Reproduction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isReproductionOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/PrintInPublication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasReproductionPosition"/>
@@ -8179,6 +8433,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibilityType"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isResponsibilityFor"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8345,22 +8605,6 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Source -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Source">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la motivazione o la fonte che ha determinato una certa interpretazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the source that motivated an interpretation.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">Motivazione</rdfs:label>
-        <rdfs:label xml:lang="en">Source</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - Normativa VeAC: AU/FRU/FRUF - Normativa MI 3.00: AU/DC/DDCF</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/SourceAndDocument -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SourceAndDocument">
@@ -8435,6 +8679,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Subject">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSubjectOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il soggetto rappresentato da un bene culturale o il suo motivo decorativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the subject of a cultural property, or its ornamental motif.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -8473,6 +8723,12 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Survey">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSurveyOn"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Survey&apos; is the following:
 resource:ArchaeologicalExcavation/0500590557-survey-1
         a           cd:ArchaeologicalExcavation ;
@@ -8509,6 +8765,12 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SurveyImage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSurveyImageOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyImageType"/>
@@ -8586,8 +8848,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSource"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isTitleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8636,12 +8904,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasTomb"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isTombOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una deposizione funeraria.</rdfs:comment>
@@ -8660,6 +8924,12 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isUrbanPlanningInstrumentOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasEligibleIntervention"/>
@@ -9552,9 +9822,9 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
@@ -9684,7 +9954,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Format"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Source"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Use"/>
         </owl:members>
