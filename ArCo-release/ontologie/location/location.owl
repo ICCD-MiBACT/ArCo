@@ -27,20 +27,20 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:title xml:lang="it">Ontologia della Localizzazione (ArCo network)</dc:title>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <rdfs:label xml:lang="en">Location Ontology (ArCo network)</rdfs:label>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
         <dc:title xml:lang="en">Location Ontology (ArCo network)</dc:title>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:label xml:lang="it">Ontologia della Localizzazione (ArCo network)</rdfs:label>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <rdfs:label xml:lang="it">Ontologia della Localizzazione (ArCo network)</rdfs:label>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
@@ -129,6 +129,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasConcept -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasConcept"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasLocation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasLocation"/>
@@ -144,6 +150,12 @@
     <!-- https://w3id.org/arco/ontology/core/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isConceptOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isConceptOf"/>
     
 
 
@@ -697,7 +709,7 @@
     <!-- https://w3id.org/arco/ontology/location/hasTypeOfContext -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasTypeOfContext">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isTypeOfContextOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
@@ -1130,7 +1142,7 @@
     <!-- https://w3id.org/arco/ontology/location/isTypeOfContextOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isTypeOfContextOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/TypeOfContext"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di collegare tipo di contesto (urbano, suburbano, extraurbano, territoriale, subacqueo) all&apos;entità che vi si trova.</rdfs:comment>
@@ -1257,9 +1269,9 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalInstituteOrSite"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment rdf:resource="https://w3id.org/arco/location/"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare un contenitore giuridico al codice assegnatogli dall&apos;ICCD.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows to associate a legal container to its code assigned by the ICCD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">cultural institute or site identifier</rdfs:label>
         <rdfs:label xml:lang="it">identificativo del contenitore giuridico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -1528,6 +1540,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Method -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method"/>
@@ -1537,6 +1555,12 @@
     <!-- https://w3id.org/arco/ontology/core/Situation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/TimeIndexedSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
     
 
 
@@ -2006,7 +2030,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     <!-- https://w3id.org/arco/ontology/location/TypeOfContext -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TypeOfContext">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contesto in cui si trova un bene culturale, che può essere urbano, suburbano, extraurbano, territoriale, subacqueo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of geographical context where the cultural property is located: i.e. urban, suburban, extra-urban, territorial, underwater.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>

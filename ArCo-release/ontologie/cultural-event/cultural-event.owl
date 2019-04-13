@@ -161,8 +161,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasImmediateNextEvent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextEvent"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, all&apos;evento immediatamente successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to the immediate next event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -179,8 +179,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasImmediatePreviousEvent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, all&apos;evento immediatamente precedente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to the immediate previous event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -197,7 +197,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isEventMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento ricorrente, inteso come collezione di eventi, a uno degli eventi membri della collezione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a recurrent event, as a collection of events, to one of its member events.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -214,8 +214,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasNextEvent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/precedes"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, a uno degli eventi successivi.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the next events.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -232,8 +232,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/follows"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento che è membro di un evento ricorrente, inteso come collezione, a uno degli eventi precedenti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event that is member of a recurrent event, as a collection, to one of the previous events.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -268,7 +268,7 @@
     <!-- https://w3id.org/arco/ontology/cultural-event/hasTimePeriodBeforeNextEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasTimePeriodBeforeNextEvent">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come collezione di eventi, al periodo di tempo che intercorre tra l&apos;evento stesso e l&apos;evento successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an event, member of a recurrent event as a collection of events, to the time period that is between that event and the next one.</rdfs:comment>
@@ -318,7 +318,7 @@
     <!-- https://w3id.org/arco/ontology/cultural-event/isEventMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isEventMemberOf">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <rdfs:isDefinedBy xml:lang="it">Questa proprietà collega un evento, membro di un evento ricorrente inteso come una collezione di eventi, all&apos;evento ricorrente di cui è membro.</rdfs:isDefinedBy>
@@ -450,11 +450,11 @@
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasNextEvent"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasPreviousEvent"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -465,14 +465,14 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
-                    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Event"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation"/>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Event"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -574,9 +574,9 @@
     
 
 
-    <!-- https://w3id.org/italia/onto/l0/Event -->
+    <!-- https://w3id.org/italia/onto/l0/EventOrSituation -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Event"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation"/>
     
 
 

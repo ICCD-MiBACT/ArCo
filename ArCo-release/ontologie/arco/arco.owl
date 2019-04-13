@@ -28,11 +28,11 @@
      xmlns:a-loc="https://w3id.org/arco/ontology/location/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
@@ -48,14 +48,14 @@
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
-        <dc:title xml:lang="en">ArCo Ontology (ArCo network)</dc:title>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <dc:title xml:lang="en">ArCo Ontology (ArCo network)</dc:title>
         <rdfs:comment xml:lang="en">The ArCo module is the root of the network ArCo - Architecture of Knowledge. It imports all the other modules and models top-level distinctions from the cultural heritage domain.</rdfs:comment>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -1012,6 +1012,12 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalDetailOccurrence -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalDetailOccurrence"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus"/>
     
 
 
@@ -2811,7 +2817,7 @@
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/TangibleCulturalProperty">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/CulturalProperty"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un bene materiale, cioè fisicamente tangibile, sia mobile che immobile.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a tangible cultural property, both immovable and movable.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a tangible cultural property, either immovable or movable.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Bene materiale</rdfs:label>
         <rdfs:label xml:lang="en">Tangible Cultural Property</rdfs:label>
@@ -2858,6 +2864,12 @@
     <!-- https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/AnomalyOrigin -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AnomalyOrigin"/>
     
 
 
@@ -2912,6 +2924,12 @@
     <!-- https://w3id.org/arco/ontology/context-description/Commission -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Commission"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/CulturalPropertyStage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/CulturalPropertyStage"/>
     
 
 
@@ -2999,6 +3017,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Reliability -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Reliability"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Research -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Research"/>
@@ -3059,6 +3083,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityCharacteristic"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/CulturalEntityClassification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/CulturalEntityClassification"/>
@@ -3083,9 +3113,27 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/AgeRange -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMedium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/ConservationStatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
     
 
 
@@ -3113,6 +3161,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/FontStyle -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/FunctionalPurpose"/>
@@ -3122,6 +3176,12 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Legibility -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
     
 
 
@@ -3149,9 +3209,21 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/Altitude -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Altitude"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/CadastralIdentity -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CadastralIdentity"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/Coordinates -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/Coordinates"/>
     
 
 
