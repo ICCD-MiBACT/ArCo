@@ -423,6 +423,12 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Situation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/Exhibition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/Exhibition">
@@ -464,8 +470,8 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/Situation"/>
                     <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
-                    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation"/>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>

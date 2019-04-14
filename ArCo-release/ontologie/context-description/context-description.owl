@@ -24,7 +24,6 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <dc:title xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</dc:title>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
@@ -4829,7 +4828,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di emissione di un provvedimento amministrativo o di una certificazione (es.: per la circolazione, esportazione/importazione di un bene culturale)</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents issue date of an administrative provision or a certification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -4865,7 +4864,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data della notifica del provvedimento amministrativo al proprietario.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the date of notification of the administrative provision to the owner.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -4902,7 +4901,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data (nella forma “aaaa/mm/gg”) della comunicazione di avvio del procedimento di dichiarazione di interesse al proprietario, possessore o detentore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents date of interest declaration communication to the owner or holder.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -6354,6 +6353,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:comment xml:lang="en">This class represents a circumstance that influenced a particular situation, e.g. the circumstance for which a cultural property was commissioned, tha circumstance in which a cultural property was used, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Circumstance</rdfs:label>
+        <rdfs:label xml:lang="en">Occasion</rdfs:label>
         <rdfs:label xml:lang="it">Occasione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
