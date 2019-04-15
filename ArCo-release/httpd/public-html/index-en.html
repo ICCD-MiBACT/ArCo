@@ -827,15 +827,14 @@ WHERE {
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
-PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
-SELECT ?collection ?item
-WHERE {
- ?collection a cis:CollectionOfCulturalEntities.
- ?collection arco-cd:isCollectionIn ?collectionmemb.
- ?collectionmemb arco-cd:hasMemberOfCollection ?item.
-} LIMIT 100
-
+                  PREFIX arco-cd:  &lt;https://w3id.org/arco/ontology/context-description/&gt;
+                  PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+                  SELECT ?collection ?item
+                  WHERE {
+                   ?collection a cis:CollectionCulEnt.
+                   ?collection arco-cd:isCollectionIn ?collectionmemb.
+                   ?collectionmemb arco-cd:hasMemberOfCollection ?item.
+                  } LIMIT 100
 </pre>
             </div>
           </div>
@@ -864,7 +863,7 @@ WHERE {
           <div class="col-lg-4 mr-auto">
              <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+%3Fcollection+%3Fitem%0D%0AWHERE+%7B%0D%0A+%3Fcollection+a+cis%3ACollectionOfCulturalEntities.%0D%0A+%3Fcollection+arco-cd%3AisCollectionIn+%3Fcollectionmemb.%0D%0A+%3Fcollectionmemb+arco-cd%3AhasMemberOfCollection+%3Fitem.%0D%0A%7D+LIMIT+100%0D%0A&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F>%0D%0APREFIX+cis%3A+<http%3A%2F%2Fdati.beniculturali.it%2Fcis%2F>%0D%0ASELECT+%3Fcollection+%3Fitem%0D%0AWHERE+%7B%0D%0A+%3Fcollection+a+cis%3ACollectionCulEnt.%0D%0A+%3Fcollection+arco-cd%3AisCollectionIn+%3Fcollectionmemb.%0D%0A+%3Fcollectionmemb+arco-cd%3AhasMemberOfCollection+%3Fitem.%0D%0A%7D+LIMIT+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Run!
                 </a>
