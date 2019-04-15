@@ -256,11 +256,11 @@
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX l0: &lt;https://w3id.org/italia/onto/l0/&gt;
-PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+PREFIX l0:  &lt;https://w3id.org/italia/onto/l0/&gt;
+PREFIX cis:  &lt;http://dati.beniculturali.it/cis/&gt;
 SELECT ?event ?eventName ?culturalProperty ?culturalPropertyLabel
 WHERE{
-  ?event cis:involves ?culturalProperty ;
+  ?event cis:involvesCulturalEntity ?culturalProperty ;
     l0:name ?eventName .
   ?culturalProperty rdfs:label ?culturalPropertyLabel
 }
@@ -300,7 +300,7 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+l0%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2Fl0%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+%3Fevent+%3FeventName+%3FculturalProperty+%3FculturalPropertyLabel%0D%0AWHERE%7B%0D%0A++%3Fevent+cis%3Ainvolves+%3FculturalProperty+%3B%0D%0A++++l0%3Aname+%3FeventName+.%0D%0A++%3FculturalProperty+rdfs%3Alabel+%3FculturalPropertyLabel%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+l0%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2Fl0%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0ASELECT+%3Fevent+%3FeventName+%3FculturalProperty+%3FculturalPropertyLabel%0D%0AWHERE%7B%0D%0A++%3Fevent+cis%3AinvolvesCulturalEntity+%3FculturalProperty+%3B%0D%0A++++l0%3Aname+%3FeventName+.%0D%0A++%3FculturalProperty+rdfs%3Alabel+%3FculturalPropertyLabel%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Run!
                 </a>
