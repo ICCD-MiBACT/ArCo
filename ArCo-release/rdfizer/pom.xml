@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.cnr.istc.stlab</groupId>
     <artifactId>arco.rdfizer</artifactId>
-    <version>0.1</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <name>ArCo RDFizer</name>
     
@@ -57,7 +57,7 @@
                 	<shadedArtifactAttached>false</shadedArtifactAttached>
           				<transformers>
             				<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-              					<mainClass>it.cnr.istc.stlab.arco.SingleFileWriter</mainClass>
+              					<mainClass>it.cnr.istc.stlab.arco.SingleFileWriterNTriples</mainClass>
             				</transformer>
             				<transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
             				<transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer" />
@@ -291,9 +291,47 @@
 		    <artifactId>lucene-queryparser</artifactId>
 		    <version>7.7.1</version>
 		</dependency>
+		
+		
+		<!-- dependency>
+		    <groupId>net.sourceforge.owlapi</groupId>
+		    <artifactId>owlapi-reasoner</artifactId>
+		    <version>3.3</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.clarkparsia.pellet</groupId>
+		    <artifactId>pellet-core</artifactId>
+		    <version>2.4.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.clarkparsia.pellet</groupId>
+		    <artifactId>pellet-jena</artifactId>
+		    <version>2.4.0-SNAPSHOT</version>
+		</dependency>
+				
+		
 				
 				
+		<dependency>
+			<groupId>MORe</groupId>
+  			<artifactId>MORe</artifactId>
+  			<version>0.2.0-SNAPSHOT</version>
+  			<scope>test</scope>
+  		</dependency -->
 				
+		<!-- Virtuoso2Jena provider -->
+	<dependency>
+		<groupId>virtuoso</groupId>
+		<artifactId>virt-jena</artifactId>
+		<version>3.0.0</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>virtuoso</groupId>
+		<artifactId>virtjdbc</artifactId>
+		<version>4.0.0</version>
+	</dependency>
 		
 		
         

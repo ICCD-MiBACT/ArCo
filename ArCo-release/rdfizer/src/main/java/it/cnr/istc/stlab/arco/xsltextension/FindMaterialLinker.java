@@ -145,7 +145,6 @@ public class FindMaterialLinker extends SKOSThesaurusLinker implements Extension
 	    try {
 	    	
 			Query query = parser.parse(QueryParserBase.escape(arg));
-			System.out.println(isearcher);
 			ScoreDoc[] hits = isearcher.search(query, 10).scoreDocs;
 			if(hits.length > 0) {
 				Document hitDoc = isearcher.doc(hits[0].doc);

@@ -67,8 +67,6 @@ public class RelatedPropertyFinder extends SKOSThesaurusLinker implements Extens
 			Resource property = querySolution.getResource("property");
 			uris.add(property.getURI());
 			if(!found) found = true;
-			
-			System.out.println(property);
 		}
 		
 		/*

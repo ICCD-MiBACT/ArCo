@@ -1648,7 +1648,7 @@
 				</xsl:for-each>
 				<!-- author for BDM < 4.00 -->
 				<xsl:for-each select="schede/BDM/AU/AUF">
-				<xsl:if test="./* and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
+				<xsl:if test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 						<arco-cd:hasAuthorshipAttribution>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
@@ -2069,50 +2069,56 @@
 					</arco-dd:hasFunctionalPurpose>
 				</xsl:if>
 				<!-- heritage protection agency -->
-				<xsl:if test="schede/*/CD/ECP">
-					<arco-core:hasAgentRole>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
-	                        </xsl:attribute>
-					</arco-core:hasAgentRole>
-					<arco-arco:hasHeritageProtectionAgency>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/CD/ECP))" />
-	                        </xsl:attribute>
-					</arco-arco:hasHeritageProtectionAgency>
-				</xsl:if>
+				<xsl:for-each select="schede/*/CD/ECP">
+					<xsl:if test=".">
+						<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'AgentRole/', $itemURI, '-heritage-protection-agency')" />
+		                        </xsl:attribute>
+						</arco-core:hasAgentRole>
+						<arco-arco:hasHeritageProtectionAgency>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+		                        </xsl:attribute>
+						</arco-arco:hasHeritageProtectionAgency>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- cataloguing agency -->
-				<xsl:if test="schede/*/CD/ESC">
-					<arco-core:hasAgentRole>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
-	                        </xsl:attribute>
-					</arco-core:hasAgentRole>
-					<arco-arco:hasCataloguingAgency>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/CD/ESC))" />
-	                        </xsl:attribute>
-					</arco-arco:hasCataloguingAgency>
-				</xsl:if>
+				<xsl:for-each select="schede/*/CD/ESC">
+					<xsl:if test=".">
+						<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'AgentRole/', $itemURI, '-cataloguing-agency')" />
+		                        </xsl:attribute>
+						</arco-core:hasAgentRole>
+						<arco-arco:hasCataloguingAgency>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+		                        </xsl:attribute>
+						</arco-arco:hasCataloguingAgency>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- proponent agency -->
-				<xsl:if test="schede/*/CD/EPR">
-					<arco-core:hasAgentRole>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
-	                        </xsl:attribute>
-					</arco-core:hasAgentRole>
-					<arco-cd:hasProponentAgency>
-						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/CD/EPR))" />
-	                        </xsl:attribute>
-					</arco-cd:hasProponentAgency>
-				</xsl:if>
+				<xsl:for-each select="schede/*/CD/EPR">
+					<xsl:if test=".">
+						<arco-core:hasAgentRole>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'AgentRole/', $itemURI, '-proponent-agency')" />
+		                        </xsl:attribute>
+						</arco-core:hasAgentRole>
+						<arco-cd:hasProponentAgency>
+							<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+		                        </xsl:attribute>
+						</arco-cd:hasProponentAgency>
+					</xsl:if>
+				</xsl:for-each>
 				<!-- Type of context for LC -->
 				<xsl:for-each select="schede/*/LC/PVZ">
 					<arco-location:hasTypeOfContext>

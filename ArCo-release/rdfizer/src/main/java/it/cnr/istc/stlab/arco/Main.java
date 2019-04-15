@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
 
 public class Main {
 
@@ -37,21 +36,26 @@ public class Main {
 					String subFolderName = subFolder.getName();
 					File outSubFolder = new File(outFolder, subFolderName);
 					
-					if(!outSubFolder.exists()){
-						outSubFolder.mkdir();
+					//if(!outSubFolder.exists()){
+					outSubFolder.mkdir();
+					
+					File[] xmls = subFolder.listFiles(f -> f.isFile() && !f.isHidden() && f.getName().endsWith(".xml"));
+					
+					System.out.println("XMLN " + outSubFolder +": "+ xmls.length);
+					
+					List<File> xmlList = new ArrayList<File>();
+					for(File xml : xmls){
+						xmlList.add(xml);
+					}
+					
+					List<File> rdfFiles = xmlList.parallelStream().map(f -> {
 						
-						File[] xmls = subFolder.listFiles(f -> f.isFile() && !f.isHidden() && f.getName().endsWith(".xml"));
+						String itemName = f.getName().replace(".xml", "");
 						
-						System.out.println("XMLN " + outSubFolder +": "+ xmls.length);
+						File ret = new File(outSubFolder, itemName + ".nt");
 						
-						List<File> xmlList = new ArrayList<File>();
-						for(File xml : xmls){
-							xmlList.add(xml);
-						}
+						if(!ret.exists()) {
 						
-						List<File> rdfFiles = xmlList.parallelStream().map(f -> {
-							
-							File ret = null;
 							InputStream is = null;
 							try {
 								is = new FileInputStream(f);
@@ -60,16 +64,14 @@ public class Main {
 								e.printStackTrace();
 							}
 							
-							String itemName = f.getName().replace(".xml", "");
 							if(is != null){
 								try{
 									
 									//System.out.println(itemName);
 									Model model = converter.convert(itemName, is);
 									
-									ret = new File(outSubFolder, itemName + ".ttl");
 									OutputStream modelOut = new FileOutputStream(ret);
-									model.write(modelOut, "TURTLE");
+									model.write(modelOut, "N-TRIPLES");
 									modelOut.close();
 									
 									
@@ -90,37 +92,39 @@ public class Main {
 								
 								
 							}
+						}
+						
+						return ret;
+					}).collect(Collectors.toList());
+					
+					System.out.println("created");
+					/*
+					Model model = ModelFactory.createDefaultModel();
+					rdfFiles.forEach(rdfFile -> {
+						Model modelTmp = ModelFactory.createDefaultModel();
+						InputStream is;
+						try {
+							is = new FileInputStream(rdfFile);
+							modelTmp.read(is, null, "TURTLE");
 							
-							return ret;
-						}).collect(Collectors.toList());
-						
-						System.out.println("created");
-						
-						Model model = ModelFactory.createDefaultModel();
-						rdfFiles.forEach(rdfFile -> {
-							Model modelTmp = ModelFactory.createDefaultModel();
-							InputStream is;
-							try {
-								is = new FileInputStream(rdfFile);
-								modelTmp.read(is, null, "TURTLE");
-								
-								is.close();
-								
-								model.add(modelTmp);
-								
-								rdfFile.delete();
-							} catch (Exception e) {
-								System.err.println(rdfFile.getName());
-								e.printStackTrace();
-							}
-						});
-						
-						OutputStream outputStream = new FileOutputStream(new File(outSubFolder, outSubFolder.getName() + ".ttl"));
-						model.write(outputStream, "TURTLE");
-						outputStream.close();
-						
-						
-					}
+							is.close();
+							
+							model.add(modelTmp);
+							
+							rdfFile.delete();
+						} catch (Exception e) {
+							System.err.println(rdfFile.getName());
+							e.printStackTrace();
+						}
+					});
+					
+					OutputStream outputStream = new FileOutputStream(new File(outSubFolder, outSubFolder.getName() + ".ttl"));
+					model.write(outputStream, "TURTLE");
+					outputStream.close();
+					*/
+					
+					
+					//}
 					
 				}
 			}

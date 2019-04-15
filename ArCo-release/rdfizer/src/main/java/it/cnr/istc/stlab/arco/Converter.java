@@ -33,8 +33,10 @@ import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
 import it.cnr.istc.stlab.arco.xsltextension.ScientificPropertyDefinitionLinker;
+import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
 import it.cnr.istc.stlab.arco.xsltextension.Uncamelizer;
 import it.cnr.istc.stlab.arco.xsltextension.Urify;
+import net.sf.saxon.functions.NormalizeSpace_1;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
@@ -86,7 +88,6 @@ public class Converter {
             public XdmValue call(XdmValue[] arguments) throws SaxonApiException
             {
                 String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                
                 
                 String digest = "";
                 MessageDigest md;
@@ -204,6 +205,7 @@ public class Converter {
         
         proc = new Processor(false);
 		proc.registerExtensionFunction(new Urify());
+		proc.registerExtensionFunction(Arcofy.getInstance());
 		proc.registerExtensionFunction(md5);
 		proc.registerExtensionFunction(sheetType2propertyType);
 		proc.registerExtensionFunction(sheetType2SpecificPropertyType);
@@ -283,6 +285,7 @@ public class Converter {
 			Serializer out = proc.newSerializer(byteArrayOut);
 			XsltTransformer trans = exp.executable.load();
 			
+			System.out.println(exp.name);
 			QName qName = new QName("item");
 			XdmValue value = new XdmAtomicValue(item);
 			trans.setParameter(qName, value);
