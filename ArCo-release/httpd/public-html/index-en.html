@@ -464,7 +464,7 @@ SELECT *
 WHERE{
   ?entity arco-cd:hasAuthorshipAttribution ?attribution .
   ?attribution arco-cd:hasInterventionRole ?role ;
-    arco-cd:hasSource ?attributionSource
+    arco-cd:hasInterpretationCriterion ?criterion
 }
 limit 100</pre>
             </div>
@@ -494,7 +494,7 @@ limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-cd%3AhasAuthorshipAttribution+%3Fattribution+.%0D%0A++%3Fattribution+arco-cd%3AhasInterventionRole+%3Frole+%3B%0D%0A++++arco-cd%3AhasSource+%3FattributionSource%0D%0A%7D%0D%0Alimit+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F>%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-cd%3AhasAuthorshipAttribution+%3Fattribution+.%0D%0A++%3Fattribution+arco-cd%3AhasInterventionRole+%3Frole+%3B%0D%0A++++arco-cd%3AhasInterpretationCriterion+%3Fcriterion%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Run!
                 </a>
