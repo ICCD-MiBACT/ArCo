@@ -518,17 +518,18 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
                <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
-PREFIX arco-dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
-PREFIX arco-arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
-SELECT *
-WHERE{?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ;
-    rdfs:label ?entityLabel ;
-  arco-cd:hasDating ?dating .
-  ?dating arco-cd:hasEvent ?event ;
-    arco-cd:hasSource ?source 
-}
-limit 100</pre>
+                  PREFIX arco-cd:  &lt;https://w3id.org/arco/ontology/context-description/&gt;
+                  PREFIX arco-dd:  &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
+                  PREFIX arco-arco:  &lt;https://w3id.org/arco/ontology/arco/&gt;
+                  SELECT *
+                  WHERE{?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ;
+                      rdfs:label ?entityLabel ;
+                    arco-cd:hasDating ?dating .
+                    ?dating arco-cd:hasDatingEvent ?event ;
+                    arco-cd:hasInterpretationCriterion ?criterion.
+                  }
+                  limit 100
+</pre>
             </div>
           </div>
           <div class="col-lg-4 mr-auto">
@@ -563,7 +564,7 @@ limit 100</pre>
           <div class="col-lg-4 ml-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-arco%3ACulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+arco-cd%3AhasEvent+%3Fevent+%3B%0D%0A++++arco-cd%3AhasSource+%3Fsource+%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F>%0D%0APREFIX+arco-dd%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F>%0D%0APREFIX+arco-arco%3A+<https%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F>%0D%0ASELECT+*%0D%0AWHERE%7B%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-arco%3ACulturalProperty+%3B%0D%0A++++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasDating+%3Fdating+.%0D%0A++%3Fdating+arco-cd%3AhasDatingEvent+%3Fevent+%3B%0D%0A++arco-cd%3AhasInterpretationCriterion+%3Fcriterion.%0D%0A%7D%0D%0Alimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Run!
                 </a>
