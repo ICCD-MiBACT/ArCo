@@ -639,17 +639,24 @@ Limit 100
           </div>
           <div class="col-lg-4 mr-auto">
             <pre class="prettyprint lang-sparql sparql-example">
-PREFIX arco-dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
-PREFIX arco-arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
-SELECT ?entity ?entityLabel ?clay
-WHERE{
-  ?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; arco-dd:hasTechnicalDetailOccurrence ?occurrence ; rdfs:label ?entityLabel .
-?occurrence arco-dd:satisfiesTechnicalDetail ?clay .
-  FILTER regex(?clay, "argilla", "i") 
-
-}
-
-Limit 100</pre>
+                PREFIX arco-dd: &lt;https://w3id.org/arco/ontology/denotative-description/&gt;
+                PREFIX arco-arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+                SELECT ?entity ?clay
+                WHERE{
+                
+                {?entity rdf:type/rdfs:subClassOf* arco-arco:CulturalProperty ; 
+                  arco-dd:hasTechnicalStatus ?techstatus. 
+                  ?techstatus arco-dd:includesTechnicalCharacteristic ?clay.
+                  FILTER regex(?clay, "argilla", "i")}
+                
+                UNION
+                
+                {?entity a arco-arco:CulturalProperty ;
+                  arco-dd:hasMaterial ?clay.
+                  FILTER regex(?clay, "argilla", "i")}
+                
+                } Limit 100
+</pre>
           </div>
         </div>
         <div class="row">
@@ -676,7 +683,7 @@ Limit 100</pre>
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fclay%0D%0AWHERE%7B%0D%0A++%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-arco%3ACulturalProperty+%3B+arco-dd%3AhasTechnicalDetailOccurrence+%3Foccurrence+%3B+rdfs%3Alabel+%3FentityLabel+.%0D%0A%3Foccurrence+arco-dd%3AsatisfiesTechnicalDetail+%3Fclay+.%0D%0A++FILTER+regex%28%3Fclay%2C+%22argilla%22%2C+%22i%22%29+%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fdenotative-description%2F%3E%0D%0APREFIX+arco-arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0ASELECT+%3Fentity+%3Fclay%0D%0AWHERE%7B%0D%0A%0D%0A%7B%3Fentity+rdf%3Atype%2Frdfs%3AsubClassOf*+arco-arco%3ACulturalProperty+%3B+%0D%0A++arco-dd%3AhasTechnicalStatus+%3Ftechstatus.+%0D%0A++%3Ftechstatus+arco-dd%3AincludesTechnicalCharacteristic+%3Fclay.%0D%0A++FILTER+regex%28%3Fclay%2C+%22argilla%22%2C+%22i%22%29%7D%0D%0A%0D%0AUNION%0D%0A%0D%0A%7B%3Fentity+a+arco-arco%3ACulturalProperty+%3B%0D%0A++arco-dd%3AhasMaterial+%3Fclay.%0D%0A++FILTER+regex%28%3Fclay%2C+%22argilla%22%2C+%22i%22%29%7D%0D%0A%0D%0A%7D%0D%0ALimit+100&should-sponge=&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Run!
                 </a>
