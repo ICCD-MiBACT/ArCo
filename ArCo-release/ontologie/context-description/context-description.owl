@@ -232,17 +232,17 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
-        <rdfs:comment xml:lang="en">This property relates an antropologic artifact to its age of death estimate.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathInterpretation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un reperto antropologico alla stima dell&apos;età della morte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an antropologic artifact to the interpretation of its age of death.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">Questa proprietà collega un reperto antropologico alla stima dell&apos;età della morte.</rdfs:label>
         <rdfs:label xml:lang="it">ha età della morte stimata</rdfs:label>
-        <rdfs:label xml:lang="en">has estimated age of death</rdfs:label>
+        <rdfs:label xml:lang="en">has age of death interpretation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1991,17 +1991,17 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasSexEstimate -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasSexInterpretation -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexEstimate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasEstimate"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexInterpretation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un reperto antropologico alla stima del sesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an antropologic artifact to its sex estimate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha sesso stimato</rdfs:label>
-        <rdfs:label xml:lang="en">has estimated sex</rdfs:label>
+        <rdfs:label xml:lang="en">has sex interpretation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS</a-cat:iccdNormTag>
@@ -3947,6 +3947,23 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/ageOfDeath -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/ageOfDeath">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathInterpretation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;età della morte stimata nel contesto della stima dell&apos;età della morte di un reperto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an anthropological finding estimated age of death.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">estimated age of death</rdfs:label>
+        <rdfs:label xml:lang="it">età della morte stimata</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/agentDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/agentDate">
@@ -4544,24 +4561,6 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/estimatedAgeOfDeath -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/estimatedAgeOfDeath">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedValue"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;età della morte stimata nel contesto della stima dell&apos;età della morte di un reperto antropologico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents an anthropological finding estimated age of death.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">estimated age of death</rdfs:label>
-        <rdfs:label xml:lang="it">età della morte stimata</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/estimatedCulturalPropertyValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/estimatedCulturalPropertyValue">
@@ -4576,24 +4575,6 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/COL/COLV; UB/INP/INP/INPA; UB/STI</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/estimatedSex -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/estimatedSex">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/estimatedValue"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sesso stimato nel contesto della stima del sesso di un reperto antropologico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents anthropological finding estimated sex.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">estimated sex</rdfs:label>
-        <rdfs:label xml:lang="it">sesso stimato</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -5208,6 +5189,23 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/sex -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/sex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sesso stimato nel contesto della stima del sesso di un reperto antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents anthropological finding estimated sex.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">estimated sex</rdfs:label>
+        <rdfs:label xml:lang="it">sesso stimato</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/stripRunAndFrameNumber -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/stripRunAndFrameNumber">
@@ -5494,15 +5492,21 @@ resource:Acquisition/1200865053-acquisition-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate -->
+    <!-- https://w3id.org/arco/ontology/context-description/AgeOfDeathInterpretation -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeathInterpretation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/ageOfDeath"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la stima dell&apos;età della morte di un reperto antropologico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the estimate of the age of death of an anthropological material.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the interpretation of the age of death of an anthropological material.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Age of death estimate</rdfs:label>
-        <rdfs:label xml:lang="it">Stima dell&apos;età della morte</rdfs:label>
+        <rdfs:label xml:lang="en">Age of death interpretation</rdfs:label>
+        <rdfs:label xml:lang="it">Interpretazione dell&apos;età della morte</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/SEM</a-cat:iccdNormTag>
@@ -8573,15 +8577,21 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/SexEstimate -->
+    <!-- https://w3id.org/arco/ontology/context-description/SexInterpretation -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SexEstimate">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Estimate"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SexInterpretation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Interpretation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/sex"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la stima del sesso di un reperto antropologico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the estimate of the sex of an anthropological material.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the interpretation of the sex of an anthropological material.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Sex estimate</rdfs:label>
-        <rdfs:label xml:lang="it">Stima del sesso</rdfs:label>
+        <rdfs:label xml:lang="it">Interpretazione del sesso</rdfs:label>
+        <rdfs:label xml:lang="en">Sex interpretation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: DA/STS</a-cat:iccdNormTag>

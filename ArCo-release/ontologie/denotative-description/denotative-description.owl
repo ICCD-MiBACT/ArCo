@@ -303,7 +303,8 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCulturalEntityCharacteristic"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isConservationStatusOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
         <rdfs:comment xml:lang="it">Questa proprietà associa il bene culturale al suo stato di conservazione.</rdfs:comment>
@@ -780,6 +781,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto all&apos;insieme delle misure osservate per quell&apos;oggetto.</rdfs:comment>
@@ -1270,6 +1272,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isConservationStatusOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isConservationStatusOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatus"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega uno stato di conservazione al bene culturale che si trova in quello stato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a conservation status of a cultural property to that cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is conservation status of</rdfs:label>
+        <rdfs:label xml:lang="it">è stato di conservazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isDedicateeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDedicateeOf">
@@ -1413,6 +1432,22 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is material or technique of</rdfs:label>
         <rdfs:label xml:lang="it">è materia e tecnica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha collezione di misure&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has measurement collection&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description/"/>
+        <rdfs:label xml:lang="en">is measurement collection of</rdfs:label>
+        <rdfs:label xml:lang="it">è collezione di misure di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2357,6 +2392,12 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isConservationStatusOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasConservationStatusType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
             </owl:Restriction>
@@ -2858,6 +2899,12 @@ resource:Measurement/0500212021-1-height
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurement"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementCollectionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>ArCo - Primer Guide v0.5</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+
+<!-- Plugin CSS -->
+<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"
+	type="text/css">
+
+<!-- Custom styles for this template -->
+<link href="css/freelancer.css" rel="stylesheet">
+</head>
+<body>
+	<nav
+		class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+		id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">ArCo - Primer Guide v1.0</a>
+			<button
+				class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
+				type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu <i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+						href="./index.html">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="primer">
+		<div class="container">
+			<h1>ArCo - Primer Guide v1.0</h1>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="intro">Introduzione</h2>
+			<p>Questo documento descrive le ontologie incluse
+				nella versione 1.0 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche a essi associate, gestite con il sistema SIGEC dall'<i>Istituto Centrale per il Catalogo e la Documentazione (ICCD)</i>.</p>
+			<p>
+				In questa versione si conferma l'organizzazione in sette moduli ontologici. Inoltre, si rimanda al primer della <a href="./primer-guide.html">versione v0.1</a> per ulteriori dettagli sull'interpretazione delle varie versioni della rete e sulle ontologie riusate.
+			</p>
+			<p>
+				Le ontologie ArCo sono pubblicate all'interno di un <i>docker</i> che comprende:
+			</p>
+			<ul>
+				<li>Questa guida;</li>
+				<li>I moduli ontologici sviluppati;</li>
+				<li>Esempi di <i>competency questions</i> e loro traduzione
+					sotto forma di SPARQL query;
+				</li>
+				<li>Un campione dei dati del SIGEC trasformati in RDF secondo
+					le modellazioni di ArCo;</li>
+				<li>Un motore SPARQL basato su Virtuoso per permettere
+					l'interrogazione dei dati e delle ontologie.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2>Indice dei contenuti</h2>
+			<ol>
+				<li><a href="#rete">La rete di ontologie ArCo v1.0</a></li>
+				<li><a href="#moduli">I moduli di ArCo v1.0</a></li>
+			</ol>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="rete">La rete di ontologie ArCo v1.0</h2>
+			<p>
+				Questa versione v1.0 della rete di ontologie ArCo rappresenta la totalità delle informazioni contenute nella <a target="_blank"href"http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici">Normativa
+					Trasversale</a> e informazioni centrali estratte dalle normative relative alle singole tipologie di beni, a esclusione dei beni naturalistici. Di seguito si elencano tutte le modellazioni presenti nella rete, divise per ciascun modulo ontologico di appartenenza.
+			
+			<p>Nella tabella seguente sono elencati gli IRI dei moduli e delle ontologie riusate, ognuno associato a un prefisso.</p>
+			<table>
+				<tr>
+					<th>Prefisso</th>
+					<th>IRI</th>
+				</tr>
+				<tr>
+					<td>arco-arco:</td>
+					<td>https://w3id.org/arco/ontology/arco/</td>
+				</tr>
+				<tr>
+					<td>arco-core:</td>
+					<td>https://w3id.org/arco/ontology/core/</td>
+				</tr>
+				<tr>
+					<td>arco-ce:</td>
+					<td>https://w3id.org/arco/ontology/cultural-event/</td>
+				</tr>
+				<tr>
+					<td>arco-catalogue:</td>
+					<td>https://w3id.org/arco/ontology/catalogue/</td>
+				</tr>
+				<tr>
+					<td>arco-dd:</td>
+					<td>https://w3id.org/arco/ontology/denotative-description/</td>
+				</tr>
+				<tr>
+					<td>arco-location:</td>
+					<td>https://w3id.org/arco/ontology/location/</td>
+				</tr>
+				<tr>
+					<td>arco-cd:</td>
+					<td>https://w3id.org/arco/ontology/context-description/</td>
+				</tr>
+				<tr>
+					<td>cis:</td>
+					<td>http://dati.beniculturali.it/cis/</td>
+				</tr>
+				<tr>
+					<td>l0:</td>
+					<td>https://w3id.org/italia/onto/l0/</td>
+				</tr>
+				<tr>
+					<td>roapit:</td>
+					<td>https://w3id.org/italia/onto/RO/</td>
+				</tr>
+				<tr>
+					<td>tiapit:</td>
+					<td>https://w3id.org/italia/onto/TI/</td>
+				</tr>
+				<tr>
+					<td>clvapit:</td>
+					<td>https://w3id.org/italia/onto/CLV/</td>
+				</tr>
+				<tr>
+					<td>smapit:</td>
+					<td>https://w3id.org/italia/onto/SM/</td>
+				</tr>
+				<tr>
+					<td>language:</td>
+					<td>https://w3id.org/italia/onto/Language/</td>
+				</tr>
+			</table>
+			<div class="text-center mt-4">
+		  <img src="./img1.0/arco-network-no-align.png" style="width: 1000px;"/>
+		</div>
+		</div>
+	</section>
+	<section class="primer">
+		<div class="container">
+			<h2 id="moduli">I moduli di ArCo v1.0</h2>
+			<p>In questa sezione si illustrano sinteticamente tutti i nuclei concettuali principali, con diagrammi di esempio, presenti nella v1.0 della rete ArCo. Per una loro descrizione dettagliata si rimanda alla sezione "Ontologie" della pagina principale. Sia le scelte di modellazione sia il vocabolario sono da ritenersi stabili.</p>
+
+			<h3>Modulo ArCo (arco:)</h3>
+			<p>Questo modulo rappresenta l'intera rete di ArCo, importando tutti gli altri moduli. Modella inoltre le informazioni considerate centrali del dominio dei beni culturali. Il primo diagramma illustra la gerarchia dei beni culturali: la classe centrale arco:CulturalProperty è rappresentata come una partizione tra arco:IntangibleCulturalProperty e arco:TangibleCulturalProperty. I beni intangibili possono a loro volta essere arco:MovableCulturalProperty e arco:ImmovableCulturalProperty. Tipologie di beni culturali più specifiche sono distribuite su più livelli all'interno di questa gerarchia. Il secondo diagramma illustra la modellazione del materiale componente di un lotto di materiali archeologici. In questo modulo si definiscono inoltre diverse categorie che possono classificare tipologie di beni differenti (es.: classificazione di bene fotografico, classificazione di bene musicale, Hornbostel-Sachs o alternativa, etc.)</p>
+			<div class="text-center mt-4">
+				<img src="./img1.0/cp-hierarchy.png" /> 
+				<img src="./img1.0/archaeological-material.png" /> 
+			</div>
+
+			<p></p>
+
+			<h3>Modulo Core (core:)</h3>
+			<p>Questo modulo modella le informazioni considerate toplevel (es.: relazione tra il tutto e la parte, tra un'entità e le sue caratteristiche, tra un'entità e un generico luogo, ecc.). Viene importato da tutti gli altri moduli della rete.</p>
+			<div class="text-center mt-4">
+				<img src="./img1.0/core-module.png" />  
+			</div>
+
+
+			<h3>Modulo Denotative Description (a-dd:)</h3>
+			<p>Questo modulo (denotazione è inteso come l'atto di indicare una cosa attraverso segni esteriori) modella le informazioni che riguardano il bene culturale in sé, osservate/osservabili durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Il primo diagramma presenta la modellazione di: stato di conservazione, tipo di bene culturale, scopo funzionale, designazione del bene e apparato iconografico o decorativo. Il diagramma seguente illustra la modellazione delle modalità comunicative attraverso le quali viene veicolato un bene demoetnoantropologico immateriale. Nel terzo diagramma sono rappresentate le misure di un bene culturale (membri di una a-dd:MeasurementCollection, per cui si riusa il pattern Collection), mentre nel quarto si presenta la modellazione dello stato tecnico del bene culturale, ovvero della situazione in cui un bene culturale ha una serie di caratteristiche tecniche (es.: forma, materia, tecnica), per il quale si riutilizza il pattern DescriptionAndSituation. Lo stesso concetto è anche rappresentato per mezzo di una relazione binaria (a-dd:hasTechnicalCharacteristic). Infine, l'ultimo diagramma rappresenta gli elementi apposti sul bene culturale (emblemi, timbri, iscrizioni) e l'accessibilità e disponibilità materiale del bene. 
+			<div class="text-center mt-4">
+				<img src="./img1.0/conserv-cptype-funcpurp-design-appar.png" />
+				<img src="./img1.0/communic-medium.png" />
+				<img src="./img1.0/measurement.png" />
+				<img src="./img1.0/technical-status.png" />
+				<img src="./img1.0/affixed-accessibility.png" />
+			</div>
+
+			<h3>Modulo Context Description (a-cd:)</h3>
+			<p>Questo modulo modella le informazioni che riguardano il contesto - inteso in senso ampio - in cui il bene culturale viene a trovarsi nel corso della sua storia. Modella quindi attributi non misurabili associati al bene. Il primo diagramma mostra l'attribuzione di autore (preferita o alternativa) o ambito culturale. Nel secondo diagramma è presente la modellazione di cronologia e committenza. Il terzo modella acquisizione e mutamento di condizione materiale, il quarto la situazione (a-cd:RelatedWorkSituation) in cui un bene culturale è in rapporto con altre opere (es.: copie, fasi preparatorie o finali, contraffazioni, etc.) o altri beni culturali. Il quinto diagramma presenta la modellazione delle responsabilità di agenti diversi nei processi di produzione e divulgazione specificamente dei beni fotografici. Nel sesto diagramma sono rappresentate indagini e interventi condotti sul bene, mentre il settimo raffigura: certificati di importazione/esportazione, copyright, condizione giuridica (proprietario attuale), strumenti urbanistico-territoriali. L'ottavo diagramma rappresenta gli inventari, il nono provvedimenti di tutela, il decimo modellazioni specifiche dei beni musicali. Nei diagrammi seguenti si illustrano le rappresentazioni di: stima del sesso e dell'età della morte di un reperto antropologico; circostanze in cui si è realizzato un bene demoetnoantropologico immateriale; tassonomia relativa a un reperto antropologico.</p>
+			<div class="text-center mt-4">
+				<img src="./img1.0/authorship-attrib.png" /> 
+				<img src="./img1.0/dating-commission.png" />
+				<img src="./img1.0/acquisition-availability.png" />
+				<img src="./img1.0/related-works.png" />
+				<img src="./img1.0/responsibility.png" />
+				<img src="./img1.0/survey-intervention.png" />
+				<img src="./img1.0/export-copyright-legalsit-urbanplanning.png" />
+				<img src="./img1.0/inventory.png" />
+				<img src="./img1.0/protective-measures.png" />
+				<img src="./img1.0/music.png" />
+				<img src="./img1.0/sex-ageofdeath.png" /> 
+				<img src="./img1.0/circumstances.png" />
+				<img src="./img1.0/biological-taxon.png" />
+			</div>
+
+			<h3>Modulo Location (a-loc:)</h3>
+			<p>Questo modulo modella le informazioni relative alla localizzazione del bene culturale. Il primo diagramma mostra la modellazione di una situazione indicizzata nel tempo (pattern Time Indexed Situation) di un bene culturale che si trova in un certo luogo a un certo tempo; il luogo è tipizzato, potendo assumere ruoli diversi nei confronti del bene culturale (es.: localizzazione attuale, localizzazione precedente, luogo di ritrovamento, luogo in cui il bene è stato esibito nel corso di una mostra, etc.). Si mostra inoltre la modellazione relativa alla georeferenziazione e alle coordinate del bene culturale, per le quali si è prevalentemente riusato il modulo CLV di OntoPiA. Nel diagramma seguente si illustra la rappresentazione di elementi che permettono la corretta identificazione della localizzazione di un saggio stratigrafico: ambiente, settore, quadrato.</p>
+			<div class="text-center mt-4">
+				<img src="./img1.0/typed-location-coordinates.png" />
+				<img src="./img1.0/stratigraphic-arearoomsquare.png" />
+			</div>
+
+			<h3>Modulo Catalogue (a-cat:)</h3>
+			<p>Questo modulo modella le informazioni relative al Catalogo dei Beni Culturali, e quindi alle schede di catalogo. Nel diagramma si illustra la rappresentazione della scheda di catalogo (all'interno del sistema informativo SIGECweb) che descrive un bene culturale, e che può avere divese versioni, che sono in successione temporale (pattern Sequence). Una scheda di catalogo viene associata a un livello di catalogazione (livello di dettaglio con cui la scheda è compilata) e a un profilo d'accesso (conseguente al grado di riservatezza dei dati contenuti nella scheda). Sono inoltre modellate altre schede relative al bene: schede redatte per finalità diverse da quella della catalogazione (a-cat:CulturalPropertyRecord), moduli informativi (a-cat:InformationForm), moduli di approfondimento (a-cat:AdditionalForm).</p>
+			<div class="text-center mt-4">
+				<img src="./img1.0/catalogue-module.png" />
+			</div>
+
+			<h3>Modulo Cultural Event (a-ce:)</h3>
+			<p>Questo modulo modella le informazioni relative agli eventi che coinvolgono un bene culturale. Nel primo diagramma sono rappresentati gli eventi ricorrenti, intesi come collezioni di eventi che si verificano con una certa periodicità. Possono essere eventi ricorrenti sia particolari tipologie di beni demoetnoantropologici immateriali (es.: una festa tradizionale a cadenza annuale) sia eventi che coinvolgono altri beni culturali. Per questi ultimi, il secondo diagramma illustra il riuso e la specializzazione di Cultural-ON.</p>
+			<div class="text-center mt-4">
+				<img src="./img1.0/recurrent-event.png" />
+				<img src="./img1.0/cult-event.png" />
+
+			</div>
+		</div>
+	</section>
+	
+	<div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>
+          <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">
+            <span class="cc-license-icons">
+              <span id="cc-logo" class="icon"><img alt="cc logo" class="cc" src="./img/cc_icon_white_x2.png"></span>
+              <span id="cc-attribution" class="icon"><img class="cc" src="./img/attribution_icon_white_x2.png"></span>
+            </span>
+          </a>
+        </small>
+      </div>
+    </div>
+	
+	<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.js"></script>
+</body>
+</html>
