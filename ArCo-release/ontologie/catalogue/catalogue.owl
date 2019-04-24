@@ -25,10 +25,10 @@
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
-        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.</rdfs:comment>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:description xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</dc:description>
         <rdfs:comment xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</rdfs:comment>
@@ -157,6 +157,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/editedAtTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/editedAtTime">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/editingTimeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record version with the time interval in which it was edited.</rdfs:comment>
@@ -171,10 +172,27 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/editingTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/editingTimeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;compilato al tempo&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;edited at time&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">editing time of</rdfs:label>
+        <rdfs:label xml:lang="it">tempo di compilazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/hasAccessProfile -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAccessProfile">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isAccessProfileOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una scheda di catalogo al profilo di accesso ai dati (basso, medio, alto).</rdfs:comment>
@@ -192,6 +210,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAdditionalFormResponsibleAgent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isAdditionalFormResponsibleAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento all&apos;ente/il soggetto responsabile nel SIGECweb della redazione del modulo.</rdfs:comment>
@@ -210,6 +229,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAdditionalFormType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isAdditionalFormTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un modulo di approfondimento al tipo di modulo (Unità Stratigrafica, Tipo Murario, Epigrafia).</rdfs:comment>
@@ -227,6 +247,7 @@
     <!-- https://w3id.org/arco/ontology/catalogue/hasAlternativeIdentifier -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasAlternativeIdentifier">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isAlternativeIdentifierOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
         <rdfs:comment xml:lang="en">Property used to associate a catalogue record with an identifier created in the context of information systems other than ICCD&apos;s SIGECweb.</rdfs:comment>
@@ -302,6 +323,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingLevelOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
         <rdfs:comment xml:lang="it">Questa proprietà permette di associare una scheda di catalogo al suo livello di catalogazione.</rdfs:comment>
@@ -338,6 +360,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasDigitalTranscriptionOperator">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isDigitalTranscriptionOperatorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione, relativa a trascrizione per informatizzazione, di una scheda di catalogo al relativo operatore. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -355,6 +378,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasDigitalTranscriptionResponsibleAgent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isDigitalTranscriptionResponsibleAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione, relativa a trascrizione per informatizzazione, di una scheda di catalogo al relativo ente/soggetto responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -392,6 +416,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasOfficialInCharge">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isOfficialInChargeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo funzionario responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -429,11 +454,12 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasPrivacyLevel">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isPrivacyLevelOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il profilo di accesso di una scheda catalografica al livello di riservatezza dei dati contenutevi (basso livello di riservatezza, alto livello di riservatezza, medio livello di riservatezza).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="it">halivello di riservatezza</rdfs:label>
+        <rdfs:label xml:lang="it">ha livello di riservatezza</rdfs:label>
         <rdfs:label xml:lang="en">has privacy level</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -446,6 +472,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasPrivacyReason">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isPrivacyReasonOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyReason"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno specifico profilo d&apos;accesso ai dati di una scheda catalografica alla motivazione che ha determinato l&apos;adozione di quel profilo d&apos;accesso (es.: scheda contenente dati liberamente accessibili, scheda contenente dati personali, scheda di bene di proprietà privata, scheda di bene a rischio, scheda di bene non adeguatamente sorvegliabile)</rdfs:comment>
@@ -463,6 +490,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasResponsibleResearchAndCompilation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isResponsibleResearchAndCompilationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo responsabile ricerca e redazione. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -480,6 +508,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasScientificDirector">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isScientificDirectorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega la prima versione di una scheda di catalogo al relativo referente verifica scientifica. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -497,6 +526,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasUpdateOfficialInCharge">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isUpdateOfficialInChargeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo funzionario responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -514,12 +544,13 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasUpdateResponsibleAgent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isUpdateResponsibleAgentOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo ente/soggetto responsabile. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="it">ha ente o soggetto responsabile</rdfs:label>
-        <rdfs:label xml:lang="en">has responsible agency or person</rdfs:label>
+        <rdfs:label xml:lang="it">ha ente o soggetto responsabile di aggiornamento</rdfs:label>
+        <rdfs:label xml:lang="en">has update responsible agency or person</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGE</iccdNormTag>
@@ -531,6 +562,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasUpdateResponsibleResearchAndCompilation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isUpdateResponsibleResearchAndCompilationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo responsabile ricerca e redazione. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -548,6 +580,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/hasUpdateScientificRevisor">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/hasCataloguingAgent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isUpdateScientificRevisorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega una versione aggiornata di una scheda di catalogo al relativo referente verifica scientifica. La relazione tra il ruolo e l&apos;ente che lo riveste è espressa nel nome della proprietà, che quindi ne fornisce una rappresentazione semplificata, con ridotta espressività. Nell&apos;ontologia questa relazione è modellata anche, in maniera più espressiva, dalla classe TimeIndexedRole, che permette di collegare l&apos;ente, il suo ruolo e la sua corrispondente estensione temporale.</rdfs:comment>
@@ -557,6 +590,73 @@
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>CM/AGG/AGGR</iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isAccessProfileOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isAccessProfileOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha profilo di accesso&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has access profile&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is access profile of</rdfs:label>
+        <rdfs:label xml:lang="it">è profilo di accesso di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isAdditionalFormResponsibleAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isAdditionalFormResponsibleAgentOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha responsabile di modulo di approfondimento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has additional form responsible agent&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is additional form responsible agent of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile di modulo di approfondimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isAdditionalFormTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isAdditionalFormTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalFormType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha tipo di modulo di approfondimento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has additional form type&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is additional form type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di modulo di approfondimento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isAlternativeIdentifierOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isAlternativeIdentifierOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha altro codice identificativo&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has alternative identifier&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is alternative identifier of</rdfs:label>
+        <rdfs:label xml:lang="it">è altro codice identificativo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -610,6 +710,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isCataloguingLevelOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isCataloguingLevelOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/CataloguingLevel"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha livello di catalogazione&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has cataloguing level&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is cataloguing level of</rdfs:label>
+        <rdfs:label xml:lang="it">è livello di catalogazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/isDescribedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isDescribedBy">
@@ -643,6 +760,40 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isDigitalTranscriptionOperatorOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isDigitalTranscriptionOperatorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha operatore di trascrizione per informatizzazione&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has digital transcription operator&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is digital transcription operator of</rdfs:label>
+        <rdfs:label xml:lang="it">è operatore di trascrizione per informatizzazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isDigitalTranscriptionResponsibleAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isDigitalTranscriptionResponsibleAgentOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha ente o soggetto responsabile di trascrizione per informatizzazione&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has digital transcription responsible agent&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is digital transcription responsible agent of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente o soggetto responsabile di trascrizione per informatizzazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/isImmediatePreviousVersionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isImmediatePreviousVersionOf">
@@ -662,6 +813,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isOfficialInChargeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isOfficialInChargeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha funzionario responsabile&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has official in charge&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is official in charge of</rdfs:label>
+        <rdfs:label xml:lang="it">è funzionario responsabile di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/isPreviousVersionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isPreviousVersionOf">
@@ -675,6 +843,40 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">is previous version of</rdfs:label>
         <rdfs:label xml:lang="it">è versione precedente di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isPrivacyLevelOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isPrivacyLevelOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyLevel"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha livello di riservatezza&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has privacy level&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is privacy level of</rdfs:label>
+        <rdfs:label xml:lang="it">è livello di riservatezza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isPrivacyReasonOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isPrivacyReasonOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/catalogue/PrivacyReason"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha motivazione di riservatezza&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has privacy reason&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is privacy reason of</rdfs:label>
+        <rdfs:label xml:lang="it">è motivazione di riservatezza di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -732,6 +934,108 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/isResponsibleResearchAndCompilationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isResponsibleResearchAndCompilationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha responsabile ricerca e redazione&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has responsible research and compilation&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is responsible research and compilation of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile ricerca e redazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isScientificDirectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isScientificDirectorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha referente verifica scientifica&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has scientific director&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is scientific director of</rdfs:label>
+        <rdfs:label xml:lang="it">è referente verifica scientifica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isUpdateOfficialInChargeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isUpdateOfficialInChargeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha funzionario responsabile di aggiornamento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has update official in charge&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is update official in charge of</rdfs:label>
+        <rdfs:label xml:lang="it">è funzionario responsabile di aggiornamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isUpdateResponsibleAgentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isUpdateResponsibleAgentOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha ente o soggetto responsabile di aggiornamento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has update responsible agent&quot;,</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is update responsible agent of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente o soggetto responsabile di aggiornamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isUpdateResponsibleResearchAndCompilationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isUpdateResponsibleResearchAndCompilationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha responsabile di ricerca e redazione di aggiornamento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has update responsible research and compilation&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is update responsible research and compilation of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile di ricerca e redazione di aggiornamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/isUpdateScientificRevisorOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/catalogue/isUpdateScientificRevisorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingAgentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha referente verifica scientifica di aggiornamento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has update scientific revisor&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
+        <rdfs:label xml:lang="en">is update scientific revisor of</rdfs:label>
+        <rdfs:label xml:lang="it">è referente verifica scientifica di aggiornamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasRelatedAgent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedAgent"/>
@@ -741,6 +1045,30 @@
     <!-- https://w3id.org/arco/ontology/context-description/isAgentRelatedTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTypeOf"/>
     
 
 
@@ -759,6 +1087,18 @@
     <!-- https://w3id.org/italia/onto/l0/follows -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/follows"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/hasDescription -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasDescription"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/isDescriptionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
     
 
 
@@ -1816,6 +2156,12 @@ resource:CatalogueRecordS/0500212038
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <iccdNormTag>ICCD Normativa Trasversale 4.00: AD/ADS/ADSM</iccdNormTag>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
     
 
 
