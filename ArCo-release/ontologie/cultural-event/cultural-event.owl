@@ -1,54 +1,54 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/cultural-event/"
      xml:base="https://w3id.org/arco/ontology/cultural-event/"
-     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
-     xmlns:opla="http://ontologydesignpatterns.org/opla/"
-     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:roapit="https://w3id.org/italia/onto/RO/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:clv="https://w3id.org/italia/onto/CLV/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:roapit="https://w3id.org/italia/onto/RO/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <rdfs:label xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</rdfs:label>
-        <rdfs:comment xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</rdfs:comment>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <dc:description xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</dc:description>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <rdfs:comment xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</rdfs:comment>
-        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <dc:description xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</dc:description>
+        <dc:description xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</dc:description>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:title xml:lang="en">Cultural Event Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <rdfs:label xml:lang="en">Cultural Event Ontology (ArCo network)</rdfs:label>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
-        <dc:description xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</dc:description>
-        <dc:title xml:lang="en">Cultural Event Ontology (ArCo network)</dc:title>
-        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cultural Event Ontology (ArCo network)</rdfs:label>
+        <rdfs:label xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</rdfs:label>
+        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -428,7 +428,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isTimePeriodMeasurementUnitOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha unità di misura di periodo di tempo&quot;.</rdfs:comment>
         <rdfs:comment xml:lang="en">This is the inverse property of &quot;has time period measurement unit&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -643,6 +643,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/isRecurrentTimePeriodOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/timePeriodValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
@@ -662,6 +668,12 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/isTimePeriodMeasurementUnitOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;unità di misura associata al periodo di tempo massimo che intercorre tra un evento membro di un evento ricorrente, inteso come collezione di eventi, e un evento membro successivo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the unit of measurement associated to the maximum time period that elapses between one of the member events of a recurrent event, as a collection of events, and the next one.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -677,6 +689,12 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/UnifyingFactor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/isUnifyingFactorOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un fattore unificante, ovvero un fattore che rappresenta un invariante comune a tutti gli eventi che sono membri dell&apos;evento ricorrente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a unifying factor, that is a factor that represents an invariant common to all the events that are members of the recurrent event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -784,5 +802,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
