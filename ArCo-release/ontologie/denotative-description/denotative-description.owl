@@ -1,58 +1,58 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/denotative-description/"
      xml:base="https://w3id.org/arco/ontology/denotative-description/"
-     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
-     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
-     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:tiapit="https://w3id.org/italia/onto/TI/"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:clv="https://w3id.org/italia/onto/CLV/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:a-loc="https://w3id.org/arco/ontology/location/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:a-loc="https://w3id.org/arco/ontology/location/"
+     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <dc:description xml:lang="it">Questo modulo, detto della descrizione denotativa (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.</dc:description>
-        <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
-        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.</rdfs:comment>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
-        <rdfs:comment xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.</rdfs:comment>
-        <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
-        <dc:title xml:lang="en">Denotative Description Ontology (ArCo network)</dc:title>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <dc:description xml:lang="it">Questo modulo, detto della descrizione denotativa (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.</dc:description>
+        <dc:description xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.</dc:description>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:title xml:lang="en">Denotative Description Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
-        <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <dc:description xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.</dc:description>
-        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione denotativa (denotazione è inteso come l&apos;atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.</rdfs:comment>
+        <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
+        <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
+        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -172,6 +172,24 @@
     <!-- https://w3id.org/arco/ontology/core/isSituationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isSituationOf"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/areAvailableNotesOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/areAvailableNotesOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasAvailableNotes"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha note producibili&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has available notes&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">are available notes of</rdfs:label>
+        <rdfs:label xml:lang="it">sono note producibili di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -376,6 +394,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyDefinitionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè la definizione.</rdfs:comment>
@@ -393,6 +412,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCulturalPropertySpecificationOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un bene culturale a una delle sue componenti, cioè alle specifiche morfologiche e funzionali.</rdfs:comment>
@@ -484,6 +504,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasDiapason">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isDiapasonOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musical al corista rilevato (nota, temperatura ed eventualmente umidità ambientale al momento della rilevazione).</rdfs:comment>
@@ -501,6 +522,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasExtension">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isExtensionOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento musicale alla sua estensione musicale.</rdfs:comment>
@@ -536,6 +558,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasFiligree">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isFiligreeOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;opera d&apos;arte, un disegno, una fotografia, una stampa alla sua filigrana.</rdfs:comment>
@@ -589,6 +612,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasGarmentAnalysis">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isGarmentAnalysisOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un vestimento antico o contemporaneo alla definizione tecnica completa dei tessuti, secondo le norme fornite dal C.I.E.T.A., o dei merletti, oppure rappresenta la distinzione fra tessuto unito e tessuto operato.</rdfs:comment>
@@ -606,6 +630,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasGarmentColour">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isGarmentColourOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un vestimento antico o contemporaneo al colore dominante, di solito quello del fondo del tessuto, o quello risultante dall&apos;intreccio.</rdfs:comment>
@@ -622,6 +647,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isIconographicOrDecorativeApparatusOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al suo apparato iconografico e/o decorativo, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche e/o delle decorazioni presenti sul bene.</rdfs:comment>
@@ -657,6 +683,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasImplementationMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasImplementationMethod">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isImplementationMethodOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ImplementationMethod"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una modalità comunicativa verbale o musicale vocale o musicale strumentale alla modalità esecutiva associata (es.: polifonica).</rdfs:comment>
@@ -710,6 +737,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasMassStorage">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMassStorageOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una risorsa digitale alla memoria di massa nella quale è stata memorizzata la fotografia digitale.</rdfs:comment>
@@ -817,6 +845,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasOrientation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasOrientation">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isOrientationOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un oggetto al suo orientamento, secondo l&apos;asse principale individuato.</rdfs:comment>
@@ -834,6 +863,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasOrnamentalMotif -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasOrnamentalMotif">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isOrnamentalMotifOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/OrnamentalMotif"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;apparato iconografico e decorativo di un bene culturale al motivo decorativo (antropomorfo, zoomorfo, geometrico) rappresentato.</rdfs:comment>
@@ -869,6 +899,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasPhotoProgram">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isPhotoProgramOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una fotografia digitale al programma di visualizzazione, memorizzazione ed elaborazione utilizzato per la fotografia digitale.</rdfs:comment>
@@ -957,6 +988,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/hasSampleCollected -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSampleCollected">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSampleCollectedFrom"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene archeologico a un campione prelevato da esso.</rdfs:comment>
@@ -1012,6 +1044,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasStorageMethodOrColourDepth">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isStorageMethodOrColourDepthOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una fotografia al metodo e alla profondità di colore con cui è stata memorizzata la fotografia digitale.</rdfs:comment>
@@ -1104,6 +1137,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTemperament">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTemperamentOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento al temperamento adottato, soprattutto in caso di oggetto in condizioni originali, o dopo un restauro, dello strumento musicale. Per gli idiofoni a tasti fissi (come xilofoni, litofoni, metallofoni) rappresenta la successione degli intervalli.</rdfs:comment>
@@ -1121,6 +1155,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTuning">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTuningOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno strumento all&apos;accordatura dello strumento musicale.</rdfs:comment>
@@ -1154,6 +1189,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasVibratingLenght">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isVibratingLenghtOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un uno strumento alla lunghezza vibrante dello strumento, in particolare di un cordofono.</rdfs:comment>
@@ -1167,10 +1203,11 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasVolumetricDiamensionsMeasurement -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasVolumetricDimensionsMeasurement -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasVolumetricDiamensionsMeasurement">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasVolumetricDimensionsMeasurement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurement"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isVolumetricDimensionsMeasurementIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/object-collection/"/>
@@ -1178,7 +1215,7 @@
         <rdfs:comment xml:lang="en">This property connects a collection of observed measures on an object to one of these measures, when the latter is relative to an ancient or contemporary apparel&apos;s size. The volumetric dimensions measurements determine the size for storage and can be considered as the object&apos;s orthogonal coordinates.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label>ha misura di imgombro</rdfs:label>
-        <rdfs:label>has volumetric diamensions measurement</rdfs:label>
+        <rdfs:label>has volumetric dimensions measurement</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa VeAC: MT/MII</a-cat:iccdNormTag>
@@ -1225,6 +1262,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/involvesAgeRange -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/involvesAgeRange">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isAgeRangeInvolvedIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una modalità comunicativa (prossemica, cinesica) alla fascia d&apos;età delle persone che attuano la comunicazione.</rdfs:comment>
@@ -1249,6 +1287,39 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is accessory of</rdfs:label>
         <rdfs:label xml:lang="it">è accessorio di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isAgeRangeInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAgeRangeInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/AgeRange"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;coinvolge fascia d&apos;età&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;involves age range&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is age range involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è fascia d&apos;età coinvolta in</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isAgentReferredToBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isAgentReferredToBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/refersToAgent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;si riferisce ad agente&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;refers to agent&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is agent referred to by</rdfs:label>
+        <rdfs:label xml:lang="it">è agente cui si riferisce</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1289,6 +1360,38 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCulturalPropertyDefinitionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha definizione di bene culturale&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has cultural property definition&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is cultural property definition of</rdfs:label>
+        <rdfs:label xml:lang="it">è definizione di bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isCulturalPropertySpecificationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCulturalPropertySpecificationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha specifiche del bene culturale&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has cultural property specification&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is cultural property specification</rdfs:label>
+        <rdfs:label xml:lang="it">sono specifiche del bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isDedicateeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDedicateeOf">
@@ -1322,6 +1425,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isDiapasonOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isDiapasonOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha corista&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has diapason&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is diapason of</rdfs:label>
+        <rdfs:label xml:lang="it">è corista di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isElementAffixedOn">
@@ -1332,6 +1452,23 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is element affixed on</rdfs:label>
         <rdfs:label xml:lang="it">è elemento apposto su</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isExtensionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isExtensionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha estensione&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has extension&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is extension of</rdfs:label>
+        <rdfs:label xml:lang="it">è estensione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1355,6 +1492,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isFiligreeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isFiligreeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha filigrana&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has filigree&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is filigree of</rdfs:label>
+        <rdfs:label xml:lang="it">è filigrana di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isFontStyleOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isFontStyleOf">
@@ -1365,6 +1519,72 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is font style of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di caratteri di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isGarmentAnalysisOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isGarmentAnalysisOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha analisi del vestimento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has garment analysis&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is garment analysis of</rdfs:label>
+        <rdfs:label xml:lang="it">è analisi del vestimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isGarmentColourOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isGarmentColourOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha colore del vestimento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has garment colour&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is garment colour of</rdfs:label>
+        <rdfs:label xml:lang="it">è colore del vestimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isIconographicOrDecorativeApparatusOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isIconographicOrDecorativeApparatusOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha apparato iconografico e decorativo&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has iconographic or decorative apparatus&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is iconographic or decorative apparatus of</rdfs:label>
+        <rdfs:label xml:lang="it">è apparato iconografico e decorativo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isImplementationMethodOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isImplementationMethodOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ImplementationMethod"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha modalità esecutiva&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has implementation method&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is implementation method of</rdfs:label>
+        <rdfs:label xml:lang="it">è modalità esecutiva di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1398,6 +1618,23 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is location subject of</rdfs:label>
         <rdfs:label xml:lang="it">è localizzazione rappresentata da</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isMassStorageOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isMassStorageOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha memoria di massa&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has mass storage&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is mass storage of</rdfs:label>
+        <rdfs:label xml:lang="it">è memoria di massa di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1472,6 +1709,38 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isOrientationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isOrientationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha orientamento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has orientation&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is orientation of</rdfs:label>
+        <rdfs:label xml:lang="it">è orientamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isOrnamentalMotifOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isOrnamentalMotifOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/OrnamentalMotif"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha motivo decorativo&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has ornamental motif&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is ornamental motif of</rdfs:label>
+        <rdfs:label xml:lang="it">è motivo decorativo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isPhotoColourOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isPhotoColourOf">
@@ -1483,6 +1752,23 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is photo colour of</rdfs:label>
         <rdfs:label xml:lang="it">è colore della foto</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isPhotoProgramOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isPhotoProgramOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha programma per foto&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has photo program&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is photo program of</rdfs:label>
+        <rdfs:label xml:lang="it">è programma per foto di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1557,6 +1843,22 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isSampleCollectedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSampleCollectedFrom">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha campione prelevato&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has sample collected&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is sample collected from</rdfs:label>
+        <rdfs:label xml:lang="it">è campione prelevato da</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isShapeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isShapeOf">
@@ -1568,6 +1870,23 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is shape of</rdfs:label>
         <rdfs:label xml:lang="it">è forma di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isStorageMethodOrColourDepthOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isStorageMethodOrColourDepthOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha metodo di memorizzazione e profondità del colore&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has storage method or colour depth&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is storage method or colour depth of</rdfs:label>
+        <rdfs:label xml:lang="it">è metodo di memorizzazione e profondità del colore di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1643,6 +1962,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusValidAt -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalStatusValidAt">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega uno stato tecnico di un&apos;entità culturale all&apos;intervallo temporale entro il quale è valido, relativamente al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
@@ -1673,6 +1993,56 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTemperamentOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTemperamentOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha temperamento&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has temperament&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is temperament of</rdfs:label>
+        <rdfs:label xml:lang="it">è temperamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un intervallo temporale entro il quale è valido uno stato tecnico di un&apos;entità culturale allo stato tecnico stesso, relativamente al momento in cui quelle caratteristiche sono state rilevate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the time interval, at which a cultural entity technical status is valid, to that technical status, with regard to the moment in which the characteristics are observed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is time interval valid for</rdfs:label>
+        <rdfs:label xml:lang="it">è intervallo di tempo valido per</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTuningOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTuningOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha accordatura&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has tuning&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is tuning of</rdfs:label>
+        <rdfs:label xml:lang="it">è accordatura di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isValueOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isValueOf">
@@ -1683,6 +2053,40 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="en">is value of</rdfs:label>
         <rdfs:label xml:lang="it">è valore di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isVibratingLenghtOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isVibratingLenghtOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha lunghezza vibrante&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has vibrating lenght&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is vibrating lenght of</rdfs:label>
+        <rdfs:label xml:lang="it">è lunghezza vibrante di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isVolumetricDimensionsMeasurementIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isVolumetricDimensionsMeasurementIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isMeasurementIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha misura di ingombro&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has volumetric dimensions measurement&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is volumetric dimensions measurement in</rdfs:label>
+        <rdfs:label xml:lang="it">è misura di ingombro di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -4364,5 +4768,5 @@ resource:MeasurementCollection/1200865132-1
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
