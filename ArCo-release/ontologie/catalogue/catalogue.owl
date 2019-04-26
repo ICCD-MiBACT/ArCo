@@ -1,48 +1,48 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/catalogue/"
      xml:base="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
-     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:roapit="https://w3id.org/italia/onto/RO/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:tiapit="https://w3id.org/italia/onto/TI/"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
      xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:roapit="https://w3id.org/italia/onto/RO/"
+     xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
-        <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.</rdfs:comment>
-        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBACT, ICCD)</dc:creator>
-        <dc:description xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</dc:description>
-        <rdfs:comment xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</rdfs:comment>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <dc:title xml:lang="it">Ontologia del Catalogo (ArCo network)</dc:title>
-        <rdfs:label xml:lang="it">Ontologia del Catalogo (ArCo network)</rdfs:label>
-        <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
-        <dc:title xml:lang="en">Catalogue Ontology (ArCo network)</dc:title>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
         <dc:description xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.</dc:description>
+        <dc:description xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</dc:description>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:title xml:lang="en">Catalogue Ontology (ArCo network)</dc:title>
+        <dc:title xml:lang="it">Ontologia del Catalogo (ArCo network)</dc:title>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
+        <rdfs:label xml:lang="it">Ontologia del Catalogo (ArCo network)</rdfs:label>
+        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1353,6 +1353,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isAccessProfileOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/expiryDate"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -1408,6 +1414,12 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AdditionalFormType">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isAdditionalFormTypeOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AdditionalForm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di modulo di approfondimento (Unità Stratigrafica, Tipo Murario, Epigrafia)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the additional form type (Stratigraphic Unit, Wall Typology, Epigraphy)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
@@ -1424,6 +1436,12 @@
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isAlternativeIdentifierOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/referenceProject"/>
@@ -2038,6 +2056,12 @@ resource:CatalogueRecordS/0500212038
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isCataloguingLevelOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il livello catalogazione, cioè la sigla che individua il grado di approfondimento dell&apos;indagine condotta sul bene in esame (I corrisponde al livello di inventario, P al livello di precatalogo, C al livello di catalogo)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cataloguing level, defining the level of detail of the survey carried out on the cultural property (Minimum, Medium, Detailed)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
@@ -2131,6 +2155,12 @@ resource:CatalogueRecordS/0500212038
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/PrivacyLevel">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isPrivacyLevelOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il livello di riservatezza dei dati contenuti in una scheda catalografica (1 livello basso di riservatezza, 2 livello medio di riservatezza, 3 livello alto di riservatezza)</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the privacy level of the data recorded in a catalogue record (Minimum, Medium, Maximum).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
@@ -2147,6 +2177,12 @@ resource:CatalogueRecordS/0500212038
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/PrivacyReason">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/catalogue/isPrivacyReasonOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/catalogue/AccessProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la motivazione che ha determinato l&apos;adozione di un profilo di accesso relativamente ai dati contenuti in una scheda catalografica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reason for the adoption of a specific access profile for a catalogue record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
@@ -2374,5 +2410,5 @@ resource:CatalogueRecordS/0500212038
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
