@@ -1,57 +1,57 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/context-description/"
      xml:base="https://w3id.org/arco/ontology/context-description/"
-     xmlns:opla="http://ontologydesignpatterns.org/opla/"
-     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
-     xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:cis="http://dati.beniculturali.it/cis/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <dc:title xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</dc:title>
-        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-        <dc:description xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</dc:description>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
-        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
-        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</rdfs:comment>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
-        <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
-        <dc:title xml:lang="en">Context Description Ontology (ArCo network)</dc:title>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
-        <dc:description xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</dc:description>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <rdfs:comment xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</rdfs:comment>
+        <dc:description xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</dc:description>
+        <dc:description xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</dc:description>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dc:title xml:lang="en">Context Description Ontology (ArCo network)</dc:title>
+        <dc:title xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</dc:title>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
+        <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
+        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -134,6 +134,291 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isAcquisitionTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isAcquisitionTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasAcquisitionType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AcquisitionType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Acquisition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di acquisizione (es.: donazione, alienazione, confisca) all&apos;acquisizione di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s acquisition type (i.e. donation, seizure) to its acquisition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is acquisition type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di acqusizione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isAlternativeDatingTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isAlternativeDatingTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasAlternativeDatingType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDatingType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AlternativeDating"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di datazione alternativa con la relativa datazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of an alternative dating to the related dating.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is alternative dating type</rdfs:label>
+        <rdfs:label xml:lang="it">è datazione alternativa di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isAnomalyOriginOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isAnomalyOriginOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasAnomalyOrigin"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyOrigin"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;origine dell&apos;anomalia (naturale, antropica, incerta) all&apos;anomalia rilevata durante una fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the origin of the anomaly (e.g. natural, unsure) to an anomaly detected during a photo interpretation or rendering survey.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is anomaly origin of</rdfs:label>
+        <rdfs:label xml:lang="it">è origine dell&apos;anomalia di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isAnomalyTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isAnomalyTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasAnomalyType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di anomalia (puntuale, lineare, areale) a un&apos;anomalia rilevata nel corso di una fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the anomaly type (line, point, poligony anomaly) to an anomaly revealed by a photo interpretation rendering.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is anomaly type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di anomalia di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isArchaeologicalPropertySurveyTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isArchaeologicalPropertySurveyTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasArchaeologicalPropertySurveyType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurveyType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di indagine alla relativa indagine su un bene archeologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of a survey to the related survey on an archaeological property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is archaeological property survey type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di indagine su bene archeologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isArchaeometricDiagnosticSurveyTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isArchaeometricDiagnosticSurveyTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasArchaeometricDiagnosticSurveyType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurveyType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurvey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo d&apos;indagine archeometrica e diagnostica (es.: analisi della malta, carotaggio, termografia, etc.) alla relativa indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of an arecheometric diagnostic survey (i.e. thermal imaging, coring) to the survey itself .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is archaeometric diagnostic survey type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di indagine archeometrica e diagnostica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isArchivedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isArchivedIn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasArchive"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SourceAndDocument"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;archivio e/o istituzione conservativa con la relativa documentazione costituita da fonti e documenti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the archive or conservative institution to the documentation made of sources and documents.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is archived in</rdfs:label>
+        <rdfs:label xml:lang="it">è archiviato in</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isBibliographyTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isBibliographyTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliographyType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BibliographyType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di riferimento bibliografico alla bibliografia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the bibliography type to its bibliography.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is bibliography type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di bibliografia di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isChangeOfAvailabilityTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isChangeOfAvailabilityTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasChangeOfAvailabilityType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailability"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di evento (es.: furto, distruzione, recupero) di mutamento di condizione materiale di un bene culturale al mutamento stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the event type (i.e. theft, destruction, recovery) of a cultural entity change of availability to the change itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is change of availability type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di mutamento condizione materiale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isCircumstanceTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isCircumstanceTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasCircumstanceType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CircumstanceType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Circumstance"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di occasione con la relativa occasione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of circumstance to the related circumstance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is circumstance type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di circostanza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isCulturalGeographicAreaOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isCulturalGeographicAreaOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalGeographicArea"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;area geografico-culturale con l&apos;uso del bene presente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural geographical area to the use of the cultural property which is present.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is cultural geographic area of</rdfs:label>
+        <rdfs:label xml:lang="it">è area geografico-culturale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isDatingEventOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isDatingEventOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasDatingEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Dating"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un evento relativo al bene culturale, cui si riferisce la specifica cronologia a una cronologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an event involving the cultural property, which the dating is about, to a dating.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is dating event of</rdfs:label>
+        <rdfs:label xml:lang="it">è evento relativo alla datazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isDerivatedWorkTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isDerivatedWorkTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasDerivatedWorkType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/DerivatedWorkType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/DerivatedWork"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di opera derivata da un bene culturale alla relativa opera derivata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of a work derivated from a cultural entity to its work derivated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is derivated work type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di opera derivata di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isFormatOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isFormatOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasFormat"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Format"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il formato con la relativa documentazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the format to the related documentation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is format of</rdfs:label>
+        <rdfs:label xml:lang="it">è formato di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isReliabilityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isReliabilityOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasReliability"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Reliability"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il livello di affidabilità delle informazioni rilevate nell&apos;indagine a una fotointerpretazione o fotorestituzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the reliability of the information collected during the survey to a photo interpretation rendering survey.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is reliability of</rdfs:label>
+        <rdfs:label xml:lang="it">è affidabilità di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#specificTimeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#specificTimeOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/specificTime"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la cronologia specifica, cioè la cronologia in anni (anche a cavallo di secoli diversi) o con date precise (nella forma &quot;aaaa/mm/gg&quot;) con l&apos;evento (realizzazione, demolizione, etc.) cui si riferisce una specifica cronologia di un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the &quot;specific time&quot;, as the dating expressed in year or as a date yyyy/mm/dd, with the event (creation, distruction) to which a dating of a cultural property is related to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">cronologia specifica di</rdfs:label>
+        <rdfs:label xml:lang="en">specific time of</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -311,7 +596,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Anomaly"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/AnomalyOrigin"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;anomalia rilevata durante una fotointerpretazione o fotorestituzione all&apos;origine dell&apos;anomalia (naturale, antropica, incerta).</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an anomaly detected during a photo interpretation or rendering survey to the origin of the anomaly (e.g. natural, unsure)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an anomaly detected during a photo interpretation or rendering survey to the origin of the anomaly (e.g. natural, unsure).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha origine dell&apos;anomalia</rdfs:label>
         <rdfs:label xml:lang="en">has anomaly origin</rdfs:label>
@@ -596,7 +881,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailability"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il mutamento di condizione materiale di un bene culturale al tipo di evento (es.: furto, distruzione, recupero)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il mutamento di condizione materiale di un bene culturale al tipo di evento (es.: furto, distruzione, recupero).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s change of availability to the event type (i.e. theft, destruction, recovery).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di mutamento condizione materiale</rdfs:label>
@@ -3841,7 +4126,9 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/italia/onto/l0/hasDescription -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasDescription"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasDescription">
+        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+    </owl:ObjectProperty>
     
 
 
@@ -9830,15 +10117,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 
@@ -9989,5 +10276,5 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
