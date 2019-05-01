@@ -369,6 +369,60 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isDocumentationTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isDocumentationTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasDocumentationType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/DocumentationType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Documentation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di documentazione alla sua documetanzione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of documentation to its documentation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is documentation type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di documentazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isExportImportCertificationTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isExportImportCertificationTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasExportImportCertificationType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertificationType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ExportImportCertification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia (es.: attestato di libera circolazione, licenza di esportazione definitiva, ecc) di una certificazione amministrativa di circolazione ed esportazione/importazione di un bene culturale alla relativa certificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type (i.e. delivery confirmation certification, free movement certification etc) of an import-export certification of a cultural entity to the rrelated certification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is export import certification type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di certificazione di esportazione o importazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isFindingContextTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isFindingContextTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasFindingContextType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContextType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/FindingContext"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di contesto di rinvenimento di un bene culturale, e in particolare di un reperto antropologico, al suo contesto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a type of cultural property (i.e. anthropological material) finding context to its context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is finding context type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di contesto di rinvenimento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isFormatOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isFormatOf">
@@ -387,6 +441,60 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isInterventionTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isInterventionTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterventionType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di intervento, a fini conservativi o di altro tipo, che ha interessato un bene culturale al relativo intervento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of intervention on a cultural property to the related intervention.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is intervention type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di intervento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isLaboratoryTestTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isLaboratoryTestTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasLaboratoryTestType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTestType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTest"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di analisi di laboratorio (es.: analisi metallurgica, analisi chimica, etc.) con la relativa analisi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the laboratory test type (i.e. chemical or metallurgical analysis) to the related laboratory test.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is laboratory test type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di analisi di laboratorio di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isObservationSurveyTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isObservationSurveyTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasObservationSurveyType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurveyType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di indagine di rilevamento (nel contesto/decontestualizzato) alla relativa indagine di rilevamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of observation survey (in the context, out of context) to the related observation survey.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is observation survey type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di indagine di rilevamento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isReliabilityOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isReliabilityOf">
@@ -399,6 +507,78 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is reliability of</rdfs:label>
         <rdfs:label xml:lang="it">è affidabilità di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isResponsibilityTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isResponsibilityTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibilityType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ResponsibilityType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Responsibility"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega al tipo di responsabilità (es.: stampatori, ritoccatori, coloritori, ecc.) alla relativa responsabilità individuata relativamente ai processi di produzione e di divulgazione che caratterizzano specificamente i beni fotografici.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the esponsibility type (i.e. printers, retouchers) to the related resposibility relative to some production or disclosure process which characterise photographic artefacts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is responsibility type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di responsabilità di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isSurveyImageTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSurveyImageTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyImageType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImageType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyImage"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo una immagine di indagine (fotografia aerea o fotografia satellitare). con la relativa immagine di indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of a survey image (i.e. aerial photograph, Satellite photograph) to the related survey image.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is survey image type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di immagine di indagine di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isTitleTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isTitleTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasTitleType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/TitleType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Title"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di titolo di un bene culturale al relativo titolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of a cultural entity title to its title.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is title type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di titolo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isUseTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isUseTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di uso del bene (attuale, precedente, storico) con il suo uso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the type of a cultural entity use to its use.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is use type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo d&apos;uso di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1545,7 +1725,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/InterventionType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un intervento, a fini conservativi o di altro tipo, che ha interessato un bene culturale al tipo di intervento.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultural entity&apos;s finding context, particularly an antropologic artefact, to its context type.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an intervention on a cultural property (i.e. conservation, interventions, reprocessing, restoring, etc.) to its intervention type.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di intervento</rdfs:label>
         <rdfs:label xml:lang="en">has intervention type</rdfs:label>
@@ -1657,7 +1837,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTest"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTestType"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;analisi di laboratorio con il tipo di analisi (es.: analisi metallurgica, analisi chimica, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;analisi di laboratorio con il tipo di analisi (es.: analisi metallurgica, analisi chimica, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a laboratory test to its test type (i.e. chemical or metallurgical analysis).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di analisi di laboratorio</rdfs:label>
@@ -1822,8 +2002,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurveyType"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine di rilevamento al tipo di indagine di rilevamento (nel contesto/decontestualizzato)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates an observation survey to the type of observation survey (in the context, out of context)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine di rilevamento al tipo di indagine di rilevamento (nel contesto/decontestualizzato).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an observation survey to the type of observation survey (in the context, out of context).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tipo di indagine di rilevamento</rdfs:label>
         <rdfs:label xml:lang="en">has observation survey type</rdfs:label>
