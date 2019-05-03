@@ -263,6 +263,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isAuthorityFileCataloguingAgencyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isAuthorityFileCataloguingAgencyOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ente schedatore dell&apos;authority file a un&apos;entità descritta in una scheda di Authority File.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the file&apos;s cataloguing institution to an entity described in a authority file.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is authority file cataloguing agency of</rdfs:label>
+        <rdfs:label xml:lang="it">è ente schedatore dell&apos;authority file di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isBibliographyTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isBibliographyTypeOf">
@@ -369,6 +387,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isDetectionMethodOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isDetectionMethodOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isMethodOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasDetectionMethod"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/DetectionMethod"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la modalità di individuazione di un bene culturale al bene culturale stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the detection method of a cultural property to the cultural property itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is detection method of</rdfs:label>
+        <rdfs:label xml:lang="it">è metodo di individuazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isDocumentationTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isDocumentationTypeOf">
@@ -459,6 +495,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isInventoryIdentifierResponsibleOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isInventoryIdentifierResponsibleOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasInventoryIdentifierResponsible"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Inventory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il contenitore giuridico che conserva attualmente il bene, o che lo ha conservato in passato, e che è responsabile dell&apos;assegnazione del numero di inventario all&apos;inventario stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the juridical container responsible for the inventory identifier of the cultural property to the inventory itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is inventory identifier responsible of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile di numero di inventario di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isLaboratoryTestTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isLaboratoryTestTypeOf">
@@ -471,6 +525,42 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is laboratory test type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di analisi di laboratorio di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isMusicalEnsembleOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isMusicalEnsembleOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasMusicalEnsemble"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il gruppo di musicisti (bande, complessi musicali, associazioni corali, ecc.) in cui uno strumento assume, o ha assunto, abitualmente un ruolo esecutivo al relativo strumento musicale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the musical ensamble where an instument is (or were) played to the related musical instrument.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is musical ensemble of</rdfs:label>
+        <rdfs:label xml:lang="it">è organico musicale di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isMusicianOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isMusicianOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasMusician"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una persona che assume - o ha assunto - un ruolo certo come esecutore di uno strumento musicale al relativo strumento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the person who plays (in the present or past) a certain role as a musical instrument&apos;s exectutor to the related instrument.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is musician of</rdfs:label>
+        <rdfs:label xml:lang="it">è musicista di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -531,6 +621,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isStratigraphicUnitOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isStratigraphicUnitOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isLocationOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasStratigraphicUnit"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/StratigraphicUnit"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;unità stratigrafica dalla quale proviene il bene rinvenuto nello scavo al relativo scavo archeologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the stratigraphic unit from which a cultural property has been found to the related archeological excavation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is stratigraphic unit of</rdfs:label>
+        <rdfs:label xml:lang="it">è unità stratigrafica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isSurveyImageTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSurveyImageTypeOf">
@@ -543,6 +651,51 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is survey image type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di immagine di indagine di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isSurveyMethodOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSurveyMethodOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isMethodOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMethod"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il metodo adottato nel corso di un&apos;indagine all&apos;indagine stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the method adopted in a survey to the survey itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is survery method of</rdfs:label>
+        <rdfs:label xml:lang="it">è metodo di indagine di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isSurveyMotivationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSurveyMotivationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyMotivation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMotivation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchaeologicalExcavation"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchaeologicalFieldSurvey"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/ArchaeometricDiagnosticSurvey"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/PhotoInterpretationRendering"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il motivo principale che ha determinato uno scavo archeologico, una ricognizione archeologica, un&apos;indagine archeometrica e diagnostica o una fotointerpretazione e fotorestituzione a ciascuno di essi.</rdfs:comment>
+        <rdfs:comment xml:lang="it">This property relates the main motivation that led to an archeological, archaeometric or diagnostic survey or a photo interpretation rendering to each of them.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is survey motivation of</rdfs:label>
+        <rdfs:label xml:lang="it">è motivo di indagine di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -567,6 +720,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isUseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isUseOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasUse"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso di un bene culturale con il bene culturale stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the use of a cultural entity to the related cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is use of</rdfs:label>
+        <rdfs:label xml:lang="it">è uso di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isUseTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isUseTypeOf">
@@ -579,6 +750,24 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is use type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo d&apos;uso di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isUserOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isUserOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasUser"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un utente, inteso come agente che ha fatto uso di un&apos;entità, all&apos;entità stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the user, intended as the agent who employed an entity, to the related entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is user of</rdfs:label>
+        <rdfs:label xml:lang="it">è utente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1871,7 +2060,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfArchivalRecordSet -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfArchivalRecordSet">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSet"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSetOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSetMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di unità archivistica complessa&quot;, collega l&apos;appartenenza di un bene culturale a un&apos;unità archivistica al bene coinvolto nella relazione.</rdfs:comment>
@@ -1889,7 +2078,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfCollection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfCollection">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfCollection"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di collezione&quot;, collega l&apos;appartenenza di un bene culturale a una collezione in un certo intervallo di tempo al bene culturale mobile coinvolto nella relazione.</rdfs:comment>
@@ -1907,7 +2096,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfPhotographicSeries -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfPhotographicSeries">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeriesIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è membro di serie&quot;, collega l&apos;appartenenza di un bene fotografico a una serie editoriale al bene fotografico coinvolto nella relazione.</rdfs:comment>
@@ -2611,7 +2800,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/SurveyMethod"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;indagine al metodo adottato nel corso dell&apos;indagine.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a survey to the method adopted in the the survey.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a survey to the method adopted in the survey.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha metodo di indagine</rdfs:label>
         <rdfs:label xml:lang="en">has survey method</rdfs:label>
@@ -3612,16 +3801,16 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSet -->
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSetOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSet">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSetOf">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ArchivalRecordSetMembership"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale alla classe che rappresenta l&apos;appartenenza del bene a una unità archivistica complessa.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural property to the class that represents the membership relation between this cultural property and an archival record set.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/contex-description/"/>
-        <rdfs:label xml:lang="en">is member of archival record set</rdfs:label>
-        <rdfs:label xml:lang="it">è membro di un&apos;unità archivistica complessa</rdfs:label>
+        <rdfs:label xml:lang="en">is member of archival record set of</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di un&apos;unità archivistica complessa di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: UB/UBF</a-cat:iccdNormTag>
@@ -3629,16 +3818,16 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfCollection -->
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfCollection">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfCollectionOf">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CollectionMembership"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale mobile alla classe che rappresenta l&apos;appartenenza del bene culturale a una collezione in un certo intervallo di tempo.</rdfs:comment>
         <rdfs:comment xml:lang="it">This property relates a cultural property to the class that represents the membership relation between this cultural property and a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is member of collection</rdfs:label>
-        <rdfs:label xml:lang="it">è membro di collezione</rdfs:label>
+        <rdfs:label xml:lang="en">is member of collection of</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di collezione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>UB/COL</a-cat:iccdNormTag>
@@ -3646,16 +3835,16 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries -->
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeriesIn -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeriesIn">
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/PhotographicSeriesMembership"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene fotografico alla classe che rappresenta l&apos;appartenenza del bene a una serie editoriale.</rdfs:comment>
         <rdfs:comment xml:lang="it">This property relates a cultural property to the class that represents the membership relation between this cultural property and a photographic series.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is member of photographic series</rdfs:label>
-        <rdfs:label xml:lang="it">è membro di serie fotografica</rdfs:label>
+        <rdfs:label xml:lang="en">is member of photographic series in</rdfs:label>
+        <rdfs:label xml:lang="it">è membro di serie fotografica in</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SFI; PD/SSI</a-cat:iccdNormTag>
@@ -10297,15 +10486,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
