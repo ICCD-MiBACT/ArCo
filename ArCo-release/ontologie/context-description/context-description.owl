@@ -585,6 +585,23 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isRelatedWorkOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isRelatedWorkOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un&apos;opera collegata al bene culturale (es.: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.) al bene culturale stesso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the situation in which a work related to the cultural property (e.g.: a preparatory work, a prototype, a copy, a reuse, etc.) is related to the cultural property itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is related work of</rdfs:label>
+        <rdfs:label xml:lang="it">è opera collegata con</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isReliabilityOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isReliabilityOf">
@@ -603,6 +620,24 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description#isResearchScientificDirectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isResearchScientificDirectorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasResearchScientificDirector"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Research"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il responsabile scientifico di una ricerca alla ricerca.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the research&apos;s scientific responsible to its research.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is research scientific director of</rdfs:label>
+        <rdfs:label xml:lang="it">è  responsabile scientifico della ricerca di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description#isResponsibilityTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isResponsibilityTypeOf">
@@ -615,6 +650,42 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is responsibility type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di responsabilità di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isResponsibleForInsertionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isResponsibleForInsertionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasResponsibleForInsertion"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/CurrentInventory"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il responsabile dell&apos;inventariazione patrimoniale del bene all&apos;inventario patrimoniale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the agent responsible for the cultural entity&apos;s inventory to the current inventory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is responsible for insertion of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile dell&apos;immissione in patrimonio di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isSecondaryAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSecondaryAuthorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSecondaryAuthor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;autore secondario di un entità, come ad esempio un contributo o una parte di una pubblicazione, all&apos;entità stessa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the secondary authors of an entity (i.e. a publication&apos;s contribution or section) to the related entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is secondary author of</rdfs:label>
+        <rdfs:label xml:lang="it">è autore secondario di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -696,6 +767,60 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is survey motivation of</rdfs:label>
         <rdfs:label xml:lang="it">è motivo di indagine di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isSurveyPhotographerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSurveyPhotographerOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyPhotographer"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il fotografo professionista (diverso dal rilevatore) che ha effettuato l&apos;indagine all&apos;indagine di rilevamento di un bene demo-etno-antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the professional photographer who took the shot to the observation survey of a demo-etno-antropologic entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is observation photographer of</rdfs:label>
+        <rdfs:label xml:lang="it">è fotografo dell&apos;indagine di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isSurveyScientificDirectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSurveyScientificDirectorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveyScientificDirector"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il responsabile scientifico di un&apos;indagine alla relativa indagine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the scientific director of a survey to the related survey.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is survey scientific director of</rdfs:label>
+        <rdfs:label xml:lang="it">è responsabile scientifico dell&apos;indagine di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description#isSurveySoundEngineerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description#isSurveySoundEngineerOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAgentRelatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasSurveySoundEngineer"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ObservationSurvey"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il fonico professionista (diverso dal rilevatore) che ha effettuato la registrazione sonora all&apos;indagine di rilevamento di un bene demo-etno-antropologico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the sound engineer who recorded an observation survey to the related observation survey of a demo-etno-antropologic entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is survey sound engineer of</rdfs:label>
+        <rdfs:label xml:lang="it">è fonico dell&apos;indagine di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -2402,8 +2527,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedWork">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un bene culturale e un&apos;opera collegata all&apos;opera stessa (es.: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.)</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the situation in which a cultural property is related to another work with the related work itself (e.g.: a preparatory work, a prototype, a copy, a reuse, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il rapporto tra un bene culturale e un&apos;opera collegata all&apos;opera stessa (es.: un lavoro preparatorio, un prototipo, una copia, un reimpiego di tutto il bene o di una sua parte, ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the situation in which a cultural property is related to another work with the related work itself (e.g.: a preparatory work, a prototype, a copy, a reuse, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha opera collegata</rdfs:label>
         <rdfs:label xml:lang="en">has related work</rdfs:label>
@@ -10487,14 +10612,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 
