@@ -1701,6 +1701,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPreviousLocation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedWork"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPreviousLocationOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale a un altro bene culturale collegato, che ne costituisce la sede di provenienza, prima della sua attuale collocazione.</rdfs:comment>
@@ -4014,9 +4015,15 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPreviousLocationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isWorkRelatedTo"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:comment xml:lang="it">Questa è la proprietà inversa di &quot;ha sede di provenienza&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has previous location&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is previous location of</rdfs:label>
         <rdfs:label xml:lang="it">è sede di provenienza di</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4755,7 +4762,17 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
 
     <!-- https://w3id.org/arco/ontology/context-description/isWorkRelatedTo -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isWorkRelatedTo"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isWorkRelatedTo">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa è la proprietà inversa a &quot;ha opera collegata&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is the inverse property of &quot;has related work&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is work related to</rdfs:label>
+        <rdfs:label xml:lang="it">è opera collegata a</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -11040,15 +11057,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
