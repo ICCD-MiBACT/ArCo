@@ -13,6 +13,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
      xmlns:oaentry="http://purl.org/emmedi/oaentry/"
      xmlns:fentry="http://www.essepuntato.it/2014/03/fentry/"
      xmlns:prov="http://www.w3.org/ns/prov#"
@@ -39,27 +40,74 @@
     
 
 
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/AdditionalForm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AdditionalForm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/AlternativeIdentifier">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecord -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecord">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecord">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/EntityMetadata"/>
-    </rdf:Description>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordF -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordF">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordF">
         <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2014/03/fentry/FEntry"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordOA -->
 
-    <rdf:Description rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordOA">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordOA">
         <rdfs:subClassOf rdf:resource="http://purl.org/emmedi/oaentry/OAEntry"/>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CulturalPropertyRecord">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/catalogue/InformationForm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/InformationForm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
 </rdf:RDF>
 
 
