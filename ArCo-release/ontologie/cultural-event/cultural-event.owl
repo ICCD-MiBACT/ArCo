@@ -4,6 +4,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:mu="https://w3id.org/italia/onto/MU/"
      xmlns:cis="http://dati.beniculturali.it/cis/"
      xmlns:clv="https://w3id.org/italia/onto/CLV/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -216,6 +217,7 @@
     <!-- https://w3id.org/arco/ontology/cultural-event/hasMemberEvent -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/hasMemberEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/isEventMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
@@ -361,6 +363,7 @@
     <!-- https://w3id.org/arco/ontology/cultural-event/isEventMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/cultural-event/isEventMemberOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/cultural-event/RecurrentEvent"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -472,6 +475,20 @@
     <!-- https://w3id.org/italia/onto/l0/follows -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/follows"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/hasMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasMember"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isMemberOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -635,6 +652,7 @@
     <!-- https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriod"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasTimePeriodMeasurementUnit"/>
@@ -664,10 +682,18 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/cultural-event/TimePeriod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TimePeriod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/isTimePeriodMeasurementUnitOf"/>
@@ -706,27 +732,81 @@
     
 
 
+    <!-- https://w3id.org/italia/onto/MU/MeasurementUnit -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/MU/MeasurementUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/onto/TI/TimeInterval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/italia/onto/l0/Agent -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/Collection -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Description -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Entity"/>
     
 
 
     <!-- https://w3id.org/italia/onto/l0/EventOrSituation -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/EventOrSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Location -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Location">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Object -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/onto/l0/Object">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+    </rdf:Description>
     
 
 

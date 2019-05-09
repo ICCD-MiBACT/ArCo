@@ -1,57 +1,57 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/arco/ontology/context-description/"
      xml:base="https://w3id.org/arco/ontology/context-description/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:l0="https://w3id.org/italia/onto/l0/"
-     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
-     xmlns:cis="http://dati.beniculturali.it/cis/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:cis="http://dati.beniculturali.it/cis/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
-     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
-        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
-        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
-        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
-        <dc:description xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</dc:description>
-        <dc:description xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</dc:description>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
-        <dc:title xml:lang="en">Context Description Ontology (ArCo network)</dc:title>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <dc:title xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</dc:title>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
-        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
+        <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
-        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
-        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</rdfs:comment>
-        <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
-        <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
+        <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:description xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</dc:description>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <rdfs:comment xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</rdfs:comment>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+        <dc:title xml:lang="en">Context Description Ontology (ArCo network)</dc:title>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/countingas.owl"/>
+        <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <dc:description xml:lang="it">Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.</dc:description>
+        <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/place.owl#"/>
+        <rdfs:comment xml:lang="en">The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -688,6 +688,7 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasCoinMember -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCoinMember">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCoinMemberOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
         <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
@@ -1285,6 +1286,7 @@
     <!-- https://w3id.org/arco/ontology/context-description/hasIntervention -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasIntervention">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isInterventionOn"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Intervention"/>
@@ -1876,6 +1878,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasSituation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedWorkSituationOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation"/>
@@ -3083,6 +3086,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isCoinMemberOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCoinMemberOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isMemberOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/NumismaticSeries"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una moneta a una serie di monete di cui è membro.</rdfs:comment>
@@ -3691,6 +3695,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isInventoryOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInventoryOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Inventory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un inventario che registra informazioni relative al bene culturale al bene culturale o alle entità o attività collegate al bene culturale.</rdfs:comment>
@@ -4730,6 +4735,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isUseTypeSpecificationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isUseTypeSpecificationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/UseTypeSpecification"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Use"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le specifiche relative al tipo di utilizzo di un bene con il relativo uso.</rdfs:comment>
@@ -4958,6 +4964,12 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/italia/onto/l0/hasMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasMember"/>
+    
+
+
     <!-- https://w3id.org/italia/onto/l0/hasTopic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasTopic">
@@ -4969,6 +4981,12 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/italia/onto/l0/isDescriptionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/isMemberOf"/>
     
 
 
@@ -9897,7 +9915,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     <!-- https://w3id.org/arco/ontology/context-description/Subject -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Subject">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Topic"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSubjectOf"/>
@@ -11057,13 +11075,13 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
@@ -11216,5 +11234,5 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 

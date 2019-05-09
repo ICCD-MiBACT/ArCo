@@ -196,6 +196,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/classifies -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/classifies">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
@@ -657,6 +658,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isIconographicOrDecorativeApparatusOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al suo apparato iconografico e/o decorativo, inteso come l&apos;insieme, che può essere più o meno complesso, delle rappresentazioni iconografiche e/o delle decorazioni presenti sul bene.</rdfs:comment>
@@ -1360,6 +1362,7 @@
     <!-- https://w3id.org/arco/ontology/denotative-description/isClassifiedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>

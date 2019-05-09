@@ -699,6 +699,7 @@
     <!-- https://w3id.org/arco/ontology/core/keyword -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/keyword">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta una parola chiave relativa a un&apos;entità, che può essere utilizzata per la ricerca dell&apos;entità.</rdfs:comment>
@@ -893,6 +894,7 @@
     <!-- https://w3id.org/arco/ontology/core/Concept -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Concept">
+        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <opla:isNativeTo rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"/>
         <rdfs:comment xml:lang="it">La classe che rappresenta un concetto.</rdfs:comment>
@@ -1013,6 +1015,14 @@
     <!-- https://w3id.org/italia/onto/l0/Characteristic -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Concept -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Concept">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
     
 
 
