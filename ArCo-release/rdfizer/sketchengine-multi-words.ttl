@@ -1,0 +1,3971 @@
+<https://w3id.org/arco/resource/Keyword/documento-audio-integrativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documento audio integrativo"@it .
+
+<https://w3id.org/arco/resource/Keyword/standard-catalografici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "standard catalografici"@it .
+
+<https://w3id.org/arco/resource/Keyword/campo-precedente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campo precedente"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-di-foglio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero di foglio"@it .
+
+<https://w3id.org/arco/resource/Keyword/paese-estero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paese estero"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-rilievo-tradizionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso rilievo tradizionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-di-aggiornamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività di aggiornamento"@it .
+
+<https://w3id.org/arco/resource/Keyword/cartografia-con-sopralluogo-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cartografia con sopralluogo rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazione-attuale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "localizzazione attuale"@it .
+
+<https://w3id.org/arco/resource/Keyword/intervento-di-scavo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "intervento di scavo"@it .
+
+<https://w3id.org/arco/resource/Keyword/religioso-cattolico-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "religioso cattolico proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/lavori-agricoli-notizie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lavori agricoli notizie"@it .
+
+<https://w3id.org/arco/resource/Keyword/immagine-documenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "immagine documenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/tale-immagine-documenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tale immagine documenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-codici-identificativi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali codici identificativi"@it .
+
+<https://w3id.org/arco/resource/Keyword/s-stampe-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "s-stampe versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/referente-per-la-verifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "referente per la verifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/campagne-di-catalogazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campagne di catalogazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/medesimo-codice-univoco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "medesimo codice univoco"@it .
+
+<https://w3id.org/arco/resource/Keyword/diagnostiche-analisi-iconografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diagnostiche analisi iconografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/paragrafo-cd-codici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paragrafo cd-codici"@it .
+
+<https://w3id.org/arco/resource/Keyword/ordine-cronologico-inverso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ordine cronologico inverso"@it .
+
+<https://w3id.org/arco/resource/Keyword/religioso-cattolico-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "religioso cattolico detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonte-archivistica-fotografia-digitale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fonte archivistica fotografia digitale"@it .
+
+<https://w3id.org/arco/resource/Keyword/percorsi-moderni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "percorsi moderni"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazioni-con-virgole>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "denominazioni con virgole"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-pregressa-soppressi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda pregressa soppressi"@it .
+
+<https://w3id.org/arco/resource/Keyword/scavo-clandestino>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scavo clandestino"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-persona-giuridica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà persona giuridica"@it .
+
+<https://w3id.org/arco/resource/Keyword/film-super>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "film super"@it .
+
+<https://w3id.org/arco/resource/Keyword/riprese-generali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riprese generali"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-scheda-precedente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di scheda precedente"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-principale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda principale"@it .
+
+<https://w3id.org/arco/resource/Keyword/compact-disc-disco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "compact disc disco"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazioni-bilingui>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "denominazioni bilingui"@it .
+
+<https://w3id.org/arco/resource/Keyword/iconografica-analisi-stilistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iconografica analisi stilistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/modalita-di-schedatura>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modalità di schedatura"@it .
+
+<https://w3id.org/arco/resource/Keyword/ripartizione-amministrativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ripartizione amministrativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-codici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali codici"@it .
+
+<https://w3id.org/arco/resource/Keyword/tabella-tavola>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tabella tavola"@it .
+
+<https://w3id.org/arco/resource/Keyword/successione-senza-spazi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "successione senza spazi"@it .
+
+<https://w3id.org/arco/resource/Keyword/tale-codice>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tale codice"@it .
+
+<https://w3id.org/arco/resource/Keyword/relazione-urbanistico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "relazione urbanistico"@it .
+
+<https://w3id.org/arco/resource/Keyword/ente-competente-per-tutela>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ente competente per tutela"@it .
+
+<https://w3id.org/arco/resource/Keyword/cartografia-senza-sopralluogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cartografia senza sopralluogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-storica-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi storica analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/unita-cartografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "unità cartografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/fogli-catastali-diversi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fogli catastali diversi"@it .
+
+<https://w3id.org/arco/resource/Keyword/letteratura-archeologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "letteratura archeologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/valori-identificativi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "valori identificativi"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-di-carattere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni di carattere"@it .
+
+<https://w3id.org/arco/resource/Keyword/video-super>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "video super"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-documenti-originali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali documenti originali"@it .
+
+<https://w3id.org/arco/resource/Keyword/ultimo-quarto-ca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ultimo quarto ca"@it .
+
+<https://w3id.org/arco/resource/Keyword/confronti-citati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "confronti citati"@it .
+
+<https://w3id.org/arco/resource/Keyword/provvedimenti-di-tutela>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "provvedimenti di tutela"@it .
+
+<https://w3id.org/arco/resource/Keyword/funzionario-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "funzionario responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/inizio-inizio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inizio inizio"@it .
+
+<https://w3id.org/arco/resource/Keyword/aperto-archeologia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aperto archeologia"@it .
+
+<https://w3id.org/arco/resource/Keyword/testo-introduttivo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "testo introduttivo"@it .
+
+<https://w3id.org/arco/resource/Keyword/edizione-in-esponente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "edizione in esponente"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-schede>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di schede"@it .
+
+<https://w3id.org/arco/resource/Keyword/seconda-meta-primo-quarto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seconda metà primo quarto"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipologia-di-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipologia di documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/coordinata-x>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "coordinata x"@it .
+
+<https://w3id.org/arco/resource/Keyword/contenitore-fisico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contenitore fisico"@it .
+
+<https://w3id.org/arco/resource/Keyword/fortuito-sequestro>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fortuito sequestro"@it .
+
+<https://w3id.org/arco/resource/Keyword/naturalistici-mineralogia-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "naturalistici-mineralogia beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero catalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/demoetnoantropologici-immateriali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "demoetnoantropologici immateriali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/elemento-con-obbligatorieta-assoluta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "elemento con obbligatorietà assoluta"@it .
+
+<https://w3id.org/arco/resource/Keyword/definizione-prescelta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "definizione prescelta"@it .
+
+<https://w3id.org/arco/resource/Keyword/persona-giuridica-senza-scopo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "persona giuridica senza scopo"@it .
+
+<https://w3id.org/arco/resource/Keyword/esame-intervento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esame intervento"@it .
+
+<https://w3id.org/arco/resource/Keyword/livello-inventariale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livello inventariale"@it .
+
+<https://w3id.org/arco/resource/Keyword/lettere-in-carattere-minuscolo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lettere in carattere minuscolo"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-note>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento note"@it .
+
+<https://w3id.org/arco/resource/Keyword/foglio-manoscritto-nota>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "foglio manoscritto nota"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-storiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede storiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/paragrafi-disponibili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paragrafi disponibili"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-esplicative-livello>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note esplicative livello"@it .
+
+<https://w3id.org/arco/resource/Keyword/attribuzione-di-tale-profilo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attribuzione di tale profilo"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-stilistica-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi stilistica analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/sede-di-provenienza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sede di provenienza"@it .
+
+<https://w3id.org/arco/resource/Keyword/documento-video-cinematografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documento video-cinematografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/frazioni-di-secolo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "frazioni di secolo"@it .
+
+<https://w3id.org/arco/resource/Keyword/terzo-quarto-ultimo-quarto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "terzo quarto ultimo quarto"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-persona>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà persona"@it .
+
+<https://w3id.org/arco/resource/Keyword/ordine-di-comparizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ordine di comparizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-informazioni-aggiuntive>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali informazioni aggiuntive"@it .
+
+<https://w3id.org/arco/resource/Keyword/nozione-di-anno>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nozione di anno"@it .
+
+<https://w3id.org/arco/resource/Keyword/disc-disco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "disc disco"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-allegata-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione allegata documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-di-carattere-generale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni di carattere generale"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottocampo-precedente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sottocampo precedente"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-esplicative-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note esplicative bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/opera-finale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opera finale"@it .
+
+<https://w3id.org/arco/resource/Keyword/ripartizione-geografico-amministrativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ripartizione geografico-amministrativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/diretta-relazione-inversa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diretta relazione inversa"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-inizio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto inizio"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-fotografia-digitale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia fotografia digitale"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-diagnostiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi diagnostiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/diffusione-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diffusione pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/aperto-valore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aperto valore"@it .
+
+<https://w3id.org/arco/resource/Keyword/appendice-i>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "appendice i"@it .
+
+<https://w3id.org/arco/resource/Keyword/inizio-fine-meta-prima>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inizio fine metà prima"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-metri-gradi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri metri gradi"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-di-confronto-libro>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia di confronto libro"@it .
+
+<https://w3id.org/arco/resource/Keyword/condizione-giuridico-amministrativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "condizione giuridico-amministrativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-previsto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda previsto"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/diapositiva-colore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diapositiva colore"@it .
+
+<https://w3id.org/arco/resource/Keyword/forme-di-datazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "forme di datazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazione-geografico-amministrativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "localizzazione geografico-amministrativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-fine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà fine"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-geografico-amministrative>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni geografico-amministrative"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-precedente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda precedente"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubbliche-opere-private>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubbliche opere private"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcg-ricognizione-archeologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rcg-ricognizione archeologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/visibilita-completa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "visibilità completa"@it .
+
+<https://w3id.org/arco/resource/Keyword/diritto-di-prelazione-individuazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diritto di prelazione individuazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-di-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni di proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-collezioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di collezioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifica-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifica scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonte-archivistica-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fonte archivistica fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubbliche-opere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubbliche opere"@it .
+
+<https://w3id.org/arco/resource/Keyword/singoli-codici-identificativi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "singoli codici identificativi"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd-bdi-beni-demoetnoantropologici-immateriali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iccd bdi-beni demoetnoantropologici immateriali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/restituzione-postbellica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "restituzione postbellica"@it .
+
+<https://w3id.org/arco/resource/Keyword/diverse-denominazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diverse denominazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/cartografia-con-sopralluogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cartografia con sopralluogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/titolo-in-base>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "titolo in base"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiusura-di-parentesi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiusura di parentesi"@it .
+
+<https://w3id.org/arco/resource/Keyword/nota-numero-nuova>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nota numero nuova"@it .
+
+<https://w3id.org/arco/resource/Keyword/trigonometrici-stereofotogrammetria>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trigonometrici stereofotogrammetria"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-definizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso definizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/chilometro-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chilometro di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/opere-private-prospezione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opere private prospezione"@it .
+
+<https://w3id.org/arco/resource/Keyword/arco-di-secoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "arco di secoli"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-gradi-sessadecimali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri gradi sessadecimali"@it .
+
+<https://w3id.org/arco/resource/Keyword/tale-spezzone>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tale spezzone"@it .
+
+<https://w3id.org/arco/resource/Keyword/privata-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "privata proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/cartografia-storica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cartografia storica"@it .
+
+<https://w3id.org/arco/resource/Keyword/privata-proprieta-mista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "privata proprietà mista"@it .
+
+<https://w3id.org/arco/resource/Keyword/nome-in-lingua-straniera>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nome in lingua straniera"@it .
+
+<https://w3id.org/arco/resource/Keyword/demoetnoantropologici-materiali-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "demoetnoantropologici materiali beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/lavori-agricoli-notizie-bibliografiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lavori agricoli notizie bibliografiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-localizzazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di localizzazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/prima-meta-seconda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prima metà seconda"@it .
+
+<https://w3id.org/arco/resource/Keyword/rinvenimento-fortuito>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rinvenimento fortuito"@it .
+
+<https://w3id.org/arco/resource/Keyword/modelli-cartacei>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modelli cartacei"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-cartografia-storica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di cartografia storica"@it .
+
+<https://w3id.org/arco/resource/Keyword/generica-indicazione-specifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "generica indicazione specifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-diagnostiche-analisi-iconografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi diagnostiche analisi iconografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-valori-negativi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di valori negativi"@it .
+
+<https://w3id.org/arco/resource/Keyword/fascia-cronologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fascia cronologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/agricoli-notizie-bibliografiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "agricoli notizie bibliografiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/occupazione-massima-di-memoria-inferiore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "occupazione massima di memoria inferiore"@it .
+
+<https://w3id.org/arco/resource/Keyword/particolare-modalita-descrittiva>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "particolare modalità descrittiva"@it .
+
+<https://w3id.org/arco/resource/Keyword/volume-in-numeri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "volume in numeri"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorieta-assoluta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorietà assoluta"@it .
+
+<https://w3id.org/arco/resource/Keyword/settori-urbani>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "settori urbani"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-demoetnoantropologici-materiali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni demoetnoantropologici materiali"@it .
+
+<https://w3id.org/arco/resource/Keyword/riproduzione-di-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riproduzione di fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/stilistica-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stilistica analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/scavo-clandestino-ecc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scavo clandestino ecc"@it .
+
+<https://w3id.org/arco/resource/Keyword/gradi-sessadecimali-metri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "gradi sessadecimali metri"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipologia-di-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipologia di scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/soppressi-in-occasione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "soppressi in occasione"@it .
+
+<https://w3id.org/arco/resource/Keyword/monogramma-nota-manoscritta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "monogramma nota manoscritta"@it .
+
+<https://w3id.org/arco/resource/Keyword/legno-legno-legno>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "legno legno legno"@it .
+
+<https://w3id.org/arco/resource/Keyword/opera-in-esame>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opera in esame"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-primo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà primo"@it .
+
+<https://w3id.org/arco/resource/Keyword/operazioni-di-recupero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "operazioni di recupero"@it .
+
+<https://w3id.org/arco/resource/Keyword/citazione-completa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "citazione completa"@it .
+
+<https://w3id.org/arco/resource/Keyword/inventario-patrimoniale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inventario patrimoniale"@it .
+
+<https://w3id.org/arco/resource/Keyword/metodo-di-georeferenziazione-tecnica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metodo di georeferenziazione tecnica"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo-di-reperimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo di reperimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/esplicative-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esplicative bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/schedatura-in-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schedatura in riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-ca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto ca"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-proprieta-mista-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica proprietà mista privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuale-numero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuale numero"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo-di-conservazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo di conservazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/modalita-descrittiva-applicata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modalità descrittiva applicata"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-video-cinematografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione video-cinematografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/documenti-multimediali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documenti multimediali"@it .
+
+<https://w3id.org/arco/resource/Keyword/diagnostiche-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diagnostiche analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/esercizio-di-diritto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esercizio di diritto"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-di-catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero di catalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-in-modo-adeguato>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene in modo adeguato"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-iconografica-analisi-stilistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi iconografica analisi stilistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/varie-realta-nazionali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "varie realtà nazionali"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazione-ufficiale-attuale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "denominazione ufficiale attuale"@it .
+
+<https://w3id.org/arco/resource/Keyword/cavallo-di-secoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cavallo di secoli"@it .
+
+<https://w3id.org/arco/resource/Keyword/appoggio-fiduciari>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "appoggio fiduciari"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-geografico-amministrative-necessarie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni geografico-amministrative necessarie"@it .
+
+<https://w3id.org/arco/resource/Keyword/intero-bene>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "intero bene"@it .
+
+<https://w3id.org/arco/resource/Keyword/acquisizione-diretta-con-fotocamere-digitali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "acquisizione diretta con fotocamere digitali"@it .
+
+<https://w3id.org/arco/resource/Keyword/data-finale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "data finale"@it .
+
+<https://w3id.org/arco/resource/Keyword/terzo-quarto-ultimo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "terzo quarto ultimo"@it .
+
+<https://w3id.org/arco/resource/Keyword/insieme-di-dati-indispensabili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "insieme di dati indispensabili"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione-mista-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "detenzione mista privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/singoli-file>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "singoli file"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-aperto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario aperto"@it .
+
+<https://w3id.org/arco/resource/Keyword/parte-residuale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parte residuale"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-prima-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà prima metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-allegata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione allegata"@it .
+
+<https://w3id.org/arco/resource/Keyword/codici-di-inventario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "codici di inventario"@it .
+
+<https://w3id.org/arco/resource/Keyword/memoria-inferiore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "memoria inferiore"@it .
+
+<https://w3id.org/arco/resource/Keyword/positivo-b>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "positivo b"@it .
+
+<https://w3id.org/arco/resource/Keyword/canonica-cappella>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "canonica cappella"@it .
+
+<https://w3id.org/arco/resource/Keyword/post-inizio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "post inizio"@it .
+
+<https://w3id.org/arco/resource/Keyword/ritrovamento-fortuito>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ritrovamento fortuito"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-di-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene di proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/anno-preciso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "anno preciso"@it .
+
+<https://w3id.org/arco/resource/Keyword/inventario-di-scavo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inventario di scavo"@it .
+
+<https://w3id.org/arco/resource/Keyword/codice-univoco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "codice univoco"@it .
+
+<https://w3id.org/arco/resource/Keyword/f-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "f versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/forma-redazionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "forma redazionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/collocazione-fisica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "collocazione fisica"@it .
+
+<https://w3id.org/arco/resource/Keyword/modello-di-scheda-previsto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modello di scheda previsto"@it .
+
+<https://w3id.org/arco/resource/Keyword/occasione-di-attivita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "occasione di attività"@it .
+
+<https://w3id.org/arco/resource/Keyword/attestato-di-libera-circolazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attestato di libera circolazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-di-proprieta-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni di proprietà pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/maggiore-versatilita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "maggiore versatilità"@it .
+
+<https://w3id.org/arco/resource/Keyword/elementi-di-confine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "elementi di confine"@it .
+
+<https://w3id.org/arco/resource/Keyword/ampiezza-superiore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ampiezza superiore"@it .
+
+<https://w3id.org/arco/resource/Keyword/private-prospezione-subacquea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "private prospezione subacquea"@it .
+
+<https://w3id.org/arco/resource/Keyword/archeologici-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archeologici versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonte-archivistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fonte archivistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/inizio-campo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inizio campo"@it .
+
+<https://w3id.org/arco/resource/Keyword/sola-particella>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sola particella"@it .
+
+<https://w3id.org/arco/resource/Keyword/livelli-descrittivi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livelli descrittivi"@it .
+
+<https://w3id.org/arco/resource/Keyword/persona-singola>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "persona singola"@it .
+
+<https://w3id.org/arco/resource/Keyword/inventariazione-patrimoniale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inventariazione patrimoniale"@it .
+
+<https://w3id.org/arco/resource/Keyword/cartografia-senza-sopralluogo-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cartografia senza sopralluogo rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/piattaforma-cooperativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "piattaforma cooperativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/contenitore-fisico-complesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contenitore fisico complesso"@it .
+
+<https://w3id.org/arco/resource/Keyword/coordinata-z>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "coordinata z"@it .
+
+<https://w3id.org/arco/resource/Keyword/trattino-medio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trattino medio"@it .
+
+<https://w3id.org/arco/resource/Keyword/territoriale-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "territoriale detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/post-inizio-fine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "post inizio fine"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivio-locale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivio locale"@it .
+
+<https://w3id.org/arco/resource/Keyword/ala-destra-ala>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ala destra ala"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-di-ispezione-diverse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività di ispezione diverse"@it .
+
+<https://w3id.org/arco/resource/Keyword/funzionari-responsabili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "funzionari responsabili"@it .
+
+<https://w3id.org/arco/resource/Keyword/seguito-di-indagini-storico-critiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seguito di indagini storico-critiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-aperto-archeologia-preventiva>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario aperto archeologia preventiva"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivistica-iscrizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivistica iscrizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/lettere-in-carattere-maiuscolo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lettere in carattere maiuscolo"@it .
+
+<https://w3id.org/arco/resource/Keyword/sola-sigla>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sola sigla"@it .
+
+<https://w3id.org/arco/resource/Keyword/scientifico-funzionario-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scientifico funzionario responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifico-aspetto-tecnico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifico aspetto tecnico"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazioni-video-cinematografiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazioni video-cinematografiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/recupero-dati-pregressi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "recupero dati pregressi"@it .
+
+<https://w3id.org/arco/resource/Keyword/relazione-con-il-bene>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "relazione con il bene"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-per-la-diffusione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni per la diffusione"@it .
+
+<https://w3id.org/arco/resource/Keyword/temporanea-licenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "temporanea licenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/carattere-redazionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "carattere redazionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonte-di-rappresentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fonte di rappresentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/testo-introduttivo-indicazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "testo introduttivo indicazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-analisi-diagnostiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso analisi diagnostiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/monastero-oratorio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "monastero oratorio"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/esplicative-livello>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esplicative livello"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-con-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene con riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-terzo-quarto-ultimo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto terzo quarto ultimo"@it .
+
+<https://w3id.org/arco/resource/Keyword/paragrafo-senza-anno>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paragrafo senza anno"@it .
+
+<https://w3id.org/arco/resource/Keyword/agricoli-notizie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "agricoli notizie"@it .
+
+<https://w3id.org/arco/resource/Keyword/campi-strutturati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campi strutturati"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-mista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà mista"@it .
+
+<https://w3id.org/arco/resource/Keyword/fascia-cronologica-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fascia cronologica di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/supporti-di-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "supporti di proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-di-carattere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note di carattere"@it .
+
+<https://w3id.org/arco/resource/Keyword/originali-analogici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "originali analogici"@it .
+
+<https://w3id.org/arco/resource/Keyword/informazioni-catalografiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "informazioni catalografiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-provvedimento-amministrativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di provvedimento amministrativo"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-detenzione-persona-giuridica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica detenzione persona giuridica"@it .
+
+<https://w3id.org/arco/resource/Keyword/secolo-per-i-secoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "secolo per i secoli"@it .
+
+<https://w3id.org/arco/resource/Keyword/iscrizione-marchio-monogramma>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iscrizione marchio monogramma"@it .
+
+<https://w3id.org/arco/resource/Keyword/enti-religiosi-di-confessione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "enti religiosi di confessione"@it .
+
+<https://w3id.org/arco/resource/Keyword/iscrizione-marchio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iscrizione marchio"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-di-catalogo-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda di catalogo documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-esplicative>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note esplicative"@it .
+
+<https://w3id.org/arco/resource/Keyword/paragrafi-disponibili-per-la-georeferenziazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paragrafi disponibili per la georeferenziazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-di-ispezione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività di ispezione"@it .
+
+<https://w3id.org/arco/resource/Keyword/manoscritta-punzone>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "manoscritta punzone"@it .
+
+<https://w3id.org/arco/resource/Keyword/indagine-territoriale-lavori>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indagine territoriale lavori"@it .
+
+<https://w3id.org/arco/resource/Keyword/colore-fermo-immagine-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "colore fermo-immagine fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/assoluta-alternativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "assoluta alternativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/scopo-di-lucro-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scopo di lucro detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/foto-aerea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "foto aerea"@it .
+
+<https://w3id.org/arco/resource/Keyword/trasversale-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trasversale versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/bollo-confronto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bollo confronto"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-aggiornato>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda aggiornato"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-specifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia specifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/privata-detenzione-mista-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "privata detenzione mista pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/campi-con-livello>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campi con livello"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-di-proprieta-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene di proprietà privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogo-generale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogo generale"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-proprieta-persona>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica proprietà persona"@it .
+
+<https://w3id.org/arco/resource/Keyword/georeferenziazione-tecnica-di-georeferenziazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "georeferenziazione tecnica di georeferenziazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottocampo-con-la-sigla>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sottocampo con la sigla"@it .
+
+<https://w3id.org/arco/resource/Keyword/informazione-richiesta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "informazione richiesta"@it .
+
+<https://w3id.org/arco/resource/Keyword/supporti-consecutivi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "supporti consecutivi"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-numismatico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene numismatico"@it .
+
+<https://w3id.org/arco/resource/Keyword/ricognizione-archeologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ricognizione archeologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/condizione-materiale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "condizione materiale"@it .
+
+<https://w3id.org/arco/resource/Keyword/aperto-archeologia-preventiva>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aperto archeologia preventiva"@it .
+
+<https://w3id.org/arco/resource/Keyword/giri-disco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "giri disco"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-di-revisione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività di revisione"@it .
+
+<https://w3id.org/arco/resource/Keyword/sede-di-rinvenimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sede di rinvenimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-valore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso valore"@it .
+
+<https://w3id.org/arco/resource/Keyword/manoscritta-punzone-sigla>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "manoscritta punzone sigla"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-informazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note informazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd-sm-strumenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iccd sm-strumenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/valori-negativi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "valori negativi"@it .
+
+<https://w3id.org/arco/resource/Keyword/flussi-di-lavoro-previsti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "flussi di lavoro previsti"@it .
+
+<https://w3id.org/arco/resource/Keyword/volume-singolare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "volume singolare"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione-persona>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "detenzione persona"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-notazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di notazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/sessadecimali-metri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sessadecimali metri"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-di-corredo-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia di corredo bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifica-colonna>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifica colonna"@it .
+
+<https://w3id.org/arco/resource/Keyword/eccezione-per-i-nomi-propri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eccezione per i nomi propri"@it .
+
+<https://w3id.org/arco/resource/Keyword/carattere-generale-per-la-compilazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "carattere generale per la compilazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-valori>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di valori"@it .
+
+<https://w3id.org/arco/resource/Keyword/relazione-urbanistico-ambientale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "relazione urbanistico ambientale"@it .
+
+<https://w3id.org/arco/resource/Keyword/indirizzo-di-rete>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indirizzo di rete"@it .
+
+<https://w3id.org/arco/resource/Keyword/ala-destra-ala-sinistra>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ala destra ala sinistra"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-nuova-serie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero nuova serie"@it .
+
+<https://w3id.org/arco/resource/Keyword/ambito-extraurbano>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ambito extraurbano"@it .
+
+<https://w3id.org/arco/resource/Keyword/prospezione-subacquea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prospezione subacquea"@it .
+
+<https://w3id.org/arco/resource/Keyword/durata-minima-indicativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "durata minima indicativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/sola-occorrenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sola occorrenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/esplicative-livello-basso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esplicative livello basso"@it .
+
+<https://w3id.org/arco/resource/Keyword/unita-stratigrafica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "unità stratigrafica"@it .
+
+<https://w3id.org/arco/resource/Keyword/f-versione-definitiva>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "f versione definitiva"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-audio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione audio"@it .
+
+<https://w3id.org/arco/resource/Keyword/firma-grafia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "firma grafia"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-proprieta-persona-giuridica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica proprietà persona giuridica"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo-di-collocazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo di collocazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/contributo-piu-autori>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contributo più autori"@it .
+
+<https://w3id.org/arco/resource/Keyword/redazione-responsabile-ricerca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "redazione responsabile ricerca"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubblico-territoriale-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubblico territoriale proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/spazio-viabilistico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "spazio viabilistico"@it .
+
+<https://w3id.org/arco/resource/Keyword/mm-film-super>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "mm film super"@it .
+
+<https://w3id.org/arco/resource/Keyword/unita-cartografica-catastale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "unità cartografica catastale"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-naturalistici-mineralogia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni naturalistici-mineralogia"@it .
+
+<https://w3id.org/arco/resource/Keyword/sessadecimali-metri-metri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sessadecimali metri metri"@it .
+
+<https://w3id.org/arco/resource/Keyword/colore-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "colore fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/ente-schedatore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ente schedatore"@it .
+
+<https://w3id.org/arco/resource/Keyword/autori-personali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "autori personali"@it .
+
+<https://w3id.org/arco/resource/Keyword/condizioni-di-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "condizioni di proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/recupero-dati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "recupero dati"@it .
+
+<https://w3id.org/arco/resource/Keyword/colore-fermo-immagine-fotografia-aerea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "colore fermo-immagine fotografia aerea"@it .
+
+<https://w3id.org/arco/resource/Keyword/forma-di-testo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "forma di testo"@it .
+
+<https://w3id.org/arco/resource/Keyword/foto-aerea-senza-sopralluogo-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "foto aerea senza sopralluogo rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/ente-collettivo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ente collettivo"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso"@it .
+
+<https://w3id.org/arco/resource/Keyword/numeri-di-pagina-iniziale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numeri di pagina iniziale"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-aperto-valore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario aperto valore"@it .
+
+<https://w3id.org/arco/resource/Keyword/quota-minima-assoluta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quota minima assoluta"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-mista-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà mista privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/parte-tipo-di-misura>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parte tipo di misura"@it .
+
+<https://w3id.org/arco/resource/Keyword/raccolta-pubblica-dati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "raccolta pubblica dati"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-esplicative-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note esplicative documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/ripartizione-catastale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ripartizione catastale"@it .
+
+<https://w3id.org/arco/resource/Keyword/enti-religiosi-di-confessione-cattolica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "enti religiosi di confessione cattolica"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifiche-fascia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifiche fascia"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-metri-metri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri metri metri"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-aperto-archeologia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario aperto archeologia"@it .
+
+<https://w3id.org/arco/resource/Keyword/soggetto-fonte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "soggetto fonte"@it .
+
+<https://w3id.org/arco/resource/Keyword/manoscritto-nota-numero-nuova>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "manoscritto nota numero nuova"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-ultimo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto ultimo"@it .
+
+<https://w3id.org/arco/resource/Keyword/notizie-bibliografiche-notizie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "notizie bibliografiche notizie"@it .
+
+<https://w3id.org/arco/resource/Keyword/ambito-culturale-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ambito culturale di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/fortuito-scavo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fortuito scavo"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogo-relativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogo relativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/fortuito-scavo-clandestino-ecc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fortuito scavo clandestino ecc"@it .
+
+<https://w3id.org/arco/resource/Keyword/esame-intervento-firma>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esame intervento firma"@it .
+
+<https://w3id.org/arco/resource/Keyword/separatore-per-i-numeri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "separatore per i numeri"@it .
+
+<https://w3id.org/arco/resource/Keyword/fogli-catastali-diversi-pertinenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fogli catastali diversi pertinenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-date>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali date"@it .
+
+<https://w3id.org/arco/resource/Keyword/ultimo-quarto-inizio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ultimo quarto inizio"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-stilistica-analisi-storica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi stilistica analisi storica"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-detenzione-persona>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica detenzione persona"@it .
+
+<https://w3id.org/arco/resource/Keyword/seguenti-precisazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seguenti precisazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/separatore-per-i-decimali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "separatore per i decimali"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-di-catalogo-generale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero di catalogo generale"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-di-catalogazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività di catalogazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/relazione-inversa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "relazione inversa"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-iconografica-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi iconografica analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione-privata-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "detenzione privata detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/sequestro-successione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sequestro successione"@it .
+
+<https://w3id.org/arco/resource/Keyword/dati-catalografici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dati catalografici"@it .
+
+<https://w3id.org/arco/resource/Keyword/diapositiva-b>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diapositiva b"@it .
+
+<https://w3id.org/arco/resource/Keyword/licenza-di-esportazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "licenza di esportazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/singoli-codici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "singoli codici"@it .
+
+<https://w3id.org/arco/resource/Keyword/serie-pagina-paragrafo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "serie pagina paragrafo"@it .
+
+<https://w3id.org/arco/resource/Keyword/file-digitale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "file digitale"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-bibliografico-in-modo-univoco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento bibliografico in modo univoco"@it .
+
+<https://w3id.org/arco/resource/Keyword/codice-identificativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "codice identificativo"@it .
+
+<https://w3id.org/arco/resource/Keyword/consultabili-on-line>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "consultabili on line"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-misura>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di misura"@it .
+
+<https://w3id.org/arco/resource/Keyword/parti-con-attributi-specifici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parti con attributi specifici"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuale-indicazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuale indicazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/pagina-paragrafo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pagina paragrafo"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-metri-esempio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri metri esempio"@it .
+
+<https://w3id.org/arco/resource/Keyword/enti-collettivi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "enti collettivi"@it .
+
+<https://w3id.org/arco/resource/Keyword/particolare-modalita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "particolare modalità"@it .
+
+<https://w3id.org/arco/resource/Keyword/storica-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "storica analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/anno-di-edizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "anno di edizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/foto-aerea-senza-sopralluogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "foto aerea senza sopralluogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/fermo-immagine-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fermo-immagine fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifiche-utili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifiche utili"@it .
+
+<https://w3id.org/arco/resource/Keyword/nota-manoscritta-punzone>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nota manoscritta punzone"@it .
+
+<https://w3id.org/arco/resource/Keyword/esplicative-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esplicative documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/campo-con-la-locuzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campo con la locuzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorieta-alternativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorietà alternativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazioni-ufficiali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "denominazioni ufficiali"@it .
+
+<https://w3id.org/arco/resource/Keyword/colore-fotografia-aerea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "colore fotografia aerea"@it .
+
+<https://w3id.org/arco/resource/Keyword/revisione-di-schede>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "revisione di schede"@it .
+
+<https://w3id.org/arco/resource/Keyword/acquisto-alienazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "acquisto alienazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/forma-di-testo-libero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "forma di testo libero"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-terzo-quarto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto terzo quarto"@it .
+
+<https://w3id.org/arco/resource/Keyword/seguito-di-atto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seguito di atto"@it .
+
+<https://w3id.org/arco/resource/Keyword/legno-legno>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "legno legno"@it .
+
+<https://w3id.org/arco/resource/Keyword/posizione-parti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "posizione parti"@it .
+
+<https://w3id.org/arco/resource/Keyword/locuzione-specialistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "locuzione specialistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-rilievo-tradizionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso rilievo tradizionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazione-ufficiale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "denominazione ufficiale"@it .
+
+<https://w3id.org/arco/resource/Keyword/sopralluogo-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sopralluogo rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/infrarossi-negativo-b>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "infrarossi negativo b"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-di-carattere-redazionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note di carattere redazionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/alluvione-terremoto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "alluvione terremoto"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-demoetnoantropologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni demoetnoantropologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/negativo-colore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "negativo colore"@it .
+
+<https://w3id.org/arco/resource/Keyword/piu-autori>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "più autori"@it .
+
+<https://w3id.org/arco/resource/Keyword/esame-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esame bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/sequenza-numerica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sequenza numerica"@it .
+
+<https://w3id.org/arco/resource/Keyword/date-di-scadenza-previste>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "date di scadenza previste"@it .
+
+<https://w3id.org/arco/resource/Keyword/rete-completo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rete completo"@it .
+
+<https://w3id.org/arco/resource/Keyword/contenitore-giuridico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contenitore giuridico"@it .
+
+<https://w3id.org/arco/resource/Keyword/rinvenimento-fortuito-scavo-clandestino>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rinvenimento fortuito scavo clandestino"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-complesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene complesso"@it .
+
+<https://w3id.org/arco/resource/Keyword/campagna-catalografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campagna catalografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/livello-di-precatalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livello di precatalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-per-la-diffusione-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni per la diffusione pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/digitalizzazione-di-originali-analogici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "digitalizzazione di originali analogici"@it .
+
+<https://w3id.org/arco/resource/Keyword/fisico-complesso-monumentale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fisico complesso monumentale"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazione-fisica-luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "localizzazione fisica luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/collocazione-inventariale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "collocazione inventariale"@it .
+
+<https://w3id.org/arco/resource/Keyword/profilo-di-accesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "profilo di accesso"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonti-bibliografiche-edite>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fonti bibliografiche edite"@it .
+
+<https://w3id.org/arco/resource/Keyword/archeologia-preventiva-fotointerpretazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archeologia preventiva fotointerpretazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-demoetnoantropologici-materiali-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni demoetnoantropologici materiali beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/parti-con-attributi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parti con attributi"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/sistemi-di-riferimento-geodetici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sistemi di riferimento geodetici"@it .
+
+<https://w3id.org/arco/resource/Keyword/positivo-colore-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "positivo colore fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/prima-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prima metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/file-rcg-ricognizione-archeologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "file rcg-ricognizione archeologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/piu-termini>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "più termini"@it .
+
+<https://w3id.org/arco/resource/Keyword/voce-tabella-tavola>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "voce tabella tavola"@it .
+
+<https://w3id.org/arco/resource/Keyword/tavola-tomo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tavola tomo"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-definizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso definizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/formati-elettronici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "formati elettronici"@it .
+
+<https://w3id.org/arco/resource/Keyword/abbazia-benedettina-cistercense>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "abbazia benedettina cistercense"@it .
+
+<https://w3id.org/arco/resource/Keyword/immissione-in-patrimonio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "immissione in patrimonio"@it .
+
+<https://w3id.org/arco/resource/Keyword/foglio-di-appartenenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "foglio di appartenenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/processo-catalografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "processo catalografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/collocazione-specifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "collocazione specifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/file-digitale-file-digitale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "file digitale file digitale"@it .
+
+<https://w3id.org/arco/resource/Keyword/confronto-contesto-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "confronto contesto documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/anno-senza-data>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "anno senza data"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-ecc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento ecc"@it .
+
+<https://w3id.org/arco/resource/Keyword/arte-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "arte versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/territoriale-lavori-agricoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "territoriale lavori agricoli"@it .
+
+<https://w3id.org/arco/resource/Keyword/codice-univoco-nazionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "codice univoco nazionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/metallo-metallo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metallo metallo"@it .
+
+<https://w3id.org/arco/resource/Keyword/compilazione-alternativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "compilazione alternativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/privata-proprieta-mista-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "privata proprietà mista pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/processi-di-interoperabilita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "processi di interoperabilità"@it .
+
+<https://w3id.org/arco/resource/Keyword/seguenti-formati-elettronici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seguenti formati elettronici"@it .
+
+<https://w3id.org/arco/resource/Keyword/firma-grafia-fonte-archivistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "firma grafia fonte archivistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-bibliografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento bibliografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/supporto-audio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "supporto audio"@it .
+
+<https://w3id.org/arco/resource/Keyword/documento-fotografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documento fotografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/castello-chiesa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "castello chiesa"@it .
+
+<https://w3id.org/arco/resource/Keyword/operazione-di-revisione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "operazione di revisione"@it .
+
+<https://w3id.org/arco/resource/Keyword/definizione-specialistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "definizione specialistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/modalita-di-individuazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modalità di individuazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/occupazione-massima>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "occupazione massima"@it .
+
+<https://w3id.org/arco/resource/Keyword/soggetto-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "soggetto responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/contesto-alternativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contesto alternativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/stilistica-analisi-storica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stilistica analisi storica"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-successive-operazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali successive operazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/prospezione-subacquea-rinvenimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prospezione subacquea rinvenimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/forma-anno>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "forma anno"@it .
+
+<https://w3id.org/arco/resource/Keyword/alfabeto-latino-attuale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "alfabeto latino attuale"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-di-catalogo-relativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda di catalogo relativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/sistema-informativo-generale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sistema informativo generale"@it .
+
+<https://w3id.org/arco/resource/Keyword/tabella-tavola-tomo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tabella tavola tomo"@it .
+
+<https://w3id.org/arco/resource/Keyword/quota-massima-assoluta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quota massima assoluta"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-considerata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda considerata"@it .
+
+<https://w3id.org/arco/resource/Keyword/operazioni-di-informatizzazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "operazioni di informatizzazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/presenti-segni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "presenti segni"@it .
+
+<https://w3id.org/arco/resource/Keyword/georeferenziazione-puntuale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "georeferenziazione puntuale"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorieta-assolute>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorietà assolute"@it .
+
+<https://w3id.org/arco/resource/Keyword/mm-film>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "mm film"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-ulteriori-scomposizioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di ulteriori scomposizioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/separatore-per-i-numeri-decimali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "separatore per i numeri decimali"@it .
+
+<https://w3id.org/arco/resource/Keyword/serie-pagina>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "serie pagina"@it .
+
+<https://w3id.org/arco/resource/Keyword/contributo-piu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contributo più"@it .
+
+<https://w3id.org/arco/resource/Keyword/carattere-maiuscolo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "carattere maiuscolo"@it .
+
+<https://w3id.org/arco/resource/Keyword/risorse-elettroniche-con-accesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "risorse elettroniche con accesso"@it .
+
+<https://w3id.org/arco/resource/Keyword/fortuito-scavo-clandestino>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fortuito scavo clandestino"@it .
+
+<https://w3id.org/arco/resource/Keyword/modalita-di-compilazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modalità di compilazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-aperto-abbazia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario aperto abbazia"@it .
+
+<https://w3id.org/arco/resource/Keyword/aperto-abbazia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aperto abbazia"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-di-corredo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione di corredo"@it .
+
+<https://w3id.org/arco/resource/Keyword/rinnovo-notificazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rinnovo notificazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-per-le-parti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede per le parti"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-nota>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione nota"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivio-opere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivio opere"@it .
+
+<https://w3id.org/arco/resource/Keyword/vista-catalografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vista catalografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/post-quem>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "post quem"@it .
+
+<https://w3id.org/arco/resource/Keyword/rinvenimento-fortuito-scavo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rinvenimento fortuito scavo"@it .
+
+<https://w3id.org/arco/resource/Keyword/anni-di-edizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "anni di edizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-detenzione-mista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica detenzione mista"@it .
+
+<https://w3id.org/arco/resource/Keyword/confronto-contesto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "confronto contesto"@it .
+
+<https://w3id.org/arco/resource/Keyword/positivo-colore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "positivo colore"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-seconda-meta-primo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà seconda metà primo"@it .
+
+<https://w3id.org/arco/resource/Keyword/monogramma-nota>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "monogramma nota"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-di-rilevamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività di rilevamento"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivistica-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivistica fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorieta-assoluta-alternativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorietà assoluta alternativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/amministrazione-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "amministrazione responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-pregresse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede pregresse"@it .
+
+<https://w3id.org/arco/resource/Keyword/notazione-internazionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "notazione internazionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/diocesi-italiane>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diocesi italiane"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotografia-aerea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotografia aerea"@it .
+
+<https://w3id.org/arco/resource/Keyword/esempio-di-valore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esempio di valore"@it .
+
+<https://w3id.org/arco/resource/Keyword/intervento-firma-grafia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "intervento firma grafia"@it .
+
+<https://w3id.org/arco/resource/Keyword/autori-collettivi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "autori collettivi"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-datazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di datazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/mini-compact-disc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "mini compact disc"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-metri-gradi-sessadecimali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri metri gradi sessadecimali"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-pregressa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda pregressa"@it .
+
+<https://w3id.org/arco/resource/Keyword/materiali-archeologici-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "materiali archeologici versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/redazione-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "redazione responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/alienazione-assegnazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "alienazione assegnazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/punzone-sigla-simbolo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "punzone sigla simbolo"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazione-fisica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "localizzazione fisica"@it .
+
+<https://w3id.org/arco/resource/Keyword/acquisto-alienazione-aggiudicazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "acquisto alienazione aggiudicazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/notizie-supplementari>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "notizie supplementari"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-di-dettaglio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni di dettaglio"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-in-modo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene in modo"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-figlie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede figlie"@it .
+
+<https://w3id.org/arco/resource/Keyword/musicali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "musicali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/parentesi-tonde>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parentesi tonde"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotografo-principale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotografo principale"@it .
+
+<https://w3id.org/arco/resource/Keyword/materiali-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "materiali beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/data-senza-luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "data senza luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/grafia-fonte-archivistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "grafia fonte archivistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/terzo-quarto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "terzo quarto"@it .
+
+<https://w3id.org/arco/resource/Keyword/introduttivo-indicazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "introduttivo indicazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/demoetnoantropologici-materiali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "demoetnoantropologici materiali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/recupero-pregresso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "recupero pregresso"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottocampo-obbligatorio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sottocampo obbligatorio"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipologie-di-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipologie di beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/successivo-campo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "successivo campo"@it .
+
+<https://w3id.org/arco/resource/Keyword/posti-in-ambito>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "posti in ambito"@it .
+
+<https://w3id.org/arco/resource/Keyword/entita-diverse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "entità diverse"@it .
+
+<https://w3id.org/arco/resource/Keyword/georeferenziazione-tecnica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "georeferenziazione tecnica"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-di-confronto-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia di confronto bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/sub-voce-tabella>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sub voce tabella"@it .
+
+<https://w3id.org/arco/resource/Keyword/inizio-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inizio metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografiche-notizie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografiche notizie"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivio-opere-pubbliche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivio opere pubbliche"@it .
+
+<https://w3id.org/arco/resource/Keyword/contesto-documentazione-esame>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contesto documentazione esame"@it .
+
+<https://w3id.org/arco/resource/Keyword/volume-in-numeri-romani>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "volume in numeri romani"@it .
+
+<https://w3id.org/arco/resource/Keyword/riproduzione-di-disegno-tecnico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riproduzione di disegno tecnico"@it .
+
+<https://w3id.org/arco/resource/Keyword/nuova-serie-pagina>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nuova serie pagina"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazione-con-eventuali-specifiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "denominazione con eventuali specifiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/segni-di-interpunzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "segni di interpunzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione-mista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "detenzione mista"@it .
+
+<https://w3id.org/arco/resource/Keyword/caratteri-di-interpunzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caratteri di interpunzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-valore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso valore"@it .
+
+<https://w3id.org/arco/resource/Keyword/modello-di-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modello di scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/fisico-complesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fisico complesso"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-bollo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia bollo"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-mista-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà mista pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotointerpretazione-indagine-territoriale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotointerpretazione indagine territoriale"@it .
+
+<https://w3id.org/arco/resource/Keyword/ispezione-diverse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ispezione diverse"@it .
+
+<https://w3id.org/arco/resource/Keyword/stratigrafici-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stratigrafici versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/occupazione-massima-di-memoria>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "occupazione massima di memoria"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazioni-grafiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazioni grafiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorio-elemento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorio elemento"@it .
+
+<https://w3id.org/arco/resource/Keyword/livello-medio-di-riservatezza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livello medio di riservatezza"@it .
+
+<https://w3id.org/arco/resource/Keyword/dimensioni-fisiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dimensioni fisiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/inizio-fine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inizio fine"@it .
+
+<https://w3id.org/arco/resource/Keyword/dati-pregressi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dati pregressi"@it .
+
+<https://w3id.org/arco/resource/Keyword/data-iniziale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "data iniziale"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-autoriale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento autoriale"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-specifiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali specifiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/dati-utili-per-la-citazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dati utili per la citazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/chilometro-di-riferimento-ecc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chilometro di riferimento ecc"@it .
+
+<https://w3id.org/arco/resource/Keyword/periodo-specifiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "periodo specifiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/marchio-monogramma-nota-manoscritta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "marchio monogramma nota manoscritta"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilievo-tradizionale-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rilievo tradizionale rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/valori-numerici-progressivi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "valori numerici progressivi"@it .
+
+<https://w3id.org/arco/resource/Keyword/genere-di-documentazione-bibliografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "genere di documentazione bibliografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/grafia-fonte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "grafia fonte"@it .
+
+<https://w3id.org/arco/resource/Keyword/coppie-di-coordinate>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "coppie di coordinate"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd-normativa-trasversale-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iccd normativa trasversale versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/oratorio-ospedale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "oratorio ospedale"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-primo-quarto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà primo quarto"@it .
+
+<https://w3id.org/arco/resource/Keyword/revisione-di-schede-pregresse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "revisione di schede pregresse"@it .
+
+<https://w3id.org/arco/resource/Keyword/genere-per-i-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "genere per i beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorieta-di-contesto-alternativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorietà di contesto alternativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/fisica-luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fisica luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-privata-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà privata proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/positivo-colore-fotografia-aerea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "positivo colore fotografia aerea"@it .
+
+<https://w3id.org/arco/resource/Keyword/territoriale-detenzione-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "territoriale detenzione privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/formati-previsti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "formati previsti"@it .
+
+<https://w3id.org/arco/resource/Keyword/repubblicana-eta-imperiale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "repubblicana-età imperiale"@it .
+
+<https://w3id.org/arco/resource/Keyword/precedente-campo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "precedente campo"@it .
+
+<https://w3id.org/arco/resource/Keyword/metodo-di-georeferenziazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metodo di georeferenziazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/seguito-di-atto-giudiziario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seguito di atto giudiziario"@it .
+
+<https://w3id.org/arco/resource/Keyword/abiti-complessi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "abiti complessi"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-multimediale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione multimediale"@it .
+
+<https://w3id.org/arco/resource/Keyword/distruzione-per-evento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "distruzione per evento"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprieta-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "proprietà privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/aperto-archeologia-preventiva-fotointerpretazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aperto archeologia preventiva fotointerpretazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-grafica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione grafica"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-di-nuova-catalogazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività di nuova catalogazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/commi-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "commi di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/scadenza-per-il-profilo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scadenza per il profilo"@it .
+
+<https://w3id.org/arco/resource/Keyword/ordine-progressivo-relativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ordine progressivo relativo"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-lista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso lista"@it .
+
+<https://w3id.org/arco/resource/Keyword/digitalizzazione-di-originali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "digitalizzazione di originali"@it .
+
+<https://w3id.org/arco/resource/Keyword/generica-indicazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "generica indicazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/appropriata-specifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "appropriata specifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/verifica-scientifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "verifica scientifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-esempio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri esempio"@it .
+
+<https://w3id.org/arco/resource/Keyword/corredo-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "corredo bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/immobile-contenitore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "immobile contenitore"@it .
+
+<https://w3id.org/arco/resource/Keyword/comunita-ebraica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "comunità ebraica"@it .
+
+<https://w3id.org/arco/resource/Keyword/opere-pubbliche-opere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opere pubbliche opere"@it .
+
+<https://w3id.org/arco/resource/Keyword/documento-originario-completo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documento originario completo"@it .
+
+<https://w3id.org/arco/resource/Keyword/stessa-sequenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stessa sequenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-stilistica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi stilistica"@it .
+
+<https://w3id.org/arco/resource/Keyword/contenitore-fisico-complesso-monumentale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contenitore fisico complesso monumentale"@it .
+
+<https://w3id.org/arco/resource/Keyword/mutamenti-condizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "mutamenti condizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/digitale-file-digitale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "digitale file digitale"@it .
+
+<https://w3id.org/arco/resource/Keyword/ambasciate-italiane>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ambasciate italiane"@it .
+
+<https://w3id.org/arco/resource/Keyword/rischio-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rischio scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifiche-disponibili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifiche disponibili"@it .
+
+<https://w3id.org/arco/resource/Keyword/campo-strutturato>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campo strutturato"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-di-livello>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero di livello"@it .
+
+<https://w3id.org/arco/resource/Keyword/operazioni-di-recupero-dati-pregressi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "operazioni di recupero dati pregressi"@it .
+
+<https://w3id.org/arco/resource/Keyword/i-note>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "i note"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/file-digitale-file>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "file digitale file"@it .
+
+<https://w3id.org/arco/resource/Keyword/libro-cattolico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "libro cattolico"@it .
+
+<https://w3id.org/arco/resource/Keyword/parte-tipo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parte tipo"@it .
+
+<https://w3id.org/arco/resource/Keyword/uso-compravendita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "uso compravendita"@it .
+
+<https://w3id.org/arco/resource/Keyword/metallo-metallo-metallo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metallo metallo metallo"@it .
+
+<https://w3id.org/arco/resource/Keyword/codici-identificativi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "codici identificativi"@it .
+
+<https://w3id.org/arco/resource/Keyword/strumenti-terminologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "strumenti terminologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo-sub-voce>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo sub voce"@it .
+
+<https://w3id.org/arco/resource/Keyword/esame-per-finalita-diverse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esame per finalità diverse"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-cronologico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento cronologico"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-di-confronto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia di confronto"@it .
+
+<https://w3id.org/arco/resource/Keyword/campo-rse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campo rse"@it .
+
+<https://w3id.org/arco/resource/Keyword/operazioni-di-recupero-dati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "operazioni di recupero dati"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-esame>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione esame"@it .
+
+<https://w3id.org/arco/resource/Keyword/preventiva-fotointerpretazione-indagine-territoriale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "preventiva fotointerpretazione indagine territoriale"@it .
+
+<https://w3id.org/arco/resource/Keyword/standard-obsoleti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "standard obsoleti"@it .
+
+<https://w3id.org/arco/resource/Keyword/struttura-conservativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "struttura conservativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-di-corredo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia di corredo"@it .
+
+<https://w3id.org/arco/resource/Keyword/canonica-cappella-casa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "canonica cappella casa"@it .
+
+<https://w3id.org/arco/resource/Keyword/responsabile-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "responsabile responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/file-rcg-ricognizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "file rcg-ricognizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-terzo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto terzo"@it .
+
+<https://w3id.org/arco/resource/Keyword/precedente-luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "precedente luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/sistemi-esterni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sistemi esterni"@it .
+
+<https://w3id.org/arco/resource/Keyword/metodologia-catalografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metodologia catalografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/trattamento-tecnico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trattamento tecnico"@it .
+
+<https://w3id.org/arco/resource/Keyword/pregressa-soppressi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pregressa soppressi"@it .
+
+<https://w3id.org/arco/resource/Keyword/realta-nazionali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "realtà nazionali"@it .
+
+<https://w3id.org/arco/resource/Keyword/prospezione-subacquea-rinvenimento-fortuito>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prospezione subacquea rinvenimento fortuito"@it .
+
+<https://w3id.org/arco/resource/Keyword/modello-schedografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modello schedografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-di-bene>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda di bene"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-seconda-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà seconda metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/privata-detenzione-mista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "privata detenzione mista"@it .
+
+<https://w3id.org/arco/resource/Keyword/documento-audio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documento audio"@it .
+
+<https://w3id.org/arco/resource/Keyword/progetto-di-riferimento-note>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "progetto di riferimento note"@it .
+
+<https://w3id.org/arco/resource/Keyword/norme-di-compilazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "norme di compilazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/verifica-scientifica-funzionario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "verifica scientifica funzionario"@it .
+
+<https://w3id.org/arco/resource/Keyword/stesso-bene-culturale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stesso bene culturale"@it .
+
+<https://w3id.org/arco/resource/Keyword/intervallo-di-anni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "intervallo di anni"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifica-parte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifica parte"@it .
+
+<https://w3id.org/arco/resource/Keyword/acquisizione-diretta-con-fotocamere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "acquisizione diretta con fotocamere"@it .
+
+<https://w3id.org/arco/resource/Keyword/raggi-infrarossi-negativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "raggi infrarossi negativo"@it .
+
+<https://w3id.org/arco/resource/Keyword/documento-originario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documento originario"@it .
+
+<https://w3id.org/arco/resource/Keyword/territoriale-proprieta-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "territoriale proprietà privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/periodo-specifiche-fascia-cronologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "periodo specifiche fascia cronologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/tiff-ecc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tiff ecc"@it .
+
+<https://w3id.org/arco/resource/Keyword/passato-per-il-bene>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "passato per il bene"@it .
+
+<https://w3id.org/arco/resource/Keyword/sede-di-realizzazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sede di realizzazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/diverse-occorrenze>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diverse occorrenze"@it .
+
+<https://w3id.org/arco/resource/Keyword/numeri-di-catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numeri di catalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/citazioni-bibliografiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "citazioni bibliografiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipologie-di-schede>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipologie di schede"@it .
+
+<https://w3id.org/arco/resource/Keyword/stato-di-appartenenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stato di appartenenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografico-completo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografico completo"@it .
+
+<https://w3id.org/arco/resource/Keyword/raccolte-miscellanee>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "raccolte miscellanee"@it .
+
+<https://w3id.org/arco/resource/Keyword/livello-di-visibilita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livello di visibilità"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazioni-audio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazioni audio"@it .
+
+<https://w3id.org/arco/resource/Keyword/definitiva-licenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "definitiva licenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/scientifica-funzionario-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scientifica funzionario responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/inizio-fine-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inizio fine metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-di-proprieta-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni di proprietà privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/opera-enciclopedica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opera enciclopedica"@it .
+
+<https://w3id.org/arco/resource/Keyword/indagine-territoriale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indagine territoriale"@it .
+
+<https://w3id.org/arco/resource/Keyword/seconda-meta-primo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seconda metà primo"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo-sub>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo sub"@it .
+
+<https://w3id.org/arco/resource/Keyword/subacquea-rinvenimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "subacquea rinvenimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/confronto-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "confronto bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/materiali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "materiali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/tecnici-relativi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tecnici relativi"@it .
+
+<https://w3id.org/arco/resource/Keyword/necessita-legate>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "necessità legate"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuale-volume>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuale volume"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-nuova>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero nuova"@it .
+
+<https://w3id.org/arco/resource/Keyword/base-cartografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "base cartografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/mutamenti-di-titolarita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "mutamenti di titolarità"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-bollo-confronto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia bollo confronto"@it .
+
+<https://w3id.org/arco/resource/Keyword/preventiva-fotointerpretazione-indagine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "preventiva fotointerpretazione indagine"@it .
+
+<https://w3id.org/arco/resource/Keyword/voce-tabella>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "voce tabella"@it .
+
+<https://w3id.org/arco/resource/Keyword/campi-semplici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campi semplici"@it .
+
+<https://w3id.org/arco/resource/Keyword/testo-libero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "testo libero"@it .
+
+<https://w3id.org/arco/resource/Keyword/responsabile-ricerca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "responsabile ricerca"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-relazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo relazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/battistero-biblioteca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "battistero biblioteca"@it .
+
+<https://w3id.org/arco/resource/Keyword/parti-residuali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parti residuali"@it .
+
+<https://w3id.org/arco/resource/Keyword/stato-estero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stato estero"@it .
+
+<https://w3id.org/arco/resource/Keyword/provvedimento-di-tutela>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "provvedimento di tutela"@it .
+
+<https://w3id.org/arco/resource/Keyword/contesto-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contesto documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/bdm-beni-demoetnoantropologici-materiali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bdm-beni demoetnoantropologici materiali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-diagnostiche-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi diagnostiche analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-documentazione-allegata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di documentazione allegata"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivistica-fotografia-digitale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivistica fotografia digitale"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-geodetici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento geodetici"@it .
+
+<https://w3id.org/arco/resource/Keyword/marchio-monogramma-nota>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "marchio monogramma nota"@it .
+
+<https://w3id.org/arco/resource/Keyword/contributi-in-raccolte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contributi in raccolte"@it .
+
+<https://w3id.org/arco/resource/Keyword/punzone-sigla>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "punzone sigla"@it .
+
+<https://w3id.org/arco/resource/Keyword/strutturazione-complessa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "strutturazione complessa"@it .
+
+<https://w3id.org/arco/resource/Keyword/mini-compact>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "mini compact"@it .
+
+<https://w3id.org/arco/resource/Keyword/sola-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sola scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/campo-ise>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "campo ise"@it .
+
+<https://w3id.org/arco/resource/Keyword/scientifico-funzionario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scientifico funzionario"@it .
+
+<https://w3id.org/arco/resource/Keyword/profilo-di-visibilita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "profilo di visibilità"@it .
+
+<https://w3id.org/arco/resource/Keyword/normativa-trasversale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "normativa trasversale"@it .
+
+<https://w3id.org/arco/resource/Keyword/titolo-proprio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "titolo proprio"@it .
+
+<https://w3id.org/arco/resource/Keyword/eccezione-per-i-nomi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eccezione per i nomi"@it .
+
+<https://w3id.org/arco/resource/Keyword/foto-aerea-con-sopralluogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "foto aerea con sopralluogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/personali-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "personali scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo-di-punto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo di punto"@it .
+
+<https://w3id.org/arco/resource/Keyword/ente-competente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ente competente"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubblico-territoriale-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubblico territoriale detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/diversa-occorrenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diversa occorrenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/documento-videocinematografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documento videocinematografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/riproduzione-di-disegno>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riproduzione di disegno"@it .
+
+<https://w3id.org/arco/resource/Keyword/territoriale-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "territoriale proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/cattolico-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cattolico detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/progetto-disegno>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "progetto disegno"@it .
+
+<https://w3id.org/arco/resource/Keyword/numeri-romani>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numeri romani"@it .
+
+<https://w3id.org/arco/resource/Keyword/risorse-elettroniche-con-accesso-remoto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "risorse elettroniche con accesso remoto"@it .
+
+<https://w3id.org/arco/resource/Keyword/complesso-monumentale-di-appartenenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "complesso monumentale di appartenenza"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-di-insieme>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda di insieme"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-informazioni-aggiuntive>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note informazioni aggiuntive"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/numero-catalogo-generale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numero catalogo generale"@it .
+
+<https://w3id.org/arco/resource/Keyword/posti-in-ambito-extraurbano>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "posti in ambito extraurbano"@it .
+
+<https://w3id.org/arco/resource/Keyword/siti-sommersi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "siti sommersi"@it .
+
+<https://w3id.org/arco/resource/Keyword/data-senza-luogo-sub>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "data senza luogo sub"@it .
+
+<https://w3id.org/arco/resource/Keyword/sigla-corrispondente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sigla corrispondente"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-in-rapporto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede in rapporto"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-schedato>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene schedato"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd-ma-monumenti-archeologici-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iccd ma-monumenti archeologici versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/elementi-conseguenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "elementi conseguenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazione-di-nascita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "localizzazione di nascita"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia-fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bibliografia fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/citazioni-per-la-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "citazioni per la bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifiche-relative>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifiche relative"@it .
+
+<https://w3id.org/arco/resource/Keyword/opportuno-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opportuno riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-analisi-diagnostiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso analisi diagnostiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-in-esame-bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene in esame bibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/paesaggio-per-le-province>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paesaggio per le province"@it .
+
+<https://w3id.org/arco/resource/Keyword/privata-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "privata detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/informazioni-riservate-per-motivi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "informazioni riservate per motivi"@it .
+
+<https://w3id.org/arco/resource/Keyword/livello-basso-di-riservatezza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livello basso di riservatezza"@it .
+
+<https://w3id.org/arco/resource/Keyword/attivita-culturali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attività culturali"@it .
+
+<https://w3id.org/arco/resource/Keyword/parte-componente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parte componente"@it .
+
+<https://w3id.org/arco/resource/Keyword/ente-responsabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ente responsabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/iconografica-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iconografica analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/dati-di-georeferenziazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dati di georeferenziazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione-mista-pubblica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "detenzione mista pubblica"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonte-archivistica-iscrizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fonte archivistica iscrizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/unita-di-misura>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "unità di misura"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-metri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri metri"@it .
+
+<https://w3id.org/arco/resource/Keyword/nota-numero-nuova-serie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nota numero nuova serie"@it .
+
+<https://w3id.org/arco/resource/Keyword/varie-realta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "varie realtà"@it .
+
+<https://w3id.org/arco/resource/Keyword/mm-video>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "mm video"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-seconda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà seconda"@it .
+
+<https://w3id.org/arco/resource/Keyword/digitale-file>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "digitale file"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazione-estera>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "localizzazione estera"@it .
+
+<https://w3id.org/arco/resource/Keyword/territoriale-lavori>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "territoriale lavori"@it .
+
+<https://w3id.org/arco/resource/Keyword/fermo-immagine-fotografia-aerea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fermo-immagine fotografia aerea"@it .
+
+<https://w3id.org/arco/resource/Keyword/operazioni-di-revisione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "operazioni di revisione"@it .
+
+<https://w3id.org/arco/resource/Keyword/negativo-b>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "negativo b"@it .
+
+<https://w3id.org/arco/resource/Keyword/lettere-in-carattere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lettere in carattere"@it .
+
+<https://w3id.org/arco/resource/Keyword/opere-pubbliche-opere-private>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opere pubbliche opere private"@it .
+
+<https://w3id.org/arco/resource/Keyword/indagini-storico-critiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indagini storico-critiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/esatta-denominazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esatta denominazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/soggetto-organizzatore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "soggetto organizzatore"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazione-antica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "denominazione antica"@it .
+
+<https://w3id.org/arco/resource/Keyword/volume-in-numeri-arabi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "volume in numeri arabi"@it .
+
+<https://w3id.org/arco/resource/Keyword/contributi-in-periodici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contributi in periodici"@it .
+
+<https://w3id.org/arco/resource/Keyword/destra-ala>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "destra ala"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-previsto-per-il-bene>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda previsto per il bene"@it .
+
+<https://w3id.org/arco/resource/Keyword/localita-estera>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "località estera"@it .
+
+<https://w3id.org/arco/resource/Keyword/scadenza-previste>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scadenza previste"@it .
+
+<https://w3id.org/arco/resource/Keyword/nastro-magnetico-in-bobina>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nastro magnetico in bobina"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-cartografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di cartografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/note-esplicative-livello-basso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "note esplicative livello basso"@it .
+
+<https://w3id.org/arco/resource/Keyword/subacquea-rinvenimento-fortuito>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "subacquea rinvenimento fortuito"@it .
+
+<https://w3id.org/arco/resource/Keyword/testa-femminile-in-ceramica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "testa femminile in ceramica"@it .
+
+<https://w3id.org/arco/resource/Keyword/firma-grafia-fonte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "firma grafia fonte"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogo-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogo documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/metodologie-catalografiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metodologie catalografiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/comunita-valdese>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "comunità valdese"@it .
+
+<https://w3id.org/arco/resource/Keyword/sigla-simbolo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sigla simbolo"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifiche-fascia-cronologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specifiche fascia cronologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/cattolico-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cattolico proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/punto-di-vista-catalografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "punto di vista catalografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-nota-relativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione nota relativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/diapositiva-colore-fermo-immagine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diapositiva colore fermo-immagine"@it .
+
+<https://w3id.org/arco/resource/Keyword/destra-ala-sinistra>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "destra ala sinistra"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilievo-tradizionale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "rilievo tradizionale"@it .
+
+<https://w3id.org/arco/resource/Keyword/intervento-in-corso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "intervento in corso"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-proprieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso proprietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo-di-fabbricazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo di fabbricazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/seconda-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "seconda metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/prodotto-video-cinematografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prodotto video-cinematografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo-di-rilevamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo di rilevamento"@it .
+
+<https://w3id.org/arco/resource/Keyword/allegata-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "allegata documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/fine-meta-prima>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fine metà prima"@it .
+
+<https://w3id.org/arco/resource/Keyword/entrambi-elemento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "entrambi elemento"@it .
+
+<https://w3id.org/arco/resource/Keyword/unica-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "unica scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/demoetnoantropologici-materiali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "demoetnoantropologici materiali"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-specifiche-relative>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali specifiche relative"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd-a-architettura-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iccd a-architettura versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-schede>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali schede"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-di-catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda di catalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione-persona-giuridica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "detenzione persona giuridica"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-stessa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda stessa"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/appendice-i-note>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "appendice i note"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-analisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso analisi"@it .
+
+<https://w3id.org/arco/resource/Keyword/deposito-donazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "deposito donazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/periodo-specifiche-fascia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "periodo specifiche fascia"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd-ma-monumenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iccd ma-monumenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/marchio-monogramma>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "marchio monogramma"@it .
+
+<https://w3id.org/arco/resource/Keyword/villa-ecc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "villa ecc"@it .
+
+<https://w3id.org/arco/resource/Keyword/nota-manoscritta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nota manoscritta"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-notizie-supplementari>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali notizie supplementari"@it .
+
+<https://w3id.org/arco/resource/Keyword/repertorio-locale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "repertorio locale"@it .
+
+<https://w3id.org/arco/resource/Keyword/elemento-con-obbligatorieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "elemento con obbligatorietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotointerpretazione-indagine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotointerpretazione indagine"@it .
+
+<https://w3id.org/arco/resource/Keyword/configurazione-strutturale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "configurazione strutturale"@it .
+
+<https://w3id.org/arco/resource/Keyword/livello-di-catalogazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livello di catalogazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/pollice-video>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pollice video"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-iconografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi iconografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiuso-lista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiuso lista"@it .
+
+<https://w3id.org/arco/resource/Keyword/manico-piedistallo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "manico piedistallo"@it .
+
+<https://w3id.org/arco/resource/Keyword/alienazione-aggiudicazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "alienazione aggiudicazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/dati-personali-scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dati personali scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/fine-meta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fine metà"@it .
+
+<https://w3id.org/arco/resource/Keyword/distruzione-per-evento-naturale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "distruzione per evento naturale"@it .
+
+<https://w3id.org/arco/resource/Keyword/manoscritto-nota-numero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "manoscritto nota numero"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "detenzione privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/esame-per-finalita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esame per finalità"@it .
+
+<https://w3id.org/arco/resource/Keyword/perdita-recupero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "perdita recupero"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-proprieta-mista>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica proprietà mista"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotografici-monumenti-archeologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotografici monumenti archeologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/colore-fermo-immagine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "colore fermo-immagine"@it .
+
+<https://w3id.org/arco/resource/Keyword/foto-aerea-con-sopralluogo-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "foto aerea con sopralluogo rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/trattamento-catalografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trattamento catalografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/scelta-di-tale-profilo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scelta di tale profilo"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottoparte-componente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sottoparte componente"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-in-esame>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene in esame"@it .
+
+<https://w3id.org/arco/resource/Keyword/monastero-oratorio-ospedale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "monastero oratorio ospedale"@it .
+
+<https://w3id.org/arco/resource/Keyword/analisi-tipologica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "analisi tipologica"@it .
+
+<https://w3id.org/arco/resource/Keyword/particolare-modalita-descrittiva-applicata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "particolare modalità descrittiva applicata"@it .
+
+<https://w3id.org/arco/resource/Keyword/finalita-diverse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "finalità diverse"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd-sm-strumenti-musicali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iccd sm-strumenti musicali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/caso-di-aggiornamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "caso di aggiornamento"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-prima>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà prima"@it .
+
+<https://w3id.org/arco/resource/Keyword/prima-elaborazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prima elaborazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/organizzazioni-amministrativo-territoriali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "organizzazioni amministrativo-territoriali"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuale-riassestamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuale riassestamento"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-ultimo-quarto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto ultimo quarto"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento-bibliografico-in-modo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "riferimento bibliografico in modo"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorieta-di-contesto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorietà di contesto"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecclesiastica-detenzione-mista-privata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ecclesiastica detenzione mista privata"@it .
+
+<https://w3id.org/arco/resource/Keyword/persona-giuridica-straniera>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "persona giuridica straniera"@it .
+
+<https://w3id.org/arco/resource/Keyword/abbreviazione-aa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "abbreviazione aa"@it .
+
+<https://w3id.org/arco/resource/Keyword/formato-digitale-di-trasferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "formato digitale di trasferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/fabbricazione-luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fabbricazione luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/indirizzo-di-rete-completo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indirizzo di rete completo"@it .
+
+<https://w3id.org/arco/resource/Keyword/documenti-editi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documenti editi"@it .
+
+<https://w3id.org/arco/resource/Keyword/esempi-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "esempi di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/numeri-di-catalogo-generale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numeri di catalogo generale"@it .
+
+<https://w3id.org/arco/resource/Keyword/indagine-territoriale-lavori-agricoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indagine territoriale lavori agricoli"@it .
+
+<https://w3id.org/arco/resource/Keyword/lucro-detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "lucro detenzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-di-catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede di catalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/livello-alto-di-riservatezza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "livello alto di riservatezza"@it .
+
+<https://w3id.org/arco/resource/Keyword/supporto-video-cinematografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "supporto video-cinematografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/nome-operatore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "nome operatore"@it .
+
+<https://w3id.org/arco/resource/Keyword/fogli-catastali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fogli catastali"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonti-edite>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fonti edite"@it .
+
+<https://w3id.org/arco/resource/Keyword/quarto-ultimo-quarto-ca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "quarto ultimo quarto ca"@it .
+
+<https://w3id.org/arco/resource/Keyword/confronto-libro>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "confronto libro"@it .
+
+<https://w3id.org/arco/resource/Keyword/responsabile-responsabile-scientifico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "responsabile responsabile scientifico"@it .
+
+<https://w3id.org/arco/resource/Keyword/motivi-legati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "motivi legati"@it .
+
+<https://w3id.org/arco/resource/Keyword/meta-prima-meta-seconda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metà prima metà seconda"@it .
+
+<https://w3id.org/arco/resource/Keyword/stesso-codice-univoco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stesso codice univoco"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali-attivita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eventuali attività"@it .
+
+<https://w3id.org/arco/resource/Keyword/carta-capitolo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "carta capitolo"@it .
+
+<https://w3id.org/arco/resource/Keyword/ospizio-palazzo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ospizio palazzo"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogatore-sovrascriverli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogatore sovrascriverli"@it .
+
+<https://w3id.org/arco/resource/Keyword/occasione-di-operazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "occasione di operazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotografici-monumenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotografici monumenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/a-architettura-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "a-architettura versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/confessione-cattolica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "confessione cattolica"@it .
+
+<https://w3id.org/arco/resource/Keyword/ulteriori-scomposizioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ulteriori scomposizioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/identificativo-univoco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "identificativo univoco"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario-chiuso-luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vocabolario chiuso luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni-cronologiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "indicazioni cronologiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/prelazione-individuazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prelazione individuazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/metri-gradi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "metri gradi"@it .
+
+<https://w3id.org/arco/resource/Keyword/gradi-sessadecimali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "gradi sessadecimali"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-con-profilo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede con profilo"@it .
+
+<https://w3id.org/arco/resource/Keyword/sistema-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sistema di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/cappella-casa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cappella casa"@it .
+
+<https://w3id.org/arco/resource/Keyword/registro-unico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "registro unico"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubblicazione-di-riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubblicazione di riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/condizione-giuridica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "condizione giuridica"@it .
+
+<https://w3id.org/arco/resource/Keyword/intervento-firma>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "intervento firma"@it .
+
+<https://w3id.org/arco/resource/Keyword/genere-di-documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "genere di documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-naturalistici-petrologia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni naturalistici-petrologia"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni-naturalistici-mineralogia-beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "beni naturalistici-mineralogia beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/referente-per-la-verifica-scientifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "referente per la verifica scientifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/valenza-per-la-storia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "valenza per la storia"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede-di-vulnerabilita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schede di vulnerabilità"@it .
+
+<https://w3id.org/arco/resource/Keyword/vestimenti-antichi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vestimenti antichi"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione-esame-intervento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione esame intervento"@it .
+
+<https://w3id.org/arco/resource/Keyword/corretto-collegamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "corretto collegamento"@it .
+
+<https://w3id.org/arco/resource/Keyword/private-prospezione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "private prospezione"@it .
+
+<https://w3id.org/arco/resource/Keyword/opere-private-prospezione-subacquea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "opere private prospezione subacquea"@it .
+
+<https://w3id.org/arco/resource/Keyword/immateriali-versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "immateriali versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/ritrovamento-fortuito-sequestro>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ritrovamento fortuito sequestro"@it .
+
+<https://w3id.org/arco/resource/Keyword/modalita-descrittiva>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "modalità descrittiva"@it .
+
+<https://w3id.org/arco/resource/Keyword/numeri-ordinali-romani>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "numeri ordinali romani"@it .
+
+<https://w3id.org/arco/resource/Keyword/tradizionale-rilievo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tradizionale rilievo"@it .
+
+<https://w3id.org/arco/resource/Keyword/sequenza-di-particelle>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sequenza di particelle"@it .
+
+<https://w3id.org/arco/resource/Keyword/contributi-in-raccolte-miscellanee>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contributi in raccolte miscellanee"@it .

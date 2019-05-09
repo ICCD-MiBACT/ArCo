@@ -1,0 +1,67 @@
+beni demoetnoantropologici materiali, 8.556552962298024
+tabella materiali archeologici, 7.955149501661129
+scheda beni numismatici, 7.947546531302876
+beni demoetnoantropologici, 4.616032516201371
+scheda catalografica, 4.1475465313028765
+culturale bene, 4.096774193548387
+strumenti musicali, 4.0
+vestimenti antichi, 4.0
+saggi stratigrafici, 4.0
+strumenti musicali, 4.0
+complessi archeologici, 3.962612188228294
+monumenti archeologici, 3.9551495016611296
+reperti archeologici, 3.9551495016611296
+scheda veac, 3.9475465313028764
+scheda smo, 3.9475465313028764
+beni culturali, 3.1498141263940522
+normativa trasversale, 3.0943661971830987
+ff versione, 3.0546792849631967
+attività  culturali, 2.166450058055011
+istituto centrale, 2.09673790776153
+archeologici, 1.9551495016611296
+scheda, 1.9475465313028766
+pubblicazione, 1.8333333333333333
+contesto, 1.5
+normativa, 1.0943661971830987
+culturali, 1.0903345724907063
+attività, 1.0761154855643045
+versione, 1.0546792849631967
+versione 3, 1.0546792849631967
+istituto, 1.048368953880765
+centrale, 1.048368953880765
+opere, 1.0078125
+schede, 1.003875968992248
+documentazione, 1.0014975664545114
+catalogo, 1.0006464124111183
+ministero, 1.0
+turismo, 1.0
+norme, 1.0
+compilazione, 1.0
+aggiornamento, 1.0
+rilasciata, 1.0
+matrici, 1.0
+incise, 1.0
+strutturazione, 1.0
+contemporanei, 1.0
+schema, 1.0
+struttura, 1.0
+storia, 1.0
+disegni, 1.0
+immateriali, 1.0
+ministero, 1.0
+culturali, 1.0
+turismo, 1.0
+stituto, 1.0
+centrale, 1.0
+catalogo, 1.0
+documentazione, 1.0
+oggetti, 1.0
+compilazione, 1.0
+carta, 1.0
+organo, 1.0
+versione 3, 1.0
+stampe, 1.0
+architettura, 1.0
+archi, 1.0
+giardini, 1.0
+scheda, 1.0

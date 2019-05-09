@@ -625,6 +625,14 @@
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Reproduction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Reproduction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Scale -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Scale">

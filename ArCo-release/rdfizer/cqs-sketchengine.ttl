@@ -1,0 +1,263 @@
+<https://w3id.org/arco/resource/Keyword/storia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "storia"@it .
+
+<https://w3id.org/arco/resource/Keyword/residenziale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "residenziale"@it .
+
+<https://w3id.org/arco/resource/Keyword/iscrizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "iscrizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/diverso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diverso"@it .
+
+<https://w3id.org/arco/resource/Keyword/essere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "essere"@it .
+
+<https://w3id.org/arco/resource/Keyword/parte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "parte"@it .
+
+<https://w3id.org/arco/resource/Keyword/ritrovare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ritrovare"@it .
+
+<https://w3id.org/arco/resource/Keyword/percorso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "percorso"@it .
+
+<https://w3id.org/arco/resource/Keyword/progetto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "progetto"@it .
+
+<https://w3id.org/arco/resource/Keyword/dato>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dato"@it .
+
+<https://w3id.org/arco/resource/Keyword/codice>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "codice"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tipo"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/geografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "geografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/vostro>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "vostro"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene-culturale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene culturale"@it .
+
+<https://w3id.org/arco/resource/Keyword/tramite>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tramite"@it .
+
+<https://w3id.org/arco/resource/Keyword/scheda-catalografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "scheda catalografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/presente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "presente"@it .
+
+<https://w3id.org/arco/resource/Keyword/sesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sesso"@it .
+
+<https://w3id.org/arco/resource/Keyword/luogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "luogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "documentazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubblicazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubblicazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/patrimonio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "patrimonio"@it .
+
+<https://w3id.org/arco/resource/Keyword/contenuto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contenuto"@it .
+
+<https://w3id.org/arco/resource/Keyword/reperto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "reperto"@it .
+
+<https://w3id.org/arco/resource/Keyword/appartenere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "appartenere"@it .
+
+<https://w3id.org/arco/resource/Keyword/archeologico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archeologico"@it .
+
+<https://w3id.org/arco/resource/Keyword/creazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "creazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/autore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "autore"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubblicare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubblicare"@it .
+
+<https://w3id.org/arco/resource/Keyword/immobile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "immobile"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivistico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivistico"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/storico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "storico"@it .
+
+<https://w3id.org/arco/resource/Keyword/possibilita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "possibilità"@it .
+
+<https://w3id.org/arco/resource/Keyword/data>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "data"@it .
+
+<https://w3id.org/arco/resource/Keyword/ontologie>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ontologie"@it .
+
+<https://w3id.org/arco/resource/Keyword/evento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "evento"@it .
+
+<https://w3id.org/arco/resource/Keyword/femminile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "femminile"@it .
+
+<https://w3id.org/arco/resource/Keyword/servizio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "servizio"@it .
+
+<https://w3id.org/arco/resource/Keyword/bene>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "bene"@it .
+
+<https://w3id.org/arco/resource/Keyword/sistema>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sistema"@it .
+
+<https://w3id.org/arco/resource/Keyword/usare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "usare"@it .
+
+<https://w3id.org/arco/resource/Keyword/acquisire>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "acquisire"@it .
+
+<https://w3id.org/arco/resource/Keyword/carta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Carta"@it .
+
+<https://w3id.org/arco/resource/Keyword/risorsa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "risorsa"@it .
+
+<https://w3id.org/arco/resource/Keyword/disponibile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "disponibile"@it .
+
+<https://w3id.org/arco/resource/Keyword/turistico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "turistico"@it .
+
+<https://w3id.org/arco/resource/Keyword/digitale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "digitale"@it .
+
+<https://w3id.org/arco/resource/Keyword/ricerca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ricerca"@it .
+
+<https://w3id.org/arco/resource/Keyword/risorse-digitali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "risorse digitali"@it .
+
+<https://w3id.org/arco/resource/Keyword/contesto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "contesto"@it .
+
+<https://w3id.org/arco/resource/Keyword/servizi-turistici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "servizi turistici"@it .
+
+<https://w3id.org/arco/resource/Keyword/culturale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "culturale"@it .
+
+<https://w3id.org/arco/resource/Keyword/pubblicazione-di-dati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "pubblicazione di dati"@it .
+
+<https://w3id.org/arco/resource/Keyword/collegare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "collegare"@it .
+
+<https://w3id.org/arco/resource/Keyword/archivio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archivio"@it .
+
+<https://w3id.org/arco/resource/Keyword/territorio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "territorio"@it .
+
+<https://w3id.org/arco/resource/Keyword/altro>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "altro"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Beni"@it .
+
+<https://w3id.org/arco/resource/Keyword/volere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "volere"@it .
+
+<https://w3id.org/arco/resource/Keyword/conservazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "conservazione"@it .

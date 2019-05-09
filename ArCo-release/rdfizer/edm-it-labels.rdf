@@ -1,0 +1,139 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/provider">
+    <rdfs:label xml:lang="it">Provider Europeana</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/preview">
+    <rdfs:label xml:lang="it">Anteprima</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/TimeSpan">
+    <rdfs:label xml:lang="it">Arco di tempo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/hasView">
+    <rdfs:label xml:lang="it">Ha vista</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isSuccessorOf">
+    <rdfs:label xml:lang="it">È il successore di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isSimilarTo">
+    <rdfs:label xml:lang="it">È simile a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isAnnotationOf">
+    <rdfs:label xml:lang="it">È l'annotazione di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/object">
+    <rdfs:label xml:lang="it">Oggetto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/Place">
+    <rdfs:label xml:lang="it">Posto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isShownBy">
+    <rdfs:label xml:lang="it">È indicato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/dataProvider">
+    <rdfs:label xml:lang="it">Provider di dati Europeana</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/country">
+    <rdfs:label xml:lang="it">Nazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/ugc">
+    <rdfs:label xml:lang="it">UGC</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/type">
+    <rdfs:label xml:lang="it">Tipo Europeana</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/PhysicalThing">
+    <rdfs:label xml:lang="it">Cosa fisica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/Event">
+    <rdfs:label xml:lang="it">Evento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/begin">
+    <rdfs:label xml:lang="it">Inizio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/realizes">
+    <rdfs:label xml:lang="it">Realizza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/InformationResource">
+    <rdfs:label xml:lang="it">Risorsa informativa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/WebResource">
+    <rdfs:label xml:lang="it">Risorsa Web</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/unstored">
+    <rdfs:label xml:lang="it">non memorizzato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/EuropeanaObject">
+    <rdfs:label xml:lang="it">Oggetto Europeana</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/uri">
+    <rdfs:label xml:lang="it">Europeana URI</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/happenedAt">
+    <rdfs:label xml:lang="it">Happened At</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isDerivativeOf">
+    <rdfs:label xml:lang="it">Derivato di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isRepresentationOf">
+    <rdfs:label xml:lang="it">È la rappresentazione di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isRelatedTo">
+    <rdfs:label xml:lang="it">È relazionato a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/NonInformationResource">
+    <rdfs:label xml:lang="it">Risorsa non informativa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/ProvidedCHO">
+    <rdfs:label xml:lang="it">Fornito CHO</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/language">
+    <rdfs:label xml:lang="it">Europeana Language</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/incorporates">
+    <rdfs:label xml:lang="it">incorpora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/landingPage">
+    <rdfs:label xml:lang="it">Pagina di destinazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/aggregatedCHO">
+    <rdfs:label xml:lang="it">Oggetto del patrimonio culturale aggregato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/currentLocation">
+    <rdfs:label xml:lang="it">Posizione attuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/hasType">
+    <rdfs:label xml:lang="it">Ha tipo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/end">
+    <rdfs:label xml:lang="it">Fine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/rights">
+    <rdfs:label xml:lang="it">Diritti Europeana</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/userTag">
+    <rdfs:label xml:lang="it">Tag dell'utente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/year">
+    <rdfs:label xml:lang="it">Anno Europeona</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isShownAt">
+    <rdfs:label xml:lang="it">Viene mostrato a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/Agent">
+    <rdfs:label xml:lang="it">Agente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/hasMet">
+    <rdfs:label xml:lang="it">Ha incontrato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/wasPresentAt">
+    <rdfs:label xml:lang="it">Era presente a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/isNextInSequence">
+    <rdfs:label xml:lang="it">È il prossimo in sequenza di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.europeana.eu/schemas/edm/occurredAt">
+    <rdfs:label xml:lang="it">Si è verificato a</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

@@ -4,7 +4,7 @@
   <groupId>it.cnr.istc.stlab</groupId>
   <artifactId>arco.rdfizer</artifactId>
   <name>ArCo RDFizer</name>
-  <version>0.1</version>
+  <version>1.0</version>
   <description>A tool for gathering RDF data from XML items coming from the DB of ICCD.</description>
   <build>
     <plugins>
@@ -58,7 +58,7 @@
           <shadedArtifactAttached>false</shadedArtifactAttached>
           <transformers>
             <transformer>
-              <mainClass>it.cnr.istc.stlab.arco.SingleFileWriter</mainClass>
+              <mainClass>it.cnr.istc.stlab.arco.SingleFileWriterNTriples</mainClass>
             </transformer>
             <transformer />
             <transformer />

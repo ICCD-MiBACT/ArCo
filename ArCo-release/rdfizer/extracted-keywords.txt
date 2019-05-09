@@ -1,591 +1,64 @@
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-archeologici
-versione
-norme
-compilazione
-aggiornamento
-trumenti musicali
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-rilasciata
-novembre
-aggiornamento
-aprile
-norme
-compilazione
+beni demoetnoantropologici materiali
+tabella materiali archeologici
+scheda beni numismatici
+beni demoetnoantropologici
+scheda catalografica
+culturale bene
+strumenti musicali
+vestimenti antichi
+saggi stratigrafici
+strumenti musicali
+complessi archeologici
 monumenti archeologici
-ministero
-attività
+reperti archeologici
+scheda veac
+scheda smo
+beni culturali
+normativa trasversale
+ff versione
+attività culturali
+istituto centrale
+archeologici
+scheda
+pubblicazione
+contesto
+normativa
 culturali
-turismo
+attività
+versione
+versione 3
 istituto
 centrale
-catalogo
+opere
 documentazione
-normativa
-versione
+catalogo
+ministero
+turismo
 norme
 compilazione
 aggiornamento
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
+rilasciata
 matrici
 incise
-versione
-norme
-compilazione
-scheda veac
-vestimenti antichi
 strutturazione
-schede
-catalogo
 contemporanei
-versione 3
 schema
 struttura
-reperti archeologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-rilasciata
-marzo
-aggiornamento
-complessi archeologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-aggiornamento
-attività  culturali
-ministero
-istituto
-centrale
-catalogo
-documentazione
-culturale x
-scheda catalografica
-scheda
-qual\\
-scheda nubeni numismatici
-attivitë culturali
-istituto centrale
-catalogo
-documentazione
-strutturazione
-schede
-20042004ministero
-saggi stratigrafici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-aggiornamento
-beni demoetnoantropologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-immateriali
-versione
-rilasciata
-dicembre
-aggiornamento
-aprile
-inistero
-ttività
-ulturali
-urismo
-stituto
-entrale
-atalogo
-ocumentazione
-normativa
-opere
-oggetti
-versione
-norme
-compilazion
-scheda smo
-strumenti musicali
-ministero
-attività
-culturali
-istituto
-centrale
-catalogo
-documentazione
-strutturazione
-organo
-ersione 3
-inistero
-ttività
-ulturali
-urismo
-stituto
-entrale
-atalogo
-ocumentazione
-normativa
+storia
 disegni
-versione
-norme
-compilazion
+immateriali
 ministero
-attività
 culturali
 turismo
-istituto
 centrale
 catalogo
 documentazione
-normativa
+oggetti
+compilazione
+carta
+organo
 stampe
-versione
-norme
-compilazione
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
 architettura
-versione
-norme
-compilazione
-aggiornamento
-eni demoetnoantropologici materiali
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-rilasciata
-novembre
-aggiornamento
-aprile
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
 archi
 giardini
-versione
-norme
-compilazione
-aggiornamento
-normativa trasversale
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-versione
-rilasciata
-novembre
-aggiornamento
-maggio
-ff  versione
-attivitë
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
 scheda
-marzo
-ministero
-tabella materiali archeologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-rilasciata
-marzo
-aggiornamento
-inistero
-ttività
-ulturali
-urismo
-stituto
-entrale
-atalogo
-ocumentazione
-cheda
-versione
-ottobre
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-archeologici
-versione
-norme
-compilazione
-aggiornamento
-trumenti musicali
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-rilasciata
-novembre
-aggiornamento
-aprile
-norme
-compilazione
-monumenti archeologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-aggiornamento
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-matrici
-incise
-versione
-norme
-compilazione
-scheda veac
-vestimenti antichi
-strutturazione
-schede
-catalogo
-contemporanei
-versione 3
-schema
-struttura
-reperti archeologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-rilasciata
-marzo
-aggiornamento
-complessi archeologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-aggiornamento
-attività  culturali
-ministero
-istituto
-centrale
-catalogo
-documentazione
-\\nqual \\xc3\\xa8
-\\xc3\\xa8
-culturale x
-scheda catalografica
-\\nqual\\
-scheda
-\\nquali
-qual\\
-scheda nubeni numismatici
-attivitë culturali
-istituto centrale
-catalogo
-documentazione
-strutturazione
-schede
-20042004ministero
-saggi stratigrafici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-aggiornamento
-beni demoetnoantropologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-immateriali
-versione
-rilasciata
-dicembre
-aggiornamento
-aprile
-inistero
-ttività
-ulturali
-urismo
-stituto
-entrale
-atalogo
-ocumentazione
-normativa
-opere
-oggetti
-versione
-norme
-compilazion
-scheda smo
-strumenti musicali
-ministero
-attività
-culturali
-istituto
-centrale
-catalogo
-documentazione
-strutturazione
-organo
-ersione 3
-inistero
-ttività
-ulturali
-urismo
-stituto
-entrale
-atalogo
-ocumentazione
-normativa
-disegni
-versione
-norme
-compilazion
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-stampe
-versione
-norme
-compilazione
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-architettura
-versione
-norme
-compilazione
-aggiornamento
-eni demoetnoantropologici materiali
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-rilasciata
-novembre
-aggiornamento
-aprile
-pg œ p
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-archi
-giardini
-versione
-norme
-compilazione
-aggiornamento
-normativa trasversale
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-versione
-rilasciata
-novembre
-aggiornamento
-maggio
-ff  versione
-attivitë
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-scheda
-marzo
-2016 ministero
-tabella materiali archeologici
-ministero
-attività
-culturali
-turismo
-istituto
-centrale
-catalogo
-documentazione
-normativa
-versione
-norme
-compilazione
-rilasciata
-marzo
-aggiornamento
-inistero
-ttività
-ulturali
-urismo
-stituto
-entrale
-atalogo
-ocumentazione
-cheda
-versione
-ottobre

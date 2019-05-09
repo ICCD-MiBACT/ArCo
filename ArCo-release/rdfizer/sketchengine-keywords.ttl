@@ -1,0 +1,3871 @@
+<https://w3id.org/arco/resource/Keyword/zappolino>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Zappolino"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/reperti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REPERTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/codifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Codifica"@it .
+
+<https://w3id.org/arco/resource/Keyword/dsch>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCH"@it .
+
+<https://w3id.org/arco/resource/Keyword/ispezioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISPEZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTG"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcgh>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGH"@it .
+
+<https://w3id.org/arco/resource/Keyword/ncv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NCV"@it .
+
+<https://w3id.org/arco/resource/Keyword/rofc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROFC"@it .
+
+<https://w3id.org/arco/resource/Keyword/ventilabri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ventilabri"@it .
+
+<https://w3id.org/arco/resource/Keyword/normativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Normativa"@it , "NORMATIVA"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctsp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTSP"@it .
+
+<https://w3id.org/arco/resource/Keyword/admp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADMP"@it .
+
+<https://w3id.org/arco/resource/Keyword/generica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GENERICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/gb1>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GB1"@it .
+
+<https://w3id.org/arco/resource/Keyword/materia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MATERIA"@it .
+
+<https://w3id.org/arco/resource/Keyword/paleografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paleografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/quantita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QUANTITÀ"@it , "Quantità"@it .
+
+<https://w3id.org/arco/resource/Keyword/lemmario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Lemmario"@it .
+
+<https://w3id.org/arco/resource/Keyword/fnti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/isrs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISRS"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpbo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPBO"@it .
+
+<https://w3id.org/arco/resource/Keyword/tematica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TEMATICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/acqt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACQT"@it .
+
+<https://w3id.org/arco/resource/Keyword/pve>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVE"@it .
+
+<https://w3id.org/arco/resource/Keyword/dgn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DGN"@it .
+
+<https://w3id.org/arco/resource/Keyword/falisca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "falisca"@it .
+
+<https://w3id.org/arco/resource/Keyword/musicali_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "musicali_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/virgole3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "virgole3"@it .
+
+<https://w3id.org/arco/resource/Keyword/note>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Note"@it .
+
+<https://w3id.org/arco/resource/Keyword/misz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/georeferenziazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "georeferenziazione"@it , "GEOREFERENZIAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBD"@it .
+
+<https://w3id.org/arco/resource/Keyword/informazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Informazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/inventari>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVENTARI"@it .
+
+<https://w3id.org/arco/resource/Keyword/gaqi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GAQI"@it .
+
+<https://w3id.org/arco/resource/Keyword/s32>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S32"@it .
+
+<https://w3id.org/arco/resource/Keyword/dray>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAY"@it .
+
+<https://w3id.org/arco/resource/Keyword/rstn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTN"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtsv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTSV"@it .
+
+<https://w3id.org/arco/resource/Keyword/cinr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CINR"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/etnoantropologico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "etnoantropologico"@it .
+
+<https://w3id.org/arco/resource/Keyword/paragrafo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "paragrafo"@it , "PARAGRAFO"@it .
+
+<https://w3id.org/arco/resource/Keyword/preistorico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Preistorico"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpe>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPE"@it .
+
+<https://w3id.org/arco/resource/Keyword/detenzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DETENZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/pst>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PST"@it .
+
+<https://w3id.org/arco/resource/Keyword/isec>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEC"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcgc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGC"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTV"@it .
+
+<https://w3id.org/arco/resource/Keyword/ncts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NCTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogatore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogatore"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvcw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCW"@it .
+
+<https://w3id.org/arco/resource/Keyword/prl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRL"@it .
+
+<https://w3id.org/arco/resource/Keyword/fur>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FUR"@it .
+
+<https://w3id.org/arco/resource/Keyword/rsed>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSED"@it .
+
+<https://w3id.org/arco/resource/Keyword/autb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTB"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCU"@it .
+
+<https://w3id.org/arco/resource/Keyword/misd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISD"@it .
+
+<https://w3id.org/arco/resource/Keyword/aut>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUT"@it .
+
+<https://w3id.org/arco/resource/Keyword/qnte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QNTE"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPV"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpdpy>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPDPY"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilevata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rilevata"@it .
+
+<https://w3id.org/arco/resource/Keyword/dsct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/drac>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAC"@it .
+
+<https://w3id.org/arco/resource/Keyword/iset>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISET"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTD"@it .
+
+<https://w3id.org/arco/resource/Keyword/reperimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REPERIMENTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/stratigrafici_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stratigrafici_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmpd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMPD"@it .
+
+<https://w3id.org/arco/resource/Keyword/stratigrafico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stratigrafico"@it .
+
+<https://w3id.org/arco/resource/Keyword/rse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSE"@it .
+
+<https://w3id.org/arco/resource/Keyword/dvmc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DVMC"@it .
+
+<https://w3id.org/arco/resource/Keyword/rofo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROFO"@it .
+
+<https://w3id.org/arco/resource/Keyword/stid>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STID"@it .
+
+<https://w3id.org/arco/resource/Keyword/aln>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALN"@it .
+
+<https://w3id.org/arco/resource/Keyword/ortorettificata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ortorettificata"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/auts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/misu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISU"@it .
+
+<https://w3id.org/arco/resource/Keyword/rvel>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVEL"@it .
+
+<https://w3id.org/arco/resource/Keyword/utu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTU"@it .
+
+<https://w3id.org/arco/resource/Keyword/crdv00150>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CRDV00150"@it .
+
+<https://w3id.org/arco/resource/Keyword/sgt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SGT"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Obbl"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCA"@it .
+
+<https://w3id.org/arco/resource/Keyword/rsti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/invd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVD"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotointerpretazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotointerpretazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/drat>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAT"@it .
+
+<https://w3id.org/arco/resource/Keyword/csse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CSSE"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvcr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCR"@it .
+
+<https://w3id.org/arco/resource/Keyword/versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VERSIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/trigonometrici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trigonometrici"@it .
+
+<https://w3id.org/arco/resource/Keyword/espt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ESPT"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtzg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTZG"@it .
+
+<https://w3id.org/arco/resource/Keyword/gldpy>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GLDPY"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftae>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAE"@it .
+
+<https://w3id.org/arco/resource/Keyword/rege>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGE"@it .
+
+<https://w3id.org/arco/resource/Keyword/definizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Definizione"@it , "DEFINIZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DENOMINAZIONE"@it , "Denominazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/mibact_iccd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MIBACT_ICCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/sorvegliabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sorvegliabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/nctn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NCTN"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvcr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCR"@it .
+
+<https://w3id.org/arco/resource/Keyword/prvs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRVS"@it .
+
+<https://w3id.org/arco/resource/Keyword/mostre>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MOSTRE"@it .
+
+<https://w3id.org/arco/resource/Keyword/schedografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schedografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/stmi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STMI"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctsf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTSF"@it .
+
+<https://w3id.org/arco/resource/Keyword/mstt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MSTT"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd_ministero>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICCD_Ministero"@it .
+
+<https://w3id.org/arco/resource/Keyword/contenitore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Contenitore"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCU"@it .
+
+<https://w3id.org/arco/resource/Keyword/sitografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sitografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/diretta4>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "diretta4"@it .
+
+<https://w3id.org/arco/resource/Keyword/nome>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Nome"@it .
+
+<https://w3id.org/arco/resource/Keyword/alnt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALNT"@it .
+
+<https://w3id.org/arco/resource/Keyword/qnt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QNT"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SPECIFICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/lvsn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LVSN"@it .
+
+<https://w3id.org/arco/resource/Keyword/iseo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEO"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Indicazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/isri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISRI"@it .
+
+<https://w3id.org/arco/resource/Keyword/figg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "figg"@it .
+
+<https://w3id.org/arco/resource/Keyword/recipienti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RECIPIENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/precisare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Precisare"@it .
+
+<https://w3id.org/arco/resource/Keyword/culturale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CULTURALE"@it .
+
+<https://w3id.org/arco/resource/Keyword/bnz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BNZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvls>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVLS"@it .
+
+<https://w3id.org/arco/resource/Keyword/audio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUDIO"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/committenza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COMMITTENZA"@it .
+
+<https://w3id.org/arco/resource/Keyword/rvme>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVME"@it .
+
+<https://w3id.org/arco/resource/Keyword/betacam>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Betacam"@it .
+
+<https://w3id.org/arco/resource/Keyword/autn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTN"@it .
+
+<https://w3id.org/arco/resource/Keyword/misp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISP"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalografica"@it .
+
+<https://w3id.org/arco/resource/Keyword/bpt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BPT"@it .
+
+<https://w3id.org/arco/resource/Keyword/lcsf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCSF"@it .
+
+<https://w3id.org/arco/resource/Keyword/sbap>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SBAP"@it .
+
+<https://w3id.org/arco/resource/Keyword/philomusica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Philomusica"@it .
+
+<https://w3id.org/arco/resource/Keyword/sti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STI"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtsl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTSL"@it .
+
+<https://w3id.org/arco/resource/Keyword/drao>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAO"@it .
+
+<https://w3id.org/arco/resource/Keyword/abbreviazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "abbreviazione"@it , "Abbreviazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/rstd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTD"@it .
+
+<https://w3id.org/arco/resource/Keyword/archeologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ARCHEOLOGICI"@it .
+
+<https://w3id.org/arco/resource/Keyword/titolarita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TITOLARITÀ"@it , "TITOLARITA"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTP"@it .
+
+<https://w3id.org/arco/resource/Keyword/acc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACC"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctms>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTMS"@it .
+
+<https://w3id.org/arco/resource/Keyword/estremi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Estremi"@it .
+
+<https://w3id.org/arco/resource/Keyword/adtm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADTM"@it .
+
+<https://w3id.org/arco/resource/Keyword/altimetria>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALTIMETRIA"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVL"@it .
+
+<https://w3id.org/arco/resource/Keyword/wcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "WCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmmn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMMN"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpdp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPDP"@it .
+
+<https://w3id.org/arco/resource/Keyword/mnatp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MNATP"@it .
+
+<https://w3id.org/arco/resource/Keyword/nsc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NSC"@it .
+
+<https://w3id.org/arco/resource/Keyword/individuale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INDIVIDUALE"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottoparti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sottoparti"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibk>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBK"@it .
+
+<https://w3id.org/arco/resource/Keyword/univoco>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "univoco"@it , "UNIVOCO"@it .
+
+<https://w3id.org/arco/resource/Keyword/atbr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ATBR"@it .
+
+<https://w3id.org/arco/resource/Keyword/colm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLM"@it .
+
+<https://w3id.org/arco/resource/Keyword/invp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVP"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBLIOGRAFIA"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCX"@it .
+
+<https://w3id.org/arco/resource/Keyword/stmd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STMD"@it .
+
+<https://w3id.org/arco/resource/Keyword/stemmi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STEMMI"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldck>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCK"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGR"@it .
+
+<https://w3id.org/arco/resource/Keyword/adma>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADMA"@it .
+
+<https://w3id.org/arco/resource/Keyword/videocinematografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VIDEOCINEMATOGRAFICO"@it , "videocinematografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/nmca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NMCA"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottocampo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Sottocampo"@it , "sottocampo"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtzs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTZS"@it .
+
+<https://w3id.org/arco/resource/Keyword/crda00150>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CRDA00150"@it .
+
+<https://w3id.org/arco/resource/Keyword/vincoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VINCOLI"@it .
+
+<https://w3id.org/arco/resource/Keyword/utut>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTUT"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CATALOGO"@it .
+
+<https://w3id.org/arco/resource/Keyword/og>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OG"@it .
+
+<https://w3id.org/arco/resource/Keyword/motivazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Motivazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/riservata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RISERVATA"@it .
+
+<https://w3id.org/arco/resource/Keyword/acqe>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACQE"@it .
+
+<https://w3id.org/arco/resource/Keyword/atb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ATB"@it .
+
+<https://w3id.org/arco/resource/Keyword/viabilistiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "viabilistiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/stmu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STMU"@it .
+
+<https://w3id.org/arco/resource/Keyword/duoc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DUOC"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd_normativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICCD_Normativa"@it .
+
+<https://w3id.org/arco/resource/Keyword/rocc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROCC"@it .
+
+<https://w3id.org/arco/resource/Keyword/caov>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CAOV"@it .
+
+<https://w3id.org/arco/resource/Keyword/giardini_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Giardini_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/nrl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NRL"@it .
+
+<https://w3id.org/arco/resource/Keyword/lcsa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCSA"@it .
+
+<https://w3id.org/arco/resource/Keyword/accc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCC"@it .
+
+<https://w3id.org/arco/resource/Keyword/viabilistico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "viabilistico"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntk>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTK"@it .
+
+<https://w3id.org/arco/resource/Keyword/dividendole>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dividendole"@it .
+
+<https://w3id.org/arco/resource/Keyword/agge>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGGE"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilevabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rilevabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVG"@it .
+
+<https://w3id.org/arco/resource/Keyword/lung>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Lung"@it .
+
+<https://w3id.org/arco/resource/Keyword/mnr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MNR"@it .
+
+<https://w3id.org/arco/resource/Keyword/interpunzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "interpunzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/genere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Genere"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDC"@it .
+
+<https://w3id.org/arco/resource/Keyword/acsp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACSP"@it .
+
+<https://w3id.org/arco/resource/Keyword/autz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/rves>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVES"@it .
+
+<https://w3id.org/arco/resource/Keyword/stime>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STIME"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBF"@it .
+
+<https://w3id.org/arco/resource/Keyword/lcsr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCSR"@it .
+
+<https://w3id.org/arco/resource/Keyword/atbm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ATBM"@it .
+
+<https://w3id.org/arco/resource/Keyword/herausgegeben>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "herausgegeben"@it .
+
+<https://w3id.org/arco/resource/Keyword/tarda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tarda"@it .
+
+<https://w3id.org/arco/resource/Keyword/tabb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tabb"@it .
+
+<https://w3id.org/arco/resource/Keyword/rstp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTP"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/etnografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Etnografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/s301>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S301"@it .
+
+<https://w3id.org/arco/resource/Keyword/motivo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Motivo"@it .
+
+<https://w3id.org/arco/resource/Keyword/struttura>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STRUTTURA"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCF"@it .
+
+<https://w3id.org/arco/resource/Keyword/schedato>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schedato"@it .
+
+<https://w3id.org/arco/resource/Keyword/prck>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCK"@it .
+
+<https://w3id.org/arco/resource/Keyword/ains>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AINS"@it .
+
+<https://w3id.org/arco/resource/Keyword/schede>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHEDE"@it .
+
+<https://w3id.org/arco/resource/Keyword/lvsd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LVSD"@it .
+
+<https://w3id.org/arco/resource/Keyword/altre>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALTRE"@it .
+
+<https://w3id.org/arco/resource/Keyword/utuo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTUO"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBW"@it .
+
+<https://w3id.org/arco/resource/Keyword/identificativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "identificativo"@it , "Identificativo"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcge>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGE"@it .
+
+<https://w3id.org/arco/resource/Keyword/stun>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STUN"@it .
+
+<https://w3id.org/arco/resource/Keyword/mibact>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MiBACT"@it .
+
+<https://w3id.org/arco/resource/Keyword/specificita1>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "specificità1"@it .
+
+<https://w3id.org/arco/resource/Keyword/stmp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STMP"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/iconclass>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Iconclass"@it .
+
+<https://w3id.org/arco/resource/Keyword/esc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ESC"@it .
+
+<https://w3id.org/arco/resource/Keyword/sigle>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Sigle"@it .
+
+<https://w3id.org/arco/resource/Keyword/mnatp56fko1200067892>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MNATP56FKO1200067892"@it .
+
+<https://w3id.org/arco/resource/Keyword/caoq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CAOQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/cognome>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Cognome"@it .
+
+<https://w3id.org/arco/resource/Keyword/drae>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAE"@it .
+
+<https://w3id.org/arco/resource/Keyword/by>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BY"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTF"@it .
+
+<https://w3id.org/arco/resource/Keyword/isrp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISRP"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvcc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCC"@it .
+
+<https://w3id.org/arco/resource/Keyword/obbligatorieta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obbligatorietà"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/asciccd00000148>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ASCICCD00000148"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmmd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMMD"@it .
+
+<https://w3id.org/arco/resource/Keyword/ain>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AIN"@it .
+
+<https://w3id.org/arco/resource/Keyword/biba>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBA"@it .
+
+<https://w3id.org/arco/resource/Keyword/storica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STORICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/funzionario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Funzionario"@it .
+
+<https://w3id.org/arco/resource/Keyword/specificare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Specificare"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTW"@it .
+
+<https://w3id.org/arco/resource/Keyword/amministrativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AMMINISTRATIVA"@it .
+
+<https://w3id.org/arco/resource/Keyword/adtt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADTT"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalograficamente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalograficamente"@it .
+
+<https://w3id.org/arco/resource/Keyword/mste>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MSTE"@it .
+
+<https://w3id.org/arco/resource/Keyword/gadpy>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GADPY"@it .
+
+<https://w3id.org/arco/resource/Keyword/amb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AMB"@it .
+
+<https://w3id.org/arco/resource/Keyword/circostanza>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Circostanza"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCF"@it .
+
+<https://w3id.org/arco/resource/Keyword/soggetto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SOGGETTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/ags25382>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGS25382"@it .
+
+<https://w3id.org/arco/resource/Keyword/informatizzazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INFORMATIZZAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/traslitterare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "traslitterare"@it .
+
+<https://w3id.org/arco/resource/Keyword/inp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INP"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBR"@it .
+
+<https://w3id.org/arco/resource/Keyword/stcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/ricognizioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RICOGNIZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/restauri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RESTAURI"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/geospatial>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Geospatial"@it .
+
+<https://w3id.org/arco/resource/Keyword/scolarita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Scolarità"@it .
+
+<https://w3id.org/arco/resource/Keyword/virgola>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "virgola"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPC"@it .
+
+<https://w3id.org/arco/resource/Keyword/documenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DOCUMENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/misa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISA"@it .
+
+<https://w3id.org/arco/resource/Keyword/caol>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CAOL"@it .
+
+<https://w3id.org/arco/resource/Keyword/scavo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCAVO"@it .
+
+<https://w3id.org/arco/resource/Keyword/riproduzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RIPRODUZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftax>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAX"@it .
+
+<https://w3id.org/arco/resource/Keyword/regx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGX"@it .
+
+<https://w3id.org/arco/resource/Keyword/iseq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/fnta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTA"@it .
+
+<https://w3id.org/arco/resource/Keyword/psaepr32525>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PSAEPR32525"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctmd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTMD"@it .
+
+<https://w3id.org/arco/resource/Keyword/acql>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACQL"@it .
+
+<https://w3id.org/arco/resource/Keyword/attuale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ATTUALE"@it .
+
+<https://w3id.org/arco/resource/Keyword/prz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPT"@it .
+
+<https://w3id.org/arco/resource/Keyword/rser>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSER"@it .
+
+<https://w3id.org/arco/resource/Keyword/autp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTP"@it .
+
+<https://w3id.org/arco/resource/Keyword/lun>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LUN"@it .
+
+<https://w3id.org/arco/resource/Keyword/misr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISR"@it .
+
+<https://w3id.org/arco/resource/Keyword/giuridica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GIURIDICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/nucn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NUCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/amuleti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Amuleti"@it .
+
+<https://w3id.org/arco/resource/Keyword/qnts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QNTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/wgs84>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "WGS84"@it .
+
+<https://w3id.org/arco/resource/Keyword/mutamenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MUTAMENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/nmcy>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NMCY"@it .
+
+<https://w3id.org/arco/resource/Keyword/prdi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRDI"@it .
+
+<https://w3id.org/arco/resource/Keyword/albn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALBN"@it .
+
+<https://w3id.org/arco/resource/Keyword/r08>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "R08"@it .
+
+<https://w3id.org/arco/resource/Keyword/inva>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVA"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTR"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGC"@it .
+
+<https://w3id.org/arco/resource/Keyword/tramite>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TRAMITE"@it .
+
+<https://w3id.org/arco/resource/Keyword/stir>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STIR"@it .
+
+<https://w3id.org/arco/resource/Keyword/authority>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Authority"@it .
+
+<https://w3id.org/arco/resource/Keyword/gramiccia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Gramiccia"@it .
+
+<https://w3id.org/arco/resource/Keyword/spsae>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SPSAE"@it .
+
+<https://w3id.org/arco/resource/Keyword/rfis>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RFIS"@it .
+
+<https://w3id.org/arco/resource/Keyword/acsw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACSW"@it .
+
+<https://w3id.org/arco/resource/Keyword/rvez>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVEZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/fnt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNT"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBM"@it .
+
+<https://w3id.org/arco/resource/Keyword/mtcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MTCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/stcn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/ambito>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AMBITO"@it .
+
+<https://w3id.org/arco/resource/Keyword/sbalombardia_0034567>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SBALombardia_0034567"@it .
+
+<https://w3id.org/arco/resource/Keyword/complessa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COMPLESSA"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTN"@it .
+
+<https://w3id.org/arco/resource/Keyword/prvp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRVP"@it .
+
+<https://w3id.org/arco/resource/Keyword/prd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRD"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogdr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGDR"@it .
+
+<https://w3id.org/arco/resource/Keyword/iscr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISCR"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCM"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGT"@it .
+
+<https://w3id.org/arco/resource/Keyword/esportazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Esportazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctsc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTSC"@it .
+
+<https://w3id.org/arco/resource/Keyword/vis>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VIS"@it , "vis"@it .
+
+<https://w3id.org/arco/resource/Keyword/admc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADMC"@it .
+
+<https://w3id.org/arco/resource/Keyword/duc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DUC"@it .
+
+<https://w3id.org/arco/resource/Keyword/ordinali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ordinali"@it .
+
+<https://w3id.org/arco/resource/Keyword/acbs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACBS"@it .
+
+<https://w3id.org/arco/resource/Keyword/dra>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRA"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftas>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAS"@it .
+
+<https://w3id.org/arco/resource/Keyword/regs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGS"@it .
+
+<https://w3id.org/arco/resource/Keyword/isel>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEL"@it .
+
+<https://w3id.org/arco/resource/Keyword/appendice>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "APPENDICE"@it , "Appendice"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpbb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPBB"@it .
+
+<https://w3id.org/arco/resource/Keyword/cartografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CARTOGRAFIA"@it .
+
+<https://w3id.org/arco/resource/Keyword/ltsd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LTSD"@it .
+
+<https://w3id.org/arco/resource/Keyword/sgti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SGTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/ornamenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ORNAMENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalografiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalografiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/bvu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BVU"@it .
+
+<https://w3id.org/arco/resource/Keyword/roz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/autk>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTK"@it .
+
+<https://w3id.org/arco/resource/Keyword/sosti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Sosti"@it .
+
+<https://w3id.org/arco/resource/Keyword/inventariale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "inventariale"@it .
+
+<https://w3id.org/arco/resource/Keyword/mism>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISM"@it .
+
+<https://w3id.org/arco/resource/Keyword/admt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADMT"@it .
+
+<https://w3id.org/arco/resource/Keyword/suppellettili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SUPPELLETTILI"@it .
+
+<https://w3id.org/arco/resource/Keyword/qntn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QNTN"@it .
+
+<https://w3id.org/arco/resource/Keyword/acce>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCE"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "localizzazione"@it , "LOCALIZZAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/asc_psae127_oa1200004567>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ASC_PSAE127_OA1200004567"@it .
+
+<https://w3id.org/arco/resource/Keyword/particelle>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Particelle"@it .
+
+<https://w3id.org/arco/resource/Keyword/unirm3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UNIRM3"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtsi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTSI"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/determinabile>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "determinabile"@it .
+
+<https://w3id.org/arco/resource/Keyword/obb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obb"@it , "OBB"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd_>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICCD_"@it .
+
+<https://w3id.org/arco/resource/Keyword/dati>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DATI"@it .
+
+<https://w3id.org/arco/resource/Keyword/cronologia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CRONOLOGIA"@it .
+
+<https://w3id.org/arco/resource/Keyword/ncun>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NCUN"@it .
+
+<https://w3id.org/arco/resource/Keyword/stim>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STIM"@it .
+
+<https://w3id.org/arco/resource/Keyword/deso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DESO"@it .
+
+<https://w3id.org/arco/resource/Keyword/rvms>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVMS"@it .
+
+<https://w3id.org/arco/resource/Keyword/aind>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AIND"@it .
+
+<https://w3id.org/arco/resource/Keyword/decorativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DECORATIVO"@it .
+
+<https://w3id.org/arco/resource/Keyword/ripetitivita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ripetitività"@it .
+
+<https://w3id.org/arco/resource/Keyword/nr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NR"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibh>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBH"@it .
+
+<https://w3id.org/arco/resource/Keyword/bdi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BDI"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CATALOGRAFICO"@it , "catalografico"@it .
+
+<https://w3id.org/arco/resource/Keyword/prls>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRLS"@it .
+
+<https://w3id.org/arco/resource/Keyword/lcst>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCST"@it .
+
+<https://w3id.org/arco/resource/Keyword/somiere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "somiere"@it .
+
+<https://w3id.org/arco/resource/Keyword/prdu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRDU"@it .
+
+<https://w3id.org/arco/resource/Keyword/scan>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCAN"@it .
+
+<https://w3id.org/arco/resource/Keyword/rstr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTR"@it .
+
+<https://w3id.org/arco/resource/Keyword/cssn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CSSN"@it .
+
+<https://w3id.org/arco/resource/Keyword/acq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/cronologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CRONOLOGICI"@it .
+
+<https://w3id.org/arco/resource/Keyword/gecy>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GECY"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMP"@it .
+
+<https://w3id.org/arco/resource/Keyword/certificazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CERTIFICAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/aegyptus>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Aegyptus"@it .
+
+<https://w3id.org/arco/resource/Keyword/mstl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MSTL"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCM"@it .
+
+<https://w3id.org/arco/resource/Keyword/catastale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CATASTALE"@it .
+
+<https://w3id.org/arco/resource/Keyword/lir>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LIR"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftan>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAN"@it .
+
+<https://w3id.org/arco/resource/Keyword/regn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGN"@it .
+
+<https://w3id.org/arco/resource/Keyword/isra>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISRA"@it .
+
+<https://w3id.org/arco/resource/Keyword/biby>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBY"@it .
+
+<https://w3id.org/arco/resource/Keyword/acronimo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Acronimo"@it .
+
+<https://w3id.org/arco/resource/Keyword/ncu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NCU"@it .
+
+<https://w3id.org/arco/resource/Keyword/r16>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "R16"@it .
+
+<https://w3id.org/arco/resource/Keyword/unirm1_3456>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UNIRM1_3456"@it .
+
+<https://w3id.org/arco/resource/Keyword/utm33>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTM33"@it .
+
+<https://w3id.org/arco/resource/Keyword/immobili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "IMMOBILI"@it .
+
+<https://w3id.org/arco/resource/Keyword/precatalogo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Precatalogo"@it , "precatalogo"@it .
+
+<https://w3id.org/arco/resource/Keyword/qnti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QNTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/sitografia2>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sitografia2"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/albd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALBD"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilevate>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rilevate"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvce>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCE"@it .
+
+<https://w3id.org/arco/resource/Keyword/aatn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AATN"@it .
+
+<https://w3id.org/arco/resource/Keyword/mis>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MIS"@it .
+
+<https://w3id.org/arco/resource/Keyword/immateriali_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "immateriali_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/cartografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CARTOGRAFICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/obsolete5>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "obsolete5"@it .
+
+<https://w3id.org/arco/resource/Keyword/rofs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROFS"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FOTOGRAFICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmmf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMMF"@it .
+
+<https://w3id.org/arco/resource/Keyword/adt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADT"@it .
+
+<https://w3id.org/arco/resource/Keyword/vocabolario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Vocabolario"@it , "vocabolario"@it .
+
+<https://w3id.org/arco/resource/Keyword/gabt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GABT"@it .
+
+<https://w3id.org/arco/resource/Keyword/rvmn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVMN"@it .
+
+<https://w3id.org/arco/resource/Keyword/autw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTW"@it .
+
+<https://w3id.org/arco/resource/Keyword/tutela4>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tutela4"@it .
+
+<https://w3id.org/arco/resource/Keyword/prtl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRTL"@it .
+
+<https://w3id.org/arco/resource/Keyword/attore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ATTORE"@it .
+
+<https://w3id.org/arco/resource/Keyword/s63>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S63"@it .
+
+<https://w3id.org/arco/resource/Keyword/mtci>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MTCI"@it .
+
+<https://w3id.org/arco/resource/Keyword/demoetnoantropologico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "demoetnoantropologico"@it .
+
+<https://w3id.org/arco/resource/Keyword/reg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REG"@it .
+
+<https://w3id.org/arco/resource/Keyword/tavv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tavv"@it .
+
+<https://w3id.org/arco/resource/Keyword/condizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CONDIZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTD"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvce>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCE"@it .
+
+<https://w3id.org/arco/resource/Keyword/sessadecimali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sessadecimali"@it .
+
+<https://w3id.org/arco/resource/Keyword/drax>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAX"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCP"@it .
+
+<https://w3id.org/arco/resource/Keyword/fnty>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTY"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvcv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCV"@it .
+
+<https://w3id.org/arco/resource/Keyword/subcontinente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "subcontinente"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGGS"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCC"@it .
+
+<https://w3id.org/arco/resource/Keyword/oggetto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGGETTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/domicilio>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Domicilio"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPD"@it .
+
+<https://w3id.org/arco/resource/Keyword/indagini>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INDAGINI"@it .
+
+<https://w3id.org/arco/resource/Keyword/etrs89>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ETRS89"@it .
+
+<https://w3id.org/arco/resource/Keyword/iseb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEB"@it .
+
+<https://w3id.org/arco/resource/Keyword/privacy3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "privacy3"@it .
+
+<https://w3id.org/arco/resource/Keyword/denominazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Denominazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/gaq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GAQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/adsn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADSN"@it .
+
+<https://w3id.org/arco/resource/Keyword/colv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLV"@it .
+
+<https://w3id.org/arco/resource/Keyword/nctr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NCTR"@it .
+
+<https://w3id.org/arco/resource/Keyword/bnm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BNM"@it .
+
+<https://w3id.org/arco/resource/Keyword/icr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICR"@it .
+
+<https://w3id.org/arco/resource/Keyword/rsec>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSEC"@it .
+
+<https://w3id.org/arco/resource/Keyword/auta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTA"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/cdgg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CDGG"@it .
+
+<https://w3id.org/arco/resource/Keyword/contenitori>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CONTENITORI"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPU"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpdpx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPDPX"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Indicare"@it .
+
+<https://w3id.org/arco/resource/Keyword/hi8>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Hi8"@it .
+
+<https://w3id.org/arco/resource/Keyword/dscs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/regz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/indicazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Indicazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/tsk>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TSK"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcgs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGS"@it .
+
+<https://w3id.org/arco/resource/Keyword/acqn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACQN"@it .
+
+<https://w3id.org/arco/resource/Keyword/modn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MODN"@it .
+
+<https://w3id.org/arco/resource/Keyword/culturali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CULTURALI"@it .
+
+<https://w3id.org/arco/resource/Keyword/gabo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GABO"@it .
+
+<https://w3id.org/arco/resource/Keyword/rset>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSET"@it .
+
+<https://w3id.org/arco/resource/Keyword/autr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTR"@it .
+
+<https://w3id.org/arco/resource/Keyword/mist>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MIST"@it .
+
+<https://w3id.org/arco/resource/Keyword/cssd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CSSD"@it .
+
+<https://w3id.org/arco/resource/Keyword/invc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVC"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdck>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCK"@it .
+
+<https://w3id.org/arco/resource/Keyword/dras>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAS"@it .
+
+<https://w3id.org/arco/resource/Keyword/vestimenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Vestimenti"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTT"@it .
+
+<https://w3id.org/arco/resource/Keyword/beni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BENI"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGGN"@it .
+
+<https://w3id.org/arco/resource/Keyword/standard4>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "standard4"@it .
+
+<https://w3id.org/arco/resource/Keyword/dts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/virvincoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VIRVincoli"@it .
+
+<https://w3id.org/arco/resource/Keyword/gll>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GLL"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCC"@it .
+
+<https://w3id.org/arco/resource/Keyword/gldpx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GLDPX"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftad>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAD"@it .
+
+<https://w3id.org/arco/resource/Keyword/regd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGD"@it .
+
+<https://w3id.org/arco/resource/Keyword/s167>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S167"@it .
+
+<https://w3id.org/arco/resource/Keyword/annotazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ANNOTAZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/stcp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STCP"@it .
+
+<https://w3id.org/arco/resource/Keyword/bil>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIL"@it .
+
+<https://w3id.org/arco/resource/Keyword/plances>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Plances"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTP"@it .
+
+<https://w3id.org/arco/resource/Keyword/srci>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SRCI"@it .
+
+<https://w3id.org/arco/resource/Keyword/fotorestituzione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "fotorestituzione"@it .
+
+<https://w3id.org/arco/resource/Keyword/prvr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRVR"@it .
+
+<https://w3id.org/arco/resource/Keyword/dlgs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DLgs"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpcl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPCL"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogdt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGDT"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTSE"@it .
+
+<https://w3id.org/arco/resource/Keyword/ispn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISPN"@it .
+
+<https://w3id.org/arco/resource/Keyword/adme>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADME"@it .
+
+<https://w3id.org/arco/resource/Keyword/geograficoamministrativa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "geograficoamministrativa"@it , "GEOGRAFICOAMMINISTRATIVA"@it .
+
+<https://w3id.org/arco/resource/Keyword/msts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MSTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/sba>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SBA"@it .
+
+<https://w3id.org/arco/resource/Keyword/es>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Es"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPP"@it .
+
+<https://w3id.org/arco/resource/Keyword/prct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/https>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "https"@it .
+
+<https://w3id.org/arco/resource/Keyword/dscn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/isen>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEN"@it .
+
+<https://w3id.org/arco/resource/Keyword/stratigrafici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stratigrafici"@it .
+
+<https://w3id.org/arco/resource/Keyword/modi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MODI"@it .
+
+<https://w3id.org/arco/resource/Keyword/soppresso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SOPPRESSO"@it .
+
+<https://w3id.org/arco/resource/Keyword/igmi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "IGMI"@it .
+
+<https://w3id.org/arco/resource/Keyword/rvmd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVMD"@it .
+
+<https://w3id.org/arco/resource/Keyword/acsc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACSC"@it .
+
+<https://w3id.org/arco/resource/Keyword/autm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTM"@it .
+
+<https://w3id.org/arco/resource/Keyword/georiferire>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "georiferire"@it .
+
+<https://w3id.org/arco/resource/Keyword/ecp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ECP"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogazione2>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogazione2"@it .
+
+<https://w3id.org/arco/resource/Keyword/cdgs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CDGS"@it .
+
+<https://w3id.org/arco/resource/Keyword/voc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Voc"@it , "VOC"@it , "voc"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggettivare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aggettivare"@it .
+
+<https://w3id.org/arco/resource/Keyword/utilizzazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTILIZZAZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/dran>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAN"@it .
+
+<https://w3id.org/arco/resource/Keyword/dividendoli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dividendoli"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpbu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPBU"@it .
+
+<https://w3id.org/arco/resource/Keyword/fnto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/acb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACB"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvcl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCL"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDC"@it .
+
+<https://w3id.org/arco/resource/Keyword/precatalogazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "precatalogazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/rsp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSP"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTN"@it .
+
+<https://w3id.org/arco/resource/Keyword/validita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Validità"@it .
+
+<https://w3id.org/arco/resource/Keyword/correlate>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CORRELATE"@it .
+
+<https://w3id.org/arco/resource/Keyword/tiff>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tiff"@it .
+
+<https://w3id.org/arco/resource/Keyword/prts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibj>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBJ"@it .
+
+<https://w3id.org/arco/resource/Keyword/mtcp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MTCP"@it .
+
+<https://w3id.org/arco/resource/Keyword/adsd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADSD"@it .
+
+<https://w3id.org/arco/resource/Keyword/accessibilita>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCESSIBILITÀ"@it .
+
+<https://w3id.org/arco/resource/Keyword/d576>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "D576"@it .
+
+<https://w3id.org/arco/resource/Keyword/fko>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FKO"@it .
+
+<https://w3id.org/arco/resource/Keyword/schedografici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schedografici"@it .
+
+<https://w3id.org/arco/resource/Keyword/stua>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STUA"@it .
+
+<https://w3id.org/arco/resource/Keyword/epsg2>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EPSG2"@it .
+
+<https://w3id.org/arco/resource/Keyword/cssp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CSSP"@it .
+
+<https://w3id.org/arco/resource/Keyword/fornire>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Fornire"@it .
+
+<https://w3id.org/arco/resource/Keyword/rstt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTT"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCW"@it .
+
+<https://w3id.org/arco/resource/Keyword/sbappsae>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SBAPPSAE"@it .
+
+<https://w3id.org/arco/resource/Keyword/stmc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STMC"@it .
+
+<https://w3id.org/arco/resource/Keyword/qualificazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Qualificazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/rof>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROF"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogato3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogato3"@it .
+
+<https://w3id.org/arco/resource/Keyword/alnn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALNN"@it .
+
+<https://w3id.org/arco/resource/Keyword/isei>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEI"@it .
+
+<https://w3id.org/arco/resource/Keyword/regp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGP"@it .
+
+<https://w3id.org/arco/resource/Keyword/creativecommons>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "creativecommons"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftap>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAP"@it .
+
+<https://w3id.org/arco/resource/Keyword/altri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALTRI"@it .
+
+<https://w3id.org/arco/resource/Keyword/creative>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Creative"@it .
+
+<https://w3id.org/arco/resource/Keyword/acquisizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACQUISIZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/isrc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISRC"@it .
+
+<https://w3id.org/arco/resource/Keyword/analitici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ANALITICI"@it .
+
+<https://w3id.org/arco/resource/Keyword/tipo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tipo"@it .
+
+<https://w3id.org/arco/resource/Keyword/acqd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACQD"@it .
+
+<https://w3id.org/arco/resource/Keyword/agg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGG"@it .
+
+<https://w3id.org/arco/resource/Keyword/timbri>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TIMBRI"@it .
+
+<https://w3id.org/arco/resource/Keyword/modd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MODD"@it .
+
+<https://w3id.org/arco/resource/Keyword/rofd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROFD"@it .
+
+<https://w3id.org/arco/resource/Keyword/georeferenzia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "georeferenzia"@it .
+
+<https://w3id.org/arco/resource/Keyword/tutela>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TUTELA"@it .
+
+<https://w3id.org/arco/resource/Keyword/pagina>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Pagina"@it .
+
+<https://w3id.org/arco/resource/Keyword/auth>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTH"@it .
+
+<https://w3id.org/arco/resource/Keyword/aaaa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "aaaa"@it .
+
+<https://w3id.org/arco/resource/Keyword/alfanumerica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "alfanumerica"@it .
+
+<https://w3id.org/arco/resource/Keyword/accesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCESSO"@it .
+
+<https://w3id.org/arco/resource/Keyword/patrimoniali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PATRIMONIALI"@it .
+
+<https://w3id.org/arco/resource/Keyword/cdgn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CDGN"@it .
+
+<https://w3id.org/arco/resource/Keyword/gb2>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GB2"@it .
+
+<https://w3id.org/arco/resource/Keyword/elementi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ELEMENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/stc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STC"@it .
+
+<https://w3id.org/arco/resource/Keyword/rvm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVM"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtsf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTSF"@it .
+
+<https://w3id.org/arco/resource/Keyword/isez>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/dscz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/bnpe>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BNPE"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCA"@it .
+
+<https://w3id.org/arco/resource/Keyword/geografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GEOGRAFICO"@it .
+
+<https://w3id.org/arco/resource/Keyword/isrt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISRT"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcgz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGGD"@it .
+
+<https://w3id.org/arco/resource/Keyword/ovest4>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ovest4"@it .
+
+<https://w3id.org/arco/resource/Keyword/iconografico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICONOGRAFICO"@it .
+
+<https://w3id.org/arco/resource/Keyword/acronimocampo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "acronimocampo"@it .
+
+<https://w3id.org/arco/resource/Keyword/auty>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTY"@it .
+
+<https://w3id.org/arco/resource/Keyword/au>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AU"@it .
+
+<https://w3id.org/arco/resource/Keyword/rver>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVER"@it .
+
+<https://w3id.org/arco/resource/Keyword/dvoc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DVOC"@it .
+
+<https://w3id.org/arco/resource/Keyword/sigecweb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SIGECWEB"@it , "SiGECweb"@it , "SIGECweb"@it .
+
+<https://w3id.org/arco/resource/Keyword/informatore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INFORMATORE"@it .
+
+<https://w3id.org/arco/resource/Keyword/dvc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DVC"@it .
+
+<https://w3id.org/arco/resource/Keyword/aat>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AAT"@it .
+
+<https://w3id.org/arco/resource/Keyword/accs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/bib>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIB"@it .
+
+<https://w3id.org/arco/resource/Keyword/gadp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GADP"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTF"@it .
+
+<https://w3id.org/arco/resource/Keyword/rsto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCR"@it .
+
+<https://w3id.org/arco/resource/Keyword/supporto>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SUPPORTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/amministrative>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AMMINISTRATIVE"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMM"@it .
+
+<https://w3id.org/arco/resource/Keyword/lombardozzi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Lombardozzi"@it .
+
+<https://w3id.org/arco/resource/Keyword/ispd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISPD"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/msti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MSTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/sostegni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Sostegni"@it .
+
+<https://w3id.org/arco/resource/Keyword/estera>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ESTERA"@it .
+
+<https://w3id.org/arco/resource/Keyword/schedatore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "schedatore"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottocampi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sottocampi"@it .
+
+<https://w3id.org/arco/resource/Keyword/ainr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AINR"@it .
+
+<https://w3id.org/arco/resource/Keyword/regk>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGK"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftak>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAK"@it .
+
+<https://w3id.org/arco/resource/Keyword/dscd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/ised>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISED"@it .
+
+<https://w3id.org/arco/resource/Keyword/dumc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DUMC"@it .
+
+<https://w3id.org/arco/resource/Keyword/poligono>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "POLIGONO"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcgd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGD"@it .
+
+<https://w3id.org/arco/resource/Keyword/adsp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADSP"@it .
+
+<https://w3id.org/arco/resource/Keyword/rez>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/collettivo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLLETTIVO"@it .
+
+<https://w3id.org/arco/resource/Keyword/cdg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CDG"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTW"@it .
+
+<https://w3id.org/arco/resource/Keyword/strutturato>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STRUTTURATO"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/caop>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CAOP"@it .
+
+<https://w3id.org/arco/resource/Keyword/cdgi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CDGI"@it .
+
+<https://w3id.org/arco/resource/Keyword/scientifica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCIENTIFICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/lvst>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LVST"@it .
+
+<https://w3id.org/arco/resource/Keyword/dscu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCU"@it .
+
+<https://w3id.org/arco/resource/Keyword/drad>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAD"@it .
+
+<https://w3id.org/arco/resource/Keyword/fnte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTE"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcgu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGU"@it .
+
+<https://w3id.org/arco/resource/Keyword/revisione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REVISIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/aidd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AIDD"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmmc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMMC"@it .
+
+<https://w3id.org/arco/resource/Keyword/espd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ESPD"@it .
+
+<https://w3id.org/arco/resource/Keyword/f_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "F_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/miba>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MIBA"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggiornamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGGIORNAMENTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/archeologici_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "archeologici_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/misv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISV"@it .
+
+<https://w3id.org/arco/resource/Keyword/documentazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DOCUMENTAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/veac>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VeAC"@it .
+
+<https://w3id.org/arco/resource/Keyword/org>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "org"@it .
+
+<https://w3id.org/arco/resource/Keyword/redazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REDAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTA"@it .
+
+<https://w3id.org/arco/resource/Keyword/cssf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CSSF"@it .
+
+<https://w3id.org/arco/resource/Keyword/prvc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRVC"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/adts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/unr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UNR"@it .
+
+<https://w3id.org/arco/resource/Keyword/mstd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MSTD"@it .
+
+<https://w3id.org/arco/resource/Keyword/gadpx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GADPX"@it .
+
+<https://w3id.org/arco/resource/Keyword/incise>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INCISE"@it .
+
+<https://w3id.org/arco/resource/Keyword/espu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ESPU"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPA"@it .
+
+<https://w3id.org/arco/resource/Keyword/alinari3280>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Alinari3280"@it .
+
+<https://w3id.org/arco/resource/Keyword/alnd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALND"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftaf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAF"@it .
+
+<https://w3id.org/arco/resource/Keyword/oac>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OAC"@it .
+
+<https://w3id.org/arco/resource/Keyword/mobili>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MOBILI"@it .
+
+<https://w3id.org/arco/resource/Keyword/cols>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLS"@it .
+
+<https://w3id.org/arco/resource/Keyword/ff_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FF_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPB"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/esportazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ESPORTAZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilevatore>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rilevatore"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPR"@it .
+
+<https://w3id.org/arco/resource/Keyword/rm0175>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RM0175"@it .
+
+<https://w3id.org/arco/resource/Keyword/fisiocritici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Fisiocritici"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftaw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAW"@it .
+
+<https://w3id.org/arco/resource/Keyword/regw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGW"@it .
+
+<https://w3id.org/arco/resource/Keyword/isep>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEP"@it .
+
+<https://w3id.org/arco/resource/Keyword/terminologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "terminologici"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctmc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTMC"@it .
+
+<https://w3id.org/arco/resource/Keyword/stereofotogrammetria>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stereofotogrammetria"@it .
+
+<https://w3id.org/arco/resource/Keyword/possesso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "POSSESSO"@it .
+
+<https://w3id.org/arco/resource/Keyword/tcl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TCL"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvlt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVLT"@it .
+
+<https://w3id.org/arco/resource/Keyword/rce>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCE"@it .
+
+<https://w3id.org/arco/resource/Keyword/provvedimenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PROVVEDIMENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/roci>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROCI"@it .
+
+<https://w3id.org/arco/resource/Keyword/rfia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RFIA"@it .
+
+<https://w3id.org/arco/resource/Keyword/acse>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACSE"@it .
+
+<https://w3id.org/arco/resource/Keyword/s238>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S238"@it .
+
+<https://w3id.org/arco/resource/Keyword/admx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADMX"@it .
+
+<https://w3id.org/arco/resource/Keyword/qntr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QNTR"@it .
+
+<https://w3id.org/arco/resource/Keyword/posizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Posizione"@it .
+
+<https://w3id.org/arco/resource/Keyword/norme>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NORME"@it .
+
+<https://w3id.org/arco/resource/Keyword/sa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SA"@it .
+
+<https://w3id.org/arco/resource/Keyword/localizzazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LOCALIZZAZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/collezioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLLEZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/drap>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAP"@it .
+
+<https://w3id.org/arco/resource/Keyword/rste>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTE"@it .
+
+<https://w3id.org/arco/resource/Keyword/bnpl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BNPL"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctmt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTMT"@it .
+
+<https://w3id.org/arco/resource/Keyword/tecnici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TECNICI"@it .
+
+<https://w3id.org/arco/resource/Keyword/eventuali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Eventuali"@it .
+
+<https://w3id.org/arco/resource/Keyword/rsr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSR"@it .
+
+<https://w3id.org/arco/resource/Keyword/acba>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACBA"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd_scheda>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICCD_Scheda"@it .
+
+<https://w3id.org/arco/resource/Keyword/trasversale_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "trasversale_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftaa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAA"@it .
+
+<https://w3id.org/arco/resource/Keyword/rega>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGA"@it .
+
+<https://w3id.org/arco/resource/Keyword/utud>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTUD"@it .
+
+<https://w3id.org/arco/resource/Keyword/conservazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CONSERVAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/bdm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BDM"@it .
+
+<https://w3id.org/arco/resource/Keyword/atbs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ATBS"@it .
+
+<https://w3id.org/arco/resource/Keyword/coln>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLN"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvcn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcy>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCY"@it .
+
+<https://w3id.org/arco/resource/Keyword/riferimento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RIFERIMENTO"@it , "Riferimento"@it .
+
+<https://w3id.org/arco/resource/Keyword/immateriali>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "IMMATERIALI"@it .
+
+<https://w3id.org/arco/resource/Keyword/rilevamento>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RILEVAMENTO"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpci>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPCI"@it .
+
+<https://w3id.org/arco/resource/Keyword/s08>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S08"@it .
+
+<https://w3id.org/arco/resource/Keyword/caof>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CAOF"@it .
+
+<https://w3id.org/arco/resource/Keyword/normative_vers>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Normative_vers"@it .
+
+<https://w3id.org/arco/resource/Keyword/convenzionalmente>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "convenzionalmente"@it .
+
+<https://w3id.org/arco/resource/Keyword/vir>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VIR"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPM"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/osservazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Osservazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftar>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAR"@it .
+
+<https://w3id.org/arco/resource/Keyword/ubicazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ubicazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/fta>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTA"@it .
+
+<https://w3id.org/arco/resource/Keyword/chiunque2>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "chiunque2"@it .
+
+<https://w3id.org/arco/resource/Keyword/roff>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROFF"@it .
+
+<https://w3id.org/arco/resource/Keyword/stut>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STUT"@it .
+
+<https://w3id.org/arco/resource/Keyword/smo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SMO"@it .
+
+<https://w3id.org/arco/resource/Keyword/prt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRT"@it .
+
+<https://w3id.org/arco/resource/Keyword/autj>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AUTJ"@it .
+
+<https://w3id.org/arco/resource/Keyword/misl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISL"@it .
+
+<https://w3id.org/arco/resource/Keyword/materiali_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "materiali_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/drak>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAK"@it .
+
+<https://w3id.org/arco/resource/Keyword/trascrizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Trascrizione"@it , "TRASCRIZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdcc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCC"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvci>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCI"@it .
+
+<https://w3id.org/arco/resource/Keyword/ltst>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LTST"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGGF"@it .
+
+<https://w3id.org/arco/resource/Keyword/separandole>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "separandole"@it .
+
+<https://w3id.org/arco/resource/Keyword/codici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CODICI"@it .
+
+<https://w3id.org/arco/resource/Keyword/coverage>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Coverage"@it .
+
+<https://w3id.org/arco/resource/Keyword/inventario>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVENTARIO"@it .
+
+<https://w3id.org/arco/resource/Keyword/ine>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INE"@it .
+
+<https://w3id.org/arco/resource/Keyword/stereogramma>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "stereogramma"@it .
+
+<https://w3id.org/arco/resource/Keyword/compilazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "compilazione"@it , "COMPILAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/sottoparte>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sottoparte"@it .
+
+<https://w3id.org/arco/resource/Keyword/mtcm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MTCM"@it .
+
+<https://w3id.org/arco/resource/Keyword/signini>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "signini"@it .
+
+<https://w3id.org/arco/resource/Keyword/coli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLI"@it .
+
+<https://w3id.org/arco/resource/Keyword/dsc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSC"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvci>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCI"@it .
+
+<https://w3id.org/arco/resource/Keyword/toponimo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "TOPONIMO"@it , "Toponimo"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/dati_indicazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dati_indicazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/gecx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GECX"@it .
+
+<https://w3id.org/arco/resource/Keyword/c256>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "C256"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCG"@it .
+
+<https://w3id.org/arco/resource/Keyword/caoa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CAOA"@it .
+
+<https://w3id.org/arco/resource/Keyword/coltodino>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Coltodino"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibbibliografia>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBBibliografia"@it .
+
+<https://w3id.org/arco/resource/Keyword/sattalini>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Sattalini"@it .
+
+<https://w3id.org/arco/resource/Keyword/descrizione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DESCRIZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/aint>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AINT"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftam>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAM"@it .
+
+<https://w3id.org/arco/resource/Keyword/dscf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCF"@it .
+
+<https://w3id.org/arco/resource/Keyword/inv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INV"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBX"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogcd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/nct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/stratigrafica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Stratigrafica"@it .
+
+<https://w3id.org/arco/resource/Keyword/rofa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ROFA"@it .
+
+<https://w3id.org/arco/resource/Keyword/relazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RELAZIONI"@it .
+
+<https://w3id.org/arco/resource/Keyword/stmq>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STMQ"@it .
+
+<https://w3id.org/arco/resource/Keyword/gabb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GABB"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctsn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTSN"@it .
+
+<https://w3id.org/arco/resource/Keyword/utm32>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTM32"@it .
+
+<https://w3id.org/arco/resource/Keyword/admn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADMN"@it .
+
+<https://w3id.org/arco/resource/Keyword/accessori>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCESSORI"@it .
+
+<https://w3id.org/arco/resource/Keyword/rv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RV"@it .
+
+<https://w3id.org/arco/resource/Keyword/nmcn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NMCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/draf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAF"@it .
+
+<https://w3id.org/arco/resource/Keyword/rip>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Rip"@it , "rip"@it , "RIP"@it .
+
+<https://w3id.org/arco/resource/Keyword/aatm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AATM"@it .
+
+<https://w3id.org/arco/resource/Keyword/adtd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADTD"@it .
+
+<https://w3id.org/arco/resource/Keyword/sgtt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SGTT"@it .
+
+<https://w3id.org/arco/resource/Keyword/s48>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S48"@it .
+
+<https://w3id.org/arco/resource/Keyword/ads>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADS"@it .
+
+<https://w3id.org/arco/resource/Keyword/precisazioni>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Precisazioni"@it .
+
+<https://w3id.org/arco/resource/Keyword/alfanumerico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "alfanumerico"@it .
+
+<https://w3id.org/arco/resource/Keyword/stima>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Stima"@it .
+
+<https://w3id.org/arco/resource/Keyword/prtk>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRTK"@it .
+
+<https://w3id.org/arco/resource/Keyword/datazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Datazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/crda00151_3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CRDA00151_3"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalografici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalografici"@it .
+
+<https://w3id.org/arco/resource/Keyword/accp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCP"@it .
+
+<https://w3id.org/arco/resource/Keyword/iccd2>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ICCD2"@it .
+
+<https://w3id.org/arco/resource/Keyword/stcc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STCC"@it .
+
+<https://w3id.org/arco/resource/Keyword/cold>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLD"@it .
+
+<https://w3id.org/arco/resource/Keyword/minidisc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MiniDisc"@it .
+
+<https://w3id.org/arco/resource/Keyword/albt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ALBT"@it .
+
+<https://w3id.org/arco/resource/Keyword/invg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVG"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTC"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvcd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/draw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAW"@it .
+
+<https://w3id.org/arco/resource/Keyword/prve>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRVE"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntx>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTX"@it .
+
+<https://w3id.org/arco/resource/Keyword/gecs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GECS"@it .
+
+<https://w3id.org/arco/resource/Keyword/aggr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AGGR"@it .
+
+<https://w3id.org/arco/resource/Keyword/ub>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UB"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPC"@it .
+
+<https://w3id.org/arco/resource/Keyword/soprintendenze>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Soprintendenze"@it .
+
+<https://w3id.org/arco/resource/Keyword/glp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GLP"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCG"@it .
+
+<https://w3id.org/arco/resource/Keyword/interventi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INTERVENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/commons>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Commons"@it .
+
+<https://w3id.org/arco/resource/Keyword/dsca>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCA"@it .
+
+<https://w3id.org/arco/resource/Keyword/isea>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEA"@it .
+
+<https://w3id.org/arco/resource/Keyword/multimediale>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MULTIMEDIALE"@it .
+
+<https://w3id.org/arco/resource/Keyword/est3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Est3"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcga>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGA"@it .
+
+<https://w3id.org/arco/resource/Keyword/adsm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADSM"@it .
+
+<https://w3id.org/arco/resource/Keyword/colu>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COLU"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogtt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGTT"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/sigla>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Sigla"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPD"@it .
+
+<https://w3id.org/arco/resource/Keyword/s121>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S121"@it .
+
+<https://w3id.org/arco/resource/Keyword/eidotipo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "eidotipo"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftay>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAY"@it .
+
+<https://w3id.org/arco/resource/Keyword/regy>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGY"@it .
+
+<https://w3id.org/arco/resource/Keyword/draa>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRAA"@it .
+
+<https://w3id.org/arco/resource/Keyword/iser>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISER"@it .
+
+<https://w3id.org/arco/resource/Keyword/isrl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISRL"@it .
+
+<https://w3id.org/arco/resource/Keyword/rve>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RVE"@it .
+
+<https://w3id.org/arco/resource/Keyword/do>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DO"@it .
+
+<https://w3id.org/arco/resource/Keyword/georeferenziare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "georeferenziare"@it .
+
+<https://w3id.org/arco/resource/Keyword/collocazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Collocazione"@it , "COLLOCAZIONE"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcg>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCG"@it .
+
+<https://w3id.org/arco/resource/Keyword/identificazione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Identificazione"@it .
+
+<https://w3id.org/arco/resource/Keyword/dirette>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DIRETTE"@it .
+
+<https://w3id.org/arco/resource/Keyword/rses>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSES"@it .
+
+<https://w3id.org/arco/resource/Keyword/lcsi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCSI"@it .
+
+<https://w3id.org/arco/resource/Keyword/atbd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ATBD"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtns>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTNS"@it .
+
+<https://w3id.org/arco/resource/Keyword/demoetnoantropologici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DEMOETNOANTROPOLOGICI"@it .
+
+<https://w3id.org/arco/resource/Keyword/coordinata>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Coordinata"@it .
+
+<https://w3id.org/arco/resource/Keyword/fnts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/pvcp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PVCP"@it .
+
+<https://w3id.org/arco/resource/Keyword/aaty>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "AATY"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmps>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMPS"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGD"@it .
+
+<https://w3id.org/arco/resource/Keyword/oggetti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGGETTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/rst>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RST"@it .
+
+<https://w3id.org/arco/resource/Keyword/videocinematografica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VIDEOCINEMATOGRAFICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/esempi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Esempi"@it .
+
+<https://w3id.org/arco/resource/Keyword/stis>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STIS"@it .
+
+<https://w3id.org/arco/resource/Keyword/repertare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "repertare"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftac>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAC"@it .
+
+<https://w3id.org/arco/resource/Keyword/regc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGC"@it .
+
+<https://w3id.org/arco/resource/Keyword/utuf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UTUF"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBN"@it .
+
+<https://w3id.org/arco/resource/Keyword/mtct>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MTCT"@it .
+
+<https://w3id.org/arco/resource/Keyword/c052021>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "C052021"@it .
+
+<https://w3id.org/arco/resource/Keyword/gaqs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GAQS"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvcp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVCP"@it .
+
+<https://w3id.org/arco/resource/Keyword/arredi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ARREDI"@it .
+
+<https://w3id.org/arco/resource/Keyword/invs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVS"@it .
+
+<https://w3id.org/arco/resource/Keyword/pre>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRE"@it .
+
+<https://w3id.org/arco/resource/Keyword/fonti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FONTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/cronologico>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "cronologico"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogds>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGDS"@it .
+
+<https://w3id.org/arco/resource/Keyword/ldcn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LDCN"@it .
+
+<https://w3id.org/arco/resource/Keyword/admd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ADMD"@it .
+
+<https://w3id.org/arco/resource/Keyword/s56>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "S56"@it .
+
+<https://w3id.org/arco/resource/Keyword/inpo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INPO"@it .
+
+<https://w3id.org/arco/resource/Keyword/prcs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRCS"@it .
+
+<https://w3id.org/arco/resource/Keyword/qnr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "QNR"@it .
+
+<https://w3id.org/arco/resource/Keyword/dscm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DSCM"@it .
+
+<https://w3id.org/arco/resource/Keyword/arte_versione>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "arte_versione"@it .
+
+<https://w3id.org/arco/resource/Keyword/ftat>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FTAT"@it .
+
+<https://w3id.org/arco/resource/Keyword/regt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "REGT"@it .
+
+<https://w3id.org/arco/resource/Keyword/suffisso>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Suffisso"@it .
+
+<https://w3id.org/arco/resource/Keyword/isem>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ISEM"@it .
+
+<https://w3id.org/arco/resource/Keyword/ctl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CTL"@it .
+
+<https://w3id.org/arco/resource/Keyword/ripetitivo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ripetitivo"@it .
+
+<https://w3id.org/arco/resource/Keyword/rcgm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RCGM"@it .
+
+<https://w3id.org/arco/resource/Keyword/c9052021>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "C9052021"@it .
+
+<https://w3id.org/arco/resource/Keyword/ct_iccd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CT_ICCD"@it .
+
+<https://w3id.org/arco/resource/Keyword/grafica>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GRAFICA"@it .
+
+<https://w3id.org/arco/resource/Keyword/prv>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRV"@it .
+
+<https://w3id.org/arco/resource/Keyword/misure>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISURE"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpp>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPP"@it .
+
+<https://w3id.org/arco/resource/Keyword/misn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MISN"@it .
+
+<https://w3id.org/arco/resource/Keyword/sovrascriverli>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "sovrascriverli"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalogare>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalogare"@it .
+
+<https://w3id.org/arco/resource/Keyword/emblemi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EMBLEMI"@it .
+
+<https://w3id.org/arco/resource/Keyword/lcsd>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "LCSD"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtnn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTNN"@it .
+
+<https://w3id.org/arco/resource/Keyword/gep>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GEP"@it .
+
+<https://w3id.org/arco/resource/Keyword/vdce>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "VDCE"@it .
+
+<https://w3id.org/arco/resource/Keyword/fntn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FNTN"@it .
+
+<https://w3id.org/arco/resource/Keyword/gpbt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GPBT"@it .
+
+<https://w3id.org/arco/resource/Keyword/wfs>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "WFS"@it .
+
+<https://w3id.org/arco/resource/Keyword/cinf>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CINF"@it .
+
+<https://w3id.org/arco/resource/Keyword/cmpn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "CMPN"@it .
+
+<https://w3id.org/arco/resource/Keyword/dtm>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DTM"@it .
+
+<https://w3id.org/arco/resource/Keyword/nvc>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "NVC"@it .
+
+<https://w3id.org/arco/resource/Keyword/accludere>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "accludere"@it .
+
+<https://w3id.org/arco/resource/Keyword/unisi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "UNISI"@it .
+
+<https://w3id.org/arco/resource/Keyword/specifiche>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SPECIFICHE"@it , "Specifiche"@it .
+
+<https://w3id.org/arco/resource/Keyword/acss>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACSS"@it .
+
+<https://w3id.org/arco/resource/Keyword/prtr>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRTR"@it .
+
+<https://w3id.org/arco/resource/Keyword/strumenti>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "STRUMENTI"@it .
+
+<https://w3id.org/arco/resource/Keyword/prlt>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRLT"@it .
+
+<https://w3id.org/arco/resource/Keyword/bibi>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BIBI"@it .
+
+<https://w3id.org/arco/resource/Keyword/accw>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "ACCW"@it .
+
+<https://w3id.org/arco/resource/Keyword/catalografica3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "catalografica3"@it .
+
+<https://w3id.org/arco/resource/Keyword/proprietari>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Proprietari"@it .
+
+<https://w3id.org/arco/resource/Keyword/invn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INVN"@it .
+
+<https://w3id.org/arco/resource/Keyword/bnb>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BNB"@it .
+
+<https://w3id.org/arco/resource/Keyword/rsts>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "RSTS"@it .
+
+<https://w3id.org/arco/resource/Keyword/prvl>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "PRVL"@it .
+
+<https://w3id.org/arco/resource/Keyword/gecz>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "GECZ"@it .
+
+<https://w3id.org/arco/resource/Keyword/ogdn>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGDN"@it .
+
+<https://w3id.org/arco/resource/Keyword/matrici>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "MATRICI"@it .
+
+<https://w3id.org/arco/resource/Keyword/integrativo>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "INTEGRATIVO"@it .

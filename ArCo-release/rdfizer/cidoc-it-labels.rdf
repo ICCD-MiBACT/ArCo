@@ -1,0 +1,1117 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P150_defines_typical_parts_of">
+    <rdfs:label xml:lang="it">definisce le parti tipiche di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">
+    <rdfs:label xml:lang="it">Oggetto informativo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P132_overlaps_with">
+    <rdfs:label xml:lang="it">si sovrappone con</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by">
+    <rdfs:label xml:lang="it">è stato creato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P62_depicts">
+    <rdfs:label xml:lang="it">raffigura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E46_Section_Definition">
+    <rdfs:label xml:lang="it">Definizione della sezione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at">
+    <rdfs:label xml:lang="it">era presente a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E55_Type">
+    <rdfs:label xml:lang="it">genere</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P33i_was_used_by">
+    <rdfs:label xml:lang="it">era usato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P145i_left_by">
+    <rdfs:label xml:lang="it">lasciato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P99i_was_dissolved_by">
+    <rdfs:label xml:lang="it">è stato sciolto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P115i_is_finished_by">
+    <rdfs:label xml:lang="it">è finito da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P35_has_identified">
+    <rdfs:label xml:lang="it">ha identificato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P97i_was_father_for">
+    <rdfs:label xml:lang="it">era padre per</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P94_has_created">
+    <rdfs:label xml:lang="it">ha creato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P30_transferred_custody_of">
+    <rdfs:label xml:lang="it">trasferimento della custodia di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end">
+    <rdfs:label xml:lang="it">inizio della fine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E93_Presence">
+    <rdfs:label xml:lang="it">Presenza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P136i_supported_type_creation">
+    <rdfs:label xml:lang="it">creazione di tipi supportati</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of">
+    <rdfs:label xml:lang="it">è composto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P73_has_translation">
+    <rdfs:label xml:lang="it">ha una traduzione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P127i_has_narrower_term">
+    <rdfs:label xml:lang="it">ha un termine più ristretto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P137i_is_exemplified_by">
+    <rdfs:label xml:lang="it">è esemplificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P56_bears_feature">
+    <rdfs:label xml:lang="it">caratteristica orsi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P129_is_about">
+    <rdfs:label xml:lang="it">è circa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P145_separated">
+    <rdfs:label xml:lang="it">separato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E87_Curation_Activity">
+    <rdfs:label xml:lang="it">Attività di cura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E66_Formation">
+    <rdfs:label xml:lang="it">Formazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates">
+    <rdfs:label xml:lang="it">Coordinate spaziali</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P45_consists_of">
+    <rdfs:label xml:lang="it">consiste di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P71i_is_listed_in">
+    <rdfs:label xml:lang="it">è elencato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E37_Mark">
+    <rdfs:label xml:lang="it">marchio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through">
+    <rdfs:label xml:lang="it">cambiato proprietà attraverso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91i_is_unit_of">
+    <rdfs:label xml:lang="it">è un'unità di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P30i_custody_transferred_through">
+    <rdfs:label xml:lang="it">custodia trasferita tramite</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P152i_is_parent_of">
+    <rdfs:label xml:lang="it">è genitore di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P5i_forms_part_of">
+    <rdfs:label xml:lang="it">fa parte di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P72i_is_language_of">
+    <rdfs:label xml:lang="it">è lingua di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P93i_was_taken_out_of_existence_by">
+    <rdfs:label xml:lang="it">è stato tolto dall'esistenza da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P143i_was_joined_by">
+    <rdfs:label xml:lang="it">è stato raggiunto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P137_exemplifies">
+    <rdfs:label xml:lang="it">esemplifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P35i_was_identified_by">
+    <rdfs:label xml:lang="it">è stato identificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P38_deassigned">
+    <rdfs:label xml:lang="it">deassigned</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P58_has_section_definition">
+    <rdfs:label xml:lang="it">ha la definizione della sezione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of">
+    <rdfs:label xml:lang="it">titolo trasferito di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P111_added">
+    <rdfs:label xml:lang="it">aggiunto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P144_joined_with">
+    <rdfs:label xml:lang="it">unito con</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to">
+    <rdfs:label xml:lang="it">è soggetto a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of">
+    <rdfs:label xml:lang="it">era la morte di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P39_measured">
+    <rdfs:label xml:lang="it">misurato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E45_Address">
+    <rdfs:label xml:lang="it">Indirizzo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of">
+    <rdfs:label xml:lang="it">mostra le caratteristiche di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P119i_is_met_in_time_by">
+    <rdfs:label xml:lang="it">è incontrato in tempo da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P38i_was_deassigned_by">
+    <rdfs:label xml:lang="it">è stato deassegnato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P42i_was_assigned_by">
+    <rdfs:label xml:lang="it">è stato assegnato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P135i_was_created_by">
+    <rdfs:label xml:lang="it">è stato creato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">
+    <rdfs:label xml:lang="it">Oggetto linguistico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14i_performed">
+    <rdfs:label xml:lang="it">eseguita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P54i_is_current_permanent_location_of">
+    <rdfs:label xml:lang="it">è attuale posizione permanente di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E86_Leaving">
+    <rdfs:label xml:lang="it">In partenza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P96i_gave_birth">
+    <rdfs:label xml:lang="it">ha dato alla luce</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P17i_motivated">
+    <rdfs:label xml:lang="it">motivata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P37i_was_assigned_by">
+    <rdfs:label xml:lang="it">è stato assegnato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E83_Type_Creation">
+    <rdfs:label xml:lang="it">Digita la creazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with">
+    <rdfs:label xml:lang="it">si incontra in tempo con</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P138_represents">
+    <rdfs:label xml:lang="it">rappresenta</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P113i_was_removed_by">
+    <rdfs:label xml:lang="it">è stato rimosso da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts">
+    <rdfs:label xml:lang="it">ha il numero di parti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P8_took_place_on_or_within">
+    <rdfs:label xml:lang="it">ha avuto luogo dentro o dentro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item">
+    <rdfs:label xml:lang="it">mostra elemento visivo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P123_resulted_in">
+    <rdfs:label xml:lang="it">provocato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within">
+    <rdfs:label xml:lang="it">in qualche momento dentro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P168_place_is_defined_by">
+    <rdfs:label xml:lang="it">il posto è definito da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78i_identifies">
+    <rdfs:label xml:lang="it">identifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P112i_was_diminished_by">
+    <rdfs:label xml:lang="it">è stato diminuito da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature">
+    <rdfs:label xml:lang="it">Caratteristica fisica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by">
+    <rdfs:label xml:lang="it">è stato formato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place">
+    <rdfs:label xml:lang="it">Posto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body">
+    <rdfs:label xml:lang="it">Corpo legale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P39i_was_measured_by">
+    <rdfs:label xml:lang="it">è stato misurato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P86i_contains">
+    <rdfs:label xml:lang="it">contiene</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P15i_influenced">
+    <rdfs:label xml:lang="it">influenzato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P134_continued">
+    <rdfs:label xml:lang="it">continua</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner">
+    <rdfs:label xml:lang="it">ha il proprietario attuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P44_has_condition">
+    <rdfs:label xml:lang="it">ha una condizione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of">
+    <rdfs:label xml:lang="it">si è verificato in presenza di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">
+    <rdfs:label xml:lang="it">Attività</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by">
+    <rdfs:label xml:lang="it">è identificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified">
+    <rdfs:label xml:lang="it">ha modificato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P26_moved_to">
+    <rdfs:label xml:lang="it">trasferito a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P156_occupies">
+    <rdfs:label xml:lang="it">occupa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P68i_use_foreseen_by">
+    <rdfs:label xml:lang="it">uso previsto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to">
+    <rdfs:label xml:lang="it">si applica a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P126i_was_employed_in">
+    <rdfs:label xml:lang="it">è stato impiegato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by">
+    <rdfs:label xml:lang="it">proprio tenuto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E80_Part_Removal">
+    <rdfs:label xml:lang="it">Rimozione della parte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P84i_was_maximum_duration_of">
+    <rdfs:label xml:lang="it">era la durata massima di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to">
+    <rdfs:label xml:lang="it">titolo trasferito a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P29_custody_received_by">
+    <rdfs:label xml:lang="it">custodia ricevuta da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P65i_is_shown_by">
+    <rdfs:label xml:lang="it">è mostrato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during">
+    <rdfs:label xml:lang="it">si verifica durante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of">
+    <rdfs:label xml:lang="it">è il tipo di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P117i_includes">
+    <rdfs:label xml:lang="it">include</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for">
+    <rdfs:label xml:lang="it">era usato per</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">
+    <rdfs:label xml:lang="it">ha tipo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P136_was_based_on">
+    <rdfs:label xml:lang="it">era basato su</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper">
+    <rdfs:label xml:lang="it">ha il custode attuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P141i_was_assigned_by">
+    <rdfs:label xml:lang="it">è stato assegnato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item">
+    <rdfs:label xml:lang="it">Elemento visivo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P19_was_intended_use_of">
+    <rdfs:label xml:lang="it">era previsto l'uso di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P71_lists">
+    <rdfs:label xml:lang="it">liste</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E70_Thing">
+    <rdfs:label xml:lang="it">Cosa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point">
+    <rdfs:label xml:lang="it">Punto di contatto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">
+    <rdfs:label xml:lang="it">aveva un partecipante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation">
+    <rdfs:label xml:lang="it">Place Appellation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E85_Joining">
+    <rdfs:label xml:lang="it">accoppiamento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E57_Material">
+    <rdfs:label xml:lang="it">Materiale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object">
+    <rdfs:label xml:lang="it">Oggetto biologico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P161_has_spatial_projection">
+    <rdfs:label xml:lang="it">ha una proiezione spaziale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of">
+    <rdfs:label xml:lang="it">è il titolo di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P84_had_at_most_duration">
+    <rdfs:label xml:lang="it">ha avuto al massimo durata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension">
+    <rdfs:label xml:lang="it">ha dimensione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E79_Part_Addition">
+    <rdfs:label xml:lang="it">Aggiunta di parti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P48i_is_preferred_identifier_of">
+    <rdfs:label xml:lang="it">è l'identificatore preferito di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E74_Group">
+    <rdfs:label xml:lang="it">Gruppo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P103_was_intended_for">
+    <rdfs:label xml:lang="it">era destinato a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E68_Dissolution">
+    <rdfs:label xml:lang="it">Dissoluzione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E48_Place_Name">
+    <rdfs:label xml:lang="it">Nome del luogo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">
+    <rdfs:label xml:lang="it">Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from">
+    <rdfs:label xml:lang="it">titolo trasferito da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within">
+    <rdfs:label xml:lang="it">si trova su o all'interno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P150i_defines_typical_wholes_for">
+    <rdfs:label xml:lang="it">definisce interi tipici per</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by">
+    <rdfs:label xml:lang="it">è indicato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P96_by_mother">
+    <rdfs:label xml:lang="it">da madre</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to">
+    <rdfs:label xml:lang="it">attributo assegnato a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P28i_surrendered_custody_through">
+    <rdfs:label xml:lang="it">consegnato la custodia attraverso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span">
+    <rdfs:label xml:lang="it">ha un lasso di tempo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P124i_was_transformed_by">
+    <rdfs:label xml:lang="it">è stato trasformato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P135_created_type">
+    <rdfs:label xml:lang="it">tipo creato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P116_starts">
+    <rdfs:label xml:lang="it">inizia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E65_Creation">
+    <rdfs:label xml:lang="it">Creazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P143_joined">
+    <rdfs:label xml:lang="it">Iscritto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P25i_moved_by">
+    <rdfs:label xml:lang="it">mosso da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P51_has_former_or_current_owner">
+    <rdfs:label xml:lang="it">ha il precedente o il proprietario attuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence">
+    <rdfs:label xml:lang="it">portato all'esistenza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by">
+    <rdfs:label xml:lang="it">è identificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity">
+    <rdfs:label xml:lang="it">Entità temporale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit">
+    <rdfs:label xml:lang="it">Unità di misura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P131i_identifies">
+    <rdfs:label xml:lang="it">identifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P147_curated">
+    <rdfs:label xml:lang="it">curata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P22i_acquired_title_through">
+    <rdfs:label xml:lang="it">titolo acquisito tramite</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P20i_was_purpose_of">
+    <rdfs:label xml:lang="it">era lo scopo di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P10_falls_within">
+    <rdfs:label xml:lang="it">cade dentro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P87i_identifies">
+    <rdfs:label xml:lang="it">identifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P127_has_broader_term">
+    <rdfs:label xml:lang="it">ha un termine più ampio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P151_was_formed_from">
+    <rdfs:label xml:lang="it">è stato formato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E78_Collection">
+    <rdfs:label xml:lang="it">Collezione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at">
+    <rdfs:label xml:lang="it">ha avuto luogo a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P149i_identifies">
+    <rdfs:label xml:lang="it">identifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition">
+    <rdfs:label xml:lang="it">Acquisizione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">
+    <rdfs:label xml:lang="it">è composto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object">
+    <rdfs:label xml:lang="it">Oggetto concettuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P34_concerned">
+    <rdfs:label xml:lang="it">ha riguardato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by">
+    <rdfs:label xml:lang="it">è stato influenzato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P20_had_specific_purpose">
+    <rdfs:label xml:lang="it">aveva uno scopo specifico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E6_Destruction">
+    <rdfs:label xml:lang="it">Distruzione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of">
+    <rdfs:label xml:lang="it">è attuale o ex membro di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E38_Image">
+    <rdfs:label xml:lang="it">Immagine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P147i_was_curated_by">
+    <rdfs:label xml:lang="it">è stato curato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E75_Conceptual_Object_Appellation">
+    <rdfs:label xml:lang="it">Appellazione concettuale dell'oggetto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E4_Period">
+    <rdfs:label xml:lang="it">Periodo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P167_at">
+    <rdfs:label xml:lang="it">a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P157_is_at_rest_relative_to">
+    <rdfs:label xml:lang="it">è a riposo rispetto a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P29i_received_custody_through">
+    <rdfs:label xml:lang="it">ricevuto la custodia attraverso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point">
+    <rdfs:label xml:lang="it">ha un punto di contatto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">
+    <rdfs:label xml:lang="it">partecipato a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P10i_contains">
+    <rdfs:label xml:lang="it">contiene</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">
+    <rdfs:label xml:lang="it">usato tecnica generale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E56_Language">
+    <rdfs:label xml:lang="it">linguaggio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P26i_was_destination_of">
+    <rdfs:label xml:lang="it">era la destinazione di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E67_Birth">
+    <rdfs:label xml:lang="it">Nascita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location">
+    <rdfs:label xml:lang="it">ha la posizione corrente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object">
+    <rdfs:label xml:lang="it">Oggetto proposizionale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P142_used_constituent">
+    <rdfs:label xml:lang="it">componente utilizzato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E31_Document">
+    <rdfs:label xml:lang="it">Documento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P13_destroyed">
+    <rdfs:label xml:lang="it">distrutto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P37_assigned">
+    <rdfs:label xml:lang="it">assegnato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P125i_was_type_of_object_used_in">
+    <rdfs:label xml:lang="it">era il tipo di oggetto utilizzato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before">
+    <rdfs:label xml:lang="it">si verifica prima</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P3_has_note">
+    <rdfs:label xml:lang="it">ha notato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P161i_is_spatial_projection_of">
+    <rdfs:label xml:lang="it">è la proiezione spaziale di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P140i_was_attributed_by">
+    <rdfs:label xml:lang="it">è stato attribuito da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to">
+    <rdfs:label xml:lang="it">si riferisce a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">
+    <rdfs:label xml:lang="it">Attribuzione attributo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">
+    <rdfs:label xml:lang="it">ha componente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object">
+    <rdfs:label xml:lang="it">Oggetto legale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P28_custody_surrendered_by">
+    <rdfs:label xml:lang="it">custodia consegnata da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P50i_is_current_keeper_of">
+    <rdfs:label xml:lang="it">è attuale detentore di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by">
+    <rdfs:label xml:lang="it">l'inizio è qualificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P133_is_separated_from">
+    <rdfs:label xml:lang="it">è separato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location">
+    <rdfs:label xml:lang="it">ha una posizione permanente attuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P146i_lost_member_by">
+    <rdfs:label xml:lang="it">membro perso da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P102_has_title">
+    <rdfs:label xml:lang="it">ha il titolo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of">
+    <rdfs:label xml:lang="it">è attuale o ex residenza di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P165_incorporates">
+    <rdfs:label xml:lang="it">incorpora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P149_is_identified_by">
+    <rdfs:label xml:lang="it">è identificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P98i_was_born">
+    <rdfs:label xml:lang="it">sono nato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E9_Move">
+    <rdfs:label xml:lang="it">Mossa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P7i_witnessed">
+    <rdfs:label xml:lang="it">assistito</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P142i_was_used_in">
+    <rdfs:label xml:lang="it">era usato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P89i_contains">
+    <rdfs:label xml:lang="it">contiene</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P8i_witnessed">
+    <rdfs:label xml:lang="it">assistito</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P139_has_alternative_form">
+    <rdfs:label xml:lang="it">ha una forma alternativa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by">
+    <rdfs:label xml:lang="it">era motivato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by">
+    <rdfs:label xml:lang="it">membro acquisito da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object">
+    <rdfs:label xml:lang="it">Oggetto fisico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P59_has_section">
+    <rdfs:label xml:lang="it">ha sezione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of">
+    <rdfs:label xml:lang="it">è soggetto di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E39_Actor">
+    <rdfs:label xml:lang="it">Attore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P116i_is_started_by">
+    <rdfs:label xml:lang="it">è iniziato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P44i_is_condition_of">
+    <rdfs:label xml:lang="it">è condizione di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P110i_was_augmented_by">
+    <rdfs:label xml:lang="it">era agosto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P160i_is_temporal_projection_of">
+    <rdfs:label xml:lang="it">è la proiezione temporale di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E49_Time_Appellation">
+    <rdfs:label xml:lang="it">Appellativo temporale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P151i_participated_in">
+    <rdfs:label xml:lang="it">partecipato a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of">
+    <rdfs:label xml:lang="it">era di origine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to">
+    <rdfs:label xml:lang="it">è uguale nel tempo a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by">
+    <rdfs:label xml:lang="it">fine è qualificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P33_used_specific_technique">
+    <rdfs:label xml:lang="it">usato tecnica specifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity">
+    <rdfs:label xml:lang="it">Entità CRM</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P40_observed_dimension">
+    <rdfs:label xml:lang="it">dimensione osservata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P31i_was_modified_by">
+    <rdfs:label xml:lang="it">è stato modificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P111i_was_added_by">
+    <rdfs:label xml:lang="it">è stato aggiunto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing">
+    <rdfs:label xml:lang="it">Cosa fisica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation">
+    <rdfs:label xml:lang="it">Appellativo d'attore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation">
+    <rdfs:label xml:lang="it">appellativo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P70_documents">
+    <rdfs:label xml:lang="it">documenti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E69_Death">
+    <rdfs:label xml:lang="it">Morte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P83i_was_minimum_duration_of">
+    <rdfs:label xml:lang="it">era durata minima di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence">
+    <rdfs:label xml:lang="it">ha residenza attuale o precedente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P167i_was_place_of">
+    <rdfs:label xml:lang="it">era il posto di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P156i_is_occupied_by">
+    <rdfs:label xml:lang="it">è occupato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P118i_is_overlapped_in_time_by">
+    <rdfs:label xml:lang="it">è sovrapposto nel tempo da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E21_Person">
+    <rdfs:label xml:lang="it">Persona</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E84_Information_Carrier">
+    <rdfs:label xml:lang="it">Porta informazioni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P120i_occurs_after">
+    <rdfs:label xml:lang="it">si verifica dopo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P92i_was_brought_into_existence_by">
+    <rdfs:label xml:lang="it">è stato introdotto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation">
+    <rdfs:label xml:lang="it">ha una rappresentazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item">
+    <rdfs:label xml:lang="it">Oggetto persistente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E50_Date">
+    <rdfs:label xml:lang="it">Data</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection">
+    <rdfs:label xml:lang="it">ha una proiezione temporale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to">
+    <rdfs:label xml:lang="it">fornisce l'accesso a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by">
+    <rdfs:label xml:lang="it">è identificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P83_had_at_least_duration">
+    <rdfs:label xml:lang="it">avuto almeno durata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P124_transformed">
+    <rdfs:label xml:lang="it">trasformato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E30_Right">
+    <rdfs:label xml:lang="it">Destra</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P42_assigned">
+    <rdfs:label xml:lang="it">assegnato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life">
+    <rdfs:label xml:lang="it">portato in vita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P21i_was_purpose_of">
+    <rdfs:label xml:lang="it">era lo scopo di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P164_during">
+    <rdfs:label xml:lang="it">durante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P99_dissolved">
+    <rdfs:label xml:lang="it">sciolto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E27_Site">
+    <rdfs:label xml:lang="it">Posto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P146_separated_from">
+    <rdfs:label xml:lang="it">separato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of">
+    <rdfs:label xml:lang="it">è il tempo di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of">
+    <rdfs:label xml:lang="it">è la posizione precedente o attuale di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence">
+    <rdfs:label xml:lang="it">Inizio dell'Esistenza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension">
+    <rdfs:label xml:lang="it">Dimensione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier">
+    <rdfs:label xml:lang="it">ha preferito l'identificatore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end">
+    <rdfs:label xml:lang="it">fine della fine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object">
+    <rdfs:label xml:lang="it">Oggetto creato dall'uomo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P101_had_as_general_use">
+    <rdfs:label xml:lang="it">avuto come uso generale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P81_ongoing_throughout">
+    <rdfs:label xml:lang="it">in corso in tutto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P73i_is_translation_of">
+    <rdfs:label xml:lang="it">è la traduzione di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E12_Production">
+    <rdfs:label xml:lang="it">Produzione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P52i_is_current_owner_of">
+    <rdfs:label xml:lang="it">è attuale proprietario di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State">
+    <rdfs:label xml:lang="it">Stato delle condizioni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">
+    <rdfs:label xml:lang="it">Arco di tempo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of">
+    <rdfs:label xml:lang="it">fa parte di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E32_Authority_Document">
+    <rdfs:label xml:lang="it">Documento di autorità</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P51i_is_former_or_current_owner_of">
+    <rdfs:label xml:lang="it">è ex o attuale proprietario di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P25_moved">
+    <rdfs:label xml:lang="it">mosso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P97_from_father">
+    <rdfs:label xml:lang="it">da padre</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on">
+    <rdfs:label xml:lang="it">le funzionalità sono anche presenti su</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object">
+    <rdfs:label xml:lang="it">Oggetto simbolico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of">
+    <rdfs:label xml:lang="it">è ex detentore o attuale di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in">
+    <rdfs:label xml:lang="it">è documentato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within">
+    <rdfs:label xml:lang="it">cade dentro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence">
+    <rdfs:label xml:lang="it">eliminato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by">
+    <rdfs:label xml:lang="it">è posseduto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E11_Modification">
+    <rdfs:label xml:lang="it">Modifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P55i_currently_holds">
+    <rdfs:label xml:lang="it">attualmente detiene</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P113_removed">
+    <rdfs:label xml:lang="it">rimosso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P166_was_a_presence_of">
+    <rdfs:label xml:lang="it">era una presenza di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P43i_is_dimension_of">
+    <rdfs:label xml:lang="it">è dimensione di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment">
+    <rdfs:label xml:lang="it">Digitare Assegnazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E25_Man-Made_Feature">
+    <rdfs:label xml:lang="it">Caratteristica artificiale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E34_Inscription">
+    <rdfs:label xml:lang="it">Iscrizione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">
+    <rdfs:label xml:lang="it">ha luogo precedente o attuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through">
+    <rdfs:label xml:lang="it">titolo consegnato attraverso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P106i_forms_part_of">
+    <rdfs:label xml:lang="it">fa parte di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P109i_is_current_or_former_curator_of">
+    <rdfs:label xml:lang="it">è attuale o ex curatore di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type">
+    <rdfs:label xml:lang="it">usato oggetto di tipo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P157i_provides_reference_space_for">
+    <rdfs:label xml:lang="it">fornisce uno spazio di riferimento per</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with">
+    <rdfs:label xml:lang="it">si sovrappone nel tempo con</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment">
+    <rdfs:label xml:lang="it">Assegnazione identificatore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P72_has_language">
+    <rdfs:label xml:lang="it">ha un linguaggio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P122_borders_with">
+    <rdfs:label xml:lang="it">confina con</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">
+    <rdfs:label xml:lang="it">misurazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by">
+    <rdfs:label xml:lang="it">è stato prodotto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P21_had_general_purpose">
+    <rdfs:label xml:lang="it">aveva uno scopo generale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by">
+    <rdfs:label xml:lang="it">è portato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P40i_was_observed_in">
+    <rdfs:label xml:lang="it">è stato osservato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by">
+    <rdfs:label xml:lang="it">è stato classificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P90_has_value">
+    <rdfs:label xml:lang="it">ha valore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E14_Condition_Assessment">
+    <rdfs:label xml:lang="it">Valutazione delle condizioni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P134i_was_continued_by">
+    <rdfs:label xml:lang="it">è stato continuato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">
+    <rdfs:label xml:lang="it">ha il precedente o il detentore attuale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P100i_died_in">
+    <rdfs:label xml:lang="it">morto nel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P105i_has_right_on">
+    <rdfs:label xml:lang="it">ha ragione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P68_foresees_use_of">
+    <rdfs:label xml:lang="it">prevede l'uso di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Man-Made_Thing">
+    <rdfs:label xml:lang="it">Cosa fatta dall'uomo fisica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P27_moved_from">
+    <rdfs:label xml:lang="it">traslocato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P56i_is_found_on">
+    <rdfs:label xml:lang="it">si trova su</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of">
+    <rdfs:label xml:lang="it">era tecnica di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E5_Event">
+    <rdfs:label xml:lang="it">Evento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object">
+    <rdfs:label xml:lang="it">usato oggetto specifico</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P141_assigned">
+    <rdfs:label xml:lang="it">assegnato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P13i_was_destroyed_by">
+    <rdfs:label xml:lang="it">è stato distrutto da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P112_diminished">
+    <rdfs:label xml:lang="it">diminuita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies">
+    <rdfs:label xml:lang="it">identifica</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P62i_is_depicted_by">
+    <rdfs:label xml:lang="it">è raffigurato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P128_carries">
+    <rdfs:label xml:lang="it">trasporta</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P5_consists_of">
+    <rdfs:label xml:lang="it">consiste di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">
+    <rdfs:label xml:lang="it">realizzato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure">
+    <rdfs:label xml:lang="it">Design o procedura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin">
+    <rdfs:label xml:lang="it">fine dell'inizio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member">
+    <rdfs:label xml:lang="it">ha un membro attuale o precedente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of">
+    <rdfs:label xml:lang="it">è componente di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P41_classified">
+    <rdfs:label xml:lang="it">classificato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced">
+    <rdfs:label xml:lang="it">Ha prodotto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P34i_was_assessed_by">
+    <rdfs:label xml:lang="it">è stato valutato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P69_is_associated_with">
+    <rdfs:label xml:lang="it">é associato a</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P86_falls_within">
+    <rdfs:label xml:lang="it">cade dentro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P45i_is_incorporated_in">
+    <rdfs:label xml:lang="it">è incorporato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of">
+    <rdfs:label xml:lang="it">consiste di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit">
+    <rdfs:label xml:lang="it">ha unità</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P95_has_formed">
+    <rdfs:label xml:lang="it">si è formato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P165i_is_incorporated_in">
+    <rdfs:label xml:lang="it">è incorporato in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P152_has_parent">
+    <rdfs:label xml:lang="it">ha un genitore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin">
+    <rdfs:label xml:lang="it">inizio dell'inizio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P164i_was_time-span_of">
+    <rdfs:label xml:lang="it">era il lasso di tempo di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P121_overlaps_with">
+    <rdfs:label xml:lang="it">si sovrappone con</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P123i_resulted_from">
+    <rdfs:label xml:lang="it">risultato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E10_Transfer_of_Custody">
+    <rdfs:label xml:lang="it">Trasferimento di custodia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence">
+    <rdfs:label xml:lang="it">Fine dell'Esistenza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing">
+    <rdfs:label xml:lang="it">Cosa fatta dall'uomo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E35_Title">
+    <rdfs:label xml:lang="it">Titolo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P19i_was_made_for">
+    <rdfs:label xml:lang="it">è stato fatto per</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P109_has_current_or_former_curator">
+    <rdfs:label xml:lang="it">ha curatore attuale o ex</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E81_Transformation">
+    <rdfs:label xml:lang="it">Trasformazione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by">
+    <rdfs:label xml:lang="it">è identificato da</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P103i_was_intention_of">
+    <rdfs:label xml:lang="it">era intenzione di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume">
+    <rdfs:label xml:lang="it">Volume dello spazio-tempo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P101i_was_use_of">
+    <rdfs:label xml:lang="it">era l'uso di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P166i_had_presence">
+    <rdfs:label xml:lang="it">avuto presenza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P58i_defines_section">
+    <rdfs:label xml:lang="it">definisce la sezione</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P110_augmented">
+    <rdfs:label xml:lang="it">aumentata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P75_possesses">
+    <rdfs:label xml:lang="it">possiede</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P126_employed">
+    <rdfs:label xml:lang="it">occupato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of">
+    <rdfs:label xml:lang="it">fa parte di</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/P115_finishes">
+    <rdfs:label xml:lang="it">finiture</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
