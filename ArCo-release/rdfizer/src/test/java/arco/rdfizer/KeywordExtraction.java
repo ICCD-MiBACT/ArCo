@@ -21,7 +21,7 @@ public class KeywordExtraction {
 	public static void main(String[] args) {
 		Model model = ModelFactory.createDefaultModel();
 		try {
-			CSVReader reader = new CSVReader(new FileReader(new File("extracted-keywords.txt")));
+			CSVReader reader = new CSVReader(new FileReader(new File("cqs-sketch.txt")));
 			reader.forEach(row -> {
 				String label = row[0];
 				
@@ -34,7 +34,7 @@ public class KeywordExtraction {
 		}
 		
 		try {
-			model.write(new FileWriter("keywords.ttl"), "TURTLE");
+			model.write(new FileWriter("cqs-sketchengine.ttl"), "TURTLE");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
