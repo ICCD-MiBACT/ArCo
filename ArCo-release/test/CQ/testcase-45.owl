@@ -17,35 +17,35 @@
     &quot;bindings&quot;: [
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty1&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Suburban&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/location/Suburban&quot; }
       } ,
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty5&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Suburban&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/location/Suburban&quot; }
       } ,
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty8&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Urban&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/location/Urban&quot; }
       } ,
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty4&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Urban&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/location/Urban&quot; }
       } ,
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty2&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Territorial&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/location/Territorial&quot; }
       } ,
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty6&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Territorial&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/location/Territorial&quot; }
       } ,
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty3&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Underwater&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/location/Underwater&quot; }
       } ,
       {
         &quot;cultpro&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#CulturalProperty7&quot; } ,
-        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/Underwater&quot; }
+        &quot;type&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/location/ontology/Underwater&quot; }
       }
     ]
   }
@@ -54,7 +54,7 @@
         <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
         <testannotationschema:hasCQ xml:lang="it">Qual è il tipo di contesto geografico nel quale è allocato il bene culturale x?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">What is the geographic context type where the cultural property X is located?</testannotationschema:hasCQ>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-location: &lt;https://w3id.org/arco/ontology/location/&gt;
 
 SELECT  *
 WHERE {
