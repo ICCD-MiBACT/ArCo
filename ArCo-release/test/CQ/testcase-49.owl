@@ -16,11 +16,11 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;CultEnt&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EpigrafePicenoCarnica&quot; } ,
-        &quot;AddFor&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AdditionalFormEpigrafePicenoCarnica&quot; } ,
-        &quot;AddForm&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#AdditionalFormEpigrafePicenoCarnica&quot; } ,
+        &quot;CultEnt&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#EpigrafePicenoCarnica&quot; } ,
+        &quot;AddFor&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#AdditionalFormEpigrafePicenoCarnica&quot; } ,
+        &quot;AddForm&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#AdditionalFormEpigrafePicenoCarnica&quot; } ,
         &quot;AddForType&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/ontology/catalogue/EpigraphyForm&quot; } ,
-        &quot;InfoFor&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#InformationFormEpigrafePicenoCarnica&quot; } ,
+        &quot;InfoFor&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI05.owl#InformationFormEpigrafePicenoCarnica&quot; } ,
         &quot;InfoForID&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;ICCD07360433&quot; }
       }
     ]
