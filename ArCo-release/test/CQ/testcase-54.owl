@@ -21,22 +21,22 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#StratigrafiaTempioOstia&quot; } ,
-        &quot;stratArea&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Ostia&quot; } ,
-        &quot;stratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#TempioNuotatore&quot; } ,
-        &quot;StratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Q1&quot; }
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#StratigrafiaTempioOstia&quot; } ,
+        &quot;stratArea&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#Ostia&quot; } ,
+        &quot;stratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#TempioNuotatore&quot; } ,
+        &quot;StratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#Q1&quot; }
       } ,
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#StratigrafiaTempioOstia&quot; } ,
-        &quot;stratArea&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Ostia&quot; } ,
-        &quot;stratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#TempioNuotatore&quot; } ,
-        &quot;StratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Q3&quot; }
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#StratigrafiaTempioOstia&quot; } ,
+        &quot;stratArea&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#Ostia&quot; } ,
+        &quot;stratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#TempioNuotatore&quot; } ,
+        &quot;StratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#Q3&quot; }
       } ,
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#StratigrafiaTempioOstia&quot; } ,
-        &quot;stratArea&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Ostia&quot; } ,
-        &quot;stratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#TempioNuotatore&quot; } ,
-        &quot;StratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Q2&quot; }
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#StratigrafiaTempioOstia&quot; } ,
+        &quot;stratArea&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#Ostia&quot; } ,
+        &quot;stratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#TempioNuotatore&quot; } ,
+        &quot;StratRoom&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI10.owl#Q2&quot; }
       }
     ]
   }
