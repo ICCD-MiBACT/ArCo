@@ -11,7 +11,7 @@
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:testDate xml:lang="en">2019-02-27</testannotationschema:testDate>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI09.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl"/>
         <testannotationschema:hasExpectedResult xml:lang="it">{
   &quot;head&quot;: {
     &quot;vars&quot;: [ &quot;cultprop&quot; , &quot;DetMethod&quot; ]
@@ -19,8 +19,8 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#FilastroccaAmbarabacciccicocco&quot; } ,
-        &quot;DetMethod&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#FonteOrale&quot; }
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#FilastroccaAmbarabacciccicocco&quot; } ,
+        &quot;DetMethod&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl#FonteOrale&quot; }
       }
     ]
   }
