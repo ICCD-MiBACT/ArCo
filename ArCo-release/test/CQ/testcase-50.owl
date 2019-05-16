@@ -16,8 +16,8 @@
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#MonetaBaiocco&quot; } ,
-        &quot;AffElem&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LegendaMonetaBaiocco&quot; }
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#MonetaBaiocco&quot; } ,
+        &quot;AffElem&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI06.owl#LegendaMonetaBaiocco&quot; }
       }
     ]
   }
