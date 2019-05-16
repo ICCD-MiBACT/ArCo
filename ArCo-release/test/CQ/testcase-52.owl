@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-52.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasInputTestData rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/VI/ToyDatasets/Toyset_VI08_BIS.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 
@@ -35,15 +35,15 @@ LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Lucy&quot; } ,
-        &quot;SexEst&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#SexEstimateLucy&quot; } ,
+        &quot;cultprop&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl#Lucy&quot; } ,
+        &quot;SexEst&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl#SexEstimateLucy&quot; } ,
         &quot;sex&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;value&quot;: &quot;F&quot; } ,
-        &quot;DeathAge&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#EstimateAgeDeathLucy&quot; } ,
+        &quot;DeathAge&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl#EstimateAgeDeathLucy&quot; } ,
         &quot;age&quot;: { &quot;type&quot;: &quot;literal&quot; , &quot;datatype&quot;: &quot;http://www.w3.org/2001/XMLSchema#integer&quot; , &quot;value&quot;: &quot;21&quot; } ,
-        &quot;Context&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyFindingContext&quot; } ,
-        &quot;ContextType&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#IndividualBurial&quot; } ,
-        &quot;BioTax&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#LucyTaxonomy&quot; } ,
-        &quot;Species&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;http://www.ontologydesignpatterns.org/cp/owl/partof.owl#Paranthropus&quot; }
+        &quot;Context&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl#LucyFindingContext&quot; } ,
+        &quot;ContextType&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl#IndividualBurial&quot; } ,
+        &quot;BioTax&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl#LucyTaxonomy&quot; } ,
+        &quot;Species&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08_BIS.owl#Paranthropus&quot; }
       }
     ]
   }
