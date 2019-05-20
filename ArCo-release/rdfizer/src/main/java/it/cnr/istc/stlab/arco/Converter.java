@@ -133,7 +133,7 @@ public class Converter {
                 String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
                 arg = TopLevelCultruralPropertyType.getPropertyType(arg);
                 
-                if(arg == null) arg = "https://www.w3id.org/arco/ontology/core/CulturalProperty";
+                if(arg == null) arg = "https://w3id.org/arco/ontology/arco/CulturalProperty";
                 return new XdmAtomicValue(arg);
             }
         };

@@ -92,6 +92,20 @@ kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
 echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .dbunico_loaded
 fi
 
+pwd="dba" ;
+echo "Setting namespaces for ArCo Knowledge Graph" ;
+echo "DB.DBA.XML_SET_NS_DECL ('arco', 'https://w3id.org/arco/ontology/arco/', 2);" >> /namespace-prefixes.sql
+echo "DB.DBA.XML_SET_NS_DECL ('a-cd', 'https://w3id.org/arco/ontology/context-description/', 2);" >> /namespace-prefixes.sql
+echo "DB.DBA.XML_SET_NS_DECL ('a-dd', 'https://w3id.org/arco/ontology/denotative-description/', 2);" >> /namespace-prefixes.sql
+echo "DB.DBA.XML_SET_NS_DECL ('a-loc', 'https://w3id.org/arco/ontology/location/', 2);" >> /namespace-prefixes.sql
+echo "DB.DBA.XML_SET_NS_DECL ('a-ce', 'https://w3id.org/arco/ontology/cultural-event/', 2);" >> /namespace-prefixes.sql
+echo "DB.DBA.XML_SET_NS_DECL ('a-cat', 'https://w3id.org/arco/ontology/catalogue/', 2);" >> /namespace-prefixes.sql
+echo "DB.DBA.XML_SET_NS_DECL ('core', 'https://w3id.org/arco/ontology/core/', 2);" >> /namespace-prefixes.sql
+echo "$(cat /namespace-prefixes.sql)"
+virtuoso-t +wait && isql-v -U dba -P "$pwd" < //namespace-prefixes.sql
+kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > .dbunico_loaded
+
 counter=1
 while [  $counter -lt 20 ]; do
 if [ ! -f ".arco_data_loaded$counter" -a -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/graphs/$counter/" ] ;

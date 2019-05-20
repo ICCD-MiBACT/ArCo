@@ -72,7 +72,149 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-
+		
+		<xsl:variable name="author-string">
+			<xsl:variable name="aut-string">
+				<xsl:if test="schede/*/AU/AUT">
+					<xsl:for-each select="schede/*/AU/AUT">
+						<xsl:choose>
+							<xsl:when
+								test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
+								<xsl:choose>
+									<xsl:when test="position() = 1">
+										<xsl:value-of
+											select="concat(./AUTN, ' (', ./AUTS, ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(', ', ./AUTN, ' (', ./AUTS, ')')" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:when>
+	           				<xsl:otherwise>	
+	           					<xsl:choose>
+									<xsl:when test="position() = 1">
+	           							<xsl:value-of
+											select="./AUTN" />
+									</xsl:when>
+									<xsl:otherwise>
+									<xsl:value-of
+											select="concat(', ', ./AUTN)" />
+									</xsl:otherwise>
+								</xsl:choose>
+	               			</xsl:otherwise>
+	                   	</xsl:choose>
+	                 </xsl:for-each>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:variable name="auf-string">
+				<xsl:if test="schede/*/AU/AUF">
+					<xsl:for-each select="schede/*/AU/AUF">
+						<xsl:choose>
+							<xsl:when
+								test="./AUFN and ./AUFS and not(starts-with(lower-case(normalize-space(./AUFS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFS)), 'n.r'))">
+								<xsl:choose>
+									<xsl:when test="position() = 1">
+										<xsl:value-of
+											select="concat(./AUFN, ' (', ./AUFS, ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(', ', ./AUFN, ' (', ./AUFS, ')')" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:when>
+	           				<xsl:when
+	           					test="./AUFB and ./AUFS and (not(starts-with(lower-case(normalize-space(./AUFS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFS)), 'n.r')))">	
+	           					<xsl:choose>
+									<xsl:when test="position() = 1">
+	           							<xsl:value-of
+											select="concat(./AUFB, ' (', ./AUFS, ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(', ', ./AUFB, ' (', ./AUFS, ')')" />
+									</xsl:otherwise>
+								</xsl:choose>
+	               			</xsl:when>
+	               			<xsl:when test="./AUFB">
+	               				<xsl:choose>
+									<xsl:when test="position() = 1">
+	           							<xsl:value-of
+											select="./AUFB" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(', ', ./AUFB)" />
+									</xsl:otherwise>
+								</xsl:choose>
+	               			</xsl:when>
+	               			<xsl:otherwise>
+	               				<xsl:choose>
+									<xsl:when test="position() = 1">
+	           							<xsl:value-of
+											select="./AUFN" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(', ', ./AUFN)" />
+									</xsl:otherwise>
+								</xsl:choose>
+	               			</xsl:otherwise>
+	                   	</xsl:choose>
+	                 </xsl:for-each>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:choose>
+				<xsl:when test="not($aut-string='')">
+					<xsl:choose>
+						<xsl:when test="not($auf-string='')">
+							<xsl:value-of select="concat(' di ', $aut-string, ', ', $auf-string)" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="concat(' di ', $aut-string)" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<xsl:when test="not($auf-string='')">
+					<xsl:value-of select="concat(' di ', $auf-string)" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="''" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+			
+		<xsl:variable name="cultural-context">
+			<xsl:choose>
+				<xsl:when test="schede/*/AU/ATB/ATBD">
+					<xsl:value-of select="concat(' - ', schede/*/AU/ATB/ATBD)" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="''" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		
+		<xsl:variable name="date-string">
+			<xsl:choose>
+        		<xsl:when test="not(schede/*/DT/DTN/DTNS)">
+        			<xsl:choose>
+                    	<xsl:when test="schede/*/DT/DTZ/DTZS">
+							<xsl:value-of
+								select="concat(' (', schede/*/DT/DTZ/DTZG, ', ',  schede/*/DT/DTZ/DTZS, ')')" />
+						</xsl:when>
+                        <xsl:otherwise>
+                        	<xsl:value-of
+								select="concat(' (', schede/*/DT/DTZ/DTZG, ')')" />
+						</xsl:otherwise>
+                    </xsl:choose>
+        		</xsl:when>
+        		<xsl:otherwise>
+        			<xsl:value-of select="''" />
+        		</xsl:otherwise>
+        	</xsl:choose>
+        </xsl:variable>
 
 
 		<rdf:RDF>
@@ -104,20 +246,24 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTA and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTA)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTA)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
-							<xsl:value-of
-								select="concat($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
-						</xsl:when>
-						<xsl:when test="schede/*/OG/SGT/SGTA or schede/*/OG/SGT/SGTI">
-							<xsl:value-of
-								select="concat($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/SGT/SGTA and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTA)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTA)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
+								<xsl:value-of
+									select="concat($sgta, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+							</xsl:when>
+							<xsl:when test="schede/*/OG/SGT/SGTA or schede/*/OG/SGT/SGTI">
+								<xsl:value-of
+									select="concat($sgta, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -176,16 +322,21 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGD/OGDN">
-							<xsl:value-of
-								select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/OGD/OGDN">
+								<xsl:value-of
+									select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
+					
 				</rdfs:label>
 			</xsl:if>
 
@@ -221,16 +372,20 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGT/OGTN and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTN)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTN)), 'n.r')))">
-							<xsl:value-of
-								select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/OGT/OGTN and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTN)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTN)), 'n.r')))">
+								<xsl:value-of
+									select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -274,16 +429,20 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTI">
-							<xsl:value-of
-								select="concat($sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/SGT/SGTI">
+								<xsl:value-of
+									select="concat($sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtn)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -339,20 +498,24 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
-							<xsl:value-of
-								select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
-						</xsl:when>
-						<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
-							<xsl:value-of
-								select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
+								<xsl:value-of
+									select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
+							</xsl:when>
+							<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
+								<xsl:value-of
+									select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtv)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -409,8 +572,12 @@
 
 				<xsl:for-each select="schede/*/SG/SGT/SGTI">
 					<rdfs:label>
-						<xsl:value-of
-							select="concat(normalize-space(.), ' (', normalize-space(/schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
+						<xsl:variable name="tmp-label">
+							<xsl:value-of
+								select="concat(normalize-space(.), ' (', normalize-space(/schede/*/OG/OGT/OGTD), $ogtv, $ogtw, $ogtp, ')')" />
+						</xsl:variable>
+						
+						<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 					</rdfs:label>
 				</xsl:for-each>
 				
@@ -456,16 +623,20 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGT/OGTN">
-							<xsl:value-of
-								select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtc)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/OGT/OGTN">
+								<xsl:value-of
+									select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtc)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -498,20 +669,24 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGT/OGTM and schede/*/OG/OGT/OGTP and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTM)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTP)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTP)), 'n.r')))">
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, ', ', $ogtp, ')')" />
-						</xsl:when>
-						<xsl:when test="schede/*/OG/OGT/OGTM or schede/*/OG/OGT/OGTP">
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, $ogtp, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT))" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/OGT/OGTM and schede/*/OG/OGT/OGTP and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTM)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTP)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTP)), 'n.r')))">
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, ', ', $ogtp, ')')" />
+							</xsl:when>
+							<xsl:when test="schede/*/OG/OGT/OGTM or schede/*/OG/OGT/OGTP">
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT), ' (', $ogtm, $ogtp, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/OGT/OGTT))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -520,8 +695,12 @@
 
 			<xsl:if test="$sheetType='TMA'">
 				<rdfs:label>
-					<xsl:value-of
-						select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', normalize-space(schede/*/OG/OGT/OGTM), ')')" />
+					<xsl:variable name="tmp-label">
+						<xsl:value-of
+							select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', normalize-space(schede/*/OG/OGT/OGTM), ')')" />
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -544,19 +723,24 @@
 
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGT/OGTT and schede/*/OG/OGT/OGTH and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTH)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTH)), 'n.r')))">
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogth, ')')" />
-						</xsl:when>
-						<xsl:when test="schede/*/OG/OGT/OGTT or schede/*/OG/OGT/OGTH">
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogth, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/OGT/OGTT and schede/*/OG/OGT/OGTH and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTH)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTH)), 'n.r')))">
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogth, ')')" />
+							</xsl:when>
+							<xsl:when test="schede/*/OG/OGT/OGTT or schede/*/OG/OGT/OGTH">
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogth, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -589,19 +773,23 @@
 
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
-							<xsl:value-of
-								select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
-						</xsl:when>
-						<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
-							<xsl:value-of
-								select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
+								<xsl:value-of
+									select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
+							</xsl:when>
+							<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
+								<xsl:value-of
+									select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -645,20 +833,24 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
-							<xsl:value-of
-								select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
-						</xsl:when>
-						<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
-							<xsl:value-of
-								select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
+								<xsl:value-of
+									select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+							</xsl:when>
+							<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
+								<xsl:value-of
+									select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtv, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -717,16 +909,20 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGT/OGTN">
-							<xsl:value-of
-								select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/OGT/OGTN">
+								<xsl:value-of
+									select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtc, $ogtf, $ogtg)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -763,16 +959,20 @@
 						</xsl:variable>
 
 						<rdfs:label>
-							<xsl:choose>
-								<xsl:when test="schede/*/OG/OGT/OGTN">
-									<xsl:value-of
-										select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')')" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of
-										select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtq)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:variable name="tmp-label">
+								<xsl:choose>
+									<xsl:when test="schede/*/OG/OGT/OGTN">
+										<xsl:value-of
+											select="concat($ogtn, normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtq)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							
+							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 						</rdfs:label>
 					</xsl:when>
 					<xsl:otherwise>
@@ -802,16 +1002,20 @@
 
 
 						<rdfs:label>
-							<xsl:choose>
-								<xsl:when test="schede/*/OG/OGT/OGTD">
-									<xsl:value-of
-										select="concat($ogtd, normalize-space(schede/*/OG/OGT/OGTT), $ogtq, ')')" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of
-										select="concat(normalize-space(schede/*/OG/OGT/OGTT), $ogtq)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:variable name="tmp-label">
+								<xsl:choose>
+									<xsl:when test="schede/*/OG/OGT/OGTD">
+										<xsl:value-of
+											select="concat($ogtd, normalize-space(schede/*/OG/OGT/OGTT), $ogtq, ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(normalize-space(schede/*/OG/OGT/OGTT), $ogtq)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							
+							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 						</rdfs:label>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -847,8 +1051,12 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:value-of
-						select="concat(normalize-space(schede/*/OG/OGT/OGTN), ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')', $ogad)" />
+					<xsl:variable name="tmp-label">
+						<xsl:value-of
+							select="concat(normalize-space(schede/*/OG/OGT/OGTN), ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtq, ')', $ogad)" />
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -876,8 +1084,12 @@
 						</xsl:variable>
 
 						<rdfs:label>
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/DB/DBD), $dbl, ' (', normalize-space(schede/*/DB/DBC), ')')" />
+							<xsl:variable name="tmp-label">
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/DB/DBD), $dbl, ' (', normalize-space(schede/*/DB/DBC), ')')" />
+							</xsl:variable>
+							
+							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 						</rdfs:label>
 					</xsl:when>
 					<xsl:otherwise>
@@ -899,16 +1111,20 @@
 						</xsl:variable>
 
 						<rdfs:label>
-							<xsl:choose>
-								<xsl:when test="schede/*/OG/OGD/OGDN">
-									<xsl:value-of
-										select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG), ')')" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of
-										select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG))" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:variable name="tmp-label">
+								<xsl:choose>
+									<xsl:when test="schede/*/OG/OGD/OGDN">
+										<xsl:value-of
+											select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG), ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(normalize-space(schede/*/OG/OGT/OGTD), ', ', normalize-space(schede/*/OG/CTG))" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							
+							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 						</rdfs:label>
 
 					</xsl:otherwise>
@@ -969,20 +1185,24 @@
 						</xsl:variable>
 
 						<rdfs:label>
-							<xsl:choose>
-								<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
-									<xsl:value-of
-										select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
-								</xsl:when>
-								<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
-									<xsl:value-of
-										select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of
-										select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:variable name="tmp-label">
+								<xsl:choose>
+									<xsl:when test="schede/*/OG/SGT/SGTT and schede/*/OG/SGT/SGTI and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/SGT/SGTI)), 'n.r')))">
+										<xsl:value-of
+											select="concat($sgtt, ', ', $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
+									</xsl:when>
+									<xsl:when test="schede/*/OG/SGT/SGTT or schede/*/OG/SGT/SGTI">
+										<xsl:value-of
+											select="concat($sgtt, $sgti, ' (', normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg, ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ogtg)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							
+							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 						</rdfs:label>
 					</xsl:when>
 					<xsl:otherwise>
@@ -1025,16 +1245,20 @@
 						</xsl:variable>
 
 						<rdfs:label>
-							<xsl:choose>
-								<xsl:when test="schede/*/OG/OGD/OGDN">
-									<xsl:value-of
-										select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg, ')')" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of
-										select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg)" />
-								</xsl:otherwise>
-							</xsl:choose>
+							<xsl:variable name="tmp-label">
+								<xsl:choose>
+									<xsl:when test="schede/*/OG/OGD/OGDN">
+										<xsl:value-of
+											select="concat($ogdn, normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg, ')')" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of
+											select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtt, $ctg)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:variable>
+							
+							<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 						</rdfs:label>
 
 					</xsl:otherwise>
@@ -1081,8 +1305,12 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:value-of
-						select="concat($nbna, normalize-space(schede/*/OG/OGT/OGTD), $ogte, $ogtc)" />
+					<xsl:variable name="tmp-label">
+						<xsl:value-of
+							select="concat($nbna, normalize-space(schede/*/OG/OGT/OGTD), $ogte, $ogtc)" />
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -1103,8 +1331,12 @@
 				</xsl:variable>
 
 				<rdfs:label>
-					<xsl:value-of
-						select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
+					<xsl:variable name="tmp-label">
+						<xsl:value-of
+							select="concat(normalize-space(schede/*/OG/OGT/OGTD), $ogtv)" />
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -1137,19 +1369,23 @@
 
 
 				<rdfs:label>
-					<xsl:choose>
-						<xsl:when test="schede/*/OG/OGT/OGTT and schede/*/OG/OGT/OGTV and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTV)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTV)), 'n.r')))">
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtv, ')')" />
-						</xsl:when>
-						<xsl:when test="schede/*/OG/OGT/OGTT or schede/*/OG/OGT/OGTV">
-							<xsl:value-of
-								select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtv, ')')" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:variable name="tmp-label">
+						<xsl:choose>
+							<xsl:when test="schede/*/OG/OGT/OGTT and schede/*/OG/OGT/OGTV and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTT)), 'n.r'))) and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTV)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTV)), 'n.r')))">
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, ', ', $ogtv, ')')" />
+							</xsl:when>
+							<xsl:when test="schede/*/OG/OGT/OGTT or schede/*/OG/OGT/OGTV">
+								<xsl:value-of
+									select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' (', $ogtt, $ogtv, ')')" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 
@@ -1157,7 +1393,11 @@
 			<!-- FF -->
 			<xsl:if test="$sheetType='FF'">
 				<rdfs:label>
-					<xsl:value-of select="normalize-space(schede/*/OG/OGD/OGDN)" />
+					<xsl:variable name="tmp-label">
+						<xsl:value-of select="normalize-space(schede/*/OG/OGD/OGDN)" />
+					</xsl:variable>
+					
+					<xsl:value-of select="concat($tmp-label, $author-string, $cultural-context, $date-string)" />
 				</rdfs:label>
 			</xsl:if>
 			
