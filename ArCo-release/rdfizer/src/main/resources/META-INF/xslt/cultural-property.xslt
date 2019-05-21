@@ -1563,7 +1563,7 @@
 								select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
 		                        </xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
-						<arco-arco:hasAuthor>
+						<arco-cd:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 		                    		<xsl:variable name="author">
 			                            <xsl:choose>
@@ -1580,7 +1580,7 @@
 		                            </xsl:variable>
 		                            <xsl:value-of select="$author" />
 		                    	</xsl:attribute>
-						</arco-arco:hasAuthor>
+						</arco-cd:hasAuthor>
 					</xsl:when>
 					<xsl:otherwise>
 					<xsl:for-each select="./AUTW">
@@ -1605,7 +1605,7 @@
 								select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-photographer-', position())" />
 		                        </xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
-						<arco-arco:hasAuthor>
+						<arco-cd:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 		                    		<xsl:variable name="author">
 			                            	<xsl:choose>
@@ -1640,7 +1640,7 @@
 			                                </xsl:otherwise>
 			                            </xsl:choose>
 		                    	</xsl:attribute>
-						</arco-arco:hasAuthor>
+						</arco-cd:hasAuthor>
 				</xsl:if>
 				</xsl:for-each>
 				<!-- author for BDM < 4.00 -->
@@ -1652,7 +1652,7 @@
 								select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, position())" />
 		                        </xsl:attribute>
 						</arco-cd:hasAuthorshipAttribution>
-						<arco-arco:hasAuthor>
+						<arco-cd:hasAuthor>
 							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="./AUFN and (./AUFS and (not(starts-with(lower-case(normalize-space(./AUFS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFS)), 'n.r'))))">
@@ -1669,7 +1669,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
                             </xsl:attribute>
-						</arco-arco:hasAuthor>
+						</arco-cd:hasAuthor>
 				</xsl:if>
 				</xsl:for-each>
 				<!-- archivalrecordset membership -->

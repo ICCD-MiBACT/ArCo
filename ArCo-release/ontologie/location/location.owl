@@ -2167,7 +2167,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <dc:description xml:lang="it">Un esempio d&apos;uso della classe &quot;Localizzazione tipizzata nel tempo&apos; è il seguente:
 resource:TimeIndexedTypedLocation/0800055566-alternative-1
         a           a-loc:TimeIndexedTypedLocation ;
-        rdfs:label &quot;Localizzazione alternativa 1 del bene culturale: 0800055566&quot;@en ;
+        rdfs:label &quot;Altra localizzazione 1 del bene culturale: 0800055566&quot;@en ;
        a-loc:atSite  resource:Site/7761991208459c29ef5c7cee8ff29deb ;
         a-loc:hasLocationType a-loc:LastLocation ;
         tiapit:atTime resource:TimeInterval/2002 .</dc:description>

@@ -1512,7 +1512,7 @@
 							select="concat($NS, 'Title/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
             			</xsl:attribute>
 						<rdf:type
-							rdf:resource="https://w3id.org/arco/context-description/Title" />
+							rdf:resource="https://w3id.org/arco/ontology/context-description/Title" />
 						<rdfs:label>
 							<xsl:value-of select="normalize-space(.)" />
 						</rdfs:label>
@@ -8017,7 +8017,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
             				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/context-description/InterpretationCriterionAndDocument'" />
+							select="'https://w3id.org/arco/ontology/context-description/SourceAndDocument'" />
             			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="en">
@@ -9432,7 +9432,7 @@
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
             				<xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/Agent'" />
+								select="'https://w3id.org/italia/onto/l0/Agent'" />
             			</xsl:attribute>
 						</rdf:type>
 						<rdfs:label xml:lang="en">
@@ -10743,7 +10743,7 @@
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
-									select="'https://w3id.org/arco/ontology/context-description/Motivation'" />
+									select="'https://w3id.org/arco/ontology/context-description/SurveyMotivation'" />
 		                        </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
@@ -23443,7 +23443,7 @@
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
-										select="'https://w3id.org/arco/ontology/denotative-description/SiteDefinition'" />
+										select="'https://w3id.org/arco/ontology/location/SiteDefinition'" />
                                     </xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -23463,7 +23463,7 @@
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
-										select="'https://w3id.org/arco/ontology/denotative-description/SiteSpecification'" />
+										select="'https://w3id.org/arco/ontology/location/SiteSpecification'" />
                                     </xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -23750,11 +23750,11 @@
 					</arco-location:isTimeIndexedTypedLocationOf>
 					<rdfs:label xml:lang="it">
 						<xsl:value-of
-							select="concat('Localizzazione alternativa ', position(), ' del bene: ', $itemURI)" />
+							select="concat('Altra localizzazione ', position(), ' del bene: ', $itemURI)" />
 					</rdfs:label>
 					<l0:name xml:lang="it">
 						<xsl:value-of
-							select="concat('Localizzazione alternativa ', position(), ' del bene: ', $itemURI)" />
+							select="concat('Altra localizzazione ', position(), ' del bene: ', $itemURI)" />
 					</l0:name>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of
@@ -24260,7 +24260,7 @@
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
-										select="'https://w3id.org/arco/ontology/denotative-description/SiteDefinition'" />
+										select="'https://w3id.org/arco/ontology/location/SiteDefinition'" />
                                         </xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
@@ -24279,7 +24279,7 @@
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
-										select="'https://w3id.org/arco/ontology/denotative-description/SiteSpecification'" />
+										select="'https://w3id.org/arco/ontology/location/SiteSpecification'" />
                                         </xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
