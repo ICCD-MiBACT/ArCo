@@ -22828,7 +22828,7 @@
 			<xsl:if test="schede/*/LC/PVC/*">
 				<xsl:variable name="address">
 					<xsl:value-of
-						select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(schede/*/LC/PVC), normalize-space(schede/*/LC/PVL), normalize-space(schede/*/LC/LDC/LDCU)))))" />
+						select="concat($NS, 'Address/', arco-fn:arcofy(concat(schede/*/LC/PVC, schede/*/LC/PVL, schede/*/LC/LDC/LDCU)))" />
 				</xsl:variable>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -25949,15 +25949,64 @@
 			<!-- The individual typed as RelatedWorkSituation is created here (cf. 
 				rule #RWS in component.xslt). -->
 			<xsl:for-each select="schede/*/*/RSE">
+				<xsl:variable name="create-rel-work-situation">
+					<xsl:choose>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='è contenuto in' 
+						or lower-case(normalize-space(./RSER))='luogo di collocazione/localizzazione'
+						or lower-case(normalize-space(./RSER))='scheda contenitore')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='era contenuto in' 
+						or lower-case(normalize-space(./RSER))='luogo di provenienza')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='esecuzione/evento di riferimento' 
+						or lower-case(normalize-space(./RSER))='è coinvolto in')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='sede di realizzazione' 
+						or lower-case(normalize-space(./RSER))='è stato realizzato in')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='bene composto' 
+						or lower-case(normalize-space(./RSER))='è compreso in')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='fonte di rappresentazione' 
+						or lower-case(normalize-space(./RSER))='è rappresentato in')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='relazione urbanistico ambientale' 
+						or lower-case(normalize-space(./RSER))='è in relazione urbanistico - ambientale con')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:when
+							test="(lower-case(normalize-space(./RSER))='sede di rinvenimento' 
+						or lower-case(normalize-space(./RSER))='è stato rinvenuto in')">
+							<xsl:value-of select="'false'" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="'true'" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>	
+			
 				<xsl:if
 					test="./* and not(starts-with(lower-case(normalize-space(./RSEC)), 'nr')) and not(starts-with(lower-case(normalize-space(./RSEC)), 'n.r')) and not(lower-case(normalize-space(./RSER))='scheda storica')">
 					<xsl:variable name="related-property"
 						select="arco-fn:related-property(normalize-space(./RSEC), 'foaf')" />
-					<xsl:if test="count($related-property) > 0">
+					<xsl:if test="count($related-property) > 0 and $create-rel-work-situation='true'">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 								<xsl:value-of
-								select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-typed-related-cultural-property-', position())" />
+								select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-1-', position())" />
 							</xsl:attribute>
 							<rdf:type
 								rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation" />
@@ -25977,102 +26026,12 @@
 								<xsl:value-of
 									select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and other cultural property')" />
 							</l0:name>
-							<xsl:choose>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='è in relazione con' 
-								or lower-case(normalize-space(./RSER))='scheda altra fotografia'
-								or lower-case(normalize-space(./RSER))='scheda opera raffigurata'
-								or lower-case(normalize-space(./RSER))='nr (recupero pregresso)')">
-									<arco-cd:involvesRelatedWork>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="$related-property" />
-										</xsl:attribute>
-									</arco-cd:involvesRelatedWork>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='è contenuto in' 
-								or lower-case(normalize-space(./RSER))='luogo di collocazione/localizzazione'
-								or lower-case(normalize-space(./RSER))='scheda contenitore')">
-									<arco-cd:isLocatedIn>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:isLocatedIn>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='era contenuto in' 
-								or lower-case(normalize-space(./RSER))='luogo di provenienza')">
-									<arco-cd:hasPreviousLocation>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:hasPreviousLocation>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='esecuzione/evento di riferimento' 
-								or lower-case(normalize-space(./RSER))='è coinvolto in')">
-									<arco-cd:isInvolvedIn>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:isInvolvedIn>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='sede di realizzazione' 
-								or lower-case(normalize-space(./RSER))='è stato realizzato in')">
-									<arco-cd:hasCreationLocation>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:hasCreationLocation>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='bene composto' 
-								or lower-case(normalize-space(./RSER))='è compreso in')">
-									<arco-cd:isReusedBy>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:isReusedBy>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='fonte di rappresentazione' 
-								or lower-case(normalize-space(./RSER))='è rappresentato in')">
-									<arco-cd:isSubjectOf>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:isSubjectOf>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='relazione urbanistico ambientale' 
-								or lower-case(normalize-space(./RSER))='è in relazione urbanistico - ambientale con')">
-									<arco-cd:hasUrbanPlanningEnvironmentalRelationWith>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:hasUrbanPlanningEnvironmentalRelationWith>
-								</xsl:when>
-								<xsl:when
-									test="(lower-case(normalize-space(./RSER))='sede di rinvenimento' 
-								or lower-case(normalize-space(./RSER))='è stato rinvenuto in')">
-									<arco-cd:hasFindingLocation>>
-										<xsl:attribute name="rdf:resource">
-										<xsl:value-of select="$related-property" />
-									</xsl:attribute>
-									</arco-cd:hasFindingLocation>
-								</xsl:when>
-								<xsl:otherwise>
-									<arco-cd:involvesRelatedWork>
-										<xsl:attribute name="rdf:resource">
-											<xsl:value-of select="$related-property" />
-										</xsl:attribute>
-									</arco-cd:involvesRelatedWork>
-								</xsl:otherwise>
-							</xsl:choose>
-
-
-
+							<arco-cd:involvesRelatedWork>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="$related-property" />
+								</xsl:attribute>
+							</arco-cd:involvesRelatedWork>
+							
 						</rdf:Description>
 					</xsl:if>
 				</xsl:if>
@@ -26086,7 +26045,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 							<xsl:value-of
-							select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-', position())" />
+							select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-2-', position())" />
 						</xsl:attribute>
 						<rdf:type
 							rdf:resource="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation" />

@@ -111,7 +111,7 @@
 							<l0:name xml:lang="it">
 								<xsl:value-of select="concat('Misurazioni del bene culturale ', $itemURI, ' ', normalize-space(./VMCE))" />
 							</l0:name>
-							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MeasurementCollection" />
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection" />
 							<arco-dd:hasMeasurement>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))))" />
@@ -206,7 +206,7 @@
 							<l0:name xml:lang="it">
 								<xsl:value-of select="concat('Misurazioni del bene culturale ', $itemURI)" />
 							</l0:name>
-							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/MeasurementCollection" />
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection" />
 							<arco-dd:hasMeasurement>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./VMCT))))" />
