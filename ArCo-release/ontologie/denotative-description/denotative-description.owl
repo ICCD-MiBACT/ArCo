@@ -193,19 +193,19 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/classifies -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/classifiesCharacteristic -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/classifies">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/classifiesCharacteristic">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
-        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è classificato da&quot;, collega un concetto tecnico a una caratteristica tecnica di un&apos;entità - come un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property connects a techical concept to an entity&apos;s technical characteristic. It is the inverse property of isClassifiedBy.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà, inversa a &quot;è caratteristica classificata da&quot;, collega un concetto tecnico a una caratteristica tecnica di un&apos;entità - come un bene culturale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a techical concept to an entity&apos;s technical characteristic. It is the inverse property of isCharacteristicClassifiedBy.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">classifica</rdfs:label>
-        <rdfs:label xml:lang="en">classifies</rdfs:label>
+        <rdfs:label xml:lang="it">classifica caratteristica tecnica</rdfs:label>
+        <rdfs:label xml:lang="en">classifies technical characteristic</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1359,9 +1359,9 @@
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isClassifiedBy -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
@@ -1369,8 +1369,8 @@
         <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica di un&apos;entità - come un bene culturale - a un concetto tecnico, che la classifica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity&apos;s techincal characteristic to a technical concept, which classifies that characteristic.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is classified by</rdfs:label>
-        <rdfs:label xml:lang="it">è classificato da</rdfs:label>
+        <rdfs:label xml:lang="en">is technical characteristic classified by</rdfs:label>
+        <rdfs:label xml:lang="it">è caratteristica tecnica classificata da</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3925,7 +3925,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClassifiedBy"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
             </owl:Restriction>
         </rdfs:subClassOf>
