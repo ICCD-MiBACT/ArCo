@@ -3255,19 +3255,19 @@
                 </xsl:for-each>
                 <!-- sex estimate -->
                 <xsl:if test="schede/AT/DA/STS">
-                	<arco-cd:hasSexEstimate>
+                	<arco-cd:hasSexInterpretation>
                 		<xsl:attribute name="rdf:resource">
-                			<xsl:value-of select="concat($NS, 'SexEstimate/', $itemURI)" />
+                			<xsl:value-of select="concat($NS, 'SexInterpretation/', $itemURI)" />
                 		</xsl:attribute>
-                	</arco-cd:hasSexEstimate>
+                	</arco-cd:hasSexInterpretation>
                 </xsl:if>
                  <!-- age of death estimate -->
                 <xsl:if test="schede/AT/DA/SEM">
-                	<arco-cd:hasAgeOfDeathEstimate>
+                	<arco-cd:hasAgeOfDeathInterpretation>
                 		<xsl:attribute name="rdf:resource">
-                			<xsl:value-of select="concat($NS, 'AgeOfDeathEstimate/', $itemURI)" />
+                			<xsl:value-of select="concat($NS, 'AgeOfDeathInterpretation/', $itemURI)" />
                 		</xsl:attribute>
-                	</arco-cd:hasAgeOfDeathEstimate>
+                	</arco-cd:hasAgeOfDeathInterpretation>
                 </xsl:if>
                 <!-- material of cultural property (version 4.00) -->
                 <xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">

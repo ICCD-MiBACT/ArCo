@@ -1372,7 +1372,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 	            			<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
+								select="concat($NS, 'Subject/', arco-fn:urify(.))" />
             		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -4795,7 +4795,7 @@
 								test="./DTN/DTNS and (not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'n.r')))">
 								<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
-									select="concat($NS, 'Event/', $itemURI, arco-fn:urify(normalize-space(./DTN/DTNS)))" />
+									select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./DTN/DTNS)))" />
                                 </xsl:attribute>
 							</xsl:when>
 							<xsl:otherwise>
@@ -4882,7 +4882,7 @@
                             <xsl:when
 						test="./DTN/DTNS and (not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'n.r')))">
                                 <xsl:value-of
-						select="concat($NS, 'Event/', $itemURI, arco-fn:urify(normalize-space(./DTNS)))" />
+						select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./DTNS)))" />
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:value-of
@@ -14873,12 +14873,12 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                 			<xsl:value-of
-						select="concat($NS, 'SexEstimate/', $itemURI)" />
+						select="concat($NS, 'SexInterpretation/', $itemURI)" />
                 		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                 				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/context-description/SexEstimate'" />
+							select="'https://w3id.org/arco/ontology/context-description/SexInterpretation'" />
                 			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -14891,16 +14891,16 @@
 					</l0:name>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of
-							select="concat('Sex estimate of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/STS/STSS))" />
+							select="concat('Sex interpretation of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/STS/STSS))" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
 						<xsl:value-of
-							select="concat('Sex estimate of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/STS/STSS))" />
+							select="concat('Sex interpretation of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/STS/STSS))" />
 					</l0:name>
-					<arco-cd:estimatedSex>
+					<arco-cd:sex>
 						<xsl:value-of
 							select="normalize-space(schede/AT/DA/STS/STSS)" />
-					</arco-cd:estimatedSex>
+					</arco-cd:sex>
 					<xsl:if
 						test="schede/AT/DA/STS/STSC and (not(starts-with(lower-case(normalize-space(schede/AT/DA/STS/STSC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/AT/DA/STS/STSC)), 'n.r')) and not(schede/AT/DA/STS/STSC='-'))">
 						<arco-cd:hasInterpretationCriterion>
@@ -14940,12 +14940,12 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                 			<xsl:value-of
-						select="concat($NS, 'AgeOfDeathEstimate/', $itemURI)" />
+						select="concat($NS, 'AgeOfDeathInterpretation/', $itemURI)" />
                 		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                 				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate'" />
+							select="'https://w3id.org/arco/ontology/context-description/AgeOfDeathInterpretation'" />
                 			</xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
@@ -14958,16 +14958,16 @@
 					</l0:name>
 					<rdfs:label xml:lang="en">
 						<xsl:value-of
-							select="concat('Age of death estimate of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/SEM/SEME))" />
+							select="concat('Age of death interpretation of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/SEM/SEME))" />
 					</rdfs:label>
 					<l0:name xml:lang="en">
 						<xsl:value-of
-							select="concat('Age of death estimate of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/SEM/SEME))" />
+							select="concat('Age of death interpretation of cultural property ', $itemURI, ': ', normalize-space(schede/AT/DA/SEM/SEME))" />
 					</l0:name>
-					<arco-cd:estimatedAgeOfDeath>
+					<arco-cd:ageOfDeath>
 						<xsl:value-of
 							select="normalize-space(schede/AT/DA/SEM/SEME)" />
-					</arco-cd:estimatedAgeOfDeath>
+					</arco-cd:ageOfDeath>
 					<xsl:if
 						test="schede/AT/DA/SEM/SEMC and (not(starts-with(lower-case(normalize-space(schede/AT/DA/SEM/SEMC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/AT/DA/SEM/SEMC)), 'n.r')) and not(schede/AT/DA/SEM/SEMC='-'))">
 						<arco-cd:hasInterpretationCriterion>
