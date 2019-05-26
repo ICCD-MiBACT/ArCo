@@ -57,48 +57,42 @@
 	</section>
 	<section class="primer">
 		<div class="container">
-			<h2 id="intro">Introduzione</h2>
-			<p>Questo documento descrive le ontologie incluse
-				nella versione 1.0 di ArCo, una rete di ontologie per descrivere i diversi tipi di beni culturali e le schede catalografiche a essi associate, gestite con il sistema SIGEC dall'<i>Istituto Centrale per il Catalogo e la Documentazione (ICCD)</i>.</p>
+			<h2 id="intro">Introduction</h2>
+			<p>This guide presents the ontologies of the version 1.0 of ArCo, an ontology network for representing many types of cultural properties and the catalogue records describing them, stored in SIGEC information system (maintained by the Italian Institute for Catalogue and Documentation - ICCD-MiBAC).</p>
 			<p>
-				In questa versione si conferma l'organizzazione in sette moduli ontologici. Inoltre, si rimanda al primer della <a href="./primer-guide.html">versione v0.1</a> per ulteriori dettagli sull'interpretazione delle varie versioni della rete e sulle ontologie riusate.
+				ArCo 1.0 consists of 7 modules. For more information on the versions of ArCo ontologies please refer to the <a href="./primer-guide.html">Primer Guide v0.1</a>.
 			</p>
-			<p>
-				Le ontologie ArCo sono pubblicate all'interno di un <i>docker</i> che comprende:
+			<p>ArCo ontologies are published in a <i>docker</i> including:
 			</p>
 			<ul>
-				<li>Questa guida;</li>
-				<li>I moduli ontologici sviluppati;</li>
-				<li>Esempi di <i>competency questions</i> e loro traduzione
-					sotto forma di SPARQL query;
+				<li>This guide;</li>
+				<li>The ontological modules so far developed;</li>
+				<li>Examples of <i>competency questions</i> and related SPARQL queries;
 				</li>
-				<li>Un campione dei dati del SIGEC trasformati in RDF secondo
-					le modellazioni di ArCo;</li>
-				<li>Un motore SPARQL basato su Virtuoso per permettere
-					l'interrogazione dei dati e delle ontologie.</li>
+				<li>SIGEC data transformed into RDF according to ArCo modeling;</li>
+				<li>A SPARQL engine based on Virtuoso to allow the interrogation of data and ontologies.</li>
 			</ul>
 		</div>
 	</section>
 	<section class="primer">
 		<div class="container">
-			<h2>Indice dei contenuti</h2>
+			<h2>Table of contents</h2>
 			<ol>
-				<li><a href="#rete">La rete di ontologie ArCo v1.0</a></li>
-				<li><a href="#moduli">I moduli di ArCo v1.0</a></li>
+				<li><a href="#rete">ArCo v1.0 ontology network</a></li>
+				<li><a href="#moduli">ArCo v1.0 modules</a></li>
 			</ol>
 		</div>
 	</section>
 	<section class="primer">
 		<div class="container">
-			<h2 id="rete">La rete di ontologie ArCo v1.0</h2>
+			<h2 id="rete">ArCo v1.0 ontology network</h2>
 			<p>
-				Questa versione v1.0 della rete di ontologie ArCo rappresenta la totalità delle informazioni contenute nella <a target="_blank"href"http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici">Normativa
-					Trasversale</a> e informazioni centrali estratte dalle normative relative alle singole tipologie di beni, a esclusione dei beni naturalistici. Di seguito si elencano tutte le modellazioni presenti nella rete, divise per ciascun modulo ontologico di appartenenza.
-			
-			<p>Nella tabella seguente sono elencati gli IRI dei moduli e delle ontologie riusate, ognuno associato a un prefisso.</p>
+				This version 1.0 represents all the information contained in the <a target="_blank" href="http://www.iccd.beniculturali.it/it/ricercanormative/61/ntr-normativa-trasversale-4_00">Normativa
+					Trasversale</a> and information peculiar to all the typologies of cultural properties, apart from naturalistic heritage.</p>			
+			<p>In the following table can be found the IRIs of the ontology modules and of the reused ontologies, along with their prefixes.</p>
 			<table>
 				<tr>
-					<th>Prefisso</th>
+					<th>Prefix</th>
 					<th>IRI</th>
 				</tr>
 				<tr>
@@ -154,6 +148,10 @@
 					<td>https://w3id.org/italia/onto/SM/</td>
 				</tr>
 				<tr>
+					<td>cpv:</td>
+					<td>https://w3id.org/italia/onto/CPV/</td>
+				</tr>
+				<tr>
 					<td>language:</td>
 					<td>https://w3id.org/italia/onto/Language/</td>
 				</tr>
@@ -165,10 +163,10 @@
 	</section>
 	<section class="primer">
 		<div class="container">
-			<h2 id="moduli">I moduli di ArCo v1.0</h2>
-			<p>In questa sezione si illustrano sinteticamente tutti i nuclei concettuali principali, con diagrammi di esempio, presenti nella v1.0 della rete ArCo. Per una loro descrizione dettagliata si rimanda alla sezione "Ontologie" della pagina principale. Sia le scelte di modellazione sia il vocabolario sono da ritenersi stabili.</p>
+			<h2 id="moduli">ArCo v1.0 modules</h2>
+			<p>This section briefly illustrates all the main concepts that ArCo network consists of. For a detailed description, refer to the "Ontologies" section of the main page. Both the modeling choices and the vocabulary are to be considered stable.</p>
 
-			<h3>Modulo ArCo (arco:)</h3>
+			<h3>ArCo module (arco:)</h3>
 			<p>Questo modulo rappresenta l'intera rete di ArCo, importando tutti gli altri moduli. Modella inoltre le informazioni considerate centrali del dominio dei beni culturali. Il primo diagramma illustra la gerarchia dei beni culturali: la classe centrale arco:CulturalProperty è rappresentata come una partizione tra arco:IntangibleCulturalProperty e arco:TangibleCulturalProperty. I beni intangibili possono a loro volta essere arco:MovableCulturalProperty e arco:ImmovableCulturalProperty. Tipologie di beni culturali più specifiche sono distribuite su più livelli all'interno di questa gerarchia. Il secondo diagramma illustra la modellazione del materiale componente di un lotto di materiali archeologici. In questo modulo si definiscono inoltre diverse categorie che possono classificare tipologie di beni differenti (es.: classificazione di bene fotografico, classificazione di bene musicale, Hornbostel-Sachs o alternativa, etc.)</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/cp-hierarchy.png" /> 
@@ -177,14 +175,14 @@
 
 			<p></p>
 
-			<h3>Modulo Core (core:)</h3>
+			<h3>Core module (core:)</h3>
 			<p>Questo modulo modella le informazioni considerate toplevel (es.: relazione tra il tutto e la parte, tra un'entità e le sue caratteristiche, tra un'entità e un generico luogo, ecc.). Viene importato da tutti gli altri moduli della rete.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/core-module.png" />  
 			</div>
 
 
-			<h3>Modulo Denotative Description (a-dd:)</h3>
+			<h3>Denotative Description module (a-dd:)</h3>
 			<p>Questo modulo (denotazione è inteso come l'atto di indicare una cosa attraverso segni esteriori) modella le informazioni che riguardano il bene culturale in sé, osservate/osservabili durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Il primo diagramma presenta la modellazione di: stato di conservazione, tipo di bene culturale, scopo funzionale, designazione del bene e apparato iconografico o decorativo. Il diagramma seguente illustra la modellazione delle modalità comunicative attraverso le quali viene veicolato un bene demoetnoantropologico immateriale. Nel terzo diagramma sono rappresentate le misure di un bene culturale (membri di una a-dd:MeasurementCollection, per cui si riusa il pattern Collection), mentre nel quarto si presenta la modellazione dello stato tecnico del bene culturale, ovvero della situazione in cui un bene culturale ha una serie di caratteristiche tecniche (es.: forma, materia, tecnica), per il quale si riutilizza il pattern DescriptionAndSituation. Lo stesso concetto è anche rappresentato per mezzo di una relazione binaria (a-dd:hasTechnicalCharacteristic). Infine, l'ultimo diagramma rappresenta gli elementi apposti sul bene culturale (emblemi, timbri, iscrizioni) e l'accessibilità e disponibilità materiale del bene. 
 			<div class="text-center mt-4">
 				<img src="./img1.0/conserv-cptype-funcpurp-design-appar.png" />
@@ -194,7 +192,7 @@
 				<img src="./img1.0/affixed-accessibility.png" />
 			</div>
 
-			<h3>Modulo Context Description (a-cd:)</h3>
+			<h3>Context Description module (a-cd:)</h3>
 			<p>Questo modulo modella le informazioni che riguardano il contesto - inteso in senso ampio - in cui il bene culturale viene a trovarsi nel corso della sua storia. Modella quindi attributi non misurabili associati al bene. Il primo diagramma mostra l'attribuzione di autore (preferita o alternativa) o ambito culturale. Nel secondo diagramma è presente la modellazione di cronologia e committenza. Il terzo modella acquisizione e mutamento di condizione materiale, il quarto la situazione (a-cd:RelatedWorkSituation) in cui un bene culturale è in rapporto con altre opere (es.: copie, fasi preparatorie o finali, contraffazioni, etc.) o altri beni culturali. Il quinto diagramma presenta la modellazione delle responsabilità di agenti diversi nei processi di produzione e divulgazione specificamente dei beni fotografici. Nel sesto diagramma sono rappresentate indagini e interventi condotti sul bene, mentre il settimo raffigura: certificati di importazione/esportazione, copyright, condizione giuridica (proprietario attuale), strumenti urbanistico-territoriali. L'ottavo diagramma rappresenta gli inventari, il nono provvedimenti di tutela, il decimo modellazioni specifiche dei beni musicali. Nei diagrammi seguenti si illustrano le rappresentazioni di: stima del sesso e dell'età della morte di un reperto antropologico; circostanze in cui si è realizzato un bene demoetnoantropologico immateriale; tassonomia relativa a un reperto antropologico.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/authorship-attrib.png" /> 
@@ -212,20 +210,20 @@
 				<img src="./img1.0/biological-taxon.png" />
 			</div>
 
-			<h3>Modulo Location (a-loc:)</h3>
+			<h3>Location module (a-loc:)</h3>
 			<p>Questo modulo modella le informazioni relative alla localizzazione del bene culturale. Il primo diagramma mostra la modellazione di una situazione indicizzata nel tempo (pattern Time Indexed Situation) di un bene culturale che si trova in un certo luogo a un certo tempo; il luogo è tipizzato, potendo assumere ruoli diversi nei confronti del bene culturale (es.: localizzazione attuale, localizzazione precedente, luogo di ritrovamento, luogo in cui il bene è stato esibito nel corso di una mostra, etc.). Si mostra inoltre la modellazione relativa alla georeferenziazione e alle coordinate del bene culturale, per le quali si è prevalentemente riusato il modulo CLV di OntoPiA. Nel diagramma seguente si illustra la rappresentazione di elementi che permettono la corretta identificazione della localizzazione di un saggio stratigrafico: ambiente, settore, quadrato.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/typed-location-coordinates.png" />
 				<img src="./img1.0/stratigraphic-arearoomsquare.png" />
 			</div>
 
-			<h3>Modulo Catalogue (a-cat:)</h3>
+			<h3>Catalogue module (a-cat:)</h3>
 			<p>Questo modulo modella le informazioni relative al Catalogo dei Beni Culturali, e quindi alle schede di catalogo. Nel diagramma si illustra la rappresentazione della scheda di catalogo (all'interno del sistema informativo SIGECweb) che descrive un bene culturale, e che può avere divese versioni, che sono in successione temporale (pattern Sequence). Una scheda di catalogo viene associata a un livello di catalogazione (livello di dettaglio con cui la scheda è compilata) e a un profilo d'accesso (conseguente al grado di riservatezza dei dati contenuti nella scheda). Sono inoltre modellate altre schede relative al bene: schede redatte per finalità diverse da quella della catalogazione (a-cat:CulturalPropertyRecord), moduli informativi (a-cat:InformationForm), moduli di approfondimento (a-cat:AdditionalForm).</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/catalogue-module.png" />
 			</div>
 
-			<h3>Modulo Cultural Event (a-ce:)</h3>
+			<h3>Cultural Event module (a-ce:)</h3>
 			<p>Questo modulo modella le informazioni relative agli eventi che coinvolgono un bene culturale. Nel primo diagramma sono rappresentati gli eventi ricorrenti, intesi come collezioni di eventi che si verificano con una certa periodicità. Possono essere eventi ricorrenti sia particolari tipologie di beni demoetnoantropologici immateriali (es.: una festa tradizionale a cadenza annuale) sia eventi che coinvolgono altri beni culturali. Per questi ultimi, il secondo diagramma illustra il riuso e la specializzazione di Cultural-ON.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/recurrent-event.png" />
