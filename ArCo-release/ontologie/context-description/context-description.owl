@@ -6590,23 +6590,21 @@ the area), to the environment and to the square from which the good comes.</rdfs
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Acquisition&apos; is the following:
-&lt;pre&gt;
+
 resource:Acquisition/1200865053-acquisition-1
         a  cd:Acquisition ;
         rdfs:label  &quot;Acquisition 1 of cultural property: 1200865053&quot;@it ;
-        cd:hasAcquisitionType resource_AcquisitionType/donazione ;
+        cd:hasAcquisitionType resource:AcquisitionType/donazione ;
         cd:hasPreviousOwner resource:Agent/auriti-giacinto ;
-        tiapit:time &quot;1963&quot; .
-&lt;/pre&gt;</dc:description>
+        tiapit:time &quot;1963&quot; .</dc:description>
         <dc:description xml:lang="it">Un esempio d&apos;uso della classe &apos;Acquisizione&apos; è il seguente:
-&lt;pre&gt;
+
 resource:Acquisition/1200865053-acquisition-1
         a  cd:Acquisition ;
         rdfs:label  &quot;Acquisizione 1 del bene culturale: 1200865053&quot;@it ;
-        cd:hasAcquisitionType resource_AcquisitionType/donazione ;
+        cd:hasAcquisitionType resource:AcquisitionType/donazione ;
         cd:hasPreviousOwner resource:Agent/auriti-giacinto ;
-        tiapit:time &quot;1963&quot; .
-&lt;/pre&gt;</dc:description>
+        tiapit:time &quot;1963&quot; .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento in cui un bene culturale è stato acquisito e si trova in una certa condizione giuridica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an event in which a cultural property is acquired, passing from an owner to another, and has a particular legal situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
