@@ -58,9 +58,9 @@
 	<section class="primer">
 		<div class="container">
 			<h2 id="intro">Introduction</h2>
-			<p>This guide presents the ontologies of the version 1.0 of ArCo, an ontology network for representing many types of cultural properties and the catalogue records describing them, stored in SIGEC information system (maintained by the Italian Institute for Catalogue and Documentation - ICCD-MiBAC).</p>
+			<p>This guide presents the ontologies of the version 1.0 of ArCo, an ontology network for representing cultural heritage and the catalogue records describing them. It is based on the official General Catalogue of the Italian Ministry of Cultural Heritage and Activities (MiBAC), which collects and validates the catalogue records of (ideally) all Italian cultural properties (excluding libraries and archives), contributed by Cultural Heritage administrators from all over Italy.</p>
 			<p>
-				ArCo 1.0 consists of 7 modules. For more information on the versions of ArCo ontologies please refer to the <a href="./primer-guide.html">Primer Guide v0.1</a>.
+				ArCo 1.0 consists of 7 modules. For more information on the versioning of ArCo ontologies please refer to the <a href="./primer-guide.html">Primer Guide v0.1</a>.
 			</p>
 			<p>ArCo ontologies are published in a <i>docker</i> including:
 			</p>
@@ -88,7 +88,7 @@
 			<h2 id="rete">ArCo v1.0 ontology network</h2>
 			<p>
 				This version 1.0 represents all the information contained in the <a target="_blank" href="http://www.iccd.beniculturali.it/it/ricercanormative/61/ntr-normativa-trasversale-4_00">Normativa
-					Trasversale</a> and information peculiar to all the typologies of cultural properties, apart from naturalistic heritage.</p>			
+					Trasversale</a> (a MiBAC encoding regulation for catalogue records, across regulations specific of particular types of cultural properties) and information peculiar to all the typologies of cultural properties, apart from naturalistic heritage.</p>			
 			<p>In the following table can be found the IRIs of the ontology modules and of the reused ontologies, along with their prefixes.</p>
 			<table>
 				<tr>
@@ -167,40 +167,67 @@
 			<p>This section briefly illustrates all the main concepts that ArCo network consists of. For a detailed description, refer to the "Ontologies" section of the main page. Both the modeling choices and the vocabulary are to be considered stable.</p>
 
 			<h3>ArCo module (arco:)</h3>
-			<p>Questo modulo rappresenta l'intera rete di ArCo, importando tutti gli altri moduli. Modella inoltre le informazioni considerate centrali del dominio dei beni culturali. Il primo diagramma illustra la gerarchia dei beni culturali: la classe centrale arco:CulturalProperty è rappresentata come una partizione tra arco:IntangibleCulturalProperty e arco:TangibleCulturalProperty. I beni intangibili possono a loro volta essere arco:MovableCulturalProperty e arco:ImmovableCulturalProperty. Tipologie di beni culturali più specifiche sono distribuite su più livelli all'interno di questa gerarchia. Il secondo diagramma illustra la modellazione del materiale componente di un lotto di materiali archeologici. In questo modulo si definiscono inoltre diverse categorie che possono classificare tipologie di beni differenti (es.: classificazione di bene fotografico, classificazione di bene musicale, Hornbostel-Sachs o alternativa, etc.)</p>
+			<p>This module is the root of the network: it imports all the other modules. Moreover, it formally represents top-level distinctions for the Cultural Heritage domain. The first diagram shows the hierarchy of cultural properties. The top-level class arco:CulturalProperty is modeled as a partition of two classes: arco:TangibleCulturalProperty and arco:IntangibleCulturalProperty. arco:TangibleCulturalProperty is further specialized in arco:MovableCulturalProperty (e.g. a painting) and arco:ImmovableCulturalProperty (e.g. an archaeological site). Additional, more specific types are defined down the hierarchy.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/cp-hierarchy.png" /> 
+			</div>
+			<p>The second diagram represents the archaeological material, which is part of a lot of archaeological materials.</p>
+			<div class="text-center mt-4">
 				<img src="./img1.0/archaeological-material.png" /> 
 			</div>
+			<p>In this module are also defined different types of categories used to classified different types of cultural properties (e.g. arco:HornbostelSachsClassification for a musical instrument, arco:PhotographicHeritageClassification for a photograph, etc.)</p>
 
 			<p></p>
 
 			<h3>Core module (core:)</h3>
-			<p>Questo modulo modella le informazioni considerate toplevel (es.: relazione tra il tutto e la parte, tra un'entità e le sue caratteristiche, tra un'entità e un generico luogo, ecc.). Viene importato da tutti gli altri moduli della rete.</p>
+			<p>This module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules. This module reuses a number of patterns (e.g. the <a href="http://www.ontologydesignpatterns.org/cp/owl/partof.owl" target="_blank">part of</a> pattern, the <a href="http://www.ontologydesignpatterns.org/cp/owl/classification.owl" target="_blank">classification</a> pattern, the <a href="http://www.ontologydesignpatterns.org/cp/owl/situation.owl" target="_blank">situation</a> pattern, etc.).</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/core-module.png" />  
 			</div>
 
 
 			<h3>Denotative Description module (a-dd:)</h3>
-			<p>Questo modulo (denotazione è inteso come l'atto di indicare una cosa attraverso segni esteriori) modella le informazioni che riguardano il bene culturale in sé, osservate/osservabili durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Il primo diagramma presenta la modellazione di: stato di conservazione, tipo di bene culturale, scopo funzionale, designazione del bene e apparato iconografico o decorativo. Il diagramma seguente illustra la modellazione delle modalità comunicative attraverso le quali viene veicolato un bene demoetnoantropologico immateriale. Nel terzo diagramma sono rappresentate le misure di un bene culturale (membri di una a-dd:MeasurementCollection, per cui si riusa il pattern Collection), mentre nel quarto si presenta la modellazione dello stato tecnico del bene culturale, ovvero della situazione in cui un bene culturale ha una serie di caratteristiche tecniche (es.: forma, materia, tecnica), per il quale si riutilizza il pattern DescriptionAndSituation. Lo stesso concetto è anche rappresentato per mezzo di una relazione binaria (a-dd:hasTechnicalCharacteristic). Infine, l'ultimo diagramma rappresenta gli elementi apposti sul bene culturale (emblemi, timbri, iscrizioni) e l'accessibilità e disponibilità materiale del bene. 
+			<p>This module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system.</p>
+			<p>The first diagram represents the: conservation status (e.g. good, bad, decent), the cultural property type (e.g. Benedectine church), the functional scope (e.g. magical function), the cultural property designation, the iconographic and decorative apparatus (e.g. the set of iconographic representations on a cultural property).</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/conserv-cptype-funcpurp-design-appar.png" />
+			</div>
+			<p>The following diagram shows the communication medium of an object (e.g. an intangible cultural property), defined by the communication medium type (e.g.: verbal, written, instrumental), the implementation method, the number of voices or instruments involved, etc.<p>
+			<div class="text-center mt-4">
 				<img src="./img1.0/communic-medium.png" />
+			</div>
+			<p>The third diagram represents the measurements of a cultural property, members of an a-dd:MeasurementCollection (pattern <a href="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl" target="_blank">collection</a>), while the fourth one depicts the a-dd:CulturalEntityTechnicalStatus, intended as a situation in which a cultural entity has some technical characteristics (e.g. is square-shaped). Each characteristic is classified by a a-dd:TechnicalConcept (e.g. the a-dd:Shape). These concepts are used in the a-dd:CulturalEntityTechnicalDescription, that is the conceptualization of the relevant technical characteristcs of a cultural entity. The pattern <a href="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl" target="_blank">DescriptionAndSituation</a> is used.</p>
+			<div class="text-center mt-4">
 				<img src="./img1.0/measurement.png" />
 				<img src="./img1.0/technical-status.png" />
+			</div>
+			<p>The last diagram of this module represents the elements affixed  on a cultural property (e.g. emblems, stamps, inscriptions) and the accessibility (the possibility to reach or enter that cultural property, for example for cataloguing activities) and the availability (wheter the cultural property is available or not e.g. theft, destruction) of a cultural property.</p>
+			<div class="text-center mt-4">
 				<img src="./img1.0/affixed-accessibility.png" />
 			</div>
 
 			<h3>Context Description module (a-cd:)</h3>
-			<p>Questo modulo modella le informazioni che riguardano il contesto - inteso in senso ampio - in cui il bene culturale viene a trovarsi nel corso della sua storia. Modella quindi attributi non misurabili associati al bene. Il primo diagramma mostra l'attribuzione di autore (preferita o alternativa) o ambito culturale. Nel secondo diagramma è presente la modellazione di cronologia e committenza. Il terzo modella acquisizione e mutamento di condizione materiale, il quarto la situazione (a-cd:RelatedWorkSituation) in cui un bene culturale è in rapporto con altre opere (es.: copie, fasi preparatorie o finali, contraffazioni, etc.) o altri beni culturali. Il quinto diagramma presenta la modellazione delle responsabilità di agenti diversi nei processi di produzione e divulgazione specificamente dei beni fotografici. Nel sesto diagramma sono rappresentate indagini e interventi condotti sul bene, mentre il settimo raffigura: certificati di importazione/esportazione, copyright, condizione giuridica (proprietario attuale), strumenti urbanistico-territoriali. L'ottavo diagramma rappresenta gli inventari, il nono provvedimenti di tutela, il decimo modellazioni specifiche dei beni musicali. Nei diagrammi seguenti si illustrano le rappresentazioni di: stima del sesso e dell'età della morte di un reperto antropologico; circostanze in cui si è realizzato un bene demoetnoantropologico immateriale; tassonomia relativa a un reperto antropologico.</p>
+			<p>This module represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.</p>
+			<p>The first diagram shows the authorship attribution (preferred or alternative) and the cultural scope attribution. The second diagram represents the dating(s) of a cultural property and its commission.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/authorship-attrib.png" /> 
 				<img src="./img1.0/dating-commission.png" />
+			</div>
+			<p>The third diagram models the acquisition (a situation in which a cultural property is acquired, passing from an owner to another, and has a particular legal situation) and the change of availability (after e.g. theft, distruction, rescue, etc.) of a cultural property.</p>
+			<div class="text-center mt-4">
 				<img src="./img1.0/acquisition-availability.png" />
+			</div>
+			<p>The following diagram shows the situation (a-cd:RelatedWorkSituation) in which a cultural property has a relation with other works (e.g. copies, forgeries, etc.) or other cultural properties.</p>
+			<div class="text-center mt-4">
 				<img src="./img1.0/related-works.png" />
+			</div>
+			<p>The fifth diagram presents the attribution of a responsibility to an agent, relating to the activities of production and dissemination of photographic heritage (e.g.: committent, editor, printer, dedicatee, etc.). The next one models interventions and surveys on a cultural property.</p>
+			<div class="text-center mt-4">
 				<img src="./img1.0/responsibility.png" />
 				<img src="./img1.0/survey-intervention.png" />
+			</div>
+			<p>In the following diagrams are represented: export import certifications; copyright; legal situation (current owner); urban planning instruments; inventories, protective measures, musician and musical ensemble (for a musical instrument); age of death and sex interpretations (for an anthropological material); circumstances and occasions related to intangible cultural heritage; biological taxon (for an anthropological material).</p>
+			<div class="text-center mt-4">				
 				<img src="./img1.0/export-copyright-legalsit-urbanplanning.png" />
 				<img src="./img1.0/inventory.png" />
 				<img src="./img1.0/protective-measures.png" />
@@ -211,20 +238,28 @@
 			</div>
 
 			<h3>Location module (a-loc:)</h3>
-			<p>Questo modulo modella le informazioni relative alla localizzazione del bene culturale. Il primo diagramma mostra la modellazione di una situazione indicizzata nel tempo (pattern Time Indexed Situation) di un bene culturale che si trova in un certo luogo a un certo tempo; il luogo è tipizzato, potendo assumere ruoli diversi nei confronti del bene culturale (es.: localizzazione attuale, localizzazione precedente, luogo di ritrovamento, luogo in cui il bene è stato esibito nel corso di una mostra, etc.). Si mostra inoltre la modellazione relativa alla georeferenziazione e alle coordinate del bene culturale, per le quali si è prevalentemente riusato il modulo CLV di OntoPiA. Nel diagramma seguente si illustra la rappresentazione di elementi che permettono la corretta identificazione della localizzazione di un saggio stratigrafico: ambiente, settore, quadrato.</p>
+			<p>This module addresses spatial and geometrical information. A cultural property may have multiple locations, motivated by different perspectives: history, storage, finding, etc. Sometimes they coincide, sometimes they do not. Those perspectives are represented by the class a-loc:LocationType. A certain location type of a cultural property holds during a time interval. This concept is modeled by a-loc:TimeIndexedTypedLocation, which specialises the <a href="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl" target="_blank">TimeIndexedSituation</a> pattern. Along with this model, the first diagram show the geometry and coordinates of the location, reusing the CLV module of OntoPiA.</p>
+			<p>In the following diagram are represented the elements that allow to identify the location of a stratigraphic record: area, room, square.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/typed-location-coordinates.png" />
 				<img src="./img1.0/stratigraphic-arearoomsquare.png" />
 			</div>
+			<p>The last diagram of this module shows the cadastral identity of a cultural property, e.g. the cadastral unit in which the cultural property is located, and the related cadastral entities (e.g. cadastral folio).</p>
+			<div class="text-center mt-4">
+				<img src="./img1.0/cadastral-location.png" />
+			</div>
+
+			<p></p>
 
 			<h3>Catalogue module (a-cat:)</h3>
-			<p>Questo modulo modella le informazioni relative al Catalogo dei Beni Culturali, e quindi alle schede di catalogo. Nel diagramma si illustra la rappresentazione della scheda di catalogo (all'interno del sistema informativo SIGECweb) che descrive un bene culturale, e che può avere divese versioni, che sono in successione temporale (pattern Sequence). Una scheda di catalogo viene associata a un livello di catalogazione (livello di dettaglio con cui la scheda è compilata) e a un profilo d'accesso (conseguente al grado di riservatezza dei dati contenuti nella scheda). Sono inoltre modellate altre schede relative al bene: schede redatte per finalità diverse da quella della catalogazione (a-cat:CulturalPropertyRecord), moduli informativi (a-cat:InformationForm), moduli di approfondimento (a-cat:AdditionalForm).</p>
+			<p>This module provides means to represent catalogue records, and link them to the cultural properties they are a record of. This models are based on the Italian General Catalogue of Cultural Heritage. A a-cat:CatalogueRecord can have more than one a-cat:CatalogueRecordVersion (pattern <a href="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl" target="_blank">Sequence</a>). A a-cat:CatalogueRecord is associated to a a-cat:CataloguingLevel (the level of detail regarding the information gathered by the cataloguer), and to an access profile (related to a a-cat:PrivacyLevel). In the following diagram are also represented records describing a cultural property for purposes other than cataloguing cultural heritage (a-cat:CulturalPropertyRecord), a-cat:InformationForm and a-cat:AdditionalForm.</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/catalogue-module.png" />
 			</div>
 
 			<h3>Cultural Event module (a-ce:)</h3>
-			<p>Questo modulo modella le informazioni relative agli eventi che coinvolgono un bene culturale. Nel primo diagramma sono rappresentati gli eventi ricorrenti, intesi come collezioni di eventi che si verificano con una certa periodicità. Possono essere eventi ricorrenti sia particolari tipologie di beni demoetnoantropologici immateriali (es.: una festa tradizionale a cadenza annuale) sia eventi che coinvolgono altri beni culturali. Per questi ultimi, il secondo diagramma illustra il riuso e la specializzazione di Cultural-ON.</p>
+			<p>This module contains information of cultural events involving a cultural property. In the first diagram are represented recurrent events, as collections of events recurring with periodic time intervals (e.g. particular types of demoethnoanthropological heritage such as an two-year traditional ceremony, or recurrent cultural heritage festivals).</p>
+			<p>The last diagram shows the reuse and specialisation of Cultural-ON for cultural events involving cultural properties (e.g. exhibitions).</p>
 			<div class="text-center mt-4">
 				<img src="./img1.0/recurrent-event.png" />
 				<img src="./img1.0/cult-event.png" />

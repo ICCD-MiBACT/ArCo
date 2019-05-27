@@ -6606,7 +6606,7 @@ resource:Acquisition/1200865053-acquisition-1
         cd:hasPreviousOwner resource:Agent/auriti-giacinto ;
         tiapit:time &quot;1963&quot; .</dc:description>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un evento in cui un bene culturale è stato acquisito e si trova in una certa condizione giuridica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents an event in which a cultural property is acquired, passing from an owner to another, and has a particular legal situation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a situation in which a cultural property is acquired, passing from an owner to another, and has a particular legal situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">Acquisition</rdfs:label>
         <rdfs:label xml:lang="it">Acquisizione</rdfs:label>
