@@ -11,15 +11,16 @@
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
-     xmlns:opla="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:opla1="http://ontologydesignpatterns.org/opla/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/catalogue">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/classification.owl"/>
+        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
@@ -35,8 +36,6 @@
         <dc:title xml:lang="it">Ontologia del Catalogo (ArCo network)</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
-        <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.</rdfs:comment>
         <rdfs:comment xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
@@ -55,6 +54,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla/isNativeTo -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/isNativeTo"/>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
 
 
@@ -79,18 +90,6 @@
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/opla/isNativeTo -->
-
-    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/opla/isNativeTo"/>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
-
-    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
 
 
