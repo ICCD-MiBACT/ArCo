@@ -84,7 +84,7 @@ public class XsltTransformer {
 	        					
 	        					String outputSyntax = commandLine.getOptionValue(OUTPUT_SYNTAX);
 	        					if(outputSyntax == null)
-	        						outputSyntax = "TURTLE";
+	        						outputSyntax = "N-TRIPLES";
 	        					
 	        					Model model = null;
 								try {

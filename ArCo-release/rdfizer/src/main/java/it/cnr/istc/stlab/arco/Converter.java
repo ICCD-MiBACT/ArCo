@@ -285,7 +285,7 @@ public class Converter {
 			Serializer out = proc.newSerializer(byteArrayOut);
 			XsltTransformer trans = exp.executable.load();
 			
-			System.out.println(exp.name);
+			//System.out.println(exp.name);
 			QName qName = new QName("item");
 			XdmValue value = new XdmAtomicValue(item);
 			trans.setParameter(qName, value);

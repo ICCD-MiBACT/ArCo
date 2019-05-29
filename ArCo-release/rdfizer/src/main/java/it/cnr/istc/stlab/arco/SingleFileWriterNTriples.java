@@ -26,7 +26,7 @@ public class SingleFileWriterNTriples {
 			File[] subFolders = inFolder.listFiles(f -> f.isDirectory() && !f.isHidden());
 			int counter = 0;
 			for(File subFolder : subFolders){
-				File[] ttls = subFolder.listFiles(file -> {return file.getName().endsWith(".ttl") ? true : false;});
+				File[] ttls = subFolder.listFiles(file -> {return file.getName().endsWith(".nt") ? true : false;});
 				
 				for(File ttl : ttls) {
 					BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(ttl), Charset.forName("UTF-8")));

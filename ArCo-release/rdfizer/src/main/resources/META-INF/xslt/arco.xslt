@@ -25565,13 +25565,20 @@
 			<!-- We create the cultural event or the exhibition - norm version 4.00 -->
 			<xsl:for-each select="schede/*/MS/MST">
 				<rdf:Description>
+					<xsl:variable name="event-uri">
+						<xsl:choose>
+							<xsl:when test="./MSTL and (not(starts-with(lower-case(normalize-space(./MSTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTL)), 'n.r')))">
+								<xsl:value-of select="arco-fn:arcofy(concat(./MSTT, ./MSTL))" />
+							</xsl:when>
+							<xsl:otherwise><xsl:value-of select="arco-fn:arcofy(./MSTT)" /></xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
 					<xsl:choose>
 						<xsl:when test="./MSTI">
 							<xsl:choose>
 								<xsl:when test="./MSTI='mostra'">
 									<xsl:attribute name="rdf:about">
-                                        <xsl:value-of
-										select="concat($NS, 'Exhibition/', $itemURI, '-', position())" />
+                                        <xsl:value-of select="concat($NS, 'Exhibition/', $event-uri)" />
                                     </xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
@@ -25583,7 +25590,7 @@
 								<xsl:otherwise>
 									<xsl:attribute name="rdf:about">
                                         <xsl:value-of
-										select="concat($NS, 'CulturalEvent/', $itemURI, '-', position())" />
+										select="concat($NS, 'CulturalEvent/', $event-uri)" />
                                     </xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
@@ -25597,7 +25604,7 @@
 						<xsl:otherwise>
 							<xsl:attribute name="rdf:about">
                                 <xsl:value-of
-								select="concat($NS, 'CulturalEvent/', $itemURI, '-', position())" />
+								select="concat($NS, 'CulturalEvent/', $event-uri)" />
                             </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -25733,11 +25740,19 @@
 			</xsl:for-each>
 			<!-- We create the cultural event or the exhibition - norm version 3.00 -->
 			<xsl:for-each select="schede/*/DO/MST">
-				<xsl:if test="./*">
+				<xsl:if test="./* and ./MSTT">
+					<xsl:variable name="event-uri">
+						<xsl:choose>
+							<xsl:when test="./MSTL and (not(starts-with(lower-case(normalize-space(./MSTL)), 'nr')) and not(starts-with(lower-case(normalize-space(./MSTL)), 'n.r')))">
+								<xsl:value-of select="arco-fn:arcofy(concat(./MSTT, ./MSTL))" />
+							</xsl:when>
+							<xsl:otherwise><xsl:value-of select="arco-fn:arcofy(./MSTT)" /></xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                             <xsl:value-of
-							select="concat($NS, 'CulturalEvent/', $itemURI, '-', position())" />
+							select="concat($NS, 'CulturalEvent/', $event-uri)" />
                         </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">

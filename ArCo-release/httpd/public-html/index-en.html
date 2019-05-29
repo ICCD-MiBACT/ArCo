@@ -629,7 +629,7 @@ SELECT *
 WHERE{
   ?entity rdfs:label ?entityLabel ;
   arco-cd:hasRelatedWorkSituation ?relatedWorkSituation .
-  ?relatedWorkSituation arco-cd:hasRelatedWork ?relatedWork .
+  ?relatedWorkSituation arco-cd:involvesRelatedWork ?relatedWork .
   ?relatedWork a arco-cd:PreparatoryWork .
 
 }
@@ -674,7 +674,7 @@ Limit 100
           <div class="col-lg-4 mr-auto">
             <div class="mt-4">
         <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasRelatedWorkSituation+%3FrelatedWorkSituation+.%0D%0A++%3FrelatedWorkSituation+arco-cd%3AhasRelatedWork+%3FrelatedWork+.%0D%0A++%3FrelatedWork+a+arco-cd%3APreparatoryWork+.%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
+                <a class="btn btn-xl btn-outline-light" href="./virtuoso/sparql?default-graph-uri=&query=PREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasRelatedWorkSituation+%3FrelatedWorkSituation+.%0D%0A++%3FrelatedWorkSituation+arco-cd%3AinvolvesRelatedWork+%3FrelatedWork+.%0D%0A++%3FrelatedWork+a+arco-cd%3APreparatoryWork+.%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&format=text%2Fhtml&timeout=0&debug=on" target="_blank">
                   <i class="fa fa-search mr-2"></i>
                   Run!
                 </a>
