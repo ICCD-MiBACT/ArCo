@@ -51,8 +51,8 @@
         <rdfs:comment xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.</rdfs:comment>
         <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
     </owl:Ontology>
     
 

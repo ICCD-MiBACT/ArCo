@@ -48,8 +48,8 @@
         <rdfs:comment xml:lang="en">The module Location models information related to the localization and georeferencing of a cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">Location Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Localizzazione (ArCo network)</rdfs:label>
-        <owl:versionInfo>Version 0.5 alpha</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo>Version 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
     </owl:Ontology>
     
 

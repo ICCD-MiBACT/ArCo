@@ -48,8 +48,8 @@
         <rdfs:comment xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Event Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -80,6 +80,12 @@
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
     
 
 

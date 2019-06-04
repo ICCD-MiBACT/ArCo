@@ -57,8 +57,8 @@
         <rdfs:comment xml:lang="en">The ArCo module is the root of the network ArCo - Architecture of Knowledge. It imports all the other modules and models top-level distinctions from the cultural heritage domain.</rdfs:comment>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia ArCo (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
     </owl:Ontology>
     
 

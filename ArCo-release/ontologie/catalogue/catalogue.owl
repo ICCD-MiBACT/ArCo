@@ -40,8 +40,8 @@
         <rdfs:comment xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia del Catalogo (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.5 alpha</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.5 alpha</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
     </owl:Ontology>
     
 
