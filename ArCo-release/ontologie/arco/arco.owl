@@ -51,7 +51,7 @@
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <dc:title xml:lang="en">ArCo Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia ArCo (ArCo network)</dc:title>
-        <terms:issued>2018-03-07</terms:issued>
+        <terms:issued>2019-03-05</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
         <terms:modified>2019-06-01</terms:modified>
