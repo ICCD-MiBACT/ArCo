@@ -51,8 +51,10 @@
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <dc:title xml:lang="en">ArCo Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia ArCo (ArCo network)</dc:title>
+        <terms:issued>2018-03-07</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:modified>2019-06-01</terms:modified>
         <rdfs:comment xml:lang="it">Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.</rdfs:comment>
         <rdfs:comment xml:lang="en">The ArCo module is the root of the network ArCo - Architecture of Knowledge. It imports all the other modules and models top-level distinctions from the cultural heritage domain.</rdfs:comment>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
@@ -98,9 +100,21 @@
     
 
 
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 

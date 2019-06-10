@@ -38,8 +38,10 @@
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <dc:title xml:lang="en">Core Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia Core (ArCo network)</dc:title>
+        <terms:issued>2018-03-07</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:modified>2019-06-01</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).</rdfs:comment>
         <rdfs:comment xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</rdfs:comment>
         <rdfs:label xml:lang="en">Core Ontology (ArCo network)</rdfs:label>
@@ -97,9 +99,21 @@
     
 
 
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 

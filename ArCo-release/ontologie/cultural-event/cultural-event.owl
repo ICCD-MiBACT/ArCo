@@ -40,8 +40,10 @@
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
         <dc:title xml:lang="en">Cultural Event Ontology (ArCo network)</dc:title>
         <dc:title xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</dc:title>
+        <terms:issued>2018-03-07</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
+        <terms:modified>2019-06-01</terms:modified>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <rdfs:comment xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</rdfs:comment>
@@ -77,9 +79,21 @@
     
 
 
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
