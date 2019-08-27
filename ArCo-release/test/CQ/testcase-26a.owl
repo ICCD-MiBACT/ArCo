@@ -9,7 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-26a.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+     <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
         <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+onto-mu%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FMU%2F%3E%0D%0A%0D%0Aselect++%3Fphoto+%3Fmeastype+%3Fmeasvalue+%3Fmeasunit%0D%0A%0D%0Awhere+%7B%0D%0A++%3Fphoto+a+arco-core%3APhotographicHeritage+.%0D%0A++%3Fphoto+arco-dd%3AhasMeasurementCollection+%3Fmeascoll+.%0D%0A++%3Fmeascoll+arco-dd%3AhasMeasurement+%3Fmeas+.%0D%0A++%3Fmeas+arco-dd%3AhasMeasurementType+%3Fmeastype+.+%0D%0A++%3Fmeas+onto-mu%3AhasValue+%3Fmeasvalue+.+%0D%0A++%3Fmeasvalue+onto-mu%3AhasMeasurementUnit+%3Fmeasunit.+%0D%0A%0D%0A++%0D%0A%7D+%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
         <testannotationschema:hasCQ xml:lang="it">Quali sono le dimensioni della fotografia X? (analogico)</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">What are the dimensions of photography X? (analog)</testannotationschema:hasCQ>

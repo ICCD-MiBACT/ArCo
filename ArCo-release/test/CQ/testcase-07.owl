@@ -9,7 +9,8 @@
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-07.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+     <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
         <testannotationschema:hasCQ xml:lang="it">Qual è la documentazione fotografica allegata alla scheda del bene culturale X?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">What is the photographic documentation attached to the catalogue record describing the cultural property X?</testannotationschema:hasCQ>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>

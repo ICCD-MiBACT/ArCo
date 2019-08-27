@@ -9,7 +9,8 @@
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-43.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+     <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
         <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
         <testannotationschema:hasCQ xml:lang="it">Quali sono gli operatori (persone) che hanno lavorato alla scheda catalografica del bene culturale x nella sua storia?</testannotationschema:hasCQ>
