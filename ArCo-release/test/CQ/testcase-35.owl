@@ -1,48 +1,52 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-35.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-35.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-35.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-35.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-35.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasCQ xml:lang="it">Per quale motivo lâ€™accesso ai dati contenuti nella scheda del bene X ha un livello di privacy media?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What is the reason why the access profile&apos;s privacy of the cultural property X is labelled as &quot;medium level&quot; in its catalogue record?</testannotationschema:hasCQ>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;reason&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071541&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071542&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-1&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-4&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-6&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-7&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071545&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071546&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071547&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071548&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
 
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-35.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasCQ xml:lang="it">Per quale motivo l’accesso ai dati contenuti nella scheda del bene X ha un livello di privacy media?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the reason why the access profile&apos;s privacy of the cultural property X is labelled as &quot;medium level&quot; in its catalogue record?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;reason&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071541&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071542&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-1&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-4&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-6&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071543-7&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071545&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071546&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071547&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500071548&quot; }	, &quot;reason&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PrivacyReason/dati-non-pubblicabili&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
+
+
+select  ?bencult ?reason
+where {
+ ?bencult arco-catalogue:isDescribedByCatalogueRecord ?cat.
+ ?cat arco-catalogue:hasAccessProfile ?profile.
+ ?profile arco-catalogue:hasPrivacyLevel arco-catalogue:MediumLevel.
+ ?profile arco-catalogue:hasPrivacyReason ?reason.
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-select  ?bencult ?reason
-where {
- ?bencult arco-catalogue:isDescribedByCatalogueRecord ?cat.
- ?cat arco-catalogue:hasAccessProfile ?profile.
- ?profile arco-catalogue:hasPrivacyLevel arco-catalogue:MediumLevel.
- ?profile arco-catalogue:hasPrivacyReason ?reason.
-} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0A%0D%0Aselect++%3Fbencult+%3Freason%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-catalogue%3AisDescribedByCatalogueRecord+%3Fcat.%0D%0A+%3Fcat+arco-catalogue%3AhasAccessProfile+%3Fprofile.%0D%0A+%3Fprofile+arco-catalogue%3AhasPrivacyLevel+arco-catalogue%3AMediumLevel.%0D%0A+%3Fprofile+arco-catalogue%3AhasPrivacyReason+%3Freason.%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=100000000000&amp;debug=on"/>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0A%0D%0Aselect++%3Fbencult+%3Freason%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-catalogue%3AisDescribedByCatalogueRecord+%3Fcat.%0D%0A+%3Fcat+arco-catalogue%3AhasAccessProfile+%3Fprofile.%0D%0A+%3Fprofile+arco-catalogue%3AhasPrivacyLevel+arco-catalogue%3AMediumLevel.%0D%0A+%3Fprofile+arco-catalogue%3AhasPrivacyReason+%3Freason.%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=100000000000&amp;debug=on"/>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

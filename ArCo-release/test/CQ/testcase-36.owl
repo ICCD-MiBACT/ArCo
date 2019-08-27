@@ -1,73 +1,79 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-36.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-36.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-36.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-36.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-36.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
-PREFIX CLV: &lt;https://w3id.org/italia/onto/CLV/&gt;
-PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
-PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
-PREFIX ti:&lt;https://w3id.org/italia/onto/TI/&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema/&gt;
 
-select ?sistema
-where {
- ?bencult arco-location:hasCulturalPropertyAddress ?address.
- ?address CLV:hasRegion ?region.
- ?region rdfs:label ?regNome.
- ?bencult arco-dd:hasAffixedElement ?ele.
- ?ele arco-dd:hasWritingSystem ?sistema.
- ?bencult arco-cd:hasDating ?date.
- ?date arco-cd:hasEvent ?event.
- ?event ti:atTime ?tempo.
- ?tempo ti:time ?value
- FILTER regex(?regNome, &quot;Puglia&quot;, &quot;i&quot;)
- FILTER regex(?value, &quot;VI a&quot;, &quot;i&quot;)
-} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-36.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
+PREFIX CLV: &lt;https://w3id.org/italia/onto/CLV/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+PREFIX ti:&lt;https://w3id.org/italia/onto/TI/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema/&gt;
+
+select ?sistema
+where {
+ ?bencult arco-location:hasCulturalPropertyAddress ?address.
+ ?address CLV:hasRegion ?region.
+ ?region rdfs:label ?regNome.
+ ?bencult arco-dd:hasAffixedElement ?ele.
+ ?ele arco-dd:hasWritingSystem ?sistema.
+ ?bencult arco-cd:hasDating ?date.
+ ?date arco-cd:hasEvent ?event.
+ ?event ti:atTime ?tempo.
+ ?tempo ti:time ?value
+ FILTER regex(?regNome, &quot;Puglia&quot;, &quot;i&quot;)
+ FILTER regex(?value, &quot;VI a&quot;, &quot;i&quot;)
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasCQ xml:lang="it">Quali sono i sistemi di scrittura che sono stati adottati in elementi apposti (iscrizioni, stemmi, marchi, emblemi, etc.) sui beni culturali conservati nella regione Puglia e la cui creazione risale al VI secolo a.C.?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What are the writing systems which has been used in affixed elements (i.e. inscriptions, crests, trademarks, emblems) on cultural properties and that are located in Puglia and that their creation goes back to the VI century b.C.? </testannotationschema:hasCQ>
-        <testannotationschema:hasExpectedResult xml:lang="it">{
-  &quot;head&quot;: {
-    &quot;vars&quot;: [ &quot;sistema&quot; ]
-  } ,
-  &quot;results&quot;: {
-    &quot;bindings&quot;: [
-      {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem4&quot; }
-      } ,
-      {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem5&quot; }
-      } ,
-      {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem6&quot; }
-      } ,
-      {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem2&quot; }
-      } ,
-      {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem1&quot; }
-      } ,
-      {
-        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem3&quot; }
-      }
-    ]
-  }
-}</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl"/>
-    </owl:Ontology>
-</rdf:RDF>
 
+        <testalod:hasInputTestDataUri rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl"/>
 
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono i sistemi di scrittura che sono stati adottati in elementi apposti (iscrizioni, stemmi, marchi, emblemi, etc.) sui beni culturali conservati nella regione Puglia e la cui creazione risale al VI secolo a.C.?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the writing systems which has been used in affixed elements (i.e. inscriptions, crests, trademarks, emblems) on cultural properties and that are located in Puglia and that their creation goes back to the VI century b.C.? </testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">{
+  &quot;head&quot;: {
+    &quot;vars&quot;: [ &quot;sistema&quot; ]
+  } ,
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
+      {
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem4&quot; }
+      } ,
+      {
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem5&quot; }
+      } ,
+      {
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem6&quot; }
+      } ,
+      {
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem2&quot; }
+      } ,
+      {
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem1&quot; }
+      } ,
+      {
+        &quot;sistema&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#WritingSystem3&quot; }
+      }
+    ]
+  }
+}</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

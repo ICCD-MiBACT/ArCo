@@ -1,46 +1,50 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-40.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-40.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-40.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-40.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-40.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;CultProp&quot;, &quot;CatRec&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319531&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319531&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319532&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319532&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319533&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319533&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319543&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319543&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319546&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319546&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319547&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319547&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319548&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319548&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319549&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319549&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319551&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319551&quot; }},
-    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319552&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319552&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasCQ xml:lang="it">Quali sono i beni culturali che hanno BNB come tipo di scheda catalografica?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What are the cultural properties which have &quot;BNB&quot; as catalogue record type? </testannotationschema:hasCQ>        
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
 
-SELECT  *
-WHERE {
-   ?CultProp arco-catalogue:isDescribedByCatalogueRecord ?CatRec . 
-   ?CatRec a arco-catalogue:CatalogueRecordBNB .
-} 
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-40.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;CultProp&quot;, &quot;CatRec&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319531&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319531&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319532&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319532&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319533&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319533&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319543&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319543&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319546&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319546&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319547&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319547&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319548&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319548&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319549&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319549&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319551&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319551&quot; }},
+    { &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/NaturalHeritage/1201319552&quot; }        , &quot;CatRec&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordBNB/1201319552&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:testDate xml:lang="en">2019-02-15</testannotationschema:testDate>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono i beni culturali che hanno BNB come tipo di scheda catalografica?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the cultural properties which have &quot;BNB&quot; as catalogue record type? </testannotationschema:hasCQ>        
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
+
+SELECT  *
+WHERE {
+   ?CultProp arco-catalogue:isDescribedByCatalogueRecord ?CatRec . 
+   ?CatRec a arco-catalogue:CatalogueRecordBNB .
+} 
+
+LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+++%3FCultProp+arco-catalogue%3AisDescribedByCatalogueRecord+%3FCatRec+.+%0D%0A+++%3FCatRec+a+arco-catalogue%3ACatalogueRecordBNB+.%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+++%3FCultProp+arco-catalogue%3AisDescribedByCatalogueRecord+%3FCatRec+.+%0D%0A+++%3FCatRec+a+arco-catalogue%3ACatalogueRecordBNB+.%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

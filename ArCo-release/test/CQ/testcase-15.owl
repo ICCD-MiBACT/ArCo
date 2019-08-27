@@ -1,47 +1,51 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-15.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-15.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-15.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-15.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-15.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasCQ xml:lang="it">Quali sono i beni culturali costruiti con l&apos;argilla?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What are the cultural properties made of clay?</testannotationschema:hasCQ>        
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fclay%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-dd%3AhasTechnicalDetailOccurrence+%3Foccurrence+%3B+rdfs%3Alabel+%3FentityLabel+.%0D%0A%3Foccurrence+arco-dd%3AsatisfiesTechnicalDetail+%3Fclay+.%0D%0A++FILTER+regex%28%3Fclay%2C+%22argilla%22%2C+%22i%22%29+%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;entityLabel&quot;, &quot;clay&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071767&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ANFORA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071783&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;PISSIDE&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071797&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;HYDRIA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071828&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;COPPA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-beige&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071876&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;BROCCHETTA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071879&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ARYBALLOS&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-giallina&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071902&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ARYBALLOS&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-fine-giallina&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071907&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;KOTYLE&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-giallina&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071932&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;COPPA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071950&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;PISSIDE CON COPERCHIO&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
-SELECT ?entity ?entityLabel ?clay
-WHERE{
-  ?entity arco-dd:hasTechnicalDetailOccurrence ?occurrence ; rdfs:label ?entityLabel .
-?occurrence arco-dd:satisfiesTechnicalDetail ?clay .
-  FILTER regex(?clay, &quot;argilla&quot;, &quot;i&quot;) 
 
-}
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-15.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-Limit 100</testannotationschema:hasSPARQLQueryUnitTest>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono i beni culturali costruiti con l&apos;argilla?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the cultural properties made of clay?</testannotationschema:hasCQ>        
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0ASELECT+%3Fentity+%3FentityLabel+%3Fclay%0D%0AWHERE%7B%0D%0A++%3Fentity+arco-dd%3AhasTechnicalDetailOccurrence+%3Foccurrence+%3B+rdfs%3Alabel+%3FentityLabel+.%0D%0A%3Foccurrence+arco-dd%3AsatisfiesTechnicalDetail+%3Fclay+.%0D%0A++FILTER+regex%28%3Fclay%2C+%22argilla%22%2C+%22i%22%29+%0D%0A%0D%0A%7D%0D%0A%0D%0ALimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;entityLabel&quot;, &quot;clay&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071767&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ANFORA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071783&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;PISSIDE&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071797&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;HYDRIA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071828&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;COPPA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-beige&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071876&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;BROCCHETTA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071879&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ARYBALLOS&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-giallina&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071902&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ARYBALLOS&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-fine-giallina&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071907&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;KOTYLE&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-giallina&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071932&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;COPPA&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1800071950&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;PISSIDE CON COPERCHIO&quot; }        , &quot;clay&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TechnicalDetail/argilla-rosa&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+SELECT ?entity ?entityLabel ?clay
+WHERE{
+  ?entity arco-dd:hasTechnicalDetailOccurrence ?occurrence ; rdfs:label ?entityLabel .
+?occurrence arco-dd:satisfiesTechnicalDetail ?clay .
+  FILTER regex(?clay, &quot;argilla&quot;, &quot;i&quot;) 
+
+}
+
+Limit 100</testannotationschema:hasSPARQLQueryUnitTest>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,45 +1,49 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-05.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-05.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-05.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-05.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-05.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
-SELECT *
-WHERE {
-  ?entity rdfs:label ?entityLabel ; 
-    arco-location:hasTimeIndexedTypedLocation ?location .
-  ?location arco-location:hasLocationType arco-location:StorageLocation.
-}
-limit 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B+%0D%0A++++arco-location%3AhasTimeIndexedTypedLocation+%3Flocation+.%0D%0A++%3Flocation+arco-location%3AhasLocationType+arco-location%3AStorageLocation.%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;entityLabel&quot;, &quot;location&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300157969&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Leda e il Cigno (dipinto)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300157969-alternative-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181617&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Madonna con Bambino tra San Lorenzo e San Carlo Borromeo (dipinto, opera isolata)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181617-alternative-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181644&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;San rocco con il cane (dipinto, opera isolata)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181644-alternative-2&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181646&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;croce processionale, opera isolata&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181646-alternative-2&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181647&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;reliquiario, opera isolata&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181647-alternative-2&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181650&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;reliquiario, opera isolata&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181650-alternative-2&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181651&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;torciera, elemento d&apos;insieme&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181651-alternative-2&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238079&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: arco provvisorio a porta Orientale a Milano - prospetto del fronte (prima variante) (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238079-alternative-2&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238081&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: arco provvisorio a porta Orientale a Milano - prospetto del fronte (seconda variante) (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238081-alternative-2&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238265&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: sezione di edificio religioso (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238265-alternative-2&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasCQ xml:lang="it">Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What are the places that have been used as storage area for a certain cultural property?</testannotationschema:hasCQ>
-        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-    </owl:Ontology>
-</rdf:RDF>
 
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-05.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
+SELECT *
+WHERE {
+  ?entity rdfs:label ?entityLabel ; 
+    arco-location:hasTimeIndexedTypedLocation ?location .
+  ?location arco-location:hasLocationType arco-location:StorageLocation.
+}
+limit 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0ASELECT+*%0D%0AWHERE+%7B%0D%0A++%3Fentity+rdfs%3Alabel+%3FentityLabel+%3B+%0D%0A++++arco-location%3AhasTimeIndexedTypedLocation+%3Flocation+.%0D%0A++%3Flocation+arco-location%3AhasLocationType+arco-location%3AStorageLocation.%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;entityLabel&quot;, &quot;location&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300157969&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Leda e il Cigno (dipinto)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300157969-alternative-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181617&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Madonna con Bambino tra San Lorenzo e San Carlo Borromeo (dipinto, opera isolata)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181617-alternative-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181644&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;San rocco con il cane (dipinto, opera isolata)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181644-alternative-2&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181646&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;croce processionale, opera isolata&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181646-alternative-2&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181647&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;reliquiario, opera isolata&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181647-alternative-2&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181650&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;reliquiario, opera isolata&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181650-alternative-2&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300181651&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;torciera, elemento d&apos;insieme&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0300181651-alternative-2&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238079&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: arco provvisorio a porta Orientale a Milano - prospetto del fronte (prima variante) (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238079-alternative-2&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238081&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: arco provvisorio a porta Orientale a Milano - prospetto del fronte (seconda variante) (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238081-alternative-2&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303238265&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;progetto architettonico: sezione di edificio religioso (disegno architettonico)&quot; }        , &quot;location&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeIndexedTypedLocation/0303238265-alternative-2&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono i luoghi che hanno rivestito la funzione di deposito nei confronti di un certo bene culturale?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the places that have been used as storage area for a certain cultural property?</testannotationschema:hasCQ>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

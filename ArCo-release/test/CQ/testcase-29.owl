@@ -1,63 +1,69 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-29.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-29.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-29.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-29.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-29.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl"/>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasCQ xml:lang="it">Quali monete hanno uno stato di conservazione che ne impedisce la leggibilit√†?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">Which coins have a conservation status that prevents their readability?</testannotationschema:hasCQ>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
 
-select ?mon
-where {
- ?mon a arco-core:NumismaticProperty.
- ?mon arco-dd:hasConservationStatus ?status.
- ?status arco-dd:hasLegibility arco-dd:ImpossibleLegibility.
-} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:hasExpectedResult xml:lang="it">{
-  &quot;head&quot;: {
-    &quot;vars&quot;: [ &quot;mon&quot; ]
-  } ,
-  &quot;results&quot;: {
-    &quot;bindings&quot;: [
-      {
-        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin5&quot; }
-      } ,
-      {
-        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin6&quot; }
-      } ,
-      {
-        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin3&quot; }
-      } ,
-      {
-        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin7&quot; }
-      } ,
-      {
-        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin2&quot; }
-      } ,
-      {
-        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin1&quot; }
-      } ,
-      {
-        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin4&quot; }
-      }
-    ]
-  }
-}</testannotationschema:hasExpectedResult>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-29.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl"/>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasCQ xml:lang="it">Quali monete hanno uno stato di conservazione che ne impedisce la leggibilit‡?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">Which coins have a conservation status that prevents their readability?</testannotationschema:hasCQ>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+
+select ?mon
+where {
+ ?mon a arco-core:NumismaticProperty.
+ ?mon arco-dd:hasConservationStatus ?status.
+ ?status arco-dd:hasLegibility arco-dd:ImpossibleLegibility.
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:hasExpectedResult xml:lang="it">{
+  &quot;head&quot;: {
+    &quot;vars&quot;: [ &quot;mon&quot; ]
+  } ,
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
+      {
+        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin5&quot; }
+      } ,
+      {
+        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin6&quot; }
+      } ,
+      {
+        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin3&quot; }
+      } ,
+      {
+        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin7&quot; }
+      } ,
+      {
+        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin2&quot; }
+      } ,
+      {
+        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin1&quot; }
+      } ,
+      {
+        &quot;mon&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl#Coin4&quot; }
+      }
+    ]
+  }
+}</testannotationschema:hasExpectedResult>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:testDate xml:lang="en">2019-02-08</testannotationschema:testDate>
-    </owl:Ontology>
-</rdf:RDF>
 
+        <testalod:hasInputTestDataUri rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ29.ttl"/>
 
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
+        <testannotationschema:testDate xml:lang="en">2019-02-08</testannotationschema:testDate>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

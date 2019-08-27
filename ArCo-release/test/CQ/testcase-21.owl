@@ -1,51 +1,55 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-21.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-21.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-21.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-21.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-21.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+cont%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Ftitle+%3Freproduction+%3Fposition%0D%0A%0D%0AWHERE+%7B%0D%0A%0D%0A%3Fpublication+cont%3AhasTitle+%3Fpubtitle+.+%0D%0A%3Fpubtitle+rdfs%3Alabel+%3Ftitle++.+%0D%0A%3Fpublication+cont%3AhasReproduction+%3Freproduction+.%0D%0A%3Freproduction+cont%3AhasReproductionPosition+%3Fposition+%0D%0A%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasCQ xml:lang="it">In quale posizione (es.: frontespizio, copertina, etc.) di una specifica pubblicazione Ã¨ stata riprodotta la stampa X?</testannotationschema:hasCQ>
-         <testannotationschema:hasCQ xml:lang="en">In which position (eg: title page, cover, etc.) of a specific publication was the X print reproduced?</testannotationschema:hasCQ>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX cont: &lt;https://w3id.org/arco/context-description/&gt;
 
-SELECT ?title ?reproduction ?position
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-21.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+cont%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Ftitle+%3Freproduction+%3Fposition%0D%0A%0D%0AWHERE+%7B%0D%0A%0D%0A%3Fpublication+cont%3AhasTitle+%3Fpubtitle+.+%0D%0A%3Fpubtitle+rdfs%3Alabel+%3Ftitle++.+%0D%0A%3Fpublication+cont%3AhasReproduction+%3Freproduction+.%0D%0A%3Freproduction+cont%3AhasReproductionPosition+%3Fposition+%0D%0A%0D%0A%7D+%0D%0A%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasCQ xml:lang="it">In quale posizione (es.: frontespizio, copertina, etc.) di una specifica pubblicazione è stata riprodotta la stampa X?</testannotationschema:hasCQ>
+         <testannotationschema:hasCQ xml:lang="en">In which position (eg: title page, cover, etc.) of a specific publication was the X print reproduced?</testannotationschema:hasCQ>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-WHERE {
-
-?publication cont:hasTitle ?pubtitle . 
-?pubtitle rdfs:label ?title  . 
-?publication cont:hasReproduction ?reproduction .
-?reproduction cont:hasReproductionPosition ?position 
-
-} 
-
-LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;title&quot;, &quot;reproduction&quot;, &quot;position&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Titiani Vecellii, Pauli Caliarii Jacobi Robusti et Jacobi de Ponte opera selectiora a Johanne Baptista Jackson, anglo, ligno coelata et coloribus adumbrata&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212049-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212049-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-1-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-1-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-10-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-10-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-12-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-12-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-16-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-16-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-17-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-17-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-2-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-2-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-22-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-22-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-24-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-24-tavola-nel-testo&quot; }},
-    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-26-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-26-tavola-nel-testo&quot; }} ] } }</testannotationschema:hasExpectedResult>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX cont: &lt;https://w3id.org/arco/context-description/&gt;
+
+SELECT ?title ?reproduction ?position
+
+WHERE {
+
+?publication cont:hasTitle ?pubtitle . 
+?pubtitle rdfs:label ?title  . 
+?publication cont:hasReproduction ?reproduction .
+?reproduction cont:hasReproductionPosition ?position 
+
+} 
+
+LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;title&quot;, &quot;reproduction&quot;, &quot;position&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Titiani Vecellii, Pauli Caliarii Jacobi Robusti et Jacobi de Ponte opera selectiora a Johanne Baptista Jackson, anglo, ligno coelata et coloribus adumbrata&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212049-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212049-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-1-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-1-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-10-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-10-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-12-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-12-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-16-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-16-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-17-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-17-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-2-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-2-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-22-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-22-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-24-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-24-tavola-nel-testo&quot; }},
+    { &quot;title&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Cento Favole bellissime de i pi\u00F9 Illustri Antichi, Moderni Autori Greci, e Latini...&quot; }	, &quot;reproduction&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Reproduction/0500212061-26-reproduction&quot; }	, &quot;position&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ReproductionPosition/0500212061-26-tavola-nel-testo&quot; }} ] } }</testannotationschema:hasExpectedResult>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

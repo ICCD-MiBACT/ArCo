@@ -1,49 +1,53 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-28.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-28.owl"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-28.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-28.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-28.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+Lan%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FLanguage%2F%3E%0D%0Aselect+distinct+*%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-dd%3AhasAffixedElement+%3Fele.%0D%0A+%3Fele+a+arco-dd%3AInscription.%0D%0A+%3Fele+Lan%3AhasLanguage+%3Flan.%0D%0A%0D%0A+FILTER+regex%28%3Flan%2C+%22italiano%22%2C+%22i%22%29%0D%0A%0D%0A%7D+LIMIT+100&amp;format=text%2Fhtml&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasCQ xml:lang="it">Quali beni hanno iscrizioni in lingua italiana? E quali in lingue diverse dallâ€™italiano?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">Which cultural properties have Italian inscriptions? And which in languages other than Italian?</testannotationschema:hasCQ>
-        <testannotationschema:hasExpectedResult xml:lang="en">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;ele&quot;, &quot;lan&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300011375&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0300011375-inscription-3&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300157969&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0300157969-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300216176&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0300216176-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0700320341-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0700320341-inscription-2&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0700320341-inscription-3&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577580&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577580-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577581-inscription-2&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577581-inscription-3&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577581-inscription-4&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
-PREFIX Lan: &lt;https://w3id.org/italia/onto/Language/&gt;
-select distinct *
-where {
- ?bencult arco-dd:hasAffixedElement ?ele.
- ?ele a arco-dd:Inscription.
- ?ele Lan:hasLanguage ?lan.
 
- FILTER regex(?lan, &quot;italiano&quot;, &quot;i&quot;)
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-28.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0APREFIX+Lan%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FLanguage%2F%3E%0D%0Aselect+distinct+*%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-dd%3AhasAffixedElement+%3Fele.%0D%0A+%3Fele+a+arco-dd%3AInscription.%0D%0A+%3Fele+Lan%3AhasLanguage+%3Flan.%0D%0A%0D%0A+FILTER+regex%28%3Flan%2C+%22italiano%22%2C+%22i%22%29%0D%0A%0D%0A%7D+LIMIT+100&amp;format=text%2Fhtml&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasCQ xml:lang="it">Quali beni hanno iscrizioni in lingua italiana? E quali in lingue diverse dall’italiano?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">Which cultural properties have Italian inscriptions? And which in languages other than Italian?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="en">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;ele&quot;, &quot;lan&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300011375&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0300011375-inscription-3&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300157969&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0300157969-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0300216176&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0300216176-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0700320341-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0700320341-inscription-2&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0700320341-inscription-3&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577580&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577580-inscription-1&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577581-inscription-2&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577581-inscription-3&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;ele&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800577581-inscription-4&quot; }        , &quot;lan&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Language/italiano&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testDate xml:lang="en">2019-01-25</testannotationschema:testDate>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+PREFIX Lan: &lt;https://w3id.org/italia/onto/Language/&gt;
+select distinct *
+where {
+ ?bencult arco-dd:hasAffixedElement ?ele.
+ ?ele a arco-dd:Inscription.
+ ?ele Lan:hasLanguage ?lan.
+
+ FILTER regex(?lan, &quot;italiano&quot;, &quot;i&quot;)
+
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

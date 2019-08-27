@@ -1,47 +1,51 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-39.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-39.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-39.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-39.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-39.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:testDate xml:lang="en">2019-02-25</testannotationschema:testDate>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-event%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcultural-event%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0A%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+%0D%0A+%3Fevent+arco-event%3AeventTimeLocation+%3Ftimeloco%0D%0A%7D%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasCQ xml:lang="it">Qual Ã¨ il tempo e il luogo di un esibizione che ha compreso il bene culturale x?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What is the place and time of the exhibition which includes the cultural entity X?</testannotationschema:hasCQ>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;event&quot;, &quot;timeloco&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750076-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750076-2&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750079-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750080-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750086-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750086-2&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750087-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750087-2&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750088-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750121-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-event: &lt;https://w3id.org/arco/cultural-event/&gt;
-PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
 
-SELECT  *
-WHERE {
- 
- ?event arco-event:eventTimeLocation ?timeloco
-}
-LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-    </owl:Ontology>
-</rdf:RDF>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-39.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:testDate xml:lang="en">2019-02-25</testannotationschema:testDate>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-event%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcultural-event%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0A%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+%0D%0A+%3Fevent+arco-event%3AeventTimeLocation+%3Ftimeloco%0D%0A%7D%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasCQ xml:lang="it">Qual è il tempo e il luogo di un esibizione che ha compreso il bene culturale x?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What is the place and time of the exhibition which includes the cultural entity X?</testannotationschema:hasCQ>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;event&quot;, &quot;timeloco&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750076-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750076-2&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750079-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750080-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750086-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750086-2&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750087-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Casa d&apos;Aste Maison Bibelot e Polimoda/ dal 20/10/2012 al 22/10/2012&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750087-2&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750088-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0900750121-1&quot; }	, &quot;timeloco&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;FI/ Firenze/ Galleria del Costume/ dal 12/11/2013&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-event: &lt;https://w3id.org/arco/cultural-event/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+
+SELECT  *
+WHERE {
+ 
+ ?event arco-event:eventTimeLocation ?timeloco
+}
+LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

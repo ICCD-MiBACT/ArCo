@@ -1,47 +1,51 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-11.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-11.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-11.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-11.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-11.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;geometry&quot;, &quot;coordinates&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254107&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0303254107-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254109&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0303254109-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0303254109-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320341-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320341-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320348&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320348-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320348-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320359&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320359-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320359-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320360&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320360-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320360-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577580&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0800577580-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0800577580-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0800577581-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0800577581-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900771257&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0900771257-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0900771257-geometry-point-1-coordinates-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900705980&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0900705980-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0900705980-geometry-point-1-coordinates-1&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
-PREFIX clvapit: &lt;https://w3id.org/italia/onto/CLV/&gt;
-SELECT *
-WHERE{
-  ?entity clvapit:hasGeometry ?geometry .
-  ?geometry arco-location:hasCoordinates ?coordinates .
 
-}
-limit 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+clvapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+clvapit%3AhasGeometry+%3Fgeometry+.%0D%0A++%3Fgeometry+arco-location%3AhasCoordinates+%3Fcoordinates+.%0D%0A%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasCQ xml:lang="it">Quali sono le coordinate geografiche del bene culturale X?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What are the geographical coordinates of the cultural property X?</testannotationschema:hasCQ>
-        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-    </owl:Ontology>
-</rdf:RDF>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-11.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;geometry&quot;, &quot;coordinates&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254107&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0303254107-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0303254107-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0303254109&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0303254109-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0303254109-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320341&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320341-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320341-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320348&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320348-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320348-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320359&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320359-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320359-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0700320360&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0700320360-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0700320360-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577580&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0800577580-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0800577580-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577581&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0800577581-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0800577581-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900771257&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0900771257-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0900771257-geometry-point-1-coordinates-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0900705980&quot; }        , &quot;geometry&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Geometry/0900705980-geometry-point-1&quot; }        , &quot;coordinates&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Coordinates/0900705980-geometry-point-1-coordinates-1&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-location: &lt;https://w3id.org/arco/location/&gt;
+PREFIX clvapit: &lt;https://w3id.org/italia/onto/CLV/&gt;
+SELECT *
+WHERE{
+  ?entity clvapit:hasGeometry ?geometry .
+  ?geometry arco-location:hasCoordinates ?coordinates .
+
+}
+limit 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-location%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Flocation%2F%3E%0D%0APREFIX+clvapit%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+clvapit%3AhasGeometry+%3Fgeometry+.%0D%0A++%3Fgeometry+arco-location%3AhasCoordinates+%3Fcoordinates+.%0D%0A%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono le coordinate geografiche del bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the geographical coordinates of the cultural property X?</testannotationschema:hasCQ>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

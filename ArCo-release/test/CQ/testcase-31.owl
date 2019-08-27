@@ -1,46 +1,50 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-31.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-31.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-31.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-31.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-31.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;isc&quot;, &quot;supp&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641502-part-n_002118&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641502-affixed-element-13&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641502-part-n_002114&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641502-affixed-element-4&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641502-part-n_002115&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641502-affixed-element-7&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641465-part-n_002490&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641465-affixed-element-2&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/adesivo-in-carta-gommata&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633919&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633919-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633933&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633933-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633934&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633934-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633935&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633935-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633936&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633936-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633942&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633942-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0A%0D%0Aselect+*%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-dd%3AhasAffixedElement+%3Fisc.%0D%0A+%3Fisc+a+arco-dd%3AInscription.%0D%0A+%3Fisc+arco-dd%3AhasSupport+%3Fsupp%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=text%2Fhtml&amp;timeout=100000000000&amp;debug=on"/>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:hasCQ xml:lang="it">Su quale supporto si trova lâ€™iscrizione del bene X?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">On what support is the iscription of the good X?</testannotationschema:hasCQ>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
 
-select *
-where {
- ?bencult arco-dd:hasAffixedElement ?isc.
- ?isc a arco-dd:Inscription.
- ?isc arco-dd:hasSupport ?supp
-} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-    </owl:Ontology>
-</rdf:RDF>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-31.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:testDate>2019-01-25</testannotationschema:testDate>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;, &quot;isc&quot;, &quot;supp&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641502-part-n_002118&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641502-affixed-element-13&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641502-part-n_002114&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641502-affixed-element-4&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641502-part-n_002115&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641502-affixed-element-7&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalPropertyPart/0800641465-part-n_002490&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800641465-affixed-element-2&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/adesivo-in-carta-gommata&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633919&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633919-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633933&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633933-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633934&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633934-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633935&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633935-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633936&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633936-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800633942&quot; }        , &quot;isc&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Inscription/0800633942-affixed-element-1&quot; }        , &quot;supp&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Support/etichetta-di-carta&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-dd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fdenotative-description%2F%3E%0D%0A%0D%0Aselect+*%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-dd%3AhasAffixedElement+%3Fisc.%0D%0A+%3Fisc+a+arco-dd%3AInscription.%0D%0A+%3Fisc+arco-dd%3AhasSupport+%3Fsupp%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=text%2Fhtml&amp;timeout=100000000000&amp;debug=on"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:hasCQ xml:lang="it">Su quale supporto si trova l’iscrizione del bene X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">On what support is the iscription of the good X?</testannotationschema:hasCQ>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
+
+select *
+where {
+ ?bencult arco-dd:hasAffixedElement ?isc.
+ ?isc a arco-dd:Inscription.
+ ?isc arco-dd:hasSupport ?supp
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

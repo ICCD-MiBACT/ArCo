@@ -1,47 +1,51 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-24.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-24.owl"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-24.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-24.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-24.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0A%0D%0Aselect+%3Fbencult%0D%0A%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-cd%3AhasSubject+%3Fsog%0D%0A+FILTER+regex%28%3Fsog%2C+%22sfinge%22%2C+%22i%22%29%0D%0A%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasCQ xml:lang="it">Quali beni hanno come soggetto la Sfinge?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What assets have the Sphinx as their subject?</testannotationschema:hasCQ>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0600040331&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500569745&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500814561&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500814604&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600006495&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600102369&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600102384&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1200575103&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1200575612&quot; }},
-    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1200575680&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
 
-select ?bencult
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-24.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0A%0D%0Aselect+%3Fbencult%0D%0A%0D%0Awhere+%7B%0D%0A+%3Fbencult+arco-cd%3AhasSubject+%3Fsog%0D%0A+FILTER+regex%28%3Fsog%2C+%22sfinge%22%2C+%22i%22%29%0D%0A%0D%0A%7D+LIMIT+100%0D%0A%0D%0A%0D%0A&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasCQ xml:lang="it">Quali beni hanno come soggetto la Sfinge?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What assets have the Sphinx as their subject?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;bencult&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/0600040331&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500569745&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500814561&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500814604&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600006495&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600102369&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/HistoricOrArtisticProperty/1600102384&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1200575103&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1200575612&quot; }},
+    { &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/ArchaeologicalProperty/1200575680&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+
+select ?bencult
+
+where {
+ ?bencult arco-cd:hasSubject ?sog
+ FILTER regex(?sog, &quot;sfinge&quot;, &quot;i&quot;)
+
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-where {
- ?bencult arco-cd:hasSubject ?sog
- FILTER regex(?sog, &quot;sfinge&quot;, &quot;i&quot;)
-
-} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

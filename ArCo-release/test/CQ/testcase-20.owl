@@ -1,65 +1,71 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-20.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-20.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-20.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-20.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-20.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl"/>
-        <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
-        <testannotationschema:hasExpectedResult xml:lang="it">{
-  &quot;head&quot;: {
-    &quot;vars&quot;: [ &quot;CultProp&quot; , &quot;Ars&quot; ]
-  } ,
-  &quot;results&quot;: {
-    &quot;bindings&quot;: [
-      {
-        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty7&quot; }
-      } ,
-      {
-        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty3&quot; }
-      } ,
-      {
-        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty1&quot; }
-      } ,
-      {
-        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty4&quot; }
-      } ,
-      {
-        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty2&quot; }
-      } ,
-      {
-        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty5&quot; }
-      } ,
-      {
-        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty6&quot; }
-      }
-    ]
-  }
-}</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasCQ xml:lang="it">Di quale unit√† archivistica (fondo e/o serie e/o sottoserie) fa parte il bene culturale X?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">Which archival record set (fund and/or series and/or subseries) is part of the cultural entitiy X?</testannotationschema:hasCQ>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-20.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl"/>
+        <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
+        <testannotationschema:hasExpectedResult xml:lang="it">{
+  &quot;head&quot;: {
+    &quot;vars&quot;: [ &quot;CultProp&quot; , &quot;Ars&quot; ]
+  } ,
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
+      {
+        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty7&quot; }
+      } ,
+      {
+        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty3&quot; }
+      } ,
+      {
+        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty1&quot; }
+      } ,
+      {
+        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty4&quot; }
+      } ,
+      {
+        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty2&quot; }
+      } ,
+      {
+        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty5&quot; }
+      } ,
+      {
+        &quot;CultProp&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl#CulturalProperty6&quot; }
+      }
+    ]
+  }
+}</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasCQ xml:lang="it">Di quale unit‡ archivistica (fondo e/o serie e/o sottoserie) fa parte il bene culturale X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">Which archival record set (fund and/or series and/or subseries) is part of the cultural entitiy X?</testannotationschema:hasCQ>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arcocd: &lt;https://w3id.org/arco/context-description/&gt;
 
-SELECT ?CultProp ?Ars
+        <testalod:hasInputTestDataUri rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ20.ttl"/>
 
-WHERE {
-?arsm arcocd:hasMemberOfArchivalRecordSet ?CultProp ;
-    arcocd:hasArchivalRecordSet ?ars 
-
-} 
-
-LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arcocd: &lt;https://w3id.org/arco/context-description/&gt;
+
+SELECT ?CultProp ?Ars
+
+WHERE {
+?arsm arcocd:hasMemberOfArchivalRecordSet ?CultProp ;
+    arcocd:hasArchivalRecordSet ?ars 
+
+} 
+
+LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

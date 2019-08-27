@@ -1,65 +1,71 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-23.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-23.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-23.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-23.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-23.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasCQ xml:lang="en">What cultural assets have been forged?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="it">Quali beni hanno subito delle contraffazioni?</testannotationschema:hasCQ>
-        <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
 
-select ?bencult
-
-where {
- ?bencult arco-cd:hasRelatedWorkSituation ?situa.
- ?situa arco-cd:hasRelatedWork ?rel.
- ?rel a arco-cd:Forgery.
-
-} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasExpectedResult xml:lang="it">{
-  &quot;head&quot;: {
-    &quot;vars&quot;: [ &quot;bencult&quot; ]
-  } ,
-  &quot;results&quot;: {
-    &quot;bindings&quot;: [
-      {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty3&quot; }
-      } ,
-      {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty2&quot; }
-      } ,
-      {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty5&quot; }
-      } ,
-      {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty1&quot; }
-      } ,
-      {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty7&quot; }
-      } ,
-      {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty4&quot; }
-      } ,
-      {
-        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty6&quot; }
-      }
-    ]
-  }
-}</testannotationschema:hasExpectedResult>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-23.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasCQ xml:lang="en">What cultural assets have been forged?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="it">Quali beni hanno subito delle contraffazioni?</testannotationschema:hasCQ>
+        <testannotationschema:testDate xml:lang="en">2019-02-13</testannotationschema:testDate>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+
+select ?bencult
+
+where {
+ ?bencult arco-cd:hasRelatedWorkSituation ?situa.
+ ?situa arco-cd:hasRelatedWork ?rel.
+ ?rel a arco-cd:Forgery.
+
+} LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasExpectedResult xml:lang="it">{
+  &quot;head&quot;: {
+    &quot;vars&quot;: [ &quot;bencult&quot; ]
+  } ,
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty3&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty2&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty5&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty1&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty7&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty4&quot; }
+      } ,
+      {
+        &quot;bencult&quot;: { &quot;type&quot;: &quot;uri&quot; , &quot;value&quot;: &quot;https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl#CulturalProperty6&quot; }
+      }
+    ]
+  }
+}</testannotationschema:hasExpectedResult>
         <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl"/>
-    </owl:Ontology>
-</rdf:RDF>
 
+        <testalod:hasInputTestDataUri rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl"/>
 
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ23.ttl"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,47 +1,51 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-12.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-12.owl"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-12.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-12.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-12.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+a+arco-core%3AMovableCulturalProperty+%3B%0D%0A++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasUse+%3Fuse+.%0D%0A%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasCQ xml:lang="it">Quali sono gli usi del bene culturale mobile X?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What are the usage associated to the movable cultural property X?</testannotationschema:hasCQ>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;entityLabel&quot;, &quot;use&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800054827&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Zampognaro. (statuetta, statuine da presepio)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800054827-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057500&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057500-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057502&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057502-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057507&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057507-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057508&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057508-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057556&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057556-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057830&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Due donne. (statuetta da presepe, religiosit\u00E0 popolare)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057830-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800056888&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Serpente. (cavicchio, utensili per l&apos;agricoltura)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800056888-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1500849351&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;catino&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1500849351-use-1&quot; }},
-    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800007989&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ghigliottina, strumento di supplizio&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800007989-use-1&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
-SELECT *
-WHERE{
-  ?entity a arco-core:MovableCulturalProperty ;
-  rdfs:label ?entityLabel ;
-  arco-cd:hasUse ?use .
 
-}
-limit 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-    </owl:Ontology>
-</rdf:RDF>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-12.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcontext-description%2F%3E%0D%0ASELECT+*%0D%0AWHERE%7B%0D%0A++%3Fentity+a+arco-core%3AMovableCulturalProperty+%3B%0D%0A++rdfs%3Alabel+%3FentityLabel+%3B%0D%0A++arco-cd%3AhasUse+%3Fuse+.%0D%0A%0D%0A%7D%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono gli usi del bene culturale mobile X?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the usage associated to the movable cultural property X?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;entity&quot;, &quot;entityLabel&quot;, &quot;use&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800054827&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Zampognaro. (statuetta, statuine da presepio)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800054827-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057500&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057500-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057502&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057502-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057507&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057507-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057508&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057508-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057556&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Maiale. (ex voto)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057556-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800057830&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Due donne. (statuetta da presepe, religiosit\u00E0 popolare)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800057830-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800056888&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;Serpente. (cavicchio, utensili per l&apos;agricoltura)&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800056888-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1500849351&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;catino&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1500849351-use-1&quot; }},
+    { &quot;entity&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1800007989&quot; }        , &quot;entityLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;ghigliottina, strumento di supplizio&quot; }        , &quot;use&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Use/1800007989-use-1&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-cd: &lt;https://w3id.org/arco/context-description/&gt;
+SELECT *
+WHERE{
+  ?entity a arco-core:MovableCulturalProperty ;
+  rdfs:label ?entityLabel ;
+  arco-cd:hasUse ?use .
+
+}
+limit 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-
-
-<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

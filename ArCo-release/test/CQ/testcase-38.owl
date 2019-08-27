@@ -1,47 +1,51 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-38.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-38.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-38.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-38.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-38.owl">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-event%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcultural-event%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0A%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+%3Fevent+cis%3Ainvolves+%3FculturalProperty.%0D%0A+%3Fevent+arco-event%3AhasEventOrganiser+%3Fagent%0D%0A%7D%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:testDate xml:lang="en">2019-02-25</testannotationschema:testDate>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
-PREFIX arco-event: &lt;https://w3id.org/arco/cultural-event/&gt;
-PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
 
-SELECT  *
-WHERE {
- ?event cis:involves ?culturalProperty.
- ?event arco-event:hasEventOrganiser ?agent
-}
-LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;event&quot;, &quot;culturalProperty&quot;, &quot;agent&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0800366380-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800366380&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/sbsae-bo&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0800391974-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800391974&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/sbsae-bo&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/1201254168-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/1201254168&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-1-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-1&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-10-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-10&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-13-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-13&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-16-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-16&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-18-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-18&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-20-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-20&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
-    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-22-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-22&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasInputTestData rdf:resource="http://stlab.istc.cnr.it/arco/docker_data/arco_dataset.nt.tar.gz"/>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
-        <testannotationschema:hasCQ xml:lang="it">Quali sono stati gli organizzatori degli eventi del bene x?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">What are the events&apos; organizers of the cultural entity X? </testannotationschema:hasCQ>
-    </owl:Ontology>
-</rdf:RDF>
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-38.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+arco-event%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcultural-event%2F%3E%0D%0APREFIX+cis%3A+%3Chttp%3A%2F%2Fdati.beniculturali.it%2Fcis%2F%3E%0D%0A%0D%0ASELECT++*%0D%0AWHERE+%7B%0D%0A+%3Fevent+cis%3Ainvolves+%3FculturalProperty.%0D%0A+%3Fevent+arco-event%3AhasEventOrganiser+%3Fagent%0D%0A%7D%0D%0ALIMIT+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+        <testannotationschema:testDate xml:lang="en">2019-02-25</testannotationschema:testDate>
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-core: &lt;https://w3id.org/arco/core/&gt;
+PREFIX arco-event: &lt;https://w3id.org/arco/cultural-event/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt;
+
+SELECT  *
+WHERE {
+ ?event cis:involves ?culturalProperty.
+ ?event arco-event:hasEventOrganiser ?agent
+}
+LIMIT 100</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;event&quot;, &quot;culturalProperty&quot;, &quot;agent&quot;] },
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0800366380-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800366380&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/sbsae-bo&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/0800391974-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800391974&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/sbsae-bo&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CulturalEvent/1201254168-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/1201254168&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-1-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-1&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-10-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-10&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-13-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-13&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-16-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-16&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-18-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-18&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-20-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-20&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }},
+    { &quot;event&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Exhibition/0800640527-22-1&quot; }	, &quot;culturalProperty&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/PhotographicHeritage/0800640527-22&quot; }	, &quot;agent&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/Agent/true&quot; }} ] } }</testannotationschema:hasExpectedResult>
+        <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+        <testannotationschema:hasCQ xml:lang="it">Quali sono stati gli organizzatori degli eventi del bene x?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">What are the events&apos; organizers of the cultural entity X? </testannotationschema:hasCQ>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
