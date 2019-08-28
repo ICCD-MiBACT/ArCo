@@ -1,52 +1,100 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-03.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase-03.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-03.owl#"
+
+     xml:base="https://w3id.org/arco/test/CQ/testcase-03.owl"
+
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
-     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-03.owl">
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#"
+
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-03.owl">
+
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
-     <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
-        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0ASELECT+*+%0D%0A%0D%0AWHERE%7B+%0D%0A%3Frecord+arco-catalogue%3AhasCatalogueRecordVersion+%3FrecordVersion+.+%0D%0A%3FrecordVersion+arco-catalogue%3AeditedAtTime+%3Ftime+.+%0D%0A%3Ftime+rdfs%3Alabel+%3FtimeLabel+%0D%0A%7D+%0D%0A%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/catalogue/&gt; 
-
-SELECT * 
-
-WHERE{ 
-?record arco-catalogue:hasCatalogueRecordVersion ?recordVersion . 
-?recordVersion arco-catalogue:editedAtTime ?time . 
-?time rdfs:label ?timeLabel 
-} 
-
-limit 100</testannotationschema:hasSPARQLQueryUnitTest>
-        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
-        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;record&quot;, &quot;recordVersion&quot;, &quot;time&quot;, &quot;timeLabel&quot;] },
-  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212017&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212017-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212018&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212018-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212019&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212019-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212020&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212020-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212021&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212021-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212023&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212023-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212024&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212024-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212026&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212026-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212027&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212027-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
-    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212028&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212028-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }} ] } }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasCQ xml:lang="it">Quando è stata redatta e aggiornata la scheda sul bene culturale X?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">Whan was the catalogue record about the cultural property X edited or updated?</testannotationschema:hasCQ>
-        
-        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
-        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+     <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+
+        <testannotationschema:hasActualResult rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql?default-graph-uri=&amp;query=PREFIX+arco-catalogue%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcatalogue%2F%3E+%0D%0A%0D%0ASELECT+*+%0D%0A%0D%0AWHERE%7B+%0D%0A%3Frecord+arco-catalogue%3AhasCatalogueRecordVersion+%3FrecordVersion+.+%0D%0A%3FrecordVersion+arco-catalogue%3AeditedAtTime+%3Ftime+.+%0D%0A%3Ftime+rdfs%3Alabel+%3FtimeLabel+%0D%0A%7D+%0D%0A%0D%0Alimit+100&amp;format=application%2Fsparql-results%2Bjson&amp;timeout=0&amp;debug=on"/>
+
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX arco-catalogue: &lt;https://w3id.org/arco/ontology/catalogue/&gt; 
+
+
+
+SELECT * 
+
+
+
+WHERE{ 
+
+?record arco-catalogue:hasCatalogueRecordVersion ?recordVersion . 
+
+?recordVersion arco-catalogue:editedAtTime ?time . 
+
+?time rdfs:label ?timeLabel 
+
+} 
+
+
+
+limit 100</testannotationschema:hasSPARQLQueryUnitTest>
+
+        <rdfs:comment xml:lang="en">Test on ArCo release 0.4</rdfs:comment>
+
+        <testannotationschema:hasExpectedResult xml:lang="it">{ &quot;head&quot;: { &quot;link&quot;: [], &quot;vars&quot;: [&quot;record&quot;, &quot;recordVersion&quot;, &quot;time&quot;, &quot;timeLabel&quot;] },
+
+  &quot;results&quot;: { &quot;distinct&quot;: false, &quot;ordered&quot;: true, &quot;bindings&quot;: [
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212017&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212017-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212018&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212018-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212019&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212019-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212020&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212020-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212021&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212021-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212023&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212023-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212024&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212024-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212026&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212026-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212027&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212027-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }},
+
+    { &quot;record&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordS/0500212028&quot; }        , &quot;recordVersion&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/CatalogueRecordVersion/0500212028-compilation&quot; }        , &quot;time&quot;: { &quot;type&quot;: &quot;uri&quot;, &quot;value&quot;: &quot;https://w3id.org/arco/resource/TimeInterval/1991&quot; }        , &quot;timeLabel&quot;: { &quot;type&quot;: &quot;literal&quot;, &quot;value&quot;: &quot;1991&quot; }} ] } }</testannotationschema:hasExpectedResult>
+
+        <testannotationschema:hasCQ xml:lang="it">Quando Ã¨ stata redatta e aggiornata la scheda sul bene culturale X?</testannotationschema:hasCQ>
+
+        <testannotationschema:hasCQ xml:lang="en">Whan was the catalogue record about the cultural property X edited or updated?</testannotationschema:hasCQ>
+
+        
+
+        <testannotationschema:testDate rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2019-01-25</testannotationschema:testDate>
+
+        <testannotationschema:testedBy xml:lang="en">Ran by Valentina Pasqual and Fabio Mariani</testannotationschema:testedBy>
+
         <testalod:hasInputTestDataUri rdf:resource="http://wit.istc.cnr.it/arco/virtuoso/sparql"/>
 
-        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
-    </owl:Ontology>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+
+    </owl:Ontology>
+
+</rdf:RDF>
+
+
+
+
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
