@@ -46,8 +46,14 @@
         <terms:modified>2019-06-01</terms:modified>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/sequence.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
-        <rdfs:comment xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.
+In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
+- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
+- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Cultural Event module models cultural events, i.e. events involving cultural properties.
+In this module are used as template the following Ontology Design Patterns:
+- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
+- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Event Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia degli Eventi Culturali (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>

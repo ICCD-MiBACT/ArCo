@@ -42,8 +42,26 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
         <terms:modified>2019-06-01</terms:modified>
-        <rdfs:comment xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).</rdfs:comment>
-        <rdfs:comment xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).
+In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
+- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
+- http://www.ontologydesignpatterns.org/cp/owl/countingas.owl
+- http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl
+- http://www.ontologydesignpatterns.org/cp/owl/classification.owl
+- http://www.ontologydesignpatterns.org/cp/owl/componency.owl
+- http://www.ontologydesignpatterns.org/cp/owl/partof.owl
+- http://www.ontologydesignpatterns.org/cp/owl/place.owl
+- http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification).
+In this module are used as template the following Ontology Design Patterns:
+- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
+- http://www.ontologydesignpatterns.org/cp/owl/countingas.owl
+- http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl
+- http://www.ontologydesignpatterns.org/cp/owl/classification.owl
+- http://www.ontologydesignpatterns.org/cp/owl/componency.owl
+- http://www.ontologydesignpatterns.org/cp/owl/partof.owl
+- http://www.ontologydesignpatterns.org/cp/owl/place.owl
+- http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Core Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia Core (ArCo network)</rdfs:label>
         <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>

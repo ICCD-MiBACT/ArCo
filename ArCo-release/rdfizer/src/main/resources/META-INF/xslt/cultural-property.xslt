@@ -1789,12 +1789,12 @@
 				</xsl:if>
 				<!-- commission -->
 				<xsl:for-each select="schede/*/AU/CMM">
-					<arco-dd:hasCommission>
+					<arco-cd:hasCommission>
 						<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
 							select="concat($NS, 'Commission/', $itemURI, '-', position())" />
 	                        </xsl:attribute>
-					</arco-dd:hasCommission>
+					</arco-cd:hasCommission>
 				</xsl:for-each>
 				<xsl:for-each select="schede/*/AU/EDT">
 				<xsl:if test="$sheetType='OAC' or $sheetType='S'">

@@ -4770,7 +4770,7 @@
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
-							select="'https://w3id.org/arco/ontology/context-description/context-description/Dating'" />
+							select="'https://w3id.org/arco/ontology/context-description/Dating'" />
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label xml:lang="it">
