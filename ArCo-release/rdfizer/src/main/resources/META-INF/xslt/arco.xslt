@@ -21327,7 +21327,7 @@
 						<arco-cd:hasInterpretationCriterion>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of
-									select="concat($NS, 'InterpretationCriterion/', arco-fn:arcofy(./AATM))" />
+									select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./AATM)))" />
                             </xsl:attribute>
 						</arco-cd:hasInterpretationCriterion>
 					</xsl:if>
@@ -21387,7 +21387,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                        	 	<xsl:value-of
-								select="concat($NS, 'InterpretationCriterion/', arco-fn:arcofy(./AATM))" />
+								select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./AATM)))" />
                         </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -21465,7 +21465,7 @@
 						<arco-cd:hasInterpretationCriterion>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of
-									select="concat($NS, 'InterpretationCriterion/', arco-fn:arcofy(./AAFM))" />
+									select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./AAFM)))" />
                             </xsl:attribute>
 						</arco-cd:hasInterpretationCriterion>
 					</xsl:if>
@@ -21507,7 +21507,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                        	 	<xsl:value-of
-								select="concat($NS, 'InterpretationCriterion/', arco-fn:arcofy(./AAFM))" />
+								select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./AAFM)))" />
                         </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">

@@ -677,7 +677,6 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/RecurrentTimePeriod">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/cultural-event/TimePeriod"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/cultural-event/hasTimePeriodMeasurementUnit"/>
