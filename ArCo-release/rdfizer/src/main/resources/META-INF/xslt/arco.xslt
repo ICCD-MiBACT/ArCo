@@ -458,7 +458,7 @@
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
 								<xsl:attribute name="rdf:resource">
 	                                <xsl:value-of
-									select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(.))" />
+									select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(normalize-space(.)))" />
 	                            </xsl:attribute>
 							</arco-catalogue:hasCatalogueRecordVersionRiT>
 							<arco-catalogue:hasUpdateScientificRevisor>
@@ -551,11 +551,11 @@
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of
-									select="concat(./@hint, ' da ', normalize-space(.))" />
+									select="concat('Responsabile ricerca e redazione di aggiornamento: ', normalize-space(.))" />
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of
-									select="concat('Update', ' by ', normalize-space(.))" />
+									select="concat('Update responsible compilation: ', normalize-space(.))" />
 							</rdfs:label>
 							<roapit:withRole>
 								<xsl:attribute name="rdf:resource">
@@ -625,11 +625,11 @@
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of
-									select="concat(./@hint, ' da ', normalize-space(.))" />
+									select="concat('Ente responsabile di aggiornamento ', normalize-space(.))" />
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of
-									select="concat('Update', ' by ', normalize-space(.))" />
+									select="concat('Update responsible agency ', normalize-space(.))" />
 							</rdfs:label>
 							<roapit:withRole>
 								<xsl:attribute name="rdf:resource">
@@ -688,7 +688,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	                            <xsl:value-of
-								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:urify(normalize-space(.)))" />
+								select="concat($NS, 'TimeIndexedRole/', $itemURI, '-agg-', position(), '-', arco-fn:arcofy(normalize-space(.)))" />
 	                        </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -698,11 +698,11 @@
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of
-									select="concat(./@hint, ' da ', normalize-space(.))" />
+									select="concat('Referente scientifico di aggiornamento ', normalize-space(.))" />
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of
-									select="concat('Update', ' by ', normalize-space(.))" />
+									select="concat('Update scientific revisor ', normalize-space(.))" />
 							</rdfs:label>
 							<roapit:withRole>
 								<xsl:attribute name="rdf:resource">
@@ -975,7 +975,7 @@
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of
-									select="normalize-space(../@hint)" />
+									select="normalize-space(./@hint)" />
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of select="'Official in charge'" />
@@ -17661,7 +17661,7 @@
 							<xsl:value-of
 								select="concat('Coordinate del bene culturale: ', $itemURI)" />
 						</rdfs:label>
-						<l0:name xml:lang="en">
+						<l0:name xml:lang="it">
 							<xsl:value-of
 								select="concat('Coordinate del bene culturale: ', $itemURI)" />
 						</l0:name>
