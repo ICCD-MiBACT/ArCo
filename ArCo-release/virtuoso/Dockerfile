@@ -1,4 +1,4 @@
-vad/FROM tenforce/virtuoso:1.3.1-virtuoso7.2.2
+FROM tenforce/virtuoso:1.3.1-virtuoso7.2.2
 
 
 # Add ontologies
