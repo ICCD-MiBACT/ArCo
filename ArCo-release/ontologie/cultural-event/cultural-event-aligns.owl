@@ -6,9 +6,14 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event-aligns/"/>
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event-aligns/">
+        <rdfs:label xml:lang="it">Questi sono gli allineamenti del modulo Cultural Event (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
+        <rdfs:label xml:lang="en">These are the alignments of Cultural Event module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
+        <dc:creator>STLab (ISTC-CNR)</dc:creator>
+    </owl:Ontology>
+
     
 
 
@@ -69,7 +74,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
     </owl:Class>
     
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit>">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/cultural-event/TimePeriodMeasurementUnit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
     </owl:Class>
 </rdf:RDF>

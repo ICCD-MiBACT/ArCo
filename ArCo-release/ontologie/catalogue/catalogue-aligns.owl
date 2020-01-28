@@ -23,7 +23,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/"/>
         <owl:imports rdf:resource="http://purl.org/emmedi/oaentry"/>
         <rdfs:label xml:lang="it">Questi sono gli allineamenti del modulo Catalogue (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
-        <rdfs:label xml:lang="en">These are the alignments of Denotative Catalogue module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
+        <rdfs:label xml:lang="en">These are the alignments of Catalogue module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
         <dc:creator>STLab (ISTC-CNR)</dc:creator>
     </owl:Ontology>
     
