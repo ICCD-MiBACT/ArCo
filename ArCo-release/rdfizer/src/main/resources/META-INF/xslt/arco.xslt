@@ -23223,10 +23223,10 @@
 							<xsl:otherwise>
 								<xsl:choose>
 									<xsl:when test ="schede/*/LC/LDC/LDCK">
-										<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCK)), normalize-space(lower-case(schede/*/LC/LDC/LDCT))))))" />
+										<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCK)), normalize-space(lower-case(schede/*/LC/LDC/LDCT))))))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCN)), normalize-space(lower-case(schede/*/LC/LDC/LDCT))))))" />
+										<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCN)), normalize-space(lower-case(schede/*/LC/LDC/LDCT))))))" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:otherwise>
