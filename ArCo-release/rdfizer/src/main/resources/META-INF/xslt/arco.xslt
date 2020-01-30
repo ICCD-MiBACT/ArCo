@@ -1372,7 +1372,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 	            			<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:urify(.))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
             		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -1407,7 +1407,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
             			<xsl:value-of
-							select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+							select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
             		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -1437,7 +1437,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
             			<xsl:value-of
-							select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+							select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
             		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -2408,7 +2408,7 @@
 									<arco-cd:hasSubject>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of
-											select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+											select="concat($NS, 'Subject/', arco-fn:arcofy(./ROFS))" />
 										</xsl:attribute>
 									</arco-cd:hasSubject>
 								</xsl:if>
@@ -2503,7 +2503,7 @@
 									<arco-cd:hasSubject>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of
-											select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+											select="concat($NS, 'Subject/', arco-fn:arcofy(./ROFS))" />
 										</xsl:attribute>
 									</arco-cd:hasSubject>
 								</xsl:if>
@@ -2597,7 +2597,7 @@
 									<arco-cd:hasSubject>
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of
-											select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+											select="concat($NS, 'Subject/', arco-fn:arcofy(./ROFS))" />
 										</xsl:attribute>
 									</arco-cd:hasSubject>
 								</xsl:if>
@@ -2686,7 +2686,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 				            			<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(./ROFS)))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(./ROFS))" />
 				            		</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -21347,7 +21347,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-							select="./AATN" />
+							select="concat($NS, 'Agent/', arco-fn:arcofy(./AATN))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -26694,6 +26694,12 @@
 							<mu:value>
 								<xsl:value-of select="$mu-value" />
 							</mu:value>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="$mu-value" />
+							</rdfs:label>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="$mu-value" />
+							</rdfs:label>
 							<xsl:choose>
 								<xsl:when test="../MISU">
 									<mu:hasMeasurementUnit>
@@ -26893,6 +26899,12 @@
 							<mu:value>
 								<xsl:value-of select="$mu-value" />
 							</mu:value>
+							<rdfs:label xml:lang="en">
+								<xsl:value-of select="$mu-value" />
+							</rdfs:label>
+							<rdfs:label xml:lang="it">
+								<xsl:value-of select="$mu-value" />
+							</rdfs:label>
 							<xsl:if test="../MIFU">
 								<mu:hasMeasurementUnit>
 									<xsl:attribute name="rdf:resource">

@@ -20,9 +20,10 @@ public class Main {
 	
 	public static void main(String[] args) {
 		String inFolderString = args[0];
-		String outFolderString = args[1];
+		String outNtriplesFile = args[1];
 		File inFolder = new File(inFolderString);
-		File outFolder = new File(outFolderString);
+		
+		File outFolder = new File("ttls");
 		outFolder.mkdirs();
 		
 		Converter converter = new Converter();
@@ -128,6 +129,10 @@ public class Main {
 					
 				}
 			}
+			
+			
+			System.out.println("Producing the RDF dump");
+			SingleFileWriterNTriples.serialize(outFolder, new File(outNtriplesFile));
 			
 			errorLog.flush();
 			errorLog.close();
