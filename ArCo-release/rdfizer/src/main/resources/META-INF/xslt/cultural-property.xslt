@@ -1449,8 +1449,21 @@
 				<xsl:if test="schede/*/LC/PVC/*">
 					<arco-location:hasCulturalPropertyAddress>
 						<xsl:attribute name="rdf:resource">
-	                            <xsl:value-of
-							select="concat($NS, 'Address/', arco-fn:arcofy(concat(schede/*/LC/PVC, schede/*/LC/PVL, schede/*/LC/LDC/LDCU)))" />
+	                            <xsl:choose>
+										<xsl:when test="schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(schede/*/LC/PVC/PVCS))='italia')">
+											<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI))))))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:choose>
+												<xsl:when test ="schede/*/LC/PVC/PVCI">
+													<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU))))))" />
+												</xsl:when>
+												<xsl:otherwise>
+													<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVL/PVLT)), normalize-space(lower-case(schede/*/LC/LDC/LDCU))))))" />
+												</xsl:otherwise>
+											</xsl:choose>
+										</xsl:otherwise>
+									</xsl:choose>
 	                        </xsl:attribute>
 					</arco-location:hasCulturalPropertyAddress>
 				</xsl:if>
