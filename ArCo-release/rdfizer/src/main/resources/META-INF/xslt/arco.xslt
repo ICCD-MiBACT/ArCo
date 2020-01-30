@@ -13740,7 +13740,7 @@
 							<clvapit:hasSpatialCoverage>
 								<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
-									select="concat($NS, 'Feature/', arco-fn:urify(arco-fn:md5(normalize-space(./UTL))))" />
+									select="concat($NS, 'Feature/', arco-fn:arcofy(normalize-space(./UTL)))" />
 	                			</xsl:attribute>
 							</clvapit:hasSpatialCoverage>
 						</xsl:if>
@@ -14023,7 +14023,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                	<xsl:value-of
-								select="concat($NS, 'Feature/', arco-fn:urify(arco-fn:md5(normalize-space(./UTL))))" />
+								select="concat($NS, 'Feature/', arco-fn:arcofy(normalize-space(./UTL)))" />
 		                </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -14037,7 +14037,7 @@
 							<clvapit:hasAddress>
 								<xsl:attribute name="rdf:resource">
 	                           <xsl:value-of
-									select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./UTLP)), normalize-space(lower-case(./UTLC)), normalize-space(lower-case(./UTLF)), normalize-space(lower-case(./UTLL))))))" />
+									select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./UTLP)), normalize-space(lower-case(./UTLC)), normalize-space(lower-case(./UTLF)), normalize-space(lower-case(./UTLL)))))" />
 	                        </xsl:attribute>
 							</clvapit:hasAddress>
 						</rdf:Description>
@@ -14045,7 +14045,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                	<xsl:value-of
-								select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./UTLP)), normalize-space(lower-case(./UTLC)), normalize-space(lower-case(./UTLF)), normalize-space(lower-case(./UTLL))))))" />
+								select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./UTLP)), normalize-space(lower-case(./UTLC)), normalize-space(lower-case(./UTLF)), normalize-space(lower-case(./UTLL)))))" />
 		                </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -16327,7 +16327,7 @@
 			<xsl:for-each select="schede/BDM/AU/LDF">
 				<xsl:variable name="location">
 					<xsl:value-of
-						select="concat($NS, 'Feature/', arco-fn:urify(arco-fn:md5(normalize-space(.))))" />
+						select="concat($NS, 'Feature/',arco-fn:arcofy(normalize-space(.)))" />
 				</xsl:variable>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -16359,10 +16359,10 @@
 						<xsl:attribute name="rdf:resource">
 						<xsl:choose>
 							<xsl:when test="./LDFS and not(lower-case(normalize-space(./LDFS))='italia')">
-								<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./LDFS)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU))))))" />
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./LDFS)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU)))))" />
 							</xsl:when>
 							<xsl:otherwise>
-	                             <xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./LDFP)), normalize-space(lower-case(./LDFC)), normalize-space(lower-case(./LDFF)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU))))))" />
+	                             <xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./LDFP)), normalize-space(lower-case(./LDFC)), normalize-space(lower-case(./LDFF)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU)))))" />
 							</xsl:otherwise>
 						</xsl:choose>
                         </xsl:attribute>
@@ -16381,10 +16381,10 @@
 					<xsl:attribute name="rdf:about">
                          <xsl:choose>
 							<xsl:when test="./LDFS and not(lower-case(normalize-space(./LDFS))='italia')">
-								<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./LDFS)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU))))))" />
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./LDFS)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU)))))" />
 							</xsl:when>
 							<xsl:otherwise>
-	                             <xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./LDFP)), normalize-space(lower-case(./LDFC)), normalize-space(lower-case(./LDFF)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU))))))" />
+	                             <xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./LDFP)), normalize-space(lower-case(./LDFC)), normalize-space(lower-case(./LDFF)), normalize-space(lower-case(./LDFL)), normalize-space(lower-case(./LDFU)))))" />
 							</xsl:otherwise>
 						</xsl:choose>
                                     </xsl:attribute>
@@ -23218,15 +23218,15 @@
 						<xsl:variable name="site">
 						<xsl:choose>
 							<xsl:when test="schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(schede/*/LC/PVC/PVCS))='italia')">
-								<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI))))))" />
+								<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)))))" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:choose>
 									<xsl:when test ="schede/*/LC/LDC/LDCK">
-										<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCK)), normalize-space(lower-case(schede/*/LC/LDC/LDCT))))))" />
+										<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCK)), normalize-space(lower-case(schede/*/LC/LDC/LDCT)))))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCN)), normalize-space(lower-case(schede/*/LC/LDC/LDCT))))))" />
+										<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCN)), normalize-space(lower-case(schede/*/LC/LDC/LDCT)))))" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:otherwise>
@@ -23614,7 +23614,7 @@
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:variable name="location"
-							select="concat($NS, 'Feature/', arco-fn:urify(arco-fn:md5(normalize-space(schede/*/LC/PVC))))" />
+							select="concat($NS, 'Feature/', arco-fn:arcofy(normalize-space(schede/*/LC/PVC)))" />
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
                                 <xsl:value-of
@@ -23647,7 +23647,7 @@
 								<xsl:attribute name="rdf:resource">
 									<xsl:choose>
 										<xsl:when test="schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(schede/*/LC/PVC/PVCS))='italia')">
-											<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI))))))" />
+											<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)))))" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:choose>
@@ -23669,7 +23669,7 @@
 								<xsl:attribute name="rdf:about">
                                 	<xsl:choose>
 										<xsl:when test="schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(schede/*/LC/PVC/PVCS))='italia')">
-											<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI))))))" />
+											<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)))))" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:choose>
@@ -24009,15 +24009,15 @@
 						<xsl:variable name="site">
 						<xsl:choose>
 							<xsl:when test="./PRV/PRVS and not(lower-case(normalize-space(./PRV/PRVS))='italia')">
-								<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(./PRV/PRVS), normalize-space(./PRV/PRVS)))))" />
+								<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(./PRV/PRVS), normalize-space(./PRV/PRVS))))" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:choose>
 									<xsl:when test ="./PRC/PRCK">
-										<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)), normalize-space(lower-case(./PRC/PRCK)), normalize-space(lower-case(./PRC/PRCT))))))" />
+										<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)), normalize-space(lower-case(./PRC/PRCK)), normalize-space(lower-case(./PRC/PRCT)))))" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)), normalize-space(lower-case(./PRC/PRCD)), normalize-space(lower-case(./PRC/PRCN)), normalize-space(lower-case(./PRC/PRCT))))))" />
+										<xsl:value-of select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)), normalize-space(lower-case(./PRC/PRCD)), normalize-space(lower-case(./PRC/PRCN)), normalize-space(lower-case(./PRC/PRCT)))))" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:otherwise>
@@ -24091,7 +24091,7 @@
 									<xsl:attribute name="rdf:resource">
                                        <xsl:choose>
 											<xsl:when test="./PRV/PRVS and not(lower-case(normalize-space(./PRV/PRVS))='italia')">
-												<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE))))))" />
+												<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE)))))" />
 											</xsl:when>
 											<xsl:otherwise>
 												<xsl:choose>
@@ -24400,15 +24400,15 @@
 								<xsl:attribute name="rdf:about">
                                     	<xsl:choose>
 											<xsl:when test="./PRV/PRVS and not(lower-case(normalize-space(./PRV/PRVS))='italia')">
-												<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE))))))" />
+												<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVS)), normalize-space(lower-case(./PRV/PRVE)))))" />
 											</xsl:when>
 											<xsl:otherwise>
 												<xsl:choose>
 													<xsl:when test ="./PRC/PRCU">
-														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(arco-fn:md5(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU))))))" />
+														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRC/PRCU)))))" />
 													</xsl:when>
 													<xsl:otherwise>
-														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(arco-fn:md5(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRL/PRLT))))))" />
+														<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(./PRV/PRVP)), normalize-space(lower-case(./PRV/PRVC)), normalize-space(lower-case(./PRV/PRVF)), normalize-space(lower-case(./PRV/PRVL)), normalize-space(lower-case(./PRL/PRLT)))))" />
 													</xsl:otherwise>
 												</xsl:choose>
 											</xsl:otherwise>
@@ -24812,7 +24812,7 @@
 						<xsl:variable name="location">
 							<xsl:if test="./PRV">
 								<xsl:value-of
-									select="concat($NS, 'Feature/', arco-fn:urify(arco-fn:md5(normalize-space(./PRV))))" />
+									select="concat($NS, 'Feature/', arco-fn:arcofy(normalize-space(./PRV)))" />
 							</xsl:if>
 						</xsl:variable>
 						<rdf:Description>
@@ -24847,7 +24847,7 @@
 								<clvapit:hasAddress>
 									<xsl:attribute name="rdf:resource">
                                         	<xsl:value-of
-										select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(./PRV), normalize-space(./PRC/PRL), normalize-space(./PRC/PRCU)))))" />
+										select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(./PRV), normalize-space(./PRC/PRL), normalize-space(./PRC/PRCU))))" />
                                         </xsl:attribute>
 								</clvapit:hasAddress>
 							</xsl:if>
@@ -24856,7 +24856,7 @@
 								<arco-location:hasContinent>
 									<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
-										select="concat($NS, 'Continent/', arco-fn:urify(arco-fn:md5(normalize-space(./PRT/PRTK))))" />
+										select="concat($NS, 'Continent/', arco-fn:arcofy(normalize-space(./PRT/PRTK)))" />
                                         </xsl:attribute>
 								</arco-location:hasContinent>
 							</xsl:if>
@@ -24892,7 +24892,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                     <xsl:value-of
-									select="concat($NS, 'Continent/', arco-fn:urify(arco-fn:md5(normalize-space(./PRT/PRTK))))" />
+									select="concat($NS, 'Continent/', arco-fn:arcofy(normalize-space(./PRT/PRTK)))" />
                                 </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -24915,12 +24915,12 @@
                                     		<xsl:when
 									test="./PRC/PRCU and not(./PRC/PRCU='.' or ./PRC/PRCU='-' or ./PRC/PRCU='/')">
                                     			<xsl:value-of
-									select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(./PRV), normalize-space(./PRC/PRCU)))))" />
+									select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(./PRV), normalize-space(./PRC/PRCU))))" />
                                     		</xsl:when>
                                     		
                                     		<xsl:otherwise>
                                     			<xsl:value-of
-									select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(normalize-space(./PRV))))" />
+									select="concat($NS, 'Address/', arco-fn:arcofy(normalize-space(./PRV)))" />
                                     		</xsl:otherwise>
                                     	</xsl:choose>
                                     </xsl:attribute>
@@ -25293,7 +25293,7 @@
 			<xsl:if test="schede/F/LR">
 				<xsl:variable name="location">
 					<xsl:value-of
-						select="concat($NS, 'Feature/', arco-fn:urify(arco-fn:md5(normalize-space(schede/F/LR/LRC))))" />
+						select="concat($NS, 'Feature/', arco-fn:arcofy(normalize-space(schede/F/LR/LRC)))" />
 				</xsl:variable>
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -25327,7 +25327,7 @@
 							<xsl:attribute name="rdf:resource">
                                <xsl:choose>
 									<xsl:when test="schede/F/LR/LRC/LRCS and not(lower-case(normalize-space(schede/F/LR/LRC/LRCS))='italia')">
-										<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/F/LR/LRC/LRCS)), normalize-space(lower-case(schede/F/LR/LRC/LRCA))))))" />
+										<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/F/LR/LRC/LRCS)), normalize-space(lower-case(schede/F/LR/LRC/LRCA)))))" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:choose>
@@ -25365,7 +25365,7 @@
 						<xsl:attribute name="rdf:about">
                               <xsl:choose>
 									<xsl:when test="schede/F/LR/LRC/LRCS and not(lower-case(normalize-space(schede/F/LR/LRC/LRCS))='italia')">
-										<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/F/LR/LRC/LRCS)), normalize-space(lower-case(schede/F/LR/LRC/LRCA))))))" />
+										<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/F/LR/LRC/LRCS)), normalize-space(lower-case(schede/F/LR/LRC/LRCA)))))" />
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:choose>
@@ -25961,7 +25961,7 @@
 								<cis:isHostedBySite>
 									<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
-										select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(lower-case(normalize-space(.)), lower-case(normalize-space(../MSTL))))))" />
+										select="concat($NS, 'Site/', arco-fn:arcofy(concat(lower-case(normalize-space(.)), lower-case(normalize-space(../MSTL)))))" />
                                 </xsl:attribute>
 								</cis:isHostedBySite>
 							</xsl:for-each>
@@ -25974,7 +25974,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                 <xsl:value-of
-									select="concat($NS, 'Site/', arco-fn:urify(arco-fn:md5(concat(lower-case(normalize-space(.)), lower-case(normalize-space(../MSTL))))))" />
+									select="concat($NS, 'Site/', arco-fn:arcofy(concat(lower-case(normalize-space(.)), lower-case(normalize-space(../MSTL)))))" />
                             </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
