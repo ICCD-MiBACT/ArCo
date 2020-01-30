@@ -2492,7 +2492,7 @@
 						<arco-cd:hasSubject>
 							<xsl:attribute name="rdf:resource">
 	                    		<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
 	                    	</xsl:attribute>
 						</arco-cd:hasSubject>
 					</xsl:if>
@@ -2506,7 +2506,7 @@
 						<arco-cd:hasSubject>
 							<xsl:attribute name="rdf:resource">
 	                    		<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
 	                    	</xsl:attribute>
 						</arco-cd:hasSubject>
 					</xsl:if>
@@ -2520,7 +2520,7 @@
 						<arco-cd:hasSubject>
 							<xsl:attribute name="rdf:resource">
 	                    		<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:urify(normalize-space(.)))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
 	                    	</xsl:attribute>
 						</arco-cd:hasSubject>
 					</xsl:if>
