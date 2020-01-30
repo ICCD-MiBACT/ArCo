@@ -82,6 +82,7 @@ public class RelatedPropertyFinder extends SKOSThesaurusLinker implements Extens
 		}
 		*/
 		
+		
 		if(uris.isEmpty()) return XdmEmptySequence.getInstance();
 		else return XdmArray.makeArray(uris.toArray());
 	}
