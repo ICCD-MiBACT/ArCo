@@ -1,5 +1,6 @@
 FROM tenforce/virtuoso:1.3.1-virtuoso7.2.2
 
+ARG KG_VERSION
 
 # Add ontologies
 
@@ -12,7 +13,7 @@ ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontol
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 
 # Add DB Unico
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-luoghi.ttl.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+#ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-luoghi.ttl.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 ADD http://dati.beniculturali.it/dataset/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 ADD http://dati.beniculturali.it/dataset/dataset-luoghi.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 ADD http://dati.beniculturali.it/dataset/dataset-eventi.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
@@ -22,25 +23,7 @@ ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /usr/l
 ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 
 # Add ArCo data
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_aa.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/1/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ab.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/2/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ac.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/3/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ad.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/4/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ae.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/5/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_af.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/6/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ag.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/7/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ah.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/8/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ai.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/9/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_aj.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/10/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ak.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/11/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_al.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/12/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_am.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/13/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_an.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/14/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ao.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/15/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ap.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/16/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_aq.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/17/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_ar.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/18/
-ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-v0.5/arco_as.nt.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/19/
+ADD http://etna.istc.cnr.it/arco-data/arco-knowledge-graph-${KG_VERSION}.nt.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/1/
 
 # Add Virtuoso bin to the PATH
 ENV PATH /usr/local/virtuoso-opensource/bin/:$PATH

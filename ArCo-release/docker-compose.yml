@@ -1,15 +1,18 @@
-version: '2'
+version: '3'
 services:
   virtuoso:
-    build: ./virtuoso
+    build: 
+      context: ./virtuoso
+      args:
+        KG_VERSION: 1.0.1
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "https://w3id.org/arco"
     volumes:
       - ./virtuoso/graphs:/graphs
     ports:
-      - "8890:8890"
-    restart: always
+      - "8891:8890"
+    #restart: always
   lode:
     build: ./lode
     ports:
