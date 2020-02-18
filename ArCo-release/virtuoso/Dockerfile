@@ -4,6 +4,14 @@ ARG KG_VERSION
 
 # Add ontologies
 
+RUN cd /opt && \
+	mkdir download-release && \
+	cd download-release && \
+	curl -O http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt && \
+	while read in; do curl -O "http://etna.istc.cnr.it/arco-data/1.0.1/$in"; done < index.txt  && \
+	mkdir /usr/local/virtuoso-opensource/share/virtuoso/vad/1/ && \
+	mv * /usr/local/virtuoso-opensource/share/virtuoso/vad/1/ 
+
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
@@ -23,7 +31,7 @@ ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /usr/l
 ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
 
 # Add ArCo data
-ADD http://etna.istc.cnr.it/arco-data/arco-knowledge-graph-${KG_VERSION}.nt.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/1/
+#ADD http://etna.istc.cnr.it/arco-data/arco-knowledge-graph-${KG_VERSION}.nt.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/1/
 
 # Add Virtuoso bin to the PATH
 ENV PATH /usr/local/virtuoso-opensource/bin/:$PATH
