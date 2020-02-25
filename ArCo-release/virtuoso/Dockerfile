@@ -4,40 +4,37 @@ ARG KG_VERSION
 
 RUN apt-get update && apt-get install -y wget
 
-RUN mkdir /toLoad && mkdir /opt/d
+COPY download_release.sh /download_release.sh
 
-ADD http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt /opt/d
-
-
-
-RUN cd /opt/d && \
-	while read in; do wget "http://etna.istc.cnr.it/arco-data/${KG_VERSION}/$in"; done < index.txt  && \
-	mv * /toLoad/ 
-
+RUN /bin/bash /download_release.sh ${KG_VERSION}
 
 # Add ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /toLoad
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /toLoad
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /toLoad
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl /toLoad
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl /toLoad
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /toLoad
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /toLoad
+RUN mkdir /d/ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /d/ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /d/ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /d/ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl /d/ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl /d/ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /d/ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /d/ontologies
 
 # Add DB Unico
-#ADD http://dati.beniculturali.it/dataset/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl /toLoad
-#ADD http://dati.beniculturali.it/dataset/dataset-luoghi.ttl /toLoad
-#ADD http://dati.beniculturali.it/dataset/dataset-eventi.ttl /toLoad
-#ADD http://dati.beniculturali.it/dataset/dataset-anagrafeBiblioteche.ttl /toLoad
-#ADD http://dati.beniculturali.it/dataset/dataset-contenitoriFisici.ttl /toLoad
-#ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /toLoad
-#ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /toLoad
+RUN mkdir /d/cis
+ADD http://etna.istc.cnr.it/arco-data/cis/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl.gz /d/cis
+ADD http://etna.istc.cnr.it/arco-data/cis/dataset-luoghi.ttl.gz /d/cis
+ADD http://etna.istc.cnr.it/arco-data/cis/dataset-eventi.ttl.gz /d/cis
+ADD http://etna.istc.cnr.it/arco-data/cis/dataset-anagrafeBiblioteche.ttl.gz /d/cis
+ADD http://etna.istc.cnr.it/arco-data/cis/dataset-contenitoriFisici.ttl.gz /d/cis
+ADD http://etna.istc.cnr.it/arco-data/cis/dataset-contenitoriGiuridici.ttl.gz /d/cis
+ADD http://etna.istc.cnr.it/arco-data/cis/dataset-archiviStato.ttl.gz /d/cis
 
 
 # Add Virtuoso config
 COPY virtuoso.ini /virtuoso.ini
 
-COPY start.sh /start.sh
+# Add startup script
+COPY virtuoso.sh /virtuoso.sh
+
 
 EXPOSE 8890
 EXPOSE 1111
@@ -46,4 +43,4 @@ VOLUME /data
 WORKDIR /data
 VOLUME /usr/local/virtuoso-opensource/share/virtuoso/vad/
 
-CMD ["/bin/bash", "/start.sh"]
+CMD ["/bin/bash", "/virtuoso.sh"]
