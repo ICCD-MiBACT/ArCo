@@ -15,7 +15,6 @@ RUN apt-get update && apt-get install -y wget
 
 RUN cd /opt/d && \
 	while read in; do wget "http://etna.istc.cnr.it/arco-data/${KG_VERSION}/$in"; done < index.txt  && \
-	mkdir /toLoad && \
 	mv * /toLoad/ 
 
 
