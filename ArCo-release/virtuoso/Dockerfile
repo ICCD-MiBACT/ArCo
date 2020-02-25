@@ -1,60 +1,51 @@
-FROM tenforce/virtuoso:1.3.1-virtuoso7.2.2
+FROM tenforce/virtuoso:virtuoso7.2.5
+
+RUN mkdir /toLoad
 
 ARG KG_VERSION
 
 # Add ontologies
 
-RUN cd /opt && \
-	mkdir download-release && \
-	cd download-release && \
-	curl -O http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt && \
-	while read in; do curl -O "http://etna.istc.cnr.it/arco-data/1.0.1/$in"; done < index.txt  && \
+RUN mkdir /opt/d
+
+ADD http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt /opt/d
+
+RUN apt-get update && apt-get install -y wget
+
+
+RUN cd /opt/d && \
+	while read in; do wget "http://etna.istc.cnr.it/arco-data/${KG_VERSION}/$in"; done < index.txt  && \
 	mkdir /usr/local/virtuoso-opensource/share/virtuoso/vad/1/ && \
 	mv * /usr/local/virtuoso-opensource/share/virtuoso/vad/1/ 
 
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/
+
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /toLoad
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /toLoad
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /toLoad
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl /toLoad
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl /toLoad
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /toLoad
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /toLoad
 
 # Add DB Unico
-#ADD http://stlab.istc.cnr.it/arco/docker_data/dataset-luoghi.ttl.tar.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
-ADD http://dati.beniculturali.it/dataset/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
-ADD http://dati.beniculturali.it/dataset/dataset-luoghi.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
-ADD http://dati.beniculturali.it/dataset/dataset-eventi.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
-ADD http://dati.beniculturali.it/dataset/dataset-anagrafeBiblioteche.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
-ADD http://dati.beniculturali.it/dataset/dataset-contenitoriFisici.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
-ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
-ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /usr/local/virtuoso-opensource/share/virtuoso/vad/dbunico/
+ADD http://dati.beniculturali.it/dataset/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl /toLoad
+ADD http://dati.beniculturali.it/dataset/dataset-luoghi.ttl /toLoad
+ADD http://dati.beniculturali.it/dataset/dataset-eventi.ttl /toLoad
+ADD http://dati.beniculturali.it/dataset/dataset-anagrafeBiblioteche.ttl /toLoad
+ADD http://dati.beniculturali.it/dataset/dataset-contenitoriFisici.ttl /toLoad
+ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /toLoad
+ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /toLoad
 
-# Add ArCo data
-#ADD http://etna.istc.cnr.it/arco-data/arco-knowledge-graph-${KG_VERSION}.nt.gz /usr/local/virtuoso-opensource/share/virtuoso/vad/1/
-
-# Add Virtuoso bin to the PATH
-ENV PATH /usr/local/virtuoso-opensource/bin/:$PATH
 
 # Add Virtuoso config
 COPY virtuoso.ini /virtuoso.ini
-COPY virtuoso.ini /usr/local/virtuoso-opensource/var/lib/virtuoso/db/virtuoso.ini
 
-# Add dump_nquads_procedure
-COPY dump_nquads_procedure.sql /dump_nquads_procedure.sql
+COPY start.sh /start.sh
 
-# Add Virtuoso log cleaning script
-COPY clean-logs.sh /clean-logs.sh
-
-# Add startup script
-COPY virtuoso.sh /virtuoso.sh
-
-RUN rm -rf /data
-
-VOLUME /usr/local/virtuoso-opensource/share/virtuoso/vad/graphs
-VOLUME /data
-WORKDIR /data
 EXPOSE 8890
 EXPOSE 1111
 
-CMD ["/bin/bash", "/virtuoso.sh"]
+VOLUME /data
+WORKDIR /data
+
+CMD ["/bin/bash", "/start.sh"]
