@@ -2,11 +2,12 @@ FROM tenforce/virtuoso:virtuoso7.2.5
 
 ARG KG_VERSION
 
+RUN apt-get update && apt-get install -y wget
+
 RUN mkdir /toLoad && mkdir /opt/d
 
 ADD http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt /opt/d
 
-RUN apt-get update && apt-get install -y wget
 
 
 RUN cd /opt/d && \
