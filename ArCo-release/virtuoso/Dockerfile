@@ -28,13 +28,13 @@ ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontol
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /toLoad
 
 # Add DB Unico
-ADD http://dati.beniculturali.it/dataset/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl /toLoad
-ADD http://dati.beniculturali.it/dataset/dataset-luoghi.ttl /toLoad
-ADD http://dati.beniculturali.it/dataset/dataset-eventi.ttl /toLoad
-ADD http://dati.beniculturali.it/dataset/dataset-anagrafeBiblioteche.ttl /toLoad
-ADD http://dati.beniculturali.it/dataset/dataset-contenitoriFisici.ttl /toLoad
-ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /toLoad
-ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /toLoad
+#ADD http://dati.beniculturali.it/dataset/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl /toLoad
+#ADD http://dati.beniculturali.it/dataset/dataset-luoghi.ttl /toLoad
+#ADD http://dati.beniculturali.it/dataset/dataset-eventi.ttl /toLoad
+#ADD http://dati.beniculturali.it/dataset/dataset-anagrafeBiblioteche.ttl /toLoad
+#ADD http://dati.beniculturali.it/dataset/dataset-contenitoriFisici.ttl /toLoad
+#ADD http://dati.beniculturali.it/dataset/dataset-contenitoriGiuridici.ttl /toLoad
+#ADD http://dati.beniculturali.it/dataset/dataset-archiviStato.ttl /toLoad
 
 
 # Add Virtuoso config
@@ -47,5 +47,6 @@ EXPOSE 1111
 
 VOLUME /data
 WORKDIR /data
+VOLUME /usr/local/virtuoso-opensource/share/virtuoso/vad/
 
 CMD ["/bin/bash", "/start.sh"]
