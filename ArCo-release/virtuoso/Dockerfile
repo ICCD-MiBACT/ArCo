@@ -1,12 +1,8 @@
 FROM tenforce/virtuoso:virtuoso7.2.5
 
-RUN mkdir /toLoad
-
 ARG KG_VERSION
 
-# Add ontologies
-
-RUN mkdir /opt/d
+RUN mkdir /toLoad && mkdir /opt/d
 
 ADD http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt /opt/d
 
@@ -18,6 +14,7 @@ RUN cd /opt/d && \
 	mv * /toLoad/ 
 
 
+# Add ontologies
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /toLoad
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /toLoad
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /toLoad
