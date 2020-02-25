@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y wget
 
 RUN cd /opt/d && \
 	while read in; do wget "http://etna.istc.cnr.it/arco-data/${KG_VERSION}/$in"; done < index.txt  && \
-	mkdir /usr/local/virtuoso-opensource/share/virtuoso/vad/1/ && \
-	mv * /usr/local/virtuoso-opensource/share/virtuoso/vad/1/ 
+	mkdir /toLoad && \
+	mv * /toLoad/ 
 
 
 ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /toLoad
