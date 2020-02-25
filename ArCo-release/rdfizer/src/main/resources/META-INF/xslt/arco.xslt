@@ -22294,6 +22294,7 @@
 								</xsl:choose>
 							</l0:name>
 							<arco-cd:isCollectorOf>
+							<xsl:attribute name="rdf:resource">
 								<xsl:choose>
 									<xsl:when test="./COLD">
 										<xsl:value-of
@@ -22304,6 +22305,7 @@
 											select="concat($NS, 'CollectionCulEnt/', $itemURI, '-', $collection-membership-position)" />
 									</xsl:otherwise>
 								</xsl:choose>
+								</xsl:attribute>
 							</arco-cd:isCollectorOf>
 						</rdf:Description>
 					</xsl:if>
