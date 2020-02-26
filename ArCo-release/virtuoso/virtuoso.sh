@@ -101,6 +101,8 @@ do
     	if [ ! -f "${D}/.arco_data_loaded" ] ;
     	then
     		echo "Loading DB ArCo data - segment ${D}" ;
+    		echo "File in ${D}: ";
+    		ls ${D}
     		echo "ld_dir_all('${D}', '*.gz', 'https://w3id.org/arco/data');" > /load_arco_data.sql
 			echo "rdf_loader_run();" >> /load_arco_data.sql
 			echo "exec('checkpoint');" >> /load_arco_data.sql
