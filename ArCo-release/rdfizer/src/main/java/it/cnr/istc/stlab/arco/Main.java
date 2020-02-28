@@ -12,6 +12,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.zip.GZIPOutputStream;
 
 import org.apache.jena.rdf.model.Model;
 
@@ -53,7 +54,7 @@ public class Main {
 						
 						String itemName = f.getName().replace(".xml", "");
 						
-						File ret = new File(outSubFolder, itemName + ".nt");
+						File ret = new File(outSubFolder, itemName + ".nt.gz");
 						
 						if(!ret.exists()) {
 						
@@ -71,7 +72,7 @@ public class Main {
 									//System.out.println(itemName);
 									Model model = converter.convert(itemName, is);
 									
-									OutputStream modelOut = new FileOutputStream(ret);
+									OutputStream modelOut = new GZIPOutputStream(new FileOutputStream(ret));
 									model.write(modelOut, "N-TRIPLES");
 									modelOut.close();
 									

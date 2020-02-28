@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
+import java.util.zip.GZIPInputStream;
 
 public class SingleFileWriterNTriples {
 
@@ -19,10 +20,10 @@ public class SingleFileWriterNTriples {
 			File[] subFolders = inFolder.listFiles(f -> f.isDirectory() && !f.isHidden());
 			int counter = 0;
 			for(File subFolder : subFolders){
-				File[] ttls = subFolder.listFiles(file -> {return file.getName().endsWith(".nt") ? true : false;});
+				File[] ttls = subFolder.listFiles(file -> {return file.getName().endsWith(".nt.gz") ? true : false;});
 				
 				for(File ttl : ttls) {
-					BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(ttl), Charset.forName("UTF-8")));
+					BufferedReader br = new BufferedReader(new InputStreamReader(new GZIPInputStream(new FileInputStream(ttl)), Charset.forName("UTF-8")));
 					String line = null;
 					while((line = br.readLine()) != null) {
 						bw.append(line);
