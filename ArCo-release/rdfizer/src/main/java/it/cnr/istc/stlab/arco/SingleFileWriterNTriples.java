@@ -19,18 +19,20 @@ public class SingleFileWriterNTriples {
 	public static void serialize(File inFolder, File folderOut) {
 		try {
 
+			String baseName = folderOut.getName();
+
 			folderOut.mkdir();
 
 			BufferedWriter bw_whole = new BufferedWriter(new OutputStreamWriter(
-					new GZIPOutputStream(new FileOutputStream(folderOut.getAbsoluteFile() + "/whole.nt.gz")),
+					new GZIPOutputStream(new FileOutputStream(folderOut.getAbsoluteFile() + "/" + baseName + ".nt.gz")),
 					Charset.forName("UTF-8")));
 
 			File[] subFolders = inFolder.listFiles(f -> f.isDirectory() && !f.isHidden());
 			int counter = 0, outFileCounter = 0;
 
 			BufferedWriter bw_part = new BufferedWriter(new OutputStreamWriter(
-					new GZIPOutputStream(
-							new FileOutputStream(folderOut.getAbsoluteFile() + "/part_" + outFileCounter + ".nt.gz")),
+					new GZIPOutputStream(new FileOutputStream(
+							folderOut.getAbsoluteFile() + "/" + baseName + "_part_" + outFileCounter + ".nt.gz")),
 					Charset.forName("UTF-8")));
 
 			long lineCounter = 0;
@@ -53,8 +55,8 @@ public class SingleFileWriterNTriples {
 							bw_part.flush();
 							bw_part.close();
 							bw_part = new BufferedWriter(new OutputStreamWriter(
-									new GZIPOutputStream(new FileOutputStream(
-											folderOut.getAbsoluteFile() + "/part_" + outFileCounter + ".nt.gz")),
+									new GZIPOutputStream(new FileOutputStream(folderOut.getAbsoluteFile() + "/"
+											+ baseName + "_part_" + outFileCounter + ".nt.gz")),
 									Charset.forName("UTF-8")));
 						}
 
