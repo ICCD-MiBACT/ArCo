@@ -23153,8 +23153,9 @@
                             </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of
-								select="normalize-space(schede/*/LC/PVC/PVCR)" />
+							<xsl:call-template name="CamelCase">
+   <xsl:with-param name="text" select="normalize-space(schede/*/LC/PVC/PVCR)"/>
+</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
 							<xsl:value-of
