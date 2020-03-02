@@ -21,11 +21,11 @@ public class Main {
 	
 	public static void main(String[] args) {
 		String inFolderString = args[0];
-		String outNtriplesFile = args[1];
+		String outNtriplesFolder = args[1];
 		File inFolder = new File(inFolderString);
 		
-		File outFolder = new File("ttls");
-		outFolder.mkdirs();
+		File outFolderTTLs = new File("ttls");
+		outFolderTTLs.mkdirs();
 		
 		Converter converter = new Converter();
 		
@@ -36,7 +36,7 @@ public class Main {
 				File[] subFolders = inFolder.listFiles(f -> f.isDirectory() && !f.isHidden());
 				for(File subFolder : subFolders){
 					String subFolderName = subFolder.getName();
-					File outSubFolder = new File(outFolder, subFolderName);
+					File outSubFolder = new File(outFolderTTLs, subFolderName);
 					
 					//if(!outSubFolder.exists()){
 					outSubFolder.mkdir();
@@ -133,7 +133,7 @@ public class Main {
 			
 			
 			System.out.println("Producing the RDF dump");
-			SingleFileWriterNTriples.serialize(outFolder, new File(outNtriplesFile));
+			SingleFileWriterNTriples.serialize(outFolderTTLs, new File(outNtriplesFolder));
 			
 			errorLog.flush();
 			errorLog.close();
