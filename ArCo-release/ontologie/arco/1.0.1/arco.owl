@@ -1388,12 +1388,45 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco#completedCollection -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco#completedCollection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà segnala se la serie risulta completa o incompleta</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates if the collection is completed or not</rdfs:comment>
+        <rdfs:label xml:lang="it">collezione completa</rdfs:label>
+        <rdfs:label xml:lang="en">completed collection</rdfs:label>
+        <a-cat:iccdNormTag>ICCD normative F, MI, S: OG/QNT/QNTC</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco#numerOfElements -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco#numerOfElements">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
+        <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
+        <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>
+        <rdfs:label xml:lang="en">number of elements</rdfs:label>
+        <rdfs:label xml:lang="it">numero di elementi</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco#positionInSequence -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco#positionInSequence">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyComponent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la posizione o il numero d’ordine dell’elemento all’interno del bene preso in considerazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the position of a cultural property component in the sequence to which it belogns.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/"/>
+        <rdfs:label xml:lang="it">numero d&apos;ordine</rdfs:label>
+        <rdfs:label xml:lang="en">position in sequence</rdfs:label>
+        <a-cat:iccdNormTag>ICCD normative F, MI, OAC, S: OG/QNT/QNTO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1649,7 +1682,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">numero di oggetti/elementi componenti</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTI; OG/QNT/QNTS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
