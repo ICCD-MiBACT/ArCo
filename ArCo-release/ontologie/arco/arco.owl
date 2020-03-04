@@ -1388,18 +1388,6 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/arco#numerOfElements -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco#numerOfElements">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
-        <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
-        <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>
-        <rdfs:label xml:lang="en">number of elements</rdfs:label>
-        <rdfs:label xml:lang="it">numero di elementi</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/arco/HSDefinition -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/HSDefinition">
@@ -1537,6 +1525,8 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:comment xml:lang="en">This property indicates if the collection is completed or not</rdfs:comment>
         <rdfs:label xml:lang="it">collezione completa</rdfs:label>
         <rdfs:label xml:lang="en">completed collection</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD normative F, MI, S: OG/QNT/QNTC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
@@ -1690,6 +1680,21 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/numberOfElements -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfElements">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/numberOfParts"/>
+        <rdfs:comment xml:lang="it">Questa propietà rappresenta  il numero complessivo, espresso in cifre, degli elementi che costituiscono il bene catalogato, nel caso esso sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi.</rdfs:comment>
+        <rdfs:label xml:lang="en">This property represents the total number of elements of a complex cultural property, when it is composed by parts containing more elements.</rdfs:label>
+        <rdfs:label xml:lang="en">number of elements</rdfs:label>
+        <rdfs:label xml:lang="it">numero di elementi</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTI; OG/QNT/QNTS</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/numberOfMembers -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/numberOfMembers">
@@ -1756,6 +1761,8 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/"/>
         <rdfs:label xml:lang="it">numero d&apos;ordine</rdfs:label>
         <rdfs:label xml:lang="en">position in sequence</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD normative F, MI, OAC, S: OG/QNT/QNTO</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
