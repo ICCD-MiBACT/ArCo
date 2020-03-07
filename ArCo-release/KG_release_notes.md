@@ -13,6 +13,6 @@
 
 **URL:** http://etna.istc.cnr.it/arco-data/1.0.1/arco-knowledge-graph-1.0.1.nt.gz
 
-**Release Id:** 1.0.2
+**Release Id:** 1.0.1
 
 - Addressed issue [#62](https://github.com/ICCD-MiBACT/ArCo/issues/62)
