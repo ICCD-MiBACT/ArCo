@@ -14,7 +14,7 @@ This release is a package containing:
 
 In order to use the release you have to install  [Docker](https://www.docker.com/community-edition). Please, refer to the [official documentation](https://docs.docker.com/get-started/#containers-and-virtual-machines) for detailed information about Docker and how to install it.
 
-The list of the knowledge graph releases is available at the following [link](KG_release_notes).
+The list of the knowledge graph releases is available at the following [link](KG_release_notes.md).
 
 
 
