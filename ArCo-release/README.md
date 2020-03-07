@@ -10,11 +10,17 @@ This release is a package containing:
  * the ArCo ontology network;
  * a SPARQL endpoint;
  * a detailed guide about how to use the ontologies and query the data.
+ 
 
 In order to use the release you have to install  [Docker](https://www.docker.com/community-edition). Please, refer to the [official documentation](https://docs.docker.com/get-started/#containers-and-virtual-machines) for detailed information about Docker and how to install it.
 
+The list of the knowledge graph releases is available at the following [link](KG_release_notes).
+
+
+
 ## Installation and execution of ArCo Release
 Launch Docker on your machine, e.g.:
+
 ```sh
 $ sudo service docker start
 ```
@@ -25,6 +31,7 @@ Open a terminal and go to the home folder, i.e. it's the folder containing this 
 $ docker-compose build
 ```
 Once the build process ends (this can take a while) you can run the package with the following command:
+
 ```sh
 $ docker-compose up
 ```
