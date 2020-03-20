@@ -1187,7 +1187,9 @@ In this module are used as template the following Ontology Design Patterns:
 
     <!-- https://w3id.org/arco/ontology/core/hasComponent -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasComponent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasComponent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/arco/hasCulturalPropertyResidual"/>
+    </owl:ObjectProperty>
     
 
 
@@ -2144,6 +2146,47 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/BotanicalCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/BotanicalCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/BotanicalHeritage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/SpecimenContainer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
+erbario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a group of specimens or specimens container, collected into an herbarium.</rdfs:comment>
+        <rdfs:label xml:lang="en">Botanical Collection</rdfs:label>
+        <rdfs:label xml:lang="it">Collezione botanica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/BotanicalHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/BotanicalHeritage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari del mondo vegetale provenienti da collezioni di botanica  (raccolte di piante essiccate: erbari)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents specimens of the plant world from botanical collections (collections of dried plants: herbaria)</rdfs:comment>
+        <rdfs:label xml:lang="it">Bene Botanico</rdfs:label>
+        <rdfs:label xml:lang="en">Botanical Heritage</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/CartographicClassification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CartographicClassification">
@@ -2792,6 +2835,36 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/Herbarium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/Herbarium">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/BotanicalHeritage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/BotanicalCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/SpecimenContainer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Erbario</rdfs:label>
+        <rdfs:label xml:lang="en">Herbarium</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/HistoricOrArtisticProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/HistoricOrArtisticProperty">
@@ -2911,6 +2984,20 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">MiBAC Scope of protection</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/MineralHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/MineralHeritage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari di minerali provenienti da collezioni di mineralogia (Augite, Goethite, scatola di quarzi ecc. ).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents specimens of minerals from collections of mineralogy (Augite, Goethite, box of quartz etc.).</rdfs:comment>
+        <rdfs:label xml:lang="it">Bene Minerale</rdfs:label>
+        <rdfs:label xml:lang="en">Mineral Heritage</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3079,6 +3166,34 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/PalaeontoogicalHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PalaeontoogicalHeritage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta eperti fossili (animali, vegetali, ichnofossili, campioni e preparati per microscopio, ecc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents fossil finds (animals, plants, ichnofossils, samples and microscope preparations, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="it">Bene Paleontologico</rdfs:label>
+        <rdfs:label xml:lang="en">Palaeontological Heritage</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/PetrologicHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PetrologicHeritage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari di rocce provenienti da collezioni (Riolite, Trachiandesite ecc).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents specimens of rocks from collections (Riolite, Trachiandesite etc.).</rdfs:comment>
+        <rdfs:label xml:lang="it">Bene Petrologico</rdfs:label>
+        <rdfs:label xml:lang="en">Pertologic Heritage</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/PhotographicHeritage -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PhotographicHeritage">
@@ -3187,6 +3302,20 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/PlanetaryScienceHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/PlanetaryScienceHeritage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari di meteoriti provenienti da collezioni ( Aubrite, Ureilite, Eucrite ecc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents meteorites from collections (Aubrite, Ureilite, Eucrite, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="it">Bene della Scienza Planetaria</rdfs:label>
+        <rdfs:label xml:lang="en">Planetary Science Heritage</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/RFId -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/RFId">
@@ -3251,6 +3380,41 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/Specimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/Specimen">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/BotanicalHeritage"/>
+        <rdfs:comment xml:lang="en">Questa classe rappresenta un insieme di parti che racchiudono i campioni,
+come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a collection of parts (as boxes, binders,bags, packages), containing specimens.</rdfs:comment>
+        <rdfs:label xml:lang="it">Campione</rdfs:label>
+        <rdfs:label xml:lang="en">Specimen</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/SpecimenContainer -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/SpecimenContainer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/BotanicalHeritage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme di parti che racchiudono i campioni,
+come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contenitore di campioni</rdfs:label>
+        <rdfs:label xml:lang="en">Specimen Container</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/TangibleCulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/TangibleCulturalProperty">
@@ -3284,6 +3448,20 @@ In this module are used as template the following Ontology Design Patterns:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CT/CTM/CTMC</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/ZoologicalHeritage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/ZoologicalHeritage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta esemplari del mondo animale provenienti da collezioni di zoologia (ustiolo, toporagno, mammifero, artropode, scatola di farfalle, collezione elmintologica, ecc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents specimens of the animal world from zoology collections (ustiolo, shrew, mammal, arthropod, butterfly box, elmintological collection, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="it">Bene Zoologico</rdfs:label>
+        <rdfs:label xml:lang="en">Zoological Heritage</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3817,6 +3995,15 @@ In this module are used as template the following Ontology Design Patterns:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/BotanicalCollection"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/Herbarium"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/Specimen"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/SpecimenContainer"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
