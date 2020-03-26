@@ -1287,18 +1287,18 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasSubstrateCathegory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasSubstrateCategory -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSubstrateCathegory">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSubstrateCategory">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveproprietà"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCathegoryOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateCathegory"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateCategory"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il substrato alla categoria di substrato</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates  the substrate to the cathegory</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates  the substrate to the category</rdfs:comment>
         <rdfs:label xml:lang="it">ha categoria di substrato</rdfs:label>
-        <rdfs:label xml:lang="en">has substrate cathegory</rdfs:label>
+        <rdfs:label xml:lang="en">has substrate category</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
@@ -2489,13 +2489,13 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isSubstrateCathegoryOf -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSubstrateCathegoryOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveproprietà"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la categoria di substrato al substrato</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the cathegory to  the substrate</rdfs:comment>
-        <rdfs:label xml:lang="en">is substrate cathegory of</rdfs:label>
+        <rdfs:comment xml:lang="en">This property relates the category to  the substrate</rdfs:comment>
+        <rdfs:label xml:lang="en">is substrate category of</rdfs:label>
         <rdfs:label xml:lang="it">è categoria di substrato di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -4651,22 +4651,22 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/SubstrateCathegory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/SubstrateCategory -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SubstrateCathegory">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SubstrateCategory">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCathegoryOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria cui appartiene il substrato su cui è stato raccolto il campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the cathegory of the substrate where the specimen was collected</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the category of the substrate where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">Categoria di substrato</rdfs:label>
-        <rdfs:label xml:lang="en">Substrate cathegory</rdfs:label>
+        <rdfs:label xml:lang="en">Substrate category</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
