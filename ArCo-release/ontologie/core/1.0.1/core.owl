@@ -402,6 +402,23 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/hasTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasTimeInterval">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isTimeIntervalOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/TimeInterval"/>
+        <rdfs:comment xml:lang="it">Questa porprietà collega un evento nel tempo all&apos;intervallo di tempo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a time indexed event to a time interval</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">ha intervallo di tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has time interval</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/hasType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/hasType">
@@ -416,6 +433,37 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">has type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/involvesAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">coinvolge agente</rdfs:label>
+        <rdfs:label xml:lang="en">involves agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isAgentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is agent involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è agente coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -660,6 +708,22 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/isTimeIntervalOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTimeIntervalOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
+        <rdfs:comment xml:lang="it">Questa porprietà collega l&apos;intervallo di tempo ad un evento nel tempo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a time interval to a time indexed event</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is time interval of</rdfs:label>
+        <rdfs:label xml:lang="it">è intervallo di tempo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/isTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isTypeOf">
@@ -724,6 +788,51 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">descrizione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/intervalEndDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/intervalEndDate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/intevalDate"/>
+        <rdfs:comment xml:lang="en">The end date of a time interval</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:isDefinedBy xml:lang="it">La data di fine di un intervallo di tempo</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">interval end date</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="it">data di fine</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/intervalStartDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/intervalStartDate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/intevalDate"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/TimeInterval"/>
+        <rdfs:comment xml:lang="it">La data di inizio di un intervallo di tempo</rdfs:comment>
+        <rdfs:comment xml:lang="en">The start date of a time interval.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:isDefinedBy xml:lang="en">interval start date</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="it">data di inizio</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/intevalDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/intevalDate">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/TimeInterval"/>
+        <rdfs:comment xml:lang="en">A datatype property that encodes values from xsd:date (or any other date-related xsd datatype) for a TimeInterval; a same TimeInterval can have more than one date value: begin date, end date, date at which the interval holds, as well as dates expressed in different formats: xsd:gYear, xsd:dateTime, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:isDefinedBy xml:lang="en">interval date</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="it">data dell&apos;intervallo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -1018,6 +1127,18 @@ In this module are used as template the following Ontology Design Patterns:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedEvent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasTimeInterval"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Qyesta classe rappresenta il concetto di evento indicizzato nel tempo</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the concept of event indexed in time</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
@@ -1041,6 +1162,19 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">Time indexed situation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeInterval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
+        <rdfs:comment>Any Region in a dimensional space that aims at representing time. It should be used when you want to talk about time as an object having some characteristics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Intervallo di tempo</rdfs:label>
+        <rdfs:label xml:lang="en">Time interval</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
     </owl:Class>
     
 
@@ -1091,6 +1225,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/italia/onto/l0/Description -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Entity"/>
     
 
 
