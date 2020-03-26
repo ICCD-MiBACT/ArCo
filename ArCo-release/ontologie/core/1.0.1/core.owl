@@ -800,7 +800,7 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- http://dati.beniculturali.it/cis/CulturalEvent -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEvent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Event"/>
         <owl:disjointWith rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
     </owl:Class>
     
@@ -968,6 +968,21 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Event -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Event">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta qualsiasi processo, evento o stato mentale, fisico o sociale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents any physical, social, or mental process, event, or state.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:label xml:lang="it">Evento</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Method -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method">
@@ -995,6 +1010,21 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">Situazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/TimeIndexedEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Event"/>
+        <rdfs:comment xml:lang="it">Qyesta classe rappresenta il concetto di evento indicizzato nel tempo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the concept of event indexed in time</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">Evento nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">Time indexed event</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
