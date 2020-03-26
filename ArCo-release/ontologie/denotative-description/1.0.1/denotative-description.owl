@@ -3424,6 +3424,12 @@ resource:Inscription/1200865151-inscription-1
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CloseIndividual">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCloseIndividualOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuo vicino al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the individual close to the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -3488,6 +3494,12 @@ resource:Inscription/1200865151-inscription-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CollectingSite">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCollectingSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta informazioni specifiche, non relative alla posizione geografica, della località di reperimento dell&apos;oggetto della scheda</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents non geographical information about the site where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -3979,6 +3991,12 @@ resource:TechnicalCharacteristic/pietra-scultura
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/FluidDynamism">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isFluidDynamismOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il moto ondoso presente al momento della raccolta.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the fluid dynamis when the specimenwas collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4071,6 +4089,12 @@ resource:TechnicalCharacteristic/pietra-scultura
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HostIndividual">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isHostIndividualOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;individuo ospite del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the individual hosting the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4171,6 +4195,12 @@ resource:TechnicalCharacteristic/pietra-scultura
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Incline">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isInclineOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;inclinazione (qualitativa) del substrato di raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the incline of the substrate where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4283,6 +4313,12 @@ resource:TechnicalCharacteristic/pietra-scultura
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Legit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isLegitOf"/>
+                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni su chi ha raccolto il campione e la data di raccolta.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents information about who collected the specimen and when it was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4423,6 +4459,12 @@ resource:MeasurementCollection/1200865132-1
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isNaturalEnvironmentOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente cui appartiene il substrato su cui è stato raccolto il campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the natural environment of the substrate where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4591,6 +4633,12 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Substrate">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta substrato specifico sul quale è stato raccolto il campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents  the specific substrate where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4608,6 +4656,12 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SubstrateCathegory">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/aanuoveclassi"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCathegoryOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria cui appartiene il substrato su cui è stato raccolto il campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the cathegory of the substrate where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
