@@ -1534,6 +1534,23 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/containerSequence -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/containerSequence">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/SpecimenContainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice che definisce la sequenza dei contenitori</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code identifying the sequence of the container</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="en">container sequence</rdfs:label>
+        <rdfs:label xml:lang="it">sequenza contenitore</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACZ</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/definitionAndPositionOfComponents -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/definitionAndPositionOfComponents">
@@ -1769,6 +1786,24 @@ In this module are used as template the following Ontology Design Patterns:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD normative F, MI, OAC, S: OG/QNT/QNTO</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/previousIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/previousIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/Specimen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta qualsiasi codice precedente a quello attuale che identifica il campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents any previous identifier of the specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="it">identificativo precedente</rdfs:label>
+        <rdfs:label xml:lang="en">previous identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">Instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2857,6 +2892,12 @@ erbario.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/SpecimenContainer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/internationalIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="it">Erbario</rdfs:label>
         <rdfs:label xml:lang="en">Herbarium</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
@@ -3384,6 +3425,12 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/Specimen">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/BotanicalHeritage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/previousIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Questa classe rappresenta un insieme di parti che racchiudono i campioni,
 come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a collection of parts (as boxes, binders,bags, packages), containing specimens.</rdfs:comment>
@@ -3403,6 +3450,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/containerSequence"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme di parti che racchiudono i campioni,
