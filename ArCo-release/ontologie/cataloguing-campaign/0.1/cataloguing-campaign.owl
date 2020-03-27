@@ -34,6 +34,7 @@
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+        <dc:description rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cataloguing-campaign/cataloguing-campaign.png"/>
         <dc:description xml:lang="it">Questo modulo permette di rappresentare i dati riguardanti le campagne di catalogazione.</dc:description>
         <dc:description xml:lang="en">This module allows to formalise data regarding the cataloguing campaigns.</dc:description>
         <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
