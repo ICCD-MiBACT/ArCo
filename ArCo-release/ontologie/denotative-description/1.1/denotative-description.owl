@@ -63,8 +63,8 @@ In this module are used as template the following Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -3191,6 +3191,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/core/Situation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Situation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/TimeIndexedEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
     
 
 

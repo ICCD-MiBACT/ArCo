@@ -29,6 +29,8 @@
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -41,7 +43,7 @@
         <terms:issued>2018-03-07</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <terms:modified>2019-06-01</terms:modified>
+        <terms:modified>2020-03-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
@@ -64,8 +66,8 @@ In this module are used as template the following Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Core Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia Core (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -416,6 +418,39 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">has type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/involvesAgent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/involvesAgent">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isAgentInvolvedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="it">coinvolge agente</rdfs:label>
+        <rdfs:label xml:lang="en">involves agent</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/core/isAgentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/isAgentInvolvedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la partecipazione di un agente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents an agent partecipation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">is agent involved in</rdfs:label>
+        <rdfs:label xml:lang="it">è agente coinvolto in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -800,7 +835,7 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- http://dati.beniculturali.it/cis/CulturalEvent -->
 
     <owl:Class rdf:about="http://dati.beniculturali.it/cis/CulturalEvent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Event"/>
         <owl:disjointWith rdf:resource="http://dati.beniculturali.it/cis/NameInTime"/>
     </owl:Class>
     
@@ -968,6 +1003,21 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/Event -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Event">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta qualsiasi processo, evento o stato mentale, fisico o sociale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents any physical, social, or mental process, event, or state.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:label xml:lang="it">Evento</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Method -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Method">
@@ -1061,6 +1111,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/italia/onto/l0/Description -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Description"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Entity"/>
     
 
 

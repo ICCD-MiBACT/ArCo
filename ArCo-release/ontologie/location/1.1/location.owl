@@ -45,7 +45,7 @@
         <terms:issued>2018-03-07</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <terms:modified>2019-06-01</terms:modified>
+        <terms:modified>2020-03-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.
 In questo modulo si riusano come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
@@ -62,8 +62,8 @@ In this module are used as template the following Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Location Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Localizzazione (ArCo network)</rdfs:label>
-        <owl:versionInfo>Version 1.0</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
+        <owl:versionInfo>Version 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
     </owl:Ontology>
     
 

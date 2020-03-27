@@ -40,7 +40,7 @@
         <terms:issued>2018-03-07</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <terms:modified>2019-06-01</terms:modified>
+        <terms:modified>2020-03-27</terms:modified>
         <opla1:reusesPatternAsTemplate rdf:resource="http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
@@ -68,8 +68,8 @@ In this module are used as template the following Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -11943,6 +11943,12 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/core/TimeIndexedEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/Type -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/Type"/>
@@ -12618,10 +12624,10 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
