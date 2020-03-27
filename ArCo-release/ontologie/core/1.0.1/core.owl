@@ -29,6 +29,8 @@
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -41,7 +43,7 @@
         <terms:issued>2018-03-07</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40"/>
-        <terms:modified>2019-06-01</terms:modified>
+        <terms:modified>2020-03-27</terms:modified>
         <rdfs:comment xml:lang="it">Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione).
 In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
@@ -64,8 +66,8 @@ In this module are used as template the following Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Core Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia Core (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.0</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -761,51 +763,6 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/core/intervalEndDate -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/intervalEndDate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/intevalDate"/>
-        <rdfs:comment xml:lang="en">The end date of a time interval</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <rdfs:isDefinedBy xml:lang="it">La data di fine di un intervallo di tempo</rdfs:isDefinedBy>
-        <rdfs:isDefinedBy xml:lang="en">interval end date</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="it">data di fine</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/intervalStartDate -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/intervalStartDate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/intevalDate"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/TimeInterval"/>
-        <rdfs:comment xml:lang="it">La data di inizio di un intervallo di tempo</rdfs:comment>
-        <rdfs:comment xml:lang="en">The start date of a time interval.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <rdfs:isDefinedBy xml:lang="en">interval start date</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="it">data di inizio</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/intevalDate -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/intevalDate">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/TimeInterval"/>
-        <rdfs:comment xml:lang="en">A datatype property that encodes values from xsd:date (or any other date-related xsd datatype) for a TimeInterval; a same TimeInterval can have more than one date value: begin date, end date, date at which the interval holds, as well as dates expressed in different formats: xsd:gYear, xsd:dateTime, etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <rdfs:isDefinedBy xml:lang="en">interval date</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="it">data dell&apos;intervallo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/core/keyword -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/core/keyword">
@@ -1104,19 +1061,6 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">Time indexed situation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/core/TimeInterval -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeInterval">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Entity"/>
-        <rdfs:comment>Any Region in a dimensional space that aims at representing time. It should be used when you want to talk about time as an object having some characteristics.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
-        <rdfs:label xml:lang="it">Intervallo di tempo</rdfs:label>
-        <rdfs:label xml:lang="en">Time interval</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
     </owl:Class>
     
 
