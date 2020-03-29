@@ -825,6 +825,8 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta del campione alla caratteristica del popolamento del luogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site the individuals&apos; shade tolerance</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
