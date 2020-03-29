@@ -182,7 +182,6 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasAccession -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAccession">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAccessionOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
@@ -504,7 +503,6 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasAssociatedPreparation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAssociatedPreparation">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isAssociatedPreparationOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Preparation"/>
@@ -608,23 +606,6 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasBeenProducedFrom -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBeenProducedFrom">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasProduced"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linnea ad un tipo nomenclaturale o ad una revisione botanica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a linnaean taxon to a type specimen or to a botanical revision</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasBibliography -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBibliography">
@@ -681,10 +662,28 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasBotanicalForm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBotanicalForm">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBotanicalFormOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linnea al la forma, che è uno dei concetti della tassonomia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the form, that is one of the concept of the taxon.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha forma botanica</rdfs:label>
+        <rdfs:label xml:lang="en">has botanical form</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasBotanicalRevision -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBotanicalRevision">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBotanicalRevisionOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
@@ -1121,7 +1120,6 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasDeterminavit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDeterminavit">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isDeterminavitOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Determinavit"/>
@@ -1406,25 +1404,6 @@ In this module are used as template the following Ontology Design Patterns:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: RV/RSE/RSER = &apos;è stato rinvenuto in&apos; (versioni precedenti: &apos;sede di rinvenimento&apos;)</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasForm -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasForm">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isFormOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Form"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linnea al la forma, che è uno dei concetti della tassonomia.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the form, that is one of the concept of the taxon.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha forma</rdfs:label>
-        <rdfs:label xml:lang="en">has form</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1987,7 +1966,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasPreparationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPreparationType">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPreparationTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Preparation"/>
@@ -2007,7 +1985,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasPreservationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPreservationType">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isPreservationTypeOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
@@ -2082,10 +2059,11 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasProduced -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasProduced">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonProducedFrom"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un tipo nomenclaturale o una revisione botanica ad una tassonomia linnea</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a type specimen or a botanical revision to a linnaean taxon</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -2197,18 +2175,17 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasRelatedSpecimen -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasRelatedSample -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedSpecimen">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedSpecimenOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedSample">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRelatedSampleOf"/>
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega due campione ai campioni delle collezioni ancillari</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a specimen to another specimen belonging to ancillary collection</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un campione ai reperti delle collezioni ancillari</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a specimen to sample belonging to ancillary collection</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha campione associato</rdfs:label>
-        <rdfs:label xml:lang="en">has related specimen</rdfs:label>
+        <rdfs:label xml:lang="it">ha reperto associato</rdfs:label>
+        <rdfs:label xml:lang="en">has related sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC, DB/DBX, DB/DBS, DB/DBP</a-cat:iccdNormTag>
@@ -2403,7 +2380,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasRevisionType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRevisionType">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isRevisionTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
@@ -2823,6 +2799,14 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasTypeSpecimen -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTypeSpecimen">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasUrbanPlanningInstrument -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUrbanPlanningInstrument">
@@ -3010,7 +2994,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isAccessionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAccessionOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;accessione presso l&apos;ente di riferimento al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the accession to a specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -3297,7 +3280,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isAssociatedPreparationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAssociatedPreparationOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il preparato al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates  a preparation to a specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -3440,10 +3422,24 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isBotanicalFormOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBotanicalFormOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega unaforma alla tassonomia in cui è classificata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a form to the linnaean taxon in which it is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is botanical form in</rdfs:label>
+        <rdfs:label xml:lang="it">è forma botanica in</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isBotanicalRevisionOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBotanicalRevisionOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la revisione botanica al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the botanical revision to a specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -3836,7 +3832,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isDeterminavitOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isDeterminavitOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega le informazioni riguardo la determinazione al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates information about the determination to a specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -4046,21 +4041,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è luogo di ritrovamento di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/isFormOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isFormOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega unaforma alla tassonomia in cui è classificata.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a form to the linnaean taxon in which it is classified.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is form in</rdfs:label>
-        <rdfs:label xml:lang="it">è forma in</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4365,6 +4345,22 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonProducedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonProducedFrom">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linnea ad un tipo nomenclaturale o ad una revisione botanica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a linnaean taxon to a type specimen or to a botanical revision</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isLocatedIn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLocatedIn">
@@ -4607,7 +4603,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isPreparationTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPreparationTypeOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di preparato al preparato</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the type to the preparation</rdfs:comment>
@@ -4623,7 +4618,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isPreservationTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPreservationTypeOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di conservazione al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the conservation type to a  specimen</rdfs:comment>
@@ -4762,15 +4756,16 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/isRelatedSpecimenOf -->
+    <!-- https://w3id.org/arco/ontology/context-description/isRelatedSampleOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRelatedSpecimenOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il campione della collezione ancillare al campione di riferimento</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a specimen belonging to ancillary collection to another specimen</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRelatedSampleOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Sample"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il reperto della collezione ancillare al campione di riferimento</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a sample belonging to ancillary collection to a specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is related specimen of</rdfs:label>
-        <rdfs:label xml:lang="it">è campione associato di</rdfs:label>
+        <rdfs:label xml:lang="en">is related sample of</rdfs:label>
+        <rdfs:label xml:lang="it">è reperto associato di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5000,7 +4995,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isRevisionTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isRevisionTypeOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega  tipo di revisione alla revisione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the type of revision to the revision</rdfs:comment>
@@ -5334,6 +5328,14 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è deposizione funeraria di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isTypeSpecimenOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isTypeSpecimenOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/aanuovo"/>
     </owl:ObjectProperty>
     
 
@@ -5719,12 +5721,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">causale RCS</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: UB/INP/INPU</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/SpecimenLocation -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/SpecimenLocation"/>
     
 
 
@@ -6672,6 +6668,22 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/manufacturingDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/manufacturingDate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/date"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di preparazione del reperto o del preparato</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the date of manufacturing of the sample or of the preparation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">data di preparazione</rdfs:label>
+        <rdfs:label xml:lang="en">manufacturing date</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBR/DBRD, DB/DBX/DBXO, DB/DBS/DBSD, DB/DB/DBP/DBPD.</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/methodOfInsertion -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/methodOfInsertion">
@@ -6728,13 +6740,31 @@ the area), to the environment and to the square from which the good comes.</rdfs
 
     <!-- https://w3id.org/arco/ontology/context-description/numberOfEnvelopes -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfEnvelopes"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfEnvelopes">
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di buste che contengono il campione o sue parti se conservate assieme al campione, e non in collezioni ancillari</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the numebr of envelopes, containing the specimen or its parts, if they are preserved with the specimen itself and not in ancillar collections</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">numbers of envelopes</rdfs:label>
+        <rdfs:label xml:lang="it">numero di buste</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/arco/ontology/context-description/numberOfLabels -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfLabels"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfLabels">
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta etichette presenti assieme al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of labels with the specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">number of labels</rdfs:label>
+        <rdfs:label xml:lang="it">numero di etichette</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
     
 
 
@@ -6843,12 +6873,6 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SSI/SSIN</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/preparationDate -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preparationDate"/>
     
 
 
@@ -7070,6 +7094,21 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAY, DO/DRA/DRAY, DO/VDC/VDCY, DO/REG/REGY, DO/FNT/FNTY, DO/BIB/BIBY - ICCD Normativa MI 3.00: DA/PLC</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/sampleLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/sampleLocation">
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la collocazione che l’oggetto ha nella collezione ancillare di cui fa parte</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the location of the object inthe ancillar collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">collocazione del reperto</rdfs:label>
+        <rdfs:label xml:lang="en">sample location</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC/DBCC, DB/DBX/DBXC, DB/DBS/DBSC, DB/DB/DBP/DBPC.</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -7322,12 +7361,6 @@ the area), to the environment and to the square from which the good comes.</rdfs
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Accession">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;informazione (dato) sulla/e persona fisica o giuridica/che che a vario titolo ha/hanno fatto pervenire il bene (campione, raccolta, collezione ecc.) all&apos;Ente di riferimento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the information about the way in which the cultural property has arrived to the organization</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -8230,16 +8263,25 @@ resource:ArchivalSubseries/museo-civico-romano
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/BotanicalForm -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista della forma estetica o cromatica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a variety from an aesthetic or chromatic point of view.</rdfs:comment>
+        <rdfs:label xml:lang="en">Botanical form</rdfs:label>
+        <rdfs:label xml:lang="it">Forma botanica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNH; SB/NAA/NAAH; SB/NAT/NATH</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/BotanicalRevision -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalRevision">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
@@ -8254,7 +8296,7 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProduced"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -8941,12 +8983,6 @@ resource:ArchivalSubseries/museo-civico-romano
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Determinavit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative alla persona che ha determinato il campione e la data della determinazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the way in which the specimen has been determined</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -9457,21 +9493,6 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Form -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Form">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista della forma estetica o cromatica</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a variety from an aesthetic or chromatic point of view.</rdfs:comment>
-        <rdfs:label xml:lang="en">Form</rdfs:label>
-        <rdfs:label xml:lang="it">Forma</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNH; SB/NAA/NAAH; SB/NAT/NATH</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/FormType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FormType">
@@ -9503,6 +9524,22 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DO/FTA/FTAF, DO/DRA/DRAF, DO/FNT/FNTR (+ DO/VDC/VDCP, DO/REG/REGP)</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/FruitSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/FruitSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto carpologico (frutti)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the fruit collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">Fruit  sample</rdfs:label>
+        <rdfs:label xml:lang="it">Reperto carpologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10004,14 +10041,22 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasVariety"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasVariety"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBotanicalForm"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCultivar"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Cultivar"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10117,12 +10162,6 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/NonLinnaeanTaxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isNonLinnaeanTaxonOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/taxonomicNumber"/>
@@ -10538,6 +10577,21 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         <rdfs:label xml:lang="it">Phylum</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/PollenSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PollenSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto palinologico (pollini)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents sample from the pollen collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Reperto palinologico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11128,6 +11182,21 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Sample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Sample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il reperto appartenente alle collezioni ancillari</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample belonging to ancillar collections</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Reperto di collezione ancillare</rdfs:label>
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Scale -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Scale">
@@ -11162,6 +11231,22 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: CA/CAO/CAOS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SeedSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SeedSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto spermologico (semi)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a sample from the seed collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Reperto spermologico</rdfs:label>
+        <rdfs:label xml:lang="en">Seed  sample</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11625,25 +11710,19 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBeenProducedFrom"/>
-                <owl:allValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimenCategory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProduced"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11865,6 +11944,22 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNF; SB/NAA/NAAF; SB/NAT/NATF</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/WoodSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/WoodSample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Sample"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto xilologico (legni)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents sample from the wood collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Reperto xilologico</rdfs:label>
+        <rdfs:label xml:lang="en">Wood sample</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBX</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -12620,14 +12715,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 
