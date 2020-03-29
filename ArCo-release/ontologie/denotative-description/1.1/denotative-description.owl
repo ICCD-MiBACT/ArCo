@@ -545,7 +545,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -818,6 +818,21 @@ In this module are used as template the following Ontology Design Patterns:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance">
+        <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta del campione alla caratteristica del popolamento del luogo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the collecting site the individuals&apos; shade tolerance</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha situazione luminosa</rdfs:label>
+        <rdfs:label xml:lang="en">has individuals&apos; shade tolerance</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2080,6 +2095,20 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isIndividualShadeToleranceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isIndividualShadeToleranceOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega la caratteristica del popolamento del luogo di raccolta al il luogo di raccolta del campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the individuals&apos; shade tolerance the collecting site</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is individuals&apos; shade tolerance of</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione luminosa di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isLabelOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isLabelOf">
@@ -2818,18 +2847,19 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/bodyText -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/bodyTranscript -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/bodyText">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/bodyTranscript">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Label"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:label xml:lang="en">body text</rdfs:label>
-        <rdfs:label xml:lang="it">testo del corpo</rdfs:label>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nel corpo dell&apos;etichetta</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the text written in the body of the label</rdfs:comment>
+        <rdfs:label xml:lang="en">body transcript</rdfs:label>
+        <rdfs:label xml:lang="it">trascrizione del corpo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
-        <a-cat:iccdNormTag xml:lang="it">Questa proprietà rappresenta il testo scritto nel corpo dell&apos;etichetta</a-cat:iccdNormTag>
-        <a-cat:iccdNormTag xml:lang="en">This property represents the text written in the body of the label</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2884,18 +2914,19 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/headingText -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/headingTranscript -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/headingText">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/headingTranscript">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Label"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nell&apos;intestazione dell&apos;etichetta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the heading of the label</rdfs:comment>
-        <rdfs:label xml:lang="en">heading text</rdfs:label>
-        <rdfs:label xml:lang="it">testo dell&apos;intestazione</rdfs:label>
+        <rdfs:label xml:lang="en">heading transcript</rdfs:label>
+        <rdfs:label xml:lang="it">trascrizione dell&apos;intestazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI</a-cat:iccdNormTag>
-        <a-cat:iccdNormTag xml:lang="it">Questa proprietà rappresenta il testo scritto nell&apos;intestazione dell&apos;etichetta</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3483,6 +3514,36 @@ resource:Inscription/1200865151-inscription-1
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFluidDynamism"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FluidDynamism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSubstrate"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta informazioni specifiche, non relative alla posizione geografica, della località di reperimento dell&apos;oggetto della scheda</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents non geographical information about the site where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -3927,7 +3988,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD - Normative A, BDM, PG 3: OG/OGA.</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4193,6 +4254,22 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tolleranza alla luminosità del popolamento ove il campione è stato raccolto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the shade tolerance of the individuals in the collecting location</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Individuals shade tolerance</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="en">ICCD Normativa BNB: LR/LRI/LRIS</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Inscription -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Inscription">
@@ -4226,7 +4303,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/bodyText"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/bodyTranscript"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4240,6 +4317,12 @@ resource:TechnicalCharacteristic/pietra-scultura
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/handwriting"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/headingTranscript"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il cartellino o l&apos;etichetta presente sul o insieme al campione oggetto della scheda o al contenitore.</rdfs:comment>
@@ -5598,6 +5681,7 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
     <!-- https://w3id.org/arco/ontology/denotative-description/Ph -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Ph">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Ph</rdfs:label>
         <rdfs:label xml:lang="it">Ph</rdfs:label>
         <owl:versionInfo xml:lang="it">Instabile</owl:versionInfo>
@@ -5815,6 +5899,7 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
     <!-- https://w3id.org/arco/ontology/denotative-description/Temperature -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Temperature">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Temperatura</rdfs:label>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
