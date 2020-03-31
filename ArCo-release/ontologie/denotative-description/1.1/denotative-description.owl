@@ -823,24 +823,6 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isIndividualShadeToleranceOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta del campione alla caratteristica del popolamento del luogo</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the collecting site the individuals&apos; shade tolerance</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">ha situazione luminosa</rdfs:label>
-        <rdfs:label xml:lang="en">has individuals&apos; shade tolerance</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: LR/LRI/LRIS</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/hasLabel -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLabel">
@@ -1235,6 +1217,24 @@ In this module are used as template the following Ontology Design Patterns:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasShadeToleranceofIndividuals -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasShadeToleranceofIndividuals">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOfIndividualFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta del campione alla caratteristica del popolamento del luogo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the collecting site the individuals&apos; shade tolerance</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha situazione luminosa</rdfs:label>
+        <rdfs:label xml:lang="en">has shade tolerance of individuals</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: LR/LRI/LRIS</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2099,20 +2099,6 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isIndividualShadeToleranceOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isIndividualShadeToleranceOf">
-        <rdfs:comment xml:lang="it">Questa proprietà collega la caratteristica del popolamento del luogo di raccolta al il luogo di raccolta del campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the individuals&apos; shade tolerance the collecting site</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is individuals&apos; shade tolerance of</rdfs:label>
-        <rdfs:label xml:lang="it">è situazione luminosa di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/isLabelOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isLabelOf">
@@ -2464,6 +2450,20 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">è tipo di campione prelevato</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOfIndividualFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOfIndividualFor">
+        <rdfs:comment xml:lang="it">Questa proprietà collega la caratteristica del popolamento del luogo di raccolta al il luogo di raccolta del campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the individuals&apos; shade tolerance the collecting site</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is shade tolerance of individuals for</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione luminosa di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3526,12 +3526,6 @@ resource:Inscription/1200865151-inscription-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasIndividualsShadeTolerance"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
@@ -3540,6 +3534,12 @@ resource:Inscription/1200865151-inscription-1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasShadeToleranceofIndividuals"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4252,22 +4252,6 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IndividualShadeTolerance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la tolleranza alla luminosità del popolamento ove il campione è stato raccolto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the shade tolerance of the individuals in the collecting location</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Individuals shade tolerance</rdfs:label>
-        <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="en">ICCD Normativa BNB: LR/LRI/LRIS</core:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/Inscription -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Inscription">
@@ -4644,6 +4628,22 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tolleranza alla luminosità del popolamento ove il campione è stato raccolto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the shade tolerance of the individuals in the collecting location</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Shade tolerance of individuals</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="en">ICCD Normativa BNB: LR/LRI/LRIS</core:iccdNormTag>
     </owl:Class>
     
 
