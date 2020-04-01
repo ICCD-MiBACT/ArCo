@@ -662,7 +662,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBotanicalFormOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linneana alla forma, che è uno dei concetti della tassonomia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the form, that is one of the concept of the taxon.</rdfs:comment>
@@ -949,10 +949,10 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasCultivar -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCultivar">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasFamily"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCultivarOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Cultivar"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linneana al cultivar, che è uno dei concetti della tassonomia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the cultivar, that is one of the concept of the taxon.</rdfs:comment>
@@ -1338,7 +1338,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isFamilyOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Family"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linneana al genere, che è uno dei concetti della tassonomia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the family, that is one of the concept of the taxon.</rdfs:comment>
@@ -1454,7 +1454,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isGenusIn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linneana al genere, che è uno dei concetti della tassonomia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the genus, that is one of the concept of the taxon.</rdfs:comment>
@@ -1699,7 +1699,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLinnaeanTaxon">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxon"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità biologica a una tassonomia linnea.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a biological entity to a linnaean taxon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -1863,7 +1863,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasNonLinnaeanTaxon">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxon"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/NonLinnaeanTaxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/NotLinnaeanTaxonomy"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità biologica a una tassonomia non linnea.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a biological entity to a non linnaean taxon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
@@ -2044,25 +2044,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI 4.00: DU, DV, DF</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonProducedFrom"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un tipo nomenclaturale o una revisione botanica ad una tassonomia linnea</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a type specimen or a botanical revision to a linnaean taxon</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">ha prodotto tassonomia linneana</rdfs:label>
-        <rdfs:label xml:lang="en">ha produced linnaean taxon</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNB: SB/TBI/TBIN; RB/RBR/RBRN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2510,7 +2491,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpeciesIn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia biologica alla specie, che è uno dei concetti della tassonomia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the subspecies, that is one of the concept of the taxon.</rdfs:comment>
@@ -2567,7 +2548,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSubspeciesIn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia biologica alla sottospecie, che è uno dei concetti della tassonomia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the subspecies, that is one of the concept of the taxon.</rdfs:comment>
@@ -2963,7 +2944,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isVarietyOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linneana alla varietà, che è uno dei concetti della tassonomia.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a linnaean taxon to the variety, that is one of the concept of the taxon.</rdfs:comment>
@@ -4358,7 +4339,8 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonProducedFrom -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonProducedFrom">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/producesLinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una tassonomia linnea ad un tipo nomenclaturale o ad una revisione botanica</rdfs:comment>
@@ -5509,6 +5491,24 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è opera collegata a</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/producesLinnaeanTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/producesLinnaeanTaxon">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un tipo nomenclaturale o una revisione botanica ad una tassonomia linnea</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a type specimen or a botanical revision to a linnaean taxon</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">produce tassonomia linneana</rdfs:label>
+        <rdfs:label xml:lang="en">produces linnaean taxon</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa ICCD BNB: SB/TBI/TBIN; RB/RBR/RBRN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -7267,7 +7267,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
     <!-- https://w3id.org/arco/ontology/context-description/taxonomicNumber -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/taxonomicNumber">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/NonLinnaeanTaxon"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/NotLinnaeanTaxonomy"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero che fa riferimento a determinate categorie tassonomiche diverse dal genere, nel caso di erbari antichi (prelinneiani o linneiani antichi, come ad es. l&apos;Erbario Micheli).</rdfs:comment>
         <rdfs:comment xml:lang="en">This proprty represents the number related to a taxonomic category, different from the genus (expecially for ancient herbaria and prelinnaean herbaria, e.g. Micheli Herbarium)</rdfs:comment>
@@ -8301,6 +8301,7 @@ resource:ArchivalSubseries/museo-civico-romano
     <!-- https://w3id.org/arco/ontology/context-description/BiologicalTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalTaxon">
+        <owl:equivalentClass rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -8326,16 +8327,26 @@ resource:ArchivalSubseries/museo-civico-romano
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una tassonomia biologica, ossia i criteri con cui si ordinano gli organismi in un sistema di classificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a biological taxonomy</rdfs:comment>
+        <rdfs:label xml:lang="en">Biological taxonomy</rdfs:label>
+        <rdfs:label xml:lang="it">Tassonomia biologica</rdfs:label>
+        <owl:versionInfo rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/BotanicalForm -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista della forma estetica o cromatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a variety from an aesthetic or chromatic point of view.</rdfs:comment>
         <rdfs:label xml:lang="en">Botanical form</rdfs:label>
@@ -8371,8 +8382,8 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/producesLinnaeanTaxon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni su eventuali revisioni cui il campione  sia andato incontro, compresi i cambi nomenclaturali conseguenti.</rdfs:comment>
@@ -9653,7 +9664,7 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isGenusIn"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10103,10 +10114,10 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/LinnaeanTaxon -->
+    <!-- https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isLinnaeanTaxonProducedFrom"/>
@@ -10121,56 +10132,51 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasVariety"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBotanicalForm"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCultivar"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Cultivar"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Cultivar"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasFamily"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Family"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Family"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasGenus"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSpecies"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSubspecies"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasVariety"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/NotLinnaeanTaxonomy"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una tassonomia linnea</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a linnaean taxon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Linnaean Taxon</rdfs:label>
+        <rdfs:label xml:lang="en">Linnaean taxononomy</rdfs:label>
         <rdfs:label xml:lang="it">Tassonomia linneana</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -10238,20 +10244,20 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/NonLinnaeanTaxon -->
+    <!-- https://w3id.org/arco/ontology/context-description/NotLinnaeanTaxonomy -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/NonLinnaeanTaxon">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/NotLinnaeanTaxonomy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/taxonomicNumber"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una tassonomia non linnea</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a linnaean taxon.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a taxon that is not based on linnaean classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">Non linnaean Taxon</rdfs:label>
+        <rdfs:label xml:lang="en">Not linnaean taxonomy</rdfs:label>
         <rdfs:label xml:lang="it">Tassonomia non linneana</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
@@ -11454,12 +11460,6 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Taxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSpeciesIn"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
             </owl:Restriction>
@@ -11567,12 +11567,6 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Taxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isSubspeciesIn"/>
@@ -11765,6 +11759,12 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Taxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -11847,6 +11847,28 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Type-SpecimenType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Type-SpecimenType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo del campione che è servito a denominare un taxon specifico o infraspecifico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of a specimen used to produce a specific taxon</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">Tipologia del tipo nomenclaturale</rdfs:label>
+        <rdfs:label xml:lang="en">Type-specimen type</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI/TBIT</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/TypeSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/TypeSpecimen">
@@ -11860,45 +11882,23 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasCategory"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimenCategory"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Type-SpecimenType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasProducedLinnaeanTaxon"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxon"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/producesLinnaeanTaxon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il campione vegetale che è servito a produrne la prima descrizione e a denominare un taxon specifico o infraspecifico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the specimen used to produce the first description an to produce the specific taxon</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il campione vegetale che è servito a produrne la prima descrizione e a denominare un taxon specifico o infraspecifico considerato nuovo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the specimen used to produce the first description an to produce the new taxon</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">Tipo nomenclaturale</rdfs:label>
         <rdfs:label xml:lang="en">Type specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/TypeSpecimenCategory -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/TypeSpecimenCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isCategoryOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo del campione che è servito a denominare un taxon specifico o infraspecifico</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of a specimen used to produce a specific taxon</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="it">Categoria del tipo nomenclaturale</rdfs:label>
-        <rdfs:label xml:lang="en">Type specimen category</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI/TBIT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -12069,12 +12069,6 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Variety">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Taxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDirectHigherRank"/>
@@ -12880,8 +12874,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
