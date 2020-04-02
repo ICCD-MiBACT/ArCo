@@ -331,8 +331,12 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLocation"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isCollectingSiteOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCollectingSite"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLegit"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega il campione al luogo di raccolta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the specimen to the collecting site</rdfs:comment>
         <rdfs:label xml:lang="it">ha luogo di raccolta</rdfs:label>
@@ -1221,17 +1225,17 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasShadeToleranceofIndividuals -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasShadeTolerance -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasShadeToleranceofIndividuals">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOfIndividualFor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasShadeTolerance">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ShadeTolerance"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta del campione alla caratteristica del popolamento del luogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site the individuals&apos; shade tolerance</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <rdfs:label xml:lang="it">ha situazione luminosa</rdfs:label>
-        <rdfs:label xml:lang="en">has shade tolerance of individuals</rdfs:label>
+        <rdfs:label xml:lang="en">has shade tolerance</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: LR/LRI/LRIS</a-cat:iccdNormTag>
@@ -1299,7 +1303,7 @@ In this module are used as template the following Ontology Design Patterns:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateCategory"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il substrato alla categoria di substrato</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates  the substrate to the category</rdfs:comment>
         <rdfs:label xml:lang="it">ha categoria di substrato</rdfs:label>
@@ -1419,6 +1423,23 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="en">has tuning</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasUnitOfMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasUnitOfMeasurement">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement"/>
+        <rdfs:comment xml:lang="it">Questa classe collega una misura alla sua unità di misura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a measurement to its unit of measurement</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha unità di misura</rdfs:label>
+        <rdfs:label xml:lang="en">has unit of measurement</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2454,13 +2475,13 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOfIndividualFor -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOfIndividualFor">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isShadeToleranceOf">
         <rdfs:comment xml:lang="it">Questa proprietà collega la caratteristica del popolamento del luogo di raccolta al il luogo di raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the individuals&apos; shade tolerance the collecting site</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is shade tolerance of individuals for</rdfs:label>
+        <rdfs:label xml:lang="en">is shade tolerance of</rdfs:label>
         <rdfs:label xml:lang="it">è situazione luminosa di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -2692,6 +2713,22 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:label xml:lang="it">è accordatura di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
+        <rdfs:comment xml:lang="it">Questa classe collega l&apos;unità di misura ad una misura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a unit of measurement to a measurement</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is unit of measurement of</rdfs:label>
+        <rdfs:label xml:lang="it">è unità di misura di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3407,17 +3444,33 @@ resource:Inscription/1200865151-inscription-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionCategory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia della collezione oggetto della scheda. Per collezione generale si intende una collezione che contiene sia campioni di crittogame che di fanerogame. Si definisce collezione crittogamica senza ulteriore specificazione una collezione che contiene campioni di diverse crittogame, ma mai campioni di fanerogame.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the category of a botanical collection</rdfs:comment>
-        <rdfs:label xml:lang="en">Botanical Collection Category</rdfs:label>
-        <rdfs:label xml:lang="it">Categoria della collezione botanica</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">ustable</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This class represents the type of a botanical collection</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Botanical Collection Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di collezione botanica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTZ</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di bene culturale botanico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a type of botanical heritage</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Botanical heritage type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di bene botanico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3538,8 +3591,8 @@ resource:Inscription/1200865151-inscription-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasShadeToleranceofIndividuals"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasShadeTolerance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ShadeTolerance"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4094,17 +4147,18 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/HerbariumCategory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/HerbariumType -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HerbariumCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HerbariumType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia dell’erbario oggetto della scheda. Per erbario generale si intende un erbario che contiene sia campioni di crittogame che di fanerogame. Si definisce erbario crittogamico senza ulteriore specificazione un erbario che contiene campioni di diverse crittogame, ma mai campioni di fanerogame.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the category</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the category of an herabarium.</rdfs:comment>
-        <rdfs:label xml:lang="it">Categoria dell&apos;erbario</rdfs:label>
-        <rdfs:label xml:lang="en">Herbarium Category</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">ustable</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This class represents the type of an herabarium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Herbarium Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di  erbario</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTR</a-cat:iccdNormTag>
     </owl:Class>
     
@@ -4420,6 +4474,12 @@ un&apos;azienda, ecc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasUnitOfMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Measurement&apos; is the following:
 resource:Measurement/0500212021-1-height
         a  dd:Measurement ;
@@ -4632,14 +4692,14 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/ShadeTolerance -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ShadeToleranceofIndividuals">
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ShadeTolerance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tolleranza alla luminosità del popolamento ove il campione è stato raccolto</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the shade tolerance of the individuals in the collecting location</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Shade tolerance of individuals</rdfs:label>
+        <rdfs:label xml:lang="en">Shade tolerance</rdfs:label>
         <rdfs:label xml:lang="it">Situazione luminosa</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -4648,33 +4708,35 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenCategory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria del campione oggetto della scheda</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the category of a specimen</rdfs:comment>
-        <rdfs:label xml:lang="it">Categoria del campione</rdfs:label>
-        <rdfs:label xml:lang="en">Specimen Category</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">ustable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTK</a-cat:iccdNormTag>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria del/dei contenitore/i in cui è/sono conservato/i il/i campione/i. Ve ne possono essere diversi, uno contenuto nell&apos;altro. In questo caso si riportano tutti i contenitori, secondo la sequenza, che deve essere specificata nel campo ACZ, fino al dettaglio cui si vuole giungere con la catalogazione. Il termine foglio è qui inserito per far fronte a casi particolari, quando su uno stesso foglio d&apos;erbario sono ospitati campioni diversi,
+ognuno con documentazione propria (etichette). Questo caso si riscontra spesso negli erbari crittogamici, ad esempio quelli lichenologici, con i campioni contenuti in buste fissate in vario numero su fogli d&apos;erbario. L&apos;inserimento del foglio quale contenitore, in questi casi, è obbligata solo se il foglio stesso riporta un qualche tipo di indicazione grafica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of a container, where specimen/specimens is/are preserved</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Specimen Container Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di contenitore del campione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTO</a-cat:iccdNormTag>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenContainerCategory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenType -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria del/dei contenitore/i in cui è/sono conservato/i il/i campione/i. Ve ne possono essere diversi, uno contenuto nell&apos;altro. In questo caso si riportano tutti i contenitori, secondo la sequenza, che deve essere specificata nel campo ACZ, fino al dettaglio cui si vuole giungere con la catalogazione. Il termine foglio è qui inserito per far fronte a casi particolari, quando su uno stesso foglio d&apos;erbario sono ospitati campioni diversi,
-ognuno con documentazione propria (etichette). Questo caso si riscontra spesso negli erbari crittogamici, ad esempio quelli lichenologici, con i campioni contenuti in buste fissate in vario numero su fogli d&apos;erbario. L&apos;inserimento del foglio quale contenitore, in questi casi, è obbligata solo se il foglio stesso riporta un qualche tipo di indicazione grafica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the category of a container, where specimen/specimens is/are preserved</rdfs:comment>
-        <rdfs:label xml:lang="it">Categoria del contenitore del campione</rdfs:label>
-        <rdfs:label xml:lang="en">Specimen Container Category</rdfs:label>
-        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">ustable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTO</a-cat:iccdNormTag>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria del campione oggetto della scheda</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of a specimen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Specimen Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di campione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTK</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4719,7 +4781,7 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSubstrateCategory"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta substrato specifico sul quale è stato raccolto il campione</rdfs:comment>
@@ -4734,21 +4796,15 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/SubstrateCategory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/SubstrateType -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SubstrateCategory">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Category"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SubstrateType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria cui appartiene il substrato su cui è stato raccolto il campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the category of the substrate where the specimen was collected</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="it">Categoria di substrato</rdfs:label>
-        <rdfs:label xml:lang="en">Substrate category</rdfs:label>
+        <rdfs:label xml:lang="en">Substrate Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di substrato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
@@ -4820,6 +4876,19 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; MT/MTX; MT/FVM; MT/FRM;</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement">
+        <rdfs:comment xml:lang="en">Questa classe rappresenta l&apos;unità di misura</rdfs:comment>
+        <rdfs:comment xml:lang="en">Thiss class represents a unit of measurement</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit of measurement</rdfs:label>
+        <rdfs:label xml:lang="it">Unità di misura</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -6112,10 +6181,10 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionCategory"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/HerbariumCategory"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenCategory"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerCategory"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/HerbariumType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenType"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
