@@ -48,35 +48,98 @@
         <version>2.4.3</version>
         <executions>
           <execution>
+            <id>rdfizer-main</id>
             <phase>package</phase>
             <goals>
               <goal>shade</goal>
             </goals>
+            <configuration>
+              <shadedArtifactAttached>false</shadedArtifactAttached>
+              <transformers>
+                <transformer>
+                  <mainClass>it.cnr.istc.stlab.arco.Main</mainClass>
+                </transformer>
+                <transformer />
+                <transformer />
+                <transformer>
+                  <addHeader>false</addHeader>
+                </transformer>
+              </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rdfizer-xslt-transformer</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <shadedArtifactAttached>false</shadedArtifactAttached>
+              <outputFile>target/arco.rdfizer-xsltTransformer.jar</outputFile>
+              <transformers>
+                <transformer>
+                  <mainClass>it.cnr.istc.stlab.arco.XsltTransformer</mainClass>
+                </transformer>
+                <transformer />
+                <transformer />
+                <transformer>
+                  <addHeader>false</addHeader>
+                </transformer>
+              </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rdfizer-xslt-tester</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <shadedArtifactAttached>false</shadedArtifactAttached>
+              <outputFile>target/arco.rdfizer-xsltTester.jar</outputFile>
+              <transformers>
+                <transformer>
+                  <mainClass>it.cnr.istc.stlab.arco.XsltTester</mainClass>
+                </transformer>
+                <transformer />
+                <transformer />
+                <transformer>
+                  <addHeader>false</addHeader>
+                </transformer>
+              </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
           </execution>
         </executions>
-        <configuration>
-          <shadedArtifactAttached>false</shadedArtifactAttached>
-          <transformers>
-            <transformer>
-              <mainClass>it.cnr.istc.stlab.arco.SingleFileWriterNTriples</mainClass>
-            </transformer>
-            <transformer />
-            <transformer />
-            <transformer>
-              <addHeader>false</addHeader>
-            </transformer>
-          </transformers>
-          <filters>
-            <filter>
-              <artifact>*:*</artifact>
-              <excludes>
-                <exclude>META-INF/*.SF</exclude>
-                <exclude>META-INF/*.DSA</exclude>
-                <exclude>META-INF/*.RSA</exclude>
-              </excludes>
-            </filter>
-          </filters>
-        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
