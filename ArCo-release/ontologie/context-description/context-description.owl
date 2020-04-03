@@ -190,12 +190,6 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/deprecated -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/deprecated"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/hasAccession -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAccession">
@@ -663,7 +657,6 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasBiologicalTaxon -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxon">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/deprecated"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/hasCollection"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isBiologicalTaxonOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -673,6 +666,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha tassonomia biologica</rdfs:label>
         <rdfs:label xml:lang="en">has biological taxon</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS</a-cat:iccdNormTag>
@@ -1415,7 +1409,6 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasGenus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasGenus">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/deprecated"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isGenusIn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -1426,6 +1419,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha genere</rdfs:label>
         <rdfs:label xml:lang="en">has genus</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
@@ -2447,7 +2441,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasSpecies -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSpecies">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/deprecated"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSpeciesIn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -2458,6 +2451,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha specie</rdfs:label>
         <rdfs:label xml:lang="en">has species</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
@@ -2505,7 +2499,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/hasSubspecies -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSubspecies">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/deprecated"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasConcept"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/context-description/isSubspeciesIn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -2516,6 +2509,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha sottospecie</rdfs:label>
         <rdfs:label xml:lang="en">has subspecies</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</a-cat:iccdNormTag>
@@ -3357,7 +3351,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/context-description/isBiologicalTaxonOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBiologicalTaxonOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/deprecated"/>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/context-description/isCollectionIn"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -3366,23 +3359,9 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is biological taxon of</rdfs:label>
         <rdfs:label xml:lang="it">è tassonomia biologica di</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/isBotanicalFormOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isBotanicalFormOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega unaforma alla tassonomia in cui è classificata.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a form to the linnaean taxon in which it is classified.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is botanical form in</rdfs:label>
-        <rdfs:label xml:lang="it">è forma botanica in</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -3644,21 +3623,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è luogo di realizzazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/isCultivarOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCultivarOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un cultivar alla tassonomia in cui è classificato.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a cultivar to the linnaean taxon in which it is classified.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is cultivar in</rdfs:label>
-        <rdfs:label xml:lang="it">è cultivar in</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4060,6 +4024,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is genus in</rdfs:label>
         <rdfs:label xml:lang="it">è genere in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5053,6 +5018,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is species in</rdfs:label>
         <rdfs:label xml:lang="it">è specie in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5104,6 +5070,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="en">is subspecies in</rdfs:label>
         <rdfs:label xml:lang="it">è sottospecie in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -5410,21 +5377,6 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è utente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/isVarietyOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isVarietyOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isConceptOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una varietà alla tassonomia in cui è classificata.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a variety to the linnaean taxon in which it is classified.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <rdfs:label xml:lang="en">is variety in</rdfs:label>
-        <rdfs:label xml:lang="it">è varietà in</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -11858,6 +11810,12 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/TypeSpecimenIdentification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConsequence"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni sull&apos;evento relativo all&apos;individuazione di un nuovo tipo nomenclaturale a partire da un campione vegetale</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the information about the event related to the identification of a TypeSpecimen based on a specimen</rdfs:comment>
         <rdfs:label xml:lang="en">Identificazione del tipo nomenclaturale</rdfs:label>
@@ -12837,15 +12795,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 
