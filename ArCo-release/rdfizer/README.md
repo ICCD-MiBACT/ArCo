@@ -26,6 +26,8 @@ $ java -Xmx2G -jar  arco.rdfizer.jar XML_FOLDER OUT_FOLDER
 Where:
 - the argument `XML_FOLDER`is the folder containing the collection of XML files to transform.
 - the argument `OUT_FOLDER` is the folder where the Knowledge Graph will be stored.
+
+
 **Note:**
 - Please use the argument -Xmx2G in order to increase the size of the heap of (at least) 2 GB.
 - Please use the naming convention ``arco-knowledge-graph-<KG_VERSION>`` for the ``OUT_FOLDER``.
