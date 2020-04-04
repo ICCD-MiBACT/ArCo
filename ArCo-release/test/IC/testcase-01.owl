@@ -24,9 +24,9 @@
   ?site2 rdfs:label _:l1 .
   FILTER (?site1!=?site2)
 }</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testCaseDescription rdf:resource="http://etna.istc.cnr.it/arco-pr/virtuoso/sparql"/>
-        <testannotationschema:testCaseDescription xml:lang="en">This test case checks that Natural Heritage Cultural Properties are not linked with a site twice.</testannotationschema:testCaseDescription>
+        <testannotationschema:testCaseDescription xml:lang="en">This test case checks that Natural Heritage Cultural Properties are not linked with the same site twice.</testannotationschema:testCaseDescription>
         <ontology:hasInputTestDataCategory rdf:resource="https://w3id.org/arco/testalod/ontology/SPARQLEndpoint"/>
+        <ontology:hasInputTestDataUri rdf:resource="http://etna.istc.cnr.it/arco-pr/virtuoso/sparql"/>
     </owl:Ontology>
 </rdf:RDF>
 
