@@ -12,7 +12,9 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/test/IC/testcase-01.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/testalod/ontology/0.2"/>
         <testannotationschema:hasExpectedResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest>ASK WHERE {
+        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; 
+
+ASK WHERE {
 {
  SELECT (COUNT(DISTINCT *) AS ?c) {
   _:timeIndexedLocation2  &lt;https://w3id.org/arco/ontology/location/atSite&gt;  ?site2 .
