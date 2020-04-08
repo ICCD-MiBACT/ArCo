@@ -4328,13 +4328,13 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/FontStyle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasLanguage"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Language"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Language"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4375,12 +4375,6 @@ resource:TechnicalCharacteristic/pietra-scultura
     <!-- https://w3id.org/arco/ontology/denotative-description/Language -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Language">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isLanguageOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Language"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A natural or artificial language, provided with an alphabet (or vocabulary) and combinatorial rules.</rdfs:comment>
         <rdfs:comment xml:lang="it">Un linguaggio artificiale o naturale, con un alfabeto (o vocabolario) e delle regole per combinare i simboli/suoni.</rdfs:comment>
         <rdfs:label xml:lang="en">Language</rdfs:label>

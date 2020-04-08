@@ -8195,26 +8195,26 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxonomy"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBiologicalTaxonOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxonomy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon biologico, ossia i criteri con cui si ordinano gli organismi in un sistema di classificazione.</rdfs:comment>
@@ -9511,7 +9511,7 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/dateOfLastChangePreservative"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un reperto carpologico (frutti)</rdfs:comment>
@@ -10022,58 +10022,31 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/LinnaeanTaxonomy">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Cultivar"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Family"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Genus"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Variety"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Cultivar"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Family"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Genus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBiologicalTaxonProducedFrom"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBiologicalTaxonProducedFrom"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/isBiologicalTaxonProducedFrom"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/OtherTaxonomy"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una tassonomia linnea</rdfs:comment>
@@ -11826,7 +11799,7 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConsequence"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni sull&apos;evento relativo all&apos;individuazione di un nuovo tipo nomenclaturale a partire da un campione vegetale</rdfs:comment>
@@ -12808,15 +12781,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
