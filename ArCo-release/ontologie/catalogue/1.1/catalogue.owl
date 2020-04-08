@@ -2120,6 +2120,7 @@ resource:CatalogueRecordS/0500212038
         <rdfs:label xml:lang="it">Scheda catalografica su bene culturale complesso</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <iccdNormTag>ICCD Normativa trasversale: OG/OGC/OGCT</iccdNormTag>
     </owl:Class>
     
 
