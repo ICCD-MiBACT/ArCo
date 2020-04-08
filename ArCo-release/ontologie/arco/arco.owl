@@ -1676,11 +1676,11 @@ In this module are used as template the following Ontology Design Patterns:
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/arco/ComplexCulturalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di esemplari/oggetti/elementi componenti di un bene culturale. Nel caso di un bene complesso identificato come serie o come insieme, si usa per specificare il numero, espresso in cifre, degli esemplari o degli oggetti componenti, oppure degli elementi componenti nel caso in cui il bene sia un insieme o una serie i cui esemplari/oggetti componenti comprendono ciascuno più elementi. Il range della proprietà è rdfs:Literal perché, nei casi in cui non sia stato possibile rilevare per motivi pratici la consistenza numerica, il valore della proprietà sarà &quot;QNR&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di oggetti componenti di un bene culturale identificato come serie o come insieme.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the number of components of a complex cultural property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="en">number of components</rdfs:label>
-        <rdfs:label xml:lang="it">numero di oggetti/elementi componenti</rdfs:label>
+        <rdfs:label xml:lang="it">numero di componenti</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/QNT/QNTN; OG/QNT/QNTS</a-cat:iccdNormTag>
