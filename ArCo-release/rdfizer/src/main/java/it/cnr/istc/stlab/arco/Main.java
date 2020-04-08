@@ -55,7 +55,7 @@ public class Main {
 			BufferedWriter errorLog = new BufferedWriter(new FileWriter("error.log"));
 
 			File folderOut = new File(outNtriplesFolder);
-			folderOut.mkdir();
+			folderOut.mkdirs();
 			OutputStream osQuarantine = new GZIPOutputStream(new FileOutputStream(new File(outQuarantineNT)));
 
 			if (inFolder.exists() && inFolder.isDirectory() && !inFolder.isHidden()) {
