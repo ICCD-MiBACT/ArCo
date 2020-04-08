@@ -35,7 +35,7 @@ public class Main {
 				BufferedReader br = new BufferedReader(new FileReader(new File(args[2])));
 				String line;
 				while ((line = br.readLine()) != null) {
-					System.out.print(line+" goes to quarantine.");
+					System.out.println(line+" goes to quarantine.");
 					catalogueRecordsToQuarantine.add(line);
 				}
 				br.close();
