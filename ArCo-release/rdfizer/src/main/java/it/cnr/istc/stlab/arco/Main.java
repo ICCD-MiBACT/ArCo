@@ -24,7 +24,7 @@ public class Main {
 	public static void main(String[] args) {
 		String inFolderString = args[0];
 		String outNtriplesFolder = args[1];
-		String outQuarantineNT = outNtriplesFolder + "quarantine.nt.gz";
+		String outQuarantineNT = outNtriplesFolder + "/quarantine.nt.gz";
 		File inFolder = new File(inFolderString);
 
 		Set<String> catalogueRecordsToQuarantine = new HashSet<>();
@@ -35,6 +35,7 @@ public class Main {
 				BufferedReader br = new BufferedReader(new FileReader(new File(args[2])));
 				String line;
 				while ((line = br.readLine()) != null) {
+					System.out.print(line+" goes to quarantine.");
 					catalogueRecordsToQuarantine.add(line);
 				}
 				br.close();
