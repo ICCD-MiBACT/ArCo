@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><schede>
+   <SI version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">SI</TSK>
+         <LIR hint="Livello ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">12</NCTR>
+            <NCTN hint="Numero catalogo generale">01339703</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S283</ESC>
+         <ECP hint="Ente competente">S283</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">insediamento</OGTD>
+            <OGTT hint="Precisazione tipologica">insediamento naturalmente difeso</OGTT>
+            <OGTA hint="Livello di individuazione">sito individuato sulla base di ricognizione archeologica</OGTA>
+            <OGTN hint="Denominazione e numero sito">SUTRI</OGTN>
+         </OGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Lazio</PVCR>
+            <PVCP hint="Provincia">VT</PVCP>
+            <PVCC hint="Comune">Sutri</PVCC>
+            <PVCL hint="Località">SUTRI</PVCL>
+         </PVC>
+      </LC>
+      <GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+         <GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+         <GPD hint="DESCRIZIONE DEL PUNTO">
+            <GPDP hint="PUNTO">
+               <GPDPX hint="Coordinata X">12.225053997</GPDPX>
+               <GPDPY hint="Coordinata Y">42.241869396</GPDPY>
+            </GPDP>
+         </GPD>
+         <GPM hint="Metodo di georeferenziazione">punto esatto</GPM>
+         <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+         <GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+         <GPB hint="BASE DI RIFERIMENTO">
+            <GPBB hint="Descrizione sintetica">ICCD1004350_CB.IGM25</GPBB>
+            <GPBT hint="Data">20-10-2017</GPBT>
+            <GPBO hint="Note">(3794236) -IGM 25000- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/IGM_25000.map) -CB.IGM25000</GPBO>
+         </GPB>
+      </GP>
+      <RE hint="MODALITA' DI REPERIMENTO">
+         <RCG hint="RICOGNIZIONI">
+            <RCGA hint="Responsabile scientifico">di Gennaro, Francesco</RCGA>
+            <RCGA hint="Responsabile scientifico">Pacciarelli, Marco</RCGA>
+            <RCGD hint="Data">fine 1900</RCGD>
+         </RCG>
+      </RE>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Fascia cronologica di riferimento">Età del Bronzo finale</DTZG>
+         </DTZ>
+         <DTM hint="Motivazione cronologia">analisi tipologica</DTM>
+      </DT>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESO hint="Descrizione">L'insediamento occupava il pianoro su ampio blocco tufaceo con ciglio perimetrale continuo, oggi interamente urbanizzato, e la più bassa limitrofa altura a sud-est in cui è scavato l'anfiteatro</DESO>
+         </DES>
+         <NCS hint="Interpretazione">Abitato naturalmente difeso, su pianori contigui</NCS>
+         <MTP hint="MATERIALI PRESENTI">
+            <MTPD hint="Definizione/tipo/percentuale">ceramica/protovillanoviana</MTPD>
+            <MTPE hint="Periodo">Bronzo Finale 1-2? Bronzo Finale 3</MTPE>
+         </MTP>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà mista</CDGG>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAE hint="Ente proprietario">SABAP</FTAE>
+            <FTAC hint="Collocazione">http://www.archeologialazio.beniculturali.it/it/28</FTAC>
+            <FTAN hint="Codice identificativo">SPV0000005</FTAN>
+         </FTA>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBA hint="Autore">Barbaro, Barbara</BIBA>
+            <BIBD hint="Anno di edizione">2010</BIBD>
+            <BIBH hint="Sigla per citazione">000001</BIBH>
+            <BIBN hint="V., pp., nn.">pp. 217-219</BIBN>
+            <BIBI hint="V., tavv., figg.">fig. 77D</BIBI>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBA hint="Autore">Alessandri, Luca - Angle, Micaela - Arancio, Maria Letizia et. al</BIBA>
+            <BIBD hint="Anno di edizione">2007</BIBD>
+            <BIBH hint="Sigla per citazione">000002</BIBH>
+            <BIBN hint="V., pp., nn.">p. 313</BIBN>
+            <BIBI hint="V., tavv., figg.">tav. IV, n. 385</BIBI>
+         </BIB>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2017</CMPD>
+            <CMPN hint="Nome">Marconi, Nadia</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Trucco, Flavia</FUR>
+      </CM>
+      <AN hint="ANNOTAZIONI">
+         <OSS hint="Osservazioni">I reperti sono conservati presso il Museo Nazionale Etrusco di Villa Giulia, Roma</OSS>
+      </AN>
+   </SI>
+</schede>

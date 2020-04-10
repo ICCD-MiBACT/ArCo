@@ -1,0 +1,420 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-bibliography:1201339703-bibliography-2
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 2 of cultural property: 1201339703"@en , "Bibliografia 2 del bene culturale: 1201339703"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "000002" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:1201339703 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "tav. IV, n. 385" ;
+        l0:name                   "Bibliography 2 of cultural property: 1201339703"@en , "Bibliografia 2 del bene culturale: 1201339703"@en .
+
+ar-geometry:1201339703-geometry-point-3
+        a                        clvapit:Geometry ;
+        rdfs:label               "Geometry (point) 3 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 3 del bene culturale: 1201339703"@it ;
+        clvapit:hasGeometryType  clvapit:Point ;
+        clvapit:isGeometryFor    ar-archeologicalProperty:1201339703 ;
+        l0:name                  "Geometry (point) 3 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 3 del bene culturale: 1201339703"@it .
+
+ar-culturalPropertyDefinition:insediamento
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "insediamento" .
+
+ar-timeIndexedRole:1201339703-compilation-62ff75665298effb02b4b9ee3899dab8
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Marconi, Nadia"@en , "Compilazione da Marconi, Nadia"@it ;
+        roapit:isRoleInTimeOf  ar-agent:62ff75665298effb02b4b9ee3899dab8 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-legalSituation:1201339703-legal-situation-proprieta-mista
+        a           arco-cd:LegalSituation ;
+        rdfs:label  "Condizione giuridica del bene culturale 1201339703: proprietà mista"@it , "Legal situation of cultural property 1201339703: proprietà mista"@en ;
+        l0:name     "Condizione giuridica del bene culturale 1201339703: proprietà mista"@it , "Legal situation of cultural property 1201339703: proprietà mista"@en .
+
+ar-TimeInterval:2017  a  tiapit:TimeInterval ;
+        rdfs:label   "2017" ;
+        tiapit:time  "2017" .
+
+ar-province:vt  a   clvapit:Province ;
+        rdfs:label  "VT" ;
+        l0:name     "VT" .
+
+ar-culturalPropertySpecification:insediamento-naturalmente-difeso
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "insediamento naturalmente difeso" .
+
+ar-bibliography:1201339703-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 1201339703"@en , "Bibliografia 1 del bene culturale: 1201339703"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "000001" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:1201339703 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "fig. 77D" ;
+        l0:name                   "Bibliography 1 of cultural property: 1201339703"@en , "Bibliografia 1 del bene culturale: 1201339703"@en .
+
+ar-geometry:1201339703-geometry-point-2
+        a                        clvapit:Geometry ;
+        rdfs:label               "Geometry (point) 2 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 2 del bene culturale: 1201339703"@it ;
+        clvapit:hasGeometryType  clvapit:Point ;
+        clvapit:isGeometryFor    ar-archeologicalProperty:1201339703 ;
+        l0:name                  "Geometry (point) 2 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 2 del bene culturale: 1201339703"@it .
+
+ar-interpretationCriterion:analisi-tipologica
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi tipologica" ;
+        l0:name     "analisi tipologica" .
+
+ar-addressArea:sutri  a  clvapit:AddressArea ;
+        rdfs:label  "Sutri" ;
+        l0:name     "Sutri" .
+
+ar-agent:5755484fd00f5caba00d187c36d38ade
+        a                    l0:Agent ;
+        rdfs:label           "SABAP" ;
+        arco-core:isAgentOf  ar-agentrole:1201339703-photographic-documentation-1-photographic-documentation-owner ;
+        l0:name              "SABAP" .
+
+ar-agent:62ff75665298effb02b4b9ee3899dab8
+        a           l0:Agent ;
+        rdfs:label  "Marconi, Nadia" .
+
+ar-designationInTime:1201339703-sutri
+        a           arco-dd:DesignationInTime ;
+        rdfs:label  "SUTRI" ;
+        l0:name     "SUTRI" .
+
+ar-agentrole:1201339703-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1201339703: S283"@it , "Heritage protection agency for cultural property 1201339703: S283"@en ;
+        arco-core:hasAgent  ar-agent:5c09060afc83459935864bce8d47aa04 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-accessProfile:1201339703-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1201339703: 1"@it , "Access profile to catalogue record of cultural property 1201339703: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 1201339703: 1"@it , "Access profile to catalogue record of cultural property 1201339703: 1"@en .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1201339703-cataloguing-agency .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+ar-address:a41edcfcb1d4daf7574ab15625272ee9
+        a                       clvapit:Address ;
+        rdfs:label              "ITALIA, Lazio, VT, Sutri, SUTRI" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-archeologicalProperty:1201339703 ;
+        clvapit:hasAddressArea  ar-addressArea:sutri ;
+        clvapit:hasCity         ar-city:sutri ;
+        clvapit:hasCountry      ar-country:italia ;
+        clvapit:hasProvince     ar-province:vt ;
+        clvapit:hasRegion       ar-region:lazio .
+
+ar-geometry:1201339703-geometry-point-1
+        a                        clvapit:Geometry ;
+        rdfs:label               "Geometry (point) 1 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 1 del bene culturale: 1201339703"@it ;
+        clvapit:hasGeometryType  clvapit:Point ;
+        clvapit:isGeometryFor    ar-archeologicalProperty:1201339703 ;
+        l0:name                  "Geometry (point) 1 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 1 del bene culturale: 1201339703"@it .
+
+ar-culturalPropertyType:5f45fbddc29375d05deb5ea8e34fc999
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: insediamento insediamento naturalmente difeso"@it , "Cultural property type: insediamento insediamento naturalmente difeso"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:insediamento ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:insediamento-naturalmente-difeso ;
+        l0:name     "Tipo del bene: insediamento insediamento naturalmente difeso"@it , "Cultural property type: insediamento insediamento naturalmente difeso"@en .
+
+ar-feature:ab14f7e2096cd39e2fe1086b7f9599e8
+        a                   clvapit:Feature ;
+        rdfs:label          "ITALIA Lazio VT Sutri SUTRI" ;
+        clvapit:hasAddress  ar-address:a41edcfcb1d4daf7574ab15625272ee9 .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-photograpyDocumentation:1201339703-photographic-documentation-1
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Photographic documentation 1 of cultural property: 1201339703"@en , "Documentazione fotografica 1 del bene culturale: 1201339703"@it ;
+        arco-cd:documentationIdentifier
+                "SPV0000005" ;
+        arco-cd:documentationLocation  "http://www.archeologialazio.beniculturali.it/it/28" ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf      ar-archeologicalProperty:1201339703 ;
+        arco-core:hasAgentRole         ar-agentrole:1201339703-photographic-documentation-1-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        l0:name                        "Photographic documentation 1 of cultural property: 1201339703"@en , "Documentazione fotografica 1 del bene culturale: 1201339703"@en .
+
+ar-archeologicalProperty:1201339703
+        a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
+        rdfs:comment                    "insediamento, insediamento naturalmente difeso, sito individuato sulla base di ricognizione archeologica, SUTRI" ;
+        rdfs:label                      "SUTRI (insediamento, insediamento naturalmente difeso) (Età del Bronzo finale)"@it , "SUTRI (insediamento, insediamento naturalmente difeso) (Età del Bronzo finale)"@en ;
+        arco-arco:catalogueNumber       "01339703" ;
+        arco-arco:description           "L'insediamento occupava il pianoro su ampio blocco tufaceo con ciglio perimetrale continuo, oggi interamente urbanizzato, e la più bassa limitrofa altura a sud-est in cui è scavato l'anfiteatro" ;
+        arco-arco:hasCataloguingAgency  ar-agent:5c09060afc83459935864bce8d47aa04 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:5c09060afc83459935864bce8d47aa04 ;
+        arco-arco:regionIdentifier      "12" ;
+        arco-arco:uniqueIdentifier      "1201339703" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                ar-catalogueRecordSI:1201339703 ;
+        arco-cd:hasBibliography         ar-bibliography:1201339703-bibliography-1 , ar-bibliography:1201339703-bibliography-2 ;
+        arco-cd:hasDating               ar-dating:1201339703-1 ;
+        arco-cd:hasDetectionMethod      ar-detectionMethod:sito-individuato-sulla-base-di-ricognizione-archeologica ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1201339703-photographic-documentation-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:1201339703-legal-situation-proprieta-mista ;
+        arco-cd:hasSurvey               ar-archeologicalFieldSurvey:1201339703-survey-1 ;
+        arco-core:hasAgentRole          ar-agentrole:1201339703-heritage-protection-agency , ar-agentrole:1201339703-cataloguing-agency ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:5f45fbddc29375d05deb5ea8e34fc999 ;
+        arco-dd:hasDesignationInTime    ar-designationInTime:1201339703-sutri ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:8af477dc1ca638db8b1a3479f95d8ea8 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1201339703-current ;
+        clvapit:hasGeometry             ar-geometry:1201339703-geometry-point-1 .
+
+ar-catalogueRecordSI:1201339703
+        a               arco-catalogue:CatalogueRecordSI ;
+        rdfs:label      "Catalogue Record n: 1201339703"@en , "Scheda catalografica n: 1201339703"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1201339703" ;
+        arco-catalogue:describesCulturalProperty
+                ar-archeologicalProperty:1201339703 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:1201339703-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1201339703-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "1201339703" ;
+        arco-core:note  "I reperti sono conservati presso il Museo Nazionale Etrusco di Villa Giulia, Roma" .
+
+ar-agentrole:1201339703-photographic-documentation-1-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 1 del bene culturale 1201339703: SABAP"@it , "Owner agency of photographic documentation 1 of cultural property 1201339703: SABAP"@en ;
+        arco-core:hasAgent  ar-agent:5755484fd00f5caba00d187c36d38ade ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 1 del bene culturale 1201339703: SABAP"@it , "Owner agency of photographic documentation 1 of cultural property 1201339703: SABAP"@en .
+
+ar-region:lazio  a  clvapit:Region ;
+        rdfs:label  "Lazio" ;
+        l0:name     "Lazio" .
+
+ar-role:ScientificDirector
+        a                   roapit:Role ;
+        rdfs:label          "Responsabile Scientifico"@it , "Scientific Director"@en ;
+        arco-core:isRoleOf  ar-agentrole:1201339703-archaeological-field-survey-1-scientific-directora0b4f79763181c48b0b5c81967e44a13 , ar-agentrole:1201339703-archaeological-field-survey-1-scientific-directore2b080bade996b8e9d5f54758f4cdb28 .
+
+ar-agent:6369180b13d367f58e1fb89b0370becd
+        a           l0:Agent ;
+        rdfs:label  "Trucco, Flavia" .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-agent:5c09060afc83459935864bce8d47aa04
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Archeologia, belle arti e paesaggio per l’area metropolitana di Roma, la provincia di Viterbo e l’Etruria meridionale" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-archeologicalProperty:1201339703 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-archeologicalProperty:1201339703 ;
+        arco-core:isAgentOf  ar-agentrole:1201339703-cataloguing-agency , ar-agentrole:1201339703-heritage-protection-agency ;
+        l0:name              "Soprintendenza Archeologia, belle arti e paesaggio per l’area metropolitana di Roma, la provincia di Viterbo e l’Etruria meridionale" .
+
+ar-timeIndexedRole:1201339703-10019e504b6782809d09d418cd7401e7
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Trucco, Flavia"@it , "Official in charge: Trucco, Flavia"@en ;
+        roapit:isRoleInTimeOf  ar-agent:6369180b13d367f58e1fb89b0370becd ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1201339703-heritage-protection-agency .
+
+ar-archeologicalFieldSurvey:1201339703-survey-1
+        a                       arco-cd:ArchaeologicalFieldSurvey ;
+        rdfs:label              "Ricognizione archeologica 1 sul bene 1201339703"@it , "Archaeological field survey 1 of cultural property 1201339703"@en ;
+        arco-cd:hasSurveyScientificDirector
+                ar-agent:e2b080bade996b8e9d5f54758f4cdb28 , ar-agent:a0b4f79763181c48b0b5c81967e44a13 ;
+        arco-core:hasAgentRole  ar-agentrole:1201339703-archaeological-field-survey-1-scientific-director-e2b080bade996b8e9d5f54758f4cdb28 , ar-agentrole:1201339703-archaeological-field-survey-1-scientific-director-a0b4f79763181c48b0b5c81967e44a13 ;
+        tiapit:time             "fine 1900" ;
+        l0:name                 "Ricognizione archeologica 1 of cultural property 1201339703"@en , "Ricognizione archeologica 1 sul bene 1201339703"@it .
+
+ar-event:1201339703-creation-1
+        a              l0:Event ;
+        rdfs:label     "Realizzazione del bene 1201339703"@it , "Creation of cultural property 1201339703"@en ;
+        tiapit:atTime  ar-TimeInterval:eta-del-bronzo-finale ;
+        l0:name        "Realizzazione del bene 1201339703"@it , "Creation of cultural property 1201339703"@en .
+
+ar-agent:e2b080bade996b8e9d5f54758f4cdb28
+        a                    l0:Agent ;
+        rdfs:label           "Pacciarelli, Marco" ;
+        arco-core:isAgentOf  ar-agentrole:1201339703-archaeological-field-survey-1-scientific-director-e2b080bade996b8e9d5f54758f4cdb28 ;
+        l0:name              "Pacciarelli, Marco" .
+
+ar-role:Owner  a            roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  ar-agentrole:1201339703-photographic-documentation-1-photographic-documentation-owner .
+
+ar-city:sutri  a    clvapit:City ;
+        rdfs:label  "Sutri" ;
+        l0:name     "Sutri" .
+
+ar-geometry:1201339703-geometry-point-4
+        a                        clvapit:Geometry ;
+        rdfs:label               "Geometry (point) 4 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 4 del bene culturale: 1201339703"@it ;
+        clvapit:hasGeometryType  clvapit:Point ;
+        clvapit:isGeometryFor    ar-archeologicalProperty:1201339703 ;
+        l0:name                  "Geometry (point) 4 of cultural property: 1201339703"@en , "Georeferenziazione (puntuale) 4 del bene culturale: 1201339703"@it .
+
+ar-dating:1201339703-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 1201339703"@it , "Dating 1 of cultural property 1201339703"@en ;
+        arco-cd:hasDatingEvent  ar-event:1201339703-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-tipologica ;
+        l0:name                 "Dating 1 of cultural property 1201339703"@en , "Cronologia 1 del bene 1201339703"@it .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-agentrole:1201339703-archaeological-field-survey-1-scientific-director-a0b4f79763181c48b0b5c81967e44a13
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Responsabile scientifico della ricognizione archeologica 1 del bene culturale 1201339703: di Gennaro, Francesco"@it , "Scientific director of archaeological field survey 1 of cultural property 1201339703: di Gennaro, Francesco"@en ;
+        arco-core:hasAgent  ar-agent:a0b4f79763181c48b0b5c81967e44a13 ;
+        arco-core:hasRole   ar-role:ScientificDirector ;
+        l0:name             "Responsabile scientifico della ricognizione archeologica 1 del bene culturale 1201339703: di Gennaro, Francesco"@it , "Scientific director of archaeological field survey 1 of cultural property 1201339703: di Gennaro, Francesco"@en .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-timeIndexedTypedLocation:1201339703-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 1201339703"@it , "Current physical location of cultural property: 1201339703"@en ;
+        arco-location:atLocation       ar-feature:ab14f7e2096cd39e2fe1086b7f9599e8 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:1201339703 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 1201339703"@it , "Current physical location of cultural property: 1201339703"@en .
+
+ar-agentrole:1201339703-archaeological-field-survey-1-scientific-director-e2b080bade996b8e9d5f54758f4cdb28
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Responsabile scientifico della ricognizione archeologica 1 del bene culturale 1201339703: Pacciarelli, Marco"@it , "Scientific director of archaeological field survey 1 of cultural property 1201339703: Pacciarelli, Marco"@en ;
+        arco-core:hasAgent  ar-agent:e2b080bade996b8e9d5f54758f4cdb28 ;
+        arco-core:hasRole   ar-role:ScientificDirector ;
+        l0:name             "Responsabile scientifico della ricognizione archeologica 1 del bene culturale 1201339703: Pacciarelli, Marco"@it , "Scientific director of archaeological field survey 1 of cultural property 1201339703: Pacciarelli, Marco"@en .
+
+ar-TimeInterval:eta-del-bronzo-finale
+        a            tiapit:TimeInterval ;
+        rdfs:label   "Età del Bronzo finale" ;
+        tiapit:time  "Età del Bronzo finale" ;
+        l0:name      "Età del Bronzo finale" .
+
+ar-catalogueRecordVersion:1201339703-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2017 Marconi, Nadia" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2017 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1201339703-compilation-62ff75665298effb02b4b9ee3899dab8 , ar-timeIndexedRole:1201339703-10019e504b6782809d09d418cd7401e7 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:6369180b13d367f58e1fb89b0370becd ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:62ff75665298effb02b4b9ee3899dab8 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                ar-catalogueRecordSI:1201339703 .
+
+ar-agentrole:1201339703-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1201339703: S283"@it , "Cataloguing agency for cultural property 1201339703: S283"@en ;
+        arco-core:hasAgent  ar-agent:5c09060afc83459935864bce8d47aa04 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-detectionMethod:sito-individuato-sulla-base-di-ricognizione-archeologica
+        a           arco-cd:DetectionMethod ;
+        rdfs:label  "sito individuato sulla base di ricognizione archeologica" ;
+        l0:name     "sito individuato sulla base di ricognizione archeologica" .
+
+ar-agent:a0b4f79763181c48b0b5c81967e44a13
+        a                    l0:Agent ;
+        rdfs:label           "di Gennaro, Francesco" ;
+        arco-core:isAgentOf  ar-agentrole:1201339703-archaeological-field-survey-1-scientific-director-a0b4f79763181c48b0b5c81967e44a13 ;
+        l0:name              "di Gennaro, Francesco" .
