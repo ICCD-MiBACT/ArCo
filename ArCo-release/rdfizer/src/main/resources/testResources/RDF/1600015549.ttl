@@ -1,0 +1,484 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+<https://w3id.org/arco/resource/CatalogueRecordRA/1600015549>
+        a           arco-catalogue:CatalogueRecordRA ;
+        rdfs:label  "Scheda catalografica n: 1600015549"@it , "Catalogue Record n: 1600015549"@en ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1600015549" ;
+        arco-catalogue:describesCulturalProperty
+                ar-archeologicalProperty:1600015549 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:1600015549-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1600015549-compilation , ar-catalogueRecordVersion:1600015549-rvm ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "1600015549" .
+
+<https://w3id.org/arco/resource/SiteType/museo-civico>
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: museo civico"@it , "Site type: museo civico"@en ;
+        arco-location:hasSiteDefinition
+                <https://w3id.org/arco/resource/SiteDefinition/museo> ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/civico> ;
+        l0:name     "Tipo di contenitore fisico: museo civico"@it , "Site type: museo civico"@en .
+
+ar-interpretationCriterion:analisi-stilistica
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi stilistica" ;
+        l0:name     "analisi stilistica" .
+
+ar-address:b25f051fec542ebbcfca4e5f79ef6b2d
+        a                    clvapit:Address ;
+        rdfs:label           "Italia, Puglia, FG, Cerignola" ;
+        clvapit:hasCity      ar-city:cerignola ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:fg ;
+        clvapit:hasRegion    ar-region:puglia .
+
+ar-timeIndexedRole:1600015549-9073b1429f89cc92aee0e21d3d70e27e
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Nava, Maria Luisa"@it , "Official in charge: Nava, Maria Luisa"@en ;
+        roapit:isRoleInTimeOf  ar-agent:210ceee31d63fa455463c148c651e054 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-culturalPropertyType:6a029270aeb503dd1ce27b1bbffe1700
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: vaso( parete"@it , "Cultural property type: vaso( parete"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:vaso-parete ;
+        l0:name     "Tipo del bene: vaso( parete"@it , "Cultural property type: vaso( parete"@en .
+
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1600015549>
+        a                  arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label         "Stato tecnico del bene culturale 1600015549"@it , "Technical status of cultural property 1600015549"@en ;
+        skos:relatedMatch  <http://dati.beniculturali.it/vocabularies/materia_e_tecnica-ra/def/067> , <http://dati.beniculturali.it/vocabularies/tecnica_e_materia-ra/def/053.002> ;
+        arco-dd:includesTechnicalCharacteristic
+                <https://w3id.org/arco/resource/TechnicalCharacteristic/impasto> ;
+        l0:name            "Stato tecnico del bene culturale 1600015549"@it , "Technical status of cultural property 1600015549"@en .
+
+<https://w3id.org/arco/resource/Value/1600015549-1-height-57>
+        a                      mu:Value ;
+        rdfs:label             "5,7"@en , "5,7"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "5,7" .
+
+ar-catalogueRecordVersion:1600015549-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2007 Lotto 2005" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2007 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1600015549-rvm-a825567160176e6a0394a20c55319a13 , ar-timeIndexedRole:1600015549-9073b1429f89cc92aee0e21d3d70e27e ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:a825567160176e6a0394a20c55319a13 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:210ceee31d63fa455463c148c651e054 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordRA/1600015549> .
+
+ar-archeologicalProperty:1600015549
+        a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
+        rdfs:comment                    "vaso( parete" ;
+        rdfs:label                      "vaso( parete - appenninico/ subappenninico (secc. XVI/ XIII a.C)"@it , "vaso( parete - appenninico/ subappenninico (secc. XVI/ XIII a.C)"@en ;
+        arco-arco:catalogueNumber       "00015549" ;
+        arco-arco:description           "confronta scheda pregressa allegata" ;
+        arco-arco:hasCataloguingAgency  ar-agent:8e4d7d21a02ee84913437679a7602b9d ;
+        arco-arco:hasCulturalPropertyCategory
+                <https://w3id.org/arco/resource/CulturalPropertyCategory/recipienti-in-ceramica-ceramica-dimpasto> ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:8e4d7d21a02ee84913437679a7602b9d ;
+        arco-arco:regionIdentifier      "16" ;
+        arco-arco:uniqueIdentifier      "1600015549" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordRA/1600015549> ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/CulturalScopeAttribution/1600015549-cultural-scope-attribution-1> ;
+        arco-cd:hasDating               ar-dating:1600015549-1 ;
+        arco-cd:hasDocumentation        <https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/1600015549-graphic-cartographic-documentation-1> , ar-photograpyDocumentation:1600015549-photographic-documentation-1 , <https://w3id.org/arco/resource/SourceAndDocument/1600015549-source-document-1> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:1600015549-legal-situation-proprieta-stato ;
+        arco-core:hasAgentRole          ar-agentrole:1600015549-heritage-protection-agency , ar-agentrole:1600015549-cataloguing-agency ;
+        arco-dd:hasConservationStatus   <https://w3id.org/arco/resource/ConservationStatus/1600015549-conservation-status-1> ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:6a029270aeb503dd1ce27b1bbffe1700 ;
+        arco-dd:hasMaterialOrTechnique  <https://w3id.org/arco/resource/TechnicalCharacteristic/impasto> ;
+        arco-dd:hasMeasurementCollection
+                <https://w3id.org/arco/resource/MeasurementCollection/1600015549-1> ;
+        arco-dd:hasTechnicalStatus      <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1600015549> ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:b90bf820c0879c0978152371b4e06f1f ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1600015549-alternative-1 , ar-timeIndexedTypedLocation:1600015549-current .
+
+ar-city:cerignola  a  clvapit:City ;
+        rdfs:label  "Cerignola" ;
+        l0:name     "Cerignola" .
+
+<https://w3id.org/arco/resource/CulturalScope/appenninico-subappenninico>
+        a           arco-cd:CulturalScope ;
+        rdfs:label  "appenninico/ subappenninico" ;
+        l0:name     "appenninico/ subappenninico" .
+
+ar-agentrole:1600015549-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1600015549: S63"@it , "Cataloguing agency for cultural property 1600015549: S63"@en ;
+        arco-core:hasAgent  ar-agent:8e4d7d21a02ee84913437679a7602b9d ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-docutmentationType:fotografia-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia b/n" ;
+        l0:name     "fotografia b/n" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1600015549-cataloguing-agency .
+
+ar-agent:8e4d7d21a02ee84913437679a7602b9d
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Archeologia della Puglia" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-archeologicalProperty:1600015549 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-archeologicalProperty:1600015549 ;
+        arco-core:isAgentOf  ar-agentrole:1600015549-cataloguing-agency , ar-agentrole:1600015549-heritage-protection-agency ;
+        l0:name              "Soprintendenza Archeologia della Puglia" .
+
+ar-timeIndexedTypedLocation:1600015549-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 1600015549"@it , "Alternative location 1 of cultural property: 1600015549"@en ;
+        arco-location:atLocation       ar-feature:468a85320a3e9ff07923aa2d1fe55a81 ;
+        arco-location:hasLocationType  arco-location:FindingLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:1600015549 ;
+        l0:name                        "Altra localizzazione 1 del bene: 1600015549"@it , "Alternative location 1 of cultural property: 1600015549"@en .
+
+ar-agent:ec4b293d5031f78651d8f277f623ba0f
+        a           l0:Agent ;
+        rdfs:label  "Archivio Generale delle Schede di Catalogo (ICCD, RM)" ;
+        l0:name     "Archivio Generale delle Schede di Catalogo (ICCD, RM)" .
+
+ar-timeIndexedTypedLocation:1600015549-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 1600015549"@it , "Current physical location of cultural property: 1600015549"@en ;
+        arco-location:atSite           <https://w3id.org/arco/resource/Site/37ed4a39c313853eb1f9f114c7bfcb6c> ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:1600015549 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 1600015549"@it , "Current physical location of cultural property: 1600015549"@en .
+
+<https://w3id.org/arco/resource/MeasurementCollection/1600015549-1>
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 1600015549"@en , "Misure del bene culturale 1600015549"@it ;
+        arco-dd:hasMeasurement  <https://w3id.org/arco/resource/Measurement/1600015549-1-width> , <https://w3id.org/arco/resource/Measurement/1600015549-1-height> ;
+        l0:name                 "Measurements of cultural property 1600015549"@en , "Misure del bene culturale 1600015549"@it .
+
+<https://w3id.org/arco/resource/SourceAndDocument/1600015549-source-document-1>
+        a                              arco-cd:SourceAndDocument ;
+        rdfs:label                     "Fonti e documenti 1 del bene culturale: 1600015549"@it , "Sources and documents 1 of cultural property: 1600015549"@en ;
+        arco-cd:documentationIdentifier
+                "1600015549" ;
+        arco-cd:documentationLocation  "1600015549" ;
+        arco-cd:hasArchive             ar-agent:ec4b293d5031f78651d8f277f623ba0f ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:scheda-storica ;
+        arco-cd:isDocumentationOf      ar-archeologicalProperty:1600015549 ;
+        tiapit:time                    "1981" ;
+        l0:name                        "Fonti e documenti 1 del bene culturale: 1600015549"@en , "Sources and documents 1 of cultural property: 1600015549"@en .
+
+ar-culturalPropertyDefinition:vaso-parete
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "vaso( parete" .
+
+ar-docutmentationType:scheda-storica
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "scheda storica" ;
+        l0:name     "scheda storica" .
+
+ar-city:foggia  a   clvapit:City ;
+        rdfs:label  "Foggia" ;
+        l0:name     "Foggia" .
+
+ar-accessProfile:1600015549-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1600015549: 1"@it , "Access profile to catalogue record of cultural property 1600015549: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 1600015549: 1"@it , "Access profile to catalogue record of cultural property 1600015549: 1"@en .
+
+ar-agent:fbae5b7a68cf329fd704ee494b4c1095
+        a           l0:Agent ;
+        rdfs:label  "Mazzei, Marina" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-timeIndexedRole:1600015549-rvm-a825567160176e6a0394a20c55319a13
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da Lotto 2005"@it , "Digital transcription by Lotto 2005"@en ;
+        roapit:isRoleInTimeOf  ar-agent:a825567160176e6a0394a20c55319a13 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-agent:a825567160176e6a0394a20c55319a13
+        a           l0:Agent ;
+        rdfs:label  "Lotto 2005" .
+
+ar-photograpyDocumentation:1600015549-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 1600015549"@en , "Documentazione fotografica 1 del bene culturale: 1600015549"@it ;
+        arco-cd:documentationIdentifier
+                "_I SATA_251-81-2" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:1600015549 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 1600015549"@en , "Documentazione fotografica 1 del bene culturale: 1600015549"@en .
+
+<https://w3id.org/arco/resource/ConservationStatus/1600015549-conservation-status-1>
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 1600015549"@it , "Conservation status 1 of cultural property: 1600015549"@en ;
+        arco-dd:hasConservationStatusType
+                <https://w3id.org/arco/resource/ConservationStatusType/frammentario> ;
+        l0:name     "Stato di conservazione 1 del bene: 1600015549"@it , "Conservation status 1 of cultural property: 1600015549"@en .
+
+ar-agentrole:1600015549-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1600015549: S63"@it , "Heritage protection agency for cultural property 1600015549: S63"@en ;
+        arco-core:hasAgent  ar-agent:8e4d7d21a02ee84913437679a7602b9d ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-TimeInterval:2007  a  tiapit:TimeInterval ;
+        rdfs:label   "2007" ;
+        tiapit:time  "2007" .
+
+<https://w3id.org/arco/resource/TechnicalCharacteristic/impasto>
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "impasto" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "impasto" .
+
+ar-event:1600015549-creation-1
+        a              l0:Event ;
+        rdfs:label     "Realizzazione del bene 1600015549"@it , "Creation of cultural property 1600015549"@en ;
+        tiapit:atTime  ar-TimeInterval:secc-xvi-xiii-ac ;
+        l0:name        "Realizzazione del bene 1600015549"@it , "Creation of cultural property 1600015549"@en .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+<https://w3id.org/arco/resource/SiteSpecification/civico>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "civico" .
+
+ar-province:fg  a   clvapit:Province ;
+        rdfs:label  "FG" ;
+        l0:name     "FG" .
+
+<https://w3id.org/arco/resource/Measurement/1600015549-1-width>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1600015549: 6cm"@en , "Misura del bene culturale 1600015549: 6cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            <https://w3id.org/arco/resource/Value/1600015549-1-width-6> ;
+        l0:name                     "Measurement of cultural property 1600015549: 6cm"@en , "Misura del bene culturale 1600015549: 6cm"@it .
+
+<https://w3id.org/arco/resource/ConservationStatusType/frammentario>
+        a           arco-dd:ConservationStatusType ;
+        rdfs:label  "frammentario" ;
+        l0:name     "frammentario" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1600015549-heritage-protection-agency .
+
+<https://w3id.org/arco/resource/GraphicOrCartographicDocumentation/1600015549-graphic-cartographic-documentation-1>
+        a                          arco-cd:GraphicOrCartographicDocumentation ;
+        rdfs:label                 "Graphic or cartographic documentation 1 of cultural property: 1600015549"@en , "Documentazione grafica o cartografica 1 del bene culturale: 1600015549"@it ;
+        arco-cd:documentationIdentifier
+                "_I SATA_251-81-2" ;
+        arco-cd:isDocumentationOf  ar-archeologicalProperty:1600015549 ;
+        arco-core:hasCategory      arco-cd:AttachedDocumentation ;
+        l0:name                    "Graphic or cartographic documentation 1 of cultural property: 1600015549"@en , "Documentazione grafica o cartografica 1 del bene culturale: 1600015549"@en .
+
+ar-timeIndexedRole:1600015549-compilation-fbae5b7a68cf329fd704ee494b4c1095
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Mazzei, Marina"@en , "Compilazione da Mazzei, Marina"@it ;
+        roapit:isRoleInTimeOf  ar-agent:fbae5b7a68cf329fd704ee494b4c1095 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-catalogueRecordVersion:1600015549-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1981 Mazzei, Marina" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1981 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1600015549-compilation-fbae5b7a68cf329fd704ee494b4c1095 , ar-timeIndexedRole:1600015549-9073b1429f89cc92aee0e21d3d70e27e ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:210ceee31d63fa455463c148c651e054 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:fbae5b7a68cf329fd704ee494b4c1095 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordRA/1600015549> .
+
+<https://w3id.org/arco/resource/Site/37ed4a39c313853eb1f9f114c7bfcb6c>
+        a                          cis:Site ;
+        rdfs:label                 "Museo Civico - deposito" ;
+        cis:siteAddress            ar-address:90d0c1f889e2bdd437e4994795401812 ;
+        arco-location:hasSiteType  <https://w3id.org/arco/resource/SiteType/museo-civico> ;
+        l0:name                    "Museo Civico - deposito" .
+
+<https://w3id.org/arco/resource/SiteDefinition/museo>
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "museo" .
+
+<https://w3id.org/arco/resource/CulturalPropertyCategory/recipienti-in-ceramica-ceramica-dimpasto>
+        a           arco-arco:CulturalPropertyCategory ;
+        rdfs:label  "recipienti in ceramica/ ceramica d'impasto" .
+
+<https://w3id.org/arco/resource/Value/1600015549-1-width-6>
+        a                      mu:Value ;
+        rdfs:label             "6"@en , "6"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "6" .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+ar-TimeInterval:1981  a  tiapit:TimeInterval ;
+        rdfs:label   "1981" ;
+        tiapit:time  "1981" .
+
+ar-address:90d0c1f889e2bdd437e4994795401812
+        a                    clvapit:Address ;
+        rdfs:label           "Italia, Puglia, FG, Foggia" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-archeologicalProperty:1600015549 ;
+        clvapit:hasCity      ar-city:foggia ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:fg ;
+        clvapit:hasRegion    ar-region:puglia .
+
+<https://w3id.org/arco/resource/Measurement/1600015549-1-height>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1600015549: 5,7cm"@en , "Misura del bene culturale 1600015549: 5,7cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            <https://w3id.org/arco/resource/Value/1600015549-1-height-57> ;
+        l0:name                     "Measurement of cultural property 1600015549: 5,7cm"@en , "Misura del bene culturale 1600015549: 5,7cm"@it .
+
+ar-agent:210ceee31d63fa455463c148c651e054
+        a           l0:Agent ;
+        rdfs:label  "Nava, Maria Luisa" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-region:puglia  a  clvapit:Region ;
+        rdfs:label  "Puglia" ;
+        l0:name     "Puglia" .
+
+ar-feature:468a85320a3e9ff07923aa2d1fe55a81
+        a                               clvapit:Feature ;
+        rdfs:label                      "Italia Puglia FG Cerignola" ;
+        arco-location:hasToponymInTime  <https://w3id.org/arco/resource/ToponymInTime/loc-s-maria-di-ripalta> ;
+        clvapit:hasAddress              ar-address:b25f051fec542ebbcfca4e5f79ef6b2d .
+
+ar-TimeInterval:secc-xvi-xiii-ac
+        a            tiapit:TimeInterval ;
+        rdfs:label   "secc. XVI/ XIII a.C" ;
+        tiapit:time  "secc. XVI/ XIII a.C" ;
+        l0:name      "secc. XVI/ XIII a.C" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "Italia" ;
+        l0:name     "Italia" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/cm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "cm" ;
+        l0:name     "cm" .
+
+<https://w3id.org/arco/resource/CulturalScopeAttribution/1600015549-cultural-scope-attribution-1>
+        a                         arco-cd:CulturalScopeAttribution ;
+        rdfs:label                "Attribuzione di ambito culturale del bene: 1600015549"@it , "Cultural scope attribution of cultural property: 1600015549"@en ;
+        arco-cd:hasCulturalScope  <https://w3id.org/arco/resource/CulturalScope/appenninico-subappenninico> ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-archeologicalProperty:1600015549 ;
+        l0:name                   "Attribuzione di ambito culturale del bene: 1600015549"@it , "Cultural scope attribution of cultural property: 1600015549"@en .
+
+ar-dating:1600015549-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 1600015549"@it , "Dating 1 of cultural property 1600015549"@en ;
+        arco-cd:hasDatingEvent  ar-event:1600015549-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-stilistica ;
+        l0:name                 "Dating 1 of cultural property 1600015549"@en , "Cronologia 1 del bene 1600015549"@it .
+
+ar-legalSituation:1600015549-legal-situation-proprieta-stato
+        a           arco-cd:LegalSituation ;
+        rdfs:label  "Condizione giuridica del bene culturale 1600015549: proprietà Stato"@it , "Legal situation of cultural property 1600015549: proprietà Stato"@en ;
+        l0:name     "Condizione giuridica del bene culturale 1600015549: proprietà Stato"@it , "Legal situation of cultural property 1600015549: proprietà Stato"@en .

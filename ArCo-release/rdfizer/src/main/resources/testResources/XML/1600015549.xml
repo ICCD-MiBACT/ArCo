@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><schede>
+   <RA version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo Scheda">RA</TSK>
+         <LIR hint="Livello ricerca">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">16</NCTR>
+            <NCTN hint="Numero catalogo generale">00015549</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S63</ESC>
+         <ECP hint="Ente competente">S63</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">vaso( parete</OGTD>
+         </OGT>
+         <CLS hint="Categoria - classe e produzione">recipienti in ceramica/ ceramica d'impasto</CLS>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+            <PVCS hint="Stato">Italia</PVCS>
+            <PVCR hint="Regione">Puglia</PVCR>
+            <PVCP hint="Provincia">FG</PVCP>
+            <PVCC hint="Comune">Foggia</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCT hint="Tipologia">museo</LDCT>
+            <LDCQ hint="Qualificazione">civico</LDCQ>
+            <LDCN hint="Denominazione attuale">Museo Civico - deposito</LDCN>
+         </LDC>
+      </LC>
+      <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
+         <TCL hint="Tipo di localizzazione">luogo di reperimento</TCL>
+         <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PRVS hint="Stato">Italia</PRVS>
+            <PRVR hint="Regione">Puglia</PRVR>
+            <PRVP hint="Provincia">FG</PRVP>
+            <PRVC hint="Comune">Cerignola</PRVC>
+         </PRV>
+         <PRL hint="Altra località">loc. S. Maria di Ripalta</PRL>
+      </LA>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Fascia cronologica di riferimento">secc. XVI/ XIII a.C</DTZG>
+         </DTZ>
+         <DTM hint="Motivazione cronologia">analisi stilistica</DTM>
+      </DT>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <ATB hint="AMBITO CULTURALE">
+            <ATBD hint="Denominazione">appenninico/ subappenninico</ATBD>
+         </ATB>
+      </AU>
+      <MT hint="DATI TECNICI">
+         <MTC hint="Materia e tecnica">impasto</MTC>
+         <MIS hint="MISURE">
+            <MISU hint="Unità">cm</MISU>
+            <MISA hint="Altezza">5,7</MISA>
+            <MISL hint="Larghezza">6</MISL>
+         </MIS>
+      </MT>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESO hint="Indicazioni sull'oggetto">confronta scheda pregressa allegata</DESO>
+         </DES>
+      </DA>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">frammentario</STCC>
+         </STC>
+      </CO>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia b/n</FTAP>
+            <FTAN hint="Codice identificativo">_I SATA_251-81-2</FTAN>
+         </FTA>
+         <DRA hint="DOCUMENTAZIONE GRAFICA">
+            <DRAX hint="Genere">documentazione allegata</DRAX>
+            <DRAN hint="Codice identificativo">_I SATA_251-81-2</DRAN>
+         </DRA>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTP hint="Tipo">scheda storica</FNTP>
+            <FNTD hint="Data">1981</FNTD>
+            <FNTN hint="Nome archivio">Archivio Generale delle Schede di Catalogo (ICCD, RM)</FNTN>
+            <FNTS hint="Posizione">1600015549</FNTS>
+            <FNTI hint="Codice identificativo">1600015549</FNTI>
+         </FNT>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">1981</CMPD>
+            <CMPN hint="Nome">Mazzei, Marina</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Nava, Maria Luisa</FUR>
+         <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+            <RVMD hint="Data">2007</RVMD>
+            <RVMN hint="Nome">Lotto 2005</RVMN>
+         </RVM>
+      </CM>
+   </RA>
+</schede>

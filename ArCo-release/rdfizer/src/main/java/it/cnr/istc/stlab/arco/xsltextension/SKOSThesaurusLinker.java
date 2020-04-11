@@ -27,11 +27,12 @@ public abstract class SKOSThesaurusLinker {
 
 	protected XdmValue link(String arg) throws SaxonApiException {
 		
+		String argClean = arg.replaceAll("[\\(\\)]", "");
 		
 		ParameterizedSparqlString pss = new ParameterizedSparqlString();
 		pss.setCommandText(sparql);
 		pss.setNsPrefix("skos", SKOS.uri);
-		pss.setLiteral("x", "^" + arg + "$");
+		pss.setLiteral("x", "^" + argClean + "$");
 		
 		ResultSet resultSet = kbManager.executeSelect(pss.asQuery(), getNamedModel());
 		
