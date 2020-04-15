@@ -1432,7 +1432,6 @@ In this module are used as template the following Ontology Design Patterns:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasUnitOfMeasurement">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement"/>
         <rdfs:comment xml:lang="it">Questa classe collega una misura alla sua unità di misura</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a measurement to its unit of measurement</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -2720,7 +2719,6 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
         <rdfs:comment xml:lang="it">Questa classe collega l&apos;unità di misura ad una misura</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a unit of measurement to a measurement</rdfs:comment>
@@ -4468,12 +4466,6 @@ un&apos;azienda, ecc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasUnitOfMeasurement"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of the class &apos;Measurement&apos; is the following:
 resource:Measurement/0500212021-1-height
         a  dd:Measurement ;
@@ -4870,19 +4862,6 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; MT/MTX; MT/FVM; MT/FRM;</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/UnitOfMeasurement">
-        <rdfs:comment xml:lang="en">Questa classe rappresenta l&apos;unità di misura</rdfs:comment>
-        <rdfs:comment xml:lang="en">Thiss class represents a unit of measurement</rdfs:comment>
-        <rdfs:label xml:lang="en">Unit of measurement</rdfs:label>
-        <rdfs:label xml:lang="it">Unità di misura</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
