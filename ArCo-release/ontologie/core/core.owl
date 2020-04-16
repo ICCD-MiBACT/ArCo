@@ -158,6 +158,8 @@ In this module are used as template the following Ontology Design Patterns:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/core/classifies">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un concetto ad un&apos;entità</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a concept to an entity</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/core"/>
