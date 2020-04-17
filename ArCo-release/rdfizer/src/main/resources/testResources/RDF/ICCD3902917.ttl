@@ -1,362 +1,543 @@
-<https://w3id.org/arco/resource/Agent/8f44d5eb234209e29700eb7153008adb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
-<https://w3id.org/arco/resource/Agent/8f44d5eb234209e29700eb7153008adb> <http://www.w3.org/2000/01/rdf-schema#label> "Archivio di Stato di Napoli" .
-<https://w3id.org/arco/resource/Agent/8f44d5eb234209e29700eb7153008adb> <https://w3id.org/italia/onto/l0/name> "Archivio di Stato di Napoli" .
-<https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CPV/Person> .
-<https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> <https://w3id.org/arco/ontology/context-description/isAuthorOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> <http://www.w3.org/2000/01/rdf-schema#label> "Del Medico Antonio" .
-<https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> <https://w3id.org/italia/onto/l0/name> "Del Medico Antonio" .
-<https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> <https://w3id.org/arco/ontology/context-description/agentDate> "notizie sec. XVIII" .
-<https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> <https://w3id.org/arco/ontology/context-description/agentLocalIdentifier> "00000058" .
-<https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
-<https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 1500068123: S81"@it .
-<https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 1500068123: S81"@en .
-<https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
-<https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> .
-<https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
-<https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 1500068123: S81"@it .
-<https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 1500068123: S81"@en .
-<https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
-<https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> .
-<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/elemento-dinsieme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/CulturalPropertyCataloguingCategory> .
-<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/elemento-dinsieme> <http://www.w3.org/2000/01/rdf-schema#label> "elemento d'insieme" .
-<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/elemento-dinsieme> <https://w3id.org/italia/onto/l0/name> "elemento d'insieme" .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-9383c090b9d65c48650e4b03412df772> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-9383c090b9d65c48650e4b03412df772> <http://www.w3.org/2000/01/rdf-schema#label> "Funzionario responsabile: Marinelli C"@it .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-9383c090b9d65c48650e4b03412df772> <http://www.w3.org/2000/01/rdf-schema#label> "Official in charge: Marinelli C"@en .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-9383c090b9d65c48650e4b03412df772> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/OfficialInCharge> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-9383c090b9d65c48650e4b03412df772> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/9724f33b6fdf2b1c410c4fcef0cd0184> .
-<https://w3id.org/arco/resource/PrivacyReason/dati-pubblicabili> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/PrivacyReason> .
-<https://w3id.org/arco/resource/PrivacyReason/dati-pubblicabili> <http://www.w3.org/2000/01/rdf-schema#label> "dati pubblicabili" .
-<https://w3id.org/arco/resource/PrivacyReason/dati-pubblicabili> <https://w3id.org/italia/onto/l0/name> "dati pubblicabili" .
-<https://w3id.org/arco/resource/TimeInterval/sec-xviii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
-<https://w3id.org/arco/resource/TimeInterval/sec-xviii> <http://www.w3.org/2000/01/rdf-schema#label> "sec. XVIII" .
-<https://w3id.org/arco/resource/TimeInterval/sec-xviii> <https://w3id.org/italia/onto/l0/name> "sec. XVIII" .
-<https://w3id.org/arco/resource/TimeInterval/sec-xviii> <https://w3id.org/italia/onto/TI/time> "sec. XVIII" .
-<https://w3id.org/arco/resource/Event/1500068123-creation-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Event> .
-<https://w3id.org/arco/resource/Event/1500068123-creation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Realizzazione del bene 1500068123"@it .
-<https://w3id.org/arco/resource/Event/1500068123-creation-1> <https://w3id.org/italia/onto/l0/name> "Realizzazione del bene 1500068123"@it .
-<https://w3id.org/arco/resource/Event/1500068123-creation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Creation of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/Event/1500068123-creation-1> <https://w3id.org/italia/onto/l0/name> "Creation of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/Event/1500068123-creation-1> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/sec-xviii> .
-<https://w3id.org/arco/resource/Event/1500068123-creation-1> <https://w3id.org/arco/ontology/context-description/specificTime> <https://w3id.org/arco/resource/TimeInterval/ca-1767-ca-1767> .
-<https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/RelatedWorkSituation> .
-<https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> <http://www.w3.org/2000/01/rdf-schema#label> "Relazione 1 tra il bene culturale 1500068123 e altro bene culturale"@it .
-<https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> <https://w3id.org/italia/onto/l0/name> "Relazione 1 tra il bene culturale 1500068123 e altro bene culturale"@it .
-<https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> <http://www.w3.org/2000/01/rdf-schema#label> "Relation 1 between the cultural property 1500068123 and other cultural property"@en .
-<https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> <https://w3id.org/italia/onto/l0/name> "Relation 1 between the cultural property 1500068123 and other cultural property"@en .
-<https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> <https://w3id.org/arco/ontology/context-description/isRelatedWorkSituationOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> <https://w3id.org/arco/ontology/context-description/involvesRelatedWork> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068163> .
-<https://w3id.org/arco/resource/DocumentationType/registro-dei-pagamenti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
-<https://w3id.org/arco/resource/DocumentationType/registro-dei-pagamenti> <http://www.w3.org/2000/01/rdf-schema#label> "registro dei pagamenti" .
-<https://w3id.org/arco/resource/DocumentationType/registro-dei-pagamenti> <https://w3id.org/italia/onto/l0/name> "registro dei pagamenti" .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Spalvieri F"@en .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Spalvieri F"@it .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/6ffbef1f52f0ff278e5fed4b4d9a787d> .
-<https://w3id.org/arco/resource/Dating/1500068123-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Dating> .
-<https://w3id.org/arco/resource/Dating/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Cronologia 1 del bene 1500068123"@it .
-<https://w3id.org/arco/resource/Dating/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Dating 1 of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/Dating/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Cronologia 1 del bene 1500068123"@it .
-<https://w3id.org/arco/resource/Dating/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Dating 1 of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/Dating/1500068123-1> <https://w3id.org/arco/ontology/context-description/hasDatingEvent> <https://w3id.org/arco/resource/Event/1500068123-creation-1> .
-<https://w3id.org/arco/resource/Dating/1500068123-1> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/documentazione> .
-<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1500068123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> .
-<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1500068123> <http://www.w3.org/2000/01/rdf-schema#label> "Stato tecnico del bene culturale 1500068123"@it .
-<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1500068123> <https://w3id.org/italia/onto/l0/name> "Stato tecnico del bene culturale 1500068123"@it .
-<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1500068123> <http://www.w3.org/2000/01/rdf-schema#label> "Technical status of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1500068123> <https://w3id.org/italia/onto/l0/name> "Technical status of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1500068123> <https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> <https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-carrara-scultura> .
-<https://w3id.org/arco/resource/Value/1500068123-1-height-210> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
-<https://w3id.org/arco/resource/Value/1500068123-1-height-210> <https://w3id.org/italia/onto/MU/value> "210" .
-<https://w3id.org/arco/resource/Value/1500068123-1-height-210> <http://www.w3.org/2000/01/rdf-schema#label> "210"@en .
-<https://w3id.org/arco/resource/Value/1500068123-1-height-210> <http://www.w3.org/2000/01/rdf-schema#label> "210"@it .
-<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
-<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
-<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
-<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> .
-<https://w3id.org/arco/resource/DocumentationType/fotografia-b-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
-<https://w3id.org/arco/resource/DocumentationType/fotografia-b-n> <http://www.w3.org/2000/01/rdf-schema#label> "fotografia b/n" .
-<https://w3id.org/arco/resource/DocumentationType/fotografia-b-n> <https://w3id.org/italia/onto/l0/name> "fotografia b/n" .
-<https://w3id.org/arco/resource/Agent/9724f33b6fdf2b1c410c4fcef0cd0184> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
-<https://w3id.org/arco/resource/Agent/9724f33b6fdf2b1c410c4fcef0cd0184> <http://www.w3.org/2000/01/rdf-schema#label> "Marinelli C" .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PreferredAuthorshipAttribution> .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1500068123"@it .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1500068123"@it .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred authorship attribution of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Preferred authorship attribution of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <https://w3id.org/arco/ontology/context-description/hasAttributedAuthor> <https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> .
-<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/documentazione> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-rvm-cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-rvm-cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/2000/01/rdf-schema#label> "TRASCRIZIONE PER INFORMATIZZAZIONE da ARTPAST/ Cozzolino M"@it .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-rvm-cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/2000/01/rdf-schema#label> "Digital transcription by ARTPAST/ Cozzolino M"@en .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-rvm-cd4090c2113cab2189bf31061109ffe1> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/DigitalTranscriptionOperator> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-rvm-cd4090c2113cab2189bf31061109ffe1> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/cd4090c2113cab2189bf31061109ffe1> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 1987 Spalvieri F" .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <https://w3id.org/arco/ontology/catalogue/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/6ffbef1f52f0ff278e5fed4b4d9a787d> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/1987> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1500068123-9383c090b9d65c48650e4b03412df772> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> <https://w3id.org/arco/ontology/catalogue/hasOfficialInCharge> <https://w3id.org/arco/resource/Agent/9724f33b6fdf2b1c410c4fcef0cd0184> .
-<https://w3id.org/arco/resource/Province/ce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Province> .
-<https://w3id.org/arco/resource/Province/ce> <http://www.w3.org/2000/01/rdf-schema#label> "CE" .
-<https://w3id.org/arco/resource/Province/ce> <https://w3id.org/italia/onto/l0/name> "CE" .
-<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-carrara-scultura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> .
-<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-carrara-scultura> <http://www.w3.org/2000/01/rdf-schema#label> "marmo di Carrara/ scultura" .
-<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-carrara-scultura> <https://w3id.org/italia/onto/l0/name> "marmo di Carrara/ scultura" .
-<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-carrara-scultura> <https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> <https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <http://www.w3.org/2000/01/rdf-schema#label> "TRASCRIZIONE PER INFORMATIZZAZIONE - 2005 ARTPAST/ Cozzolino M" .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1500068123-rvm-cd4090c2113cab2189bf31061109ffe1> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <https://w3id.org/arco/ontology/catalogue/hasDigitalTranscriptionOperator> <https://w3id.org/arco/resource/Agent/cd4090c2113cab2189bf31061109ffe1> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2005> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1500068123-9383c090b9d65c48650e4b03412df772> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> <https://w3id.org/arco/ontology/catalogue/hasOfficialInCharge> <https://w3id.org/arco/resource/Agent/9724f33b6fdf2b1c410c4fcef0cd0184> .
-<https://w3id.org/arco/resource/TimeInterval/ca-1767-ca-1767> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
-<https://w3id.org/arco/resource/TimeInterval/ca-1767-ca-1767> <http://www.w3.org/2000/01/rdf-schema#label> "ca 1767 - ca 1767" .
-<https://w3id.org/arco/resource/TimeInterval/ca-1767-ca-1767> <https://w3id.org/italia/onto/l0/name> "ca 1767 - ca 1767" .
-<https://w3id.org/arco/resource/TimeInterval/ca-1767-ca-1767> <https://w3id.org/arco/ontology/arco/startTime> "ca 1767" .
-<https://w3id.org/arco/resource/TimeInterval/ca-1767-ca-1767> <https://w3id.org/arco/ontology/arco/endTime> "ca 1767" .
-<https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/Site> .
-<https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> <http://www.w3.org/2000/01/rdf-schema#label> "Reggia di Caserta" .
-<https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> <https://w3id.org/italia/onto/l0/name> "Reggia di Caserta" .
-<https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> <http://dati.beniculturali.it/cis/siteAddress> <https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> .
-<https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> <http://dati.beniculturali.it/cis/isSiteOf> <https://w3id.org/arco/resource/CulturalInstituteOrSite/a9d1bdaf4810acc94fa6b94a8251ca65> .
-<https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> <https://w3id.org/arco/ontology/location/hasSiteType> <https://w3id.org/arco/resource/SiteType/reggia> .
-<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
-<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Funzionario responsabile"@it .
-<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Official in charge"@en .
-<https://w3id.org/arco/resource/SiteType/reggia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteType> .
-<https://w3id.org/arco/resource/SiteType/reggia> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo di contenitore fisico: reggia"@it .
-<https://w3id.org/arco/resource/SiteType/reggia> <https://w3id.org/italia/onto/l0/name> "Tipo di contenitore fisico: reggia"@it .
-<https://w3id.org/arco/resource/SiteType/reggia> <http://www.w3.org/2000/01/rdf-schema#label> "Site type: reggia"@en .
-<https://w3id.org/arco/resource/SiteType/reggia> <https://w3id.org/italia/onto/l0/name> "Site type: reggia"@en .
-<https://w3id.org/arco/resource/SiteType/reggia> <https://w3id.org/arco/ontology/location/hasSiteDefinition> <https://w3id.org/arco/resource/SiteDefinition/reggia> .
-<https://w3id.org/arco/resource/ConservationStatus/1500068123-conservation-status-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/ConservationStatus> .
-<https://w3id.org/arco/resource/ConservationStatus/1500068123-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Stato di conservazione 1 del bene: 1500068123"@it .
-<https://w3id.org/arco/resource/ConservationStatus/1500068123-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Stato di conservazione 1 del bene: 1500068123"@it .
-<https://w3id.org/arco/resource/ConservationStatus/1500068123-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Conservation status 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/ConservationStatus/1500068123-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Conservation status 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/ConservationStatus/1500068123-conservation-status-1> <https://w3id.org/arco/ontology/denotative-description/hasConservationStatusType> <https://w3id.org/arco/ontology/denotative-description/DecentConservationStatus> .
-<https://w3id.org/arco/resource/Subject/c257c29611fbe0fa111a7f953717344d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Subject> .
-<https://w3id.org/arco/resource/Subject/c257c29611fbe0fa111a7f953717344d> <http://www.w3.org/2000/01/rdf-schema#label> "Polifemo" .
-<https://w3id.org/arco/resource/Subject/c257c29611fbe0fa111a7f953717344d> <https://w3id.org/italia/onto/l0/name> "Polifemo" .
-<https://w3id.org/arco/resource/Subject/c257c29611fbe0fa111a7f953717344d> <https://w3id.org/arco/ontology/context-description/isSubjectOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-agg-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-agg-1> <http://www.w3.org/2000/01/rdf-schema#label> "AGGIORNAMENTO - REVISIONE - 2005 ARTPAST/ Cozzolino M" .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-agg-1> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-agg-1> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-agg-1> <https://w3id.org/arco/ontology/catalogue/hasUpdateResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/cd4090c2113cab2189bf31061109ffe1> .
-<https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-agg-1> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2005> .
-<https://w3id.org/arco/resource/Role/UpdateResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
-<https://w3id.org/arco/resource/Role/UpdateResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Update responsible research and compilation"@en .
-<https://w3id.org/arco/resource/Role/UpdateResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile di ricerca e redazione di aggiornamento"@it .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 3 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <https://w3id.org/italia/onto/l0/name> "Bibliography 3 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 3 del bene culturale: 1500068123"@it .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <https://w3id.org/italia/onto/l0/name> "Bibliografia 3 del bene culturale: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "00000135" .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <https://w3id.org/arco/ontology/core/note> "p.77" .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
-<https://w3id.org/arco/resource/CulturalPropertyDefinition/busto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
-<https://w3id.org/arco/resource/CulturalPropertyDefinition/busto> <http://www.w3.org/2000/01/rdf-schema#label> "busto" .
-<https://w3id.org/arco/resource/LegalSituation/1500068123-legal-situation-proprieta-stato> <http://www.w3.org/2000/01/rdf-schema#label> "Condizione giuridica del bene culturale 1500068123: proprietà Stato"@it .
-<https://w3id.org/arco/resource/LegalSituation/1500068123-legal-situation-proprieta-stato> <https://w3id.org/italia/onto/l0/name> "Condizione giuridica del bene culturale 1500068123: proprietà Stato"@it .
-<https://w3id.org/arco/resource/LegalSituation/1500068123-legal-situation-proprieta-stato> <http://www.w3.org/2000/01/rdf-schema#label> "Legal situation of cultural property 1500068123: proprietà Stato"@en .
-<https://w3id.org/arco/resource/LegalSituation/1500068123-legal-situation-proprieta-stato> <https://w3id.org/italia/onto/l0/name> "Legal situation of cultural property 1500068123: proprietà Stato"@en .
-<https://w3id.org/arco/resource/LegalSituation/1500068123-legal-situation-proprieta-stato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/LegalSituation> .
-<https://w3id.org/arco/resource/LegalSituation/1500068123-legal-situation-proprieta-stato> <https://w3id.org/arco/ontology/context-description/hasOwner> <https://w3id.org/arco/resource/Agent/cdbe81587e45178e0b1be8bfd5ab5483> .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <http://www.w3.org/2000/01/rdf-schema#label> "Localizzazione fisica attuale del bene: 1500068123"@it .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <https://w3id.org/italia/onto/l0/name> "Localizzazione fisica attuale del bene: 1500068123"@it .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <http://www.w3.org/2000/01/rdf-schema#label> "Current physical location of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <https://w3id.org/italia/onto/l0/name> "Current physical location of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <https://w3id.org/arco/ontology/location/hasLocationType> <https://w3id.org/arco/ontology/location/CurrentPhysicalLocation> .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <https://w3id.org/arco/ontology/core/specifications> "Parco, Bosco Vecchio, Castelluccia" .
-<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> <https://w3id.org/arco/ontology/location/atSite> <https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PhotographicDocumentation> .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Photographic documentation 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <https://w3id.org/italia/onto/l0/name> "Photographic documentation 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Documentazione fotografica 1 del bene culturale: 1500068123"@it .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <https://w3id.org/italia/onto/l0/name> "Documentazione fotografica 1 del bene culturale: 1500068123"@en .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "AFS81 007710" .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/AttachedDocumentation> .
-<https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/fotografia-b-n> .
-<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
-<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
-<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
-<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> .
-<https://w3id.org/arco/resource/AccessProfile/1500068123-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/AccessProfile> .
-<https://w3id.org/arco/resource/AccessProfile/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1500068123: 1"@it .
-<https://w3id.org/arco/resource/AccessProfile/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Profilo d'accesso alla scheda catalografica del bene culturale 1500068123: 1"@it .
-<https://w3id.org/arco/resource/AccessProfile/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Access profile to catalogue record of cultural property 1500068123: 1"@en .
-<https://w3id.org/arco/resource/AccessProfile/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Access profile to catalogue record of cultural property 1500068123: 1"@en .
-<https://w3id.org/arco/resource/AccessProfile/1500068123-1> <https://w3id.org/arco/ontology/catalogue/hasPrivacyLevel> <https://w3id.org/arco/ontology/catalogue/MinimumPrivacy> .
-<https://w3id.org/arco/resource/AccessProfile/1500068123-1> <https://w3id.org/arco/ontology/catalogue/hasPrivacyReason> <https://w3id.org/arco/resource/PrivacyReason/dati-pubblicabili> .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/arco/ontology/context-description/documentationTitle> "Casa Reale, Amministrativa: Maggiordomia Maggiore" .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/SourceAndDocument> .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <http://www.w3.org/2000/01/rdf-schema#label> "Fonti e documenti 1 del bene culturale: 1500068123"@it .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <http://www.w3.org/2000/01/rdf-schema#label> "Sources and documents 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/italia/onto/l0/name> "Sources and documents 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/italia/onto/l0/name> "Fonti e documenti 1 del bene culturale: 1500068123"@en .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/arco/ontology/context-description/hasArchive> <https://w3id.org/arco/resource/Agent/8f44d5eb234209e29700eb7153008adb> .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/arco/ontology/context-description/folio> "C. 50, (2)" .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/italia/onto/TI/time> "1767" .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/arco/ontology/context-description/documentationLocation> "fasc. 16" .
-<https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/registro-dei-pagamenti> .
-<https://w3id.org/arco/resource/Agent/cdbe81587e45178e0b1be8bfd5ab5483> <http://www.w3.org/2000/01/rdf-schema#label> "Ministero per i Beni Culturali e Ambientali/ SBAAAS CE" .
-<https://w3id.org/arco/resource/Agent/cdbe81587e45178e0b1be8bfd5ab5483> <https://w3id.org/italia/onto/l0/name> "Ministero per i Beni Culturali e Ambientali/ SBAAAS CE" .
-<https://w3id.org/arco/resource/Agent/cdbe81587e45178e0b1be8bfd5ab5483> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
-<https://w3id.org/arco/resource/Agent/cdbe81587e45178e0b1be8bfd5ab5483> <https://w3id.org/arco/ontology/context-description/address> "via Douhet, 2" .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/arco/regionIdentifier> "15" .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasLegalSituation> <https://w3id.org/arco/resource/LegalSituation/1500068123-legal-situation-proprieta-stato> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/edf15e6321416af29dbabf4c9bd0e823> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasDating> <https://w3id.org/arco/resource/Dating/1500068123-1> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00068123" .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasAuthorshipAttribution> <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1500068123-1> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-3> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> <https://w3id.org/arco/resource/TimeIndexedTypedLocation/1500068123-current> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/denotative-description/hasMaterialOrTechnique> <https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-carrara-scultura> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/PhotographicDocumentation/1500068123-photographic-documentation-1> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasSubject> <https://w3id.org/arco/resource/Subject/c257c29611fbe0fa111a7f953717344d> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/211017d13fcde759abf9043256cedeb9> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <http://www.w3.org/2000/01/rdf-schema#label> "Polifemo (busto, elemento d'insieme) di Del Medico Antonio (sec. XVIII)"@it .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus> <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1500068123> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/arco/hasCulturalPropertyCataloguingCategory> <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/elemento-dinsieme> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <http://www.w3.org/2000/01/rdf-schema#comment> "busto, elemento d'insieme" .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <http://www.w3.org/2000/01/rdf-schema#label> "Polifemo (busto, elemento d'insieme) by Del Medico Antonio (sec. XVIII)"@en .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> <https://w3id.org/arco/resource/MeasurementCollection/1500068123-1> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/HistoricOrArtisticProperty> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation> <https://w3id.org/arco/resource/RelatedWorkSituation/1500068123-related-cultural-property-2-1> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/catalogue/isDescribedByCatalogueRecord> <https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/subject> "Polifemo" .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/arco/uniqueIdentifier> "1500068123" .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/denotative-description/hasConservationStatus> <https://w3id.org/arco/resource/ConservationStatus/1500068123-conservation-status-1> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/arco/description> "La scultura rappresenta un uomo barbuto rivolto verso sinistra dotato di un grande occhio al centro della fronte. Regge con entrambe le mani un masso di forma irregolare, poggiato sul fianco destro, mentre dal fianco sinistro pende un flauto a canne tenuto con una cinghia che attraversa il busto nudo del gigante. La veste è scesa sulle spalle e presenta una bordatura filamentosa. La colonnina che sostiene la scultura poggia su una base quadrata con fregio a foglie d'acanto intrecciate" .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress> <https://w3id.org/arco/resource/Address/7353bc536f32fbedeefdc21858a0af4f> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> .
-<https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/SourceAndDocument/1500068123-source-document-1> .
-<https://w3id.org/arco/resource/TimeInterval/1987> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
-<https://w3id.org/arco/resource/TimeInterval/1987> <http://www.w3.org/2000/01/rdf-schema#label> "1987" .
-<https://w3id.org/arco/resource/TimeInterval/1987> <https://w3id.org/italia/onto/TI/time> "1987" .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Address> .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <https://w3id.org/arco/ontology/location/isCulturalPropertyAddressOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <http://www.w3.org/2000/01/rdf-schema#label> "Italia, Campania, CE, Caserta" .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <https://w3id.org/italia/onto/CLV/fullAddress> "via Douhet, 2" .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <https://w3id.org/italia/onto/CLV/hasCountry> <https://w3id.org/arco/resource/Country/italia> .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <https://w3id.org/italia/onto/CLV/hasRegion> <https://w3id.org/arco/resource/Region/campania> .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <https://w3id.org/italia/onto/CLV/hasProvince> <https://w3id.org/arco/resource/Province/ce> .
-<https://w3id.org/arco/resource/Address/277a0a125205487ff0eb73992018c43c> <https://w3id.org/italia/onto/CLV/hasCity> <https://w3id.org/arco/resource/City/caserta> .
-<https://w3id.org/arco/resource/Measurement/1500068123-1-height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
-<https://w3id.org/arco/resource/Measurement/1500068123-1-height> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of cultural property 1500068123: 210"@en .
-<https://w3id.org/arco/resource/Measurement/1500068123-1-height> <https://w3id.org/italia/onto/l0/name> "Measurement of cultural property 1500068123: 210"@en .
-<https://w3id.org/arco/resource/Measurement/1500068123-1-height> <http://www.w3.org/2000/01/rdf-schema#label> "Misura del bene culturale 1500068123: 210"@it .
-<https://w3id.org/arco/resource/Measurement/1500068123-1-height> <https://w3id.org/italia/onto/l0/name> "Misura del bene culturale 1500068123: 210"@it .
-<https://w3id.org/arco/resource/Measurement/1500068123-1-height> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementType> <https://w3id.org/arco/ontology/denotative-description/Height> .
-<https://w3id.org/arco/resource/Measurement/1500068123-1-height> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1500068123-1-height-210> .
-<https://w3id.org/arco/resource/SiteDefinition/reggia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteDefinition> .
-<https://w3id.org/arco/resource/SiteDefinition/reggia> <http://www.w3.org/2000/01/rdf-schema#label> "reggia" .
-<https://w3id.org/arco/resource/CulturalInstituteOrSite/a9d1bdaf4810acc94fa6b94a8251ca65> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CulturalInstituteOrSite> .
-<https://w3id.org/arco/resource/CulturalInstituteOrSite/a9d1bdaf4810acc94fa6b94a8251ca65> <http://www.w3.org/2000/01/rdf-schema#label> "Museo della Reggia di Caserta" .
-<https://w3id.org/arco/resource/CulturalInstituteOrSite/a9d1bdaf4810acc94fa6b94a8251ca65> <https://w3id.org/italia/onto/l0/name> "Museo della Reggia di Caserta" .
-<https://w3id.org/arco/resource/CulturalInstituteOrSite/a9d1bdaf4810acc94fa6b94a8251ca65> <http://dati.beniculturali.it/cis/hasCISNameInTime> <https://w3id.org/arco/resource/CISNameInTime/museo-della-reggia-di-caserta> .
-<https://w3id.org/arco/resource/CulturalInstituteOrSite/a9d1bdaf4810acc94fa6b94a8251ca65> <http://dati.beniculturali.it/cis/hasSite> <https://w3id.org/arco/resource/Site/0487dac3090671be7c395dcfaa0c1b7e> .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 2 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <https://w3id.org/italia/onto/l0/name> "Bibliography 2 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 2 del bene culturale: 1500068123"@it .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <https://w3id.org/italia/onto/l0/name> "Bibliografia 2 del bene culturale: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "00000046" .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <https://w3id.org/arco/ontology/core/note> "v. XIII, pp.738-88; pp.789-869" .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-2> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/SpecificBibliography> .
-<https://w3id.org/arco/resource/Region/campania> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Region> .
-<https://w3id.org/arco/resource/Region/campania> <http://www.w3.org/2000/01/rdf-schema#label> "Campania" .
-<https://w3id.org/arco/resource/Region/campania> <https://w3id.org/italia/onto/l0/name> "Campania" .
-<https://w3id.org/arco/resource/Role/DigitalTranscriptionOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
-<https://w3id.org/arco/resource/Role/DigitalTranscriptionOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Digital transcription operator"@en .
-<https://w3id.org/arco/resource/Role/DigitalTranscriptionOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Operatore della trascrizione per informatizzazione"@it .
-<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
-<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
-<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
-<https://w3id.org/arco/resource/CulturalPropertyType/edf15e6321416af29dbabf4c9bd0e823> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
-<https://w3id.org/arco/resource/CulturalPropertyType/edf15e6321416af29dbabf4c9bd0e823> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo del bene: busto"@it .
-<https://w3id.org/arco/resource/CulturalPropertyType/edf15e6321416af29dbabf4c9bd0e823> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural property type: busto"@en .
-<https://w3id.org/arco/resource/CulturalPropertyType/edf15e6321416af29dbabf4c9bd0e823> <https://w3id.org/italia/onto/l0/name> "Tipo del bene: busto"@it .
-<https://w3id.org/arco/resource/CulturalPropertyType/edf15e6321416af29dbabf4c9bd0e823> <https://w3id.org/italia/onto/l0/name> "Cultural property type: busto"@en .
-<https://w3id.org/arco/resource/CulturalPropertyType/edf15e6321416af29dbabf4c9bd0e823> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/busto> .
-<https://w3id.org/arco/resource/Agent/cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
-<https://w3id.org/arco/resource/Agent/cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/2000/01/rdf-schema#label> "ARTPAST/ Cozzolino M" .
-<https://w3id.org/arco/resource/CISNameInTime/museo-della-reggia-di-caserta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CISNameInTime> .
-<https://w3id.org/arco/resource/CISNameInTime/museo-della-reggia-di-caserta> <http://www.w3.org/2000/01/rdf-schema#label> "Denominazione nel tempo: Museo della Reggia di Caserta"@it .
-<https://w3id.org/arco/resource/CISNameInTime/museo-della-reggia-di-caserta> <https://w3id.org/italia/onto/l0/name> "Denominazione nel tempo: Museo della Reggia di Caserta"@it .
-<https://w3id.org/arco/resource/CISNameInTime/museo-della-reggia-di-caserta> <http://www.w3.org/2000/01/rdf-schema#label> "Name in time: Museo della Reggia di Caserta"@en .
-<https://w3id.org/arco/resource/CISNameInTime/museo-della-reggia-di-caserta> <https://w3id.org/italia/onto/l0/name> "Name in time: Museo della Reggia di Caserta"@en .
-<https://w3id.org/arco/resource/CISNameInTime/museo-della-reggia-di-caserta> <http://dati.beniculturali.it/cis/institutionalCISName> "Museo della Reggia di Caserta" .
-<https://w3id.org/arco/resource/InterpretationCriterion/documentazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/InterpretationCriterion> .
-<https://w3id.org/arco/resource/InterpretationCriterion/documentazione> <http://www.w3.org/2000/01/rdf-schema#label> "documentazione" .
-<https://w3id.org/arco/resource/InterpretationCriterion/documentazione> <https://w3id.org/italia/onto/l0/name> "documentazione" .
-<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Country> .
-<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/2000/01/rdf-schema#label> "Italia" .
-<https://w3id.org/arco/resource/Country/italia> <https://w3id.org/italia/onto/l0/name> "Italia" .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Cozzolino M"@it .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1> <http://www.w3.org/2000/01/rdf-schema#label> "Update responsible compilation: ARTPAST/ Cozzolino M"@en .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/UpdateResponsibleCompilation> .
-<https://w3id.org/arco/resource/TimeIndexedRole/1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/cd4090c2113cab2189bf31061109ffe1> .
-<https://w3id.org/arco/resource/City/caserta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/City> .
-<https://w3id.org/arco/resource/City/caserta> <http://www.w3.org/2000/01/rdf-schema#label> "Caserta" .
-<https://w3id.org/arco/resource/City/caserta> <https://w3id.org/italia/onto/l0/name> "Caserta" .
-<https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
-<https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza Archeologia, belle arti e paesaggio per le province di Caserta e Benevento " .
-<https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> <https://w3id.org/italia/onto/l0/name> "Soprintendenza Archeologia, belle arti e paesaggio per le province di Caserta e Benevento " .
-<https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1500068123-cataloguing-agency> .
-<https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1500068123-heritage-protection-agency> .
-<https://w3id.org/arco/resource/Agent/924a63be913cf1b7e90a723109fd5784> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/MeasurementCollection/1500068123-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> .
-<https://w3id.org/arco/resource/MeasurementCollection/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Measurements of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/MeasurementCollection/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Measurements of cultural property 1500068123"@en .
-<https://w3id.org/arco/resource/MeasurementCollection/1500068123-1> <http://www.w3.org/2000/01/rdf-schema#label> "Misure del bene culturale 1500068123"@it .
-<https://w3id.org/arco/resource/MeasurementCollection/1500068123-1> <https://w3id.org/italia/onto/l0/name> "Misure del bene culturale 1500068123"@it .
-<https://w3id.org/arco/resource/MeasurementCollection/1500068123-1> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/1500068123-1-height> .
-<https://w3id.org/arco/resource/TimeInterval/2005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
-<https://w3id.org/arco/resource/TimeInterval/2005> <http://www.w3.org/2000/01/rdf-schema#label> "2005" .
-<https://w3id.org/arco/resource/TimeInterval/2005> <https://w3id.org/italia/onto/TI/time> "2005" .
-<https://w3id.org/arco/resource/Agent/6ffbef1f52f0ff278e5fed4b4d9a787d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
-<https://w3id.org/arco/resource/Agent/6ffbef1f52f0ff278e5fed4b4d9a787d> <http://www.w3.org/2000/01/rdf-schema#label> "Spalvieri F" .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <https://w3id.org/italia/onto/l0/name> "Bibliography 1 of cultural property: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 1 del bene culturale: 1500068123"@it .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <https://w3id.org/italia/onto/l0/name> "Bibliografia 1 del bene culturale: 1500068123"@en .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "00000041" .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <https://w3id.org/arco/ontology/core/note> "v. XXIV" .
-<https://w3id.org/arco/resource/Bibliography/1500068123-bibliography-1> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/SpecificBibliography> .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 1500068123"@en .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-rvm> .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/P> .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/hasAccessProfile> <https://w3id.org/arco/resource/AccessProfile/1500068123-1> .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordOA> .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "ICCD3902917" .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-compilation> .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/describesCulturalProperty> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500068123> .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier> "1500068123" .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 1500068123"@it .
-<https://w3id.org/arco/resource/CatalogueRecordOA/1500068123> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/1500068123-agg-1> .
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-agent:8f44d5eb234209e29700eb7153008adb
+        a           l0:Agent ;
+        rdfs:label  "Archivio di Stato di Napoli" ;
+        l0:name     "Archivio di Stato di Napoli" .
+
+ar-agent:211017d13fcde759abf9043256cedeb9
+        a                             CPV:Person ;
+        rdfs:label                    "Del Medico Antonio" ;
+        arco-cd:agentDate             "notizie sec. XVIII" ;
+        arco-cd:agentLocalIdentifier  "00000058" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:1500068123 ;
+        l0:name                       "Del Medico Antonio" .
+
+ar-agentrole:1500068123-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1500068123: S81"@it , "Cataloguing agency for cultural property 1500068123: S81"@en ;
+        arco-core:hasAgent  ar-agent:924a63be913cf1b7e90a723109fd5784 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-agentrole:1500068123-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1500068123: S81"@it , "Heritage protection agency for cultural property 1500068123: S81"@en ;
+        arco-core:hasAgent  ar-agent:924a63be913cf1b7e90a723109fd5784 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-CulturalPropertyCataloguingCategory:elemento-dinsieme
+        a           arco-arco:CulturalPropertyCataloguingCategory ;
+        rdfs:label  "elemento d'insieme" ;
+        l0:name     "elemento d'insieme" .
+
+ar-timeIndexedRole:1500068123-9383c090b9d65c48650e4b03412df772
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Marinelli C"@it , "Official in charge: Marinelli C"@en ;
+        roapit:isRoleInTimeOf  ar-agent:9724f33b6fdf2b1c410c4fcef0cd0184 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-privacyReason:dati-pubblicabili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "dati pubblicabili" ;
+        l0:name     "dati pubblicabili" .
+
+ar-TimeInterval:sec-xviii
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XVIII" ;
+        tiapit:time  "sec. XVIII" ;
+        l0:name      "sec. XVIII" .
+
+ar-event:1500068123-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 1500068123"@it , "Creation of cultural property 1500068123"@en ;
+        arco-cd:specificTime  ar-TimeInterval:ca-1767-ca-1767 ;
+        tiapit:atTime         ar-TimeInterval:sec-xviii ;
+        l0:name               "Realizzazione del bene 1500068123"@it , "Creation of cultural property 1500068123"@en .
+
+ar-RelatedWorkSituation:1500068123-related-cultural-property-2-1
+        a                            arco-cd:RelatedWorkSituation ;
+        rdfs:label                   "Relazione 1 tra il bene culturale 1500068123 e altro bene culturale"@it , "Relation 1 between the cultural property 1500068123 and other cultural property"@en ;
+        arco-cd:involvesRelatedWork  ar-HistoricOrArtisticProperty:1500068163 ;
+        arco-cd:isRelatedWorkSituationOf
+                ar-HistoricOrArtisticProperty:1500068123 ;
+        l0:name                      "Relazione 1 tra il bene culturale 1500068123 e altro bene culturale"@it , "Relation 1 between the cultural property 1500068123 and other cultural property"@en .
+
+ar-docutmentationType:registro-dei-pagamenti
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "registro dei pagamenti" ;
+        l0:name     "registro dei pagamenti" .
+
+ar-timeIndexedRole:1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Spalvieri F"@en , "Compilazione da Spalvieri F"@it ;
+        roapit:isRoleInTimeOf  ar-agent:6ffbef1f52f0ff278e5fed4b4d9a787d ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-dating:1500068123-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 1500068123"@it , "Dating 1 of cultural property 1500068123"@en ;
+        arco-cd:hasDatingEvent  ar-event:1500068123-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:documentazione ;
+        l0:name                 "Dating 1 of cultural property 1500068123"@en , "Cronologia 1 del bene 1500068123"@it .
+
+ar-CulturalEntityTechnicalStatus:1500068123
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 1500068123"@it , "Technical status of cultural property 1500068123"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:marmo-di-carrara-scultura ;
+        l0:name     "Stato tecnico del bene culturale 1500068123"@it , "Technical status of cultural property 1500068123"@en .
+
+ar-Value:1500068123-1-height-210
+        a           mu:Value ;
+        rdfs:label  "210"@en , "210"@it ;
+        mu:value    "210" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1500068123-cataloguing-agency .
+
+ar-docutmentationType:fotografia-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia b/n" ;
+        l0:name     "fotografia b/n" .
+
+ar-agent:9724f33b6fdf2b1c410c4fcef0cd0184
+        a           l0:Agent ;
+        rdfs:label  "Marinelli C" .
+
+ar-PreferredAuthorshipAttribution:1500068123-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1500068123"@it , "Preferred authorship attribution of cultural property: 1500068123"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:211017d13fcde759abf9043256cedeb9 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:documentazione ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-HistoricOrArtisticProperty:1500068123 ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1500068123"@it , "Preferred authorship attribution of cultural property: 1500068123"@en .
+
+ar-timeIndexedRole:1500068123-rvm-cd4090c2113cab2189bf31061109ffe1
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da ARTPAST/ Cozzolino M"@it , "Digital transcription by ARTPAST/ Cozzolino M"@en ;
+        roapit:isRoleInTimeOf  ar-agent:cd4090c2113cab2189bf31061109ffe1 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-catalogueRecordVersion:1500068123-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1987 Spalvieri F" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1987 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1500068123-compilation-6ffbef1f52f0ff278e5fed4b4d9a787d , ar-timeIndexedRole:1500068123-9383c090b9d65c48650e4b03412df772 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:9724f33b6fdf2b1c410c4fcef0cd0184 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:6ffbef1f52f0ff278e5fed4b4d9a787d ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                ar-CatalogueRecordOA:1500068123 .
+
+ar-province:ce  a   clvapit:Province ;
+        rdfs:label  "CE" ;
+        l0:name     "CE" .
+
+ar-TechnicalCharacteristic:marmo-di-carrara-scultura
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "marmo di Carrara/ scultura" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "marmo di Carrara/ scultura" .
+
+ar-catalogueRecordVersion:1500068123-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2005 ARTPAST/ Cozzolino M" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2005 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1500068123-rvm-cd4090c2113cab2189bf31061109ffe1 , ar-timeIndexedRole:1500068123-9383c090b9d65c48650e4b03412df772 ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:cd4090c2113cab2189bf31061109ffe1 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:9724f33b6fdf2b1c410c4fcef0cd0184 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                ar-CatalogueRecordOA:1500068123 .
+
+ar-TimeInterval:ca-1767-ca-1767
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca 1767 - ca 1767" ;
+        arco-arco:endTime    "ca 1767" ;
+        arco-arco:startTime  "ca 1767" ;
+        l0:name              "ca 1767 - ca 1767" .
+
+ar-Site:0487dac3090671be7c395dcfaa0c1b7e
+        a                          cis:Site ;
+        rdfs:label                 "Reggia di Caserta" ;
+        cis:isSiteOf               ar-cis:a9d1bdaf4810acc94fa6b94a8251ca65 ;
+        cis:siteAddress            ar-address:277a0a125205487ff0eb73992018c43c ;
+        arco-location:hasSiteType  ar-SiteType:reggia ;
+        l0:name                    "Reggia di Caserta" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-SiteType:reggia  a  arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: reggia"@it , "Site type: reggia"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:reggia ;
+        l0:name     "Tipo di contenitore fisico: reggia"@it , "Site type: reggia"@en .
+
+ar-ConservationStatus:1500068123-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 1500068123"@it , "Conservation status 1 of cultural property: 1500068123"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 1500068123"@it , "Conservation status 1 of cultural property: 1500068123"@en .
+
+ar-Subject:c257c29611fbe0fa111a7f953717344d
+        a                    arco-cd:Subject ;
+        rdfs:label           "Polifemo" ;
+        arco-cd:isSubjectOf  ar-HistoricOrArtisticProperty:1500068123 ;
+        l0:name              "Polifemo" .
+
+ar-catalogueRecordVersion:1500068123-agg-1
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2005 ARTPAST/ Cozzolino M" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2005 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1 ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                ar-agent:cd4090c2113cab2189bf31061109ffe1 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                ar-CatalogueRecordOA:1500068123 .
+
+ar-role:UpdateResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+ar-bibliography:1500068123-bibliography-3
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 3 of cultural property: 1500068123"@en , "Bibliografia 3 del bene culturale: 1500068123"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "00000135" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:1500068123 ;
+        arco-core:hasCategory     arco-cd:ComparativeBibliography ;
+        arco-core:note            "p.77" ;
+        l0:name                   "Bibliography 3 of cultural property: 1500068123"@en , "Bibliografia 3 del bene culturale: 1500068123"@en .
+
+ar-culturalPropertyDefinition:busto
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "busto" .
+
+ar-legalSituation:1500068123-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 1500068123: proprietà Stato"@it , "Legal situation of cultural property 1500068123: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:cdbe81587e45178e0b1be8bfd5ab5483 ;
+        l0:name           "Condizione giuridica del bene culturale 1500068123: proprietà Stato"@it , "Legal situation of cultural property 1500068123: proprietà Stato"@en .
+
+ar-timeIndexedTypedLocation:1500068123-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 1500068123"@it , "Current physical location of cultural property: 1500068123"@en ;
+        arco-core:specifications       "Parco, Bosco Vecchio, Castelluccia" ;
+        arco-location:atSite           ar-Site:0487dac3090671be7c395dcfaa0c1b7e ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:1500068123 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 1500068123"@it , "Current physical location of cultural property: 1500068123"@en .
+
+ar-photograpyDocumentation:1500068123-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 1500068123"@en , "Documentazione fotografica 1 del bene culturale: 1500068123"@it ;
+        arco-cd:documentationIdentifier
+                "AFS81 007710" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf     ar-HistoricOrArtisticProperty:1500068123 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 1500068123"@en , "Documentazione fotografica 1 del bene culturale: 1500068123"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1500068123-heritage-protection-agency .
+
+ar-accessProfile:1500068123-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1500068123: 1"@it , "Access profile to catalogue record of cultural property 1500068123: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:dati-pubblicabili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 1500068123: 1"@it , "Access profile to catalogue record of cultural property 1500068123: 1"@en .
+
+ar-SourceAndDocument:1500068123-source-document-1
+        a                              arco-cd:SourceAndDocument ;
+        rdfs:label                     "Fonti e documenti 1 del bene culturale: 1500068123"@it , "Sources and documents 1 of cultural property: 1500068123"@en ;
+        arco-cd:documentationLocation  "fasc. 16" ;
+        arco-cd:documentationTitle     "Casa Reale, Amministrativa: Maggiordomia Maggiore" ;
+        arco-cd:folio                  "C. 50, (2)" ;
+        arco-cd:hasArchive             ar-agent:8f44d5eb234209e29700eb7153008adb ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:registro-dei-pagamenti ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:1500068123 ;
+        tiapit:time                    "1767" ;
+        l0:name                        "Sources and documents 1 of cultural property: 1500068123"@en , "Fonti e documenti 1 del bene culturale: 1500068123"@en .
+
+ar-agent:cdbe81587e45178e0b1be8bfd5ab5483
+        a                l0:Agent ;
+        rdfs:label       "Ministero per i Beni Culturali e Ambientali/ SBAAAS CE" ;
+        arco-cd:address  "via Douhet, 2" ;
+        l0:name          "Ministero per i Beni Culturali e Ambientali/ SBAAAS CE" .
+
+ar-HistoricOrArtisticProperty:1500068123
+        a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
+        rdfs:comment                    "busto, elemento d'insieme" ;
+        rdfs:label                      "Polifemo (busto, elemento d'insieme) di Del Medico Antonio (sec. XVIII)"@it , "Polifemo (busto, elemento d'insieme) by Del Medico Antonio (sec. XVIII)"@en ;
+        arco-arco:catalogueNumber       "00068123" ;
+        arco-arco:description           "La scultura rappresenta un uomo barbuto rivolto verso sinistra dotato di un grande occhio al centro della fronte. Regge con entrambe le mani un masso di forma irregolare, poggiato sul fianco destro, mentre dal fianco sinistro pende un flauto a canne tenuto con una cinghia che attraversa il busto nudo del gigante. La veste è scesa sulle spalle e presenta una bordatura filamentosa. La colonnina che sostiene la scultura poggia su una base quadrata con fregio a foglie d'acanto intrecciate" ;
+        arco-arco:hasCataloguingAgency  ar-agent:924a63be913cf1b7e90a723109fd5784 ;
+        arco-arco:hasCulturalPropertyCataloguingCategory
+                ar-CulturalPropertyCataloguingCategory:elemento-dinsieme ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:924a63be913cf1b7e90a723109fd5784 ;
+        arco-arco:regionIdentifier      "15" ;
+        arco-arco:uniqueIdentifier      "1500068123" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                ar-CatalogueRecordOA:1500068123 ;
+        arco-cd:hasAuthor               ar-agent:211017d13fcde759abf9043256cedeb9 ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:1500068123-1 ;
+        arco-cd:hasBibliography         ar-bibliography:1500068123-bibliography-3 , ar-bibliography:1500068123-bibliography-2 , ar-bibliography:1500068123-bibliography-1 ;
+        arco-cd:hasDating               ar-dating:1500068123-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1500068123-photographic-documentation-1 , ar-SourceAndDocument:1500068123-source-document-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:1500068123-legal-situation-proprieta-stato ;
+        arco-cd:hasRelatedWorkSituation
+                ar-RelatedWorkSituation:1500068123-related-cultural-property-2-1 ;
+        arco-cd:hasSubject              ar-Subject:c257c29611fbe0fa111a7f953717344d ;
+        arco-cd:subject                 "Polifemo" ;
+        arco-core:hasAgentRole          ar-agentrole:1500068123-heritage-protection-agency , ar-agentrole:1500068123-cataloguing-agency ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:1500068123-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:edf15e6321416af29dbabf4c9bd0e823 ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:marmo-di-carrara-scultura ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:1500068123-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1500068123 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:7353bc536f32fbedeefdc21858a0af4f ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1500068123-current .
+
+ar-TimeInterval:1987  a  tiapit:TimeInterval ;
+        rdfs:label   "1987" ;
+        tiapit:time  "1987" .
+
+ar-address:277a0a125205487ff0eb73992018c43c
+        a                    clvapit:Address ;
+        rdfs:label           "Italia, Campania, CE, Caserta" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-HistoricOrArtisticProperty:1500068123 ;
+        clvapit:fullAddress  "via Douhet, 2" ;
+        clvapit:hasCity      ar-city:caserta ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:ce ;
+        clvapit:hasRegion    ar-region:campania .
+
+ar-Measurement:1500068123-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1500068123: 210"@en , "Misura del bene culturale 1500068123: 210"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:1500068123-1-height-210 ;
+        l0:name                     "Measurement of cultural property 1500068123: 210"@en , "Misura del bene culturale 1500068123: 210"@it .
+
+ar-SiteDefinition:reggia
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "reggia" .
+
+ar-cis:a9d1bdaf4810acc94fa6b94a8251ca65
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Museo della Reggia di Caserta" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:museo-della-reggia-di-caserta ;
+        cis:hasSite           ar-Site:0487dac3090671be7c395dcfaa0c1b7e ;
+        l0:name               "Museo della Reggia di Caserta" .
+
+ar-bibliography:1500068123-bibliography-2
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 2 of cultural property: 1500068123"@en , "Bibliografia 2 del bene culturale: 1500068123"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "00000046" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:1500068123 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "v. XIII, pp.738-88; pp.789-869" ;
+        l0:name                   "Bibliography 2 of cultural property: 1500068123"@en , "Bibliografia 2 del bene culturale: 1500068123"@en .
+
+ar-region:campania  a  clvapit:Region ;
+        rdfs:label  "Campania" ;
+        l0:name     "Campania" .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-culturalPropertyType:edf15e6321416af29dbabf4c9bd0e823
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: busto"@it , "Cultural property type: busto"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:busto ;
+        l0:name     "Tipo del bene: busto"@it , "Cultural property type: busto"@en .
+
+ar-agent:cd4090c2113cab2189bf31061109ffe1
+        a           l0:Agent ;
+        rdfs:label  "ARTPAST/ Cozzolino M" .
+
+ar-CISNameInTime:museo-della-reggia-di-caserta
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Museo della Reggia di Caserta"@it , "Name in time: Museo della Reggia di Caserta"@en ;
+        cis:institutionalCISName  "Museo della Reggia di Caserta" ;
+        l0:name                   "Denominazione nel tempo: Museo della Reggia di Caserta"@it , "Name in time: Museo della Reggia di Caserta"@en .
+
+ar-interpretationCriterion:documentazione
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "documentazione" ;
+        l0:name     "documentazione" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "Italia" ;
+        l0:name     "Italia" .
+
+ar-timeIndexedRole:1500068123-agg-1-cd4090c2113cab2189bf31061109ffe1
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Cozzolino M"@it , "Update responsible compilation: ARTPAST/ Cozzolino M"@en ;
+        roapit:isRoleInTimeOf  ar-agent:cd4090c2113cab2189bf31061109ffe1 ;
+        roapit:withRole        ar-role:UpdateResponsibleCompilation .
+
+ar-city:caserta  a  clvapit:City ;
+        rdfs:label  "Caserta" ;
+        l0:name     "Caserta" .
+
+ar-agent:924a63be913cf1b7e90a723109fd5784
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Archeologia, belle arti e paesaggio per le province di Caserta e Benevento " ;
+        arco-arco:isCataloguingAgencyOf
+                ar-HistoricOrArtisticProperty:1500068123 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-HistoricOrArtisticProperty:1500068123 ;
+        arco-core:isAgentOf  ar-agentrole:1500068123-cataloguing-agency , ar-agentrole:1500068123-heritage-protection-agency ;
+        l0:name              "Soprintendenza Archeologia, belle arti e paesaggio per le province di Caserta e Benevento " .
+
+ar-MeasurementCollection:1500068123-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 1500068123"@en , "Misure del bene culturale 1500068123"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:1500068123-1-height ;
+        l0:name                 "Measurements of cultural property 1500068123"@en , "Misure del bene culturale 1500068123"@it .
+
+ar-TimeInterval:2005  a  tiapit:TimeInterval ;
+        rdfs:label   "2005" ;
+        tiapit:time  "2005" .
+
+ar-agent:6ffbef1f52f0ff278e5fed4b4d9a787d
+        a           l0:Agent ;
+        rdfs:label  "Spalvieri F" .
+
+ar-bibliography:1500068123-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 1500068123"@en , "Bibliografia 1 del bene culturale: 1500068123"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "00000041" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:1500068123 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "v. XXIV" ;
+        l0:name                   "Bibliography 1 of cultural property: 1500068123"@en , "Bibliografia 1 del bene culturale: 1500068123"@en .
+
+ar-CatalogueRecordOA:1500068123
+        a           arco-catalogue:CatalogueRecordOA ;
+        rdfs:label  "Catalogue Record n: 1500068123"@en , "Scheda catalografica n: 1500068123"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1500068123" ;
+        arco-catalogue:describesCulturalProperty
+                ar-HistoricOrArtisticProperty:1500068123 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:1500068123-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1500068123-rvm , ar-catalogueRecordVersion:1500068123-compilation , ar-catalogueRecordVersion:1500068123-agg-1 ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "ICCD3902917" .
