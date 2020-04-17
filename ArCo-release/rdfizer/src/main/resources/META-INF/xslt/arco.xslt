@@ -79,7 +79,7 @@
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
-	
+
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
 	exclude-result-prefixes="xsl php">
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
@@ -10238,33 +10238,33 @@
 								</arco-core:isAgentOf>
 							</rdf:Description>
 							<rdf:Description>
-							<xsl:attribute name="rdf:about">
+								<xsl:attribute name="rdf:about">
 					                        <xsl:value-of
-								select="concat($NS, 'Role/ScientificDirector')" />
+									select="concat($NS, 'Role/ScientificDirector')" />
 					                    </xsl:attribute>
-							<rdf:type>
-								<xsl:attribute name="rdf:resource">
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
 					                            <xsl:value-of
-									select="'https://w3id.org/italia/onto/RO/Role'" />
+										select="'https://w3id.org/italia/onto/RO/Role'" />
 					                        </xsl:attribute>
-							</rdf:type>
-							<rdfs:label xml:lang="it">
-								<xsl:value-of select="'Responsabile Scientifico'" />
-							</rdfs:label>
-							<rdfs:label xml:lang="en">
-								<xsl:value-of select="'Scientific Director'" />
-							</rdfs:label>
-							<arco-core:isRoleOf>
-								<xsl:attribute name="rdf:resource">
+								</rdf:type>
+								<rdfs:label xml:lang="it">
+									<xsl:value-of select="'Responsabile Scientifico'" />
+								</rdfs:label>
+								<rdfs:label xml:lang="en">
+									<xsl:value-of select="'Scientific Director'" />
+								</rdfs:label>
+								<arco-core:isRoleOf>
+									<xsl:attribute name="rdf:resource">
 					                            <xsl:value-of
-									select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-field-survey-', $survey-position, '-scientific-director',arco-fn:arcofy(.))" />
+										select="concat($NS, 'AgentRole/', $itemURI, '-archaeological-field-survey-', $survey-position, '-scientific-director',arco-fn:arcofy(.))" />
 					                        </xsl:attribute>
-							</arco-core:isRoleOf>
-						</rdf:Description>
+								</arco-core:isRoleOf>
+							</rdf:Description>
 						</xsl:for-each>
 
 
-						
+
 
 					</xsl:if>
 					<!-- agent role of activity responsible as an individual -->
@@ -26515,7 +26515,6 @@
 					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
-
 			<xsl:for-each select="schede/*/RV/ROZ">
 
 				<xsl:variable name="rel-work"
@@ -26544,6 +26543,12 @@
 							<xsl:value-of
 								select="concat('Relation ', position(), ' between the cultural property ', $itemURI, ' and other cultural property')" />
 						</l0:name>
+						
+						<arco-cd:isRelatedWorkSituationOf>
+							<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+							</xsl:attribute>
+						</arco-cd:isRelatedWorkSituationOf>
 
 						<xsl:for-each select="$rel-work">
 							<arco-cd:involvesRelatedWork>
@@ -26553,7 +26558,18 @@
 							</arco-cd:involvesRelatedWork>
 						</xsl:for-each>
 
-
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+						</xsl:attribute>
+						
+						<arco-cd:hasRelatedWorkSituation>
+							<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-2-', position())" />
+							</xsl:attribute>
+						</arco-cd:hasRelatedWorkSituation>
+						
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
