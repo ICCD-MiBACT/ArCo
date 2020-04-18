@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <schede>
+     <OA version="3.00">
+      <CD hint="CODICI">
+       <TSK hint="Tipo scheda">OA</TSK>
+       <LIR hint="Livello ricerca">P</LIR>
+       <NCT hint="CODICE UNIVOCO">
+        <NCTR hint="Codice regione">15</NCTR>
+        <NCTN hint="Numero catalogo generale">00068123</NCTN>
+       </NCT>
+       <ESC hint="Ente schedatore">S81</ESC>
+       <ECP hint="Ente competente">S81</ECP>
+      </CD>
+      <RV hint="RELAZIONI">
+       <ROZ hint="Altre relazioni">1500068163</ROZ>
+      </RV>
+      <OG hint="OGGETTO">
+       <OGT hint="OGGETTO">
+        <OGTD hint="Definizione">busto</OGTD>
+        <OGTV hint="Identificazione">elemento d'insieme</OGTV>
+       </OGT>
+       <SGT hint="SOGGETTO">
+        <SGTI hint="Identificazione">Polifemo</SGTI>
+       </SGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+       <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+        <PVCS hint="Stato">Italia</PVCS>
+        <PVCR hint="Regione">Campania</PVCR>
+        <PVCP hint="Provincia">CE</PVCP>
+        <PVCC hint="Comune">Caserta</PVCC>
+       </PVC>
+       <LDC hint="COLLOCAZIONE SPECIFICA">
+        <LDCT hint="Tipologia">reggia</LDCT>
+        <LDCN hint="Denominazione">Reggia di Caserta</LDCN>
+        <LDCU hint="Denominazione spazio viabilistico">via Douhet, 2</LDCU>
+        <LDCM hint="Denominazione raccolta">Museo della Reggia di Caserta</LDCM>
+        <LDCS hint="Specifiche">Parco, Bosco Vecchio, Castelluccia</LDCS>
+       </LDC>
+      </LC>
+      <DT hint="CRONOLOGIA">
+       <DTZ hint="CRONOLOGIA GENERICA">
+        <DTZG hint="Secolo">sec. XVIII</DTZG>
+       </DTZ>
+       <DTS hint="CRONOLOGIA SPECIFICA">
+        <DTSI hint="Da">1767</DTSI>
+        <DTSV hint="Validità">ca</DTSV>
+        <DTSF hint="A">1767</DTSF>
+        <DTSL hint="Validità">ca</DTSL>
+       </DTS>
+       <DTM hint="Motivazione cronologia">documentazione</DTM>
+      </DT>
+      <AU hint="DEFINIZIONE CULTURALE">
+       <AUT hint="AUTORE">
+        <AUTM hint="Motivazione dell'attribuzione">documentazione</AUTM>
+        <AUTN hint="Nome scelto">Del Medico Antonio</AUTN>
+        <AUTA hint="Dati anagrafici">notizie sec. XVIII</AUTA>
+        <AUTH hint="Sigla per citazione">00000058</AUTH>
+       </AUT>
+      </AU>
+      <MT hint="DATI TECNICI">
+       <MTC hint="Materia e tecnica">marmo di Carrara/ scultura</MTC>
+       <MIS hint="MISURE">
+        <MISA hint="Altezza">210</MISA>
+       </MIS>
+      </MT>
+      <CO hint="CONSERVAZIONE">
+       <STC hint="STATO DI CONSERVAZIONE">
+        <STCC hint="Stato di conservazione">discreto</STCC>
+       </STC>
+      </CO>
+      <DA hint="DATI ANALITICI">
+       <DES hint="DESCRIZIONE">
+        <DESO hint="Indicazioni sull'oggetto">La scultura rappresenta un uomo barbuto rivolto verso sinistra dotato di un grande occhio al centro della fronte. Regge con entrambe le mani un masso di forma irregolare, poggiato sul fianco destro, mentre dal fianco sinistro pende un flauto a canne tenuto con una cinghia che attraversa il busto nudo del gigante. La veste è scesa sulle spalle e presenta una bordatura filamentosa. La colonnina che sostiene la scultura poggia su una base quadrata con fregio a foglie d'acanto intrecciate</DESO>
+        <DESS hint="Indicazioni sul soggetto">Personaggi: Polifemo. Attributi: (Polifemo) masso</DESS>
+       </DES>
+       <NSC hint="Notizie storico-critiche">E' il termine raffigurante Polifemo, come risulta nella nota del giugno 1767, riguardo all'elenco delle opere eseguite dall'abate Del Medico. Il masso che il ciclope è in atto di lanciare con furore, è indirizzato contro Aci, il fauno amato dalla nereide Galatea, di cui il gigante, figlio di Nettuno, è innammorato. Così narra Ovidio nelle sue Metamorfosi: "... Aiutami, Galatea, ti prego, aiutatemi, genitori miei, e ammettetemi, visto che muoio, nel vostro regno ( Aci infatti sarà trasformato in fiume)!. Il Ciclope lo insegue e staccato un pezzo di monte glielo scaglia, e benchè soltanto uno spigolo del masso colpisca Aci, pure quello spigolo schiaccia Aci completamente". La statua in particolare, è situata in un piccolo slargo presso la Castelluccia, all'interno del bosco vecchio</NSC>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+       <CDG hint="CONDIZIONE GIURIDICA">
+        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+        <CDGS hint="Indicazione specifica">Ministero per i Beni Culturali e Ambientali/ SBAAAS CE</CDGS>
+        <CDGI hint="Indirizzo">via Douhet, 2</CDGI>
+       </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+       <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+        <FTAX hint="Genere">documentazione allegata</FTAX>
+        <FTAP hint="Tipo">fotografia b/n</FTAP>
+        <FTAN hint="Codice identificativo">AFS81 007710</FTAN>
+       </FTA>
+       <FNT hint="FONTI E DOCUMENTI">
+        <FNTP hint="Tipo">registro dei pagamenti</FNTP>
+        <FNTT hint="Denominazione">Casa Reale, Amministrativa: Maggiordomia Maggiore</FNTT>
+        <FNTD hint="Data">1767</FNTD>
+        <FNTF hint="Foglio/Carta">C. 50, (2)</FNTF>
+        <FNTN hint="Nome archivio">Archivio di Stato di Napoli</FNTN>
+        <FNTS hint="Posizione">fasc. 16</FNTS>
+       </FNT>
+       <BIB hint="BIBLIOGRAFIA">
+        <BIBX hint="Genere">bibliografia specifica</BIBX>
+        <BIBA hint="Autore">Strazzullo F</BIBA>
+        <BIBD hint="Anno di edizione">1974</BIBD>
+        <BIBH hint="Sigla per citazione">00000041</BIBH>
+        <BIBN hint="V., pp., nn.">v. XXIV</BIBN>
+       </BIB>
+       <BIB hint="BIBLIOGRAFIA">
+        <BIBX hint="Genere">bibliografia specifica</BIBX>
+        <BIBA hint="Autore">Ovidio P</BIBA>
+        <BIBD hint="Anno di edizione">1947</BIBD>
+        <BIBH hint="Sigla per citazione">00000046</BIBH>
+        <BIBN hint="V., pp., nn.">v. XIII, pp.738-88; pp.789-869</BIBN>
+       </BIB>
+       <BIB hint="BIBLIOGRAFIA">
+        <BIBX hint="Genere">bibliografia di confronto</BIBX>
+        <BIBA hint="Autore">Ripa C</BIBA>
+        <BIBD hint="Anno di edizione">1593</BIBD>
+        <BIBH hint="Sigla per citazione">00000135</BIBH>
+        <BIBN hint="V., pp., nn.">p.77</BIBN>
+       </BIB>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+       <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+        <ADSP hint="Profilo di accesso">1</ADSP>
+        <ADSM hint="Motivazione">dati pubblicabili</ADSM>
+       </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+       <CMP hint="COMPILAZIONE">
+        <CMPD hint="Data">1987</CMPD>
+        <CMPN hint="Nome">Spalvieri F</CMPN>
+       </CMP>
+       <FUR hint="Funzionario responsabile">Marinelli C</FUR>
+       <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+        <RVMD hint="Data">2005</RVMD>
+        <RVMN hint="Nome">ARTPAST/ Cozzolino M</RVMN>
+       </RVM>
+       <AGG hint="AGGIORNAMENTO - REVISIONE">
+        <AGGD hint="Data">2005</AGGD>
+        <AGGN hint="Nome">ARTPAST/ Cozzolino M</AGGN>
+       </AGG>
+      </CM>
+     </OA>
+    </schede>
