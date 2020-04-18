@@ -1,0 +1,582 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+<https://w3id.org/arco/resource/CadastralFolio/2000029936-1-1>
+        a           arco-location:CadastralFolio ;
+        rdfs:label  "Foglio di mappa catastale del bene culturale 2000029936: 18"@it , "Cadastral folio of cultural property 2000029936: 18"@en ;
+        l0:name     "Foglio di mappa catastale del bene culturale 2000029936: 18"@it , "Cadastral folio of cultural property 2000029936: 18"@en .
+
+<https://w3id.org/arco/resource/CadastralIdentity/2000029936-1>
+        a                               arco-location:CadastralIdentity ;
+        rdfs:label                      "Identità catastale 1 del bene: 2000029936"@it , "Cadastral identity 1 of cultural property: 2000029936"@en ;
+        arco-location:hasCadastralCity  ar-city:cagliari ;
+        arco-location:hasCadastralEntity
+                <https://w3id.org/arco/resource/CadastralFolio/2000029936-1-1> , <https://w3id.org/arco/resource/CadastralUnitCollection/2000029936-1-1> ;
+        arco-location:hasLocationType   arco-location:CurrentPhysicalLocation ;
+        l0:name                         "Identità catastale 1 del bene: 2000029936"@it , "Cadastral identity 1 of cultural property: 2000029936"@en .
+
+ar-province:ca  a   clvapit:Province ;
+        rdfs:label  "CA" ;
+        l0:name     "CA" .
+
+ar-agent:d93754ac5136dcd525ad67b2f3a29102
+        a           l0:Agent ;
+        rdfs:label  "Fiorino, Donatella Rita" .
+
+ar-culturalPropertyDefinition:villa
+        a                arco-dd:CulturalPropertyDefinition ;
+        rdfs:label       "villa" ;
+        skos:closeMatch  <http://dati.beniculturali.it/vocabularies/beni_architettonici_e_paesaggistici/def/013.011> .
+
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936>
+        a                               arco-arco:ArchitecturalOrLandscapeHeritage , arco-arco:ImmovableCulturalProperty ;
+        rdfs:comment                    "villa, Villa Binaghi" ;
+        rdfs:label                      "Villa Binaghi (villa) - ing. Binaghi Roberto"@it , "Villa Binaghi (villa) - ing. Binaghi Roberto"@en ;
+        arco-arco:catalogueNumber       "00029936" ;
+        arco-arco:hasCataloguingAgency  ar-agent:2b3357d90b70edb1773bba13390166c1 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:2b3357d90b70edb1773bba13390166c1 ;
+        arco-arco:regionIdentifier      "20" ;
+        arco-arco:uniqueIdentifier      "2000029936" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordA/2000029936> ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/CulturalScopeAttribution/2000029936-cultural-scope-attribution-1> ;
+        arco-cd:hasBibliography         ar-bibliography:2000029936-bibliography-1 , ar-bibliography:2000029936-bibliography-2 ;
+        arco-cd:hasChangeOfAvailability
+                <https://w3id.org/arco/resource/ChangeOfAvailability/2000029936-change-of-availability> ;
+        arco-cd:hasDating               ar-dating:2000029936-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:2000029936-photographic-documentation-2 , <https://w3id.org/arco/resource/SourceAndDocument/2000029936-source-document-1> , ar-photograpyDocumentation:2000029936-photographic-documentation-1 ;
+        arco-cd:hasIntervention         <https://w3id.org/arco/resource/ConservationIntervention/2000029936-conservation-intervention-1> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:2000029936-legal-situation-proprieta-stato ;
+        arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/2000029936-protective-measure-1> ;
+        arco-cd:hasUrbanPlanningInstrument
+                <https://w3id.org/arco/resource/UrbanPlanningInstrument/2000029936-urban-planning-instrument-1> ;
+        arco-core:hasAgentRole          ar-agentrole:2000029936-heritage-protection-agency , ar-agentrole:2000029936-cataloguing-agency ;
+        arco-dd:hasConservationStatus   <https://w3id.org/arco/resource/ConservationStatus/2000029936-conservation-status-1> ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:ed3f29fee9e28e36f7cdc8115e0642e9 ;
+        arco-dd:hasDesignationInTime    ar-designationInTime:2000029936-villa-binaghi ;
+        arco-dd:hasUse                  <https://w3id.org/arco/resource/Use/2000029936-current-use-1> , <https://w3id.org/arco/resource/Use/2000029936-historical-use-1> ;
+        arco-location:hasCadastralIdentity
+                <https://w3id.org/arco/resource/CadastralIdentity/2000029936-1> ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:9b38c42cb5a5526d6bd341c43ca67ae9 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:2000029936-current .
+
+ar-city:cagliari  a  clvapit:City ;
+        rdfs:label  "Cagliari" ;
+        l0:name     "Cagliari" .
+
+ar-feature:66f3d0e5d8694546d13a433c89b78168
+        a                   clvapit:Feature ;
+        rdfs:label          "ITALIA Sardegna CA Cagliari Viale Trento 98" ;
+        clvapit:hasAddress  ar-address:7907294078fbec1263b297a1b9374d1d .
+
+<https://w3id.org/arco/resource/Use/2000029936-current-use-1>
+        a                    arco-cd:Use ;
+        rdfs:label           "Current use 1 of cultural property 2000029936"@en , "Uso attuale 1 del bene culturale 2000029936"@it ;
+        arco-cd:hasUseType   arco-cd:CurrentUse ;
+        arco-cd:useFunction  "uffici" ;
+        l0:name              "Current use 1 of cultural property 2000029936"@en , "Uso attuale 1 del bene culturale 2000029936"@it .
+
+ar-timeIndexedTypedLocation:2000029936-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 2000029936"@it , "Current physical location of cultural property: 2000029936"@en ;
+        arco-location:atLocation       ar-feature:66f3d0e5d8694546d13a433c89b78168 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 2000029936"@it , "Current physical location of cultural property: 2000029936"@en .
+
+ar-accessProfile:2000029936-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 2000029936: 1"@it , "Access profile to catalogue record of cultural property 2000029936: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 2000029936: 1"@it , "Access profile to catalogue record of cultural property 2000029936: 1"@en .
+
+ar-TimeInterval:1920-1925
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "1920 - 1925" ;
+        arco-arco:endTime    "1925" ;
+        arco-arco:startTime  "1920" ;
+        l0:name              "1920 - 1925" .
+
+ar-designationInTime:2000029936-villa-binaghi
+        a           arco-dd:DesignationInTime ;
+        rdfs:label  "Villa Binaghi" ;
+        l0:name     "Villa Binaghi" .
+
+<https://w3id.org/arco/resource/UrbanPlanningInstrument/2000029936-urban-planning-instrument-1>
+        a           arco-cd:UrbanPlanningInstrument ;
+        rdfs:label  "Urban planning instrument 1 of cultural property 2000029936: P.U.C."@en , "Strumento urbanistico-territoriale 1 del bene culturale 2000029936: P.U.C."@it ;
+        arco-cd:hasEligibleIntervention
+                <https://w3id.org/arco/resource/EligibleIntervention/interventi-di-restauro-e-risanamento-conservativo-manutenzione-ordinaria-e-straordinaria-cosi-come-definiti-dalla-legislazione-vigente> ;
+        l0:name     "Urban planning instrument 1 of cultural property 2000029936: P.U.C."@en , "Strumento urbanistico-territoriale 1 del bene culturale 2000029936: P.U.C."@it .
+
+<https://w3id.org/arco/resource/Use/2000029936-historical-use-1>
+        a                    arco-cd:Use ;
+        rdfs:label           "Historical use 1 of cultural property 2000029936"@en , "Uso storico 1 del bene culturale 2000029936"@it ;
+        arco-cd:hasUseType   arco-cd:HistoricalUse ;
+        arco-cd:useFunction  "abitazione" ;
+        tiapit:time          "destinazione originaria" ;
+        l0:name              "Historical use 1 of cultural property 2000029936"@en , "Uso storico 1 del bene culturale 2000029936"@it .
+
+ar-TimeInterval:xx-xx
+        a            tiapit:TimeInterval ;
+        rdfs:label   "XX - XX" ;
+        tiapit:time  "XX - XX" ;
+        l0:name      "XX - XX" .
+
+ar-agent:e7c4c29304af45b51c857f7bdbb08808
+        a           l0:Agent ;
+        rdfs:label  "Archivio Storico BAPSAE CA" ;
+        l0:name     "Archivio Storico BAPSAE CA" .
+
+<https://w3id.org/arco/resource/CulturalScopeAttribution/2000029936-cultural-scope-attribution-1>
+        a                            arco-cd:CulturalScopeAttribution ;
+        rdfs:label                   "Attribuzione di ambito culturale del bene: 2000029936"@it , "Cultural scope attribution of cultural property: 2000029936"@en ;
+        arco-cd:hasCulturalScope     <https://w3id.org/arco/resource/CulturalScope/ing-binaghi-roberto> ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:bibliografia ;
+        arco-cd:hasInterventionRole  ar-role:2000029936-progetto ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        l0:name                      "Attribuzione di ambito culturale del bene: 2000029936"@it , "Cultural scope attribution of cultural property: 2000029936"@en .
+
+ar-agentrole:2000029936-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 2000029936: S10"@it , "Heritage protection agency for cultural property 2000029936: S10"@en ;
+        arco-core:hasAgent  ar-agent:2b3357d90b70edb1773bba13390166c1 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000029936-cataloguing-agency .
+
+ar-docutmentationType:fotografia-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia B/N" ;
+        l0:name     "fotografia B/N" .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+ar-agent:4379ff3538030c38e05c3c317c7f351c
+        a           l0:Agent ;
+        rdfs:label  "Pintori, Giovanni" ;
+        l0:name     "Pintori, Giovanni" .
+
+ar-catalogueRecordVersion:2000029936-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1982 Ingegno A." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1982 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:2000029936-compilation-6ef34b347485f8e4f692aa096708e8e6 , ar-timeIndexedRole:2000029936-b69be95025aefdcc02bf9e7fc3dcdfa6 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:6ef34b347485f8e4f692aa096708e8e6 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:6ef34b347485f8e4f692aa096708e8e6 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordA/2000029936> .
+
+ar-agentrole:2000029936-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 2000029936: S10"@it , "Cataloguing agency for cultural property 2000029936: S10"@en ;
+        arco-core:hasAgent  ar-agent:2b3357d90b70edb1773bba13390166c1 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-event:2000029936costruzione
+        a                      l0:Event ;
+        rdfs:label             "costruzione"@it , "costruzione"@en ;
+        arco-cd:specificTime   ar-TimeInterval:1920-1925 ;
+        arco-core:description  "L'edificio, che fa parte di un complesso costituito da due unità immobiliari inserite in un ampio giardino, risulta costruito tra il 1920 e il 1925." ;
+        tiapit:atTime          ar-TimeInterval:xx-xx ;
+        l0:name                "costruzione"@it , "costruzione"@en .
+
+ar-culturalPropertyType:ed3f29fee9e28e36f7cdc8115e0642e9
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: villa"@it , "Cultural property type: villa"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:villa ;
+        l0:name     "Tipo del bene: villa"@it , "Cultural property type: villa"@en .
+
+ar-bibliography:2000029936-bibliography-2
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliografia 2 del bene culturale: 2000029936"@it , "Bibliography 2 of cultural property: 2000029936"@en ;
+        arco-cd:bibliographyICCDIdentifier
+                "S10A0047" ;
+        arco-cd:bibliographyLocalIdentifier
+                "S10A0047" ;
+        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "pp. 82..83" ;
+        l0:name                   "Bibliography 2 of cultural property: 2000029936"@en , "Bibliografia 2 del bene culturale: 2000029936"@en .
+
+ar-catalogueRecordVersion:2000029936-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2006 Laconi P." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:2000029936-rvm-27a1a2bc2eddf9a693e0a6e271bd7696 , ar-timeIndexedRole:2000029936-b69be95025aefdcc02bf9e7fc3dcdfa6 ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:27a1a2bc2eddf9a693e0a6e271bd7696 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:6ef34b347485f8e4f692aa096708e8e6 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordA/2000029936> .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-agent:8a8dff1eb52a4b9f96c1d55baf5785ed
+        a           l0:Agent ;
+        rdfs:label  "Laconi, Patrizia" .
+
+ar-timeIndexedRole:2000029936-rvm-27a1a2bc2eddf9a693e0a6e271bd7696
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da Laconi P."@it , "Digital transcription by Laconi P."@en ;
+        roapit:isRoleInTimeOf  ar-agent:27a1a2bc2eddf9a693e0a6e271bd7696 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+<https://w3id.org/arco/resource/CulturalScope/ing-binaghi-roberto>
+        a           arco-cd:CulturalScope ;
+        rdfs:label  "ing. Binaghi Roberto" ;
+        l0:name     "ing. Binaghi Roberto" .
+
+ar-agentrole:2000029936-photographic-documentation-2-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 2 del bene culturale 2000029936: S10"@it , "Owner agency of photographic documentation 2 of cultural property 2000029936: S10"@en ;
+        arco-core:hasAgent  ar-agent:2b3357d90b70edb1773bba13390166c1 ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 2 del bene culturale 2000029936: S10"@it , "Owner agency of photographic documentation 2 of cultural property 2000029936: S10"@en .
+
+ar-agent:2b3357d90b70edb1773bba13390166c1
+        a                    COV:Organization , l0:Agent ;
+        rdfs:label           "S10" , "Soprintendenza per i Beni Architettonici Paesaggistici Storici Artistici ed Etnoantropologici per le province di Cagliari e Oristano" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        arco-core:isAgentOf  ar-agentrole:2000029936-heritage-protection-agency , ar-agentrole:2000029936-cataloguing-agency , ar-agentrole:2000029936-photographic-documentation-2-photographic-documentation-owner ;
+        l0:name              "Soprintendenza per i Beni Architettonici Paesaggistici Storici Artistici ed Etnoantropologici per le province di Cagliari e Oristano" , "S10" .
+
+ar-bibliography:2000029936-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 2000029936"@en , "Bibliografia 1 del bene culturale: 2000029936"@it ;
+        arco-cd:bibliographyICCDIdentifier
+                "S10A0002" ;
+        arco-cd:bibliographyLocalIdentifier
+                "S10A0002" ;
+        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p.45" ;
+        l0:name                   "Bibliography 1 of cultural property: 2000029936"@en , "Bibliografia 1 del bene culturale: 2000029936"@en .
+
+ar-role:UpdateResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+ar-docutmentationType:progetti-di-restauro-relazioni-provvedimenti-di
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "progetti di restauro/ relazioni/ provvedimenti di" ;
+        l0:name     "progetti di restauro/ relazioni/ provvedimenti di" .
+
+ar-catalogueRecordVersion:2000029936-agg-1
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2013 Laconi, Patrizia Fiorino, Donatella Rita" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:2000029936-agg-1-8a8dff1eb52a4b9f96c1d55baf5785ed , ar-timeIndexedRole:2000029936-97be811cf44625afcd4a2ae75ed41bed ;
+        arco-catalogue:hasUpdateOfficialInCharge
+                ar-agent:d93754ac5136dcd525ad67b2f3a29102 ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                ar-agent:8a8dff1eb52a4b9f96c1d55baf5785ed ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordA/2000029936> .
+
+<https://w3id.org/arco/resource/EligibleIntervention/interventi-di-restauro-e-risanamento-conservativo-manutenzione-ordinaria-e-straordinaria-cosi-come-definiti-dalla-legislazione-vigente>
+        a           arco-cd:EligibleIntervention ;
+        rdfs:label  "interventi di restauro e risanamento conservativo/manutenzione ordinaria e straordinaria, così come definiti dalla legislazione vigente." ;
+        l0:name     "interventi di restauro e risanamento conservativo/manutenzione ordinaria e straordinaria, così come definiti dalla legislazione vigente." .
+
+ar-agent:27a1a2bc2eddf9a693e0a6e271bd7696
+        a           l0:Agent ;
+        rdfs:label  "Laconi P." .
+
+<https://w3id.org/arco/resource/ProtectiveMeasure/2000029936-protective-measure-1>
+        a                             arco-cd:ProtectiveMeasure ;
+        rdfs:label                    "Protective measure 1 of cultural property 2000029936: DM (L. n. 1089/1939, artt. 1, 4)"@en , "Provvedimento di tutela 1 del bene culturale 2000029936: DM (L. n. 1089/1939, artt. 1, 4)"@it ;
+        arco-cd:issueDate             "1980/07/31" ;
+        arco-cd:registrationDateOrGU  "1981/03/31" ;
+        l0:name                       "Protective measure 1 of cultural property 2000029936: DM (L. n. 1089/1939, artt. 1, 4)"@en , "Provvedimento di tutela 1 del bene culturale 2000029936: DM (L. n. 1089/1939, artt. 1, 4)"@it .
+
+<https://w3id.org/arco/resource/SourceAndDocument/2000029936-source-document-1>
+        a                              arco-cd:SourceAndDocument ;
+        rdfs:label                     "Sources and documents 1 of cultural property: 2000029936"@en , "Fonti e documenti 1 del bene culturale: 2000029936"@it ;
+        arco-cd:documentationIdentifier
+                "ASBAPSAECA110809" ;
+        arco-cd:documentationLocation  "CA/11-(08)-09" ;
+        arco-cd:hasArchive             ar-agent:e7c4c29304af45b51c857f7bdbb08808 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:progetti-di-restauro-relazioni-provvedimenti-di ;
+        arco-cd:isDocumentationOf      <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        tiapit:time                    "dal 1980 al 1998" ;
+        l0:name                        "Sources and documents 1 of cultural property: 2000029936"@en , "Fonti e documenti 1 del bene culturale: 2000029936"@en .
+
+<https://w3id.org/arco/resource/InterpretationCriterion/1999-loddo-g-cagliari%3A-architetture-dal-1900-al-1945>
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "https://w3id.org/arco/resource/InterpretationCriterion/1999-loddo-g-cagliari%3A-architetture-dal-1900-al-1945" ;
+        l0:name     "https://w3id.org/arco/resource/InterpretationCriterion/1999-loddo-g-cagliari%3A-architetture-dal-1900-al-1945" .
+
+<https://w3id.org/arco/resource/ChangeOfAvailability/2000029936-change-of-availability>
+        a               arco-cd:ChangeOfAvailability ;
+        rdfs:label      "Mutamento condizione materiale del bene culturale: 2000029936"@it , "Change of availability of cultural property: 2000029936"@en ;
+        arco-cd:hasChangeOfAvailabilityType
+                <https://w3id.org/arco/resource/ChangeOfAvailabilityType/acquisto> ;
+        arco-core:note  "Acquirente Ministero delle Finanze come da Verbale di presa di possesso per assunzione in consegna dei fabbricati" ;
+        tiapit:time     "1983/11/15" ;
+        l0:name         "Mutamento condizione materiale del bene culturale: 2000029936"@it , "Change of availability of cultural property: 2000029936"@en .
+
+ar-TimeInterval:1982  a  tiapit:TimeInterval ;
+        rdfs:label   "1982" ;
+        tiapit:time  "1982" .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-interpretationCriterion:bibliografia
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "bibliografia" ;
+        l0:name     "bibliografia" .
+
+ar-TimeInterval:1981-00-00-non-accertata
+        a                    tiapit:TimeInterval ;
+        arco-arco:endTime    "non accertata" ;
+        arco-arco:startTime  "1981/00/00" .
+
+ar-region:sardegna  a  clvapit:Region ;
+        rdfs:label  "Sardegna" ;
+        l0:name     "Sardegna" .
+
+ar-address:7907294078fbec1263b297a1b9374d1d
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Sardegna, CA, Cagliari, Viale Trento 98" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        clvapit:fullAddress  "Viale Trento 98" ;
+        clvapit:hasCity      ar-city:cagliari ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:ca ;
+        clvapit:hasRegion    ar-region:sardegna .
+
+ar-photograpyDocumentation:2000029936-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 2000029936"@en , "Documentazione fotografica 2 del bene culturale: 2000029936"@it ;
+        arco-cd:documentationIdentifier
+                "New_1387271619416" ;
+        arco-cd:hasAuthor             ar-agent:4379ff3538030c38e05c3c317c7f351c ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        arco-core:hasAgentRole        ar-agentrole:2000029936-photographic-documentation-2-photographic-documentation-owner ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        tiapit:time                   "2013" ;
+        l0:name                       "Documentazione fotografica 2 del bene culturale: 2000029936"@en , "Photographic documentation 2 of cultural property: 2000029936"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000029936-heritage-protection-agency .
+
+<https://w3id.org/arco/resource/CatalogueRecordA/2000029936>
+        a           arco-catalogue:CatalogueRecordA ;
+        rdfs:label  "Catalogue Record n: 2000029936"@en , "Scheda catalografica n: 2000029936"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "2000029936" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:2000029936-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:2000029936-agg-1 , ar-catalogueRecordVersion:2000029936-compilation , ar-catalogueRecordVersion:2000029936-rvm ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "Scheda-A" .
+
+ar-dating:2000029936-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 2000029936"@it , "Dating 1 of cultural property 2000029936"@en ;
+        arco-cd:hasDatingEvent  ar-event:2000029936costruzione ;
+        arco-cd:hasInterpretationCriterion
+                <https://w3id.org/arco/resource/InterpretationCriterion/1999-loddo-g-cagliari%3A-architetture-dal-1900-al-1945> ;
+        l0:name                 "Dating 1 of cultural property 2000029936"@en , "Cronologia 1 del bene 2000029936"@it .
+
+ar-agent:c856d9b5af5da2a1f94b65e9865a1c47
+        a           l0:Agent ;
+        rdfs:label  "Ente MiBAC in consegna a SOPRINTENDENZA PER I BENI ARCHITETTONICI PAESAGGISTICI STORICI ARTISTICI ED ETNOANTROPOLOGICI PER LE PROVINCE DI CAGLIARI E ORISTANO" ;
+        l0:name     "Ente MiBAC in consegna a SOPRINTENDENZA PER I BENI ARCHITETTONICI PAESAGGISTICI STORICI ARTISTICI ED ETNOANTROPOLOGICI PER LE PROVINCE DI CAGLIARI E ORISTANO" .
+
+ar-TimeInterval:2006  a  tiapit:TimeInterval ;
+        rdfs:label   "2006" ;
+        tiapit:time  "2006" .
+
+ar-timeIndexedRole:2000029936-97be811cf44625afcd4a2ae75ed41bed
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             " di aggiornamento: Fiorino, Donatella Rita"@it , "Update official in charge: Fiorino, Donatella Rita"@en ;
+        roapit:isRoleInTimeOf  ar-agent:d93754ac5136dcd525ad67b2f3a29102 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-role:Owner  a            roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000029936-photographic-documentation-2-photographic-documentation-owner .
+
+<https://w3id.org/arco/resource/ConservationStatus/2000029936-conservation-status-1>
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 2000029936"@it , "Conservation status 1 of cultural property: 2000029936"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:GoodConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 2000029936"@it , "Conservation status 1 of cultural property: 2000029936"@en .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+<https://w3id.org/arco/resource/CadastralUnitCollection/2000029936-1-1>
+        a           arco-location:CadastralUnitCollection ;
+        rdfs:label  "Collezione di particelle catastali del bene culturale 2000029936: mapp. 467 sub 1 - 2 - 3"@it , "Cadastral unit collection of cultural property 2000029936: mapp. 467 sub 1 - 2 - 3"@en ;
+        l0:name     "Collezione di particelle catastali del bene culturale 2000029936: mapp. 467 sub 1 - 2 - 3"@it , "Cadastral unit collection of cultural property 2000029936: mapp. 467 sub 1 - 2 - 3"@en .
+
+ar-timeIndexedRole:2000029936-agg-1-8a8dff1eb52a4b9f96c1d55baf5785ed
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: Laconi, Patrizia"@it , "Update responsible compilation: Laconi, Patrizia"@en ;
+        roapit:isRoleInTimeOf  ar-agent:8a8dff1eb52a4b9f96c1d55baf5785ed ;
+        roapit:withRole        ar-role:UpdateResponsibleCompilation .
+
+ar-timeIndexedRole:2000029936-compilation-6ef34b347485f8e4f692aa096708e8e6
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Ingegno A."@en , "Compilazione da Ingegno A."@it ;
+        roapit:isRoleInTimeOf  ar-agent:6ef34b347485f8e4f692aa096708e8e6 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-role:2000029936-progetto
+        a           roapit:Role ;
+        rdfs:label  "progetto" ;
+        l0:name     "progetto" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-TimeInterval:2013  a  tiapit:TimeInterval ;
+        rdfs:label   "2013" ;
+        tiapit:time  "2013" .
+
+<https://w3id.org/arco/resource/ConservationIntervention/2000029936-conservation-intervention-1>
+        a                      arco-cd:ConservationIntervention ;
+        rdfs:label             "Conservation intervention 1 on cultural property 2000029936"@en , "Intervento conservativo 1 sul bene culturale 2000029936"@it ;
+        arco-core:description  "Lavori realizzati in lotti per adattamento a nuova sede Soprintendenza con interventi di ristrutturazione completa di tutti gli spazi da destinare a uffici e depositi" ;
+        tiapit:atTime          ar-TimeInterval:1981-00-00-non-accertata ;
+        l0:name                "Conservation intervention 1 on cultural property 2000029936"@en , "Intervento conservativo 1 sul bene culturale 2000029936"@it .
+
+<https://w3id.org/arco/resource/ChangeOfAvailabilityType/acquisto>
+        a           arco-cd:ChangeOfAvailabilityType ;
+        rdfs:label  "acquisto" ;
+        l0:name     "acquisto" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-photograpyDocumentation:2000029936-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 2000029936"@en , "Documentazione fotografica 1 del bene culturale: 2000029936"@it ;
+        arco-cd:documentationIdentifier
+                "3 (S10 19948)" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/2000029936> ;
+        arco-core:hasCategory         arco-cd:ExistingDocumentation ;
+        arco-core:note                "Prospetto su Viale Trento (1982)" ;
+        l0:name                       "Documentazione fotografica 1 del bene culturale: 2000029936"@en , "Photographic documentation 1 of cultural property: 2000029936"@en .
+
+ar-agent:6ef34b347485f8e4f692aa096708e8e6
+        a           l0:Agent ;
+        rdfs:label  "Ingegno A." .
+
+ar-timeIndexedRole:2000029936-b69be95025aefdcc02bf9e7fc3dcdfa6
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Ingegno A."@it , "Official in charge: Ingegno A."@en ;
+        roapit:isRoleInTimeOf  ar-agent:6ef34b347485f8e4f692aa096708e8e6 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-legalSituation:2000029936-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 2000029936: proprietà Stato"@it , "Legal situation of cultural property 2000029936: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:c856d9b5af5da2a1f94b65e9865a1c47 ;
+        l0:name           "Condizione giuridica del bene culturale 2000029936: proprietà Stato"@it , "Legal situation of cultural property 2000029936: proprietà Stato"@en .

@@ -1,0 +1,422 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-catalogueRecordVersion:0900206599-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER MEMORIZZAZIONE - 2008 Maraschini V." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2008 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0900206599-0086faa3aa2044730f7afed3a2e6c198 , ar-timeIndexedRole:0900206599-6f82716912aa2f23ca7c75e9bb614411 , ar-timeIndexedRole:0900206599-rvm-691ba1b4f9619b28a34f180c1a7fad50 ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:691ba1b4f9619b28a34f180c1a7fad50 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:d277736129404c7d3083bfe3225b32c9 , ar-agent:691ba1b4f9619b28a34f180c1a7fad50 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordRA/0900206599> .
+
+ar-timeIndexedRole:0900206599-6f82716912aa2f23ca7c75e9bb614411
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Maraschini V."@it , "Official in charge: Maraschini V."@en ;
+        roapit:isRoleInTimeOf  ar-agent:691ba1b4f9619b28a34f180c1a7fad50 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-culturalPropertyDefinition:kantharos
+        a                arco-dd:CulturalPropertyDefinition ;
+        rdfs:label       "kantharos" ;
+        skos:closeMatch  <http://dati.beniculturali.it/vocabularies/reperti_archeologici/def/009.005.000.071> .
+
+ar-event:0900206599-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0900206599"@it , "Creation of cultural property 0900206599"@en ;
+        arco-cd:specificTime  ar-TimeInterval:700-ac-602-ac ;
+        tiapit:atTime         ar-TimeInterval:vii-secolo-ac ;
+        l0:name               "Realizzazione del bene 0900206599"@it , "Creation of cultural property 0900206599"@en .
+
+ar-agentrole:0900206599-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0900206599: S15"@it , "Heritage protection agency for cultural property 0900206599: S15"@en ;
+        arco-core:hasAgent  ar-agent:d3bea8363a5046e239c8433d1f5f0828 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-TimeInterval:1985  a  tiapit:TimeInterval ;
+        rdfs:label   "1985" ;
+        tiapit:time  "1985" .
+
+ar-catalogueRecordVersion:0900206599-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1985 Poggesi G." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1985 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0900206599-6f82716912aa2f23ca7c75e9bb614411 , ar-timeIndexedRole:0900206599-0086faa3aa2044730f7afed3a2e6c198 , ar-timeIndexedRole:0900206599-compilation-f20de576775115aa8cc2e099550fe15a ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:d277736129404c7d3083bfe3225b32c9 , ar-agent:691ba1b4f9619b28a34f180c1a7fad50 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:f20de576775115aa8cc2e099550fe15a ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordRA/0900206599> .
+
+ar-photograpyDocumentation:0900206599-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 0900206599"@en , "Documentazione fotografica 2 del bene culturale: 0900206599"@it ;
+        arco-cd:documentationIdentifier
+                "SAFI51036" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:0900206599 ;
+        arco-core:hasCategory         <https://w3id.org/arco/resource/DocumentationCategory/fotografie-allegate> ;
+        l0:name                       "Photographic documentation 2 of cultural property: 0900206599"@en , "Documentazione fotografica 2 del bene culturale: 0900206599"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordRA/0900206599>
+        a           arco-catalogue:CatalogueRecordRA ;
+        rdfs:label  "Catalogue Record n: 0900206599"@en , "Scheda catalografica n: 0900206599"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0900206599" ;
+        arco-catalogue:describesCulturalProperty
+                ar-archeologicalProperty:0900206599 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0900206599-compilation , ar-catalogueRecordVersion:0900206599-rvm ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "Scheda-RA" .
+
+ar-address:d41d8cd98f00b204e9800998ecf8427e
+        a                   clvapit:Address ;
+        rdfs:label          "ITALIA" ;
+        clvapit:hasCountry  ar-country:italia .
+
+ar-timeIndexedTypedLocation:0900206599-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0900206599"@it , "Current physical location of cultural property: 0900206599"@en ;
+        arco-core:specifications       "Piano II,Sala 2" ;
+        arco-location:atSite           <https://w3id.org/arco/resource/Site/a1e688cadae05c427aef51d28512c8e5> ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:0900206599 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0900206599"@it , "Current physical location of cultural property: 0900206599"@en .
+
+ar-agent:d3bea8363a5046e239c8433d1f5f0828
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Archeologia della Toscana" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-archeologicalProperty:0900206599 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-archeologicalProperty:0900206599 ;
+        arco-core:isAgentOf  ar-agentrole:0900206599-cataloguing-agency , ar-agentrole:0900206599-heritage-protection-agency ;
+        l0:name              "Soprintendenza Archeologia della Toscana" .
+
+ar-agent:f20de576775115aa8cc2e099550fe15a
+        a           l0:Agent ;
+        rdfs:label  "Poggesi G." .
+
+ar-city:firenze  a  clvapit:City ;
+        rdfs:label  "Firenze" ;
+        l0:name     "Firenze" .
+
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0900206599>
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0900206599"@it , "Technical status of cultural property 0900206599"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                <https://w3id.org/arco/resource/TechnicalCharacteristic/impasto-a-impressione> ;
+        l0:name     "Stato tecnico del bene culturale 0900206599"@it , "Technical status of cultural property 0900206599"@en .
+
+ar-agent:d277736129404c7d3083bfe3225b32c9
+        a           l0:Agent ;
+        rdfs:label  "Maggiani A." .
+
+<https://w3id.org/arco/resource/CulturalPropertyCategory/ceramica-di-impasto>
+        a           arco-arco:CulturalPropertyCategory ;
+        rdfs:label  "Ceramica di impasto" .
+
+<https://w3id.org/arco/resource/TechnicalCharacteristic/impasto-a-impressione>
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "impasto/ a impressione" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "impasto/ a impressione" .
+
+ar-timeIndexedRole:0900206599-0086faa3aa2044730f7afed3a2e6c198
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Maggiani A."@it , "Official in charge: Maggiani A."@en ;
+        roapit:isRoleInTimeOf  ar-agent:d277736129404c7d3083bfe3225b32c9 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+<https://w3id.org/arco/resource/MeasurementCollection/0900206599-1>
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0900206599"@en , "Misure del bene culturale 0900206599"@it ;
+        arco-core:note          "max.: 166" ;
+        arco-dd:hasMeasurement  <https://w3id.org/arco/resource/Measurement/0900206599-1-height> ;
+        l0:name                 "Measurements of cultural property 0900206599"@en , "Misure del bene culturale 0900206599"@it .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900206599-cataloguing-agency .
+
+ar-photograpyDocumentation:0900206599-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 0900206599"@en , "Documentazione fotografica 1 del bene culturale: 0900206599"@it ;
+        arco-cd:documentationIdentifier
+                "SAFI41124/7" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:positivo-b-n ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:0900206599 ;
+        arco-core:hasCategory         <https://w3id.org/arco/resource/DocumentationCategory/fotografie-esistenti> ;
+        l0:name                       "Photographic documentation 1 of cultural property: 0900206599"@en , "Documentazione fotografica 1 del bene culturale: 0900206599"@en .
+
+ar-province:fi  a   clvapit:Province ;
+        rdfs:label  "FI" ;
+        l0:name     "FI" .
+
+<https://w3id.org/arco/resource/Measurement/0900206599-1-height>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0900206599: 138mm."@en , "Misura del bene culturale 0900206599: 138mm."@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            <https://w3id.org/arco/resource/Value/0900206599-1-height-138> ;
+        l0:name                     "Measurement of cultural property 0900206599: 138mm."@en , "Misura del bene culturale 0900206599: 138mm."@it .
+
+<https://w3id.org/arco/resource/ConservationStatus/0900206599-conservation-status-1>
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 0900206599"@it , "Conservation status 1 of cultural property: 0900206599"@en ;
+        arco-core:specifications  "parzialmente integrato" ;
+        arco-dd:hasConservationStatusType
+                <https://w3id.org/arco/resource/ConservationStatusType/ricomposto> ;
+        l0:name                   "Stato di conservazione 1 del bene: 0900206599"@it , "Conservation status 1 of cultural property: 0900206599"@en .
+
+<https://w3id.org/arco/resource/Site/a1e688cadae05c427aef51d28512c8e5>
+        a                cis:Site ;
+        rdfs:label       "Museo Archeologico Nazionale" ;
+        cis:siteAddress  ar-address:7ba1a418b9135aeda387d316d4b8c032 ;
+        l0:name          "Museo Archeologico Nazionale" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/mm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "mm." ;
+        l0:name     "mm." .
+
+<https://w3id.org/arco/resource/Value/0900206599-1-height-138>
+        a                      mu:Value ;
+        rdfs:label             "138"@en , "138"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "138" .
+
+ar-address:7ba1a418b9135aeda387d316d4b8c032
+        a                       clvapit:Address ;
+        rdfs:label              "ITALIA, FI, Firenze, Firenze" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-archeologicalProperty:0900206599 ;
+        clvapit:fullAddress     "Piazza della Santissima Annunziata, 9" ;
+        clvapit:hasAddressArea  ar-addressArea:firenze ;
+        clvapit:hasCity         ar-city:firenze ;
+        clvapit:hasCountry      ar-country:italia ;
+        clvapit:hasProvince     ar-province:fi .
+
+ar-TimeInterval:2008  a  tiapit:TimeInterval ;
+        rdfs:label   "2008" ;
+        tiapit:time  "2008" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-culturalPropertyType:a6983606a603b5747fecd8c68f27a3fe
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: kantharos"@it , "Cultural property type: kantharos"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:kantharos ;
+        l0:name     "Tipo del bene: kantharos"@it , "Cultural property type: kantharos"@en .
+
+ar-docutmentationType:fotografia-digitale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale" ;
+        l0:name     "fotografia digitale" .
+
+ar-docutmentationType:positivo-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "positivo b/n" ;
+        l0:name     "positivo b/n" .
+
+<https://w3id.org/arco/resource/ConservationStatusType/ricomposto>
+        a           arco-dd:ConservationStatusType ;
+        rdfs:label  "ricomposto" ;
+        l0:name     "ricomposto" .
+
+ar-dating:0900206599-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0900206599"@it , "Dating 1 of cultural property 0900206599"@en ;
+        arco-cd:hasDatingEvent  ar-event:0900206599-creation-1 ;
+        l0:name                 "Dating 1 of cultural property 0900206599"@en , "Cronologia 1 del bene 0900206599"@it .
+
+<https://w3id.org/arco/resource/DocumentationCategory/fotografie-allegate>
+        a           arco-cd:DocumentationCategory ;
+        rdfs:label  "fotografie allegate" ;
+        l0:name     "fotografie allegate" .
+
+ar-timeIndexedTypedLocation:0900206599-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 0900206599"@it , "Alternative location 1 of cultural property: 0900206599"@en ;
+        arco-location:atLocation       ar-feature:fbf5f839bf16f0f3c8e03b9e8bc2e5c2 ;
+        arco-location:hasLocationType  arco-location:FindingLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:0900206599 ;
+        l0:name                        "Altra localizzazione 1 del bene: 0900206599"@it , "Alternative location 1 of cultural property: 0900206599"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900206599-heritage-protection-agency .
+
+<https://w3id.org/arco/resource/DocumentationCategory/fotografie-esistenti>
+        a           arco-cd:DocumentationCategory ;
+        rdfs:label  "fotografie esistenti" ;
+        l0:name     "fotografie esistenti" .
+
+ar-agentrole:0900206599-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0900206599: S15"@it , "Cataloguing agency for cultural property 0900206599: S15"@en ;
+        arco-core:hasAgent  ar-agent:d3bea8363a5046e239c8433d1f5f0828 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-timeIndexedRole:0900206599-compilation-f20de576775115aa8cc2e099550fe15a
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Poggesi G."@en , "Compilazione da Poggesi G."@it ;
+        roapit:isRoleInTimeOf  ar-agent:f20de576775115aa8cc2e099550fe15a ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-feature:fbf5f839bf16f0f3c8e03b9e8bc2e5c2
+        a                   clvapit:Feature ;
+        rdfs:label          "ITALIA" ;
+        clvapit:hasAddress  ar-address:d41d8cd98f00b204e9800998ecf8427e .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+ar-TimeInterval:700-ac-602-ac
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "700 a.C. - 602 a.C." ;
+        arco-arco:endTime    "602 a.C." ;
+        arco-arco:startTime  "700 a.C." ;
+        l0:name              "700 a.C. - 602 a.C." .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-legalSituation:0900206599-legal-situation-proprieta-stato
+        a           arco-cd:LegalSituation ;
+        rdfs:label  "Condizione giuridica del bene culturale 0900206599: proprietà Stato"@it , "Legal situation of cultural property 0900206599: proprietà Stato"@en ;
+        l0:name     "Condizione giuridica del bene culturale 0900206599: proprietà Stato"@it , "Legal situation of cultural property 0900206599: proprietà Stato"@en .
+
+ar-TimeInterval:vii-secolo-ac
+        a            tiapit:TimeInterval ;
+        rdfs:label   "VII secolo a.C." ;
+        tiapit:time  "VII secolo a.C." ;
+        l0:name      "VII secolo a.C." .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-timeIndexedRole:0900206599-rvm-691ba1b4f9619b28a34f180c1a7fad50
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER MEMORIZZAZIONE da Maraschini V."@it , "Digital transcription by Maraschini V."@en ;
+        roapit:isRoleInTimeOf  ar-agent:691ba1b4f9619b28a34f180c1a7fad50 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-addressArea:firenze
+        a           clvapit:AddressArea ;
+        rdfs:label  "Firenze" ;
+        l0:name     "Firenze" .
+
+ar-agent:691ba1b4f9619b28a34f180c1a7fad50
+        a           l0:Agent ;
+        rdfs:label  "Maraschini V." .
+
+ar-archeologicalProperty:0900206599
+        a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
+        rdfs:comment                    "kantharos" ;
+        rdfs:label                      "kantharos (VII secolo a.C.)"@it , "kantharos (VII secolo a.C.)"@en ;
+        arco-arco:catalogueNumber       "00206599" ;
+        arco-arco:description           "Corpo biconico con labbro estroflesso;collo a profilo leggermente concavo;piede tronco-conico distinto;anse a bastoncello,verticali,con apofisi coniche in corrispondenza degli attacchi superiori. Impasto nerastro a chiazze brune,decorazione impressa Decorazione:sulla parte centrale del corpo fascia delimitata da linee a falsa cordicella,suddivisa in tre parti,con cuppelle ai lati ed apofisi sormontate da archetto a falsa cordicella al centro." ;
+        arco-arco:hasCataloguingAgency  ar-agent:d3bea8363a5046e239c8433d1f5f0828 ;
+        arco-arco:hasCulturalPropertyCategory
+                <https://w3id.org/arco/resource/CulturalPropertyCategory/ceramica-di-impasto> ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:d3bea8363a5046e239c8433d1f5f0828 ;
+        arco-arco:regionIdentifier      "09" ;
+        arco-arco:uniqueIdentifier      "0900206599" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordRA/0900206599> ;
+        arco-cd:findingNote             "Dalle Antiche Collezioni" ;
+        arco-cd:hasDating               ar-dating:0900206599-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0900206599-photographic-documentation-2 , ar-photograpyDocumentation:0900206599-photographic-documentation-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0900206599-legal-situation-proprieta-stato ;
+        arco-core:hasAgentRole          ar-agentrole:0900206599-heritage-protection-agency , ar-agentrole:0900206599-cataloguing-agency ;
+        arco-dd:hasConservationStatus   <https://w3id.org/arco/resource/ConservationStatus/0900206599-conservation-status-1> ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:a6983606a603b5747fecd8c68f27a3fe ;
+        arco-dd:hasMaterialOrTechnique  <https://w3id.org/arco/resource/TechnicalCharacteristic/impasto-a-impressione> ;
+        arco-dd:hasMeasurementCollection
+                <https://w3id.org/arco/resource/MeasurementCollection/0900206599-1> ;
+        arco-dd:hasTechnicalStatus      <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0900206599> ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:953ff50af600f7915d2bf649fd579efb ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0900206599-alternative-1 , ar-timeIndexedTypedLocation:0900206599-current .

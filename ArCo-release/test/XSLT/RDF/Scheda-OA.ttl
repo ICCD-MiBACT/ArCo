@@ -1,0 +1,509 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-TimeInterval:1993  a  tiapit:TimeInterval ;
+        rdfs:label   "1993" ;
+        tiapit:time  "1993" .
+
+ar-culturalPropertyType:e0f85950871864ae68bbd52aa767ef8c
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: scultura"@it , "Cultural property type: scultura"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:scultura ;
+        l0:name     "Tipo del bene: scultura"@it , "Cultural property type: scultura"@en .
+
+ar-address:c0716b4e59129ca29c4206e610348d83
+        a                    clvapit:Address ;
+        rdfs:label           "Italia, Veneto, PD, Padova" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        clvapit:fullAddress  "Via Orto Botanico, 15" ;
+        clvapit:hasCity      ar-city:padova ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:pd ;
+        clvapit:hasRegion    ar-region:veneto .
+
+<https://w3id.org/arco/resource/Value/0500177321-16-1-height-80>
+        a           mu:Value ;
+        rdfs:label  "80"@en , "80"@it ;
+        mu:value    "80" .
+
+ar-agent:7c6d0071bd87a051bc4b945392e573f5
+        a                    COV:Organization ;
+        rdfs:label           "S76" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        arco-core:isAgentOf  ar-agentrole:0500177321-16-cataloguing-agency ;
+        l0:name              "S76" .
+
+ar-interpretationCriterion:iscrizione
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "Iscrizione" ;
+        l0:name     "Iscrizione" .
+
+ar-timeIndexedTypedLocation:0500177321-16-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0500177321-16"@it , "Current physical location of cultural property: 0500177321-16"@en ;
+        arco-core:note                 "Ubicazione originaria: OR" ;
+        arco-core:specifications       "Balaustrata" ;
+        arco-location:atSite           <https://w3id.org/arco/resource/Site/4812fe3241cc2ac38012180566202e6e> ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0500177321-16"@it , "Current physical location of cultural property: 0500177321-16"@en .
+
+ar-privacyReason:dati-pubblicabili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "dati pubblicabili" ;
+        l0:name     "dati pubblicabili" .
+
+<https://w3id.org/arco/resource/Commission/0500177321-16-1>
+        a                      arco-cd:Commission ;
+        rdfs:label             "Committenza 1 del bene 0500177321-16"@it , "Commission 1 of cultural property 0500177321-16"@en ;
+        arco-cd:hasCommittent  ar-agent:2b40682d79465f6d711050617e285490 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:documentazione ;
+        tiapit:time            "1760" ;
+        l0:name                "Commission 1 of cultural property 0500177321-16"@en , "Committenza 1 del bene 0500177321-16"@it .
+
+ar-TimeInterval:sec-xviii
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XVIII" ;
+        tiapit:time  "sec. XVIII" ;
+        l0:name      "sec. XVIII" .
+
+<https://w3id.org/arco/resource/TechnicalCharacteristic/a-solchi>
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a solchi" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a solchi" .
+
+<https://w3id.org/arco/resource/SiteSpecification/universitario>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "universitario" .
+
+<https://w3id.org/arco/resource/SiteType/orto-botanico-universitario>
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: orto botanico universitario"@it , "Site type: orto botanico universitario"@en ;
+        arco-location:hasSiteDefinition
+                <https://w3id.org/arco/resource/SiteDefinition/orto-botanico> ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/universitario> ;
+        l0:name     "Tipo di contenitore fisico: orto botanico universitario"@it , "Site type: orto botanico universitario"@en .
+
+ar-catalogueRecordVersion:0500177321-16-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1993 Piva R." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1993 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0500177321-16-compilation-b77e88ea4ee0e85f52610e14a72fd7a1 , ar-timeIndexedRole:0500177321-16-59a1574fbb32ef6fc0ee256af6ef5f83 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:879088b5018ca9da1da982a70983ae9b ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:b77e88ea4ee0e85f52610e14a72fd7a1 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordOA/0500177321-16> .
+
+<https://w3id.org/arco/resource/CatalogueRecordOA/0500177321-16>
+        a           arco-catalogue:CatalogueRecordOA ;
+        rdfs:label  "Scheda catalografica n: 0500177321-16"@it , "Catalogue Record n: 0500177321-16"@en ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0500177321-16" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0500177321-16-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0500177321-16-agg-1 , ar-catalogueRecordVersion:0500177321-16-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "Scheda-OA" .
+
+<https://w3id.org/arco/resource/Site/4812fe3241cc2ac38012180566202e6e>
+        a                          cis:Site ;
+        rdfs:label                 "Orto Botanico" ;
+        cis:siteAddress            ar-address:c0716b4e59129ca29c4206e610348d83 ;
+        arco-location:hasSiteType  <https://w3id.org/arco/resource/SiteType/orto-botanico-universitario> ;
+        l0:name                    "Orto Botanico" .
+
+<https://w3id.org/arco/resource/ConservationStatus/0500177321-16-conservation-status-1>
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 0500177321-16"@it , "Conservation status 1 of cultural property: 0500177321-16"@en ;
+        arco-core:specifications  "Corrosioni" ;
+        arco-dd:hasConservationStatusType
+                arco-dd:MediocreConservationStatus ;
+        l0:name                   "Stato di conservazione 1 del bene: 0500177321-16"@it , "Conservation status 1 of cultural property: 0500177321-16"@en .
+
+ar-city:padova  a   clvapit:City ;
+        rdfs:label  "Padova" ;
+        l0:name     "Padova" .
+
+ar-agent:c19ee496a75f42bcb59a96b0e19872c5
+        a           l0:Agent ;
+        rdfs:label  "ARTPAST/ Cailotto C." .
+
+<https://w3id.org/arco/resource/Measurement/0500177321-16-1-height>
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0500177321-16: 80"@en , "Misura del bene culturale 0500177321-16: 80"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            <https://w3id.org/arco/resource/Value/0500177321-16-1-height-80> ;
+        l0:name                     "Measurement of cultural property 0500177321-16: 80"@en , "Misura del bene culturale 0500177321-16: 80"@it .
+
+ar-accessProfile:0500177321-16-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0500177321-16: 1"@it , "Access profile to catalogue record of cultural property 0500177321-16: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:dati-pubblicabili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0500177321-16: 1"@it , "Access profile to catalogue record of cultural property 0500177321-16: 1"@en .
+
+<https://w3id.org/arco/resource/FontStyle/lettere-capitali>
+        a           arco-dd:FontStyle ;
+        rdfs:label  "lettere capitali" ;
+        l0:name     "lettere capitali" .
+
+ar-TimeInterval:1760-1760
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "1760 - 1760" ;
+        arco-arco:endTime    "1760" ;
+        arco-arco:startTime  "1760" ;
+        l0:name              "1760 - 1760" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0500177321-16-cataloguing-agency .
+
+ar-docutmentationType:fotografia-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia b/n" ;
+        l0:name     "fotografia b/n" .
+
+ar-region:veneto  a  clvapit:Region ;
+        rdfs:label  "Veneto" ;
+        l0:name     "Veneto" .
+
+<https://w3id.org/arco/resource/SiteDefinition/orto-botanico>
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "orto botanico" .
+
+ar-photograpyDocumentation:0500177321-16-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 0500177321-16"@en , "Documentazione fotografica 2 del bene culturale: 0500177321-16"@it ;
+        arco-cd:documentationIdentifier
+                "SBAS Veneto 00539024" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 2 of cultural property: 0500177321-16"@en , "Documentazione fotografica 2 del bene culturale: 0500177321-16"@en .
+
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0500177321-16-inscription-1>
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 0500177321-16"@it , "Technical status of inscription 1 of cultural property 0500177321-16"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                <https://w3id.org/arco/resource/TechnicalCharacteristic/a-solchi> ;
+        l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0500177321-16"@it , "Technical status of inscription 1 of cultural property 0500177321-16"@en .
+
+ar-agentrole:0500177321-16-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0500177321-16: S76"@it , "Cataloguing agency for cultural property 0500177321-16: S76"@en ;
+        arco-core:hasAgent  ar-agent:7c6d0071bd87a051bc4b945392e573f5 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-agent:076e35f5163f33d323fad9378b107297
+        a           l0:Agent ;
+        rdfs:label  "Riformatori allo studio" ;
+        l0:name     "Riformatori allo studio" .
+
+ar-legalSituation:0500177321-16-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0500177321-16: proprietà Stato"@it , "Legal situation of cultural property 0500177321-16: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:e0266f481c06b45d2fec89c97e90faa8 ;
+        l0:name           "Condizione giuridica del bene culturale 0500177321-16: proprietà Stato"@it , "Legal situation of cultural property 0500177321-16: proprietà Stato"@en .
+
+ar-event:0500177321-16-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0500177321-16"@it , "Creation of cultural property 0500177321-16"@en ;
+        arco-cd:specificTime  ar-TimeInterval:1760-1760 ;
+        tiapit:atTime         ar-TimeInterval:sec-xviii ;
+        l0:name               "Realizzazione del bene 0500177321-16"@it , "Creation of cultural property 0500177321-16"@en .
+
+ar-role:UpdateResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+ar-photograpyDocumentation:0500177321-16-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 0500177321-16"@en , "Documentazione fotografica 1 del bene culturale: 0500177321-16"@it ;
+        arco-cd:documentationIdentifier
+                "SBAS Veneto 00539021" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 0500177321-16"@en , "Documentazione fotografica 1 del bene culturale: 0500177321-16"@en .
+
+ar-timeIndexedRole:0500177321-16-59a1574fbb32ef6fc0ee256af6ef5f83
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Spiazzi A. M."@it , "Official in charge: Spiazzi A. M."@en ;
+        roapit:isRoleInTimeOf  ar-agent:879088b5018ca9da1da982a70983ae9b ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-catalogueRecordVersion:0500177321-16-agg-1
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2006 ARTPAST/ Cailotto C. NR (recupero pregresso)" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0500177321-16-agg-1-c19ee496a75f42bcb59a96b0e19872c5 ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                ar-agent:c19ee496a75f42bcb59a96b0e19872c5 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordOA/0500177321-16> .
+
+ar-province:pd  a   clvapit:Province ;
+        rdfs:label  "PD" ;
+        l0:name     "PD" .
+
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0500177321-16>
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0500177321-16"@it , "Technical status of cultural property 0500177321-16"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                <https://w3id.org/arco/resource/TechnicalCharacteristic/pietra> ;
+        l0:name     "Stato tecnico del bene culturale 0500177321-16"@it , "Technical status of cultural property 0500177321-16"@en .
+
+ar-timeIndexedRole:0500177321-16-compilation-b77e88ea4ee0e85f52610e14a72fd7a1
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Piva R."@en , "Compilazione da Piva R."@it ;
+        roapit:isRoleInTimeOf  ar-agent:b77e88ea4ee0e85f52610e14a72fd7a1 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0500177321-16-heritage-protection-agency .
+
+ar-dating:0500177321-16-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0500177321-16"@it , "Dating 1 of cultural property 0500177321-16"@en ;
+        arco-cd:hasDatingEvent  ar-event:0500177321-16-creation-1 ;
+        l0:name                 "Dating 1 of cultural property 0500177321-16"@en , "Cronologia 1 del bene 0500177321-16"@it .
+
+ar-timeIndexedRole:0500177321-16-agg-1-c19ee496a75f42bcb59a96b0e19872c5
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Cailotto C."@it , "Update responsible compilation: ARTPAST/ Cailotto C."@en ;
+        roapit:isRoleInTimeOf  ar-agent:c19ee496a75f42bcb59a96b0e19872c5 ;
+        roapit:withRole        ar-role:UpdateResponsibleCompilation .
+
+ar-TimeInterval:2006  a  tiapit:TimeInterval ;
+        rdfs:label   "2006" ;
+        tiapit:time  "2006" .
+
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16>
+        a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "scultura" ;
+        rdfs:label                      "busto ritratto di Giulio Pontedera. (scultura) di Bonazza Antonio (bottega) (sec. XVIII)"@it , "busto ritratto di Giulio Pontedera. (scultura) by Bonazza Antonio (bottega) (sec. XVIII)"@en ;
+        arco-arco:catalogueNumber       "00177321" ;
+        arco-arco:description           "Parte posteriore: non lavorata." ;
+        arco-arco:hasCataloguingAgency  ar-agent:7c6d0071bd87a051bc4b945392e573f5 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:d17f157be5bfe842006520aad12086ba ;
+        arco-arco:regionIdentifier      "05" ;
+        arco-arco:uniqueIdentifier      "0500177321" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordOA/0500177321-16> ;
+        arco-cd:hasAuthor               ar-agent:0c5576d398fbf9515a0f006a343802a0 ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0500177321-16-1> ;
+        arco-cd:hasCommission           <https://w3id.org/arco/resource/Commission/0500177321-16-2> , <https://w3id.org/arco/resource/Commission/0500177321-16-1> ;
+        arco-cd:hasDating               ar-dating:0500177321-16-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0500177321-16-photographic-documentation-1 , ar-photograpyDocumentation:0500177321-16-photographic-documentation-2 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0500177321-16-legal-situation-proprieta-stato ;
+        arco-cd:hasSubject              <https://w3id.org/arco/resource/Subject/683bf4a5815bbf322fbb94b4e231267a> ;
+        arco-cd:subject                 "busto ritratto di Giulio Pontedera." ;
+        arco-core:hasAgentRole          ar-agentrole:0500177321-16-heritage-protection-agency , ar-agentrole:0500177321-16-cataloguing-agency ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0500177321-16-inscription-1> ;
+        arco-dd:hasConservationStatus   <https://w3id.org/arco/resource/ConservationStatus/0500177321-16-conservation-status-1> ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:e0f85950871864ae68bbd52aa767ef8c ;
+        arco-dd:hasMaterialOrTechnique  <https://w3id.org/arco/resource/TechnicalCharacteristic/pietra> ;
+        arco-dd:hasMeasurementCollection
+                <https://w3id.org/arco/resource/MeasurementCollection/0500177321-16-1> ;
+        arco-dd:hasTechnicalStatus      <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0500177321-16> ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:bca9fadd2aea0b422a9c4799506fc000 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0500177321-16-current .
+
+<https://w3id.org/arco/resource/Subject/683bf4a5815bbf322fbb94b4e231267a>
+        a                    arco-cd:Subject ;
+        rdfs:label           "busto ritratto di Giulio Pontedera." ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        l0:name              "busto ritratto di Giulio Pontedera." .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+<https://w3id.org/arco/resource/MeasurementCollection/0500177321-16-1>
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0500177321-16"@en , "Misure del bene culturale 0500177321-16"@it ;
+        arco-dd:hasMeasurement  <https://w3id.org/arco/resource/Measurement/0500177321-16-1-height> ;
+        l0:name                 "Measurements of cultural property 0500177321-16"@en , "Misure del bene culturale 0500177321-16"@it .
+
+ar-agent:879088b5018ca9da1da982a70983ae9b
+        a           l0:Agent ;
+        rdfs:label  "Spiazzi A. M." .
+
+ar-interpretationCriterion:documentazione
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "documentazione" ;
+        l0:name     "documentazione" .
+
+ar-agent:2b40682d79465f6d711050617e285490
+        a           l0:Agent ;
+        rdfs:label  "Capitanio di Padova (?)" ;
+        l0:name     "Capitanio di Padova (?)" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "Italia" ;
+        l0:name     "Italia" .
+
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0500177321-16-1>
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0500177321-16"@it , "Preferred authorship attribution of cultural property: 0500177321-16"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:0c5576d398fbf9515a0f006a343802a0 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:documentazione ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0500177321-16"@it , "Preferred authorship attribution of cultural property: 0500177321-16"@en .
+
+ar-agent:0c5576d398fbf9515a0f006a343802a0
+        a                             <https://w3id.org/italia/onto/CPV/Person> ;
+        rdfs:label                    "Bonazza Antonio (bottega)" ;
+        arco-cd:agentDate             "1698/ 1763" ;
+        arco-cd:agentLocalIdentifier  "00000003" ;
+        arco-cd:isAuthorOf            <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        l0:name                       "Bonazza Antonio (bottega)" .
+
+<https://w3id.org/arco/resource/Inscription/0500177321-16-inscription-1>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 1 of cultural property 0500177321-16"@en , "Iscrizione 1 sul bene culturale 0500177321-16"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/lettere-capitali> ;
+        arco-dd:hasMaterialOrTechnique  <https://w3id.org/arco/resource/TechnicalCharacteristic/a-solchi> ;
+        arco-dd:hasTechnicalStatus      <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0500177321-16-inscription-1> ;
+        arco-dd:positionOnCulturalProperty
+                "Piedistallo" ;
+        arco-dd:transcript              "IULIO PONTEDERAE PISANO/ MORTI PRAEFECTO/ III VIRI LITT. STAT. DECR./ PR. KAL. IUN. MDCCLX" ;
+        language:hasLanguage            <https://w3id.org/arco/resource/Language/latino> .
+
+ar-agent:b77e88ea4ee0e85f52610e14a72fd7a1
+        a           l0:Agent ;
+        rdfs:label  "Piva R." .
+
+<https://w3id.org/arco/resource/Language/latino>
+        a           language:Language ;
+        rdfs:label  "latino" ;
+        l0:name     "latino" .
+
+<https://w3id.org/arco/resource/TechnicalCharacteristic/pietra>
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "pietra" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "pietra" .
+
+ar-agent:e0266f481c06b45d2fec89c97e90faa8
+        a           l0:Agent ;
+        rdfs:label  "università di Padova" ;
+        l0:name     "università di Padova" .
+
+<https://w3id.org/arco/resource/Commission/0500177321-16-2>
+        a                      arco-cd:Commission ;
+        rdfs:label             "Committenza 2 del bene 0500177321-16"@it , "Commission 2 of cultural property 0500177321-16"@en ;
+        arco-cd:hasCommittent  ar-agent:076e35f5163f33d323fad9378b107297 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:iscrizione ;
+        tiapit:time            "1760" ;
+        l0:name                "Commission 2 of cultural property 0500177321-16"@en , "Committenza 2 del bene 0500177321-16"@it .
+
+ar-agent:d17f157be5bfe842006520aad12086ba
+        a                    COV:Organization ;
+        rdfs:label           "S119" ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0500177321-16> ;
+        arco-core:isAgentOf  ar-agentrole:0500177321-16-heritage-protection-agency ;
+        l0:name              "S119" .
+
+ar-agentrole:0500177321-16-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0500177321-16: S119"@it , "Heritage protection agency for cultural property 0500177321-16: S119"@en ;
+        arco-core:hasAgent  ar-agent:d17f157be5bfe842006520aad12086ba ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-culturalPropertyDefinition:scultura
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "scultura" .
