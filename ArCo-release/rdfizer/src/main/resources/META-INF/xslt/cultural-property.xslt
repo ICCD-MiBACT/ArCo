@@ -1467,15 +1467,28 @@
 	                        </xsl:attribute>
 					</arco-location:hasCulturalPropertyAddress>
 				</xsl:if>
-				<!-- has number of components -->
+<!-- has number of components -->
 				<xsl:if
-					test="schede/*/OG/QNT/QNTN or schede/*/OG/QNT/QNTI or schede/*/OG/QNT/QNTS">
+					test="schede/*/OG/QNT/QNTN or schede/*/OG/QNT/QNTS">
 					<arco-arco:numberOfComponents>
 					<xsl:choose>
 						<xsl:when test="schede/*/OG/QNT/QNTN">
 							 <xsl:value-of
 							select="normalize-space(schede/*/OG/QNT/QNTN)" />
 						</xsl:when>
+						<xsl:when test="schede/*/OG/QNT/QNTS">
+							 <xsl:value-of
+							select="normalize-space(schede/*/OG/QNT/QNTS)" />
+						</xsl:when>
+					</xsl:choose>
+					</arco-arco:numberOfComponents>
+				</xsl:if>
+
+<!-- has number of elements -->
+				<xsl:if
+					test="schede/*/OG/QNT/QNTI or schede/*/OG/QNT/QNTS">
+					<arco-arco:numberOfElements>
+					<xsl:choose>
 						<xsl:when test="schede/*/OG/QNT/QNTI">
 							 <xsl:value-of
 							select="normalize-space(schede/*/OG/QNT/QNTI)" />
@@ -1485,9 +1498,10 @@
 							select="normalize-space(schede/*/OG/QNT/QNTS)" />
 						</xsl:when>
 					</xsl:choose>
-					</arco-arco:numberOfComponents>
-				</xsl:if>
-				<!-- cultural property description -->
+					</arco-arco:numberOfElements>
+				</xsl:if>				
+<!-- cultural property description -->
+
 				<xsl:if test="schede/*/DA/DES">
 					<xsl:choose>
 						<xsl:when test="schede/*/DA/DES/DESO and not($sheetType='NU')">
