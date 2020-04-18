@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <F version="4.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">F</TSK>
+         <LIR hint="Livello catalogazione">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice Regione">08</NCTR>
+            <NCTN hint="Numero catalogo generale">00640528</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S261</ESC>
+         <ECP hint="Ente competente per tutela">S261</ECP>
+      </CD>
+      <OG hint="BENE CULTURALE">
+         <AMB hint="Ambito di tutela MiBACT">storico artistico</AMB>
+         <CTG hint="Categoria">DOCUMENTAZIONE DEL PATRIMONIO PAESAGGISTICO</CTG>
+         <OGT hint="DEFINIZIONE BENE">
+            <OGTD hint="Definizione">positivo</OGTD>
+            <OGTT hint="Tipologia">album</OGTT>
+            <OGTV hint="Configurazione strutturale e di contesto">elemento-parte componente</OGTV>
+         </OGT>
+         <OGC hint="TRATTAMENTO CATALOGRAFICO">
+            <OGCT hint="Trattamento catalografico">bene complesso/bene composito - parte componente</OGCT>
+            <OGCN hint="Numero parti componenti">67</OGCN>
+            <OGCS hint="Note">carta 20, recto</OGCS>
+         </OGC>
+         <OGM hint="Modalità di individuazione">appartenenza ad una collezione o raccolta pubblica</OGM>
+         <OGR hint="Disponibilità del bene">bene disponibile</OGR>
+      </OG>
+      <RV hint="RELAZIONI">
+         <RVE hint="STRUTTURA COMPLESSA">
+            <RVEL hint="Livello nella struttura gerarchica">20</RVEL>
+         </RVE>
+         <RSE hint="RELAZIONI CON ALTRI BENI">
+            <RSER hint="Tipo relazione">è contenuto in</RSER>
+            <RSET hint="Tipo scheda">A</RSET>
+            <RSED hint="Definizione del bene">palazzo</RSED>
+            <RSEC hint="Identificativo univoco della scheda">0800241663</RSEC>
+         </RSE>
+         <RSE hint="RELAZIONI CON ALTRI BENI">
+            <RSER hint="Tipo relazione">è in relazione con</RSER>
+            <RSES hint="Specifiche tipo relazione">Album Cassarini, Rocche e castelli della provincia di Parma (titolo attribuito)</RSES>
+            <RSET hint="Tipo scheda">F</RSET>
+            <RSED hint="Definizione del bene">positivo, album</RSED>
+            <RSEC hint="Identificativo univoco della scheda">0800640527-0</RSEC>
+         </RSE>
+      </RV>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Emilia-Romagna</PVCR>
+            <PVCP hint="Provincia">BO</PVCP>
+            <PVCC hint="Comune">Bologna</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCT hint="Tipologia">palazzo</LDCT>
+            <LDCQ hint="Qualificazione">senatoriale</LDCQ>
+            <LDCN hint="Denominazione attuale">Palazzo Dall'Armi Marescalchi</LDCN>
+            <LDCF hint="Uso">ufficio</LDCF>
+            <LDCU hint="Indirizzo">via IV Novembre, 5</LDCU>
+            <LDCM hint="Denominazione raccolta">Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Bologna e le province di Modena, Reggio Emilia e Ferrara</LDCM>
+            <LDCS hint="Specifiche">Biblioteca</LDCS>
+            <LDCD hint="Riferimento cronologico">1969 post</LDCD>
+         </LDC>
+         <LCN hint="Note">piano terra, entro armadio ligneo A, sportello A4</LCN>
+         <ACB hint="ACCESSIBILITA' DEL BENE">
+            <ACBA hint="Accessibilità">si</ACBA>
+         </ACB>
+      </LC>
+      <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO - AMMINISTRATIVE">
+         <TLC hint="Tipo di localizzazione">luogo di provenienza/collocazione precedente</TLC>
+         <PRV hint="LOCALIZZAZIONE">
+            <PRVS hint="Stato">ITALIA</PRVS>
+            <PRVR hint="Regione">Emilia-Romagna</PRVR>
+            <PRVP hint="Provincia">BO</PRVP>
+            <PRVC hint="Comune">Bologna</PRVC>
+         </PRV>
+         <PRC hint="COLLOCAZIONE SPECIFICA">
+            <PRCT hint="Tipologia contenitore fisico">palazzo</PRCT>
+            <PRCN hint="Denominazione contenitore fisico">Palazzo Garganelli</PRCN>
+            <PRCF hint="Uso contenitore fisico">ufficio</PRCF>
+            <PRCU hint="Indicazioni viabilistiche">via Santo Stefano, 40</PRCU>
+            <PRCM hint="Denominazione contenitore giuridico">Soprintendenza ai Monumenti dell'Emilia</PRCM>
+         </PRC>
+         <PRD hint="DATI CRONOLOGICI">
+            <PRDU hint="Data fine">1969</PRDU>
+         </PRD>
+      </LA>
+      <UB hint="DATI PATRIMONIALI/INVENTARI/STIME/COLLEZIONI">
+         <UBF hint="UBICAZIONE BENE">
+            <UBFP hint="Fondo">Fondo Positivi - Ex Soprintendenza BAP BO</UBFP>
+         </UBF>
+         <INV hint="ALTRI INVENTARI"/>
+      </UB>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <AUT hint="AUTORE/RESPONSABILITA'">
+            <AUTJ hint="Ente schedatore">S261</AUTJ>
+            <AUTH hint="Codice identificativo">BAPA0248</AUTH>
+            <AUTN hint="Nome scelto di persona o ente">Cassarini, Alessandro</AUTN>
+            <AUTP hint="Tipo intestazione">P</AUTP>
+            <AUTA hint="Indicazioni cronologiche">1847-1929</AUTA>
+            <AUTI hint="Indicazione del nome e dell'indirizzo">Alessandro Cassarini Bologna</AUTI>
+            <AUTR hint="Ruolo">fotografo principale</AUTR>
+            <AUTM hint="Motivazione/fonte">iscrizione</AUTM>
+            <AUTZ hint="Note">indicazione di responsabilità a stampa nella parte inferiore destra della carta</AUTZ>
+         </AUT>
+      </AU>
+      <SG hint="SOGGETTO">
+         <SGT hint="SOGGETTO">
+            <SGTI hint="Identificazione">Repubblica di San Marino - Monte Titano</SGTI>
+            <SGTI hint="Identificazione">Vedute - Paesaggio - Territorio</SGTI>
+            <SGTD hint="Indicazioni sul soggetto">Repubblica di San Marino - Veduta verso il Monte Titano</SGTD>
+         </SGT>
+         <SGL hint="TITOLO">
+            <SGLT hint="Titolo proprio">Repubblica di S. Marino - Monte Titano veduta generale, dalla strada di Rimini</SGLT>
+            <SGLS hint="Specifiche titolo">manoscritto sulla carta dell'album</SGLS>
+         </SGL>
+      </SG>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Fascia cronologica/periodo">XIX</DTZG>
+         </DTZ>
+         <DTS hint="CRONOLOGIA SPECIFICA">
+            <DTSI hint="Da">1892</DTSI>
+            <DTSV hint="Validità">ca</DTSV>
+            <DTSF hint="A">1893</DTSF>
+            <DTSL hint="Validità">ca</DTSL>
+         </DTS>
+         <DTM hint="Motivazione/fonte">fonte archivistica</DTM>
+         <DTT hint="Note">faldone 65, archivio vecchio della Soprintendenza ai Monumenti di Bologna</DTT>
+      </DT>
+      <LR hint="LUOGO E DATA DELLA RIPRESA">
+         <LRC hint="LOCALIZZAZIONE">
+            <LRCS hint="Stato">SAN MARINO</LRCS>
+            <LRCR hint="Regione">NR</LRCR>
+            <LRCP hint="Provincia">NR</LRCP>
+            <LRCC hint="Comune">NR</LRCC>
+         </LRC>
+         <LRO hint="Occasione">censimento delle rocche del territorio emiliano, romagnolo, del Montefeltro e dell'Appennino tosco-emiliano</LRO>
+         <LRD hint="Data della ripresa">1893 ante</LRD>
+      </LR>
+      <MT hint="DATI TECNICI">
+         <MTX hint="Indicazione di colore">BN</MTX>
+         <MTC hint="MATERIA E TECNICA">
+            <MTCM hint="Materia">carta</MTCM>
+            <MTCT hint="Tecnica">albumina</MTCT>
+         </MTC>
+         <FRM hint="Formato">21 x 27</FRM>
+      </MT>
+      <CO hint="CONSERVAZIONE E INTERVENTI">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">discreto</STCC>
+            <STCS hint="Specifiche">macchie, sbiadimento, specchio d'argento,  graffi</STCS>
+         </STC>
+         <STD hint="Modalità di conservazione">il fototipo è protetto da una doppia interfoliazione in carta acid-free</STD>
+         <RST hint="INTERVENTI">
+            <RSTI hint="Tipo intervento">restauro</RSTI>
+            <RSTD hint="Riferimento cronologico">1994</RSTD>
+            <RSTE hint="Ente responsabile">Soprintendenza per i Beni Ambientali ed Architettonici di Bologna, Modena e Reggio Emilia</RSTE>
+            <RSTN hint="Responsabile dell'intervento/nome operatore">Tonelli, Elvira</RSTN>
+         </RST>
+      </CO>
+      <DA hint="DATI ANALITICI">
+         <DES hint="Descrizione">L'albumina è incollata al recto della carta entro una cornice filettata dorata. Nella parte inferiore del supporto secondario è manoscritto ad inchiostro seppia il titolo proprio dell'immagine superiore. All'angolo inferiore destro delle carte è stampata a lettere dorate l'indicazione di responsabilità del fotografo.</DES>
+         <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+            <ISEP hint="Posizione">carta: sotto il fototipo</ISEP>
+            <ISED hint="Definizione">iscrizione</ISED>
+            <ISEC hint="Classe di appartenenza">didascalica</ISEC>
+            <ISEM hint="Materia e tecnica">a inchiostro</ISEM>
+            <ISEI hint="Trascrizione">Repubblica di S. Marino - Monte Titano veduta generale, dalla strada di Rimini.</ISEI>
+         </ISE>
+         <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+            <ISEP hint="Posizione">carta: in basso a destra</ISEP>
+            <ISED hint="Definizione">iscrizione</ISED>
+            <ISEC hint="Classe di appartenenza">indicazione di responsabilità</ISEC>
+            <ISEM hint="Materia e tecnica">tipografica</ISEM>
+            <ISEI hint="Trascrizione">Alessandro Cassarini Bologna</ISEI>
+         </ISE>
+         <NSC hint="Notizie storico-critiche">Nel presente album sono contenute sette immagini del territorio sammarinese: dalla quinta turrita del Monte Titano, alla veduta delle tre Penne contrassegnate dalle torri di avvistamento e di difesa, sino a diverse riprese dell’abitato inerpicato sull’altura (specifiche inquadrature del Palazzo Pubblico e della Porta San Francesco). Presso la biblioteca dell’ex Soprintendenza ai Beni Architettonici di Bologna (attualmente Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Bologna e le province di Modena, Reggio Emilia e Ferrara) si conservano due album del fotografo dilettante Alessandro Cassarini. E’ possibile ripercorrere la via di acquisizione di tali beni tramite il carteggio conservato nel faldone 65 dell’archivio vecchio (ubicato presso i locali di deposito della cantina). Gli album furono oggetto di una complessa trattativa avvenuta nel biennio 1893-1894 tra lo stesso autore ed il primo direttore dell’Ufficio Regionale per la conservazione dei Monumenti dell’Emilia (ente da cui nacque la Soprintendenza ai Monumenti di Bologna), Raffaele Faccioli (1836-1914). Il primo volume, privo di titolo proprio, raccoglie immagini delle rocche della provincia parmense (inv. A_000001), mentre il secondo “Rocche e Rocce” comprende un territorio ben più ampio dall’Emilia al Montefeltro, sino ad incursioni in ambito toscano (inv. A_000002). Le stampe positive sono databili indicativamente tra il 1892 ed il 1893, anno in cui vennero presentate all'Esposizione Nazionale Fotografica di Torino (forse entrambi gli album?). Nel dicembre del 1893 i volumi dovevano già trovarsi presso l'Ufficio Regionale di Bologna, in via Belle Arti 52 (lettera di Cassarini del 22 gennaio 1894), anche se il saldo di pagamento avvenne soltanto nell'aprile successivo (lettera del 17 aprile 1894 del Ministero della Pubblica Istruzione a Faccioli in cui si conferma l'avvenuto compenso).</NSC>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+            <CDGS hint="Indicazione specifica">Ministero dei beni e delle attività culturali e del turismo - SABAP BO</CDGS>
+            <CDGI hint="Indirizzo">via IV Novembre, 5 – 40123 Bologna</CDGI>
+         </CDG>
+         <ACQ hint="ACQUISIZIONE">
+            <ACQT hint="Tipo acquisizione">compravendita</ACQT>
+            <ACQN hint="Nome">Cassarini, Alessandro</ACQN>
+            <ACQD hint="Riferimento cronologico">1893-1894</ACQD>
+         </ACQ>
+         <BPT hint="Provvedimenti di tutela - sintesi">no</BPT>
+      </TU>
+      <DO hint="DOCUMENTAZIONE">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAN hint="Codice identificativo">SABAPBO/A_000002_20</FTAN>
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAF hint="Formato">jpg</FTAF>
+            <FTAK hint="Nome file originale">A_000002_20.JPG</FTAK>
+         </FTA>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTI hint="Codice identificativo">New_1481797781017</FNTI>
+            <FNTX hint="Genere">documentazione esistente</FNTX>
+            <FNTP hint="Tipo">faldone documentario</FNTP>
+            <FNTT hint="Denominazione/titolo">faldone 65 dell’archivio vecchio Soprintendenza ai Monumenti - Cartella 65/2: "Fotografie. Prat. Gen.”</FNTT>
+            <FNTN hint="Nome archivio">Archivio storico documentale della Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Bologna e le province di Modena, Reggio Emilia e Ferrara/ sede di Palazzo Dall'Armi Marescalchi, cantina</FNTN>
+            <FNTK hint="Nome file originale">faldone 65.JPG</FNTK>
+         </FNT>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0220</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">monografia</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Le collezioni d'arte della Cassa di Risparmio in Bologna. Le fotografie. 1. Pietro Poppi e la Fotografia dell'Emilia, a cura di Franco Cristofori e Giancarlo Roversi, Bologna, Cassa di Risparmio di Bologna, 1980.</BIBM>
+            <BIBN hint="Note">pp. 102-103</BIBN>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0219</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">monografia</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Fotografia &amp; fotografi a Bologna: 1839-1900, a cura di Giuseppina Benassati, Angela Tromellini, Casalecchio di Reno, Grafis, 1992.</BIBM>
+            <BIBN hint="Note">pp. 272-273</BIBN>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0426</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">sito web</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">IBC Regione Emilia-Romagna - Pubblicazioni di IBC – Il futuro dei Castelli: dalla conoscenza al recupero, atti della tavola rotonda organizzata al Salone del restauro di Ferrara del 2002</BIBM>
+            <BIBW hint="Indirizzo web (URL)">http://online.ibc.regione.emilia-romagna.it/h3/h3.exe/apubblicazioni/t?NRECORD=0000047839</BIBW>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0298</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">sito web</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Parma e la sua Storia. Fotografi e fotografie a Parma (1876-1900) di Roberto Spocci.</BIBM>
+            <BIBW hint="Indirizzo web (URL)">http://www.parmaelasuastoria.it/ita/Fotografi%20e%20fotografie%20a%20Parma.aspx?idMostra=8&amp;idNode=79 (consultato il 2016/12/14)</BIBW>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0204</BIBH>
+            <BIBX hint="Genere">bibliografia di corredo</BIBX>
+            <BIBF hint="Tipo">contributo in catalogo mostra</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Monari Paola, La tormentata formazione degli uffici per la conservazione degli edifici monumentali, in Norma e arbitrio. Architetti e ingegneri a Bologna 1850-1950, a cura di Giuliano Greslieri, Pier Giorgio Massaretti, Venezia, Marsiglio, 2001, pp. 311-329.</BIBM>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0427</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">atti</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Dalle ‘Cose di interesse’ ai ‘Beni culturali’. Ricerche e dibattiti negli uffici Mibac dell’Emilia-Romagna, a cura di Patrizia Farinelli e Paola Monari, Bologna, 2012.</BIBM>
+            <BIBN hint="Note">pp. 87, 100-103</BIBN>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0428</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">biografia</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Alessandro Cassarini: l'alpinista, il fotografo, il filantropo, Bologna, La grafica emiliana, [19..].</BIBM>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBJ hint="Ente schedatore">S261</BIBJ>
+            <BIBH hint="Codice identificativo">BAPB0429</BIBH>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">monografia</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Malatesta &amp; Montefeltro: viaggio nelle colline riminesi, a cura della Provincia di Rimini – Assessorato al Turismo, 2011.</BIBM>
+         </BIB>
+      </DO>
+      <MS hint="MOSTRE/ALTRI EVENTI CULTURALI/PREMI">
+         <MST hint="MOSTRA/EVENTO CULTURALE">
+            <MSTI hint="Tipo">mostra</MSTI>
+            <MSTT hint="Titolo/denominazione">Obiettivo castelli in Emilia-Romagna. Immagini fotografiche per la tutela e la valorizzazione</MSTT>
+            <MSTE hint="Ente/soggetto organizzatore">IBC Regione Emilia-Romagna</MSTE>
+            <MSTE hint="Ente/soggetto organizzatore">Soprintendenza Regionale per i Beni e le attività culturali dell'Emilia-Romagna</MSTE>
+            <MSTL hint="Luogo, sede espositiva, data">Ferrara, Salone del Restauro, 2002</MSTL>
+         </MST>
+      </MS>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+         <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+            <CMPD hint="Anno di redazione">2016</CMPD>
+            <CMPN hint="Responsabile ricerca e redazione">Mengoli, Elisa</CMPN>
+         </CMP>
+         <RSR hint="Referente verifica scientifica">Giudici, Corinna</RSR>
+         <FUR hint="Funzionario responsabile">Farinelli, Patrizia</FUR>
+      </CM>
+      <AN hint="ANNOTAZIONI">
+         <OSS hint="Osservazioni">Alessandro Cassarini (1847-1929), eclettico personaggio bolognese nativo dell'Appennino, definito nel titolo della biografia dedicatagli "alpinista, fotografo, filantropo", principiò la sua attività di fotografo dilettante attorno alla fine degli anni Ottanta del XIX secolo (Benassati-Tromellini 1992). La prossimità con Corrado Ricci e la passione per l'alpinismo condivisa con la sezione cittadina del Club Alpino Italiano (C.A.I.) lo portarono ad intraprendere un progetto piuttosto articolato e completo di censimento fotografico delle rocche e dei castelli del territorio emiliano romagnolo, con sconfinamenti nel vicino Montefeltro; peraltro anche le bellezze naturali dell'arco alpino, in particolar modo del Cadore e del bellunese, furono oggetto delle sue riprese. Il connubio tra alpinismo e fotografia, l'intraprendenza nella propaganda della propria opera, valsero a Cassarini il riconoscimento nel 1895 a Cavaliere della Corona d'Italia, in seguito al dono di uno dei suoi album al Ministero della Pubblica Istruzione.</OSS>
+      </AN>
+   </F>
+</schede>

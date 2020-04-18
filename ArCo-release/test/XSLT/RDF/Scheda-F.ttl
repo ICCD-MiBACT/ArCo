@@ -1,0 +1,352 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+<https://w3id.org/arco/resource/Subject/6ffbfbe3c93120170c4edcef2366dd2f>
+        a                    arco-cd:Subject ;
+        rdfs:label           "Repubblica di San Marino - Monte Titano" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        l0:name              "Repubblica di San Marino - Monte Titano" .
+
+ar-culturalPropertySpecification:album
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "album" .
+
+ar-agent:7648989fbec408d983920dc10ef77730
+        a           l0:Agent ;
+        rdfs:label  "Giudici, Corinna" .
+
+ar-photograpyDocumentation:0800640528-20-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 0800640528-20"@en , "Documentazione fotografica 1 del bene culturale: 0800640528-20"@it ;
+        arco-cd:digitalFileName       "A_000002_20.JPG" ;
+        arco-cd:documentationIdentifier
+                "SABAPBO/A_000002_20" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:hasFormat             <https://w3id.org/arco/resource/Format/jpg> ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Documentazione fotografica 1 del bene culturale: 0800640528-20"@en , "Photographic documentation 1 of cultural property: 0800640528-20"@en .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente verifica scientifica"@it , "Scientific Director"@en .
+
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/elemento-parte-componente>
+        a           arco-arco:CulturalPropertyCataloguingCategory ;
+        rdfs:label  "elemento-parte componente" ;
+        l0:name     "elemento-parte componente" .
+
+ar-catalogueRecordVersion:0800640528-20-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "REDAZIONE E VERIFICA SCIENTIFICA - 2016 Mengoli, Elisa" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2016 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0800640528-20-compilation-f64eb97ee2db39689571dff4987756f1 , ar-timeIndexedRole:0800640528-20-a3f88cdbb6cbc3caf4c94390a4c97932 , ar-timeIndexedRole:0800640528-20-bec84ebabc4719254c5ffb3678404e0b ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:498d4156a21e53651ccb92659c68c5ec ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:f64eb97ee2db39689571dff4987756f1 ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:7648989fbec408d983920dc10ef77730 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800640528-20> .
+
+ar-agentrole:0800640528-20-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0800640528-20: S261"@it , "Heritage protection agency for cultural property 0800640528-20: S261"@en ;
+        arco-core:hasAgent  ar-agent:dc7160721a16c8a0ae69d8c621402683 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-culturalPropertyType:0fa169c643c3983d89e1255afda02485
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: positivo album"@it , "Cultural property type: positivo album"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:positivo ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:album ;
+        l0:name     "Tipo del bene: positivo album"@it , "Cultural property type: positivo album"@en .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/AcquisitionType/compravendita>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "compravendita" ;
+        l0:name     "compravendita" .
+
+ar-culturalPropertyDefinition:positivo
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "positivo" .
+
+<https://w3id.org/arco/resource/Acquisition/0800640528-20-acquisition-1>
+        a                           arco-cd:Acquisition ;
+        rdfs:label                  "Acquisizione 1 del bene culturale: 0800640528-20"@it , "Acquisition 1 of cultural property: 0800640528-20"@en ;
+        arco-cd:hasAcquisitionType  <https://w3id.org/arco/resource/AcquisitionType/compravendita> ;
+        arco-cd:hasPreviousOwner    ar-agent:f6eaedbfa13bc09d65d8b3b0a440ea38 ;
+        arco-cd:isAcquisitionOf     <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        tiapit:time                 "1893-1894" ;
+        l0:name                     "Acquisizione 1 del bene culturale: 0800640528-20"@it , "Acquisition 1 of cultural property: 0800640528-20"@en .
+
+ar-TimeInterval:xix  a  tiapit:TimeInterval ;
+        rdfs:label   "XIX" ;
+        tiapit:time  "XIX" ;
+        l0:name      "XIX" .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0800640528-20-source-document-1>
+        a                          arco-cd:SourceAndDocument ;
+        rdfs:label                 "Sources and documents 1 of cultural property: 0800640528-20"@en , "Fonti e documenti 1 del bene culturale: 0800640528-20"@it ;
+        arco-cd:digitalFileName    "faldone 65.JPG" ;
+        arco-cd:documentationIdentifier
+                "New_1481797781017" ;
+        arco-cd:isDocumentationOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        l0:name                    "Sources and documents 1 of cultural property: 0800640528-20"@en , "Fonti e documenti 1 del bene culturale: 0800640528-20"@en .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-TimeInterval:2016  a  tiapit:TimeInterval ;
+        rdfs:label   "2016" ;
+        tiapit:time  "2016" .
+
+ar-TimeInterval:ca-1892-ca-1893
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca 1892 - ca 1893" ;
+        arco-arco:endTime    "ca 1893" ;
+        arco-arco:startTime  "ca 1892" ;
+        l0:name              "ca 1892 - ca 1893" .
+
+<https://w3id.org/arco/resource/Subject/e13f14801d2d43fcaba2dd94fe550176>
+        a                    arco-cd:Subject ;
+        rdfs:label           "Vedute - Paesaggio - Territorio" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        l0:name              "Vedute - Paesaggio - Territorio" .
+
+<https://w3id.org/arco/resource/Format/jpg>
+        a           arco-cd:Format ;
+        rdfs:label  "jpg" ;
+        l0:name     "jpg" .
+
+<https://w3id.org/arco/resource/Title/0800640528-20-repubblica-di-s-marino-monte-titano-veduta-generale-dalla-strada-di-rimini>
+        a                         arco-cd:Title ;
+        rdfs:label                "Repubblica di S. Marino - Monte Titano veduta generale, dalla strada di Rimini" ;
+        arco-cd:hasTitleType      arco-cd:ProperTitle ;
+        arco-cd:isTitleOf         <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        arco-core:specifications  "manoscritto sulla carta dell'album" ;
+        l0:name                   "Repubblica di S. Marino - Monte Titano veduta generale, dalla strada di Rimini" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-agent:498d4156a21e53651ccb92659c68c5ec
+        a           l0:Agent ;
+        rdfs:label  "Farinelli, Patrizia" .
+
+ar-agent:f64eb97ee2db39689571dff4987756f1
+        a           l0:Agent ;
+        rdfs:label  "Mengoli, Elisa" .
+
+ar-timeIndexedRole:0800640528-20-compilation-f64eb97ee2db39689571dff4987756f1
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Mengoli, Elisa"@en , "Compilazione da Mengoli, Elisa"@it ;
+        roapit:isRoleInTimeOf  ar-agent:f64eb97ee2db39689571dff4987756f1 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-interpretationCriterion:fonte-archivistica
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "fonte archivistica" ;
+        l0:name     "fonte archivistica" .
+
+ar-agentrole:0800640528-20-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0800640528-20: S261"@it , "Cataloguing agency for cultural property 0800640528-20: S261"@en ;
+        arco-core:hasAgent  ar-agent:dc7160721a16c8a0ae69d8c621402683 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-timeIndexedRole:0800640528-20-a3f88cdbb6cbc3caf4c94390a4c97932
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente verifica scientifica: Giudici, Corinna"@it , "Scientific director: Giudici, Corinna"@en ;
+        roapit:isRoleInTimeOf  ar-agent:7648989fbec408d983920dc10ef77730 ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+ar-agent:f6eaedbfa13bc09d65d8b3b0a440ea38
+        a           l0:Agent ;
+        rdfs:label  "Cassarini, Alessandro" ;
+        l0:name     "Cassarini, Alessandro" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0800640528-20-cataloguing-agency .
+
+ar-agent:dc7160721a16c8a0ae69d8c621402683
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Archeologia, belle arti e paesaggio per la città metropolitana di Bologna e le province di Modena, Reggio Emilia e Ferrara" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        arco-core:isAgentOf  ar-agentrole:0800640528-20-cataloguing-agency , ar-agentrole:0800640528-20-heritage-protection-agency ;
+        l0:name              "Soprintendenza Archeologia, belle arti e paesaggio per la città metropolitana di Bologna e le province di Modena, Reggio Emilia e Ferrara" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0800640528-20-heritage-protection-agency .
+
+<https://w3id.org/arco/resource/CatalogueRecordF/0800640528-20>
+        a               arco-catalogue:CatalogueRecordF ;
+        rdfs:label      "Scheda catalografica n: 0800640528-20"@it , "Catalogue Record n: 0800640528-20"@en ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0800640528-20" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0800640528-20-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0800640528-20-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "Scheda-F" ;
+        arco-core:note  "Alessandro Cassarini (1847-1929), eclettico personaggio bolognese nativo dell'Appennino, definito nel titolo della biografia dedicatagli \"alpinista, fotografo, filantropo\", principiò la sua attività di fotografo dilettante attorno alla fine degli anni Ottanta del XIX secolo (Benassati-Tromellini 1992). La prossimità con Corrado Ricci e la passione per l'alpinismo condivisa con la sezione cittadina del Club Alpino Italiano (C.A.I.) lo portarono ad intraprendere un progetto piuttosto articolato e completo di censimento fotografico delle rocche e dei castelli del territorio emiliano romagnolo, con sconfinamenti nel vicino Montefeltro; peraltro anche le bellezze naturali dell'arco alpino, in particolar modo del Cadore e del bellunese, furono oggetto delle sue riprese. Il connubio tra alpinismo e fotografia, l'intraprendenza nella propaganda della propria opera, valsero a Cassarini il riconoscimento nel 1895 a Cavaliere della Corona d'Italia, in seguito al dono di uno dei suoi album al Ministero della Pubblica Istruzione." .
+
+ar-dating:0800640528-20-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0800640528-20"@it , "Dating 1 of cultural property 0800640528-20"@en ;
+        arco-cd:hasDatingEvent  ar-event:0800640528-20-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:fonte-archivistica ;
+        l0:name                 "Dating 1 of cultural property 0800640528-20"@en , "Cronologia 1 del bene 0800640528-20"@it .
+
+ar-timeIndexedRole:0800640528-20-bec84ebabc4719254c5ffb3678404e0b
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Farinelli, Patrizia"@it , "Official in charge: Farinelli, Patrizia"@en ;
+        roapit:isRoleInTimeOf  ar-agent:498d4156a21e53651ccb92659c68c5ec ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+<https://w3id.org/arco/resource/PhotographicHeritage/0800640528-20>
+        a                               arco-arco:PhotographicHeritage , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "positivo, album, elemento-parte componente" ;
+        rdfs:label                      "Repubblica di San Marino - Monte Titano (positivo, elemento-parte componente) di Cassarini, Alessandro (XIX)"@it , "Repubblica di San Marino - Monte Titano (positivo, elemento-parte componente) by Cassarini, Alessandro (XIX)"@en , "Vedute - Paesaggio - Territorio (positivo, elemento-parte componente) di Cassarini, Alessandro (XIX)"@it , "Vedute - Paesaggio - Territorio (positivo, elemento-parte componente) by Cassarini, Alessandro (XIX)"@en ;
+        arco-arco:catalogueNumber       "00640528" ;
+        arco-arco:description           "L'albumina è incollata al recto della carta entro una cornice filettata dorata. Nella parte inferiore del supporto secondario è manoscritto ad inchiostro seppia il titolo proprio dell'immagine superiore. All'angolo inferiore destro delle carte è stampata a lettere dorate l'indicazione di responsabilità del fotografo." ;
+        arco-arco:hasCataloguingAgency  ar-agent:dc7160721a16c8a0ae69d8c621402683 ;
+        arco-arco:hasCulturalPropertyCataloguingCategory
+                <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/elemento-parte-componente> ;
+        arco-arco:hasCulturalPropertyCategory
+                <https://w3id.org/arco/resource/CulturalPropertyCategory/documentazione-del-patrimonio-paesaggistico> ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:dc7160721a16c8a0ae69d8c621402683 ;
+        arco-arco:hasMibacScopeOfProtection
+                arco-arco:HistoricalArtisticScope ;
+        arco-arco:regionIdentifier      "08" ;
+        arco-arco:uniqueIdentifier      "0800640528" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800640528-20> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0800640528-20-acquisition-1> ;
+        arco-cd:hasAuthor               ar-agent:f6eaedbfa13bc09d65d8b3b0a440ea38 ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800640528-20-1> ;
+        arco-cd:hasBibliography         ar-bibliography:0800640528-20-bibliography-3 , ar-bibliography:0800640528-20-bibliography-7 , ar-bibliography:0800640528-20-bibliography-5 , ar-bibliography:0800640528-20-bibliography-2 , ar-bibliography:0800640528-20-bibliography-6 , ar-bibliography:0800640528-20-bibliography-4 , ar-bibliography:0800640528-20-bibliography-8 , ar-bibliography:0800640528-20-bibliography-1 ;
+        arco-cd:hasDating               ar-dating:0800640528-20-1 ;
+        arco-cd:hasDetectionMethod      ar-detectionMethod:appartenenza-ad-una-collezione-o-raccolta-pubblica ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0800640528-20-photographic-documentation-1 , <https://w3id.org/arco/resource/SourceAndDocument/0800640528-20-source-document-1> ;
+        arco-cd:hasIntervention         <https://w3id.org/arco/resource/Intervention/0800640528-20-intervention-1> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0800640528-20-legal-situation-proprieta-stato ;
+        arco-cd:hasRelatedWorkSituation
+                <https://w3id.org/arco/resource/RelatedWorkSituation/0800640528-20-related-cultural-property-1-2> ;
+        arco-cd:hasSubject              <https://w3id.org/arco/resource/Subject/6ffbfbe3c93120170c4edcef2366dd2f> , <https://w3id.org/arco/resource/Subject/e13f14801d2d43fcaba2dd94fe550176> ;
+        arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/0800640528-20-repubblica-di-s-marino-monte-titano-veduta-generale-dalla-strada-di-rimini> ;
+        arco-cd:isLocatedIn             <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800241663> ;
+        arco-cd:isMemberOfArchivalRecordSet
+                <https://w3id.org/arco/resource/ArchivalRecordSetMembership/0800640528-20> ;
+        arco-cd:properTitle             "Repubblica di S. Marino - Monte Titano veduta generale, dalla strada di Rimini" ;
+        arco-cd:subject                 "Vedute - Paesaggio - Territorio" , "Repubblica di San Marino - Monte Titano" ;
+        arco-core:hasAgentRole          ar-agentrole:0800640528-20-cataloguing-agency , ar-agentrole:0800640528-20-heritage-protection-agency ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0800640528-20-affixed-element-2> , <https://w3id.org/arco/resource/Inscription/0800640528-20-affixed-element-1> ;
+        arco-dd:hasConservationStatus   <https://w3id.org/arco/resource/ConservationStatus/0800640528-20-conservation-status-1> ;
+        arco-dd:hasCulturalPropertyAccessibility
+                arco-dd:Accessible ;
+        arco-dd:hasCulturalPropertyAvailability
+                arco-dd:Available ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:0fa169c643c3983d89e1255afda02485 ;
+        arco-dd:hasMaterial             <https://w3id.org/arco/resource/TechnicalCharacteristic/carta> ;
+        arco-dd:hasPhotoColour          <https://w3id.org/arco/resource/TechnicalCharacteristic/bn> ;
+        arco-dd:hasPhotoSize            <https://w3id.org/arco/resource/TechnicalCharacteristic/21-x-27> ;
+        arco-dd:hasTechnicalStatus      <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800640528-20> ;
+        arco-dd:hasTechnique            <https://w3id.org/arco/resource/TechnicalCharacteristic/albumina> ;
+        arco-dd:storageConditions       "il fototipo è protetto da una doppia interfoliazione in carta acid-free" ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:96325e0c5a3b2b64baa6ae0eeafcb821 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0800640528-20-current , ar-timeIndexedTypedLocation:0800640528-20-shot , ar-timeIndexedTypedLocation:0800640528-20-alternative-1 .
+
+ar-event:0800640528-20-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0800640528-20"@it , "Creation of cultural property 0800640528-20"@en ;
+        arco-cd:specificTime  ar-TimeInterval:ca-1892-ca-1893 ;
+        tiapit:atTime         ar-TimeInterval:xix ;
+        l0:name               "Realizzazione del bene 0800640528-20"@it , "Creation of cultural property 0800640528-20"@en .

@@ -13034,7 +13034,8 @@
 					</xsl:if>
 				</xsl:for-each>
 			</xsl:if>
-			<!-- finding context (AT) -->
+
+<!-- finding context (AT) -->
 			<xsl:if
 				test="schede/AT/OG/OGC and (not(starts-with(lower-case(normalize-space(schede/AT/OG/OGC/OGCT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/AT/OG/OGC/OGCT)), 'n.r')))">
 				<rdf:Description>
