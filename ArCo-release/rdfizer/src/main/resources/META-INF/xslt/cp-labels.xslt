@@ -331,7 +331,7 @@
 				</xsl:when>
 				<xsl:when test="$sheetType='BNB'">
 					<xsl:choose>
-		        			<xsl:when test="schede/BNB/LR/LRD/LRDB)">
+		        			<xsl:when test="schede/BNB/LR/LRD/LRDB">
 		        				<xsl:choose>
 					                    	<xsl:when test="schede/BNB/LR/LRD/LRDD">
 									<xsl:value-of
@@ -343,7 +343,7 @@
 								</xsl:otherwise>
 					                    </xsl:choose>
 		        			</xsl:when>
-		        			<xsl:when test="schede/BNB/LR/LRD/LRDF)">
+		        			<xsl:when test="schede/BNB/LR/LRD/LRDF">
 							<xsl:value-of select="concat(' (', schede/BNB/LR/LRD/LRDF, ')')" />
 		        			</xsl:when>
 		        			<xsl:otherwise>
