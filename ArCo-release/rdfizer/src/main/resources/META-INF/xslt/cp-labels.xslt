@@ -310,27 +310,56 @@
 		
 		<xsl:variable name="date-string">
 			<xsl:choose>
-				<xsl:when test="$sheetType='A'">
+				<xsl:when test="$sheetType='A' and $sheetType='PG'">
 					<xsl:choose>
-		        		<xsl:when test="not(schede/A/RE/REN/RENS)">
-		        			<xsl:choose>
-		                    	<xsl:when test="schede/A/RE/REL/RELF">
+		        			<xsl:when test="not(schede/A/RE/REN/RENS)">
+		        				<xsl:choose>
+					                    	<xsl:when test="schede/A/RE/REL/RELF">
 									<xsl:value-of
 										select="concat(' (', schede/A/RE/REL/RELS, ', ',  schede/A/RE/REL/RELF, ')')" />
 								</xsl:when>
-		                        <xsl:otherwise>
-		                        	<xsl:value-of
+					                        <xsl:otherwise>
+		        		                	<xsl:value-of
 										select="concat(' (', schede/A/RE/REL/RELS, ')')" />
 								</xsl:otherwise>
-		                    </xsl:choose>
-		        		</xsl:when>
-		        		<xsl:otherwise>
-		        			<xsl:value-of select="''" />
-		        		</xsl:otherwise>
-        			</xsl:choose>
+					                    </xsl:choose>
+		        			</xsl:when>
+		        			<xsl:otherwise>
+		        				<xsl:value-of select="''" />
+			        		</xsl:otherwise>
+        				</xsl:choose>
+				</xsl:when>
+				<xsl:when test="$sheetType='BNB'">
+					<xsl:choose>
+		        			<xsl:when test="schede/BNB/LR/LRD/LRDB)">
+		        				<xsl:choose>
+					                    	<xsl:when test="schede/BNB/LR/LRD/LRDD">
+									<xsl:value-of
+										select="concat(' (', schede/BNB/LR/LRD/LRDB, ' - ',  schede/BNB/LR/LRD/LRDD, ')')" />
+								</xsl:when>
+					                        <xsl:otherwise>
+		        		                	<xsl:value-of
+										select="concat(' (', schede/BNB/LR/LRD/LRDB, ')')" />
+								</xsl:otherwise>
+					                    </xsl:choose>
+		        			</xsl:when>
+		        			<xsl:when test="schede/BNB/LR/LRD/LRDF)">
+							<xsl:value-of select="concat(' (', schede/BNB/LR/LRD/LRDF, ')')" />
+		        			</xsl:when>
+		        			<xsl:otherwise>
+		        				<xsl:value-of select="''" />
+			        		</xsl:otherwise>
+        				</xsl:choose>
 				</xsl:when>
 				<xsl:when test="$sheetType='BDM'">
-                      	<xsl:value-of select="concat(' (', schede/BDM/AU/DTF/DTFZ, ')')" />
+                      			<xsl:choose>
+	                      			<xsl:when test="schede/BDM/AU/DTF/DTFZ">
+							<xsl:value-of select="concat(' (', schede/BDM/AU/DTF/DTFZ, ')')" />
+						</xsl:when>
+		        			<xsl:otherwise>
+		        				<xsl:value-of select="''" />
+			        		</xsl:otherwise>
+        				</xsl:choose>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:choose>
