@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <A version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">A</TSK>
+         <LIR hint="Livello ricerca">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">08</NCTR>
+            <NCTN hint="Numero catalogo generale">00107878</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S142</ESC>
+         <ECP hint="Ente competente">S142</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione tipologica">chiesa</OGTD>
+            <OGTN hint="Denominazione">Chiesa di S. Elisabetta</OGTN>
+         </OGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Emilia Romagna</PVCR>
+            <PVCP hint="Provincia">PR</PVCP>
+            <PVCC hint="Comune">Parma</PVCC>
+         </PVC>
+      </LC>
+      <CS hint="LOCALIZZAZIONE CATASTALE">
+         <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+         <CTS hint="LOCALIZZAZIONE CATASTALE">
+            <CTSC hint="Comune">Parma</CTSC>
+         </CTS>
+      </CS>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <ATB hint="AMBITO CULTURALE">
+            <ATBR hint="Riferimento all'intervento">costruzione</ATBR>
+            <ATBD hint="Denominazione">barocco</ATBD>
+            <ATBM hint="Fonte dell'attribuzione">bibliografia</ATBM>
+         </ATB>
+      </AU>
+      <RE hint="NOTIZIE STORICHE">
+         <REN hint="NOTIZIA">
+            <RENR hint="Riferimento">intero bene</RENR>
+         </REN>
+         <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+            <RELS hint="Secolo">sec. XVII</RELS>
+            <RELI hint="Data">1621</RELI>
+         </REL>
+         <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+            <REVS hint="Secolo">sec. XVII</REVS>
+            <REVI hint="Data">1621</REVI>
+         </REV>
+      </RE>
+      <PN hint="PIANTA">
+         <PNR hint="Riferimento alla parte">intero bene</PNR>
+         <PNT hint="PIANTA">
+            <PNTS hint="Schema">centrale</PNTS>
+            <PNTF hint="Forma">quadrata</PNTF>
+         </PNT>
+      </PN>
+      <SV hint="STRUTTURE VERTICALI">
+         <SVC hint="TECNICA COSTRUTTIVA">
+            <SVCU hint="Ubicazione">intero bene</SVCU>
+            <SVCC hint="Genere">in muratura</SVCC>
+            <SVCM hint="Materiali">laterizio</SVCM>
+         </SVC>
+      </SV>
+      <SO hint="STRUTTURE DI ORIZZONTAMENTO">
+         <SOF hint="TIPO">
+            <SOFG hint="Genere">cupola</SOFG>
+         </SOF>
+      </SO>
+      <SO hint="STRUTTURE DI ORIZZONTAMENTO">
+         <SOF hint="TIPO">
+            <SOFG hint="Genere">volta</SOFG>
+            <SOFF hint="Forma">a botte</SOFF>
+         </SOF>
+      </SO>
+      <CP hint="COPERTURE">
+         <CPU hint="Ubicazione">intero bene</CPU>
+         <CPC hint="STRUTTURA E TECNICA">
+            <CPCT hint="Struttura primaria">capriate</CPCT>
+         </CPC>
+         <CPM hint="MANTO DI COPERTURA">
+            <CPMR hint="Riferimento">intera copertura</CPMR>
+            <CPMT hint="Tipo">tegole</CPMT>
+            <CPMQ hint="Qualificazione del tipo">coppi</CPMQ>
+            <CPMM hint="Materiali">laterizio</CPMM>
+         </CPM>
+      </CP>
+      <DE hint="ELEMENTI DECORATIVI">
+         <DEC hint="ELEMENTI DECORATIVI">
+            <DECU hint="Ubicazione">prospetto principale</DECU>
+            <DECL hint="Collocazione">esterna</DECL>
+            <DECT hint="Tipo">cornice</DECT>
+         </DEC>
+         <DEC hint="ELEMENTI DECORATIVI">
+            <DECU hint="Ubicazione">prospetto principale</DECU>
+            <DECL hint="Collocazione">esterna</DECL>
+            <DECT hint="Tipo">paraste</DECT>
+         </DEC>
+         <DEC hint="ELEMENTI DECORATIVI">
+            <DECU hint="Ubicazione">prospetto principale</DECU>
+            <DECL hint="Collocazione">esterna</DECL>
+            <DECT hint="Tipo">modanature</DECT>
+         </DEC>
+         <DEC hint="ELEMENTI DECORATIVI">
+            <DECU hint="Ubicazione">prospetto principale</DECU>
+            <DECL hint="Collocazione">esterna</DECL>
+            <DECT hint="Tipo">volute</DECT>
+         </DEC>
+         <DEC hint="ELEMENTI DECORATIVI">
+            <DECL hint="Collocazione">interna</DECL>
+            <DECT hint="Tipo">cornice</DECT>
+         </DEC>
+         <DEC hint="ELEMENTI DECORATIVI">
+            <DECL hint="Collocazione">interna</DECL>
+            <DECT hint="Tipo">capitelli</DECT>
+         </DEC>
+      </DE>
+      <US hint="UTILIZZAZIONI">
+         <USA hint="USO ATTUALE">
+            <USAR hint="Riferimento alla parte">intero bene</USAR>
+            <USAD hint="Uso">deposito</USAD>
+         </USA>
+         <USO hint="USO STORICO">
+            <USOR hint="Riferimento alla parte">intero bene</USOR>
+            <USOD hint="Uso">chiesa</USOD>
+         </USO>
+      </US>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+         </CDG>
+         <NVC hint="PROVVEDIMENTI DI TUTELA">
+            <NVCT hint="Tipo provvedimento">DM (L. n. 1089/1939, artt. 1, 4)</NVCT>
+            <NVCE hint="Estremi provvedimento">1986/10/06</NVCE>
+         </NVC>
+         <STU hint="STRUMENTI URBANISTICI">
+            <STUT hint="Strumenti in vigore">P.R.G. approvato il 2/10/1974</STUT>
+            <STUN hint="Sintesi normativa zona">restauro</STUN>
+         </STU>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia b/n</FTAP>
+            <FTAD hint="Data">1976</FTAD>
+            <FTAE hint="Ente proprietario">SBAP PR</FTAE>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia b/n</FTAP>
+            <FTAD hint="Data">1976</FTAD>
+            <FTAE hint="Ente proprietario">SBAP PR</FTAE>
+         </FTA>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTP hint="Tipo">Decreto Ministeriale</FNTP>
+            <FNTD hint="Data">1986</FNTD>
+         </FNT>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTP hint="Tipo">scheda storica</FNTP>
+            <FNTA hint="Autore">Tragni/ Ghirardi/ Zanlari</FNTA>
+            <FNTD hint="Data">1976</FNTD>
+         </FNT>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">2</ADSP>
+            <ADSM hint="Motivazione">scheda di bene non adeguatamente sorvegliabile</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">1976</CMPD>
+            <CMPN hint="Nome">Bocchi M./ Ghirardi F./ Tragni C./ Zanlari P.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">NR</FUR>
+         <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+            <RVMD hint="Data">2012</RVMD>
+            <RVMN hint="Nome">Albonico C.</RVMN>
+         </RVM>
+      </CM>
+      <AN hint="ANNOTAZIONI"/>
+   </A>
+</schede>

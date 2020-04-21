@@ -1,0 +1,446 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-timeIndexedRole:0800107878-rvm-dd81e6e6cc6a1b1a6ffd87eefa69a6f6
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da Albonico C."@it , "Digital transcription by Albonico C."@en ;
+        roapit:isRoleInTimeOf  ar-agent:dd81e6e6cc6a1b1a6ffd87eefa69a6f6 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-culturalPropertyDefinition:chiesa
+        a                arco-dd:CulturalPropertyDefinition ;
+        rdfs:label       "chiesa" ;
+        skos:closeMatch  <http://dati.beniculturali.it/vocabularies/beni_architettonici_e_paesaggistici/def/012.013> .
+
+ar-TimeInterval:2012  a  tiapit:TimeInterval ;
+        rdfs:label   "2012" ;
+        tiapit:time  "2012" .
+
+ar-agent:dd81e6e6cc6a1b1a6ffd87eefa69a6f6
+        a           l0:Agent ;
+        rdfs:label  "Albonico C." .
+
+<https://w3id.org/arco/resource/CadastralIdentity/0800107878-1>
+        a                               arco-location:CadastralIdentity ;
+        rdfs:label                      "Identità catastale 1 del bene: 0800107878"@it , "Cadastral identity 1 of cultural property: 0800107878"@en ;
+        arco-location:hasCadastralCity  ar-city:parma ;
+        arco-location:hasLocationType   arco-location:CurrentPhysicalLocation ;
+        l0:name                         "Identità catastale 1 del bene: 0800107878"@it , "Cadastral identity 1 of cultural property: 0800107878"@en .
+
+<https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878>
+        a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchitecturalOrLandscapeHeritage ;
+        rdfs:comment                    "chiesa, Chiesa di S. Elisabetta" ;
+        rdfs:label                      "Chiesa di S. Elisabetta (chiesa) - barocco (sec. XVII)"@it , "Chiesa di S. Elisabetta (chiesa) - barocco (sec. XVII)"@en ;
+        arco-arco:catalogueNumber       "00107878" ;
+        arco-arco:hasCataloguingAgency  ar-agent:15de7453f8a4fc530300b70b25a2a6cb ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:15de7453f8a4fc530300b70b25a2a6cb ;
+        arco-arco:regionIdentifier      "08" ;
+        arco-arco:uniqueIdentifier      "0800107878" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordA/0800107878> ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/CulturalScopeAttribution/0800107878-cultural-scope-attribution-1> ;
+        arco-cd:hasDating               ar-dating:0800107878-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0800107878-photographic-documentation-2 , <https://w3id.org/arco/resource/SourceAndDocument/0800107878-source-document-1> , ar-photograpyDocumentation:0800107878-photographic-documentation-1 , <https://w3id.org/arco/resource/SourceAndDocument/0800107878-source-document-2> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0800107878-legal-situation-proprieta-ente-pubblico-territoriale ;
+        arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/0800107878-protective-measure-1> ;
+        arco-cd:hasUrbanPlanningInstrument
+                <https://w3id.org/arco/resource/UrbanPlanningInstrument/0800107878-urban-planning-instrument-1> ;
+        arco-core:hasAgentRole          ar-agentrole:0800107878-heritage-protection-agency , ar-agentrole:0800107878-cataloguing-agency ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:513aa116e2841524cea1f365b412671c ;
+        arco-dd:hasDesignationInTime    ar-designationInTime:0800107878-chiesa-di-s-elisabetta ;
+        arco-dd:hasUse                  <https://w3id.org/arco/resource/Use/0800107878-historical-use-1> , <https://w3id.org/arco/resource/Use/0800107878-current-use-1> ;
+        arco-location:hasCadastralIdentity
+                <https://w3id.org/arco/resource/CadastralIdentity/0800107878-1> ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:d56630c72abacc2fb580bced40f02545 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0800107878-current .
+
+ar-catalogueRecordVersion:0800107878-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1976 Bocchi M./ Ghirardi F./ Tragni C./ Zanlari P." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1976 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0800107878-compilation-3be2d02890f212995e3a4832ff9a8d6e ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:3be2d02890f212995e3a4832ff9a8d6e ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordA/0800107878> .
+
+ar-agent:60013bbe7116307383991ed2eac2121f
+        a           l0:Agent ;
+        rdfs:label  "Tragni/ Ghirardi/ Zanlari" ;
+        l0:name     "Tragni/ Ghirardi/ Zanlari" .
+
+ar-agentrole:0800107878-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0800107878: S142"@it , "Heritage protection agency for cultural property 0800107878: S142"@en ;
+        arco-core:hasAgent  ar-agent:15de7453f8a4fc530300b70b25a2a6cb ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-event:0800107878-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0800107878"@it , "Creation of cultural property 0800107878"@en ;
+        arco-cd:specificTime  ar-TimeInterval:1621-1621 ;
+        tiapit:atTime         ar-TimeInterval:sec-xvii-sec-xvii ;
+        l0:name               "Realizzazione del bene 0800107878"@it , "Creation of cultural property 0800107878"@en .
+
+ar-province:pr  a   clvapit:Province ;
+        rdfs:label  "PR" ;
+        l0:name     "PR" .
+
+<https://w3id.org/arco/resource/Use/0800107878-current-use-1>
+        a                    arco-cd:Use ;
+        rdfs:label           "Current use 1 of cultural property 0800107878"@en , "Uso attuale 1 del bene culturale 0800107878"@it ;
+        arco-cd:hasUseType   arco-cd:CurrentUse ;
+        arco-cd:useFunction  "deposito" ;
+        l0:name              "Current use 1 of cultural property 0800107878"@en , "Uso attuale 1 del bene culturale 0800107878"@it .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0800107878-source-document-2>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Sources and documents 2 of cultural property: 0800107878"@en , "Fonti e documenti 2 del bene culturale: 0800107878"@it ;
+        arco-cd:hasAuthor             ar-agent:60013bbe7116307383991ed2eac2121f ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:scheda-storica ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        tiapit:time                   "1976" ;
+        l0:name                       "Sources and documents 2 of cultural property: 0800107878"@en , "Fonti e documenti 2 del bene culturale: 0800107878"@en .
+
+ar-city:parma  a    clvapit:City ;
+        rdfs:label  "Parma" ;
+        l0:name     "Parma" .
+
+ar-region:emilia-romagna
+        a           clvapit:Region ;
+        rdfs:label  "Emilia Romagna" ;
+        l0:name     "Emilia Romagna" .
+
+<https://w3id.org/arco/resource/CulturalScopeAttribution/0800107878-cultural-scope-attribution-1>
+        a                            arco-cd:CulturalScopeAttribution ;
+        rdfs:label                   "Attribuzione di ambito culturale del bene: 0800107878"@it , "Cultural scope attribution of cultural property: 0800107878"@en ;
+        arco-cd:hasCulturalScope     <https://w3id.org/arco/resource/CulturalScope/barocco> ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:bibliografia ;
+        arco-cd:hasInterventionRole  ar-role:0800107878-costruzione ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        l0:name                      "Attribuzione di ambito culturale del bene: 0800107878"@it , "Cultural scope attribution of cultural property: 0800107878"@en .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0800107878-cataloguing-agency .
+
+ar-docutmentationType:fotografia-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia b/n" ;
+        l0:name     "fotografia b/n" .
+
+ar-TimeInterval:1621-1621
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "1621 - 1621" ;
+        arco-arco:endTime    "1621" ;
+        arco-arco:startTime  "1621" ;
+        l0:name              "1621 - 1621" .
+
+ar-agentrole:0800107878-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0800107878: S142"@it , "Cataloguing agency for cultural property 0800107878: S142"@en ;
+        arco-core:hasAgent  ar-agent:15de7453f8a4fc530300b70b25a2a6cb ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-TimeInterval:1976  a  tiapit:TimeInterval ;
+        rdfs:label   "1976" ;
+        tiapit:time  "1976" .
+
+ar-docutmentationType:scheda-storica
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "scheda storica" ;
+        l0:name     "scheda storica" .
+
+<https://w3id.org/arco/resource/SourceAndDocument/0800107878-source-document-1>
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Sources and documents 1 of cultural property: 0800107878"@en , "Fonti e documenti 1 del bene culturale: 0800107878"@it ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:decreto-ministeriale ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        tiapit:time                   "1986" ;
+        l0:name                       "Sources and documents 1 of cultural property: 0800107878"@en , "Fonti e documenti 1 del bene culturale: 0800107878"@en .
+
+ar-agentrole:0800107878-photographic-documentation-2-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 2 del bene culturale 0800107878: SBAP PR"@it , "Owner agency of photographic documentation 2 of cultural property 0800107878: SBAP PR"@en ;
+        arco-core:hasAgent  ar-agent:36be7bbcb642554f41f4047a1b9455de ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 2 del bene culturale 0800107878: SBAP PR"@it , "Owner agency of photographic documentation 2 of cultural property 0800107878: SBAP PR"@en .
+
+ar-catalogueRecordVersion:0800107878-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2012 Albonico C." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0800107878-rvm-dd81e6e6cc6a1b1a6ffd87eefa69a6f6 ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:dd81e6e6cc6a1b1a6ffd87eefa69a6f6 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordA/0800107878> .
+
+ar-culturalPropertyType:513aa116e2841524cea1f365b412671c
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: chiesa"@it , "Cultural property type: chiesa"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:chiesa ;
+        l0:name     "Tipo del bene: chiesa"@it , "Cultural property type: chiesa"@en .
+
+ar-agent:15de7453f8a4fc530300b70b25a2a6cb
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza per i Beni Architettonici e Paesaggistici per le province di Parma e Piacenza" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        arco-core:isAgentOf  ar-agentrole:0800107878-cataloguing-agency , ar-agentrole:0800107878-heritage-protection-agency ;
+        l0:name              "Soprintendenza per i Beni Architettonici e Paesaggistici per le province di Parma e Piacenza" .
+
+ar-timeIndexedTypedLocation:0800107878-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0800107878"@it , "Current physical location of cultural property: 0800107878"@en ;
+        arco-location:atLocation       ar-feature:9bdbcb41490651f460e45a96fb988272 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0800107878"@it , "Current physical location of cultural property: 0800107878"@en .
+
+ar-role:0800107878-costruzione
+        a           roapit:Role ;
+        rdfs:label  "costruzione" ;
+        l0:name     "costruzione" .
+
+ar-address:8408ee5311456b3a37a74e28d81db19b
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Emilia Romagna, PR, Parma" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        clvapit:hasCity      ar-city:parma ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:pr ;
+        clvapit:hasRegion    ar-region:emilia-romagna .
+
+ar-TimeInterval:sec-xvii-sec-xvii
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XVII - sec. XVII" ;
+        tiapit:time  "sec. XVII - sec. XVII" ;
+        l0:name      "sec. XVII - sec. XVII" .
+
+ar-interpretationCriterion:bibliografia
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "bibliografia" ;
+        l0:name     "bibliografia" .
+
+<https://w3id.org/arco/resource/ProtectiveMeasure/0800107878-protective-measure-1>
+        a                  arco-cd:ProtectiveMeasure ;
+        rdfs:label         "Protective measure 1 of cultural property 0800107878: DM (L. n. 1089/1939, artt. 1, 4)"@en , "Provvedimento di tutela 1 del bene culturale 0800107878: DM (L. n. 1089/1939, artt. 1, 4)"@it ;
+        arco-cd:issueDate  "1986/10/06" ;
+        l0:name            "Protective measure 1 of cultural property 0800107878: DM (L. n. 1089/1939, artt. 1, 4)"@en , "Provvedimento di tutela 1 del bene culturale 0800107878: DM (L. n. 1089/1939, artt. 1, 4)"@it .
+
+ar-agent:36be7bbcb642554f41f4047a1b9455de
+        a                    l0:Agent ;
+        rdfs:label           "SBAP PR" ;
+        arco-core:isAgentOf  ar-agentrole:0800107878-photographic-documentation-1-photographic-documentation-owner , ar-agentrole:0800107878-photographic-documentation-2-photographic-documentation-owner ;
+        l0:name              "SBAP PR" .
+
+<https://w3id.org/arco/resource/EligibleIntervention/restauro>
+        a           arco-cd:EligibleIntervention ;
+        rdfs:label  "restauro" ;
+        l0:name     "restauro" .
+
+ar-dating:0800107878-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0800107878"@it , "Dating 1 of cultural property 0800107878"@en ;
+        arco-cd:hasDatingEvent  ar-event:0800107878-creation-1 ;
+        l0:name                 "Dating 1 of cultural property 0800107878"@en , "Cronologia 1 del bene 0800107878"@it .
+
+ar-docutmentationType:decreto-ministeriale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "Decreto Ministeriale" ;
+        l0:name     "Decreto Ministeriale" .
+
+<https://w3id.org/arco/resource/CatalogueRecordA/0800107878>
+        a           arco-catalogue:CatalogueRecordA ;
+        rdfs:label  "Catalogue Record n: 0800107878"@en , "Scheda catalografica n: 0800107878"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0800107878" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0800107878-2 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0800107878-compilation , ar-catalogueRecordVersion:0800107878-rvm ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "ICCD10016401" .
+
+<https://w3id.org/arco/resource/CulturalScope/barocco>
+        a           arco-cd:CulturalScope ;
+        rdfs:label  "barocco" ;
+        l0:name     "barocco" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0800107878-heritage-protection-agency .
+
+ar-photograpyDocumentation:0800107878-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 0800107878"@en , "Documentazione fotografica 2 del bene culturale: 0800107878"@it ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        arco-core:hasAgentRole        ar-agentrole:0800107878-photographic-documentation-2-photographic-documentation-owner ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        tiapit:time                   "1976" ;
+        l0:name                       "Photographic documentation 2 of cultural property: 0800107878"@en , "Documentazione fotografica 2 del bene culturale: 0800107878"@en .
+
+ar-legalSituation:0800107878-legal-situation-proprieta-ente-pubblico-territoriale
+        a           arco-cd:LegalSituation ;
+        rdfs:label  "Condizione giuridica del bene culturale 0800107878: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0800107878: proprietà Ente pubblico territoriale"@en ;
+        l0:name     "Condizione giuridica del bene culturale 0800107878: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0800107878: proprietà Ente pubblico territoriale"@en .
+
+ar-role:Owner  a            roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  ar-agentrole:0800107878-photographic-documentation-1-photographic-documentation-owner , ar-agentrole:0800107878-photographic-documentation-2-photographic-documentation-owner .
+
+<https://w3id.org/arco/resource/UrbanPlanningInstrument/0800107878-urban-planning-instrument-1>
+        a           arco-cd:UrbanPlanningInstrument ;
+        rdfs:label  "Urban planning instrument 1 of cultural property 0800107878: P.R.G. approvato il 2/10/1974"@en , "Strumento urbanistico-territoriale 1 del bene culturale 0800107878: P.R.G. approvato il 2/10/1974"@it ;
+        arco-cd:hasEligibleIntervention
+                <https://w3id.org/arco/resource/EligibleIntervention/restauro> ;
+        l0:name     "Urban planning instrument 1 of cultural property 0800107878: P.R.G. approvato il 2/10/1974"@en , "Strumento urbanistico-territoriale 1 del bene culturale 0800107878: P.R.G. approvato il 2/10/1974"@it .
+
+ar-agentrole:0800107878-photographic-documentation-1-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 1 del bene culturale 0800107878: SBAP PR"@it , "Owner agency of photographic documentation 1 of cultural property 0800107878: SBAP PR"@en ;
+        arco-core:hasAgent  ar-agent:36be7bbcb642554f41f4047a1b9455de ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 1 del bene culturale 0800107878: SBAP PR"@it , "Owner agency of photographic documentation 1 of cultural property 0800107878: SBAP PR"@en .
+
+ar-agent:3be2d02890f212995e3a4832ff9a8d6e
+        a           l0:Agent ;
+        rdfs:label  "Bocchi M./ Ghirardi F./ Tragni C./ Zanlari P." .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-timeIndexedRole:0800107878-compilation-3be2d02890f212995e3a4832ff9a8d6e
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Bocchi M./ Ghirardi F./ Tragni C./ Zanlari P."@en , "Compilazione da Bocchi M./ Ghirardi F./ Tragni C./ Zanlari P."@it ;
+        roapit:isRoleInTimeOf  ar-agent:3be2d02890f212995e3a4832ff9a8d6e ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-privacyReason:scheda-di-bene-non-adeguatamente-sorvegliabile
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda di bene non adeguatamente sorvegliabile" ;
+        l0:name     "scheda di bene non adeguatamente sorvegliabile" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-designationInTime:0800107878-chiesa-di-s-elisabetta
+        a           arco-dd:DesignationInTime ;
+        rdfs:label  "Chiesa di S. Elisabetta" ;
+        l0:name     "Chiesa di S. Elisabetta" .
+
+ar-feature:9bdbcb41490651f460e45a96fb988272
+        a                   clvapit:Feature ;
+        rdfs:label          "ITALIA Emilia Romagna PR Parma" ;
+        clvapit:hasAddress  ar-address:8408ee5311456b3a37a74e28d81db19b .
+
+ar-photograpyDocumentation:0800107878-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 0800107878"@en , "Documentazione fotografica 1 del bene culturale: 0800107878"@it ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800107878> ;
+        arco-core:hasAgentRole        ar-agentrole:0800107878-photographic-documentation-1-photographic-documentation-owner ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        tiapit:time                   "1976" ;
+        l0:name                       "Photographic documentation 1 of cultural property: 0800107878"@en , "Documentazione fotografica 1 del bene culturale: 0800107878"@en .
+
+<https://w3id.org/arco/resource/Use/0800107878-historical-use-1>
+        a                    arco-cd:Use ;
+        rdfs:label           "Historical use 1 of cultural property 0800107878"@en , "Uso storico 1 del bene culturale 0800107878"@it ;
+        arco-cd:hasUseType   arco-cd:HistoricalUse ;
+        arco-cd:useFunction  "chiesa" ;
+        l0:name              "Historical use 1 of cultural property 0800107878"@en , "Uso storico 1 del bene culturale 0800107878"@it .
+
+ar-accessProfile:0800107878-2
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0800107878: 2"@it , "Access profile to catalogue record of cultural property 0800107878: 2"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MediumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-di-bene-non-adeguatamente-sorvegliabile ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0800107878: 2"@it , "Access profile to catalogue record of cultural property 0800107878: 2"@en .
