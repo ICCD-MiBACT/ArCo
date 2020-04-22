@@ -6716,7 +6716,7 @@
 						<xsl:value-of
 							select="concat('Documentazione fotografica ', position(), ' del bene culturale: ', $itemURI)" />
 					</rdfs:label>
-					<l0:name xml:lang="en">
+					<l0:name xml:lang="it">
 						<xsl:value-of
 							select="concat('Documentazione fotografica ', position(), ' del bene culturale: ', $itemURI)" />
 					</l0:name>
