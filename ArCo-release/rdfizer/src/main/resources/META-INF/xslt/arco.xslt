@@ -5270,11 +5270,11 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:value-of
-								select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./REN/RENF)))" />
+								select="normalize-space(./REN/RENF)" />
 						</rdfs:label>
 						<l0:name>
 							<xsl:value-of
-								select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./REN/RENF)))" />
+								select="normalize-space(./REN/RENF)" />
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -12945,7 +12945,7 @@
 							<arco-cd:hasCircumstance>
 								<xsl:attribute name="rdf:resource">
 									<xsl:value-of
-									select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./DDCC)))" />
+									select="concat($NS, 'Circumstance/', arco-fn:urify(normalize-space(./DDCC)))" />
 								</xsl:attribute>
 							</arco-cd:hasCircumstance>
 						</xsl:if>
