@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-# English Version (versione italiana riportata di seguito)
+# English Version (Versione italiana fornita di seguito)
 
 **Indicate which part of the project the bug concerns: ontology, knowledge graph, rdfizer**
 
