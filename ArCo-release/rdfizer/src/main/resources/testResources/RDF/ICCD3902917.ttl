@@ -329,7 +329,7 @@ ar-photograpyDocumentation:1500068123-photographic-documentation-1
         arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-b-n ;
         arco-cd:isDocumentationOf     ar-HistoricOrArtisticProperty:1500068123 ;
         arco-core:hasCategory         arco-cd:AttachedDocumentation ;
-        l0:name                       "Photographic documentation 1 of cultural property: 1500068123"@en , "Documentazione fotografica 1 del bene culturale: 1500068123"@en .
+        l0:name                       "Photographic documentation 1 of cultural property: 1500068123"@en , "Documentazione fotografica 1 del bene culturale: 1500068123"@it .
 
 ar-role:HeritageProtectionAgency
         a                   roapit:Role ;

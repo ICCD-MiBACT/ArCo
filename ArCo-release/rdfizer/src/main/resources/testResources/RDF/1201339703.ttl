@@ -214,7 +214,7 @@ ar-photograpyDocumentation:1201339703-photographic-documentation-1
         arco-cd:isDocumentationOf      ar-archeologicalProperty:1201339703 ;
         arco-core:hasAgentRole         ar-agentrole:1201339703-photographic-documentation-1-photographic-documentation-owner ;
         arco-core:hasCategory          arco-cd:AttachedDocumentation ;
-        l0:name                        "Photographic documentation 1 of cultural property: 1201339703"@en , "Documentazione fotografica 1 del bene culturale: 1201339703"@en .
+        l0:name                        "Photographic documentation 1 of cultural property: 1201339703"@en , "Documentazione fotografica 1 del bene culturale: 1201339703"@it .
 
 ar-archeologicalProperty:1201339703
         a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
