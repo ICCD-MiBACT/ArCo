@@ -54,7 +54,7 @@ In questo modulo si riusano come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:comment xml:lang="en">The module Location models information related to the localization and georeferencing of a cultural property.
-In this module are used as template the following Ontology Design Patterns:
+In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
 - http://www.ontologydesignpatterns.org/cp/owl/classification.owl
 - http://www.ontologydesignpatterns.org/cp/owl/place.owl

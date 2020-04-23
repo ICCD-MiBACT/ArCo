@@ -64,7 +64,7 @@ In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/partof.owl
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:comment xml:lang="en">The ArCo module is the root of the network ArCo - Architecture of Knowledge. It imports all the other modules and models top-level distinctions from the cultural heritage domain.
-In this module are used as template the following Ontology Design Patterns:
+In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/classification.owl
 - http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
 - http://www.ontologydesignpatterns.org/cp/owl/componency.owl
@@ -98,6 +98,18 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -952,6 +964,12 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasAccession -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAccession"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasAcquisition -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition"/>
@@ -961,6 +979,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAssociatedPreparation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAssociatedPreparation"/>
     
 
 
@@ -982,9 +1006,21 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasBiologicalTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxon"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxonomy"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasBotanicalRevision -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasBotanicalRevision"/>
     
 
 
@@ -1015,6 +1051,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasDetectionMethod -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDetectionMethod"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasDeterminavit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDeterminavit"/>
     
 
 
@@ -1090,6 +1132,12 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasRelatedSample -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedSample"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedWorkSituation"/>
@@ -1129,6 +1177,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/hasTitle -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTitle"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasTypeSpecimen -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTypeSpecimen"/>
     
 
 
@@ -1254,6 +1308,18 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCloseIndividual -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCloseIndividual"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasCollectingSite -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCollectingSite"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasConservationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasConservationStatus"/>
@@ -1290,9 +1356,27 @@ In this module are used as template the following Ontology Design Patterns:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasHostIndividual -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasHostIndividual"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasIconographicOrDecorativeApparatus"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasLabel -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLabel"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasLegit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLegit"/>
     
 
 
@@ -1915,6 +1999,18 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- https://w3id.org/arco/ontology/context-description/numberInCirculation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberInCirculation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/numberOfEnvelopes -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfEnvelopes"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/numberOfLabels -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfLabels"/>
     
 
 
@@ -3658,6 +3754,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Accession -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Accession"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/Acquisition -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition"/>
@@ -3700,9 +3802,21 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/BiologicalTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BiologicalTaxonomy"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/BotanicalRevision -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
     
 
 
@@ -3745,6 +3859,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/context-description/DetectionMethod -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/DetectionMethod"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Determinavit -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Determinavit"/>
     
 
 
@@ -3808,6 +3928,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Preparation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Preparation"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/ProtectiveMeasure -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure"/>
@@ -3838,6 +3964,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/Sample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Sample"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/SexEstimate -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
@@ -3859,6 +3991,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/context-description/Title -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Title"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/TypeSpecimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
     
 
 
@@ -3922,6 +4060,30 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CloseIndividual -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CloseIndividual"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/CollectingSite -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/CommunicationMedium -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CommunicationMedium"/>
@@ -3976,15 +4138,39 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/HerbariumType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HerbariumType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/HostIndividual -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HostIndividual"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatus"/>
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/Label -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Label"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Legibility -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Legibility"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Legit -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Legit"/>
     
 
 
@@ -4003,6 +4189,18 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/denotative-description/SampleCollected -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollected"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenType"/>
     
 
 

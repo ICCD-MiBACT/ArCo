@@ -44,7 +44,7 @@ In questo modulo sono riusati come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/classification.owl
 - http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:comment>
         <rdfs:comment xml:lang="en">The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.
-In this module are used as template the following Ontology Design Patterns:
+In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/classification.owl
 - http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Catalogue Ontology (ArCo network)</rdfs:label>
@@ -75,6 +75,12 @@ In this module are used as template the following Ontology Design Patterns:
     <!-- http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate -->
 
     <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 

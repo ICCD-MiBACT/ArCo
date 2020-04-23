@@ -56,7 +56,7 @@ In questo modulo si riusano come template i seguenti Ontology Design Patterns:
 - http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:comment xml:lang="en">The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.
-In this module are used as template the following Ontology Design Patterns:
+In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl
 - http://www.ontologydesignpatterns.org/cp/owl/classification.owl
 - http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl
