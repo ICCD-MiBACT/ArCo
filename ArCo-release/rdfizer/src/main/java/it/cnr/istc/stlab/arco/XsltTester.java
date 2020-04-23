@@ -120,18 +120,22 @@ public class XsltTester {
 						System.out.println(String.format("\nFAILED %s %s %s", lineNumber, xmlIn.getName(),
 								FilenameUtils.getName(expectedResultFile)));
 
+						Model generatedMinusExpected = ModelFactory.createDefaultModel();
+						generatedMinusExpected.add(generatedModel);
+						generatedMinusExpected.remove(expectedResult);
+						System.out.println("\nGenerated\\Expected (to add to expected): "
+								+ generatedMinusExpected.size() + " triples");
 						if (verbose) {
-							Model generatedMinusExpected = ModelFactory.createDefaultModel();
-							generatedMinusExpected.add(generatedModel);
-							generatedMinusExpected.remove(expectedResult);
-							System.out.println("\nGenerated\\Exepected (to add to expected)");
 							generatedMinusExpected.write(System.out, "NT");
+						}
 
-							Model expectedMinusGenerated = ModelFactory.createDefaultModel();
-							expectedMinusGenerated.add(expectedResult);
-							expectedMinusGenerated.remove(generatedModel);
-							System.out.println("\nExepected\\Generated (to remove from expected)");
-							expectedMinusGenerated.write(System.out,"NT");
+						Model expectedMinusGenerated = ModelFactory.createDefaultModel();
+						expectedMinusGenerated.add(expectedResult);
+						expectedMinusGenerated.remove(generatedModel);
+						System.out.println("\nExpected\\Generated (to remove from expected) "
+								+ expectedMinusGenerated.size() + " triples");
+						if (verbose) {
+							expectedMinusGenerated.write(System.out, "NT");
 						}
 
 					}
