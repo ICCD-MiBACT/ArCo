@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><schede>
+   <BDM version="4.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">BDM</TSK>
+         <LIR hint="Livello catalogazione">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice Regione">12</NCTR>
+            <NCTN hint="Numero catalogo generale">01254198</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S56</ESC>
+         <ECP hint="Ente competente per tutela">S56</ECP>
+      </CD>
+      <OG hint="BENE CULTURALE">
+         <AMB hint="Ambito di tutela MiBACT">etnoantropologico</AMB>
+         <CTG hint="Categoria">RAPPRESENTAZIONI/ PROFANE</CTG>
+         <OGT hint="DEFINIZIONE BENE">
+            <OGTD hint="Definizione">Costume di Arlecchina</OGTD>
+            <OGTT hint="Tipologia">della commedia dell'arte</OGTT>
+            <OGTP hint="Parte componente">Cintura</OGTP>
+            <OGTV hint="Configurazione strutturale e di contesto">bene complesso/ parte componente</OGTV>
+         </OGT>
+         <OGC hint="TRATTAMENTO CATALOGRAFICO">
+            <OGCT hint="Trattamento catalografico">scheda di insieme</OGCT>
+         </OGC>
+         <OGM hint="Modalità di individuazione">appartenenza ad una collezione o raccolta pubblica</OGM>
+         <OGM hint="Modalità di individuazione">dati di archivio</OGM>
+         <OGR hint="Disponibilità del bene">bene disponibile</OGR>
+      </OG>
+      <RV hint="RELAZIONI">
+         <RVE hint="STRUTTURA COMPLESSA">
+            <RVEL hint="Livello nella struttura complessa">4</RVEL>
+         </RVE>
+      </RV>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Lazio</PVCR>
+            <PVCP hint="Provincia">RM</PVCP>
+            <PVCC hint="Comune">Roma</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCT hint="Tipologia">palazzo</LDCT>
+            <LDCN hint="Denominazione attuale">Palazzo delle Tradizioni Popolari</LDCN>
+            <LDCF hint="Uso">museo</LDCF>
+            <LDCC hint="Complesso di appartenenza">Musei d'Arte e Scienza</LDCC>
+            <LDCU hint="Indirizzo">Piazza Guglielmo Marconi, 8/10</LDCU>
+            <LDCM hint="Denominazione raccolta">Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari</LDCM>
+            <LDCS hint="Specifiche">Piano III/ stanza di deposito n. 403</LDCS>
+         </LDC>
+         <ACB hint="ACCESSIBILITA' DEL BENE">
+            <ACBA hint="Accessibilità">si</ACBA>
+         </ACB>
+      </LC>
+      <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO - AMMINISTRATIVE">
+         <TLC hint="Tipo di localizzazione">luogo di produzione/realizzazione</TLC>
+         <PRV hint="LOCALIZZAZIONE">
+            <PRVS hint="Stato">ITALIA</PRVS>
+            <PRVR hint="Regione">Piemonte</PRVR>
+            <PRVP hint="Provincia">BI</PRVP>
+            <PRVC hint="Comune">Biella</PRVC>
+         </PRV>
+         <PRC hint="COLLOCAZIONE SPECIFICA">
+            <PRCT hint="Tipologia contenitore fisico">laboratorio</PRCT>
+            <PRCQ hint="Qualificazione contenitore fisico">sartoriale</PRCQ>
+            <PRCU hint="Indicazioni viabilistiche">Via San Filippo, 4</PRCU>
+            <PRCM hint="Denominazione contenitore giuridico">Sartoria Adolfo Caucino di Biella</PRCM>
+         </PRC>
+         <PRD hint="DATI CRONOLOGICI">
+            <PRDI hint="Riferimento cronologico/data inizio">1910</PRDI>
+         </PRD>
+         <LAN hint="Note">L’attribuzione del luogo di realizzazione e della cronologia viene desunta dalle fonti d’archivio (carteggio Loria-Roccavilla)</LAN>
+      </LA>
+      <UB hint="DATI PATRIMONIALI/INVENTARI/STIME/COLLEZIONI">
+         <COL hint="COLLEZIONI">
+            <COLD hint="Denominazione">raccolta Roccavilla</COLD>
+            <COLN hint="Nome del collezionista">Alessandro Roccavilla</COLN>
+            <COLA hint="Data ingresso bene nella collezione">1910</COLA>
+         </COL>
+      </UB>
+      <DT hint="CRONOLOGIA">
+         <DTN hint="NOTIZIA STORICA">
+            <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+            <DTNN hint="Notizia (dettaglio)">Il costume è stato realizzato su commissione per l'Esposizione Internazionale di Roma del 1911, seguendo il modello delle illustrazioni di Maurice Sand (BIBR: SAND 1860)</DTNN>
+         </DTN>
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Fascia cronologica/periodo">XX</DTZG>
+            <DTZS hint="Specifiche fascia cronologica/periodo">inizio</DTZS>
+         </DTZ>
+         <DTS hint="CRONOLOGIA SPECIFICA">
+            <DTSI hint="Da">1910</DTSI>
+            <DTSF hint="A">1910</DTSF>
+         </DTS>
+         <DTM hint="Motivazione/fonte">data di acquisizione</DTM>
+         <DTM hint="Motivazione/fonte">documentazione</DTM>
+      </DT>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <AUT hint="AUTORE/RESPONSABILITA'">
+            <AUTN hint="Nome scelto di persona o ente">Caucino, Adolfo</AUTN>
+            <AUTP hint="Tipo intestazione">P</AUTP>
+            <AUTA hint="Indicazioni cronologiche">1910</AUTA>
+            <AUTE hint="Mestiere">sarto</AUTE>
+            <AUTM hint="Motivazione/fonte">documentazione</AUTM>
+         </AUT>
+         <CMM hint="COMMITTENZA">
+            <CMMN hint="Nome">Roccavilla Alessandro</CMMN>
+            <CMMD hint="Riferimento cronologico">1909-1910</CMMD>
+            <CMMC hint="Circostanza">Roma, Mostra di Etnografia Italiana, 1911</CMMC>
+            <CMMF hint="Motivazione/fonte">documentazione</CMMF>
+            <CMMY hint="Note">Dalla fine del 1909, e in particolare nel 1910, Alessandro Roccavilla si rivolge alla sartoria di Adolfo Caucino per la realizzazione di alcune maschere della commedia dell'arte. L'iniziativa viene concordata con Lamberto Loria, come documenta il carteggio intercorso tra i due. Si vedano ad esempio le lettere del 29 ottobre 1909 e del 24 novembre 1909 (FNTI: ICDe_AS_CarteggioLR, fasc. 963)</CMMY>
+         </CMM>
+      </AU>
+      <DA hint="DATI ANALITICI">
+         <DES hint="Descrizione">Cintura in cuoio. Sulla superficie ha una colorazione nera, mentre nella parte interna è presente il colore naturale del cuoio. Nella parte terminale vi è la presenza di una fibbia rettangolare di metallo color argento. L’ardiglione che va ad inserirsi in uno dei dieci fori praticati nella cintura è anch’esso di metallo color argento</DES>
+         <NSC hint="Notizie storico-critiche">Il costume di Arlecchina fa parte della raccolta di maschere della commedia dell’arte curata da Alessandro Roccavilla su incarico di Lamberto Loria, per l’Esposizione Internazionale di Roma del 1911. La commedia dell’arte, nelle sue peculiari caratteristiche, era al tempo scomparsa. Tra la seconda metà del Cinquecento e la fine del Settecento conobbe il periodo di massima diffusione come forma di rappresentazione teatrale che dalla penisola italiana giunse a diventare un fenomeno europeo. Prima che la denominazione di “commedia dell’arte” venisse introdotta con la riforma teatrale di Goldoni nel XVIII sec. e l’affermazione della professionalità dell’attore, tali rappresentazioni erano conosciute con il nome di “commedia buffonesca”, “di maschere”, “a soggetto”, “all’improvviso”, “commedia degli Zanni”. Caratteristiche principali erano: l’uso di costumi e maschere; la costruzione semplice dei personaggi attraverso l’uso di un dialetto, la foggia del costume e una precisa classe sociale; l’improvvisazione degli attori sulla base di un canovaccio (o scenario) che forniva una descrizione indicativa dell’intreccio e dell’azione dei personaggi: uno strumento mnemonico che si prestava in modo duttile a una forma orale di rappresentazione fondata sull’azione, adattabile in funzione degli attori presenti (BIBR: TAVIANI 1982), nonché di pubblici e contesti differenti (BIBR: FERRONE 1993). Attraverso le performance che transitavano nelle pubbliche piazze o sui palcoscenici teatrali, durante il periodo di carnevale o in particolari occasioni cerimoniali e festive, la commedia dell’arte rappresentò un veicolo di circolarità culturale tra élite e mondo popolare. L’esposizione romana del 1911, allestita nel Palazzo delle Maschere e dei costumi, intendeva rappresentare l’evoluzione storica della commedia dell’arte e riconoscere l’interesse etnografico di quegli elementi di origine popolare che pure avevano risentito di contatti con la Commedia erudita. Le maschere, montate su manichini e sullo sfondo di scenografie dipinte, dialogavano in differenti gruppi che segnalavano il passaggio dagli aspetti comici non ancora formalizzati, che fino al XVI secolo avevano come campo d’azione la piazza (satire, buffonerie, contrasti), fino ai caratteri più codificati delle maschere della commedia dell’arte che, dal Cinquecento, presero forma con l’attività di compagnie di attori e attrici professionisti (BIBR: CATALOGO MOSTRA 1911). Venivano così rappresentati alcuni “tipi fissi” – caratteri che ricorrono nelle differenti performance teatrali: il Servo (o Zanni), il Padrone, l’Innamorato, ecc. –, incluse le “servette”, tra cui Arlecchina, esposta nel gruppo IV dedicato ai “Personaggi della Commedia dell’Arte del secolo XVIII”. Il costume collezionato da Roccavilla è stato realizzato dalla sartoria Caucino di Biella seguendo il modello iconografico delle illustrazioni di Maurice Sand (BIBR: SAND 1860), che individua Arlecchina tra quelle servette spesso coinvolte nei sotterfugi amorosi della padrona innamorata, anche note con i nomi di Colombina, Betta, Franceschina, Diamantina, Corallina, Violetta e Marinetta. La commedia dell’arte fu il primo esempio nella storia del teatro a includere le attrici negli spettacoli per le parti femminili. Nelle prime compagnie di comici le servette venivano interpretate da uomini. Intorno al 1560 apparvero sulla scena le prime donne, solitamente dotate di bellezza e di una certa cultura: una rivoluzione di grande impatto sul pubblico, che costituì un veicolo di emancipazione femminile e alimentò la polemica ecclesiastica contro gli aspetti immorali della nuova professione dei comici (BIBR: CASTIGLIONE 1759). In questo percorso ebbe un ruolo importante lo sviluppo, tra Italia e Francia, della maschera veneziana di Colombina, grazie al talento creativo di Isabella Franchini Biancolelli e successivamente di sua nipote Caterina Biancolelli (1665-1716) (BIBR: RASI 1905; RADULESCU 2011). Il personaggio di Arlecchina si lega a quello di Colombina e ne mantiene la duttilità nell’assumere parti differenti, forzando i tradizionali schemi dei tipi fissi: dalla domestica impertinente alla falsa ingenua, al medico, avvocato o giudice, ecc., per diventare in Francia una sorta di primo Zanni femminile. Furba, attraente e dalla forte personalità, Colombina è scaltra nel liberarsi del corteggiamento del suo “vecchio” padrone Pantalone o di Leandro. È lo speculare femminile di Arlecchino di cui è solitamente l’Amorosa o la moglie, tanto che, occasionalmente, i due personaggi verranno assimilati non solo nella foggia del costume ma anche nel nome: Arlecchina, con il costume a toppe colorate, appare per la prima volta sulle scene a Parigi nel 1695 in un dramma intitolato “Ritorno dalla fiera di Besons”, trovando largo consenso nel pubblico e diventando popolare nell’ambito di feste e carnevali. La sua maggiore interprete fu la stessa Caterina Biancolelli, figlia di Domenico Biancolelli (1638-1688), un celebre Arlecchino</NSC>
+      </DA>
+      <MT hint="DATI TECNICI">
+         <MTC hint="MATERIA E TECNICA">
+            <MTCM hint="Materia">cuoio</MTCM>
+            <MTCT hint="Tecnica">conciatura</MTCT>
+         </MTC>
+         <MTC hint="MATERIA E TECNICA">
+            <MTCM hint="Materia">metallo/ argento</MTCM>
+            <MTCT hint="Tecnica">modellatura a stampo</MTCT>
+         </MTC>
+         <MIS hint="MISURE">
+            <MISZ hint="Tipo di misura">lunghezza</MISZ>
+            <MISU hint="Unità di misura">cm</MISU>
+            <MISM hint="Valore">91.50</MISM>
+         </MIS>
+         <MIS hint="MISURE">
+            <MISZ hint="Tipo di misura">larghezza</MISZ>
+            <MISU hint="Unità di misura">cm</MISU>
+            <MISM hint="Valore">4.5</MISM>
+         </MIS>
+         <MIS hint="MISURE">
+            <MISP hint="Riferimento alla parte">fibbia</MISP>
+            <MISZ hint="Tipo di misura">altezza</MISZ>
+            <MISU hint="Unità di misura">cm</MISU>
+            <MISM hint="Valore">4</MISM>
+         </MIS>
+         <MIS hint="MISURE">
+            <MISP hint="Riferimento alla parte">fibbia</MISP>
+            <MISZ hint="Tipo di misura">larghezza</MISZ>
+            <MISU hint="Unità di misura">cm</MISU>
+            <MISM hint="Valore">6</MISM>
+         </MIS>
+      </MT>
+      <UT hint="UTILIZZAZIONI">
+         <UTU hint="DATI DI USO">
+            <UTUT hint="Tipo">storico</UTUT>
+            <UTUF hint="Funzione">mascheramento teatrale</UTUF>
+            <UTUO hint="Occasione">nelle rappresentazioni della commedia dell’arte</UTUO>
+            <UTUD hint="Riferimento cronologico">XX inizio</UTUD>
+            <UTUN hint="Note">Il bene non è stato mai indossato poiché realizzato su commissione unicamente per l'Esposizione Internazionale di Roma del 1911, seguendo il modello di Bergamo, sec. XVIII, tratto dalle illustrazioni di Maurice Sand (BIBR: SAND 1860)</UTUN>
+         </UTU>
+      </UT>
+      <CO hint="CONSERVAZIONE E INTERVENTI">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">buono</STCC>
+         </STC>
+         <STD hint="Modalità di conservazione">In origine il bene era custodito nella cassa di legno 763, insieme agli altri pezzi del costume. È attualmente conservato in un deposito privo di controllo microclimatico, all'interno di una scatola di cartone priva di acidi che riportano l'indicazione del corrispondente numero di inventario 24339</STD>
+      </CO>
+      <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+            <CDGS hint="Indicazione specifica">Ministero dei beni e delle attività culturali e del turismo</CDGS>
+         </CDG>
+         <ACQ hint="ACQUISIZIONE">
+            <ACQT hint="Tipo acquisizione">acquisto</ACQT>
+            <ACQN hint="Nome">Roccavilla, Alessandro</ACQN>
+            <ACQD hint="Riferimento cronologico">1910</ACQD>
+            <ACQL hint="Luogo acquisizione">Piemonte/ BI/ Biella</ACQL>
+         </ACQ>
+         <BPT hint="Provvedimenti di tutela - sintesi">dato non disponibile</BPT>
+      </TU>
+      <DO hint="DOCUMENTAZIONE">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAN hint="Codice identificativo">MUCIV-MATP_24339_001</FTAN>
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAF hint="Formato">jpg</FTAF>
+            <FTAA hint="Autore">Naccari, Fabio</FTAA>
+            <FTAD hint="Riferimento cronologico">2017/10/00</FTAD>
+            <FTAE hint="Ente proprietario">Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari</FTAE>
+            <FTAK hint="Nome file originale">MUCIV-MATP_24339_001.jpg</FTAK>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAN hint="Codice identificativo">MUCIV-MATP_24339_002</FTAN>
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAF hint="Formato">jpg</FTAF>
+            <FTAA hint="Autore">Naccari, Fabio</FTAA>
+            <FTAD hint="Riferimento cronologico">2017/10/00</FTAD>
+            <FTAE hint="Ente proprietario">Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari</FTAE>
+            <FTAK hint="Nome file originale">MUCIV-MATP_24339_002.jpg</FTAK>
+         </FTA>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTI hint="Codice identificativo">MUCIV-MATP_SC_0001</FNTI>
+            <FNTX hint="Genere">documentazione allegata</FNTX>
+            <FNTP hint="Tipo">scheda conservativa</FNTP>
+            <FNTT hint="Denominazione/titolo">Il restauro di dieci costumi della Commedia dell’Arte - Salone di Ferrara</FNTT>
+            <FNTA hint="Autore">Picciau, Maura - Sicurezza, Anna Luce</FNTA>
+            <FNTD hint="Riferimento cronologico">2017</FNTD>
+            <FNTK hint="Nome file originale">Scheda conservativa_Costumi_Commedia_Arte_Salone_Ferrara.pdf</FNTK>
+         </FNT>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTI hint="Codice identificativo">ICDe_Bibl_0002_b</FNTI>
+            <FNTX hint="Genere">documentazione esistente</FNTX>
+            <FNTP hint="Tipo">tesi di laurea</FNTP>
+            <FNTT hint="Denominazione/titolo">Il carteggio Roccavilla-Loria per l'Esposizione Universale di Roma 1911</FNTT>
+            <FNTA hint="Autore">Fiorenzi, Sabina</FNTA>
+            <FNTD hint="Riferimento cronologico">1981-1982</FNTD>
+            <FNTN hint="Nome archivio">ICDe Biblioteca – presso MUCIV-MATP</FNTN>
+            <FNTS hint="Collocazione">X-XVI 45-45a</FNTS>
+            <FNTO hint="Note">La tesi si compone di due volumi. Il secondo riporta 230 lettere trascritte del carteggio Roccavilla-Loria</FNTO>
+         </FNT>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTI hint="Codice identificativo">MUCIV-MATP_sch_RMEI_24339</FNTI>
+            <FNTX hint="Genere">documentazione allegata</FNTX>
+            <FNTP hint="Tipo">scheda</FNTP>
+            <FNTR hint="Formato">pdf</FNTR>
+            <FNTT hint="Denominazione/titolo">Scheda Regio Museo di Etnografia Italiana n. inv. 24339</FNTT>
+            <FNTD hint="Riferimento cronologico">1938-1939</FNTD>
+            <FNTN hint="Nome archivio">MUCIV-MATP – Ufficio inventariazione e catalogo</FNTN>
+            <FNTE hint="Ente proprietario">S56</FNTE>
+            <FNTK hint="Nome file originale">MUCIV-MATP_sch_RMEI_24339.pdf</FNTK>
+            <FNTO hint="Note">Lo schedario del Regio Museo di Etnografia Italiana è stato realizzato da un Comitato direttivo costituito nel gennaio 1938. Segue un doppio ordinamento (per serie di oggetti e per regione) e riporta i dati contenuti nelle schede redatte dai raccoglitori coinvolti per la Mostra del 1911</FNTO>
+         </FNT>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTI hint="Codice identificativo">ICDe_Bibl_0004_b</FNTI>
+            <FNTX hint="Genere">documentazione allegata</FNTX>
+            <FNTP hint="Tipo">catalogo</FNTP>
+            <FNTR hint="Formato">pdf</FNTR>
+            <FNTT hint="Denominazione/titolo">Catalogo della mostra di etnografia italiana in Piazza d’Armi. Esposizione Internazionale di Roma 1911 – Maschere italiane</FNTT>
+            <FNTD hint="Riferimento cronologico">1911</FNTD>
+            <FNTN hint="Nome archivio">ICDe Biblioteca – presso MUCIV-MATP</FNTN>
+            <FNTS hint="Collocazione">O - VII - 45</FNTS>
+            <FNTK hint="Nome file originale">ICDe_Bibl_0004_b.pdf</FNTK>
+            <FNTO hint="Note">Vedi BIBR: CATALOGO MOSTRA 1911</FNTO>
+         </FNT>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTI hint="Codice identificativo">ICDe_AS_CarteggioLR</FNTI>
+            <FNTX hint="Genere">documentazione esistente</FNTX>
+            <FNTP hint="Tipo">epistolario</FNTP>
+            <FNTT hint="Denominazione/titolo">Carteggio Loria - Roccavilla</FNTT>
+            <FNTA hint="Autore">Roccavilla, Alessandro – Loria, Lamberto</FNTA>
+            <FNTD hint="Riferimento cronologico">1909-1913</FNTD>
+            <FNTN hint="Nome archivio">ICDe Archivio storico – presso MUCIV-MATP</FNTN>
+            <FNTS hint="Collocazione">b. 39-40</FNTS>
+            <FNTF hint="Foglio/Carta">fasc. 963-968</FNTF>
+         </FNT>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">RESTITUZIONI 2016</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00015</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">contributo in catalogo mostra</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Picciau Maura, Sartoria Adolfo Caucino di Biella. Tre costumi della Commedia dell’Arte, in Restituzioni 2016. Tesori d'arte restaurati, a cura di Carlo Bertelli, Giorgio Bonsanti, Venezia, Marsilio, 2016, pp. 365-374</BIBM>
+            <BIBW hint="Indirizzo web (URL)">http://restituzioni.marsilioeditori.it/2016/docs/Restituzioni_2016_catalogo.pdf</BIBW>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">JAFFE-BERG 2015</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00002</BIBH>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">libro</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Jaffe-Berg Erith, Commedia dell'Arte and the Mediterranean: Charting Journeys and Mapping ‘Others’, London, Routledge, 2015</BIBM>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">RADULESCU 2011</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00013</BIBH>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">libro</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Radulescu Domnica, Women's Comedic Art as Social Revolution: Five Performers and the Lessons of Their Subversive Humor, Jefferson, NC, McFarland, 2011, pp 69-118</BIBM>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">FERRONE 1993</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00009</BIBH>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">libro</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Ferrone Siro, Attori, mercanti, corsari. La commedia dell'arte in Europa tra Cinque e Seicento, Torino, Einaudi, 1993, pp. 3-49</BIBM>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">TAVIANI 1982</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00010</BIBH>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">contributo in periodico</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Taviani Ferdinando, La composizione del dramma nella Commedia dell'Arte, in Quaderni di teatro, n. 15, IV (1982), pp. 151-171</BIBM>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">CATALOGO MOSTRA 1911</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00007</BIBH>
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBF hint="Tipo">catalogo mostra</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Catalogo della mostra di etnografia italiana in Piazza d’Armi. Esposizione Internazionale di Roma 1911, Bergamo, Istituto di Arti Grafiche, 1911, pp. 138-140</BIBM>
+            <BIBN hint="Note">Consultabile tra le fonti e i documenti allegati alla presente scheda di catalogo (FNTI: ICDe_Bibl_0004_b)</BIBN>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">RASI 1905</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00014</BIBH>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">libro</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Luigi Rasi, I comici italiani, biografia, bibliografia, iconografia, Firenze, Fratelli Bocca, 1897-1905, vol. I</BIBM>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">SAND 1860</BIBR>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">tomo</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">Sand Maurice, Masques et bouffons: comédie italienne, Paris, Michel Lévy frère, 1860, tomo I, pp. 205-236, 355</BIBM>
+            <BIBW hint="Indirizzo web (URL)">http://gallica.bnf.fr/ark:/12148/bpt6k6250296n/f252.image</BIBW>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBR hint="Abbreviazione">CASTIGLIONE 1759</BIBR>
+            <BIBJ hint="Ente schedatore">S56</BIBJ>
+            <BIBH hint="Codice identificativo">BIB00012</BIBH>
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBF hint="Tipo">libro</BIBF>
+            <BIBM hint="Riferimento bibliografico completo">GIOVANNI BATTISTA, Sentimenti di San Carlo Borromeo intorno agli spettacoli, Bergamo, Appresso P. Lancellotti, 1759</BIBM>
+            <BIBW hint="Indirizzo web (URL)">https://babel.hathitrust.org/cgi/pt?id=mdp.39015073737184</BIBW>
+         </BIB>
+      </DO>
+      <MS hint="MOSTRE/ALTRI EVENTI CULTURALI">
+         <MST hint="MOSTRA/EVENTO CULTURALE">
+            <MSTI hint="Tipo">mostra</MSTI>
+            <MSTT hint="Titolo/denominazione">Restituzioni. Tesori d'arte restaurati</MSTT>
+            <MSTE hint="Ente/soggetto organizzatore">Intesa Sanpaolo</MSTE>
+            <MSTL hint="Luogo, sede espositiva, data">Milano, Gallerie d'Italia di Piazza della Scala, dal 1 aprile al 17 luglio 2016</MSTL>
+         </MST>
+         <MST hint="MOSTRA/EVENTO CULTURALE">
+            <MSTI hint="Tipo">mostra</MSTI>
+            <MSTT hint="Titolo/denominazione">Mostra di Etnografia Italiana</MSTT>
+            <MSTE hint="Ente/soggetto organizzatore">Comitato per l’Esposizione del 1911</MSTE>
+            <MSTL hint="Luogo, sede espositiva, data">Roma, Piazza d’Armi, 1911</MSTL>
+         </MST>
+      </MS>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+         <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+            <CMPD hint="Anno di redazione">2017</CMPD>
+            <CMPN hint="Responsabile ricerca e redazione">Magnani, Fabrizio</CMPN>
+            <CMPN hint="Responsabile ricerca e redazione">Pavani, Veronica</CMPN>
+         </CMP>
+         <RSR hint="Referente verifica scientifica">Sicurezza, Anna</RSR>
+         <FUR hint="Funzionario responsabile">Sicurezza, Anna</FUR>
+      </CM>
+   </BDM>
+</schede>

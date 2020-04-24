@@ -1,0 +1,836 @@
+<https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/AccessProfile> .
+<https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Access profile to catalogue record of cultural property 1201254198-4: 1"@en .
+<https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1201254198-4: 1"@it .
+<https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> <https://w3id.org/arco/ontology/catalogue/hasPrivacyLevel> <https://w3id.org/arco/ontology/catalogue/MinimumPrivacy> .
+<https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> <https://w3id.org/arco/ontology/catalogue/hasPrivacyReason> <https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> .
+<https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Access profile to catalogue record of cultural property 1201254198-4: 1"@en .
+<https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Profilo d'accesso alla scheda catalografica del bene culturale 1201254198-4: 1"@it .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Acquisition> .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <http://www.w3.org/2000/01/rdf-schema#label> "Acquisition 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <http://www.w3.org/2000/01/rdf-schema#label> "Acquisizione 1 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <https://w3id.org/arco/ontology/context-description/acquisitionLocation> "Piemonte/ BI/ Biella" .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <https://w3id.org/arco/ontology/context-description/hasAcquisitionType> <https://w3id.org/arco/resource/AcquisitionType/acquisto> .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <https://w3id.org/arco/ontology/context-description/hasPreviousOwner> <https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <https://w3id.org/arco/ontology/context-description/isAcquisitionOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <https://w3id.org/italia/onto/TI/time> "1910" .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <https://w3id.org/italia/onto/l0/name> "Acquisition 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> <https://w3id.org/italia/onto/l0/name> "Acquisizione 1 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/AcquisitionType/acquisto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/AcquisitionType> .
+<https://w3id.org/arco/resource/AcquisitionType/acquisto> <http://www.w3.org/2000/01/rdf-schema#label> "acquisto" .
+<https://w3id.org/arco/resource/AcquisitionType/acquisto> <https://w3id.org/italia/onto/l0/name> "acquisto" .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Address> .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <http://www.w3.org/2000/01/rdf-schema#label> "ITALIA, Lazio, RM, Roma" .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <https://w3id.org/arco/ontology/location/isCulturalPropertyAddressOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <https://w3id.org/italia/onto/CLV/fullAddress> "Piazza Guglielmo Marconi, 8/10" .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <https://w3id.org/italia/onto/CLV/hasCity> <https://w3id.org/arco/resource/City/roma> .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <https://w3id.org/italia/onto/CLV/hasCountry> <https://w3id.org/arco/resource/Country/italia> .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <https://w3id.org/italia/onto/CLV/hasProvince> <https://w3id.org/arco/resource/Province/rm> .
+<https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> <https://w3id.org/italia/onto/CLV/hasRegion> <https://w3id.org/arco/resource/Region/lazio> .
+<https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Address> .
+<https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> <http://www.w3.org/2000/01/rdf-schema#label> "ITALIA, Piemonte, BI, Biella" .
+<https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> <https://w3id.org/italia/onto/CLV/fullAddress> "Via San Filippo, 4" .
+<https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> <https://w3id.org/italia/onto/CLV/hasCity> <https://w3id.org/arco/resource/City/biella> .
+<https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> <https://w3id.org/italia/onto/CLV/hasCountry> <https://w3id.org/arco/resource/Country/italia> .
+<https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> <https://w3id.org/italia/onto/CLV/hasProvince> <https://w3id.org/arco/resource/Province/bi> .
+<https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> <https://w3id.org/italia/onto/CLV/hasRegion> <https://w3id.org/arco/resource/Region/piemonte> .
+<https://w3id.org/arco/resource/Agent/1609d16ae22ce5ca34299bcc0062fbfb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/1609d16ae22ce5ca34299bcc0062fbfb> <http://www.w3.org/2000/01/rdf-schema#label> "Intesa Sanpaolo" .
+<https://w3id.org/arco/resource/Agent/1609d16ae22ce5ca34299bcc0062fbfb> <https://w3id.org/italia/onto/l0/name> "Intesa Sanpaolo" .
+<https://w3id.org/arco/resource/Agent/49b828274e9ca96f88eb5a49bcccc55f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/49b828274e9ca96f88eb5a49bcccc55f> <http://www.w3.org/2000/01/rdf-schema#label> "Roccavilla, Alessandro – Loria, Lamberto" .
+<https://w3id.org/arco/resource/Agent/49b828274e9ca96f88eb5a49bcccc55f> <https://w3id.org/italia/onto/l0/name> "Roccavilla, Alessandro – Loria, Lamberto" .
+<https://w3id.org/arco/resource/Agent/678bec59383dc15886babb51c9d4d432> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/678bec59383dc15886babb51c9d4d432> <http://www.w3.org/2000/01/rdf-schema#label> "ICDe Archivio storico – presso MUCIV-MATP" .
+<https://w3id.org/arco/resource/Agent/678bec59383dc15886babb51c9d4d432> <https://w3id.org/italia/onto/l0/name> "ICDe Archivio storico – presso MUCIV-MATP" .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <http://www.w3.org/2000/01/rdf-schema#label> "Istituto Centrale per la Demoetnoantropologia" .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <http://www.w3.org/2000/01/rdf-schema#label> "S56" .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <https://w3id.org/italia/onto/l0/name> "Istituto Centrale per la Demoetnoantropologia" .
+<https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> <https://w3id.org/italia/onto/l0/name> "S56" .
+<https://w3id.org/arco/resource/Agent/75e928853b5bcece0399fdb6c5c60c7b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/75e928853b5bcece0399fdb6c5c60c7b> <http://www.w3.org/2000/01/rdf-schema#label> "Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari" .
+<https://w3id.org/arco/resource/Agent/75e928853b5bcece0399fdb6c5c60c7b> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/Agent/75e928853b5bcece0399fdb6c5c60c7b> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/Agent/75e928853b5bcece0399fdb6c5c60c7b> <https://w3id.org/italia/onto/l0/name> "Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari" .
+<https://w3id.org/arco/resource/Agent/7be213f0d6bc54052a085b6b60bf59fc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/7be213f0d6bc54052a085b6b60bf59fc> <http://www.w3.org/2000/01/rdf-schema#label> "Ministero dei beni e delle attività culturali e del turismo" .
+<https://w3id.org/arco/resource/Agent/7be213f0d6bc54052a085b6b60bf59fc> <https://w3id.org/italia/onto/l0/name> "Ministero dei beni e delle attività culturali e del turismo" .
+<https://w3id.org/arco/resource/Agent/7f79284d9c5fc138b71e937d1b22fb21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CPV/Person> .
+<https://w3id.org/arco/resource/Agent/7f79284d9c5fc138b71e937d1b22fb21> <http://www.w3.org/2000/01/rdf-schema#label> "Caucino, Adolfo" .
+<https://w3id.org/arco/resource/Agent/7f79284d9c5fc138b71e937d1b22fb21> <https://w3id.org/arco/ontology/context-description/agentDate> "1910" .
+<https://w3id.org/arco/resource/Agent/7f79284d9c5fc138b71e937d1b22fb21> <https://w3id.org/arco/ontology/context-description/isAuthorOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Agent/7f79284d9c5fc138b71e937d1b22fb21> <https://w3id.org/italia/onto/l0/name> "Caucino, Adolfo" .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <http://www.w3.org/2000/01/rdf-schema#label> "Alessandro Roccavilla" .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <http://www.w3.org/2000/01/rdf-schema#label> "Roccavilla Alessandro" .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <http://www.w3.org/2000/01/rdf-schema#label> "Roccavilla, Alessandro" .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <https://w3id.org/arco/ontology/context-description/isCollectorOf> <https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <https://w3id.org/italia/onto/l0/name> "Alessandro Roccavilla" .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <https://w3id.org/italia/onto/l0/name> "Roccavilla Alessandro" .
+<https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> <https://w3id.org/italia/onto/l0/name> "Roccavilla, Alessandro" .
+<https://w3id.org/arco/resource/Agent/8b45ac1ad41939c76997201d943e7c5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/8b45ac1ad41939c76997201d943e7c5c> <http://www.w3.org/2000/01/rdf-schema#label> "Magnani, Fabrizio" .
+<https://w3id.org/arco/resource/Agent/92ad4fb4e4f444c915ada2cac6f40a8b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/92ad4fb4e4f444c915ada2cac6f40a8b> <http://www.w3.org/2000/01/rdf-schema#label> "Comitato per l’Esposizione del 1911" .
+<https://w3id.org/arco/resource/Agent/92ad4fb4e4f444c915ada2cac6f40a8b> <https://w3id.org/italia/onto/l0/name> "Comitato per l’Esposizione del 1911" .
+<https://w3id.org/arco/resource/Agent/9a2a17f87b4cb152d8358f68076a42ba> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/9a2a17f87b4cb152d8358f68076a42ba> <http://www.w3.org/2000/01/rdf-schema#label> "Fiorenzi, Sabina" .
+<https://w3id.org/arco/resource/Agent/9a2a17f87b4cb152d8358f68076a42ba> <https://w3id.org/italia/onto/l0/name> "Fiorenzi, Sabina" .
+<https://w3id.org/arco/resource/Agent/9f177d6ad728be3cc7a20585c7de0d38> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/9f177d6ad728be3cc7a20585c7de0d38> <http://www.w3.org/2000/01/rdf-schema#label> "MUCIV-MATP – Ufficio inventariazione e catalogo" .
+<https://w3id.org/arco/resource/Agent/9f177d6ad728be3cc7a20585c7de0d38> <https://w3id.org/italia/onto/l0/name> "MUCIV-MATP – Ufficio inventariazione e catalogo" .
+<https://w3id.org/arco/resource/Agent/a2b6f0294ea480d2c3b43a221778e876> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/a2b6f0294ea480d2c3b43a221778e876> <http://www.w3.org/2000/01/rdf-schema#label> "Sicurezza, Anna" .
+<https://w3id.org/arco/resource/Agent/b4bce1f62b153d79c6078837486ee5ee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/b4bce1f62b153d79c6078837486ee5ee> <http://www.w3.org/2000/01/rdf-schema#label> "Naccari, Fabio" .
+<https://w3id.org/arco/resource/Agent/b4bce1f62b153d79c6078837486ee5ee> <https://w3id.org/italia/onto/l0/name> "Naccari, Fabio" .
+<https://w3id.org/arco/resource/Agent/bb33f58289e5480f58c2fb2de13ad26a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/bb33f58289e5480f58c2fb2de13ad26a> <http://www.w3.org/2000/01/rdf-schema#label> "Picciau, Maura - Sicurezza, Anna Luce" .
+<https://w3id.org/arco/resource/Agent/bb33f58289e5480f58c2fb2de13ad26a> <https://w3id.org/italia/onto/l0/name> "Picciau, Maura - Sicurezza, Anna Luce" .
+<https://w3id.org/arco/resource/Agent/fd85baa1327c0c04789c3ab43cb1059f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/fd85baa1327c0c04789c3ab43cb1059f> <http://www.w3.org/2000/01/rdf-schema#label> "Pavani, Veronica" .
+<https://w3id.org/arco/resource/Agent/ff20ac981f233aaed5f6a9116b861215> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/ff20ac981f233aaed5f6a9116b861215> <http://www.w3.org/2000/01/rdf-schema#label> "ICDe Biblioteca – presso MUCIV-MATP" .
+<https://w3id.org/arco/resource/Agent/ff20ac981f233aaed5f6a9116b861215> <https://w3id.org/italia/onto/l0/name> "ICDe Biblioteca – presso MUCIV-MATP" .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 1201254198-4: S56"@en .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 1201254198-4: S56"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 1201254198-4: S56"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 1201254198-4: S56"@en .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Ente proprietario della documentazione fotografica 1 del bene culturale 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner agency of photographic documentation 1 of cultural property 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@en .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/75e928853b5bcece0399fdb6c5c60c7b> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/Owner> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/italia/onto/l0/name> "Ente proprietario della documentazione fotografica 1 del bene culturale 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/italia/onto/l0/name> "Owner agency of photographic documentation 1 of cultural property 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@en .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Ente proprietario della documentazione fotografica 2 del bene culturale 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner agency of photographic documentation 2 of cultural property 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@en .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/75e928853b5bcece0399fdb6c5c60c7b> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/Owner> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> <https://w3id.org/italia/onto/l0/name> "Ente proprietario della documentazione fotografica 2 del bene culturale 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> <https://w3id.org/italia/onto/l0/name> "Owner agency of photographic documentation 2 of cultural property 1201254198-4: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@en .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Ente proprietario di fonti e documenti 3 del bene culturale 1201254198-4: S56"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner agency of sources and documents 3 of cultural property 1201254198-4: S56"@en .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/Owner> .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> <https://w3id.org/italia/onto/l0/name> "Ente proprietario di fonti e documenti 3 del bene culturale 1201254198-4: S56"@it .
+<https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> <https://w3id.org/italia/onto/l0/name> "Owner agency of sources and documents 3 of cultural property 1201254198-4: S56"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 1 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/arco/ontology/context-description/abbreviation> "RESTITUZIONI 2016" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00015" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Picciau Maura, Sartoria Adolfo Caucino di Biella. Tre costumi della Commedia dell’Arte, in Restituzioni 2016. Tesori d'arte restaurati, a cura di Carlo Bertelli, Giorgio Bonsanti, Venezia, Marsilio, 2016, pp. 365-374" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/contributo-in-catalogo-mostra> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/SpecificBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/italia/onto/SM/URL> "http://restituzioni.marsilioeditori.it/2016/docs/Restituzioni_2016_catalogo.pdf" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/italia/onto/l0/name> "Bibliografia 1 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> <https://w3id.org/italia/onto/l0/name> "Bibliography 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 2 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 2 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/arco/ontology/context-description/abbreviation> "JAFFE-BERG 2015" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00002" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Jaffe-Berg Erith, Commedia dell'Arte and the Mediterranean: Charting Journeys and Mapping ‘Others’, London, Routledge, 2015" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/libro> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/italia/onto/l0/name> "Bibliografia 2 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> <https://w3id.org/italia/onto/l0/name> "Bibliography 2 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 3 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 3 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/arco/ontology/context-description/abbreviation> "RADULESCU 2011" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00013" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Radulescu Domnica, Women's Comedic Art as Social Revolution: Five Performers and the Lessons of Their Subversive Humor, Jefferson, NC, McFarland, 2011, pp 69-118" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/libro> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/italia/onto/l0/name> "Bibliografia 3 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> <https://w3id.org/italia/onto/l0/name> "Bibliography 3 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 4 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 4 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/arco/ontology/context-description/abbreviation> "FERRONE 1993" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00009" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Ferrone Siro, Attori, mercanti, corsari. La commedia dell'arte in Europa tra Cinque e Seicento, Torino, Einaudi, 1993, pp. 3-49" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/libro> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/italia/onto/l0/name> "Bibliografia 4 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> <https://w3id.org/italia/onto/l0/name> "Bibliography 4 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 5 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 5 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/arco/ontology/context-description/abbreviation> "TAVIANI 1982" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00010" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Taviani Ferdinando, La composizione del dramma nella Commedia dell'Arte, in Quaderni di teatro, n. 15, IV (1982), pp. 151-171" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/contributo-in-periodico> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/italia/onto/l0/name> "Bibliografia 5 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> <https://w3id.org/italia/onto/l0/name> "Bibliography 5 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 6 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 6 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/context-description/abbreviation> "CATALOGO MOSTRA 1911" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00007" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Catalogo della mostra di etnografia italiana in Piazza d’Armi. Esposizione Internazionale di Roma 1911, Bergamo, Istituto di Arti Grafiche, 1911, pp. 138-140" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/catalogo-mostra> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/SpecificBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/arco/ontology/core/note> "Consultabile tra le fonti e i documenti allegati alla presente scheda di catalogo (FNTI: ICDe_Bibl_0004_b)" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/italia/onto/l0/name> "Bibliografia 6 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> <https://w3id.org/italia/onto/l0/name> "Bibliography 6 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 7 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 7 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/arco/ontology/context-description/abbreviation> "RASI 1905" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00014" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Luigi Rasi, I comici italiani, biografia, bibliografia, iconografia, Firenze, Fratelli Bocca, 1897-1905, vol. I" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/libro> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/italia/onto/l0/name> "Bibliografia 7 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> <https://w3id.org/italia/onto/l0/name> "Bibliography 7 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 8 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 8 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/arco/ontology/context-description/abbreviation> "SAND 1860" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "Sand Maurice, Masques et bouffons: comédie italienne, Paris, Michel Lévy frère, 1860, tomo I, pp. 205-236, 355" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/tomo> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/italia/onto/SM/URL> "http://gallica.bnf.fr/ark:/12148/bpt6k6250296n/f252.image" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/italia/onto/l0/name> "Bibliografia 8 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> <https://w3id.org/italia/onto/l0/name> "Bibliography 8 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Bibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliografia 9 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliography 9 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/arco/ontology/context-description/abbreviation> "CASTIGLIONE 1759" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/arco/ontology/context-description/bibliographyLocalIdentifier> "BIB00012" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> "GIOVANNI BATTISTA, Sentimenti di San Carlo Borromeo intorno agli spettacoli, Bergamo, Appresso P. Lancellotti, 1759" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/arco/ontology/context-description/hasAuthorityFileCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/arco/ontology/context-description/hasBibliographyType> <https://w3id.org/arco/resource/BibliographyType/libro> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/arco/ontology/context-description/isBibliographyOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ComparativeBibliography> .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/italia/onto/SM/URL> "https://babel.hathitrust.org/cgi/pt?id=mdp.39015073737184" .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/italia/onto/l0/name> "Bibliografia 9 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> <https://w3id.org/italia/onto/l0/name> "Bibliography 9 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/BibliographyType/catalogo-mostra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/BibliographyType> .
+<https://w3id.org/arco/resource/BibliographyType/catalogo-mostra> <http://www.w3.org/2000/01/rdf-schema#label> "catalogo mostra" .
+<https://w3id.org/arco/resource/BibliographyType/catalogo-mostra> <https://w3id.org/italia/onto/l0/name> "catalogo mostra" .
+<https://w3id.org/arco/resource/BibliographyType/contributo-in-catalogo-mostra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/BibliographyType> .
+<https://w3id.org/arco/resource/BibliographyType/contributo-in-catalogo-mostra> <http://www.w3.org/2000/01/rdf-schema#label> "contributo in catalogo mostra" .
+<https://w3id.org/arco/resource/BibliographyType/contributo-in-catalogo-mostra> <https://w3id.org/italia/onto/l0/name> "contributo in catalogo mostra" .
+<https://w3id.org/arco/resource/BibliographyType/contributo-in-periodico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/BibliographyType> .
+<https://w3id.org/arco/resource/BibliographyType/contributo-in-periodico> <http://www.w3.org/2000/01/rdf-schema#label> "contributo in periodico" .
+<https://w3id.org/arco/resource/BibliographyType/contributo-in-periodico> <https://w3id.org/italia/onto/l0/name> "contributo in periodico" .
+<https://w3id.org/arco/resource/BibliographyType/libro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/BibliographyType> .
+<https://w3id.org/arco/resource/BibliographyType/libro> <http://www.w3.org/2000/01/rdf-schema#label> "libro" .
+<https://w3id.org/arco/resource/BibliographyType/libro> <https://w3id.org/italia/onto/l0/name> "libro" .
+<https://w3id.org/arco/resource/BibliographyType/tomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/BibliographyType> .
+<https://w3id.org/arco/resource/BibliographyType/tomo> <http://www.w3.org/2000/01/rdf-schema#label> "tomo" .
+<https://w3id.org/arco/resource/BibliographyType/tomo> <https://w3id.org/italia/onto/l0/name> "tomo" .
+<https://w3id.org/arco/resource/CISNameInTime/museo-delle-civilta-museo-delle-arti-e-tradizioni-popolari> <http://dati.beniculturali.it/cis/institutionalCISName> "Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari" .
+<https://w3id.org/arco/resource/CISNameInTime/museo-delle-civilta-museo-delle-arti-e-tradizioni-popolari> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CISNameInTime> .
+<https://w3id.org/arco/resource/CISNameInTime/museo-delle-civilta-museo-delle-arti-e-tradizioni-popolari> <http://www.w3.org/2000/01/rdf-schema#label> "Denominazione nel tempo: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@it .
+<https://w3id.org/arco/resource/CISNameInTime/museo-delle-civilta-museo-delle-arti-e-tradizioni-popolari> <http://www.w3.org/2000/01/rdf-schema#label> "Name in time: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@en .
+<https://w3id.org/arco/resource/CISNameInTime/museo-delle-civilta-museo-delle-arti-e-tradizioni-popolari> <https://w3id.org/italia/onto/l0/name> "Denominazione nel tempo: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@it .
+<https://w3id.org/arco/resource/CISNameInTime/museo-delle-civilta-museo-delle-arti-e-tradizioni-popolari> <https://w3id.org/italia/onto/l0/name> "Name in time: Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari"@en .
+<https://w3id.org/arco/resource/CISNameInTime/sartoria-adolfo-caucino-di-biella> <http://dati.beniculturali.it/cis/institutionalCISName> "Sartoria Adolfo Caucino di Biella" .
+<https://w3id.org/arco/resource/CISNameInTime/sartoria-adolfo-caucino-di-biella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CISNameInTime> .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordBDM> .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 1201254198-4"@en .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 1201254198-4"@it .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier> "1201254198-4" .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <https://w3id.org/arco/ontology/catalogue/describesCulturalProperty> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <https://w3id.org/arco/ontology/catalogue/hasAccessProfile> <https://w3id.org/arco/resource/AccessProfile/1201254198-4-1> .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/C> .
+<https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "ICCD13661303" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "REDAZIONE E VERIFICA SCIENTIFICA - 2017 Magnani, Fabrizio Pavani, Veronica" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2017> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-33ce7efa22dd77a24a771373bc55cd14> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-6b811589c4d34dbc73d58c485fbcd71a> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-8b45ac1ad41939c76997201d943e7c5c> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-fd85baa1327c0c04789c3ab43cb1059f> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasOfficialInCharge> <https://w3id.org/arco/resource/Agent/a2b6f0294ea480d2c3b43a221778e876> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/8b45ac1ad41939c76997201d943e7c5c> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/fd85baa1327c0c04789c3ab43cb1059f> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/hasScientificDirector> <https://w3id.org/arco/resource/Agent/a2b6f0294ea480d2c3b43a221778e876> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/1201254198-4-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> .
+<https://w3id.org/arco/resource/Circumstance/nelle-rappresentazioni-della-commedia-dell%E2%80%99arte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Circumstance> .
+<https://w3id.org/arco/resource/Circumstance/nelle-rappresentazioni-della-commedia-dell%E2%80%99arte> <http://www.w3.org/2000/01/rdf-schema#label> "nelle rappresentazioni della commedia dell’arte" .
+<https://w3id.org/arco/resource/Circumstance/nelle-rappresentazioni-della-commedia-dell%E2%80%99arte> <https://w3id.org/italia/onto/l0/name> "nelle rappresentazioni della commedia dell’arte" .
+<https://w3id.org/arco/resource/Circumstance/roma-mostra-di-etnografia-italiana-1911> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Circumstance> .
+<https://w3id.org/arco/resource/Circumstance/roma-mostra-di-etnografia-italiana-1911> <http://www.w3.org/2000/01/rdf-schema#label> "Roma, Mostra di Etnografia Italiana, 1911" .
+<https://w3id.org/arco/resource/Circumstance/roma-mostra-di-etnografia-italiana-1911> <https://w3id.org/italia/onto/l0/name> "Roma, Mostra di Etnografia Italiana, 1911" .
+<https://w3id.org/arco/resource/City/biella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/City> .
+<https://w3id.org/arco/resource/City/biella> <http://www.w3.org/2000/01/rdf-schema#label> "Biella" .
+<https://w3id.org/arco/resource/City/biella> <https://w3id.org/italia/onto/l0/name> "Biella" .
+<https://w3id.org/arco/resource/City/roma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/City> .
+<https://w3id.org/arco/resource/City/roma> <http://www.w3.org/2000/01/rdf-schema#label> "Roma" .
+<https://w3id.org/arco/resource/City/roma> <https://w3id.org/italia/onto/l0/name> "Roma" .
+<https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CollectionCulEnt> .
+<https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> <http://www.w3.org/2000/01/rdf-schema#label> "raccolta Roccavilla"@en .
+<https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> <http://www.w3.org/2000/01/rdf-schema#label> "raccolta Roccavilla"@it .
+<https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> <https://w3id.org/arco/ontology/context-description/hasCollector> <https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> .
+<https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> <https://w3id.org/arco/ontology/context-description/isCollectionIn> <https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> .
+<https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> <https://w3id.org/italia/onto/l0/name> "raccolta Roccavilla"@en .
+<https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> <https://w3id.org/italia/onto/l0/name> "raccolta Roccavilla"@it .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/CollectionMembership> .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <http://www.w3.org/2000/01/rdf-schema#label> "Appartenenza a collezione 1 del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <http://www.w3.org/2000/01/rdf-schema#label> "Collection membership 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <https://w3id.org/arco/ontology/context-description/hasCollection> <https://w3id.org/arco/resource/CollectionCulEnt/raccolta-roccavilla> .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <https://w3id.org/arco/ontology/context-description/hasMemberOfCollection> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/1910> .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <https://w3id.org/italia/onto/l0/name> "Appartenenza a collezione 1 del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> <https://w3id.org/italia/onto/l0/name> "Collection membership 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Commission> .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Commission 1 of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Committenza 1 del bene 1201254198-4"@it .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/hasCircumstance> <https://w3id.org/arco/resource/Circumstance/roma-mostra-di-etnografia-italiana-1911> .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/hasCommittent> <https://w3id.org/arco/resource/Agent/824e5dd85abc244240da52556707bc25> .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/documentazione> .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <https://w3id.org/arco/ontology/core/note> "Dalla fine del 1909, e in particolare nel 1910, Alessandro Roccavilla si rivolge alla sartoria di Adolfo Caucino per la realizzazione di alcune maschere della commedia dell'arte. L'iniziativa viene concordata con Lamberto Loria, come documenta il carteggio intercorso tra i due. Si vedano ad esempio le lettere del 29 ottobre 1909 e del 24 novembre 1909 (FNTI: ICDe_AS_CarteggioLR, fasc. 963)" .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <https://w3id.org/italia/onto/TI/time> "1909-1910" .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Commission 1 of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/Commission/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Committenza 1 del bene 1201254198-4"@it .
+<https://w3id.org/arco/resource/ConservationStatus/1201254198-4-conservation-status-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/ConservationStatus> .
+<https://w3id.org/arco/resource/ConservationStatus/1201254198-4-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Conservation status 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/ConservationStatus/1201254198-4-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Stato di conservazione 1 del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/ConservationStatus/1201254198-4-conservation-status-1> <https://w3id.org/arco/ontology/denotative-description/hasConservationStatusType> <https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus> .
+<https://w3id.org/arco/resource/ConservationStatus/1201254198-4-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Conservation status 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/ConservationStatus/1201254198-4-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Stato di conservazione 1 del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Country> .
+<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/2000/01/rdf-schema#label> "ITALIA" .
+<https://w3id.org/arco/resource/Country/italia> <https://w3id.org/italia/onto/l0/name> "ITALIA" .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Stato tecnico del bene culturale 1201254198-4"@it .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Technical status of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> <https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> <https://w3id.org/arco/resource/TechnicalCharacteristic/conciatura> .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> <https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> <https://w3id.org/arco/resource/TechnicalCharacteristic/cuoio> .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> <https://w3id.org/italia/onto/l0/name> "Stato tecnico del bene culturale 1201254198-4"@it .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> <https://w3id.org/italia/onto/l0/name> "Technical status of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/d873a3d5b0d656107a352c5d79f6996c> <http://dati.beniculturali.it/cis/hasCISNameInTime> <https://w3id.org/arco/resource/CISNameInTime/museo-delle-civilta-museo-delle-arti-e-tradizioni-popolari> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/d873a3d5b0d656107a352c5d79f6996c> <http://dati.beniculturali.it/cis/hasSite> <https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/d873a3d5b0d656107a352c5d79f6996c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CulturalInstituteOrSite> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/d873a3d5b0d656107a352c5d79f6996c> <http://www.w3.org/2000/01/rdf-schema#label> "Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari" .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/d873a3d5b0d656107a352c5d79f6996c> <https://w3id.org/italia/onto/l0/name> "Museo delle Civiltà - Museo delle Arti e Tradizioni Popolari" .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/f0247746e9719eda46dd2bd41f96f900> <http://dati.beniculturali.it/cis/hasCISNameInTime> <https://w3id.org/arco/resource/CISNameInTime/sartoria-adolfo-caucino-di-biella> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/f0247746e9719eda46dd2bd41f96f900> <http://dati.beniculturali.it/cis/hasSite> <https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/f0247746e9719eda46dd2bd41f96f900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/CulturalInstituteOrSite> .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/f0247746e9719eda46dd2bd41f96f900> <http://www.w3.org/2000/01/rdf-schema#label> "Sartoria Adolfo Caucino di Biella" .
+<https://w3id.org/arco/resource/CulturalInstituteOrSite/f0247746e9719eda46dd2bd41f96f900> <https://w3id.org/italia/onto/l0/name> "Sartoria Adolfo Caucino di Biella" .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/bene-complesso-parte-componente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/CulturalPropertyCataloguingCategory> .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/bene-complesso-parte-componente> <http://www.w3.org/2000/01/rdf-schema#label> "bene complesso/ parte componente" .
+<https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/bene-complesso-parte-componente> <https://w3id.org/italia/onto/l0/name> "bene complesso/ parte componente" .
+<https://w3id.org/arco/resource/CulturalPropertyCategory/rappresentazioni-profane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/CulturalPropertyCategory> .
+<https://w3id.org/arco/resource/CulturalPropertyCategory/rappresentazioni-profane> <http://www.w3.org/2000/01/rdf-schema#label> "RAPPRESENTAZIONI/ PROFANE" .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/costume-di-arlecchina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/costume-di-arlecchina> <http://www.w3.org/2000/01/rdf-schema#label> "Costume di Arlecchina" .
+<https://w3id.org/arco/resource/CulturalPropertyPart/1201254198-4-part-fibbia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/CulturalPropertyPart> .
+<https://w3id.org/arco/resource/CulturalPropertyPart/1201254198-4-part-fibbia> <http://www.w3.org/2000/01/rdf-schema#label> "fibbia" .
+<https://w3id.org/arco/resource/CulturalPropertyPart/1201254198-4-part-fibbia> <https://w3id.org/arco/ontology/context-description/hasMeasurementCollection> <https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> .
+<https://w3id.org/arco/resource/CulturalPropertyPart/1201254198-4-part-fibbia> <https://w3id.org/arco/ontology/core/isPartOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/CulturalPropertyPart/1201254198-4-part-fibbia> <https://w3id.org/italia/onto/l0/name> "fibbia" .
+<https://w3id.org/arco/resource/CulturalPropertySpecification/della-commedia-dellarte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification> .
+<https://w3id.org/arco/resource/CulturalPropertySpecification/della-commedia-dellarte> <http://www.w3.org/2000/01/rdf-schema#label> "della commedia dell'arte" .
+<https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural property type: Costume di Arlecchina della commedia dell'arte"@en .
+<https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo del bene: Costume di Arlecchina della commedia dell'arte"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/costume-di-arlecchina> .
+<https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification> <https://w3id.org/arco/resource/CulturalPropertySpecification/della-commedia-dellarte> .
+<https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> <https://w3id.org/italia/onto/l0/name> "Cultural property type: Costume di Arlecchina della commedia dell'arte"@en .
+<https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> <https://w3id.org/italia/onto/l0/name> "Tipo del bene: Costume di Arlecchina della commedia dell'arte"@it .
+<https://w3id.org/arco/resource/Dating/1201254198-4-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Dating> .
+<https://w3id.org/arco/resource/Dating/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Cronologia 1 del bene 1201254198-4"@it .
+<https://w3id.org/arco/resource/Dating/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Dating 1 of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/Dating/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/hasDatingEvent> <https://w3id.org/arco/resource/Event/1201254198-4-realizzazione> .
+<https://w3id.org/arco/resource/Dating/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/data-di-acquisizione> .
+<https://w3id.org/arco/resource/Dating/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Cronologia 1 del bene 1201254198-4"@it .
+<https://w3id.org/arco/resource/Dating/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Dating 1 of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/CulturalPropertyComponent> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/DemoEthnoAnthropologicalHeritage> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <http://www.w3.org/2000/01/rdf-schema#label> "Cintura" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <http://www.w3.org/2000/01/rdf-schema#label> "Costume di Arlecchina, della commedia dell'arte, RAPPRESENTAZIONI/ PROFANE - Cintura" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/catalogueNumber> "01254198" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/description> "Cintura in cuoio. Sulla superficie ha una colorazione nera, mentre nella parte interna è presente il colore naturale del cuoio. Nella parte terminale vi è la presenza di una fibbia rettangolare di metallo color argento. L’ardiglione che va ad inserirsi in uno dei dieci fori praticati nella cintura è anch’esso di metallo color argento" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/hasCulturalPropertyCataloguingCategory> <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/bene-complesso-parte-componente> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/hasCulturalPropertyCategory> <https://w3id.org/arco/resource/CulturalPropertyCategory/rappresentazioni-profane> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/73ebb0e2299c89dc70a54abbde5c0a7c> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/hasMibacScopeOfProtection> <https://w3id.org/arco/ontology/arco/EthnoAnthropologicalScope> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/isCulturalPropertyComponentOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/regionIdentifier> "12" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/arco/uniqueIdentifier> "1201254198" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/catalogue/isDescribedByCatalogueRecord> <https://w3id.org/arco/resource/CatalogueRecordBDM/1201254198-4> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasAcquisition> <https://w3id.org/arco/resource/Acquisition/1201254198-4-acquisition-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/7f79284d9c5fc138b71e937d1b22fb21> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasAuthorshipAttribution> <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-2> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-3> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-4> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-5> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-6> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-7> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-8> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasBibliography> <https://w3id.org/arco/resource/Bibliography/1201254198-4-bibliography-9> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasCommission> <https://w3id.org/arco/resource/Commission/1201254198-4-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDating> <https://w3id.org/arco/resource/Dating/1201254198-4-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDetectionMethod> <https://w3id.org/arco/resource/DetectionMethod/appartenenza-ad-una-collezione-o-raccolta-pubblica> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasLegalSituation> <https://w3id.org/arco/resource/LegalSituation/1201254198-4-legal-situation-proprieta-stato> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/hasUse> <https://w3id.org/arco/resource/Use/1201254198-4-use-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/context-description/isMemberOfCollection> <https://w3id.org/arco/resource/CollectionMembership/1201254198-4-collection-membership-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/core/hasPart> <https://w3id.org/arco/resource/CulturalPropertyPart/1201254198-4-part-fibbia> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/hasConservationStatus> <https://w3id.org/arco/resource/ConservationStatus/1201254198-4-conservation-status-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAccessibility> <https://w3id.org/arco/ontology/denotative-description/Accessible> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyAvailability> <https://w3id.org/arco/ontology/denotative-description/Available> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/hasMaterial> <https://w3id.org/arco/resource/TechnicalCharacteristic/cuoio> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> <https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus> <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/1201254198-4> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/hasTechnique> <https://w3id.org/arco/resource/TechnicalCharacteristic/conciatura> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/denotative-description/storageConditions> "In origine il bene era custodito nella cassa di legno 763, insieme agli altri pezzi del costume. È attualmente conservato in un deposito privo di controllo microclimatico, all'interno di una scatola di cartone priva di acidi che riportano l'indicazione del corrispondente numero di inventario 24339" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress> <https://w3id.org/arco/resource/Address/fded61e21d1f39be0b62b912d12f9a44> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> <https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> <https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/DemoEthnoAnthropologicalHeritage> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#comment> "Costume di Arlecchina, della commedia dell'arte, Cintura, bene complesso/ parte componente" .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Costume di Arlecchina, della commedia dell'arte, RAPPRESENTAZIONI/ PROFANE by Caucino, Adolfo"@en .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Costume di Arlecchina, della commedia dell'arte, RAPPRESENTAZIONI/ PROFANE di Caucino, Adolfo"@it .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> <https://w3id.org/arco/ontology/arco/hasCulturalPropertyComponent> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4-component> .
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/0c9cca2cab63d8b01964490ef3c679a6> .
+<https://w3id.org/arco/resource/DetectionMethod/appartenenza-ad-una-collezione-o-raccolta-pubblica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DetectionMethod> .
+<https://w3id.org/arco/resource/DetectionMethod/appartenenza-ad-una-collezione-o-raccolta-pubblica> <http://www.w3.org/2000/01/rdf-schema#label> "appartenenza ad una collezione o raccolta pubblica" .
+<https://w3id.org/arco/resource/DetectionMethod/appartenenza-ad-una-collezione-o-raccolta-pubblica> <https://w3id.org/italia/onto/l0/name> "appartenenza ad una collezione o raccolta pubblica" .
+<https://w3id.org/arco/resource/DocumentationType/catalogo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+<https://w3id.org/arco/resource/DocumentationType/catalogo> <http://www.w3.org/2000/01/rdf-schema#label> "catalogo" .
+<https://w3id.org/arco/resource/DocumentationType/catalogo> <https://w3id.org/italia/onto/l0/name> "catalogo" .
+<https://w3id.org/arco/resource/DocumentationType/epistolario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+<https://w3id.org/arco/resource/DocumentationType/epistolario> <http://www.w3.org/2000/01/rdf-schema#label> "epistolario" .
+<https://w3id.org/arco/resource/DocumentationType/epistolario> <https://w3id.org/italia/onto/l0/name> "epistolario" .
+<https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+<https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> <http://www.w3.org/2000/01/rdf-schema#label> "fotografia digitale (file)" .
+<https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> <https://w3id.org/italia/onto/l0/name> "fotografia digitale (file)" .
+<https://w3id.org/arco/resource/DocumentationType/scheda-conservativa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+<https://w3id.org/arco/resource/DocumentationType/scheda-conservativa> <http://www.w3.org/2000/01/rdf-schema#label> "scheda conservativa" .
+<https://w3id.org/arco/resource/DocumentationType/scheda-conservativa> <https://w3id.org/italia/onto/l0/name> "scheda conservativa" .
+<https://w3id.org/arco/resource/DocumentationType/scheda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+<https://w3id.org/arco/resource/DocumentationType/scheda> <http://www.w3.org/2000/01/rdf-schema#label> "scheda" .
+<https://w3id.org/arco/resource/DocumentationType/scheda> <https://w3id.org/italia/onto/l0/name> "scheda" .
+<https://w3id.org/arco/resource/DocumentationType/tesi-di-laurea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+<https://w3id.org/arco/resource/DocumentationType/tesi-di-laurea> <http://www.w3.org/2000/01/rdf-schema#label> "tesi di laurea" .
+<https://w3id.org/arco/resource/DocumentationType/tesi-di-laurea> <https://w3id.org/italia/onto/l0/name> "tesi di laurea" .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Event> .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <http://www.w3.org/2000/01/rdf-schema#label> "realizzazione"@en .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <http://www.w3.org/2000/01/rdf-schema#label> "realizzazione"@it .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <https://w3id.org/arco/ontology/context-description/specificTime> <https://w3id.org/arco/resource/TimeInterval/1910-1910> .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <https://w3id.org/arco/ontology/core/description> "Il costume è stato realizzato su commissione per l'Esposizione Internazionale di Roma del 1911, seguendo il modello delle illustrazioni di Maurice Sand (BIBR: SAND 1860)" .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/xx-inizio> .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <https://w3id.org/italia/onto/l0/name> "realizzazione"@en .
+<https://w3id.org/arco/resource/Event/1201254198-4-> <https://w3id.org/italia/onto/l0/name> "realizzazione"@it .
+<https://w3id.org/arco/resource/Exhibition/62029c12701e755b6d0dc89f0daa407f> <http://dati.beniculturali.it/cis/involvesCulturalEntity> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Exhibition/62029c12701e755b6d0dc89f0daa407f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/cultural-event/Exhibition> .
+<https://w3id.org/arco/resource/Exhibition/62029c12701e755b6d0dc89f0daa407f> <http://www.w3.org/2000/01/rdf-schema#label> "Restituzioni. Tesori d'arte restaurati" .
+<https://w3id.org/arco/resource/Exhibition/62029c12701e755b6d0dc89f0daa407f> <https://w3id.org/arco/ontology/cultural-event/eventTimeLocation> "true" .
+<https://w3id.org/arco/resource/Exhibition/62029c12701e755b6d0dc89f0daa407f> <https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser> <https://w3id.org/arco/resource/Agent/1609d16ae22ce5ca34299bcc0062fbfb> .
+<https://w3id.org/arco/resource/Exhibition/62029c12701e755b6d0dc89f0daa407f> <https://w3id.org/italia/onto/RO/hasRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-intesa-sanpaolo> .
+<https://w3id.org/arco/resource/Exhibition/62029c12701e755b6d0dc89f0daa407f> <https://w3id.org/italia/onto/l0/name> "Restituzioni. Tesori d'arte restaurati" .
+<https://w3id.org/arco/resource/Exhibition/66463aae248fb02bb271d307092fcbbe> <http://dati.beniculturali.it/cis/involvesCulturalEntity> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/Exhibition/66463aae248fb02bb271d307092fcbbe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/cultural-event/Exhibition> .
+<https://w3id.org/arco/resource/Exhibition/66463aae248fb02bb271d307092fcbbe> <http://www.w3.org/2000/01/rdf-schema#label> "Mostra di Etnografia Italiana" .
+<https://w3id.org/arco/resource/Exhibition/66463aae248fb02bb271d307092fcbbe> <https://w3id.org/arco/ontology/cultural-event/eventTimeLocation> "true" .
+<https://w3id.org/arco/resource/Exhibition/66463aae248fb02bb271d307092fcbbe> <https://w3id.org/arco/ontology/cultural-event/hasEventOrganiser> <https://w3id.org/arco/resource/Agent/92ad4fb4e4f444c915ada2cac6f40a8b> .
+<https://w3id.org/arco/resource/Exhibition/66463aae248fb02bb271d307092fcbbe> <https://w3id.org/italia/onto/RO/hasRiT> <https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-comitato-per-l%E2%80%99esposizione-del-1911> .
+<https://w3id.org/arco/resource/Exhibition/66463aae248fb02bb271d307092fcbbe> <https://w3id.org/italia/onto/l0/name> "Mostra di Etnografia Italiana" .
+<https://w3id.org/arco/resource/Format/jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Format> .
+<https://w3id.org/arco/resource/Format/jpg> <http://www.w3.org/2000/01/rdf-schema#label> "jpg" .
+<https://w3id.org/arco/resource/Format/jpg> <https://w3id.org/italia/onto/l0/name> "jpg" .
+<https://w3id.org/arco/resource/Format/pdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Format> .
+<https://w3id.org/arco/resource/Format/pdf> <http://www.w3.org/2000/01/rdf-schema#label> "pdf" .
+<https://w3id.org/arco/resource/Format/pdf> <https://w3id.org/italia/onto/l0/name> "pdf" .
+<https://w3id.org/arco/resource/InterpretationCriterion/data-di-acquisizione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/InterpretationCriterion> .
+<https://w3id.org/arco/resource/InterpretationCriterion/data-di-acquisizione> <http://www.w3.org/2000/01/rdf-schema#label> "data di acquisizione" .
+<https://w3id.org/arco/resource/InterpretationCriterion/data-di-acquisizione> <https://w3id.org/italia/onto/l0/name> "data di acquisizione" .
+<https://w3id.org/arco/resource/InterpretationCriterion/documentazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/InterpretationCriterion> .
+<https://w3id.org/arco/resource/InterpretationCriterion/documentazione> <http://www.w3.org/2000/01/rdf-schema#label> "documentazione" .
+<https://w3id.org/arco/resource/InterpretationCriterion/documentazione> <https://w3id.org/italia/onto/l0/name> "documentazione" .
+<https://w3id.org/arco/resource/LegalSituation/1201254198-4-legal-situation-proprieta-stato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/LegalSituation> .
+<https://w3id.org/arco/resource/LegalSituation/1201254198-4-legal-situation-proprieta-stato> <http://www.w3.org/2000/01/rdf-schema#label> "Condizione giuridica del bene culturale 1201254198-4: proprietà Stato"@it .
+<https://w3id.org/arco/resource/LegalSituation/1201254198-4-legal-situation-proprieta-stato> <http://www.w3.org/2000/01/rdf-schema#label> "Legal situation of cultural property 1201254198-4: proprietà Stato"@en .
+<https://w3id.org/arco/resource/LegalSituation/1201254198-4-legal-situation-proprieta-stato> <https://w3id.org/arco/ontology/context-description/hasOwner> <https://w3id.org/arco/resource/Agent/7be213f0d6bc54052a085b6b60bf59fc> .
+<https://w3id.org/arco/resource/LegalSituation/1201254198-4-legal-situation-proprieta-stato> <https://w3id.org/italia/onto/l0/name> "Condizione giuridica del bene culturale 1201254198-4: proprietà Stato"@it .
+<https://w3id.org/arco/resource/LegalSituation/1201254198-4-legal-situation-proprieta-stato> <https://w3id.org/italia/onto/l0/name> "Legal situation of cultural property 1201254198-4: proprietà Stato"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of cultural property 1201254198-4: 91.50cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> <http://www.w3.org/2000/01/rdf-schema#label> "Misura del bene culturale 1201254198-4: 91.50cm"@it .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementType> <https://w3id.org/arco/ontology/denotative-description/Lenght> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1201254198-4-1-lenght-9150> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> <https://w3id.org/italia/onto/l0/name> "Measurement of cultural property 1201254198-4: 91.50cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> <https://w3id.org/italia/onto/l0/name> "Misura del bene culturale 1201254198-4: 91.50cm"@it .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of cultural property 1201254198-4: 4.5cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> <http://www.w3.org/2000/01/rdf-schema#label> "Misura del bene culturale 1201254198-4: 4.5cm"@it .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementType> <https://w3id.org/arco/ontology/denotative-description/Width> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1201254198-4-2-width-45> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> <https://w3id.org/italia/onto/l0/name> "Measurement of cultural property 1201254198-4: 4.5cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> <https://w3id.org/italia/onto/l0/name> "Misura del bene culturale 1201254198-4: 4.5cm"@it .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of cultural property 1201254198-4: 4cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> <http://www.w3.org/2000/01/rdf-schema#label> "Misura del bene culturale 1201254198-4: 4cm"@it .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementType> <https://w3id.org/arco/ontology/denotative-description/Height> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1201254198-4-3-height-4> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> <https://w3id.org/italia/onto/l0/name> "Measurement of cultural property 1201254198-4: 4cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> <https://w3id.org/italia/onto/l0/name> "Misura del bene culturale 1201254198-4: 4cm"@it .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of cultural property 1201254198-4: 6cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> <http://www.w3.org/2000/01/rdf-schema#label> "Misura del bene culturale 1201254198-4: 6cm"@it .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementType> <https://w3id.org/arco/ontology/denotative-description/Width> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/1201254198-4-4-width-6> .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> <https://w3id.org/italia/onto/l0/name> "Measurement of cultural property 1201254198-4: 6cm"@en .
+<https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> <https://w3id.org/italia/onto/l0/name> "Misura del bene culturale 1201254198-4: 6cm"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> <http://www.w3.org/2000/01/rdf-schema#label> "Measurements of cultural property 1201254198-4 fibbia"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> <http://www.w3.org/2000/01/rdf-schema#label> "Misure del bene culturale 1201254198-4 fibbia"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/1201254198-4-3-height> .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/1201254198-4-4-width> .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> <https://w3id.org/italia/onto/l0/name> "Measurements of cultural property 1201254198-4 fibbia"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4-fibbia> <https://w3id.org/italia/onto/l0/name> "Misure del bene culturale 1201254198-4 fibbia"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Measurements of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> <http://www.w3.org/2000/01/rdf-schema#label> "Misure del bene culturale 1201254198-4"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/1201254198-4-1-lenght> .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/1201254198-4-2-width> .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> <https://w3id.org/italia/onto/l0/name> "Measurements of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/1201254198-4> <https://w3id.org/italia/onto/l0/name> "Misure del bene culturale 1201254198-4"@it .
+<https://w3id.org/arco/resource/MeasurementUnit/cm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/MeasurementUnit> .
+<https://w3id.org/arco/resource/MeasurementUnit/cm> <http://www.w3.org/2000/01/rdf-schema#label> "cm" .
+<https://w3id.org/arco/resource/MeasurementUnit/cm> <https://w3id.org/italia/onto/l0/name> "cm" .
+<https://w3id.org/arco/resource/MonumentalArea/musei-darte-e-scienza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/MonumentalArea> .
+<https://w3id.org/arco/resource/MonumentalArea/musei-darte-e-scienza> <http://www.w3.org/2000/01/rdf-schema#label> "Musei d'Arte e Scienza" .
+<https://w3id.org/arco/resource/MonumentalArea/musei-darte-e-scienza> <https://w3id.org/italia/onto/l0/name> "Musei d'Arte e Scienza" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PhotographicDocumentation> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Documentazione fotografica 1 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Photographic documentation 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/digitalFileName> "MUCIV-MATP_24339_001.jpg" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "MUCIV-MATP_24339_001" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/b4bce1f62b153d79c6078837486ee5ee> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/hasFormat> <https://w3id.org/arco/resource/Format/jpg> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/AttachedDocumentation> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/italia/onto/TI/time> "2017/10/00" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/italia/onto/l0/name> "Documentazione fotografica 1 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-1> <https://w3id.org/italia/onto/l0/name> "Photographic documentation 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PhotographicDocumentation> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <http://www.w3.org/2000/01/rdf-schema#label> "Documentazione fotografica 2 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <http://www.w3.org/2000/01/rdf-schema#label> "Photographic documentation 2 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/context-description/digitalFileName> "MUCIV-MATP_24339_002.jpg" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "MUCIV-MATP_24339_002" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/b4bce1f62b153d79c6078837486ee5ee> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/context-description/hasFormat> <https://w3id.org/arco/resource/Format/jpg> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/AttachedDocumentation> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/italia/onto/TI/time> "2017/10/00" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/italia/onto/l0/name> "Documentazione fotografica 2 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/PhotographicDocumentation/1201254198-4-photographic-documentation-2> <https://w3id.org/italia/onto/l0/name> "Photographic documentation 2 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PreferredAuthorshipAttribution> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred authorship attribution of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/hasAttributedAuthor> <https://w3id.org/arco/resource/Agent/7f79284d9c5fc138b71e937d1b22fb21> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/documentazione> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/1201254198-4-1> <https://w3id.org/italia/onto/l0/name> "Preferred authorship attribution of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/PrivacyReason> .
+<https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> <http://www.w3.org/2000/01/rdf-schema#label> "scheda contenente dati liberamente accessibili" .
+<https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> <https://w3id.org/italia/onto/l0/name> "scheda contenente dati liberamente accessibili" .
+<https://w3id.org/arco/resource/Province/rm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Province> .
+<https://w3id.org/arco/resource/Province/rm> <http://www.w3.org/2000/01/rdf-schema#label> "RM" .
+<https://w3id.org/arco/resource/Province/rm> <https://w3id.org/italia/onto/l0/name> "RM" .
+<https://w3id.org/arco/resource/Region/bi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Province> .
+<https://w3id.org/arco/resource/Region/bi> <http://www.w3.org/2000/01/rdf-schema#label> "BI" .
+<https://w3id.org/arco/resource/Region/bi> <https://w3id.org/italia/onto/l0/name> "BI" .
+<https://w3id.org/arco/resource/Region/lazio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Region> .
+<https://w3id.org/arco/resource/Region/lazio> <http://www.w3.org/2000/01/rdf-schema#label> "Lazio" .
+<https://w3id.org/arco/resource/Region/lazio> <https://w3id.org/italia/onto/l0/name> "Lazio" .
+<https://w3id.org/arco/resource/Region/piemonte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Region> .
+<https://w3id.org/arco/resource/Region/piemonte> <http://www.w3.org/2000/01/rdf-schema#label> "Piemonte" .
+<https://w3id.org/arco/resource/Region/piemonte> <https://w3id.org/italia/onto/l0/name> "Piemonte" .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-cataloguing-agency> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Funzionario responsabile"@it .
+<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Official in charge"@en .
+<https://w3id.org/arco/resource/Role/Organiser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/Organiser> <http://www.w3.org/2000/01/rdf-schema#label> "Ente/Soggetto organizzatore"@it .
+<https://w3id.org/arco/resource/Role/Organiser> <http://www.w3.org/2000/01/rdf-schema#label> "Organiser"@en .
+<https://w3id.org/arco/resource/Role/Organiser> <https://w3id.org/italia/onto/l0/name> "Ente/Soggetto organizzatore"@it .
+<https://w3id.org/arco/resource/Role/Organiser> <https://w3id.org/italia/onto/l0/name> "Organiser"@en .
+<https://w3id.org/arco/resource/Role/Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Ente proprietario della documentazione"@it .
+<https://w3id.org/arco/resource/Role/Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner of documentation"@en .
+<https://w3id.org/arco/resource/Role/Owner> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-1-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/Role/Owner> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-photographic-documentation-2-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/Role/Owner> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ScientificDirector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ScientificDirector> <http://www.w3.org/2000/01/rdf-schema#label> "Referente verifica scientifica"@it .
+<https://w3id.org/arco/resource/Role/ScientificDirector> <http://www.w3.org/2000/01/rdf-schema#label> "Scientific Director"@en .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <http://dati.beniculturali.it/cis/isPartOf> <https://w3id.org/arco/resource/MonumentalArea/musei-darte-e-scienza> .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <http://dati.beniculturali.it/cis/isSiteOf> <https://w3id.org/arco/resource/CulturalInstituteOrSite/d873a3d5b0d656107a352c5d79f6996c> .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <http://dati.beniculturali.it/cis/siteAddress> <https://w3id.org/arco/resource/Address/404f863f23f8341735412cb6dc01fd91> .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/Site> .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <http://www.w3.org/2000/01/rdf-schema#label> "Palazzo delle Tradizioni Popolari" .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <https://w3id.org/arco/ontology/context-description/hasUseFunction> <https://w3id.org/arco/resource/UseFunction/museo> .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <https://w3id.org/arco/ontology/location/hasSiteType> <https://w3id.org/arco/resource/SiteType/palazzo> .
+<https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> <https://w3id.org/italia/onto/l0/name> "Palazzo delle Tradizioni Popolari" .
+<https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> <http://dati.beniculturali.it/cis/isSiteOf> <https://w3id.org/arco/resource/CulturalInstituteOrSite/f0247746e9719eda46dd2bd41f96f900> .
+<https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> <http://dati.beniculturali.it/cis/siteAddress> <https://w3id.org/arco/resource/Address/a0c27ec1cab526ed8d1c440361ff0291> .
+<https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/Site> .
+<https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> <http://www.w3.org/2000/01/rdf-schema#label> "Contenitore fisico di: Sartoria Adolfo Caucino di Biella" .
+<https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> <https://w3id.org/arco/ontology/location/hasSiteType> <https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> .
+<https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> <https://w3id.org/italia/onto/l0/name> "Contenitore fisico di: Sartoria Adolfo Caucino di Biella" .
+<https://w3id.org/arco/resource/SiteDefinition/laboratorio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteDefinition> .
+<https://w3id.org/arco/resource/SiteDefinition/laboratorio> <http://www.w3.org/2000/01/rdf-schema#label> "laboratorio" .
+<https://w3id.org/arco/resource/SiteDefinition/palazzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteDefinition> .
+<https://w3id.org/arco/resource/SiteDefinition/palazzo> <http://www.w3.org/2000/01/rdf-schema#label> "palazzo" .
+<https://w3id.org/arco/resource/SiteSpecification/sartoriale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteSpecification> .
+<https://w3id.org/arco/resource/SiteSpecification/sartoriale> <http://www.w3.org/2000/01/rdf-schema#label> "sartoriale" .
+<https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteType> .
+<https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> <http://www.w3.org/2000/01/rdf-schema#label> "Site type: laboratorio sartoriale"@en .
+<https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo di contenitore fisico: laboratorio sartoriale"@it .
+<https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> <https://w3id.org/arco/ontology/location/hasSiteDefinition> <https://w3id.org/arco/resource/SiteDefinition/laboratorio> .
+<https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> <https://w3id.org/arco/ontology/location/hasSiteSpecification> <https://w3id.org/arco/resource/SiteSpecification/sartoriale> .
+<https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> <https://w3id.org/italia/onto/l0/name> "Site type: laboratorio sartoriale"@en .
+<https://w3id.org/arco/resource/SiteType/laboratorio-sartoriale> <https://w3id.org/italia/onto/l0/name> "Tipo di contenitore fisico: laboratorio sartoriale"@it .
+<https://w3id.org/arco/resource/SiteType/palazzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteType> .
+<https://w3id.org/arco/resource/SiteType/palazzo> <http://www.w3.org/2000/01/rdf-schema#label> "Site type: palazzo"@en .
+<https://w3id.org/arco/resource/SiteType/palazzo> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo di contenitore fisico: palazzo"@it .
+<https://w3id.org/arco/resource/SiteType/palazzo> <https://w3id.org/arco/ontology/location/hasSiteDefinition> <https://w3id.org/arco/resource/SiteDefinition/palazzo> .
+<https://w3id.org/arco/resource/SiteType/palazzo> <https://w3id.org/italia/onto/l0/name> "Site type: palazzo"@en .
+<https://w3id.org/arco/resource/SiteType/palazzo> <https://w3id.org/italia/onto/l0/name> "Tipo di contenitore fisico: palazzo"@it .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/SourceAndDocument> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <http://www.w3.org/2000/01/rdf-schema#label> "Fonti e documenti 1 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <http://www.w3.org/2000/01/rdf-schema#label> "Sources and documents 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/arco/ontology/context-description/digitalFileName> "Scheda conservativa_Costumi_Commedia_Arte_Salone_Ferrara.pdf" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "MUCIV-MATP_SC_0001" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/arco/ontology/context-description/documentationTitle> "Il restauro di dieci costumi della Commedia dell’Arte - Salone di Ferrara" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/bb33f58289e5480f58c2fb2de13ad26a> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/scheda-conservativa> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/AttachedDocumentation> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/italia/onto/TI/time> "2017" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/italia/onto/l0/name> "Fonti e documenti 1 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-1> <https://w3id.org/italia/onto/l0/name> "Sources and documents 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/SourceAndDocument> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <http://www.w3.org/2000/01/rdf-schema#label> "Fonti e documenti 2 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <http://www.w3.org/2000/01/rdf-schema#label> "Sources and documents 2 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "ICDe_Bibl_0002_b" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/context-description/documentationLocation> "X-XVI 45-45a" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/context-description/documentationTitle> "Il carteggio Roccavilla-Loria per l'Esposizione Universale di Roma 1911" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/context-description/hasArchive> <https://w3id.org/arco/resource/Agent/ff20ac981f233aaed5f6a9116b861215> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/9a2a17f87b4cb152d8358f68076a42ba> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/tesi-di-laurea> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ExistingDocumentation> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/arco/ontology/core/note> "La tesi si compone di due volumi. Il secondo riporta 230 lettere trascritte del carteggio Roccavilla-Loria" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/italia/onto/TI/time> "1981-1982" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/italia/onto/l0/name> "Fonti e documenti 2 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-2> <https://w3id.org/italia/onto/l0/name> "Sources and documents 2 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/SourceAndDocument> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <http://www.w3.org/2000/01/rdf-schema#label> "Fonti e documenti 3 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <http://www.w3.org/2000/01/rdf-schema#label> "Sources and documents 3 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/context-description/digitalFileName> "MUCIV-MATP_sch_RMEI_24339.pdf" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "MUCIV-MATP_sch_RMEI_24339" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/context-description/documentationTitle> "Scheda Regio Museo di Etnografia Italiana n. inv. 24339" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/context-description/hasArchive> <https://w3id.org/arco/resource/Agent/9f177d6ad728be3cc7a20585c7de0d38> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/scheda> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/context-description/hasFormat> <https://w3id.org/arco/resource/Format/pdf> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/1201254198-4-source-document-3-source-document-owner> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/AttachedDocumentation> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/arco/ontology/core/note> "Lo schedario del Regio Museo di Etnografia Italiana è stato realizzato da un Comitato direttivo costituito nel gennaio 1938. Segue un doppio ordinamento (per serie di oggetti e per regione) e riporta i dati contenuti nelle schede redatte dai raccoglitori coinvolti per la Mostra del 1911" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/italia/onto/TI/time> "1938-1939" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/italia/onto/l0/name> "Fonti e documenti 3 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-3> <https://w3id.org/italia/onto/l0/name> "Sources and documents 3 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/SourceAndDocument> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <http://www.w3.org/2000/01/rdf-schema#label> "Fonti e documenti 4 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <http://www.w3.org/2000/01/rdf-schema#label> "Sources and documents 4 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/digitalFileName> "ICDe_Bibl_0004_b.pdf" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "ICDe_Bibl_0004_b" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/documentationLocation> "O - VII - 45" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/documentationTitle> "Catalogo della mostra di etnografia italiana in Piazza d’Armi. Esposizione Internazionale di Roma 1911 – Maschere italiane" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/hasArchive> <https://w3id.org/arco/resource/Agent/ff20ac981f233aaed5f6a9116b861215> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/catalogo> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/hasFormat> <https://w3id.org/arco/resource/Format/pdf> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/AttachedDocumentation> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/arco/ontology/core/note> "Vedi BIBR: CATALOGO MOSTRA 1911" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/italia/onto/TI/time> "1911" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/italia/onto/l0/name> "Fonti e documenti 4 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-4> <https://w3id.org/italia/onto/l0/name> "Sources and documents 4 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/SourceAndDocument> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <http://www.w3.org/2000/01/rdf-schema#label> "Fonti e documenti 5 del bene culturale: 1201254198-4"@it .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <http://www.w3.org/2000/01/rdf-schema#label> "Sources and documents 5 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "ICDe_AS_CarteggioLR" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/documentationLocation> "b. 39-40" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/documentationTitle> "Carteggio Loria - Roccavilla" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/folio> "fasc. 963-968" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/hasArchive> <https://w3id.org/arco/resource/Agent/678bec59383dc15886babb51c9d4d432> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/49b828274e9ca96f88eb5a49bcccc55f> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/epistolario> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/ExistingDocumentation> .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/italia/onto/TI/time> "1909-1913" .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/italia/onto/l0/name> "Fonti e documenti 5 del bene culturale: 1201254198-4"@en .
+<https://w3id.org/arco/resource/SourceAndDocument/1201254198-4-source-document-5> <https://w3id.org/italia/onto/l0/name> "Sources and documents 5 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/conciatura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/conciatura> <http://www.w3.org/2000/01/rdf-schema#label> "conciatura" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/conciatura> <https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> <https://w3id.org/arco/ontology/denotative-description/Technique> .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/conciatura> <https://w3id.org/italia/onto/l0/name> "conciatura" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/cuoio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/cuoio> <http://www.w3.org/2000/01/rdf-schema#label> "cuoio" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/cuoio> <https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> <https://w3id.org/arco/ontology/denotative-description/Material> .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/cuoio> <https://w3id.org/italia/onto/l0/name> "cuoio" .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-33ce7efa22dd77a24a771373bc55cd14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-33ce7efa22dd77a24a771373bc55cd14> <http://www.w3.org/2000/01/rdf-schema#label> "Funzionario responsabile: Sicurezza, Anna"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-33ce7efa22dd77a24a771373bc55cd14> <http://www.w3.org/2000/01/rdf-schema#label> "Official in charge: Sicurezza, Anna"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-33ce7efa22dd77a24a771373bc55cd14> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/a2b6f0294ea480d2c3b43a221778e876> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-33ce7efa22dd77a24a771373bc55cd14> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/OfficialInCharge> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-6b811589c4d34dbc73d58c485fbcd71a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-6b811589c4d34dbc73d58c485fbcd71a> <http://www.w3.org/2000/01/rdf-schema#label> "Referente verifica scientifica: Sicurezza, Anna"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-6b811589c4d34dbc73d58c485fbcd71a> <http://www.w3.org/2000/01/rdf-schema#label> "Scientific director: Sicurezza, Anna"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-6b811589c4d34dbc73d58c485fbcd71a> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/a2b6f0294ea480d2c3b43a221778e876> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-6b811589c4d34dbc73d58c485fbcd71a> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ScientificDirector> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-comitato-per-l%E2%80%99esposizione-del-1911> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-comitato-per-l%E2%80%99esposizione-del-1911> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/92ad4fb4e4f444c915ada2cac6f40a8b> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-comitato-per-l%E2%80%99esposizione-del-1911> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/Organiser> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-8b45ac1ad41939c76997201d943e7c5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-8b45ac1ad41939c76997201d943e7c5c> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Magnani, Fabrizio"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-8b45ac1ad41939c76997201d943e7c5c> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Magnani, Fabrizio"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-8b45ac1ad41939c76997201d943e7c5c> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/8b45ac1ad41939c76997201d943e7c5c> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-8b45ac1ad41939c76997201d943e7c5c> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-fd85baa1327c0c04789c3ab43cb1059f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-fd85baa1327c0c04789c3ab43cb1059f> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Pavani, Veronica"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-fd85baa1327c0c04789c3ab43cb1059f> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Pavani, Veronica"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-fd85baa1327c0c04789c3ab43cb1059f> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/fd85baa1327c0c04789c3ab43cb1059f> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-compilation-fd85baa1327c0c04789c3ab43cb1059f> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-intesa-sanpaolo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-intesa-sanpaolo> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/1609d16ae22ce5ca34299bcc0062fbfb> .
+<https://w3id.org/arco/resource/TimeIndexedRole/1201254198-4-intesa-sanpaolo> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/Organiser> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <http://www.w3.org/2000/01/rdf-schema#label> "Alternative location 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <http://www.w3.org/2000/01/rdf-schema#label> "Altra localizzazione 1 del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <https://w3id.org/arco/ontology/core/note> "L’attribuzione del luogo di realizzazione e della cronologia viene desunta dalle fonti d’archivio (carteggio Loria-Roccavilla)" .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <https://w3id.org/arco/ontology/location/atSite> <https://w3id.org/arco/resource/Site/c098f919de7dbccc476581e59dac540b> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <https://w3id.org/arco/ontology/location/hasLocationType> <https://w3id.org/arco/ontology/location/ProductionRealizationLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/1910> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <https://w3id.org/italia/onto/l0/name> "Alternative location 1 of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-alternative-1> <https://w3id.org/italia/onto/l0/name> "Altra localizzazione 1 del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <http://www.w3.org/2000/01/rdf-schema#label> "Current physical location of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <http://www.w3.org/2000/01/rdf-schema#label> "Localizzazione fisica attuale del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <https://w3id.org/arco/ontology/core/specifications> "Piano III/ stanza di deposito n. 403" .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <https://w3id.org/arco/ontology/location/atSite> <https://w3id.org/arco/resource/Site/05aab8bdebf0731ed4afba958b7243a7> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <https://w3id.org/arco/ontology/location/hasLocationType> <https://w3id.org/arco/ontology/location/CurrentPhysicalLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1201254198-4> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <https://w3id.org/italia/onto/l0/name> "Current physical location of cultural property: 1201254198-4"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/1201254198-4-current> <https://w3id.org/italia/onto/l0/name> "Localizzazione fisica attuale del bene: 1201254198-4"@it .
+<https://w3id.org/arco/resource/TimeInterval/1910-1910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/1910-1910> <http://www.w3.org/2000/01/rdf-schema#label> "1910 - 1910" .
+<https://w3id.org/arco/resource/TimeInterval/1910-1910> <https://w3id.org/arco/ontology/arco/endTime> "1910" .
+<https://w3id.org/arco/resource/TimeInterval/1910-1910> <https://w3id.org/arco/ontology/arco/startTime> "1910" .
+<https://w3id.org/arco/resource/TimeInterval/1910-1910> <https://w3id.org/italia/onto/l0/name> "1910 - 1910" .
+<https://w3id.org/arco/resource/TimeInterval/1910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/1910> <https://w3id.org/arco/ontology/arco/endTime> "" .
+<https://w3id.org/arco/resource/TimeInterval/1910> <https://w3id.org/arco/ontology/arco/startTime> "1910" .
+<https://w3id.org/arco/resource/TimeInterval/2017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2017> <http://www.w3.org/2000/01/rdf-schema#label> "2017" .
+<https://w3id.org/arco/resource/TimeInterval/2017> <https://w3id.org/italia/onto/TI/time> "2017" .
+<https://w3id.org/arco/resource/TimeInterval/xx-inizio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/xx-inizio> <http://www.w3.org/2000/01/rdf-schema#label> "XX inizio" .
+<https://w3id.org/arco/resource/TimeInterval/xx-inizio> <https://w3id.org/italia/onto/TI/time> "XX inizio" .
+<https://w3id.org/arco/resource/TimeInterval/xx-inizio> <https://w3id.org/italia/onto/l0/name> "XX inizio" .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Use> .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <http://www.w3.org/2000/01/rdf-schema#label> "Use 1 of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <http://www.w3.org/2000/01/rdf-schema#label> "Uso 1 del bene culturale 1201254198-4"@it .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <https://w3id.org/arco/ontology/context-description/hasCircumstance> <https://w3id.org/arco/resource/Circumstance/nelle-rappresentazioni-della-commedia-dell%E2%80%99arte> .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <https://w3id.org/arco/ontology/context-description/hasUseType> <https://w3id.org/arco/ontology/context-description/HistoricalUse> .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <https://w3id.org/arco/ontology/context-description/useFunction> "mascheramento teatrale" .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <https://w3id.org/arco/ontology/core/note> "Il bene non è stato mai indossato poiché realizzato su commissione unicamente per l'Esposizione Internazionale di Roma del 1911, seguendo il modello di Bergamo, sec. XVIII, tratto dalle illustrazioni di Maurice Sand (BIBR: SAND 1860)" .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <https://w3id.org/italia/onto/TI/time> "XX inizio" .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <https://w3id.org/italia/onto/l0/name> "Use 1 of cultural property 1201254198-4"@en .
+<https://w3id.org/arco/resource/Use/1201254198-4-use-1> <https://w3id.org/italia/onto/l0/name> "Uso 1 del bene culturale 1201254198-4"@it .
+<https://w3id.org/arco/resource/UseFunction/museo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/UseFunction> .
+<https://w3id.org/arco/resource/UseFunction/museo> <http://www.w3.org/2000/01/rdf-schema#label> "museo" .
+<https://w3id.org/arco/resource/UseFunction/museo> <https://w3id.org/arco/ontology/context-description/useFunction> "museo" .
+<https://w3id.org/arco/resource/UseFunction/museo> <https://w3id.org/italia/onto/l0/name> "museo" .
+<https://w3id.org/arco/resource/Value/1201254198-4-1-lenght-9150> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/1201254198-4-1-lenght-9150> <http://www.w3.org/2000/01/rdf-schema#label> "91.50"@en .
+<https://w3id.org/arco/resource/Value/1201254198-4-1-lenght-9150> <http://www.w3.org/2000/01/rdf-schema#label> "91.50"@it .
+<https://w3id.org/arco/resource/Value/1201254198-4-1-lenght-9150> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/cm> .
+<https://w3id.org/arco/resource/Value/1201254198-4-1-lenght-9150> <https://w3id.org/italia/onto/MU/value> "91.50" .
+<https://w3id.org/arco/resource/Value/1201254198-4-2-width-45> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/1201254198-4-2-width-45> <http://www.w3.org/2000/01/rdf-schema#label> "4.5"@en .
+<https://w3id.org/arco/resource/Value/1201254198-4-2-width-45> <http://www.w3.org/2000/01/rdf-schema#label> "4.5"@it .
+<https://w3id.org/arco/resource/Value/1201254198-4-2-width-45> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/cm> .
+<https://w3id.org/arco/resource/Value/1201254198-4-2-width-45> <https://w3id.org/italia/onto/MU/value> "4.5" .
+<https://w3id.org/arco/resource/Value/1201254198-4-3-height-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/1201254198-4-3-height-4> <http://www.w3.org/2000/01/rdf-schema#label> "4"@en .
+<https://w3id.org/arco/resource/Value/1201254198-4-3-height-4> <http://www.w3.org/2000/01/rdf-schema#label> "4"@it .
+<https://w3id.org/arco/resource/Value/1201254198-4-3-height-4> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/cm> .
+<https://w3id.org/arco/resource/Value/1201254198-4-3-height-4> <https://w3id.org/italia/onto/MU/value> "4" .
+<https://w3id.org/arco/resource/Value/1201254198-4-4-width-6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/1201254198-4-4-width-6> <http://www.w3.org/2000/01/rdf-schema#label> "6"@en .
+<https://w3id.org/arco/resource/Value/1201254198-4-4-width-6> <http://www.w3.org/2000/01/rdf-schema#label> "6"@it .
+<https://w3id.org/arco/resource/Value/1201254198-4-4-width-6> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/cm> .
+<https://w3id.org/arco/resource/Value/1201254198-4-4-width-6> <https://w3id.org/italia/onto/MU/value> "6" .
