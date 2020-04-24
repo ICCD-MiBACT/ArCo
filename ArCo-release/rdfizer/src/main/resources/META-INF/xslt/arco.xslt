@@ -4961,7 +4961,7 @@
                             <xsl:when
 						test="./DTN/DTNS and (not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTN/DTNS)), 'n.r')))">
                                 <xsl:value-of
-						select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./DTNS)))" />
+						select="concat($NS, 'Event/', $itemURI, '-', arco-fn:urify(normalize-space(./DTN/DTNS)))" />
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:value-of
