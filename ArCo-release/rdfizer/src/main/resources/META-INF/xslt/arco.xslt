@@ -14634,21 +14634,21 @@
 							select="concat('Obverse of numismatic property ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="schede/NU/DA/DES/DESA">
-						<arco-cd:hasAffixedElement>
+						<arco-dd:hasAffixedElement>
 							<xsl:attribute name="rdf:resource">
 									<xsl:value-of
 								select="concat($NS, 'CoinDesign/', $itemURI, '-obverse-design')" />
 								</xsl:attribute>
-						</arco-cd:hasAffixedElement>
+						</arco-dd:hasAffixedElement>
 					</xsl:if>
 					<xsl:if
 						test="schede/NU/DA/DES/DESN or schede/NU/DA/DES/DESF or schede/NU/DA/DES/DESL">
-						<arco-cd:hasAffixedElement>
+						<arco-dd:hasAffixedElement>
 							<xsl:attribute name="rdf:resource">
 									<xsl:value-of
 								select="concat($NS, 'CoinLegend/', $itemURI, '-obverse-legend')" />
 								</xsl:attribute>
-						</arco-cd:hasAffixedElement>
+						</arco-dd:hasAffixedElement>
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
@@ -14800,21 +14800,21 @@
 							select="concat('Reverse of numismatic property ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="schede/NU/DA/DES/DESM">
-						<arco-cd:hasAffixedElement>
+						<arco-dd:hasAffixedElement>
 							<xsl:attribute name="rdf:resource">
 									<xsl:value-of
 								select="concat($NS, 'CoinDesign/', $itemURI, '-reverse-design')" />
 								</xsl:attribute>
-						</arco-cd:hasAffixedElement>
+						</arco-dd:hasAffixedElement>
 					</xsl:if>
 					<xsl:if
 						test="schede/NU/DA/DES/DESG or schede/NU/DA/DES/DESR or schede/NU/DA/DES/DEST">
-						<arco-cd:hasAffixedElement>
+						<arco-dd:hasAffixedElement>
 							<xsl:attribute name="rdf:resource">
 									<xsl:value-of
 								select="concat($NS, 'CoinLegend/', $itemURI, '-reverse-legend')" />
 								</xsl:attribute>
-						</arco-cd:hasAffixedElement>
+						</arco-dd:hasAffixedElement>
 					</xsl:if>
 				</rdf:Description>
 			</xsl:if>
