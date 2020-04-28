@@ -1499,7 +1499,16 @@
 						</xsl:when>
 					</xsl:choose>
 					</arco-arco:numberOfElements>
-				</xsl:if>				
+				</xsl:if>
+				
+				<!-- position in sequence -->
+				<xsl:if
+					test="schede/*/OG/QNT/QNTO">
+					<arco-arco:positionInSequence>
+					    <xsl:value-of
+							select="normalize-space(schede/*/OG/QNT/QNTO)" />
+					</arco-arco:positionInSequence>
+				</xsl:if>						
 <!-- cultural property description -->
 
 				<xsl:if test="schede/*/DA/DES">
@@ -3762,7 +3771,7 @@
 			<xsl:if test="schede/*/OG/OGC/OGCT and (not(schede/AT/OG/OGC/OGCT))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="$culturalProperty" />
+						<xsl:value-of select="$objectOfDescription" />
 					</xsl:attribute>
 					<arco-catalogue:isDescribedByCatalogueRecord>
 					<xsl:attribute name="rdf:resource">
