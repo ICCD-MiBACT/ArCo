@@ -1,0 +1,195 @@
+<schede>
+	<OA version="3.00_ICCD0">
+		<CD hint="CODICI">
+			<TSK hint="Tipo Scheda">OA</TSK>
+			<LIR hint="Livello ricerca">P</LIR>
+			<NCT hint="CODICE UNIVOCO">
+				<NCTR hint="Codice regione">08</NCTR>
+				<NCTN hint="Numero catalogo generale">00577432</NCTN>
+			</NCT>
+			<ESC hint="Ente schedatore">S08</ESC>
+			<ECP hint="Ente competente">S08</ECP>
+		</CD>
+		<OG hint="OGGETTO">
+			<OGT hint="OGGETTO">
+				<OGTD hint="Definizione">lapide commemorativa ai caduti</OGTD>
+				<OGTN hint="Denominazione/dedicazione">Lapide commemorativa ai
+					caduti della prima guerra mondiale</OGTN>
+			</OGT>
+		</OG>
+		<LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+			<PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+				<PVCS hint="Stato">ITALIA</PVCS>
+				<PVCR hint="Regione">Emilia-Romagna</PVCR>
+				<PVCP hint="Provincia">FE</PVCP>
+				<PVCC hint="Comune">Ferrara</PVCC>
+			</PVC>
+			<LDC hint="COLLOCAZIONE SPECIFICA">
+				<LDCT hint="Tipologia">palazzo</LDCT>
+				<LDCQ hint="Qualificazione">di giustizia</LDCQ>
+				<LDCN hint="Denominazione">Tribunale di Ferrara</LDCN>
+				<LDCU hint="Denominazione spazio viabilistico">via Borgo dei
+					Leoni 60/62</LDCU>
+			</LDC>
+		</LC>
+		<GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+			<GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+			<GPD hint="DESCRIZIONE DEL PUNTO">
+				<GPDP hint="PUNTO">
+					<GPDPX hint="Coordinata X">11.621301683</GPDPX>
+					<GPDPY hint="Coordinata Y">44.839403766</GPDPY>
+				</GPDP>
+			</GPD>
+			<GPM hint="Metodo di georeferenziazione">punto esatto</GPM>
+			<GPT hint="Tecnica di georeferenziazione">rilievo da cartografia
+				con sopralluogo</GPT>
+			<GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+			<GPB hint="BASE DI RIFERIMENTO">
+				<GPBB hint="Descrizione sintetica">ICCD1007177_0</GPBB>
+				<GPBT hint="Data">20-10-2014</GPBT>
+				<GPBO hint="Note">(2218351) -CTR 5.000-
+					(http://servizigis.regione.emilia-romagna.it/wms/ctr5) -0</GPBO>
+			</GPB>
+		</GP>
+		<DT hint="CRONOLOGIA">
+			<DTZ hint="CRONOLOGIA GENERICA">
+				<DTZG hint="Secolo">sec. XX</DTZG>
+			</DTZ>
+			<DTS hint="CRONOLOGIA SPECIFICA">
+				<DTSI hint="Da">1923/07/08</DTSI>
+				<DTSV hint="Validita'">ante</DTSV>
+				<DTSF hint="A">1923/07/08</DTSF>
+			</DTS>
+			<DTM hint="Motivazione cronologia">fonte archivistica</DTM>
+		</DT>
+		<AU hint="DEFINIZIONE CULTURALE">
+			<AUT hint="AUTORE">
+				<AUTR hint="Riferimento all'intervento">progettista</AUTR>
+				<AUTM hint="Motivazione dell'attribuzione">fonte archivistica</AUTM>
+				<AUTN hint="Nome scelto">Diegoli Giacomo</AUTN>
+				<AUTA hint="Dati anagrafici">notizie 1936</AUTA>
+				<AUTH hint="Sigla per citazione">00000921</AUTH>
+			</AUT>
+			<AUT hint="AUTORE">
+				<AUTR hint="Riferimento all'intervento">scultore</AUTR>
+				<AUTM hint="Motivazione dell'attribuzione">fonte archivistica</AUTM>
+				<NCUN hint="Codice univoco ICCD">00015865</NCUN>
+				<AUTN hint="Nome scelto">Sarto Mario</AUTN>
+				<AUTA hint="Dati anagrafici">1885/ 1959</AUTA>
+				<AUTH hint="Sigla per citazione">00000521</AUTH>
+			</AUT>
+		</AU>
+		<MT hint="DATI TECNICI">
+			<MTC hint="Materia e tecnica">marmo di Verona/ scultura</MTC>
+			<MTC hint="Materia e tecnica">marmo di Verona/ incisione</MTC>
+			<MTC hint="Materia e tecnica">bronzo/ fusione</MTC>
+			<MIS hint="MISURE">
+				<MISU hint="Unita'">cm</MISU>
+				<MISR hint="Mancanza">MNR</MISR>
+			</MIS>
+		</MT>
+		<CO hint="CONSERVAZIONE">
+			<STC hint="STATO DI CONSERVAZIONE">
+				<STCC hint="Stato di conservazione">buono</STCC>
+			</STC>
+		</CO>
+		<DA hint="DATI ANALITICI">
+			<DES hint="DESCRIZIONE">
+				<DESO hint="Indicazioni sull'oggetto">La lapide, oggi
+					scomparsa, in memoria degli studenti del Regio Istituto Tecnico
+					“Vincenzo Monti” caduti nel corso della Prima Guerra Mondiale si
+					trovava nell’edificio che ora ospita il Tribunale di Ferrara. La
+					sua immagine è rimasta sulle pagine della “Gazzetta Ferrarese” del
+					10 luglio 1923. L’opera era composta da una lastra rettangolare in
+					marmo di Verona alta 2 m, sagomata nei due lati minori e arricchita
+					da un bassorilievo bronzeo protetto da un’edicola. La scultura in
+					bronzo rappresentava un vaso con sfingi a supporto di una spada
+					coronata da un rosaio con i rami incrociati a formare un serto di
+					spine. Sedici stelle indicavano il numero degli studenti caduti, i
+					cui nomi erano elencati nella parte inferiore della lapide. In
+					basso, scolpita nel marmo, era una fascia orizzontale con daghe
+					romane e tre ovali contenenti squadra, Vittoria alata e altra
+					figura</DESO>
+				<DESI hint="Codifica Iconclass">soggetto assente</DESI>
+				<DESS hint="Indicazioni sul soggetto">OGGETTI: vaso con sfingi;
+					squadra. ARMI: spada; daghe. PIANTE: rosaio. SIMBOLI: stelle;
+					Vittoria alata</DESS>
+			</DES>
+			<ISR hint="ISCRIZIONI">
+				<ISRC hint="Classe di appartenenza">commemorativa</ISRC>
+				<ISRL hint="Lingua">italiano</ISRL>
+				<ISRS hint="Tecnica di scrittura">a incisione</ISRS>
+				<ISRT hint="Tipo di caratteri">capitale</ISRT>
+				<ISRP hint="Posizione">in basso</ISRP>
+				<ISRI hint="Trascrizione">[elenco 16 nomi di studenti caduti]</ISRI>
+			</ISR>
+			<NSC hint="Notizie storico-critiche">L'opera fu commissionata da
+				un Comitato pro monumento, composto da: prof. Brombin, preside prof.
+				Rimondini, professori Pellegrini, Cozzi, Quagloi, Diegoli e Giberti,
+				studenti Ghisellini, Fiorentini, Bacchi, Sivieri, Aldrovandi,
+				Bergamini, Malagù, Brombin, Agodi, Ancona, Gagliardi, Turati,
+				Ferrari, Falzoni, Cacciari e Brunelli. Progettata dall’architetto
+				Giacomo Diegoli (Ferrara 1888-Pavia 1962), professore all’Istituto
+				“Vincenzo Monti”, ed eseguita dallo scultore Mario Sarto (Codigoro
+				1885-Bologna 1955), fu inaugurata la domenica 8 luglio 1923, alla
+				presenza di autorità, parenti dei Caduti, professori e studenti. La
+				cerimonia si aprì alle ore 17 con i discorsi del preside, prof.
+				Rimondini, dell’ex combattente avvocato, prof. Vittorio Ghezzi, e di
+				allievi in corso di studio. Seguirono lo svelamento da parte della
+				signora Rimondini al suono dell’Inno del Piave e la benedizione di
+				monsignor Campi alla lapide, al Bollettino della Vittoria, al quadro
+				con le fotografie dei caduti e alla bandiera dell’Istituto. La
+				cerimonia si concluse col suono di inni patriottici e sfilate di
+				studenti che gettavano fiori. Bibliografia: L. Scardino, Il
+				monumento ai caduti di Guarda Ferrarese, in FD, Bollettino della
+				“Ferrariae Decus”, n. 10, 30 novembre 1996, p. 83. L. Scardino (a
+				cura di), Mario Sarto (1885-1955). Uno scultore codigorese tra
+				Liberty e Novecento, fotografie di Andrea Samaritani, Ferrara 2006,
+				p. 11. Documentazione d'archivio: ASCFE, Per gli studenti del R.I.
+				Tecnico morti in guerra, in “Gazzetta Ferrarese”, 8 febbraio 1923.
+				ASCFE, La cerimonia in onore degli studenti del R.I. Tecnico morti
+				in guerra, in “Gazzetta Ferrarese”, 10 luglio 1923. Sitografia:
+				http://www.emiliaromagna.beniculturali.it/index.php?it/108/ricerca-itinerari/47/607
+				http://www.ottocentoferrarese.it/dizionario-storico-dellottocento-ferrarese/lemmi/item/110.html
+				http://it.wikipedia.org/wiki/Mario_Sarto</NSC>
+		</DA>
+		<TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+			<CDG hint="CONDIZIONE GIURIDICA">
+				<CDGG hint="Indicazione generica">proprietà Ente pubblico
+					territoriale</CDGG>
+				<CDGS hint="Indicazione specifica">Comune di Ferrara</CDGS>
+				<CDGI hint="Indirizzo">Piazza Municipio, 2 - Ferrara (FE)</CDGI>
+			</CDG>
+			<ALN hint="MUTAMENTI TITOLARITA'/POSSESSO/DETENZIONE">
+				<ALNT hint="Tipo evento">perdita</ALNT>
+			</ALN>
+		</TU>
+		<DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+			<FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+				<FTAX hint="Genere">documentazione allegata</FTAX>
+				<FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+				<FTAA hint="Autore">Biondi, Marianna</FTAA>
+				<FTAD hint="Data">2012</FTAD>
+				<FTAE hint="Ente proprietario">SBSAE BO</FTAE>
+				<FTAC hint="Collocazione">archivio fotografico</FTAC>
+				<FTAN hint="Codice identificativo">SBSAEBO257471</FTAN>
+				<FTAT hint="Note">disegno pubblicato su “Gazzetta Ferrarese”
+					del 10 luglio 1923</FTAT>
+			</FTA>
+		</DO>
+		<AD hint="ACCESSO AI DATI">
+			<ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+				<ADSP hint="Profilo di accesso">1</ADSP>
+				<ADSM hint="Motivazione">scheda contenente dati liberamente
+					accessibili</ADSM>
+			</ADS>
+		</AD>
+		<CM hint="COMPILAZIONE">
+			<CMP hint="COMPILAZIONE">
+				<CMPD hint="Data">2014</CMPD>
+				<CMPN hint="Nome">Biondi, Marianna</CMPN>
+			</CMP>
+			<FUR hint="Funzionario responsabile">Stanzani, Anna</FUR>
+		</CM>
+	</OA>
+</schede>

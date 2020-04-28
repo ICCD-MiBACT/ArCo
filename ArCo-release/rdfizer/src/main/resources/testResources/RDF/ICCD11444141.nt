@@ -1,0 +1,368 @@
+<https://w3id.org/arco/resource/Province/fe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Province> .
+<https://w3id.org/arco/resource/Province/fe> <http://www.w3.org/2000/01/rdf-schema#label> "FE" .
+<https://w3id.org/arco/resource/Province/fe> <https://w3id.org/italia/onto/l0/name> "FE" .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Address> .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <https://w3id.org/arco/ontology/location/isCulturalPropertyAddressOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <http://www.w3.org/2000/01/rdf-schema#label> "ITALIA, Emilia-Romagna, FE, Ferrara" .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <https://w3id.org/italia/onto/CLV/fullAddress> "via Borgo dei Leoni 60/62" .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <https://w3id.org/italia/onto/CLV/hasCountry> <https://w3id.org/arco/resource/Country/italia> .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <https://w3id.org/italia/onto/CLV/hasRegion> <https://w3id.org/arco/resource/Region/emilia-romagna> .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <https://w3id.org/italia/onto/CLV/hasProvince> <https://w3id.org/arco/resource/Province/fe> .
+<https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> <https://w3id.org/italia/onto/CLV/hasCity> <https://w3id.org/arco/resource/City/ferrara> .
+<https://w3id.org/arco/resource/SiteSpecification/di-giustizia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteSpecification> .
+<https://w3id.org/arco/resource/SiteSpecification/di-giustizia> <http://www.w3.org/2000/01/rdf-schema#label> "di giustizia" .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-compilation-f4196831b0ff93393b8926ad613f295e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-compilation-f4196831b0ff93393b8926ad613f295e> <http://www.w3.org/2000/01/rdf-schema#label> "Compilation by Biondi, Marianna"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-compilation-f4196831b0ff93393b8926ad613f295e> <http://www.w3.org/2000/01/rdf-schema#label> "Compilazione da Biondi, Marianna"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-compilation-f4196831b0ff93393b8926ad613f295e> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/ResponsibleCompilation> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-compilation-f4196831b0ff93393b8926ad613f295e> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/f4196831b0ff93393b8926ad613f295e> .
+<https://w3id.org/arco/resource/ConservationStatus/0800577432-conservation-status-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/ConservationStatus> .
+<https://w3id.org/arco/resource/ConservationStatus/0800577432-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Stato di conservazione 1 del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/ConservationStatus/0800577432-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Stato di conservazione 1 del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/ConservationStatus/0800577432-conservation-status-1> <http://www.w3.org/2000/01/rdf-schema#label> "Conservation status 1 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/ConservationStatus/0800577432-conservation-status-1> <https://w3id.org/italia/onto/l0/name> "Conservation status 1 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/ConservationStatus/0800577432-conservation-status-1> <https://w3id.org/arco/ontology/denotative-description/hasConservationStatusType> <https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Ente proprietario della documentazione fotografica 1 del bene culturale 0800577432: SBSAE BO"@it .
+<https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner agency of photographic documentation 1 of cultural property 0800577432: SBSAE BO"@en .
+<https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/italia/onto/l0/name> "Ente proprietario della documentazione fotografica 1 del bene culturale 0800577432: SBSAE BO"@it .
+<https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/italia/onto/l0/name> "Owner agency of photographic documentation 1 of cultural property 0800577432: SBSAE BO"@en .
+<https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/Owner> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/460ca2dd20add6803826043ca480f926> .
+<https://w3id.org/arco/resource/ChangeOfAvailability/0800577432-change-of-availability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/ChangeOfAvailability> .
+<https://w3id.org/arco/resource/ChangeOfAvailability/0800577432-change-of-availability> <http://www.w3.org/2000/01/rdf-schema#label> "Mutamento condizione materiale del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/ChangeOfAvailability/0800577432-change-of-availability> <https://w3id.org/italia/onto/l0/name> "Mutamento condizione materiale del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/ChangeOfAvailability/0800577432-change-of-availability> <http://www.w3.org/2000/01/rdf-schema#label> "Change of availability of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/ChangeOfAvailability/0800577432-change-of-availability> <https://w3id.org/italia/onto/l0/name> "Change of availability of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/ChangeOfAvailability/0800577432-change-of-availability> <https://w3id.org/arco/ontology/context-description/hasChangeOfAvailabilityType> <https://w3id.org/arco/resource/ChangeOfAvailabilityType/perdita> .
+<https://w3id.org/arco/resource/CulturalPropertyType/35e9d787c6a64a96f85f743c261e856b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> .
+<https://w3id.org/arco/resource/CulturalPropertyType/35e9d787c6a64a96f85f743c261e856b> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo del bene: lapide commemorativa ai caduti"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/35e9d787c6a64a96f85f743c261e856b> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural property type: lapide commemorativa ai caduti"@en .
+<https://w3id.org/arco/resource/CulturalPropertyType/35e9d787c6a64a96f85f743c261e856b> <https://w3id.org/italia/onto/l0/name> "Tipo del bene: lapide commemorativa ai caduti"@it .
+<https://w3id.org/arco/resource/CulturalPropertyType/35e9d787c6a64a96f85f743c261e856b> <https://w3id.org/italia/onto/l0/name> "Cultural property type: lapide commemorativa ai caduti"@en .
+<https://w3id.org/arco/resource/CulturalPropertyType/35e9d787c6a64a96f85f743c261e856b> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> <https://w3id.org/arco/resource/CulturalPropertyDefinition/lapide-commemorativa-ai-caduti> .
+<https://w3id.org/arco/resource/SiteDefinition/palazzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteDefinition> .
+<https://w3id.org/arco/resource/SiteDefinition/palazzo> <http://www.w3.org/2000/01/rdf-schema#label> "palazzo" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasAuthorshipAttribution> <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus> <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/MovableCulturalProperty> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/arco/regionIdentifier> "08" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/denotative-description/hasDesignationInTime> <https://w3id.org/arco/resource/DesignationInTime/0800577432-lapide-commemorativa-ai-caduti-della-prima-guerra-mondiale> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/denotative-description/hasMaterialOrTechnique> <https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-verona-scultura> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasLegalSituation> <https://w3id.org/arco/resource/LegalSituation/0800577432-legal-situation-proprieta-ente-pubblico-territoriale> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/denotative-description/hasAffixedElement> <https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> <https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection> <https://w3id.org/arco/resource/MeasurementCollection/0800577432-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasChangeOfAvailability> <https://w3id.org/arco/resource/ChangeOfAvailability/0800577432-change-of-availability> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/italia/onto/CLV/hasGeometry> <https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/iconclassCode> "soggetto assente" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/arco/hasHeritageProtectionAgency> <https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <http://www.w3.org/2000/01/rdf-schema#comment> "lapide commemorativa ai caduti, Lapide commemorativa ai\n\t\t\t\t\tcaduti della prima guerra mondiale" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasAuthorshipAttribution> <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/arco/hasCataloguingAgency> <https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress> <https://w3id.org/arco/resource/Address/2201c6c98430adc97b384caea231d58c> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasDating> <https://w3id.org/arco/resource/Dating/0800577432-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <http://www.w3.org/2000/01/rdf-schema#label> "lapide commemorativa ai caduti by Diegoli Giacomo, Sarto Mario (sec. XX)"@en .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/arco/catalogueNumber> "00577432" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/arco/description> "La lapide, oggi scomparsa, in memoria degli studenti del Regio Istituto Tecnico “Vincenzo Monti” caduti nel corso della Prima Guerra Mondiale si trovava nell’edificio che ora ospita il Tribunale di Ferrara. La sua immagine è rimasta sulle pagine della “Gazzetta Ferrarese” del 10 luglio 1923. L’opera era composta da una lastra rettangolare in marmo di Verona alta 2 m, sagomata nei due lati minori e arricchita da un bassorilievo bronzeo protetto da un’edicola. La scultura in bronzo rappresentava un vaso con sfingi a supporto di una spada coronata da un rosaio con i rami incrociati a formare un serto di spine. Sedici stelle indicavano il numero degli studenti caduti, i cui nomi erano elencati nella parte inferiore della lapide. In basso, scolpita nel marmo, era una fascia orizzontale con daghe romane e tre ovali contenenti squadra, Vittoria alata e altra figura" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <http://www.w3.org/2000/01/rdf-schema#label> "lapide commemorativa ai caduti di Diegoli Giacomo, Sarto Mario (sec. XX)"@it .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/catalogue/isDescribedByCatalogueRecord> <https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/arco/uniqueIdentifier> "0800577432" .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> <https://w3id.org/arco/resource/CulturalPropertyType/35e9d787c6a64a96f85f743c261e856b> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasDocumentation> <https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <https://w3id.org/arco/ontology/denotative-description/hasConservationStatus> <https://w3id.org/arco/resource/ConservationStatus/0800577432-conservation-status-1> .
+<https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/arco/HistoricOrArtisticProperty> .
+<https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/SiteType> .
+<https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo di contenitore fisico: palazzo di giustizia"@it .
+<https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> <https://w3id.org/italia/onto/l0/name> "Tipo di contenitore fisico: palazzo di giustizia"@it .
+<https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> <http://www.w3.org/2000/01/rdf-schema#label> "Site type: palazzo di giustizia"@en .
+<https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> <https://w3id.org/italia/onto/l0/name> "Site type: palazzo di giustizia"@en .
+<https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> <https://w3id.org/arco/ontology/location/hasSiteDefinition> <https://w3id.org/arco/resource/SiteDefinition/palazzo> .
+<https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> <https://w3id.org/arco/ontology/location/hasSiteSpecification> <https://w3id.org/arco/resource/SiteSpecification/di-giustizia> .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordOA> .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Record n: 0800577432"@en .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <http://www.w3.org/2000/01/rdf-schema#label> "Scheda catalografica n: 0800577432"@it .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> <https://w3id.org/arco/ontology/catalogue/P> .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <https://w3id.org/arco/ontology/catalogue/catalogueRecordIdentifier> "0800577432" .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <https://w3id.org/arco/ontology/catalogue/systemRecordCode> "ICCD11444141" .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <https://w3id.org/arco/ontology/catalogue/hasAccessProfile> <https://w3id.org/arco/resource/AccessProfile/0800577432-1> .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersion> <https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> .
+<https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> <https://w3id.org/arco/ontology/catalogue/describesCulturalProperty> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela del bene 0800577432: S08"@it .
+<https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage protection agency for cultural property 0800577432: S08"@en .
+<https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/HeritageProtectionAgency> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> .
+<https://w3id.org/arco/resource/ChangeOfAvailabilityType/perdita> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/ChangeOfAvailabilityType> .
+<https://w3id.org/arco/resource/ChangeOfAvailabilityType/perdita> <http://www.w3.org/2000/01/rdf-schema#label> "perdita" .
+<https://w3id.org/arco/resource/ChangeOfAvailabilityType/perdita> <https://w3id.org/italia/onto/l0/name> "perdita" .
+<https://w3id.org/arco/resource/DesignationInTime/0800577432-lapide-commemorativa-ai-caduti-della-prima-guerra-mondiale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/DesignationInTime> .
+<https://w3id.org/arco/resource/DesignationInTime/0800577432-lapide-commemorativa-ai-caduti-della-prima-guerra-mondiale> <http://www.w3.org/2000/01/rdf-schema#label> "Lapide commemorativa ai caduti della prima guerra mondiale" .
+<https://w3id.org/arco/resource/DesignationInTime/0800577432-lapide-commemorativa-ai-caduti-della-prima-guerra-mondiale> <https://w3id.org/italia/onto/l0/name> "Lapide commemorativa ai caduti della prima guerra mondiale" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/a-incisione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/a-incisione> <http://www.w3.org/2000/01/rdf-schema#label> "a incisione" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/a-incisione> <https://w3id.org/italia/onto/l0/name> "a incisione" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/a-incisione> <https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> <https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/CatalogueRecordVersion> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <http://www.w3.org/2000/01/rdf-schema#label> "COMPILAZIONE - 2014 Biondi, Marianna" .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <https://w3id.org/arco/ontology/catalogue/isCatalogueRecordVersionOf> <https://w3id.org/arco/resource/CatalogueRecordOA/0800577432> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/0800577432-compilation-f4196831b0ff93393b8926ad613f295e> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <https://w3id.org/arco/ontology/catalogue/hasResponsibleResearchAndCompilation> <https://w3id.org/arco/resource/Agent/f4196831b0ff93393b8926ad613f295e> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <https://w3id.org/arco/ontology/catalogue/editedAtTime> <https://w3id.org/arco/resource/TimeInterval/2014> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <https://w3id.org/arco/ontology/catalogue/hasCatalogueRecordVersionRiT> <https://w3id.org/arco/resource/TimeIndexedRole/0800577432-e655d6fa316522ca1241b9c4b9e45fc2> .
+<https://w3id.org/arco/resource/CatalogueRecordVersion/0800577432-compilation> <https://w3id.org/arco/ontology/catalogue/hasOfficialInCharge> <https://w3id.org/arco/resource/Agent/0b737b2a38e72cbd8bca803c146213b7> .
+<https://w3id.org/arco/resource/FontStyle/capitale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/FontStyle> .
+<https://w3id.org/arco/resource/FontStyle/capitale> <http://www.w3.org/2000/01/rdf-schema#label> "capitale" .
+<https://w3id.org/arco/resource/FontStyle/capitale> <https://w3id.org/italia/onto/l0/name> "capitale" .
+<https://w3id.org/arco/resource/MeasurementCollection/0800577432-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/MeasurementCollection> .
+<https://w3id.org/arco/resource/MeasurementCollection/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Measurements of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Measurements of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/MeasurementCollection/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Misure del bene culturale 0800577432"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Misure del bene culturale 0800577432"@it .
+<https://w3id.org/arco/resource/MeasurementCollection/0800577432-1> <https://w3id.org/arco/ontology/denotative-description/hasMeasurement> <https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> .
+<https://w3id.org/arco/resource/Region/emilia-romagna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Region> .
+<https://w3id.org/arco/resource/Region/emilia-romagna> <http://www.w3.org/2000/01/rdf-schema#label> "Emilia-romagna" .
+<https://w3id.org/arco/resource/Region/emilia-romagna> <https://w3id.org/italia/onto/l0/name> "Emilia-romagna" .
+<https://w3id.org/arco/resource/Site/9fae3cdbb65bb15c35d7721e06c27d65> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.beniculturali.it/cis/Site> .
+<https://w3id.org/arco/resource/Site/9fae3cdbb65bb15c35d7721e06c27d65> <http://www.w3.org/2000/01/rdf-schema#label> "Tribunale di Ferrara" .
+<https://w3id.org/arco/resource/Site/9fae3cdbb65bb15c35d7721e06c27d65> <https://w3id.org/italia/onto/l0/name> "Tribunale di Ferrara" .
+<https://w3id.org/arco/resource/Site/9fae3cdbb65bb15c35d7721e06c27d65> <http://dati.beniculturali.it/cis/siteAddress> <https://w3id.org/arco/resource/Address/7b88b7a3075cd3e28b6bd4166c7c9441> .
+<https://w3id.org/arco/resource/Site/9fae3cdbb65bb15c35d7721e06c27d65> <https://w3id.org/arco/ontology/location/hasSiteType> <https://w3id.org/arco/resource/SiteType/palazzo-di-giustizia> .
+<https://w3id.org/arco/resource/AccessProfile/0800577432-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/AccessProfile> .
+<https://w3id.org/arco/resource/AccessProfile/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0800577432: 1"@it .
+<https://w3id.org/arco/resource/AccessProfile/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Profilo d'accesso alla scheda catalografica del bene culturale 0800577432: 1"@it .
+<https://w3id.org/arco/resource/AccessProfile/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Access profile to catalogue record of cultural property 0800577432: 1"@en .
+<https://w3id.org/arco/resource/AccessProfile/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Access profile to catalogue record of cultural property 0800577432: 1"@en .
+<https://w3id.org/arco/resource/AccessProfile/0800577432-1> <https://w3id.org/arco/ontology/catalogue/hasPrivacyLevel> <https://w3id.org/arco/ontology/catalogue/MinimumPrivacy> .
+<https://w3id.org/arco/resource/AccessProfile/0800577432-1> <https://w3id.org/arco/ontology/catalogue/hasPrivacyReason> <https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> .
+<https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Measurement> .
+<https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement of cultural property 0800577432: MNRcm"@en .
+<https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> <https://w3id.org/italia/onto/l0/name> "Measurement of cultural property 0800577432: MNRcm"@en .
+<https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> <http://www.w3.org/2000/01/rdf-schema#label> "Misura del bene culturale 0800577432: MNRcm"@it .
+<https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> <https://w3id.org/italia/onto/l0/name> "Misura del bene culturale 0800577432: MNRcm"@it .
+<https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> <https://w3id.org/arco/ontology/denotative-description/hasMeasurementType> <https://w3id.org/arco/ontology/denotative-description/FrontTotalLength> .
+<https://w3id.org/arco/resource/Measurement/0800577432-1-front-total-length> <https://w3id.org/arco/ontology/denotative-description/hasValue> <https://w3id.org/arco/resource/Value/0800577432-1-front-total-length-> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore"@it .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency"@en .
+<https://w3id.org/arco/resource/Role/CataloguinAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> .
+<https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/DocumentationType> .
+<https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> <http://www.w3.org/2000/01/rdf-schema#label> "fotografia digitale (file)" .
+<https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> <https://w3id.org/italia/onto/l0/name> "fotografia digitale (file)" .
+<https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/Organization> .
+<https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> <http://www.w3.org/2000/01/rdf-schema#label> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Bologna Ferrara Forli'-Cesena Ravenna e Rimini" .
+<https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> <https://w3id.org/italia/onto/l0/name> "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Bologna Ferrara Forli'-Cesena Ravenna e Rimini" .
+<https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> <https://w3id.org/arco/ontology/arco/isCataloguingAgencyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> .
+<https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> .
+<https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> <https://w3id.org/arco/ontology/arco/isHeritageProtectionAgencyOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/TimeInterval/ante-1923-07-08-1923-07-08> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/ante-1923-07-08-1923-07-08> <http://www.w3.org/2000/01/rdf-schema#label> "ante 1923/07/08 - 1923/07/08" .
+<https://w3id.org/arco/resource/TimeInterval/ante-1923-07-08-1923-07-08> <https://w3id.org/italia/onto/l0/name> "ante 1923/07/08 - 1923/07/08" .
+<https://w3id.org/arco/resource/TimeInterval/ante-1923-07-08-1923-07-08> <https://w3id.org/arco/ontology/arco/startTime> "ante 1923/07/08" .
+<https://w3id.org/arco/resource/TimeInterval/ante-1923-07-08-1923-07-08> <https://w3id.org/arco/ontology/arco/endTime> "1923/07/08" .
+<https://w3id.org/arco/resource/LegalSituation/0800577432-legal-situation-proprieta-ente-pubblico-territoriale> <http://www.w3.org/2000/01/rdf-schema#label> "Condizione giuridica del bene culturale 0800577432: proprietà Ente pubblico territoriale"@it .
+<https://w3id.org/arco/resource/LegalSituation/0800577432-legal-situation-proprieta-ente-pubblico-territoriale> <https://w3id.org/italia/onto/l0/name> "Condizione giuridica del bene culturale 0800577432: proprietà Ente pubblico territoriale"@it .
+<https://w3id.org/arco/resource/LegalSituation/0800577432-legal-situation-proprieta-ente-pubblico-territoriale> <http://www.w3.org/2000/01/rdf-schema#label> "Legal situation of cultural property 0800577432: proprietà Ente pubblico territoriale"@en .
+<https://w3id.org/arco/resource/LegalSituation/0800577432-legal-situation-proprieta-ente-pubblico-territoriale> <https://w3id.org/italia/onto/l0/name> "Legal situation of cultural property 0800577432: proprietà Ente pubblico territoriale"@en .
+<https://w3id.org/arco/resource/LegalSituation/0800577432-legal-situation-proprieta-ente-pubblico-territoriale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/LegalSituation> .
+<https://w3id.org/arco/resource/LegalSituation/0800577432-legal-situation-proprieta-ente-pubblico-territoriale> <https://w3id.org/arco/ontology/context-description/hasOwner> <https://w3id.org/arco/resource/Agent/dc393ec2bcbfdb8fdfc9e7a866d44c71> .
+<https://w3id.org/arco/resource/InterpretationCriterion/fonte-archivistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/InterpretationCriterion> .
+<https://w3id.org/arco/resource/InterpretationCriterion/fonte-archivistica> <http://www.w3.org/2000/01/rdf-schema#label> "fonte archivistica" .
+<https://w3id.org/arco/resource/InterpretationCriterion/fonte-archivistica> <https://w3id.org/italia/onto/l0/name> "fonte archivistica" .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Geometry> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-4> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry (point) 4 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-4> <https://w3id.org/italia/onto/l0/name> "Geometry (point) 4 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-4> <http://www.w3.org/2000/01/rdf-schema#label> "Georeferenziazione (puntuale) 4 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-4> <https://w3id.org/italia/onto/l0/name> "Georeferenziazione (puntuale) 4 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-4> <https://w3id.org/italia/onto/CLV/isGeometryFor> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-4> <https://w3id.org/italia/onto/CLV/hasGeometryType> <https://w3id.org/italia/onto/CLV/Point> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/italia/onto/l0/name> "Photographic documentation 1 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Documentazione fotografica 1 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/core/hasCategory> <https://w3id.org/arco/ontology/context-description/AttachedDocumentation> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/documentationIdentifier> "SBSAEBO257471" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/core/hasAgentRole> <https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/hasDocumentationType> <https://w3id.org/arco/resource/DocumentationType/fotografia-digitale-file> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/isDocumentationOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/documentationLocation> "archivio fotografico" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Photographic documentation 1 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/context-description/hasAuthor> <https://w3id.org/arco/resource/Agent/f4196831b0ff93393b8926ad613f295e> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/italia/onto/TI/time> "2012" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PhotographicDocumentation> .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/arco/ontology/core/note> "disegno pubblicato su “Gazzetta Ferrarese” del 10 luglio 1923" .
+<https://w3id.org/arco/resource/PhotographicDocumentation/0800577432-photographic-documentation-1> <https://w3id.org/italia/onto/l0/name> "Documentazione fotografica 1 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/core/AgentRole> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente schedatore del bene 0800577432: S08"@it .
+<https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> <http://www.w3.org/2000/01/rdf-schema#label> "Cataloguing agency for cultural property 0800577432: S08"@en .
+<https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasRole> <https://w3id.org/arco/resource/Role/CataloguinAgency> .
+<https://w3id.org/arco/resource/AgentRole/0800577432-cataloguing-agency> <https://w3id.org/arco/ontology/core/hasAgent> <https://w3id.org/arco/resource/Agent/52e9543ed285c89c64f4327f479b5835> .
+<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Funzionario responsabile"@it .
+<https://w3id.org/arco/resource/Role/OfficialInCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Official in charge"@en .
+<https://w3id.org/arco/resource/TimeInterval/sec-xx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/sec-xx> <http://www.w3.org/2000/01/rdf-schema#label> "sec. XX" .
+<https://w3id.org/arco/resource/TimeInterval/sec-xx> <https://w3id.org/italia/onto/l0/name> "sec. XX" .
+<https://w3id.org/arco/resource/TimeInterval/sec-xx> <https://w3id.org/italia/onto/TI/time> "sec. XX" .
+<https://w3id.org/arco/resource/Role/progettista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/progettista> <http://www.w3.org/2000/01/rdf-schema#label> "progettista" .
+<https://w3id.org/arco/resource/Role/progettista> <https://w3id.org/italia/onto/l0/name> "progettista" .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PreferredAuthorshipAttribution> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <http://www.w3.org/2000/01/rdf-schema#label> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <https://w3id.org/italia/onto/l0/name> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred authorship attribution of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <https://w3id.org/italia/onto/l0/name> "Preferred authorship attribution of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <https://w3id.org/arco/ontology/context-description/hasAttributedAuthor> <https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <https://w3id.org/arco/ontology/context-description/hasInterventionRole> <https://w3id.org/arco/resource/Role/scultore> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-2> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/fonte-archivistica> .
+<https://w3id.org/arco/resource/City/ferrara> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/City> .
+<https://w3id.org/arco/resource/City/ferrara> <http://www.w3.org/2000/01/rdf-schema#label> "Ferrara" .
+<https://w3id.org/arco/resource/City/ferrara> <https://w3id.org/italia/onto/l0/name> "Ferrara" .
+<https://w3id.org/arco/resource/Agent/0b737b2a38e72cbd8bca803c146213b7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/0b737b2a38e72cbd8bca803c146213b7> <http://www.w3.org/2000/01/rdf-schema#label> "Stanzani, Anna" .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <https://w3id.org/arco/ontology/location/isTimeIndexedTypedLocationOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <http://www.w3.org/2000/01/rdf-schema#label> "Localizzazione fisica attuale del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <https://w3id.org/italia/onto/l0/name> "Localizzazione fisica attuale del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <http://www.w3.org/2000/01/rdf-schema#label> "Current physical location of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <https://w3id.org/italia/onto/l0/name> "Current physical location of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <https://w3id.org/arco/ontology/location/hasLocationType> <https://w3id.org/arco/ontology/location/CurrentPhysicalLocation> .
+<https://w3id.org/arco/resource/TimeIndexedTypedLocation/0800577432-current> <https://w3id.org/arco/ontology/location/atSite> <https://w3id.org/arco/resource/Site/9fae3cdbb65bb15c35d7721e06c27d65> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/lapide-commemorativa-ai-caduti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> .
+<https://w3id.org/arco/resource/CulturalPropertyDefinition/lapide-commemorativa-ai-caduti> <http://www.w3.org/2000/01/rdf-schema#label> "lapide commemorativa ai caduti" .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Geometry> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-3> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry (point) 3 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-3> <https://w3id.org/italia/onto/l0/name> "Geometry (point) 3 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-3> <http://www.w3.org/2000/01/rdf-schema#label> "Georeferenziazione (puntuale) 3 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-3> <https://w3id.org/italia/onto/l0/name> "Georeferenziazione (puntuale) 3 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-3> <https://w3id.org/italia/onto/CLV/isGeometryFor> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-3> <https://w3id.org/italia/onto/CLV/hasGeometryType> <https://w3id.org/italia/onto/CLV/Point> .
+<https://w3id.org/arco/resource/Agent/f4196831b0ff93393b8926ad613f295e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/f4196831b0ff93393b8926ad613f295e> <http://www.w3.org/2000/01/rdf-schema#label> "Biondi, Marianna" .
+<https://w3id.org/arco/resource/Agent/f4196831b0ff93393b8926ad613f295e> <https://w3id.org/italia/onto/l0/name> "Biondi, Marianna" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-verona-scultura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-verona-scultura> <http://www.w3.org/2000/01/rdf-schema#label> "marmo di Verona/ scultura" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-verona-scultura> <https://w3id.org/italia/onto/l0/name> "marmo di Verona/ scultura" .
+<https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-verona-scultura> <https://w3id.org/arco/ontology/denotative-description/isCharacteristicClassifiedBy> <https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique> .
+<https://w3id.org/arco/resource/Role/scultore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/scultore> <http://www.w3.org/2000/01/rdf-schema#label> "scultore" .
+<https://w3id.org/arco/resource/Role/scultore> <https://w3id.org/italia/onto/l0/name> "scultore" .
+<https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CPV/Person> .
+<https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> <https://w3id.org/arco/ontology/context-description/isAuthorOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> <http://www.w3.org/2000/01/rdf-schema#label> "Sarto Mario" .
+<https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> <https://w3id.org/italia/onto/l0/name> "Sarto Mario" .
+<https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> <https://w3id.org/arco/ontology/context-description/agentDate> "1885/ 1959" .
+<https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> <https://w3id.org/arco/ontology/context-description/agentLocalIdentifier> "00000521" .
+<https://w3id.org/arco/resource/Agent/49137901c139e142aa39fdf1b35f75ff> <https://w3id.org/arco/ontology/context-description/authorICCDIdentifier> "00015865" .
+<https://w3id.org/arco/resource/Language/italiano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/Language/Language> .
+<https://w3id.org/arco/resource/Language/italiano> <http://www.w3.org/2000/01/rdf-schema#label> "italiano" .
+<https://w3id.org/arco/resource/Language/italiano> <https://w3id.org/italia/onto/l0/name> "italiano" .
+<https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/catalogue/PrivacyReason> .
+<https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> <http://www.w3.org/2000/01/rdf-schema#label> "scheda contenente dati liberamente accessibili" .
+<https://w3id.org/arco/resource/PrivacyReason/scheda-contenente-dati-liberamente-accessibili> <https://w3id.org/italia/onto/l0/name> "scheda contenente dati liberamente accessibili" .
+<https://w3id.org/arco/resource/TimeInterval/2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/TI/TimeInterval> .
+<https://w3id.org/arco/resource/TimeInterval/2014> <http://www.w3.org/2000/01/rdf-schema#label> "2014" .
+<https://w3id.org/arco/resource/TimeInterval/2014> <https://w3id.org/italia/onto/TI/time> "2014" .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/PreferredAuthorshipAttribution> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0800577432"@it .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred authorship attribution of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Preferred authorship attribution of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <https://w3id.org/arco/ontology/context-description/isAuthorshipAttributionOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <https://w3id.org/arco/ontology/context-description/hasAttributedAuthor> <https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <https://w3id.org/arco/ontology/context-description/hasInterventionRole> <https://w3id.org/arco/resource/Role/progettista> .
+<https://w3id.org/arco/resource/PreferredAuthorshipAttribution/0800577432-1> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/fonte-archivistica> .
+<https://w3id.org/arco/resource/Agent/dc393ec2bcbfdb8fdfc9e7a866d44c71> <http://www.w3.org/2000/01/rdf-schema#label> "Comune di Ferrara" .
+<https://w3id.org/arco/resource/Agent/dc393ec2bcbfdb8fdfc9e7a866d44c71> <https://w3id.org/italia/onto/l0/name> "Comune di Ferrara" .
+<https://w3id.org/arco/resource/Agent/dc393ec2bcbfdb8fdfc9e7a866d44c71> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/dc393ec2bcbfdb8fdfc9e7a866d44c71> <https://w3id.org/arco/ontology/context-description/address> "Piazza Municipio, 2 - Ferrara (FE)" .
+<https://w3id.org/arco/resource/Value/0800577432-1-front-total-length-mnr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/Value> .
+<https://w3id.org/arco/resource/Value/0800577432-1-front-total-length-mnr> <https://w3id.org/italia/onto/MU/value> "MNR" .
+<https://w3id.org/arco/resource/Value/0800577432-1-front-total-length-mnr> <http://www.w3.org/2000/01/rdf-schema#label> "MNR"@en .
+<https://w3id.org/arco/resource/Value/0800577432-1-front-total-length-mnr> <http://www.w3.org/2000/01/rdf-schema#label> "MNR"@it .
+<https://w3id.org/arco/resource/Value/0800577432-1-front-total-length-mnr> <https://w3id.org/italia/onto/MU/hasMeasurementUnit> <https://w3id.org/arco/resource/MeasurementUnit/cm> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Geometry> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-2> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry (point) 2 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-2> <https://w3id.org/italia/onto/l0/name> "Geometry (point) 2 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-2> <http://www.w3.org/2000/01/rdf-schema#label> "Georeferenziazione (puntuale) 2 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-2> <https://w3id.org/italia/onto/l0/name> "Georeferenziazione (puntuale) 2 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-2> <https://w3id.org/italia/onto/CLV/isGeometryFor> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-2> <https://w3id.org/italia/onto/CLV/hasGeometryType> <https://w3id.org/italia/onto/CLV/Point> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Ente competente per tutela"@it .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <http://www.w3.org/2000/01/rdf-schema#label> "Heritage Protection Agency"@en .
+<https://w3id.org/arco/resource/Role/HeritageProtectionAgency> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0800577432-heritage-protection-agency> .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432> <http://www.w3.org/2000/01/rdf-schema#label> "Stato tecnico del bene culturale 0800577432"@it .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432> <https://w3id.org/italia/onto/l0/name> "Stato tecnico del bene culturale 0800577432"@it .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432> <http://www.w3.org/2000/01/rdf-schema#label> "Technical status of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432> <https://w3id.org/italia/onto/l0/name> "Technical status of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432> <https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> <https://w3id.org/arco/resource/TechnicalCharacteristic/marmo-di-verona-scultura> .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/Inscription> .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <http://www.w3.org/2000/01/rdf-schema#label> "Inscription 1 of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <http://www.w3.org/2000/01/rdf-schema#label> "Iscrizione 1 sul bene culturale 0800577432"@it .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <https://w3id.org/arco/ontology/denotative-description/transcript> "[elenco 16 nomi di studenti caduti]" .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <https://w3id.org/arco/ontology/denotative-description/positionOnCulturalProperty> "in basso" .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <https://w3id.org/italia/onto/Language/hasLanguage> <https://w3id.org/arco/resource/Language/italiano> .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <https://w3id.org/arco/ontology/denotative-description/hasFontStyle> <https://w3id.org/arco/resource/FontStyle/capitale> .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <https://w3id.org/arco/ontology/denotative-description/hasTechnicalStatus> <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432-inscription-1> .
+<https://w3id.org/arco/resource/Inscription/0800577432-inscription-1> <https://w3id.org/arco/ontology/denotative-description/hasMaterialOrTechnique> <https://w3id.org/arco/resource/TechnicalCharacteristic/a-incisione> .
+<https://w3id.org/arco/resource/Role/Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Ente proprietario della documentazione"@it .
+<https://w3id.org/arco/resource/Role/Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner of documentation"@en .
+<https://w3id.org/arco/resource/Role/Owner> <https://w3id.org/arco/ontology/core/isRoleOf> <https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/Event/0800577432-creation-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Event> .
+<https://w3id.org/arco/resource/Event/0800577432-creation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Realizzazione del bene 0800577432"@it .
+<https://w3id.org/arco/resource/Event/0800577432-creation-1> <https://w3id.org/italia/onto/l0/name> "Realizzazione del bene 0800577432"@it .
+<https://w3id.org/arco/resource/Event/0800577432-creation-1> <http://www.w3.org/2000/01/rdf-schema#label> "Creation of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/Event/0800577432-creation-1> <https://w3id.org/italia/onto/l0/name> "Creation of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/Event/0800577432-creation-1> <https://w3id.org/italia/onto/TI/atTime> <https://w3id.org/arco/resource/TimeInterval/sec-xx> .
+<https://w3id.org/arco/resource/Event/0800577432-creation-1> <https://w3id.org/arco/ontology/context-description/specificTime> <https://w3id.org/arco/resource/TimeInterval/ante-1923-07-08-1923-07-08> .
+<https://w3id.org/arco/resource/Dating/0800577432-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/context-description/Dating> .
+<https://w3id.org/arco/resource/Dating/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Cronologia 1 del bene 0800577432"@it .
+<https://w3id.org/arco/resource/Dating/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Dating 1 of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/Dating/0800577432-1> <https://w3id.org/italia/onto/l0/name> "Cronologia 1 del bene 0800577432"@it .
+<https://w3id.org/arco/resource/Dating/0800577432-1> <http://www.w3.org/2000/01/rdf-schema#label> "Dating 1 of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/Dating/0800577432-1> <https://w3id.org/arco/ontology/context-description/hasDatingEvent> <https://w3id.org/arco/resource/Event/0800577432-creation-1> .
+<https://w3id.org/arco/resource/Dating/0800577432-1> <https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion> <https://w3id.org/arco/resource/InterpretationCriterion/fonte-archivistica> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/Role> .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible research and compilation"@en .
+<https://w3id.org/arco/resource/Role/ResponsibleCompilation> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile ricerca e redazione"@it .
+<https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CPV/Person> .
+<https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> <https://w3id.org/arco/ontology/context-description/isAuthorOf> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> <http://www.w3.org/2000/01/rdf-schema#label> "Diegoli Giacomo" .
+<https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> <https://w3id.org/italia/onto/l0/name> "Diegoli Giacomo" .
+<https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> <https://w3id.org/arco/ontology/context-description/agentDate> "notizie 1936" .
+<https://w3id.org/arco/resource/Agent/d4ef282a1024bdf72755876032bfd626> <https://w3id.org/arco/ontology/context-description/agentLocalIdentifier> "00000921" .
+<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Country> .
+<https://w3id.org/arco/resource/Country/italia> <http://www.w3.org/2000/01/rdf-schema#label> "ITALIA" .
+<https://w3id.org/arco/resource/Country/italia> <https://w3id.org/italia/onto/l0/name> "ITALIA" .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/CLV/Geometry> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry (point) 1 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> <https://w3id.org/italia/onto/l0/name> "Geometry (point) 1 of cultural property: 0800577432"@en .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> <http://www.w3.org/2000/01/rdf-schema#label> "Georeferenziazione (puntuale) 1 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> <https://w3id.org/italia/onto/l0/name> "Georeferenziazione (puntuale) 1 del bene culturale: 0800577432"@it .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> <https://w3id.org/italia/onto/CLV/isGeometryFor> <https://w3id.org/arco/resource/HistoricOrArtisticProperty/0800577432> .
+<https://w3id.org/arco/resource/Geometry/0800577432-geometry-point-1> <https://w3id.org/italia/onto/CLV/hasGeometryType> <https://w3id.org/italia/onto/CLV/Point> .
+<https://w3id.org/arco/resource/MeasurementUnit/cm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/MU/MeasurementUnit> .
+<https://w3id.org/arco/resource/MeasurementUnit/cm> <http://www.w3.org/2000/01/rdf-schema#label> "cm" .
+<https://w3id.org/arco/resource/MeasurementUnit/cm> <https://w3id.org/italia/onto/l0/name> "cm" .
+<https://w3id.org/arco/resource/Agent/460ca2dd20add6803826043ca480f926> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/l0/Agent> .
+<https://w3id.org/arco/resource/Agent/460ca2dd20add6803826043ca480f926> <http://www.w3.org/2000/01/rdf-schema#label> "SBSAE BO" .
+<https://w3id.org/arco/resource/Agent/460ca2dd20add6803826043ca480f926> <https://w3id.org/italia/onto/l0/name> "SBSAE BO" .
+<https://w3id.org/arco/resource/Agent/460ca2dd20add6803826043ca480f926> <https://w3id.org/arco/ontology/core/isAgentOf> <https://w3id.org/arco/resource/AgentRole/0800577432-photographic-documentation-1-photographic-documentation-owner> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-e655d6fa316522ca1241b9c4b9e45fc2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/RO/TimeIndexedRole> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-e655d6fa316522ca1241b9c4b9e45fc2> <http://www.w3.org/2000/01/rdf-schema#label> "Funzionario responsabile: Stanzani, Anna"@it .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-e655d6fa316522ca1241b9c4b9e45fc2> <http://www.w3.org/2000/01/rdf-schema#label> "Official in charge: Stanzani, Anna"@en .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-e655d6fa316522ca1241b9c4b9e45fc2> <https://w3id.org/italia/onto/RO/withRole> <https://w3id.org/arco/resource/Role/OfficialInCharge> .
+<https://w3id.org/arco/resource/TimeIndexedRole/0800577432-e655d6fa316522ca1241b9c4b9e45fc2> <https://w3id.org/italia/onto/RO/isRoleInTimeOf> <https://w3id.org/arco/resource/Agent/0b737b2a38e72cbd8bca803c146213b7> .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432-inscription-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432-inscription-1> <http://www.w3.org/2000/01/rdf-schema#label> "Stato tecnico dell'iscrizione 1 sul bene culturale 0800577432"@it .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432-inscription-1> <https://w3id.org/italia/onto/l0/name> "Stato tecnico dell'iscrizione 1 sul bene culturale 0800577432"@it .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432-inscription-1> <http://www.w3.org/2000/01/rdf-schema#label> "Technical status of inscription 1 of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432-inscription-1> <https://w3id.org/italia/onto/l0/name> "Technical status of inscription 1 of cultural property 0800577432"@en .
+<https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/0800577432-inscription-1> <https://w3id.org/arco/ontology/denotative-description/includesTechnicalCharacteristic> <https://w3id.org/arco/resource/TechnicalCharacteristic/a-incisione> .

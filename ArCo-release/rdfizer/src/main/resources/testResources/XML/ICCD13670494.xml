@@ -1,0 +1,373 @@
+<schede>
+	<A version="3.00_ICCD0">
+		<CD hint="CODICI">
+			<TSK hint="Tipo scheda">A</TSK>
+			<LIR hint="Livello ricerca">I</LIR>
+			<NCT hint="CODICE UNIVOCO">
+				<NCTR hint="Codice regione">15</NCTR>
+				<NCTN hint="Numero catalogo generale">00391452</NCTN>
+			</NCT>
+			<ESC hint="Ente schedatore">S282</ESC>
+			<ECP hint="Ente competente">S282</ECP>
+		</CD>
+		<OG hint="OGGETTO">
+			<OGT hint="OGGETTO">
+				<OGTD hint="Definizione tipologica">chiesa</OGTD>
+				<OGTN hint="Denominazione">Chiesa di Santa Brigida a San Luigi</OGTN>
+			</OGT>
+		</OG>
+		<LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+			<PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+				<PVCS hint="Stato">ITALIA</PVCS>
+				<PVCR hint="Regione">Campania</PVCR>
+				<PVCP hint="Provincia">NA</PVCP>
+				<PVCC hint="Comune">Napoli</PVCC>
+				<PVCL hint="Località">NAPOLI</PVCL>
+				<PVCI hint="Indirizzo">Via Francesco Petrarca</PVCI>
+			</PVC>
+			<PVL hint="Altra località">Chiaia</PVL>
+			<PVE hint="Diocesi">NAPOLI</PVE>
+			<CST hint="CENTRO STORICO">
+				<CSTN hint="Numero d'ordine">10</CSTN>
+				<CSTD hint="Denominazione">Chiaia</CSTD>
+				<CSTA hint="Carattere amministrativo del centro storico">frazione</CSTA>
+			</CST>
+			<ZUR hint="ZONA URBANA">
+				<ZURN hint="Numero">13</ZURN>
+				<ZURD hint="Denominazione">quartiere</ZURD>
+			</ZUR>
+			<SET hint="SETTORE">
+				<SETT hint="Tipo">SU</SETT>
+				<SETN hint="Numero">012</SETN>
+				<SETP hint="Numero nel settore">001</SETP>
+			</SET>
+		</LC>
+		<CS hint="LOCALIZZAZIONE CATASTALE">
+			<CTS hint="LOCALIZZAZIONE CATASTALE">
+				<CTSC hint="Comune">Napoli</CTSC>
+				<CTSF hint="Foglio/Data">218/1976</CTSF>
+				<CTSP hint="Proprietari">s.n</CTSP>
+			</CTS>
+		</CS>
+		<GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+			<GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+			<GPD hint="DESCRIZIONE DEL PUNTO">
+				<GPDP hint="PUNTO">
+					<GPDPX hint="Coordinata X">40.816</GPDPX>
+					<GPDPY hint="Coordinata Y">14.200</GPDPY>
+				</GPDP>
+			</GPD>
+			<GPM hint="Metodo di georeferenziazione">punto approssimato</GPM>
+			<GPT hint="Tecnica di georeferenziazione">rilievo tramite GPS</GPT>
+			<GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+			<GPB hint="BASE DI RIFERIMENTO">
+				<GPBT hint="Data">1996</GPBT>
+			</GPB>
+		</GP>
+		<AU hint="DEFINIZIONE CULTURALE">
+			<ATB hint="AMBITO CULTURALE">
+				<ATBR hint="Riferimento all'intervento">costruzione</ATBR>
+				<ATBD hint="Denominazione">maestranze partenopee</ATBD>
+				<ATBM hint="Fonte dell'attribuzione">bibliografia</ATBM>
+			</ATB>
+		</AU>
+		<RE hint="NOTIZIE STORICHE">
+			<REN hint="NOTIZIA">
+				<RENR hint="Riferimento">intero bene</RENR>
+				<RENS hint="Notizia sintetica">inizio lavori</RENS>
+				<RENN hint="Notizia">Nella parte alta di Posillipo si trova in
+					una chiesa, sita in Via Petrarca, dedicata a Santa Brigida, sede
+					della parrocchia di San Luigi. Nel 1525 Roberto d'Alessandro donò
+					in questa zona un podere ai domenicani affinchè vi erigessero un
+					convento ed una chiesa dedicata alla santa svedese. ciò fu fatto
+					soltanto negli anni '70 del secolo. Nel 1806 il complesso fu
+					soppresso e mentre la chiesa fu ceduta alla congrega di Santa Maria
+					a Pergola, il convento andò in vendita e, dopo il 1860, fu
+					trasformato in villa signorile finchè non fu acquistato nel 1898
+					dai gesuiti che vi aprirono una loro casa denominata villa San
+					Luigi. Accanto sorge anche la sezione San Luigi della Facoltà
+					Teologica dell'Italia Meridionale. La facciata della chiesa
+					conserva le forme acquistate nella rifazione del 1748, attestata da
+					una lapide sulla sinistra, su cui il restauro del 1930 ha
+					sovrapposto il tondo con la vergine sul portale</RENN>
+				<RENF hint="Fonte">bibliografica n.d.c</RENF>
+			</REN>
+			<REL hint="CRONOLOGIA, ESTREMO REMOTO">
+				<RELS hint="Secolo">XVI</RELS>
+				<RELF hint="Frazione di secolo">secondo quarto</RELF>
+				<RELW hint="Validità">ca</RELW>
+			</REL>
+			<REV hint="CRONOLOGIA, ESTREMO RECENTE">
+				<REVS hint="Secolo">XX</REVS>
+				<REVF hint="Frazione di secolo">secondo quarto</REVF>
+				<REVW hint="Validità">ca</REVW>
+				<REVI hint="Data">1930</REVI>
+			</REV>
+		</RE>
+		<RE hint="NOTIZIE STORICHE">
+			<REN hint="NOTIZIA">
+				<RENR hint="Riferimento">intero bene</RENR>
+				<RENN hint="Notizia">La facciata è divisa in due ordini, col
+					corpo centrale aggettante, definito da colonne e da un timpano
+					curvo, nell'ordine inferiore, da un trangolare, nel superiore.
+					Coevo sembra il campanile, con terminazione a bulbo, posto in fondo
+					al fianco destro. L'interno settecentesco, ad una navata, con
+					cupola, reca pochi stucchi e fasce decorative che disegnano le
+					superfici. Gli altari (il maggiore è del 1712) e gran parte dei
+					dipinti che li sovrastano datano al XVIII secolo, ma le opere più
+					interessanti sono quelle più antiche: la Madonna del Rosario, sul
+					secondo altare a destra, tela dell'Azzolino, e, di fornte la
+					Maddalena e Santa Caterina d'Alessandria, rilievi marmorei
+					seicenteschi posti ai lati di un crocifisso ligneo. Sul fondo
+					dell'abside tre tavole, Santa Brigida in estasi e ai lati San Paolo
+					e il Battista, rimandano alla chiesa seicentesca e ai suoi
+					fondatori, i d'Alessandro di cui si vedono gli stemmi e l'immagine
+					della famiglia di un cavaliere orante</RENN>
+				<RENF hint="Fonte">bibliografica n.d.c</RENF>
+			</REN>
+			<REL hint="CRONOLOGIA, ESTREMO REMOTO">
+				<RELS hint="Secolo">XVIII</RELS>
+				<RELF hint="Frazione di secolo">primo quarto</RELF>
+				<RELW hint="Validità">ca</RELW>
+				<RELI hint="Data">1712</RELI>
+			</REL>
+			<REV hint="CRONOLOGIA, ESTREMO RECENTE">
+				<REVS hint="Secolo">XX</REVS>
+				<REVF hint="Frazione di secolo">secondo quarto</REVF>
+				<REVW hint="Validità">ca</REVW>
+				<REVI hint="Data">1930</REVI>
+			</REV>
+		</RE>
+		<SI hint="SPAZI">
+			<SII hint="SUDDIVISIONE INTERNA">
+				<SIIR hint="Riferimento">intero bene</SIIR>
+				<SIIO hint="Tipo di suddivisione orizzontale">livelli continui</SIIO>
+				<SIIN hint="Numero di piani">+1</SIIN>
+				<SIIP hint="Tipo di piani">p. t</SIIP>
+			</SII>
+		</SI>
+		<IS hint="IMPIANTO STRUTTURALE">
+			<IST hint="Configurazione strutturale primaria">Edificio di forma
+				rettangolare ad una navata con nucleo centrale a pilastri in pietra
+				di tufo; volta a botte a tutto sesto e copertura a tetto a due falde
+				simmetriche; struttura a capriate; campanile posto in fondo al
+				fianco destro con copertura a bulbo</IST>
+		</IS>
+		<PN hint="PIANTA">
+			<PNR hint="Riferimento alla parte">intero bene</PNR>
+			<PNT hint="PIANTA">
+				<PNTQ hint="Riferimento piano o quota">p. t</PNTQ>
+				<PNTS hint="Schema">ad aula</PNTS>
+				<PNTF hint="Forma">rettangolare</PNTF>
+				<PNTE hint="Dati icnografici significativi">abside//cappella//navata</PNTE>
+			</PNT>
+		</PN>
+		<FN hint="FONDAZIONI">
+			<FNA hint="Tipo di terreno a livello di appoggio">non accertabile</FNA>
+			<FNS hint="STRUTTURE">
+				<FNSU hint="Ubicazione">intero bene</FNSU>
+				<FNST hint="Tipo">continua</FNST>
+				<FNSQ hint="Qualificazione del tipo">con sottofondazione (cont</FNSQ>
+				<FNSC hint="Tecnica costruttiva">muratura omogenea</FNSC>
+				<FNSM hint="Materiali">blocchi regolari di tufo</FNSM>
+			</FNS>
+		</FN>
+		<SV hint="STRUTTURE VERTICALI">
+			<SVC hint="TECNICA COSTRUTTIVA">
+				<SVCU hint="Ubicazione">nucleo centrale</SVCU>
+				<SVCT hint="Tipo di struttura">parete</SVCT>
+				<SVCC hint="Genere">in muratura</SVCC>
+				<SVCQ hint="Qualificazione del genere">continua</SVCQ>
+				<SVCM hint="Materiali">tufo</SVCM>
+			</SVC>
+		</SV>
+		<SO hint="STRUTTURE DI ORIZZONTAMENTO">
+			<SOF hint="TIPO">
+				<SOFG hint="Genere">cupola</SOFG>
+				<SOFF hint="Forma">a cupola</SOFF>
+			</SOF>
+			<SOE hint="STRUTTURA">
+				<SOER hint="Riferimento">intera volta</SOER>
+				<SOEC hint="Tecnica costruttiva">muratura</SOEC>
+				<SOES hint="Specificazioni tecniche">blocchi regolari</SOES>
+			</SOE>
+		</SO>
+		<SO hint="STRUTTURE DI ORIZZONTAMENTO">
+			<SOU hint="Ubicazione">corpo principale</SOU>
+			<SOF hint="TIPO">
+				<SOFG hint="Genere">volta</SOFG>
+				<SOFF hint="Forma">a botte</SOFF>
+				<SOFQ hint="Qualificazione della forma">a tutto sesto</SOFQ>
+			</SOF>
+			<SOE hint="STRUTTURA">
+				<SOER hint="Riferimento">intera volta</SOER>
+				<SOEC hint="Tecnica costruttiva">muratura</SOEC>
+				<SOES hint="Specificazioni tecniche">blocchi regolari</SOES>
+			</SOE>
+		</SO>
+		<CP hint="COPERTURE">
+			<CPU hint="Ubicazione">corpo principale</CPU>
+			<CPF hint="CONFIGURAZIONE ESTERNA">
+				<CPFG hint="Genere">a tetto</CPFG>
+				<CPFF hint="Forma">a 2 falde</CPFF>
+				<CPFQ hint="Qualificazione della forma">a falde simmetriche</CPFQ>
+			</CPF>
+			<CPC hint="STRUTTURA E TECNICA">
+				<CPCT hint="Struttura primaria">capriate</CPCT>
+			</CPC>
+			<CPM hint="MANTO DI COPERTURA">
+				<CPMR hint="Riferimento">intera copertura</CPMR>
+				<CPMQ hint="Qualificazione del tipo">non valutabile</CPMQ>
+				<CPMM hint="Materiali">non accertabile</CPMM>
+			</CPM>
+		</CP>
+		<CP hint="COPERTURE">
+			<CPF hint="CONFIGURAZIONE ESTERNA">
+				<CPFG hint="Genere">a cupola</CPFG>
+			</CPF>
+			<CPM hint="MANTO DI COPERTURA">
+				<CPMR hint="Riferimento">intera copertura</CPMR>
+				<CPMQ hint="Qualificazione del tipo">non valutabile</CPMQ>
+				<CPMM hint="Materiali">non accertabile</CPMM>
+			</CPM>
+		</CP>
+		<PV hint="PAVIMENTI E PAVIMENTAZIONI">
+			<PVM hint="PAVIMENTI E PAVIMENTAZIONI">
+				<PVMU hint="Ubicazione">intero bene</PVMU>
+				<PVMG hint="Genere">marmo</PVMG>
+				<PVMS hint="Schema del disegno">a motivi geometrici</PVMS>
+			</PVM>
+		</PV>
+		<DE hint="ELEMENTI DECORATIVI">
+			<DEC hint="ELEMENTI DECORATIVI">
+				<DECU hint="Ubicazione">prospetto principale</DECU>
+				<DECL hint="Collocazione">esterna</DECL>
+				<DECQ hint="Qualificazione del tipo">con tondo</DECQ>
+				<DECM hint="Materiali">marmo cipollino</DECM>
+			</DEC>
+			<DEC hint="ELEMENTI DECORATIVI">
+				<DECU hint="Ubicazione">prospetto principale</DECU>
+				<DECL hint="Collocazione">esterna</DECL>
+				<DECQ hint="Qualificazione del tipo">timpano curvilineo</DECQ>
+				<DECM hint="Materiali">muratura intonacata</DECM>
+				<DECM hint="Materiali">stucco</DECM>
+			</DEC>
+			<DEC hint="ELEMENTI DECORATIVI">
+				<DECU hint="Ubicazione">tutti i prospetti</DECU>
+				<DECL hint="Collocazione">interna</DECL>
+				<DECT hint="Tipo">stucchi</DECT>
+				<DECM hint="Materiali">stucco</DECM>
+			</DEC>
+		</DE>
+		<LI hint="ISCRIZIONI, LAPIDI, STEMMI">
+			<LSI hint="ISCRIZIONI, LAPIDI, STEMMI">
+				<LSIU hint="Ubicazione">prospetto principale</LSIU>
+				<LSIG hint="Genere">lapide</LSIG>
+				<LSIT hint="Tipo">La facciata della chiesa conserva le forme
+					acquistate nella rifazione del 1748, attestata da una lapide sulla
+					sinistra, su cui il restauro del 1930 ha sovrapposto il tondo con
+					la Vergine sul portale</LSIT>
+				<LSIC hint="Tecnica">scolpita/o</LSIC>
+				<LSIM hint="Materiali">marmo di Carrara</LSIM>
+			</LSI>
+			<LSI hint="ISCRIZIONI, LAPIDI, STEMMI">
+				<LSIG hint="Genere">stemma</LSIG>
+				<LSIT hint="Tipo">Sul fondo dell'abside tre tavole, Santa
+					Brigida in estasi e ai lati San Paolo e il Battista, rimandano alla
+					chiesa seicentesca ed ai suoi fondatori d'Alessandro, di cui si
+					vedono gli setemmi e l'immagine di un cavaliere della famiglia
+					orante</LSIT>
+				<LSIC hint="Tecnica">scolpita/o</LSIC>
+				<LSIM hint="Materiali">marmo di Carrara</LSIM>
+			</LSI>
+		</LI>
+		<CO hint="CONSERVAZIONE">
+			<STC hint="STATO DI CONSERVAZIONE">
+				<STCR hint="Riferimento alla parte">intero bene</STCR>
+				<STCC hint="Stato di conservazione">buono</STCC>
+			</STC>
+		</CO>
+		<RS hint="RESTAURI">
+			<RST hint="RESTAURI">
+				<RSTR hint="Riferimento alla parte">intero bene</RSTR>
+				<RSTI hint="Data inizio">1748</RSTI>
+				<RSTF hint="Data fine">non accertata</RSTF>
+				<RSTT hint="Tipo di intervento">La facciata della chiesa
+					conserva le forme acquistate nella rifazione del 1748, attestata da
+					una lapide sulla sinistra, su cui il restauro del 1930 ha
+					sovrapposto il tondo con la vergine sul portale</RSTT>
+			</RST>
+		</RS>
+		<US hint="UTILIZZAZIONI">
+			<USA hint="USO ATTUALE">
+				<USAR hint="Riferimento alla parte">intero bene</USAR>
+				<USAD hint="Uso">chiesa</USAD>
+			</USA>
+			<USO hint="USO STORICO">
+				<USOR hint="Riferimento alla parte">intero bene</USOR>
+				<USOC hint="Riferimento cronologico">destinazione originaria</USOC>
+				<USOD hint="Uso">chiesa</USOD>
+			</USO>
+		</US>
+		<TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+			<CDG hint="CONDIZIONE GIURIDICA">
+				<CDGG hint="Indicazione generica">proprietà Ente religioso
+					cattolico</CDGG>
+			</CDG>
+			<NVC hint="PROVVEDIMENTI DI TUTELA">
+				<NVCT hint="Tipo provvedimento">DM (L. n. 1089/1939, artt. 1,
+					4)</NVCT>
+				<NVCE hint="Estremi provvedimento">prospetto principale</NVCE>
+			</NVC>
+		</TU>
+		<DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+			<FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+				<FTAX hint="Genere">documentazione allegata</FTAX>
+				<FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+				<FTAN hint="Codice identificativo">00391452-1</FTAN>
+			</FTA>
+			<FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+				<FTAX hint="Genere">documentazione allegata</FTAX>
+				<FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+				<FTAN hint="Codice identificativo">00391452-2</FTAN>
+			</FTA>
+			<FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+				<FTAX hint="Genere">documentazione allegata</FTAX>
+				<FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+				<FTAN hint="Codice identificativo">00391452-3</FTAN>
+			</FTA>
+			<FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+				<FTAX hint="Genere">documentazione allegata</FTAX>
+				<FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+				<FTAN hint="Codice identificativo">00391452-4</FTAN>
+			</FTA>
+			<BIB hint="BIBLIOGRAFIA">
+				<BIBX hint="Genere">bibliografia di confronto</BIBX>
+				<BIBA hint="Autore">Ruotolo R</BIBA>
+				<BIBD hint="Anno di edizione">1996</BIBD>
+				<BIBH hint="Sigla per citazione">00000002</BIBH>
+			</BIB>
+		</DO>
+		<AD hint="ACCESSO AI DATI">
+			<ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+				<ADSP hint="Profilo di accesso">1</ADSP>
+				<ADSM hint="Motivazione">scheda contenente dati liberamente
+					accessibili</ADSM>
+			</ADS>
+		</AD>
+		<CM hint="COMPILAZIONE">
+			<CMP hint="COMPILAZIONE">
+				<CMPD hint="Data">1996</CMPD>
+				<CMPN hint="Nome">Catalano C</CMPN>
+			</CMP>
+			<FUR hint="Funzionario responsabile">Sardella F</FUR>
+			<AGG hint="AGGIORNAMENTO - REVISIONE">
+				<AGGD hint="Data">2017</AGGD>
+				<AGGN hint="Nome">Albano G</AGGN>
+				<AGGE hint="Ente">SABAP NA</AGGE>
+				<AGGR hint="Referente scientifico">Romano R</AGGR>
+				<AGGF hint="Funzionario responsabile">Bellucci E</AGGF>
+			</AGG>
+		</CM>
+	</A>
+</schede>
