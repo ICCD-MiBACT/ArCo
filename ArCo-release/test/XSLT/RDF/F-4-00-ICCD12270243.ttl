@@ -1,0 +1,747 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-ConservationStatus:1201250498-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 1201250498"@it , "Conservation status 1 of cultural property: 1201250498"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:GoodConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 1201250498"@it , "Conservation status 1 of cultural property: 1201250498"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordF/1201250498>
+        a           arco-catalogue:CatalogueRecordF ;
+        rdfs:label  "Catalogue Record n: 1201250498"@en , "Scheda catalografica n: 1201250498"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1201250498" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:1201250498-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1201250498-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:I ;
+        arco-catalogue:systemRecordCode
+                "F-4-00-ICCD12270243" .
+
+ar-TimeInterval:xx  a  tiapit:TimeInterval ;
+        rdfs:label   "XX" ;
+        tiapit:time  "XX" ;
+        l0:name      "XX" .
+
+ar-accessProfile:1201250498-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1201250498: 1"@it , "Access profile to catalogue record of cultural property 1201250498: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 1201250498: 1"@it , "Access profile to catalogue record of cultural property 1201250498: 1"@en .
+
+ar-TimeInterval:2012  a  tiapit:TimeInterval ;
+        rdfs:label   "2012" ;
+        tiapit:time  "2012" .
+
+ar-region:friuli-venezia-giulia
+        a           clvapit:Region ;
+        rdfs:label  "Friuli-Venezia Giulia" ;
+        l0:name     "Friuli-Venezia Giulia" .
+
+ar-timeIndexedTypedLocation:1201250498-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Current physical location of cultural property: 1201250498"@en , "Localizzazione fisica attuale del bene: 1201250498"@it ;
+        arco-core:specifications       "Gabinetto fotografico nazionale" ;
+        arco-location:atSite           ar-Site:3c59e977e7e4eb822e4138f0918775aa ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        tiapit:atTime                  ar-TimeInterval:1975 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 1201250498"@it , "Current physical location of cultural property: 1201250498"@en .
+
+ar-agentrole:1201250498-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1201250498: ICCD"@it , "Cataloguing agency for cultural property 1201250498: ICCD"@en ;
+        arco-core:hasAgent  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-Measurement:1201250498-1-height-lenght
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1201250498: 122x171mm"@en , "Misura del bene culturale 1201250498: 122x171mm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:HeightLenght ;
+        arco-dd:hasValue            ar-Value:1201250498-1-height-lenght-122x171 ;
+        l0:name                     "Measurement of cultural property 1201250498: 122x171mm"@en , "Misura del bene culturale 1201250498: 122x171mm"@it .
+
+ar-agent:4fe2756ada44b714c00cf3f64fba6380
+        a           l0:Agent ;
+        rdfs:label  "Berardi, Elena" .
+
+ar-agent:050ae5d29fc291b682bcf51f1250ca75
+        a                    COV:Organization ;
+        rdfs:label           "Istituto Centrale per il Catalogo e la Documentazione" , "ICCD" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        arco-core:isAgentOf  ar-agentrole:1201250498-cataloguing-agency , ar-agentrole:1201250498-heritage-protection-agency ;
+        l0:name              "Istituto Centrale per il Catalogo e la Documentazione" , "ICCD" .
+
+ar-address:2ea2d09b2596015b836880d49012dcec
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Lazio, RM, Roma" ;
+        clvapit:fullAddress  "via in Miranda, 5" ;
+        clvapit:hasCity      ar-city:roma ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:rm ;
+        clvapit:hasRegion    ar-region:lazio .
+
+ar-agent:9fda82f1657252a06cce4a2a3aa571f4
+        a           l0:Agent ;
+        rdfs:label  "Ministero della Pubblica Istruzione" ;
+        l0:name     "Ministero della Pubblica Istruzione" .
+
+ar-SiteDefinition:ospizio
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "ospizio" .
+
+<https://w3id.org/arco/resource/CulturalPropertyCategory/documentazione-del-patrimonio-paesaggistico>
+        a           arco-arco:CulturalPropertyCategory ;
+        rdfs:label  "documentazione del patrimonio paesaggistico" .
+
+ar-Site:88b0af937846b234dd08e08dcf113704
+        a                          cis:Site ;
+        rdfs:label                 "Contenitore fisico di: Gabinetto Fotografico Nazionale" ;
+        cis:isSiteOf               ar-cis:137ee09aed5c5616e87f8ea3efb31d14 ;
+        cis:siteAddress            ar-address:2ea2d09b2596015b836880d49012dcec ;
+        arco-location:hasSiteType  ar-SiteType:palazzo ;
+        l0:name                    "Contenitore fisico di: Gabinetto Fotografico Nazionale" .
+
+ar-address:d41d8cd98f00b204e9800998ecf8427e
+        a                   clvapit:Address ;
+        rdfs:label          "ITALIA, Friuli-Venezia Giulia" ;
+        clvapit:hasCountry  ar-country:italia ;
+        clvapit:hasRegion   ar-region:friuli-venezia-giulia .
+
+ar-timeIndexedRole:1201250498-compilation-04b35ba6636fd36483010fac41a27f6c
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Pacella, Manuela"@en , "Compilazione da Pacella, Manuela"@it ;
+        roapit:isRoleInTimeOf  ar-agent:04b35ba6636fd36483010fac41a27f6c ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-SiteDefinition:palazzo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "palazzo" .
+
+ar-timeIndexedRole:1201250498-c2f07525dcb3500cfe93ea66af34ce44
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente verifica scientifica: Cavanna, Pierangelo"@it , "Scientific director: Cavanna, Pierangelo"@en ;
+        roapit:isRoleInTimeOf  ar-agent:857aa0e5c7712b3677bd6551fe1b1fd3 ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+<https://w3id.org/arco/resource/Title/1201250498-com-di-lusevera-udine-grotta-di-villanova-profondita-metri-60>
+        a                         arco-cd:Title ;
+        rdfs:label                "Com. di Lusevera (Udine). Grotta di Villanova. Profondità. metri 60" ;
+        arco-cd:hasTitleType      arco-cd:ProperTitle ;
+        arco-cd:isTitleOf         <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        arco-core:specifications  "manoscritto al verso" ;
+        l0:name                   "Com. di Lusevera (Udine). Grotta di Villanova. Profondità. metri 60" .
+
+ar-SiteType:ospizio-apostolico
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: ospizio apostolico"@it , "Site type: ospizio apostolico"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:ospizio ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/apostolico> ;
+        l0:name     "Tipo di contenitore fisico: ospizio apostolico"@it , "Site type: ospizio apostolico"@en .
+
+ar-MeasurementCollection:1201250498-supporto-primario
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 1201250498 supporto primario"@en , "Misure del bene culturale 1201250498 supporto primario"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:1201250498-1-height-lenght ;
+        l0:name                 "Measurements of cultural property 1201250498 supporto primario"@en , "Misure del bene culturale 1201250498 supporto primario"@it .
+
+ar-province:rm  a   clvapit:Province ;
+        rdfs:label  "RM" ;
+        l0:name     "RM" .
+
+ar-Site:2a2fbd6a35da48094a9c8e8a0f75ea59
+        a                          cis:Site ;
+        rdfs:label                 "Contenitore fisico di: Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti" ;
+        cis:isSiteOf               ar-cis:f4751cc6f51bed3224c76d8f3851575b ;
+        cis:siteAddress            ar-address:f8d010a9248cab70c3f8149c4968d2a8 ;
+        arco-location:hasSiteType  ar-SiteType:palazzo ;
+        l0:name                    "Contenitore fisico di: Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti" .
+
+<https://w3id.org/arco/resource/ArchivalSeries/1201250498-fotografie-inventariate-non-cartonate-da-lucca-lu-pinacoteca-nazionale-a-luvinate-va>
+        a                              arco-cd:ArchivalSeries ;
+        rdfs:label                     "Fotografie inventariate non cartonate/ Da Lucca (LU) - Pinacoteca Nazionale a Luvinate (VA)" ;
+        arco-cd:isArchivalRecordSetIn  <https://w3id.org/arco/resource/ArchivalRecordSetMembership/1201250498> ;
+        arco-core:isComponentOf        <https://w3id.org/arco/resource/ArchivalFonds/1201250498-mpi-ministero-della-pubblica-istruzione-direzione-generale-delle-antichita-e-belle-arti> ;
+        l0:name                        "Fotografie inventariate non cartonate/ Da Lucca (LU) - Pinacoteca Nazionale a Luvinate (VA)" .
+
+ar-TechnicalCharacteristic:carta
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "carta" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:Material ;
+        l0:name     "carta" .
+
+<https://w3id.org/arco/resource/Stamp/1201250498-affixed-element-1>
+        a                              arco-dd:Stamp ;
+        rdfs:label                     "Element 1 affixed to cultural property 1201250498: stamp"@en , "Elemento 1 apposto sul bene 1201250498: timbro"@it ;
+        arco-core:description          "timbro tondo a inchiostro blu con la scritta: Ministero della Pubblica Istruzione direzione Generale Arti - Archivio Fotografico" ;
+        arco-dd:hasAffixedElementType  <https://w3id.org/arco/resource/AffixedElementType/di-collezione> ;
+        arco-dd:positionOnCulturalProperty
+                "al verso" ;
+        arco-dd:refersToAgent          ar-agent:9fda82f1657252a06cce4a2a3aa571f4 .
+
+ar-Subject:8f4e2b235e31e56d35e19740a4da0778
+        a                    arco-cd:Subject ;
+        rdfs:label           "Friuli Venezia Giulia - Udine <provincia> - Lusevera - Grotta di Villanova" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        l0:name              "Friuli Venezia Giulia - Udine <provincia> - Lusevera - Grotta di Villanova" .
+
+ar-CISNameInTime:ministero-della-pubblica-istruzione-direzione-generale-delle-antichita-e-belle-arti
+        a                         cis:CISNameInTime ;
+        cis:institutionalCISName  "Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1201250498-cataloguing-agency .
+
+ar-legalSituation:1201250498-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 1201250498: proprietà Stato"@it , "Legal situation of cultural property 1201250498: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:31ba559c9657a068a50cd3f4763a72a8 ;
+        l0:name           "Condizione giuridica del bene culturale 1201250498: proprietà Stato"@it , "Legal situation of cultural property 1201250498: proprietà Stato"@en .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/mm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "mm" ;
+        l0:name     "mm" .
+
+ar-agent:31ba559c9657a068a50cd3f4763a72a8
+        a                l0:Agent ;
+        rdfs:label       "Ministero per i Beni e le Attività Culturali/ Istituto centrale per il catalogo e la documentazione" ;
+        arco-cd:address  "via di San Michele 18" ;
+        l0:name          "Ministero per i Beni e le Attività Culturali/ Istituto centrale per il catalogo e la documentazione" .
+
+ar-PreferredAuthorshipAttribution:1201250498-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Preferred authorship attribution of cultural property: 1201250498"@en , "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1201250498"@it ;
+        arco-cd:hasAttributedAuthor  ar-agent:177a193d5a25fc296242b5e6386ad63f ;
+        arco-cd:hasAuthorityFileCataloguingAgency
+                ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-tecnico-formale ;
+        arco-cd:hasInterventionRole  ar-role:fotografo-principale ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1201250498"@it , "Preferred authorship attribution of cultural property: 1201250498"@en .
+
+<https://w3id.org/arco/resource/SiteSpecification/apostolico>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "apostolico" .
+
+ar-timeIndexedTypedLocation:1201250498-shot
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione di ripresa del bene: 1201250498"@it , "Shooting location of cultural property: 1201250498"@en ;
+        arco-location:atLocation       ar-feature:6bd13ae3d2c8104bd4c569b9c752de6a ;
+        arco-location:hasLocationType  arco-location:ShootingLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        tiapit:atTime                  ar-TimeInterval:1901-1925 ;
+        l0:name                        "Localizzazione di ripresa del bene: 1201250498"@it , "Shooting location of cultural property: 1201250498"@en .
+
+ar-agent:04b35ba6636fd36483010fac41a27f6c
+        a           l0:Agent ;
+        rdfs:label  "Pacella, Manuela" .
+
+ar-agent:177a193d5a25fc296242b5e6386ad63f
+        a                             CPV:Person ;
+        rdfs:label                    "Anonimo <1901-1925>" ;
+        arco-cd:agentDate             "XX primo quarto" ;
+        arco-cd:agentLocalIdentifier  "00242" ;
+        arco-cd:isAuthorOf            <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        l0:name                       "Anonimo <1901-1925>" .
+
+ar-cis:137ee09aed5c5616e87f8ea3efb31d14
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Gabinetto Fotografico Nazionale" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:gabinetto-fotografico-nazionale ;
+        cis:hasSite           ar-Site:88b0af937846b234dd08e08dcf113704 ;
+        l0:name               "Gabinetto Fotografico Nazionale" .
+
+ar-photograpyDocumentation:1201250498-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 1201250498"@en , "Documentazione fotografica 1 del bene culturale: 1201250498"@it ;
+        arco-cd:digitalFileName       "MPI6014820.jpg" ;
+        arco-cd:documentationIdentifier
+                "MPI6014820" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:hasFormat             <https://w3id.org/arco/resource/Format/jpeg> ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 1201250498"@en , "Documentazione fotografica 1 del bene culturale: 1201250498"@it .
+
+<https://w3id.org/arco/resource/ArchivalFonds/1201250498-mpi-ministero-della-pubblica-istruzione-direzione-generale-delle-antichita-e-belle-arti>
+        a                              arco-cd:ArchivalFonds ;
+        rdfs:label                     "MPI - Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti" ;
+        arco-cd:isArchivalRecordSetIn  <https://w3id.org/arco/resource/ArchivalRecordSetMembership/1201250498> ;
+        arco-core:hasComponent         <https://w3id.org/arco/resource/ArchivalSeries/1201250498-fotografie-inventariate-non-cartonate-da-lucca-lu-pinacoteca-nazionale-a-luvinate-va> ;
+        l0:name                        "MPI - Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti" .
+
+ar-city:roma  a     clvapit:City ;
+        rdfs:label  "Roma" ;
+        l0:name     "Roma" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-cis:f4751cc6f51bed3224c76d8f3851575b
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:ministero-della-pubblica-istruzione-direzione-generale-delle-antichita-e-belle-arti ;
+        cis:hasSite           ar-Site:2a2fbd6a35da48094a9c8e8a0f75ea59 ;
+        l0:name               "Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti" .
+
+ar-TimeInterval:1901-1925
+        a            tiapit:TimeInterval ;
+        tiapit:time  "1901-1925" .
+
+ar-Site:3c59e977e7e4eb822e4138f0918775aa
+        a                          cis:Site ;
+        rdfs:label                 "Conservatorio delle Zitelle" ;
+        cis:isPartOf               <https://w3id.org/arco/resource/MonumentalArea/ospizio-apostolico-di-san-michele-a-ripa-grande> ;
+        cis:isSiteOf               ar-cis:e2951f06cc935e88e6496107c66d8296 ;
+        cis:siteAddress            ar-address:ba2574c7aa8d93c32affb5b9241320b7 ;
+        arco-cd:hasUseFunction     <https://w3id.org/arco/resource/UseFunction/ufficio> ;
+        arco-location:hasSiteType  ar-SiteType:ospizio-apostolico ;
+        l0:name                    "Conservatorio delle Zitelle" .
+
+ar-timeIndexedRole:1201250498-7b13398883ccf47805e8137ee13fe289
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Berardi, Elena"@it , "Official in charge: Berardi, Elena"@en ;
+        roapit:isRoleInTimeOf  ar-agent:4fe2756ada44b714c00cf3f64fba6380 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/1201250498-part-supporto-primario>
+        a                   arco-arco:CulturalPropertyPart ;
+        rdfs:label          "supporto primario" ;
+        arco-cd:hasMeasurementCollection
+                ar-MeasurementCollection:1201250498-supporto-primario ;
+        arco-core:isPartOf  <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        l0:name             "supporto primario" .
+
+ar-dating:1201250498-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 1201250498"@it , "Dating 1 of cultural property 1201250498"@en ;
+        arco-cd:hasDatingEvent  ar-event:1201250498-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-tecnico-formale ;
+        l0:name                 "Dating 1 of cultural property 1201250498"@en , "Cronologia 1 del bene 1201250498"@it .
+
+ar-agent:857aa0e5c7712b3677bd6551fe1b1fd3
+        a           l0:Agent ;
+        rdfs:label  "Cavanna, Pierangelo" .
+
+ar-CulturalEntityTechnicalStatus:1201250498
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 1201250498"@it , "Technical status of cultural property 1201250498"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:carta , ar-TechnicalCharacteristic:gelatina-bromuro-dargento , ar-TechnicalCharacteristic:18-x-24 , ar-TechnicalCharacteristic:bn ;
+        l0:name     "Stato tecnico del bene culturale 1201250498"@it , "Technical status of cultural property 1201250498"@en .
+
+ar-TimeInterval:1975  a  tiapit:TimeInterval ;
+        tiapit:time  "1975" .
+
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/1201250498>
+        a                               arco-cd:ArchivalRecordSetMembership ;
+        rdfs:label                      "Appartenenza a unità archivistica complessa del bene: 1201250498"@it , "Archival record set membership of cultural property: 1201250498"@en ;
+        arco-cd:archivalRecordLocation  "Sala C 6447.03" ;
+        arco-cd:archivalRecordSetTitle  "Lusevera (Udine)" ;
+        arco-cd:hasArchivalRecordSet    <https://w3id.org/arco/resource/ArchivalFonds/1201250498-mpi-ministero-della-pubblica-istruzione-direzione-generale-delle-antichita-e-belle-arti> , <https://w3id.org/arco/resource/ArchivalSeries/1201250498-fotografie-inventariate-non-cartonate-da-lucca-lu-pinacoteca-nazionale-a-luvinate-va> ;
+        arco-cd:hasMemberOfArchivalRecordSet
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        l0:name                         "Archival record set membership of cultural property: 1201250498"@en , "Appartenenza a unità archivistica complessa del bene: 1201250498"@it .
+
+ar-region:rm  a     clvapit:Province ;
+        rdfs:label  "RM" ;
+        l0:name     "RM" .
+
+ar-TechnicalCharacteristic:bn
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "BN" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:PhotoColour ;
+        l0:name     "BN" .
+
+ar-TechnicalCharacteristic:18-x-24
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "18 x 24" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:PhotoSize ;
+        l0:name     "18 x 24" .
+
+ar-region:lazio  a  clvapit:Region ;
+        rdfs:label  "Lazio" ;
+        l0:name     "Lazio" .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente verifica scientifica"@it , "Scientific Director"@en .
+
+ar-CISNameInTime:istituto-centrale-per-il-catalogo-e-la-documentazione
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Istituto centrale per il catalogo e la documentazione"@it , "Name in time: Istituto centrale per il catalogo e la documentazione"@en ;
+        cis:institutionalCISName  "Istituto centrale per il catalogo e la documentazione" ;
+        l0:name                   "Denominazione nel tempo: Istituto centrale per il catalogo e la documentazione"@it , "Name in time: Istituto centrale per il catalogo e la documentazione"@en .
+
+ar-TimeInterval:1893-1973
+        a                    tiapit:TimeInterval ;
+        arco-arco:endTime    "1973" ;
+        arco-arco:startTime  "1893" .
+
+ar-TimeInterval:ca-1901-ca-1925
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca 1901 - ca 1925" ;
+        arco-arco:endTime    "ca 1925" ;
+        arco-arco:startTime  "ca 1901" ;
+        l0:name              "ca 1901 - ca 1925" .
+
+ar-culturalPropertySpecification:cartella
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "cartella" .
+
+<https://w3id.org/arco/resource/Acquisition/1201250498-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisition 1 of cultural property: 1201250498"@en , "Acquisizione 1 del bene culturale: 1201250498"@it ;
+        arco-cd:acquisitionLocation  "Lazio/ RM/ Roma" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/assegnazione> ;
+        arco-cd:hasPreviousOwner     ar-agent:9fda82f1657252a06cce4a2a3aa571f4 ;
+        arco-cd:isAcquisitionOf      <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        tiapit:time                  "1973" ;
+        l0:name                      "Acquisition 1 of cultural property: 1201250498"@en , "Acquisizione 1 del bene culturale: 1201250498"@it .
+
+ar-detectionMethod:appartenenza-ad-una-collezione-o-raccolta-pubblica
+        a           arco-cd:DetectionMethod ;
+        rdfs:label  "appartenenza ad una collezione o raccolta pubblica" ;
+        l0:name     "appartenenza ad una collezione o raccolta pubblica" .
+
+ar-role:fotografo-principale
+        a           roapit:Role ;
+        rdfs:label  "fotografo principale" ;
+        l0:name     "fotografo principale" .
+
+ar-timeIndexedTypedLocation:1201250498-alternative-2
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 2 del bene: 1201250498"@it , "Alternative location 2 of cultural property: 1201250498"@en ;
+        arco-location:atSite           ar-Site:88b0af937846b234dd08e08dcf113704 ;
+        arco-location:hasLocationType  arco-location:LastLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        tiapit:atTime                  ar-TimeInterval:1973-1975 ;
+        l0:name                        "Altra localizzazione 2 del bene: 1201250498"@it , "Alternative location 2 of cultural property: 1201250498"@en .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+<https://w3id.org/arco/resource/AffixedElementType/di-collezione>
+        a           arco-dd:AffixedElementType ;
+        rdfs:label  "di collezione" ;
+        l0:name     "di collezione" .
+
+ar-CISNameInTime:gabinetto-fotografico-nazionale
+        a                         cis:CISNameInTime ;
+        cis:institutionalCISName  "Gabinetto Fotografico Nazionale" .
+
+ar-Value:1201250498-1-height-lenght-122x171
+        a                      mu:Value ;
+        rdfs:label             "122x171"@en , "122x171"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "122x171" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1201250498-heritage-protection-agency .
+
+ar-culturalPropertyDefinition:positivo
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "positivo" .
+
+ar-interpretationCriterion:analisi-tecnico-formale
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi tecnico-formale" ;
+        l0:name     "analisi tecnico-formale" .
+
+ar-catalogueRecordVersion:1201250498-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "REDAZIONE E VERIFICA SCIENTIFICA - 2012 Pacella, Manuela" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1201250498-c2f07525dcb3500cfe93ea66af34ce44 , ar-timeIndexedRole:1201250498-compilation-04b35ba6636fd36483010fac41a27f6c , ar-timeIndexedRole:1201250498-7b13398883ccf47805e8137ee13fe289 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:4fe2756ada44b714c00cf3f64fba6380 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:04b35ba6636fd36483010fac41a27f6c ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:857aa0e5c7712b3677bd6551fe1b1fd3 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordF/1201250498> .
+
+<https://w3id.org/arco/resource/MonumentalArea/ospizio-apostolico-di-san-michele-a-ripa-grande>
+        a           cis:MonumentalArea ;
+        rdfs:label  "Ospizio apostolico di San Michele a Ripa Grande" ;
+        l0:name     "Ospizio apostolico di San Michele a Ripa Grande" .
+
+<https://w3id.org/arco/resource/AcquisitionType/assegnazione>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "assegnazione" ;
+        l0:name     "assegnazione" .
+
+ar-culturalPropertyType:a54d6bfa9e687d1ce2da5fdb4bcf10a2
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: positivo cartella"@it , "Cultural property type: positivo cartella"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:positivo ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:cartella ;
+        l0:name     "Tipo del bene: positivo cartella"@it , "Cultural property type: positivo cartella"@en .
+
+ar-TimeInterval:1973-1975
+        a                    tiapit:TimeInterval ;
+        arco-arco:endTime    "1975" ;
+        arco-arco:startTime  "1973" .
+
+ar-event:1201250498-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 1201250498"@it , "Creation of cultural property 1201250498"@en ;
+        arco-cd:specificTime  ar-TimeInterval:ca-1901-ca-1925 ;
+        tiapit:atTime         ar-TimeInterval:xx ;
+        l0:name               "Realizzazione del bene 1201250498"@it , "Creation of cultural property 1201250498"@en .
+
+ar-address:ba2574c7aa8d93c32affb5b9241320b7
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Lazio, RM, Roma" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        clvapit:fullAddress  "via di San Michele, 18" ;
+        clvapit:hasCity      ar-city:roma ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:rm ;
+        clvapit:hasRegion    ar-region:lazio .
+
+ar-timeIndexedTypedLocation:1201250498-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Alternative location 1 of cultural property: 1201250498"@en , "Altra localizzazione 1 del bene: 1201250498"@it ;
+        arco-core:specifications       "Archivio fotografico" ;
+        arco-location:atSite           ar-Site:2a2fbd6a35da48094a9c8e8a0f75ea59 ;
+        arco-location:hasLocationType  arco-location:LastLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> ;
+        tiapit:atTime                  ar-TimeInterval:1893-1973 ;
+        l0:name                        "Alternative location 1 of cultural property: 1201250498"@en , "Altra localizzazione 1 del bene: 1201250498"@it .
+
+<https://w3id.org/arco/resource/PhotographicHeritage/1201250498>
+        a                               arco-arco:PhotographicHeritage , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "positivo, cartella" ;
+        rdfs:label                      "Friuli Venezia Giulia - Udine <provincia> - Lusevera - Grotta di Villanova (positivo) di Anonimo <1901-1925> (XX)"@it , "Friuli Venezia Giulia - Udine <provincia> - Lusevera - Grotta di Villanova (positivo) by Anonimo <1901-1925> (XX)"@en ;
+        arco-arco:catalogueNumber       "01250498" ;
+        arco-arco:hasCataloguingAgency  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-arco:hasCulturalPropertyCategory
+                <https://w3id.org/arco/resource/CulturalPropertyCategory/documentazione-del-patrimonio-paesaggistico> ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-arco:hasMibacScopeOfProtection
+                arco-arco:HistoricalArtisticScope ;
+        arco-arco:numberOfComponents    "1" ;
+        arco-arco:numberOfElements      "1" ;
+        arco-arco:regionIdentifier      "12" ;
+        arco-arco:uniqueIdentifier      "1201250498" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordF/1201250498> , <https://w3id.org/arco/resource/CatalogueRecord/bene-semplice>  ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/1201250498-acquisition-1> ;
+        arco-cd:hasAuthor               ar-agent:177a193d5a25fc296242b5e6386ad63f ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:1201250498-1 ;
+        arco-cd:hasDating               ar-dating:1201250498-1 ;
+        arco-cd:hasDetectionMethod      ar-detectionMethod:appartenenza-ad-una-collezione-o-raccolta-pubblica ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1201250498-photographic-documentation-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:1201250498-legal-situation-proprieta-stato ;
+        arco-cd:hasSubject              ar-Subject:8f4e2b235e31e56d35e19740a4da0778 ;
+        arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/1201250498-com-di-lusevera-udine-grotta-di-villanova-profondita-metri-60> ;
+        arco-cd:isMemberOfArchivalRecordSet
+                <https://w3id.org/arco/resource/ArchivalRecordSetMembership/1201250498> ;
+        arco-cd:properTitle             "Com. di Lusevera (Udine). Grotta di Villanova. Profondità. metri 60" ;
+        arco-cd:subject                 "Friuli Venezia Giulia - Udine <provincia> - Lusevera - Grotta di Villanova" ;
+        arco-core:hasAgentRole          ar-agentrole:1201250498-heritage-protection-agency , ar-agentrole:1201250498-cataloguing-agency ;
+        arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/1201250498-part-supporto-primario> ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Stamp/1201250498-affixed-element-1> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:1201250498-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyAccessibility
+                arco-dd:Accessible ;
+        arco-dd:hasCulturalPropertyAvailability
+                arco-dd:Available ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:a54d6bfa9e687d1ce2da5fdb4bcf10a2 ;
+        arco-dd:hasMaterial             ar-TechnicalCharacteristic:carta ;
+        arco-dd:hasPhotoColour          ar-TechnicalCharacteristic:bn ;
+        arco-dd:hasPhotoSize            ar-TechnicalCharacteristic:18-x-24 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1201250498 ;
+        arco-dd:hasTechnique            ar-TechnicalCharacteristic:gelatina-bromuro-dargento ;
+        arco-dd:proposedIntervention    "spolveratura/ condizionamento" ;
+        arco-dd:storageConditions       "conservato in cassettiera, in locale non climatizzato" ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:c3f9e66843f800486a10e50dc29f5c3c ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1201250498-current , ar-timeIndexedTypedLocation:1201250498-shot , ar-timeIndexedTypedLocation:1201250498-alternative-1 , ar-timeIndexedTypedLocation:1201250498-alternative-2 .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-cis:e2951f06cc935e88e6496107c66d8296
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Istituto centrale per il catalogo e la documentazione" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:istituto-centrale-per-il-catalogo-e-la-documentazione ;
+        cis:hasSite           ar-Site:3c59e977e7e4eb822e4138f0918775aa ;
+        l0:name               "Istituto centrale per il catalogo e la documentazione" .
+
+<https://w3id.org/arco/resource/Format/jpeg>
+        a           arco-cd:Format ;
+        rdfs:label  ".jpeg" ;
+        l0:name     ".jpeg" .
+
+ar-agentrole:1201250498-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1201250498: ICCD"@it , "Heritage protection agency for cultural property 1201250498: ICCD"@en ;
+        arco-core:hasAgent  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-SiteType:palazzo  a  arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        l0:name     "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en .
+
+<https://w3id.org/arco/resource/UseFunction/ufficio>
+        a                    arco-cd:UseFunction ;
+        rdfs:label           "ufficio" ;
+        arco-cd:useFunction  "ufficio" ;
+        l0:name              "ufficio" .
+
+ar-feature:6bd13ae3d2c8104bd4c569b9c752de6a
+        a                   clvapit:Feature ;
+        rdfs:label          "ITALIA Friuli-Venezia Giulia" ;
+        clvapit:hasAddress  ar-address:d41d8cd98f00b204e9800998ecf8427e .
+
+ar-TechnicalCharacteristic:gelatina-bromuro-dargento
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "gelatina bromuro d'argento" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:Technique ;
+        l0:name     "gelatina bromuro d'argento" .
+
+ar-address:f8d010a9248cab70c3f8149c4968d2a8
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Lazio, RM, Roma" ;
+        clvapit:fullAddress  "via di San Michele, 13" ;
+        clvapit:hasCity      ar-city:roma ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:rm ;
+        clvapit:hasRegion    ar-region:lazio .
+
+<https://w3id.org/arco/resource/CatalogueRecord/bene-semplice>
+        a                         arco-catalogue:ComplexCPCatalogueRecord ;
+        rdfs:label                "bene semplice" ;
+        arco-catalogue:describes  <https://w3id.org/arco/resource/PhotographicHeritage/1201250498> .
