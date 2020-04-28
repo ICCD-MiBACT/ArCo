@@ -559,7 +559,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			
-			<!-- part of cultural property when there is RSTP (< 4.00, conservation intervention) -->
+			<!-- part of cultural property when there is RSTR (< 4.00, conservation intervention) -->
 			<xsl:if test="$sheetType='A'">
 			<xsl:for-each select="schede/*/RS/RST">
 				<xsl:variable name="parentPosition">
