@@ -531,7 +531,7 @@
 							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-cd:hasIntervention>
 								<xsl:choose>
-									<xsl:when test="contains(normalize-space(lower-case(./RSTI)), 'consolidamento') or contains(normalize-space(lower-case(./RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(./RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(./RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(./RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(./RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(./RSTI)), 'protezione finale') or contains(normalize-space(lower-case(./RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(./RSTI)), 'trattamento parti metalliche')">
+									<xsl:when test="contains(normalize-space(lower-case(../RSTI)), 'consolidamento') or contains(normalize-space(lower-case(../RSTI)), 'controllo microclimatico') or contains(normalize-space(lower-case(../RSTI)), 'trattamento biocida-disinfestazione') or contains(normalize-space(lower-case(../RSTI)), 'rimozione di elementi non originali') or contains(normalize-space(lower-case(../RSTI)), 'pulitura meccanica') or contains(normalize-space(lower-case(../RSTI)), 'pulitura chimica') or contains(normalize-space(lower-case(../RSTI)), 'protezione finale') or contains(normalize-space(lower-case(../RSTI)), 'riadesione parti') or contains(normalize-space(lower-case(../RSTI)), 'trattamento parti metalliche')">
 										<xsl:attribute name="rdf:resource">
 											<xsl:value-of select="concat($NS, 'ConservationIntervention/', $itemURI, '-conservation-intervention-', $parentPosition)" />
 										</xsl:attribute>
@@ -559,7 +559,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			
-			<!-- part of cultural property when there is RSTP (< 4.00, conservation intervention) -->
+			<!-- part of cultural property when there is RSTR (< 4.00, conservation intervention) -->
 			<xsl:if test="$sheetType='A'">
 			<xsl:for-each select="schede/*/RS/RST">
 				<xsl:variable name="parentPosition">

@@ -16,6 +16,10 @@ Once the build process fininshes, three executable JARs  can be found under the 
 
 If the XLST sheet is modified, then the software needs to be rebuilt again.
 
+### JVM on Windows
+
+When running rdfizer on Windows environment provide paramter  ``-Dfile.encoding=UTF-8`` to the JVM (cf. oifbaf's [comment](https://github.com/ICCD-MiBACT/ArCo/issues/75#issuecomment-620469221) on Issue #75).
+
 ### rdfizer Usage
 
 The JAR named `arco.rdfizer.jar` transforms a collection of XML files into an RDF Knowledge Graph according to the XSTL transformations.
