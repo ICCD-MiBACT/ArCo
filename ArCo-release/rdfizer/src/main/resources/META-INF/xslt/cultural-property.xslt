@@ -3758,45 +3758,7 @@
                 </xsl:if>
 			</rdf:Description>
 	
-							<!-- Complex cultural property catalogue record -->
-							
-	<xsl:variable name="ComplexCPCatalogueRecordType">
-		<xsl:if test="not(schede/AT/OG/OGC/OGCT)"> 
-			<xsl:value-of select="arco-fn:urify(normalize-space(schede/*/OG/OGC/OGCT))" />
-		</xsl:if>
-	</xsl:variable>
-	
-	<xsl:variable name="ComplexCPCatalogueRecord" select="concat($NS, 'CatalogueRecord', ComplexCPCatalogueRecord, '/', $ComplexCPCatalogueRecordType)" />
-		
-			<xsl:if test="schede/*/OG/OGC/OGCT and (not(schede/AT/OG/OGC/OGCT))">
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="$objectOfDescription" />
-					</xsl:attribute>
-					<arco-catalogue:isDescribedByCatalogueRecord>
-					<xsl:attribute name="rdf:resource">
-                    <xsl:value-of select="$ComplexCPCatalogueRecord" />
-                </xsl:attribute>
-				</arco-catalogue:isDescribedByCatalogueRecord>
-				</rdf:Description>
-			</xsl:if>
-			
-		<xsl:if test="schede/*/OG/OGC/OGCT and (not(schede/AT/OG/OGC/OGCT))">
-			<rdf:Description>
-					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="$ComplexCPCatalogueRecord" />
-					</xsl:attribute>
-					<rdfs:label>
-						<xsl:value-of select="normalize-space(schede/*/OG/OGC/OGCT)" />
-					</rdfs:label>
-					<rdf:type rdf:resource="https://w3id.org/arco/ontology/catalogue/ComplexCPCatalogueRecord" />
-					<arco-catalogue:describes>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="$culturalProperty" />
-						</xsl:attribute>
-					</arco-catalogue:describes>
-			</rdf:Description>
-		</xsl:if>
+
 					
 					
 					

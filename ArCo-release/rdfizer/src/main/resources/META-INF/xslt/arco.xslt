@@ -154,6 +154,14 @@
 						select="concat('https://w3id.org/arco/ontology/catalogue/', 'CatalogueRecord', $sheetType)" />
                     </xsl:attribute>
 				</rdf:type>
+				<xsl:if test="schede/*/OG/OGC/OGCT and (not(lower-case(normalize-space(schede/*/OG/OGC/OGCT))='bene semplice') and not(lower-case(normalize-space(schede/*/OG/OGC/OGCT))='bene complesso/bene composito - parte componente') and not(schede/AT/OG/OGC/OGCT))">
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+                         <xsl:value-of
+								select="'https://w3id.org/arco/ontology/catalogue/ComplexCPCatalogueRecord'" />
+                    </xsl:attribute>
+				</rdf:type>
+				</xsl:if>
 				<rdfs:label xml:lang="en">
 					<xsl:value-of
 						select="concat('Catalogue Record n: ', $itemURI)" />
