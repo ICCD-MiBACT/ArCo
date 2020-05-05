@@ -21,4 +21,4 @@ mvn exec:java -Dexec.mainClass="it.cnr.istc.stlab.arco.harverster.OAIHarvester" 
 
 ## Licence
 
-ArCo OAI Havester is distributed under license Apache 2.0.
+ArCo OAI Havester is distributed under license [Apache 2.0](LICENSE).
