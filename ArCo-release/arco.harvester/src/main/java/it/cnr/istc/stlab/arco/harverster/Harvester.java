@@ -28,7 +28,7 @@ public class Harvester {
 	private static final Pattern p = Pattern.compile("@(.*?)@");
 	private DocumentBuilder builder;
 
-	private static final Logger logger = LogManager.getLogger(HarvestOAI.class);
+	private static final Logger logger = LogManager.getLogger(OAIHarvester.class);
 
 	public Harvester(String listIdentifierURL, String outputDirectory) throws ParserConfigurationException {
 		super();
