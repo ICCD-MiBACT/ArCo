@@ -42,7 +42,7 @@ public class Harvester {
 
 	}
 
-	public String getRecords() throws IOException, ParserConfigurationException, SAXException, XPathExpressionException,
+	public void getRecords() throws IOException, ParserConfigurationException, SAXException, XPathExpressionException,
 			TransformerException {
 		String nextToken = null;
 
@@ -80,21 +80,26 @@ public class Harvester {
 				if (m.find()) {
 					String keycode = identifier.substring(m.start(1), m.end(1));
 
-					FileOutputStream fos = new FileOutputStream(
-							new File(outputDirectory + "/" + chunk + "/" + keycode + ".xml"));
+					String recordString = getRecord(identifier + "/xml");
 
-					fos.write(getRecord(identifier + "/xml").getBytes());
+					if (recordString != null) {
+						FileOutputStream fos = new FileOutputStream(
+								new File(outputDirectory + "/" + chunk + "/" + keycode + ".xml"));
+						fos.write(getRecord(identifier + "/xml").getBytes());
+						fos.flush();
+						fos.flush();
+						fos.close();
+					} else {
+						logger.error("Could not download " + identifier);
+					}
 
-					fos.flush();
-
-					fos_keys.write((keycode + "\t" + identifier + "\t" + datestamp + "\n").getBytes());
+					fos_keys.write((keycode + "\t" + identifier + "\t" + datestamp + "\t" + chunk + "/" + keycode
+							+ ".xml" + "\n").getBytes());
 					fos_paths.write((chunk + "/" + keycode + ".xml" + "\n").getBytes());
 
 					fos_keys.flush();
 					fos_paths.flush();
 
-					fos.flush();
-					fos.close();
 				}
 
 				if (++c % chunk_size == 0) {
@@ -113,7 +118,6 @@ public class Harvester {
 		fos_keys.close();
 		fos_paths.close();
 
-		return null;
 	}
 
 	private String getRecord(String identifier)
@@ -122,9 +126,14 @@ public class Harvester {
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
 		Document d = builder.parse(conn.getInputStream());
-		Element schede = (Element) d.getElementsByTagName("schede").item(0);
-		return Utils.nodeToString(schede, false, true);
+		try {
+			Element schede = (Element) d.getElementsByTagName("schede").item(0);
+			return Utils.nodeToString(schede, false, true);
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+			e.printStackTrace();
+		}
+		return null;
 	}
-
 
 }
