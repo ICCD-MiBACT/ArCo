@@ -1336,6 +1336,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
@@ -2569,6 +2570,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica all&apos;entità che ha quella caratteristica.</rdfs:comment>
