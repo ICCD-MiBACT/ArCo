@@ -1124,26 +1124,6 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/core/TimeIndexedClassification -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/core/TimeIndexedClassification">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/Classification"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isTimeIndexedSituationOf"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Classification"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una classificazione nel tempo</rdfs:comment>
