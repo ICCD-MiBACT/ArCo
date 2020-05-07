@@ -1336,6 +1336,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
@@ -2569,6 +2570,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica all&apos;entità che ha quella caratteristica.</rdfs:comment>
@@ -3442,37 +3444,6 @@ resource:Inscription/1200865151-inscription-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia della collezione oggetto della scheda. Per collezione generale si intende una collezione che contiene sia campioni di crittogame che di fanerogame. Si definisce collezione crittogamica senza ulteriore specificazione una collezione che contiene campioni di diverse crittogame, ma mai campioni di fanerogame.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of a botanical collection</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Botanical Collection Type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di collezione botanica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTZ</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di bene culturale botanico</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a type of botanical heritage</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Botanical heritage type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di bene botanico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/Brand -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Brand">
@@ -4145,23 +4116,6 @@ resource:TechnicalCharacteristic/pietra-scultura
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/HerbariumType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HerbariumType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia dell’erbario oggetto della scheda. Per erbario generale si intende un erbario che contiene sia campioni di crittogame che di fanerogame. Si definisce erbario crittogamico senza ulteriore specificazione un erbario che contiene campioni di diverse crittogame, ma mai campioni di fanerogame.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the category</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of an herabarium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Herbarium Type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di  erbario</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTR</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/HistoricalPlaque">
@@ -4322,7 +4276,7 @@ resource:TechnicalCharacteristic/pietra-scultura
     <!-- https://w3id.org/arco/ontology/denotative-description/Label -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Label">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/AffixedElement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasFontStyle"/>
@@ -4694,39 +4648,6 @@ resource:MeasurementCollection/1200865132-1
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria del/dei contenitore/i in cui è/sono conservato/i il/i campione/i. Ve ne possono essere diversi, uno contenuto nell&apos;altro. In questo caso si riportano tutti i contenitori, secondo la sequenza, che deve essere specificata nel campo ACZ, fino al dettaglio cui si vuole giungere con la catalogazione. Il termine foglio è qui inserito per far fronte a casi particolari, quando su uno stesso foglio d&apos;erbario sono ospitati campioni diversi,
-ognuno con documentazione propria (etichette). Questo caso si riscontra spesso negli erbari crittogamici, ad esempio quelli lichenologici, con i campioni contenuti in buste fissate in vario numero su fogli d&apos;erbario. L&apos;inserimento del foglio quale contenitore, in questi casi, è obbligata solo se il foglio stesso riporta un qualche tipo di indicazione grafica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of a container, where specimen/specimens is/are preserved</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Specimen Container Type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di contenitore del campione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTO</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/SpecimenType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria del campione oggetto della scheda</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of a specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">Specimen Type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di campione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: OG/OGT/OGTK</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/Stamp -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Stamp">
@@ -4965,6 +4886,18 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CulturalPropertyAccessibility"/>
         <rdfs:label xml:lang="it">Accessibile</rdfs:label>
         <rdfs:label xml:lang="en">Accessible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Altitude -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Altitude">
+        <rdfs:label xml:lang="en">Altitude</rdfs:label>
+        <rdfs:label xml:lang="it">Altitudine</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: LR/LRI/LRIA</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -6149,15 +6082,6 @@ ognuno con documentazione propria (etichette). Questo caso si riscontra spesso n
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/IconographicOrDecorativeApparatusType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SampleCollectedType"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/HerbariumType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/SpecimenType"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

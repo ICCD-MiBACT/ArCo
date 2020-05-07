@@ -2104,8 +2104,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/TangibleCulturalProperty"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathInterpretation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/AgeOfDeathInterpretation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2122,8 +2122,8 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSexEstimate"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSexInterpretation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/SexInterpretation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2217,12 +2217,6 @@ erbario.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAccession"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Accession"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalHeritageType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2361,6 +2355,14 @@ erbario.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/arco/CulturalProperty -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/CulturalProperty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/IntangibleCulturalProperty"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/arco/TangibleCulturalProperty"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
