@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,6 +28,7 @@ public class Harvester {
 	private static final int chunk_size = 1000;
 	private static final Pattern p = Pattern.compile("@(.*?)@");
 	private DocumentBuilder builder;
+	private static final int NUM_OF_ATTEMPTS = 3;
 
 	private static final Logger logger = LogManager.getLogger(OAIHarvester.class);
 
@@ -46,8 +48,8 @@ public class Harvester {
 			TransformerException {
 		String nextToken = null;
 
-		int c = 0;
-		int chunk = 0;
+		AtomicInteger c = new AtomicInteger(0);
+		AtomicInteger chunk = new AtomicInteger(0);
 
 		FileOutputStream fos_keys = new FileOutputStream(new File(outputDirectory + "/keys.txt"));
 		FileOutputStream fos_paths = new FileOutputStream(new File(outputDirectory + "/paths.txt"));
@@ -65,52 +67,22 @@ public class Harvester {
 				first = false;
 			}
 
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("GET");
-
-			Document d = builder.parse(conn.getInputStream());
-
-			NodeList headers = d.getElementsByTagName("header");
-
-			for (int i = 0; i < headers.getLength(); i++) {
-				Element header = (Element) headers.item(i);
-				String identifier = header.getElementsByTagName("identifier").item(0).getTextContent();
-				String datestamp = header.getElementsByTagName("datestamp").item(0).getTextContent();
-				Matcher m = p.matcher(identifier);
-				if (m.find()) {
-					String keycode = identifier.substring(m.start(1), m.end(1));
-
-					String recordString = getRecord(identifier + "/xml");
-
-					if (recordString != null) {
-						FileOutputStream fos = new FileOutputStream(
-								new File(outputDirectory + "/" + chunk + "/" + keycode + ".xml"));
-						fos.write(getRecord(identifier + "/xml").getBytes());
-						fos.flush();
-						fos.flush();
-						fos.close();
-					} else {
-						logger.error("Could not download " + identifier);
+			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
+				try {
+					nextToken = getRecordsFromList(url, chunk, c, fos_keys, fos_paths);
+					break;
+				} catch (Exception e) {
+					e.printStackTrace();
+					logger.error(e.getMessage());
+					try {
+						Thread.sleep(60000);
+					} catch (InterruptedException e1) {
+						e1.printStackTrace();
 					}
-
-					fos_keys.write((keycode + "\t" + identifier + "\t" + datestamp + "\t" + chunk + "/" + keycode
-							+ ".xml" + "\n").getBytes());
-					fos_paths.write((chunk + "/" + keycode + ".xml" + "\n").getBytes());
-
-					fos_keys.flush();
-					fos_paths.flush();
-
+					logger.error("Retry! " + i);
 				}
-
-				if (++c % chunk_size == 0) {
-					logger.info("Processed " + c);
-					chunk++;
-					new File(outputDirectory + "/" + chunk + "/").mkdirs();
-				}
-
 			}
 
-			nextToken = d.getElementsByTagName("resumptionToken").item(0).getTextContent();
 		}
 
 		fos_keys.flush();
@@ -120,20 +92,89 @@ public class Harvester {
 
 	}
 
-	private String getRecord(String identifier)
+	private String getRecordsFromList(URL url, AtomicInteger chunk, AtomicInteger c, FileOutputStream fos_keys,
+			FileOutputStream fos_paths)
 			throws IOException, SAXException, XPathExpressionException, TransformerException {
-		URL url = new URL(listIdentifierURL + "verb=GetRecord&metadataPrefix=oai_dc&identifier=" + identifier);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
+
 		Document d = builder.parse(conn.getInputStream());
-		try {
-			Element schede = (Element) d.getElementsByTagName("schede").item(0);
-			return Utils.nodeToString(schede, false, true);
-		} catch (Exception e) {
-			logger.error(e.getMessage());
-			e.printStackTrace();
+
+		NodeList headers = d.getElementsByTagName("header");
+
+		for (int i = 0; i < headers.getLength(); i++) {
+			Element header = (Element) headers.item(i);
+			String identifier = header.getElementsByTagName("identifier").item(0).getTextContent();
+			String datestamp = header.getElementsByTagName("datestamp").item(0).getTextContent();
+			Matcher m = p.matcher(identifier);
+			if (m.find()) {
+				String keycode = identifier.substring(m.start(1), m.end(1));
+
+				String recordString = getRecord(identifier + "/xml");
+
+				if (recordString != null) {
+					FileOutputStream fos = new FileOutputStream(
+							new File(outputDirectory + "/" + chunk.get() + "/" + keycode + ".xml"));
+					fos.write(recordString.getBytes());
+					fos.flush();
+					fos.flush();
+					fos.close();
+
+					fos_keys.write((keycode + "\tSUCCESS\t" + identifier + "\t" + datestamp + "\t" + chunk.get() + "/"
+							+ keycode + ".xml" + "\n").getBytes());
+				} else {
+					logger.error("Could not download " + identifier);
+					fos_keys.write((keycode + "\tERROR\t" + identifier + "\t" + datestamp + "\t" + chunk.get() + "/"
+							+ keycode + ".xml" + "\n").getBytes());
+				}
+
+				fos_paths.write((chunk.get() + "/" + keycode + ".xml" + "\n").getBytes());
+
+				fos_keys.flush();
+				fos_paths.flush();
+
+			}
+
+			if (c.incrementAndGet() % chunk_size == 0) {
+				logger.info("Processed " + c);
+				chunk.incrementAndGet();
+				new File(outputDirectory + "/" + chunk + "/").mkdirs();
+			}
+
+		}
+
+		return d.getElementsByTagName("resumptionToken").item(0).getTextContent();
+	}
+
+	private String getRecord(String identifier)
+			throws IOException, SAXException, XPathExpressionException, TransformerException {
+		for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
+			try {
+				URL url = new URL(listIdentifierURL + "verb=GetRecord&metadataPrefix=oai_dc&identifier=" + identifier);
+				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+				conn.setRequestMethod("GET");
+				Document d = builder.parse(conn.getInputStream());
+				try {
+					Element schede = (Element) d.getElementsByTagName("schede").item(0);
+					return Utils.nodeToString(schede, false, true);
+				} catch (Exception e) {
+					logger.error(e.getMessage());
+					e.printStackTrace();
+				}
+				return null;
+			} catch (Exception e) {
+				e.printStackTrace();
+				logger.error(e.getMessage());
+				try {
+					Thread.sleep(60000);
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}
+				logger.error("Retry! " + i);
+			}
 		}
 		return null;
+
 	}
 
 }
