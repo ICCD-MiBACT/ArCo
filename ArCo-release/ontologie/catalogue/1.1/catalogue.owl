@@ -1710,7 +1710,7 @@ resource:CatalogueRecordS/0500212038
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordCA">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive complessi archeologici.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - archaeological complexes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural archaeological complexes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Archaeological complexes catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Complessi archeologici</rdfs:label>
@@ -1725,7 +1725,7 @@ resource:CatalogueRecordS/0500212038
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordCNS">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive centri/nuclei storici.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - historic cities / town centres.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the catalogue record describing historic cities / town centres.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Historic cities / town centres catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Centri/nuclei storici</rdfs:label>
@@ -1740,7 +1740,7 @@ resource:CatalogueRecordS/0500212038
     <owl:Class rdf:about="https://w3id.org/arco/ontology/catalogue/CatalogueRecordD">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/catalogue/CatalogueRecord"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la scheda catalografica che descrive disegni.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the catalogue record describing Natural heritage - drawings.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the catalogue record describing drawings.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <rdfs:label xml:lang="en">Drawings catalogue record</rdfs:label>
         <rdfs:label xml:lang="it">Scheda Disegni</rdfs:label>

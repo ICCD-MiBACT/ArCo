@@ -755,6 +755,7 @@ In this module are used as template the following Ontology Design Patterns:
         <rdfs:comment xml:lang="it">Questa classe rappresenta un fattore unificante, ovvero un fattore che rappresenta un invariante comune a tutti gli eventi che sono membri dell&apos;evento ricorrente.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a unifying factor, that is a factor that represents an invariant common to all the events that are members of the recurrent event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
+        <rdfs:label xml:lang="en">Common factor</rdfs:label>
         <rdfs:label xml:lang="it">Fattore unificante</rdfs:label>
         <rdfs:label xml:lang="en">Unifying factor</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
