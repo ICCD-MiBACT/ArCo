@@ -3007,6 +3007,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di buste che contengono il campione o sue parti se conservate assieme al campione, e non in collezioni ancillari</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the numebr of envelopes, containing the specimen or its parts, if they are preserved with the specimen itself and not in ancillar collections</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/denotative-description</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">numbers of envelopes</rdfs:label>
+        <rdfs:label xml:lang="it">numero di buste</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants">
@@ -3021,6 +3038,23 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfLabels -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfLabels">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta etichette presenti assieme al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the number of labels with the specimen</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/denotative-description</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">number of labels</rdfs:label>
+        <rdfs:label xml:lang="it">numero di etichette</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
