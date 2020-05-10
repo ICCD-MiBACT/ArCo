@@ -1297,17 +1297,17 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/hasSubstrateCategory -->
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasSubstrateType -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSubstrateCategory">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSubstrateType">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSubstrateTypeOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Substrate"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateType"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il substrato alla categoria di substrato</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates  the substrate to the category</rdfs:comment>
-        <rdfs:label xml:lang="it">ha categoria di substrato</rdfs:label>
-        <rdfs:label xml:lang="en">has substrate category</rdfs:label>
+        <rdfs:label xml:lang="it">ha tipo di substrato</rdfs:label>
+        <rdfs:label xml:lang="en">has substrate type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
@@ -2523,19 +2523,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSubstrateCategoryOf">
-        <rdfs:comment xml:lang="it">Questa proprietà collega la categoria di substrato al substrato</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the category to  the substrate</rdfs:comment>
-        <rdfs:label xml:lang="en">is substrate category of</rdfs:label>
-        <rdfs:label xml:lang="it">è categoria di substrato di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/isSubstrateOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSubstrateOf">
@@ -2546,6 +2533,19 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isSubstrateTypeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSubstrateTypeOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega la categoria di substrato al substrato</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the category to  the substrate</rdfs:comment>
+        <rdfs:label xml:lang="en">is substrate type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di substrato di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4721,7 +4721,7 @@ resource:MeasurementCollection/1200865132-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSubstrateCategory"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSubstrateType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SubstrateType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
