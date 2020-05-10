@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-TimeInterval:1993  a  tiapit:TimeInterval ;
         rdfs:label   "1993" ;
@@ -183,8 +186,10 @@ ar-catalogueRecordVersion:0500177321-16-compilation
                 ar-CatalogueRecordOA:0500177321-16 .
 
 ar-CatalogueRecordOA:0500177321-16
-        a           arco-catalogue:CatalogueRecordOA ;
-        rdfs:label  "Scheda catalografica n: 0500177321-16"@it , "Catalogue Record n: 0500177321-16"@en ;
+        a             arco-catalogue:CatalogueRecordOA ;
+        rdfs:label    "Scheda catalografica n: 0500177321-16"@it , "Catalogue Record n: 0500177321-16"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0500177321-16" ;
         arco-catalogue:describesCulturalProperty
@@ -374,9 +379,27 @@ ar-TimeInterval:2006  a  tiapit:TimeInterval ;
         tiapit:time  "2006" .
 
 ar-HistoricOrArtisticProperty:0500177321-16
-        a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
+        a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "scultura" ;
-        rdfs:label                      "busto ritratto di Giulio Pontedera. (scultura) di Bonazza Antonio (bottega) (sec. XVIII)"@it , "busto ritratto di Giulio Pontedera. (scultura) by Bonazza Antonio (bottega) (sec. XVIII)"@en ;
+        rdfs:label                      "busto ritratto di Giulio Pontedera. (scultura) by Bonazza Antonio (bottega) (sec. XVIII)"@en , "busto ritratto di Giulio Pontedera. (scultura) di Bonazza Antonio (bottega) (sec. XVIII)"@it ;
+        pico:author                     ar-agent:0c5576d398fbf9515a0f006a343802a0 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:pietra ;
+        dc:coverage                     ar-city:padova ;
+        dc:creator                      ar-agent:0c5576d398fbf9515a0f006a343802a0 ;
+        dc:date                         ar-TimeInterval:1760-1760 ;
+        dc:description                  "Parte posteriore: non lavorata." ;
+        dc:format                       ar-MeasurementCollection:0500177321-16-1 ;
+        dc:identifier                   "0500177321-16" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500177321-16-legal-situation-proprieta-stato" ;
+        dc:source                       ar-CatalogueRecordOA:0500177321-16 ;
+        dc:subject                      ar-Subject:683bf4a5815bbf322fbb94b4e231267a ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" ] ;
+        dc:type                         ar-culturalPropertyType:e0f85950871864ae68bbd52aa767ef8c ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                ar-CatalogueRecordOA:0500177321-16 ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/c0716b4e59129ca29c4206e610348d83" ;
         arco-arco:catalogueNumber       "00177321" ;
         arco-arco:description           "Parte posteriore: non lavorata." ;
         arco-arco:hasCataloguingAgency  ar-agent:7c6d0071bd87a051bc4b945392e573f5 ;
@@ -389,9 +412,9 @@ ar-HistoricOrArtisticProperty:0500177321-16
         arco-cd:hasAuthor               ar-agent:0c5576d398fbf9515a0f006a343802a0 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:0500177321-16-1 ;
-        arco-cd:hasCommission           <https://w3id.org/arco/resource/Commission/0500177321-16-2> , <https://w3id.org/arco/resource/Commission/0500177321-16-1> ;
+        arco-cd:hasCommission           <https://w3id.org/arco/resource/Commission/0500177321-16-1> , <https://w3id.org/arco/resource/Commission/0500177321-16-2> ;
         arco-cd:hasDating               ar-dating:0500177321-16-1 ;
-        arco-cd:hasDocumentation        ar-photograpyDocumentation:0500177321-16-photographic-documentation-1 , ar-photograpyDocumentation:0500177321-16-photographic-documentation-2 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0500177321-16-photographic-documentation-2 , ar-photograpyDocumentation:0500177321-16-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:0500177321-16-legal-situation-proprieta-stato ;
         arco-cd:hasSubject              ar-Subject:683bf4a5815bbf322fbb94b4e231267a ;
         arco-cd:subject                 "busto ritratto di Giulio Pontedera." ;

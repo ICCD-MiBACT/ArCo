@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-catalogueRecordVersion:0900206599-rvm
         a                            arco-catalogue:CatalogueRecordVersion ;
@@ -143,14 +146,16 @@ ar-photograpyDocumentation:0900206599-photographic-documentation-2
         l0:name                       "Photographic documentation 2 of cultural property: 0900206599"@en , "Documentazione fotografica 2 del bene culturale: 0900206599"@it .
 
 <https://w3id.org/arco/resource/CatalogueRecordRA/0900206599>
-        a           arco-catalogue:CatalogueRecordRA ;
-        rdfs:label  "Catalogue Record n: 0900206599"@en , "Scheda catalografica n: 0900206599"@it ;
+        a             arco-catalogue:CatalogueRecordRA ;
+        rdfs:label    "Scheda catalografica n: 0900206599"@it , "Catalogue Record n: 0900206599"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0900206599" ;
         arco-catalogue:describesCulturalProperty
                 ar-archeologicalProperty:0900206599 ;
         arco-catalogue:hasCatalogueRecordVersion
-                ar-catalogueRecordVersion:0900206599-compilation , ar-catalogueRecordVersion:0900206599-rvm ;
+                ar-catalogueRecordVersion:0900206599-rvm , ar-catalogueRecordVersion:0900206599-compilation ;
         arco-catalogue:hasCataloguingLevel
                 arco-catalogue:P ;
         arco-catalogue:systemRecordCode
@@ -409,9 +414,24 @@ ar-agent:691ba1b4f9619b28a34f180c1a7fad50
         rdfs:label  "Maraschini V." .
 
 ar-archeologicalProperty:0900206599
-        a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
+        a                               arco-arco:ArchaeologicalProperty , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "kantharos" ;
-        rdfs:label                      "kantharos (VII secolo a.C.)"@it , "kantharos (VII secolo a.C.)"@en ;
+        rdfs:label                      "kantharos (VII secolo a.C.)"@en , "kantharos (VII secolo a.C.)"@it ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:impasto-a-impressione ;
+        dc:coverage                     ar-city:firenze ;
+        dc:date                         ar-TimeInterval:700-ac-602-ac ;
+        dc:description                  "Corpo biconico con labbro estroflesso;collo a profilo leggermente concavo;piede tronco-conico distinto;anse a bastoncello,verticali,con apofisi coniche in corrispondenza degli attacchi superiori. Impasto nerastro a chiazze brune,decorazione impressa Decorazione:sulla parte centrale del corpo fascia delimitata da linee a falsa cordicella,suddivisa in tre parti,con cuppelle ai lati ed apofisi sormontate da archetto a falsa cordicella al centro." ;
+        dc:format                       ar-MeasurementCollection:0900206599-1 ;
+        dc:identifier                   "0900206599" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900206599-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordRA/0900206599> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#reperti_archeologici" ] ;
+        dc:type                         ar-culturalPropertyType:a6983606a603b5747fecd8c68f27a3fe ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordRA/0900206599> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/7ba1a418b9135aeda387d316d4b8c032" ;
         arco-arco:catalogueNumber       "00206599" ;
         arco-arco:description           "Corpo biconico con labbro estroflesso;collo a profilo leggermente concavo;piede tronco-conico distinto;anse a bastoncello,verticali,con apofisi coniche in corrispondenza degli attacchi superiori. Impasto nerastro a chiazze brune,decorazione impressa Decorazione:sulla parte centrale del corpo fascia delimitata da linee a falsa cordicella,suddivisa in tre parti,con cuppelle ai lati ed apofisi sormontate da archetto a falsa cordicella al centro." ;
         arco-arco:hasCataloguingAgency  ar-agent:d3bea8363a5046e239c8433d1f5f0828 ;
@@ -438,4 +458,4 @@ ar-archeologicalProperty:0900206599
         arco-location:hasCulturalPropertyAddress
                 ar-address:953ff50af600f7915d2bf649fd579efb ;
         arco-location:hasTimeIndexedTypedLocation
-                ar-timeIndexedTypedLocation:0900206599-alternative-1 , ar-timeIndexedTypedLocation:0900206599-current .
+                ar-timeIndexedTypedLocation:0900206599-current , ar-timeIndexedTypedLocation:0900206599-alternative-1 .

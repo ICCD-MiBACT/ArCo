@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-province:ca  a   clvapit:Province ;
         rdfs:label  "CA" ;
@@ -172,6 +175,20 @@ ar-archeologicalProperty:2000202451
         a                               arco-arco:ArchaeologicalProperty , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "materiale di collezione museale, ceramica/ materiale lapideo" ;
         rdfs:label                      "materiale di collezione museale (ceramica/ materiale lapideo) (Neolitico recente)"@it , "materiale di collezione museale (ceramica/ materiale lapideo) (Neolitico recente)"@en ;
+        dc:coverage                     ar-city:cagliari ;
+        dc:description                  "tra i materiali esposti si individuano una statuina fittile di stile cruciforme, assisa (h. 4,9; largh. 4,5) e una statuina di marmo bianco saccaroide a placca traforata (h. res. 9,3)" ;
+        dc:identifier                   "2000202451" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000202451-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#beni_archeologici" ] ;
+        dc:type                         ar-culturalPropertyType:fdbc5860f8aa1fdb52d6659b43aff227 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:2000202451-bibliography-1 , ar-bibliography:2000202451-bibliography-2 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/33403d0a21f3497e610de99a52d5f967" ;
         arco-arco:catalogueNumber       "00202451" ;
         arco-arco:description           "tra i materiali esposti si individuano una statuina fittile di stile cruciforme, assisa (h. 4,9; largh. 4,5) e una statuina di marmo bianco saccaroide a placca traforata (h. res. 9,3)" ;
         arco-arco:hasCataloguingAgency  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
@@ -416,8 +433,10 @@ ar-agent:37392174174e71e6b1dfe3f9f5f269bd
         rdfs:label  "Usai, Emerenziana" .
 
 <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451>
-        a           arco-catalogue:CatalogueRecordTMA ;
-        rdfs:label  "Catalogue Record n: 2000202451"@en , "Scheda catalografica n: 2000202451"@it ;
+        a             arco-catalogue:CatalogueRecordTMA ;
+        rdfs:label    "Scheda catalografica n: 2000202451"@it , "Catalogue Record n: 2000202451"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "2000202451" ;
         arco-catalogue:describesCulturalProperty

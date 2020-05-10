@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-catalogueRecordVersion:0100354511-agg-1
         a                            arco-catalogue:CatalogueRecordVersion ;
@@ -198,6 +201,22 @@ ar-archeologicalProperty:0100354511
         a                               arco-arco:ArchaeologicalProperty , arco-arco:ImmovableCulturalProperty ;
         rdfs:comment                    "cinta fortificativa, struttura di fortificazione, Mura urbiche romane" ;
         rdfs:label                      "Mura urbiche romane (cinta fortificativa, struttura di fortificazione) (Eta' romana repubblicana, fine)"@it , "Mura urbiche romane (cinta fortificativa, struttura di fortificazione) (Eta' romana repubblicana, fine)"@en ;
+        dc:coverage                     ar-city:tortona ;
+        dc:date                         ar-TimeInterval:ca-fine-ii-ac-ca-ii-sec-dc ;
+        dc:description                  "Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre. La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica. La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec." ;
+        dc:format                       ar-MeasurementCollection:0100354511-1 ;
+        dc:identifier                   "0100354511" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0100354511-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordMA/0100354511> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#monumenti_archeologici" ] ;
+        dc:type                         ar-culturalPropertyType:7fad43efbee87c378a34a84405ede61c ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0100354511-bibliography-2 , ar-bibliography:0100354511-bibliography-1 , ar-bibliography:0100354511-bibliography-4 , ar-bibliography:0100354511-bibliography-3 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordMA/0100354511> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/eeb82c548bb7cfa50433e30585b8ee88" ;
         arco-arco:catalogueNumber       "00354511" ;
         arco-arco:description           "Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre. La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica. La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec." ;
         arco-arco:hasCataloguingAgency  ar-agent:208f0cd7c8c771f2b29a68b9b425a6a2 ;
@@ -209,14 +228,14 @@ ar-archeologicalProperty:0100354511
         arco-arco:uniqueIdentifier      "0100354511" ;
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordMA/0100354511> ;
-        arco-cd:hasBibliography         ar-bibliography:0100354511-bibliography-1 , ar-bibliography:0100354511-bibliography-4 , ar-bibliography:0100354511-bibliography-2 , ar-bibliography:0100354511-bibliography-3 ;
+        arco-cd:hasBibliography         ar-bibliography:0100354511-bibliography-2 , ar-bibliography:0100354511-bibliography-3 , ar-bibliography:0100354511-bibliography-4 , ar-bibliography:0100354511-bibliography-1 ;
         arco-cd:hasDating               ar-dating:0100354511-1 ;
-        arco-cd:hasDocumentation        ar-SourceAndDocument:0100354511-source-document-1 , ar-SourceAndDocument:0100354511-source-document-2 , ar-photograpyDocumentation:0100354511-photographic-documentation-2 , ar-photograpyDocumentation:0100354511-photographic-documentation-3 , ar-photograpyDocumentation:0100354511-photographic-documentation-1 ;
-        arco-cd:hasIntervention         <https://w3id.org/arco/resource/ConservationIntervention/0100354511-conservation-intervention-2> , <https://w3id.org/arco/resource/ConservationIntervention/0100354511-conservation-intervention-1> ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0100354511-photographic-documentation-1 , ar-SourceAndDocument:0100354511-source-document-2 , ar-SourceAndDocument:0100354511-source-document-1 , ar-photograpyDocumentation:0100354511-photographic-documentation-3 , ar-photograpyDocumentation:0100354511-photographic-documentation-2 ;
+        arco-cd:hasIntervention         <https://w3id.org/arco/resource/ConservationIntervention/0100354511-conservation-intervention-1> , <https://w3id.org/arco/resource/ConservationIntervention/0100354511-conservation-intervention-2> ;
         arco-cd:hasLegalSituation       ar-legalSituation:0100354511-legal-situation-proprieta-stato ;
         arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/0100354511-protective-measure-1> ;
         arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/0100354511-survey-1> ;
-        arco-core:hasAgentRole          ar-agentrole:0100354511-heritage-protection-agency , ar-agentrole:0100354511-cataloguing-agency ;
+        arco-core:hasAgentRole          ar-agentrole:0100354511-cataloguing-agency , ar-agentrole:0100354511-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0100354511-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:7fad43efbee87c378a34a84405ede61c ;
@@ -532,6 +551,8 @@ ar-role:ResponsibleCompilation
 <https://w3id.org/arco/resource/CatalogueRecordMA/0100354511>
         a               arco-catalogue:CatalogueRecordMA ;
         rdfs:label      "Catalogue Record n: 0100354511"@en , "Scheda catalografica n: 0100354511"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0100354511" ;
         arco-catalogue:describesCulturalProperty

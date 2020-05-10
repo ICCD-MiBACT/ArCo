@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-Measurement:0800418491-1-height
         a                           arco-dd:Measurement ;
@@ -190,6 +193,24 @@ ar-Measurement:0800418491-1-width
         a                               arco-arco:MovableCulturalProperty , arco-arco:PhotographicHeritage ;
         rdfs:comment                    "positivo, m" ;
         rdfs:label                      "Madonna con Bambino e santi - Dipinti (positivo) di Bissolo, Francesco, Anonimo (XX)"@it , "Madonna con Bambino e santi - Dipinti (positivo) by Bissolo, Francesco, Anonimo (XX)"@en ;
+        pico:author                     ar-agent:ac037c61854d527f164f8e9d23df1918 , ar-agent:88a853949e67984d831d9779eacdea21 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:gelatina-bromuro-dargento-carta ;
+        dc:coverage                     ar-city:bologna ;
+        dc:creator                      ar-agent:ac037c61854d527f164f8e9d23df1918 , ar-agent:88a853949e67984d831d9779eacdea21 ;
+        dc:date                         ar-TimeInterval:post-1915-ante-1924 ;
+        dc:format                       ar-MeasurementCollection:0800418491-1 ;
+        dc:identifier                   "0800418491" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0800418491-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
+        dc:subject                      ar-Subject:38b0632df5a5f2c863893af2d781bc74 ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#fotografie" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/0800418491-francesco-bissolo-madonna-in-trono-col-bambino-i-santi-paolo-e-lorenzo-e-il-committente> ;
+        dc:type                         ar-culturalPropertyType:20e6d3fc7923851fb8313bad70a9fd65 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/d437532e901e75933d35137868fb9597" ;
         arco-arco:catalogueNumber       "00418491" ;
         arco-arco:hasCataloguingAgency  ar-agent:52e9543ed285c89c64f4327f479b5835 ;
         arco-arco:hasHeritageProtectionAgency
@@ -292,8 +313,10 @@ ar-accessProfile:0800418491-1
         l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0800418491: 1"@it , "Access profile to catalogue record of cultural property 0800418491: 1"@en .
 
 <https://w3id.org/arco/resource/CatalogueRecordF/0800418491>
-        a           arco-catalogue:CatalogueRecordF ;
-        rdfs:label  "Catalogue Record n: 0800418491"@en , "Scheda catalografica n: 0800418491"@it ;
+        a             arco-catalogue:CatalogueRecordF ;
+        rdfs:label    "Catalogue Record n: 0800418491"@en , "Scheda catalografica n: 0800418491"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0800418491" ;
         arco-catalogue:describesCulturalProperty

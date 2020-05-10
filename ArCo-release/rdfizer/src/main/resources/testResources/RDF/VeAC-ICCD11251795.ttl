@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-ConservationStatus:0900750392-conservation-status-1
         a                         arco-dd:ConservationStatus ;
@@ -342,6 +345,8 @@ ar-role:OfficialInCharge
 <https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392>
         a               arco-catalogue:CatalogueRecordVeAC ;
         rdfs:label      "Scheda catalografica n: 0900750392"@it , "Catalogue Record n: 0900750392"@en ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0900750392" ;
         arco-catalogue:describesCulturalProperty
@@ -481,9 +486,24 @@ ar-CISNameInTime:galleria-del-costume
         l0:name                   "Denominazione nel tempo: Galleria del Costume"@it , "Name in time: Galleria del Costume"@en .
 
 ar-HistoricOrArtisticProperty:0900750392
-        a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
+        a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "camicia, intimo, 2 pezzi: polsini, da giorno, femminile, sprone con collo a cinturino" ;
         rdfs:label                      "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@it , "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@en ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:lino , ar-TechnicalCharacteristic:tessuto ;
+        dc:coverage                     ar-city:firenze ;
+        dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/0900750392-cultural-scope-attribution-1> ;
+        dc:date                         ar-TimeInterval:ca-1890-ca-1899 ;
+        dc:description                  "Sprone di camicia, confezionato in tela di lino grezza tinta écru, ricamata ad ago a punto sfilato: motivo a maglie geometriche traforate, rifinite a punto stuoia e fili lanciati. Lungo l'orlo inferiore, effetto rigato ottenuto dalla recisione e sfilatura delle trame. Presenta girocollo leggermente più pronunciato in corrispondenza del taglio anteriore. Si conserva a parte il colletto ad anello rialzato (h cm 6), con lavorazione a ricamo analoga a quella dello sprone." ;
+        dc:identifier                   "0900750392" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900750392-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#abbigliamento_e_accessori" ] ;
+        dc:type                         ar-culturalPropertyType:b449fefae16a7efad3e1c7242ce36501 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/13219322a59903c1360a0c85347b8fa0" ;
         arco-arco:catalogueNumber       "00750392" ;
         arco-arco:description           "Sprone di camicia, confezionato in tela di lino grezza tinta écru, ricamata ad ago a punto sfilato: motivo a maglie geometriche traforate, rifinite a punto stuoia e fili lanciati. Lungo l'orlo inferiore, effetto rigato ottenuto dalla recisione e sfilatura delle trame. Presenta girocollo leggermente più pronunciato in corrispondenza del taglio anteriore. Si conserva a parte il colletto ad anello rialzato (h cm 6), con lavorazione a ricamo analoga a quella dello sprone." ;
         arco-arco:hasCataloguingAgency  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
@@ -500,7 +520,7 @@ ar-HistoricOrArtisticProperty:0900750392
         arco-cd:hasAuthorshipAttribution
                 <https://w3id.org/arco/resource/CulturalScopeAttribution/0900750392-cultural-scope-attribution-1> ;
         arco-cd:hasDating               ar-dating:0900750392-1 ;
-        arco-cd:hasDocumentation        ar-photograpyDocumentation:0900750392-photographic-documentation-4 , ar-photograpyDocumentation:0900750392-photographic-documentation-5 , ar-SourceAndDocument:0900750392-source-document-1 , ar-photograpyDocumentation:0900750392-photographic-documentation-2 , ar-photograpyDocumentation:0900750392-photographic-documentation-1 , ar-photograpyDocumentation:0900750392-photographic-documentation-3 ;
+        arco-cd:hasDocumentation        ar-SourceAndDocument:0900750392-source-document-1 , ar-photograpyDocumentation:0900750392-photographic-documentation-1 , ar-photograpyDocumentation:0900750392-photographic-documentation-5 , ar-photograpyDocumentation:0900750392-photographic-documentation-2 , ar-photograpyDocumentation:0900750392-photographic-documentation-4 , ar-photograpyDocumentation:0900750392-photographic-documentation-3 ;
         arco-cd:hasLegalSituation       ar-legalSituation:0900750392-legal-situation-proprieta-stato ;
         arco-cd:hasRelatedWorkSituation
                 ar-RelatedWorkSituation:0900750392-related-cultural-property-2-1 ;

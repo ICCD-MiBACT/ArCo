@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedRole:1500831200-compilation-823022e720e285e9b09230f327465b76
         a                      roapit:TimeIndexedRole ;
@@ -96,6 +99,17 @@ ar-bibliography:1500831200-bibliography-1
         a                               arco-arco:NaturalHeritage , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "Arenaria, ita, esemplare" ;
         rdfs:label                      "Arenaria (esemplare) ()"@it , "Arenaria (esemplare) ()"@en ;
+        dc:coverage                     ar-city:caserta ;
+        dc:identifier                   "1500831200" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1500831200-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBNPE/1500831200> ;
+        dc:type                         ar-culturalPropertyType:f802f4924d5f1daa859daf19dc8bbf85 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:1500831200-bibliography-1 , ar-bibliography:1500831200-bibliography-2 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordBNPE/1500831200> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/98e2be110abcc2f342ea3e272eb0f2f2" ;
         arco-arco:catalogueNumber       "00831200" ;
         arco-arco:hasCataloguingAgency  ar-agent:c711702d5dadbfda28dca24e19ceb301 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
@@ -184,8 +198,10 @@ ar-timeIndexedRole:1500831200-952507ef9c0f166548861dffd9a482f7
         roapit:withRole        ar-role:OfficialInCharge .
 
 <https://w3id.org/arco/resource/CatalogueRecordBNPE/1500831200>
-        a           arco-catalogue:CatalogueRecordBNPE ;
-        rdfs:label  "Catalogue Record n: 1500831200"@en , "Scheda catalografica n: 1500831200"@it ;
+        a             arco-catalogue:CatalogueRecordBNPE ;
+        rdfs:label    "Catalogue Record n: 1500831200"@en , "Scheda catalografica n: 1500831200"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1500831200" ;
         arco-catalogue:describesCulturalProperty

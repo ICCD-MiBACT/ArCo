@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 <https://w3id.org/arco/resource/FontStyle/stampatello>
         a           arco-dd:FontStyle ;
@@ -441,6 +444,27 @@ ar-HistoricOrArtisticProperty:0500436576
         a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "manifesto, pubblicitario" ;
         rdfs:label                      "automa su fondo grigio (manifesto) by Depero Fortunato (sec. XX)"@en , "automa su fondo grigio (manifesto) di Depero Fortunato (sec. XX)"@it ;
+        pico:author                     ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-cromolitografia ;
+        dc:coverage                     ar-city:treviso ;
+        dc:creator                      ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        dc:date                         ar-TimeInterval:1925-1925 ;
+        dc:description                  "Lettura iconografica: automa. Categoria merceologica/ tipo evento: industria farmaceutica; preparati farmaceutici; purgante. Nomi: Magnesia S. Pellegrino. Luoghi: Trento; Rovereto." ;
+        dc:format                       ar-MeasurementCollection:0500436576-1 ;
+        dc:identifier                   "0500436576" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500436576-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
+        dc:subject                      ar-Subject:d4a6948948a409ef3c40ac9be6bf2e8f ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/0500436576-magnesia-s-pellegrino> ;
+        dc:type                         ar-culturalPropertyType:33d58e4a833816969251025527426665 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0500436576-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/8886a02ff0fb574ac2b7860d0e2cffd5" ;
         arco-arco:catalogueNumber       "00436576" ;
         arco-arco:hasCataloguingAgency  ar-agent:fe113185bede3f826ee42b2b66726fde ;
         arco-arco:hasHeritageProtectionAgency
@@ -558,6 +582,8 @@ ar-province:tv  a   clvapit:Province ;
 <https://w3id.org/arco/resource/CatalogueRecordS/0500436576>
         a               arco-catalogue:CatalogueRecordS ;
         rdfs:label      "Catalogue Record n: 0500436576"@en , "Scheda catalografica n: 0500436576"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0500436576" ;
         arco-catalogue:describesCulturalProperty
@@ -676,15 +702,15 @@ ar-country:italia  a  clvapit:Country ;
         rdfs:label  "ITALIA" ;
         l0:name     "ITALIA" .
 
+ar-agent:a36b8f092cd416f0b877c4f9976012b5
+        a           l0:Agent ;
+        rdfs:label  "Mazza, Marta" .
+
 ar-Value:0500436576-1-width-71
         a                      mu:Value ;
         rdfs:label             "71"@en , "71"@it ;
         mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
         mu:value               "71" .
-
-ar-agent:a36b8f092cd416f0b877c4f9976012b5
-        a           l0:Agent ;
-        rdfs:label  "Mazza, Marta" .
 
 ar-timeIndexedRole:0500436576-compilation-1d973588e20ea90ecad9a36d0f98a230
         a                      roapit:TimeIndexedRole ;

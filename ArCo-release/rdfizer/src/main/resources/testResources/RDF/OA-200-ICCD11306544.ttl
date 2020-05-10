@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agentrole:1200489492-cataloguing-agency
         a                   arco-core:AgentRole ;
@@ -138,6 +141,27 @@ ar-HistoricOrArtisticProperty:1200489492
         a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "dipinto, opera isolata" ;
         rdfs:label                      "I Vespri Siciliani, soggetto storico (dipinto, opera isolata) di Hayez Francesco (XIX)"@it , "I Vespri Siciliani, soggetto storico (dipinto, opera isolata) by Hayez Francesco (XIX)"@en ;
+        pico:author                     ar-agent:e3f5df208cd2709c9d16a469e0b8667a ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:tempera-grassa-su-tela ;
+        dc:coverage                     ar-city:roma ;
+        dc:creator                      ar-agent:e3f5df208cd2709c9d16a469e0b8667a ;
+        dc:date                         ar-TimeInterval:1846-1846 ;
+        dc:description                  "Episodio della storia siciliana. Numerose figure con al centro un uomo con la spada, uno disteso ferito ed una donna svenuta tra le braccia di un'altra figura maschile." ;
+        dc:format                       ar-MeasurementCollection:1200489492-1 ;
+        dc:identifier                   "1200489492" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1200489492-legal-situation-proprieta-stato" ;
+        dc:source                       ar-CatalogueRecordOA:1200489492 ;
+        dc:subject                      ar-Subject:fb02d68efdd272a1fdf9f723c383e284 ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/1200489492-i-vespri-siciliani> ;
+        dc:type                         ar-culturalPropertyType:54764e0bac66f48b0e7af57043f65a0c ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:1200489492-bibliography-2 , ar-bibliography:1200489492-bibliography-4 , ar-bibliography:1200489492-bibliography-1 , ar-bibliography:1200489492-bibliography-3 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                ar-CatalogueRecordOA:1200489492 ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/75c88c672817e56f209bf659a1093119" ;
         arco-arco:catalogueNumber       "00489492" ;
         arco-arco:description           "Episodio della storia siciliana. Numerose figure con al centro un uomo con la spada, uno disteso ferito ed una donna svenuta tra le braccia di un'altra figura maschile." ;
         arco-arco:hasCataloguingAgency  ar-agent:233d0c1d9f7d0cb96383afee5c81148b ;
@@ -200,7 +224,9 @@ ar-PreferredAuthorshipAttribution:1200489492-1
 
 ar-CatalogueRecordOA:1200489492
         a               arco-catalogue:CatalogueRecordOA ;
-        rdfs:label      "Catalogue Record n: 1200489492"@en , "Scheda catalografica n: 1200489492"@it ;
+        rdfs:label      "Scheda catalografica n: 1200489492"@it , "Catalogue Record n: 1200489492"@en ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1200489492" ;
         arco-catalogue:describesCulturalProperty
@@ -480,14 +506,14 @@ ar-Site:052a39ae142d08c0b141821b3883ae27
         cis:siteAddress  ar-address:92195fedf48882dcd45bff75ff25af0c ;
         l0:name          "Ruffo Vincenzo principe di S.Antimo" .
 
-ar-agent:2ccaa360db8eedcaaf164c92227bd390
-        a           l0:Agent ;
-        rdfs:label  "Piantoni G." .
-
 ar-role:HeritageProtectionAgency
         a                   roapit:Role ;
         rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
         arco-core:isRoleOf  ar-agentrole:1200489492-heritage-protection-agency .
+
+ar-agent:2ccaa360db8eedcaaf164c92227bd390
+        a           l0:Agent ;
+        rdfs:label  "Piantoni G." .
 
 ar-agent:abe7006b67d16b266c9e407e90352a94
         a                l0:Agent ;

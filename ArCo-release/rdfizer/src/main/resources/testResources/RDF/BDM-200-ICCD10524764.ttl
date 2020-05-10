@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-address:7c92a76200066e323645d455b4e1cd9a
         a                    clvapit:Address ;
@@ -205,6 +208,8 @@ ar-Value:2000168323-1-height-75
 <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323>
         a               arco-catalogue:CatalogueRecordBDM ;
         rdfs:label      "Catalogue Record n: 2000168323"@en , "Scheda catalografica n: 2000168323"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "2000168323" ;
         arco-catalogue:describesCulturalProperty
@@ -370,9 +375,26 @@ ar-Site:923fd13f958d82813f5116abaf09f866
         l0:name          "Museo del Legno" .
 
 <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323>
-        a                               arco-arco:MovableCulturalProperty , arco-arco:DemoEthnoAnthropologicalHeritage ;
+        a                               arco-arco:DemoEthnoAnthropologicalHeritage , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "cassa" ;
         rdfs:label                      "cassa - Barbagia di Belvì (XIX sec.)"@it , "cassa - Barbagia di Belvì (XIX sec.)"@en ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:legno-di-castagno , ar-TechnicalCharacteristic:intaglio ;
+        dc:coverage                     ar-city:sorgono ;
+        dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/2000168323-cultural-scope-attribution-1> ;
+        dc:description                  "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato." ;
+        dc:format                       ar-MeasurementCollection:2000168323-1 ;
+        dc:identifier                   "2000168323" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000168323-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" ] ;
+        dc:type                         ar-culturalPropertyType:db645c4a8554c595ba4d24965ae2943b ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:2000168323-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/7c92a76200066e323645d455b4e1cd9a" ;
         arco-arco:catalogueNumber       "00168323" ;
         arco-arco:description           "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato." ;
         arco-arco:hasCataloguingAgency  ar-agent:b29df33b907c20bd2be0ff0b149efffc ;
@@ -403,7 +425,7 @@ ar-Site:923fd13f958d82813f5116abaf09f866
         arco-location:hasCulturalPropertyAddress
                 ar-address:d968ef5fe937dafa548db6a608569f65 ;
         arco-location:hasTimeIndexedTypedLocation
-                ar-timeIndexedTypedLocation:2000168323-current , ar-timeIndexedTypedLocation:2000168323-alternative-1 .
+                ar-timeIndexedTypedLocation:2000168323-alternative-1 , ar-timeIndexedTypedLocation:2000168323-current .
 
 ar-role:HeritageProtectionAgency
         a                   roapit:Role ;

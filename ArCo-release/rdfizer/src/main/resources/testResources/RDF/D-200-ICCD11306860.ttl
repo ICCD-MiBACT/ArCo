@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedTypedLocation:1000017424-current
         a                              arco-location:TimeIndexedTypedLocation ;
@@ -327,9 +330,28 @@ ar-role:OfficialInCharge
         rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
 
 ar-HistoricOrArtisticProperty:1000017424
-        a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
+        a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "disegno, elemento d'insieme" ;
-        rdfs:label                      "prospetto delle due facciate di Palazzo Bonaini - Boldrini, prospetto di edificio (disegno, elemento d'insieme) by Lorenzini Alessio (sec. XVIII)"@en , "prospetto delle due facciate di Palazzo Bonaini - Boldrini, prospetto di edificio (disegno, elemento d'insieme) di Lorenzini Alessio (sec. XVIII)"@it ;
+        rdfs:label                      "prospetto delle due facciate di Palazzo Bonaini - Boldrini, prospetto di edificio (disegno, elemento d'insieme) di Lorenzini Alessio (sec. XVIII)"@it , "prospetto delle due facciate di Palazzo Bonaini - Boldrini, prospetto di edificio (disegno, elemento d'insieme) by Lorenzini Alessio (sec. XVIII)"@en ;
+        pico:author                     ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-inchiostro-di-china-acquerellatura ;
+        dc:coverage                     ar-city:perugia ;
+        dc:creator                      ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        dc:date                         ar-TimeInterval:post-1769-ante-1780 ;
+        dc:description                  "Architetture: Perugia: Palazzo Bonaini - Boldrini: prospetto delle due facciate." ;
+        dc:format                       ar-MeasurementCollection:1000017424-1 ;
+        dc:identifier                   "1000017424" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000017424-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
+        dc:subject                      ar-Subject:71f760c94408b3e4ac8727a2fc876817 ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.2#disegni" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/1000017424-prospetto-delle-due-facciate-di-palazzo-bonaini-boldrini> ;
+        dc:type                         ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/13f44a6b924a1404e569deef12f98db2" ;
         arco-arco:catalogueNumber       "00017424" ;
         arco-arco:hasCataloguingAgency  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
@@ -353,7 +375,7 @@ ar-HistoricOrArtisticProperty:1000017424
         arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/1000017424-prospetto-delle-due-facciate-di-palazzo-bonaini-boldrini> ;
         arco-cd:subject                 "prospetto di edificio" ;
         arco-cd:title                   "prospetto delle due facciate di Palazzo Bonaini - Boldrini" ;
-        arco-core:hasAgentRole          ar-agentrole:1000017424-cataloguing-agency , ar-agentrole:1000017424-heritage-protection-agency ;
+        arco-core:hasAgentRole          ar-agentrole:1000017424-heritage-protection-agency , ar-agentrole:1000017424-cataloguing-agency ;
         arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/1000017424-inscription-1> , <https://w3id.org/arco/resource/Inscription/1000017424-inscription-2> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1000017424-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
@@ -497,6 +519,8 @@ ar-interpretationCriterion:data
 <https://w3id.org/arco/resource/CatalogueRecordD/1000017424>
         a               arco-catalogue:CatalogueRecordD ;
         rdfs:label      "Catalogue Record n: 1000017424"@en , "Scheda catalografica n: 1000017424"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1000017424" ;
         arco-catalogue:describesCulturalProperty

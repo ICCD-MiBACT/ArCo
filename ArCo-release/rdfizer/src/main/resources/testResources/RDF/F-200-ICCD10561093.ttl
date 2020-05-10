@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-cis:56a1f90baf6fb2cf73aca4142ba2a4d8
         a                     cis:CulturalInstituteOrSite ;
@@ -393,6 +396,26 @@ ar-Value:0500677128-1-width-236
         a                               arco-arco:PhotographicHeritage , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "positivo, m" ;
         rdfs:label                      "Vicenza. Villa Fogazzaro a San Bastian (positivo) di Soprintendenza ai Monumenti (XX, prima metà)"@it , "Vicenza. Villa Fogazzaro a San Bastian (positivo) by Soprintendenza ai Monumenti (XX, prima metà)"@en ;
+        pico:author                     ar-agent:80d144c7b6fc12af9820804f5a990aef ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:gelatina-ai-sali-dargento-carta ;
+        dc:coverage                     ar-city:verona ;
+        dc:creator                      ar-agent:80d144c7b6fc12af9820804f5a990aef ;
+        dc:date                         ar-TimeInterval:1944-05-19-1944-05-19 ;
+        dc:format                       ar-MeasurementCollection:0500677128-2 , ar-MeasurementCollection:0500677128-1 ;
+        dc:identifier                   "0500677128" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500677128-legal-situation-detenzione-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordF/0500677128> ;
+        dc:subject                      ar-Subject:ba6912849a18a0a4061872d481cccccb ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#fotografie" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/0500677128-il-titolo-proprio-non-corrisponde-al-soggetto-rappresentato> , <https://w3id.org/arco/resource/Title/0500677128-vicenza-villa-valmarana-dei-nani-parco> ;
+        dc:type                         ar-culturalPropertyType:20e6d3fc7923851fb8313bad70a9fd65 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0500677128-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordF/0500677128> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/c236ed58ebf45635bf3829839a34bb7c" ;
         arco-arco:catalogueNumber       "00677128" ;
         arco-arco:hasCataloguingAgency  ar-agent:d329d0ae83d6f6820b8c7b13bbb59d3b ;
         arco-arco:hasHeritageProtectionAgency
@@ -528,6 +551,8 @@ ar-feature:dd5470bc7134e475dcda372996902cde
 <https://w3id.org/arco/resource/CatalogueRecordF/0500677128>
         a               arco-catalogue:CatalogueRecordF ;
         rdfs:label      "Catalogue Record n: 0500677128"@en , "Scheda catalografica n: 0500677128"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0500677128" ;
         arco-catalogue:describesCulturalProperty

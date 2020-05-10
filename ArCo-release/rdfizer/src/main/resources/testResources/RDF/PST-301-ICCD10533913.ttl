@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-Value:0900771903-2-weight-8
         a                      mu:Value ;
@@ -166,8 +169,10 @@ ar-agentrole:0900771903-cataloguing-agency
         arco-core:hasRole   ar-role:CataloguinAgency .
 
 <https://w3id.org/arco/resource/CatalogueRecordPST/0900771903>
-        a           arco-catalogue:CatalogueRecordPST ;
-        rdfs:label  "Catalogue Record n: 0900771903"@en , "Scheda catalografica n: 0900771903"@it ;
+        a             arco-catalogue:CatalogueRecordPST ;
+        rdfs:label    "Catalogue Record n: 0900771903"@en , "Scheda catalografica n: 0900771903"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0900771903" ;
         arco-catalogue:describesCulturalProperty
@@ -353,7 +358,22 @@ ar-agent:8f4b8548c37ae67371b9ab44193ff367
 <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903>
         a                               arco-arco:ScientificOrTechnologicalHeritage , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "stufa, per inclusioni di paraffina" ;
-        rdfs:label                      "stufa, per inclusioni di paraffina (XX secolo, prima metà)"@it , "stufa, per inclusioni di paraffina (XX secolo, prima metà)"@en ;
+        rdfs:label                      "stufa, per inclusioni di paraffina (XX secolo, prima metà)"@en , "stufa, per inclusioni di paraffina (XX secolo, prima metà)"@it ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:rame-fusione ;
+        dc:coverage                     ar-city:pisa ;
+        dc:date                         ar-TimeInterval:ca-1920-ca-1930 ;
+        dc:description                  "Stufetta da tavolo quadrangolare, su supporto a 4 piedi, con struttura in rame e rivestimento in pannelli di compensato. Su un lato l'apparato elettrico per il riscaldamento e il cavo di alimentazione. Parte superiore con le 4 pareti finestrate in vetro. Manopole frontali di apertura in porcellana." ;
+        dc:format                       ar-MeasurementCollection:0900771903-1 , ar-MeasurementCollection:0900771903-2 ;
+        dc:identifier                   "0900771903" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900771903-legal-situation-proprieta-ente-pubblico-non-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordPST/0900771903> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#strumenti_scientifici" ] ;
+        dc:type                         ar-culturalPropertyType:1b667d9ac1ee11f7bc197557c91e6f7f ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordPST/0900771903> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/914197ecfa134c68565fd8ad729a0e69" ;
         arco-arco:catalogueNumber       "00771903" ;
         arco-arco:description           "Stufetta da tavolo quadrangolare, su supporto a 4 piedi, con struttura in rame e rivestimento in pannelli di compensato. Su un lato l'apparato elettrico per il riscaldamento e il cavo di alimentazione. Parte superiore con le 4 pareti finestrate in vetro. Manopole frontali di apertura in porcellana." ;
         arco-arco:hasCataloguingAgency  ar-agent:b09447ae8e9574072df697580f199333 ;
@@ -369,7 +389,7 @@ ar-agent:8f4b8548c37ae67371b9ab44193ff367
         arco-cd:hasDocumentation        ar-photograpyDocumentation:0900771903-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:0900771903-legal-situation-proprieta-ente-pubblico-non-territoriale ;
         arco-cd:hasUse                  <https://w3id.org/arco/resource/Use/0900771903-use> ;
-        arco-core:hasAgentRole          ar-agentrole:0900771903-heritage-protection-agency , ar-agentrole:0900771903-cataloguing-agency ;
+        arco-core:hasAgentRole          ar-agentrole:0900771903-cataloguing-agency , ar-agentrole:0900771903-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0900771903-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:1b667d9ac1ee11f7bc197557c91e6f7f ;

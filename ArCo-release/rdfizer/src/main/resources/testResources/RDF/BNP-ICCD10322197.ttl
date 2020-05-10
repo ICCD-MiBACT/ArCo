@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedRole:1000176190-23c419e6622aa0cc2cbe145c7053067d
         a                      roapit:TimeIndexedRole ;
@@ -145,6 +148,18 @@ ar-cis:60c0f1939523b7fe52245c9072da153c
         a                               arco-arco:MovableCulturalProperty , arco-arco:NaturalHeritage ;
         rdfs:comment                    "fossile, mandibola destra di lince, esemplare, mammalofauna fossile di Pantalla (Todi, PG)" ;
         rdfs:label                      "fossile (mandibola destra di lince, esemplare) ()"@it , "fossile (mandibola destra di lince, esemplare) ()"@en ;
+        dc:coverage                     ar-city:perugia ;
+        dc:description                  "Animalia Mammalia Carnivora Felidae Lynx issiodorensis: Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole. | Italia , Umbria , Todi ( PG ), Pantalla" ;
+        dc:identifier                   "1000176190" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000176190-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.3#fossili" ] ;
+        dc:type                         ar-culturalPropertyType:c1e65efeb519a78d5117466ccc70b694 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/78f87f90bb197d348b96bf947ce7583e" ;
         arco-arco:catalogueNumber       "00176190" ;
         arco-arco:description           "Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole." ;
         arco-arco:hasCataloguingAgency  ar-agent:0ed33537564751ea81589bc628149448 ;
@@ -331,8 +346,10 @@ ar-country:italia  a  clvapit:Country ;
         l0:name     "ITALIA" .
 
 <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190>
-        a           arco-catalogue:CatalogueRecordBNP ;
-        rdfs:label  "Catalogue Record n: 1000176190"@en , "Scheda catalografica n: 1000176190"@it ;
+        a             arco-catalogue:CatalogueRecordBNP ;
+        rdfs:label    "Catalogue Record n: 1000176190"@en , "Scheda catalografica n: 1000176190"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1000176190" ;
         arco-catalogue:describesCulturalProperty

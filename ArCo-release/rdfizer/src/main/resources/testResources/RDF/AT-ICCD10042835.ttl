@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-TimeInterval:2012  a  tiapit:TimeInterval ;
         rdfs:label   "2012" ;
@@ -434,8 +437,10 @@ ar-agent:5b61db147cfb054ae123c1a5be50474a
         l0:name              "Bedini, Alessandro" .
 
 <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980>
-        a           arco-catalogue:CatalogueRecordAT ;
-        rdfs:label  "Catalogue Record n: 2000194980"@en , "Scheda catalografica n: 2000194980"@it ;
+        a             arco-catalogue:CatalogueRecordAT ;
+        rdfs:label    "Catalogue Record n: 2000194980"@en , "Scheda catalografica n: 2000194980"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "2000194980" ;
         arco-catalogue:describesCulturalProperty
@@ -529,6 +534,20 @@ ar-archeologicalProperty:2000194980
         a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
         rdfs:comment                    "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario, morfologia/ struttura alterata post mortem per cause naturali, inumato" ;
         rdfs:label                      "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario (morfologia/ struttura alterata post mortem per cause naturali, inumato) (Età del Bronzo-Età del Ferro)"@it , "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario (morfologia/ struttura alterata post mortem per cause naturali, inumato) (Età del Bronzo-Età del Ferro)"@en ;
+        dc:coverage                     ar-city:villanovaforru ;
+        dc:description                  "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro." ;
+        dc:identifier                   "2000194980" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000194980-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#reperti_antropologici" ] ;
+        dc:type                         ar-culturalPropertyType:487cd0e5f488a90820c6a12e8f7d5173 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:2000194980-bibliography-2 , ar-bibliography:2000194980-bibliography-6 , ar-bibliography:2000194980-bibliography-3 , ar-bibliography:2000194980-bibliography-1 , ar-bibliography:2000194980-bibliography-5 , ar-bibliography:2000194980-bibliography-4 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/d4558e9241ed4446c4e83257fcff67f2" ;
         arco-arco:catalogueNumber       "00194980" ;
         arco-arco:description           "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro." ;
         arco-arco:hasCataloguingAgency  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;

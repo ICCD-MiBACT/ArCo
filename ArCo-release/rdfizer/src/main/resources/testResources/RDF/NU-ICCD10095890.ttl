@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-role:Mint  a             roapit:Role ;
         rdfs:label          "Zecca"@it , "Mint"@en ;
@@ -240,8 +243,10 @@ ar-agent:8a1c01ed7ebb1de617e6a781118fb41a
         rdfs:label  "Sframeli M." .
 
 <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467>
-        a           arco-catalogue:CatalogueRecordNU ;
-        rdfs:label  "Catalogue Record n: 0900746467"@en , "Scheda catalografica n: 0900746467"@it ;
+        a             arco-catalogue:CatalogueRecordNU ;
+        rdfs:label    "Catalogue Record n: 0900746467"@en , "Scheda catalografica n: 0900746467"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0900746467" ;
         arco-catalogue:describesCulturalProperty
@@ -349,9 +354,29 @@ ar-Site:29dd39ce13a94d043b713bdb2507228f
         l0:name                    "Palazzo del Bargello o del Podestà già del Capitano del Popolo" .
 
 <https://w3id.org/arco/resource/NumismaticProperty/0900746467>
-        a                               arco-arco:MovableCulturalProperty , arco-arco:NumismaticProperty ;
+        a                               arco-arco:NumismaticProperty , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "moneta, francescone, Italiana/Granducato di Toscana" ;
         rdfs:label                      "moneta by Siries Luigi (XVIII)"@en , "moneta di Siries Luigi (XVIII)"@it ;
+        pico:author                     ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:argento-coniazione ;
+        dc:coverage                     ar-city:san-marcello-pistoiese ;
+        dc:creator                      ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        dc:date                         ar-TimeInterval:1780-dc-1780-dc ;
+        dc:description                  "Dritto: busto corazzato a destra; accette incrociate. Rovescio: stemma rettangolare coronato circondato dal collare del Toson d'oro" ;
+        dc:format                       ar-MeasurementCollection:0900746467-1 ;
+        dc:identifier                   "0900746467" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900746467-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
+        dc:subject                      ar-Subject:184748e0f820f9b05b9167b6e3e88943 ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#monete_e_medaglie" ] ;
+        dc:type                         ar-culturalPropertyType:8f9f34c41fd574e8b6c473ff2401db69 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0900746467-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/790e4be7eaac1705136cfaf4be7454e9" ;
         arco-arco:catalogueNumber       "00746467" ;
         arco-arco:hasCataloguingAgency  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
         arco-arco:hasHeritageProtectionAgency
@@ -372,7 +397,7 @@ ar-Site:29dd39ce13a94d043b713bdb2507228f
         arco-cd:hasSubject              ar-Subject:184748e0f820f9b05b9167b6e3e88943 ;
         arco-cd:subject                 "ritratto di Piero Leopoldo di Lorena" ;
         arco-core:hasAgentRole          ar-agentrole:0900746467-cataloguing-agency , ar-agentrole:0900746467-heritage-protection-agency ;
-        arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-obverse> , <https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-reverse> ;
+        arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-reverse> , <https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-obverse> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0900746467-conservation-status-1 ;
         arco-dd:hasCulturalPropertyAvailability
                 arco-dd:Available ;
@@ -386,7 +411,7 @@ ar-Site:29dd39ce13a94d043b713bdb2507228f
         arco-location:hasCulturalPropertyAddress
                 ar-address:6fb2f5d0319aabd3315cb2c62a4dbee9 ;
         arco-location:hasTimeIndexedTypedLocation
-                ar-timeIndexedTypedLocation:0900746467-current , ar-timeIndexedTypedLocation:0900746467-alternative-1 .
+                ar-timeIndexedTypedLocation:0900746467-alternative-1 , ar-timeIndexedTypedLocation:0900746467-current .
 
 ar-ConservationStatus:0900746467-conservation-status-1
         a                      arco-dd:ConservationStatus ;

@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-docutmentationType:inventario
         a           arco-cd:DocumentationType ;
@@ -302,8 +305,10 @@ ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7
         l0:name              "veduta di Perugia" .
 
 <https://w3id.org/arco/resource/CatalogueRecordS/1000017428>
-        a           arco-catalogue:CatalogueRecordS ;
-        rdfs:label  "Catalogue Record n: 1000017428"@en , "Scheda catalografica n: 1000017428"@it ;
+        a             arco-catalogue:CatalogueRecordS ;
+        rdfs:label    "Catalogue Record n: 1000017428"@en , "Scheda catalografica n: 1000017428"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1000017428" ;
         arco-catalogue:describesCulturalProperty
@@ -381,7 +386,26 @@ ar-city:perugia  a  clvapit:City ;
 ar-HistoricOrArtisticProperty:1000017428
         a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "stampa" ;
-        rdfs:label                      "La prima campagna del 2° reggimento del Genio a Perugia, veduta di Perugia (stampa) di Bucco Luigi (sec. XIX)"@it , "La prima campagna del 2° reggimento del Genio a Perugia, veduta di Perugia (stampa) by Bucco Luigi (sec. XIX)"@en ;
+        rdfs:label                      "La prima campagna del 2° reggimento del Genio a Perugia, veduta di Perugia (stampa) by Bucco Luigi (sec. XIX)"@en , "La prima campagna del 2° reggimento del Genio a Perugia, veduta di Perugia (stampa) di Bucco Luigi (sec. XIX)"@it ;
+        pico:author                     ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-litografia ;
+        dc:coverage                     ar-city:perugia ;
+        dc:creator                      ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        dc:date                         ar-TimeInterval:1864-1864 ;
+        dc:description                  "Vedute: Perugia. Soggetti profani: laa prima compagnia del secondo reggimento del genio a Perugia." ;
+        dc:format                       ar-MeasurementCollection:1000017428-1 ;
+        dc:identifier                   "1000017428" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000017428-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
+        dc:subject                      ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7 ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/1000017428-la-prima-campagna-del-2%C2%B0-reggimento-del-genio-a-perugia> ;
+        dc:type                         ar-culturalPropertyType:42c2d1489e80b781f7b103e054b8524a ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/57d3ff2d024e7d2ee10f106b3d415321" ;
         arco-arco:catalogueNumber       "00017428" ;
         arco-arco:hasCataloguingAgency  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
         arco-arco:hasHeritageProtectionAgency
@@ -395,13 +419,13 @@ ar-HistoricOrArtisticProperty:1000017428
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:1000017428-1 ;
         arco-cd:hasDating               ar-dating:1000017428-1 ;
-        arco-cd:hasDocumentation        ar-SourceAndDocument:1000017428-source-document-1 , ar-photograpyDocumentation:1000017428-photographic-documentation-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1000017428-photographic-documentation-1 , ar-SourceAndDocument:1000017428-source-document-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:1000017428-legal-situation-proprieta-ente-pubblico-territoriale ;
         arco-cd:hasSubject              ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7 ;
         arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/1000017428-la-prima-campagna-del-2%C2%B0-reggimento-del-genio-a-perugia> ;
         arco-cd:subject                 "veduta di Perugia" ;
         arco-cd:title                   "La prima campagna del 2° reggimento del Genio a Perugia" ;
-        arco-core:hasAgentRole          ar-agentrole:1000017428-heritage-protection-agency , ar-agentrole:1000017428-cataloguing-agency ;
+        arco-core:hasAgentRole          ar-agentrole:1000017428-cataloguing-agency , ar-agentrole:1000017428-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1000017428-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:42c2d1489e80b781f7b103e054b8524a ;

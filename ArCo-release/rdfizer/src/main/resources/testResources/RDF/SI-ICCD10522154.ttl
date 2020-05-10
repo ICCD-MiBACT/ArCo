@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedRole:0500590493SI-a62661ad1f45afc635f212edf812e7fa
         a                      roapit:TimeIndexedRole ;
@@ -94,9 +97,25 @@ ar-city:roana  a    clvapit:City ;
         l0:name     "scavo stratigrafico" .
 
 ar-archeologicalProperty:0500590493SI
-        a                               arco-arco:ArchaeologicalProperty , arco-arco:ImmovableCulturalProperty ;
+        a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
         rdfs:comment                    "grotta, rinvenimenti casuali e scavo" ;
-        rdfs:label                      "grotta - Musteriano (Paleolitico medio Musteriano)"@it , "grotta - Musteriano (Paleolitico medio Musteriano)"@en ;
+        rdfs:label                      "grotta - Musteriano (Paleolitico medio Musteriano)"@en , "grotta - Musteriano (Paleolitico medio Musteriano)"@it ;
+        dc:coverage                     ar-city:roana ;
+        dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/0500590493SI-cultural-scope-attribution-1> ;
+        dc:date                         ar-TimeInterval:ca-80000-bp-ca-35000-bp ;
+        dc:description                  "Industria litica costituita da strumenti rinvenuti in giacitura secondaria" ;
+        dc:identifier                   "0500590493SI" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500590493SI-legal-situation-proprieta-stato" ;
+        dc:source                       ar-catalogueRecordSI:0500590493SI ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche" ] ;
+        dc:type                         ar-culturalPropertyType:9c898aa78b2fd0dfae7091cd8fd61b02 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0500590493SI-bibliography-1 , ar-bibliography:0500590493SI-bibliography-2 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                ar-catalogueRecordSI:0500590493SI ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/927ba9ea79eff359f634ecf06fde5d7f" ;
         arco-arco:catalogueNumber       "00590493" ;
         arco-arco:description           "Industria litica costituita da strumenti rinvenuti in giacitura secondaria" ;
         arco-arco:hasCataloguingAgency  ar-agent:a860868d23f3a68323a2e3f6563d7f31 ;
@@ -112,7 +131,7 @@ ar-archeologicalProperty:0500590493SI
         arco-cd:hasBibliography         ar-bibliography:0500590493SI-bibliography-2 , ar-bibliography:0500590493SI-bibliography-1 ;
         arco-cd:hasDating               ar-dating:0500590493SI-1 ;
         arco-cd:hasDetectionMethod      ar-detectionMethod:rinvenimenti-casuali-e-scavo ;
-        arco-cd:hasDocumentation        ar-SourceAndDocument:0500590493SI-source-document-1 , ar-photograpyDocumentation:0500590493SI-photographic-documentation-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0500590493SI-photographic-documentation-1 , ar-SourceAndDocument:0500590493SI-source-document-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:0500590493SI-legal-situation-proprieta-stato ;
         arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/0500590493SI-protective-measure-1> ;
         arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/0500590493SI-survey-1> ;
@@ -435,8 +454,10 @@ ar-country:italia  a  clvapit:Country ;
         l0:name     "ITALIA" .
 
 ar-catalogueRecordSI:0500590493SI
-        a           arco-catalogue:CatalogueRecordSI ;
-        rdfs:label  "Catalogue Record n: 0500590493SI"@en , "Scheda catalografica n: 0500590493SI"@it ;
+        a             arco-catalogue:CatalogueRecordSI ;
+        rdfs:label    "Scheda catalografica n: 0500590493SI"@it , "Catalogue Record n: 0500590493SI"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0500590493SI" ;
         arco-catalogue:describesCulturalProperty

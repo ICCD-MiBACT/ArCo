@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agentrole:0303232991-heritage-protection-agency
         a                   arco-core:AgentRole ;
@@ -228,6 +231,17 @@ ar-archeologicalProperty:0303232991
         a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
         rdfs:comment                    "saggio stratigrafico in ambito urbano" ;
         rdfs:label                      "saggio stratigrafico in ambito urbano"@it , "saggio stratigrafico in ambito urbano"@en ;
+        dc:coverage                     ar-city:brescia ;
+        dc:identifier                   "0303232991" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0303232991-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#saggi_archeologici_stratigrafici" ] ;
+        dc:type                         ar-culturalPropertyType:1a06cce58e40c7f65db5382b7f20f670 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/4581b3af8c56c2232d1341e8e874fd69" ;
         arco-arco:catalogueNumber       "03232991" ;
         arco-arco:hasCataloguingAgency  ar-agent:d25fb707067c6b50982cb83b41ae6711 ;
         arco-arco:hasHeritageProtectionAgency
@@ -272,8 +286,10 @@ ar-region:lombardia  a  clvapit:Region ;
         l0:name     "Lombardia" .
 
 <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991>
-        a           arco-catalogue:CatalogueRecordSAS ;
-        rdfs:label  "Catalogue Record n: 0303232991"@en , "Scheda catalografica n: 0303232991"@it ;
+        a             arco-catalogue:CatalogueRecordSAS ;
+        rdfs:label    "Scheda catalografica n: 0303232991"@it , "Catalogue Record n: 0303232991"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0303232991" ;
         arco-catalogue:describesCulturalProperty

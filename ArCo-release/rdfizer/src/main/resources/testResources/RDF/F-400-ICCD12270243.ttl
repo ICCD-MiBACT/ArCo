@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-ConservationStatus:1201250498-conservation-status-1
         a           arco-dd:ConservationStatus ;
@@ -86,8 +89,10 @@ ar-ConservationStatus:1201250498-conservation-status-1
         l0:name     "Stato di conservazione 1 del bene: 1201250498"@it , "Conservation status 1 of cultural property: 1201250498"@en .
 
 <https://w3id.org/arco/resource/CatalogueRecordF/1201250498>
-        a           arco-catalogue:CatalogueRecordF ;
-        rdfs:label  "Catalogue Record n: 1201250498"@en , "Scheda catalografica n: 1201250498"@it ;
+        a             arco-catalogue:CatalogueRecordF ;
+        rdfs:label    "Catalogue Record n: 1201250498"@en , "Scheda catalografica n: 1201250498"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1201250498" ;
         arco-catalogue:describesCulturalProperty
@@ -183,6 +188,12 @@ ar-SiteDefinition:ospizio
         a           arco-arco:CulturalPropertyCategory ;
         rdfs:label  "documentazione del patrimonio paesaggistico" .
 
+ar-address:d41d8cd98f00b204e9800998ecf8427e
+        a                   clvapit:Address ;
+        rdfs:label          "ITALIA, Friuli-Venezia Giulia" ;
+        clvapit:hasCountry  ar-country:italia ;
+        clvapit:hasRegion   ar-region:friuli-venezia-giulia .
+
 ar-Site:88b0af937846b234dd08e08dcf113704
         a                          cis:Site ;
         rdfs:label                 "Contenitore fisico di: Gabinetto Fotografico Nazionale" ;
@@ -190,12 +201,6 @@ ar-Site:88b0af937846b234dd08e08dcf113704
         cis:siteAddress            ar-address:2ea2d09b2596015b836880d49012dcec ;
         arco-location:hasSiteType  ar-SiteType:palazzo ;
         l0:name                    "Contenitore fisico di: Gabinetto Fotografico Nazionale" .
-
-ar-address:d41d8cd98f00b204e9800998ecf8427e
-        a                   clvapit:Address ;
-        rdfs:label          "ITALIA, Friuli-Venezia Giulia" ;
-        clvapit:hasCountry  ar-country:italia ;
-        clvapit:hasRegion   ar-region:friuli-venezia-giulia .
 
 ar-timeIndexedRole:1201250498-compilation-04b35ba6636fd36483010fac41a27f6c
         a                      roapit:TimeIndexedRole ;
@@ -640,6 +645,26 @@ ar-timeIndexedTypedLocation:1201250498-alternative-1
         a                               arco-arco:PhotographicHeritage , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "positivo, cartella" ;
         rdfs:label                      "Friuli Venezia Giulia - Udine <provincia> - Lusevera - Grotta di Villanova (positivo) di Anonimo <1901-1925> (XX)"@it , "Friuli Venezia Giulia - Udine <provincia> - Lusevera - Grotta di Villanova (positivo) by Anonimo <1901-1925> (XX)"@en ;
+        pico:author                     ar-agent:177a193d5a25fc296242b5e6386ad63f ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta , ar-TechnicalCharacteristic:gelatina-bromuro-dargento ;
+        dc:coverage                     ar-city:roma ;
+        dc:creator                      ar-agent:177a193d5a25fc296242b5e6386ad63f ;
+        dc:date                         ar-TimeInterval:ca-1901-ca-1925 ;
+        dc:format                       ar-MeasurementCollection:1201250498-supporto-primario ;
+        dc:identifier                   "1201250498" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1201250498-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordF/1201250498> ;
+        dc:subject                      ar-Subject:8f4e2b235e31e56d35e19740a4da0778 ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#fotografie" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/1201250498-com-di-lusevera-udine-grotta-di-villanova-profondita-metri-60> ;
+        dc:type                         ar-culturalPropertyType:a54d6bfa9e687d1ce2da5fdb4bcf10a2 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:1201250498-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordF/1201250498> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/ba2574c7aa8d93c32affb5b9241320b7" ;
         arco-arco:catalogueNumber       "01250498" ;
         arco-arco:hasCataloguingAgency  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-arco:hasCulturalPropertyCategory

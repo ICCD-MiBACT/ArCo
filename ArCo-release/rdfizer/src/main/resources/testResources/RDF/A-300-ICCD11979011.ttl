@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-culturalPropertyDefinition:chiesa
         a                arco-dd:CulturalPropertyDefinition ;
@@ -159,6 +162,8 @@ ar-photograpyDocumentation:1600040375-photographic-documentation-7
 <https://w3id.org/arco/resource/CatalogueRecordA/1600040375>
         a               arco-catalogue:CatalogueRecordA ;
         rdfs:label      "Scheda catalografica n: 1600040375"@it , "Catalogue Record n: 1600040375"@en ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1600040375" ;
         arco-catalogue:describesCulturalProperty
@@ -477,9 +482,24 @@ ar-country:italia  a  clvapit:Country ;
         l0:name     "ITALIA" .
 
 <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375>
-        a                               arco-arco:ArchitecturalOrLandscapeHeritage , arco-arco:ImmovableCulturalProperty ;
+        a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchitecturalOrLandscapeHeritage ;
         rdfs:comment                    "chiesa, gentilizia, CHIESA DI S. MARGHERITA" ;
         rdfs:label                      "CHIESA DI S. MARGHERITA (chiesa, gentilizia) - NR ()"@it , "CHIESA DI S. MARGHERITA (chiesa, gentilizia) - NR ()"@en ;
+        dc:coverage                     ar-city:bisceglie ;
+        dc:date                         ar-TimeInterval:1197-00-00-1197-00-00 ;
+        dc:description                  "schema strutturale ad unica navata longitudinale, monoabsidata coperta a botte interrotta dalla cupola poggiante su due arcate laterali cieche" ;
+        dc:identifier                   "1600040375" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1600040375-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordA/1600040375> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#beni_architettonici" ] ;
+        dc:type                         ar-culturalPropertyType:3cf11ea1a9b8d257c85dac555cf12179 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:1600040375-bibliography-5 , ar-bibliography:1600040375-bibliography-2 , ar-bibliography:1600040375-bibliography-4 , ar-bibliography:1600040375-bibliography-1 , ar-bibliography:1600040375-bibliography-3 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordA/1600040375> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/e3d472a1ce2cb838e72c23db7dbac12e" ;
         arco-arco:catalogueNumber       "00040375" ;
         arco-arco:hasCataloguingAgency  ar-agent:a3dcee9173a23ce4a1a427dffefab879 ;
         arco-arco:hasHeritageProtectionAgency
@@ -488,11 +508,11 @@ ar-country:italia  a  clvapit:Country ;
         arco-arco:uniqueIdentifier      "1600040375" ;
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordA/1600040375> ;
-        arco-cd:hasBibliography         ar-bibliography:1600040375-bibliography-3 , ar-bibliography:1600040375-bibliography-1 , ar-bibliography:1600040375-bibliography-2 , ar-bibliography:1600040375-bibliography-4 , ar-bibliography:1600040375-bibliography-5 ;
-        arco-cd:hasDocumentation        ar-photograpyDocumentation:1600040375-photographic-documentation-3 , ar-photograpyDocumentation:1600040375-photographic-documentation-4 , ar-photograpyDocumentation:1600040375-photographic-documentation-5 , ar-photograpyDocumentation:1600040375-photographic-documentation-10 , ar-photograpyDocumentation:1600040375-photographic-documentation-6 , ar-photograpyDocumentation:1600040375-photographic-documentation-11 , ar-photograpyDocumentation:1600040375-photographic-documentation-7 , ar-photograpyDocumentation:1600040375-photographic-documentation-1 , ar-photograpyDocumentation:1600040375-photographic-documentation-8 , ar-photograpyDocumentation:1600040375-photographic-documentation-9 , ar-photograpyDocumentation:1600040375-photographic-documentation-2 ;
+        arco-cd:hasBibliography         ar-bibliography:1600040375-bibliography-3 , ar-bibliography:1600040375-bibliography-4 , ar-bibliography:1600040375-bibliography-1 , ar-bibliography:1600040375-bibliography-5 , ar-bibliography:1600040375-bibliography-2 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1600040375-photographic-documentation-7 , ar-photograpyDocumentation:1600040375-photographic-documentation-4 , ar-photograpyDocumentation:1600040375-photographic-documentation-11 , ar-photograpyDocumentation:1600040375-photographic-documentation-8 , ar-photograpyDocumentation:1600040375-photographic-documentation-1 , ar-photograpyDocumentation:1600040375-photographic-documentation-5 , ar-photograpyDocumentation:1600040375-photographic-documentation-2 , ar-photograpyDocumentation:1600040375-photographic-documentation-6 , ar-photograpyDocumentation:1600040375-photographic-documentation-9 , ar-photograpyDocumentation:1600040375-photographic-documentation-10 , ar-photograpyDocumentation:1600040375-photographic-documentation-3 ;
         arco-cd:hasLegalSituation       ar-legalSituation:1600040375-legal-situation-proprieta-ente-pubblico-territoriale ;
         arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/1600040375-protective-measure-1> ;
-        arco-core:hasAgentRole          ar-agentrole:1600040375-heritage-protection-agency , ar-agentrole:1600040375-cataloguing-agency ;
+        arco-core:hasAgentRole          ar-agentrole:1600040375-cataloguing-agency , ar-agentrole:1600040375-heritage-protection-agency ;
         arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/1600040375-part-chiesa> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1600040375-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType

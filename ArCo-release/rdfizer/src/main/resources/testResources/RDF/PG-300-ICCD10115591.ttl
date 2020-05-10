@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-TimeInterval:2012  a  tiapit:TimeInterval ;
         rdfs:label   "2012" ;
@@ -151,6 +154,18 @@ ar-SourceAndDocument:0900104131-source-document-1
         a                               arco-arco:ArchitecturalOrLandscapeHeritage , arco-arco:ImmovableCulturalProperty ;
         rdfs:comment                    "giardino, pubblico, Giardino Ospedale Vecchio" ;
         rdfs:label                      "Giardino Ospedale Vecchio (giardino, pubblico) - NR 8recupero pregresso) ()"@it , "Giardino Ospedale Vecchio (giardino, pubblico) - NR 8recupero pregresso) ()"@en ;
+        dc:coverage                     ar-city:lucca ;
+        dc:description                  "giardino pubblico" ;
+        dc:identifier                   "0900104131" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900104131-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordPG/0900104131> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#giardini_e_parchi" ] ;
+        dc:type                         ar-culturalPropertyType:2993f3e403f33ab24c72de67921a7102 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordPG/0900104131> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/f6f8c94dec95181c211ec6f6f840babf" ;
         arco-arco:catalogueNumber       "00104131" ;
         arco-arco:hasCataloguingAgency  ar-agent:44780961703d13411b6ca4b2ec697b4f ;
         arco-arco:hasHeritageProtectionAgency
@@ -345,8 +360,10 @@ ar-agent:dcccf64aa59303fb3e85be59dba6089b
         rdfs:label  "Bedini G." .
 
 <https://w3id.org/arco/resource/CatalogueRecordPG/0900104131>
-        a           arco-catalogue:CatalogueRecordPG ;
-        rdfs:label  "Catalogue Record n: 0900104131"@en , "Scheda catalografica n: 0900104131"@it ;
+        a             arco-catalogue:CatalogueRecordPG ;
+        rdfs:label    "Catalogue Record n: 0900104131"@en , "Scheda catalografica n: 0900104131"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0900104131" ;
         arco-catalogue:describesCulturalProperty

@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-CISNameInTime:museo-nazionale-preistorico-etnografico-lpigorini
         a                         cis:CISNameInTime ;
@@ -156,7 +159,23 @@ ar-catalogueRecordVersion:1200543135-compilation
 <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135>
         a                               arco-arco:CulturalProperty , arco-arco:DemoEthnoAnthropologicalHeritage ;
         rdfs:comment                    "TURCASSO, TOLOR" ;
-        rdfs:label                      "TURCASSO - DAYAK-PENEHING ()"@en , "TURCASSO - DAYAK-PENEHING ()"@it ;
+        rdfs:label                      "TURCASSO - DAYAK-PENEHING ()"@it , "TURCASSO - DAYAK-PENEHING ()"@en ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:bambu ;
+        dc:coverage                     ar-city:roma ;
+        dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/1200543135-cultural-scope-attribution-1> ;
+        dc:format                       ar-MeasurementCollection:1200543135-1 ;
+        dc:identifier                   "1200543135" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1200543135-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordE/1200543135> ;
+        dc:subject                      [ xsi:type
+                          " http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" ] ;
+        dc:type                         ar-culturalPropertyType:90145e38ef1b6ae85e2e7e134f6b4525 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:1200543135-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordE/1200543135> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/ceb21cdd948addcf770d36736e3a426f" ;
         arco-arco:catalogueNumber       "00543135" ;
         arco-arco:hasCataloguingAgency  ar-agent:06d2688ce598da4bf86c95233b32bdf2 ;
         arco-arco:hasHeritageProtectionAgency
@@ -174,7 +193,7 @@ ar-catalogueRecordVersion:1200543135-compilation
         arco-cd:hasLegalSituation       ar-legalSituation:1200543135-legal-situation-proprieta-stato ;
         arco-cd:hasRelatedWorkSituation
                 ar-RelatedWorkSituation:1200543135-related-cultural-property-2-1 ;
-        arco-core:hasAgentRole          ar-agentrole:1200543135-heritage-protection-agency , ar-agentrole:1200543135-cataloguing-agency ;
+        arco-core:hasAgentRole          ar-agentrole:1200543135-cataloguing-agency , ar-agentrole:1200543135-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1200543135-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:90145e38ef1b6ae85e2e7e134f6b4525 ;
@@ -306,7 +325,9 @@ ar-MeasurementCollection:1200543135-1
 
 <https://w3id.org/arco/resource/CatalogueRecordE/1200543135>
         a               arco-catalogue:CatalogueRecordE ;
-        rdfs:label      "Catalogue Record n: 1200543135"@en , "Scheda catalografica n: 1200543135"@it ;
+        rdfs:label      "Scheda catalografica n: 1200543135"@it , "Catalogue Record n: 1200543135"@en ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1200543135" ;
         arco-catalogue:describesCulturalProperty

@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 <https://w3id.org/arco/resource/ArchaeologicalExcavation/1400090488-survey-1>
         a                               arco-cd:ArchaeologicalExcavation ;
@@ -298,6 +301,8 @@ ar-MeasurementCollection:1400090488-1
 <https://w3id.org/arco/resource/CatalogueRecordRA/1400090488>
         a               arco-catalogue:CatalogueRecordRA ;
         rdfs:label      "Scheda catalografica n: 1400090488"@it , "Catalogue Record n: 1400090488"@en ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1400090488" ;
         arco-catalogue:describesCulturalProperty
@@ -329,6 +334,11 @@ ar-agent:65c89b04734b8b41d8b162708e3c1c7a
         arco-core:isAgentOf  ar-agentrole:1400090488-photographic-documentation-1-photographic-documentation-owner , ar-agentrole:1400090488-archaeological-excavation-1-activity-responsible ;
         l0:name              "SBA CB" .
 
+ar-role:ScientificDirector
+        a                   roapit:Role ;
+        rdfs:label          "Referente scientifico"@it , "Scientific Director"@en , "Responsabile Scientifico"@it ;
+        arco-core:isRoleOf  ar-agentrole:1400090488-archaeological-excavation-1-scientific-director .
+
 ar-accessProfile:1400090488-1
         a                               arco-catalogue:AccessProfile ;
         rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1400090488: 1"@it , "Access profile to catalogue record of cultural property 1400090488: 1"@en ;
@@ -336,11 +346,6 @@ ar-accessProfile:1400090488-1
         arco-catalogue:hasPrivacyReason
                 ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
         l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 1400090488: 1"@it , "Access profile to catalogue record of cultural property 1400090488: 1"@en .
-
-ar-role:ScientificDirector
-        a                   roapit:Role ;
-        rdfs:label          "Referente scientifico"@it , "Scientific Director"@en , "Responsabile Scientifico"@it ;
-        arco-core:isRoleOf  ar-agentrole:1400090488-archaeological-excavation-1-scientific-director .
 
 ar-agent:2a757647cc9b04ec85e3b8f0d11a29f5
         a           l0:Agent ;
@@ -375,6 +380,20 @@ ar-archeologicalProperty:1400090488
         a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
         rdfs:comment                    "olla/ fondo" ;
         rdfs:label                      "olla/ fondo (III  a.C.)"@it , "olla/ fondo (III  a.C.)"@en ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:argilla-a-tornio ;
+        dc:coverage                     ar-city:campobasso ;
+        dc:description                  "Fondo su basso piede ad anello con parete obliqua" ;
+        dc:format                       ar-MeasurementCollection:1400090488-1 ;
+        dc:identifier                   "1400090488" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1400090488-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordRA/1400090488> ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#reperti_archeologici" ] ;
+        dc:type                         ar-culturalPropertyType:2c9f1e81c61be25cc83015d2917b5d53 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordRA/1400090488> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/d5a2e55b735322c761ef179ecac84259" ;
         arco-arco:catalogueNumber       "00090488" ;
         arco-arco:description           "Fondo su basso piede ad anello con parete obliqua" ;
         arco-arco:hasCataloguingAgency  ar-agent:cbff70cf902b51d4f2f930ee23bddb2a ;

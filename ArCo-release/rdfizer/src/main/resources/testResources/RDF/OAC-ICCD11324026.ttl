@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-CISNameInTime:collezione-boschi-di-stefano
         a                         cis:CISNameInTime ;
@@ -299,6 +302,26 @@ ar-HistoricOrArtisticProperty:0302040489
         a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "dipinto" ;
         rdfs:label                      "Paesaggio, Paesaggio (dipinto) di Ajmone Giuseppe (sec. XX)"@it , "Paesaggio, Paesaggio (dipinto) by Ajmone Giuseppe (sec. XX)"@en ;
+        pico:author                     ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:olio-su-masonite ;
+        dc:coverage                     ar-city:milano ;
+        dc:creator                      ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1 ;
+        dc:date                         ar-TimeInterval:ca-1947-ca-1947 ;
+        dc:format                       ar-MeasurementCollection:0302040489-1 ;
+        dc:identifier                   "0302040489" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0302040489-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489> ;
+        dc:subject                      ar-Subject:eb7fb6546fb530af17ecc39dc870224a ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" ] ;
+        dc:title                        <https://w3id.org/arco/resource/Title/0302040489-paesaggio> ;
+        dc:type                         ar-culturalPropertyType:54764e0bac66f48b0e7af57043f65a0c ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0302040489-bibliography-2 , ar-bibliography:0302040489-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/73f332fff7c9faa04c2374fa5dac9427" ;
         arco-arco:catalogueNumber       "02040489" ;
         arco-arco:hasCataloguingAgency  ar-agent:6ab35a3e63bd2a29ca21f1c3b4466dce ;
         arco-arco:hasHeritageProtectionAgency
@@ -311,7 +334,7 @@ ar-HistoricOrArtisticProperty:0302040489
         arco-cd:hasAuthor               ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:0302040489-1 ;
-        arco-cd:hasBibliography         ar-bibliography:0302040489-bibliography-2 , ar-bibliography:0302040489-bibliography-1 ;
+        arco-cd:hasBibliography         ar-bibliography:0302040489-bibliography-1 , ar-bibliography:0302040489-bibliography-2 ;
         arco-cd:hasDating               ar-dating:0302040489-1 ;
         arco-cd:hasDocumentation        ar-photograpyDocumentation:0302040489-photographic-documentation-2 , ar-photograpyDocumentation:0302040489-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale ;
@@ -331,7 +354,7 @@ ar-HistoricOrArtisticProperty:0302040489
         arco-location:hasCulturalPropertyAddress
                 ar-address:0ed18b53f9dc6ae750e61f1d2082ca5f ;
         arco-location:hasTimeIndexedTypedLocation
-                ar-timeIndexedTypedLocation:0302040489-current , ar-timeIndexedTypedLocation:0302040489-alternative-2 , ar-timeIndexedTypedLocation:0302040489-alternative-1 .
+                ar-timeIndexedTypedLocation:0302040489-alternative-1 , ar-timeIndexedTypedLocation:0302040489-current , ar-timeIndexedTypedLocation:0302040489-alternative-2 .
 
 ar-agentrole:0302040489-cataloguing-agency
         a                   arco-core:AgentRole ;
@@ -538,8 +561,10 @@ ar-cis:64457690e1a3190123a8ce2b52a79ff5
         l0:name               "Polo del Novecento e Arte Contemporanea" .
 
 <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489>
-        a           arco-catalogue:CatalogueRecordOAC ;
-        rdfs:label  "Catalogue Record n: 0302040489"@en , "Scheda catalografica n: 0302040489"@it ;
+        a             arco-catalogue:CatalogueRecordOAC ;
+        rdfs:label    "Catalogue Record n: 0302040489"@en , "Scheda catalografica n: 0302040489"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0302040489" ;
         arco-catalogue:describesCulturalProperty
@@ -566,18 +591,18 @@ ar-agent:ce3337533a58c2be2958ff1c3c06453c
         a           l0:Agent ;
         rdfs:label  "Giacon, Danka" .
 
+ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en ;
+        arco-cd:hasOwner  ar-agent:349291242ff90c347b6e9125a947dd02 ;
+        l0:name           "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en .
+
 ar-CulturalEntityTechnicalStatus:0302040489-inscription-1
         a           arco-dd:CulturalEntityTechnicalStatus ;
         rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 0302040489"@it , "Technical status of inscription 1 of cultural property 0302040489"@en ;
         arco-dd:includesTechnicalCharacteristic
                 ar-TechnicalCharacteristic:a-pennello ;
         l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0302040489"@it , "Technical status of inscription 1 of cultural property 0302040489"@en .
-
-ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale
-        a                 arco-cd:LegalSituation ;
-        rdfs:label        "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en ;
-        arco-cd:hasOwner  ar-agent:349291242ff90c347b6e9125a947dd02 ;
-        l0:name           "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en .
 
 ar-SiteType:deposito-museale
         a           arco-location:SiteType ;

@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agent:ab0e18f88b67935608a177444ae08812
         a                    COV:Organization ;
@@ -134,7 +137,24 @@ ar-agent:24b2ef2fe855be8ded28c21b578bf5df
 ar-HistoricOrArtisticProperty:0100173819-0
         a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "matrice, matrice composita" ;
-        rdfs:label                      "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@it , "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@en ;
+        rdfs:label                      "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@en , "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@it ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:legno-intaglio ;
+        dc:coverage                     ar-city:torino ;
+        dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/0100173819-0-cultural-scope-attribution-1> ;
+        dc:date                         ar-TimeInterval:post-1700-ante-1710 ;
+        dc:description                  "Soggetti sacri. Personaggi: San Maurizio." ;
+        dc:format                       ar-MeasurementCollection:0100173819-0-1 ;
+        dc:identifier                   "0100173819-0" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0100173819-0-legal-situation-proprieta-ente-pubblico-non-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordMI/0100173819-0> ;
+        dc:subject                      ar-Subject:bb0f47aa9723633faa20443e4c1757ae ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" ] ;
+        dc:type                         ar-culturalPropertyType:935e6636547b2b41d619bb2664c576ec ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordMI/0100173819-0> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/8292f4af631ec68f0bd8a7a14ffd7351" ;
         arco-arco:catalogueNumber       "00173819" ;
         arco-arco:hasCataloguingAgency  ar-agent:9aace282ddb0c7c5cb2b61e7913ac2d1 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
@@ -351,8 +371,10 @@ ar-event:0100173819-0-creation-1
         l0:name               "Realizzazione del bene 0100173819-0"@it , "Creation of cultural property 0100173819-0"@en .
 
 <https://w3id.org/arco/resource/CatalogueRecordMI/0100173819-0>
-        a           arco-catalogue:CatalogueRecordMI ;
-        rdfs:label  "Catalogue Record n: 0100173819-0"@en , "Scheda catalografica n: 0100173819-0"@it ;
+        a             arco-catalogue:CatalogueRecordMI ;
+        rdfs:label    "Catalogue Record n: 0100173819-0"@en , "Scheda catalografica n: 0100173819-0"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0100173819-0" ;
         arco-catalogue:describesCulturalProperty

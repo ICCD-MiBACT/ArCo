@@ -8,6 +8,7 @@
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
 @prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
@@ -45,6 +46,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ar-province: <https://w3id.org/arco/resource/Province/> .
 @prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
 @prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
 @prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
 @prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
@@ -77,6 +79,7 @@
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agent:ab0e18f88b67935608a177444ae08812
         a                    l0:Agent , COV:Organization ;
@@ -92,6 +95,26 @@ ar-HistoricOrArtisticProperty:0100350961
         a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "disegno, opera isolata" ;
         rdfs:label                      "testa di donna velata (disegno, opera isolata) di Peruzzi Baldassarre (sec. XVI, primo quarto)"@it , "testa di donna velata (disegno, opera isolata) by Peruzzi Baldassarre (sec. XVI, primo quarto)"@en ;
+        pico:author                     ar-agent:10ae20f17743df400a1bd794df022add ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-matita-nera-matita-colorata ;
+        dc:coverage                     ar-city:torino ;
+        dc:creator                      ar-agent:10ae20f17743df400a1bd794df022add ;
+        dc:date                         ar-TimeInterval:ca-1500-ca-1525 ;
+        dc:description                  "DISEGNO su carta" ;
+        dc:format                       ar-MeasurementCollection:0100350961-1 ;
+        dc:identifier                   "0100350961" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0100350961-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
+        dc:subject                      ar-Subject:feec4e188957ff3aab6e0844b1d98a62 ;
+        dc:subject                      [ xsi:type
+                          "http://culturaitalia.it/pico/thesaurus/4.2#disegni" ] ;
+        dc:type                         ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0100350961-bibliography-4 , ar-bibliography:0100350961-bibliography-8 , ar-bibliography:0100350961-bibliography-1 , ar-bibliography:0100350961-bibliography-5 , ar-bibliography:0100350961-bibliography-2 , ar-bibliography:0100350961-bibliography-6 , ar-bibliography:0100350961-bibliography-3 , ar-bibliography:0100350961-bibliography-7 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474" ;
         arco-arco:catalogueNumber       "00350961" ;
         arco-arco:description           "DISEGNO su carta" ;
         arco-arco:hasCataloguingAgency  ar-agent:ab0e18f88b67935608a177444ae08812 ;
@@ -338,6 +361,8 @@ ar-TechnicalCharacteristic:carta-matita-nera-matita-colorata
 <https://w3id.org/arco/resource/CatalogueRecordD/0100350961>
         a               arco-catalogue:CatalogueRecordD ;
         rdfs:label      "Scheda catalografica n: 0100350961"@it , "Catalogue Record n: 0100350961"@en ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "0100350961" ;
         arco-catalogue:describesCulturalProperty
