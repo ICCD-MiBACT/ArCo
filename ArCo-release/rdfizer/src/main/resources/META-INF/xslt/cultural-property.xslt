@@ -2612,6 +2612,8 @@
 					</xsl:if>
 				</xsl:for-each>
 				<!-- proper title -->
+				<xsl:if test="not($sheetType='PST')">
+				
 				<xsl:for-each select="schede/*/OG/SGT/SGTP">
 				<xsl:if
 					test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
@@ -2625,6 +2627,7 @@
 					</arco-cd:hasTitle>
 					</xsl:if>
 				</xsl:for-each>
+				</xsl:if>
 					<xsl:for-each select="schede/*/SG/SGL/SGLT">
 						<xsl:choose>
 							<xsl:when test="(starts-with(lower-case(normalize-space(.)), 'nr')) or (starts-with(lower-case(normalize-space(.)), 'n.r'))">

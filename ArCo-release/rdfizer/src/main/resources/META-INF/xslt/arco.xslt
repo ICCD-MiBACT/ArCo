@@ -1396,7 +1396,7 @@
 						<xsl:value-of select="concat(' ', schede/*/SGT/SGTI)" />
 					</xsl:if>
 				</rdfs:comment>
-	  <!-- hasCulturalPropertyType Da mettere in arco, (aggiungere a linea 1399-1453 incluse)  -->
+	 								 <!-- hasCulturalPropertyType  -->
 				<xsl:for-each select="schede/*/OG/OGT">
 					<xsl:choose>
 						<xsl:when
@@ -5889,7 +5889,7 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
-							<!-- continua ... CulturalPropertyType as individual (linea 5837-6223 incluse)-->
+										<!-- CulturalPropertyType as individual -->
 			<xsl:for-each select="schede/*/OG/OGT">
 				<rdf:Description>
 					<xsl:choose>
