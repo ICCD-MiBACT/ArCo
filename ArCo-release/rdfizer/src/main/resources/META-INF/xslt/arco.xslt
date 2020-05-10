@@ -1396,62 +1396,117 @@
 						<xsl:value-of select="concat(' ', schede/*/SGT/SGTI)" />
 					</xsl:if>
 				</rdfs:comment>
+	  <!-- hasCulturalPropertyType Da mettere in arco, (aggiungere a linea 1399-1453 incluse)  -->
 				<xsl:for-each select="schede/*/OG/OGT">
 					<xsl:choose>
 						<xsl:when
-							test="not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
+							test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
 							<arco-dd:hasCulturalPropertyType>
 								<xsl:attribute name="rdf:resource">
-                            <xsl:choose>
-                                <xsl:when test="./OGTT">
-                                    <xsl:value-of
-									select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTT)))" />
-                                </xsl:when>
-                                <xsl:when test="./OGTD">
-                                    <xsl:value-of
-									select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:attribute>
+									<xsl:choose>
+										<xsl:when test="./OGTT">
+											<xsl:value-of
+												select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTT)))" />
+										</xsl:when>
+										<xsl:when test="./OGTD">
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+										</xsl:when>
+									</xsl:choose>
+								</xsl:attribute>
 							</arco-dd:hasCulturalPropertyType>
 						</xsl:when>
 						<xsl:when
 							test="$sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')">
 							<arco-dd:hasCulturalPropertyType>
 								<xsl:attribute name="rdf:resource">
-                            <xsl:choose>
-                                <xsl:when test="./OGTQ">
-                                    <xsl:value-of
-									select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTQ)))" />
-                                </xsl:when>
-                                <xsl:when test="./OGTD">
-                                    <xsl:value-of
-									select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:attribute>
+									<xsl:choose>
+										<xsl:when test="./OGTQ">
+											<xsl:value-of
+												select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTQ)))" />
+										</xsl:when>
+										<xsl:when test="./OGTD">
+											<xsl:value-of
+												select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+										</xsl:when>
+									</xsl:choose>
+								</xsl:attribute>
 							</arco-dd:hasCulturalPropertyType>
 						</xsl:when>
 						<xsl:when
 							test="$sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
 							<arco-dd:hasCulturalPropertyType>
 								<xsl:attribute name="rdf:resource">
-                            <xsl:choose>
-                                <xsl:when test="./OGTQ">
-                                    <xsl:value-of
-									select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTT, '-', ./OGTQ)))" />
-                                </xsl:when>
-                                <xsl:when test="./OGTT">
-                                    <xsl:value-of
-									select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTT))" />
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:attribute>
+									<xsl:choose>
+										<xsl:when test="./OGTQ">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTT, '-', ./OGTQ)))" />
+										</xsl:when>
+										<xsl:when test="./OGTT">
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTT))" />
+										</xsl:when>
+									</xsl:choose>
+								</xsl:attribute>
 							</arco-dd:hasCulturalPropertyType>
+						</xsl:when>
+						<xsl:when test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'campione'))">
+							<arco-dd:hasCulturalPropertyType>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./OGTK">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTK)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-dd:hasCulturalPropertyType>					
+						</xsl:when>
+						<xsl:when test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'erbario'))">
+							<arco-dd:hasCulturalPropertyType>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./OGTR">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTR)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-dd:hasCulturalPropertyType>					
+						</xsl:when>
+						<xsl:when test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'collezione'))">
+							<arco-dd:hasCulturalPropertyType>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./OGTZ">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTZ)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-dd:hasCulturalPropertyType>					
+						</xsl:when>
+						<xsl:when test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'contenitore'))">
+							<arco-dd:hasCulturalPropertyType>
+								<xsl:attribute name="rdf:resource">
+									<xsl:choose>
+										<xsl:when test="./OGTO">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTO)))" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute>
+							</arco-dd:hasCulturalPropertyType>					
 						</xsl:when>
 					</xsl:choose>
 				</xsl:for-each>
-			</rdf:Description>
+		</rdf:Description>
+
 			<!-- Subject as an individual (sgti) -->
 			<xsl:for-each select="schede/*/*/SGT/SGTI">
 				<xsl:if
@@ -5834,74 +5889,65 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
+							<!-- continua ... CulturalPropertyType as individual (linea 5837-6223 incluse)-->
 			<xsl:for-each select="schede/*/OG/OGT">
 				<rdf:Description>
 					<xsl:choose>
 						<xsl:when
-							test="not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
+							test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
 							<xsl:attribute name="rdf:about">
-                        <xsl:choose>
-                            <xsl:when test="./OGTT">
-                                <xsl:value-of
-								select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTT)))" />
-                            </xsl:when>
-                            <xsl:when test="./OGTD">
-                                <xsl:value-of
-								select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:attribute>
+                     		   <xsl:choose>
+                            		<xsl:when test="./OGTT">
+                                		<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTT)))" />
+                            		</xsl:when>
+                            		<xsl:when test="./OGTD">
+                                		<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+                            		</xsl:when>
+                        		</xsl:choose>
+                    		</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
-                        </xsl:attribute>
+                            		<xsl:value-of
+										select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:choose>
 									<xsl:when test="./OGTT">
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTT)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTT)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
 								<xsl:choose>
 									<xsl:when test="./OGTT">
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTT)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTT)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
 							<l0:name xml:lang="it">
 								<xsl:choose>
 									<xsl:when test="./OGTT">
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTT)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTT)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
 							<l0:name xml:lang="en">
 								<xsl:choose>
 									<xsl:when test="./OGTT">
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTT)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTT)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
@@ -5909,86 +5955,73 @@
 								test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
-                        </xsl:attribute>
+                            			<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+                        			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
 							<xsl:if
 								test="./OGTT and not(lower-case(normalize-space(./OGTT))='nr' or lower-case(normalize-space(./OGTT))='n.r.' or lower-case(normalize-space(./OGTT))='nr (recupero pregresso)')">
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
-                                <xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTT)))" />
-                            </xsl:attribute>
+                                		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTT)))" />
+                            		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
 						</xsl:when>
 						<xsl:when
 							test="$sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')">
 							<xsl:attribute name="rdf:about">
-                        <xsl:choose>
-                            <xsl:when test="./OGTQ">
-                                <xsl:value-of
-								select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTQ)))" />
-                            </xsl:when>
-                            <xsl:when test="./OGTD">
-                                <xsl:value-of
-								select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:attribute>
+                        		<xsl:choose>
+                            		<xsl:when test="./OGTQ">
+                                		<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, '-', ./OGTQ)))" />
+                            		</xsl:when>
+                            		<xsl:when test="./OGTD">
+                                		<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+                            		</xsl:when>
+                        		</xsl:choose>
+                    		</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
-                        </xsl:attribute>
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:choose>
 									<xsl:when test="./OGTQ">
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTQ)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
 								<xsl:choose>
 									<xsl:when test="./OGTQ">
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTQ)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
 							<l0:name xml:lang="it">
 								<xsl:choose>
 									<xsl:when test="./OGTQ">
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTQ)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTD)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
 							<l0:name xml:lang="en">
 								<xsl:choose>
 									<xsl:when test="./OGTQ">
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTQ)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTD)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
@@ -5996,62 +6029,53 @@
 								test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
-                        </xsl:attribute>
+                            			<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+                        			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
 							<xsl:if
 								test="./OGTQ and not(lower-case(normalize-space(./OGTQ))='nr' or lower-case(normalize-space(./OGTQ))='n.r.' or lower-case(normalize-space(./OGTQ))='nr (recupero pregresso)')">
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
-                                <xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
-                            </xsl:attribute>
+                                		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
+                            		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
 						</xsl:when>
 						<xsl:when
 							test="$sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
 							<xsl:attribute name="rdf:about">
-                        <xsl:choose>
-                            <xsl:when test="./OGTQ">
-                                <xsl:value-of
-								select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTT, '-', ./OGTQ)))" />
-                            </xsl:when>
-                            <xsl:when test="./OGTT">
-                                <xsl:value-of
-								select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTT))" />
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:attribute>
+                        		<xsl:choose>
+                            		<xsl:when test="./OGTQ">
+                                		<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTT, '-', ./OGTQ)))" />
+                            		</xsl:when>
+                            		<xsl:when test="./OGTT">
+                                		<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTT))" />
+                            		</xsl:when>
+                        		</xsl:choose>
+                    		</xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
-                        </xsl:attribute>
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:choose>
 									<xsl:when test="./OGTQ">
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTT, ' ', ./OGTQ)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTT, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTT)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTT)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
 							<rdfs:label xml:lang="en">
 								<xsl:choose>
 									<xsl:when test="./OGTQ">
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTT, ' ', ./OGTQ)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTT, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTT)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTT)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
@@ -6062,20 +6086,17 @@
 											select="concat('Tipo del bene: ', ./OGTT, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Tipo del bene: ', ./OGTT)" />
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTT)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
 							<l0:name xml:lang="en">
 								<xsl:choose>
 									<xsl:when test="./OGTT">
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTT, ' ', ./OGTQ)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTT, ' ', ./OGTQ)" />
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of
-											select="concat('Cultural property type: ', ./OGTT)" />
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTT)" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
@@ -6083,24 +6104,317 @@
 								test="./OGTT and not(lower-case(normalize-space(./OGTT))='nr' or lower-case(normalize-space(./OGTT))='n.r.' or lower-case(normalize-space(./OGTT))='nr (recupero pregresso)')">
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
-                            <xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTT)))" />
-                        </xsl:attribute>
+                            			<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTT)))" />
+                        			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
 							<xsl:if
 								test="./OGTQ and not(lower-case(normalize-space(./OGTQ))='nr' or lower-case(normalize-space(./OGTQ))='n.r.' or lower-case(normalize-space(./OGTQ))='nr (recupero pregresso)')">
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
-                                <xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
-                            </xsl:attribute>
+                                		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
+                            		</xsl:attribute>
+								</arco-dd:hasCulturalPropertySpecification>
+							</xsl:if>
+						</xsl:when>
+						<xsl:when
+							test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'erbario'))">
+							<xsl:attribute name="rdf:about">
+                        		<xsl:choose>
+                            		<xsl:when test="./OGTR">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTR)))" />
+									</xsl:when>
+									<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+									</xsl:otherwise>
+                        		</xsl:choose>
+                    		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTR">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTR)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTR">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTR)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTR">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTR)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<l0:name xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTR">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTR)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<xsl:if
+								test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertyDefinition>
+									<xsl:attribute name="rdf:resource">
+                            			<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+                        			</xsl:attribute>
+								</arco-dd:hasCulturalPropertyDefinition>
+							</xsl:if>
+							<xsl:if
+								test="./OGTR and not(lower-case(normalize-space(./OGTR))='nr' or lower-case(normalize-space(./OGTR))='n.r.' or lower-case(normalize-space(./OGTR))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertySpecification>
+									<xsl:attribute name="rdf:resource">
+                                		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTR)))" />
+                            		</xsl:attribute>
+								</arco-dd:hasCulturalPropertySpecification>
+							</xsl:if>
+						</xsl:when>
+						<xsl:when
+							test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'campione'))">
+							<xsl:attribute name="rdf:about">
+                        		<xsl:choose>
+                            		<xsl:when test="./OGTK">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTK)))" />
+									</xsl:when>
+									<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+									</xsl:otherwise>
+                        		</xsl:choose>
+                    		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTK">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTK)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTK">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTK)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTK">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' ', ./OGTK)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<l0:name xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTK">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' ', ./OGTK)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<xsl:if
+								test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertyDefinition>
+									<xsl:attribute name="rdf:resource">
+                            			<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+                        			</xsl:attribute>
+								</arco-dd:hasCulturalPropertyDefinition>
+							</xsl:if>
+							<xsl:if
+								test="./OGTK and not(lower-case(normalize-space(./OGTK))='nr' or lower-case(normalize-space(./OGTK))='n.r.' or lower-case(normalize-space(./OGTK))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertySpecification>
+									<xsl:attribute name="rdf:resource">
+                                		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTK)))" />
+                            		</xsl:attribute>
+								</arco-dd:hasCulturalPropertySpecification>
+							</xsl:if>
+						</xsl:when>
+							<xsl:when test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'collezione'))">
+							<xsl:attribute name="rdf:about">
+                        		<xsl:choose>
+                            		<xsl:when test="./OGTZ">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTZ)))" />
+									</xsl:when>
+									<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTD))" />
+									</xsl:otherwise>
+                        		</xsl:choose>
+                    		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTZ">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' - ', ./OGTZ)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTZ)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTZ">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' - ', ./OGTZ)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTZ">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' - ', ./OGTZ)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<l0:name xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTZ">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' - ', ./OGTZ)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<xsl:if
+								test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertyDefinition>
+									<xsl:attribute name="rdf:resource">
+                            			<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+                        			</xsl:attribute>
+								</arco-dd:hasCulturalPropertyDefinition>
+							</xsl:if>
+							<xsl:if
+								test="./OGTZ and not(lower-case(normalize-space(./OGTZ))='nr' or lower-case(normalize-space(./OGTZ))='n.r.' or lower-case(normalize-space(./OGTZ))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertySpecification>
+									<xsl:attribute name="rdf:resource">
+                                		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTZ)))" />
+                            		</xsl:attribute>
+								</arco-dd:hasCulturalPropertySpecification>
+							</xsl:if>
+						</xsl:when>
+						<xsl:when test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'contenitore'))">
+							<xsl:attribute name="rdf:about">
+                        		<xsl:choose>
+                            		<xsl:when test="./OGTO">
+											<xsl:value-of	select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(./OGTD, ' ', ./OGTO)))" />
+									</xsl:when>
+									<xsl:otherwise>
+											<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(./OGTO))" />
+									</xsl:otherwise>
+                        		</xsl:choose>
+                    		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+                            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType'" />
+                        		</xsl:attribute>
+							</rdf:type>
+							<rdfs:label xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTO">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' - ', ./OGTO)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTO)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<rdfs:label xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTO">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' - ', ./OGTO)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</rdfs:label>
+							<l0:name xml:lang="it">
+								<xsl:choose>
+									<xsl:when test="./OGTO">
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD, ' - ', ./OGTO)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Tipo del bene: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<l0:name xml:lang="en">
+								<xsl:choose>
+									<xsl:when test="./OGTO">
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD, ' - ', ./OGTO)" />
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="concat('Cultural property type: ', ./OGTD)" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</l0:name>
+							<xsl:if
+								test="./OGTD and not(lower-case(normalize-space(./OGTD))='nr' or lower-case(normalize-space(./OGTD))='n.r.' or lower-case(normalize-space(./OGTD))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertyDefinition>
+									<xsl:attribute name="rdf:resource">
+                            			<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+                        			</xsl:attribute>
+								</arco-dd:hasCulturalPropertyDefinition>
+							</xsl:if>
+							<xsl:if
+								test="./OGTO and not(lower-case(normalize-space(./OGTO))='nr' or lower-case(normalize-space(./OGTO))='n.r.' or lower-case(normalize-space(./OGTO))='nr (recupero pregresso)')">
+								<arco-dd:hasCulturalPropertySpecification>
+									<xsl:attribute name="rdf:resource">
+                                		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTO)))" />
+                            		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
 						</xsl:when>
 					</xsl:choose>
 				</rdf:Description>
 			</xsl:for-each>
+			
 			<!-- We add the definition as an individual. The definition is associated 
 				with a Cultural Property Type by the property arco-dd:hasCulturalPropertyDefinition. -->
 			<xsl:choose>
@@ -6177,7 +6491,7 @@
 				associated with a Cultural Property Type by the property arco-dd:hasCulturalPropertySpecification. -->
 			<xsl:choose>
 				<xsl:when
-					test="not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
+					test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
 					<xsl:if
 						test="schede/*/OG/OGT/OGTT and not(lower-case(normalize-space(schede/*/OG/OGT/OGTT))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTT))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTT))='nr (recupero pregresso)')">
 						<rdf:Description>
@@ -6220,7 +6534,96 @@
 						</rdf:Description>
 					</xsl:if>
 				</xsl:when>
+				<xsl:when
+					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'campione'))">
+					<xsl:if
+						test="schede/*/OG/OGT/OGTK and not(lower-case(normalize-space(schede/*/OG/OGT/OGTK))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTK))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTK))='nr (recupero pregresso)')">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTK)))" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of
+									select="normalize-space(schede/*/OG/OGT/OGTK)" />
+							</rdfs:label>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:when>
+				<xsl:when
+					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'erbario'))">
+					<xsl:if
+						test="schede/*/OG/OGT/OGTR and not(lower-case(normalize-space(schede/*/OG/OGT/OGTR))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTR))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTR))='nr (recupero pregresso)')">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTR)))" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of
+									select="normalize-space(schede/*/OG/OGT/OGTR)" />
+							</rdfs:label>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:when>
+				<xsl:when
+					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'collezione'))">
+					<xsl:if
+						test="schede/*/OG/OGT/OGTZ and not(lower-case(normalize-space(schede/*/OG/OGT/OGTZ))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTZ))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTZ))='nr (recupero pregresso)')">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTZ)))" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of
+									select="normalize-space(schede/*/OG/OGT/OGTZ)" />
+							</rdfs:label>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:when>
+				<xsl:when
+					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'contenitore'))">
+					<xsl:if
+						test="schede/*/OG/OGT/OGTO and not(lower-case(normalize-space(schede/*/OG/OGT/OGTO))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTO))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTO))='nr (recupero pregresso)')">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+		                        <xsl:value-of
+								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTO)))" />
+		                    </xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="'https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification'" />
+		                        </xsl:attribute>
+							</rdf:type>
+							<rdfs:label>
+								<xsl:value-of
+									select="normalize-space(schede/*/OG/OGT/OGTO)" />
+							</rdfs:label>
+						</rdf:Description>
+					</xsl:if>
+				</xsl:when>
 			</xsl:choose>
+
 			<!-- Cataloguing Agency - Agent Role CD/ESC -->
 			<xsl:if
 				test="(not(starts-with(lower-case(normalize-space(schede/*/CD/ESC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/CD/ESC)), 'n.r')))">
@@ -23443,13 +23846,17 @@
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:choose>
-										<xsl:when test="schede/*/LC/LDC/LDCK">
+										<xsl:when test="schede/*/LC/LDC/LDCK">	
 											<xsl:value-of
-												select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCK)), normalize-space(lower-case(schede/*/LC/LDC/LDCT)))))" />
+												select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCK)))))" />
+										</xsl:when>
+										<xsl:when test="schede/*/LC/LDC/LDCN and starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), 'nr') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '-') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '(*)') and starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '(?)') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '(denominazione assente)') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '?') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '.') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '590977') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), '63904') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), 'non id.') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), 'non identificabile') or starts-with(lower-case(normalize-space(schede/*/LC/LDC/LDCN)), 'n.r')">
+											<xsl:value-of
+												select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCT)))))" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of
-												select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCN)), normalize-space(lower-case(schede/*/LC/LDC/LDCT)))))" />
+												select="concat($NS, 'Site/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)), normalize-space(lower-case(schede/*/LC/LDC/LDCN)))))" />
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:otherwise>

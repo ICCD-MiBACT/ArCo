@@ -1,0 +1,627 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-ConservationStatus:0900750392-conservation-status-1
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 0900750392"@it , "Conservation status 1 of cultural property: 0900750392"@en ;
+        arco-core:specifications  "Presenza di lisature; colletto staccato; scucitura in corrispondenza della spalla sinistra." ;
+        arco-dd:hasConservationStatusType
+                arco-dd:MediocreConservationStatus ;
+        tiapit:time               "2014" ;
+        l0:name                   "Stato di conservazione 1 del bene: 0900750392"@it , "Conservation status 1 of cultural property: 0900750392"@en .
+
+ar-SourceAndDocument:0900750392-source-document-1
+        a                              arco-cd:SourceAndDocument ;
+        rdfs:label                     "Fonti e documenti 1 del bene culturale: 0900750392"@it , "Sources and documents 1 of cultural property: 0900750392"@en ;
+        arco-cd:documentationIdentifier
+                "Giornale Costume" ;
+        arco-cd:documentationLocation  "n.p." ;
+        arco-cd:documentationTitle     "Giornale della Galleria del Costume. Vol. 2" ;
+        arco-cd:folio                  "(2014) p. 288" ;
+        arco-cd:hasArchive             ar-agent:72ef11de130dbc3bccd555094dddd959 ;
+        arco-cd:hasAuthor              ar-agent:d41d8cd98f00b204e9800998ecf8427e ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:registro-inventariale ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-core:hasCategory          arco-cd:ExistingDocumentation ;
+        tiapit:time                    "2002 -" ;
+        l0:name                        "Fonti e documenti 1 del bene culturale: 0900750392"@en , "Sources and documents 1 of cultural property: 0900750392"@en .
+
+ar-accessProfile:0900750392-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0900750392: 1"@it , "Access profile to catalogue record of cultural property 0900750392: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0900750392: 1"@it , "Access profile to catalogue record of cultural property 0900750392: 1"@en .
+
+<https://w3id.org/arco/resource/CulturalScopeAttribution/0900750392-cultural-scope-attribution-1>
+        a                         arco-cd:CulturalScopeAttribution ;
+        rdfs:label                "Attribuzione di ambito culturale del bene: 0900750392"@it , "Cultural scope attribution of cultural property: 0900750392"@en ;
+        arco-cd:hasCulturalScope  <https://w3id.org/arco/resource/CulturalScope/ambito-francese> ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-stilistica ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-HistoricOrArtisticProperty:0900750392 ;
+        l0:name                   "Attribuzione di ambito culturale del bene: 0900750392"@it , "Cultural scope attribution of cultural property: 0900750392"@en .
+
+ar-photograpyDocumentation:0900750392-photographic-documentation-3
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Photographic documentation 3 of cultural property: 0900750392"@en , "Documentazione fotografica 3 del bene culturale: 0900750392"@it ;
+        arco-cd:documentationIdentifier
+                "SSPSAEPM FI 24881UC" ;
+        arco-cd:documentationLocation  "Galleria del Costume" ;
+        arco-cd:hasAuthor              ar-agent:d01fc1945b4d9675fc3743fcfef52d60 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-core:hasAgentRole         ar-agentrole:0900750392-photographic-documentation-3-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        arco-core:note                 "dettaglio del tessuto" ;
+        tiapit:time                    "2014" ;
+        l0:name                        "Documentazione fotografica 3 del bene culturale: 0900750392"@it , "Photographic documentation 3 of cultural property: 0900750392"@en .
+
+ar-agent:72ef11de130dbc3bccd555094dddd959
+        a           l0:Agent ;
+        rdfs:label  "Firenze/ Archivio della Galleria del Costume" ;
+        l0:name     "Firenze/ Archivio della Galleria del Costume" .
+
+ar-interpretationCriterion:analisi-stilistica
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi stilistica" ;
+        l0:name     "analisi stilistica" .
+
+ar-agent:f262108a67caf8abf3dd7c8c47251ebd
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Speciale per il Patrimonio Storico Artistico ed Etnoantropologico e per il Polo Museale della citta' di Firenze" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-core:isAgentOf  ar-agentrole:0900750392-cataloguing-agency , ar-agentrole:0900750392-heritage-protection-agency ;
+        l0:name              "Soprintendenza Speciale per il Patrimonio Storico Artistico ed Etnoantropologico e per il Polo Museale della citta' di Firenze" .
+
+<https://w3id.org/arco/resource/CulturalPropertyCategory/intimo>
+        a           arco-arco:CulturalPropertyCategory ;
+        rdfs:label  "intimo" .
+
+ar-SiteDefinition:palazzo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "palazzo" .
+
+ar-agent:2d155d0818896df72a309785f786d26c
+        a           l0:Agent ;
+        rdfs:label  "Gorrini Schlatter, Giuliana" ;
+        l0:name     "Gorrini Schlatter, Giuliana" .
+
+ar-region:toscana  a  clvapit:Region ;
+        rdfs:label  "Toscana" ;
+        l0:name     "Toscana" .
+
+ar-agentrole:0900750392-photographic-documentation-4-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 4 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 4 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en ;
+        arco-core:hasAgent  ar-agent:4c7f54c8eacb31919d87fa647ddb7c2d ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 4 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 4 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en .
+
+ar-city:firenze  a  clvapit:City ;
+        rdfs:label  "Firenze" ;
+        l0:name     "Firenze" .
+
+ar-photograpyDocumentation:0900750392-photographic-documentation-2
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Documentazione fotografica 2 del bene culturale: 0900750392"@it , "Photographic documentation 2 of cultural property: 0900750392"@en ;
+        arco-cd:documentationIdentifier
+                "SSPSAEPM FI 25045UC" ;
+        arco-cd:documentationLocation  "Galleria del Costume" ;
+        arco-cd:hasAuthor              ar-agent:d01fc1945b4d9675fc3743fcfef52d60 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-core:hasAgentRole         ar-agentrole:0900750392-photographic-documentation-2-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        arco-core:note                 "dettaglio del colletto" ;
+        tiapit:time                    "2014" ;
+        l0:name                        "Photographic documentation 2 of cultural property: 0900750392"@en , "Documentazione fotografica 2 del bene culturale: 0900750392"@it .
+
+ar-TechnicalCharacteristic:tessuto
+        a                       arco-dd:TechnicalCharacteristic ;
+        rdfs:label              "tessuto" ;
+        arco-dd:isClassifiedBy  arco-dd:Technique .
+
+ar-culturalPropertyType:b449fefae16a7efad3e1c7242ce36501
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: camicia sprone con collo a cinturino"@it , "Cultural property type: camicia sprone con collo a cinturino"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:camicia ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:sprone-con-collo-a-cinturino ;
+        l0:name     "Tipo del bene: camicia sprone con collo a cinturino"@it , "Cultural property type: camicia sprone con collo a cinturino"@en .
+
+ar-culturalPropertySpecification:sprone-con-collo-a-cinturino
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "sprone con collo a cinturino" .
+
+ar-timeIndexedRole:0900750392-compilation-d01fc1945b4d9675fc3743fcfef52d60
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Masiero, Elisa"@en , "Compilazione da Masiero, Elisa"@it ;
+        roapit:isRoleInTimeOf  ar-agent:d01fc1945b4d9675fc3743fcfef52d60 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-timeIndexedRole:0900750392-0f4c37c381cfe5a65ae1adba8d62ece0
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Chiarelli, Caterina"@it , "Scientific director: Chiarelli, Caterina"@en ;
+        roapit:isRoleInTimeOf  ar-agent:be8c4f00354c299376c63e76870982f9 ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+ar-agent:be8c4f00354c299376c63e76870982f9
+        a           l0:Agent ;
+        rdfs:label  "Chiarelli, Caterina" .
+
+ar-agentrole:0900750392-photographic-documentation-1-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 1 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 1 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en ;
+        arco-core:hasAgent  ar-agent:4c7f54c8eacb31919d87fa647ddb7c2d ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 1 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 1 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900750392-cataloguing-agency .
+
+ar-TimeInterval:ca-1890-ca-1899
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca 1890 - ca 1899" ;
+        arco-arco:endTime    "ca 1899" ;
+        arco-arco:startTime  "ca 1890" ;
+        l0:name              "ca 1890 - ca 1899" .
+
+ar-docutmentationType:registro-inventariale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "registro inventariale" ;
+        l0:name     "registro inventariale" .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+ar-province:fi  a   clvapit:Province ;
+        rdfs:label  "FI" ;
+        l0:name     "FI" .
+
+ar-CulturalEntityTechnicalStatus:0900750392
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:ecru , ar-TechnicalCharacteristic:tela-di-lino-ricamata-pto-stuoia-fili-lanciati .
+
+ar-catalogueRecordVersion:0900750392-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2014 Masiero, Elisa" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2014 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0900750392-compilation-d01fc1945b4d9675fc3743fcfef52d60 , ar-timeIndexedRole:0900750392-0f4c37c381cfe5a65ae1adba8d62ece0 , ar-timeIndexedRole:0900750392-71f1d5af9376ed56a25ff0b701504bcd ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:3b493b6877e30a4dc4fee8044f62a65b ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:d01fc1945b4d9675fc3743fcfef52d60 ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:be8c4f00354c299376c63e76870982f9 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392> .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/0900750392-part-su-tutto-il-capo>
+        a                           arco-arco:CulturalPropertyPart ;
+        rdfs:label                  "su tutto il capo" ;
+        arco-core:isPartOf          ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-dd:hasTechnicalStatus  ar-CulturalEntityTechnicalStatus:0900750392-part-su-tutto-il-capo ;
+        l0:name                     "su tutto il capo" .
+
+ar-photograpyDocumentation:0900750392-photographic-documentation-1
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Photographic documentation 1 of cultural property: 0900750392"@en , "Documentazione fotografica 1 del bene culturale: 0900750392"@it ;
+        arco-cd:documentationIdentifier
+                "SSPSAEPM FI 25044UC" ;
+        arco-cd:documentationLocation  "Galleria del Costume" ;
+        arco-cd:hasAuthor              ar-agent:d01fc1945b4d9675fc3743fcfef52d60 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-core:hasAgentRole         ar-agentrole:0900750392-photographic-documentation-1-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        arco-core:note                 "intero" ;
+        tiapit:time                    "2014" ;
+        l0:name                        "Photographic documentation 1 of cultural property: 0900750392"@en , "Documentazione fotografica 1 del bene culturale: 0900750392"@it .
+
+ar-agent:4c7f54c8eacb31919d87fa647ddb7c2d
+        a                    l0:Agent ;
+        rdfs:label           "SSPSAEPM FI/ Galleria del Costume" ;
+        arco-core:isAgentOf  ar-agentrole:0900750392-photographic-documentation-1-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-2-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-3-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-4-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-5-photographic-documentation-owner ;
+        l0:name              "SSPSAEPM FI/ Galleria del Costume" .
+
+ar-agent:d41d8cd98f00b204e9800998ecf8427e
+        a           l0:Agent ;
+        rdfs:label  "-" ;
+        l0:name     "-" .
+
+ar-address:13219322a59903c1360a0c85347b8fa0
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Toscana, FI, Firenze" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-HistoricOrArtisticProperty:0900750392 ;
+        clvapit:fullAddress  "P.zza Pitti, 1" ;
+        clvapit:hasCity      ar-city:firenze ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:fi ;
+        clvapit:hasRegion    ar-region:toscana .
+
+ar-legalSituation:0900750392-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0900750392: proprietà Stato"@it , "Legal situation of cultural property 0900750392: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:dc75a976de1c4442a6d31e6f5aa5fa69 ;
+        l0:name           "Condizione giuridica del bene culturale 0900750392: proprietà Stato"@it , "Legal situation of cultural property 0900750392: proprietà Stato"@en .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392>
+        a               arco-catalogue:CatalogueRecordVeAC ;
+        rdfs:label      "Scheda catalografica n: 0900750392"@it , "Catalogue Record n: 0900750392"@en ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0900750392" ;
+        arco-catalogue:describesCulturalProperty
+                ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0900750392-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0900750392-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "VeAC-ICCD11251795" ;
+        arco-core:note  "Accompagnato da cartellino manoscritto recante la seguente iscrizione: \"Calais/ (Museo)\"." .
+
+ar-agent:3b493b6877e30a4dc4fee8044f62a65b
+        a           l0:Agent ;
+        rdfs:label  "Sframeli, Maria" .
+
+<https://w3id.org/arco/resource/CulturalScope/ambito-francese>
+        a           arco-cd:CulturalScope ;
+        rdfs:label  "ambito francese" ;
+        l0:name     "ambito francese" .
+
+ar-agentrole:0900750392-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0900750392: S156"@it , "Heritage protection agency for cultural property 0900750392: S156"@en ;
+        arco-core:hasAgent  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-agentrole:0900750392-photographic-documentation-3-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 3 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 3 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en ;
+        arco-core:hasAgent  ar-agent:4c7f54c8eacb31919d87fa647ddb7c2d ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 3 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 3 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en .
+
+ar-dating:0900750392-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0900750392"@it , "Dating 1 of cultural property 0900750392"@en ;
+        arco-cd:hasDatingEvent  ar-event:0900750392-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-stilistica ;
+        l0:name                 "Dating 1 of cultural property 0900750392"@en , "Cronologia 1 del bene 0900750392"@it .
+
+ar-agentrole:0900750392-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0900750392: S156"@it , "Cataloguing agency for cultural property 0900750392: S156"@en ;
+        arco-core:hasAgent  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente scientifico"@it , "Scientific Director"@en .
+
+ar-TimeInterval:sec-xix-fine
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XIX fine" ;
+        tiapit:time  "sec. XIX fine" ;
+        l0:name      "sec. XIX fine" .
+
+ar-TechnicalCharacteristic:ecru
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "écru" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:GarmentColour ;
+        l0:name     "écru" .
+
+<https://w3id.org/arco/resource/AcquisitionType/donazione>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "donazione" ;
+        l0:name     "donazione" .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-TimeInterval:2014  a  tiapit:TimeInterval ;
+        rdfs:label   "2014" ;
+        tiapit:time  "2014" .
+
+ar-TechnicalCharacteristic:tela-di-lino-ricamata-pto-stuoia-fili-lanciati
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "tela di lino ricamata (p.to stuoia, fili lanciati)" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:GarmentAnalysis ;
+        l0:name     "tela di lino ricamata (p.to stuoia, fili lanciati)" .
+
+ar-agent:d01fc1945b4d9675fc3743fcfef52d60
+        a           l0:Agent ;
+        rdfs:label  "Masiero, Elisa" ;
+        l0:name     "Masiero, Elisa" .
+
+ar-photograpyDocumentation:0900750392-photographic-documentation-5
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Photographic documentation 5 of cultural property: 0900750392"@en , "Documentazione fotografica 5 del bene culturale: 0900750392"@it ;
+        arco-cd:documentationIdentifier
+                "SSPSAEPM FI 27339UC" ;
+        arco-cd:documentationLocation  "Galleria del Costume" ;
+        arco-cd:hasAuthor              ar-agent:d01fc1945b4d9675fc3743fcfef52d60 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-core:hasAgentRole         ar-agentrole:0900750392-photographic-documentation-5-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        arco-core:note                 "La Mode Illustrée, 1898 p. 219" ;
+        tiapit:time                    "2014" ;
+        l0:name                        "Documentazione fotografica 5 del bene culturale: 0900750392"@it , "Photographic documentation 5 of cultural property: 0900750392"@en .
+
+ar-cis:7f7764e5ff18640df27297daf5ee9d8b
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Galleria del Costume" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:galleria-del-costume ;
+        cis:hasSite           ar-Site:d86fe78695b1a833f53ff7a82730ec69 ;
+        l0:name               "Galleria del Costume" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900750392-heritage-protection-agency .
+
+ar-role:Owner  a            roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900750392-photographic-documentation-1-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-2-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-3-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-4-photographic-documentation-owner , ar-agentrole:0900750392-photographic-documentation-5-photographic-documentation-owner .
+
+ar-RelatedWorkSituation:0900750392-related-cultural-property-2-1
+        a                            arco-cd:RelatedWorkSituation ;
+        rdfs:label                   "Relazione 1 tra il bene culturale 0900750392 e altro bene culturale"@it , "Relation 1 between the cultural property 0900750392 and other cultural property"@en ;
+        arco-cd:involvesRelatedWork  ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-cd:isRelatedWorkSituationOf
+                ar-HistoricOrArtisticProperty:0900750392 ;
+        l0:name                      "Relazione 1 tra il bene culturale 0900750392 e altro bene culturale"@it , "Relation 1 between the cultural property 0900750392 and other cultural property"@en .
+
+ar-CISNameInTime:galleria-del-costume
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Galleria del Costume"@it , "Name in time: Galleria del Costume"@en ;
+        cis:institutionalCISName  "Galleria del Costume" ;
+        l0:name                   "Denominazione nel tempo: Galleria del Costume"@it , "Name in time: Galleria del Costume"@en .
+
+ar-HistoricOrArtisticProperty:0900750392
+        a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "camicia, intimo, 2 pezzi: polsini, da giorno, femminile, sprone con collo a cinturino" ;
+        rdfs:label                      "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@it , "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@en ;
+        arco-arco:catalogueNumber       "00750392" ;
+        arco-arco:description           "Sprone di camicia, confezionato in tela di lino grezza tinta écru, ricamata ad ago a punto sfilato: motivo a maglie geometriche traforate, rifinite a punto stuoia e fili lanciati. Lungo l'orlo inferiore, effetto rigato ottenuto dalla recisione e sfilatura delle trame. Presenta girocollo leggermente più pronunciato in corrispondenza del taglio anteriore. Si conserva a parte il colletto ad anello rialzato (h cm 6), con lavorazione a ricamo analoga a quella dello sprone." ;
+        arco-arco:hasCataloguingAgency  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-arco:hasCulturalPropertyCategory
+                <https://w3id.org/arco/resource/CulturalPropertyCategory/intimo> ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-arco:numberOfComponents    "2" ;
+        arco-arco:regionIdentifier      "09" ;
+        arco-arco:uniqueIdentifier      "0900750392" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0900750392-acquisition-1> ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/CulturalScopeAttribution/0900750392-cultural-scope-attribution-1> ;
+        arco-cd:hasDating               ar-dating:0900750392-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0900750392-photographic-documentation-4 , ar-photograpyDocumentation:0900750392-photographic-documentation-5 , ar-SourceAndDocument:0900750392-source-document-1 , ar-photograpyDocumentation:0900750392-photographic-documentation-2 , ar-photograpyDocumentation:0900750392-photographic-documentation-1 , ar-photograpyDocumentation:0900750392-photographic-documentation-3 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0900750392-legal-situation-proprieta-stato ;
+        arco-cd:hasRelatedWorkSituation
+                ar-RelatedWorkSituation:0900750392-related-cultural-property-2-1 ;
+        arco-core:hasAgentRole          ar-agentrole:0900750392-cataloguing-agency , ar-agentrole:0900750392-heritage-protection-agency ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0900750392-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:b449fefae16a7efad3e1c7242ce36501 ;
+        arco-dd:hasGarmentAnalysis      ar-TechnicalCharacteristic:tela-di-lino-ricamata-pto-stuoia-fili-lanciati ;
+        arco-dd:hasGarmentColour        ar-TechnicalCharacteristic:ecru ;
+        arco-dd:hasMaterial             ar-TechnicalCharacteristic:lino ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0900750392 ;
+        arco-dd:hasTechnique            ar-TechnicalCharacteristic:tessuto ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:e5659ef05c067e75d2be71ed6f3ad94d ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0900750392-current .
+
+ar-timeIndexedRole:0900750392-71f1d5af9376ed56a25ff0b701504bcd
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Sframeli, Maria"@it , "Official in charge: Sframeli, Maria"@en ;
+        roapit:isRoleInTimeOf  ar-agent:3b493b6877e30a4dc4fee8044f62a65b ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-agentrole:0900750392-photographic-documentation-5-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 5 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 5 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en ;
+        arco-core:hasAgent  ar-agent:4c7f54c8eacb31919d87fa647ddb7c2d ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 5 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 5 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en .
+
+ar-SiteType:palazzo-statale
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo statale"@it , "Site type: palazzo statale"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/statale> ;
+        l0:name     "Tipo di contenitore fisico: palazzo statale"@it , "Site type: palazzo statale"@en .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-photograpyDocumentation:0900750392-photographic-documentation-4
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Documentazione fotografica 4 del bene culturale: 0900750392"@it , "Photographic documentation 4 of cultural property: 0900750392"@en ;
+        arco-cd:documentationIdentifier
+                "SSPSAEPM FI 24882UC" ;
+        arco-cd:documentationLocation  "Galleria del Costume" ;
+        arco-cd:hasAuthor              ar-agent:d01fc1945b4d9675fc3743fcfef52d60 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0900750392 ;
+        arco-core:hasAgentRole         ar-agentrole:0900750392-photographic-documentation-4-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        arco-core:note                 "dettaglio della lavorazione a ricamo" ;
+        tiapit:time                    "2014" ;
+        l0:name                        "Documentazione fotografica 4 del bene culturale: 0900750392"@it , "Photographic documentation 4 of cultural property: 0900750392"@en .
+
+ar-CulturalEntityTechnicalStatus:0900750392-part-su-tutto-il-capo
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico della parte di bene culturale 0900750392"@it , "Technical status of part of cultural property 0900750392"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:tessuto ;
+        l0:name     "Stato tecnico della parte di bene culturale 0900750392"@it , "Technical status of part of cultural property 0900750392"@en .
+
+ar-event:0900750392-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0900750392"@it , "Creation of cultural property 0900750392"@en ;
+        arco-cd:specificTime  ar-TimeInterval:ca-1890-ca-1899 ;
+        tiapit:atTime         ar-TimeInterval:sec-xix-fine ;
+        l0:name               "Realizzazione del bene 0900750392"@it , "Creation of cultural property 0900750392"@en .
+
+<https://w3id.org/arco/resource/SiteSpecification/statale>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "statale" .
+
+ar-culturalPropertyDefinition:camicia
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "camicia" .
+
+ar-agentrole:0900750392-photographic-documentation-2-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 2 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 2 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en ;
+        arco-core:hasAgent  ar-agent:4c7f54c8eacb31919d87fa647ddb7c2d ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 2 del bene culturale 0900750392: SSPSAEPM FI/ Galleria del Costume"@it , "Owner agency of photographic documentation 2 of cultural property 0900750392: SSPSAEPM FI/ Galleria del Costume"@en .
+
+ar-timeIndexedTypedLocation:0900750392-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0900750392"@it , "Current physical location of cultural property: 0900750392"@en ;
+        arco-core:specifications       "deposito abiti" ;
+        arco-location:atSite           ar-Site:d86fe78695b1a833f53ff7a82730ec69 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:0900750392 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0900750392"@it , "Current physical location of cultural property: 0900750392"@en .
+
+ar-Site:d86fe78695b1a833f53ff7a82730ec69
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo Pitti" ;
+        cis:isSiteOf               ar-cis:7f7764e5ff18640df27297daf5ee9d8b ;
+        cis:siteAddress            ar-address:13219322a59903c1360a0c85347b8fa0 ;
+        arco-location:hasSiteType  ar-SiteType:palazzo-statale ;
+        l0:name                    "Palazzo Pitti" .
+
+<https://w3id.org/arco/resource/Acquisition/0900750392-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisition 1 of cultural property: 0900750392"@en , "Acquisizione 1 del bene culturale: 0900750392"@it ;
+        arco-cd:acquisitionLocation  "FI/ Firenze/ Galleria del Costume" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/donazione> ;
+        arco-cd:hasPreviousOwner     ar-agent:2d155d0818896df72a309785f786d26c ;
+        arco-cd:isAcquisitionOf      ar-HistoricOrArtisticProperty:0900750392 ;
+        tiapit:time                  "2014" ;
+        l0:name                      "Acquisizione 1 del bene culturale: 0900750392"@it , "Acquisition 1 of cultural property: 0900750392"@en .
+
+ar-agent:dc75a976de1c4442a6d31e6f5aa5fa69
+        a                l0:Agent ;
+        rdfs:label       "Ministero per i Beni e le Attività Culturali/ Soprintendenza SPSAE e per il Polo Museale Fiorentino" ;
+        arco-cd:address  "Via della Ninna 5, 50122 Firenze (FI)" ;
+        l0:name          "Ministero per i Beni e le Attività Culturali/ Soprintendenza SPSAE e per il Polo Museale Fiorentino" .

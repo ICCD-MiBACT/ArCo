@@ -1,0 +1,671 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-CISNameInTime:collezione-boschi-di-stefano
+        a                         cis:CISNameInTime ;
+        cis:institutionalCISName  "Collezione Boschi Di Stefano" .
+
+ar-timeIndexedTypedLocation:0302040489-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0302040489"@it , "Current physical location of cultural property: 0302040489"@en ;
+        arco-location:atSite           ar-Site:5ceca7b3c18e1f1bbffbf2f75126a021 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0302040489"@it , "Current physical location of cultural property: 0302040489"@en .
+
+ar-address:185ba43d907f4064fca7b5d57767ddbd
+        a                    clvapit:Address ;
+        rdfs:label           "Lombardia, MI, Milano" ;
+        clvapit:hasCity      ar-city:milano ;
+        clvapit:hasProvince  ar-province:mi ;
+        clvapit:hasRegion    ar-region:lombardia .
+
+ar-TechnicalCharacteristic:a-pennello
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a pennello" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a pennello" .
+
+ar-culturalPropertyDefinition:dipinto
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "dipinto" .
+
+ar-Measurement:0302040489-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0302040489: 40cm"@en , "Misura del bene culturale 0302040489: 40cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:0302040489-1-height-40 ;
+        l0:name                     "Measurement of cultural property 0302040489: 40cm"@en , "Misura del bene culturale 0302040489: 40cm"@it .
+
+ar-timeIndexedTypedLocation:0302040489-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 0302040489"@it , "Alternative location 1 of cultural property: 0302040489"@en ;
+        arco-location:atSite           ar-Site:d41d8cd98f00b204e9800998ecf8427e ;
+        arco-location:hasLocationType  arco-location:LastLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        tiapit:atTime                  ar-TimeInterval:1974 ;
+        l0:name                        "Altra localizzazione 1 del bene: 0302040489"@it , "Alternative location 1 of cultural property: 0302040489"@en .
+
+ar-catalogueRecordVersion:0302040489-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2005 Giacon, Danka" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2005 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0302040489-compilation-ce3337533a58c2be2958ff1c3c06453c , ar-timeIndexedRole:0302040489-4584532d7bdf7b9827a1303352969985 , ar-timeIndexedRole:0302040489-3bd6146fca28e834fea370513634fef3 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:3304d73004edf82a363dddc88e330ebe ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:ce3337533a58c2be2958ff1c3c06453c ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:3d42ed83b0ddbfa80f260a2bf603a69c ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489> .
+
+ar-city:milano  a   clvapit:City ;
+        rdfs:label  "Milano" ;
+        l0:name     "Milano" .
+
+ar-PreferredAuthorshipAttribution:0302040489-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0302040489"@it , "Preferred authorship attribution of cultural property: 0302040489"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1 ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0302040489"@it , "Preferred authorship attribution of cultural property: 0302040489"@en .
+
+ar-TechnicalCharacteristic:olio-su-masonite
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "olio su masonite" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "olio su masonite" .
+
+ar-Value:0302040489-1-height-40
+        a                      mu:Value ;
+        rdfs:label             "40"@en , "40"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "40" .
+
+ar-TimeInterval:ca-1947-ca-1947
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca 1947 - ca 1947" ;
+        arco-arco:endTime    "ca 1947" ;
+        arco-arco:startTime  "ca 1947" ;
+        l0:name              "ca 1947 - ca 1947" .
+
+ar-timeIndexedRole:0302040489-4584532d7bdf7b9827a1303352969985
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Vecchio, Stefania"@it , "Scientific director: Vecchio, Stefania"@en ;
+        roapit:isRoleInTimeOf  ar-agent:3d42ed83b0ddbfa80f260a2bf603a69c ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+ar-agent:6ab35a3e63bd2a29ca21f1c3b4466dce
+        a                    COV:Organization ;
+        rdfs:label           "Regione Lombardia" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:isAgentOf  ar-agentrole:0302040489-cataloguing-agency ;
+        l0:name              "Regione Lombardia" .
+
+<https://w3id.org/arco/resource/Acquisition/0302040489-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisizione 1 del bene culturale: 0302040489"@it , "Acquisition 1 of cultural property: 0302040489"@en ;
+        arco-cd:acquisitionLocation  "Milano" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/donazione> ;
+        arco-cd:hasPreviousOwner     ar-agent:dac9f9762eb3e93955c58e9592eef408 ;
+        arco-cd:isAcquisitionOf      ar-HistoricOrArtisticProperty:0302040489 ;
+        tiapit:time                  "1974" ;
+        l0:name                      "Acquisizione 1 del bene culturale: 0302040489"@it , "Acquisition 1 of cultural property: 0302040489"@en .
+
+ar-agent:3304d73004edf82a363dddc88e330ebe
+        a           l0:Agent ;
+        rdfs:label  "Pugliese, Marina" .
+
+ar-province:mi  a   clvapit:Province ;
+        rdfs:label  "MI" ;
+        l0:name     "MI" .
+
+<https://w3id.org/arco/resource/Title/0302040489-paesaggio>
+        a           arco-cd:Title ;
+        rdfs:label  "Paesaggio" ;
+        l0:name     "Paesaggio" .
+
+ar-docutmentationType:negativo-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "negativo b/n" ;
+        l0:name     "negativo b/n" .
+
+ar-dating:0302040489-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0302040489"@it , "Dating 1 of cultural property 0302040489"@en ;
+        arco-cd:hasDatingEvent  ar-event:0302040489-creation-1 ;
+        l0:name                 "Dating 1 of cultural property 0302040489"@en , "Cronologia 1 del bene 0302040489"@it .
+
+ar-Site:6e7346880af7dbabb368c95b3bad34c1
+        a                          cis:Site ;
+        rdfs:label                 "magazzino Boschi" ;
+        cis:siteAddress            ar-address:185ba43d907f4064fca7b5d57767ddbd ;
+        arco-location:hasSiteType  ar-SiteType:deposito-museale ;
+        l0:name                    "magazzino Boschi" .
+
+ar-agentrole:0302040489-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0302040489: S27"@it , "Heritage protection agency for cultural property 0302040489: S27"@en ;
+        arco-core:hasAgent  ar-agent:033c02867cc5a8b01b0683692e033139 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0302040489-cataloguing-agency .
+
+ar-bibliography:0302040489-bibliography-2
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 2 of cultural property: 0302040489"@en , "Bibliografia 2 del bene culturale: 0302040489"@it ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        l0:name                   "Bibliography 2 of cultural property: 0302040489"@en , "Bibliografia 2 del bene culturale: 0302040489"@en .
+
+ar-photograpyDocumentation:0302040489-photographic-documentation-2
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Photographic documentation 2 of cultural property: 0302040489"@en , "Documentazione fotografica 2 del bene culturale: 0302040489"@it ;
+        arco-cd:documentationIdentifier
+                "OAC-5i010-00006_02" ;
+        arco-cd:documentationLocation  "Castello Sforzesco" ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:negativo-b-n ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:hasAgentRole         ar-agentrole:0302040489-photographic-documentation-2-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:ExistingDocumentation ;
+        l0:name                        "Photographic documentation 2 of cultural property: 0302040489"@en , "Documentazione fotografica 2 del bene culturale: 0302040489"@it .
+
+ar-agent:349291242ff90c347b6e9125a947dd02
+        a                l0:Agent ;
+        rdfs:label       "Comune di Milano, Civiche Raccolte d'Arte" ;
+        arco-cd:address  "Palazzo Marino, piazza Scala 2" ;
+        l0:name          "Comune di Milano, Civiche Raccolte d'Arte" .
+
+ar-Site:5ceca7b3c18e1f1bbffbf2f75126a021
+        a                          cis:Site ;
+        rdfs:label                 "Casa Museo Boschi - Di Stefano" ;
+        cis:isSiteOf               ar-cis:64457690e1a3190123a8ce2b52a79ff5 ;
+        cis:siteAddress            ar-address:73f332fff7c9faa04c2374fa5dac9427 ;
+        arco-location:hasSiteType  ar-SiteType:edificio-residenziale ;
+        l0:name                    "Casa Museo Boschi - Di Stefano" .
+
+<https://w3id.org/arco/resource/SiteSpecification/museale>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "museale" .
+
+ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1
+        a                             CPV:Person ;
+        rdfs:label                    "Ajmone Giuseppe" ;
+        arco-cd:agentDate             "1923-2005" ;
+        arco-cd:agentLocalIdentifier  "20000001" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0302040489 ;
+        l0:name                       "Ajmone Giuseppe" .
+
+ar-agent:dac9f9762eb3e93955c58e9592eef408
+        a           l0:Agent ;
+        rdfs:label  "Boschi, Antonio" ;
+        l0:name     "Boschi, Antonio" .
+
+ar-Value:0302040489-1-width-55
+        a                      mu:Value ;
+        rdfs:label             "55"@en , "55"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "55" .
+
+ar-HistoricOrArtisticProperty:0302040489
+        a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
+        rdfs:comment                    "dipinto" ;
+        rdfs:label                      "Paesaggio, Paesaggio (dipinto) di Ajmone Giuseppe (sec. XX)"@it , "Paesaggio, Paesaggio (dipinto) by Ajmone Giuseppe (sec. XX)"@en ;
+        arco-arco:catalogueNumber       "02040489" ;
+        arco-arco:hasCataloguingAgency  ar-agent:6ab35a3e63bd2a29ca21f1c3b4466dce ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:033c02867cc5a8b01b0683692e033139 ;
+        arco-arco:regionIdentifier      "03" ;
+        arco-arco:uniqueIdentifier      "0302040489" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0302040489-acquisition-1> ;
+        arco-cd:hasAuthor               ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1 ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:0302040489-1 ;
+        arco-cd:hasBibliography         ar-bibliography:0302040489-bibliography-2 , ar-bibliography:0302040489-bibliography-1 ;
+        arco-cd:hasDating               ar-dating:0302040489-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0302040489-photographic-documentation-2 , ar-photograpyDocumentation:0302040489-photographic-documentation-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale ;
+        arco-cd:hasSubject              ar-Subject:eb7fb6546fb530af17ecc39dc870224a ;
+        arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/0302040489-paesaggio> ;
+        arco-cd:subject                 "Paesaggio" ;
+        arco-cd:title                   "Paesaggio" ;
+        arco-core:hasAgentRole          ar-agentrole:0302040489-cataloguing-agency , ar-agentrole:0302040489-heritage-protection-agency ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0302040489-inscription-2> , <https://w3id.org/arco/resource/Inscription/0302040489-inscription-1> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0302040489-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:54764e0bac66f48b0e7af57043f65a0c ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:olio-su-masonite ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:0302040489-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0302040489 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:0ed18b53f9dc6ae750e61f1d2082ca5f ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0302040489-current , ar-timeIndexedTypedLocation:0302040489-alternative-2 , ar-timeIndexedTypedLocation:0302040489-alternative-1 .
+
+ar-agentrole:0302040489-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0302040489: R03"@it , "Cataloguing agency for cultural property 0302040489: R03"@en ;
+        arco-core:hasAgent  ar-agent:6ab35a3e63bd2a29ca21f1c3b4466dce ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+<https://w3id.org/arco/resource/Inscription/0302040489-inscription-2>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 2 of cultural property 0302040489"@en , "Iscrizione 2 sul bene culturale 0302040489"@it ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-penna ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0302040489-inscription-2 ;
+        arco-dd:positionOnCulturalProperty
+                "retro, cornice" ;
+        arco-dd:transcript              "inv.1214 Ajmone \"Paesaggio\"" .
+
+ar-agent:e93887c55fb67b2ac48120f9f27dabb7
+        a                    l0:Agent ;
+        rdfs:label           "Civico Archivio Fotografico" ;
+        arco-core:isAgentOf  ar-agentrole:0302040489-photographic-documentation-2-photographic-documentation-owner ;
+        l0:name              "Civico Archivio Fotografico" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-timeIndexedRole:0302040489-3bd6146fca28e834fea370513634fef3
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Pugliese, Marina"@it , "Official in charge: Pugliese, Marina"@en ;
+        roapit:isRoleInTimeOf  ar-agent:3304d73004edf82a363dddc88e330ebe ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-TimeInterval:sec-xx
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XX" ;
+        tiapit:time  "sec. XX" ;
+        l0:name      "sec. XX" .
+
+ar-docutmentationType:fotografia-digitale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale" ;
+        l0:name     "fotografia digitale" .
+
+ar-agentrole:0302040489-photographic-documentation-2-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 2 del bene culturale 0302040489: Civico Archivio Fotografico"@it , "Owner agency of photographic documentation 2 of cultural property 0302040489: Civico Archivio Fotografico"@en ;
+        arco-core:hasAgent  ar-agent:e93887c55fb67b2ac48120f9f27dabb7 ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 2 del bene culturale 0302040489: Civico Archivio Fotografico"@it , "Owner agency of photographic documentation 2 of cultural property 0302040489: Civico Archivio Fotografico"@en .
+
+ar-photograpyDocumentation:0302040489-photographic-documentation-1
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Photographic documentation 1 of cultural property: 0302040489"@en , "Documentazione fotografica 1 del bene culturale: 0302040489"@it ;
+        arco-cd:documentationIdentifier
+                "OAC-5i010-00006_01" ;
+        arco-cd:documentationLocation  "Archivio Iconografico M9" ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-digitale ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        l0:name                        "Documentazione fotografica 1 del bene culturale: 0302040489"@it , "Photographic documentation 1 of cultural property: 0302040489"@en .
+
+ar-bibliography:0302040489-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 0302040489"@en , "Bibliografia 1 del bene culturale: 0302040489"@it ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "vol. I, fig. 11" ;
+        l0:name                   "Bibliography 1 of cultural property: 0302040489"@en , "Bibliografia 1 del bene culturale: 0302040489"@en .
+
+ar-region:mi  a     clvapit:Province ;
+        rdfs:label  "MI" ;
+        l0:name     "MI" .
+
+ar-address:73f332fff7c9faa04c2374fa5dac9427
+        a                    clvapit:Address ;
+        rdfs:label           "Italia, Lombardia, MI, Milano" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        clvapit:fullAddress  "Via Jan, 15" ;
+        clvapit:hasCity      ar-city:milano ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:mi ;
+        clvapit:hasRegion    ar-region:lombardia .
+
+<https://w3id.org/arco/resource/CulturalEvent/10b61d3ea64a451e9f9fae5c2d3dfe92>
+        a                           cis:CulturalEvent ;
+        rdfs:label                  "Ajmone: opere scelte, 1943 - 1997" ;
+        cis:involvesCulturalEntity  ar-HistoricOrArtisticProperty:0302040489 ;
+        clvapit:hasSpatialCoverage  <https://w3id.org/arco/resource/GeographicalFeature/1deb12e600a906fae8c16a48d61fc546> ;
+        l0:name                     "Ajmone: opere scelte, 1943 - 1997" .
+
+ar-SiteDefinition:deposito
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "deposito" .
+
+ar-Measurement:0302040489-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0302040489: 55cm"@en , "Misura del bene culturale 0302040489: 55cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:0302040489-1-width-55 ;
+        l0:name                     "Measurement of cultural property 0302040489: 55cm"@en , "Misura del bene culturale 0302040489: 55cm"@it .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente scientifico"@it , "Scientific Director"@en .
+
+<https://w3id.org/arco/resource/Inscription/0302040489-inscription-1>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 1 of cultural property 0302040489"@en , "Iscrizione 1 sul bene culturale 0302040489"@it ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-pennello ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0302040489-inscription-1 ;
+        arco-dd:positionOnCulturalProperty
+                "in basso a sinistra" ;
+        arco-dd:transcript              "Ajmone" .
+
+ar-CulturalEntityTechnicalStatus:0302040489-inscription-2
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 2 sul bene culturale 0302040489"@it , "Technical status of inscription 2 of cultural property 0302040489"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-penna ;
+        l0:name     "Stato tecnico dell'iscrizione 2 sul bene culturale 0302040489"@it , "Technical status of inscription 2 of cultural property 0302040489"@en .
+
+<https://w3id.org/arco/resource/AcquisitionType/donazione>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "donazione" ;
+        l0:name     "donazione" .
+
+ar-MeasurementCollection:0302040489-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0302040489"@en , "Misure del bene culturale 0302040489"@it ;
+        arco-core:note          "ingombro: 43,8x58,5x3" ;
+        arco-dd:hasMeasurement  ar-Measurement:0302040489-1-width , ar-Measurement:0302040489-1-height ;
+        l0:name                 "Measurements of cultural property 0302040489"@en , "Misure del bene culturale 0302040489"@it .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-cis:880e38d4f12bee1d88ba59a79c52e730
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Collezione Boschi Di Stefano" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:collezione-boschi-di-stefano ;
+        cis:hasSite           ar-Site:d41d8cd98f00b204e9800998ecf8427e ;
+        l0:name               "Collezione Boschi Di Stefano" .
+
+ar-TechnicalCharacteristic:a-penna
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a penna" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a penna" .
+
+ar-SiteDefinition:edificio-residenziale
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "edificio residenziale" .
+
+ar-ConservationStatus:0302040489-conservation-status-1
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 0302040489"@it , "Conservation status 1 of cultural property: 0302040489"@en ;
+        arco-core:specifications  "Superficie cromatica: caduta di colore.||Data rilievo: 2005" ;
+        arco-dd:hasConservationStatusType
+                arco-dd:GoodConservationStatus ;
+        l0:name                   "Stato di conservazione 1 del bene: 0302040489"@it , "Conservation status 1 of cultural property: 0302040489"@en .
+
+<https://w3id.org/arco/resource/GeographicalFeature/1deb12e600a906fae8c16a48d61fc546>
+        a           cis:GeographicalFeature ;
+        rdfs:label  "Arona, Ex Convento della Purificazione, 1997" .
+
+ar-Subject:eb7fb6546fb530af17ecc39dc870224a
+        a                    arco-cd:Subject ;
+        rdfs:label           "Paesaggio" ;
+        arco-cd:isSubjectOf  ar-HistoricOrArtisticProperty:0302040489 ;
+        l0:name              "Paesaggio" .
+
+ar-accessProfile:0302040489-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0302040489: 1"@it , "Access profile to catalogue record of cultural property 0302040489: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0302040489: 1"@it , "Access profile to catalogue record of cultural property 0302040489: 1"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0302040489-heritage-protection-agency .
+
+ar-TimeInterval:1974  a    tiapit:TimeInterval ;
+        arco-arco:endTime  "1974" .
+
+ar-event:0302040489-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0302040489"@it , "Creation of cultural property 0302040489"@en ;
+        arco-cd:specificTime  ar-TimeInterval:ca-1947-ca-1947 ;
+        tiapit:atTime         ar-TimeInterval:sec-xx ;
+        l0:name               "Realizzazione del bene 0302040489"@it , "Creation of cultural property 0302040489"@en .
+
+ar-cis:64457690e1a3190123a8ce2b52a79ff5
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Polo del Novecento e Arte Contemporanea" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:polo-del-novecento-e-arte-contemporanea ;
+        cis:hasSite           ar-Site:5ceca7b3c18e1f1bbffbf2f75126a021 ;
+        l0:name               "Polo del Novecento e Arte Contemporanea" .
+
+<https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489>
+        a           arco-catalogue:CatalogueRecordOAC ;
+        rdfs:label  "Catalogue Record n: 0302040489"@en , "Scheda catalografica n: 0302040489"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0302040489" ;
+        arco-catalogue:describesCulturalProperty
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0302040489-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0302040489-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "OAC-ICCD11324026" .
+
+ar-role:Owner  a            roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  ar-agentrole:0302040489-photographic-documentation-2-photographic-documentation-owner .
+
+ar-TimeInterval:1997-2003
+        a                    tiapit:TimeInterval ;
+        arco-arco:endTime    "2003" ;
+        arco-arco:startTime  "1997" .
+
+ar-agent:ce3337533a58c2be2958ff1c3c06453c
+        a           l0:Agent ;
+        rdfs:label  "Giacon, Danka" .
+
+ar-CulturalEntityTechnicalStatus:0302040489-inscription-1
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 0302040489"@it , "Technical status of inscription 1 of cultural property 0302040489"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-pennello ;
+        l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0302040489"@it , "Technical status of inscription 1 of cultural property 0302040489"@en .
+
+ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en ;
+        arco-cd:hasOwner  ar-agent:349291242ff90c347b6e9125a947dd02 ;
+        l0:name           "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en .
+
+ar-SiteType:deposito-museale
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: deposito museale"@it , "Site type: deposito museale"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:deposito ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/museale> ;
+        l0:name     "Tipo di contenitore fisico: deposito museale"@it , "Site type: deposito museale"@en .
+
+ar-agent:033c02867cc5a8b01b0683692e033139
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza per i beni storici artistici ed etnoantropologici per le province di Milano Bergamo Como Lecco Lodi Monza Pavia Sondrio Varese" ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:isAgentOf  ar-agentrole:0302040489-heritage-protection-agency ;
+        l0:name              "Soprintendenza per i beni storici artistici ed etnoantropologici per le province di Milano Bergamo Como Lecco Lodi Monza Pavia Sondrio Varese" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-culturalPropertyType:54764e0bac66f48b0e7af57043f65a0c
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: dipinto"@it , "Cultural property type: dipinto"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:dipinto ;
+        l0:name     "Tipo del bene: dipinto"@it , "Cultural property type: dipinto"@en .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "Italia" ;
+        l0:name     "Italia" .
+
+ar-timeIndexedTypedLocation:0302040489-alternative-2
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 2 del bene: 0302040489"@it , "Alternative location 2 of cultural property: 0302040489"@en ;
+        arco-location:atSite           ar-Site:6e7346880af7dbabb368c95b3bad34c1 ;
+        arco-location:hasLocationType  arco-location:StorageLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:0302040489 ;
+        tiapit:atTime                  ar-TimeInterval:1997-2003 ;
+        l0:name                        "Altra localizzazione 2 del bene: 0302040489"@it , "Alternative location 2 of cultural property: 0302040489"@en .
+
+ar-Site:d41d8cd98f00b204e9800998ecf8427e
+        a             cis:Site ;
+        rdfs:label    "Contenitore fisico di: Collezione Boschi Di Stefano" ;
+        cis:isSiteOf  ar-cis:880e38d4f12bee1d88ba59a79c52e730 ;
+        l0:name       "Contenitore fisico di: Collezione Boschi Di Stefano" .
+
+ar-timeIndexedRole:0302040489-compilation-ce3337533a58c2be2958ff1c3c06453c
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Giacon, Danka"@en , "Compilazione da Giacon, Danka"@it ;
+        roapit:isRoleInTimeOf  ar-agent:ce3337533a58c2be2958ff1c3c06453c ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+<https://w3id.org/arco/resource/MeasurementUnit/cm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "cm" ;
+        l0:name     "cm" .
+
+ar-region:lombardia  a  clvapit:Region ;
+        rdfs:label  "Lombardia" ;
+        l0:name     "Lombardia" .
+
+ar-CISNameInTime:polo-del-novecento-e-arte-contemporanea
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Polo del Novecento e Arte Contemporanea"@it , "Name in time: Polo del Novecento e Arte Contemporanea"@en ;
+        cis:institutionalCISName  "Polo del Novecento e Arte Contemporanea" ;
+        l0:name                   "Denominazione nel tempo: Polo del Novecento e Arte Contemporanea"@it , "Name in time: Polo del Novecento e Arte Contemporanea"@en .
+
+ar-agent:3d42ed83b0ddbfa80f260a2bf603a69c
+        a           l0:Agent ;
+        rdfs:label  "Vecchio, Stefania" .
+
+ar-TimeInterval:2005  a  tiapit:TimeInterval ;
+        rdfs:label   "2005" ;
+        tiapit:time  "2005" .
+
+ar-SiteType:edificio-residenziale
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: edificio residenziale"@it , "Site type: edificio residenziale"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:edificio-residenziale ;
+        l0:name     "Tipo di contenitore fisico: edificio residenziale"@it , "Site type: edificio residenziale"@en .
+
+ar-CulturalEntityTechnicalStatus:0302040489
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0302040489"@it , "Technical status of cultural property 0302040489"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:olio-su-masonite ;
+        l0:name     "Stato tecnico del bene culturale 0302040489"@it , "Technical status of cultural property 0302040489"@en .

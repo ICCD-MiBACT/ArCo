@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <RA version="2.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo di scheda">RA</TSK>
+         <LIR hint="Livello di ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">09</NCTR>
+            <NCTN hint="Numero catalogo generale">00206599</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S15</ESC>
+         <ECP hint="Ente competente">S15</ECP>
+      </CD>
+      <LC hint="LOCALIZZAZIONE">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCP hint="Provincia">FI</PVCP>
+            <PVCC hint="Comune">Firenze</PVCC>
+            <PVCL hint="Localita'">Firenze</PVCL>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCN hint="Denominazione">Museo Archeologico Nazionale</LDCN>
+            <LDCU hint="Denominazione spazio viabilistico">Piazza della Santissima Annunziata, 9</LDCU>
+            <LDCS hint="Specifiche">Piano II,Sala 2</LDCS>
+         </LDC>
+      </LC>
+      <UB hint="UBICAZIONE">
+         <INV hint="INVENTARIO DI MUSEO O SOPRINTENDENZA"/>
+      </UB>
+      <LA hint="ALTRE LOCALIZZAZIONI">
+         <TCL hint="Tipo di Localizzazione">reperimento</TCL>
+         <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PRVS hint="Stato">ITALIA</PRVS>
+         </PRV>
+      </LA>
+      <RP hint="REPERIMENTO">
+         <SPR hint="Specifiche di reperimento">Dalle Antiche Collezioni</SPR>
+      </RP>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">kantharos</OGTD>
+         </OGT>
+         <CLS hint="Classe e produzione">Ceramica di impasto</CLS>
+      </OG>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Secolo">VII secolo a.C.</DTZG>
+         </DTZ>
+         <DTS hint="CRONOLOGIA SPECIFICA">
+            <DTSI hint="Da">700 a.C.</DTSI>
+            <DTSF hint="A">602 a.C.</DTSF>
+         </DTS>
+         <DTM hint="Motivazione cronologica">NR (recupero pregresso)</DTM>
+      </DT>
+      <MT hint="DATI TECNICI">
+         <MTC hint="Materia e tecnica">impasto/ a impressione</MTC>
+         <MIS hint="MISURE">
+            <MISU hint="Unita'">mm.</MISU>
+            <MISA hint="Altezza">138</MISA>
+            <MISV hint="Varie">max.: 166</MISV>
+         </MIS>
+      </MT>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">ricomposto</STCC>
+            <STCS hint="Indicazioni specifiche">parzialmente integrato</STCS>
+         </STC>
+      </CO>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESO hint="Indicazioni sull'oggetto">Corpo biconico con labbro estroflesso;collo a profilo leggermente concavo;piede tronco-conico distinto;anse a bastoncello,verticali,con apofisi coniche in corrispondenza degli attacchi superiori. Impasto nerastro a chiazze brune,decorazione impressa Decorazione:sulla parte centrale del corpo fascia delimitata da linee a falsa cordicella,suddivisa in tre parti,con cuppelle ai lati ed apofisi sormontate da archetto a falsa cordicella al centro.</DESO>
+         </DES>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="FOTOGRAFIE">
+            <FTAX hint="Genere">fotografie esistenti</FTAX>
+            <FTAP hint="Tipo">positivo b/n</FTAP>
+            <FTAN hint="Codice identificativo">SAFI41124/7</FTAN>
+         </FTA>
+         <FTA hint="FOTOGRAFIE">
+            <FTAX hint="Genere">fotografie allegate</FTAX>
+            <FTAP hint="Tipo">fotografia digitale</FTAP>
+            <FTAN hint="Codice identificativo">SAFI51036</FTAN>
+         </FTA>
+      </DO>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">1985</CMPD>
+            <CMPN hint="Nome compilatore">Poggesi G.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Maraschini V.</FUR>
+         <FUR hint="Funzionario responsabile">Maggiani A.</FUR>
+         <RVM hint="TRASCRIZIONE PER MEMORIZZAZIONE">
+            <RVMD hint="Data registrazione">2008</RVMD>
+            <RVMN hint="Nome revisore">Maraschini V.</RVMN>
+         </RVM>
+      </CM>
+   </RA>
+</schede>

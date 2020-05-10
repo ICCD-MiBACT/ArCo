@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <BNPE version="3.01_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">BNPE</TSK>
+         <LIR hint="Livello ricerca">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">15</NCTR>
+            <NCTN hint="Numero catalogo generale">00831200</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">AI182</ESC>
+         <ECP hint="Ente competente">S81</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">Arenaria</OGTD>
+            <OGTL hint="Codice lingua">ita</OGTL>
+            <OGTV hint="Identificazione">esemplare</OGTV>
+         </OGT>
+         <QNT hint="QUANTITA'">
+            <QNTN hint="Numero">1</QNTN>
+         </QNT>
+      </OG>
+      <SR hint="SISTEMATICA-PETROLOGIA">
+         <SRN hint="CLASSIFICAZIONE">
+            <SRNT hint="Tipo litologico">roccia sedimentaria</SRNT>
+            <SRNP hint="Nome petrografico">arenaria</SRNP>
+            <SRNR hint="Nome petrografico (IUGS)">sandstone</SRNR>
+            <SRNN hint="Altro nome">pietra arenaria</SRNN>
+         </SRN>
+         <SRC hint="CARATTERISTICHE PETROGRAFICHE">
+            <SRCP hint="Strutture primarie">lamination</SRCP>
+            <SRCR hint="Tipo di tessitura">lineated</SRCR>
+            <SRCZ hint="Alterazione">nessuna informazione</SRCZ>
+         </SRC>
+         <SRM hint="MINERALOGIA">
+            <SRMP hint="Minerali principali">Quartz, Orthoclase, Feldspar</SRMP>
+            <SRMA hint="Minerali accessori">Ossidi di Ferro</SRMA>
+         </SRM>
+         <SRG hint="CARATTERISTICHE GEOTECNICHE">
+            <SRGS hint="Coesione">semidure</SRGS>
+         </SRG>
+         <SRF hint="CARATTERISTICHE FISICHE">
+            <SRFR hint="Radioattivita'">non determinata</SRFR>
+         </SRF>
+         <SRI hint="ALTRE INFORMAZIONI">
+            <SRIM hint="Impiego come materiale lapideo">si</SRIM>
+            <SRIT hint="Ambito di impiego (riferimento ad altre schede ICCD)">edilizia</SRIT>
+         </SRI>
+         <SRT hint="TIPO">
+            <SRTT hint="Tipo">olotipo</SRTT>
+         </SRT>
+         <SRE hint="CARTELLINI/ ETICHETTE">
+            <SRET hint="Testo">Arenaria, rocce sedimentarie, Castel di Sangro, 021, Collezione F. Desiderio</SRET>
+         </SRE>
+      </SR>
+      <LR hint="DATI DI RACCOLTA">
+         <LRV hint="LOCALITA' DI RACCOLTA">
+            <LRVT hint="Tipo di localizzazione">località di raccolta - dati storici</LRVT>
+            <LRVK hint="Continente">Europa</LRVK>
+            <LRVS hint="Stato">Italia</LRVS>
+            <LRVR hint="Regione">Abruzzo</LRVR>
+            <LRVP hint="Provincia">Aquila</LRVP>
+            <LRVC hint="Comune">Castel di Sangro</LRVC>
+         </LRV>
+         <LRI hint="INFORMAZIONI SULLA RACCOLTA">
+            <LRIL hint="Legit">Desiderio, Francesco Paolo</LRIL>
+            <LRIU hint="Motivo">collezionismo</LRIU>
+         </LRI>
+      </LR>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Campania</PVCR>
+            <PVCP hint="Provincia">CE</PVCP>
+            <PVCC hint="Comune">Caserta</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCT hint="Tipologia">museo</LDCT>
+            <LDCN hint="Denominazione">Museo "Michelangelo"</LDCN>
+            <LDCC hint="Complesso monumentale di appartenenza">Istituto Tecnico Statale "M. Buonarroti"</LDCC>
+            <LDCU hint="Denominazione spazio viabilistico">viale Michelangelo 1</LDCU>
+            <LDCM hint="Denominazione struttura conservativa">Museo "Michelangelo"</LDCM>
+            <LDCS hint="Specifiche">piano terra</LDCS>
+         </LDC>
+      </LC>
+      <UB hint="DATI PATRIMONIALI E COLLEZIONI">
+         <INV hint="INVENTARIO"/>
+         <COL hint="COLLEZIONI">
+            <COLD hint="Denominazione">Collezione Desiderio</COLD>
+            <COLC hint="Nome del collezionista">Desiderio, Francesco Paolo</COLC>
+            <COLA hint="Data ingresso del bene nella collezione">2009</COLA>
+         </COL>
+      </UB>
+      <AU hint="DEFINIZIONE CULTURALE/ PREPARAZIONE E TRATTAMENTI">
+         <AUI hint="AUTORE/ RESPONSABILITA'">
+            <AUIR hint="Ruolo">collezionista</AUIR>
+            <AUIN hint="Autore">Desiderio, Francesco Paolo</AUIN>
+            <AUIA hint="Dati anagrafici/ Periodo di attivita'">15/05/1920 - 28/06/2012</AUIA>
+            <AUIM hint="Motivazione dell'attribuzione">documentazione</AUIM>
+         </AUI>
+         <AUI hint="AUTORE/ RESPONSABILITA'">
+            <AUIR hint="Ruolo">classificatore</AUIR>
+            <AUIN hint="Autore">Natale, Maddalena</AUIN>
+            <AUIA hint="Dati anagrafici/ Periodo di attivita'">1/07/1969 - vivente</AUIA>
+            <AUIM hint="Motivazione dell'attribuzione">documentazione</AUIM>
+         </AUI>
+      </AU>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCD hint="Data">2014</STCD>
+            <STCC hint="Stato di conservazione">buono</STCC>
+         </STC>
+      </CO>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <ACQ hint="ACQUISIZIONE">
+            <ACQT hint="Tipo acquisizione">donazione</ACQT>
+            <ACQN hint="Nome">Desiderio, Francesco Paolo</ACQN>
+            <ACQD hint="Data acquisizione">2009/04/16</ACQD>
+            <ACQL hint="Luogo acquisizione">CE/ Caserta</ACQL>
+         </ACQ>
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+            <CDGS hint="Indicazione specifica">Istituto Tecnico Statale "M. Buonarroti"</CDGS>
+            <CDGI hint="Indirizzo">viale Michelangelo 1 - 81100 Caserta</CDGI>
+         </CDG>
+         <NVC hint="PROVVEDIMENTI DI TUTELA">
+            <NVCT hint="Tipo provvedimento">ope legis (L.1089/1939 art.4)</NVCT>
+         </NVC>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAA hint="Autore">Di Lorenzo, Pietro</FTAA>
+            <FTAD hint="Data">2014/00/00</FTAD>
+            <FTAE hint="Ente proprietario">Museo "Michelangelo"</FTAE>
+            <FTAC hint="Collocazione">Museo "Michelangelo"</FTAC>
+            <FTAN hint="Codice identificativo">New_1410036395377</FTAN>
+            <FTAF hint="Formato">6x8</FTAF>
+         </FTA>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBA hint="Autore">Di Lorenzo, P.</BIBA>
+            <BIBD hint="Anno di edizione">2011</BIBD>
+            <BIBH hint="Sigla per citazione">00000001</BIBH>
+            <BIBN hint="V., p., n.">pp. 48-49</BIBN>
+            <BIBI hint="V., tav., fig.">fig. 11</BIBI>
+         </BIB>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">bibliografia specifica</BIBX>
+            <BIBA hint="Autore">Natale, M.</BIBA>
+            <BIBD hint="Anno di edizione">2011</BIBD>
+            <BIBH hint="Sigla per citazione">00000002</BIBH>
+         </BIB>
+         <BIL hint="Citazione completa">P. Di Lorenzo (2011), Il Museo “Michelangelo”, in Scientia Magistra Vitae – catalogo dei Musei, degli approfondimenti e delle mostre, a cura di P. Di Lorenzo e A. Rea, pp. 34-52, Melagrana onlus, San Felice a Cancello (CE),  ISBN 978-88-6335-064-7.</BIL>
+         <BIL hint="Citazione completa">M. Natale (2011), La sezione di Mineralogia, in P. Di Lorenzo, A. Rea, Scientia Magistra Vitae Creare, Conoscere, Diffondere e Valorizzare la Scienza e la sua memoria storica/ DVD di documentazione del progetto. Ministero dell’Istruzione, dell’Università, ISBN 978-88-6355-067-8.</BIL>
+         <BSE hint="BIBLIOGRAFIA SU SUPPORTO ELETTRONICO">
+            <BSEX hint="Genere">bibliografia specifica</BSEX>
+            <BSES hint="Tipo di supporto">DVD</BSES>
+            <BSEA hint="Autore/Curatore dell'opera">Di Lorenzo, P./ Rea, A.</BSEA>
+            <BSET hint="Titolo dell'opera">Scientia Magistra Vitae  Creare, Conoscere, Diffondere e Valorizzare la Scienza e la sua memoria storica  / DVD di documentazione del progetto. Ministero dell’Istruzione, dell’Università e della Ricerca L. 6/2000</BSET>
+            <BSEL hint="Luogo di edizione">San Felice a Cancello</BSEL>
+            <BSEE hint="Editore/Produttore/Distributore">Melagrana</BSEE>
+            <BSED hint="Data di edizione">2011</BSED>
+            <BSEN hint="Edizione">I° Edizione</BSEN>
+            <BSER hint="Autore del contributo">Natale, M.</BSER>
+            <BSEC hint="Titolo del contributo/parte componente">La sezione di Mineralogia</BSEC>
+         </BSE>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2014</CMPD>
+            <CMPN hint="Nome">Quero, Tania</CMPN>
+         </CMP>
+         <RSR hint="Referente scientifico">Di Lorenzo, Pietro</RSR>
+         <FUR hint="Funzionario responsabile">Bellofatto, Lucia</FUR>
+      </CM>
+   </BNPE>
+</schede>

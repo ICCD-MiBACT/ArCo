@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <BNP version="3.01_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">BNP</TSK>
+         <LIR hint="Livello ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">10</NCTR>
+            <NCTN hint="Numero catalogo generale">00176190</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S37</ESC>
+         <ECP hint="Ente competente">S37</ECP>
+      </CD>
+      <AC hint="ALTRI CODICI">
+         <ACK hint="Codice campione">167337</ACK>
+      </AC>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">fossile</OGTD>
+            <OGTT hint="Definizione specifica">mandibola destra di lince</OGTT>
+            <OGTV hint="Identificazione">esemplare</OGTV>
+            <OGTC hint="Denominazione collezione">mammalofauna fossile di Pantalla (Todi, PG)</OGTC>
+         </OGT>
+      </OG>
+      <SP hint="SISTEMATICA - PALEONTOLOGIA">
+         <SPS hint="SISTEMATICA">
+            <SPSP hint="Regno">Animalia</SPSP>
+            <SPSH hint="Phylum/ Divisione">Chordata</SPSH>
+            <SPSB hint="Classe">Mammalia</SPSB>
+            <SPSO hint="Ordine">Carnivora</SPSO>
+            <SPSF hint="Famiglia">Felidae</SPSF>
+            <SPSR hint="Genere">Lynx</SPSR>
+            <SPSS hint="Specie">issiodorensis</SPSS>
+            <SPST hint="Sottospecie">valdarnensis</SPST>
+         </SPS>
+         <SPM hint="TIPO">
+            <SPMT hint="Materiale tipico">no</SPMT>
+            <SPMP hint="Tipologia">NR</SPMP>
+            <SPMD hint="Denominazione">NR</SPMD>
+         </SPM>
+      </SP>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESO hint="Descrizione oggetto">Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole.</DESO>
+         </DES>
+      </DA>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Umbria</PVCR>
+            <PVCP hint="Provincia">PG</PVCP>
+            <PVCC hint="Comune">Perugia</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCT hint="Tipologia">deposito</LDCT>
+            <LDCU hint="Denominazione spazio viabilistico">Via Assisana 53, Ponte San Giovanni, Perugia</LDCU>
+            <LDCM hint="Denominazione struttura conservativa">Palazzone</LDCM>
+         </LDC>
+      </LC>
+      <LR hint="DATI DI RACCOLTA">
+         <LRT hint="Tipo di localizzazione">località di raccolta - dati aggiornati</LRT>
+         <LRV hint="LOCALITA' DI RACCOLTA">
+            <LRVK hint="Continente/ Subcontinente">Europa</LRVK>
+            <LRVS hint="Stato">Italia</LRVS>
+            <LRVR hint="Regione">Umbria</LRVR>
+            <LRVP hint="Provincia">PG</LRVP>
+            <LRVC hint="Comune">Todi</LRVC>
+            <LRVL hint="Localita'">Pantalla</LRVL>
+         </LRV>
+         <LRI hint="INFORMAZIONI SULLA RACCOLTA">
+            <LRIR hint="Ambiente">affioramento</LRIR>
+         </LRI>
+      </LR>
+      <ET hint="ETA' GEOLOGICA">
+         <ETG hint="GEOCRONOLOGIA (CRONOSTRATIGRAFIA)">
+            <ETGE hint="Eon (Eontema)">Fanerozoico</ETGE>
+            <ETGR hint="Era (Eratema)">Cenozoico</ETGR>
+            <ETGP hint="Periodo (Sistema)">Quaternario</ETGP>
+            <ETGO hint="Epoca (Serie)">Pleistocene</ETGO>
+            <ETGT hint="Eta' (Piano)">Gelasiano/Calabriano</ETGT>
+         </ETG>
+         <ETA hint="ALTRE INFORMAZIONI">
+            <ETAC hint="Contesto geologico">affioramento Unità di Santa Maria di Ciciliano</ETAC>
+            <ETAO hint="Litotipo">sabbie siltose</ETAO>
+            <ETAD hint="Datazione relativa dell'affioramento">Villafranchiano superiore</ETAD>
+         </ETA>
+      </ET>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">discreto</STCC>
+         </STC>
+      </CO>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <ACQ hint="ACQUISIZIONE">
+            <ACQT hint="Tipo acquisizione">scavo</ACQT>
+            <ACQD hint="Data acquisizione">1995</ACQD>
+         </ACQ>
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAN hint="Codice identificativo">SBAU - dig2013 - 149</FTAN>
+         </FTA>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2013</CMPD>
+            <CMPN hint="Nome">Marco Cherin</CMPN>
+         </CMP>
+         <RSR hint="Referente scientifico">Maria Cristina De Angelis</RSR>
+         <FUR hint="Funzionario responsabile">Maria Cristina De Angelis</FUR>
+      </CM>
+   </BNP>
+</schede>

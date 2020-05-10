@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <E version="2.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo di scheda">E</TSK>
+         <LIR hint="Livello di ricerca">I</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">12</NCTR>
+            <NCTN hint="Numero catalogo generale">00543135</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">C337 (L.160/88)</ESC>
+         <ECP hint="Ente competente">S48</ECP>
+      </CD>
+      <RV hint="GERARCHIA">
+         <ROZ hint="Riferimento orizzontale">1200543135</ROZ>
+      </RV>
+      <LC hint="LOCALIZZAZIONE">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PVCP hint="Provincia">RM</PVCP>
+            <PVCC hint="Comune">ROMA</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCN hint="Denominazione">PALAZZO DELLE SCIENZE</LDCN>
+            <LDCM hint="Denominazione raccolta">MUSEO NAZIONALE PREISTORICO ETNOGRAFICO "L.PIGORINI"</LDCM>
+            <LDCS hint="Specifiche">MAGAZZINO INDONESIA 5/G</LDCS>
+         </LDC>
+      </LC>
+      <UB hint="UBICAZIONE">
+         <INV hint="INVENTARIO DI MUSEO O SOPRINTENDENZA"/>
+      </UB>
+      <LA hint="ALTRE LOCALIZZAZIONI">
+         <TCL hint="Tipo di localizzazione">PROVENIENZA</TCL>
+         <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PRVG hint="Continente">ASIA</PRVG>
+            <PRVA hint="Area Geografica">INDONESIA</PRVA>
+            <PRVR hint="Regione Specifica">BORNEO CENTRO-ORIENTALE, ALTO CORSO DEL MAHAKAM</PRVR>
+         </PRV>
+      </LA>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">TURCASSO</OGTD>
+            <OGTL hint="Denominazione locale">TOLOR</OGTL>
+         </OGT>
+         <QNT hint="QUANTITA'">
+            <QNTN hint="Numero">35</QNTN>
+         </QNT>
+      </OG>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <ATB hint="AMBITO CULTURALE">
+            <ATBD hint="Denominazione">DAYAK-PENEHING</ATBD>
+         </ATB>
+      </AU>
+      <MT hint="DATI TECNICI">
+         <MTC hint="Materia e tecnica">BAMBU'</MTC>
+         <MTC hint="Materia e tecnica">FIBRA VEGETALE INTRECCIATA</MTC>
+         <MTC hint="Materia e tecnica">LEGNO INTAGLIATO</MTC>
+         <MIS hint="MISURE">
+            <MISA hint="Altezza">41.00</MISA>
+            <MISL hint="Larghezza">10.50</MISL>
+            <MISD hint="Diametro">7.00</MISD>
+            <MISS hint="Spessore">0.30</MISS>
+         </MIS>
+      </MT>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">DISCRETO</STCC>
+         </STC>
+      </CO>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <ACQ hint="ACQUISIZIONE">
+            <ACQT hint="Tipo acquisizione">DONAZIONE</ACQT>
+            <ACQN hint="Nome">RUDEL E.</ACQN>
+            <ACQD hint="Data acquisizione">1911</ACQD>
+         </ACQ>
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">PROPRIETA' STATO</CDGG>
+            <CDGS hint="Indicazione specifica">SOPRINTENDENZA AL MUSEO PREISTORICO ETNOGRAFICO</CDGS>
+            <CDGI hint="Indirizzo">VIALE LINCOLN 1 - ROMA</CDGI>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="FOTOGRAFIE">
+            <FTAX hint="Genere">FOTOGRAFIE ALLEGATE</FTAX>
+            <FTAP hint="Tipo">FOTOGRAFIA COLORE</FTAP>
+            <FTAN hint="Codice identificativo">SMPE RM 14587</FTAN>
+         </FTA>
+         <FTA hint="FOTOGRAFIE">
+            <FTAX hint="Genere">FOTOGRAFIE ALLEGATE</FTAX>
+            <FTAP hint="Tipo">FOTOGRAFIA COLORE</FTAP>
+            <FTAN hint="Codice identificativo">SMPE RM 14588</FTAN>
+         </FTA>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">BIBLIOGRAFIA DI CONFRONTO</BIBX>
+            <BIBN hint="V., pp., nn.">P.185</BIBN>
+            <BIBA hint="Autore">ROTH L.</BIBA>
+            <BIBD hint="Anno di edizione">1896</BIBD>
+         </BIB>
+      </DO>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">1996</CMPD>
+            <CMPN hint="Nome compilatore">ZABOTTI F.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">PADERNI L.</FUR>
+      </CM>
+      <AN hint="ANNOTAZIONI">
+         <OSS hint="Osservazioni">NELLA FASCIA IN FIBRA VEGETALE E' INFILATO UN LEGNO A FORCELLA CON INTAGLI PER APPENDERLO ALLA CINTURA. INTERNO FODERATO IN PELLE DI ANIMALE ENTRO LA QUALE STANNO CANALETTE DI BAMBU', FASCE DI PELLE E DARDI AVVELENATI. CFR. 62361-73028-79543-81028.</OSS>
+      </AN>
+   </E>
+</schede>

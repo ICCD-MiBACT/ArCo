@@ -1,0 +1,490 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-Value:0900771903-2-weight-8
+        a                      mu:Value ;
+        rdfs:label             "8"@en , "8"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/kg> ;
+        mu:value               "8" .
+
+ar-Value:0900771903-1-width-41
+        a                      mu:Value ;
+        rdfs:label             "41"@en , "41"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "41" .
+
+ar-TimeInterval:ca-1920-ca-1930
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca 1920 - ca 1930" ;
+        arco-arco:endTime    "ca 1930" ;
+        arco-arco:startTime  "ca 1920" ;
+        l0:name              "ca 1920 - ca 1930" .
+
+ar-Site:aab3bbd3754a7f95472725372c10833d
+        a                cis:Site ;
+        rdfs:label       "Ospedale Santa Chiara" ;
+        cis:isSiteOf     ar-cis:ac82f3dd2ee625a10a36e6cf499dd8ad ;
+        cis:siteAddress  ar-address:914197ecfa134c68565fd8ad729a0e69 ;
+        l0:name          "Ospedale Santa Chiara" .
+
+ar-agent:0d71e15417bcad27e4a5aad6c2726a73
+        a           l0:Agent ;
+        rdfs:label  "Terenna, Gigliola" .
+
+ar-CulturalEntityTechnicalStatus:0900771903
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0900771903"@it , "Technical status of cultural property 0900771903"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:rame-fusione ;
+        l0:name     "Stato tecnico del bene culturale 0900771903"@it , "Technical status of cultural property 0900771903"@en .
+
+ar-CISNameInTime:collezione-strumentaria-storica-dellaoupisana
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Collezione strumentaria storica dell'A.O.U.Pisana"@it , "Name in time: Collezione strumentaria storica dell'A.O.U.Pisana"@en ;
+        cis:institutionalCISName  "Collezione strumentaria storica dell'A.O.U.Pisana" ;
+        l0:name                   "Denominazione nel tempo: Collezione strumentaria storica dell'A.O.U.Pisana"@it , "Name in time: Collezione strumentaria storica dell'A.O.U.Pisana"@en .
+
+ar-dating:0900771903-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0900771903"@it , "Dating 1 of cultural property 0900771903"@en ;
+        arco-cd:hasDatingEvent  ar-event:0900771903-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-tipologica ;
+        l0:name                 "Dating 1 of cultural property 0900771903"@en , "Cronologia 1 del bene 0900771903"@it .
+
+ar-city:pisa  a     clvapit:City ;
+        rdfs:label  "Pisa" ;
+        l0:name     "Pisa" .
+
+ar-region:toscana  a  clvapit:Region ;
+        rdfs:label  "Toscana" ;
+        l0:name     "Toscana" .
+
+ar-interpretationCriterion:analisi-tipologica
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi tipologica" ;
+        l0:name     "analisi tipologica" .
+
+ar-timeIndexedTypedLocation:0900771903-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0900771903"@it , "Current physical location of cultural property: 0900771903"@en ;
+        arco-core:specifications       "Edificio 41- piano I" ;
+        arco-location:atSite           ar-Site:aab3bbd3754a7f95472725372c10833d ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0900771903"@it , "Current physical location of cultural property: 0900771903"@en .
+
+ar-event:0900771903-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0900771903"@it , "Creation of cultural property 0900771903"@en ;
+        arco-cd:specificTime  ar-TimeInterval:ca-1920-ca-1930 ;
+        tiapit:atTime         ar-TimeInterval:xx-secolo-prima-meta ;
+        l0:name               "Realizzazione del bene 0900771903"@it , "Creation of cultural property 0900771903"@en .
+
+ar-agentrole:0900771903-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0900771903: AOU090901"@it , "Cataloguing agency for cultural property 0900771903: AOU090901"@en ;
+        arco-core:hasAgent  ar-agent:b09447ae8e9574072df697580f199333 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+<https://w3id.org/arco/resource/CatalogueRecordPST/0900771903>
+        a           arco-catalogue:CatalogueRecordPST ;
+        rdfs:label  "Catalogue Record n: 0900771903"@en , "Scheda catalografica n: 0900771903"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0900771903" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0900771903-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0900771903-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "PST-301-ICCD10533913" .
+
+ar-Measurement:0900771903-2-weight
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0900771903: 8kg"@en , "Misura del bene culturale 0900771903: 8kg"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Weight ;
+        arco-dd:hasValue            ar-Value:0900771903-2-weight-8 ;
+        l0:name                     "Measurement of cultural property 0900771903: 8kg"@en , "Misura del bene culturale 0900771903: 8kg"@it .
+
+<https://w3id.org/arco/resource/Use/0900771903-use>
+        a                      arco-cd:Use ;
+        rdfs:label             "Use of cultural property 0900771903"@en , "Uso del bene culturale 0900771903"@it ;
+        arco-cd:useConditions  "I tessuti biologici, ricavati mediante taglio con microtomo e installati su vetrino, sono inseriti ancora umidi nella stufa e posti ad asciugare mediante riscaldamento elettrico" ;
+        arco-cd:useFunction    "Asciugatura dei tessuti biologici per la preparazione dei campioni da analizzare in laboratorio" ;
+        tiapit:time            "Secolo XX prima metà" ;
+        l0:name                "Use of cultural property 0900771903"@en , "Uso del bene culturale 0900771903"@it .
+
+ar-timeIndexedRole:0900771903-37f3238a9cb4dd68183127de1bd74ef4
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Terenna, Gigliola"@it , "Scientific director: Terenna, Gigliola"@en ;
+        roapit:isRoleInTimeOf  ar-agent:0d71e15417bcad27e4a5aad6c2726a73 ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900771903-cataloguing-agency .
+
+ar-photograpyDocumentation:0900771903-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 0900771903"@en , "Documentazione fotografica 1 del bene culturale: 0900771903"@it ;
+        arco-cd:documentationIdentifier
+                "New_1381841120187" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 0900771903"@en , "Documentazione fotografica 1 del bene culturale: 0900771903"@it .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/kg>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "kg" ;
+        l0:name     "kg" .
+
+ar-agent:0ec8d0382f1ae10e3a6eb1182535a2e8
+        a           l0:Agent ;
+        rdfs:label  "Baldini, Mario" .
+
+ar-ConservationStatus:0900771903-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 0900771903"@it , "Conservation status 1 of cultural property: 0900771903"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 0900771903"@it , "Conservation status 1 of cultural property: 0900771903"@en .
+
+ar-agentrole:0900771903-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0900771903: S121"@it , "Heritage protection agency for cultural property 0900771903: S121"@en ;
+        arco-core:hasAgent  ar-agent:eadb82aaf3a73512cbe8b13b8a7e3fba ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-culturalPropertyType:1b667d9ac1ee11f7bc197557c91e6f7f
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: stufa per inclusioni di paraffina"@it , "Cultural property type: stufa per inclusioni di paraffina"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:stufa ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:per-inclusioni-di-paraffina ;
+        l0:name     "Tipo del bene: stufa per inclusioni di paraffina"@it , "Cultural property type: stufa per inclusioni di paraffina"@en .
+
+ar-agent:b09447ae8e9574072df697580f199333
+        a                    COV:Organization ;
+        rdfs:label           "Azienda Ospedaliera Universitaria Pisana" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903> ;
+        arco-core:isAgentOf  ar-agentrole:0900771903-cataloguing-agency ;
+        l0:name              "Azienda Ospedaliera Universitaria Pisana" .
+
+ar-timeIndexedRole:0900771903-2b10dbe65734c29d5a668907a2254327
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Macripò, Alba Maria"@it , "Official in charge: Macripò, Alba Maria"@en ;
+        roapit:isRoleInTimeOf  ar-agent:8f4b8548c37ae67371b9ab44193ff367 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-TechnicalCharacteristic:rame-fusione
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "rame/fusione" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "rame/fusione" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-catalogueRecordVersion:0900771903-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2013 Baldini, Mario" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0900771903-2b10dbe65734c29d5a668907a2254327 , ar-timeIndexedRole:0900771903-37f3238a9cb4dd68183127de1bd74ef4 , ar-timeIndexedRole:0900771903-compilation-0ec8d0382f1ae10e3a6eb1182535a2e8 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:8f4b8548c37ae67371b9ab44193ff367 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:0ec8d0382f1ae10e3a6eb1182535a2e8 ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:0d71e15417bcad27e4a5aad6c2726a73 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordPST/0900771903> .
+
+ar-culturalPropertySpecification:per-inclusioni-di-paraffina
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "per inclusioni di paraffina" .
+
+ar-Measurement:0900771903-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0900771903: 41cm"@en , "Misura del bene culturale 0900771903: 41cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:0900771903-1-width-41 ;
+        l0:name                     "Measurement of cultural property 0900771903: 41cm"@en , "Misura del bene culturale 0900771903: 41cm"@it .
+
+ar-Measurement:0900771903-1-depth
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0900771903: 21cm"@en , "Misura del bene culturale 0900771903: 21cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Depth ;
+        arco-dd:hasValue            ar-Value:0900771903-1-depth-21 ;
+        l0:name                     "Measurement of cultural property 0900771903: 21cm"@en , "Misura del bene culturale 0900771903: 21cm"@it .
+
+ar-TimeInterval:xx-secolo-prima-meta
+        a            tiapit:TimeInterval ;
+        rdfs:label   "XX secolo prima metà" ;
+        tiapit:time  "XX secolo prima metà" ;
+        l0:name      "XX secolo prima metà" .
+
+ar-Value:0900771903-1-depth-21
+        a                      mu:Value ;
+        rdfs:label             "21"@en , "21"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "21" .
+
+ar-timeIndexedRole:0900771903-compilation-0ec8d0382f1ae10e3a6eb1182535a2e8
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Baldini, Mario"@en , "Compilazione da Baldini, Mario"@it ;
+        roapit:isRoleInTimeOf  ar-agent:0ec8d0382f1ae10e3a6eb1182535a2e8 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-culturalPropertyDefinition:stufa
+        a                arco-dd:CulturalPropertyDefinition ;
+        rdfs:label       "stufa" ;
+        skos:closeMatch  <http://dati.beniculturali.it/vocabularies/patrimonio_scientifico_e_tecnologico/def/231> .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente scientifico"@it , "Scientific Director"@en .
+
+ar-accessProfile:0900771903-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0900771903: 1"@it , "Access profile to catalogue record of cultural property 0900771903: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0900771903: 1"@it , "Access profile to catalogue record of cultural property 0900771903: 1"@en .
+
+ar-agent:8f4b8548c37ae67371b9ab44193ff367
+        a           l0:Agent ;
+        rdfs:label  "Macripò, Alba Maria" .
+
+<https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903>
+        a                               arco-arco:ScientificOrTechnologicalHeritage , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "stufa, per inclusioni di paraffina" ;
+        rdfs:label                      "stufa, per inclusioni di paraffina (XX secolo, prima metà)"@it , "stufa, per inclusioni di paraffina (XX secolo, prima metà)"@en ;
+        arco-arco:catalogueNumber       "00771903" ;
+        arco-arco:description           "Stufetta da tavolo quadrangolare, su supporto a 4 piedi, con struttura in rame e rivestimento in pannelli di compensato. Su un lato l'apparato elettrico per il riscaldamento e il cavo di alimentazione. Parte superiore con le 4 pareti finestrate in vetro. Manopole frontali di apertura in porcellana." ;
+        arco-arco:hasCataloguingAgency  ar-agent:b09447ae8e9574072df697580f199333 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:eadb82aaf3a73512cbe8b13b8a7e3fba ;
+        arco-arco:numberOfComponents    "1" ;
+        arco-arco:regionIdentifier      "09" ;
+        arco-arco:uniqueIdentifier      "0900771903" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordPST/0900771903> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0900771903-acquisition-1> ;
+        arco-cd:hasDating               ar-dating:0900771903-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0900771903-photographic-documentation-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0900771903-legal-situation-proprieta-ente-pubblico-non-territoriale ;
+        arco-cd:hasUse                  <https://w3id.org/arco/resource/Use/0900771903-use> ;
+        arco-core:hasAgentRole          ar-agentrole:0900771903-heritage-protection-agency , ar-agentrole:0900771903-cataloguing-agency ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0900771903-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:1b667d9ac1ee11f7bc197557c91e6f7f ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:rame-fusione ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:0900771903-1 , ar-MeasurementCollection:0900771903-2 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0900771903 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:20c7fb1b2b68c71e1646f8769c89d2d4 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0900771903-current .
+
+ar-MeasurementCollection:0900771903-2
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0900771903"@en , "Misure del bene culturale 0900771903"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:0900771903-2-weight ;
+        l0:name                 "Measurements of cultural property 0900771903"@en , "Misure del bene culturale 0900771903"@it .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+<https://w3id.org/arco/resource/Acquisition/0900771903-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisizione 1 del bene culturale: 0900771903"@it , "Acquisition 1 of cultural property: 0900771903"@en ;
+        arco-cd:acquisitionLocation  "PI/Pisa/fuori uso" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/assegnazione> ;
+        arco-cd:isAcquisitionOf      <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903> ;
+        tiapit:time                  "1995/post" ;
+        l0:name                      "Acquisizione 1 del bene culturale: 0900771903"@it , "Acquisition 1 of cultural property: 0900771903"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900771903-heritage-protection-agency .
+
+ar-Measurement:0900771903-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0900771903: 50,5cm"@en , "Misura del bene culturale 0900771903: 50,5cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:0900771903-1-height-505 ;
+        l0:name                     "Measurement of cultural property 0900771903: 50,5cm"@en , "Misura del bene culturale 0900771903: 50,5cm"@it .
+
+ar-address:914197ecfa134c68565fd8ad729a0e69
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Toscana, PI, Pisa" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903> ;
+        clvapit:fullAddress  "Via Roma, 67" ;
+        clvapit:hasCity      ar-city:pisa ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:pi ;
+        clvapit:hasRegion    ar-region:toscana .
+
+<https://w3id.org/arco/resource/AcquisitionType/assegnazione>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "assegnazione" ;
+        l0:name     "assegnazione" .
+
+ar-province:pi  a   clvapit:Province ;
+        rdfs:label  "PI" ;
+        l0:name     "PI" .
+
+ar-MeasurementCollection:0900771903-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0900771903 21"@en , "Misure del bene culturale 0900771903 21"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:0900771903-1-width , ar-Measurement:0900771903-1-height , ar-Measurement:0900771903-1-depth ;
+        l0:name                 "Measurements of cultural property 0900771903 21"@en , "Misure del bene culturale 0900771903 21"@it .
+
+ar-agent:9fbcb05d61f9dd691ef9d46de6824a7e
+        a           l0:Agent ;
+        rdfs:label  "Azienda Ospedaliero-Universitaria Pisana" ;
+        l0:name     "Azienda Ospedaliero-Universitaria Pisana" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-TimeInterval:2013  a  tiapit:TimeInterval ;
+        rdfs:label   "2013" ;
+        tiapit:time  "2013" .
+
+ar-Value:0900771903-1-height-505
+        a                      mu:Value ;
+        rdfs:label             "50,5"@en , "50,5"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "50,5" .
+
+ar-cis:ac82f3dd2ee625a10a36e6cf499dd8ad
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Collezione strumentaria storica dell'A.O.U.Pisana" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:collezione-strumentaria-storica-dellaoupisana ;
+        cis:hasSite           ar-Site:aab3bbd3754a7f95472725372c10833d ;
+        l0:name               "Collezione strumentaria storica dell'A.O.U.Pisana" .
+
+ar-agent:eadb82aaf3a73512cbe8b13b8a7e3fba
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Archeologia, belle arti e paesaggio per le province di Pisa e Livorno" ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/ScientificOrTechnologicalHeritage/0900771903> ;
+        arco-core:isAgentOf  ar-agentrole:0900771903-heritage-protection-agency ;
+        l0:name              "Soprintendenza Archeologia, belle arti e paesaggio per le province di Pisa e Livorno" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/cm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "cm" ;
+        l0:name     "cm" .
+
+ar-legalSituation:0900771903-legal-situation-proprieta-ente-pubblico-non-territoriale
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0900771903: proprietà Ente pubblico non territoriale"@it , "Legal situation of cultural property 0900771903: proprietà Ente pubblico non territoriale"@en ;
+        arco-cd:hasOwner  ar-agent:9fbcb05d61f9dd691ef9d46de6824a7e ;
+        l0:name           "Condizione giuridica del bene culturale 0900771903: proprietà Ente pubblico non territoriale"@it , "Legal situation of cultural property 0900771903: proprietà Ente pubblico non territoriale"@en .

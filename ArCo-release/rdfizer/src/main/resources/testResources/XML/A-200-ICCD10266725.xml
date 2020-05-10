@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <A version="2.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo di scheda">A</TSK>
+         <LIR hint="Livello di ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">11</NCTR>
+            <NCTN hint="Numero catalogo generale">00217609</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S03</ESC>
+         <ECP hint="Ente competente">S03</ECP>
+      </CD>
+      <LC hint="LOCALIZZAZIONE">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PVCP hint="Provincia">AP</PVCP>
+            <PVCC hint="Comune">Ripatransone</PVCC>
+            <PVCF hint="Frazione">Ripatransone</PVCF>
+         </PVC>
+         <CST hint="CENTRO STORICO">
+            <CSTN hint="Numero d'ordine">01</CSTN>
+            <CSTD hint="Denominazione">Ripatransone</CSTD>
+            <CSTA hint="Carattere amministrativo del centro storico">capoluogo municipale</CSTA>
+         </CST>
+         <ZUR hint="ZONA URBANA">
+            <ZURN hint="Numero">0</ZURN>
+            <ZURD hint="Denominazione">zona centrale</ZURD>
+         </ZUR>
+         <SET hint="ZONA URBANA">
+            <SETT hint="Tipo">SU</SETT>
+         </SET>
+      </LC>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTT hint="Tipo">fontana</OGTT>
+            <OGTD hint="Denominazione">Fontana di via Vittorio Emanuele</OGTD>
+         </OGT>
+      </OG>
+      <RV hint="GERARCHIA">
+         <RVE hint="RIFERIMENTO VERTICALE">
+            <RVEL hint="Livello">bene individuo</RVEL>
+         </RVE>
+      </RV>
+      <CR hint="RIFERIMENTI GEO-TOPOGRAFICI">
+         <CRD hint="COORDINATE">
+            <CRDR hint="Sistema di riferimento">Gauss-Boaga</CRDR>
+            <CRDZ hint="Altitudine significativa">494.00</CRDZ>
+         </CRD>
+      </CR>
+      <UB hint="UBICAZIONE">
+         <CTS hint="CATASTO">
+            <CTSF hint="Foglio">33</CTSF>
+            <CTSD hint="Data foglio">s.d.</CTSD>
+         </CTS>
+         <UBV hint="UBICAZIONE">
+            <UBVA hint="Genere dell'affaccio">principale</UBVA>
+            <UBVD hint="Denominazione spazio viabilistico">Via Vittorio Emanuele</UBVD>
+            <UBVN hint="Numero civico">0(P)</UBVN>
+         </UBV>
+      </UB>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <ATB hint="AMBITO CULTURALE">
+            <ATBR hint="Riferimento all'intervento (ruolo)">costruzione</ATBR>
+            <ATBD hint="Denominazione">maestranze locali seicentesche</ATBD>
+            <ATBM hint="Fonte dell'attribuzione">N.R.</ATBM>
+         </ATB>
+      </AU>
+      <RE hint="NOTIZIE STORICHE">
+         <REN hint="NOTIZIA">
+            <RENR hint="Riferimento">intero bene</RENR>
+            <RENS hint="Notizia sintetica">costruzione</RENS>
+         </REN>
+         <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+            <RELS hint="Secolo">XVII</RELS>
+            <RELF hint="Frazione di secolo">inizio</RELF>
+            <RELW hint="Validita'">ante</RELW>
+         </REL>
+         <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+            <REVS hint="Secolo">XVII</REVS>
+            <REVF hint="Frazione di secolo">prima metà</REVF>
+            <REVW hint="Validita'">ca.</REVW>
+         </REV>
+      </RE>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCR hint="Riferimento alla parte">intero bene</STCR>
+            <STCC hint="Stato di conservazione">buono</STCC>
+         </STC>
+      </CO>
+      <US hint="UTILIZZAZIONI">
+         <USA hint="USO ATTUALE">
+            <USAR hint="Riferimento alla parte">intero bene</USAR>
+            <USAD hint="Uso">fontana</USAD>
+         </USA>
+      </US>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Ente locale</CDGG>
+         </CDG>
+         <VIN hint="VINCOLI MINISTERO B.C.A.">
+            <VINL hint="Legge">D.lgs. 490/1999</VINL>
+            <VINA hint="Articolo">art. 5</VINA>
+            <VINE hint="Estensione">intero bene</VINE>
+         </VIN>
+         <STU hint="STRUMENTI URBANISTICI">
+            <STUT hint="Strumento in vigore">P.R.</STUT>
+            <STUN hint="Sintesi normativa zona">restauro e risanamento conservativo</STUN>
+         </STU>
+      </TU>
+      <AL hint="ALLEGATI">
+         <SFC hint="Stralcio foglio catastale">1</SFC>
+         <FTA hint="FOTOGRAFIE">
+            <FTAP hint="Tipo">fotografia digitale</FTAP>
+         </FTA>
+      </AL>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <IGM hint="CARTOGRAFIA I.G.M.I.">
+            <IGMN hint="Estremi della tavoletta">F.° 133 I N.O.</IGMN>
+            <IGMD hint="Denominazione">RIPATRANSONE</IGMD>
+         </IGM>
+      </DO>
+      <SK hint="RIFERIMENTO ALTRE SCHEDE">
+         <RSE hint="ALTRE SCHEDE O VECCHIE SCHEDE">
+            <RSER hint="Riferimento argomento">scheda di catalogo</RSER>
+            <RSEC hint="Codici">1100006261 (IPCE)</RSEC>
+            <RSED hint="Data">1972</RSED>
+            <RSEN hint="Compilatori">Alimena R.</RSEN>
+         </RSE>
+      </SK>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILATORI">
+            <CMPR hint="Ruolo del compilatore">compilazione della scheda (speditiva)</CMPR>
+            <CMPN hint="Nome del compilatore">Taffetani D.</CMPN>
+            <CMPD hint="Data">2004</CMPD>
+         </CMP>
+         <CMP hint="COMPILATORI">
+            <CMPR hint="Ruolo del compilatore">informatizzazione della scheda (speditiva)</CMPR>
+            <CMPN hint="Nome del compilatore">Taffetani D.</CMPN>
+            <CMPD hint="Data">2004</CMPD>
+         </CMP>
+         <CMP hint="COMPILATORI">
+            <CMPR hint="Ruolo del compilatore">fotografia della scheda (speditiva)</CMPR>
+            <CMPN hint="Nome del compilatore">Taffetani D.</CMPN>
+            <CMPD hint="Data">2004</CMPD>
+         </CMP>
+         <FUR hint="Funzionario responsabile">NR</FUR>
+      </CM>
+   </A>
+</schede>

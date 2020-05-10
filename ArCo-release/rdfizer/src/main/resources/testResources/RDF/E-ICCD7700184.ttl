@@ -1,0 +1,457 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+
+ar-CISNameInTime:museo-nazionale-preistorico-etnografico-lpigorini
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: MUSEO NAZIONALE PREISTORICO ETNOGRAFICO \"L.PIGORINI\""@it , "Name in time: MUSEO NAZIONALE PREISTORICO ETNOGRAFICO \"L.PIGORINI\""@en ;
+        cis:institutionalCISName  "MUSEO NAZIONALE PREISTORICO ETNOGRAFICO \"L.PIGORINI\"" ;
+        l0:name                   "Denominazione nel tempo: MUSEO NAZIONALE PREISTORICO ETNOGRAFICO \"L.PIGORINI\""@it , "Name in time: MUSEO NAZIONALE PREISTORICO ETNOGRAFICO \"L.PIGORINI\""@en .
+
+ar-agent:3cbefe4d523cdef35c603107a682a0df
+        a           l0:Agent ;
+        rdfs:label  "RUDEL E." ;
+        l0:name     "RUDEL E." .
+
+ar-address:d41d8cd98f00b204e9800998ecf8427e
+        a                  clvapit:Address ;
+        rdfs:label         "ASIA, INDONESIA, BORNEO CENTRO-ORIENTALE, ALTO CORSO DEL MAHAKAM" ;
+        clvapit:hasRegion  ar-region:borneo-centro-orientale-alto-corso-del-mahakam .
+
+ar-Measurement:1200543135-1-thickness
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1200543135: 0.30"@en , "Misura del bene culturale 1200543135: 0.30"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Thickness ;
+        arco-dd:hasValue            ar-Value:1200543135-1-thickness-030 ;
+        l0:name                     "Measurement of cultural property 1200543135: 0.30"@en , "Misura del bene culturale 1200543135: 0.30"@it .
+
+ar-region:borneo-centro-orientale-alto-corso-del-mahakam
+        a           clvapit:Region ;
+        rdfs:label  "BORNEO CENTRO-ORIENTALE, ALTO CORSO DEL MAHAKAM" ;
+        l0:name     "BORNEO CENTRO-ORIENTALE, ALTO CORSO DEL MAHAKAM" .
+
+ar-agent:2fcb93394263cda060b1eb6cbab797b7
+        a           l0:Agent ;
+        rdfs:label  "ZABOTTI F." .
+
+ar-timeIndexedRole:1200543135-compilation-2fcb93394263cda060b1eb6cbab797b7
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by ZABOTTI F."@en , "Compilazione da ZABOTTI F."@it ;
+        roapit:isRoleInTimeOf  ar-agent:2fcb93394263cda060b1eb6cbab797b7 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-Value:1200543135-1-height-4100
+        a           mu:Value ;
+        rdfs:label  "41.00"@en , "41.00"@it ;
+        mu:value    "41.00" .
+
+ar-province:rm  a   clvapit:Province ;
+        rdfs:label  "RM" ;
+        l0:name     "RM" .
+
+ar-ConservationStatus:1200543135-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 1200543135"@it , "Conservation status 1 of cultural property: 1200543135"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 1200543135"@it , "Conservation status 1 of cultural property: 1200543135"@en .
+
+ar-address:ceb21cdd948addcf770d36736e3a426f
+        a                    clvapit:Address ;
+        rdfs:label           "RM, ROMA" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        clvapit:hasCity      ar-city:roma ;
+        clvapit:hasProvince  ar-province:rm .
+
+ar-catalogueRecordVersion:1200543135-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1996 ZABOTTI F." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1996 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1200543135-compilation-2fcb93394263cda060b1eb6cbab797b7 , ar-timeIndexedRole:1200543135-332e7944090b3fded042df207d0d5669 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:1e3152251a48570f16583dae7dc45611 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:2fcb93394263cda060b1eb6cbab797b7 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordE/1200543135> .
+
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135>
+        a                               arco-arco:CulturalProperty , arco-arco:DemoEthnoAnthropologicalHeritage ;
+        rdfs:comment                    "TURCASSO, TOLOR" ;
+        rdfs:label                      "TURCASSO - DAYAK-PENEHING ()"@en , "TURCASSO - DAYAK-PENEHING ()"@it ;
+        arco-arco:catalogueNumber       "00543135" ;
+        arco-arco:hasCataloguingAgency  ar-agent:06d2688ce598da4bf86c95233b32bdf2 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:339d677b73f05760bf8b0849fd006e7b ;
+        arco-arco:numberOfComponents    "35" ;
+        arco-arco:regionIdentifier      "12" ;
+        arco-arco:uniqueIdentifier      "1200543135" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordE/1200543135> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/1200543135-acquisition-1> ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/CulturalScopeAttribution/1200543135-cultural-scope-attribution-1> ;
+        arco-cd:hasBibliography         ar-bibliography:1200543135-bibliography-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1200543135-photographic-documentation-1 , ar-photograpyDocumentation:1200543135-photographic-documentation-2 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:1200543135-legal-situation-proprieta-stato ;
+        arco-cd:hasRelatedWorkSituation
+                ar-RelatedWorkSituation:1200543135-related-cultural-property-2-1 ;
+        arco-core:hasAgentRole          ar-agentrole:1200543135-heritage-protection-agency , ar-agentrole:1200543135-cataloguing-agency ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:1200543135-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:90145e38ef1b6ae85e2e7e134f6b4525 ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:bambu ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:1200543135-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1200543135 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:8f3a81709c7bb911f639002bcf687b7a ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1200543135-alternative-1 , ar-timeIndexedTypedLocation:1200543135-current .
+
+ar-photograpyDocumentation:1200543135-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 1200543135"@en , "Documentazione fotografica 2 del bene culturale: 1200543135"@it ;
+        arco-cd:documentationIdentifier
+                "SMPE RM 14588" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-colore ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        arco-core:hasCategory         <https://w3id.org/arco/resource/DocumentationCategory/fotografie-allegate> ;
+        l0:name                       "Photographic documentation 2 of cultural property: 1200543135"@en , "Documentazione fotografica 2 del bene culturale: 1200543135"@it .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1200543135-cataloguing-agency .
+
+ar-Value:1200543135-1-width-1050
+        a           mu:Value ;
+        rdfs:label  "10.50"@en , "10.50"@it ;
+        mu:value    "10.50" .
+
+ar-feature:6289586d7337f549cb0602dff7a0e340
+        a                   clvapit:Feature ;
+        rdfs:label          "ASIA INDONESIA BORNEO CENTRO-ORIENTALE, ALTO CORSO DEL MAHAKAM" ;
+        clvapit:hasAddress  ar-address:d41d8cd98f00b204e9800998ecf8427e .
+
+ar-docutmentationType:fotografia-colore
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "FOTOGRAFIA COLORE" ;
+        l0:name     "FOTOGRAFIA COLORE" .
+
+ar-timeIndexedTypedLocation:1200543135-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 1200543135"@it , "Current physical location of cultural property: 1200543135"@en ;
+        arco-core:specifications       "MAGAZZINO INDONESIA 5/G" ;
+        arco-location:atSite           ar-Site:abdafd878584f9d552c2ef9edd680738 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 1200543135"@it , "Current physical location of cultural property: 1200543135"@en .
+
+ar-RelatedWorkSituation:1200543135-related-cultural-property-2-1
+        a                            arco-cd:RelatedWorkSituation ;
+        rdfs:label                   "Relazione 1 tra il bene culturale 1200543135 e altro bene culturale"@it , "Relation 1 between the cultural property 1200543135 and other cultural property"@en ;
+        arco-cd:involvesRelatedWork  <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        arco-cd:isRelatedWorkSituationOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        l0:name                      "Relazione 1 tra il bene culturale 1200543135 e altro bene culturale"@it , "Relation 1 between the cultural property 1200543135 and other cultural property"@en .
+
+ar-city:roma  a     clvapit:City ;
+        rdfs:label  "Roma" ;
+        l0:name     "Roma" .
+
+ar-Site:abdafd878584f9d552c2ef9edd680738
+        a                cis:Site ;
+        rdfs:label       "PALAZZO DELLE SCIENZE" ;
+        cis:isSiteOf     ar-cis:8495380f0c26f4582c7126897bdfc52a ;
+        cis:siteAddress  ar-address:ceb21cdd948addcf770d36736e3a426f ;
+        l0:name          "PALAZZO DELLE SCIENZE" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-culturalPropertyType:90145e38ef1b6ae85e2e7e134f6b4525
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: TURCASSO"@it , "Cultural property type: TURCASSO"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:turcasso ;
+        l0:name     "Tipo del bene: TURCASSO"@it , "Cultural property type: TURCASSO"@en .
+
+ar-agentrole:1200543135-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1200543135: C337 (L.160/88)"@it , "Cataloguing agency for cultural property 1200543135: C337 (L.160/88)"@en ;
+        arco-core:hasAgent  ar-agent:06d2688ce598da4bf86c95233b32bdf2 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-photograpyDocumentation:1200543135-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 1200543135"@en , "Documentazione fotografica 1 del bene culturale: 1200543135"@it ;
+        arco-cd:documentationIdentifier
+                "SMPE RM 14587" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-colore ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        arco-core:hasCategory         <https://w3id.org/arco/resource/DocumentationCategory/fotografie-allegate> ;
+        l0:name                       "Photographic documentation 1 of cultural property: 1200543135"@en , "Documentazione fotografica 1 del bene culturale: 1200543135"@it .
+
+ar-TimeInterval:1996  a  tiapit:TimeInterval ;
+        rdfs:label   "1996" ;
+        tiapit:time  "1996" .
+
+ar-Value:1200543135-1-thickness-030
+        a           mu:Value ;
+        rdfs:label  "0.30"@en , "0.30"@it ;
+        mu:value    "0.30" .
+
+ar-CulturalEntityTechnicalStatus:1200543135
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 1200543135"@it , "Technical status of cultural property 1200543135"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:bambu ;
+        l0:name     "Stato tecnico del bene culturale 1200543135"@it , "Technical status of cultural property 1200543135"@en .
+
+ar-culturalPropertyDefinition:turcasso
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "TURCASSO" .
+
+ar-MeasurementCollection:1200543135-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 1200543135"@en , "Misure del bene culturale 1200543135"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:1200543135-1-width , ar-Measurement:1200543135-1-diameter , ar-Measurement:1200543135-1-thickness , ar-Measurement:1200543135-1-height ;
+        l0:name                 "Measurements of cultural property 1200543135"@en , "Misure del bene culturale 1200543135"@it .
+
+<https://w3id.org/arco/resource/AcquisitionType/donazione>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "DONAZIONE" ;
+        l0:name     "DONAZIONE" .
+
+<https://w3id.org/arco/resource/CatalogueRecordE/1200543135>
+        a               arco-catalogue:CatalogueRecordE ;
+        rdfs:label      "Catalogue Record n: 1200543135"@en , "Scheda catalografica n: 1200543135"@it ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1200543135" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1200543135-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:I ;
+        arco-catalogue:systemRecordCode
+                "E-ICCD7700184" ;
+        arco-core:note  "NELLA FASCIA IN FIBRA VEGETALE E' INFILATO UN LEGNO A FORCELLA CON INTAGLI PER APPENDERLO ALLA CINTURA. INTERNO FODERATO IN PELLE DI ANIMALE ENTRO LA QUALE STANNO CANALETTE DI BAMBU', FASCE DI PELLE E DARDI AVVELENATI. CFR. 62361-73028-79543-81028." .
+
+ar-agent:339d677b73f05760bf8b0849fd006e7b
+        a                    COV:Organization ;
+        rdfs:label           "Museo delle Civiltà - Museo Preistorico e Etnografico \"Luigi Pigorini\"" ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        arco-core:isAgentOf  ar-agentrole:1200543135-heritage-protection-agency ;
+        l0:name              "Museo delle Civiltà - Museo Preistorico e Etnografico \"Luigi Pigorini\"" .
+
+ar-timeIndexedRole:1200543135-332e7944090b3fded042df207d0d5669
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: PADERNI L."@it , "Official in charge: PADERNI L."@en ;
+        roapit:isRoleInTimeOf  ar-agent:1e3152251a48570f16583dae7dc45611 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-Value:1200543135-1-diameter-700
+        a           mu:Value ;
+        rdfs:label  "7.00"@en , "7.00"@it ;
+        mu:value    "7.00" .
+
+<https://w3id.org/arco/resource/DocumentationCategory/fotografie-allegate>
+        a           arco-cd:DocumentationCategory ;
+        rdfs:label  "FOTOGRAFIE ALLEGATE" ;
+        l0:name     "FOTOGRAFIE ALLEGATE" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1200543135-heritage-protection-agency .
+
+ar-Measurement:1200543135-1-diameter
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1200543135: 7.00"@en , "Misura del bene culturale 1200543135: 7.00"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Diameter ;
+        arco-dd:hasValue            ar-Value:1200543135-1-diameter-700 ;
+        l0:name                     "Measurement of cultural property 1200543135: 7.00"@en , "Misura del bene culturale 1200543135: 7.00"@it .
+
+ar-Measurement:1200543135-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1200543135: 10.50"@en , "Misura del bene culturale 1200543135: 10.50"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:1200543135-1-width-1050 ;
+        l0:name                     "Measurement of cultural property 1200543135: 10.50"@en , "Misura del bene culturale 1200543135: 10.50"@it .
+
+ar-agent:a510cf66d948a3b96a361aa3c3dc9574
+        a                l0:Agent ;
+        rdfs:label       "SOPRINTENDENZA AL MUSEO PREISTORICO ETNOGRAFICO" ;
+        arco-cd:address  "VIALE LINCOLN 1 - ROMA" ;
+        l0:name          "SOPRINTENDENZA AL MUSEO PREISTORICO ETNOGRAFICO" .
+
+ar-cis:8495380f0c26f4582c7126897bdfc52a
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "MUSEO NAZIONALE PREISTORICO ETNOGRAFICO \"L.PIGORINI\"" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:museo-nazionale-preistorico-etnografico-lpigorini ;
+        cis:hasSite           ar-Site:abdafd878584f9d552c2ef9edd680738 ;
+        l0:name               "MUSEO NAZIONALE PREISTORICO ETNOGRAFICO \"L.PIGORINI\"" .
+
+ar-agentrole:1200543135-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1200543135: S48"@it , "Heritage protection agency for cultural property 1200543135: S48"@en ;
+        arco-core:hasAgent  ar-agent:339d677b73f05760bf8b0849fd006e7b ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+<https://w3id.org/arco/resource/CulturalScope/dayak-penehing>
+        a           arco-cd:CulturalScope ;
+        rdfs:label  "DAYAK-PENEHING" ;
+        l0:name     "DAYAK-PENEHING" .
+
+ar-Measurement:1200543135-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1200543135: 41.00"@en , "Misura del bene culturale 1200543135: 41.00"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:1200543135-1-height-4100 ;
+        l0:name                     "Measurement of cultural property 1200543135: 41.00"@en , "Misura del bene culturale 1200543135: 41.00"@it .
+
+ar-timeIndexedTypedLocation:1200543135-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 1200543135"@it , "Alternative location 1 of cultural property: 1200543135"@en ;
+        arco-location:atLocation       ar-feature:6289586d7337f549cb0602dff7a0e340 ;
+        arco-location:hasLocationType  arco-location:LastLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        l0:name                        "Altra localizzazione 1 del bene: 1200543135"@it , "Alternative location 1 of cultural property: 1200543135"@en .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+<https://w3id.org/arco/resource/CulturalScopeAttribution/1200543135-cultural-scope-attribution-1>
+        a                         arco-cd:CulturalScopeAttribution ;
+        rdfs:label                "Attribuzione di ambito culturale del bene: 1200543135"@it , "Cultural scope attribution of cultural property: 1200543135"@en ;
+        arco-cd:hasCulturalScope  <https://w3id.org/arco/resource/CulturalScope/dayak-penehing> ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        l0:name                   "Attribuzione di ambito culturale del bene: 1200543135"@it , "Cultural scope attribution of cultural property: 1200543135"@en .
+
+ar-agent:1e3152251a48570f16583dae7dc45611
+        a           l0:Agent ;
+        rdfs:label  "PADERNI L." .
+
+ar-legalSituation:1200543135-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 1200543135: PROPRIETA' STATO"@it , "Legal situation of cultural property 1200543135: PROPRIETA' STATO"@en ;
+        arco-cd:hasOwner  ar-agent:a510cf66d948a3b96a361aa3c3dc9574 ;
+        l0:name           "Condizione giuridica del bene culturale 1200543135: PROPRIETA' STATO"@it , "Legal situation of cultural property 1200543135: PROPRIETA' STATO"@en .
+
+<https://w3id.org/arco/resource/Acquisition/1200543135-acquisition-1>
+        a                           arco-cd:Acquisition ;
+        rdfs:label                  "Acquisizione 1 del bene culturale: 1200543135"@it , "Acquisition 1 of cultural property: 1200543135"@en ;
+        arco-cd:hasAcquisitionType  <https://w3id.org/arco/resource/AcquisitionType/donazione> ;
+        arco-cd:hasPreviousOwner    ar-agent:3cbefe4d523cdef35c603107a682a0df ;
+        arco-cd:isAcquisitionOf     <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        tiapit:time                 "1911" ;
+        l0:name                     "Acquisizione 1 del bene culturale: 1200543135"@it , "Acquisition 1 of cultural property: 1200543135"@en .
+
+ar-bibliography:1200543135-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 1200543135"@en , "Bibliografia 1 del bene culturale: 1200543135"@it ;
+        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        arco-core:hasCategory     arco-cd:ComparativeBibliography ;
+        arco-core:note            "P.185" ;
+        l0:name                   "Bibliography 1 of cultural property: 1200543135"@en , "Bibliografia 1 del bene culturale: 1200543135"@en .
+
+ar-agent:06d2688ce598da4bf86c95233b32bdf2
+        a                    COV:Organization ;
+        rdfs:label           "C337 (L.160/88)" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200543135> ;
+        arco-core:isAgentOf  ar-agentrole:1200543135-cataloguing-agency ;
+        l0:name              "C337 (L.160/88)" .
+
+ar-TechnicalCharacteristic:bambu
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "BAMBU'" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "BAMBU'" .
