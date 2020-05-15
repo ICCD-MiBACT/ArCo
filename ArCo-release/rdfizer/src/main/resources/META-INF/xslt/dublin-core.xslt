@@ -587,6 +587,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 										<!-- dc:creator -->
 	
 	<xsl:for-each select="schede/*/AU/AUT">
+	<xsl:if test="./AUTN and (not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')))">
 	<dc:creator>
 		<xsl:attribute name="rdf:resource">
 			<xsl:variable name="author">
@@ -605,9 +606,12 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			<xsl:value-of select="$author" />
 		</xsl:attribute>
 	</dc:creator>
+	</xsl:if>
 	</xsl:for-each>
 	
 	<xsl:for-each select="schede/F/AU/AUF">
+	<xsl:if
+					test="not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 	<dc:creator>
 		<xsl:attribute name="rdf:resource">
 			<xsl:variable name="author">
@@ -641,6 +645,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:choose>
 		</xsl:attribute>
 	</dc:creator>
+	</xsl:if>
 	</xsl:for-each>
 	
 	<xsl:for-each select="schede/BDM/AU/AUF">
@@ -679,6 +684,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 								<!-- pico:author -->
 	
 	<xsl:for-each select="schede/*/AU/AUT">
+	<xsl:if test="./AUTN and (not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')))">
 	<pico:author>
 		<xsl:attribute name="rdf:resource">
 			<xsl:variable name="author">
@@ -697,8 +703,10 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			<xsl:value-of select="$author" />
 		</xsl:attribute>
 	</pico:author>
+	</xsl:if>
 	</xsl:for-each>
 	<xsl:for-each select="schede/F/AU/AUF">
+	<xsl:if test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 	<pico:author>
 		<xsl:attribute name="rdf:resource">
 			<xsl:variable name="author">
@@ -732,6 +740,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:choose>
 		</xsl:attribute>
 	</pico:author>
+	</xsl:if>
 	</xsl:for-each>
 	
 	<xsl:for-each select="schede/BDM/AU/AUF">

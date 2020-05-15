@@ -1849,7 +1849,7 @@
 				</xsl:choose>
 			</xsl:for-each>
 			<!-- Title as an individual for SG/SGT/SGTR -->
-			<xsl:for-each select="schede/*/SG/SGT/SGTR">
+			<xsl:for-each select="schede/*/OG/SGT/SGTR">
 				<xsl:if
 					test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 					<rdf:Description>

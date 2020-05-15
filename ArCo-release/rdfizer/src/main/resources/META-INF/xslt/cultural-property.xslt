@@ -3070,7 +3070,7 @@
 				</xsl:if>
 				<!-- affixed element (*/LSI) -->
 				<xsl:if test="schede/A/*/LSI/*">
-				<xsl:for-each select="schede/A/*/LSI/*">
+				<xsl:for-each select="schede/A/*/LSI">
 					<arco-dd:hasAffixedElement>
 						<xsl:choose>
 							<xsl:when test="lower-case(normalize-space(./LSIG))='timbro'">
