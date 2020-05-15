@@ -21864,6 +21864,67 @@
 
 
 			<xsl:for-each select="schede/*/AU/AAT">
+				<xsl:if test="not(schede/*/AU/AAT/*)">
+				<rdf:Description>
+						<xsl:attribute name="rdf:about">
+        	<xsl:value-of
+							select="concat($NS, 'AlternativeAuthorshipAttribution/', $itemURI, '-', position())" />
+        </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+            	<xsl:value-of
+								select="'https://w3id.org/arco/ontology/context-description/AlternativeAuthorshipAttribution'" />
+			</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of
+								select="concat('Attribuzione superata, alternativa o tradizionale di autore del bene: ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of
+								select="concat('Attribuzione superata, alternativa o tradizionale di autore del bene: ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of
+								select="concat('Alternative authorship attribution of cultural property: ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of
+								select="concat('Alternative authorship attribution of cultural property: ', $itemURI)" />
+						</l0:name>
+						<arco-cd:isAuthorshipAttributionOf>
+							<xsl:attribute name="rdf:resource"> 
+							<xsl:value-of
+								select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+						</xsl:attribute>
+						</arco-cd:isAuthorshipAttributionOf>
+
+						<arco-cd:hasAttributedAuthor>
+							<xsl:attribute name="rdf:resource">
+        	                	<xsl:value-of
+								select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+            	            </xsl:attribute>
+						</arco-cd:hasAttributedAuthor>
+					</rdf:Description>
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+                        <xsl:value-of
+							select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                    </xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+								select="'https://w3id.org/italia/onto/l0/Agent'" />
+                        </xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(.)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(.)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:if>
 				<xsl:if
 					test="./AATN and (not(starts-with(lower-case(normalize-space(./AATN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AATN)), 'n.r')))">
 					<rdf:Description>
