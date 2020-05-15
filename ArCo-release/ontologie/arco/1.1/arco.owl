@@ -1918,18 +1918,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/numberOfEnvelopes -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfEnvelopes"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/numberOfLabels -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/numberOfLabels"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/rights -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/rights"/>
@@ -2202,6 +2190,12 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/SpecimenContainer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/BotanicalCollectionType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
@@ -2909,6 +2903,12 @@ erbario.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/HerbariumType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/internationalIdentifier"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
             </owl:Restriction>
@@ -3478,6 +3478,12 @@ erbario.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SpecimenType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCloseIndividual"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CloseIndividual"/>
             </owl:Restriction>
@@ -3561,6 +3567,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SpecimenContainerType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
