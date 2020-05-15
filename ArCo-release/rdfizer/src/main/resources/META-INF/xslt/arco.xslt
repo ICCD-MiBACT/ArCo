@@ -14383,6 +14383,12 @@
 			            			</xsl:otherwise>
 			            		</xsl:choose>	
 		            		</xsl:attribute>
+							<rdf:type>
+								<xsl:attribute name="rdf:resource">
+	                                <xsl:value-of
+									select="'https://w3id.org/italia/onto/l0/Agent'" />
+	                            </xsl:attribute>
+							</rdf:type>
 								<xsl:choose>
 									<xsl:when test="./UTNN">
 										<rdfs:label>
