@@ -611,7 +611,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	
 	<xsl:for-each select="schede/F/AU/AUF">
 	<xsl:if
-					test="not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
+					test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 	<dc:creator>
 		<xsl:attribute name="rdf:resource">
 			<xsl:variable name="author">
