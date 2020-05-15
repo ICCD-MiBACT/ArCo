@@ -8075,6 +8075,12 @@ resource:ArchivalSubseries/museo-civico-romano
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasCulturalScope"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/CulturalScope"/>
             </owl:Restriction>
@@ -8083,6 +8089,12 @@ resource:ArchivalSubseries/museo-civico-romano
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterventionRole"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/RO/Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;attribuzione di un autore o di una responsabilità per la creazione di un bene culturale, cioè le informazioni relative ai soggetti (persone singole o enti collettivi) intervenuti nella realizzazione del bene e/o all&apos;ambito culturale di riferimento.</rdfs:comment>
@@ -8258,7 +8270,7 @@ resource:ArchivalSubseries/museo-civico-romano
     <!-- https://w3id.org/arco/ontology/context-description/BotanicalForm -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/Cultivar"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista della forma estetica o cromatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a variety from an aesthetic or chromatic point of view.</rdfs:comment>
@@ -8676,7 +8688,7 @@ resource:ArchivalSubseries/museo-civico-romano
     <!-- https://w3id.org/arco/ontology/context-description/Cultivar -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Cultivar">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista delle specifiche forme coltivate</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents is the most basic classification category of cultivated plants in the International Code of Nomenclature for Cultivated Plants</rdfs:comment>
         <rdfs:label xml:lang="en">Cultivar</rdfs:label>
@@ -9302,6 +9314,8 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
                         <owl:complementOf>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Cultivar"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Family"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Genus"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
@@ -9320,6 +9334,8 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Cultivar"/>
                             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Genus"/>
                             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
                             <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
@@ -9573,6 +9589,8 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
                         <owl:complementOf>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Cultivar"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Genus"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
@@ -9582,12 +9600,6 @@ resource:AudioDocumentation/1200924650-audio-documentation-1
                         </owl:complementOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Species"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10228,13 +10240,16 @@ resource:LegalSituation/1400054721-legal-situation-proprieta-stato
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLowerRank"/>
                 <owl:allValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Family"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Genus"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Variety"/>
-                        </owl:unionOf>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Class"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Kingdom"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Order"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Phylum"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -11349,25 +11364,14 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
                         <owl:complementOf>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Cultivar"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Species"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Variety"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Variety"/>
-                        </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -11446,18 +11450,14 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDirectLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasHigherRank"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/BotanicalForm"/>
+                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Cultivar"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Subspecies"/>
                                     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Variety"/>
                                 </owl:unionOf>
@@ -11465,12 +11465,6 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
                         </owl:complementOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLowerRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la sottospecie.</rdfs:comment>
@@ -11947,22 +11941,6 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Variety">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Subspecies"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="https://w3id.org/arco/ontology/context-description/Variety"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la varietà.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the variety</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/context-description/"/>
@@ -12756,14 +12734,14 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
