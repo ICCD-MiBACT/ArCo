@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase_toydataset_01.owl#"
-     xml:base="https://w3id.org/arco/test/CQ/testcase_toydataset_01.owl"
+<rdf:RDF xmlns="https://github.com/ICCD-MiBACT/ArCo/blob/master/ArCo-release/test/CQ/CQ_BNB1.owl#"
+     xml:base="https://github.com/ICCD-MiBACT/ArCo/blob/master/ArCo-release/test/CQ/CQ_BNB1.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
