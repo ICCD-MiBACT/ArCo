@@ -29,6 +29,7 @@ public class Harvester {
 	private static final Pattern p = Pattern.compile("@(.*?)@");
 	private DocumentBuilder builder;
 	private static final int NUM_OF_ATTEMPTS = 3;
+	private AtomicInteger c = new AtomicInteger(0);
 
 	private static final Logger logger = LogManager.getLogger(OAIHarvester.class);
 
@@ -48,17 +49,18 @@ public class Harvester {
 			TransformerException {
 		String nextToken = null;
 
-		AtomicInteger c = new AtomicInteger(0);
 		AtomicInteger chunk = new AtomicInteger(0);
+
+		new File(outputDirectory + "/" + chunk + "/").mkdirs();
 
 		FileOutputStream fos_keys = new FileOutputStream(new File(outputDirectory + "/keys.txt"));
 		FileOutputStream fos_paths = new FileOutputStream(new File(outputDirectory + "/paths.txt"));
 
-		new File(outputDirectory + "/" + chunk + "/").mkdirs();
-
 		boolean first = true;
 
 		while (nextToken != null || first) {
+
+			logger.trace("Issuing request " + listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
 
 			URL url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
 
@@ -69,13 +71,13 @@ public class Harvester {
 
 			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
 				try {
-					nextToken = getRecordsFromList(url, chunk, c, fos_keys, fos_paths);
+					nextToken = getRecordsFromList(url, chunk, fos_keys, fos_paths);
 					break;
 				} catch (Exception e) {
 					e.printStackTrace();
 					logger.error(e.getMessage());
 					try {
-						Thread.sleep(60000);
+						Thread.sleep((i + 1) * 60000);
 					} catch (InterruptedException e1) {
 						e1.printStackTrace();
 					}
@@ -92,7 +94,7 @@ public class Harvester {
 
 	}
 
-	private String getRecordsFromList(URL url, AtomicInteger chunk, AtomicInteger c, FileOutputStream fos_keys,
+	private String getRecordsFromList(URL url, AtomicInteger chunk, FileOutputStream fos_keys,
 			FileOutputStream fos_paths)
 			throws IOException, SAXException, XPathExpressionException, TransformerException {
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -143,6 +145,15 @@ public class Harvester {
 
 		}
 
+		logger.trace(d.getElementsByTagName("resumptionToken").item(0).getAttributes().getNamedItem("completeListSize")
+				.getNodeValue());
+
+		long items = Long.parseLong(d.getElementsByTagName("resumptionToken").item(0).getAttributes()
+				.getNamedItem("completeListSize").getNodeValue());
+		if (c.get() >= items) {
+			return null;
+		}
+
 		return d.getElementsByTagName("resumptionToken").item(0).getTextContent();
 	}
 
@@ -166,7 +177,7 @@ public class Harvester {
 				e.printStackTrace();
 				logger.error(e.getMessage());
 				try {
-					Thread.sleep(60000);
+					Thread.sleep((i + 1) * 60000);
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
 				}
