@@ -9955,7 +9955,7 @@
 			<!-- Surveys -->
 			<!-- observation survey -->
 			<xsl:if
-				test="schede/*/DR/DRV/* and not($sheetVersion='4.00') and not($sheetVersion='4.00_ICCD0')">
+				test="schede/BDM/DR/DRV/* and not($sheetVersion='4.00') and not($sheetVersion='4.00_ICCD0')">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                 			<xsl:value-of
@@ -9984,18 +9984,18 @@
 							select="concat('Indagine di rilevamento del bene culturale ', $itemURI)" />
 					</l0:name>
 					<xsl:if
-						test="schede/*/DR/DRV/DRVD and not(schede/*/DR/DRV/DRVD='0000/00/00' or schede/*/DR/DRV/DRVD='/')">
+						test="schede/BDM/DR/DRV/DRVD and not(schede/BDM/DR/DRV/DRVD='0000/00/00' or schede/BDM/DR/DRV/DRVD='/')">
 						<tiapit:time>
 							<xsl:value-of
-								select="normalize-space(schede/*/DR/DRV/DRVD)" />
+								select="normalize-space(schede/BDM/DR/DRV/DRVD)" />
 						</tiapit:time>
 					</xsl:if>
 					<xsl:if
-						test="schede/*/DR/DRV/DRVE and (not(starts-with(lower-case(normalize-space(schede/*/DR/DRV/DRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/DR/DRV/DRVE)), 'n.r')))">
+						test="schede/BDM/DR/DRV/DRVE and (not(starts-with(lower-case(normalize-space(schede/BDM/DR/DRV/DRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/BDM/DR/DRV/DRVE)), 'n.r')))">
 						<arco-cd:hasActivityResponsible>
 							<xsl:attribute name="rdf:resource">
 	                				<xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/DR/DRV/DRVE))" />
+								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BDM/DR/DRV/DRVE))" />
 	                			</xsl:attribute>
 						</arco-cd:hasActivityResponsible>
 						<arco-core:hasAgentRole>
@@ -10005,7 +10005,7 @@
 							</xsl:attribute>
 						</arco-core:hasAgentRole>
 					</xsl:if>
-					<xsl:if test="schede/*/DR/DRV/DRVR">
+					<xsl:if test="schede/BDM/DR/DRV/DRVR">
 						<arco-cd:isRelatedToResearch>
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of
@@ -10015,7 +10015,7 @@
 					</xsl:if>
 				</rdf:Description>
 				<xsl:if
-					test="schede/*/DR/DRV/DRVE and (not(starts-with(lower-case(normalize-space(schede/*/DR/DRV/DRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/DR/DRV/DRVE)), 'n.r')))">
+					test="schede/BDM/DR/DRV/DRVE and (not(starts-with(lower-case(normalize-space(schede/BDM/DR/DRV/DRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/BDM/DR/DRV/DRVE)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 			                        		<xsl:value-of
@@ -10029,19 +10029,19 @@
 						</rdf:type>
 						<rdfs:label xml:lang="it">
 							<xsl:value-of
-								select="concat('Ente responsabile del rilevamento del bene culturale ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVE))" />
+								select="concat('Ente responsabile del rilevamento del bene culturale ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVE))" />
 						</rdfs:label>
 						<l0:name xml:lang="it">
 							<xsl:value-of
-								select="concat('Ente responsabile del rilevamento del bene culturale ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVE))" />
+								select="concat('Ente responsabile del rilevamento del bene culturale ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVE))" />
 						</l0:name>
 						<rdfs:label xml:lang="en">
 							<xsl:value-of
-								select="concat('Responsible agency of obervation of cultural property ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVE))" />
+								select="concat('Responsible agency of obervation of cultural property ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVE))" />
 						</rdfs:label>
 						<l0:name xml:lang="en">
 							<xsl:value-of
-								select="concat('Responsible agency of observation of cultural property ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVE))" />
+								select="concat('Responsible agency of observation of cultural property ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVE))" />
 						</l0:name>
 						<arco-core:hasRole>
 							<xsl:attribute name="rdf:resource">
@@ -10052,7 +10052,7 @@
 						<arco-core:hasAgent>
 							<xsl:attribute name="rdf:resource">
 					                            <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/DR/DRV/DRVE))" />
+								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BDM/DR/DRV/DRVE))" />
 					                        </xsl:attribute>
 						</arco-core:hasAgent>
 					</rdf:Description>
@@ -10083,7 +10083,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 					                        <xsl:value-of
-							select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/DR/DRV/DRVE))" />
+							select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BDM/DR/DRV/DRVE))" />
 					                    </xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -10093,11 +10093,11 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:value-of
-								select="normalize-space(schede/*/DR/DRV/DRVE)" />
+								select="normalize-space(schede/BDM/DR/DRV/DRVE)" />
 						</rdfs:label>
 						<l0:name>
 							<xsl:value-of
-								select="normalize-space(schede/*/DR/DRV/DRVE)" />
+								select="normalize-space(schede/BDM/DR/DRV/DRVE)" />
 						</l0:name>
 						<arco-core:isAgentOf>
 							<xsl:attribute name="rdf:resource">
@@ -10107,7 +10107,7 @@
 						</arco-core:isAgentOf>
 					</rdf:Description>
 				</xsl:if>
-				<xsl:if test="schede/*/DR/DRV/DRVR">
+				<xsl:if test="schede/BDM/DR/DRV/DRVR">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 									<xsl:value-of
@@ -10134,7 +10134,7 @@
 						<arco-cd:hasResearchScientificDirector>
 							<xsl:attribute name="rdf:resource">
 		                				<xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/DR/DRV/DRVR))" />
+								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BDM/DR/DRV/DRVR))" />
 		                			</xsl:attribute>
 						</arco-cd:hasResearchScientificDirector>
 						<arco-core:hasAgentRole>
@@ -10145,7 +10145,7 @@
 						</arco-core:hasAgentRole>
 					</rdf:Description>
 					<xsl:if
-						test="schede/*/DR/DRV/DRVR and (not(starts-with(lower-case(normalize-space(schede/*/DR/DRV/DRVR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/DR/DRV/DRVR)), 'n.r')))">
+						test="schede/BDM/DR/DRV/DRVR and (not(starts-with(lower-case(normalize-space(schede/BDM/DR/DRV/DRVR)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/BDM/DR/DRV/DRVR)), 'n.r')))">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 			                        		<xsl:value-of
@@ -10159,19 +10159,19 @@
 							</rdf:type>
 							<rdfs:label xml:lang="it">
 								<xsl:value-of
-									select="concat('Agente responsabile scientifico della ricerca sul bene culturale ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVR))" />
+									select="concat('Agente responsabile scientifico della ricerca sul bene culturale ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVR))" />
 							</rdfs:label>
 							<l0:name xml:lang="it">
 								<xsl:value-of
-									select="concat('Agente responsabile scientifico della ricerca sul bene culturale ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVR))" />
+									select="concat('Agente responsabile scientifico della ricerca sul bene culturale ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVR))" />
 							</l0:name>
 							<rdfs:label xml:lang="en">
 								<xsl:value-of
-									select="concat('Responsible agent of research on cultural property ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVR))" />
+									select="concat('Responsible agent of research on cultural property ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVR))" />
 							</rdfs:label>
 							<l0:name xml:lang="en">
 								<xsl:value-of
-									select="concat('Responsible agent of research on cultural property ', $itemURI, ': ', normalize-space(schede/*/DR/DRV/DRVR))" />
+									select="concat('Responsible agent of research on cultural property ', $itemURI, ': ', normalize-space(schede/BDM/DR/DRV/DRVR))" />
 							</l0:name>
 							<arco-core:hasRole>
 								<xsl:attribute name="rdf:resource">
@@ -10182,7 +10182,7 @@
 							<arco-core:hasAgent>
 								<xsl:attribute name="rdf:resource">
 					                            <xsl:value-of
-									select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/DR/DRV/DRVR))" />
+									select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BDM/DR/DRV/DRVR))" />
 					                        </xsl:attribute>
 							</arco-core:hasAgent>
 						</rdf:Description>
@@ -10215,7 +10215,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 					                        <xsl:value-of
-								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/DR/DRV/DRVR))" />
+								select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BDM/DR/DRV/DRVR))" />
 					                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -10225,11 +10225,11 @@
 							</rdf:type>
 							<rdfs:label>
 								<xsl:value-of
-									select="normalize-space(schede/*/DR/DRV/DRVR)" />
+									select="normalize-space(schede/BDM/DR/DRV/DRVR)" />
 							</rdfs:label>
 							<l0:name>
 								<xsl:value-of
-									select="normalize-space(schede/*/DR/DRV/DRVR)" />
+									select="normalize-space(schede/BDM/DR/DRV/DRVR)" />
 							</l0:name>
 							<arco-core:isAgentOf>
 								<xsl:attribute name="rdf:resource">
