@@ -1516,15 +1516,15 @@
 						<xsl:when test="schede/*/DA/DES/DESO and not($sheetType='NU')">
 							<xsl:if
 								test="not(lower-case(normalize-space(schede/*/DA/DES/DESO))='nr' or lower-case(normalize-space(schede/*/DA/DES/DESO))='n.r.' or lower-case(normalize-space(schede/*/DA/DES/DESO))='nr (recupero pregresso)')">
-								<arco-arco:description>
+								<arco-core:description>
 									<xsl:value-of select="normalize-space(schede/*/DA/DES/DESO)" />
-								</arco-arco:description>
+								</arco-core:description>
 							</xsl:if>
 						</xsl:when>
 						<xsl:when test="not(schede/*/DA/DES/*)">
-							<arco-arco:description>
+							<arco-core:description>
 								<xsl:value-of select="normalize-space(schede/*/DA/DES)" />
-							</arco-arco:description>
+							</arco-core:description>
 						</xsl:when>
 					</xsl:choose>
 				</xsl:if>
