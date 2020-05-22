@@ -1167,7 +1167,6 @@
 										select="concat(', ', normalize-space(schede/*/OG/OGT/OGTE))" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="''" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
@@ -1585,12 +1584,6 @@
 						<xsl:value-of select="normalize-space(schede/*/OG/OGC/OGCD)" />
 					</arco-arco:definitionAndPositionOfComponents>
 				</xsl:if>
-				<!-- international identifier -->
-				<xsl:for-each select="schede/*/AC/ACI">
-					<arco-arco:internationalIdentifier>
-						<xsl:value-of select="normalize-space(schede/*/AC/ACI)" />
-					</arco-arco:internationalIdentifier>
-				</xsl:for-each>
 				<!-- cadastral identity -->
 				<xsl:for-each select="schede/*/CS">
 					<arco-location:hasCadastralIdentity>
@@ -2923,6 +2916,32 @@
                         </xsl:attribute>
 					</arco-dd:hasDesignationInTime>
 				</xsl:if>
+				</xsl:if>
+				<xsl:if test="schede/BNB/OG/OGT/OGTE">
+					<xsl:choose>
+						<xsl:when test="schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'erbario')">
+							<arco-dd:hasDesignationInTime>
+								<xsl:attribute name="rdf:resource">
+                        			<xsl:value-of
+							select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(schede/BNB/OG/OGT/OGTE)))" />   	                            
+                        		</xsl:attribute>
+							</arco-dd:hasDesignationInTime>
+						</xsl:when>
+						<xsl:otherwise></xsl:otherwise>
+					</xsl:choose>
+				</xsl:if>
+				<xsl:if test="schede/BNB/OG/OGT/OGTC">
+					<xsl:choose>
+						<xsl:when test="schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'collezione')">
+							<arco-dd:hasDesignationInTime>
+								<xsl:attribute name="rdf:resource">
+                        			<xsl:value-of
+							select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(schede/BNB/OG/OGT/OGTC)))" />   	                            
+                        		</xsl:attribute>
+							</arco-dd:hasDesignationInTime>
+						</xsl:when>
+						<xsl:otherwise></xsl:otherwise>
+					</xsl:choose>
 				</xsl:if>
 				<!-- identifier:uniqueIdentifier - concat of NCTR + NCTN + NCTS available 
 					in schede/*/CD/NCT) -->

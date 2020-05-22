@@ -240,6 +240,48 @@
 							select="normalize-space(schede/*/AC/ACI)" />
 					</arco-catalogue:internationalIdentifier>
 				</xsl:if>
+				<xsl:if
+					test="schede/*/AC/ACE and (not(starts-with(lower-case(normalize-space(schede/*/AC/ACE)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/AC/ACE)), 'n.r')))">
+					<l0:identifier>
+						<xsl:value-of
+							select="normalize-space(schede/*/AC/ACE)" />
+					</l0:identifier>
+				</xsl:if>	
+				<xsl:if
+					test="schede/*/AC/ACO and (not(starts-with(lower-case(normalize-space(schede/*/AC/ACO)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/AC/ACO)), 'n.r')))">
+					<l0:identifier>
+						<xsl:value-of
+							select="normalize-space(schede/*/AC/ACO)" />
+					</l0:identifier>
+				</xsl:if>
+				<xsl:if
+					test="schede/*/AC/ACZ and (not(starts-with(lower-case(normalize-space(schede/*/AC/ACZ)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/AC/ACZ)), 'n.r')))">
+					<arco-arco:containerSequence>
+						<xsl:value-of
+							select="normalize-space(schede/*/AC/ACZ)" />
+					</arco-arco:containerSequence>
+				</xsl:if>
+				<xsl:if
+					test="schede/*/AC/ACJ and (not(starts-with(lower-case(normalize-space(schede/*/AC/ACJ)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/AC/ACJ)), 'n.r')))">
+					<l0:identifier>
+						<xsl:value-of
+							select="normalize-space(schede/*/AC/ACJ)" />
+					</l0:identifier>
+				</xsl:if>
+				<xsl:if
+					test="schede/*/AC/ACN and (not(starts-with(lower-case(normalize-space(schede/*/AC/ACN)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/AC/ACN)), 'n.r')))">
+					<arco-arco:previousIdentifier>
+						<xsl:value-of
+							select="normalize-space(schede/*/AC/ACN)" />
+					</arco-arco:previousIdentifier>
+				</xsl:if>
+				<xsl:if
+					test="schede/*/AC/ACK and (not(starts-with(lower-case(normalize-space(schede/*/AC/ACK)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/AC/ACK)), 'n.r')))">
+					<l0:identifier>
+						<xsl:value-of
+							select="normalize-space(schede/*/AC/ACK)" />
+					</l0:identifier>
+				</xsl:if>
 				<xsl:if test="schede/*/CM/CMP">
 					<arco-catalogue:hasCatalogueRecordVersion>
 						<xsl:attribute name="rdf:resource">
@@ -6535,13 +6577,13 @@
 					</xsl:if>
 				</xsl:when>
 				<xsl:when
-					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'campione'))">
+					test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'campione'))">
 					<xsl:if
-						test="schede/*/OG/OGT/OGTK and not(lower-case(normalize-space(schede/*/OG/OGT/OGTK))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTK))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTK))='nr (recupero pregresso)')">
+						test="schede/BNB/OG/OGT/OGTK and not(lower-case(normalize-space(schede/*/OG/OGT/OGTK))='nr' or lower-case(normalize-space(schede/BNB/OG/OGT/OGTK))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTK))='nr (recupero pregresso)')">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(schede/*/OG/OGT/OGTK)))" />
+								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(schede/BNB/OG/OGT/OGTK)))" />
 		                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -6551,13 +6593,13 @@
 							</rdf:type>
 							<rdfs:label>
 								<xsl:value-of
-									select="normalize-space(schede/*/OG/OGT/OGTK)" />
+									select="normalize-space(schede/BNB/OG/OGT/OGTK)" />
 							</rdfs:label>
 						</rdf:Description>
 					</xsl:if>
 				</xsl:when>
 				<xsl:when
-					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'erbario'))">
+					test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'erbario'))">
 					<xsl:if
 						test="schede/*/OG/OGT/OGTR and not(lower-case(normalize-space(schede/*/OG/OGT/OGTR))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTR))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTR))='nr (recupero pregresso)')">
 						<rdf:Description>
@@ -6579,7 +6621,7 @@
 					</xsl:if>
 				</xsl:when>
 				<xsl:when
-					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'collezione'))">
+					test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'collezione'))">
 					<xsl:if
 						test="schede/*/OG/OGT/OGTZ and not(lower-case(normalize-space(schede/*/OG/OGT/OGTZ))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTZ))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTZ))='nr (recupero pregresso)')">
 						<rdf:Description>
@@ -6601,7 +6643,7 @@
 					</xsl:if>
 				</xsl:when>
 				<xsl:when
-					test="$sheetType='BNB' and (./OGTD and starts-with(lower-case(normalize-space(./OGTD)), 'contenitore'))">
+					test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'contenitore'))">
 					<xsl:if
 						test="schede/*/OG/OGT/OGTO and not(lower-case(normalize-space(schede/*/OG/OGT/OGTO))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTO))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTO))='nr (recupero pregresso)')">
 						<rdf:Description>
@@ -19207,6 +19249,48 @@
 					<l0:name>
 						<xsl:value-of
 							select="normalize-space(schede/*/OG/OGT/OGTD)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+
+												<!-- Name in time BNB-->
+			<xsl:if test="schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'erbario')">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        	<xsl:value-of
+						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(schede/BNB/OG/OGT/OGTE)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/BNB/OG/OGT/OGTE)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(schede/BNB/OG/OGT/OGTE)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'collezione')">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        	<xsl:value-of
+						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(schede/BNB/OG/OGT/OGTC)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(schede/BNB/OG/OGT/OGTC)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(schede/BNB/OG/OGT/OGTC)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
