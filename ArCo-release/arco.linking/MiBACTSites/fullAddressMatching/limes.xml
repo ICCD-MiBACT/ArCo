@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE LIMES SYSTEM "limes.dtd">
+<LIMES>
+	<PREFIX>
+		<NAMESPACE>http://dati.beniculturali.it/cis/</NAMESPACE>
+		<LABEL>cis</LABEL>
+	</PREFIX>
+	<PREFIX>
+		<NAMESPACE>http://www.w3.org/2000/01/rdf-schema#</NAMESPACE>
+		<LABEL>rdfs</LABEL>
+	</PREFIX>
+	<PREFIX>
+		<NAMESPACE>http://www.w3.org/2002/07/owl#</NAMESPACE>
+		<LABEL>owl</LABEL>
+	</PREFIX>
+	<PREFIX>
+		<NAMESPACE>https://w3id.org/italia/onto/CLV/</NAMESPACE>
+		<LABEL>CLV</LABEL>
+	</PREFIX>
+	<PREFIX>
+		<NAMESPACE>http://www.w3.org/1999/02/22-rdf-syntax-ns#</NAMESPACE>
+		<LABEL>rdf</LABEL>
+	</PREFIX>
+	<PREFIX>
+		<NAMESPACE>https://w3id.org/arco/ontology/location/</NAMESPACE>
+		<LABEL>a-loc</LABEL>
+	</PREFIX>
+	<SOURCE>
+		<ID>cis</ID>
+		<ENDPOINT>http://dati.beniculturali.it/sparql</ENDPOINT>
+		<GRAPH>http://dati.beniculturali.it/mibact/luoghi</GRAPH>
+		<VAR>?x</VAR>
+		<PAGESIZE>2000</PAGESIZE>
+		<RESTRICTION>?x a cis:Site</RESTRICTION>
+		<PROPERTY>rdfs:label{0} AS uriasstring RENAME iri</PROPERTY>
+		<PROPERTY>cis:siteAddress/CLV:hasCity/rdfs:label AS lowercase RENAME cLabel</PROPERTY>
+		<PROPERTY>cis:siteAddress/CLV:hasStreetToponym/CLV:officialStreetName AS lowercase RENAME faddress</PROPERTY>
+	</SOURCE>
+	<TARGET>
+		<ID>arco</ID>
+		<ENDPOINT>http://etna.istc.cnr.it/arco-pr/virtuoso/sparql</ENDPOINT>
+		<GRAPH>https://w3id.org/arco/data</GRAPH>
+		<VAR>?y</VAR>
+		<PAGESIZE>2000</PAGESIZE>
+		<RESTRICTION>?y a cis:Site</RESTRICTION>
+		<PROPERTY>rdfs:label{0} AS uriasstring RENAME iri</PROPERTY>
+		<PROPERTY>cis:siteAddress/CLV:hasCity/rdfs:label AS lowercase RENAME cLabel</PROPERTY>
+		<PROPERTY>cis:siteAddress/CLV:fullAddress AS lowercase RENAME faddress</PROPERTY>
+	</TARGET>
+	<METRIC>MINUS(1.0*AND(Trigram(x.faddress,y.faddress)|0.5,Trigram(x.cLabel,y.cLabel)|0.8)|0.5,1.0*ExactMatch(x.iri,y.iri)|1.0)</METRIC>
+	<ACCEPTANCE>
+		<THRESHOLD>0.9</THRESHOLD>
+		<FILE>cis_site_match_toponym.tsv</FILE>
+		<RELATION>owl:sameAs</RELATION>
+	</ACCEPTANCE>
+	<REVIEW>
+		<THRESHOLD>0.8</THRESHOLD>
+		<FILE>review.tsv</FILE>
+		<RELATION>owl:sameAs</RELATION>
+	</REVIEW>
+	<EXECUTION>
+		<REWRITER>default</REWRITER>
+		<PLANNER>default</PLANNER>
+		<ENGINE>default</ENGINE>
+	</EXECUTION>
+	<OUTPUT>TAB</OUTPUT>
+</LIMES>
