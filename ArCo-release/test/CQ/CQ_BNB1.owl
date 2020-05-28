@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/CQ_BNB1.owl#"
-     xml:base="https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/CQ_BNB1.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/CQ_BNB1.owl#"
+     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/CQ_BNB1.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,7 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/CQ_BNB1.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/CQ_BNB1.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
         <testannotationschema:hasCQ xml:lang="it">Quali campioni sono tipi nomenclaturali di cultivar?</testannotationschema:hasCQ>
@@ -26,29 +26,29 @@
       {
         &quot;cp&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen1&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen1&quot;
         },
         &quot;ts&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#TypeSpecimen1&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#TypeSpecimen1&quot;
         }
         &quot;bt&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon1&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon1&quot;
         }
       },
      {
         &quot;cp&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen3&quot;
+          &quot;value&quot;: &quot;https://https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen3&quot;
         },
         &quot;ts&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#TypeSpecimen3&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#TypeSpecimen3&quot;
         }
         &quot;bt&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon3&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon3&quot;
         }
       },
     ]
@@ -69,7 +69,7 @@ WHERE {
         <testannotationschema:testedBy xml:lang="en">Run by Margherita Porena</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Testing BNB</rdfs:comment>
         <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
-        <testalod:hasInputTestDataUri rdf:resource="https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl"/>
+        <testalod:hasInputTestDataUri rdf:resource="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 
