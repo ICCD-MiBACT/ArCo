@@ -14,12 +14,12 @@
 
 :Specimen2	a arco:Specimen ;
 		a-cd:hasTypeSpecimen :TypeSpecimen2 .
-:TypeSpecimen2 	a-cd:producesBiologicalTaxon :BiologicalTaxon2".
+:TypeSpecimen2 	a-cd:producesBiologicalTaxon :BiologicalTaxon2.
 :BiologicalTaxon2	a a-cd:Species
 
 :SpecimenContainer1	a arco:SpecimenContainer ;
 		a-cd:hasTypeSpecimen :TypeSpecimen .
-:TypeSpecimen 	a-cd:producesBiologicalTaxon :BiologicalTaxon".
+:TypeSpecimen 	a-cd:producesBiologicalTaxon :BiologicalTaxon.
 :BiologicalTaxon	a a-cd:Species
 
 :Specimen3	a arco:Specimen ;
