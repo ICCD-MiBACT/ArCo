@@ -1584,6 +1584,35 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
+			<xsl:for-each select="schede/*/*/THS/THSD">
+				<xsl:if
+					test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+	            			<xsl:value-of
+							select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
+            		</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+                          <xsl:value-of
+								select="'https://w3id.org/arco/ontology/context-description/Subject'" />
+                        </xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(.)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(.)" />
+						</l0:name>
+						<arco-cd:isSubjectOf>
+							<xsl:attribute name="rdf:resource">
+                    		<xsl:value-of
+								select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+                    	</xsl:attribute>
+						</arco-cd:isSubjectOf>
+					</rdf:Description>
+				</xsl:if>
+			</xsl:for-each>
 			<!-- Subject as an individual (desu) -->
 			<xsl:for-each select="schede/NU/DA/DES/DESU">
 				<xsl:if

@@ -2513,6 +2513,20 @@
 						</arco-cd:hasSubject>
 					</xsl:if>
 				</xsl:for-each>
+				<xsl:for-each select="schede/*/*/THS/THSD">
+					<xsl:if
+						test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+						<arco-cd:subject>
+							<xsl:value-of select="normalize-space(.)" />
+						</arco-cd:subject>
+						<arco-cd:hasSubject>
+							<xsl:attribute name="rdf:resource">
+	                    		<xsl:value-of
+								select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
+	                    	</xsl:attribute>
+						</arco-cd:hasSubject>
+					</xsl:if>
+				</xsl:for-each>
 				<xsl:for-each select="schede/NU/DA/DES/DESU">
 					<xsl:if
 						test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
