@@ -10,24 +10,24 @@
 :Specimen1	a arco:Specimen ;
 		a-cd:hasTypeSpecimen :TypeSpecimen1 .
 :TypeSpecimen1 	a-cd:producesBiologicalTaxon :BiologicalTaxon1.
-:BiologicalTaxon1	a a-cd:Cultivar
+:BiologicalTaxon1	a a-cd:Cultivar .
 
 :Specimen2	a arco:Specimen ;
 		a-cd:hasTypeSpecimen :TypeSpecimen2 .
 :TypeSpecimen2 	a-cd:producesBiologicalTaxon :BiologicalTaxon2.
-:BiologicalTaxon2	a a-cd:Species
+:BiologicalTaxon2	a a-cd:Species .
 
 :SpecimenContainer1	a arco:SpecimenContainer ;
 		a-cd:hasTypeSpecimen :TypeSpecimen .
 :TypeSpecimen 	a-cd:producesBiologicalTaxon :BiologicalTaxon.
-:BiologicalTaxon	a a-cd:Species
+:BiologicalTaxon	a a-cd:Species .
 
 :Specimen3	a arco:Specimen ;
 		a-cd:hasTypeSpecimen :TypeSpecimen3 .
 :TypeSpecimen3 	a-cd:producesBiologicalTaxon :BiologicalTaxon3.
-:BiologicalTaxon3	a a-cd:Cultivar
+:BiologicalTaxon3	a a-cd:Cultivar .
 
 :Specimen4	a arco:Specimen ;
 		a-cd:hasBotanicalRevision :TypeSpecimen4 .
 :TypeSpecimen4 	a-cd:producesBiologicalTaxon :BiologicalTaxon4.
-:BiologicalTaxon4	a a-cd:Cultivar
+:BiologicalTaxon4	a a-cd:Cultivar .
