@@ -3425,6 +3425,39 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/isClassifiedByOriginalTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isClassifiedByOriginalTaxon">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
+        <owl:propertyDisjointWith rdf:resource="https://w3id.org/arco/ontology/context-description/isClassifiedByRevisedTaxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità ad un taxon originariamente associato</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity and a the taxon originally associated to the entity</rdfs:comment>
+        <rdfs:label xml:lang="en">is classified by original taxon</rdfs:label>
+        <rdfs:label xml:lang="it">è classificato da taxon originario</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isClassifiedByRevisedTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isClassifiedByRevisedTaxon">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità ad un taxon prodotto da una revisione dell&apos;entità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity and a taxon produced by a revision of the entity</rdfs:comment>
+        <rdfs:label xml:lang="en">is classified by revised taxon</rdfs:label>
+        <rdfs:label xml:lang="it">è classificato da taxon revisionato</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/isCoinIssuanceOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCoinIssuanceOf">
@@ -12727,8 +12760,8 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
