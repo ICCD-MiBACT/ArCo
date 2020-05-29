@@ -26,36 +26,36 @@
       {
         &quot;cp&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen1&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen1&quot;
         },
         &quot;ts&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#TypeSpecimen1&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen1&quot;
         }
         &quot;bt&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon1&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon1&quot;
         }
       },
      {
         &quot;cp&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen3&quot;
+          &quot;value&quot;: &quot;https://https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen3&quot;
         },
         &quot;ts&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#TypeSpecimen3&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen3&quot;
         }
         &quot;bt&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon3&quot;
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon3&quot;
         }
       },
     ]
   }
 }</testannotationschema:hasExpectedResult>
         <testannotationschema:hasSPARQLQueryUnitTest>PREFIX a-cd: &lt;https://w3id.org/arco/context-description/&gt;
-PREFIX arco: &lt;https://w3id.org/arco/ontology/arco&gt;
+PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 
 SELECT ?cp ?ts ?bt
 
