@@ -1,4 +1,4 @@
-@prefix : <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#>.
+@prefix : <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
