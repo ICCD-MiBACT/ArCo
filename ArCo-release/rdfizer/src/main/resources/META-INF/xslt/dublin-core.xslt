@@ -866,34 +866,34 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	
 	
 						<!-- subject con Pico -->
-<xsl:if test="$sheetType='RA'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#reperti_archeologici" /> </xsl:if>
-<xsl:if test="$sheetType='OA'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" /> </xsl:if>
-<xsl:if test="$sheetType='F'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#fotografie" /> </xsl:if>
-<xsl:if test="$sheetType='SI'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche" /> </xsl:if>
-<xsl:if test="$sheetType='SAS'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#saggi_archeologici_stratigrafici" /> </xsl:if>
-<xsl:if test="$sheetType='CA'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche" /> </xsl:if>
-<xsl:if test="$sheetType='MA'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#monumenti_archeologici" /> </xsl:if>
-<xsl:if test="$sheetType='AT'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#reperti_antropologici" /> </xsl:if>
-<xsl:if test="$sheetType='TMA'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#beni_archeologici" /> </xsl:if>
-<xsl:if test="$sheetType='NU'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#monete_e_medaglie" /> </xsl:if>
-<xsl:if test="$sheetType='OAC'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" /> </xsl:if>
-<xsl:if test="$sheetType='D'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.2#disegni" /> </xsl:if>
-<xsl:if test="$sheetType='MI'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" /> </xsl:if>
-<xsl:if test="$sheetType='S'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" /> </xsl:if>
-<xsl:if test="$sheetType='VeAC'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#abbigliamento_e_accessori" /> </xsl:if>
-<xsl:if test="$sheetType='A'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#beni_architettonici" /> </xsl:if>
-<xsl:if test="$sheetType='PG'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#giardini_e_parchi" /> </xsl:if>
-<xsl:if test="$sheetType='BDI'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#beni_immateriali_della_tradizione_e_del_folklore" /> </xsl:if>
-<xsl:if test="$sheetType='BDM'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" /> </xsl:if>
-<xsl:if test="$sheetType='BNB'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.3#piante" /> </xsl:if>
-<xsl:if test="$sheetType='BNM'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.3#minerali" /> </xsl:if>
-<xsl:if test="$sheetType='BNP'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.3#fossili" /> </xsl:if>
-<xsl:if test="$sheetType='BNPE '"> <dc:subject xsi:type=" http://culturaitalia.it/pico/thesaurus/4.3#rocce" /> </xsl:if>
-<xsl:if test="$sheetType='BNZ'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.3#animali" /> </xsl:if>
-<xsl:if test="$sheetType='E'"> <dc:subject xsi:type=" http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" /> </xsl:if>
-<xsl:if test="$sheetType='PST'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_scientifici" /> </xsl:if>
-<xsl:if test="$sheetType='SM'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_musicali" /> </xsl:if>
-<xsl:if test="$sheetType='SMO'"> <dc:subject xsi:type="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_musicali" /> </xsl:if>
+<xsl:if test="$sheetType='RA'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#reperti_archeologici" /> </xsl:if>
+<xsl:if test="$sheetType='OA'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" /> </xsl:if>
+<xsl:if test="$sheetType='F'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#fotografie" /> </xsl:if>
+<xsl:if test="$sheetType='SI'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche" /> </xsl:if>
+<xsl:if test="$sheetType='SAS'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#saggi_archeologici_stratigrafici" /> </xsl:if>
+<xsl:if test="$sheetType='CA'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche" /> </xsl:if>
+<xsl:if test="$sheetType='MA'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#monumenti_archeologici" /> </xsl:if>
+<xsl:if test="$sheetType='AT'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#reperti_antropologici" /> </xsl:if>
+<xsl:if test="$sheetType='TMA'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#beni_archeologici" /> </xsl:if>
+<xsl:if test="$sheetType='NU'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#monete_e_medaglie" /> </xsl:if>
+<xsl:if test="$sheetType='OAC'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" /> </xsl:if>
+<xsl:if test="$sheetType='D'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.2#disegni" /> </xsl:if>
+<xsl:if test="$sheetType='MI'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" /> </xsl:if>
+<xsl:if test="$sheetType='S'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" /> </xsl:if>
+<xsl:if test="$sheetType='VeAC'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#abbigliamento_e_accessori" /> </xsl:if>
+<xsl:if test="$sheetType='A'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#beni_architettonici" /> </xsl:if>
+<xsl:if test="$sheetType='PG'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#giardini_e_parchi" /> </xsl:if>
+<xsl:if test="$sheetType='BDI'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#beni_immateriali_della_tradizione_e_del_folklore" /> </xsl:if>
+<xsl:if test="$sheetType='BDM'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" /> </xsl:if>
+<xsl:if test="$sheetType='BNB'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#piante" /> </xsl:if>
+<xsl:if test="$sheetType='BNM'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#minerali" /> </xsl:if>
+<xsl:if test="$sheetType='BNP'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#fossili" /> </xsl:if>
+<xsl:if test="$sheetType='BNPE '"> <dc:subject rdf:resource=" http://culturaitalia.it/pico/thesaurus/4.3#rocce" /> </xsl:if>
+<xsl:if test="$sheetType='BNZ'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#animali" /> </xsl:if>
+<xsl:if test="$sheetType='E'"> <dc:subject rdf:resource=" http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" /> </xsl:if>
+<xsl:if test="$sheetType='PST'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_scientifici" /> </xsl:if>
+<xsl:if test="$sheetType='SM'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_musicali" /> </xsl:if>
+<xsl:if test="$sheetType='SMO'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_musicali" /> </xsl:if>
 
 
 
