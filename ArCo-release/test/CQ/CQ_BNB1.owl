@@ -64,7 +64,7 @@ WHERE {
 ?ts a-cd:producesBiologicalTaxon ?bt  .
 ?bt a a-cd:Cultivar .
 }</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testDate>2020-06-01</testannotationschema:testDate>
+        <testannotationschema:testDate>2020-06-02</testannotationschema:testDate>
         <testannotationschema:testedBy xml:lang="en">Run by Margherita Porena</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Testing BNB</rdfs:comment>
         <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
