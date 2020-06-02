@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/CQ_BNB1.owl#"
-     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/CQ_BNB1.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/CQ_BNB1.owl/"
+     xml:base="https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/CQ_BNB1.owl/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -14,48 +14,48 @@
         <testannotationschema:hasCQ xml:lang="it">Quali campioni sono tipi nomenclaturali di cultivar?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">Which specimens have type specimen of a cultivar?</testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult xml:lang="it">{
-  &quot;head&quot;: {
-    &quot;vars&quot;: [
-      &quot;cp&quot;,
-      &quot;ts&quot;,
-      &quot;bt&quot; 
+  "head": {
+    "vars": [
+      "cp",
+      "ts",
+      "bt" 
    ]
   },
-  &quot;results&quot;: {
-    &quot;bindings&quot;: [
+  "results": {
+    "bindings": [
       {
-        &quot;cp&quot;: {
-          &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen1&quot;
+        "cp": {
+          "type": "uri",
+          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen1"
         },
-        &quot;ts&quot;: {
-          &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen1&quot;
+        "ts": {
+          "type": "uri",
+          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen1"
         },
-        &quot;bt&quot;: {
-          &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon1&quot;
+        "bt": {
+          "type": "uri",
+          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon1"
         }
       },
      {
-        &quot;cp&quot;: {
-          &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen3&quot;
+        "cp": {
+          "type": "uri",
+          "value": "https://https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen3"
         },
-        &quot;ts&quot;: {
-          &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen3&quot;
+        "ts": {
+          "type": "uri",
+          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen3"
         },
-        &quot;bt&quot;: {
-          &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon3&quot;
+        "bt": {
+          "type": "uri",
+          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon3"
         }
       }
     ]
   }
 }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
-PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX a-cd: <https://w3id.org/arco/ontology/context-description>
+PREFIX arco: <https://w3id.org/arco/ontology/arco>
 
 SELECT ?cp ?ts ?bt
 
