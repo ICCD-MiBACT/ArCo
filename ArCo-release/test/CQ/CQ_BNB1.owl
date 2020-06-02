@@ -12,7 +12,7 @@
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
         <testannotationschema:hasCQ xml:lang="it">Quali campioni sono tipi nomenclaturali di cultivar?</testannotationschema:hasCQ>
-        <testannotationschema:hasCQ xml:lang="en">Which specimens are type specimen of a cultivar?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">Which specimens have type specimen of a cultivar?</testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult xml:lang="it">{
   &quot;head&quot;: {
     &quot;vars&quot;: [
@@ -54,7 +54,7 @@
     ]
   }
 }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX a-cd: &lt;https://w3id.org/arco/context-description/&gt;
+        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 
 SELECT ?cp ?ts ?bt
@@ -64,7 +64,7 @@ WHERE {
 ?ts a-cd:producesBiologicalTaxon ?bt  .
 ?bt a a-cd:Cultivar .
 }</testannotationschema:hasSPARQLQueryUnitTest>
-        <testannotationschema:testDate>2020-05-15</testannotationschema:testDate>
+        <testannotationschema:testDate>2020-06-01</testannotationschema:testDate>
         <testannotationschema:testedBy xml:lang="en">Run by Margherita Porena</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Testing BNB</rdfs:comment>
         <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
