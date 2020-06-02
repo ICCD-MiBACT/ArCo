@@ -18,7 +18,7 @@
     &quot;vars&quot;: [
       &quot;cp&quot;,
       &quot;ts&quot;,
-      &quot;bt&quot;, 
+      &quot;bt&quot; 
    ]
   },
   &quot;results&quot;: {
@@ -31,7 +31,7 @@
         &quot;ts&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
           &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen1&quot;
-        }
+        },
         &quot;bt&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
           &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon1&quot;
@@ -45,12 +45,12 @@
         &quot;ts&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
           &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen3&quot;
-        }
+        },
         &quot;bt&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
           &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon3&quot;
         }
-      },
+      }
     ]
   }
 }</testannotationschema:hasExpectedResult>
@@ -60,7 +60,6 @@ PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 SELECT ?cp ?ts ?bt
 
 WHERE {
-?cp a arco:BotanicalHeritage .
 ?cp a-cd:hasTypeSpecimen ?ts .
 ?ts a-cd:producesBiologicalTaxon ?bt  .
 ?bt a a-cd:Cultivar .
