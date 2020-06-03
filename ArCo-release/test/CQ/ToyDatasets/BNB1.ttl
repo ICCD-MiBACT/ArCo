@@ -28,6 +28,6 @@
 :BiologicalTaxon3	a a-cd:Cultivar .
 
 :Specimen4	a arco:Specimen ;
-		a-cd:hasBotanicalRevision :TypeSpecimen4 .
-:TypeSpecimen4 	a-cd:producesBiologicalTaxon :BiologicalTaxon4 .
-:BiologicalTaxon4	a a-cd:Subspecies .
+		a-cd:hasBotanicalRevision :BotanicalRevision4 .
+:BotanicalRevision4 	a-cd:producesBiologicalTaxon :BiologicalTaxon4 .
+:BiologicalTaxon4	a a-cd:Cultivar .

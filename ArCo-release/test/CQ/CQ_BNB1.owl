@@ -14,41 +14,41 @@
         <testannotationschema:hasCQ xml:lang="it">Quali campioni sono tipi nomenclaturali di cultivar?</testannotationschema:hasCQ>
         <testannotationschema:hasCQ xml:lang="en">Which specimens have type specimen producing a cultivar taxon?</testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult>{
-  "head": {
-    "vars": [
-      "cp",
-      "ts",
-      "bt" 
+  &quot;head&quot;: {
+    &quot;vars&quot;: [
+      &quot;cp&quot;,
+      &quot;ts&quot;,
+      &quot;bt&quot; 
    ]
   },
-  "results": {
-    "bindings": [
+  &quot;results&quot;: {
+    &quot;bindings&quot;: [
       {
-        "cp": {
-          "type": "uri",
-          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen1"
+        &quot;cp&quot;: {
+          &quot;type&quot;: &quot;uri&quot;,
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen1&quot;
         },
-        "ts": {
-          "type": "uri",
-          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen1"
+        &quot;ts&quot;: {
+          &quot;type&quot;: &quot;uri&quot;,
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen1&quot;
         },
-        "bt": {
-          "type": "uri",
-          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon1"
+        &quot;bt&quot;: {
+          &quot;type&quot;: &quot;uri&quot;,
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon1&quot;
         }
       },
      {
-        "cp": {
-          "type": "uri",
-          "value": "https://https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen3"
+        &quot;cp&quot;: {
+          &quot;type&quot;: &quot;uri&quot;,
+          &quot;value&quot;: &quot;https://https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/Specimen3&quot;
         },
-        "ts": {
-          "type": "uri",
-          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen3"
+        &quot;ts&quot;: {
+          &quot;type&quot;: &quot;uri&quot;,
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/TypeSpecimen3&quot;
         },
-        "bt": {
-          "type": "uri",
-          "value": "https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon3"
+        &quot;bt&quot;: {
+          &quot;type&quot;: &quot;uri&quot;,
+          &quot;value&quot;: &quot;https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/BiologicalTaxon3&quot;
         }
       }
     ]
