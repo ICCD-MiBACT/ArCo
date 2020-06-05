@@ -6031,7 +6031,7 @@
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
 							<xsl:if
-								test="./OGTT and not(lower-case(normalize-space(./OGTT))='nr' or lower-case(normalize-space(./OGTT))='n.r.' or lower-case(normalize-space(./OGTT))='nr (recupero pregresso)')">
+								test="./OGTT and not($sheetType='NU') and not(lower-case(normalize-space(./OGTT))='nr' or lower-case(normalize-space(./OGTT))='n.r.' or lower-case(normalize-space(./OGTT))='nr (recupero pregresso)')">
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTT)))" />
@@ -6562,7 +6562,7 @@
 				associated with a Cultural Property Type by the property arco-dd:hasCulturalPropertySpecification. -->
 			<xsl:choose>
 				<xsl:when
-					test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
+					test="not($sheetType='BNB') and not($sheetType='NU') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
 					<xsl:if
 						test="schede/*/OG/OGT/OGTT and not(lower-case(normalize-space(schede/*/OG/OGT/OGTT))='nr' or lower-case(normalize-space(schede/*/OG/OGT/OGTT))='n.r.' or lower-case(normalize-space(schede/*/OG/OGT/OGTT))='nr (recupero pregresso)')">
 						<rdf:Description>
@@ -13244,12 +13244,12 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS, 'NumismaticPropertyCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
+						select="concat($NS, 'NumismaticPropertyFunctionalCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
 						</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
 								<xsl:value-of
-							select="'https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory'" />
+							select="'https://w3id.org/arco/ontology/arco/NumismaticPropertyFunctionalCategory'" />
 							</xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
@@ -13259,6 +13259,28 @@
 					<l0:name>
 						<xsl:value-of
 							select="normalize-space(schede/NU/OG/OGT/OGTH)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="schede/NU/OG/OGT/OGTT">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+							<xsl:value-of
+						select="concat($NS, 'NumismaticPropertyTypologicalCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTT)))" />
+						</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+								<xsl:value-of
+							select="'https://w3id.org/arco/ontology/arco/NumismaticPropertyTypologicalCategory'" />
+							</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of
+							select="normalize-space(schede/NU/OG/OGT/OGTT)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of
+							select="normalize-space(schede/NU/OG/OGT/OGTT)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>

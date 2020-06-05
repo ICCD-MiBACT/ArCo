@@ -3210,14 +3210,54 @@ erbario.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria funzionale di un bene numismatico, in riferimento a una classificazione relativa alla funzione, o alla destinazione, o alla committenza del bene catalogato, secondo le classificazioni più consuete.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a functional category of a numismatic property, referring to a classification related to the function or the commission of the cultural property, according to the most common classifications.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria di un bene numismatico, in riferimento a una classificazione relativa alla tipologia, alla funzione, alla destinazione, o alla committenza del bene catalogato, secondo le classificazioni più consuete.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a category of a numismatic property, referring to a classification related to the type or the function or the commission of the cultural property, according to the most common classifications.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
         <rdfs:label xml:lang="it">Classificazione di bene numismatico</rdfs:label>
         <rdfs:label xml:lang="en">Numismatic property classification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/NumismaticPropertyFunctionalCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/NumismaticPropertyFunctionalCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/isNumismaticPropertyCategoryOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria funzionale di un bene numismatico, in riferimento a una classificazione relativa alla funzione, o alla destinazione, o alla committenza del bene catalogato, secondo le classificazioni più consuete.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a functional category of a numismatic property, referring to a classification related to the function or the commission of the cultural property, according to the most common classifications.</rdfs:comment>
+        <rdfs:label xml:lang="it">Classificazione funzionale di bene numismatico</rdfs:label>
+        <rdfs:label xml:lang="en">Numismatic property functional category</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa NU 4.00: OG/OGT/OGTH</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/NumismaticPropertyTypologicalCategory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/NumismaticPropertyTypologicalCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticPropertyCategory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/isNumismaticPropertyCategoryOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/arco/NumismaticProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la categoria di un bene numismatico, in riferimento a una classificazione relativa alla tipologia, secondo le classificazioni più consuete.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a category of a numismatic property, referring to a classification related to the type, according to the most common classifications.</rdfs:comment>
+        <rdfs:label xml:lang="it">Classificazione tipologica di bene numismatico</rdfs:label>
+        <rdfs:label xml:lang="en">Numismatic property typological category</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:Class>
     
 

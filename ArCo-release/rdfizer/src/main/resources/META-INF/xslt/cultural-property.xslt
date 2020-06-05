@@ -67,7 +67,7 @@
 		<!-- variable ogtt -->
 		<xsl:variable name="ogtt">
 			<xsl:choose>
-				<xsl:when test="schede/*/OG/OGT/OGTT">
+				<xsl:when test="schede/*/OG/OGT/OGTT and not($sheetType='NU')">
 					<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTT)" />
 				</xsl:when>
 				<xsl:otherwise>
@@ -631,7 +631,14 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
-							<xsl:value-of select="concat($tmpLabel, ' - ', $ogtp)" />
+							<xsl:choose>
+								<xsl:when test="schede/*/OG/OGT/OGTO">
+									<xsl:value-of select="concat(normalize-space(schede/*/OG/OGT/OGTD), ' - ', normalize-space(schede/*/OG/OGT/OGTO))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="normalize-space(schede/*/OG/OGT/OGTD)" />
+								</xsl:otherwise>
+							</xsl:choose>
 						</rdfs:label>
 					</xsl:if>
 
@@ -3026,11 +3033,19 @@
 								</xsl:attribute>
 						</arco-arco:hasCulturalPropertyInventoryCategory>
 				</xsl:if>
-				<!-- numismatic property classification -->
+				<!-- numismatic property functional classification -->
 				<xsl:if test="schede/NU/OG/OGT/OGTH">
 					<arco-arco:hasNumismaticPropertyCategory>
 						<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'NumismaticPropertyCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
+								<xsl:value-of select="concat($NS, 'NumismaticPropertyFunctionalCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTH)))" />
+							</xsl:attribute>
+					</arco-arco:hasNumismaticPropertyCategory>
+				</xsl:if>
+				<!-- numismatic property typological classification -->
+				<xsl:if test="schede/NU/OG/OGT/OGTT">
+					<arco-arco:hasNumismaticPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'NumismaticPropertyTypologicalCategory/', arco-fn:urify(normalize-space(schede/NU/OG/OGT/OGTT)))" />
 							</xsl:attribute>
 					</arco-arco:hasNumismaticPropertyCategory>
 				</xsl:if>
