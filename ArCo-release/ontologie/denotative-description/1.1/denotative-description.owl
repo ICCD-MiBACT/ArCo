@@ -3567,6 +3567,7 @@ resource:Inscription/1200865151-inscription-1
     <!-- https://w3id.org/arco/ontology/denotative-description/CollectingSite -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/CollectingSite">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Location"/>
         <rdfs:subClassOf>
             <owl:Restriction>
