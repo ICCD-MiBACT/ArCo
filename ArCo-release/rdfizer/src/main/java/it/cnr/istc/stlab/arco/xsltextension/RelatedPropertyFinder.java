@@ -4,15 +4,20 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.Syntax;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.tdb.TDBFactory;
 
+import it.cnr.istc.stlab.arco.SpecificCulturalPropertyType;
+import it.cnr.istc.stlab.arco.Urifier;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
@@ -24,22 +29,21 @@ import net.sf.saxon.s9api.XdmAtomicValue;
 import net.sf.saxon.s9api.XdmEmptySequence;
 import net.sf.saxon.s9api.XdmValue;
 
-public class RelatedPropertyFinder extends SKOSThesaurusLinker implements ExtensionFunction {
+public class RelatedPropertyFinder implements ExtensionFunction {
 	
 	private static final String IDENTIFIERS = "META-INF/datasets/identifiers.ttl";
-	private static final String KB_NAMED_MODEL = "identifiers";
 	
 	private static RelatedPropertyFinder instance;
-	
+	private Dataset dataset;
 	
 	private RelatedPropertyFinder() {
-		super();
-		if(!kbManager.modelExists(KB_NAMED_MODEL)) {
-			Model model = ModelFactory.createDefaultModel();
+		dataset = TDBFactory.createDataset("identifiers");
+		Model model = dataset.getDefaultModel();
+		if(model.isEmpty()){
+			
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(IDENTIFIERS);
 			model.read(inputStream, null, "TURTLE");
 			
-			kbManager.addNamedModel(KB_NAMED_MODEL, model);
 		}
 	}
 	
@@ -52,12 +56,15 @@ public class RelatedPropertyFinder extends SKOSThesaurusLinker implements Extens
 	@Override
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-		
+		String type = ((XdmAtomicValue)arguments[1].itemAt(0)).getStringValue();
+        
 		String sparql = "SELECT ?property "
-				+ "WHERE{ ?property <https://w3id.org/arco/ontology/arco/uniqueIdentifier> '" + arg + "'}";
+				+ "WHERE{ ?property <https://w3id.org/arco/core/uniqueIdentifier> '" + arg + "'}";
 		
 		Query query = QueryFactory.create(sparql, Syntax.syntaxARQ);
-		ResultSet resultSet = kbManager.executeSelect(query, getNamedModel());
+		QueryExecution queryExecution = QueryExecutionFactory.create(query, dataset.getDefaultModel());
+		ResultSet resultSet = queryExecution.execSelect();
+		
 		
 		List<String> uris = new ArrayList<String>();
 		
@@ -103,11 +110,6 @@ public class RelatedPropertyFinder extends SKOSThesaurusLinker implements Extens
 	@Override
 	public SequenceType getResultType() {
 		return SequenceType.makeSequenceType(ItemType.ANY_ARRAY, OccurrenceIndicator.ZERO_OR_MORE);
-	}
-
-	@Override
-	protected String getNamedModel() {
-		return KB_NAMED_MODEL;
 	}
 
 }
