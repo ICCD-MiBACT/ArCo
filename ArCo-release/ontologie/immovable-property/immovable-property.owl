@@ -308,7 +308,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/isDesignOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isDesignOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
         <rdfs:range>
             <owl:Class>
