@@ -333,10 +333,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCollectingSite"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/hasLegit"/>
-        </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="it">Questa proprietà collega il campione al luogo di raccolta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the specimen to the collecting site</rdfs:comment>
         <rdfs:label xml:lang="it">ha luogo di raccolta</rdfs:label>
