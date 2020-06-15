@@ -1155,6 +1155,20 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification">
+        <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica alla sua qualificazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a technical characteristic to a aqualification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha qualificazione di caratteristica tecnica</rdfs:label>
+        <rdfs:label xml:lang="en">has technical caracteristic qualification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic">
@@ -2209,6 +2223,20 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISES</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega una qualificazione a una caratteristica tecnica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an qualification to a technical characteristic</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is technical caracteristic qualification of</rdfs:label>
+        <rdfs:label xml:lang="it">è qualificazione di carattestica tecnica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -4127,6 +4155,21 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la qualificazione di una caratteristica tecnica relativa a un bene culturale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the qualification of a characteristic of a cultural property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">Qualificazione di caratteristica tecnica</rdfs:label>
+        <rdfs:label xml:lang="en">Technical characteristic qualification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 

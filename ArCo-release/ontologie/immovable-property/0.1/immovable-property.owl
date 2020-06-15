@@ -148,7 +148,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFoundations"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Foundations"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
     </owl:ObjectProperty>
     
 
@@ -160,12 +160,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructurePart"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Covering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/hasCoveringColour -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasCoveringColour">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isCoveringColourOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
     </owl:ObjectProperty>
     
 
@@ -178,8 +189,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPortion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -209,11 +220,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/hasForm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasForm">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFormOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/hasFoundations -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasFoundations">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Foundations"/>
     </owl:ObjectProperty>
     
@@ -224,7 +246,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasHorizontalElement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isHorizontalElementOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/HorizontalElement"/>
     </owl:ObjectProperty>
     
@@ -237,8 +259,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPortion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -272,7 +294,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasVerticalConnection">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isVerticalConnectionOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalConnection"/>
     </owl:ObjectProperty>
     
@@ -283,8 +305,18 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasVerticalElement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isVerticalElementOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/isCoveringColourOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isCoveringColourOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:ObjectProperty>
     
 
@@ -296,8 +328,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructurePart"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -313,8 +345,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPortion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -341,12 +373,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/isFormOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFormOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/isHorizontalElementOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isHorizontalElementOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/HorizontalElement"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
     </owl:ObjectProperty>
     
 
@@ -358,8 +400,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion"/>
-                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPortion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -400,7 +442,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isVerticalConnectionOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalConnection"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
     </owl:ObjectProperty>
     
 
@@ -410,7 +452,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isVerticalElementOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
     </owl:ObjectProperty>
     
 
@@ -537,7 +579,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/ArchitecturalElement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalElement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
     </owl:Class>
     
 
@@ -545,15 +587,14 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/ArchitecturalEnsamble -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalEnsamble">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructurePart"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/Building"/>
     </owl:Class>
     
 
@@ -561,31 +602,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/Building -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Building">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/BuildingOrStructureElement -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructureElement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructurePart"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/BuildingOrStructurePart -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructurePart">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
     </owl:Class>
     
 
@@ -598,10 +615,77 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/Construction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/ConstructionElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/ConstructionPart -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPart">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/ConstructionPortion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPortion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
+                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Covering"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/Covering -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Covering">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructurePart"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/CoveringType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/CoveringType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
     </owl:Class>
     
 
@@ -633,7 +717,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/Floor -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Floor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionPortion"/>
     </owl:Class>
     
 
@@ -665,7 +749,8 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/FlooringType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/FlooringType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/CoveringType"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/RoofingType"/>
     </owl:Class>
     
 
@@ -689,7 +774,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/FurnishingElement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/FurnishingElement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
     </owl:Class>
     
 
@@ -714,6 +799,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/HorizontalSubdivision">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/InteriorSubdivision"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalSubdivision"/>
     </owl:Class>
     
 
@@ -762,6 +848,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Ramp">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalConnection"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/Stair"/>
     </owl:Class>
     
 
@@ -801,7 +888,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/RoofingType -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/RoofingType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/CoveringType"/>
     </owl:Class>
     
 
@@ -809,7 +896,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/Room -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Room">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalPortion"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionPortion"/>
     </owl:Class>
     
 
@@ -849,7 +936,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/TransportElement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/TransportElement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/BuildingOrStructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
     </owl:Class>
     
 
@@ -913,27 +1000,79 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/HorizontalElementShape -->
+    <!-- https://w3id.org/arco/ontology/immovable-property/CoveringColour -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/HorizontalElementShape"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/CoveringColour"/>
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/RoofShape -->
+    <!-- https://w3id.org/arco/ontology/immovable-property/HorizontalElementForm -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/RoofShape"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/HorizontalElementForm"/>
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/VerticalConnectionShape -->
+    <!-- https://w3id.org/arco/ontology/immovable-property/RoofForm -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalConnectionShape"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/RoofForm"/>
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/VerticalElementShape -->
+    <!-- https://w3id.org/arco/ontology/immovable-property/VerticalConnectionForm -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalElementShape"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalConnectionForm"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/VerticalElementForm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalElementForm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalElement"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/FurnishingElement"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/TransportElement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Chimney"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Door"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Foundations"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/HorizontalElement"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Railing"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Roof"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/StructuralElement"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalConnection"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Window"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/CoveringType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/FoundationsType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/HorizontalElementType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/RoofType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/SoilType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalConnectionType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalElementType"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
