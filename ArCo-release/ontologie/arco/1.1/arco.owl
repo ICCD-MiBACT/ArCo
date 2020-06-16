@@ -34,6 +34,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
@@ -2221,8 +2222,8 @@ erbario.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/NaturalHeritage"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAccession"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Accession"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAccession"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Accession"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3482,74 +3483,50 @@ erbario.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/arco/BotanicalHeritage"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBiologicalTaxon"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAssociatedPreparation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Preparation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBotanicalRevision"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BotanicalRevision"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasDeterminavit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Determinavit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasRelatedSample"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasTypeSpecimen"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/TypeSpecimen"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/BiologicalTaxon"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCloseIndividual"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CloseIndividual"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAssociatedPreparation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Preparation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasCollectingSite"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/CollectingSite"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasBotanicalRevision"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BotanicalRevision"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasHostIndividual"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/HostIndividual"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLabel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Label"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasLabel"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Label"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasRelatedSample"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Sample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasLegit"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Legit"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasTypeSpecimenIdentification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3562,18 +3539,6 @@ erbario.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/arco/previousIdentifier"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/numberOfEnvelopes"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/numberOfLabels"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Questa classe rappresenta un insieme di parti che racchiudono i campioni,
@@ -3599,8 +3564,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasLabel"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Label"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLabel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Label"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
