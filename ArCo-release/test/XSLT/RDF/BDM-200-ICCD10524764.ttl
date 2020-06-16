@@ -1,0 +1,569 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-address:7c92a76200066e323645d455b4e1cd9a
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, NU, Sorgono" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        clvapit:fullAddress  "corso Vittorio Emanuele" ;
+        clvapit:hasCity      ar-city:sorgono ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:nu .
+
+ar-Measurement:2000168323-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 2000168323: 75cm"@en , "Misura del bene culturale 2000168323: 75cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:2000168323-1-height-75 ;
+        l0:name                     "Measurement of cultural property 2000168323: 75cm"@en , "Misura del bene culturale 2000168323: 75cm"@it .
+
+ar-TimeInterval:2012  a  tiapit:TimeInterval ;
+        rdfs:label   "2012" ;
+        tiapit:time  "2012" .
+
+ar-agent:ead124946ac0f35db0b60a6d7cdbced7
+        a           l0:Agent ;
+        rdfs:label  "Nunfris, A." .
+
+ar-MeasurementCollection:2000168323-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 2000168323 52"@en , "Misure del bene culturale 2000168323 52"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:2000168323-1-width , ar-Measurement:2000168323-1-height , ar-Measurement:2000168323-1-depth ;
+        l0:name                 "Measurements of cultural property 2000168323 52"@en , "Misure del bene culturale 2000168323 52"@it .
+
+ar-agent:f03fcaf397a37cef65d7869f07a2fd39
+        a                l0:Agent ;
+        rdfs:label       "comune di Sorgono" ;
+        arco-cd:address  "corso IV Novembre 1, 08038 Sorgono NU" ;
+        l0:name          "comune di Sorgono" .
+
+ar-catalogueRecordVersion:2000168323-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE - 2013 Nunfris, A." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:2000168323-rvm-ead124946ac0f35db0b60a6d7cdbced7 , ar-timeIndexedRole:2000168323-86301fa4402056eb413222f2e8fcf4f2 ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:ead124946ac0f35db0b60a6d7cdbced7 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:f05f363f24f46e74a65720861f90f3d0 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> .
+
+ar-timeIndexedTypedLocation:2000168323-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 2000168323"@it , "Current physical location of cultural property: 2000168323"@en ;
+        arco-location:atSite           ar-Site:923fd13f958d82813f5116abaf09f866 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 2000168323"@it , "Current physical location of cultural property: 2000168323"@en .
+
+ar-agentrole:2000168323-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 2000168323: S59"@it , "Cataloguing agency for cultural property 2000168323: S59"@en ;
+        arco-core:hasAgent  ar-agent:b29df33b907c20bd2be0ff0b149efffc ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-ConservationStatus:2000168323-conservation-status-1
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 2000168323"@it , "Conservation status 1 of cultural property: 2000168323"@en ;
+        arco-core:specifications  "mancano i piedi; fessurazioni delle tavole, coperchio probabilmente non pertinente." ;
+        arco-dd:hasConservationStatusType
+                arco-dd:MediocreConservationStatus ;
+        l0:name                   "Stato di conservazione 1 del bene: 2000168323"@it , "Conservation status 1 of cultural property: 2000168323"@en .
+
+ar-timeIndexedRole:2000168323-compilation-f05f363f24f46e74a65720861f90f3d0
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Dettori, M.P."@en , "Compilazione da Dettori, M.P."@it ;
+        roapit:isRoleInTimeOf  ar-agent:f05f363f24f46e74a65720861f90f3d0 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+<https://w3id.org/arco/resource/DocumentationCategory/specifiche-allegate>
+        a           arco-cd:DocumentationCategory ;
+        rdfs:label  "specifiche allegate" ;
+        l0:name     "specifiche allegate" .
+
+ar-culturalPropertyType:db645c4a8554c595ba4d24965ae2943b
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: cassa"@it , "Cultural property type: cassa"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:cassa ;
+        l0:name     "Tipo del bene: cassa"@it , "Cultural property type: cassa"@en .
+
+ar-photograpyDocumentation:2000168323-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 2000168323"@en , "Documentazione fotografica 1 del bene culturale: 2000168323"@it ;
+        arco-cd:documentationIdentifier
+                "SBAPSAE59156745" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        arco-core:hasCategory         <https://w3id.org/arco/resource/DocumentationCategory/specifiche-allegate> ;
+        l0:name                       "Photographic documentation 1 of cultural property: 2000168323"@en , "Documentazione fotografica 1 del bene culturale: 2000168323"@it .
+
+ar-catalogueRecordVersion:2000168323-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2012 Dettori, M.P. Nunfris, A." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:2000168323-compilation-f05f363f24f46e74a65720861f90f3d0 , ar-timeIndexedRole:2000168323-86301fa4402056eb413222f2e8fcf4f2 , ar-timeIndexedRole:2000168323-compilation-ead124946ac0f35db0b60a6d7cdbced7 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:f05f363f24f46e74a65720861f90f3d0 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:ead124946ac0f35db0b60a6d7cdbced7 , ar-agent:f05f363f24f46e74a65720861f90f3d0 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> .
+
+ar-agent:f05f363f24f46e74a65720861f90f3d0
+        a           l0:Agent ;
+        rdfs:label  "Dettori, M.P." .
+
+ar-Value:2000168323-1-height-75
+        a                      mu:Value ;
+        rdfs:label             "75"@en , "75"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "75" .
+
+<https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323>
+        a               arco-catalogue:CatalogueRecordBDM ;
+        rdfs:label      "Catalogue Record n: 2000168323"@en , "Scheda catalografica n: 2000168323"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "2000168323" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:2000168323-rvm , ar-catalogueRecordVersion:2000168323-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "BDM-200-ICCD10524764" ;
+        arco-core:note  "La cassa fa parte di una donazione effettuata da parte del \"mastru 'e linna\" (maestro falegname) Antonio Sau a favore del comune di Sorgono, datata 1998. Appartengono al lascito altre sei casse, frammenti di frontoni lignei intagliati, matrici xilografiche e macchinari da falegnameria d'epoca." .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000168323-cataloguing-agency .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/OrnamentalMotif/fitomorfo>
+        a           arco-dd:OrnamentalMotif ;
+        rdfs:label  "fitomorfo" ;
+        l0:name     "fitomorfo" .
+
+ar-dating:2000168323-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene culturale 2000168323"@it , "Dating 1 of cultural property 2000168323"@en ;
+        arco-cd:hasDatingEvent  ar-event:2000168323-creation ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:esami-stilistico-comparativi-e-sul-manufatto ;
+        l0:name                 "Cronologia 1 del bene culturale 2000168323"@it , "Dating 1 of cultural property 2000168323"@en .
+
+ar-Measurement:2000168323-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 2000168323: 125cm"@en , "Misura del bene culturale 2000168323: 125cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:2000168323-1-width-125 ;
+        l0:name                     "Measurement of cultural property 2000168323: 125cm"@en , "Misura del bene culturale 2000168323: 125cm"@it .
+
+ar-Measurement:2000168323-1-depth
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 2000168323: 52cm"@en , "Misura del bene culturale 2000168323: 52cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Depth ;
+        arco-dd:hasValue            ar-Value:2000168323-1-depth-52 ;
+        l0:name                     "Measurement of cultural property 2000168323: 52cm"@en , "Misura del bene culturale 2000168323: 52cm"@it .
+
+ar-TechnicalCharacteristic:intaglio
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "intaglio" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:Technique ;
+        l0:name     "intaglio" .
+
+ar-timeIndexedRole:2000168323-86301fa4402056eb413222f2e8fcf4f2
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Dettori, M.P."@it , "Official in charge: Dettori, M.P."@en ;
+        roapit:isRoleInTimeOf  ar-agent:f05f363f24f46e74a65720861f90f3d0 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-TechnicalCharacteristic:legno-di-castagno
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "legno di castagno" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:Material ;
+        l0:name     "legno di castagno" .
+
+ar-interpretationCriterion:esami-stilistico-comparativi-e-sul-manufatto
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "esami stilistico-comparativi e sul manufatto" ;
+        l0:name     "esami stilistico-comparativi e sul manufatto" .
+
+<https://w3id.org/arco/resource/Use/2000168323-use-1>
+        a                    arco-cd:Use ;
+        rdfs:label           "Use 1 of cultural property 2000168323"@en , "Uso 1 del bene culturale 2000168323"@it ;
+        arco-cd:useFunction  "contenere corredo nuziale" ;
+        l0:name              "Use 1 of cultural property 2000168323"@en , "Uso 1 del bene culturale 2000168323"@it .
+
+ar-TechnicalCharacteristic:legno-di-castagno-intaglio
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "legno di castagno/intaglio" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "legno di castagno/intaglio" .
+
+ar-timeIndexedTypedLocation:2000168323-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 2000168323"@it , "Alternative location 1 of cultural property: 2000168323"@en ;
+        arco-location:atSite           ar-Site:709867ceda77a5e6ce87fe49e08ff1ae ;
+        arco-location:hasLocationType  arco-location:ObservationLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        l0:name                        "Altra localizzazione 1 del bene: 2000168323"@it , "Alternative location 1 of cultural property: 2000168323"@en .
+
+ar-province:nu  a   clvapit:Province ;
+        rdfs:label  "NU" ;
+        l0:name     "NU" .
+
+ar-culturalPropertyDefinition:cassa
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "cassa" .
+
+<https://w3id.org/arco/resource/IconographicOrDecorativeApparatus/2000168323-decorative-2>
+        a                             arco-dd:IconographicOrDecorativeApparatus ;
+        rdfs:label                    "Apparato decorativo 2 del bene culturale 2000168323"@it , "Decorative apparatus 2 of the cultural property 2000168323"@en ;
+        arco-dd:hasFunctionalPurpose  <https://w3id.org/arco/resource/FunctionalPurpose/magico-prottetiva> ;
+        arco-dd:hasIconographicOrDecorativeApparatusType
+                arco-dd:DecorativeApparatus ;
+        arco-dd:hasOrnamentalMotif    <https://w3id.org/arco/resource/OrnamentalMotif/fitomorfo> ;
+        arco-dd:hasTechnicalStatus    ar-CulturalEntityTechnicalStatus:2000168323-decorative-2 ;
+        l0:name                       "Apparato decorativo 2 del bene culturale 2000168323"@it , "Decorative apparatus 2 of the cultural property 2000168323"@en .
+
+ar-Value:2000168323-1-depth-52
+        a                      mu:Value ;
+        rdfs:label             "52"@en , "52"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "52" .
+
+ar-bibliography:2000168323-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 2000168323"@en , "Bibliografia 1 del bene culturale: 2000168323"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "299" ;
+        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        arco-core:hasCategory     <https://w3id.org/arco/resource/BibliographyCategory/di-confronto> ;
+        arco-core:note            "pp. 64-187." ;
+        l0:name                   "Bibliography 1 of cultural property: 2000168323"@en , "Bibliografia 1 del bene culturale: 2000168323"@en .
+
+ar-CulturalEntityTechnicalStatus:2000168323-decorative-2
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'apparato figurativo 2 del bene culturale 2000168323"@it , "Technical status of decorative apparatus 2 of cultural property 2000168323"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:legno-di-castagno-intaglio ;
+        l0:name     "Stato tecnico dell'apparato figurativo 2 del bene culturale 2000168323"@it , "Technical status of decorative apparatus 2 of cultural property 2000168323"@en .
+
+ar-region:sardegna  a  clvapit:Region ;
+        rdfs:label  "Sardegna" ;
+        l0:name     "Sardegna" .
+
+ar-event:2000168323-creation
+        a              l0:Event ;
+        rdfs:label     "Realizzazione del bene 2000168323"@it , "Creation of cultural property 2000168323"@en ;
+        tiapit:atTime  ar-TimeInterval:xix-sec ;
+        l0:name        "Realizzazione del bene 2000168323"@it , "Creation of cultural property 2000168323"@en .
+
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323>
+        a                               arco-arco:DemoEthnoAnthropologicalHeritage , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "cassa" ;
+        rdfs:label                      "cassa - Barbagia di Belvì (XIX sec.)"@it , "cassa - Barbagia di Belvì (XIX sec.)"@en ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:legno-di-castagno , ar-TechnicalCharacteristic:intaglio ;
+        dc:coverage                     ar-city:sorgono ;
+        dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/2000168323-cultural-scope-attribution-1> ;
+        dc:description                  "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato." ;
+        dc:format                       ar-MeasurementCollection:2000168323-1 ;
+        dc:identifier                   "2000168323" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000168323-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore> ;
+        dc:type                         ar-culturalPropertyType:db645c4a8554c595ba4d24965ae2943b ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:2000168323-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/7c92a76200066e323645d455b4e1cd9a" ;
+        arco-arco:catalogueNumber       "00168323" ;
+        arco-arco:hasCataloguingAgency  ar-agent:b29df33b907c20bd2be0ff0b149efffc ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:b29df33b907c20bd2be0ff0b149efffc ;
+        arco-arco:regionIdentifier      "20" ;
+        arco-arco:uniqueIdentifier      "2000168323" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> ;
+        arco-cd:hasAuthorshipAttribution
+                <https://w3id.org/arco/resource/CulturalScopeAttribution/2000168323-cultural-scope-attribution-1> ;
+        arco-cd:hasBibliography         ar-bibliography:2000168323-bibliography-1 ;
+        arco-cd:hasDating               ar-dating:2000168323-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:2000168323-photographic-documentation-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:2000168323-legal-situation-proprieta-ente-pubblico-territoriale ;
+        arco-cd:hasUse                  <https://w3id.org/arco/resource/Use/2000168323-use-1> ;
+        arco-core:description           "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato." ;
+        arco-core:hasAgentRole          ar-agentrole:2000168323-cataloguing-agency , ar-agentrole:2000168323-heritage-protection-agency ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:2000168323-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:db645c4a8554c595ba4d24965ae2943b ;
+        arco-dd:hasIconographicOrDecorativeApparatus
+                <https://w3id.org/arco/resource/IconographicOrDecorativeApparatus/2000168323-decorative-2> , <https://w3id.org/arco/resource/IconographicOrDecorativeApparatus/2000168323-decorative-1> ;
+        arco-dd:hasMaterial             ar-TechnicalCharacteristic:legno-di-castagno ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:2000168323-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:2000168323 ;
+        arco-dd:hasTechnique            ar-TechnicalCharacteristic:intaglio ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:7c92a76200066e323645d455b4e1cd9a ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:2000168323-alternative-1 , ar-timeIndexedTypedLocation:2000168323-current .
+
+ar-CulturalEntityTechnicalStatus:2000168323
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 2000168323"@it , "Technical status of cultural property 2000168323"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:legno-di-castagno , ar-TechnicalCharacteristic:intaglio ;
+        l0:name     "Stato tecnico del bene culturale 2000168323"@it , "Technical status of cultural property 2000168323"@en .
+
+ar-Site:923fd13f958d82813f5116abaf09f866
+        a                cis:Site ;
+        rdfs:label       "Museo del Legno" ;
+        cis:siteAddress  ar-address:7c92a76200066e323645d455b4e1cd9a ;
+        l0:name          "Museo del Legno" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000168323-heritage-protection-agency .
+
+ar-timeIndexedRole:2000168323-rvm-ead124946ac0f35db0b60a6d7cdbced7
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE da Nunfris, A."@it , "Digital transcription by Nunfris, A."@en ;
+        roapit:isRoleInTimeOf  ar-agent:ead124946ac0f35db0b60a6d7cdbced7 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+<https://w3id.org/arco/resource/FunctionalPurpose/magico-prottetiva>
+        a           arco-dd:FunctionalPurpose ;
+        rdfs:label  "magico-prottetiva" ;
+        l0:name     "magico-prottetiva" .
+
+<https://w3id.org/arco/resource/CulturalScopeAttribution/2000168323-cultural-scope-attribution-1>
+        a                         arco-cd:CulturalScopeAttribution ;
+        rdfs:label                "Attribuzione di ambito culturale del bene: 2000168323"@it , "Cultural scope attribution of cultural property: 2000168323"@en ;
+        arco-cd:hasCulturalScope  <https://w3id.org/arco/resource/CulturalScope/barbagia-di-belvi> ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:esami-stilistico-comparativi-e-sul-manufatto ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        l0:name                   "Attribuzione di ambito culturale del bene: 2000168323"@it , "Cultural scope attribution of cultural property: 2000168323"@en .
+
+<https://w3id.org/arco/resource/IconographicOrDecorativeApparatus/2000168323-decorative-1>
+        a                             arco-dd:IconographicOrDecorativeApparatus ;
+        rdfs:label                    "Apparato decorativo 1 del bene culturale 2000168323"@it , "Decorative apparatus 1 of the cultural property 2000168323"@en ;
+        arco-dd:hasFunctionalPurpose  <https://w3id.org/arco/resource/FunctionalPurpose/magico-prottetiva> ;
+        arco-dd:hasIconographicOrDecorativeApparatusType
+                arco-dd:DecorativeApparatus ;
+        arco-dd:hasOrnamentalMotif    <https://w3id.org/arco/resource/OrnamentalMotif/zoomorfo> ;
+        arco-dd:hasTechnicalStatus    ar-CulturalEntityTechnicalStatus:2000168323-decorative-1 ;
+        l0:name                       "Apparato decorativo 1 del bene culturale 2000168323"@it , "Decorative apparatus 1 of the cultural property 2000168323"@en .
+
+ar-TimeInterval:xix-sec
+        a            tiapit:TimeInterval ;
+        rdfs:label   "XIX sec." ;
+        tiapit:time  "XIX sec." ;
+        l0:name      "XIX sec." .
+
+ar-Site:709867ceda77a5e6ce87fe49e08ff1ae
+        a                cis:Site ;
+        rdfs:label       "botteghe Antonio Sau" ;
+        cis:siteAddress  ar-address:5c2eb2c43a93029d67426dcc385aff4b ;
+        l0:name          "botteghe Antonio Sau" .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+<https://w3id.org/arco/resource/BibliographyCategory/di-confronto>
+        a           arco-cd:BibliographyCategory ;
+        rdfs:label  "di confronto" ;
+        l0:name     "di confronto" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-TimeInterval:2013  a  tiapit:TimeInterval ;
+        rdfs:label   "2013" ;
+        tiapit:time  "2013" .
+
+ar-city:sorgono  a  clvapit:City ;
+        rdfs:label  "Sorgono" ;
+        l0:name     "Sorgono" .
+
+ar-CulturalEntityTechnicalStatus:2000168323-decorative-1
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'apparato figurativo 1 del bene culturale 2000168323"@it , "Technical status of decorative apparatus 1 of cultural property 2000168323"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:legno-di-castagno-intaglio ;
+        l0:name     "Stato tecnico dell'apparato figurativo 1 del bene culturale 2000168323"@it , "Technical status of decorative apparatus 1 of cultural property 2000168323"@en .
+
+ar-agent:b29df33b907c20bd2be0ff0b149efffc
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza per i Beni Architettonici Paesaggistici Storici Artistici ed Etnoantropologici per le province di Sassari e Nuoro" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        arco-core:isAgentOf  ar-agentrole:2000168323-cataloguing-agency , ar-agentrole:2000168323-heritage-protection-agency ;
+        l0:name              "Soprintendenza per i Beni Architettonici Paesaggistici Storici Artistici ed Etnoantropologici per le province di Sassari e Nuoro" .
+
+ar-Value:2000168323-1-width-125
+        a                      mu:Value ;
+        rdfs:label             "125"@en , "125"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "125" .
+
+<https://w3id.org/arco/resource/CulturalScope/barbagia-di-belvi>
+        a           arco-cd:CulturalScope ;
+        rdfs:label  "Barbagia di Belvì" ;
+        l0:name     "Barbagia di Belvì" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/cm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "cm" ;
+        l0:name     "cm" .
+
+ar-timeIndexedRole:2000168323-compilation-ead124946ac0f35db0b60a6d7cdbced7
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Nunfris, A."@en , "Compilazione da Nunfris, A."@it ;
+        roapit:isRoleInTimeOf  ar-agent:ead124946ac0f35db0b60a6d7cdbced7 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+<https://w3id.org/arco/resource/OrnamentalMotif/zoomorfo>
+        a           arco-dd:OrnamentalMotif ;
+        rdfs:label  "zoomorfo" ;
+        l0:name     "zoomorfo" .
+
+ar-legalSituation:2000168323-legal-situation-proprieta-ente-pubblico-territoriale
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 2000168323: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 2000168323: proprietà Ente pubblico territoriale"@en ;
+        arco-cd:hasOwner  ar-agent:f03fcaf397a37cef65d7869f07a2fd39 ;
+        l0:name           "Condizione giuridica del bene culturale 2000168323: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 2000168323: proprietà Ente pubblico territoriale"@en .
+
+ar-address:5c2eb2c43a93029d67426dcc385aff4b
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Sardegna, NU, Sorgono" ;
+        clvapit:fullAddress  "via Roma" ;
+        clvapit:hasCity      ar-city:sorgono ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:nu ;
+        clvapit:hasRegion    ar-region:sardegna .
+
+ar-agentrole:2000168323-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 2000168323: S59"@it , "Heritage protection agency for cultural property 2000168323: S59"@en ;
+        arco-core:hasAgent  ar-agent:b29df33b907c20bd2be0ff0b149efffc ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-region:nu  a     clvapit:Province ;
+        rdfs:label  "NU" ;
+        l0:name     "NU" .

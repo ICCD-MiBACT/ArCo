@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <SAS version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">SAS</TSK>
+         <LIR hint="Livello ricerca">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">03</NCTR>
+            <NCTN hint="Numero catalogo generale">03232991</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S25</ESC>
+         <ECP hint="Ente competente">S25</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">saggio stratigrafico in ambito urbano</OGTD>
+         </OGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Lombardia</PVCR>
+            <PVCP hint="Provincia">BS</PVCP>
+            <PVCC hint="Comune">Brescia</PVCC>
+            <PVCL hint="Localita'">BRESCIA</PVCL>
+            <PVCI hint="Indirizzo">Via Musei</PVCI>
+         </PVC>
+      </LC>
+      <GA hint="GEOREFERENZIAZIONE TRAMITE AREA">
+         <GAL hint="Tipo di localizzazione">localizzazione fisica</GAL>
+         <GAD hint="DESCRIZIONE DEL POLIGONO">
+            <GADP hint="PUNTO DEL POLIGONO">
+               <GADPX hint="Coordinata X">10.22582474</GADPX>
+               <GADPY hint="Coordinata Y">45.539762976</GADPY>
+            </GADP>
+            <GADP hint="PUNTO DEL POLIGONO">
+               <GADPX hint="Coordinata X">10.22561821</GADPX>
+               <GADPY hint="Coordinata Y">45.539762976</GADPY>
+            </GADP>
+            <GADP hint="PUNTO DEL POLIGONO">
+               <GADPX hint="Coordinata X">10.225612846</GADPX>
+               <GADPY hint="Coordinata Y">45.53963423</GADPY>
+            </GADP>
+            <GADP hint="PUNTO DEL POLIGONO">
+               <GADPX hint="Coordinata X">10.225819376</GADPX>
+               <GADPY hint="Coordinata Y">45.539628866</GADPY>
+            </GADP>
+         </GAD>
+         <GAM hint="Metodo di georeferenziazione">perimetrazione approssimata</GAM>
+         <GAT hint="Tecnica di georeferenziazione">rilievo da cartografia senza sopralluogo</GAT>
+         <GAP hint="Proiezione e Sistema di riferimento">WGS84</GAP>
+         <GAB hint="BASE DI RIFERIMENTO">
+            <GABB hint="Descrizione sintetica">CTR LOMBARDIA</GABB>
+            <GABT hint="Data">6-12-2012</GABT>
+            <GABO hint="Note">(588307)</GABO>
+         </GAB>
+      </GA>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Fascia cronologica di riferimento">Alto Medioevo</DTZG>
+         </DTZ>
+         <DTM hint="Motivazione cronologia">analisi storico-scientifica</DTM>
+         <DTM hint="Motivazione cronologia">analisi dei materiali</DTM>
+      </DT>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAD hint="Data">2009</FTAD>
+            <FTAN hint="Codice identificativo">DL115485</FTAN>
+         </FTA>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2012</CMPD>
+            <CMPN hint="Nome">Guglielmetti, Angela</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Rossi, Filomena</FUR>
+      </CM>
+   </SAS>
+</schede>

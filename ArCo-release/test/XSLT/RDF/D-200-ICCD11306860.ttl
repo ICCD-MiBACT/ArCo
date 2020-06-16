@@ -1,0 +1,604 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-timeIndexedTypedLocation:1000017424-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 1000017424"@it , "Current physical location of cultural property: 1000017424"@en ;
+        arco-core:note                 "Ubicazione originaria: SC" ;
+        arco-core:specifications       "depositi (Deposito Superiore, cassettiera, cassetto 5)" ;
+        arco-location:atSite           ar-Site:0d6864b4e4ab0182acffcc1a57334f84 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:1000017424 ;
+        l0:name                        "Current physical location of cultural property: 1000017424"@en , "Localizzazione fisica attuale del bene: 1000017424"@it .
+
+ar-CulturalEntityTechnicalStatus:1000017424
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 1000017424"@it , "Technical status of cultural property 1000017424"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:carta-inchiostro-di-china-acquerellatura ;
+        l0:name     "Stato tecnico del bene culturale 1000017424"@it , "Technical status of cultural property 1000017424"@en .
+
+ar-Value:1000017424-1-width-380
+        a                      mu:Value ;
+        rdfs:label             "380"@en , "380"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "380" .
+
+ar-PreferredAuthorshipAttribution:1000017424-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1000017424"@it , "Preferred authorship attribution of cultural property: 1000017424"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:firma ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-HistoricOrArtisticProperty:1000017424 ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1000017424"@it , "Preferred authorship attribution of cultural property: 1000017424"@en .
+
+ar-catalogueRecordVersion:1000017424-agg-1
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO - 2006 ARTPAST/ Sargentini C." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1000017424-agg-1-2395621f73e2aae9fbaa132e0f94e1f7 ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                ar-agent:2395621f73e2aae9fbaa132e0f94e1f7 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> .
+
+ar-address:13f44a6b924a1404e569deef12f98db2
+        a                    clvapit:Address ;
+        rdfs:label           "PG, Perugia" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-HistoricOrArtisticProperty:1000017424 ;
+        clvapit:fullAddress  "Corso Vannucci, 19" ;
+        clvapit:hasCity      ar-city:perugia ;
+        clvapit:hasProvince  ar-province:pg .
+
+ar-CulturalPropertyCataloguingCategory:elemento-dinsieme
+        a           arco-arco:CulturalPropertyCataloguingCategory ;
+        rdfs:label  "elemento d'insieme" ;
+        l0:name     "elemento d'insieme" .
+
+ar-timeIndexedRole:1000017424-agg-1-2395621f73e2aae9fbaa132e0f94e1f7
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Sargentini C."@it , "Update responsible compilation: ARTPAST/ Sargentini C."@en ;
+        roapit:isRoleInTimeOf  ar-agent:2395621f73e2aae9fbaa132e0f94e1f7 ;
+        roapit:withRole        ar-role:UpdateResponsibleCompilation .
+
+ar-TimeInterval:sec-xviii
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XVIII" ;
+        tiapit:time  "sec. XVIII" ;
+        l0:name      "sec. XVIII" .
+
+ar-province:pg  a   clvapit:Province ;
+        rdfs:label  "PG" ;
+        l0:name     "PG" .
+
+ar-agent:1a85f6783a4154e9c94c647f09fd20f4
+        a                             CPV:Person ;
+        rdfs:label                    "Lorenzini Alessio" ;
+        arco-cd:agentDate             "sec. XVIII" ;
+        arco-cd:agentLocalIdentifier  "00001090" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:1000017424 ;
+        l0:name                       "Lorenzini Alessio" .
+
+ar-agent:2395621f73e2aae9fbaa132e0f94e1f7
+        a           l0:Agent ;
+        rdfs:label  "ARTPAST/ Sargentini C." .
+
+<https://w3id.org/arco/resource/Title/1000017424-prospetto-delle-due-facciate-di-palazzo-bonaini-boldrini>
+        a           arco-cd:Title ;
+        rdfs:label  "prospetto delle due facciate di Palazzo Bonaini - Boldrini" ;
+        l0:name     "prospetto delle due facciate di Palazzo Bonaini - Boldrini" .
+
+ar-SiteDefinition:palazzo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "palazzo" .
+
+<https://w3id.org/arco/resource/Inscription/1000017424-inscription-2>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 2 of cultural property 1000017424"@en , "Iscrizione 2 sul bene culturale 1000017424"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/corsivo> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-penna ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017424-inscription-2 ;
+        arco-dd:positionOnCulturalProperty
+                "in basso a destra" ;
+        arco-dd:transcript              "LORENZINI F(ECIT) 177..." .
+
+ar-culturalPropertyDefinition:disegno
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "disegno" .
+
+ar-agent:182e1d9074ba174e80f41429ad21f8a2
+        a                    COV:Organization ;
+        rdfs:label           "S38" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-HistoricOrArtisticProperty:1000017424 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-HistoricOrArtisticProperty:1000017424 ;
+        arco-core:isAgentOf  ar-agentrole:1000017424-cataloguing-agency , ar-agentrole:1000017424-heritage-protection-agency ;
+        l0:name              "S38" .
+
+ar-event:1000017424-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 1000017424"@it , "Creation of cultural property 1000017424"@en ;
+        arco-cd:specificTime  ar-TimeInterval:post-1769-ante-1780 ;
+        tiapit:atTime         ar-TimeInterval:sec-xviii ;
+        l0:name               "Realizzazione del bene 1000017424"@it , "Creation of cultural property 1000017424"@en .
+
+ar-interpretationCriterion:firma
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "firma" ;
+        l0:name     "firma" .
+
+ar-legalSituation:1000017424-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 1000017424: proprietà Stato"@it , "Legal situation of cultural property 1000017424: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:8cb75ec50c37b769b2c85210b3716feb ;
+        l0:name           "Condizione giuridica del bene culturale 1000017424: proprietà Stato"@it , "Legal situation of cultural property 1000017424: proprietà Stato"@en .
+
+ar-agentrole:1000017424-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1000017424: S38"@it , "Heritage protection agency for cultural property 1000017424: S38"@en ;
+        arco-core:hasAgent  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-catalogueRecordVersion:1000017424-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 1989 Rosi A.M." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1989 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1000017424-compilation-ee45dc7c98a8637a4ae77b851279e80f , ar-timeIndexedRole:1000017424-f22bbb019d3c60b3a5f7d21ed8c526fb ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:ee45dc7c98a8637a4ae77b851279e80f ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> .
+
+ar-agent:db77e4f7daaafed7270e007791676132
+        a           l0:Agent ;
+        rdfs:label  "S.B.A.A.A.A.S. dell'Umbria" ;
+        l0:name     "S.B.A.A.A.A.S. dell'Umbria" .
+
+ar-TimeInterval:post-1769-ante-1780
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "post 1769 - ante 1780" ;
+        arco-arco:endTime    "ante 1780" ;
+        arco-arco:startTime  "post 1769" ;
+        l0:name              "post 1769 - ante 1780" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1000017424-cataloguing-agency .
+
+ar-Measurement:1000017424-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1000017424: 380mm"@en , "Misura del bene culturale 1000017424: 380mm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:1000017424-1-width-380 ;
+        l0:name                     "Measurement of cultural property 1000017424: 380mm"@en , "Misura del bene culturale 1000017424: 380mm"@it .
+
+ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d
+        a           l0:Agent ;
+        rdfs:label  "Garibaldi V." .
+
+<https://w3id.org/arco/resource/Inscription/1000017424-inscription-1>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 1 of cultural property 1000017424"@en , "Iscrizione 1 sul bene culturale 1000017424"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/corsivo> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-penna ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017424-inscription-1 ;
+        arco-dd:positionOnCulturalProperty
+                "in alto, entro cartiglio" ;
+        arco-dd:transcript              "PROSPETTO DELLE DUE FACCIATE DEL NUOVO/ PALAZZO DELL'ILL(USTRISS)IMO SIG(NOR) CO(N)TE ORA/ZIO BONAINI BOLDRINI IN PERUGIA." .
+
+ar-CulturalEntityTechnicalStatus:1000017424-inscription-2
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 2 sul bene culturale 1000017424"@it , "Technical status of inscription 2 of cultural property 1000017424"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-penna ;
+        l0:name     "Stato tecnico dell'iscrizione 2 sul bene culturale 1000017424"@it , "Technical status of inscription 2 of cultural property 1000017424"@en .
+
+<https://w3id.org/arco/resource/MeasurementUnit/mm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "mm" ;
+        l0:name     "mm" .
+
+ar-SiteType:palazzo-comunale
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo comunale"@it , "Site type: palazzo comunale"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/comunale> ;
+        l0:name     "Tipo di contenitore fisico: palazzo comunale"@it , "Site type: palazzo comunale"@en .
+
+ar-agent:6b42c6f0d1145edee89a150b813a3a10
+        a           l0:Agent ;
+        rdfs:label  "Delogu G.L." .
+
+ar-agentrole:1000017424-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1000017424: S38"@it , "Cataloguing agency for cultural property 1000017424: S38"@en ;
+        arco-core:hasAgent  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-TechnicalCharacteristic:carta-inchiostro-di-china-acquerellatura
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "carta/ inchiostro di china/ acquerellatura" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "carta/ inchiostro di china/ acquerellatura" .
+
+ar-TimeInterval:1989  a  tiapit:TimeInterval ;
+        rdfs:label   "1989" ;
+        tiapit:time  "1989" .
+
+ar-ConservationStatus:1000017424-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 1000017424"@it , "Conservation status 1 of cultural property: 1000017424"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 1000017424"@it , "Conservation status 1 of cultural property: 1000017424"@en .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-HistoricOrArtisticProperty:1000017424
+        a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "disegno, elemento d'insieme" ;
+        rdfs:label                      "prospetto delle due facciate di Palazzo Bonaini - Boldrini, prospetto di edificio (disegno, elemento d'insieme) di Lorenzini Alessio (sec. XVIII)"@it , "prospetto delle due facciate di Palazzo Bonaini - Boldrini, prospetto di edificio (disegno, elemento d'insieme) by Lorenzini Alessio (sec. XVIII)"@en ;
+        pico:author                     ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-inchiostro-di-china-acquerellatura ;
+        dc:coverage                     ar-city:perugia ;
+        dc:creator                      ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        dc:date                         ar-TimeInterval:post-1769-ante-1780 ;
+        dc:description                  "Architetture: Perugia: Palazzo Bonaini - Boldrini: prospetto delle due facciate." ;
+        dc:format                       ar-MeasurementCollection:1000017424-1 ;
+        dc:identifier                   "1000017424" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000017424-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.2#disegni> , ar-Subject:71f760c94408b3e4ac8727a2fc876817 ;
+        dc:title                        <https://w3id.org/arco/resource/Title/1000017424-prospetto-delle-due-facciate-di-palazzo-bonaini-boldrini> ;
+        dc:type                         ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/13f44a6b924a1404e569deef12f98db2" ;
+        arco-arco:catalogueNumber       "00017424" ;
+        arco-arco:hasCataloguingAgency  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-arco:hasCulturalPropertyCataloguingCategory
+                ar-CulturalPropertyCataloguingCategory:elemento-dinsieme ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-arco:regionIdentifier      "10" ;
+        arco-arco:uniqueIdentifier      "1000017424" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
+        arco-cd:hasAuthor               ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:1000017424-1 ;
+        arco-cd:hasDating               ar-dating:1000017424-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1000017424-photographic-documentation-1 ;
+        arco-cd:hasIntervention         <https://w3id.org/arco/resource/ConservationIntervention/1000017424-conservation-intervention-1> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:1000017424-legal-situation-proprieta-stato ;
+        arco-cd:hasRelatedWorkSituation
+                ar-RelatedWorkSituation:1000017424-related-cultural-property-2-1 ;
+        arco-cd:hasSubject              ar-Subject:71f760c94408b3e4ac8727a2fc876817 ;
+        arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/1000017424-prospetto-delle-due-facciate-di-palazzo-bonaini-boldrini> ;
+        arco-cd:subject                 "prospetto di edificio" ;
+        arco-cd:title                   "prospetto delle due facciate di Palazzo Bonaini - Boldrini" ;
+        arco-core:hasAgentRole          ar-agentrole:1000017424-heritage-protection-agency , ar-agentrole:1000017424-cataloguing-agency ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/1000017424-inscription-1> , <https://w3id.org/arco/resource/Inscription/1000017424-inscription-2> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:1000017424-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:carta-inchiostro-di-china-acquerellatura ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:1000017424-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017424 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:13f44a6b924a1404e569deef12f98db2 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1000017424-current .
+
+ar-TimeInterval:1996  a  tiapit:TimeInterval ;
+        rdfs:label   "1996" ;
+        tiapit:time  "1996" .
+
+ar-docutmentationType:fotografia-digitale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale" ;
+        l0:name     "fotografia digitale" .
+
+ar-CulturalEntityTechnicalStatus:1000017424-inscription-1
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 1000017424"@it , "Technical status of inscription 1 of cultural property 1000017424"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-penna ;
+        l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 1000017424"@it , "Technical status of inscription 1 of cultural property 1000017424"@en .
+
+ar-RelatedWorkSituation:1000017424-related-cultural-property-2-1
+        a                            arco-cd:RelatedWorkSituation ;
+        rdfs:label                   "Relazione 1 tra il bene culturale 1000017424 e altro bene culturale"@it , "Relation 1 between the cultural property 1000017424 and other cultural property"@en ;
+        arco-cd:involvesRelatedWork  ar-HistoricOrArtisticProperty:1000017422 ;
+        arco-cd:isRelatedWorkSituationOf
+                ar-HistoricOrArtisticProperty:1000017424 ;
+        l0:name                      "Relazione 1 tra il bene culturale 1000017424 e altro bene culturale"@it , "Relation 1 between the cultural property 1000017424 and other cultural property"@en .
+
+ar-TimeInterval:1990  a  tiapit:TimeInterval ;
+        tiapit:time  "1990" .
+
+ar-catalogueRecordVersion:1000017424-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER MEMORIZZAZIONE - 1996 Delogu G.L." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:1996 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1000017424-rvm-6b42c6f0d1145edee89a150b813a3a10 , ar-timeIndexedRole:1000017424-f22bbb019d3c60b3a5f7d21ed8c526fb ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:6b42c6f0d1145edee89a150b813a3a10 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> .
+
+ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: disegno"@it , "Cultural property type: disegno"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:disegno ;
+        l0:name     "Tipo del bene: disegno"@it , "Cultural property type: disegno"@en .
+
+ar-role:UpdateResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+ar-timeIndexedRole:1000017424-f22bbb019d3c60b3a5f7d21ed8c526fb
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Garibaldi V."@it , "Official in charge: Garibaldi V."@en ;
+        roapit:isRoleInTimeOf  ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+<https://w3id.org/arco/resource/ConservationIntervention/1000017424-conservation-intervention-1>
+        a                               arco-cd:ConservationIntervention ;
+        rdfs:label                      "Conservation intervention 1 on cultural property 1000017424"@en , "Intervento conservativo 1 sul bene culturale 1000017424"@it ;
+        arco-cd:hasActivityOperator     ar-agent:012cf70226157d93877a7a4128f14e96 ;
+        arco-cd:hasActivityResponsible  ar-agent:db77e4f7daaafed7270e007791676132 ;
+        arco-cd:hasActivitySponsor      ar-agent:db77e4f7daaafed7270e007791676132 ;
+        tiapit:atTime                   ar-TimeInterval:1990 ;
+        l0:name                         "Conservation intervention 1 on cultural property 1000017424"@en , "Intervento conservativo 1 sul bene culturale 1000017424"@it .
+
+ar-cis:043da8a9dfc951488a76bbff5958b680
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Galleria Nazionale dell'Umbria" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:galleria-nazionale-dellumbria ;
+        cis:hasSite           ar-Site:0d6864b4e4ab0182acffcc1a57334f84 ;
+        l0:name               "Galleria Nazionale dell'Umbria" .
+
+ar-MeasurementCollection:1000017424-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 1000017424"@en , "Misure del bene culturale 1000017424"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:1000017424-1-width , ar-Measurement:1000017424-1-height ;
+        l0:name                 "Measurements of cultural property 1000017424"@en , "Misure del bene culturale 1000017424"@it .
+
+ar-TechnicalCharacteristic:a-penna
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a penna" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a penna" .
+
+<https://w3id.org/arco/resource/FontStyle/corsivo>
+        a           arco-dd:FontStyle ;
+        rdfs:label  "corsivo" ;
+        l0:name     "corsivo" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1000017424-heritage-protection-agency .
+
+ar-Value:1000017424-1-height-540
+        a                      mu:Value ;
+        rdfs:label             "540"@en , "540"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "540" .
+
+ar-city:perugia  a  clvapit:City ;
+        rdfs:label  "Perugia" ;
+        l0:name     "Perugia" .
+
+ar-agent:8cb75ec50c37b769b2c85210b3716feb
+        a                l0:Agent ;
+        rdfs:label       "Ministero per i Beni e le Attività Culturali" ;
+        arco-cd:address  "Corso Vannucci - 06100 Perugia" ;
+        l0:name          "Ministero per i Beni e le Attività Culturali" .
+
+ar-timeIndexedRole:1000017424-rvm-6b42c6f0d1145edee89a150b813a3a10
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER MEMORIZZAZIONE da Delogu G.L."@it , "Digital transcription by Delogu G.L."@en ;
+        roapit:isRoleInTimeOf  ar-agent:6b42c6f0d1145edee89a150b813a3a10 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-TimeInterval:2006  a  tiapit:TimeInterval ;
+        rdfs:label   "2006" ;
+        tiapit:time  "2006" .
+
+ar-interpretationCriterion:data
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "data" ;
+        l0:name     "data" .
+
+<https://w3id.org/arco/resource/CatalogueRecordD/1000017424>
+        a               arco-catalogue:CatalogueRecordD ;
+        rdfs:label      "Catalogue Record n: 1000017424"@en , "Scheda catalografica n: 1000017424"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1000017424" ;
+        arco-catalogue:describesCulturalProperty
+                ar-HistoricOrArtisticProperty:1000017424 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1000017424-compilation , ar-catalogueRecordVersion:1000017424-rvm , ar-catalogueRecordVersion:1000017424-agg-1 ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "D-200-ICCD11306860" ;
+        arco-core:note  "Ultimo aggiornamento: 2007 - Donà A. - nell'ambito del progetto \"Catalogazione speditiva dei beni mobili conservati nei depositi dei musei statali\"." .
+
+ar-Site:0d6864b4e4ab0182acffcc1a57334f84
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo dei Priori" ;
+        cis:isSiteOf               ar-cis:043da8a9dfc951488a76bbff5958b680 ;
+        cis:siteAddress            ar-address:13f44a6b924a1404e569deef12f98db2 ;
+        arco-location:hasSiteType  ar-SiteType:palazzo-comunale ;
+        l0:name                    "Palazzo dei Priori" .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+<https://w3id.org/arco/resource/SiteSpecification/comunale>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "comunale" .
+
+ar-CISNameInTime:galleria-nazionale-dellumbria
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Galleria Nazionale dell'Umbria"@it , "Name in time: Galleria Nazionale dell'Umbria"@en ;
+        cis:institutionalCISName  "Galleria Nazionale dell'Umbria" ;
+        l0:name                   "Denominazione nel tempo: Galleria Nazionale dell'Umbria"@it , "Name in time: Galleria Nazionale dell'Umbria"@en .
+
+ar-photograpyDocumentation:1000017424-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 1000017424"@en , "Documentazione fotografica 1 del bene culturale: 1000017424"@it ;
+        arco-cd:documentationIdentifier
+                "SBSAE PG17424" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale ;
+        arco-cd:isDocumentationOf     ar-HistoricOrArtisticProperty:1000017424 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 1000017424"@en , "Documentazione fotografica 1 del bene culturale: 1000017424"@it .
+
+ar-agent:ee45dc7c98a8637a4ae77b851279e80f
+        a           l0:Agent ;
+        rdfs:label  "Rosi A.M." .
+
+ar-Measurement:1000017424-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1000017424: 540mm"@en , "Misura del bene culturale 1000017424: 540mm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:1000017424-1-height-540 ;
+        l0:name                     "Measurement of cultural property 1000017424: 540mm"@en , "Misura del bene culturale 1000017424: 540mm"@it .
+
+ar-timeIndexedRole:1000017424-compilation-ee45dc7c98a8637a4ae77b851279e80f
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Rosi A.M."@en , "Compilazione da Rosi A.M."@it ;
+        roapit:isRoleInTimeOf  ar-agent:ee45dc7c98a8637a4ae77b851279e80f ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-dating:1000017424-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 1000017424"@it , "Dating 1 of cultural property 1000017424"@en ;
+        arco-cd:hasDatingEvent  ar-event:1000017424-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:data ;
+        l0:name                 "Dating 1 of cultural property 1000017424"@en , "Cronologia 1 del bene 1000017424"@it .
+
+ar-agent:012cf70226157d93877a7a4128f14e96
+        a           l0:Agent ;
+        rdfs:label  "Cristostomi P." ;
+        l0:name     "Cristostomi P." .
+
+ar-Subject:71f760c94408b3e4ac8727a2fc876817
+        a                    arco-cd:Subject ;
+        rdfs:label           "prospetto di edificio" ;
+        arco-cd:isSubjectOf  ar-HistoricOrArtisticProperty:1000017424 ;
+        l0:name              "prospetto di edificio" .

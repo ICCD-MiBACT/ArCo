@@ -1,0 +1,473 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-province:ca  a   clvapit:Province ;
+        rdfs:label  "CA" ;
+        l0:name     "CA" .
+
+ar-agentrole:2000202451-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 2000202451: S09"@it , "Cataloguing agency for cultural property 2000202451: S09"@en ;
+        arco-core:hasAgent  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+<https://w3id.org/arco/resource/DocumentationCategory/riproduzione-di-fotografi>
+        a           arco-cd:DocumentationCategory ;
+        rdfs:label  "riproduzione di fotografi" ;
+        l0:name     "riproduzione di fotografi" .
+
+ar-photograpyDocumentation:2000202451-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Documentazione fotografica 1 del bene culturale: 2000202451"@it , "Photographic documentation 1 of cultural property: 2000202451"@en ;
+        arco-cd:documentationIdentifier
+                "202451" ;
+        arco-cd:hasAuthor             ar-agent:5b9e14c3cc6f9bf5b16fe6a7b7b89e6d ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:2000202451 ;
+        arco-core:hasCategory         <https://w3id.org/arco/resource/DocumentationCategory/riproduzione-di-fotografi> ;
+        arco-core:note                "da Atze1981, fig. 67" ;
+        tiapit:time                   "2013/03/01" ;
+        l0:name                       "Photographic documentation 1 of cultural property: 2000202451"@en , "Documentazione fotografica 1 del bene culturale: 2000202451"@it .
+
+ar-city:cagliari  a  clvapit:City ;
+        rdfs:label  "Cagliari" ;
+        l0:name     "Cagliari" .
+
+ar-CISNameInTime:museo-archeologico-nazionale-di-cagliari
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Museo Archeologico Nazionale di Cagliari"@it , "Name in time: Museo Archeologico Nazionale di Cagliari"@en ;
+        cis:institutionalCISName  "Museo Archeologico Nazionale di Cagliari" ;
+        l0:name                   "Denominazione nel tempo: Museo Archeologico Nazionale di Cagliari"@it , "Name in time: Museo Archeologico Nazionale di Cagliari"@en .
+
+ar-TimeInterval:neolitico-recente
+        a            tiapit:TimeInterval ;
+        rdfs:label   "Neolitico recente" ;
+        tiapit:time  "Neolitico recente" ;
+        l0:name      "Neolitico recente" .
+
+ar-address:8a65ad6c8ff7ffbda192a62c3874aa0d
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Sardegna, OR, Nurachi" ;
+        clvapit:hasCity      ar-city:nurachi ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:or ;
+        clvapit:hasRegion    ar-region:sardegna .
+
+ar-Site:33403d0a21f3497e610de99a52d5f967
+        a                          cis:Site ;
+        rdfs:label                 "Contenitore fisico di: Museo Archeologico Nazionale di Cagliari" ;
+        cis:isSiteOf               ar-cis:860292be9c1092fbc8f3c7545342b773 ;
+        cis:siteAddress            ar-address:33403d0a21f3497e610de99a52d5f967 ;
+        arco-location:hasSiteType  ar-SiteType:museo ;
+        l0:name                    "Contenitore fisico di: Museo Archeologico Nazionale di Cagliari" .
+
+ar-city:nurachi  a  clvapit:City ;
+        rdfs:label  "Nurachi" ;
+        l0:name     "Nurachi" .
+
+ar-feature:cfa431398fbcf763721d4249624a92e3
+        a                               clvapit:Feature ;
+        rdfs:label                      "ITALIA Sardegna OR Nurachi" ;
+        arco-location:hasToponymInTime  <https://w3id.org/arco/resource/ToponymInTime/gribaia-bib> ;
+        clvapit:hasAddress              ar-address:8a65ad6c8ff7ffbda192a62c3874aa0d .
+
+ar-agentrole:2000202451-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 2000202451: S09"@it , "Heritage protection agency for cultural property 2000202451: S09"@en ;
+        arco-core:hasAgent  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+<https://w3id.org/arco/resource/ArchaeologicalMaterial/2000202451-2>
+        a           arco-arco:ArchaeologicalMaterial ;
+        rdfs:label  "Materiale componente 2 del bene: 2000202451: materiale lapideo - statuina"@it , "Archaeological Material 2 of cultural property: 2000202451: materiale lapideo - statuina"@en ;
+        arco-arco:hasArchaeologicalMaterialCategory
+                <https://w3id.org/arco/resource/ArchaeologicalMaterialCategory/materiale-lapideo> ;
+        arco-arco:numberOfArchaeologicalMaterials
+                "1" ;
+        l0:name     "Materiale componente 2 del bene: 2000202451: materiale lapideo - statuina"@it , "Archaeological Material 2 of cultural property: 2000202451: materiale lapideo - statuina"@en .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000202451-cataloguing-agency .
+
+ar-archeologicalProperty:2000202451
+        a                               arco-arco:ArchaeologicalProperty , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "materiale di collezione museale, ceramica/ materiale lapideo" ;
+        rdfs:label                      "materiale di collezione museale (ceramica/ materiale lapideo) (Neolitico recente)"@it , "materiale di collezione museale (ceramica/ materiale lapideo) (Neolitico recente)"@en ;
+        dc:coverage                     ar-city:cagliari ;
+        dc:description                  "tra i materiali esposti si individuano una statuina fittile di stile cruciforme, assisa (h. 4,9; largh. 4,5) e una statuina di marmo bianco saccaroide a placca traforata (h. res. 9,3)" ;
+        dc:identifier                   "2000202451" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000202451-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_archeologici> ;
+        dc:type                         ar-culturalPropertyType:fdbc5860f8aa1fdb52d6659b43aff227 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:2000202451-bibliography-1 , ar-bibliography:2000202451-bibliography-2 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/33403d0a21f3497e610de99a52d5f967" ;
+        arco-arco:catalogueNumber       "00202451" ;
+        arco-arco:hasCataloguingAgency  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-arco:regionIdentifier      "20" ;
+        arco-arco:uniqueIdentifier      "2000202451" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/2000202451-acquisition-1> ;
+        arco-cd:hasBibliography         ar-bibliography:2000202451-bibliography-1 , ar-bibliography:2000202451-bibliography-2 ;
+        arco-cd:hasDating               ar-dating:2000202451-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:2000202451-photographic-documentation-1 , ar-photograpyDocumentation:2000202451-photographic-documentation-2 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:2000202451-legal-situation-proprieta-stato ;
+        arco-core:description           "tra i materiali esposti si individuano una statuina fittile di stile cruciforme, assisa (h. 4,9; largh. 4,5) e una statuina di marmo bianco saccaroide a placca traforata (h. res. 9,3)" ;
+        arco-core:hasAgentRole          ar-agentrole:2000202451-heritage-protection-agency , ar-agentrole:2000202451-cataloguing-agency ;
+        arco-core:hasPart               <https://w3id.org/arco/resource/ArchaeologicalMaterial/2000202451-2> , <https://w3id.org/arco/resource/ArchaeologicalMaterial/2000202451-1> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:2000202451-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:fdbc5860f8aa1fdb52d6659b43aff227 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:33403d0a21f3497e610de99a52d5f967 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:2000202451-current , ar-timeIndexedTypedLocation:2000202451-alternative-1 .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/ArchaeologicalMaterialCategory/ceramica>
+        a           arco-arco:ArchaeologicalMaterialCategory ;
+        rdfs:label  "ceramica" ;
+        l0:name     "ceramica" .
+
+ar-accessProfile:2000202451-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 2000202451: 1"@it , "Access profile to catalogue record of cultural property 2000202451: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 2000202451: 1"@it , "Access profile to catalogue record of cultural property 2000202451: 1"@en .
+
+ar-interpretationCriterion:analisi-dei-materiali
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi dei materiali" ;
+        l0:name     "analisi dei materiali" .
+
+ar-timeIndexedTypedLocation:2000202451-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 2000202451"@it , "Alternative location 1 of cultural property: 2000202451"@en ;
+        arco-location:atLocation       ar-feature:cfa431398fbcf763721d4249624a92e3 ;
+        arco-location:hasLocationType  arco-location:FindingLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:2000202451 ;
+        l0:name                        "Altra localizzazione 1 del bene: 2000202451"@it , "Alternative location 1 of cultural property: 2000202451"@en .
+
+ar-cis:860292be9c1092fbc8f3c7545342b773
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Museo Archeologico Nazionale di Cagliari" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:museo-archeologico-nazionale-di-cagliari ;
+        cis:hasSite           ar-Site:33403d0a21f3497e610de99a52d5f967 ;
+        l0:name               "Museo Archeologico Nazionale di Cagliari" .
+
+<https://w3id.org/arco/resource/Acquisition/2000202451-acquisition-1>
+        a                           arco-cd:Acquisition ;
+        rdfs:label                  "Acquisizione 1 del bene culturale: 2000202451"@it , "Acquisition 1 of cultural property: 2000202451"@en ;
+        arco-cd:hasAcquisitionType  <https://w3id.org/arco/resource/AcquisitionType/ritrovamento-fortuito> ;
+        arco-cd:isAcquisitionOf     ar-archeologicalProperty:2000202451 ;
+        l0:name                     "Acquisizione 1 del bene culturale: 2000202451"@it , "Acquisition 1 of cultural property: 2000202451"@en .
+
+ar-address:33403d0a21f3497e610de99a52d5f967
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Sardegna, CA, Cagliari" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-archeologicalProperty:2000202451 ;
+        clvapit:hasCity      ar-city:cagliari ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:ca ;
+        clvapit:hasRegion    ar-region:sardegna .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-catalogueRecordVersion:2000202451-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2013 Canino, Gianfrancesco" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:2000202451-compilation-5b9e14c3cc6f9bf5b16fe6a7b7b89e6d , ar-timeIndexedRole:2000202451-b588f91ccc914022bb42ac2862bf56c9 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:37392174174e71e6b1dfe3f9f5f269bd ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:5b9e14c3cc6f9bf5b16fe6a7b7b89e6d ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> .
+
+ar-ConservationStatus:2000202451-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 2000202451"@it , "Conservation status 1 of cultural property: 2000202451"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 2000202451"@it , "Conservation status 1 of cultural property: 2000202451"@en .
+
+<https://w3id.org/arco/resource/ArchaeologicalMaterial/2000202451-1>
+        a           arco-arco:ArchaeologicalMaterial ;
+        rdfs:label  "Materiale componente 1 del bene: 2000202451: ceramica - statuina"@it , "Archaeological Material 1 of cultural property: 2000202451: ceramica - statuina"@en ;
+        arco-arco:hasArchaeologicalMaterialCategory
+                <https://w3id.org/arco/resource/ArchaeologicalMaterialCategory/ceramica> ;
+        arco-arco:numberOfArchaeologicalMaterials
+                "1" ;
+        l0:name     "Materiale componente 1 del bene: 2000202451: ceramica - statuina"@it , "Archaeological Material 1 of cultural property: 2000202451: ceramica - statuina"@en .
+
+<https://w3id.org/arco/resource/AcquisitionType/ritrovamento-fortuito>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "ritrovamento fortuito" ;
+        l0:name     "ritrovamento fortuito" .
+
+<https://w3id.org/arco/resource/ArchaeologicalMaterialCategory/materiale-lapideo>
+        a           arco-arco:ArchaeologicalMaterialCategory ;
+        rdfs:label  "materiale lapideo" ;
+        l0:name     "materiale lapideo" .
+
+ar-culturalPropertyType:fdbc5860f8aa1fdb52d6659b43aff227
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: materiale di collezione museale"@it , "Cultural property type: materiale di collezione museale"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:materiale-di-collezione-museale ;
+        l0:name     "Tipo del bene: materiale di collezione museale"@it , "Cultural property type: materiale di collezione museale"@en .
+
+ar-timeIndexedRole:2000202451-b588f91ccc914022bb42ac2862bf56c9
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Usai, Emerenziana"@it , "Official in charge: Usai, Emerenziana"@en ;
+        roapit:isRoleInTimeOf  ar-agent:37392174174e71e6b1dfe3f9f5f269bd ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-bibliography:2000202451-bibliography-2
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 2 of cultural property: 2000202451"@en , "Bibliografia 2 del bene culturale: 2000202451"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "Atz1975b" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000202451 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "figg. 12,4; 15,11; tavv. XXVIII,1-4; XL,2" ;
+        l0:name                   "Bibliography 2 of cultural property: 2000202451"@en , "Bibliografia 2 del bene culturale: 2000202451"@en .
+
+ar-culturalPropertyDefinition:materiale-di-collezione-museale
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "materiale di collezione museale" .
+
+ar-SiteType:museo  a  arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: museo"@it , "Site type: museo"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:museo ;
+        l0:name     "Tipo di contenitore fisico: museo"@it , "Site type: museo"@en .
+
+ar-province:or  a   clvapit:Province ;
+        rdfs:label  "OR" ;
+        l0:name     "OR" .
+
+ar-region:sardegna  a  clvapit:Region ;
+        rdfs:label  "Sardegna" ;
+        l0:name     "Sardegna" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000202451-heritage-protection-agency .
+
+ar-timeIndexedRole:2000202451-compilation-5b9e14c3cc6f9bf5b16fe6a7b7b89e6d
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Canino, Gianfrancesco"@en , "Compilazione da Canino, Gianfrancesco"@it ;
+        roapit:isRoleInTimeOf  ar-agent:5b9e14c3cc6f9bf5b16fe6a7b7b89e6d ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-event:2000202451-creation-1
+        a              l0:Event ;
+        rdfs:label     "Realizzazione del bene 2000202451"@it , "Creation of cultural property 2000202451"@en ;
+        tiapit:atTime  ar-TimeInterval:neolitico-recente ;
+        l0:name        "Realizzazione del bene 2000202451"@it , "Creation of cultural property 2000202451"@en .
+
+ar-SiteDefinition:museo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "museo" .
+
+ar-bibliography:2000202451-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 2000202451"@en , "Bibliografia 1 del bene culturale: 2000202451"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "Lill1999" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000202451 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "figg. 52, 84, 257, 310" ;
+        l0:name                   "Bibliography 1 of cultural property: 2000202451"@en , "Bibliografia 1 del bene culturale: 2000202451"@en .
+
+ar-legalSituation:2000202451-legal-situation-proprieta-stato
+        a           arco-cd:LegalSituation ;
+        rdfs:label  "Condizione giuridica del bene culturale 2000202451: proprietà Stato"@it , "Legal situation of cultural property 2000202451: proprietà Stato"@en ;
+        l0:name     "Condizione giuridica del bene culturale 2000202451: proprietà Stato"@it , "Legal situation of cultural property 2000202451: proprietà Stato"@en .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-TimeInterval:2013  a  tiapit:TimeInterval ;
+        rdfs:label   "2013" ;
+        tiapit:time  "2013" .
+
+ar-agent:5b9e14c3cc6f9bf5b16fe6a7b7b89e6d
+        a           l0:Agent ;
+        rdfs:label  "Canino, Gianfrancesco" ;
+        l0:name     "Canino, Gianfrancesco" .
+
+ar-dating:2000202451-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 2000202451"@it , "Dating 1 of cultural property 2000202451"@en ;
+        arco-cd:hasDatingEvent  ar-event:2000202451-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-dei-materiali ;
+        l0:name                 "Dating 1 of cultural property 2000202451"@en , "Cronologia 1 del bene 2000202451"@it .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-timeIndexedTypedLocation:2000202451-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 2000202451"@it , "Current physical location of cultural property: 2000202451"@en ;
+        arco-location:atSite           ar-Site:33403d0a21f3497e610de99a52d5f967 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:2000202451 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 2000202451"@it , "Current physical location of cultural property: 2000202451"@en .
+
+ar-agent:37392174174e71e6b1dfe3f9f5f269bd
+        a           l0:Agent ;
+        rdfs:label  "Usai, Emerenziana" .
+
+<https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451>
+        a             arco-catalogue:CatalogueRecordTMA ;
+        rdfs:label    "Scheda catalografica n: 2000202451"@it , "Catalogue Record n: 2000202451"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "2000202451" ;
+        arco-catalogue:describesCulturalProperty
+                ar-archeologicalProperty:2000202451 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:2000202451-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:2000202451-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "TMA-ICCD10113684" .
+
+ar-photograpyDocumentation:2000202451-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Documentazione fotografica 2 del bene culturale: 2000202451"@it , "Photographic documentation 2 of cultural property: 2000202451"@en ;
+        arco-cd:documentationIdentifier
+                "202451-1" ;
+        arco-cd:hasAuthor             ar-agent:5b9e14c3cc6f9bf5b16fe6a7b7b89e6d ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:2000202451 ;
+        arco-core:hasCategory         <https://w3id.org/arco/resource/DocumentationCategory/riproduzione-di-fotografi> ;
+        arco-core:note                "da Lill1999, fig. 84" ;
+        tiapit:time                   "2013/03/01" ;
+        l0:name                       "Photographic documentation 2 of cultural property: 2000202451"@en , "Documentazione fotografica 2 del bene culturale: 2000202451"@it .
+
+ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza per i Beni Archeologici per le province di Cagliari e Oristano" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-archeologicalProperty:2000202451 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-archeologicalProperty:2000202451 ;
+        arco-core:isAgentOf  ar-agentrole:2000202451-cataloguing-agency , ar-agentrole:2000202451-heritage-protection-agency ;
+        l0:name              "Soprintendenza per i Beni Archeologici per le province di Cagliari e Oristano" .

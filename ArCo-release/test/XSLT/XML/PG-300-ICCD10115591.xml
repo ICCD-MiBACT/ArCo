@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <PG version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">PG</TSK>
+         <LIR hint="Livello ricerca">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">09</NCTR>
+            <NCTN hint="Numero catalogo generale">00104131</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S122</ESC>
+         <ECP hint="Ente competente">S122</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione tipologica">giardino</OGTD>
+            <OGTQ hint="Qualificazione">pubblico</OGTQ>
+            <OGTN hint="Denominazione">Giardino Ospedale Vecchio</OGTN>
+         </OGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Toscana</PVCR>
+            <PVCP hint="Provincia">LU</PVCP>
+            <PVCC hint="Comune">Lucca</PVCC>
+         </PVC>
+      </LC>
+      <CS hint="LOCALIZZAZIONE CATASTALE">
+         <CTL hint="Tipo di localizzazione">NR (recupero pregresso)</CTL>
+         <CTS hint="LOCALIZZAZIONE CATASTALE">
+            <CTSC hint="Comune">Lucca</CTSC>
+         </CTS>
+      </CS>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <ATB hint="AMBITO CULTURALE">
+            <ATBR hint="Riferimento all'intervento (ruolo)">NR (recupero pregresso)</ATBR>
+            <ATBD hint="Denominazione">NR 8recupero pregresso)</ATBD>
+            <ATBM hint="Fonte dell'attribuzione">NR (recupero pregresso)</ATBM>
+         </ATB>
+      </AU>
+      <RE hint="NOTIZIE STORICHE">
+         <REN hint="NOTIZIA">
+            <RENR hint="Riferimento">intero bene</RENR>
+         </REN>
+         <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+            <RELS hint="Secolo">XIX</RELS>
+            <RELF hint="Frazione di secolo">seconda metà</RELF>
+         </REL>
+         <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+            <REVS hint="Secolo">NR (recupe</REVS>
+         </REV>
+      </RE>
+      <MP hint="IMPIANTO">
+         <MPC hint="COLLEGAMENTI INTERNI">
+            <MPCR hint="Riferimento">giardino</MPCR>
+            <MPCS hint="Descrizione">vialetti a ghiaino</MPCS>
+         </MPC>
+      </MP>
+      <US hint="UTILIZZAZIONI">
+         <USA hint="USO ATTUALE">
+            <USAR hint="Riferimento alla parte">giardino</USAR>
+            <USAD hint="Uso">parco pubblico</USAD>
+         </USA>
+         <USO hint="USO STORICO">
+            <USOR hint="Riferimento alla parte">giardino</USOR>
+         </USO>
+      </US>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+         </CDG>
+         <NVC hint="PROVVEDIMENTI DI TUTELA">
+            <NVCT hint="Tipo provvedimento">DM (L. n. 1497/1939, art. 6)</NVCT>
+         </NVC>
+         <STU hint="STRUMENTI URBANISTICI">
+            <STUT hint="Strumenti in vigore">Piano Strutturale e Regolamento Urbanistico</STUT>
+         </STU>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">positivo b/n</FTAP>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione esistente</FTAX>
+            <FTAP hint="Tipo">positivo b/n</FTAP>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">positivo b/n</FTAP>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">riproduzione fotostatica</FTAP>
+         </FTA>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTP hint="Tipo">relazione storico artistica</FNTP>
+            <FNTT hint="Denominazione">relazione storica</FNTT>
+            <FNTD hint="Data">1978</FNTD>
+         </FNT>
+         <FNT hint="FONTI E DOCUMENTI">
+            <FNTP hint="Tipo">scheda botanica</FNTP>
+            <FNTA hint="Autore">Paolo emilio Tomei - illeggibile</FNTA>
+            <FNTT hint="Denominazione">scheda botanica</FNTT>
+            <FNTD hint="Data">1978</FNTD>
+         </FNT>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">2</ADSP>
+            <ADSM hint="Motivazione">scheda di bene non adeguatamente sorvegliabile</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">1978</CMPD>
+            <CMPN hint="Nome">Bedini G.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Antonia d' Aniello</FUR>
+         <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+            <RVMD hint="Data">2012</RVMD>
+            <RVMN hint="Nome">Stefano Demi</RVMN>
+         </RVM>
+      </CM>
+   </PG>
+</schede>

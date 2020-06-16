@@ -1,0 +1,784 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://w3id.org/arco/resource/FontStyle/stampatello>
+        a           arco-dd:FontStyle ;
+        rdfs:label  "stampatello" ;
+        l0:name     "stampatello" .
+
+ar-CISNameInTime:raccolta-nando-salce
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Raccolta Nando Salce"@it , "Name in time: Raccolta Nando Salce"@en ;
+        cis:institutionalCISName  "Raccolta Nando Salce" ;
+        l0:name                   "Denominazione nel tempo: Raccolta Nando Salce"@it , "Name in time: Raccolta Nando Salce"@en .
+
+ar-TechnicalCharacteristic:carta-cromolitografia
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "carta/ cromolitografia" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "carta/ cromolitografia" .
+
+<https://w3id.org/arco/resource/AffixedElement/0500436576-affixed-element-3>
+        a                              arco-dd:AffixedElement ;
+        rdfs:label                     "Element 3 affixed to cultural property 0500436576: bollo"@en , "Elemento 3 apposto sul bene 0500436576: bollo"@it ;
+        arco-core:description          "A timbro. Circolare. All'interno: XII UNA LIRA; personificazione dell'Italia" ;
+        arco-dd:hasAffixedElementType  <https://w3id.org/arco/resource/AffixedElementType/civile> ;
+        arco-dd:occurrences            "1" ;
+        arco-dd:positionOnCulturalProperty
+                "in basso a destra" ;
+        arco-dd:refersToAgent          ar-agent:f13256968237dbb55ca66dcd93956c78 .
+
+ar-ConservationStatus:0500436576-conservation-status-1
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 0500436576"@it , "Conservation status 1 of cultural property: 0500436576"@en ;
+        arco-core:specifications  "Manifesto stampato su unico foglio con l'altro soggetto Magnesia San Pellegrino (dim. tot. cm 140 x 99). Parzialmente mancante di margine superiore. Il foglio è stato strappato dal muro, e presenta al verso e al recto vari strati di manifesti strappati, resti di colla, accumuli di polvere e altro materiale. Conseguenze della poco attenta rimozione sono le pieghe e le mancanze." ;
+        arco-dd:hasConservationStatusType
+                arco-dd:MediocreConservationStatus ;
+        l0:name                   "Stato di conservazione 1 del bene: 0500436576"@it , "Conservation status 1 of cultural property: 0500436576"@en .
+
+ar-agent:49aff3509498c7ec71887134339fddce
+        a           l0:Agent ;
+        rdfs:label  "Lunatici, Simona" .
+
+ar-PreferredAuthorshipAttribution:0500436576-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0500436576"@it , "Preferred authorship attribution of cultural property: 0500436576"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:firma ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-HistoricOrArtisticProperty:0500436576 ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0500436576"@it , "Preferred authorship attribution of cultural property: 0500436576"@en .
+
+ar-RelatedWorkSituation:0500436576-related-cultural-property-2-1
+        a                            arco-cd:RelatedWorkSituation ;
+        rdfs:label                   "Relazione 1 tra il bene culturale 0500436576 e altro bene culturale"@it , "Relation 1 between the cultural property 0500436576 and other cultural property"@en ;
+        arco-cd:involvesRelatedWork  ar-HistoricOrArtisticProperty:0500436575 ;
+        arco-cd:isRelatedWorkSituationOf
+                ar-HistoricOrArtisticProperty:0500436576 ;
+        l0:name                      "Relazione 1 tra il bene culturale 0500436576 e altro bene culturale"@it , "Relation 1 between the cultural property 0500436576 and other cultural property"@en .
+
+<https://w3id.org/arco/resource/Brand/0500436576-affixed-element-1>
+        a                              arco-dd:Brand ;
+        rdfs:label                     "Element 1 affixed to cultural property 0500436576: brand"@en , "Elemento 1 apposto sul bene 0500436576: marchio"@it ;
+        arco-core:description          "Circolare. All'interno: EDIZIONI/ STAR/ officine impresa gen./ affissioni e pubblicità/ Milano/ Via C. Goldoni, 10" ;
+        arco-dd:hasAffixedElementType  <https://w3id.org/arco/resource/AffixedElementType/commerciale> ;
+        arco-dd:occurrences            "1" ;
+        arco-dd:positionOnCulturalProperty
+                "in basso a sinistra" ;
+        arco-dd:refersToAgent          ar-agent:7504a89d067bf712fc12edf09d20a96f .
+
+ar-docutmentationType:diapositiva-colore
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "diapositiva colore" ;
+        l0:name     "diapositiva colore" .
+
+ar-agentrole:0500436576-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0500436576: S160"@it , "Cataloguing agency for cultural property 0500436576: S160"@en ;
+        arco-core:hasAgent  ar-agent:fe113185bede3f826ee42b2b66726fde ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-CulturalEntityTechnicalStatus:0500436576
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0500436576"@it , "Technical status of cultural property 0500436576"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:carta-cromolitografia ;
+        l0:name     "Stato tecnico del bene culturale 0500436576"@it , "Technical status of cultural property 0500436576"@en .
+
+ar-bibliography:0500436576-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 0500436576"@en , "Bibliografia 1 del bene culturale: 0500436576"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "S1000001" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0500436576 ;
+        arco-core:hasCategory     arco-cd:ComparativeBibliography ;
+        arco-core:note            "p. 202" ;
+        l0:name                   "Bibliography 1 of cultural property: 0500436576"@en , "Bibliografia 1 del bene culturale: 0500436576"@en .
+
+ar-culturalPropertyType:33d58e4a833816969251025527426665
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: manifesto pubblicitario"@it , "Cultural property type: manifesto pubblicitario"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:manifesto ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:pubblicitario ;
+        l0:name     "Tipo del bene: manifesto pubblicitario"@it , "Cultural property type: manifesto pubblicitario"@en .
+
+ar-agentrole:0500436576-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0500436576: S160"@it , "Heritage protection agency for cultural property 0500436576: S160"@en ;
+        arco-core:hasAgent  ar-agent:fe113185bede3f826ee42b2b66726fde ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-agent:259879fc33ed737f9c89b9c85d774045
+        a           l0:Agent ;
+        rdfs:label  "Caburlotto, Luca" .
+
+<https://w3id.org/arco/resource/Inscription/0500436576-inscription-4>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 4 of cultural property 0500436576"@en , "Iscrizione 4 sul bene culturale 0500436576"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/stampatello> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-stampa ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0500436576-inscription-4 ;
+        arco-dd:positionOnCulturalProperty
+                "in basso a sinistra" ;
+        arco-dd:transcript              "AUTORIZZATO DALLA R. QUESTURA DI MILANO" .
+
+<https://w3id.org/arco/resource/Title/0500436576-magnesia-s-pellegrino>
+        a                     arco-cd:Title ;
+        rdfs:label            "Magnesia S. Pellegrino" ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:dalla-stampa ;
+        arco-cd:hasTitleType  arco-cd:ProperTitle ;
+        arco-cd:isTitleOf     ar-HistoricOrArtisticProperty:0500436576 ;
+        l0:name               "Magnesia S. Pellegrino" .
+
+ar-TimeInterval:2009  a  tiapit:TimeInterval ;
+        rdfs:label   "2009" ;
+        tiapit:time  "2009" .
+
+ar-photograpyDocumentation:0500436576-photographic-documentation-1
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Photographic documentation 1 of cultural property: 0500436576"@en , "Documentazione fotografica 1 del bene culturale: 0500436576"@it ;
+        arco-cd:documentationIdentifier
+                "VE 13826" ;
+        arco-cd:documentationLocation  "Archivio Fotografico SBSAE VE BL PD e TV" ;
+        arco-cd:hasAuthor              ar-agent:645bff3831764afe00a210d4aeb6a7c9 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:diapositiva-colore ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0500436576 ;
+        arco-core:hasAgentRole         ar-agentrole:0500436576-photographic-documentation-1-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        arco-core:note                 "prima del restauro" ;
+        tiapit:time                    "2009" ;
+        l0:name                        "Photographic documentation 1 of cultural property: 0500436576"@en , "Documentazione fotografica 1 del bene culturale: 0500436576"@it .
+
+ar-interpretationCriterion:firma
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "firma" ;
+        l0:name     "firma" .
+
+ar-TechnicalCharacteristic:non-determinabile
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "non determinabile" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "non determinabile" .
+
+ar-dating:0500436576-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0500436576"@it , "Dating 1 of cultural property 0500436576"@en ;
+        arco-cd:hasDatingEvent  ar-event:0500436576-creation-1 ;
+        l0:name                 "Dating 1 of cultural property 0500436576"@en , "Cronologia 1 del bene 0500436576"@it .
+
+ar-agent:fe113185bede3f826ee42b2b66726fde
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici per le province di Venezia (con esclusione della citta' di Venezia e dei Comuni della Gronda lagunare) Belluno Padova e Treviso" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-HistoricOrArtisticProperty:0500436576 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-HistoricOrArtisticProperty:0500436576 ;
+        arco-core:isAgentOf  ar-agentrole:0500436576-cataloguing-agency , ar-agentrole:0500436576-heritage-protection-agency ;
+        l0:name              "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici per le province di Venezia (con esclusione della citta' di Venezia e dei Comuni della Gronda lagunare) Belluno Padova e Treviso" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0500436576-cataloguing-agency .
+
+ar-legalSituation:0500436576-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0500436576: proprietà Stato"@it , "Legal situation of cultural property 0500436576: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:d9d23e99a98052ee0c9976e204c4b4da ;
+        l0:name           "Condizione giuridica del bene culturale 0500436576: proprietà Stato"@it , "Legal situation of cultural property 0500436576: proprietà Stato"@en .
+
+ar-region:veneto  a  clvapit:Region ;
+        rdfs:label  "Veneto" ;
+        l0:name     "Veneto" .
+
+ar-timeIndexedTypedLocation:0500436576-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0500436576"@it , "Current physical location of cultural property: 0500436576"@en ;
+        arco-location:atSite           ar-Site:fb1c695fa675a13099e9d5ed1946abce ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:0500436576 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0500436576"@it , "Current physical location of cultural property: 0500436576"@en .
+
+ar-CulturalEntityTechnicalStatus:0500436576-inscription-4
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 4 sul bene culturale 0500436576"@it , "Technical status of inscription 4 of cultural property 0500436576"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-stampa ;
+        l0:name     "Stato tecnico dell'iscrizione 4 sul bene culturale 0500436576"@it , "Technical status of inscription 4 of cultural property 0500436576"@en .
+
+<https://w3id.org/arco/resource/Inscription/0500436576-inscription-3>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 3 of cultural property 0500436576"@en , "Iscrizione 3 sul bene culturale 0500436576"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/stampatello> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-stampa ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0500436576-inscription-3 ;
+        arco-dd:positionOnCulturalProperty
+                "in alto" ;
+        arco-dd:transcript              "MAGNESIA/ S. PELLEGRINO" .
+
+ar-agentrole:0500436576-photographic-documentation-1-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 1 del bene culturale 0500436576: Soprintendenza BSAE VE BL PD e TV"@it , "Owner agency of photographic documentation 1 of cultural property 0500436576: Soprintendenza BSAE VE BL PD e TV"@en ;
+        arco-core:hasAgent  ar-agent:d9d23e99a98052ee0c9976e204c4b4da ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 1 del bene culturale 0500436576: Soprintendenza BSAE VE BL PD e TV"@it , "Owner agency of photographic documentation 1 of cultural property 0500436576: Soprintendenza BSAE VE BL PD e TV"@en .
+
+ar-culturalPropertyDefinition:manifesto
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "manifesto" .
+
+<https://w3id.org/arco/resource/FontStyle/caratteri-vari>
+        a           arco-dd:FontStyle ;
+        rdfs:label  "caratteri vari" ;
+        l0:name     "caratteri vari" .
+
+ar-Subject:d4a6948948a409ef3c40ac9be6bf2e8f
+        a                    arco-cd:Subject ;
+        rdfs:label           "automa su fondo grigio" ;
+        arco-cd:isSubjectOf  ar-HistoricOrArtisticProperty:0500436576 ;
+        arco-dd:positionOnCulturalProperty
+                "Magnesia S. Pellegrino" ;
+        l0:name              "automa su fondo grigio" .
+
+ar-event:0500436576-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0500436576"@it , "Creation of cultural property 0500436576"@en ;
+        arco-cd:specificTime  ar-TimeInterval:1925-1925 ;
+        tiapit:atTime         ar-TimeInterval:sec-xx ;
+        l0:name               "Realizzazione del bene 0500436576"@it , "Creation of cultural property 0500436576"@en .
+
+ar-agent:280c5b92e0a42da20db65bb41a8159c2
+        a           l0:Agent ;
+        rdfs:label  "Majoli, Luca" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-TimeInterval:sec-xx
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XX" ;
+        tiapit:time  "sec. XX" ;
+        l0:name      "sec. XX" .
+
+ar-TimeInterval:1925-1925
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "1925 - 1925" ;
+        arco-arco:endTime    "1925" ;
+        arco-arco:startTime  "1925" ;
+        l0:name              "1925 - 1925" .
+
+ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7
+        a                             CPV:Person ;
+        rdfs:label                    "Depero Fortunato" ;
+        arco-cd:agentDate             "1892/ 1960" ;
+        arco-cd:agentLocalIdentifier  "S1000134" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0500436576 ;
+        l0:name                       "Depero Fortunato" .
+
+<https://w3id.org/arco/resource/AffixedElementType/civile>
+        a           arco-dd:AffixedElementType ;
+        rdfs:label  "civile" ;
+        l0:name     "civile" .
+
+ar-catalogueRecordVersion:0500436576-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2009 Baccichetto, Natalia" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2009 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0500436576-compilation-1d973588e20ea90ecad9a36d0f98a230 , ar-timeIndexedRole:0500436576-77ae952e749a936cb830f84b2ebfe642 , ar-timeIndexedRole:0500436576-6b546afd15fef802bf61bd45d39a6442 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:259879fc33ed737f9c89b9c85d774045 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:1d973588e20ea90ecad9a36d0f98a230 ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:a36b8f092cd416f0b877c4f9976012b5 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> .
+
+<https://w3id.org/arco/resource/Stamp/0500436576-affixed-element-4>
+        a                              arco-dd:Stamp ;
+        rdfs:label                     "Element 4 affixed to cultural property 0500436576: stamp"@en , "Elemento 4 apposto sul bene 0500436576: timbro"@it ;
+        arco-core:description          "A timbro. Rettangolare. All'interno: COMUNE DI TREVISO/ 24 GEN. 19[...]/ PUBBLICHE AFFISSIONI" ;
+        arco-dd:hasAffixedElementType  <https://w3id.org/arco/resource/AffixedElementType/civile> ;
+        arco-dd:occurrences            "1" ;
+        arco-dd:positionOnCulturalProperty
+                "in alto a destra" ;
+        arco-dd:refersToAgent          ar-agent:4f157bf197db795e7a6249a66fd15e00 .
+
+ar-agent:645bff3831764afe00a210d4aeb6a7c9
+        a           l0:Agent ;
+        rdfs:label  "Santi, Maddalena" ;
+        l0:name     "Santi, Maddalena" .
+
+ar-role:UpdateResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+ar-culturalPropertySpecification:pubblicitario
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "pubblicitario" .
+
+<https://w3id.org/arco/resource/Inscription/0500436576-inscription-2>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 2 of cultural property 0500436576"@en , "Iscrizione 2 sul bene culturale 0500436576"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/caratteri-vari> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:non-determinabile ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0500436576-inscription-2 ;
+        arco-dd:positionOnCulturalProperty
+                "in basso a destra" ;
+        arco-dd:transcript              "Edizioni/ Star/ officine impresa gen./ affissioni e pubblicità/ Milano/ Via C. Goldoni, 10" .
+
+ar-timeIndexedRole:0500436576-cc7b88b417b25aefc7d0c28f29013565
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             " di aggiornamento: Majoli, Luca"@it , "Update official in charge: Majoli, Luca"@en ;
+        roapit:isRoleInTimeOf  ar-agent:280c5b92e0a42da20db65bb41a8159c2 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-CulturalEntityTechnicalStatus:0500436576-inscription-3
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 3 sul bene culturale 0500436576"@it , "Technical status of inscription 3 of cultural property 0500436576"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-stampa ;
+        l0:name     "Stato tecnico dell'iscrizione 3 sul bene culturale 0500436576"@it , "Technical status of inscription 3 of cultural property 0500436576"@en .
+
+ar-address:8886a02ff0fb574ac2b7860d0e2cffd5
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Veneto, TV, Treviso" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-HistoricOrArtisticProperty:0500436576 ;
+        clvapit:fullAddress  "via Sant'Ambrogio di Fiera, 60" ;
+        clvapit:hasCity      ar-city:treviso ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:tv ;
+        clvapit:hasRegion    ar-region:veneto .
+
+ar-HistoricOrArtisticProperty:0500436576
+        a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
+        rdfs:comment                    "manifesto, pubblicitario" ;
+        rdfs:label                      "automa su fondo grigio (manifesto) by Depero Fortunato (sec. XX)"@en , "automa su fondo grigio (manifesto) di Depero Fortunato (sec. XX)"@it ;
+        pico:author                     ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-cromolitografia ;
+        dc:coverage                     ar-city:treviso ;
+        dc:creator                      ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        dc:date                         ar-TimeInterval:1925-1925 ;
+        dc:description                  "Lettura iconografica: automa. Categoria merceologica/ tipo evento: industria farmaceutica; preparati farmaceutici; purgante. Nomi: Magnesia S. Pellegrino. Luoghi: Trento; Rovereto." ;
+        dc:format                       ar-MeasurementCollection:0500436576-1 ;
+        dc:identifier                   "0500436576" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500436576-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
+        dc:subject                      ar-Subject:d4a6948948a409ef3c40ac9be6bf2e8f , <http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici> ;
+        dc:title                        <https://w3id.org/arco/resource/Title/0500436576-magnesia-s-pellegrino> ;
+        dc:type                         ar-culturalPropertyType:33d58e4a833816969251025527426665 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0500436576-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/8886a02ff0fb574ac2b7860d0e2cffd5" ;
+        arco-arco:catalogueNumber       "00436576" ;
+        arco-arco:hasCataloguingAgency  ar-agent:fe113185bede3f826ee42b2b66726fde ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:fe113185bede3f826ee42b2b66726fde ;
+        arco-arco:regionIdentifier      "05" ;
+        arco-arco:uniqueIdentifier      "0500436576" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0500436576-acquisition-1> ;
+        arco-cd:hasAuthor               ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:0500436576-1 ;
+        arco-cd:hasBibliography         ar-bibliography:0500436576-bibliography-1 ;
+        arco-cd:hasDating               ar-dating:0500436576-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0500436576-photographic-documentation-1 ;
+        arco-cd:hasEdition              <https://w3id.org/arco/resource/Edition/0500436576-milano> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0500436576-legal-situation-proprieta-stato ;
+        arco-cd:hasRelatedWorkSituation
+                ar-RelatedWorkSituation:0500436576-related-cultural-property-2-1 ;
+        arco-cd:hasSubject              ar-Subject:d4a6948948a409ef3c40ac9be6bf2e8f ;
+        arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/0500436576-magnesia-s-pellegrino> ;
+        arco-cd:iconclassCode           "soggetto non rilevabile" ;
+        arco-cd:properTitle             "Magnesia S. Pellegrino" ;
+        arco-cd:subject                 "automa su fondo grigio" ;
+        arco-core:hasAgentRole          ar-agentrole:0500436576-cataloguing-agency , ar-agentrole:0500436576-heritage-protection-agency ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/AffixedElement/0500436576-affixed-element-3> , <https://w3id.org/arco/resource/Brand/0500436576-affixed-element-1> , <https://w3id.org/arco/resource/Inscription/0500436576-inscription-2> , <https://w3id.org/arco/resource/Inscription/0500436576-inscription-4> , <https://w3id.org/arco/resource/Inscription/0500436576-inscription-1> , <https://w3id.org/arco/resource/Inscription/0500436576-inscription-3> , <https://w3id.org/arco/resource/Stamp/0500436576-affixed-element-4> , <https://w3id.org/arco/resource/Brand/0500436576-affixed-element-2> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0500436576-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:33d58e4a833816969251025527426665 ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:carta-cromolitografia ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:0500436576-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0500436576 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:8886a02ff0fb574ac2b7860d0e2cffd5 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0500436576-current .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente scientifico"@it , "Scientific Director"@en .
+
+ar-role:editore-stampatore
+        a           roapit:Role ;
+        rdfs:label  "editore/stampatore" ;
+        l0:name     "editore/stampatore" .
+
+ar-agent:552c71c172354ece9e82c1a66f110325
+        a           l0:Agent ;
+        rdfs:label  "Magnesia S. Pellegrino" ;
+        l0:name     "Magnesia S. Pellegrino" .
+
+<https://w3id.org/arco/resource/Edition/0500436576-milano>
+        a                        arco-cd:Edition ;
+        rdfs:label               "Edizione Milano del bene 0500436576"@it , "Edition Milano of cultural property 0500436576"@en ;
+        arco-cd:editionLocation  "Milano" ;
+        roapit:holdsRoleInTime   ar-timeIndexedRole:0500436576-edition-1 ;
+        l0:name                  "Edizione Milano del bene 0500436576"@it , "Edition Milano of cultural property 0500436576"@en .
+
+<https://w3id.org/arco/resource/AcquisitionType/donazione>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "donazione" ;
+        l0:name     "donazione" .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-timeIndexedRole:0500436576-6b546afd15fef802bf61bd45d39a6442
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Caburlotto, Luca"@it , "Official in charge: Caburlotto, Luca"@en ;
+        roapit:isRoleInTimeOf  ar-agent:259879fc33ed737f9c89b9c85d774045 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-agent:7504a89d067bf712fc12edf09d20a96f
+        a           l0:Agent ;
+        rdfs:label  "Edizioni Star" ;
+        l0:name     "Edizioni Star" .
+
+ar-agent:1909edbc505facff05947e8bf887f109
+        a           l0:Agent ;
+        rdfs:label  "Nando Salce" ;
+        l0:name     "Nando Salce" .
+
+ar-Site:fb1c695fa675a13099e9d5ed1946abce
+        a                cis:Site ;
+        rdfs:label       "ex scuola Giorgi" ;
+        cis:isSiteOf     ar-cis:a570ee0aad53ac0e04ad0f55f0878f6c ;
+        cis:siteAddress  ar-address:8886a02ff0fb574ac2b7860d0e2cffd5 ;
+        l0:name          "ex scuola Giorgi" .
+
+ar-TechnicalCharacteristic:a-stampa
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a stampa" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a stampa" .
+
+ar-MeasurementCollection:0500436576-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0500436576"@en , "Misure del bene culturale 0500436576"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:0500436576-1-width , ar-Measurement:0500436576-1-height ;
+        l0:name                 "Measurements of cultural property 0500436576"@en , "Misure del bene culturale 0500436576"@it .
+
+<https://w3id.org/arco/resource/FontStyle/corsivo>
+        a           arco-dd:FontStyle ;
+        rdfs:label  "corsivo" ;
+        l0:name     "corsivo" .
+
+ar-province:tv  a   clvapit:Province ;
+        rdfs:label  "TV" ;
+        l0:name     "TV" .
+
+<https://w3id.org/arco/resource/CatalogueRecordS/0500436576>
+        a               arco-catalogue:CatalogueRecordS ;
+        rdfs:label      "Catalogue Record n: 0500436576"@en , "Scheda catalografica n: 0500436576"@it ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0500436576" ;
+        arco-catalogue:describesCulturalProperty
+                ar-HistoricOrArtisticProperty:0500436576 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0500436576-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0500436576-compilation , ar-catalogueRecordVersion:0500436576-agg-1 ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "S-300-ICCD10239336" ;
+        arco-core:note  "il manifesto in oggetto è unito ad altro di analogo soggetto a formare un unico foglio (v. fotografia allegata)" .
+
+ar-Measurement:0500436576-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0500436576: 71cm"@en , "Misura del bene culturale 0500436576: 71cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:0500436576-1-width-71 ;
+        l0:name                     "Measurement of cultural property 0500436576: 71cm"@en , "Misura del bene culturale 0500436576: 71cm"@it .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0500436576-heritage-protection-agency .
+
+ar-timeIndexedRole:0500436576-edition-1
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "editore/stampatore del bene 0500436576"@it , "editore/stampatore of cultural property 0500436576"@en ;
+        roapit:isRoleInTimeOf  ar-agent:7504a89d067bf712fc12edf09d20a96f ;
+        roapit:withRole        ar-role:editore-stampatore .
+
+ar-accessProfile:0500436576-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0500436576: 1"@it , "Access profile to catalogue record of cultural property 0500436576: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0500436576: 1"@it , "Access profile to catalogue record of cultural property 0500436576: 1"@en .
+
+ar-agent:f13256968237dbb55ca66dcd93956c78
+        a           l0:Agent ;
+        rdfs:label  "Regno d'Italia" ;
+        l0:name     "Regno d'Italia" .
+
+<https://w3id.org/arco/resource/Inscription/0500436576-inscription-1>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 1 of cultural property 0500436576"@en , "Iscrizione 1 sul bene culturale 0500436576"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/corsivo> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:non-determinabile ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0500436576-inscription-1 ;
+        arco-dd:positionOnCulturalProperty
+                "in basso a destra" ;
+        arco-dd:transcript              "F. Depero/ Rovereto" .
+
+ar-CulturalEntityTechnicalStatus:0500436576-inscription-2
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 2 sul bene culturale 0500436576"@it , "Technical status of inscription 2 of cultural property 0500436576"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:non-determinabile ;
+        l0:name     "Stato tecnico dell'iscrizione 2 sul bene culturale 0500436576"@it , "Technical status of inscription 2 of cultural property 0500436576"@en .
+
+ar-role:Owner  a            roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  ar-agentrole:0500436576-photographic-documentation-1-photographic-documentation-owner .
+
+ar-interpretationCriterion:dalla-stampa
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "dalla stampa" ;
+        l0:name     "dalla stampa" .
+
+ar-timeIndexedRole:0500436576-agg-1-49aff3509498c7ec71887134339fddce
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: Lunatici, Simona"@it , "Update responsible compilation: Lunatici, Simona"@en ;
+        roapit:isRoleInTimeOf  ar-agent:49aff3509498c7ec71887134339fddce ;
+        roapit:withRole        ar-role:UpdateResponsibleCompilation .
+
+ar-city:treviso  a  clvapit:City ;
+        rdfs:label  "Treviso" ;
+        l0:name     "Treviso" .
+
+ar-agent:4f157bf197db795e7a6249a66fd15e00
+        a           l0:Agent ;
+        rdfs:label  "Comune di Treviso" ;
+        l0:name     "Comune di Treviso" .
+
+ar-Measurement:0500436576-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0500436576: 98cm"@en , "Misura del bene culturale 0500436576: 98cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:0500436576-1-height-98 ;
+        l0:name                     "Measurement of cultural property 0500436576: 98cm"@en , "Misura del bene culturale 0500436576: 98cm"@it .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-catalogueRecordVersion:0500436576-agg-1
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2013 Lunatici, Simona Majoli, Luca" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0500436576-agg-1-49aff3509498c7ec71887134339fddce , ar-timeIndexedRole:0500436576-cc7b88b417b25aefc7d0c28f29013565 ;
+        arco-catalogue:hasUpdateOfficialInCharge
+                ar-agent:280c5b92e0a42da20db65bb41a8159c2 ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                ar-agent:49aff3509498c7ec71887134339fddce ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> .
+
+ar-TimeInterval:2013  a  tiapit:TimeInterval ;
+        rdfs:label   "2013" ;
+        tiapit:time  "2013" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-Value:0500436576-1-width-71
+        a                      mu:Value ;
+        rdfs:label             "71"@en , "71"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "71" .
+
+ar-agent:a36b8f092cd416f0b877c4f9976012b5
+        a           l0:Agent ;
+        rdfs:label  "Mazza, Marta" .
+
+ar-timeIndexedRole:0500436576-compilation-1d973588e20ea90ecad9a36d0f98a230
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Baccichetto, Natalia"@en , "Compilazione da Baccichetto, Natalia"@it ;
+        roapit:isRoleInTimeOf  ar-agent:1d973588e20ea90ecad9a36d0f98a230 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+<https://w3id.org/arco/resource/MeasurementUnit/cm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "cm" ;
+        l0:name     "cm" .
+
+ar-Value:0500436576-1-height-98
+        a                      mu:Value ;
+        rdfs:label             "98"@en , "98"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "98" .
+
+ar-cis:a570ee0aad53ac0e04ad0f55f0878f6c
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Raccolta Nando Salce" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:raccolta-nando-salce ;
+        cis:hasSite           ar-Site:fb1c695fa675a13099e9d5ed1946abce ;
+        l0:name               "Raccolta Nando Salce" .
+
+ar-CulturalEntityTechnicalStatus:0500436576-inscription-1
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 0500436576"@it , "Technical status of inscription 1 of cultural property 0500436576"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:non-determinabile ;
+        l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0500436576"@it , "Technical status of inscription 1 of cultural property 0500436576"@en .
+
+<https://w3id.org/arco/resource/AffixedElementType/commerciale>
+        a           arco-dd:AffixedElementType ;
+        rdfs:label  "commerciale" ;
+        l0:name     "commerciale" .
+
+ar-agent:1d973588e20ea90ecad9a36d0f98a230
+        a           l0:Agent ;
+        rdfs:label  "Baccichetto, Natalia" .
+
+<https://w3id.org/arco/resource/Brand/0500436576-affixed-element-2>
+        a                              arco-dd:Brand ;
+        rdfs:label                     "Element 2 affixed to cultural property 0500436576: brand"@en , "Elemento 2 apposto sul bene 0500436576: marchio"@it ;
+        arco-core:description          "Esagonale. All'interno: MAGNESIA/ S. PELLEGRINO; figura di pellegrino" ;
+        arco-dd:hasAffixedElementType  <https://w3id.org/arco/resource/AffixedElementType/commerciale> ;
+        arco-dd:occurrences            "1" ;
+        arco-dd:positionOnCulturalProperty
+                "al centro" ;
+        arco-dd:refersToAgent          ar-agent:552c71c172354ece9e82c1a66f110325 .
+
+ar-timeIndexedRole:0500436576-77ae952e749a936cb830f84b2ebfe642
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Mazza, Marta"@it , "Scientific director: Mazza, Marta"@en ;
+        roapit:isRoleInTimeOf  ar-agent:a36b8f092cd416f0b877c4f9976012b5 ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+ar-agent:d9d23e99a98052ee0c9976e204c4b4da
+        a                    l0:Agent ;
+        rdfs:label           "Soprintendenza BSAE VE BL PD e TV" ;
+        arco-cd:address      "Santa Croce 770 - Venezia" ;
+        arco-core:isAgentOf  ar-agentrole:0500436576-photographic-documentation-1-photographic-documentation-owner ;
+        l0:name              "Soprintendenza BSAE VE BL PD e TV" .
+
+<https://w3id.org/arco/resource/Acquisition/0500436576-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisizione 1 del bene culturale: 0500436576"@it , "Acquisition 1 of cultural property: 0500436576"@en ;
+        arco-cd:acquisitionLocation  "Treviso" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/donazione> ;
+        arco-cd:hasPreviousOwner     ar-agent:1909edbc505facff05947e8bf887f109 ;
+        arco-cd:isAcquisitionOf      ar-HistoricOrArtisticProperty:0500436576 ;
+        tiapit:time                  "1962" ;
+        l0:name                      "Acquisition 1 of cultural property: 0500436576"@en , "Acquisizione 1 del bene culturale: 0500436576"@it .

@@ -1,0 +1,705 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-role:Mint  a             roapit:Role ;
+        rdfs:label          "Zecca"@it , "Mint"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900746467-issuance-1-mint-1 .
+
+ar-agent:14e2538d6b4bcfd883650174e1e1ba93
+        a                    l0:Agent ;
+        rdfs:label           "Pietro Leopoldo di Lorena" ;
+        arco-core:isAgentOf  ar-agentrole:0900746467-issuance-1-issuer-1 ;
+        l0:name              "Pietro Leopoldo di Lorena" .
+
+ar-SiteDefinition:casa
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "casa" .
+
+ar-TimeInterval:2012  a  tiapit:TimeInterval ;
+        rdfs:label   "2012" ;
+        tiapit:time  "2012" .
+
+ar-agent:b03ea81ce6fe0bcd33261ca8a97f3c6e
+        a           l0:Agent ;
+        rdfs:label  "Ministero per i Beni e le Attività Culturali (Polo Museale di Firenze)" ;
+        l0:name     "Ministero per i Beni e le Attività Culturali (Polo Museale di Firenze)" .
+
+<https://w3id.org/arco/resource/CoinLegend/0900746467-reverse-legend>
+        a                         arco-dd:CoinLegend ;
+        rdfs:label                "Legenda presente sul rovescio del bene numismatico 0900746467"@it , "Legend on reverse of numismatic property 0900746467"@en ;
+        arco-dd:hasWritingSystem  <https://w3id.org/arco/resource/WritingSystem/latino> ;
+        arco-dd:transcript        "DIRIGE DOMINE GRESSUS MEOS/PISIS 1780" ;
+        language:hasLanguage      <https://w3id.org/arco/resource/Language/latino> ;
+        l0:name                   "Legenda presente sul rovescio del bene numismatico 0900746467"@it , "Legend on reverse of numismatic property 0900746467"@en .
+
+ar-agentrole:0900746467-issuance-1-issuer-1
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Soggetto emittente 1 del bene culturale 0900746467: Pietro Leopoldo di Lorena"@it , "Issuer 1 of cultural property 0900746467: Pietro Leopoldo di Lorena"@en ;
+        arco-core:hasAgent  ar-agent:14e2538d6b4bcfd883650174e1e1ba93 ;
+        arco-core:hasRole   ar-role:Issuer ;
+        l0:name             "Soggetto emittente 1 del bene culturale 0900746467: Pietro Leopoldo di Lorena"@it , "Issuer 1 of cultural property 0900746467: Pietro Leopoldo di Lorena"@en .
+
+ar-catalogueRecordVersion:0900746467-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2012 Rousseau B." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0900746467-compilation-33ba533799d182c9e88121412426ea19 , ar-timeIndexedRole:0900746467-ec80617d58e4e524394eba9027cec9ec ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:8a1c01ed7ebb1de617e6a781118fb41a ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:33ba533799d182c9e88121412426ea19 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> .
+
+ar-agent:f262108a67caf8abf3dd7c8c47251ebd
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Speciale per il Patrimonio Storico Artistico ed Etnoantropologico e per il Polo Museale della citta' di Firenze" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        arco-core:isAgentOf  ar-agentrole:0900746467-cataloguing-agency , ar-agentrole:0900746467-heritage-protection-agency ;
+        l0:name              "Soprintendenza Speciale per il Patrimonio Storico Artistico ed Etnoantropologico e per il Polo Museale della citta' di Firenze" .
+
+ar-timeIndexedRole:0900746467-compilation-33ba533799d182c9e88121412426ea19
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Rousseau B."@en , "Compilazione da Rousseau B."@it ;
+        roapit:isRoleInTimeOf  ar-agent:33ba533799d182c9e88121412426ea19 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-agent:401eab3f41505c97056f8eefc9b7b8b7
+        a                             CPV:Person ;
+        rdfs:label                    "Siries Luigi" ;
+        arco-cd:agentDate             "1743/ 1811" ;
+        arco-cd:agentLocalIdentifier  "00004551" ;
+        arco-cd:isAuthorOf            <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        l0:name                       "Siries Luigi" .
+
+<https://w3id.org/arco/resource/WritingSystem/latino>
+        a           arco-dd:WritingSystem ;
+        rdfs:label  "latino" ;
+        l0:name     "latino" .
+
+ar-accessProfile:0900746467-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0900746467: 1"@it , "Access profile to catalogue record of cultural property 0900746467: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0900746467: 1"@it , "Access profile to catalogue record of cultural property 0900746467: 1"@en .
+
+ar-photograpyDocumentation:0900746467-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Documentazione fotografica 2 del bene culturale: 0900746467"@it , "Photographic documentation 2 of cultural property: 0900746467"@en ;
+        arco-cd:documentationIdentifier
+                "SSPSAEPM FI 19279UC" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "rovescio" ;
+        l0:name                       "Photographic documentation 2 of cultural property: 0900746467"@en , "Documentazione fotografica 2 del bene culturale: 0900746467"@it .
+
+ar-agent:fdd5a39ea94e7b9fb2e7635cc1f1f4f7
+        a                    l0:Agent ;
+        rdfs:label           "Granducato di Toscana" ;
+        arco-core:isAgentOf  ar-agentrole:0900746467-issuance-1-issuing-state-1 ;
+        l0:name              "Granducato di Toscana" .
+
+<https://w3id.org/arco/resource/CoinDesign/0900746467-reverse-design>
+        a                      arco-dd:CoinDesign ;
+        rdfs:label             "Raffigurazione presente sul rovescio del bene numismatico 0900746467"@it , "Design on reverse of numismatic property 0900746467"@en ;
+        arco-core:description  "stemma rettangolare coronato circondato dal collare del Toson d'oro" ;
+        l0:name                "Raffigurazione presente sul rovescio del bene numismatico 0900746467"@it , "Design on reverse of numismatic property 0900746467"@en .
+
+ar-SiteDefinition:palazzo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "palazzo" .
+
+ar-region:toscana  a  clvapit:Region ;
+        rdfs:label  "Toscana" ;
+        l0:name     "Toscana" .
+
+ar-agentrole:0900746467-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0900746467: S156"@it , "Cataloguing agency for cultural property 0900746467: S156"@en ;
+        arco-core:hasAgent  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+<https://w3id.org/arco/resource/CoinLegend/0900746467-obverse-legend>
+        a                     arco-dd:CoinLegend ;
+        rdfs:label            "Legenda presente sul dritto del bene numismatico 0900746467"@it , "Legend on obverse of numismatic property 0900746467"@en ;
+        arco-dd:transcript    "PETRUS LEOPOLDUS . D . G . P . R . H . ET B . A . A. M . D . ETRUR" ;
+        language:hasLanguage  <https://w3id.org/arco/resource/Language/latino> ;
+        l0:name               "Legenda presente sul dritto del bene numismatico 0900746467"@it , "Legend on obverse of numismatic property 0900746467"@en .
+
+ar-TechnicalCharacteristic:argento-coniazione
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "argento/ coniazione" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "argento/ coniazione" .
+
+ar-culturalPropertyType:8f9f34c41fd574e8b6c473ff2401db69
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: moneta"@it , "Cultural property type: moneta"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:moneta ;
+        l0:name     "Tipo del bene: moneta"@it , "Cultural property type: moneta"@en .
+
+ar-city:firenze  a  clvapit:City ;
+        rdfs:label  "Firenze" ;
+        l0:name     "Firenze" .
+
+ar-event:0900746467-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0900746467"@it , "Creation of cultural property 0900746467"@en ;
+        arco-cd:specificTime  ar-TimeInterval:1780-dc-1780-dc ;
+        tiapit:atTime         ar-TimeInterval:xviii ;
+        l0:name               "Realizzazione del bene 0900746467"@it , "Creation of cultural property 0900746467"@en .
+
+ar-agent:8a1c01ed7ebb1de617e6a781118fb41a
+        a           l0:Agent ;
+        rdfs:label  "Sframeli M." .
+
+<https://w3id.org/arco/resource/CatalogueRecordNU/0900746467>
+        a             arco-catalogue:CatalogueRecordNU ;
+        rdfs:label    "Scheda catalografica n: 0900746467"@it , "Catalogue Record n: 0900746467"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0900746467" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0900746467-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0900746467-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "NU-ICCD10095890" .
+
+ar-cis:fceced59d1032d6561a8426fec37fecf
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Museo Ferrucciano" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:museo-ferrucciano ;
+        cis:hasSite           ar-Site:963bab5806eeac5017e94d35271ec8ac ;
+        l0:name               "Museo Ferrucciano" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900746467-cataloguing-agency .
+
+ar-CulturalEntityTechnicalStatus:0900746467
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0900746467"@it , "Technical status of cultural property 0900746467"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:argento-coniazione ;
+        l0:name     "Stato tecnico del bene culturale 0900746467"@it , "Technical status of cultural property 0900746467"@en .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/CoinDesign/0900746467-obverse-design>
+        a                      arco-dd:CoinDesign ;
+        rdfs:label             "Raffigurazione presente sul dritto del bene numismatico 0900746467"@it , "Design on obverse of numismatic property 0900746467"@en ;
+        arco-core:description  "busto corazzato a destra; accette incrociate" ;
+        l0:name                "Raffigurazione presente sul dritto del bene numismatico 0900746467"@it , "Design on obverse of numismatic property 0900746467"@en .
+
+ar-photograpyDocumentation:0900746467-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Documentazione fotografica 1 del bene culturale: 0900746467"@it , "Photographic documentation 1 of cultural property: 0900746467"@en ;
+        arco-cd:documentationIdentifier
+                "SSPSAEPM FI 19278UC" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "diritto" ;
+        l0:name                       "Documentazione fotografica 1 del bene culturale: 0900746467"@it , "Photographic documentation 1 of cultural property: 0900746467"@en .
+
+ar-timeIndexedRole:0900746467-ec80617d58e4e524394eba9027cec9ec
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Sframeli M."@it , "Official in charge: Sframeli M."@en ;
+        roapit:isRoleInTimeOf  ar-agent:8a1c01ed7ebb1de617e6a781118fb41a ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-MeasurementCollection:0900746467-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0900746467"@en , "Misure del bene culturale 0900746467"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:0900746467-1-diameter ;
+        l0:name                 "Measurements of cultural property 0900746467"@en , "Misure del bene culturale 0900746467"@it .
+
+ar-agent:6f06f27dc298945563a0bae9cc8e6d25
+        a                    l0:Agent ;
+        rdfs:label           "Pisis" ;
+        arco-core:isAgentOf  ar-agentrole:0900746467-issuance-1-mint-1 ;
+        l0:name              "Pisis" .
+
+ar-agentrole:0900746467-issuance-1-issuing-state-1
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Realtà statuale emittente 1 del bene culturale 0900746467: Granducato di Toscana"@it , "Issuing State 1 of cultural property 0900746467: Granducato di Toscana"@en ;
+        arco-core:hasAgent  ar-agent:fdd5a39ea94e7b9fb2e7635cc1f1f4f7 ;
+        arco-core:hasRole   ar-role:IssuingState ;
+        l0:name             "Realtà statuale emittente 1 del bene culturale 0900746467: Granducato di Toscana"@it , "Issuing State 1 of cultural property 0900746467: Granducato di Toscana"@en .
+
+ar-SiteType:casa  a  arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: casa"@it , "Site type: casa"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:casa ;
+        l0:name     "Tipo di contenitore fisico: casa"@it , "Site type: casa"@en .
+
+ar-role:Minter  a           roapit:Role ;
+        rdfs:label          "Zecchiere"@it , "Minter"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900746467-issuance-1-minter-1 .
+
+ar-timeIndexedTypedLocation:0900746467-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0900746467"@it , "Current physical location of cultural property: 0900746467"@en ;
+        arco-location:atSite           ar-Site:963bab5806eeac5017e94d35271ec8ac ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0900746467"@it , "Current physical location of cultural property: 0900746467"@en .
+
+ar-Site:29dd39ce13a94d043b713bdb2507228f
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo del Bargello o del Podestà già del Capitano del Popolo" ;
+        cis:isSiteOf               ar-cis:fa36a0e475d7f638c20d70cd686eb2c8 ;
+        cis:siteAddress            ar-address:baf8c807fbde64045fa67254dafd3e9f ;
+        arco-location:hasSiteType  ar-SiteType:palazzo ;
+        l0:name                    "Palazzo del Bargello o del Podestà già del Capitano del Popolo" .
+
+<https://w3id.org/arco/resource/NumismaticProperty/0900746467>
+        a                               arco-arco:NumismaticProperty , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "moneta, francescone, Italiana/Granducato di Toscana" ;
+        rdfs:label                      "moneta - francescone by Siries Luigi (XVIII)"@en , "moneta - francescone di Siries Luigi (XVIII)"@it ;
+        pico:author                     ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:argento-coniazione ;
+        dc:coverage                     ar-city:san-marcello-pistoiese ;
+        dc:creator                      ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        dc:date                         ar-TimeInterval:1780-dc-1780-dc ;
+        dc:description                  "Dritto: busto corazzato a destra; accette incrociate. Rovescio: stemma rettangolare coronato circondato dal collare del Toson d'oro" ;
+        dc:format                       ar-MeasurementCollection:0900746467-1 ;
+        dc:identifier                   "0900746467" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900746467-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#monete_e_medaglie> , ar-Subject:184748e0f820f9b05b9167b6e3e88943 ;
+        dc:type                         ar-culturalPropertyType:8f9f34c41fd574e8b6c473ff2401db69 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0900746467-bibliography-1 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/790e4be7eaac1705136cfaf4be7454e9" ;
+        arco-arco:catalogueNumber       "00746467" ;
+        arco-arco:hasCataloguingAgency  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-arco:regionIdentifier      "09" ;
+        arco-arco:uniqueIdentifier      "0900746467" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0900746467-acquisition-1> ;
+        arco-cd:hasAuthor               ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:0900746467-1 ;
+        arco-cd:hasBibliography         ar-bibliography:0900746467-bibliography-1 ;
+        arco-cd:hasCoinIssuance         <https://w3id.org/arco/resource/CoinIssuance/0900746467-issuance-1> ;
+        arco-cd:hasDating               ar-dating:0900746467-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0900746467-photographic-documentation-2 , ar-photograpyDocumentation:0900746467-photographic-documentation-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0900746467-legal-situation-proprieta-stato ;
+        arco-cd:hasSubject              ar-Subject:184748e0f820f9b05b9167b6e3e88943 ;
+        arco-cd:subject                 "ritratto di Piero Leopoldo di Lorena" ;
+        arco-core:hasAgentRole          ar-agentrole:0900746467-cataloguing-agency , ar-agentrole:0900746467-heritage-protection-agency ;
+        arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-reverse> , <https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-obverse> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0900746467-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyAvailability
+                arco-dd:Available ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:8f9f34c41fd574e8b6c473ff2401db69 ;
+        arco-dd:hasDesignationInTime    ar-designationInTime:0900746467-francescone ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:argento-coniazione ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:0900746467-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0900746467 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:790e4be7eaac1705136cfaf4be7454e9 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0900746467-alternative-1 , ar-timeIndexedTypedLocation:0900746467-current .
+
+ar-ConservationStatus:0900746467-conservation-status-1
+        a                      arco-dd:ConservationStatus ;
+        rdfs:label             "Stato di conservazione 1 del bene: 0900746467"@it , "Conservation status 1 of cultural property: 0900746467"@en ;
+        arco-dd:hasConservationStatusType
+                <https://w3id.org/arco/resource/ConservationStatusType/intero> ;
+        arco-dd:hasLegibility  arco-dd:DecentLegibility ;
+        l0:name                "Stato di conservazione 1 del bene: 0900746467"@it , "Conservation status 1 of cultural property: 0900746467"@en .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-Subject:184748e0f820f9b05b9167b6e3e88943
+        a                    arco-cd:Subject ;
+        rdfs:label           "ritratto di Piero Leopoldo di Lorena" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        l0:name              "ritratto di Piero Leopoldo di Lorena" .
+
+ar-CISNameInTime:museo-ferrucciano
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Museo Ferrucciano"@it , "Name in time: Museo Ferrucciano"@en ;
+        cis:institutionalCISName  "Museo Ferrucciano" ;
+        l0:name                   "Denominazione nel tempo: Museo Ferrucciano"@it , "Name in time: Museo Ferrucciano"@en .
+
+ar-timeIndexedTypedLocation:0900746467-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 0900746467"@it , "Alternative location 1 of cultural property: 0900746467"@en ;
+        arco-location:atSite           ar-Site:29dd39ce13a94d043b713bdb2507228f ;
+        arco-location:hasLocationType  arco-location:LastLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        tiapit:atTime                  ar-TimeInterval:1958 ;
+        l0:name                        "Altra localizzazione 1 del bene: 0900746467"@it , "Alternative location 1 of cultural property: 0900746467"@en .
+
+ar-role:Issuer  a           roapit:Role ;
+        rdfs:label          "Soggetto emittente di moneta"@it , "Coin issuer"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900746467-issuance-1-issuer-1 .
+
+ar-PreferredAuthorshipAttribution:0900746467-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0900746467"@it , "Preferred authorship attribution of cultural property: 0900746467"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:monogramma ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0900746467"@it , "Preferred authorship attribution of cultural property: 0900746467"@en .
+
+<https://w3id.org/arco/resource/AcquisitionType/ritrovamento-fortuito>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "ritrovamento fortuito" ;
+        l0:name     "ritrovamento fortuito" .
+
+ar-TimeInterval:1780-dc-1780-dc
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "1780 d.C. - 1780 d.C." ;
+        arco-arco:endTime    "1780 d.C." ;
+        arco-arco:startTime  "1780 d.C." ;
+        l0:name              "1780 d.C. - 1780 d.C." .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-obverse>
+        a                          arco-arco:CulturalPropertyPart ;
+        rdfs:label                 "Dritto del bene numismatico 0900746467"@it , "Obverse of numismatic property 0900746467"@en ;
+        arco-dd:hasAffixedElement  <https://w3id.org/arco/resource/CoinDesign/0900746467-obverse-design> , <https://w3id.org/arco/resource/CoinLegend/0900746467-obverse-legend> ;
+        l0:name                    "Dritto del bene numismatico 0900746467"@it , "Obverse of numismatic property 0900746467"@en .
+
+<https://w3id.org/arco/resource/Acquisition/0900746467-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisizione 1 del bene culturale: 0900746467"@it , "Acquisition 1 of cultural property: 0900746467"@en ;
+        arco-cd:acquisitionLocation  "PT/ S. Marcello Pistoiese/ Gavinana" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/ritrovamento-fortuito> ;
+        arco-cd:hasPreviousOwner     ar-agent:71b4d3fe221882660fbe7410366f388e ;
+        arco-cd:isAcquisitionOf      <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        tiapit:time                  "1958 ante" ;
+        l0:name                      "Acquisition 1 of cultural property: 0900746467"@en , "Acquisizione 1 del bene culturale: 0900746467"@it .
+
+ar-interpretationCriterion:monogramma
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "monogramma" ;
+        l0:name     "monogramma" .
+
+<https://w3id.org/arco/resource/CoinIssuance/0900746467-issuance-1>
+        a                        arco-cd:CoinIssuance ;
+        rdfs:label               "Emissione di moneta 1 del bene culturale 0900746467"@it , "Coin issuance 1 of cultural property 0900746467"@en ;
+        arco-cd:hasIssuer        ar-agent:14e2538d6b4bcfd883650174e1e1ba93 ;
+        arco-cd:hasIssuingState  ar-agent:fdd5a39ea94e7b9fb2e7635cc1f1f4f7 ;
+        arco-cd:hasMint          ar-agent:6f06f27dc298945563a0bae9cc8e6d25 ;
+        arco-cd:hasMinter        ar-agent:f2c2bb309b9ab4a4e843cade1ace4926 ;
+        arco-core:hasAgentRole   ar-agentrole:0900746467-issuance-1-mint-1 , ar-agentrole:0900746467-issuance-1-minter-1 , ar-agentrole:0900746467-issuance-1-issuing-state-1 , ar-agentrole:0900746467-issuance-1-issuer-1 ;
+        l0:name                  "Coin issuance 1 of cultural property 0900746467"@en , "Emissione di moneta 1 del bene culturale 0900746467"@it .
+
+ar-address:790e4be7eaac1705136cfaf4be7454e9
+        a                       clvapit:Address ;
+        rdfs:label              "ITALIA, Toscana, PT, San Marcello Pistoiese, GAVINANA" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        clvapit:fullAddress     "piazza Francesco Ferrucci, 1" ;
+        clvapit:hasAddressArea  ar-addressArea:gavinana ;
+        clvapit:hasCity         ar-city:san-marcello-pistoiese ;
+        clvapit:hasCountry      ar-country:italia ;
+        clvapit:hasProvince     ar-province:pt ;
+        clvapit:hasRegion       ar-region:toscana .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-legalSituation:0900746467-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0900746467: proprietà Stato"@it , "Legal situation of cultural property 0900746467: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:b03ea81ce6fe0bcd33261ca8a97f3c6e ;
+        l0:name           "Condizione giuridica del bene culturale 0900746467: proprietà Stato"@it , "Legal situation of cultural property 0900746467: proprietà Stato"@en .
+
+ar-agentrole:0900746467-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0900746467: S156"@it , "Heritage protection agency for cultural property 0900746467: S156"@en ;
+        arco-core:hasAgent  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-dating:0900746467-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0900746467"@it , "Dating 1 of cultural property 0900746467"@en ;
+        arco-cd:hasDatingEvent  ar-event:0900746467-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:data ;
+        l0:name                 "Dating 1 of cultural property 0900746467"@en , "Cronologia 1 del bene 0900746467"@it .
+
+ar-bibliography:0900746467-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 0900746467"@en , "Bibliografia 1 del bene culturale: 0900746467"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "00016431" ;
+        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        arco-core:hasCategory     arco-cd:ComparativeBibliography ;
+        l0:name                   "Bibliography 1 of cultural property: 0900746467"@en , "Bibliografia 1 del bene culturale: 0900746467"@en .
+
+ar-region:fi  a     clvapit:Province ;
+        rdfs:label  "FI" ;
+        l0:name     "FI" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900746467-heritage-protection-agency .
+
+ar-Value:0900746467-1-diameter-041
+        a                      mu:Value ;
+        rdfs:label             "0.41"@en , "0.41"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
+        mu:value               "0.41" .
+
+ar-agent:33ba533799d182c9e88121412426ea19
+        a           l0:Agent ;
+        rdfs:label  "Rousseau B." .
+
+ar-designationInTime:0900746467-francescone
+        a           arco-dd:DesignationInTime ;
+        rdfs:label  "francescone" ;
+        arco-dd:hasDesignationInTimeType
+                arco-dd:Original ;
+        l0:name     "francescone" .
+
+ar-agent:f2c2bb309b9ab4a4e843cade1ace4926
+        a                    l0:Agent ;
+        rdfs:label           "Fabbrini Antonio (accette incrociate)" ;
+        arco-core:isAgentOf  ar-agentrole:0900746467-issuance-1-minter-1 ;
+        l0:name              "Fabbrini Antonio (accette incrociate)" .
+
+ar-TimeInterval:xviii
+        a            tiapit:TimeInterval ;
+        rdfs:label   "XVIII" ;
+        tiapit:time  "XVIII" ;
+        l0:name      "XVIII" .
+
+ar-addressArea:gavinana
+        a           clvapit:AddressArea ;
+        rdfs:label  "Gavinana" ;
+        l0:name     "Gavinana" .
+
+ar-interpretationCriterion:data
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "data" ;
+        l0:name     "data" .
+
+ar-agent:71b4d3fe221882660fbe7410366f388e
+        a           l0:Agent ;
+        rdfs:label  "Chelucci Palmerini" ;
+        l0:name     "Chelucci Palmerini" .
+
+ar-city:san-marcello-pistoiese
+        a           clvapit:City ;
+        rdfs:label  "San Marcello Pistoiese" ;
+        l0:name     "San Marcello Pistoiese" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-agentrole:0900746467-issuance-1-minter-1
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Zecchiere 1 del bene culturale 0900746467: Fabbrini Antonio (accette incrociate)"@it , "Minter 1 of cultural property 0900746467: Fabbrini Antonio (accette incrociate)"@en ;
+        arco-core:hasAgent  ar-agent:f2c2bb309b9ab4a4e843cade1ace4926 ;
+        arco-core:hasRole   ar-role:Minter ;
+        l0:name             "Zecchiere 1 del bene culturale 0900746467: Fabbrini Antonio (accette incrociate)"@it , "Minter 1 of cultural property 0900746467: Fabbrini Antonio (accette incrociate)"@en .
+
+ar-culturalPropertyDefinition:moneta
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "moneta" .
+
+<https://w3id.org/arco/resource/ConservationStatusType/intero>
+        a           arco-dd:ConservationStatusType ;
+        rdfs:label  "intero" ;
+        l0:name     "intero" .
+
+ar-province:pt  a   clvapit:Province ;
+        rdfs:label  "PT" ;
+        l0:name     "PT" .
+
+ar-agentrole:0900746467-issuance-1-mint-1
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Zecca 1 del bene culturale 0900746467: Pisis"@it , "Mint 1 of cultural property 0900746467: Pisis"@en ;
+        arco-core:hasAgent  ar-agent:6f06f27dc298945563a0bae9cc8e6d25 ;
+        arco-core:hasRole   ar-role:Mint ;
+        l0:name             "Zecca 1 del bene culturale 0900746467: Pisis"@it , "Mint 1 of cultural property 0900746467: Pisis"@en .
+
+ar-cis:fa36a0e475d7f638c20d70cd686eb2c8
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Museo Nazionale del Bargello" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:museo-nazionale-del-bargello ;
+        cis:hasSite           ar-Site:29dd39ce13a94d043b713bdb2507228f ;
+        l0:name               "Museo Nazionale del Bargello" .
+
+ar-role:IssuingState  a     roapit:Role ;
+        rdfs:label          "Realtà statuale emittente"@it , "Issuing State"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900746467-issuance-1-issuing-state-1 .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-SiteType:palazzo  a  arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        l0:name     "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en .
+
+<https://w3id.org/arco/resource/MeasurementUnit/cm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "cm" ;
+        l0:name     "cm" .
+
+ar-Site:963bab5806eeac5017e94d35271ec8ac
+        a                          cis:Site ;
+        rdfs:label                 "casa ex-Battistini" ;
+        cis:isSiteOf               ar-cis:fceced59d1032d6561a8426fec37fecf ;
+        cis:siteAddress            ar-address:790e4be7eaac1705136cfaf4be7454e9 ;
+        arco-location:hasSiteType  ar-SiteType:casa ;
+        l0:name                    "casa ex-Battistini" .
+
+ar-CISNameInTime:museo-nazionale-del-bargello
+        a                         cis:CISNameInTime ;
+        cis:institutionalCISName  "Museo Nazionale del Bargello" .
+
+<https://w3id.org/arco/resource/Language/latino>
+        a           language:Language ;
+        rdfs:label  "latino" ;
+        l0:name     "latino" .
+
+ar-TimeInterval:1958  a    tiapit:TimeInterval ;
+        arco-arco:endTime  "1958" .
+
+ar-address:baf8c807fbde64045fa67254dafd3e9f
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Toscana, FI, Firenze" ;
+        clvapit:hasCity      ar-city:firenze ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:fi ;
+        clvapit:hasRegion    ar-region:toscana .
+
+ar-Measurement:0900746467-1-diameter
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0900746467: 0.41cm"@en , "Misura del bene culturale 0900746467: 0.41cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Diameter ;
+        arco-dd:hasValue            ar-Value:0900746467-1-diameter-041 ;
+        l0:name                     "Measurement of cultural property 0900746467: 0.41cm"@en , "Misura del bene culturale 0900746467: 0.41cm"@it .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-reverse>
+        a                          arco-arco:CulturalPropertyPart ;
+        rdfs:label                 "Rovescio del bene numismatico 0900746467"@it , "Reverse of numismatic property 0900746467"@en ;
+        arco-dd:hasAffixedElement  <https://w3id.org/arco/resource/CoinDesign/0900746467-reverse-design> , <https://w3id.org/arco/resource/CoinLegend/0900746467-reverse-legend> ;
+        l0:name                    "Rovescio del bene numismatico 0900746467"@it , "Reverse of numismatic property 0900746467"@en .

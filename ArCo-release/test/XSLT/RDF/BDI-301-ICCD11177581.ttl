@@ -1,0 +1,350 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-agentrole:1200870331-proponent-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proponente del bene 1200870331: ICCD"@it , "Proponent agency for cultural property 1200870331: ICCD"@en ;
+        arco-core:hasAgent  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-core:hasRole   ar-role:ProponentAgency .
+
+ar-timeIndexedRole:1200870331-39352f6fb4286cb1f5d927a313ca37d6
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Cavatrunci Claudio"@it , "Scientific director: Cavatrunci Claudio"@en ;
+        roapit:isRoleInTimeOf  ar-agent:b6fb9c1c4f6cf3c0f93797093466b50e ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+ar-agent:050ae5d29fc291b682bcf51f1250ca75
+        a                            l0:Agent , COV:Organization ;
+        rdfs:label                   "ICCD" , "Istituto Centrale per il Catalogo e la Documentazione" ;
+        arco-cd:isProponentAgencyOf  <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        arco-core:isAgentOf          ar-agentrole:1200870331-proponent-agency ;
+        l0:name                      "Istituto Centrale per il Catalogo e la Documentazione" .
+
+ar-TimeInterval:2004  a  tiapit:TimeInterval ;
+        rdfs:label   "2004" ;
+        tiapit:time  "2004" .
+
+ar-timeIndexedTypedLocation:1200870331-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 1200870331"@it , "Alternative location 1 of cultural property: 1200870331"@en ;
+        arco-location:atSite           ar-Site:6615093624cf9414f0db0b36f5042009 ;
+        arco-location:hasLocationType  arco-location:ObservationLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        l0:name                        "Altra localizzazione 1 del bene: 1200870331"@it , "Alternative location 1 of cultural property: 1200870331"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331>
+        a             arco-catalogue:CatalogueRecordBDI ;
+        rdfs:label    "Catalogue Record n: 1200870331"@en , "Scheda catalografica n: 1200870331"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1200870331" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:1200870331-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1200870331-rvm , ar-catalogueRecordVersion:1200870331-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "BDI-301-ICCD11177581" .
+
+<https://w3id.org/arco/resource/FilmDocumentation/1200870331-film-documentation-1>
+        a                             arco-cd:FilmDocumentation ;
+        rdfs:label                    "Documentazione video-cinematografica 1 del bene culturale: 1200870331"@it , "Film documentation 1 of cultural property: 1200870331"@en ;
+        arco-cd:documentationIdentifier
+                "New_1401864636006" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:video-dvd ;
+        arco-cd:hasFormat             <https://w3id.org/arco/resource/Format/video-dvd> ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Documentazione video-cinematografica 1 del bene culturale: 1200870331"@en , "Film documentation 1 of cultural property: 1200870331"@en .
+
+ar-agentrole:1200870331-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1200870331: S48"@it , "Cataloguing agency for cultural property 1200870331: S48"@en ;
+        arco-core:hasAgent  ar-agent:339d677b73f05760bf8b0849fd006e7b ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-timeIndexedRole:1200870331-rvm-16aa6c27754f49dc1166a42aed8765c9
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da Tucci Roberta"@it , "Digital transcription by Tucci Roberta"@en ;
+        roapit:isRoleInTimeOf  ar-agent:16aa6c27754f49dc1166a42aed8765c9 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-Subject:f146aa45a94ac1a3b311a1951608def5
+        a                    arco-cd:Subject ;
+        rdfs:label           "Ciclo dell’anno/ Immacolata Concezione, 8 dicembre" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        l0:name              "Ciclo dell’anno/ Immacolata Concezione, 8 dicembre" .
+
+ar-agent:b6fb9c1c4f6cf3c0f93797093466b50e
+        a           l0:Agent ;
+        rdfs:label  "Cavatrunci Claudio" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1200870331-cataloguing-agency .
+
+ar-accessProfile:1200870331-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1200870331: 1"@it , "Access profile to catalogue record of cultural property 1200870331: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 1200870331: 1"@it , "Access profile to catalogue record of cultural property 1200870331: 1"@en .
+
+ar-address:1dd7d4edb92f2bd7e71ae08f3b5c1404
+        a                       clvapit:Address ;
+        rdfs:label              "PERU', NR, NR, NR, America, Perù, Departamento di Moquegua, Ubinas" ;
+        clvapit:hasAddressArea  ar-addressArea:america-peru-departamento-di-moquegua-ubinas ;
+        clvapit:hasCountry      ar-country:peru .
+
+ar-agent:16aa6c27754f49dc1166a42aed8765c9
+        a           l0:Agent ;
+        rdfs:label  "Tucci Roberta" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-addressArea:america-peru-departamento-di-moquegua-ubinas
+        a           clvapit:AddressArea ;
+        rdfs:label  "America, Perù, Departamento di Moquegua, Ubinas" ;
+        l0:name     "America, Perù, Departamento di Moquegua, Ubinas" .
+
+<https://w3id.org/arco/resource/Format/video-dvd>
+        a           arco-cd:Format ;
+        rdfs:label  "video DVD" ;
+        l0:name     "video DVD" .
+
+ar-catalogueRecordVersion:1200870331-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2004 Adelfio Simonetta" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2004 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1200870331-39352f6fb4286cb1f5d927a313ca37d6 , ar-timeIndexedRole:1200870331-986b714b5055d04c4c51a9a6e880324e , ar-timeIndexedRole:1200870331-compilation-7d2fa075edd78b6a5efc3e6acc8cb6b5 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:366f929d9eeb0f8da3e60304d1be53fd ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:7d2fa075edd78b6a5efc3e6acc8cb6b5 ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:b6fb9c1c4f6cf3c0f93797093466b50e ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> .
+
+ar-role:DigitalTranscriptionResponsibleAgent
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription responsible agent"@en , "Responsabile della trascrizione per informatizzazione"@it .
+
+<https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331>
+        a                               arco-arco:DemoEthnoAnthropologicalHeritage , arco-arco:IntangibleCulturalProperty ;
+        rdfs:comment                    "La yunta, Semina rituale, festa/ cerimonia, musica strumentale, danza" ;
+        rdfs:label                      "Semina rituale, La yunta (festa/ cerimonia) ()"@it , "Semina rituale, La yunta (festa/ cerimonia) ()"@en ;
+        dc:description                  "Il corteo dei personaggi fa il suo ingresso in plaza de Armas, la piazza centrale del paese. Sfilano ordinatamente un suonatore di flauto a tacca #quena# e un suonatore di tamburo, due danzatori mascherati da contadini in abiti tradizionali, due uomini che conducono i buoi aggiogati all’aratro, l’uomo che guida l’aratro. I due musici si dispongono al centro eseguendo la melodia di accompagnamento al rito. I buoi portano coperte multicolori sulla groppa e un giogo appositamente adornato per la festa. Vengono tirati da due uomini mentre un terzo si occupa di guidare l’aratro da dietro, facendo talvolta pressione con il piede sinistro sulla bure, per approfondire il solco. Dietro all’aratro si muovono i personaggi principali, un uomo travestito da contadina, con gonna e #manta# sulle spalle, e un secondo uomo con il volto mascherato e con una lunga barba nera. La donna danza dietro all’aratro simulando l’atto della semina. Con cadenza ritmica si piega in avanti lasciando cadere nel solco alcuni chicchi di mais che preleva con la mano destra da una bisaccia appesa al collo. Alcune donne tra gli astanti si chinano a raccogliere i chicchi dal solco per assicurarsi la buona fortuna e un buon raccolto. Subito dietro, il danzatore barbuto, detto #abuelo# (il nonno) segue la donna accennando con il piede il gesto di coprire il solco dove è stato seminato. Mentre danza fa roteare con la mano destra una lunga sciarpa bianca." ;
+        dc:identifier                   "1200870331" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_immateriali_della_tradizione_e_del_folklore> ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> ;
+        arco-arco:catalogueNumber       "00870331" ;
+        arco-arco:hasCataloguingAgency  ar-agent:339d677b73f05760bf8b0849fd006e7b ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:339d677b73f05760bf8b0849fd006e7b ;
+        arco-arco:regionIdentifier      "12" ;
+        arco-arco:uniqueIdentifier      "1200870331" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> ;
+        arco-cd:hasDocumentation        <https://w3id.org/arco/resource/FilmDocumentation/1200870331-film-documentation-1> ;
+        arco-cd:hasProponentAgency      ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-cd:hasSubject              ar-Subject:f146aa45a94ac1a3b311a1951608def5 ;
+        arco-cd:subject                 "Ciclo dell’anno/ Immacolata Concezione, 8 dicembre" ;
+        arco-core:hasAgentRole          ar-agentrole:1200870331-proponent-agency , ar-agentrole:1200870331-cataloguing-agency , ar-agentrole:1200870331-heritage-protection-agency ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1200870331-alternative-1 .
+
+ar-timeIndexedRole:1200870331-rvm-050ae5d29fc291b682bcf51f1250ca75
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da ICCD"@it , "Digital transcription by ICCD"@en ;
+        roapit:isRoleInTimeOf  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        roapit:withRole        ar-role:DigitalTranscriptionResponsibleAgent .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente scientifico"@it , "Scientific Director"@en .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-agent:339d677b73f05760bf8b0849fd006e7b
+        a                    COV:Organization ;
+        rdfs:label           "Museo delle Civiltà - Museo Preistorico e Etnografico \"Luigi Pigorini\"" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        arco-core:isAgentOf  ar-agentrole:1200870331-cataloguing-agency , ar-agentrole:1200870331-heritage-protection-agency ;
+        l0:name              "Museo delle Civiltà - Museo Preistorico e Etnografico \"Luigi Pigorini\"" .
+
+ar-docutmentationType:video-dvd
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "video DVD" ;
+        l0:name     "video DVD" .
+
+ar-TimeInterval:2014  a  tiapit:TimeInterval ;
+        rdfs:label   "2014" ;
+        tiapit:time  "2014" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1200870331-heritage-protection-agency .
+
+ar-role:ProponentAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente proponente"@it , "Proponent agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1200870331-proponent-agency .
+
+ar-Site:6615093624cf9414f0db0b36f5042009
+        a                cis:Site ;
+        rdfs:label       "Contenitore fisico"@it , "Site"@en ;
+        cis:siteAddress  ar-address:1dd7d4edb92f2bd7e71ae08f3b5c1404 ;
+        l0:name          "Contenitore fisico"@it , "Site"@en .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+ar-agent:7d2fa075edd78b6a5efc3e6acc8cb6b5
+        a           l0:Agent ;
+        rdfs:label  "Adelfio Simonetta" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-timeIndexedRole:1200870331-986b714b5055d04c4c51a9a6e880324e
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Cardelli Alessandra"@it , "Official in charge: Cardelli Alessandra"@en ;
+        roapit:isRoleInTimeOf  ar-agent:366f929d9eeb0f8da3e60304d1be53fd ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-country:peru  a  clvapit:Country ;
+        rdfs:label  "PERU'" ;
+        l0:name     "PERU'" .
+
+ar-timeIndexedRole:1200870331-compilation-7d2fa075edd78b6a5efc3e6acc8cb6b5
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Adelfio Simonetta"@en , "Compilazione da Adelfio Simonetta"@it ;
+        roapit:isRoleInTimeOf  ar-agent:7d2fa075edd78b6a5efc3e6acc8cb6b5 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-agent:366f929d9eeb0f8da3e60304d1be53fd
+        a           l0:Agent ;
+        rdfs:label  "Cardelli Alessandra" .
+
+ar-agentrole:1200870331-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1200870331: S48"@it , "Heritage protection agency for cultural property 1200870331: S48"@en ;
+        arco-core:hasAgent  ar-agent:339d677b73f05760bf8b0849fd006e7b ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-catalogueRecordVersion:1200870331-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2014 Tucci Roberta ICCD" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2014 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1200870331-39352f6fb4286cb1f5d927a313ca37d6 , ar-timeIndexedRole:1200870331-986b714b5055d04c4c51a9a6e880324e , ar-timeIndexedRole:1200870331-rvm-16aa6c27754f49dc1166a42aed8765c9 , ar-timeIndexedRole:1200870331-rvm-050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:16aa6c27754f49dc1166a42aed8765c9 ;
+        arco-catalogue:hasDigitalTranscriptionResponsibleAgent
+                ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:366f929d9eeb0f8da3e60304d1be53fd ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> .

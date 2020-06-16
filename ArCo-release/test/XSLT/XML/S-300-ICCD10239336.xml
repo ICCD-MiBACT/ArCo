@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <S version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo Scheda">S</TSK>
+         <LIR hint="Livello ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">05</NCTR>
+            <NCTN hint="Numero catalogo generale">00436576</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S160</ESC>
+         <ECP hint="Ente competente">S160</ECP>
+      </CD>
+      <RV hint="RELAZIONI">
+         <ROZ hint="Altre relazioni">0500436575</ROZ>
+      </RV>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">manifesto</OGTD>
+            <OGTT hint="Tipologia">pubblicitario</OGTT>
+         </OGT>
+         <SGT hint="SOGGETTO">
+            <SGTI hint="Identificazione">automa su fondo grigio</SGTI>
+            <SGTP hint="Titolo proprio">Magnesia S. Pellegrino</SGTP>
+            <SGTL hint="Tipo titolo">dalla stampa</SGTL>
+         </SGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICA AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCR hint="Regione">Veneto</PVCR>
+            <PVCP hint="Provincia">TV</PVCP>
+            <PVCC hint="Comune">Treviso</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCN hint="Denominazione">ex scuola Giorgi</LDCN>
+            <LDCU hint="Denominazione spazio viabilistico">via Sant'Ambrogio di Fiera, 60</LDCU>
+            <LDCM hint="Denominazione raccolta">Raccolta Nando Salce</LDCM>
+         </LDC>
+      </LC>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Secolo">sec. XX</DTZG>
+         </DTZ>
+         <DTS hint="CRONOLOGIA SPECIFICA">
+            <DTSI hint="Da">1925</DTSI>
+            <DTSF hint="A">1925</DTSF>
+         </DTS>
+         <DTM hint="Motivazione cronologia">NR (recupero pregresso)</DTM>
+      </DT>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <AUT hint="AUTORE">
+            <AUTM hint="Motivazione dell'attribuzione">firma</AUTM>
+            <AUTN hint="Nome scelto">Depero Fortunato</AUTN>
+            <AUTA hint="Dati anagrafici">1892/ 1960</AUTA>
+            <AUTH hint="Sigla per citazione">S1000134</AUTH>
+         </AUT>
+         <EDT hint="EDITORI STAMPATORI">
+            <EDTN hint="Nome">Edizioni Star</EDTN>
+            <EDTR hint="Ruolo">editore/stampatore</EDTR>
+            <EDTL hint="Luogo di edizione">Milano</EDTL>
+         </EDT>
+      </AU>
+      <MT hint="DATI TECNICI">
+         <MTC hint="Materia e tecnica">carta/ cromolitografia</MTC>
+         <MIS hint="MISURE">
+            <MISU hint="Unita'">cm</MISU>
+            <MISA hint="Altezza">98</MISA>
+            <MISL hint="Larghezza">71</MISL>
+         </MIS>
+         <MIF hint="MISURE FOGLIO">
+            <MIFA hint="Altezza">99</MIFA>
+            <MIFL hint="Larghezza">140</MIFL>
+            <MIFV hint="Validita'">ca</MIFV>
+         </MIF>
+      </MT>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">mediocre</STCC>
+            <STCS hint="Indicazioni specifiche">Manifesto stampato su unico foglio con l'altro soggetto Magnesia San Pellegrino (dim. tot. cm 140 x 99). Parzialmente mancante di margine superiore. Il foglio è stato strappato dal muro, e presenta al verso e al recto vari strati di manifesti strappati, resti di colla, accumuli di polvere e altro materiale. Conseguenze della poco attenta rimozione sono le pieghe e le mancanze.</STCS>
+         </STC>
+      </CO>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESI hint="Codifica Iconclass">soggetto non rilevabile</DESI>
+            <DESS hint="Indicazioni sul soggetto">Lettura iconografica: automa. Categoria merceologica/ tipo evento: industria farmaceutica; preparati farmaceutici; purgante. Nomi: Magnesia S. Pellegrino. Luoghi: Trento; Rovereto.</DESS>
+         </DES>
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">indicazione di responsabilità</ISRC>
+            <ISRS hint="Tecnica di scrittura">non determinabile</ISRS>
+            <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+            <ISRP hint="Posizione">in basso a destra</ISRP>
+            <ISRI hint="Trascrizione">F. Depero/ Rovereto</ISRI>
+         </ISR>
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">indicazione di responsabilità</ISRC>
+            <ISRS hint="Tecnica di scrittura">non determinabile</ISRS>
+            <ISRT hint="Tipo di caratteri">caratteri vari</ISRT>
+            <ISRP hint="Posizione">in basso a destra</ISRP>
+            <ISRI hint="Trascrizione">Edizioni/ Star/ officine impresa gen./ affissioni e pubblicità/ Milano/ Via C. Goldoni, 10</ISRI>
+         </ISR>
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">pubblicitaria</ISRC>
+            <ISRS hint="Tecnica di scrittura">a stampa</ISRS>
+            <ISRT hint="Tipo di caratteri">stampatello</ISRT>
+            <ISRP hint="Posizione">in alto</ISRP>
+            <ISRI hint="Trascrizione">MAGNESIA/ S. PELLEGRINO</ISRI>
+         </ISR>
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+            <ISRS hint="Tecnica di scrittura">a stampa</ISRS>
+            <ISRT hint="Tipo di caratteri">stampatello</ISRT>
+            <ISRP hint="Posizione">in basso a sinistra</ISRP>
+            <ISRI hint="Trascrizione">AUTORIZZATO DALLA R. QUESTURA DI MILANO</ISRI>
+         </ISR>
+         <STM hint="STEMMI, EMBLEMI, MARCHI">
+            <STMC hint="Classe di appartenenza">marchio</STMC>
+            <STMQ hint="Qualificazione">commerciale</STMQ>
+            <STMI hint="Identificazione">Edizioni Star</STMI>
+            <STMU hint="Quantita'">1</STMU>
+            <STMP hint="Posizione">in basso a sinistra</STMP>
+            <STMD hint="Descrizione">Circolare. All'interno: EDIZIONI/ STAR/ officine impresa gen./ affissioni e pubblicità/ Milano/ Via C. Goldoni, 10</STMD>
+         </STM>
+         <STM hint="STEMMI, EMBLEMI, MARCHI">
+            <STMC hint="Classe di appartenenza">marchio</STMC>
+            <STMQ hint="Qualificazione">commerciale</STMQ>
+            <STMI hint="Identificazione">Magnesia S. Pellegrino</STMI>
+            <STMU hint="Quantita'">1</STMU>
+            <STMP hint="Posizione">al centro</STMP>
+            <STMD hint="Descrizione">Esagonale. All'interno: MAGNESIA/ S. PELLEGRINO; figura di pellegrino</STMD>
+         </STM>
+         <STM hint="STEMMI, EMBLEMI, MARCHI">
+            <STMC hint="Classe di appartenenza">bollo</STMC>
+            <STMQ hint="Qualificazione">civile</STMQ>
+            <STMI hint="Identificazione">Regno d'Italia</STMI>
+            <STMU hint="Quantita'">1</STMU>
+            <STMP hint="Posizione">in basso a destra</STMP>
+            <STMD hint="Descrizione">A timbro. Circolare. All'interno: XII UNA LIRA; personificazione dell'Italia</STMD>
+         </STM>
+         <STM hint="STEMMI, EMBLEMI, MARCHI">
+            <STMC hint="Classe di appartenenza">timbro</STMC>
+            <STMQ hint="Qualificazione">civile</STMQ>
+            <STMI hint="Identificazione">Comune di Treviso</STMI>
+            <STMU hint="Quantita'">1</STMU>
+            <STMP hint="Posizione">in alto a destra</STMP>
+            <STMD hint="Descrizione">A timbro. Rettangolare. All'interno: COMUNE DI TREVISO/ 24 GEN. 19[...]/ PUBBLICHE AFFISSIONI</STMD>
+         </STM>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <ACQ hint="ACQUISIZIONE">
+            <ACQT hint="Tipo acquisizione">donazione</ACQT>
+            <ACQN hint="Nome">Nando Salce</ACQN>
+            <ACQD hint="Data acquisizione">1962</ACQD>
+            <ACQL hint="Luogo acquisizione">Treviso</ACQL>
+         </ACQ>
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+            <CDGS hint="Indicazione specifica">Soprintendenza BSAE VE BL PD e TV</CDGS>
+            <CDGI hint="Indirizzo">Santa Croce 770 - Venezia</CDGI>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">diapositiva colore</FTAP>
+            <FTAA hint="Autore">Santi, Maddalena</FTAA>
+            <FTAD hint="Data">2009</FTAD>
+            <FTAE hint="Ente proprietario">Soprintendenza BSAE VE BL PD e TV</FTAE>
+            <FTAC hint="Collocazione">Archivio Fotografico SBSAE VE BL PD e TV</FTAC>
+            <FTAN hint="Codice identificativo">VE 13826</FTAN>
+            <FTAT hint="Note">prima del restauro</FTAT>
+         </FTA>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">bibliografia di confronto</BIBX>
+            <BIBA hint="Autore">Italia che cambia</BIBA>
+            <BIBD hint="Anno di edizione">1989</BIBD>
+            <BIBH hint="Sigla per citazione">S1000001</BIBH>
+            <BIBN hint="V., pp., nn.">p. 202</BIBN>
+         </BIB>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2009</CMPD>
+            <CMPN hint="Nome">Baccichetto, Natalia</CMPN>
+         </CMP>
+         <RSR hint="Referente scientifico">Mazza, Marta</RSR>
+         <FUR hint="Funzionario responsabile">Caburlotto, Luca</FUR>
+         <AGG hint="AGGIORNAMENTO - REVISIONE">
+            <AGGD hint="Data">2013</AGGD>
+            <AGGN hint="Nome">Lunatici, Simona</AGGN>
+            <AGGF hint="Funzionario responsabile">Majoli, Luca</AGGF>
+         </AGG>
+      </CM>
+      <AN hint="ANNOTAZIONI">
+         <OSS hint="Osservazioni">il manifesto in oggetto è unito ad altro di analogo soggetto a formare un unico foglio (v. fotografia allegata)</OSS>
+      </AN>
+   </S>
+</schede>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <F version="3.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo Scheda">F</TSK>
+         <LIR hint="Livello ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">08</NCTR>
+            <NCTN hint="Numero catalogo generale">00418491</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S08</ESC>
+         <ECP hint="Ente competente">S08</ECP>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione dell'oggetto">positivo</OGTD>
+            <OGTB hint="Natura biblioteconomica dell'oggetto">m</OGTB>
+         </OGT>
+         <QNT hint="QUANTITA'">
+            <QNTN hint="Numero oggetti/elementi">1</QNTN>
+         </QNT>
+      </OG>
+      <SG hint="SOGGETTO">
+         <SGT hint="SOGGETTO">
+            <SGTI hint="Identificazione">Madonna con Bambino e santi - Dipinti</SGTI>
+            <SGTD hint="Indicazioni sul soggetto">Francesco Bissolo/ Madonna in trono col Bambino, i Santi Paolo e Lorenzo e il committente/ Collocazione ignota</SGTD>
+         </SGT>
+         <SGL hint="TITOLO">
+            <SGLT hint="Titolo proprio">NR (recupero pregresso)</SGLT>
+            <SGLL hint="Titolo parallelo">NR (recupero pregresso)</SGLL>
+            <SGLA hint="Titolo attribuito">Francesco Bissolo. Madonna in trono col Bambino, i Santi Paolo e Lorenzo e il committente</SGLA>
+            <SGLS hint="Specifiche del titolo">del catalogatore</SGLS>
+         </SGL>
+      </SG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+            <PVCS hint="Stato">Italia</PVCS>
+            <PVCR hint="Regione">Emilia Romagna</PVCR>
+            <PVCP hint="Provincia">BO</PVCP>
+            <PVCC hint="Comune">Bologna</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCT hint="Tipologia architettonica">palazzo</LDCT>
+            <LDCQ hint="Qualificazione">museo</LDCQ>
+            <LDCN hint="Denominazione">Palazzo Pepoli Campogrande</LDCN>
+            <LDCU hint="Denominazione spazio viabilistico">via Castiglione, 7</LDCU>
+            <LDCM hint="Denominazione raccolta">Archivio Fotografico SBSAE BO</LDCM>
+         </LDC>
+      </LC>
+      <UB hint="UBICAZIONE E DATI PATRIMONIALI">
+         <UBF hint="UBICAZIONE FOTO">
+            <UBFP hint="Fondo">Fondo Malaguzzi Valeri</UBFP>
+         </UBF>
+         <INV hint="INVENTARIO"/>
+      </UB>
+      <LR hint="LUOGO E DATA DELLA RIPRESA">
+         <LRD hint="Data">1924 ante</LRD>
+      </LR>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Secolo">XX</DTZG>
+         </DTZ>
+         <DTS hint="CRONOLOGIA SPECIFICA">
+            <DTSI hint="Da">1915</DTSI>
+            <DTSV hint="Validita'">post</DTSV>
+            <DTSF hint="A">1924</DTSF>
+            <DTSL hint="Validita'">ante</DTSL>
+         </DTS>
+         <DTM hint="MOTIVAZIONE CRONOLOGIA">
+            <DTMM hint="Motivazione">iscrizione</DTMM>
+            <DTMS hint="Specifiche">datazione manoscritta sul verso del positivo</DTMS>
+         </DTM>
+         <DTM hint="MOTIVAZIONE CRONOLOGIA">
+            <DTMM hint="Motivazione">analisi storica</DTMM>
+            <DTMS hint="Specifiche">inizio raccolta fotografica da parte di Francesco Malaguzzi Valeri nel 1915</DTMS>
+         </DTM>
+      </DT>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <AUF hint="AUTORE DELLA FOTOGRAFIA">
+            <AUFN hint="Nome scelto (autore personale)">Anonimo</AUFN>
+            <AUFA hint="Dati anagrafici/estremi cronologici">attivo prima metà sec. XX</AUFA>
+            <AUFR hint="Riferimento all'intervento">fotografo principale</AUFR>
+            <AUFM hint="Motivazione dell'attribuzione">n.r. [non rilevabile]</AUFM>
+         </AUF>
+         <AUT hint="ALTRO AUTORE">
+            <AUTN hint="Nome scelto (autore personale)">Bissolo, Francesco</AUTN>
+            <AUTI hint="Indicazione del nome">Francesco Bissolo</AUTI>
+            <AUTA hint="Dati anagrafici">1470-1475/ 1554</AUTA>
+            <AUTR hint="Riferimento all'intervento">pittore</AUTR>
+            <AUTM hint="Motivazione dell'attribuzione">iscrizione</AUTM>
+         </AUT>
+      </AU>
+      <MT hint="DATI TECNICI">
+         <MTX hint="Indicazione di colore">B/ N</MTX>
+         <MTC hint="Materia e tecnica">gelatina bromuro d'argento/ carta</MTC>
+         <MIS hint="MISURE">
+            <MISO hint="Tipo misure">supporto primario</MISO>
+            <MISU hint="Unita'">mm</MISU>
+            <MISA hint="Altezza">162</MISA>
+            <MISL hint="Larghezza">116</MISL>
+         </MIS>
+         <FVC hint="CARATTERISTICHE FOTOGRAFIA VIRTUALE">
+            <FVCN hint="Note">viraggio</FVCN>
+         </FVC>
+      </MT>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">discreto</STCC>
+         </STC>
+      </CO>
+      <RS hint="RESTAURI">
+         <RST hint="RESTAURI">
+            <RSTD hint="Data">2002/ 2003</RSTD>
+            <RSTS hint="Situazione">NR (recupero pregresso)</RSTS>
+            <RSTE hint="Ente responsabile">SBSAE BO</RSTE>
+            <RSTN hint="Nome dell'operatore">La Fototeca s.n.c.</RSTN>
+            <RSTC hint="Scheda di restauro">SBSAE BO, relazione interna all'ufficio allegata alla pratica di restauro, Tonelli, 2003.</RSTC>
+         </RST>
+      </RS>
+      <DA hint="DATI ANALITICI">
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+            <ISRS hint="Tecnica di scrittura">a inchiostro</ISRS>
+            <ISRP hint="Posizione">sul supporto primario: verso: al centro</ISRP>
+            <ISRI hint="Trascrizione">fotografia eseguita prima del restauro</ISRI>
+         </ISR>
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">didascalica</ISRC>
+            <ISRS hint="Tecnica di scrittura">a inchiostro</ISRS>
+            <ISRP hint="Posizione">sul supporto primario: verso: al centro</ISRP>
+            <ISRI hint="Trascrizione">tela eseguita da Francesco Bissolo stata rubata/ nella chiesa di Levada di Piave (Oderzo)/ nella notte fra il 28 e il 29 Febbraio 1924; co-/ me da lettera della Soprintendenza Musei e/ Gallerie di Venezia, in data 4 maggio 1924, / Prot. N. 4435 (= Di questo ufficio prot. N. = 122)</ISRI>
+         </ISR>
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+            <ISRS hint="Tecnica di scrittura">a matita</ISRS>
+            <ISRP hint="Posizione">sul supporto primario: verso: in alto a destra</ISRP>
+            <ISRI hint="Trascrizione">N. 86</ISRI>
+         </ISR>
+         <ISR hint="ISCRIZIONI">
+            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+            <ISRS hint="Tecnica di scrittura">a matita</ISRS>
+            <ISRP hint="Posizione">sul supporto primario: verso: in alto a sinistra</ISRP>
+            <ISRI hint="Trascrizione">03 78 01</ISRI>
+         </ISR>
+         <NSC hint="Notizie storico-critiche">La datazione del positivo è stata ricavata anche dalle iscrizioni presenti sul verso del supporto primario, secondo le quali, nel 1924 il dipinto venne rubato dalla Chiesa di San Bonifacio a Levada di Piave, originale collocazione dell'opera.Il Fondo Malaguzzi Valeri comincia a costituirsi per volere di Francesco Malaguzzi Valeri a pochi mesi di distanza dal suo incarico in qualità di Direttore della Pinacoteca Nazionale di Bologna. In una lettera indirizzata a Corrado Ricci datata 22 dicembre 1915, Malaguzzi Valeri scriveva: "Caro Ricci, secondo un tuo - e mio - desiderio ho iniziato con qualche fortuna la raccolta fotografica bolognese e dintorni con vedute antiche e piante dell&#146;antica Bologna".L&#146;8 settembre del 1918, Malaguzzi Valeri informa Ricci di aver raggiunto, grazie all&#146;incremento del Ministero, le 5000 unità, lamentandosene per la scarsità e chiedendo un appoggio per ottenere altri esemplari. Sommando il numero di fotografie segnalate nella lettera del marzo 1917, con quelle dell&#146;aprile dello stesso anno, si osserva come l&#146;archivio fotografico superi le 6500 unità. Inoltre vi erano altre stampe subentrate nel fondo attraverso altri canali, ulteriori e probabili stampe di sua proprietà, e quelle donate l&#146;anno successivo da Igino Benvenuto Supino.Al 1918 si ferma la documentazione scritta sul fondo malaguzziano, ma il fondo stesso ci testimonia come negli anni successivi la morte del Malaguzzi, avvenuta nel 1928, il fondo sia stato ampliato nei decenni successivi.Il Fondo Malaguzzi Valeri è costituito da 5720 positivi, stampati per lo più con la tecnica dell'albumina e gelatina bromuro d'argento e realizzati da 118 autori diversi, dalla seconda metà dell&#146;Ottocento alla seconda metà del Novecento. I soggetti predominanti riguardano opere di pittura di artisti europei, coprendo un periodo cronologico che va dal sec. XII al sec. XX. Il nucleo più corposo riguarda opere del Museo del Prado di Madrid con 495 stampe seguito dalla Galleria degli Uffizi con 263 stampe, la Pinacoteca di Brera (257), le Gallerie dell&#146;Accademia di Venezia (224), il Museo Nazionale di Capodimonte (217).</NSC>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+            <CDGS hint="Indicazione specifica">Ministero per i Beni e le Attività Culturali - SBSAE BO</CDGS>
+            <CDGI hint="Indirizzo">Via Belle Arti, 56</CDGI>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale</FTAP>
+            <FTAN hint="Codice identificativo">SBSAE BO00250592</FTAN>
+            <FTAF hint="Formato">jpg</FTAF>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia digitale</FTAP>
+            <FTAN hint="Codice identificativo">SBSAE BO00251176</FTAN>
+            <FTAT hint="Note">verso</FTAT>
+            <FTAF hint="Formato">jpg</FTAF>
+         </FTA>
+         <BSE hint="BIBLIOGRAFIA SU SUPPORTO ELETTRONICO">
+            <BSEX hint="Genere">bibliografia di confronto</BSEX>
+            <BSES hint="Tipo di supporto">Risorsa elettronica con accesso remoto</BSES>
+            <BSEA hint="Autore/curatore dell'opera">Comune di Ponte di Piave</BSEA>
+            <BSET hint="Titolo dell'opera">La chiesa di San Bonifacio a Levada di Ponte di Piave</BSET>
+            <BSEL hint="Luogo di edizione">Levada</BSEL>
+            <BSEE hint="Editore/Produttore/Distributore">Comun e di Ponte di Piave</BSEE>
+            <BSED hint="Anno di edizione">2008</BSED>
+            <BSEI hint="Indirizzo di rete">http://www.pontedipiave.com/index.php?area=3&amp;menu=</BSEI>
+         </BSE>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">dati pubblicabili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2010</CMPD>
+            <CMPN hint="Nome">Gagliano C.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Giudici C.</FUR>
+         <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+            <RVMD hint="Data">2010</RVMD>
+            <RVMN hint="Nome">ICCD/ DG BASAE/</RVMN>
+         </RVM>
+         <AGG hint="AGGIORNAMENTO - REVISIONE">
+            <AGGD hint="Data">2010</AGGD>
+            <AGGN hint="Nome">ICCD/ DG BASAE/ Gagliano C.</AGGN>
+            <AGGF hint="Funzionario responsabile">NR (recupero pregresso)</AGGF>
+         </AGG>
+      </CM>
+   </F>
+</schede>

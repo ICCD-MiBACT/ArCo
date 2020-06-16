@@ -1,0 +1,726 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-TimeInterval:2012  a  tiapit:TimeInterval ;
+        rdfs:label   "2012" ;
+        tiapit:time  "2012" .
+
+<https://w3id.org/arco/resource/CulturalPropertyCategory/inumato>
+        a           arco-arco:CulturalPropertyCategory ;
+        rdfs:label  "inumato" .
+
+<https://w3id.org/arco/resource/SurveyMethod/scavo-stratigrafico>
+        a           arco-cd:SurveyMethod ;
+        rdfs:label  "scavo stratigrafico" ;
+        l0:name     "scavo stratigrafico" .
+
+<https://w3id.org/arco/resource/ArchaeologicalExcavation/2000194980-survey-1>
+        a                               arco-cd:ArchaeologicalExcavation ;
+        rdfs:label                      "Archaeological excavation 1 of cultural property 2000194980: Necropoli Monti 'e Prama, tombe a cista Bedini"@en , "Scavo archeologico 1 del bene 2000194980: Necropoli Monti 'e Prama, tombe a cista Bedini"@it ;
+        arco-cd:hasActivityResponsible  ar-agent:b8e45457e91ceecd5e3910742948340a ;
+        arco-cd:hasSurveyMethod         <https://w3id.org/arco/resource/SurveyMethod/scavo-stratigrafico> ;
+        arco-cd:hasSurveyMotivation     <https://w3id.org/arco/resource/SurveyMotivation/lavori-agricoli> ;
+        arco-cd:hasSurveyScientificDirector
+                ar-agent:5b61db147cfb054ae123c1a5be50474a ;
+        arco-cd:hasTomb                 <https://w3id.org/arco/resource/Tomb/8b> ;
+        arco-core:hasAgentRole          ar-agentrole:2000194980-archaeological-excavation-1-scientific-director , ar-agentrole:2000194980-archaeological-excavation-1-activity-responsible ;
+        arco-core:note                  "Tomba sigillata" ;
+        tiapit:time                     "1975" ;
+        l0:name                         "Archaeological excavation 1 of cultural property 2000194980: Necropoli Monti 'e Prama, tombe a cista Bedini"@en , "Scavo archeologico 1 del bene 2000194980: Necropoli Monti 'e Prama, tombe a cista Bedini"@it .
+
+ar-photograpyDocumentation:2000194980-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 2000194980"@en , "Documentazione fotografica 2 del bene culturale: 2000194980"@it ;
+        arco-cd:documentationIdentifier
+                "New_1350240123958" ;
+        arco-cd:hasAuthor             ar-agent:057ecd9869f1cb61adb90b594bd3a5e1 ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "mandibola" ;
+        tiapit:time                   "2009/05/00" ;
+        l0:name                       "Documentazione fotografica 2 del bene culturale: 2000194980"@it , "Photographic documentation 2 of cultural property: 2000194980"@en .
+
+ar-addressArea:cabras
+        a           clvapit:AddressArea ;
+        rdfs:label  "CABRAS" ;
+        l0:name     "CABRAS" .
+
+ar-TimeInterval:eta-del-bronzo-eta-del-ferro
+        a            tiapit:TimeInterval ;
+        rdfs:label   "Età del Bronzo-Età del Ferro" ;
+        tiapit:time  "Età del Bronzo-Età del Ferro" ;
+        l0:name      "Età del Bronzo-Età del Ferro" .
+
+ar-agentrole:2000194980-archaeological-excavation-1-scientific-director
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Responsabile scientifico dello scavo archeologico 1 del bene culturale 2000194980: Bedini, Alessandro"@it , "Scientific director of archaeological excavation 1 of cultural property 2000194980: Bedini, Alessandro"@en ;
+        arco-core:hasAgent  ar-agent:5b61db147cfb054ae123c1a5be50474a ;
+        arco-core:hasRole   ar-role:ScientificDirector ;
+        l0:name             "Responsabile scientifico dello scavo archeologico 1 del bene culturale 2000194980: Bedini, Alessandro"@it , "Scientific director of archaeological excavation 1 of cultural property 2000194980: Bedini, Alessandro"@en .
+
+ar-province:ca  a   clvapit:Province ;
+        rdfs:label  "CA" ;
+        l0:name     "CA" .
+
+ar-bibliography:2000194980-bibliography-3
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 3 of cultural property: 2000194980"@en , "Bibliografia 3 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "Bouv1983" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "pp. 89-110, n. 10" ;
+        l0:name                   "Bibliography 3 of cultural property: 2000194980"@en , "Bibliografia 3 del bene culturale: 2000194980"@en .
+
+ar-timeIndexedTypedLocation:2000194980-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 2000194980"@it , "Current physical location of cultural property: 2000194980"@en ;
+        arco-location:atSite           ar-Site:c528d03f7c49a8d3c808b58908041efd ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:2000194980 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 2000194980"@it , "Current physical location of cultural property: 2000194980"@en .
+
+<https://w3id.org/arco/resource/AcquisitionType/scavo>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "scavo" ;
+        l0:name     "scavo" .
+
+ar-culturalPropertyType:487cd0e5f488a90820c6a12e8f7d5173
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: reperti antropologici pertinenti a un unico individuo reperto osteo-dentario"@it , "Cultural property type: reperti antropologici pertinenti a un unico individuo reperto osteo-dentario"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:reperti-antropologici-pertinenti-a-un-unico-individuo ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:reperto-osteo-dentario ;
+        l0:name     "Tipo del bene: reperti antropologici pertinenti a un unico individuo reperto osteo-dentario"@it , "Cultural property type: reperti antropologici pertinenti a un unico individuo reperto osteo-dentario"@en .
+
+ar-agent:b8e45457e91ceecd5e3910742948340a
+        a                    l0:Agent ;
+        rdfs:label           "Soprintendenza per i Beni Archeologici per le Province di Cagliari e Oristano" ;
+        arco-core:isAgentOf  ar-agentrole:2000194980-archaeological-excavation-1-activity-responsible ;
+        l0:name              "Soprintendenza per i Beni Archeologici per le Province di Cagliari e Oristano" .
+
+ar-interpretationCriterion:analisi-storico-scientifica
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi storico-scientifica" ;
+        l0:name     "analisi storico-scientifica" .
+
+ar-event:2000194980-creation-1
+        a              l0:Event ;
+        rdfs:label     "Realizzazione del bene 2000194980"@it , "Creation of cultural property 2000194980"@en ;
+        tiapit:atTime  ar-TimeInterval:eta-del-bronzo-eta-del-ferro ;
+        l0:name        "Realizzazione del bene 2000194980"@it , "Creation of cultural property 2000194980"@en .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-radio>
+        a                         arco-arco:CulturalPropertyPart ;
+        rdfs:label                "radio" ;
+        arco-arco:numberOfCulturalPropertyParts
+                "1" ;
+        arco-core:specifications  "frammento distale" ;
+        l0:name                   "radio" .
+
+ar-timeIndexedRole:2000194980-b588f91ccc914022bb42ac2862bf56c9
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Usai, Emerenziana"@it , "Official in charge: Usai, Emerenziana"@en ;
+        roapit:isRoleInTimeOf  ar-agent:37392174174e71e6b1dfe3f9f5f269bd ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-accessProfile:2000194980-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 2000194980: 1"@it , "Access profile to catalogue record of cultural property 2000194980: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 2000194980: 1"@it , "Access profile to catalogue record of cultural property 2000194980: 1"@en .
+
+ar-photograpyDocumentation:2000194980-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 2000194980"@en , "Documentazione fotografica 1 del bene culturale: 2000194980"@it ;
+        arco-cd:documentationIdentifier
+                "New_1350238961679" ;
+        arco-cd:hasAuthor             ar-agent:057ecd9869f1cb61adb90b594bd3a5e1 ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "insieme dei reperti pervenuti allo studio" ;
+        tiapit:time                   "2009/05/00" ;
+        l0:name                       "Photographic documentation 1 of cultural property: 2000194980"@en , "Documentazione fotografica 1 del bene culturale: 2000194980"@it .
+
+ar-timeIndexedTypedLocation:2000194980-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 2000194980"@it , "Alternative location 1 of cultural property: 2000194980"@en ;
+        arco-location:atLocation       ar-feature:a3f758365bec01131062cfb116059f06 ;
+        arco-location:hasLocationType  arco-location:FindingLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-archeologicalProperty:2000194980 ;
+        l0:name                        "Altra localizzazione 1 del bene: 2000194980"@it , "Alternative location 1 of cultural property: 2000194980"@en .
+
+<https://w3id.org/arco/resource/PaleopathologySurvey/2000194980-survey-1>
+        a                        arco-cd:PaleopathologySurvey ;
+        rdfs:label               "Paleopathology survey of cultural property 2000194980"@en , "Indagine su paleopatologia del bene culturale 2000194980"@it ;
+        arco-cd:diagnosis        "Nella mandibola, tra corpo e ramo di destra, si osserva un?ipertrofia con notevole aumento del diametro trasverso del corpo, con cavitazione all?interno di esso, estesa fino all?apofisi coronoide. Mancando segni d?invasività, la diagnosi propende per un angioma. Carie 0 1 in M2 superiore sinistro; carie A NC 3 in M3 inferiore sinistro." ;
+        arco-cd:hasSurveyMethod  <https://w3id.org/arco/resource/SurveyMethod/rilevamento-a-occhio-nudo> ;
+        arco-core:note           "Le carie sono codificate secondo Moore e Corbet (1971) e Whittaker et alii (1981)" ;
+        l0:name                  "Paleopathology survey of cultural property 2000194980"@en , "Indagine su paleopatologia del bene culturale 2000194980"@it .
+
+<https://w3id.org/arco/resource/FindingContextType/sepoltura-singola-primaria>
+        a           arco-cd:FindingContextType ;
+        rdfs:label  "sepoltura singola primaria" ;
+        l0:name     "sepoltura singola primaria" .
+
+ar-Site:c528d03f7c49a8d3c808b58908041efd
+        a                          cis:Site ;
+        rdfs:label                 "Civico Museo Archeologico" ;
+        cis:siteAddress            ar-address:d4558e9241ed4446c4e83257fcff67f2 ;
+        arco-location:hasSiteType  ar-SiteType:deposito-museo-archeologico ;
+        l0:name                    "Civico Museo Archeologico" .
+
+ar-address:d4558e9241ed4446c4e83257fcff67f2
+        a                       clvapit:Address ;
+        rdfs:label              "ITALIA, Sardegna, CA, Villanovaforru, VILLANOVAFORRU" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-archeologicalProperty:2000194980 ;
+        clvapit:fullAddress     "Via L. Puxeddu, 1" ;
+        clvapit:hasAddressArea  ar-addressArea:villanovaforru ;
+        clvapit:hasCity         ar-city:villanovaforru ;
+        clvapit:hasCountry      ar-country:italia ;
+        clvapit:hasProvince     ar-province:ca ;
+        clvapit:hasRegion       ar-region:sardegna .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-cranio>
+        a                         arco-arco:CulturalPropertyPart ;
+        rdfs:label                "cranio" ;
+        arco-arco:numberOfCulturalPropertyParts
+                "1" ;
+        arco-core:note            "Cattivo stato di conservazione, col tavolato esterno vistosamente corroso specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali, il parietale e lo zigomatico del lato destro, la squama occipitale con attacchi muscolari e rugosità marcati." ;
+        arco-core:specifications  "25 frammenti" ;
+        l0:name                   "cranio" .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-mandibola>
+        a                         arco-arco:CulturalPropertyPart ;
+        rdfs:label                "mandibola" ;
+        arco-arco:numberOfCulturalPropertyParts
+                "1" ;
+        arco-core:note            "I frammenti non permettono un rimontaggio dell'osso, ma riavvicinati fra loro permettono di fotografarlo nel suo insieme." ;
+        arco-core:specifications  "6 frammenti" ;
+        l0:name                   "mandibola" .
+
+ar-bibliography:2000194980-bibliography-2
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 2 of cultural property: 2000194980"@en , "Bibliografia 2 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "Moor1971" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "pp.151-168, n. 5" ;
+        l0:name                   "Bibliography 2 of cultural property: 2000194980"@en , "Bibliografia 2 del bene culturale: 2000194980"@en .
+
+ar-agent:e73b632d8ca49ea18fabd954bbe9bb65
+        a           l0:Agent ;
+        rdfs:label  "Van der Plicht, J." ;
+        l0:name     "Van der Plicht, J." .
+
+ar-ConservationStatus:2000194980-conservation-status-1
+        a            arco-dd:ConservationStatus ;
+        rdfs:label   "Stato di conservazione 1 del bene: 2000194980"@it , "Conservation status 1 of cultural property: 2000194980"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:GoodConservationStatus ;
+        tiapit:time  "2008" ;
+        l0:name      "Stato di conservazione 1 del bene: 2000194980"@it , "Conservation status 1 of cultural property: 2000194980"@en .
+
+ar-docutmentationType:tabella
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "tabella" ;
+        l0:name     "tabella" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000194980-cataloguing-agency .
+
+ar-SiteType:deposito-museo-archeologico
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: Deposito Museo Archeologico"@it , "Site type: Deposito Museo Archeologico"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:deposito-museo-archeologico ;
+        l0:name     "Tipo di contenitore fisico: Deposito Museo Archeologico"@it , "Site type: Deposito Museo Archeologico"@en .
+
+<https://w3id.org/arco/resource/Acquisition/2000194980-acquisition-1>
+        a                           arco-cd:Acquisition ;
+        rdfs:label                  "Acquisizione 1 del bene culturale: 2000194980"@it , "Acquisition 1 of cultural property: 2000194980"@en ;
+        arco-cd:hasAcquisitionType  <https://w3id.org/arco/resource/AcquisitionType/scavo> ;
+        arco-cd:isAcquisitionOf     ar-archeologicalProperty:2000194980 ;
+        tiapit:time                 "1975-1979" ;
+        l0:name                     "Acquisizione 1 del bene culturale: 2000194980"@it , "Acquisition 1 of cultural property: 2000194980"@en .
+
+ar-docutmentationType:fotografia-digitale-file
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale (file)" ;
+        l0:name     "fotografia digitale (file)" .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-dente>
+        a                         arco-arco:CulturalPropertyPart ;
+        rdfs:label                "dente" ;
+        arco-arco:numberOfCulturalPropertyParts
+                "20" ;
+        arco-core:note            "Per ogni elemento è stato indicato se è perveuto sparso (S) o se è presente sull'osso(P) ed è stato riportato il grado d'usura valutato secondo le metodiche indicate in Bouville et alii, 1983 (cfr. scheda FTA3, tabella usura dentaria)." ;
+        arco-core:specifications  "16 denti definitivi e il secondo premolare deciduo destro sono pervenuti allo studio come elementi sparsi" ;
+        l0:name                   "dente" .
+
+ar-addressArea:villanovaforru
+        a           clvapit:AddressArea ;
+        rdfs:label  "Villanovaforru" ;
+        l0:name     "Villanovaforru" .
+
+ar-timeIndexedRole:2000194980-compilation-a8a95ad2e00cac9fb61d4a84f7771f98
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Fonzo, Ornella"@en , "Compilazione da Fonzo, Ornella"@it ;
+        roapit:isRoleInTimeOf  ar-agent:a8a95ad2e00cac9fb61d4a84f7771f98 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-agent:a8a95ad2e00cac9fb61d4a84f7771f98
+        a           l0:Agent ;
+        rdfs:label  "Fonzo, Ornella" ;
+        l0:name     "Fonzo, Ornella" .
+
+ar-SiteDefinition:deposito-museo-archeologico
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "Deposito Museo Archeologico" .
+
+ar-interpretationCriterion:adulto-sutura-sfeno-occipitale-saldata-giovane-ampi-tratti-di-suture-pervie
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "adulto (sutura sfeno-occipitale saldata); giovane (ampi tratti di suture pervie)" ;
+        l0:name     "adulto (sutura sfeno-occipitale saldata); giovane (ampi tratti di suture pervie)" .
+
+<https://w3id.org/arco/resource/SexInterpretation/2000194980>
+        a            arco-cd:SexInterpretation ;
+        rdfs:label   "Stima del sesso della morte del bene culturale 2000194980: maschio"@it , "Sex interpretation of cultural property 2000194980: maschio"@en ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:mastoide-condilo-della-mandibola-mento-inion-dimensioni-e-spessore-del-radio ;
+        arco-cd:sex  "maschio" ;
+        l0:name      "Stima del sesso del bene culturale 2000194980: maschio"@it , "Sex interpretation of cultural property 2000194980: maschio"@en .
+
+<https://w3id.org/arco/resource/Tomb/8b>
+        a           arco-cd:Tomb ;
+        rdfs:label  "8B" ;
+        l0:name     "8B" .
+
+ar-interpretationCriterion:mastoide-condilo-della-mandibola-mento-inion-dimensioni-e-spessore-del-radio
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "mastoide, condilo della mandibola , mento, inion; dimensioni e spessore del radio" ;
+        l0:name     "mastoide, condilo della mandibola , mento, inion; dimensioni e spessore del radio" .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-address:758c781289fcb9930e2232011169b1e7
+        a                       clvapit:Address ;
+        rdfs:label              "ITALIA, Sardegna, OR, Cabras, CABRAS" ;
+        clvapit:hasAddressArea  ar-addressArea:cabras ;
+        clvapit:hasCity         ar-city:cabras ;
+        clvapit:hasCountry      ar-country:italia ;
+        clvapit:hasProvince     ar-province:or ;
+        clvapit:hasRegion       ar-region:sardegna .
+
+ar-bibliography:2000194980-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 2000194980"@en , "Bibliografia 1 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "With1981" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "pp. 237-245, n. 26" ;
+        l0:name                   "Bibliography 1 of cultural property: 2000194980"@en , "Bibliografia 1 del bene culturale: 2000194980"@en .
+
+ar-agent:057ecd9869f1cb61adb90b594bd3a5e1
+        a           l0:Agent ;
+        rdfs:label  "Pacciani, Elsa, Fonzo, Ornella" ;
+        l0:name     "Pacciani, Elsa, Fonzo, Ornella" .
+
+ar-docutmentationType:fotografia-digitale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale" ;
+        l0:name     "fotografia digitale" .
+
+ar-role:ActivityResponsible
+        a                   roapit:Role ;
+        rdfs:label          "Responsabile dell'attività"@it , "Activity Responsible"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000194980-archaeological-excavation-1-activity-responsible .
+
+ar-agent:5b61db147cfb054ae123c1a5be50474a
+        a                    l0:Agent ;
+        rdfs:label           "Bedini, Alessandro" ;
+        arco-core:isAgentOf  ar-agentrole:2000194980-archaeological-excavation-1-scientific-director ;
+        l0:name              "Bedini, Alessandro" .
+
+<https://w3id.org/arco/resource/CatalogueRecordAT/2000194980>
+        a             arco-catalogue:CatalogueRecordAT ;
+        rdfs:label    "Catalogue Record n: 2000194980"@en , "Scheda catalografica n: 2000194980"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "2000194980" ;
+        arco-catalogue:describesCulturalProperty
+                ar-archeologicalProperty:2000194980 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:2000194980-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:2000194980-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "AT-ICCD10042835" .
+
+<https://w3id.org/arco/resource/FindingContext/2000194980-sepoltura-singola-primaria>
+        a                              arco-cd:FindingContext ;
+        rdfs:label                     "Finding context of cultural property 2000194980: sepoltura singola primaria"@en , "Contesto di ritrovamento del bene culturale 2000194980: sepoltura singola primaria"@it ;
+        arco-cd:hasFindingContextType  <https://w3id.org/arco/resource/FindingContextType/sepoltura-singola-primaria> ;
+        l0:name                        "Finding context of cultural property 2000194980: sepoltura singola primaria"@en , "Contesto di ritrovamento del bene culturale 2000194980: sepoltura singola primaria"@it .
+
+ar-bibliography:2000194980-bibliography-6
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 6 of cultural property: 2000194980"@en , "Bibliografia 6 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "Ube1989" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        l0:name                   "Bibliography 6 of cultural property: 2000194980"@en , "Bibliografia 6 del bene culturale: 2000194980"@en .
+
+ar-role:ScientificDirector
+        a                   roapit:Role ;
+        rdfs:label          "Responsabile Scientifico"@it , "Scientific Director"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000194980-archaeological-excavation-1-scientific-director .
+
+<https://w3id.org/arco/resource/SurveyMethod/rilevamento-a-occhio-nudo>
+        a           arco-cd:SurveyMethod ;
+        rdfs:label  "rilevamento a occhio nudo" ;
+        l0:name     "rilevamento a occhio nudo" .
+
+ar-city:villanovaforru
+        a           clvapit:City ;
+        rdfs:label  "Villanovaforru" ;
+        l0:name     "Villanovaforru" .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-costa>
+        a                         arco-arco:CulturalPropertyPart ;
+        rdfs:label                "costa" ;
+        arco-arco:numberOfCulturalPropertyParts
+                "4" ;
+        arco-core:specifications  "frammenti" ;
+        l0:name                   "costa" .
+
+ar-province:or  a   clvapit:Province ;
+        rdfs:label  "OR" ;
+        l0:name     "OR" .
+
+<https://w3id.org/arco/resource/AgeOfDeathInterpretation/2000194980>
+        a                   arco-cd:AgeOfDeathInterpretation ;
+        rdfs:label          "Stima dell'età della morte del bene culturale 2000194980: 20-30 anni"@it , "Age of death interpretation of cultural property 2000194980: 20-30 anni"@en ;
+        arco-cd:ageOfDeath  "20-30 anni" ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:adulto-sutura-sfeno-occipitale-saldata-giovane-ampi-tratti-di-suture-pervie ;
+        l0:name             "Stima dell'età della morte del bene culturale 2000194980: 20-30 anni"@it , "Age of death interpretation of cultural property 2000194980: 20-30 anni"@en .
+
+ar-legalSituation:2000194980-legal-situation-proprieta-stato
+        a           arco-cd:LegalSituation ;
+        rdfs:label  "Condizione giuridica del bene culturale 2000194980: proprietà Stato"@it , "Legal situation of cultural property 2000194980: proprietà Stato"@en ;
+        l0:name     "Condizione giuridica del bene culturale 2000194980: proprietà Stato"@it , "Legal situation of cultural property 2000194980: proprietà Stato"@en .
+
+ar-region:sardegna  a  clvapit:Region ;
+        rdfs:label  "Sardegna" ;
+        l0:name     "Sardegna" .
+
+ar-photograpyDocumentation:2000194980-photographic-documentation-4
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 4 of cultural property: 2000194980"@en , "Documentazione fotografica 4 del bene culturale: 2000194980"@it ;
+        arco-cd:documentationIdentifier
+                "New_1361990707175" ;
+        arco-cd:hasAuthor             ar-agent:e73b632d8ca49ea18fabd954bbe9bb65 ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale-file ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "Grafico delle datazioni al C14" ;
+        l0:name                       "Documentazione fotografica 4 del bene culturale: 2000194980"@it , "Photographic documentation 4 of cultural property: 2000194980"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:2000194980-heritage-protection-agency .
+
+ar-archeologicalProperty:2000194980
+        a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
+        rdfs:comment                    "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario, morfologia/ struttura alterata post mortem per cause naturali, inumato" ;
+        rdfs:label                      "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario (morfologia/ struttura alterata post mortem per cause naturali, inumato) (Età del Bronzo-Età del Ferro)"@it , "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario (morfologia/ struttura alterata post mortem per cause naturali, inumato) (Età del Bronzo-Età del Ferro)"@en ;
+        dc:coverage                     ar-city:villanovaforru ;
+        dc:description                  "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro." ;
+        dc:identifier                   "2000194980" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000194980-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#reperti_antropologici> ;
+        dc:type                         ar-culturalPropertyType:487cd0e5f488a90820c6a12e8f7d5173 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:2000194980-bibliography-2 , ar-bibliography:2000194980-bibliography-6 , ar-bibliography:2000194980-bibliography-3 , ar-bibliography:2000194980-bibliography-1 , ar-bibliography:2000194980-bibliography-5 , ar-bibliography:2000194980-bibliography-4 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/d4558e9241ed4446c4e83257fcff67f2" ;
+        arco-arco:catalogueNumber       "00194980" ;
+        arco-arco:hasCataloguingAgency  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-arco:hasCulturalPropertyCategory
+                <https://w3id.org/arco/resource/CulturalPropertyCategory/inumato> ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-arco:regionIdentifier      "20" ;
+        arco-arco:uniqueIdentifier      "2000194980" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/2000194980-acquisition-1> ;
+        arco-cd:hasAgeOfDeathInterpretation
+                <https://w3id.org/arco/resource/AgeOfDeathInterpretation/2000194980> ;
+        arco-cd:hasBibliography         ar-bibliography:2000194980-bibliography-3 , ar-bibliography:2000194980-bibliography-5 , ar-bibliography:2000194980-bibliography-2 , ar-bibliography:2000194980-bibliography-4 , ar-bibliography:2000194980-bibliography-6 , ar-bibliography:2000194980-bibliography-1 ;
+        arco-cd:hasDating               ar-dating:2000194980-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:2000194980-photographic-documentation-2 , ar-photograpyDocumentation:2000194980-photographic-documentation-1 , ar-photograpyDocumentation:2000194980-photographic-documentation-3 , ar-photograpyDocumentation:2000194980-photographic-documentation-4 ;
+        arco-cd:hasFindingContext       <https://w3id.org/arco/resource/FindingContext/2000194980-sepoltura-singola-primaria> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:2000194980-legal-situation-proprieta-stato ;
+        arco-cd:hasSexInterpretation    <https://w3id.org/arco/resource/SexInterpretation/2000194980> ;
+        arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/2000194980-survey-1> ;
+        arco-core:description           "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro." ;
+        arco-core:hasAgentRole          ar-agentrole:2000194980-cataloguing-agency , ar-agentrole:2000194980-heritage-protection-agency ;
+        arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-atlante> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-dente> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-mandibola> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-scapola> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-cranio> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-mandibola-denti> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-costa> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-radio> ;
+        arco-dd:anthropologicalMaterialMorphology
+                "morfologia/ struttura alterata post mortem per cause naturali" ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:2000194980-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:487cd0e5f488a90820c6a12e8f7d5173 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:d4558e9241ed4446c4e83257fcff67f2 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:2000194980-alternative-1 , ar-timeIndexedTypedLocation:2000194980-current .
+
+ar-culturalPropertyDefinition:reperti-antropologici-pertinenti-a-un-unico-individuo
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "reperti antropologici pertinenti a un unico individuo" .
+
+ar-catalogueRecordVersion:2000194980-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2012 Fonzo, Ornella" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:2000194980-compilation-a8a95ad2e00cac9fb61d4a84f7771f98 , ar-timeIndexedRole:2000194980-b588f91ccc914022bb42ac2862bf56c9 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:37392174174e71e6b1dfe3f9f5f269bd ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:a8a95ad2e00cac9fb61d4a84f7771f98 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> .
+
+ar-bibliography:2000194980-bibliography-5
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 5 of cultural property: 2000194980"@en , "Bibliografia 5 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "Oli1961" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        l0:name                   "Bibliography 5 of cultural property: 2000194980"@en , "Bibliografia 5 del bene culturale: 2000194980"@en .
+
+ar-dating:2000194980-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 2000194980"@it , "Dating 1 of cultural property 2000194980"@en ;
+        arco-cd:hasDatingEvent  ar-event:2000194980-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-storico-scientifica ;
+        l0:name                 "Dating 1 of cultural property 2000194980"@en , "Cronologia 1 del bene 2000194980"@it .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-atlante>
+        a                         arco-arco:CulturalPropertyPart ;
+        rdfs:label                "atlante" ;
+        arco-arco:numberOfCulturalPropertyParts
+                "1" ;
+        arco-core:specifications  "frammento" ;
+        l0:name                   "atlante" .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-scapola>
+        a                         arco-arco:CulturalPropertyPart ;
+        rdfs:label                "scapola" ;
+        arco-arco:numberOfCulturalPropertyParts
+                "1" ;
+        arco-core:specifications  "1 frammento della spina dell'osso sinistro" ;
+        l0:name                   "scapola" .
+
+ar-city:cabras  a   clvapit:City ;
+        rdfs:label  "Cabras" ;
+        l0:name     "Cabras" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-agentrole:2000194980-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 2000194980: S09"@it , "Cataloguing agency for cultural property 2000194980: S09"@en ;
+        arco-core:hasAgent  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-privacyReason:dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "dati liberamente accessibili" ;
+        l0:name     "dati liberamente accessibili" .
+
+ar-agentrole:2000194980-archaeological-excavation-1-activity-responsible
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente responsabile dello scavo archeologico 1 del bene culturale 2000194980: Soprintendenza per i Beni Archeologici per le Province di Cagliari e Oristano"@it , "Responsible agency of archaeological excavation 1 of cultural property 2000194980: Soprintendenza per i Beni Archeologici per le Province di Cagliari e Oristano"@en ;
+        arco-core:hasAgent  ar-agent:b8e45457e91ceecd5e3910742948340a ;
+        arco-core:hasRole   ar-role:ActivityResponsible ;
+        l0:name             "Ente responsabile dello scavo archeologico 1 del bene culturale 2000194980: Soprintendenza per i Beni Archeologici per le Province di Cagliari e Oristano"@it , "Responsible agency of archaeological excavation 1 of cultural property 2000194980: Soprintendenza per i Beni Archeologici per le Province di Cagliari e Oristano"@en .
+
+ar-feature:a3f758365bec01131062cfb116059f06
+        a                               clvapit:Feature ;
+        rdfs:label                      "ITALIA Sardegna OR Cabras CABRAS" ;
+        arco-location:hasToponymInTime  <https://w3id.org/arco/resource/ToponymInTime/monti-e-prama-igm> ;
+        clvapit:hasAddress              ar-address:758c781289fcb9930e2232011169b1e7 .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+ar-photograpyDocumentation:2000194980-photographic-documentation-3
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Documentazione fotografica 3 del bene culturale: 2000194980"@it , "Photographic documentation 3 of cultural property: 2000194980"@en ;
+        arco-cd:documentationIdentifier
+                "New_1350242483137" ;
+        arco-cd:hasAuthor             ar-agent:a8a95ad2e00cac9fb61d4a84f7771f98 ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:tabella ;
+        arco-cd:isDocumentationOf     ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "Tabella usura dentaria" ;
+        tiapit:time                   "2009/00/00" ;
+        l0:name                       "Photographic documentation 3 of cultural property: 2000194980"@en , "Documentazione fotografica 3 del bene culturale: 2000194980"@it .
+
+ar-agentrole:2000194980-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 2000194980: S09"@it , "Heritage protection agency for cultural property 2000194980: S09"@en ;
+        arco-core:hasAgent  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+<https://w3id.org/arco/resource/SurveyMotivation/lavori-agricoli>
+        a           arco-cd:SurveyMotivation ;
+        rdfs:label  "lavori agricoli" ;
+        l0:name     "lavori agricoli" .
+
+ar-bibliography:2000194980-bibliography-4
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 4 of cultural property: 2000194980"@en , "Bibliografia 4 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "Chia1969" ;
+        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "V. 1-2" ;
+        l0:name                   "Bibliography 4 of cultural property: 2000194980"@en , "Bibliografia 4 del bene culturale: 2000194980"@en .
+
+ar-agent:37392174174e71e6b1dfe3f9f5f269bd
+        a           l0:Agent ;
+        rdfs:label  "Usai, Emerenziana" .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-mandibola-denti>
+        a                   arco-arco:CulturalPropertyPart ;
+        rdfs:label          "mandibola, denti" ;
+        arco-cd:hasSurvey   <https://w3id.org/arco/resource/PaleopathologySurvey/2000194980-survey-1> ;
+        arco-core:isPartOf  ar-archeologicalProperty:2000194980 ;
+        l0:name             "mandibola, denti" .
+
+ar-culturalPropertySpecification:reperto-osteo-dentario
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "reperto osteo-dentario" .
+
+ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza per i Beni Archeologici per le province di Cagliari e Oristano" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-archeologicalProperty:2000194980 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-archeologicalProperty:2000194980 ;
+        arco-core:isAgentOf  ar-agentrole:2000194980-cataloguing-agency , ar-agentrole:2000194980-heritage-protection-agency ;
+        l0:name              "Soprintendenza per i Beni Archeologici per le province di Cagliari e Oristano" .

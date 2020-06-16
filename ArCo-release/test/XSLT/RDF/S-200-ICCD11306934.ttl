@@ -1,0 +1,593 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-docutmentationType:inventario
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "inventario" ;
+        l0:name     "inventario" .
+
+ar-timeIndexedRole:1000017428-rvm-90b9ab24c15306f938c8ca3a3e41fb6c
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER MEMORIZZAZIONE da Sargentini C."@it , "Digital transcription by Sargentini C."@en ;
+        roapit:isRoleInTimeOf  ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-Site:36f87147b583281c10b0d87dc24f88c9
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo Conestabile della Staffa" ;
+        cis:isSiteOf               ar-cis:1a4e4f301bdaf438a1d4213ab77efe08 ;
+        cis:siteAddress            ar-address:986cab461363429c3bc7666252651c38 ;
+        arco-location:hasSiteType  ar-SiteType:palazzo ;
+        l0:name                    "Palazzo Conestabile della Staffa" .
+
+ar-TimeInterval:1864-1864
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "1864 - 1864" ;
+        arco-arco:endTime    "1864" ;
+        arco-arco:startTime  "1864" ;
+        l0:name              "1864 - 1864" .
+
+ar-Value:1000017428-1-height-420
+        a                      mu:Value ;
+        rdfs:label             "420"@en , "420"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "420" .
+
+ar-province:pg  a   clvapit:Province ;
+        rdfs:label  "PG" ;
+        l0:name     "PG" .
+
+ar-agent:2395621f73e2aae9fbaa132e0f94e1f7
+        a           l0:Agent ;
+        rdfs:label  "ARTPAST/ Sargentini C." .
+
+ar-SiteDefinition:palazzo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "palazzo" .
+
+ar-culturalPropertyDefinition:stampa
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "stampa" .
+
+ar-timeIndexedRole:1000017428-compilation-90b9ab24c15306f938c8ca3a3e41fb6c
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Sargentini C."@en , "Compilazione da Sargentini C."@it ;
+        roapit:isRoleInTimeOf  ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-agent:182e1d9074ba174e80f41429ad21f8a2
+        a                    COV:Organization ;
+        rdfs:label           "S38" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-HistoricOrArtisticProperty:1000017428 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-HistoricOrArtisticProperty:1000017428 ;
+        arco-core:isAgentOf  ar-agentrole:1000017428-cataloguing-agency , ar-agentrole:1000017428-heritage-protection-agency ;
+        l0:name              "S38" .
+
+ar-agent:bf606979b2b333bae8abdfdc59b16a3d
+        a                             CPV:Person ;
+        rdfs:label                    "Bucco Luigi" ;
+        arco-cd:agentDate             "notizie metà sec. XIX" ;
+        arco-cd:agentLocalIdentifier  "00001506" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:1000017428 ;
+        l0:name                       "Bucco Luigi" .
+
+ar-event:1000017428-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 1000017428"@it , "Creation of cultural property 1000017428"@en ;
+        arco-cd:specificTime  ar-TimeInterval:1864-1864 ;
+        tiapit:atTime         ar-TimeInterval:sec-xix ;
+        l0:name               "Realizzazione del bene 1000017428"@it , "Creation of cultural property 1000017428"@en .
+
+ar-agent:6a1505e0ccde70bab627a850c1459d30
+        a           l0:Agent ;
+        rdfs:label  "PG/ SBAPPSAE" ;
+        l0:name     "PG/ SBAPPSAE" .
+
+ar-interpretationCriterion:firma
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "firma" ;
+        l0:name     "firma" .
+
+ar-timeIndexedRole:1000017428-agg-1-2395621f73e2aae9fbaa132e0f94e1f7
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Sargentini C."@it , "Update responsible compilation: ARTPAST/ Sargentini C."@en ;
+        roapit:isRoleInTimeOf  ar-agent:2395621f73e2aae9fbaa132e0f94e1f7 ;
+        roapit:withRole        ar-role:UpdateResponsibleCompilation .
+
+ar-TechnicalCharacteristic:carta-litografia
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "carta/ litografia" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "carta/ litografia" .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1000017428-cataloguing-agency .
+
+ar-CulturalEntityTechnicalStatus:1000017428
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 1000017428"@it , "Technical status of cultural property 1000017428"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:carta-litografia ;
+        l0:name     "Stato tecnico del bene culturale 1000017428"@it , "Technical status of cultural property 1000017428"@en .
+
+ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d
+        a           l0:Agent ;
+        rdfs:label  "Garibaldi V." .
+
+ar-Value:1000017428-1-width-585
+        a                      mu:Value ;
+        rdfs:label             "585"@en , "585"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "585" .
+
+ar-timeIndexedRole:1000017428-f22bbb019d3c60b3a5f7d21ed8c526fb
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Garibaldi V."@it , "Official in charge: Garibaldi V."@en ;
+        roapit:isRoleInTimeOf  ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+<https://w3id.org/arco/resource/MeasurementUnit/mm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "mm." ;
+        l0:name     "mm." .
+
+ar-SiteType:palazzo-comunale
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo comunale"@it , "Site type: palazzo comunale"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/comunale> ;
+        l0:name     "Tipo di contenitore fisico: palazzo comunale"@it , "Site type: palazzo comunale"@en .
+
+ar-timeIndexedTypedLocation:1000017428-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 1000017428"@it , "Current physical location of cultural property: 1000017428"@en ;
+        arco-core:specifications       "uffici" ;
+        arco-location:atSite           ar-Site:f21ac2ec11e92cfa78a23bffc6f7b08a ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:1000017428 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 1000017428"@it , "Current physical location of cultural property: 1000017428"@en .
+
+ar-cis:1a4e4f301bdaf438a1d4213ab77efe08
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Biblioteca comunale Augusta" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:biblioteca-comunale-augusta ;
+        cis:hasSite           ar-Site:36f87147b583281c10b0d87dc24f88c9 ;
+        l0:name               "Biblioteca comunale Augusta" .
+
+ar-catalogueRecordVersion:1000017428-agg-1
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO - 2006 ARTPAST/ Sargentini C." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1000017428-agg-1-2395621f73e2aae9fbaa132e0f94e1f7 ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                ar-agent:2395621f73e2aae9fbaa132e0f94e1f7 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-MeasurementCollection:1000017428-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 1000017428"@en , "Misure del bene culturale 1000017428"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:1000017428-1-width , ar-Measurement:1000017428-1-height ;
+        l0:name                 "Measurements of cultural property 1000017428"@en , "Misure del bene culturale 1000017428"@it .
+
+ar-docutmentationType:fotografia-digitale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale" ;
+        l0:name     "fotografia digitale" .
+
+ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c
+        a           l0:Agent ;
+        rdfs:label  "Sargentini C." .
+
+ar-Site:f21ac2ec11e92cfa78a23bffc6f7b08a
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo dei Priori" ;
+        cis:isPartOf               <https://w3id.org/arco/resource/MonumentalArea/palazzo-dei-priori> ;
+        cis:isSiteOf               ar-cis:043da8a9dfc951488a76bbff5958b680 ;
+        cis:siteAddress            ar-address:57d3ff2d024e7d2ee10f106b3d415321 ;
+        arco-location:hasSiteType  ar-SiteType:palazzo-comunale ;
+        l0:name                    "Palazzo dei Priori" .
+
+<https://w3id.org/arco/resource/AcquisitionType/deposito>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "deposito" ;
+        l0:name     "deposito" .
+
+ar-region:pg  a     clvapit:Province ;
+        rdfs:label  "PG" ;
+        l0:name     "PG" .
+
+ar-CISNameInTime:biblioteca-comunale-augusta
+        a                         cis:CISNameInTime ;
+        cis:institutionalCISName  "Biblioteca comunale Augusta" .
+
+ar-role:UpdateResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7
+        a                    arco-cd:Subject ;
+        rdfs:label           "veduta di Perugia" ;
+        arco-cd:isSubjectOf  ar-HistoricOrArtisticProperty:1000017428 ;
+        l0:name              "veduta di Perugia" .
+
+<https://w3id.org/arco/resource/CatalogueRecordS/1000017428>
+        a             arco-catalogue:CatalogueRecordS ;
+        rdfs:label    "Catalogue Record n: 1000017428"@en , "Scheda catalografica n: 1000017428"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "1000017428" ;
+        arco-catalogue:describesCulturalProperty
+                ar-HistoricOrArtisticProperty:1000017428 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:1000017428-rvm , ar-catalogueRecordVersion:1000017428-agg-1 , ar-catalogueRecordVersion:1000017428-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:I ;
+        arco-catalogue:systemRecordCode
+                "S-200-ICCD11306934" .
+
+ar-catalogueRecordVersion:1000017428-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER MEMORIZZAZIONE - 2006 Sargentini C." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1000017428-rvm-90b9ab24c15306f938c8ca3a3e41fb6c , ar-timeIndexedRole:1000017428-f22bbb019d3c60b3a5f7d21ed8c526fb ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> .
+
+ar-Measurement:1000017428-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1000017428: 420mm."@en , "Misura del bene culturale 1000017428: 420mm."@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:1000017428-1-height-420 ;
+        l0:name                     "Measurement of cultural property 1000017428: 420mm."@en , "Misura del bene culturale 1000017428: 420mm."@it .
+
+ar-cis:043da8a9dfc951488a76bbff5958b680
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Galleria Nazionale dell'Umbria" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:galleria-nazionale-dellumbria ;
+        cis:hasSite           ar-Site:f21ac2ec11e92cfa78a23bffc6f7b08a ;
+        l0:name               "Galleria Nazionale dell'Umbria" .
+
+ar-address:986cab461363429c3bc7666252651c38
+        a                    clvapit:Address ;
+        rdfs:label           "PG, Perugia" ;
+        clvapit:hasCity      ar-city:perugia ;
+        clvapit:hasProvince  ar-province:pg .
+
+ar-culturalPropertyType:42c2d1489e80b781f7b103e054b8524a
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: stampa"@it , "Cultural property type: stampa"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:stampa ;
+        l0:name     "Tipo del bene: stampa"@it , "Cultural property type: stampa"@en .
+
+ar-ConservationStatus:1000017428-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 1000017428"@it , "Conservation status 1 of cultural property: 1000017428"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 1000017428"@it , "Conservation status 1 of cultural property: 1000017428"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:1000017428-heritage-protection-agency .
+
+ar-Measurement:1000017428-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1000017428: 585mm."@en , "Misura del bene culturale 1000017428: 585mm."@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:1000017428-1-width-585 ;
+        l0:name                     "Measurement of cultural property 1000017428: 585mm."@en , "Misura del bene culturale 1000017428: 585mm."@it .
+
+ar-city:perugia  a  clvapit:City ;
+        rdfs:label  "Perugia" ;
+        l0:name     "Perugia" .
+
+ar-HistoricOrArtisticProperty:1000017428
+        a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
+        rdfs:comment                    "stampa" ;
+        rdfs:label                      "La prima campagna del 2° reggimento del Genio a Perugia, veduta di Perugia (stampa) by Bucco Luigi (sec. XIX)"@en , "La prima campagna del 2° reggimento del Genio a Perugia, veduta di Perugia (stampa) di Bucco Luigi (sec. XIX)"@it ;
+        pico:author                     ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-litografia ;
+        dc:coverage                     ar-city:perugia ;
+        dc:creator                      ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        dc:date                         ar-TimeInterval:1864-1864 ;
+        dc:description                  "Vedute: Perugia. Soggetti profani: laa prima compagnia del secondo reggimento del genio a Perugia." ;
+        dc:format                       ar-MeasurementCollection:1000017428-1 ;
+        dc:identifier                   "1000017428" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000017428-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
+        dc:subject                      ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7 , <http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici> ;
+        dc:title                        <https://w3id.org/arco/resource/Title/1000017428-la-prima-campagna-del-2%C2%B0-reggimento-del-genio-a-perugia> ;
+        dc:type                         ar-culturalPropertyType:42c2d1489e80b781f7b103e054b8524a ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/57d3ff2d024e7d2ee10f106b3d415321" ;
+        arco-arco:catalogueNumber       "00017428" ;
+        arco-arco:hasCataloguingAgency  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-arco:regionIdentifier      "10" ;
+        arco-arco:uniqueIdentifier      "1000017428" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/1000017428-acquisition-1> ;
+        arco-cd:hasAuthor               ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:1000017428-1 ;
+        arco-cd:hasDating               ar-dating:1000017428-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:1000017428-photographic-documentation-1 , ar-SourceAndDocument:1000017428-source-document-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:1000017428-legal-situation-proprieta-ente-pubblico-territoriale ;
+        arco-cd:hasSubject              ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7 ;
+        arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/1000017428-la-prima-campagna-del-2%C2%B0-reggimento-del-genio-a-perugia> ;
+        arco-cd:subject                 "veduta di Perugia" ;
+        arco-cd:title                   "La prima campagna del 2° reggimento del Genio a Perugia" ;
+        arco-core:hasAgentRole          ar-agentrole:1000017428-cataloguing-agency , ar-agentrole:1000017428-heritage-protection-agency ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:1000017428-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:42c2d1489e80b781f7b103e054b8524a ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:carta-litografia ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:1000017428-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017428 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:57d3ff2d024e7d2ee10f106b3d415321 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:1000017428-alternative-1 , ar-timeIndexedTypedLocation:1000017428-current .
+
+ar-TimeInterval:2006  a  tiapit:TimeInterval ;
+        rdfs:label   "2006" ;
+        tiapit:time  "2006" .
+
+ar-interpretationCriterion:data
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "data" ;
+        l0:name     "data" .
+
+ar-catalogueRecordVersion:1000017428-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2006 Sargentini C." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:1000017428-compilation-90b9ab24c15306f938c8ca3a3e41fb6c , ar-timeIndexedRole:1000017428-f22bbb019d3c60b3a5f7d21ed8c526fb ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> .
+
+ar-agent:28c06fa0cdfefa9a2ef7816d5e01549f
+        a                l0:Agent ;
+        rdfs:label       "Comune di Perugia" ;
+        arco-cd:address  "Corso Vannucci - 06100 Perugia" ;
+        l0:name          "Comune di Perugia" .
+
+ar-dating:1000017428-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 1000017428"@it , "Dating 1 of cultural property 1000017428"@en ;
+        arco-cd:hasDatingEvent  ar-event:1000017428-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:data ;
+        l0:name                 "Dating 1 of cultural property 1000017428"@en , "Cronologia 1 del bene 1000017428"@it .
+
+ar-timeIndexedTypedLocation:1000017428-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 1000017428"@it , "Alternative location 1 of cultural property: 1000017428"@en ;
+        arco-location:atSite           ar-Site:36f87147b583281c10b0d87dc24f88c9 ;
+        arco-location:hasLocationType  arco-location:LastLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:1000017428 ;
+        l0:name                        "Altra localizzazione 1 del bene: 1000017428"@it , "Alternative location 1 of cultural property: 1000017428"@en .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+<https://w3id.org/arco/resource/Title/1000017428-la-prima-campagna-del-2%C2%B0-reggimento-del-genio-a-perugia>
+        a           arco-cd:Title ;
+        rdfs:label  "La prima campagna del 2° reggimento del Genio a Perugia" ;
+        l0:name     "La prima campagna del 2° reggimento del Genio a Perugia" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+<https://w3id.org/arco/resource/SiteSpecification/comunale>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "comunale" .
+
+ar-CISNameInTime:galleria-nazionale-dellumbria
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Galleria Nazionale dell'Umbria"@it , "Name in time: Galleria Nazionale dell'Umbria"@en ;
+        cis:institutionalCISName  "Galleria Nazionale dell'Umbria" ;
+        l0:name                   "Denominazione nel tempo: Galleria Nazionale dell'Umbria"@it , "Name in time: Galleria Nazionale dell'Umbria"@en .
+
+<https://w3id.org/arco/resource/Acquisition/1000017428-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisizione 1 del bene culturale: 1000017428"@it , "Acquisition 1 of cultural property: 1000017428"@en ;
+        arco-cd:acquisitionLocation  "PG/ Perugia" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/deposito> ;
+        arco-cd:hasPreviousOwner     ar-agent:e2d2b942fea614ae68fb69aeabbac7f3 ;
+        arco-cd:isAcquisitionOf      ar-HistoricOrArtisticProperty:1000017428 ;
+        l0:name                      "Acquisizione 1 del bene culturale: 1000017428"@it , "Acquisition 1 of cultural property: 1000017428"@en .
+
+ar-agent:e2d2b942fea614ae68fb69aeabbac7f3
+        a           l0:Agent ;
+        rdfs:label  "Biblioteca comunale Augusta" ;
+        l0:name     "Biblioteca comunale Augusta" .
+
+<https://w3id.org/arco/resource/MonumentalArea/palazzo-dei-priori>
+        a           cis:MonumentalArea ;
+        rdfs:label  "Palazzo dei Priori" ;
+        l0:name     "Palazzo dei Priori" .
+
+ar-agentrole:1000017428-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 1000017428: S38"@it , "Heritage protection agency for cultural property 1000017428: S38"@en ;
+        arco-core:hasAgent  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-SiteType:palazzo  a  arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        l0:name     "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en .
+
+ar-TimeInterval:sec-xix
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XIX" ;
+        tiapit:time  "sec. XIX" ;
+        l0:name      "sec. XIX" .
+
+ar-PreferredAuthorshipAttribution:1000017428-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1000017428"@it , "Preferred authorship attribution of cultural property: 1000017428"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:firma ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-HistoricOrArtisticProperty:1000017428 ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1000017428"@it , "Preferred authorship attribution of cultural property: 1000017428"@en .
+
+ar-agentrole:1000017428-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 1000017428: S38"@it , "Cataloguing agency for cultural property 1000017428: S38"@en ;
+        arco-core:hasAgent  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-legalSituation:1000017428-legal-situation-proprieta-ente-pubblico-territoriale
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 1000017428: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 1000017428: proprietà Ente pubblico territoriale"@en ;
+        arco-cd:hasOwner  ar-agent:28c06fa0cdfefa9a2ef7816d5e01549f ;
+        l0:name           "Condizione giuridica del bene culturale 1000017428: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 1000017428: proprietà Ente pubblico territoriale"@en .
+
+ar-photograpyDocumentation:1000017428-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 1 of cultural property: 1000017428"@en , "Documentazione fotografica 1 del bene culturale: 1000017428"@it ;
+        arco-cd:documentationIdentifier
+                "SBAPSAE PG17428" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale ;
+        arco-cd:isDocumentationOf     ar-HistoricOrArtisticProperty:1000017428 ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 1000017428"@en , "Documentazione fotografica 1 del bene culturale: 1000017428"@it .
+
+ar-address:57d3ff2d024e7d2ee10f106b3d415321
+        a                    clvapit:Address ;
+        rdfs:label           "PG, Perugia" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-HistoricOrArtisticProperty:1000017428 ;
+        clvapit:fullAddress  "Corso Vannucci - 06100 Perugia" ;
+        clvapit:hasCity      ar-city:perugia ;
+        clvapit:hasProvince  ar-province:pg .
+
+ar-SourceAndDocument:1000017428-source-document-1
+        a                             arco-cd:SourceAndDocument ;
+        rdfs:label                    "Fonti e documenti 1 del bene culturale: 1000017428"@it , "Sources and documents 1 of cultural property: 1000017428"@en ;
+        arco-cd:documentationTitle    "Inventario della raccolta storico topografica della città di Perugia" ;
+        arco-cd:hasArchive            ar-agent:6a1505e0ccde70bab627a850c1459d30 ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:inventario ;
+        arco-cd:isDocumentationOf     ar-HistoricOrArtisticProperty:1000017428 ;
+        tiapit:time                   "1951" ;
+        l0:name                       "Sources and documents 1 of cultural property: 1000017428"@en , "Fonti e documenti 1 del bene culturale: 1000017428"@en .
