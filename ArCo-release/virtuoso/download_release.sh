@@ -5,7 +5,7 @@ KG_VERSION=$1
 mkdir /d
 cd /d/
 
-wget http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt
+wget http://arco.istc.cnr.it/arco-data/${KG_VERSION}/index.txt
 
 while read in; do wget "http://arco.istc.cnr.it/arco-data/${KG_VERSION}/$in"; done < index.txt
 
