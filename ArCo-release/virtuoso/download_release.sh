@@ -7,7 +7,7 @@ cd /d/
 
 wget http://etna.istc.cnr.it/arco-data/${KG_VERSION}/index.txt
 
-while read in; do wget "http://etna.istc.cnr.it/arco-data/${KG_VERSION}/$in"; done < index.txt
+while read in; do wget "http://arco.istc.cnr.it/arco-data/${KG_VERSION}/$in"; done < index.txt
 
 i=1
 for f in *.nt.gz; 
