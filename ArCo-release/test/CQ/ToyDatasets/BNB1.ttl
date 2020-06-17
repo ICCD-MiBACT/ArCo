@@ -11,16 +11,16 @@
 @prefix arcolocation: <https://w3id.org/arco/ontology/location/> .
 
 :Specimen1	a-mp:isClassifiedBy :BiologicalTaxon1.
-:BiologicalTaxon1	a a-cd:Cultivar
+:BiologicalTaxon1	a a-cd:Cultivar.
 
 :Specimen2	a-mp:isClassifiedBy :BiologicalTaxon2.
-:BiologicalTaxon2	a a-cd:Species
+:BiologicalTaxon2	a a-cd:Species.
 
 :SpecimenContainer1	a-mp:isClassifiedBy :BiologicalTaxonCont.	
-:BiologicalTaxonCont	a a-cd:Genus
+:BiologicalTaxonCont	a a-cd:Genus.
 
 :Specimen3	a-mp:isClassifiedBy :BiologicalTaxon3.
-:BiologicalTaxon3	a a-cd:Cultivar
+:BiologicalTaxon3	a a-cd:Cultivar.
 
 :Specimen4	a-mp:isClassifiedBy :BiologicalTaxon4.
-:BiologicalTaxon4	a a-cd:BotanicalForm
+:BiologicalTaxon4	a a-cd:BotanicalForm.
