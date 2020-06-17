@@ -1,33 +1,26 @@
-@prefix : <https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl/>.
+@prefix : <https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
 @prefix core: <https://w3id.org/arco/ontology/core/> .
 @prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix a-mp: <https://w3id.org/arco/ontology/movable-property/> .
+@prefix a-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix arco: <https://w3id.org/arco/ontology/arco> .
 @prefix ti:<https://w3id.org/italia/onto/TI/> . 
 @prefix arcolocation: <https://w3id.org/arco/ontology/location/> .
 
-:Specimen1	a arco:Specimen ;
-		a-cd:hasTypeSpecimen :TypeSpecimen1 .
-:TypeSpecimen1 	a-cd:producesBiologicalTaxon :BiologicalTaxon1 .
-:BiologicalTaxon1	a a-cd:Cultivar .
+:Specimen1	a-mp:isClassifiedBy :BiologicalTaxon1.
+:BiologicalTaxon1	a a-cd:Cultivar
 
-:Specimen2	a arco:Specimen ;
-		a-cd:hasTypeSpecimen :TypeSpecimen2 .
-:TypeSpecimen2 	a-cd:producesBiologicalTaxon :BiologicalTaxon2 .
-:BiologicalTaxon2	a a-cd:Species .
+:Specimen2	a-mp:isClassifiedBy :BiologicalTaxon2.
+:BiologicalTaxon2	a a-cd:Species
 
-:SpecimenContainer1	a arco:SpecimenContainer ;
-		a-cd:hasTypeSpecimen :TypeSpecimen .
-:TypeSpecimen 	a-cd:producesBiologicalTaxon :BiologicalTaxon .
-:BiologicalTaxon	a a-cd:Species .
+:SpecimenContainer1	a-mp:isClassifiedBy :BiologicalTaxonCont.	
+:BiologicalTaxonCont	a a-cd:Genus
 
-:Specimen3	a arco:Specimen ;
-		a-cd:hasTypeSpecimen :TypeSpecimen3 .
-:TypeSpecimen3 	a-cd:producesBiologicalTaxon :BiologicalTaxon3 .
-:BiologicalTaxon3	a a-cd:Cultivar .
+:Specimen3	a-mp:isClassifiedBy :BiologicalTaxon3.
+:BiologicalTaxon3	a a-cd:Cultivar
 
-:Specimen4	a arco:Specimen ;
-		a-cd:hasBotanicalRevision :BotanicalRevision4 .
-:BotanicalRevision4 	a-cd:producesBiologicalTaxon :BiologicalTaxon4 .
-:BiologicalTaxon4	a a-cd:Cultivar .
+:Specimen4	a-mp:isClassifiedBy :BiologicalTaxon4.
+:BiologicalTaxon4	a a-cd:BotanicalForm
