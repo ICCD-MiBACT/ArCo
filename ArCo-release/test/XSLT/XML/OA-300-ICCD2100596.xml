@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <OA version="3.00">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">OA</TSK>
+         <LIR hint="Livello ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">05</NCTR>
+            <NCTN hint="Numero catalogo generale">00177321</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S76</ESC>
+         <ECP hint="Ente competente">S119</ECP>
+      </CD>
+      <RV hint="RELAZIONI">
+         <RVE hint="STRUTTURA COMPLESSA">
+            <RVEL hint="Livello">16</RVEL>
+            <RVER hint="Codice bene radice">0500177321</RVER>
+         </RVE>
+      </RV>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">scultura</OGTD>
+         </OGT>
+         <SGT hint="SOGGETTO">
+            <SGTI hint="Identificazione">busto ritratto di Giulio Pontedera.</SGTI>
+         </SGT>
+      </OG>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+            <PVCS hint="Stato">Italia</PVCS>
+            <PVCR hint="Regione">Veneto</PVCR>
+            <PVCP hint="Provincia">PD</PVCP>
+            <PVCC hint="Comune">Padova</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCT hint="Tipologia">orto botanico</LDCT>
+            <LDCQ hint="Qualificazione">universitario</LDCQ>
+            <LDCN hint="Denominazione">Orto Botanico</LDCN>
+            <LDCU hint="Denominazione spazio viabilistico">Via Orto Botanico, 15</LDCU>
+            <LDCS hint="Specifiche">Balaustrata</LDCS>
+         </LDC>
+      </LC>
+      <UB hint="UBICAZIONE E DATI PATRIMONIALI">
+         <UBO hint="Ubicazione originaria">OR</UBO>
+      </UB>
+      <DT hint="CRONOLOGIA">
+         <DTZ hint="CRONOLOGIA GENERICA">
+            <DTZG hint="Secolo">sec. XVIII</DTZG>
+         </DTZ>
+         <DTS hint="CRONOLOGIA SPECIFICA">
+            <DTSI hint="Da">1760</DTSI>
+            <DTSF hint="A">1760</DTSF>
+         </DTS>
+         <DTM hint="Motivazione cronologia">NR (recupero pregresso)</DTM>
+      </DT>
+      <AU hint="DEFINIZIONE CULTURALE">
+         <AUT hint="AUTORE">
+            <AUTS hint="Riferimento all'autore">bottega</AUTS>
+            <AUTM hint="Motivazione dell'attribuzione">documentazione</AUTM>
+            <AUTN hint="Nome scelto">Bonazza Antonio</AUTN>
+            <AUTA hint="Dati anagrafici">1698/ 1763</AUTA>
+            <AUTH hint="Sigla per citazione">00000003</AUTH>
+         </AUT>
+         <CMM hint="COMMITTENZA">
+            <CMMN hint="Nome">Capitanio di Padova (?)</CMMN>
+            <CMMD hint="Data">1760</CMMD>
+            <CMMF hint="Fonte">documentazione</CMMF>
+         </CMM>
+         <CMM hint="COMMITTENZA">
+            <CMMN hint="Nome">Riformatori allo studio</CMMN>
+            <CMMD hint="Data">1760</CMMD>
+            <CMMF hint="Fonte">Iscrizione</CMMF>
+         </CMM>
+      </AU>
+      <MT hint="DATI TECNICI">
+         <MTC hint="Materia e tecnica">pietra</MTC>
+         <MIS hint="MISURE">
+            <MISA hint="Altezza">80</MISA>
+         </MIS>
+      </MT>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">mediocre</STCC>
+            <STCS hint="Indicazioni specifiche">Corrosioni</STCS>
+         </STC>
+      </CO>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESO hint="Indicazioni sull'oggetto">Parte posteriore: non lavorata.</DESO>
+            <DESI hint="Codifica Iconclass">NR (recupero pregresso)</DESI>
+            <DESS hint="Indicazioni sul soggetto">NR (recupero pregresso)</DESS>
+         </DES>
+         <ISR hint="ISCRIZIONI">
+            <ISRL hint="Lingua">latino</ISRL>
+            <ISRS hint="Tecnica di scrittura">a solchi</ISRS>
+            <ISRT hint="Tipo di caratteri">lettere capitali</ISRT>
+            <ISRP hint="Posizione">Piedistallo</ISRP>
+            <ISRI hint="Trascrizione">IULIO PONTEDERAE PISANO/ MORTI PRAEFECTO/ III VIRI LITT. STAT. DECR./ PR. KAL. IUN. MDCCLX</ISRI>
+         </ISR>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+            <CDGS hint="Indicazione specifica">università di Padova</CDGS>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia b/n</FTAP>
+            <FTAN hint="Codice identificativo">SBAS Veneto 00539021</FTAN>
+         </FTA>
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">documentazione allegata</FTAX>
+            <FTAP hint="Tipo">fotografia b/n</FTAP>
+            <FTAN hint="Codice identificativo">SBAS Veneto 00539024</FTAN>
+         </FTA>
+      </DO>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">1</ADSP>
+            <ADSM hint="Motivazione">dati pubblicabili</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">1993</CMPD>
+            <CMPN hint="Nome">Piva R.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Spiazzi A. M.</FUR>
+         <AGG hint="AGGIORNAMENTO - REVISIONE">
+            <AGGD hint="Data">2006</AGGD>
+            <AGGN hint="Nome">ARTPAST/ Cailotto C.</AGGN>
+            <AGGF hint="Funzionario responsabile">NR (recupero pregresso)</AGGF>
+         </AGG>
+      </CM>
+   </OA>
+</schede>

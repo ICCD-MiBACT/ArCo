@@ -1,0 +1,755 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-agent:ab0e18f88b67935608a177444ae08812
+        a                    l0:Agent , COV:Organization ;
+        rdfs:label           "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" , "S67" ;
+        arco-arco:isCataloguingAgencyOf
+                ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-arco:isHeritageProtectionAgencyOf
+                ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:isAgentOf  ar-agentrole:0100350961-cataloguing-agency , ar-agentrole:0100350961-photographic-documentation-1-photographic-documentation-owner , ar-agentrole:0100350961-heritage-protection-agency ;
+        l0:name              "S67" , "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici del Piemonte" .
+
+ar-HistoricOrArtisticProperty:0100350961
+        a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "disegno, opera isolata" ;
+        rdfs:label                      "testa di donna velata (disegno, opera isolata) di Peruzzi Baldassarre (sec. XVI, primo quarto)"@it , "testa di donna velata (disegno, opera isolata) by Peruzzi Baldassarre (sec. XVI, primo quarto)"@en ;
+        pico:author                     ar-agent:10ae20f17743df400a1bd794df022add ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:carta-matita-nera-matita-colorata ;
+        dc:coverage                     ar-city:torino ;
+        dc:creator                      ar-agent:10ae20f17743df400a1bd794df022add ;
+        dc:date                         ar-TimeInterval:ca-1500-ca-1525 ;
+        dc:description                  "DISEGNO su carta" ;
+        dc:format                       ar-MeasurementCollection:0100350961-1 ;
+        dc:identifier                   "0100350961" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0100350961-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
+        dc:subject                      ar-Subject:feec4e188957ff3aab6e0844b1d98a62 , <http://culturaitalia.it/pico/thesaurus/4.2#disegni> ;
+        dc:type                         ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
+        <http://purl.org/dc/terms/bibliographicCitation>
+                ar-bibliography:0100350961-bibliography-4 , ar-bibliography:0100350961-bibliography-8 , ar-bibliography:0100350961-bibliography-1 , ar-bibliography:0100350961-bibliography-5 , ar-bibliography:0100350961-bibliography-2 , ar-bibliography:0100350961-bibliography-6 , ar-bibliography:0100350961-bibliography-3 , ar-bibliography:0100350961-bibliography-7 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474" ;
+        arco-arco:catalogueNumber       "00350961" ;
+        arco-arco:hasCataloguingAgency  ar-agent:ab0e18f88b67935608a177444ae08812 ;
+        arco-arco:hasCulturalPropertyCataloguingCategory
+                ar-CulturalPropertyCataloguingCategory:opera-isolata ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:ab0e18f88b67935608a177444ae08812 ;
+        arco-arco:regionIdentifier      "01" ;
+        arco-arco:uniqueIdentifier      "0100350961" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0100350961-acquisition-1> ;
+        arco-cd:hasAuthor               ar-agent:10ae20f17743df400a1bd794df022add ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:0100350961-1 ;
+        arco-cd:hasBibliography         ar-bibliography:0100350961-bibliography-7 , ar-bibliography:0100350961-bibliography-6 , ar-bibliography:0100350961-bibliography-1 , ar-bibliography:0100350961-bibliography-5 , ar-bibliography:0100350961-bibliography-4 , ar-bibliography:0100350961-bibliography-8 , ar-bibliography:0100350961-bibliography-3 , ar-bibliography:0100350961-bibliography-2 ;
+        arco-cd:hasDating               ar-dating:0100350961-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0100350961-photographic-documentation-1 , ar-SourceAndDocument:0100350961-source-document-1 ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0100350961-legal-situation-proprieta-stato ;
+        arco-cd:hasSubject              ar-Subject:feec4e188957ff3aab6e0844b1d98a62 ;
+        arco-cd:iconclassCode           "31 A 2211 (+82)" ;
+        arco-cd:subject                 "testa di donna velata" ;
+        arco-core:description           "DISEGNO su carta" ;
+        arco-core:hasAgentRole          ar-agentrole:0100350961-cataloguing-agency , ar-agentrole:0100350961-heritage-protection-agency ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0100350961-inscription-1> , <https://w3id.org/arco/resource/Inscription/0100350961-inscription-2> , <https://w3id.org/arco/resource/Inscription/0100350961-inscription-3> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0100350961-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:carta-matita-nera-matita-colorata ;
+        arco-dd:hasMeasurementCollection
+                ar-MeasurementCollection:0100350961-1 ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0100350961 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:de0ffb9ac0d0cfe3fc81462221b1d474 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0100350961-alternative-1 , ar-timeIndexedTypedLocation:0100350961-current .
+
+ar-Value:0100350961-1-width-180
+        a                      mu:Value ;
+        rdfs:label             "180"@en , "180"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "180" .
+
+ar-timeIndexedRole:0100350961-98973e406f9f8e468992675590298b8b
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Gabrielli, Edith"@it , "Scientific director: Gabrielli, Edith"@en ;
+        roapit:isRoleInTimeOf  ar-agent:bc70464bc7df4e3b39d1a6a68c4aad9c ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+ar-TimeInterval:2012  a  tiapit:TimeInterval ;
+        rdfs:label   "2012" ;
+        tiapit:time  "2012" .
+
+<https://w3id.org/arco/resource/Inscription/0100350961-inscription-2>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 2 of cultural property 0100350961"@en , "Iscrizione 2 sul bene culturale 0100350961"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/corsivo> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-penna ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0100350961-inscription-2 ;
+        arco-dd:positionOnCulturalProperty
+                "basso, sinistra" ;
+        arco-dd:transcript              "Peruzzi" .
+
+ar-PreferredAuthorshipAttribution:0100350961-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0100350961"@it , "Preferred authorship attribution of cultural property: 0100350961"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:10ae20f17743df400a1bd794df022add ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-stilistica ;
+        arco-cd:hasInterventionRole  ar-role:realizzazione ;
+        arco-cd:isAuthorshipAttributionOf
+                ar-HistoricOrArtisticProperty:0100350961 ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0100350961"@it , "Preferred authorship attribution of cultural property: 0100350961"@en .
+
+ar-CulturalEntityTechnicalStatus:0100350961-inscription-3
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 3 sul bene culturale 0100350961"@it , "Technical status of inscription 3 of cultural property 0100350961"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-penna ;
+        l0:name     "Stato tecnico dell'iscrizione 3 sul bene culturale 0100350961"@it , "Technical status of inscription 3 of cultural property 0100350961"@en .
+
+ar-interpretationCriterion:analisi-stilistica
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi stilistica" ;
+        l0:name     "analisi stilistica" .
+
+ar-bibliography:0100350961-bibliography-5
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 5 of cultural property: 0100350961"@en , "Bibliografia 5 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "0100017" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p. 26" ;
+        l0:name                   "Bibliography 5 of cultural property: 0100350961"@en , "Bibliografia 5 del bene culturale: 0100350961"@en .
+
+ar-TimeInterval:ca-1500-ca-1525
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "ca 1500 - ca 1525" ;
+        arco-arco:endTime    "ca 1525" ;
+        arco-arco:startTime  "ca 1500" ;
+        l0:name              "ca 1500 - ca 1525" .
+
+ar-Measurement:0100350961-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100350961: 270mm"@en , "Misura del bene culturale 0100350961: 270mm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:0100350961-1-height-270 ;
+        l0:name                     "Measurement of cultural property 0100350961: 270mm"@en , "Misura del bene culturale 0100350961: 270mm"@it .
+
+ar-timeIndexedRole:0100350961-a2de39d35a2610d83d1f9d55203e4000
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Caldera, Massimiliano"@it , "Official in charge: Caldera, Massimiliano"@en ;
+        roapit:isRoleInTimeOf  ar-agent:3905f7ffeb9f0f819e87aa3d314753bb ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-legalSituation:0100350961-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0100350961: proprietà Stato"@it , "Legal situation of cultural property 0100350961: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:8cb75ec50c37b769b2c85210b3716feb ;
+        l0:name           "Condizione giuridica del bene culturale 0100350961: proprietà Stato"@it , "Legal situation of cultural property 0100350961: proprietà Stato"@en .
+
+ar-SiteDefinition:palazzo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "palazzo" .
+
+ar-culturalPropertyDefinition:disegno
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "disegno" .
+
+ar-agentrole:0100350961-photographic-documentation-1-photographic-documentation-owner
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente proprietario della documentazione fotografica 1 del bene culturale 0100350961: S67"@it , "Owner agency of photographic documentation 1 of cultural property 0100350961: S67"@en ;
+        arco-core:hasAgent  ar-agent:ab0e18f88b67935608a177444ae08812 ;
+        arco-core:hasRole   ar-role:Owner ;
+        l0:name             "Ente proprietario della documentazione fotografica 1 del bene culturale 0100350961: S67"@it , "Owner agency of photographic documentation 1 of cultural property 0100350961: S67"@en .
+
+ar-CISNameInTime:galleria-sabauda
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Galleria Sabauda"@it , "Name in time: Galleria Sabauda"@en ;
+        cis:institutionalCISName  "Galleria Sabauda" ;
+        l0:name                   "Denominazione nel tempo: Galleria Sabauda"@it , "Name in time: Galleria Sabauda"@en .
+
+ar-dating:0100350961-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0100350961"@it , "Dating 1 of cultural property 0100350961"@en ;
+        arco-cd:hasDatingEvent  ar-event:0100350961-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:bibliografia ;
+        l0:name                 "Dating 1 of cultural property 0100350961"@en , "Cronologia 1 del bene 0100350961"@it .
+
+<https://w3id.org/arco/resource/Inscription/0100350961-inscription-1>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 1 of cultural property 0100350961"@en , "Iscrizione 1 sul bene culturale 0100350961"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/corsivo> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-penna ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0100350961-inscription-1 ;
+        arco-dd:positionOnCulturalProperty
+                "alto, sinistra" ;
+        arco-dd:transcript              "Baldassarre da Siena" .
+
+ar-CulturalEntityTechnicalStatus:0100350961-inscription-2
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 2 sul bene culturale 0100350961"@it , "Technical status of inscription 2 of cultural property 0100350961"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-penna ;
+        l0:name     "Stato tecnico dell'iscrizione 2 sul bene culturale 0100350961"@it , "Technical status of inscription 2 of cultural property 0100350961"@en .
+
+ar-bibliography:0100350961-bibliography-4
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 4 of cultural property: 0100350961"@en , "Bibliografia 4 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "01002348" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p. 20" ;
+        l0:name                   "Bibliography 4 of cultural property: 0100350961"@en , "Bibliografia 4 del bene culturale: 0100350961"@en .
+
+ar-agent:bc70464bc7df4e3b39d1a6a68c4aad9c
+        a           l0:Agent ;
+        rdfs:label  "Gabrielli, Edith" .
+
+ar-TimeInterval:sec-xvi-primo-quarto
+        a            tiapit:TimeInterval ;
+        rdfs:label   "sec. XVI primo quarto" ;
+        tiapit:time  "sec. XVI primo quarto" ;
+        l0:name      "sec. XVI primo quarto" .
+
+ar-ConservationStatus:0100350961-conservation-status-1
+        a                         arco-dd:ConservationStatus ;
+        rdfs:label                "Stato di conservazione 1 del bene: 0100350961"@it , "Conservation status 1 of cultural property: 0100350961"@en ;
+        arco-core:specifications  "alcune lacerazioni e consunzioni nella carta" ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name                   "Stato di conservazione 1 del bene: 0100350961"@it , "Conservation status 1 of cultural property: 0100350961"@en .
+
+ar-agent:31bbc084ab73643b767f7890580e436b
+        a           l0:Agent ;
+        rdfs:label  "Quasimodo, Francesca" ;
+        l0:name     "Quasimodo, Francesca" .
+
+ar-CulturalEntityTechnicalStatus:0100350961
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0100350961"@it , "Technical status of cultural property 0100350961"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:carta-matita-nera-matita-colorata ;
+        l0:name     "Stato tecnico del bene culturale 0100350961"@it , "Technical status of cultural property 0100350961"@en .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0100350961-cataloguing-agency .
+
+ar-docutmentationType:fotografia-b-n
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia b/n" ;
+        l0:name     "fotografia b/n" .
+
+ar-region:to  a     clvapit:Province ;
+        rdfs:label  "TO" ;
+        l0:name     "TO" .
+
+ar-address:de0ffb9ac0d0cfe3fc81462221b1d474
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Piemonte, TO, Torino" ;
+        arco-location:isCulturalPropertyAddressOf
+                ar-HistoricOrArtisticProperty:0100350961 ;
+        clvapit:fullAddress  "via XX Settembre, 86" ;
+        clvapit:hasCity      ar-city:torino ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:to ;
+        clvapit:hasRegion    ar-region:piemonte .
+
+ar-region:piemonte  a  clvapit:Region ;
+        rdfs:label  "Piemonte" ;
+        l0:name     "Piemonte" .
+
+ar-TechnicalCharacteristic:carta-matita-nera-matita-colorata
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "carta/ matita nera matita colorata" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "carta/ matita nera matita colorata" .
+
+<https://w3id.org/arco/resource/CatalogueRecordD/0100350961>
+        a               arco-catalogue:CatalogueRecordD ;
+        rdfs:label      "Scheda catalografica n: 0100350961"@it , "Catalogue Record n: 0100350961"@en ;
+        dc:language     "ita" ;
+        dc:publisher    ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0100350961" ;
+        arco-catalogue:describesCulturalProperty
+                ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0100350961-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0100350961-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "D-300-ICCD10082711" ;
+        arco-core:note  "INVENTARI, TESTI (INVT): INVN: 270 INVD: 1952; INVT: 270/ 129/ 145/ Baldassarre Peruzzi/ Testa di giovane donna - disegno/ 0,27x0,18/ Carta/ 60.000/ Acq. 1869 | INVN: 129; INVD: 1899; INVT: 131.- PERUZZI (Baldassarre). Nato a Siena nel 1481, morto a Roma nel 1536. Testa di giovane donna, vista di faccia. A metà del naturale. - Disegno a matita nera e rossa, su carta. A. 0,27; L. 0,18. Fu venduto alla R. Pinacoteca nel 1869 dal cav. G. Vico. Proveniva dalla raccolta Capoquadri di Firenze. | INVN: 145; INVD: 1871; INVS: 150; INVT: 145/ 128 bis/ 129/ Studio di testa di Giovane/ carta. disegno/ 0,27/ 0, 18 / Peruzzi Baldassarre/ 150. || FONTI E DOCUMENTI (FNT), inventari presso Direzione Galleria Sabauda: FNTA: Gamba F.; FNTT: Regia Pinacoteca di Torino. Inventario degli oggetti d'arte. Parte 1° Quadri, Statue, Disegni e Stampe; FNTD: 1871; FNTF: pp. 19-20; FNTA: Baudi di Vesme A.; FNTT: Catalogo della Regia Pinacoteca di Torino; FNTD: 1899; FNTF: p. 56 | FNTT: Galleria Sabauda, Torino. Inventario dei Dipinti e degli Arazzi al 31 dic. 1969; FNTD: 1952; FNTF: pp. 21-22 ||" .
+
+ar-timeIndexedTypedLocation:0100350961-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0100350961"@it , "Current physical location of cultural property: 0100350961"@en ;
+        arco-core:note                 "Ubicazione originaria: SC" ;
+        arco-location:atSite           ar-Site:577a95a65ad7bdaa0589f45a0fce3117 ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:0100350961 ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0100350961"@it , "Current physical location of cultural property: 0100350961"@en .
+
+ar-Site:577a95a65ad7bdaa0589f45a0fce3117
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo Reale, Manica Nuova" ;
+        cis:isSiteOf               ar-cis:e87b06f3ecf459cee8d6669c5a37f706 ;
+        cis:siteAddress            ar-address:de0ffb9ac0d0cfe3fc81462221b1d474 ;
+        arco-location:hasSiteType  ar-SiteType:palazzo ;
+        l0:name                    "Palazzo Reale, Manica Nuova" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/mm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "mm" ;
+        l0:name     "mm" .
+
+ar-photograpyDocumentation:0100350961-photographic-documentation-1
+        a                              arco-cd:PhotographicDocumentation ;
+        rdfs:label                     "Documentazione fotografica 1 del bene culturale: 0100350961"@it , "Photographic documentation 1 of cultural property: 0100350961"@en ;
+        arco-cd:documentationIdentifier
+                "SBAS TO 694B/LS" ;
+        arco-cd:documentationLocation  "Archivio fotografico della Soprintendenza BSAE-PIE" ;
+        arco-cd:hasAuthor              ar-agent:bf8b04217cff36f0bd6662007cf4569c ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:fotografia-b-n ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasAgentRole         ar-agentrole:0100350961-photographic-documentation-1-photographic-documentation-owner ;
+        arco-core:hasCategory          arco-cd:AttachedDocumentation ;
+        tiapit:time                    "1950/00/00" ;
+        l0:name                        "Photographic documentation 1 of cultural property: 0100350961"@en , "Documentazione fotografica 1 del bene culturale: 0100350961"@it .
+
+ar-Subject:feec4e188957ff3aab6e0844b1d98a62
+        a                    arco-cd:Subject ;
+        rdfs:label           "testa di donna velata" ;
+        arco-cd:isSubjectOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        l0:name              "testa di donna velata" .
+
+ar-CulturalEntityTechnicalStatus:0100350961-inscription-1
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 0100350961"@it , "Technical status of inscription 1 of cultural property 0100350961"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-penna ;
+        l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0100350961"@it , "Technical status of inscription 1 of cultural property 0100350961"@en .
+
+ar-bibliography:0100350961-bibliography-3
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 3 of cultural property: 0100350961"@en , "Bibliografia 3 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "01002384" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p. 56" ;
+        l0:name                   "Bibliography 3 of cultural property: 0100350961"@en , "Bibliografia 3 del bene culturale: 0100350961"@en .
+
+ar-agent:03196445159411b85f094a4b920ba8c3
+        a           l0:Agent ;
+        rdfs:label  "Capretti, Elena" .
+
+ar-catalogueRecordVersion:0100350961-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2012 Capretti, Elena" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0100350961-a2de39d35a2610d83d1f9d55203e4000 , ar-timeIndexedRole:0100350961-compilation-03196445159411b85f094a4b920ba8c3 , ar-timeIndexedRole:0100350961-98973e406f9f8e468992675590298b8b ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:3905f7ffeb9f0f819e87aa3d314753bb ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:03196445159411b85f094a4b920ba8c3 ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:bc70464bc7df4e3b39d1a6a68c4aad9c ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-agentrole:0100350961-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0100350961: S67"@it , "Cataloguing agency for cultural property 0100350961: S67"@en ;
+        arco-core:hasAgent  ar-agent:ab0e18f88b67935608a177444ae08812 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-address:3dae63addfb6d100c8b5756774f9628d
+        a                    clvapit:Address ;
+        rdfs:label           "ITALIA, Piemonte, TO, Torino" ;
+        clvapit:fullAddress  "via Accademia delle Scienze, 6" ;
+        clvapit:hasCity      ar-city:torino ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:to ;
+        clvapit:hasRegion    ar-region:piemonte .
+
+ar-bibliography:0100350961-bibliography-8
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 8 of cultural property: 0100350961"@en , "Bibliografia 8 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "01002327" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "pp. 188-189, n. 129" ;
+        l0:name                   "Bibliography 8 of cultural property: 0100350961"@en , "Bibliografia 8 del bene culturale: 0100350961"@en .
+
+ar-role:realizzazione
+        a           roapit:Role ;
+        rdfs:label  "realizzazione" ;
+        l0:name     "realizzazione" .
+
+ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: disegno"@it , "Cultural property type: disegno"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:disegno ;
+        l0:name     "Tipo del bene: disegno"@it , "Cultural property type: disegno"@en .
+
+ar-bibliography:0100350961-bibliography-2
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 2 of cultural property: 0100350961"@en , "Bibliografia 2 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "01000166" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p. 132" ;
+        l0:name                   "Bibliography 2 of cultural property: 0100350961"@en , "Bibliografia 2 del bene culturale: 0100350961"@en .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente scientifico"@it , "Scientific Director"@en .
+
+ar-agentrole:0100350961-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0100350961: S67"@it , "Heritage protection agency for cultural property 0100350961: S67"@en ;
+        arco-core:hasAgent  ar-agent:ab0e18f88b67935608a177444ae08812 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-cis:366335395bb0a5a1861521c663edb966
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Galleria Sabauda" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:galleria-sabauda ;
+        cis:hasSite           ar-Site:d5bd8e45e2e30a33f4e5cf78acec4d6d ;
+        l0:name               "Galleria Sabauda" .
+
+ar-cis:e87b06f3ecf459cee8d6669c5a37f706
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Galleria Sabauda" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:galleria-sabauda ;
+        cis:hasSite           ar-Site:577a95a65ad7bdaa0589f45a0fce3117 ;
+        l0:name               "Galleria Sabauda" .
+
+ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati liberamente accessibili" ;
+        l0:name     "scheda contenente dati liberamente accessibili" .
+
+ar-interpretationCriterion:bibliografia
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "bibliografia" ;
+        l0:name     "bibliografia" .
+
+ar-timeIndexedTypedLocation:0100350961-alternative-1
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Altra localizzazione 1 del bene: 0100350961"@it , "Alternative location 1 of cultural property: 0100350961"@en ;
+        arco-core:specifications       "Deposito, rete 21 verso" ;
+        arco-location:atSite           ar-Site:d5bd8e45e2e30a33f4e5cf78acec4d6d ;
+        arco-location:hasLocationType  arco-location:StorageLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                ar-HistoricOrArtisticProperty:0100350961 ;
+        l0:name                        "Altra localizzazione 1 del bene: 0100350961"@it , "Alternative location 1 of cultural property: 0100350961"@en .
+
+ar-TechnicalCharacteristic:a-penna
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a penna" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a penna" .
+
+ar-Measurement:0100350961-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0100350961: 180mm"@en , "Misura del bene culturale 0100350961: 180mm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:0100350961-1-width-180 ;
+        l0:name                     "Measurement of cultural property 0100350961: 180mm"@en , "Misura del bene culturale 0100350961: 180mm"@it .
+
+ar-accessProfile:0100350961-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0100350961: 1"@it , "Access profile to catalogue record of cultural property 0100350961: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0100350961: 1"@it , "Access profile to catalogue record of cultural property 0100350961: 1"@en .
+
+<https://w3id.org/arco/resource/FontStyle/corsivo>
+        a           arco-dd:FontStyle ;
+        rdfs:label  "corsivo" ;
+        l0:name     "corsivo" .
+
+ar-Site:d5bd8e45e2e30a33f4e5cf78acec4d6d
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo dell'Accademia delle Scienze" ;
+        cis:isSiteOf               ar-cis:366335395bb0a5a1861521c663edb966 ;
+        cis:siteAddress            ar-address:3dae63addfb6d100c8b5756774f9628d ;
+        arco-location:hasSiteType  ar-SiteType:palazzo ;
+        l0:name                    "Palazzo dell'Accademia delle Scienze" .
+
+ar-bibliography:0100350961-bibliography-7
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 7 of cultural property: 0100350961"@en , "Bibliografia 7 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "01001021" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p. 119 n. 85, p. 160" ;
+        l0:name                   "Bibliography 7 of cultural property: 0100350961"@en , "Bibliografia 7 del bene culturale: 0100350961"@en .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0100350961-heritage-protection-agency .
+
+<https://w3id.org/arco/resource/Acquisition/0100350961-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisition 1 of cultural property: 0100350961"@en , "Acquisizione 1 del bene culturale: 0100350961"@it ;
+        arco-cd:acquisitionLocation  "Firenze" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/acquisto> ;
+        arco-cd:hasPreviousOwner     ar-agent:50231b771fe964586aad90dfe9643cdd ;
+        arco-cd:isAcquisitionOf      ar-HistoricOrArtisticProperty:0100350961 ;
+        tiapit:time                  "1869" ;
+        l0:name                      "Acquisition 1 of cultural property: 0100350961"@en , "Acquisizione 1 del bene culturale: 0100350961"@it .
+
+ar-agent:8cb75ec50c37b769b2c85210b3716feb
+        a                l0:Agent ;
+        rdfs:label       "Ministero per i Beni e le Attività Culturali" ;
+        arco-cd:address  "via Accademia delle Scienze, 5 - Torino" ;
+        l0:name          "Ministero per i Beni e le Attività Culturali" .
+
+ar-city:torino  a   clvapit:City ;
+        rdfs:label  "Torino" ;
+        l0:name     "Torino" .
+
+ar-bibliography:0100350961-bibliography-1
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 1 of cultural property: 0100350961"@en , "Bibliografia 1 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "01002390" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p. 20" ;
+        l0:name                   "Bibliography 1 of cultural property: 0100350961"@en , "Bibliografia 1 del bene culturale: 0100350961"@en .
+
+ar-timeIndexedRole:0100350961-compilation-03196445159411b85f094a4b920ba8c3
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Capretti, Elena"@en , "Compilazione da Capretti, Elena"@it ;
+        roapit:isRoleInTimeOf  ar-agent:03196445159411b85f094a4b920ba8c3 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-role:Owner  a            roapit:Role ;
+        rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
+        arco-core:isRoleOf  ar-agentrole:0100350961-photographic-documentation-1-photographic-documentation-owner .
+
+ar-agent:185321a80fbaed803010a58965f17fdf
+        a           l0:Agent ;
+        rdfs:label  "Soprintendenza per i Beni Storici, Artistici ed Etnoantropologici del Piemonte - Ufficio Catalogo" ;
+        l0:name     "Soprintendenza per i Beni Storici, Artistici ed Etnoantropologici del Piemonte - Ufficio Catalogo" .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+<https://w3id.org/arco/resource/AcquisitionType/acquisto>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "acquisto" ;
+        l0:name     "acquisto" .
+
+ar-agent:bf8b04217cff36f0bd6662007cf4569c
+        a           l0:Agent ;
+        rdfs:label  "Carità, Roberto" ;
+        l0:name     "Carità, Roberto" .
+
+ar-agent:3905f7ffeb9f0f819e87aa3d314753bb
+        a           l0:Agent ;
+        rdfs:label  "Caldera, Massimiliano" .
+
+ar-SourceAndDocument:0100350961-source-document-1
+        a                              arco-cd:SourceAndDocument ;
+        rdfs:label                     "Sources and documents 1 of cultural property: 0100350961"@en , "Fonti e documenti 1 del bene culturale: 0100350961"@it ;
+        arco-cd:documentationIdentifier
+                "UC-SBSAE_PIE00000434" ;
+        arco-cd:documentationLocation  "database \"OA Galleria Sabauda\"" ;
+        arco-cd:documentationTitle     "00000434" ;
+        arco-cd:folio                  "formato digitale" ;
+        arco-cd:hasArchive             ar-agent:185321a80fbaed803010a58965f17fdf ;
+        arco-cd:hasAuthor              ar-agent:31bbc084ab73643b767f7890580e436b ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:scheda-oa-ad-uso-interno ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0100350961 ;
+        tiapit:time                    "2005/00/00" ;
+        l0:name                        "Fonti e documenti 1 del bene culturale: 0100350961"@en , "Sources and documents 1 of cultural property: 0100350961"@en .
+
+ar-agent:10ae20f17743df400a1bd794df022add
+        a                             CPV:Person ;
+        rdfs:label                    "Peruzzi Baldassarre" ;
+        arco-cd:agentDate             "1481/ 1536" ;
+        arco-cd:agentLocalIdentifier  "00006322" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0100350961 ;
+        l0:name                       "Peruzzi Baldassarre" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
+
+<https://w3id.org/arco/resource/Inscription/0100350961-inscription-3>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 3 of cultural property 0100350961"@en , "Iscrizione 3 sul bene culturale 0100350961"@it ;
+        arco-dd:hasFontStyle            <https://w3id.org/arco/resource/FontStyle/corsivo> ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-penna ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0100350961-inscription-3 ;
+        arco-dd:positionOnCulturalProperty
+                "fodera di supporto antica" ;
+        arco-dd:transcript              "Biringucci" .
+
+ar-event:0100350961-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0100350961"@it , "Creation of cultural property 0100350961"@en ;
+        arco-cd:specificTime  ar-TimeInterval:ca-1500-ca-1525 ;
+        tiapit:atTime         ar-TimeInterval:sec-xvi-primo-quarto ;
+        l0:name               "Realizzazione del bene 0100350961"@it , "Creation of cultural property 0100350961"@en .
+
+ar-SiteType:palazzo  a  arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        l0:name     "Tipo di contenitore fisico: palazzo"@it , "Site type: palazzo"@en .
+
+ar-MeasurementCollection:0100350961-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0100350961"@en , "Misure del bene culturale 0100350961"@it ;
+        arco-core:note          "cornice, altezza: 585" ;
+        arco-dd:hasMeasurement  ar-Measurement:0100350961-1-width , ar-Measurement:0100350961-1-height ;
+        l0:name                 "Measurements of cultural property 0100350961"@en , "Misure del bene culturale 0100350961"@it .
+
+ar-bibliography:0100350961-bibliography-6
+        a                         arco-cd:Bibliography ;
+        rdfs:label                "Bibliography 6 of cultural property: 0100350961"@en , "Bibliografia 6 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographyLocalIdentifier
+                "01002347" ;
+        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory     arco-cd:SpecificBibliography ;
+        arco-core:note            "p. 28" ;
+        l0:name                   "Bibliography 6 of cultural property: 0100350961"@en , "Bibliografia 6 del bene culturale: 0100350961"@en .
+
+ar-agent:50231b771fe964586aad90dfe9643cdd
+        a           l0:Agent ;
+        rdfs:label  "Vico, Giovanni" ;
+        l0:name     "Vico, Giovanni" .
+
+ar-province:to  a   clvapit:Province ;
+        rdfs:label  "TO" ;
+        l0:name     "TO" .
+
+ar-docutmentationType:scheda-oa-ad-uso-interno
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "scheda OA ad uso interno" ;
+        l0:name     "scheda OA ad uso interno" .
+
+ar-CulturalPropertyCataloguingCategory:opera-isolata
+        a           arco-arco:CulturalPropertyCataloguingCategory ;
+        rdfs:label  "opera isolata" ;
+        l0:name     "opera isolata" .
+
+ar-Value:0100350961-1-height-270
+        a                      mu:Value ;
+        rdfs:label             "270"@en , "270"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "270" .

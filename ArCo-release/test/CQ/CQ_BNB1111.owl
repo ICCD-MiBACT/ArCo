@@ -59,7 +59,7 @@ WHERE {
         <testannotationschema:testedBy xml:lang="en">Run by Margherita Porena</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Testing BNB</rdfs:comment>
         <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
-        <testalod:hasInputTestDataUri rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_BNB1.ttl"/>
+        <testalod:hasInputTestDataUri rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/BNB1.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 

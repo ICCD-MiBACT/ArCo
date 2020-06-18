@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <BDM version="2.00_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo di scheda">BDM</TSK>
+         <LIR hint="Livello di ricerca">P</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">20</NCTR>
+            <NCTN hint="Numero catalogo generale">00168323</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">S59</ESC>
+         <ECP hint="Ente competente">S59</ECP>
+      </CD>
+      <LC hint="LOCALIZZAZIONE">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PVCS hint="Stato">ITALIA</PVCS>
+            <PVCP hint="Provincia">NU</PVCP>
+            <PVCC hint="Comune">Sorgono</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA">
+            <LDCN hint="Denominazione del contenitore architettonico/ambientale">Museo del Legno</LDCN>
+            <LDCU hint="Denominazione dello spazio viabilistico">corso Vittorio Emanuele</LDCU>
+         </LDC>
+      </LC>
+      <UB hint="UBICAZIONE">
+         <INV hint="INVENTARIO DI MUSEO O DI COLLEZIONE"/>
+      </UB>
+      <LA hint="ALTRE LOCALIZZAZIONI">
+         <TCL hint="Tipo di localizzazione">di rilevamento</TCL>
+         <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+            <PRVS hint="Stato">ITALIA</PRVS>
+            <PRVR hint="Regione">Sardegna</PRVR>
+            <PRVP hint="Provincia">NU</PRVP>
+            <PRVC hint="Comune">Sorgono</PRVC>
+         </PRV>
+         <PRC hint="COLLOCAZIONE SPECIFICA DI PROVENIENZA">
+            <PRCD hint="Denominazione del contenitore architettonico/ambientale">botteghe Antonio Sau</PRCD>
+            <PRCU hint="Denominazione dello spazio viabilistico">via Roma</PRCU>
+         </PRC>
+      </LA>
+      <OG hint="OGGETTO">
+         <OGT hint="DEFINIZIONE DELL'OGGETTO">
+            <OGTD hint="Definizione">cassa</OGTD>
+         </OGT>
+      </OG>
+      <AU hint="AUTORE FABBRICAZIONE/ ESECUZIONE">
+         <ATB hint="AMBITO DI PRODUZIONE">
+            <ATBD hint="Denominazione">Barbagia di Belvì</ATBD>
+            <ATBM hint="Motivazione">esami stilistico-comparativi e sul manufatto</ATBM>
+         </ATB>
+         <DTF hint="CRONOLOGIA DI FABBRICAZIONE/ ESECUZIONE">
+            <DTFZ hint="Datazione">XIX sec.</DTFZ>
+            <DTFM hint="Motivazione della datazione">esami stilistico-comparativi e sul manufatto</DTFM>
+         </DTF>
+      </AU>
+      <MT hint="DATI TECNICI">
+         <MTC hint="MATERIA E TECNICA">
+            <MTCM hint="Materia">legno di castagno</MTCM>
+            <MTCT hint="Tecnica">intaglio</MTCT>
+         </MTC>
+         <MIS hint="MISURE">
+            <MISU hint="Unita'">cm</MISU>
+            <MISA hint="Altezza">75</MISA>
+            <MISL hint="Larghezza">125</MISL>
+            <MISP hint="Profondita'">52</MISP>
+         </MIS>
+      </MT>
+      <UT hint="USO">
+         <UTF hint="Funzione">contenere corredo nuziale</UTF>
+      </UT>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Dati di conservazione">mediocre</STCC>
+            <STCS hint="Indicazioni specifiche">mancano i piedi; fessurazioni delle tavole, coperchio probabilmente non pertinente.</STCS>
+         </STC>
+      </CO>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESO hint="Indicazioni sull'oggetto">Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato.</DESO>
+            <DESS hint="Descrizione del soggetto">In "sa mustra" -in sardo la parte mediana del frontone- due colombelle si affrontano ai lati di un motivo quadrangolare, ornato da un fiore centrale e da volute in corrispondenza degli angoli; due motivi romboidali, anch'essi ornati da volute, concludono la partitura. Attorno abbiamo un fregio che alterna mezzi rosoni a spighe di grano. L'ampia fascia in basso ospita un grande rosone centrale da cui si svolgono mezzi rosoni assieme a spighe di grano e baccellature.</DESS>
+         </DES>
+         <APF hint="APPARATO FIGURATIVO">
+            <APFT hint="Tipologia">zoomorfo</APFT>
+            <APFF hint="Funzione">magico-prottetiva</APFF>
+            <APFE hint="Materia e tecnica d'esecuzione">legno di castagno/intaglio</APFE>
+         </APF>
+         <APF hint="APPARATO FIGURATIVO">
+            <APFT hint="Tipologia">fitomorfo</APFT>
+            <APFF hint="Funzione">magico-prottetiva</APFF>
+            <APFE hint="Materia e tecnica d'esecuzione">legno di castagno/intaglio</APFE>
+         </APF>
+         <NSC hint="Notizie storico-critiche">L'opera in questione ripete il consueto armamentario decorativo delle casse nuziali barbaricine. Nella nostra, sia per composizione che per esecuzione dell'intaglio, pare dominare l'elemento geometrico. I motivi iconografici di lontana origine paleocristiana, perduto il loro connotato simbolico, assumono probabilmente un valore apotropaico.</NSC>
+      </DA>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+            <CDGS hint="Indicazione specifica">comune di Sorgono</CDGS>
+            <CDGI hint="Indirizzo">corso IV Novembre 1, 08038 Sorgono NU</CDGI>
+         </CDG>
+      </TU>
+      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+            <FTAX hint="Genere">specifiche allegate</FTAX>
+            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+            <FTAN hint="Codice identificativo">SBAPSAE59156745</FTAN>
+         </FTA>
+         <BIB hint="BIBLIOGRAFIA">
+            <BIBX hint="Genere">di confronto</BIBX>
+            <BIBA hint="Autore">Paulis, Susanna</BIBA>
+            <BIBD hint="Anno di edizione">2012</BIBD>
+            <BIBN hint="Volume, n. del fascicolo, pagine">pp. 64-187.</BIBN>
+            <BIBH hint="Sigla per citazione">299</BIBH>
+         </BIB>
+      </DO>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2012</CMPD>
+            <CMPN hint="Nome">Dettori, M.P.</CMPN>
+            <CMPN hint="Nome">Nunfris, A.</CMPN>
+         </CMP>
+         <FUR hint="Funzionario responsabile">Dettori, M.P.</FUR>
+         <RVM hint="TRASCRIZIONE">
+            <RVMD hint="Data">2013</RVMD>
+            <RVMN hint="Nome">Nunfris, A.</RVMN>
+         </RVM>
+      </CM>
+      <AN hint="ANNOTAZIONI">
+         <OSS hint="Note e osservazioni critiche">La cassa fa parte di una donazione effettuata da parte del "mastru 'e linna" (maestro falegname) Antonio Sau a favore del comune di Sorgono, datata 1998. Appartengono al lascito altre sei casse, frammenti di frontoni lignei intagliati, matrici xilografiche e macchinari da falegnameria d'epoca.</OSS>
+      </AN>
+   </BDM>
+</schede>

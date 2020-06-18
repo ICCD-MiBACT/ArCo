@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <BNM version="3.01_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">BNM</TSK>
+         <LIR hint="Livello ricerca">C</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">09</NCTR>
+            <NCTN hint="Numero catalogo generale">00785097</NCTN>
+         </NCT>
+         <ESC hint="Ente schedatore">UniFi</ESC>
+         <ECP hint="Ente competente">S156</ECP>
+      </CD>
+      <RV hint="RELAZIONI">
+         <RVE hint="STRUTTURA COMPLESSA">
+            <RVEL hint="Livello">1</RVEL>
+            <RVER hint="Codice bene radice">0900785097</RVER>
+         </RVE>
+      </RV>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">ACANTITE</OGTD>
+            <OGTL hint="Lingua">ita</OGTL>
+            <OGTV hint="Identificazione">esemplare</OGTV>
+            <OGTC hint="Denominazione collezione">GENERALE</OGTC>
+         </OGT>
+      </OG>
+      <SM hint="SISTEMATICA MINERALI">
+         <SMN hint="NOMENCLATURA">
+            <SMNA hint="Specie (nome italiano)">ACANTITE</SMNA>
+            <SMNI hint="Specie (I.M.A.)">ACANTHITE</SMNI>
+         </SMN>
+         <SMS hint="SISTEMATICA">
+            <SMSD hint="Classe (New Dana)">Sulfides, including Selenides and Tellurides</SMSD>
+            <SMSK hint="Codice (New Dana)">2.4.1.1</SMSK>
+            <SMSC hint="Classe (Strunz)">Metal Sulfides, M:S &gt; 1:1 (mainly 2:1)</SMSC>
+            <SMSS hint="Sottoclasse (Strunz)">With Cu, Ag, Au</SMSS>
+            <SMSX hint="Codice (Strunz)">2.BA.25</SMSX>
+            <SMSE hint="Formula semplificata">Ag2S</SMSE>
+         </SMS>
+         <SMT hint="TIPO">
+            <SMTT hint="Tipo">non tipo</SMTT>
+         </SMT>
+         <SMC hint="CARATTERISTICHE CRISTALLOGRAFICHE">
+            <SMCS hint="Sistema">Monoclino</SMCS>
+            <SMCL hint="Classe">Prismatica</SMCL>
+            <SMCP hint="Gruppo puntuale">P 21/c</SMCP>
+            <SMCG hint="Gruppo spaziale">14</SMCG>
+         </SMC>
+      </SM>
+      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+            <PVCS hint="Stato">Italia</PVCS>
+            <PVCR hint="Regione">Toscana</PVCR>
+            <PVCP hint="Provincia">FI</PVCP>
+            <PVCC hint="Comune">Firenze</PVCC>
+         </PVC>
+         <LDC hint="COLLOCAZIONE SPECIFICA"/>
+      </LC>
+      <DA hint="DATI ANALITICI">
+         <DES hint="DESCRIZIONE">
+            <DESO hint="Oggetto">Prova descrizione scheda BNM</DESO>
+         </DES>
+      </DA>
+      <CO hint="CONSERVAZIONE">
+         <STC hint="STATO DI CONSERVAZIONE">
+            <STCC hint="Stato di conservazione">buono</STCC>
+         </STC>
+      </CO>
+      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+         <ACQ hint="ACQUISIZIONE">
+            <ACQT hint="Tipo acquisizione">IGNOTA</ACQT>
+         </ACQ>
+         <CDG hint="CONDIZIONE GIURIDICA">
+            <CDGG hint="Indicazione generica">proprietà Ente pubblico non territoriale</CDGG>
+         </CDG>
+      </TU>
+      <AD hint="ACCESSO AI DATI">
+         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+            <ADSP hint="Profilo di accesso">2</ADSP>
+            <ADSM hint="Motivazione">scheda contenente dati personali</ADSM>
+         </ADS>
+      </AD>
+      <CM hint="COMPILAZIONE">
+         <CMP hint="COMPILAZIONE">
+            <CMPD hint="Data">2013</CMPD>
+            <CMPN hint="Nome">Fantoni, Luciana</CMPN>
+         </CMP>
+         <RSR hint="Referente scientifico">Pratesi, Giovanni</RSR>
+         <FUR hint="Funzionario responsabile">Bindi, Luca</FUR>
+      </CM>
+   </BNM>
+</schede>

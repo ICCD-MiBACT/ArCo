@@ -1,0 +1,1033 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/location/"
+     xml:base="https://w3id.org/arco/location/"
+     xmlns:arco-location="https://w3id.org/arco/location/"
+     xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cis="http://dati.beniculturali.it/cis/"
+     xmlns:clv="https://w3id.org/italia/onto/CLV/"
+     xmlns:arco-core="https://w3id.org/arco/core/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/location/">
+        <owl:imports rdf:resource="http://dati.beniculturali.it/cis/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/core/"/>
+        <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
+        <owl:versionInfo xml:lang="it">Versione 0.3 beta</owl:versionInfo>
+        <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Marialetizia Mancinelli (MiBACT, ICCD)</dc:creator>
+        <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/core/iccdNormTag -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/core/iccdNormTag"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/isInSite -->
+
+    <owl:ObjectProperty rdf:about="http://dati.beniculturali.it/cis/isInSite"/>
+    
+
+
+    <!-- https://w3id.org/arco/location/atLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/atLocation">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione qualificata nel tempo al luogo cui si riferisce.</rdfs:comment>
+        <rdfs:label xml:lang="en">at location</rdfs:label>
+        <rdfs:label xml:lang="it">presso luogo</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>se LC senza sottoelemento LDC; se LA senza sottoelemento PRC</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/atSite -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/atSite">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/atLocation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/Site"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione qualificata nel tempo al contenitore fisico cui si riferisce.</rdfs:comment>
+        <rdfs:label xml:lang="en">at site</rdfs:label>
+        <rdfs:label xml:lang="it">presso contenitore fisico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC; LA/PRC</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasAltitude -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasAltitude">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Coordinates"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega le coordinate relative alla georeferenziazione di un oggetto (Geometry) alla sua altitudine.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha altitudine</rdfs:label>
+        <rdfs:label xml:lang="en">has altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI - GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasBaseMap -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasBaseMap">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/BaseMap"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione di un oggetto alla base cartografica eventualmente utilizzata.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha base cartografica</rdfs:label>
+        <rdfs:label xml:lang="en">has base map</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasContinent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasContinent">
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/Continent"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la localizzazione di un&apos;entità al continente in cui si trova.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha continente</rdfs:label>
+        <rdfs:label xml:lang="en">has continent</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LA/PRT/PRTK</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasCoordinates -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasCoordinates">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/Coordinates"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la georeferenziazione di un oggetto (Geometry) alle coordinate (x, y, z).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha coordinate</rdfs:label>
+        <rdfs:label xml:lang="en">has coordinates</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>GP/GPD; GA/GAPD; GL/GLS, ICCD Normativa Trasversale: GE/GEC</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasCulturalPropertyAddress -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasCulturalPropertyAddress">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/core/CulturalProperty"/>
+        <rdfs:range rdf:resource="http://dati.gov.it/onto/clvapit#Address"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la relazione che collega un bene culturale all&apos;indirizzo della sua localizzazione fisica attuale, al momento della catalogazione. La relazione fornisce una rappresentazione semplificata, con ridotta espressività, della localizzazione attuale del bene culturale, e provoca la perdita delle altre informazioni che riguardano la collocazione del bene (eventuale contenitore fisico, continente, collocazione specifica nel contenitore fisico, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">cultural property address</rdfs:label>
+        <rdfs:label xml:lang="it">indirizzo del bene culturale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/PVC</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasGeometryMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasGeometryMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/GeometryMethod"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione al metodo utilizzato per il posizionamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha metodo di georeferenziazione</rdfs:label>
+        <rdfs:label xml:lang="en">has geometry method</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM - GA/GAM - GL/GLM</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasGeometryTechnique -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasGeometryTechnique">
+        <rdfs:label xml:lang="it">ha tecnica di georeferenziazione</rdfs:label>
+        <rdfs:label xml:lang="en">has geometry technique</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasLocationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasLocationType">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una localizzazione qualificata nel tempo al tipo di localizzazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di localizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">has location type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasReferredLocationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasReferredLocationType">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una georeferenziazione al tipo di localizzazione (fisica attuale, precedente, di rinvenimento, etc.) cui si riferisce.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di localizzazione cui si riferisce</rdfs:label>
+        <rdfs:label xml:lang="en">has referred location type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasSiteDefinition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasSiteDefinition">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/SiteType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/SiteDefinition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè alla definizione della sua tipologia.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha definizione del contenitore fisico</rdfs:label>
+        <rdfs:label xml:lang="en">has site definition</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè la definizione.</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC/LDCT</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasSiteSpecification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasSiteSpecification">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/SiteType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/SiteSpecification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè alle specifiche sulla sua tipologia.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha qualificazione del contenitore fisico</rdfs:label>
+        <rdfs:label xml:lang="en">has site specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">Questa proprietà collega la tipologia di un contenitore fisico a una delle sue componenti, cioè la qualificazione.</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC/LDCQ</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasSiteType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasSiteType">
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/Site"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/SiteType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un contenitore fisico al tipo di contenitore fisico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di contenitore fisico</rdfs:label>
+        <rdfs:label xml:lang="en">has site type</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasTimeIndexedQualifiedLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasTimeIndexedQualifiedLocation">
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità a una sua localizzazione qualificata nel tempo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha localizzazione qualificata nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has time indexed qualified location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">LC; LA; per normativa F: anche LR</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasToponymInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasToponymInTime">
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/ToponymInTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di collegare un luogo a una denominazione che cambia nel tempo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha toponimo nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">has toponym in time</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/PVL; LA/PRL</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/hasTypeOfContext -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/location/hasTypeOfContext">
+        <rdfs:range rdf:resource="https://w3id.org/arco/location/TypeOfContext"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di collegare un bene culturale al tipo di contesto (urbano, suburbano, territoriale, subacqueo) in cui si trova.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a cultural property to the type of context in which the cultural property is located.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di contesto geografico</rdfs:label>
+        <rdfs:label xml:lang="en">has type of geographical context</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/PVZ; LA/PRZ</arco-core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime"/>
+    
+
+
+    <!-- ttps://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="ttps://w3id.org/italia/onto/TI/atTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dati.gov.it/onto/l0/name -->
+
+    <owl:DatatypeProperty rdf:about="http://dati.gov.it/onto/l0/name"/>
+    
+
+
+    <!-- https://w3id.org/arco/location/alt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/alt">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata z di un oggetto, che ne definisce l&apos;altitudine rispetto al livello del mare.</rdfs:comment>
+        <rdfs:label xml:lang="en">altitude</rdfs:label>
+        <rdfs:label xml:lang="it">altitudine</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEC/GECZ; normative precedenti: GP/GPC/GPCL</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/lat -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/lat">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata y, ovvero la latitudine.</rdfs:comment>
+        <rdfs:label xml:lang="en">latitude</rdfs:label>
+        <rdfs:label xml:lang="it">latitudine</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>GP/GPD/GPDP/GPDPY; GA/GAD/GADP/GADPY; GL/GLD/GLDP/GLDPY; ICCD Normativa Trasversale 4.00: GE/GEC/GECY</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/locationDetails -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/locationDetails">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/TimeIndexedQualifiedLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è utilizzata per rappresentare informazioni sui percorsi che permettono l’accesso al bene o che lo delimitano, o ulteriori specifiche per la localizzazione del bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is used to represent other paths and details about the cultural property location.</rdfs:comment>
+        <rdfs:label xml:lang="it">dettagli della localizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">location details</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/PVC/PVCV</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/long -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/long">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la coordinata x, ovvero la longitudine.</rdfs:comment>
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+        <rdfs:label xml:lang="it">longitudine</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>GP/GPD/GPDP/GPDPX; GA/GAD/GADP/GADPX; GL/GLD/GLDP/GLDPX; ICCD Normativa Trasversale 4.00: GE/GEC/GECX</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/maxAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/maxAlt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/alt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="it">altitudine massima</rdfs:label>
+        <rdfs:label xml:lang="en">maximum altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAX; versioni precedenti: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/minAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/minAlt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/alt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="it">altitudine minima</rdfs:label>
+        <rdfs:label xml:lang="en">minimum altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: MT/MTA/MTAM; versioni precedenti: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/pointType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/pointType">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il tipo di punto che georeferenzia il bene catalogato. La definizione del tipo di punto non è univoca e dipende dalla tipologia e dalla conformazione del bene e dal tipo di localizzazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">point type</rdfs:label>
+        <rdfs:label xml:lang="it">tipo di punto</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">Normative di versioni precedenti alla 4.00: GP/GPC/GPCT</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/relativeAlt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/relativeAlt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/location/alt"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/location/Altitude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="it">altitudine relativa</rdfs:label>
+        <rdfs:label xml:lang="en">relative altitude</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTA/MTAR</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/siteIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/siteIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/Site"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà permette di associare un contenitore fisico al codice assegnatogli dall&apos;ICCD.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificativo del contenitore fisico</rdfs:label>
+        <rdfs:label xml:lang="en">site identifier</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC/LDCK; LA/PRC/PRCK</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/location/spacialReferenceSystem -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/location/spacialReferenceSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CLV/Geometry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sistema di riferimento utilizzato per la georeferenziazione (es.: WGS84, WGS84 UTM32, ...)</rdfs:comment>
+        <rdfs:label xml:lang="it">sistema di riferimento</rdfs:label>
+        <rdfs:label xml:lang="en">spacial reference system</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEP; versioni precedenti: GA/GAP - GL/GLP - GP/GPP</arco-core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/italia/onto/TI/date -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/date"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/identifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+    
+
+
+    <!-- ttps://w3id.org/italia/onto/TI/date -->
+
+    <owl:DatatypeProperty rdf:about="ttps://w3id.org/italia/onto/TI/date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/GeographicalFeature -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/GeographicalFeature"/>
+    
+
+
+    <!-- http://dati.beniculturali.it/cis/Site -->
+
+    <owl:Class rdf:about="http://dati.beniculturali.it/cis/Site"/>
+    
+
+
+    <!-- http://dati.gov.it/onto/clvapit#Address -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/clvapit#Address"/>
+    
+
+
+    <!-- http://dati.gov.it/onto/clvapit#Feature -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/clvapit#Feature"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/CulturalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/CulturalProperty"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/ImmovableCulturalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/ImmovableCulturalProperty"/>
+    
+
+
+    <!-- https://w3id.org/arco/core/Type -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/core/Type"/>
+    
+
+
+    <!-- https://w3id.org/arco/location/Altitude -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/Altitude">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/alt"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;altitudine, ovvero l&apos;altezza di un oggetto rispetto al livello del mare, che può essere specificata da un&apos;altitudine massima, minima, relativa.</rdfs:comment>
+        <rdfs:label xml:lang="en">Altitude</rdfs:label>
+        <rdfs:label xml:lang="it">Altitudine</rdfs:label>
+        <arco-core:iccdNormTag xml:lang="it">quota minima: GP/GPC/GPCI -GA/GAQ/GAQI - GL/GLQ/GLQI - MT/MTA/MTAM; quota massima: GP/GPC/GPCS - GA/GAQS - GL/GLQ/GLQS - MT/MTA/MTAX; quota relativa: MT/MTA/MTAR; coordinata z: 4.00 GE/GEC/GECZ - 3.00GP/GPC/GPCL</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/BaseMap -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/BaseMap">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/date"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la base cartografica eventualmente utilizzata nelle attività di georeferenziazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">Base cartografica</rdfs:label>
+        <rdfs:label xml:lang="en">Base map</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPB; versioni precedenti: GP/GPB - GA/GAB - GL/GLB</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/Continent -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/Continent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CLV/Feature"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un Continente.</rdfs:comment>
+        <rdfs:label xml:lang="en">Continent</rdfs:label>
+        <rdfs:label xml:lang="it">Continente</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/Coordinates -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/Coordinates">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme delle coordinate, geografiche o proiettate, che permettono la georeferenziazione di un oggetto. Per la georeferenziazione puntuale sarà presente soltanto una coppia di coordinate; per la georeferenziazione lineare e areale saranno presenti più coppie di coordinate che individuano i punti che definiscono la linea o
+l&apos;area che rappresenta il bene.</rdfs:comment>
+        <rdfs:label xml:lang="it">Coordinate</rdfs:label>
+        <rdfs:label xml:lang="en">Coordinates</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>GP/GPD; GA/GAPD; GL/GLS, ICCD Normativa Trasversale: GE/GEC</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/GeometryMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/GeometryMethod">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il metodo utilizzato per il posizionamento (esatto, approssimato, con rappresentazione simbolica).</rdfs:comment>
+        <rdfs:label xml:lang="en">Geometry method</rdfs:label>
+        <rdfs:label xml:lang="it">Metodo di posizionamento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa trasversale 4.00: GE/GPM; versioni precedenti: GP/GPM -  GA/GAM - GL/GLM</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/GeometryTechnique -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/GeometryTechnique">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tecnica di georeferenziazione, utilizzata per l&apos;acquisizione delle coordinate (rilievo da cartografia con sopralluogo, rilievo da cartografia senza sopralluogo, rilievo da foto aerea con sopralluogo, rilievo da foto aerea senza sopralluogo, rilievo da satelliterilievo tradizionale, rilievo tramite GPS, rilievo tramite punti d&apos;appoggio fiduciali o trigonometrici, stereofotogrammetria).</rdfs:comment>
+        <rdfs:label xml:lang="en">Geometry technique</rdfs:label>
+        <rdfs:label xml:lang="it">Tecnica di georeferenziazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GPT; versioni precedenti: GP/GPT - GA/GAT - GL/GLT</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/HistoricalGeographicalArea -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/HistoricalGeographicalArea">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/GeographicalFeature"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un&apos;area storico-geografica.</rdfs:comment>
+        <rdfs:label xml:lang="it">Area storico-geografica</rdfs:label>
+        <rdfs:label xml:lang="en">Historical geographical area</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/LocationType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/LocationType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di localizzazione di un bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">LA/TLC; LA/TCL; LC (CurrentPhysicalLocation); per normativa F: anche LR (ShotLocation)</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/SiteDefinition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/SiteDefinition">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore fisico.</rdfs:comment>
+        <rdfs:label xml:lang="it">Definizione di Contenitore Fisico</rdfs:label>
+        <rdfs:label xml:lang="en">Site Definition</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC/LDCT</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/SiteSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/SiteSpecification">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta specifiche sulla qualificazione del contenitore fisico, cioè l&apos;aggettivo o la locuzione che, rispetto alla Site Definition, precisa, integra o caratterizza il contenitore fisico dal punto di vista della
+condizione giuridico-amministrativa o funzionale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Qualificazione del Contenitore Fisico</rdfs:label>
+        <rdfs:label xml:lang="en">Site Specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC/LDCQ</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/SiteType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/SiteType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/core/Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasSiteDefinition"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/location/SiteDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasSiteSpecification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/location/SiteSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contenitore fisico, cioè la tipologia del contenitore fisico ed eventuali aggettivi o locuzioni che precisano, integrano o caratterizzano il contenitore fisico dal punto di vistaq della condizione giuridico-amministrativa o funzionale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Site Type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di Contenitore Fisico</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/LDC/LDCT; LC/LDC/LDCQ</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/TimeIndexedQualifiedLocation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/TimeIndexedQualifiedLocation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/location/hasLocationType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/location/LocationType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una localizzazione di un bene culturale, inserita in un arco temporale e qualificata in base al ruolo che la localizzazione riveste nei confronti del bene culturale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Localizzazione qualificata nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">Time Indexed Qualified Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag xml:lang="it">LC; LA; per normativa F: anche LR</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/ToponymInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/ToponymInTime">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="ttps://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dati.gov.it/onto/l0/name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta eventuali altre denominazioni del luogo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents other place&apos;s designations.</rdfs:comment>
+        <rdfs:label xml:lang="it">Toponimo nel tempo</rdfs:label>
+        <rdfs:label xml:lang="en">Toponym in time</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/PVL; LA/PRL</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/location/TypeOfContext -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/location/TypeOfContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di contesto in cui si trova un bene culturale (urbano, suburbano, territoriale, subacqueo).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of context, in which a cultural property is located.</rdfs:comment>
+        <rdfs:label xml:lang="it">Tipo di contesto geografico</rdfs:label>
+        <rdfs:label xml:lang="en">Type of Geographic Context</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <arco-core:iccdNormTag>LC/PVZ; LA/PRZ</arco-core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Feature -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Feature"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Geometry -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Geometry"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Characteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Characteristic"/>
+    
+
+
+    <!-- ttps://w3id.org/italia/onto/TI/TimeInterval -->
+
+    <owl:Class rdf:about="ttps://w3id.org/italia/onto/TI/TimeInterval"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/location/CurrentPhysicalLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/CurrentPhysicalLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="en">Current Physical Location</rdfs:label>
+        <rdfs:label xml:lang="it">Localizzazione fisica attuale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/ExhibitionLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/ExhibitionLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="en">Exhibition Location</rdfs:label>
+        <rdfs:label xml:lang="it">Luogo di esposizione</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/FindingLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/FindingLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="en">Finding Location</rdfs:label>
+        <rdfs:label xml:lang="it">Luogo di reperimento</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/LastLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/LastLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="it">Luogo di provenienza/Collocazione precedente</rdfs:label>
+        <rdfs:label xml:lang="en">Place of Origin / Last Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/ObservationLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/ObservationLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="it">Luogo di rilevamento</rdfs:label>
+        <rdfs:label xml:lang="en">Observation Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/ProductionRealizationLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/ProductionRealizationLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="it">Luogo di produzione/realizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">Production or Realization Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/ShotLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/ShotLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="it">Luogo della ripresa</rdfs:label>
+        <rdfs:label xml:lang="en">Shot Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/StorageLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/StorageLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="it">Luogo di deposito</rdfs:label>
+        <rdfs:label xml:lang="en">Storage Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/SubjectLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/SubjectLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/LocationType"/>
+        <rdfs:label xml:lang="it">Area rappresentata</rdfs:label>
+        <rdfs:label xml:lang="en">Subject Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/Suburban -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/Suburban">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/TypeOfContext"/>
+        <rdfs:comment xml:lang="en">It represents a specific type of context, that is Suburban Context.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta uno specifico tipo di contesto, cioè un contesto suburbano.</rdfs:comment>
+        <rdfs:label xml:lang="en">Suburban</rdfs:label>
+        <rdfs:label xml:lang="it">Suburbano</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/Territorial -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/Territorial">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/TypeOfContext"/>
+        <rdfs:comment xml:lang="en">It represents a specific type of context, that is Territorial.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta uno specifico tipo di contesto, cioè un contesto territoriale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Territorial</rdfs:label>
+        <rdfs:label xml:lang="it">Territoriale</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/Underwater -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/Underwater">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/TypeOfContext"/>
+        <rdfs:comment xml:lang="en">It represents a specific type of context, that is Underwater.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un particolare tipo di contesto, cioè un contesto subacqueo.</rdfs:comment>
+        <rdfs:label xml:lang="it">Subacqueo</rdfs:label>
+        <rdfs:label xml:lang="en">Underwater</rdfs:label>
+        <rdfs:label xml:lang="it">provvisoria</rdfs:label>
+        <rdfs:label xml:lang="en">unstable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/location/Urban -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/location/Urban">
+        <rdf:type rdf:resource="https://w3id.org/arco/location/TypeOfContext"/>
+        <rdfs:comment xml:lang="en">It represents a specific type of context, that is Urban Context</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta uno specifico tipo di contesto, cioè un contesto urbano.</rdfs:comment>
+        <rdfs:label xml:lang="en">Urban</rdfs:label>
+        <rdfs:label xml:lang="it">Urbano</rdfs:label>
+        <owl:versionInfo xml:lang="it">provvisoria</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->

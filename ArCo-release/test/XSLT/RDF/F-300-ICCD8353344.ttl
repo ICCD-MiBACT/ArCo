@@ -1,0 +1,725 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-Measurement:0800418491-1-height
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0800418491: 162mm"@en , "Misura del bene culturale 0800418491: 162mm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Height ;
+        arco-dd:hasValue            ar-Value:0800418491-1-height-162 ;
+        l0:name                     "Measurement of cultural property 0800418491: 162mm"@en , "Misura del bene culturale 0800418491: 162mm"@it .
+
+ar-TimeInterval:xx  a  tiapit:TimeInterval ;
+        rdfs:label   "XX" ;
+        tiapit:time  "XX" ;
+        l0:name      "XX" .
+
+<https://w3id.org/arco/resource/ConservationIntervention/0800418491-conservation-intervention-1>
+        a                               arco-cd:ConservationIntervention ;
+        rdfs:label                      "Conservation intervention 1 on cultural property 0800418491"@en , "Intervento conservativo 1 sul bene culturale 0800418491"@it ;
+        arco-cd:framework               "NR (recupero pregresso)" ;
+        arco-cd:hasActivityOperator     ar-agent:9bcab4fcbb49b7a4c9495201ba12f7e4 ;
+        arco-cd:hasActivityResponsible  ar-agent:460ca2dd20add6803826043ca480f926 ;
+        tiapit:atTime                   ar-TimeInterval:2002-2003 ;
+        l0:name                         "Conservation intervention 1 on cultural property 0800418491"@en , "Intervento conservativo 1 sul bene culturale 0800418491"@it .
+
+ar-CISNameInTime:archivio-fotografico-sbsae-bo
+        a                         cis:CISNameInTime ;
+        rdfs:label                "Denominazione nel tempo: Archivio Fotografico SBSAE BO"@it , "Name in time: Archivio Fotografico SBSAE BO"@en ;
+        cis:institutionalCISName  "Archivio Fotografico SBSAE BO" ;
+        l0:name                   "Denominazione nel tempo: Archivio Fotografico SBSAE BO"@it , "Name in time: Archivio Fotografico SBSAE BO"@en .
+
+ar-TechnicalCharacteristic:a-inchiostro
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a inchiostro" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a inchiostro" .
+
+ar-interpretationCriterion:iscrizione
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "iscrizione" ;
+        l0:name     "iscrizione" .
+
+ar-province:bo  a   clvapit:Province ;
+        rdfs:label  "BO" ;
+        l0:name     "BO" .
+
+ar-Site:43de88e6a02e6baadfb77935ac251d3b
+        a                          cis:Site ;
+        rdfs:label                 "Palazzo Pepoli Campogrande" ;
+        cis:isSiteOf               ar-cis:0a307ed9aa9e3c624d8b55d2c80afbcb ;
+        cis:siteAddress            ar-address:d437532e901e75933d35137868fb9597 ;
+        arco-location:hasSiteType  ar-SiteType:palazzo-museo ;
+        l0:name                    "Palazzo Pepoli Campogrande" .
+
+<https://w3id.org/arco/resource/Inscription/0800418491-inscription-4>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 4 of cultural property 0800418491"@en , "Iscrizione 4 sul bene culturale 0800418491"@it ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-matita ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0800418491-inscription-4 ;
+        arco-dd:positionOnCulturalProperty
+                "sul supporto primario: verso: in alto a sinistra" ;
+        arco-dd:transcript              "03 78 01" .
+
+ar-privacyReason:dati-pubblicabili
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "dati pubblicabili" ;
+        l0:name     "dati pubblicabili" .
+
+ar-agent:88a853949e67984d831d9779eacdea21
+        a                   CPV:Person ;
+        rdfs:label          "Bissolo, Francesco" ;
+        arco-cd:agentDate   "1470-1475/ 1554" ;
+        arco-cd:isAuthorOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name             "Bissolo, Francesco" .
+
+ar-cis:0a307ed9aa9e3c624d8b55d2c80afbcb
+        a                     cis:CulturalInstituteOrSite ;
+        rdfs:label            "Archivio Fotografico SBSAE BO" ;
+        cis:hasCISNameInTime  ar-CISNameInTime:archivio-fotografico-sbsae-bo ;
+        cis:hasSite           ar-Site:43de88e6a02e6baadfb77935ac251d3b ;
+        l0:name               "Archivio Fotografico SBSAE BO" .
+
+ar-timeIndexedRole:0800418491-agg-1-2ab89e73b8c119f2bf0e189775a2f403
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ICCD/ DG BASAE/ Gagliano C."@it , "Update responsible compilation: ICCD/ DG BASAE/ Gagliano C."@en ;
+        roapit:isRoleInTimeOf  ar-agent:2ab89e73b8c119f2bf0e189775a2f403 ;
+        roapit:withRole        ar-role:UpdateResponsibleCompilation .
+
+<https://w3id.org/arco/resource/ArchivalFonds/0800418491-fondo-malaguzzi-valeri>
+        a                              arco-cd:ArchivalFonds ;
+        rdfs:label                     "Fondo Malaguzzi Valeri" ;
+        arco-cd:isArchivalRecordSetIn  <https://w3id.org/arco/resource/ArchivalRecordSetMembership/0800418491> ;
+        l0:name                        "Fondo Malaguzzi Valeri" .
+
+ar-SiteDefinition:palazzo
+        a           arco-location:SiteDefinition ;
+        rdfs:label  "palazzo" .
+
+ar-agent:ac037c61854d527f164f8e9d23df1918
+        a                  CPV:Person ;
+        rdfs:label         "Anonimo" ;
+        arco-cd:agentDate  "attivo prima metà sec. XX" ;
+        l0:name            "Anonimo" .
+
+ar-Measurement:0800418491-1-width
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 0800418491: 116mm"@en , "Misura del bene culturale 0800418491: 116mm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Width ;
+        arco-dd:hasValue            ar-Value:0800418491-1-width-116 ;
+        l0:name                     "Measurement of cultural property 0800418491: 116mm"@en , "Misura del bene culturale 0800418491: 116mm"@it .
+
+<https://w3id.org/arco/resource/PhotographicHeritage/0800418491>
+        a                               arco-arco:MovableCulturalProperty , arco-arco:PhotographicHeritage ;
+        rdfs:comment                    "positivo, m" ;
+        rdfs:label                      "Madonna con Bambino e santi - Dipinti (positivo) di Bissolo, Francesco, Anonimo (XX)"@it , "Madonna con Bambino e santi - Dipinti (positivo) by Bissolo, Francesco, Anonimo (XX)"@en ;
+        pico:author                     ar-agent:ac037c61854d527f164f8e9d23df1918 , ar-agent:88a853949e67984d831d9779eacdea21 ;
+        pico:materialAndTechnique       ar-TechnicalCharacteristic:gelatina-bromuro-dargento-carta ;
+        dc:coverage                     ar-city:bologna ;
+        dc:creator                      ar-agent:ac037c61854d527f164f8e9d23df1918 , ar-agent:88a853949e67984d831d9779eacdea21 ;
+        dc:date                         ar-TimeInterval:post-1915-ante-1924 ;
+        dc:format                       ar-MeasurementCollection:0800418491-1 ;
+        dc:identifier                   "0800418491" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0800418491-legal-situation-proprieta-stato" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
+        dc:subject                      ar-Subject:38b0632df5a5f2c863893af2d781bc74 , <http://culturaitalia.it/pico/thesaurus/4.1#fotografie> ;
+        dc:title                        <https://w3id.org/arco/resource/Title/0800418491-francesco-bissolo-madonna-in-trono-col-bambino-i-santi-paolo-e-lorenzo-e-il-committente> ;
+        dc:type                         ar-culturalPropertyType:20e6d3fc7923851fb8313bad70a9fd65 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/d437532e901e75933d35137868fb9597" ;
+        arco-arco:catalogueNumber       "00418491" ;
+        arco-arco:hasCataloguingAgency  ar-agent:52e9543ed285c89c64f4327f479b5835 ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:52e9543ed285c89c64f4327f479b5835 ;
+        arco-arco:numberOfComponents    "1" ;
+        arco-arco:regionIdentifier      "08" ;
+        arco-arco:uniqueIdentifier      "0800418491" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
+        arco-cd:attributedTitle         "Francesco Bissolo. Madonna in trono col Bambino, i Santi Paolo e Lorenzo e il committente" ;
+        arco-cd:hasAuthor               ar-agent:ac037c61854d527f164f8e9d23df1918 , ar-agent:88a853949e67984d831d9779eacdea21 ;
+        arco-cd:hasAuthorshipAttribution
+                ar-PreferredAuthorshipAttribution:0800418491-1 , ar-PreferredAuthorshipAttribution:0800418491-photographer-1 ;
+        arco-cd:hasDating               ar-dating:0800418491-1 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0800418491-photographic-documentation-1 , ar-photograpyDocumentation:0800418491-photographic-documentation-2 ;
+        arco-cd:hasIntervention         <https://w3id.org/arco/resource/ConservationIntervention/0800418491-conservation-intervention-1> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0800418491-legal-situation-proprieta-stato ;
+        arco-cd:hasSubject              ar-Subject:38b0632df5a5f2c863893af2d781bc74 ;
+        arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/0800418491-francesco-bissolo-madonna-in-trono-col-bambino-i-santi-paolo-e-lorenzo-e-il-committente> ;
+        arco-cd:isMemberOfArchivalRecordSet
+                <https://w3id.org/arco/resource/ArchivalRecordSetMembership/0800418491> ;
+        arco-cd:subject                 "Madonna con Bambino e santi - Dipinti" ;
+        arco-core:hasAgentRole          ar-agentrole:0800418491-heritage-protection-agency , ar-agentrole:0800418491-cataloguing-agency ;
+        arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/0800418491-part-supporto-primario> ;
+        arco-dd:digitalPhotographNote   "viraggio" ;
+        arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0800418491-inscription-3> , <https://w3id.org/arco/resource/Inscription/0800418491-inscription-2> , <https://w3id.org/arco/resource/Inscription/0800418491-inscription-4> , <https://w3id.org/arco/resource/Inscription/0800418491-inscription-1> ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0800418491-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:20e6d3fc7923851fb8313bad70a9fd65 ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:gelatina-bromuro-dargento-carta ;
+        arco-dd:hasPhotoColour          ar-TechnicalCharacteristic:b-n ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0800418491 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:d437532e901e75933d35137868fb9597 ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0800418491-shot , ar-timeIndexedTypedLocation:0800418491-current .
+
+ar-agent:06c4b86cb803b4784978175669eb7c11
+        a           l0:Agent ;
+        rdfs:label  "Gagliano C." .
+
+ar-agentrole:0800418491-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0800418491: S08"@it , "Cataloguing agency for cultural property 0800418491: S08"@en ;
+        arco-core:hasAgent  ar-agent:52e9543ed285c89c64f4327f479b5835 ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-region:emilia-romagna
+        a           clvapit:Region ;
+        rdfs:label  "Emilia Romagna" ;
+        l0:name     "Emilia Romagna" .
+
+ar-agent:f467d159be260d399ecd7ce31db60932
+        a           l0:Agent ;
+        rdfs:label  "Giudici C." .
+
+<https://w3id.org/arco/resource/Inscription/0800418491-inscription-3>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 3 of cultural property 0800418491"@en , "Iscrizione 3 sul bene culturale 0800418491"@it ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-matita ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0800418491-inscription-3 ;
+        arco-dd:positionOnCulturalProperty
+                "sul supporto primario: verso: in alto a destra" ;
+        arco-dd:transcript              "N. 86" .
+
+ar-CulturalEntityTechnicalStatus:0800418491-inscription-4
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 4 sul bene culturale 0800418491"@it , "Technical status of inscription 4 of cultural property 0800418491"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-matita ;
+        l0:name     "Stato tecnico dell'iscrizione 4 sul bene culturale 0800418491"@it , "Technical status of inscription 4 of cultural property 0800418491"@en .
+
+ar-PreferredAuthorshipAttribution:0800418491-photographer-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore di fotografia preferita, maggiormente accreditata o convincente del bene: 0800418491"@it , "Preferred photograph authorship attribution of cultural property: 0800418491"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:ac037c61854d527f164f8e9d23df1918 ;
+        arco-cd:hasInterventionRole  ar-role:fotografo-principale ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name                      "Attribuzione di autore di fotografia preferita, maggiormente accreditata o convincente del bene: 0800418491"@it , "Preferred photograph authorship attribution of cultural property: 0800418491"@en .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0800418491-cataloguing-agency .
+
+ar-ConservationStatus:0800418491-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 0800418491"@it , "Conservation status 1 of cultural property: 0800418491"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:DecentConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 0800418491"@it , "Conservation status 1 of cultural property: 0800418491"@en .
+
+ar-accessProfile:0800418491-1
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0800418491: 1"@it , "Access profile to catalogue record of cultural property 0800418491: 1"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MinimumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:dati-pubblicabili ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0800418491: 1"@it , "Access profile to catalogue record of cultural property 0800418491: 1"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordF/0800418491>
+        a             arco-catalogue:CatalogueRecordF ;
+        rdfs:label    "Catalogue Record n: 0800418491"@en , "Scheda catalografica n: 0800418491"@it ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0800418491" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0800418491-1 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0800418491-agg-1 , ar-catalogueRecordVersion:0800418491-rvm , ar-catalogueRecordVersion:0800418491-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:P ;
+        arco-catalogue:systemRecordCode
+                "F-300-ICCD8353344" .
+
+ar-agent:52e9543ed285c89c64f4327f479b5835
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Bologna Ferrara Forli'-Cesena Ravenna e Rimini" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        arco-core:isAgentOf  ar-agentrole:0800418491-cataloguing-agency , ar-agentrole:0800418491-heritage-protection-agency ;
+        l0:name              "Soprintendenza per i Beni Storici Artistici ed Etnoantropologici  per le province di Bologna Ferrara Forli'-Cesena Ravenna e Rimini" .
+
+ar-event:0800418491-creation-1
+        a                     l0:Event ;
+        rdfs:label            "Realizzazione del bene 0800418491"@it , "Creation of cultural property 0800418491"@en ;
+        arco-cd:specificTime  ar-TimeInterval:post-1915-ante-1924 ;
+        tiapit:atTime         ar-TimeInterval:xx ;
+        l0:name               "Realizzazione del bene 0800418491"@it , "Creation of cultural property 0800418491"@en .
+
+ar-culturalPropertyType:20e6d3fc7923851fb8313bad70a9fd65
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: positivo"@it , "Cultural property type: positivo"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:positivo ;
+        l0:name     "Tipo del bene: positivo"@it , "Cultural property type: positivo"@en .
+
+ar-Value:0800418491-1-width-116
+        a                      mu:Value ;
+        rdfs:label             "116"@en , "116"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "116" .
+
+<https://w3id.org/arco/resource/MeasurementUnit/mm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "mm" ;
+        l0:name     "mm" .
+
+ar-TimeInterval:2010  a  tiapit:TimeInterval ;
+        rdfs:label   "2010" ;
+        tiapit:time  "2010" .
+
+ar-catalogueRecordVersion:0800418491-agg-1
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2010 ICCD/ DG BASAE/ Gagliano C. NR (recupero pregresso)" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2010 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0800418491-agg-1-2ab89e73b8c119f2bf0e189775a2f403 ;
+        arco-catalogue:hasUpdateResponsibleResearchAndCompilation
+                ar-agent:2ab89e73b8c119f2bf0e189775a2f403 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+<https://w3id.org/arco/resource/Inscription/0800418491-inscription-2>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 2 of cultural property 0800418491"@en , "Iscrizione 2 sul bene culturale 0800418491"@it ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-inchiostro ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0800418491-inscription-2 ;
+        arco-dd:positionOnCulturalProperty
+                "sul supporto primario: verso: al centro" ;
+        arco-dd:transcript              "tela eseguita da Francesco Bissolo stata rubata/ nella chiesa di Levada di Piave (Oderzo)/ nella notte fra il 28 e il 29 Febbraio 1924; co-/ me da lettera della Soprintendenza Musei e/ Gallerie di Venezia, in data 4 maggio 1924, / Prot. N. 4435 (= Di questo ufficio prot. N. = 122)" .
+
+ar-TimeInterval:2002-2003
+        a            tiapit:TimeInterval ;
+        tiapit:time  "2002/ 2003" .
+
+ar-CulturalEntityTechnicalStatus:0800418491-inscription-3
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 3 sul bene culturale 0800418491"@it , "Technical status of inscription 3 of cultural property 0800418491"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-matita ;
+        l0:name     "Stato tecnico dell'iscrizione 3 sul bene culturale 0800418491"@it , "Technical status of inscription 3 of cultural property 0800418491"@en .
+
+ar-TechnicalCharacteristic:b-n
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "B/ N" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:PhotoColour ;
+        l0:name     "B/ N" .
+
+ar-agent:6d9f471dca3f83dfd78f51a18b4cbd44
+        a                l0:Agent ;
+        rdfs:label       "Ministero per i Beni e le Attività Culturali - SBSAE BO" ;
+        arco-cd:address  "Via Belle Arti, 56" ;
+        l0:name          "Ministero per i Beni e le Attività Culturali - SBSAE BO" .
+
+ar-docutmentationType:fotografia-digitale
+        a           arco-cd:DocumentationType ;
+        rdfs:label  "fotografia digitale" ;
+        l0:name     "fotografia digitale" .
+
+ar-timeIndexedTypedLocation:0800418491-shot
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione di ripresa del bene: 0800418491"@it , "Shooting location of cultural property: 0800418491"@en ;
+        arco-location:atLocation       ar-feature:d41d8cd98f00b204e9800998ecf8427e ;
+        arco-location:hasLocationType  arco-location:ShootingLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        tiapit:atTime                  ar-TimeInterval:1924-ante ;
+        l0:name                        "Localizzazione di ripresa del bene: 0800418491"@it , "Shooting location of cultural property: 0800418491"@en .
+
+ar-TimeInterval:1924-ante
+        a            tiapit:TimeInterval ;
+        tiapit:time  "1924 ante" .
+
+<https://w3id.org/arco/resource/SiteSpecification/museo>
+        a           arco-location:SiteSpecification ;
+        rdfs:label  "museo" .
+
+ar-MeasurementCollection:0800418491-1
+        a                       arco-dd:MeasurementCollection ;
+        rdfs:label              "Measurements of cultural property 0800418491"@en , "Misure del bene culturale 0800418491"@it ;
+        arco-dd:hasMeasurement  ar-Measurement:0800418491-1-width , ar-Measurement:0800418491-1-height ;
+        l0:name                 "Measurements of cultural property 0800418491"@en , "Misure del bene culturale 0800418491"@it .
+
+ar-feature:d41d8cd98f00b204e9800998ecf8427e
+        a                   clvapit:Feature ;
+        rdfs:label          "" ;
+        clvapit:hasAddress  ar-address:d41d8cd98f00b204e9800998ecf8427e .
+
+ar-Value:0800418491-1-height-162
+        a                      mu:Value ;
+        rdfs:label             "162"@en , "162"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "162" .
+
+<https://w3id.org/arco/resource/CulturalPropertyPart/0800418491-part-supporto-primario>
+        a                   arco-arco:CulturalPropertyPart ;
+        rdfs:label          "supporto primario" ;
+        arco-cd:hasMeasurementCollection
+                ar-MeasurementCollection:0800418491-1 ;
+        arco-core:isPartOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name             "supporto primario" .
+
+ar-role:UpdateResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Update responsible research and compilation"@en , "Responsabile di ricerca e redazione di aggiornamento"@it .
+
+ar-timeIndexedRole:0800418491-29f40400c9f30353bce26bba743e103b
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Giudici C."@it , "Official in charge: Giudici C."@en ;
+        roapit:isRoleInTimeOf  ar-agent:f467d159be260d399ecd7ce31db60932 ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-city:bologna  a  clvapit:City ;
+        rdfs:label  "Bologna" ;
+        l0:name     "Bologna" .
+
+ar-role:fotografo-principale
+        a           roapit:Role ;
+        rdfs:label  "fotografo principale" ;
+        l0:name     "fotografo principale" .
+
+<https://w3id.org/arco/resource/Inscription/0800418491-inscription-1>
+        a                               arco-dd:Inscription ;
+        rdfs:label                      "Inscription 1 of cultural property 0800418491"@en , "Iscrizione 1 sul bene culturale 0800418491"@it ;
+        arco-dd:hasMaterialOrTechnique  ar-TechnicalCharacteristic:a-inchiostro ;
+        arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0800418491-inscription-1 ;
+        arco-dd:positionOnCulturalProperty
+                "sul supporto primario: verso: al centro" ;
+        arco-dd:transcript              "fotografia eseguita prima del restauro" .
+
+ar-address:d437532e901e75933d35137868fb9597
+        a                    clvapit:Address ;
+        rdfs:label           "Italia, Emilia Romagna, BO, Bologna" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        clvapit:fullAddress  "via Castiglione, 7" ;
+        clvapit:hasCity      ar-city:bologna ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:bo ;
+        clvapit:hasRegion    ar-region:emilia-romagna .
+
+ar-CulturalEntityTechnicalStatus:0800418491-inscription-2
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 2 sul bene culturale 0800418491"@it , "Technical status of inscription 2 of cultural property 0800418491"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-inchiostro ;
+        l0:name     "Stato tecnico dell'iscrizione 2 sul bene culturale 0800418491"@it , "Technical status of inscription 2 of cultural property 0800418491"@en .
+
+ar-catalogueRecordVersion:0800418491-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2010 Gagliano C." ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2010 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0800418491-compilation-06c4b86cb803b4784978175669eb7c11 , ar-timeIndexedRole:0800418491-29f40400c9f30353bce26bba743e103b ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:f467d159be260d399ecd7ce31db60932 ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:06c4b86cb803b4784978175669eb7c11 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> .
+
+ar-TechnicalCharacteristic:a-matita
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a matita" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "a matita" .
+
+ar-agent:2ab89e73b8c119f2bf0e189775a2f403
+        a           l0:Agent ;
+        rdfs:label  "ICCD/ DG BASAE/ Gagliano C." .
+
+ar-PreferredAuthorshipAttribution:0800418491-1
+        a                            arco-cd:PreferredAuthorshipAttribution ;
+        rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0800418491"@it , "Preferred authorship attribution of cultural property: 0800418491"@en ;
+        arco-cd:hasAttributedAuthor  ar-agent:88a853949e67984d831d9779eacdea21 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:iscrizione ;
+        arco-cd:hasInterventionRole  ar-role:pittore ;
+        arco-cd:isAuthorshipAttributionOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0800418491"@it , "Preferred authorship attribution of cultural property: 0800418491"@en .
+
+ar-role:pittore  a  roapit:Role ;
+        rdfs:label  "pittore" ;
+        l0:name     "pittore" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0800418491-heritage-protection-agency .
+
+ar-timeIndexedRole:0800418491-compilation-06c4b86cb803b4784978175669eb7c11
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Gagliano C."@en , "Compilazione da Gagliano C."@it ;
+        roapit:isRoleInTimeOf  ar-agent:06c4b86cb803b4784978175669eb7c11 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-photograpyDocumentation:0800418491-photographic-documentation-2
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Photographic documentation 2 of cultural property: 0800418491"@en , "Documentazione fotografica 2 del bene culturale: 0800418491"@it ;
+        arco-cd:documentationIdentifier
+                "SBSAE BO00251176" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale ;
+        arco-cd:hasFormat             <https://w3id.org/arco/resource/Format/jpg> ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        arco-core:note                "verso" ;
+        l0:name                       "Documentazione fotografica 2 del bene culturale: 0800418491"@it , "Photographic documentation 2 of cultural property: 0800418491"@en .
+
+ar-culturalPropertyDefinition:positivo
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "positivo" .
+
+<https://w3id.org/arco/resource/Title/0800418491-francesco-bissolo-madonna-in-trono-col-bambino-i-santi-paolo-e-lorenzo-e-il-committente>
+        a                         arco-cd:Title ;
+        rdfs:label                "Francesco Bissolo. Madonna in trono col Bambino, i Santi Paolo e Lorenzo e il committente" ;
+        arco-cd:hasTitleType      arco-cd:AttributedTitle ;
+        arco-cd:isTitleOf         <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        arco-core:specifications  "del catalogatore" ;
+        l0:name                   "Francesco Bissolo. Madonna in trono col Bambino, i Santi Paolo e Lorenzo e il committente" .
+
+ar-timeIndexedRole:0800418491-rvm-00bccd7be8afa55cd8d24b1396ec3b81
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da ICCD/ DG BASAE/"@it , "Digital transcription by ICCD/ DG BASAE/"@en ;
+        roapit:isRoleInTimeOf  ar-agent:00bccd7be8afa55cd8d24b1396ec3b81 ;
+        roapit:withRole        ar-role:DigitalTranscriptionOperator .
+
+ar-SiteType:palazzo-museo
+        a           arco-location:SiteType ;
+        rdfs:label  "Tipo di contenitore fisico: palazzo museo"@it , "Site type: palazzo museo"@en ;
+        arco-location:hasSiteDefinition
+                ar-SiteDefinition:palazzo ;
+        arco-location:hasSiteSpecification
+                <https://w3id.org/arco/resource/SiteSpecification/museo> ;
+        l0:name     "Tipo di contenitore fisico: palazzo museo"@it , "Site type: palazzo museo"@en .
+
+ar-Subject:38b0632df5a5f2c863893af2d781bc74
+        a                    arco-cd:Subject ;
+        rdfs:label           "Madonna con Bambino e santi - Dipinti" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name              "Madonna con Bambino e santi - Dipinti" .
+
+ar-CulturalEntityTechnicalStatus:0800418491-inscription-1
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 0800418491"@it , "Technical status of inscription 1 of cultural property 0800418491"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:a-inchiostro ;
+        l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0800418491"@it , "Technical status of inscription 1 of cultural property 0800418491"@en .
+
+ar-role:DigitalTranscriptionOperator
+        a           roapit:Role ;
+        rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-timeIndexedTypedLocation:0800418491-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0800418491"@it , "Current physical location of cultural property: 0800418491"@en ;
+        arco-location:atSite           ar-Site:43de88e6a02e6baadfb77935ac251d3b ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0800418491"@it , "Current physical location of cultural property: 0800418491"@en .
+
+<https://w3id.org/arco/resource/Format/jpg>
+        a           arco-cd:Format ;
+        rdfs:label  "jpg" ;
+        l0:name     "jpg" .
+
+ar-dating:0800418491-1
+        a                       arco-cd:Dating ;
+        rdfs:label              "Cronologia 1 del bene 0800418491"@it , "Dating 1 of cultural property 0800418491"@en ;
+        arco-cd:hasDatingEvent  ar-event:0800418491-creation-1 ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:iscrizione ;
+        l0:name                 "Dating 1 of cultural property 0800418491"@en , "Cronologia 1 del bene 0800418491"@it .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "Italia" ;
+        l0:name     "Italia" .
+
+ar-TimeInterval:post-1915-ante-1924
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "post 1915 - ante 1924" ;
+        arco-arco:endTime    "ante 1924" ;
+        arco-arco:startTime  "post 1915" ;
+        l0:name              "post 1915 - ante 1924" .
+
+ar-agent:9bcab4fcbb49b7a4c9495201ba12f7e4
+        a           l0:Agent ;
+        rdfs:label  "La Fototeca s.n.c." ;
+        l0:name     "La Fototeca s.n.c." .
+
+ar-agent:00bccd7be8afa55cd8d24b1396ec3b81
+        a           l0:Agent ;
+        rdfs:label  "ICCD/ DG BASAE/" .
+
+ar-photograpyDocumentation:0800418491-photographic-documentation-1
+        a                             arco-cd:PhotographicDocumentation ;
+        rdfs:label                    "Documentazione fotografica 1 del bene culturale: 0800418491"@it , "Photographic documentation 1 of cultural property: 0800418491"@en ;
+        arco-cd:documentationIdentifier
+                "SBSAE BO00250592" ;
+        arco-cd:hasDocumentationType  ar-docutmentationType:fotografia-digitale ;
+        arco-cd:hasFormat             <https://w3id.org/arco/resource/Format/jpg> ;
+        arco-cd:isDocumentationOf     <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        arco-core:hasCategory         arco-cd:AttachedDocumentation ;
+        l0:name                       "Photographic documentation 1 of cultural property: 0800418491"@en , "Documentazione fotografica 1 del bene culturale: 0800418491"@it .
+
+ar-CulturalEntityTechnicalStatus:0800418491
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 0800418491"@it , "Technical status of cultural property 0800418491"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:gelatina-bromuro-dargento-carta , ar-TechnicalCharacteristic:b-n ;
+        l0:name     "Stato tecnico del bene culturale 0800418491"@it , "Technical status of cultural property 0800418491"@en .
+
+ar-agent:460ca2dd20add6803826043ca480f926
+        a           l0:Agent ;
+        rdfs:label  "SBSAE BO" ;
+        l0:name     "SBSAE BO" .
+
+<https://w3id.org/arco/resource/ArchivalRecordSetMembership/0800418491>
+        a                             arco-cd:ArchivalRecordSetMembership ;
+        rdfs:label                    "Appartenenza a unità archivistica complessa del bene: 0800418491"@it , "Archival record set membership of cultural property: 0800418491"@en ;
+        arco-cd:hasArchivalRecordSet  <https://w3id.org/arco/resource/ArchivalFonds/0800418491-fondo-malaguzzi-valeri> ;
+        arco-cd:hasMemberOfArchivalRecordSet
+                <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name                       "Appartenenza a unità archivistica complessa del bene: 0800418491"@it , "Archival record set membership of cultural property: 0800418491"@en .
+
+ar-catalogueRecordVersion:0800418491-rvm
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2010 ICCD/ DG BASAE/" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2010 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0800418491-rvm-00bccd7be8afa55cd8d24b1396ec3b81 , ar-timeIndexedRole:0800418491-29f40400c9f30353bce26bba743e103b ;
+        arco-catalogue:hasDigitalTranscriptionOperator
+                ar-agent:00bccd7be8afa55cd8d24b1396ec3b81 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:f467d159be260d399ecd7ce31db60932 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> .
+
+ar-agentrole:0800418491-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0800418491: S08"@it , "Heritage protection agency for cultural property 0800418491: S08"@en ;
+        arco-core:hasAgent  ar-agent:52e9543ed285c89c64f4327f479b5835 ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-TechnicalCharacteristic:gelatina-bromuro-dargento-carta
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "gelatina bromuro d'argento/ carta" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:MaterialOrTechnique ;
+        l0:name     "gelatina bromuro d'argento/ carta" .
+
+ar-legalSituation:0800418491-legal-situation-proprieta-stato
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0800418491: proprietà Stato"@it , "Legal situation of cultural property 0800418491: proprietà Stato"@en ;
+        arco-cd:hasOwner  ar-agent:6d9f471dca3f83dfd78f51a18b4cbd44 ;
+        l0:name           "Condizione giuridica del bene culturale 0800418491: proprietà Stato"@it , "Legal situation of cultural property 0800418491: proprietà Stato"@en .

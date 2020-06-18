@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schede>
+   <BNB version="3.01_ICCD0">
+      <CD hint="CODICI">
+         <TSK hint="Tipo scheda">BNB</TSK>
+         <LIR hint="Livello ricerca">I</LIR>
+         <NCT hint="CODICE UNIVOCO">
+            <NCTR hint="Codice regione">09</NCTR>
+            <NCTN hint="Numero catalogo generale">00860338</NCTN>
+         </NCT>
+      </CD>
+      <OG hint="OGGETTO">
+         <OGT hint="OGGETTO">
+            <OGTD hint="Definizione">campione</OGTD>
+            <OGTE hint="Denominazione erbario">Herbarium Universitatis Senensis</OGTE>
+            <OGTR hint="Tipologia erbario">erbario generale</OGTR>
+            <OGTC hint="Denominazione collezione/ raccolta">Collezione xiloteca</OGTC>
+            <OGTZ hint="Tipologia collezione/ raccolta">collezione fanerogamica</OGTZ>
+            <OGTK hint="Tipologia campione">essiccato</OGTK>
+         </OGT>
+      </OG>
+      <SB hint="SISTEMATICA-BOTANICA">
+         <SBS hint="SISTEMATICA">
+            <SBSF hint="Famiglia">Magnoliaceae</SBSF>
+            <SBSN hint="Numero genere">60</SBSN>
+            <SBSC hint="Schema sistematico di riferimento">Durand Th. 1888, Index Generum Phanerogamorum- Bruxellis</SBSC>
+         </SBS>
+         <NBN hint="NOMENCLATURA">
+            <NBNA hint="Specie nome completo">Cupressus sp.</NBNA>
+         </NBN>
+      </SB>
+      <DB hint="DOCUMENTAZIONE BIOLOGICA">
+         <DBC hint="DOCUMENTAZIONE CARPOTECA">
+            <DBCX hint="Tipo conservazione">umido in alcool</DBCX>
+            <DBCA hint="Autore">De Conservantis Autore</DBCA>
+            <DBCD hint="Data">20-03-2000</DBCD>
+            <DBCE hint="Data ultimo cambio conservante">11-11-2011</DBCE>
+            <DBCC hint="Collocazione">Sc.1 Foglio 3.</DBCC>
+         </DBC>
+         <DBX hint="DOCUMENTAZIONE XILOTECA">
+            <DBXX hint="Tipo o forma">rotella</DBXX>
+            <DBXT hint="Autore">Autor Autoris</DBXT>
+            <DBXO hint="Data">3 marzo 1972</DBXO>
+            <DBXA hint="Altezza">3 cm</DBXA>
+            <DBXL hint="Larghezza">11cm</DBXL>
+            <DBXN hint="Lunghezza">11 cm</DBXN>
+            <DBXD hint="Diametro">12 cm</DBXD>
+            <DBXP hint="Peso">25 g</DBXP>
+            <DBXC hint="Collocazione">Sc.12</DBXC>
+         </DBX>
+         <DBX hint="DOCUMENTAZIONE XILOTECA">
+            <DBXX hint="Tipo o forma">foglia</DBXX>
+            <DBXT hint="Autore">Autore foglia</DBXT>
+            <DBXO hint="Data">15 gigno 1988</DBXO>
+            <DBXA hint="Altezza">5 cm</DBXA>
+            <DBXN hint="Lunghezza">3 cm</DBXN>
+            <DBXD hint="Diametro">2 cm</DBXD>
+            <DBXP hint="Peso">1 g</DBXP>
+            <DBXC hint="Collocazione">Sc.111</DBXC>
+         </DBX>
+         <DBR hint="PREPARATI">
+            <DBRT hint="Tipo">vetrino</DBRT>
+            <DBRA hint="Autore">Geppetto</DBRA>
+            <DBRD hint="Data">11-04-1988</DBRD>
+            <DBRS hint="Descrizione">Messo sul vetrino e poi in frigo</DBRS>
+         </DBR>
+      </DB>
+   </BNB>
+</schede>

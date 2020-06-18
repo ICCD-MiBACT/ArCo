@@ -1,0 +1,336 @@
+@prefix ar-country: <https://w3id.org/arco/resource/Country/> .
+@prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix language: <https://w3id.org/italia/onto/Language/> .
+@prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
+@prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
+@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-event: <https://w3id.org/arco/resource/Event/> .
+@prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
+@prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
+@prefix dcterms: <http://purl.org/dc/terms/creator> .
+@prefix arco-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix ar-catalogueRecordVersion: <https://w3id.org/arco/resource/CatalogueRecordVersion/> .
+@prefix ar-archeologicalFieldSurvey: <https://w3id.org/arco/resource/ArchaeologicalFieldSurvey/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix smapit: <https://w3id.org/italia/onto/SM/> .
+@prefix ar-SiteType: <https://w3id.org/arco/resource/SiteType/> .
+@prefix ar-address: <https://w3id.org/arco/resource/Address/> .
+@prefix ar-TechnicalCharacteristic: <https://w3id.org/arco/resource/TechnicalCharacteristic/> .
+@prefix ar-SiteDefinition: <https://w3id.org/arco/resource/SiteDefinition/> .
+@prefix mu:    <https://w3id.org/italia/onto/MU/> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix ar-CatalogueRecordOA: <https://w3id.org/arco/resource/CatalogueRecordOA/> .
+@prefix ar-SourceAndDocument: <https://w3id.org/arco/resource/SourceAndDocument/> .
+@prefix ar-legalSituation: <https://w3id.org/arco/resource/LegalSituation/> .
+@prefix ar-CISNameInTime: <https://w3id.org/arco/resource/CISNameInTime/> .
+@prefix ar-Subject: <https://w3id.org/arco/resource/Subject/> .
+@prefix ar-Value: <https://w3id.org/arco/resource/Value/> .
+@prefix arco-ce: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix arco-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ar-agent: <https://w3id.org/arco/resource/Agent/> .
+@prefix arco-core: <https://w3id.org/arco/ontology/core/> .
+@prefix arco-location: <https://w3id.org/arco/ontology/location/> .
+@prefix l0:    <https://w3id.org/italia/onto/l0/> .
+@prefix ar-culturalPropertyType: <https://w3id.org/arco/resource/CulturalPropertyType/> .
+@prefix ar-timeIndexedRole: <https://w3id.org/arco/resource/TimeIndexedRole/> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix ar-TimeInterval: <https://w3id.org/arco/resource/TimeInterval/> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions> .
+@prefix ar-culturalPropertyDefinition: <https://w3id.org/arco/resource/CulturalPropertyDefinition/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ar-province: <https://w3id.org/arco/resource/Province/> .
+@prefix cis:   <http://dati.beniculturali.it/cis/> .
+@prefix xsi:   <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix ar-cis: <https://w3id.org/arco/resource/CulturalInstituteOrSite/> .
+@prefix arco-fn: <https://w3id.org/arco/saxon-extension> .
+@prefix ar-PreferredAuthorshipAttribution: <https://w3id.org/arco/resource/PreferredAuthorshipAttribution/> .
+@prefix ar-MeasurementCollection: <https://w3id.org/arco/resource/MeasurementCollection/> .
+@prefix ar-dating: <https://w3id.org/arco/resource/Dating/> .
+@prefix ar-privacyReason: <https://w3id.org/arco/resource/PrivacyReason/> .
+@prefix ar-CulturalEntityTechnicalStatus: <https://w3id.org/arco/resource/CulturalEntityTechnicalStatus/> .
+@prefix ar-bibliography: <https://w3id.org/arco/resource/Bibliography/> .
+@prefix ar-feature: <https://w3id.org/arco/resource/Feature/> .
+@prefix ar-archeologicalProperty: <https://w3id.org/arco/resource/ArchaeologicalProperty/> .
+@prefix ar-region: <https://w3id.org/arco/resource/Region/> .
+@prefix ar-interpretationCriterion: <https://w3id.org/arco/resource/InterpretationCriterion/> .
+@prefix ar-Site: <https://w3id.org/arco/resource/Site/> .
+@prefix ar-geometry: <https://w3id.org/arco/resource/Geometry/> .
+@prefix ar-role: <https://w3id.org/arco/resource/Role/> .
+@prefix ar-agentrole: <https://w3id.org/arco/resource/AgentRole/> .
+@prefix ar-ConservationStatus: <https://w3id.org/arco/resource/ConservationStatus/> .
+@prefix ar-designationInTime: <https://w3id.org/arco/resource/DesignationInTime/> .
+@prefix tiapit: <https://w3id.org/italia/onto/TI/> .
+@prefix ar-photograpyDocumentation: <https://w3id.org/arco/resource/PhotographicDocumentation/> .
+@prefix ar-city: <https://w3id.org/arco/resource/City/> .
+@prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
+@prefix COV:   <https://w3id.org/italia/onto/COV/> .
+@prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
+@prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
+@prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
+@prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
+@prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+ar-agentrole:0900785097-1-cataloguing-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente schedatore del bene 0900785097-1: UniFi"@it , "Cataloguing agency for cultural property 0900785097-1: UniFi"@en ;
+        arco-core:hasAgent  ar-agent:409fd7bea69ada8f3a31b99147a6cc6a ;
+        arco-core:hasRole   ar-role:CataloguinAgency .
+
+ar-agent:409fd7bea69ada8f3a31b99147a6cc6a
+        a                    COV:Organization ;
+        rdfs:label           "UniFi" ;
+        arco-arco:isCataloguingAgencyOf
+                <https://w3id.org/arco/resource/NaturalHeritage/0900785097-1> ;
+        arco-core:isAgentOf  ar-agentrole:0900785097-1-cataloguing-agency ;
+        l0:name              "UniFi" .
+
+ar-catalogueRecordVersion:0900785097-1-compilation
+        a                            arco-catalogue:CatalogueRecordVersion ;
+        rdfs:label                   "COMPILAZIONE - 2013 Fantoni, Luciana" ;
+        arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
+        arco-catalogue:hasCatalogueRecordVersionRiT
+                ar-timeIndexedRole:0900785097-1-6b43497e49c2a143a18887f9299e08e1 , ar-timeIndexedRole:0900785097-1-compilation-e12ea730320e614679a9c800b69ac369 , ar-timeIndexedRole:0900785097-1-6ab7a14ce03447767db5640cb0d9fe92 ;
+        arco-catalogue:hasOfficialInCharge
+                ar-agent:3650c7b8e6cd52160d11b38de4a6491a ;
+        arco-catalogue:hasResponsibleResearchAndCompilation
+                ar-agent:e12ea730320e614679a9c800b69ac369 ;
+        arco-catalogue:hasScientificDirector
+                ar-agent:472f7d41568f1de53d19f78bcad1a675 ;
+        arco-catalogue:isCatalogueRecordVersionOf
+                <https://w3id.org/arco/resource/CatalogueRecordBNM/0900785097-1> .
+
+ar-city:firenze  a  clvapit:City ;
+        rdfs:label  "Firenze" ;
+        l0:name     "Firenze" .
+
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "Italia" ;
+        l0:name     "Italia" .
+
+ar-role:ScientificDirector
+        a           roapit:Role ;
+        rdfs:label  "Referente scientifico"@it , "Scientific Director"@en .
+
+ar-timeIndexedTypedLocation:0900785097-1-current
+        a                              arco-location:TimeIndexedTypedLocation ;
+        rdfs:label                     "Localizzazione fisica attuale del bene: 0900785097-1"@it , "Current physical location of cultural property: 0900785097-1"@en ;
+        arco-location:atLocation       ar-feature:6cb6d628115356a22dc99f59497b93bb ;
+        arco-location:hasLocationType  arco-location:CurrentPhysicalLocation ;
+        arco-location:isTimeIndexedTypedLocationOf
+                <https://w3id.org/arco/resource/NaturalHeritage/0900785097-1> ;
+        l0:name                        "Localizzazione fisica attuale del bene: 0900785097-1"@it , "Current physical location of cultural property: 0900785097-1"@en .
+
+<https://w3id.org/arco/resource/CatalogueRecordBNM/0900785097-1>
+        a             arco-catalogue:CatalogueRecordBNM ;
+        rdfs:label    "Scheda catalografica n: 0900785097-1"@it , "Catalogue Record n: 0900785097-1"@en ;
+        dc:language   "ita" ;
+        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        arco-catalogue:catalogueRecordIdentifier
+                "0900785097-1" ;
+        arco-catalogue:describesCulturalProperty
+                <https://w3id.org/arco/resource/NaturalHeritage/0900785097-1> ;
+        arco-catalogue:hasAccessProfile
+                ar-accessProfile:0900785097-1-2 ;
+        arco-catalogue:hasCatalogueRecordVersion
+                ar-catalogueRecordVersion:0900785097-1-compilation ;
+        arco-catalogue:hasCataloguingLevel
+                arco-catalogue:C ;
+        arco-catalogue:systemRecordCode
+                "BNM-ICCD10616036" .
+
+<https://w3id.org/arco/resource/AcquisitionType/ignota>
+        a           arco-cd:AcquisitionType ;
+        rdfs:label  "IGNOTA" ;
+        l0:name     "IGNOTA" .
+
+ar-region:toscana  a  clvapit:Region ;
+        rdfs:label  "Toscana" ;
+        l0:name     "Toscana" .
+
+<https://w3id.org/arco/resource/Acquisition/0900785097-1-acquisition-1>
+        a                           arco-cd:Acquisition ;
+        rdfs:label                  "Acquisizione 1 del bene culturale: 0900785097-1"@it , "Acquisition 1 of cultural property: 0900785097-1"@en ;
+        arco-cd:hasAcquisitionType  <https://w3id.org/arco/resource/AcquisitionType/ignota> ;
+        arco-cd:isAcquisitionOf     <https://w3id.org/arco/resource/NaturalHeritage/0900785097-1> ;
+        l0:name                     "Acquisizione 1 del bene culturale: 0900785097-1"@it , "Acquisition 1 of cultural property: 0900785097-1"@en .
+
+ar-timeIndexedRole:0900785097-1-6ab7a14ce03447767db5640cb0d9fe92
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Funzionario responsabile: Bindi, Luca"@it , "Official in charge: Bindi, Luca"@en ;
+        roapit:isRoleInTimeOf  ar-agent:3650c7b8e6cd52160d11b38de4a6491a ;
+        roapit:withRole        ar-role:OfficialInCharge .
+
+ar-role:ResponsibleCompilation
+        a           roapit:Role ;
+        rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-agent:e12ea730320e614679a9c800b69ac369
+        a           l0:Agent ;
+        rdfs:label  "Fantoni, Luciana" .
+
+ar-agentrole:0900785097-1-heritage-protection-agency
+        a                   arco-core:AgentRole ;
+        rdfs:label          "Ente competente per tutela del bene 0900785097-1: S156"@it , "Heritage protection agency for cultural property 0900785097-1: S156"@en ;
+        arco-core:hasAgent  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-core:hasRole   ar-role:HeritageProtectionAgency .
+
+ar-province:fi  a   clvapit:Province ;
+        rdfs:label  "FI" ;
+        l0:name     "FI" .
+
+ar-timeIndexedRole:0900785097-1-compilation-e12ea730320e614679a9c800b69ac369
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Compilation by Fantoni, Luciana"@en , "Compilazione da Fantoni, Luciana"@it ;
+        roapit:isRoleInTimeOf  ar-agent:e12ea730320e614679a9c800b69ac369 ;
+        roapit:withRole        ar-role:ResponsibleCompilation .
+
+ar-legalSituation:0900785097-1-legal-situation-proprieta-ente-pubblico-non-territoriale
+        a           arco-cd:LegalSituation ;
+        rdfs:label  "Condizione giuridica del bene culturale 0900785097-1: proprietà Ente pubblico non territoriale"@it , "Legal situation of cultural property 0900785097-1: proprietà Ente pubblico non territoriale"@en ;
+        l0:name     "Condizione giuridica del bene culturale 0900785097-1: proprietà Ente pubblico non territoriale"@it , "Legal situation of cultural property 0900785097-1: proprietà Ente pubblico non territoriale"@en .
+
+ar-culturalPropertyType:25592622f0cbe0d7640d9daefd2dbaa0
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: ACANTITE"@it , "Cultural property type: ACANTITE"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:acantite ;
+        l0:name     "Tipo del bene: ACANTITE"@it , "Cultural property type: ACANTITE"@en .
+
+ar-timeIndexedRole:0900785097-1-6b43497e49c2a143a18887f9299e08e1
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Pratesi, Giovanni"@it , "Scientific director: Pratesi, Giovanni"@en ;
+        roapit:isRoleInTimeOf  ar-agent:472f7d41568f1de53d19f78bcad1a675 ;
+        roapit:withRole        ar-role:ScientificDirector .
+
+<https://w3id.org/arco/resource/ReferenceCoinLegend/ita>
+        a           arco-arco:ReferenceCoinLegend ;
+        rdfs:label  "ita" ;
+        l0:name     "ita" .
+
+ar-address:baf8c807fbde64045fa67254dafd3e9f
+        a                    clvapit:Address ;
+        rdfs:label           "Italia, Toscana, FI, Firenze" ;
+        arco-location:isCulturalPropertyAddressOf
+                <https://w3id.org/arco/resource/NaturalHeritage/0900785097-1> ;
+        clvapit:hasCity      ar-city:firenze ;
+        clvapit:hasCountry   ar-country:italia ;
+        clvapit:hasProvince  ar-province:fi ;
+        clvapit:hasRegion    ar-region:toscana .
+
+<https://w3id.org/arco/resource/NaturalHeritage/0900785097-1>
+        a                               arco-arco:MovableCulturalProperty , arco-arco:NaturalHeritage ;
+        rdfs:comment                    "ACANTITE, ita, esemplare, GENERALE" ;
+        rdfs:label                      "ACANTITE (esemplare) ()"@it , "ACANTITE (esemplare) ()"@en ;
+        dc:coverage                     ar-city:firenze ;
+        dc:description                  "Prova descrizione scheda BNM" ;
+        dc:identifier                   "0900785097-1" ;
+        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900785097-1-legal-situation-proprieta-ente-pubblico-non-territoriale" ;
+        dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBNM/0900785097-1> ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.3#minerali> ;
+        dc:type                         ar-culturalPropertyType:25592622f0cbe0d7640d9daefd2dbaa0 ;
+        <http://purl.org/dc/terms/isReferencedBy>
+                <https://w3id.org/arco/resource/CatalogueRecordBNM/0900785097-1> ;
+        <http://purl.org/dc/terms/spatial>
+                "https://w3id.org/arco/resource/Address/baf8c807fbde64045fa67254dafd3e9f" ;
+        arco-arco:catalogueNumber       "00785097" ;
+        arco-arco:hasCataloguingAgency  ar-agent:409fd7bea69ada8f3a31b99147a6cc6a ;
+        arco-arco:hasCulturalPropertyCataloguingCategory
+                ar-CulturalPropertyCataloguingCategory:esemplare ;
+        arco-arco:hasHeritageProtectionAgency
+                ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
+        arco-arco:hasReferenceCoinLegend
+                <https://w3id.org/arco/resource/ReferenceCoinLegend/ita> ;
+        arco-arco:regionIdentifier      "09" ;
+        arco-arco:uniqueIdentifier      "0900785097" ;
+        arco-catalogue:isDescribedByCatalogueRecord
+                <https://w3id.org/arco/resource/CatalogueRecordBNM/0900785097-1> ;
+        arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0900785097-1-acquisition-1> ;
+        arco-cd:hasLegalSituation       ar-legalSituation:0900785097-1-legal-situation-proprieta-ente-pubblico-non-territoriale ;
+        arco-core:description           "Prova descrizione scheda BNM" ;
+        arco-core:hasAgentRole          ar-agentrole:0900785097-1-cataloguing-agency , ar-agentrole:0900785097-1-heritage-protection-agency ;
+        arco-dd:hasConservationStatus   ar-ConservationStatus:0900785097-1-conservation-status-1 ;
+        arco-dd:hasCulturalPropertyType
+                ar-culturalPropertyType:25592622f0cbe0d7640d9daefd2dbaa0 ;
+        arco-location:hasCulturalPropertyAddress
+                ar-address:baf8c807fbde64045fa67254dafd3e9f ;
+        arco-location:hasTimeIndexedTypedLocation
+                ar-timeIndexedTypedLocation:0900785097-1-current .
+
+ar-role:OfficialInCharge
+        a           roapit:Role ;
+        rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
+
+ar-agent:f262108a67caf8abf3dd7c8c47251ebd
+        a                    COV:Organization ;
+        rdfs:label           "Soprintendenza Speciale per il Patrimonio Storico Artistico ed Etnoantropologico e per il Polo Museale della citta' di Firenze" ;
+        arco-arco:isHeritageProtectionAgencyOf
+                <https://w3id.org/arco/resource/NaturalHeritage/0900785097-1> ;
+        arco-core:isAgentOf  ar-agentrole:0900785097-1-heritage-protection-agency ;
+        l0:name              "Soprintendenza Speciale per il Patrimonio Storico Artistico ed Etnoantropologico e per il Polo Museale della citta' di Firenze" .
+
+ar-ConservationStatus:0900785097-1-conservation-status-1
+        a           arco-dd:ConservationStatus ;
+        rdfs:label  "Stato di conservazione 1 del bene: 0900785097-1"@it , "Conservation status 1 of cultural property: 0900785097-1"@en ;
+        arco-dd:hasConservationStatusType
+                arco-dd:GoodConservationStatus ;
+        l0:name     "Stato di conservazione 1 del bene: 0900785097-1"@it , "Conservation status 1 of cultural property: 0900785097-1"@en .
+
+ar-role:CataloguinAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900785097-1-cataloguing-agency .
+
+ar-accessProfile:0900785097-1-2
+        a                               arco-catalogue:AccessProfile ;
+        rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 0900785097-1: 2"@it , "Access profile to catalogue record of cultural property 0900785097-1: 2"@en ;
+        arco-catalogue:hasPrivacyLevel  arco-catalogue:MediumPrivacy ;
+        arco-catalogue:hasPrivacyReason
+                ar-privacyReason:scheda-contenente-dati-personali ;
+        l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 0900785097-1: 2"@it , "Access profile to catalogue record of cultural property 0900785097-1: 2"@en .
+
+ar-CulturalPropertyCataloguingCategory:esemplare
+        a           arco-arco:CulturalPropertyCataloguingCategory ;
+        rdfs:label  "esemplare" ;
+        l0:name     "esemplare" .
+
+ar-role:HeritageProtectionAgency
+        a                   roapit:Role ;
+        rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
+        arco-core:isRoleOf  ar-agentrole:0900785097-1-heritage-protection-agency .
+
+ar-agent:472f7d41568f1de53d19f78bcad1a675
+        a           l0:Agent ;
+        rdfs:label  "Pratesi, Giovanni" .
+
+ar-culturalPropertyDefinition:acantite
+        a           arco-dd:CulturalPropertyDefinition ;
+        rdfs:label  "ACANTITE" .
+
+ar-TimeInterval:2013  a  tiapit:TimeInterval ;
+        rdfs:label   "2013" ;
+        tiapit:time  "2013" .
+
+ar-privacyReason:scheda-contenente-dati-personali
+        a           arco-catalogue:PrivacyReason ;
+        rdfs:label  "scheda contenente dati personali" ;
+        l0:name     "scheda contenente dati personali" .
+
+ar-feature:6cb6d628115356a22dc99f59497b93bb
+        a                   clvapit:Feature ;
+        rdfs:label          "Italia Toscana FI Firenze" ;
+        clvapit:hasAddress  ar-address:baf8c807fbde64045fa67254dafd3e9f .
+
+ar-agent:3650c7b8e6cd52160d11b38de4a6491a
+        a           l0:Agent ;
+        rdfs:label  "Bindi, Luca" .
