@@ -1318,6 +1318,7 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;informazione (dato) sulla/e persona fisica o giuridica/che che a vario titolo ha/hanno fatto pervenire il bene (campione, raccolta, collezione ecc.) all&apos;Ente di riferimento.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the information about the way in which the cultural property has arrived to the organization</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -2608,6 +2609,25 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Incline"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalEnvironment"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SampleForm"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/FruitSample"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PollenSample"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SeedSample"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/WoodSample"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

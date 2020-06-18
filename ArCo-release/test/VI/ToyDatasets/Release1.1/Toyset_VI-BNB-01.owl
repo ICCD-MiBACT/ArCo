@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#"
+     xml:base="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:arco-core="https://w3id.org/arco/ontology/arco/"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:movable-property="https://w3id.org/arco/ontology/movable-property/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/involvesAgent -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/arco/involvesAgent"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/isAgentInvolvedIn -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/arco/isAgentInvolvedIn"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasBotanicalRevision -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasBotanicalRevision"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasBotanicalRevisionType -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasBotanicalRevisionType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasClassificationInTime -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasClassificationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasRelatedSample -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasRelatedSample"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasTaxon -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasTaxon"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/arco/Specimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/arco/Specimen"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BiologicalTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BotanicalRevision -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalRevision"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BotanicalRevisionType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalRevisionType"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ClassificationInTime -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ClassificationInTime"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/FruitSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/FruitSample"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SeedSample -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SeedSample"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/l0/Agent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Agent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Agent1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Agent1">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+        <arco-core:isAgentInvolvedIn rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#SpecimenHarvesting1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Classificazione1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Classificazione1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/ClassificationInTime"/>
+        <movable-property:hasTaxon rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#B/Taxon1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Plant1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Plant1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/Specimen"/>
+        <movable-property:hasBotanicalRevision rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Revisione1"/>
+        <movable-property:hasClassificationInTime rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Classificazione1"/>
+        <movable-property:hasRelatedSample rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Sample1"/>
+        <movable-property:hasRelatedSample rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Sample2"/>
+        <movable-property:hasSpecimenHarvesting rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#SpecimenHarvesting1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Revisione1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Revisione1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/BotanicalRevision"/>
+        <movable-property:hasBotanicalRevisionType rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Revisionemorfologica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Revisionemorfologica -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Revisionemorfologica">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/BotanicalRevisionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Sample1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Sample1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/FruitSample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Sample2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Sample2">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/SeedSample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#SpecimenHarvesting1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#SpecimenHarvesting1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <arco-core:involvesAgent rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Agent1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Taxon1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-BNB-01.owl#Taxon1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
