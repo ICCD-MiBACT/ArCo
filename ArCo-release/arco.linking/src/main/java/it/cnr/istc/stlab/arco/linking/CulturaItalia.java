@@ -8,6 +8,7 @@ import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.ConfigurationUtils;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
@@ -17,7 +18,7 @@ import org.apache.jena.vocabulary.OWL;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import it.cnr.istc.stlab.lgu.commons.semanticweb.querying.ResultSetRetrieverWithLimitAndOffset;
+import it.cnr.istc.stlab.lgu.commons.semanticweb.querying.QueryExecutionRetrieverWithLimitAndOffset;
 import tech.tablesaw.api.StringColumn;
 import tech.tablesaw.api.Table;
 
@@ -67,11 +68,19 @@ public class CulturaItalia {
 			Table culturaItaliaTable = Table.create("culturaItaliaTable", StringColumn.create("cpCI"),
 					StringColumn.create("crCI"), StringColumn.create("uiCI"));
 
-			ResultSetRetrieverWithLimitAndOffset retriever = new ResultSetRetrieverWithLimitAndOffset(queryString,
-					culturaItaliaSparqlEndpoint, culturaItaliaLimit);
+			QueryExecutionRetrieverWithLimitAndOffset retriever = new QueryExecutionRetrieverWithLimitAndOffset(
+					queryString, culturaItaliaSparqlEndpoint, culturaItaliaLimit);
+			QueryExecution qexec;
+			boolean stop = false;
 			ResultSet rs;
 
-			while ((rs = retriever.next()).hasNext()) {
+			while (!stop) {
+				qexec = retriever.next();
+				rs = qexec.execSelect();
+				if (!rs.hasNext()) {
+					stop = true;
+				}
+
 				while (rs.hasNext()) {
 					QuerySolution qs = rs.next();
 					String label = qs.get("l").asLiteral().getValue().toString();
@@ -87,15 +96,23 @@ public class CulturaItalia {
 						culturaItaliaTable.column("uiCI").appendCell((regionId + recordId));
 					}
 				}
+				qexec.close();
 			}
 
 			Table arcoTable = Table.create("arcoTable", StringColumn.create("cp"), StringColumn.create("cr"),
 					StringColumn.create("ui"));
 
-			ResultSetRetrieverWithLimitAndOffset retrieverArco = new ResultSetRetrieverWithLimitAndOffset(
+			QueryExecutionRetrieverWithLimitAndOffset retrieverArco = new QueryExecutionRetrieverWithLimitAndOffset(
 					queryStringArCo, arcoSparqlEndpoint, arcoLimit);
 
-			while ((rs = retrieverArco.next()).hasNext()) {
+			stop = false;
+
+			while (!stop) {
+				qexec = retrieverArco.next();
+				rs = qexec.execSelect();
+				if (!rs.hasNext()) {
+					stop = true;
+				}
 				while (rs.hasNext()) {
 					QuerySolution qs = rs.next();
 
@@ -108,6 +125,7 @@ public class CulturaItalia {
 					arcoTable.column("ui").appendCell(ui);
 
 				}
+				qexec.close();
 			}
 			Model result = ModelFactory.createDefaultModel();
 

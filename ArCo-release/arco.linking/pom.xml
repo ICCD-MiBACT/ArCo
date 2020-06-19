@@ -28,7 +28,7 @@
 		<dependency>
 			<groupId>it.cnr.istc.stlab</groupId>
 			<artifactId>lgu.commons.semanticweb</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/tech.tablesaw/tablesaw-core -->
