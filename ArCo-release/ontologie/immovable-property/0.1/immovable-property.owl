@@ -160,6 +160,17 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf"/>
+        <rdfs:label xml:lang="it">ha ordine architettonico</rdfs:label>
+        <rdfs:label xml:lang="en">has architectural order</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/hasColour -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasColour">
@@ -215,7 +226,7 @@ In this module the following Ontology Design Patterns have been used:
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -231,7 +242,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasFloorPlan">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFloorPlanOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/FloorPlan"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
@@ -324,7 +335,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasLayout">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isLayoutOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
@@ -390,6 +401,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:label xml:lang="en">is architectural order</rdfs:label>
+        <rdfs:label xml:lang="it">è ordine architettonico di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/isColourOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isColourOf">
@@ -434,7 +455,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isDesignOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -458,7 +479,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFloorPlanOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/FloorPlan"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -530,7 +551,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isLayoutOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -661,6 +682,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">number of flights</rdfs:label>
+        <rdfs:label xml:lang="it">numero delle rampe</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -686,12 +708,13 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/numberOfLandings -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/numberOfLandings">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">number of landings</rdfs:label>
+        <rdfs:label xml:lang="it">numero dei pianerottoli</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -707,6 +730,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">number of rises</rdfs:label>
+        <rdfs:label xml:lang="it">numero delle alzate</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -739,7 +763,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/refersToFloorOrLevel -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/refersToFloorOrLevel">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
@@ -755,7 +779,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/significantIconographicInformation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/significantIconographicInformation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
@@ -844,6 +868,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:label xml:lang="en">Architectural order</rdfs:label>
+        <rdfs:label xml:lang="it">Ordine architettonico</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/Building -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Building">
@@ -914,6 +948,51 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">Construction</rdfs:label>
         <rdfs:label xml:lang="it">Costruzione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/ConstructionDesign -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFloorPlan"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/FloorPlan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasLayout"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/refersToFloorOrLevel"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/significantIconographicInformation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
+        <rdfs:label xml:lang="en">Construction design</rdfs:label>
+        <rdfs:label xml:lang="it">Progetto della costruzione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -1000,7 +1079,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasDesign"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/Design"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1062,51 +1141,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">Covering type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di rivestimento</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/Design -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Design">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFloorPlan"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/FloorPlan"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasLayout"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/refersToFloorOrLevel"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/significantIconographicInformation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="en">Design</rdfs:label>
-        <rdfs:label xml:lang="it">Progetto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -1828,18 +1862,6 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-        <rdfs:label xml:lang="en">Architectural order</rdfs:label>
-        <rdfs:label xml:lang="it">Ordine architettonico</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:NamedIndividual>
     
 
 

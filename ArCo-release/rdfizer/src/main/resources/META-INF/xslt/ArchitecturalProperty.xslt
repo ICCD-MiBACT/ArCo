@@ -210,7 +210,7 @@
 			<xsl:choose>	
 				<xsl:when test="./PNT/* and (not(./PNR) or ./PNR='intero bene' or ./PNR='integrale' or ./PNR='tutta' or ./PNR='totale') or (starts-with(lower-case(normalize-space(./PNR)), 'nr')) or (starts-with(lower-case(normalize-space(./PNR)), 'n.r')) or (starts-with(lower-case(normalize-space(./PNR)), 'intero')) or (starts-with(lower-case(normalize-space(./PNR)), 'intera')) or (starts-with(lower-case(normalize-space(./PNR)), 'esemplar'))">
 					<arco-ip:hasDesign>
-						<xsl:value-of select="concat($NS, 'Design/', arco-fn:arcofy(normalize-space(./PNT)))" />
+						<xsl:value-of select="concat($NS, 'ConstructionDesign/', arco-fn:arcofy(normalize-space(./PNT)))" />
 					</arco-ip:hasDesign>
 				</xsl:when>
 				<xsl:otherwise>
@@ -381,22 +381,22 @@
 	</xsl:for-each>	
 	
 
-							<!-- Design as individual -->
+							<!-- ConstructionDesign as individual -->
 	<xsl:for-each select="schede/A/PN/PNT">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-        		<xsl:value-of select="concat($NS, 'Design/', arco-fn:arcofy(normalize-space(.)))" />
+        		<xsl:value-of select="concat($NS, 'ConstructionDesign/', arco-fn:arcofy(normalize-space(.)))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/immovable-property/Design'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/immovable-property/ConstructionDesign'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label  xml:lang="en">
-				<xsl:value-of select="concat('Design  of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Construction design  of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name  xml:lang="en">
-				<xsl:value-of select="concat('Design  of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Construction design  of cultural property ', $itemURI)" />
 			</l0:name>
 			<rdfs:label  xml:lang="it">
 				<xsl:value-of select="concat('Pianta del bene culturale ', $itemURI)" />
@@ -1570,7 +1570,7 @@
 				</arco-core:isPartOf>
 				<xsl:if test="./PNT">
 				<arco-ip:hasDesign>
-					<xsl:value-of select="concat($NS, 'Design/', arco-fn:arcofy(normalize-space(./PNT)))" />
+					<xsl:value-of select="concat($NS, 'ConstructionDesign/', arco-fn:arcofy(normalize-space(./PNT)))" />
 				</arco-ip:hasDesign>
 				</xsl:if>
 		</rdf:Description>
