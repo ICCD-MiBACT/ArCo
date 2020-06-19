@@ -2533,6 +2533,20 @@
 				</xsl:otherwise>	
 				</xsl:choose>
 			</arco-core:hasConsequence>
+			<xsl:if test="schede/BNB/SB/TBI/TBIN">
+			<arco-mp:createsTaxon>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="$TypespecimenTaxon" />
+				</xsl:attribute>
+			</arco-mp:createsTaxon>
+			</xsl:if>
+			<xsl:if test="schede/BNB/SB/NAT">
+			<arco-mp:createsTaxon>
+				<xsl:attribute name="rdf:resource">
+		        	<xsl:value-of select="$TypespecimenTaxon" />
+				</xsl:attribute>
+			</arco-mp:createsTaxon>
+			</xsl:if>
 			<xsl:if test="schede/BNB/SB/TBI/TBIB">
 				<xsl:variable name="startDate">
 					<xsl:choose>
