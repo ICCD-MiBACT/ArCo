@@ -645,7 +645,29 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">difference in height</rdfs:label>
-        <rdfs:label xml:lang="it">differenza di altezza</rdfs:label>
+        <rdfs:label xml:lang="it">dislivello</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/numberOfChimneys -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/numberOfChimneys">
+        <rdfs:label xml:lang="en">number of chimneys</rdfs:label>
+        <rdfs:label xml:lang="it">numero di comignoli</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/numberOfDoors -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/numberOfDoors">
+        <rdfs:label xml:lang="en">number of doors</rdfs:label>
+        <rdfs:label xml:lang="it">numero di porte</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -661,6 +683,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">number of flights</rdfs:label>
+        <rdfs:label xml:lang="it">numero delle rampe</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -692,6 +715,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">number of landings</rdfs:label>
+        <rdfs:label xml:lang="it">numero dei pianerottoli</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -707,6 +731,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="en">This property represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">number of rises</rdfs:label>
+        <rdfs:label xml:lang="it">numero delle alzate</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -730,6 +755,28 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">numbero of rooms</rdfs:label>
         <rdfs:label xml:lang="it">numero di stanze</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/numberOfVerticalElements -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/numberOfVerticalElements">
+        <rdfs:label xml:lang="en">number of vertical elements</rdfs:label>
+        <rdfs:label xml:lang="it">numero di elementi verticali</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/numberOfWindows -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/numberOfWindows">
+        <rdfs:label xml:lang="en">number of windows</rdfs:label>
+        <rdfs:label xml:lang="it">numero di finestre</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -885,8 +932,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="it">Camino</rdfs:label>
         <rdfs:label xml:lang="en">Chimney</rdfs:label>
+        <rdfs:label xml:lang="it">Comignolo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
