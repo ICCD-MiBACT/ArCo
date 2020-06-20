@@ -20,3 +20,6 @@ done
 
 rm index.txt
   
+mkdir /quarantine
+cd /quarantine
+wget "http://arco.istc.cnr.it/arco-data/${KG_VERSION}/quarantine.nt.gz"

@@ -115,6 +115,30 @@ do
     fi
 done
 
+if [  -d "/quarantine" ]; then
+    echo "/quarantine exist, moving to /usr/local/virtuoso-opensource/share/virtuoso/vad"
+    mv /quarantine /usr/local/virtuoso-opensource/share/virtuoso/vad/ 
+else
+	echo "/quarantine does not exist"
+fi
+if [ -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/quarantine" ]; 
+	then
+    if [ ! -f "/usr/local/virtuoso-opensource/share/virtuoso/vad/quarantine/.arco_data_loaded" ] ;
+    then
+    	echo "Loading DB ArCo data - segment quarantine" ;
+    	echo "File in /usr/local/virtuoso-opensource/share/virtuoso/vad/quarantine: ";
+   		ls /usr/local/virtuoso-opensource/share/virtuoso/vad/quarantine
+   		echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/quarantine', '*.gz', 'https://w3id.org/arco/data/quarantine');" > /load_arco_data.sql
+		echo "rdf_loader_run();" >> /load_arco_data.sql
+		echo "exec('checkpoint');" >> /load_arco_data.sql
+		echo "WAIT_FOR_CHILDREN; " >> /load_arco_data.sql
+		echo "$(cat /load_arco_data.sql)"
+		virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data.sql
+		kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+		echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > /usr/local/virtuoso-opensource/share/virtuoso/vad/quarantine/.arco_data_loaded
+	fi
+fi
+	
 
 
 crudini --set virtuoso.ini HTTPServer ServerPort ${VIRT_HTTPServer_ServerPort:-$original_port}
