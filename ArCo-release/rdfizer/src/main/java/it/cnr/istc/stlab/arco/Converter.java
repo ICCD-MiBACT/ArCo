@@ -28,12 +28,15 @@ import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
+import it.cnr.istc.stlab.arco.xsltextension.ExtractUnit;
+import it.cnr.istc.stlab.arco.xsltextension.ExtractValue;
 import it.cnr.istc.stlab.arco.xsltextension.FindMaterialAndTechniqueLinker;
 import it.cnr.istc.stlab.arco.xsltextension.FindMaterialLinker;
 import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
 import it.cnr.istc.stlab.arco.xsltextension.ScientificPropertyDefinitionLinker;
+import it.cnr.istc.stlab.arco.xsltextension.Split;
 import it.cnr.istc.stlab.arco.xsltextension.Uncamelizer;
 import it.cnr.istc.stlab.arco.xsltextension.Urify;
 import net.sf.saxon.s9api.ExtensionFunction;
@@ -220,6 +223,12 @@ public class Converter {
 		proc.registerExtensionFunction(MeasurementMapper.getInstance());
 		proc.registerExtensionFunction(Uncamelizer.getInstance());
 		proc.registerExtensionFunction(ImageFinder.getInstance());
+		proc.registerExtensionFunction(Split.getInstance());
+		proc.registerExtensionFunction(ExtractValue.getInstance());
+		proc.registerExtensionFunction(ExtractUnit.getInstance());
+		
+		
+		
         XsltCompiler comp = proc.newXsltCompiler();
         
         ClassLoader loader = Converter.class.getClassLoader();

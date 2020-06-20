@@ -377,6 +377,12 @@
 			<artifactId>lucene-queryparser</artifactId>
 			<version>7.7.1</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>it.cnr.istc.stlab</groupId>
+			<artifactId>lgu.commons.semanticweb</artifactId>
+			<version>0.0.2</version>
+		</dependency>
 
 
 		<!-- dependency> <groupId>net.sourceforge.owlapi</groupId> <artifactId>owlapi-reasoner</artifactId> 
