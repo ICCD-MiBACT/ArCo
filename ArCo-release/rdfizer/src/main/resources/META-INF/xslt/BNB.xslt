@@ -86,47 +86,7 @@
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 
 
-    <xsl:template match="@*|node()">
-        <xsl:copy>
-            <xsl:apply-templates select="@*|node()"/>
-        </xsl:copy>
-    </xsl:template>
-    <xsl:template match="text/text()" name="tokenize">
-        <xsl:param name="text" select="."/>
-        <xsl:param name="separator" select="','"/>
-        <xsl:choose>
-            <xsl:when test="not(contains($text, $separator))">
-                <item>
-                    <xsl:value-of select="normalize-space($text)"/>
-                </item>
-            </xsl:when>
-            <xsl:otherwise>
-                <item>
-                    <xsl:value-of select="normalize-space(substring-before($text, $separator))"/>
-                </item>
-                <xsl:call-template name="tokenize">
-                    <xsl:with-param name="text" select="substring-after($text, $separator)"/>
-                </xsl:call-template>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-<xsl:variable name="agent">
- <xsl:choose>
- <xsl:when test="schede/BNB/LR/LRD/LRDA">
-         <xsl:call-template name="tokenize">
-               <xsl:with-param name="text" select="item"/>
-         </xsl:call-template>
-	</xsl:when>
-<xsl:when test="schede/BNB/SB/TBI/TBIA">
- <xsl:variable name="text" select="."/>
-        <xsl:variable name="separator" select="','"/>
-	<xsl:call-template name="tokenize">
-		<xsl:with-param name="text" select="substring-after($text, $separator)"/>
-	</xsl:call-template>
-	</xsl:when>
-	
-	</xsl:choose>
-</xsl:variable>
+
 	
 	<xsl:variable name="sheetVersion"
 		select="schede/*/@version" />
@@ -151,90 +111,138 @@
 	<xsl:variable name="BiologicalTaxon">   
 		<xsl:choose>
 			<xsl:when test="schede/BNB/SB/NBN/NBNA and not(lower-case(normalize-space(schede/BNB/SB/NBN/NBNA))='nr' or lower-case(normalize-space(schede/BNB/SB/NBN/NBNA))='n.r.' or lower-case(normalize-space(schede/BNB/SB/NBN/NBNA))='nr (recupero pregresso)')">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(normalize-space(schede/BNB/SB/NBN/NBNA)))" />
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAA/NAAL and not(schede/BNB/SB/NAA/NAAH) and not(schede/BNB/SB/NBN/NBNA)">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD,  '-', schede/BNB/SB/NAA/NAAF,  '-', schede/BNB/SB/NAA/NAAL)))" />                	
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAA/NAAH and not(schede/BNB/SB/NAA/NAAL) and not(schede/BNB/SB/NBN/NBNA)">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD,  '-', schede/BNB/SB/NAA/NAAF,  '-', schede/BNB/SB/NAA/NAAH)))" />                	
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAA/NAAF and not(schede/BNB/SB/NAA/NAAH) and not(schede/BNB/SB/NAA/NAAL) and not(schede/BNB/SB/NBN/NBNA)">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD,  '-', schede/BNB/SB/NAA/NAAF)))" />                	
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAA/NAAD and not(schede/BNB/SB/NAA/NAAF) and not(schede/BNB/SB/NAA/NAAH) and not(schede/BNB/SB/NAA/NAAL) and not(schede/BNB/SB/NBN/NBNA)">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD)))" />                	
+				</xsl:attribute>
 			</xsl:when>		                	
 			<xsl:when test="schede/BNB/SB/NAA/NAAB and not(schede/BNB/SB/NAA/NAAF) and not(schede/BNB/SB/NAA/NAAH) and not(schede/BNB/SB/NAA/NAAL)  and not(schede/BNB/SB/NAA/NAAD) and not(schede/BNB/SB/NBN/NBNA)">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB)))" />		                		
+				</xsl:attribute>
 			</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="TypespecimenTaxon">   
 		<xsl:choose>
 			<xsl:when test="schede/BNB/SB/TBI/TBIN and not(lower-case(normalize-space(schede/BNB/SB/TBI/TBIN))='nr' or lower-case(normalize-space(schede/BNB/SB/TBI/TBIN))='n.r.' or lower-case(normalize-space(schede/BNB/SB/TBI/TBIN))='nr (recupero pregresso)')">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(normalize-space(schede/BNB/SB/TBI/TBIN)))" />
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAT/NATL and not(schede/BNB/SB/NAT/NATH) and not(schede/BNB/SB/TBI/TBIN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD,  '-', schede/BNB/SB/NAT/NATF,  '-', schede/BNB/SB/NAT/NATL)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD,  '-', schede/BNB/SB/NAT/NATF,  '-', schede/BNB/SB/NAT/NATL)))" />
+				</xsl:attribute>                	
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAT/NATH and not(schede/BNB/SB/NAT/NATL) and not(schede/BNB/SB/TBI/TBIN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD,  '-', schede/BNB/SB/NAT/NATF,  '-', schede/BNB/SB/NAT/NATH)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD,  '-', schede/BNB/SB/NAT/NATF,  '-', schede/BNB/SB/NAT/NATH)))" />
+				</xsl:attribute>                	
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAT/NATF and not(schede/BNB/SB/NAT/NATH) and not(schede/BNB/SB/NAT/NATL) and not(schede/BNB/SB/TBI/TBIN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD,  '-', schede/BNB/SB/NAT/NATF)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD,  '-', schede/BNB/SB/NAT/NATF)))" />
+				</xsl:attribute>                	
 			</xsl:when>
 			<xsl:when test="schede/BNB/SB/NAT/NATD and not(schede/BNB/SB/NAT/NATF) and not(schede/BNB/SB/NAT/NATH) and not(schede/BNB/SB/NAT/NATL) and not(schede/BNB/SB/TBI/TBIN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB,  '-', schede/BNB/SB/NAT/NATD)))" />
+				</xsl:attribute>                	
 			</xsl:when>		                	
 			<xsl:when test="schede/BNB/SB/NAT/NATB and not(schede/BNB/SB/NAT/NATF) and not(schede/BNB/SB/NAT/NATH) and not(schede/BNB/SB/NAT/NATL)  and not(schede/BNB/SB/NAT/NATD) and not(schede/BNB/SB/TBI/TBIN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB)))" />		                		
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAT/NATA, '-', schede/BNB/SB/NAT/NATB)))" />
+				</xsl:attribute>		                		
 			</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="RevisedTaxon">   
 		<xsl:choose>
 			<xsl:when test="schede/BNB/RB/RBR/RBRN and not(lower-case(normalize-space(schede/BNB/RB/RBR/RBRN))='nr' or lower-case(normalize-space(schede/BNB/RB/RBR/RBRN))='n.r.' or lower-case(normalize-space(schede/BNB/RB/RBR/RBRN))='nr (recupero pregresso)')">
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(normalize-space(schede/BNB/RB/RBR/RBRN)))" />
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:when test="schede/BNB/RB/RBN/RBNL and not(schede/BNB/RB/RBN/RBNH) and not(schede/BNB/RB/RBR/RBRN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND,  '-', schede/BNB/RB/RBN/RBNF,  '-', schede/BNB/RB/RBN/RBNL)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND,  '-', schede/BNB/RB/RBN/RBNF,  '-', schede/BNB/RB/RBN/RBNL)))" />
+				</xsl:attribute>                	
 			</xsl:when>
 			<xsl:when test="schede/BNB/RB/RBN/RBNH and not(schede/BNB/RB/RBN/RBNL) and not(schede/BNB/RB/RBR/RBRN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND,  '-', schede/BNB/RB/RBN/RBNF,  '-', schede/BNB/RB/RBN/RBNH)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND,  '-', schede/BNB/RB/RBN/RBNF,  '-', schede/BNB/RB/RBN/RBNH)))" />
+				</xsl:attribute>                	
 			</xsl:when>
 			<xsl:when test="schede/BNB/RB/RBN/RBNF and not(schede/BNB/RB/RBN/RBNH) and not(schede/BNB/RB/RBN/RBNL) and not(schede/BNB/RB/RBR/RBRN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND,  '-', schede/BNB/RB/RBN/RBNF)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND,  '-', schede/BNB/RB/RBN/RBNF)))" />
+				</xsl:attribute>                	
 			</xsl:when>
 			<xsl:when test="schede/BNB/RB/RBN/RBND and not(schede/BNB/RB/RBN/RBNF) and not(schede/BNB/RB/RBN/RBNH) and not(schede/BNB/RB/RBN/RBNL) and not(schede/BNB/RB/RBR/RBRN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND)))" />                	
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB,  '-', schede/BNB/RB/RBN/RBND)))" />
+				</xsl:attribute>                	
 			</xsl:when>		                	
 			<xsl:when test="schede/BNB/RB/RBN/RBNB and not(schede/BNB/RB/RBN/RBNF) and not(schede/BNB/RB/RBN/RBNH) and not(schede/BNB/RB/RBN/RBNL)  and not(schede/BNB/RB/RBN/RBND) and not(schede/BNB/RB/RBR/RBRN)">
-				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB)))" />		                		
+				<xsl:attribute name="rdf:resource">
+				<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/RB/RBN/RBNA, '-', schede/BNB/RB/RBN/RBNB)))" />
+				</xsl:attribute>		                		
 			</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="BiologicalTaxonType">	
 		<xsl:choose>
 			<xsl:when test="schede/BNB/SB/NBN/NBNA" >
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BiologicalTaxon'" />
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:choose>
 					<xsl:when test="schede/BNB/SB/NAA/NAAL and not(schede/BNB/SB/NAA/NAAH)" >                	
+		    	     	<xsl:attribute name="rdf:resource">
 		    	     	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Cultivar'" />
+		    	     	</xsl:attribute>
 		    		</xsl:when>
 				    <xsl:when test="schede/BNB/SB/NAA/NAAH and not(schede/BNB/SB/NAA/NAAL)" >                	
-			         	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BotanicalForm'" />     	
+			         	<xsl:attribute name="rdf:resource">
+			         	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BotanicalForm'" />
+			         	</xsl:attribute>     	
 				    </xsl:when>
 				    <xsl:when test="schede/BNB/SB/NAA/NAAF and not(schede/BNB/SB/NAA/NAAH) and not(schede/BNB/SB/NAA/NAAL)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Variety'" />       	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Variety'" />
+		        	 	</xsl:attribute>       	
 			    	</xsl:when>
 				    <xsl:when test="schede/BNB/SB/NAA/NAAD and not(schede/BNB/SB/NAA/NAAF) and not(schede/BNB/SB/NAA/NAAH) and not(schede/BNB/SB/NAA/NAAL)" >                	
-			         	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Subspecies'" />    	
+			         	<xsl:attribute name="rdf:resource">
+			         	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Subspecies'" />
+			         	</xsl:attribute>    	
 				    </xsl:when>
 			    	<xsl:when test="schede/BNB/SB/NAA/NAAB and not(schede/BNB/SB/NAA/NAAF) and not(schede/BNB/SB/NAA/NAAH) and not(schede/BNB/SB/NAA/NAAL) and not(schede/BNB/SB/NAA/NAAD)" >                	
-			         	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Species'" />     	
+			         	<xsl:attribute name="rdf:resource">
+			         	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Species'" />
+			         	</xsl:attribute>     	
 			    	</xsl:when>
 				</xsl:choose>
 			</xsl:otherwise>
@@ -243,24 +251,36 @@
 	<xsl:variable name="TypespecimenTaxonType">	
 		<xsl:choose>
 			<xsl:when test="schede/BNB/SB/TBI/TBIN" >
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BiologicalTaxon'" />
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:choose>
 					<xsl:when test="schede/BNB/SB/NAT/NATL and not(schede/BNB/SB/NAT/NATH)" >                	
+		         		<xsl:attribute name="rdf:resource">
 		         		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Cultivar'" />
+		         		</xsl:attribute>
 				    </xsl:when>
 				    <xsl:when test="schede/BNB/SB/NAT/NATH and not(schede/BNB/SB/NAT/NATL)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BotanicalForm'" />     	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BotanicalForm'" />
+		        	 	</xsl:attribute>     	
 				    </xsl:when >
 				    <xsl:when test="schede/BNB/SB/NAT/NATF and not(schede/BNB/SB/NAT/NATH) and not(schede/BNB/SB/NAT/NATL)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Variety'" />       	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Variety'" />
+		        	 	</xsl:attribute>       	
 				    </xsl:when>
 				    <xsl:when test="schede/BNB/SB/NAT/NATD and not(schede/BNB/SB/NAT/NATF) and not(schede/BNB/SB/NAT/NATH) and not(schede/BNB/SB/NAT/NATL)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Subspecies'" />    	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Subspecies'" />
+		        	 	</xsl:attribute>    	
 				    </xsl:when>
 				    <xsl:when test="schede/BNB/SB/NAT/NATB and not(schede/BNB/SB/NAT/NATF) and not(schede/BNB/SB/NAT/NATH) and not(schede/BNB/SB/NAT/NATL) and not(schede/BNB/SB/NAT/NATD)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Species'" />     	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Species'" />
+		        	 	</xsl:attribute>     	
 				    </xsl:when>
 				</xsl:choose>
 			</xsl:otherwise>
@@ -269,24 +289,36 @@
 	<xsl:variable name="RevisedTaxonType">	
 		<xsl:choose>
 			<xsl:when test="schede/BNB/RB/RBR/RBRN" >
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BiologicalTaxon'" />
+				</xsl:attribute>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:choose>
-					<xsl:when test="schede/BNB/RB/RBN/RBNL and not(schede/BNB/RB/RBN/RBNH)" >                	
+					<xsl:when test="schede/BNB/RB/RBN/RBNL and not(schede/BNB/RB/RBN/RBNH)" >
+						<xsl:attribute name="rdf:resource">                	
 		         		<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Cultivar'" />
+		         		</xsl:attribute>
 				    </xsl:when>
 				    <xsl:when test="schede/BNB/RB/RBN/RBNH and not(schede/BNB/RB/RBN/RBNL)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BotanicalForm'" />     	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/BotanicalForm'" />
+		        	 	</xsl:attribute>     	
 				    </xsl:when >
 				    <xsl:when test="schede/BNB/RB/RBN/RBNF and not(schede/BNB/RB/RBN/RBNH) and not(schede/BNB/RB/RBN/RBNL)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Variety'" />       	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Variety'" />
+		        	 	</xsl:attribute>       	
 				    </xsl:when>
 				    <xsl:when test="schede/BNB/RB/RBN/RBND and not(schede/BNB/RB/RBN/RBNF) and not(schede/BNB/RB/RBN/RBNH) and not(schede/BNB/RB/RBN/RBNL)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Subspecies'" />    	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Subspecies'" />
+		        	 	</xsl:attribute>    	
 				    </xsl:when>
 				    <xsl:when test="schede/BNB/RB/RBN/RBNB and not(schede/BNB/RB/RBN/RBNF) and not(schede/BNB/RB/RBN/RBNH) and not(schede/BNB/RB/RBN/RBNL) and not(schede/BNB/RB/RBN/RBND)" >                	
-		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Species'" />     	
+		        	 	<xsl:attribute name="rdf:resource">
+		        	 	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Species'" />
+		        	 	</xsl:attribute>     	
 				    </xsl:when>
 				</xsl:choose>
 			</xsl:otherwise>
@@ -303,12 +335,14 @@
 							<!-- Properties of BotanicalHeritage -->
 	
 	<rdf:Description>
-		<xsl:attribute name="rdf:about">
+		<xsl:attribute name="rdf:resource">
         	<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
 		<xsl:if test="schede/BNB/SB/NBN/NBNA or schede/BNB/SB/NAA">
 			<arco-mp:isClassifiedByOriginalTaxon>
+				<xsl:attribute name="rdf:resource">
 		    	<xsl:value-of select="$BiologicalTaxon" />
+		    	</xsl:attribute>
 			</arco-mp:isClassifiedByOriginalTaxon>
 		</xsl:if>
 		<xsl:if test="schede/BNB/OG/OGT/OGTS">
@@ -345,24 +379,32 @@
 			
 		<xsl:if test="schede/BNB/SB/NBN or schede/BNB/SB/NAA">
 			<arco-core:hasClassificationInTime>
+		    	<xsl:attribute name="rdf:resource">
 		    	<xsl:value-of select="concat('https://w3id.org/arco/resource/ClassificationInTime/',$itemURI, '-original-classification')" />
+		    	</xsl:attribute>
 			</arco-core:hasClassificationInTime>
 		</xsl:if>
 		<xsl:for-each select="schede/BNB/RB">
 			<xsl:if test="schede/BNB/RB/RBR/RBRN or schede/BNB/RB/RBN">
 			<arco-core:hasClassificationInTime>
+		    	<xsl:attribute name="rdf:resource">
 		    	<xsl:value-of select="concat('https://w3id.org/arco/resource/ClassificationInTime/',$itemURI, '-revised-classification-', position())" />
+		    	</xsl:attribute>
 			</arco-core:hasClassificationInTime>
 			</xsl:if>
 		</xsl:for-each>
 		<xsl:if test="schede/BNB/SB/TBI/TBIN or schede/BNB/SB/NAT">
 				<arco-core:hasClassificationInTime>
+		            <xsl:attribute name="rdf:resource">
 		             <xsl:value-of select="concat('https://w3id.org/arco/resource/ClassificationInTime/',$itemURI, '-typespecimen-classification')" />
+		            </xsl:attribute>
 				</arco-core:hasClassificationInTime>
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/ABC">				
 				<arco-mp:hasAccession>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/Accession/', $itemURI)" />
+					</xsl:attribute>
 				</arco-mp:hasAccession>
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/CBP/CBPF">
@@ -382,57 +424,79 @@
 			</xsl:if>
 			<xsl:for-each select="schede/BNB/SB/SBE">
 				<arco-mp:hasLabel>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/Label/', $itemURI, '-', position())" />
+					</xsl:attribute>
 				</arco-mp:hasLabel>			
 			</xsl:for-each>
 			<xsl:if test="schede/BNB/LR">
 				<arco-mp:hasSpecimenHarvesting>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/SpecimenHarvesting/', $itemURI)" />
+					</xsl:attribute>
 				</arco-mp:hasSpecimenHarvesting>
 			</xsl:if>				
 			<xsl:for-each select="schede/BNB/RB">
 				<arco-cd:hasSurvey>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/BotanicalRevision/', $itemURI, '-', position())" />
+					</xsl:attribute>
 				</arco-cd:hasSurvey>
 			</xsl:for-each>
 			<xsl:for-each select="schede/BNB/DB/DBR">
 				<arco-mp:hasAssociatedPreparation>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/Preparation/', $itemURI, '-', position())" />
+					</xsl:attribute>
 				</arco-mp:hasAssociatedPreparation>
 			</xsl:for-each>				
 			<xsl:for-each select="schede/BNB/DB/DBC">
 				<arco-mp:hasRelatedSample>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/FruitSample/', $itemURI, '-', position())" />
+					</xsl:attribute>
 				</arco-mp:hasRelatedSample>
 			</xsl:for-each>
 			<xsl:for-each select="schede/BNB/DB/DBX">
 				<arco-mp:hasRelatedSample>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/WoodSample/', $itemURI, '-', position())" />
+					</xsl:attribute>
 				</arco-mp:hasRelatedSample>
 			</xsl:for-each>	
 			<xsl:for-each select="schede/BNB/DB/DBS">
 				<arco-mp:hasRelatedSample>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/SeedSample/', $itemURI, '-', position())" />
+					</xsl:attribute>
 				</arco-mp:hasRelatedSample>
 			</xsl:for-each>	
 			<xsl:for-each select="schede/BNB/DB/DBP">
 				<arco-mp:hasRelatedSample>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/PollenSample/', $itemURI, '-', position())" />
+					</xsl:attribute>
 				</arco-mp:hasRelatedSample>
 			</xsl:for-each>
 			<xsl:if test="schede/BNB/LR/LRI/LRIM">
 				<arco-mp:hasHostIndividual>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/HostIndividual/', arco-fn:arcofy(schede/BNB/LR/LRI/LRIM))" />
+					</xsl:attribute>
 				</arco-mp:hasHostIndividual>
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRI/LRIV">
 				<arco-mp:hasCloseIndividual>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/CloseIndividual/', arco-fn:arcofy(schede/BNB/LR/LRI/LRIV))" />
+					</xsl:attribute>
 				</arco-mp:hasCloseIndividual>
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/TBI">
 				<arco-mp:hasTypeSpecimenIdentification>
+					<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/TypeSpecimenIdentification/', $itemURI)" />
+					</xsl:attribute>
 				</arco-mp:hasTypeSpecimenIdentification>
 			</xsl:if>	
 	</rdf:Description>
@@ -501,7 +565,9 @@
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/SBS/SBSC">
 			<arco-cd:hasBibliography>
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-1-', position())" />
+				</xsl:attribute>
 			</arco-cd:hasBibliography>
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/DBV/DBVA">
@@ -588,7 +654,9 @@
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/TBI/TBIL">
 			<arco-cd:hasBibliography>
+				<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-2-', position())" />
+				</xsl:attribute>
 			</arco-cd:hasBibliography>
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/TBI/TBIA">
@@ -675,7 +743,9 @@
 		</xsl:if>
 		<xsl:if test="schede/BNB/RB/RBR/RBRB">
 			<arco-cd:hasBibliography>
+			<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-2-', position())" />
+				</xsl:attribute>
 			</arco-cd:hasBibliography>
 		</xsl:if>
 		<xsl:if test="schede/BNB/RB/RBR/RBRA">
@@ -723,7 +793,9 @@
             </l0:name>
 		<xsl:if test="schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/BNB/SB/SBS/SBSC)), 'n.r')))">
 			<arco-cd:hasBibliography>
-	        	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+			<xsl:attribute name="rdf:resource">
+	        	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />
+	        </xsl:attribute>	
 			</arco-cd:hasBibliography>
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/SBS/SBSG">
@@ -739,10 +811,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD,  '-', schede/BNB/SB/NAA/NAAL)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD)))" />
+            		</xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Cultivar'" />      
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Cultivar'" />
+            </xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(schede/BNB/SB/NAA/NAAA, ' ', schede/BNB/SB/NAA/NAAB,  ' ', schede/BNB/SB/NAA/NAAD,  ' ', schede/BNB/SB/NAA/NAAL)" />
@@ -758,10 +834,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD,  '-', schede/BNB/SB/NAA/NAAH)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD)))" />
+            </xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/BotanicalForm'" />      
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/BotanicalForm'" />
+            </xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(schede/BNB/SB/NAA/NAAA, ' ', schede/BNB/SB/NAA/NAAB,  ' ', schede/BNB/SB/NAA/NAAD,  ' ', schede/BNB/SB/NAA/NAAH)" />
@@ -771,7 +851,9 @@
             </l0:name>
             <xsl:if test="schede/BNB/SB/NAA/NAAI">
             	<arco-cd:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAI))" />
+            		</xsl:attribute>
             	</arco-cd:hasAuthor>
             </xsl:if>	           
   		</rdf:Description>
@@ -782,10 +864,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD,  '-', schede/BNB/SB/NAA/NAAF)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD)))" />
+            	</xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />      
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />
+            </xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(schede/BNB/SB/NAA/NAAA, ' ', schede/BNB/SB/NAA/NAAB,  ' ', schede/BNB/SB/NAA/NAAD,  ' ', schede/BNB/SB/NAA/NAAF)" />
@@ -795,7 +881,9 @@
             </l0:name>
             <xsl:if test="schede/BNB/SB/NAA/NAAG">
             	<arco-cd:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAG))" />
+            	</xsl:attribute>
             	</arco-cd:hasAuthor>
             </xsl:if>	           
   		</rdf:Description>
@@ -806,10 +894,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB,  '-', schede/BNB/SB/NAA/NAAD)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB)))" />
+            </xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
+            <xsl:attribute name="rdf:resource">
             	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Subspecies'" />      
+            </xsl:attribute>
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(schede/BNB/SB/NAA/NAAA, ' ', schede/BNB/SB/NAA/NAAB,  ' ', schede/BNB/SB/NAA/NAAD)" />
@@ -819,7 +911,9 @@
             </l0:name>	
             <xsl:if test="schede/BNB/SB/NAA/NAAE">
             	<arco-cd:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAE))" />
+            	</xsl:attribute>
             	</arco-cd:hasAuthor> 
             </xsl:if>                       
     	</rdf:Description>
@@ -830,10 +924,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(schede/BNB/SB/NAA/NAAA, '-', schede/BNB/SB/NAA/NAAB)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(schede/BNB/SB/NAA/NAAA))" />
+            </xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Species'" />      
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Species'" />
+            </xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(schede/BNB/SB/NAA/NAAA, ' ', schede/BNB/SB/NAA/NAAB)" />
@@ -843,7 +941,9 @@
             </l0:name>
             <xsl:if test="schede/BNB/SB/NAA/NAAC">
             	<arco-cd:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAC))" />
+            	</xsl:attribute>
             	</arco-cd:hasAuthor> 
             </xsl:if>           	           
     	</rdf:Description>
@@ -854,10 +954,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(schede/BNB/SB/NAA/NAAA))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            	<xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(schede/BNB/SB/SBS/SBSF))" />
+            	</xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Genus'" />      
+            	<xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Genus'" />
+            	</xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="schede/BNB/SB/NAA/NAAA" />
@@ -879,16 +983,22 @@
             </xsl:attribute>
            <xsl:if test="schede/BNB/SB/NAA/NAAA">
             <arco-cd:hasDirectLowerRank>
+            <xsl:attribute name="rdf:resource">
             	<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(schede/BNB/SB/NAA/NAAA))" />
+            </xsl:attribute>
             </arco-cd:hasDirectLowerRank>
             </xsl:if>
             <xsl:if test="schede/BNB/SB/NBN/NBNA">
             <arco-cd:hasLowerRank>
+            <xsl:attribute name="rdf:resource">
             	<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(schede/BNB/SB/NBN/NBNA))" />
+            </xsl:attribute>
             </arco-cd:hasLowerRank>
             </xsl:if>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Family'" />      
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Family'" />
+            </xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="schede/BNB/SB/SBS/SBSF" />
@@ -927,10 +1037,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND,  '-', ./RBN/RBNL)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND)))" />
+            </xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Cultivar'" />      
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Cultivar'" />
+            </xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(./RBN/RBNA, ' ', ./RBN/RBNB,  ' ', ./RBN/RBND,  ' ', ./RBN/RBNL)" />
@@ -948,10 +1062,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND,  '-', ./RBN/RBNH)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND)))" />
+            </xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
+            <xsl:attribute name="rdf:resource">
             	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/BotanicalForm'" />      
+            </xsl:attribute>
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND,  '-', ./RBN/RBNH)" />
@@ -961,7 +1079,9 @@
             </l0:name>           
             <xsl:if test="./RBN/RBNI">
             	<arco-cd:hasAuthor>
+            	<xsl:attribute name="rdf:about">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBN/RBNI))" />
+            	</xsl:attribute>
             	</arco-cd:hasAuthor>
             </xsl:if>	           
     	</rdf:Description>
@@ -974,10 +1094,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND,  '-', ./RBN/RBNF)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND)))" />
+            </xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
+            <xsl:attribute name="rdf:resource">
             	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />      
+            </xsl:attribute>
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(./RBN/RBNA, ' ', ./RBN/RBNB,  ' ', ./RBN/RBND,  ' ', ./RBN/RBNF)" />
@@ -987,7 +1111,9 @@
             </l0:name>
             <xsl:if test="./RBN/RBNG">
             	<arco-cd:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBN/RBNG))" />
+            	</xsl:attribute>
             	</arco-cd:hasAuthor>
             </xsl:if>	           
     </rdf:Description>
@@ -1000,10 +1126,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB,  '-', ./RBN/RBND)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            	<xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB)))" />
+            	</xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
+            	<xsl:attribute name="rdf:resource">
             	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Subspecies'" />      
+            	</xsl:attribute>
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(./RBN/RBNA, ' ', ./RBN/RBNB,  ' ', ./RBN/RBND)" />
@@ -1013,7 +1143,9 @@
             </l0:name>	
             <xsl:if test="./RBN/RBNE">
             	<arco-cd:hasAuthor>
+            		<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBN/RBNE))" />
+            		</xsl:attribute>
             	</arco-cd:hasAuthor> 
             </xsl:if>                       
     </rdf:Description>
@@ -1026,10 +1158,14 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(concat(./RBN/RBNA, '-', ./RBN/RBNB)))" />
             </xsl:attribute>
             <arco-mp:hasDirectHigherRank>
+            <xsl:attribute name="rdf:resource">
             		 <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(./RBN/RBNA))" />
+            </xsl:attribute>
             </arco-mp:hasDirectHigherRank>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Species'" />      
+            	<xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Species'" />
+            	</xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="concat(./RBN/RBNA, ' ', ./RBN/RBNB)" />
@@ -1039,7 +1175,9 @@
             </l0:name>
             <xsl:if test="./RBN/RBNC">
             	<arco-cd:hasAuthor>
+            	<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBN/RBNC))" />
+            	</xsl:attribute>
             	</arco-cd:hasAuthor> 
             </xsl:if>           	           
     	</rdf:Description>
@@ -1052,7 +1190,9 @@
                <xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(./RBN/RBNA))" />
             </xsl:attribute>
             <rdf:type>
-            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Genus'" />      
+            <xsl:attribute name="rdf:resource">
+            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Genus'" />
+            </xsl:attribute>      
             </rdf:type>
             <rdfs:label>
             	 <xsl:value-of select="./RBN/RBNA" />
@@ -1161,7 +1301,9 @@
 			</l0:name>
 			<xsl:if test="schede/BNB/SB/ABC/ABCA">
 				<arco-core:involvesAgent>
+				<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/ABC/ABCA))" />					
+				</xsl:attribute>
 				</arco-core:involvesAgent>	
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/ABC/ABCB">
@@ -1359,7 +1501,9 @@
 			</l0:name>
 			<xsl:if test="schede/BNB/LR/LRD/LRDA">
 				<arco-core:involvesAgent>
+				<xsl:attribute name="rdf:resource">
           				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(schede/BNB/LR/LRD/LRDA))" />					
+				</xsl:attribute>
 				</arco-core:involvesAgent>	
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRD/LRDB">
@@ -1401,7 +1545,9 @@
 					</xsl:if>
 					<xsl:if test="schede/BNB/LR/LRI">
 						<arco-mp:hasCollectingSite>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat('https://w3id.org/arco/resource/CollectingSite/', $itemURI)" />
+						</xsl:attribute>
 						</arco-mp:hasCollectingSite>
 					</xsl:if>
 				</rdf:Description>
@@ -1501,17 +1647,23 @@
 			</l0:name>
 			<xsl:if test="schede/BNB/LR/LRI/LRIP">
 				<arco-dd:hasOrientation>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/Orientation/', arco-fn:urify(normalize-space(schede/BNB/LR/LRI/LRIP)))" />
+				</xsl:attribute>
 				</arco-dd:hasOrientation>
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRI/LRID">
 				<arco-mp:hasFluidDynamism>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/FluidDynamism/', arco-fn:urify(normalize-space(schede/BNB/LR/LRI/LRID)))" />
+				</xsl:attribute>
 				</arco-mp:hasFluidDynamism>
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRI/LRIS">
 				<arco-mp:hasShadeTolerance>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/ShadeTolerance/', arco-fn:urify(normalize-space(schede/BNB/LR/LRI/LRIS)))" />
+				</xsl:attribute>
 				</arco-mp:hasShadeTolerance>
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRI/LRIE">
@@ -1521,12 +1673,16 @@
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRI/LRIH or schede/BNB/LR/LRI/LRIT or schede/BNB/LR/LRI/LRIA or schede/BNB/LR/LRI/LRIO">
 				<arco-dd:hasMeasurementCollection>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, 'collecting-site-measurement-collection')" />
+				</xsl:attribute>
 				</arco-dd:hasMeasurementCollection>
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRI/LRIR">
 				<arco-mp:hasSubstrate>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'Substrate/', arco-fn:urify(normalize-space(schede/BNB/LR/LRI/LRIR)))" />
+				</xsl:attribute>
 				</arco-mp:hasSubstrate>
 			</xsl:if>
 			<xsl:for-each select="schede/BNB/LR/LRV">
@@ -1724,17 +1880,23 @@
 					</l0:name>
 					<xsl:if test="schede/BNB/LR/LRI/LRII">
 					<arco-mp:hasIncline>
+					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'Incline/', arco-fn:urify(normalize-space(schede/BNB/LR/LRI/LRII)))" />
+					</xsl:attribute>
 					</arco-mp:hasIncline>
 					</xsl:if>
 					<xsl:if test="schede/BNB/LR/LRI/LRIB">
 						<arco-mp:hasNaturalEnvironment>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'NaturalEnvironment/', arco-fn:urify(normalize-space(schede/BNB/LR/LRI/LRIB)))" />
+						</xsl:attribute>
 						</arco-mp:hasNaturalEnvironment>
 					</xsl:if>
 					<xsl:if test="schede/BNB/LR/LRI/LRIJ">
 						<arco-mp:hasSubstrateType>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'SubstrateType/', arco-fn:urify(normalize-space(schede/BNB/LR/LRI/LRIJ)))" />
+						</xsl:attribute>
 						</arco-mp:hasSubstrateType>
 					</xsl:if>	
 				</rdf:Description>
@@ -1881,17 +2043,23 @@
 			</l0:name>
 			<xsl:if test="./RBR/RBRA">
 				<arco-core:involvesAgent>
+				<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBRA))" />					
+				</xsl:attribute>
 				</arco-core:involvesAgent>	
 			</xsl:if>
 			<xsl:if test="./RBR/RBRB">	
 				<arco-cd:hasBibliography>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-botanical-revision-bibliography-', position())" />
+				</xsl:attribute>
 				</arco-cd:hasBibliography>
 			</xsl:if>
 			<xsl:if test="./RBR/RBRT">	
 				<arco-core:hasType>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'BotanicalRevisionType/', arco-fn:urify(./RBR/RBRT))" />
+				</xsl:attribute>
 				</arco-core:hasType>
 			</xsl:if>
 			<xsl:if test="./RBA">
@@ -1901,7 +2069,9 @@
 			</xsl:if>					
 			<xsl:if test="./RBR/RBRN or ./RBN">
 				<arco-core:hasConsequence>
+				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="concat('https://w3id.org/arco/resource/ClassificationInTime/',$itemURI, '-revised-classification-', position())" />
+				</xsl:attribute>
 				</arco-core:hasConsequence>
 			</xsl:if>	
 			<xsl:if test="./RBD/RBDB">
@@ -2159,12 +2329,16 @@
 					</l0:name>
 					<xsl:if test="./DBRA">
 						<arco-cd:hasAuthor>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBRA))" />
+						</xsl:attribute>
 						</arco-cd:hasAuthor>
 					</xsl:if>
 					<xsl:if test="./DBRT">	
 						<arco-core:hasType>
+							<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'PreparationType/', arco-fn:urify(./DBRT))" />
+							</xsl:attribute>
 						</arco-core:hasType>
 					</xsl:if>
 					<xsl:if test="./DBRD">
@@ -2225,7 +2399,9 @@
 			</l0:name>
 			<xsl:if test="./DBCA">
 				<arco-cd:hasAuthor>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBCA))" />
+				</xsl:attribute>
 				</arco-cd:hasAuthor>
 			</xsl:if>
 			<xsl:if test="./DBCC">	
@@ -2245,7 +2421,9 @@
 			</xsl:if>
 			<xsl:if test="./DBCX">
 				<arco-mp:hasPreservationType>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'PreservationType/', arco-fn:urify(./DBCX))" />
+				</xsl:attribute>
 				</arco-mp:hasPreservationType>
 			</xsl:if>			
 		</rdf:Description>
@@ -2295,7 +2473,9 @@
 					</l0:name>
 					<xsl:if test="./DBXT">
 						<arco-cd:hasAuthor>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBXT))" />
+						</xsl:attribute>
 						</arco-cd:hasAuthor>
 					</xsl:if>
 					<xsl:if test="./DBXC">	
@@ -2310,12 +2490,16 @@
 					</xsl:if>
 					<xsl:if test="./DBXX">
 						<arco-mp:hasSampleForm>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'SampleForm/', arco-fn:urify(./DBXX))" />
+						</xsl:attribute>
 						</arco-mp:hasSampleForm>
 					</xsl:if>
 					<xsl:if test="./DBXA or ./DBXL or ./DBXN or ./DBXD or ./DBXP">
 						<arco-cd:hasMeasurementCollection>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'MeasurementCollection/', 'WoodSample', '-', position(), '-related-sample-measurement-collection')" />
+						</xsl:attribute>
 						</arco-cd:hasMeasurementCollection>
 					</xsl:if>
 				</rdf:Description>
@@ -2428,7 +2612,9 @@
 					</l0:name>
 					<xsl:if test="./DBPA">
 						<arco-cd:hasAuthor>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBPA))" />
+						</xsl:attribute>
 						</arco-cd:hasAuthor>
 					</xsl:if>
 					<xsl:if test="./DBPC">	
@@ -2468,7 +2654,9 @@
 					</l0:name>
 					<xsl:if test="./DBSR">
 						<arco-cd:hasAuthor>
+						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBSR))" />
+						</xsl:attribute>
 						</arco-cd:hasAuthor>
 					</xsl:if>
 					<xsl:if test="./DBSC">	
@@ -2510,26 +2698,36 @@
 			</l0:name>
 			<xsl:if test="schede/BNB/SB/TBI/TBIA">
 				<arco-cd:hasAuthor>
+				<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/TBI/TBIA))" />					
+				</xsl:attribute>
 				</arco-cd:hasAuthor>	
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/TBI/TBIL">	
 				<arco-cd:hasBibliography>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-TypeSpecimen-bibliography')" />
+				</xsl:attribute>
 				</arco-cd:hasBibliography>
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/TBI/TBIT">	
 				<arco-core:hasType>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'TypeOfTypeSpecimen/', arco-fn:urify(schede/BNB/SB/TBI/TBIT))" />
+				</xsl:attribute>
 				</arco-core:hasType>
 			</xsl:if>								
 			<arco-core:hasConsequence>
 				<xsl:choose>
 				<xsl:when test="schede/BNB/SB/TBI/TBIN or schede/BNB/SB/NAT">
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/ClassificationInTime/',$itemURI, '-typespecimen-classification')" />
+				</xsl:attribute>
 				</xsl:when>
 				<xsl:otherwise>
+				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat('https://w3id.org/arco/resource/ClassificationInTime/',$itemURI, '-original-classification')" />
+				</xsl:attribute>
 				</xsl:otherwise>	
 				</xsl:choose>
 			</arco-core:hasConsequence>
@@ -2880,6 +3078,7 @@
 			</arco-dd:hasMeasurementType>
 		</rdf:Description>
 	</xsl:for-each>
+
 				
 	</rdf:RDF>
 </xsl:template>								
