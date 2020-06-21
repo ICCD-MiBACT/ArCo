@@ -549,11 +549,14 @@
 			</arco-cd:hasBibliography>
 		</xsl:if>
 		<xsl:if test="schede/*/SB/DBV/DBVA">
-			<arco-core:involvesAgent>
-				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/*/SB/DBV/DBVA))" />
-				</xsl:attribute>
-			</arco-core:involvesAgent>
+			<xsl:variable name="authorssplit" select="arco-fn:split(schede/*/SB/DBV/DBVA)" />
+			<xsl:for-each select="$authorssplit">
+				<arco-core:involvesAgent>
+					<xsl:attribute name="rdf:resource">
+        				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+					</xsl:attribute>
+				</arco-core:involvesAgent>
+			</xsl:for-each>
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/NBN/NBNA">
 			<arco-mp:hasTaxon>
@@ -638,11 +641,14 @@
 			</arco-cd:hasBibliography>
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/TBI/TBIA">
-			<arco-core:involvesAgent>
-				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/TBI/TBIA))" />
-				</xsl:attribute>
-			</arco-core:involvesAgent>
+			<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/SB/TBI/TBIA)" />
+			<xsl:for-each select="$authorssplit">
+				<arco-core:involvesAgent>
+					<xsl:attribute name="rdf:resource">
+        				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+					</xsl:attribute>
+				</arco-core:involvesAgent>
+			</xsl:for-each>
 		</xsl:if>
 		<xsl:if test="schede/BNB/SB/TBI/TBIN">
 			<arco-mp:hasTaxon>
@@ -727,11 +733,14 @@
 			</arco-cd:hasBibliography>
 		</xsl:if>
 		<xsl:if test="schede/BNB/RB/RBR/RBRA">
-			<arco-core:involvesAgent>
-				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/RB/RBR/RBRA))" />
-				</xsl:attribute>
-			</arco-core:involvesAgent>
+			<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/RB/RBR/RBRA)" />
+			<xsl:for-each select="$authorssplit">
+				<arco-core:involvesAgent>
+					<xsl:attribute name="rdf:resource">
+        				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+					</xsl:attribute>
+				</arco-core:involvesAgent>
+			</xsl:for-each>
 		</xsl:if>
 		<xsl:if test="schede/BNB/RB/RBR/RBRN">
 			<arco-mp:hasTaxon>
@@ -1272,12 +1281,15 @@
 				<xsl:value-of select="concat('Accession of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="schede/BNB/SB/ABC/ABCA">
+			<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/SB/ABC/ABCA)" />
+			<xsl:for-each select="$authorssplit">
 				<arco-core:involvesAgent>
-				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/ABC/ABCA))" />					
-				</xsl:attribute>
-				</arco-core:involvesAgent>	
-			</xsl:if>
+					<xsl:attribute name="rdf:resource">
+        				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+					</xsl:attribute>
+				</arco-core:involvesAgent>
+			</xsl:for-each>
+		</xsl:if>
 			<xsl:if test="schede/BNB/SB/ABC/ABCB">
 				<xsl:variable name="startDate">
 					<xsl:choose>
@@ -1472,11 +1484,14 @@
 				<xsl:value-of select="concat('Harvesting of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="schede/BNB/LR/LRD/LRDA">
+			<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/LR/LRD/LRDA)" />
+			<xsl:for-each select="$authorssplit">
 				<arco-core:involvesAgent>
 					<xsl:attribute name="rdf:resource">
-          				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:urify(schede/BNB/LR/LRD/LRDA))" />					
+        				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 					</xsl:attribute>
-				</arco-core:involvesAgent>	
+				</arco-core:involvesAgent>
+			</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="schede/BNB/LR/LRD/LRDB">
 						<xsl:variable name="startDate">
@@ -2026,11 +2041,14 @@
 				<xsl:value-of 	select="concat('Botanical revision of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./RBR/RBRA">
+			<xsl:variable name="authorssplit" select="arco-fn:split(./RBR/RBRA)" />
+			<xsl:for-each select="$authorssplit">
 				<arco-core:involvesAgent>
-				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./RBRA))" />					
-				</xsl:attribute>
-				</arco-core:involvesAgent>	
+					<xsl:attribute name="rdf:resource">
+        				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+					</xsl:attribute>
+				</arco-core:involvesAgent>
+			</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="./RBR/RBRB">	
 				<arco-cd:hasBibliography>
@@ -3263,7 +3281,132 @@
 			</mu:hasMeasurementUnit>
 		</rdf:Description>
 	</xsl:for-each>		
-		
+	<xsl:if test="schede/*/SB/DBV/DBVA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/*/SB/DBV/DBVA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+                    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                	</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+	<xsl:if test="schede/BNB/SB/TBI/TBIA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/SB/TBI/TBIA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+                    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                	</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+	<xsl:if test="schede/BNB/RB/RBR/RBRA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/RB/RBR/RBRA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+                    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                	</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+	<xsl:if test="schede/BNB/SB/ABC/ABCA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/SB/ABC/ABCA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+                    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                	</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+		<xsl:if test="schede/BNB/LR/LRD/LRDA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/LR/LRD/LRDA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+                    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                	</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+	<xsl:if test="schede/BNB/RB/RBR/RBRA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/RB/RBR/RBRA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+                    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+                	</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>
