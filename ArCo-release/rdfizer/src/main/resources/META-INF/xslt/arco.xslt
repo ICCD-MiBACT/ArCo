@@ -20810,6 +20810,11 @@
 		                                    <xsl:value-of
 									select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTS)))" />
 		                                </xsl:when>
+		                                 <xsl:when
+									test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+		                                    <xsl:value-of
+									select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTA)))" />
+		                                </xsl:when>
 		                                <xsl:otherwise>
 		                                    <xsl:value-of
 									select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
@@ -20929,11 +20934,14 @@
 						<xsl:variable name="author">
 							<xsl:choose>
 								<xsl:when
-									test="./AUTS
-		                		and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))
-		                	">
+									test="./AUTS and (not(starts-with(lower-case(normalize-space(./AUTS)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTS)), 'n.r')))">
 									<xsl:value-of
 										select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTS)))" />
+								</xsl:when>
+								<xsl:when
+									test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+									<xsl:value-of
+										select="concat($NS, 'Agent/', arco-fn:arcofy(concat(./AUTN, '-', ./AUTA)))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of
