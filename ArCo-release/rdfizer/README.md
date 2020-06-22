@@ -25,11 +25,12 @@ When running rdfizer on Windows environment provide paramter  ``-Dfile.encoding=
 The JAR named `arco.rdfizer.jar` transforms a collection of XML files into an RDF Knowledge Graph according to the XSTL transformations.
 The command synopsis is the following:
 ```
-$ java -Xmx2G -jar  arco.rdfizer.jar XML_FOLDER OUT_FOLDER
+$ java -Xmx2G -jar  arco.rdfizer.jar XML_FOLDER OUT_FOLDER [QUARANTINE]
 ```
 Where:
 - the argument `XML_FOLDER`is the folder containing the collection of XML files to transform.
 - the argument `OUT_FOLDER` is the folder where the Knowledge Graph will be stored.
+- the argument `QUARANTINE` is the filepath containing the identifiers of the cards to put in the quarantine graph.
 
 
 **Note:**
@@ -40,11 +41,12 @@ Where:
 #### Example
 
 ```
-$ java -Xmx2G -jar arco.rdfizer.jar /path/to/input/XML_FOLDER /path/to/outpu/arco-knowledge-graph-1.0.0
+$ java -Xmx2G -jar arco.rdfizer.jar /path/to/input/XML_FOLDER /path/to/output/arco-knowledge-graph-1.0.0 quarantine
 ```
 
 
 ### xsltTransformer Usage
+
 The JAR named `arco.rdfizer-xsltTransformer.jar` can be executed in a terminal.
 The command synopsis is the following:
 ```
