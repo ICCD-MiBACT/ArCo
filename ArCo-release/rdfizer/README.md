@@ -30,7 +30,7 @@ $ java -Xmx2G -jar  arco.rdfizer.jar XML_FOLDER OUT_FOLDER [QUARANTINE]
 Where:
 - the argument `XML_FOLDER`is the folder containing the collection of XML files to transform.
 - the argument `OUT_FOLDER` is the folder where the Knowledge Graph will be stored.
-- the argument `QUARANTINE` is the filepath containing the identifiers of the cards to put in the quarantine graph.
+- the optional argument `QUARANTINE` is the filepath containing the identifiers of the cards to put in the quarantine graph.
 
 
 **Note:**
