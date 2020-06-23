@@ -10,11 +10,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 import org.apache.jena.rdf.model.Model;
@@ -24,7 +28,7 @@ public class Main {
 	public static void main(String[] args) {
 		String inFolderString = args[0];
 		String outNtriplesFolder = args[1];
-		String outQuarantineNT = outNtriplesFolder + "/quarantine.nt.gz";
+
 		File inFolder = new File(inFolderString);
 
 		Set<String> catalogueRecordsToQuarantine = new HashSet<>();
@@ -35,7 +39,7 @@ public class Main {
 				BufferedReader br = new BufferedReader(new FileReader(new File(args[2])));
 				String line;
 				while ((line = br.readLine()) != null) {
-					System.out.println(line+" goes to quarantine.");
+					System.out.println(line + " goes to quarantine.");
 					catalogueRecordsToQuarantine.add(line);
 				}
 				br.close();
@@ -46,6 +50,8 @@ public class Main {
 			}
 		}
 
+		File quarantineTempFolder = new File("quarantine");
+		quarantineTempFolder.mkdirs();
 		File outFolderTTLs = new File("ttls");
 		outFolderTTLs.mkdirs();
 
@@ -56,7 +62,6 @@ public class Main {
 
 			File folderOut = new File(outNtriplesFolder);
 			folderOut.mkdirs();
-			OutputStream osQuarantine = new GZIPOutputStream(new FileOutputStream(new File(outQuarantineNT)));
 
 			if (inFolder.exists() && inFolder.isDirectory() && !inFolder.isHidden()) {
 				File[] subFolders = inFolder.listFiles(f -> f.isDirectory() && !f.isHidden());
@@ -95,11 +100,15 @@ public class Main {
 									Model model = converter.convert(itemName, is);
 
 									if (catalogueRecordsToQuarantine.contains(itemName)) {
+										OutputStream osQuarantine = new GZIPOutputStream(new FileOutputStream(
+												new File(quarantineTempFolder, itemName + ".nt.gz")));
 										model.write(osQuarantine, "N-TRIPLES");
 										osQuarantine.flush();
+										osQuarantine.close();
 									} else {
 										OutputStream modelOut = new GZIPOutputStream(new FileOutputStream(ret));
 										model.write(modelOut, "N-TRIPLES");
+										modelOut.flush();
 										modelOut.close();
 									}
 
@@ -125,11 +134,34 @@ public class Main {
 				}
 			}
 
-			osQuarantine.flush();
-			osQuarantine.close();
-
 			System.out.println("Producing the RDF dump");
 			SingleFileWriterNTriples.serialize(outFolderTTLs, new File(outNtriplesFolder));
+
+			BufferedWriter bw_quarantine = new BufferedWriter(new OutputStreamWriter(
+					new GZIPOutputStream(new FileOutputStream(outNtriplesFolder + "/quarantine.nt.gz")),
+					Charset.forName("UTF-8")));
+
+			for (File f : quarantineTempFolder.listFiles()) {
+				if (f.getName().endsWith(".nt.gz")) {
+
+					BufferedReader br = new BufferedReader(new InputStreamReader(
+							new GZIPInputStream(new FileInputStream(f)), Charset.forName("UTF-8")));
+					String line = null;
+					while ((line = br.readLine()) != null) {
+
+						bw_quarantine.append(line);
+						bw_quarantine.newLine();
+
+					}
+					br.close();
+					bw_quarantine.flush();
+
+				}
+
+			}
+			
+			bw_quarantine.flush();
+			bw_quarantine.close();
 
 			errorLog.flush();
 			errorLog.close();
