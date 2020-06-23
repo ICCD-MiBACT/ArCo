@@ -24,4 +24,4 @@ You can run the container with
 docker run -p 8890:8890 --restart=always --name arco_virtuoso_pr<KG_VERSION> -it arco_virtuoso_pr<KG_VERSION>
 ```
 
-The SPARQL endpoint will be then available at http://localhost:8890/sparql
+The SPARQL endpoint will be then available at [http://localhost:8890/sparql](http://localhost:8890/sparql)
