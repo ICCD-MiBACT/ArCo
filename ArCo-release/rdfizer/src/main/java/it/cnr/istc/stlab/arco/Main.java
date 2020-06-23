@@ -50,7 +50,7 @@ public class Main {
 			}
 		}
 
-		File quarantineTempFolder = new File("quarantine");
+		File quarantineTempFolder = new File("quarantine-cards");
 		quarantineTempFolder.mkdirs();
 		File outFolderTTLs = new File("ttls");
 		outFolderTTLs.mkdirs();
