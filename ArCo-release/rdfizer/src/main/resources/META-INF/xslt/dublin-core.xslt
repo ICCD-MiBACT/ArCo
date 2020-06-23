@@ -331,29 +331,31 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</dc:title>
 		</xsl:if>
 	</xsl:for-each>
-		
-									<!-- dcterms:spatial -->
+
+	<!-- dcterms:spatial -->
 	<xsl:if test="schede/*/LC/PVC">
 		<dcterms:spatial>
+			<xsl:attribute name="rdf:resource">
 			<xsl:choose>
 				<xsl:when
-					test="schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(schede/*/LC/PVC/PVCS))='italia')">
+				test="schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(schede/*/LC/PVC/PVCS))='italia')">
 						<xsl:value-of
-								select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI))))))" />
+				select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI))))))" />
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:choose>
 						<xsl:when test="schede/*/LC/PVC/PVCI">
 							<xsl:value-of
-									select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)))))" />
+				select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)))))" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of
-										select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVL/PVLT)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)))))" />
+				select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVL/PVLT)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)))))" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:otherwise>
 			</xsl:choose>
+			</xsl:attribute>
 		</dcterms:spatial>
 	</xsl:if>
 		
@@ -503,11 +505,13 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:if>
 
 
-				<!-- dc:rights -->
+	<!-- dc:rights -->
 	<xsl:if test="schede/*/TU/CDG/CDGG">
 		<dc:rights>
+			<xsl:attribute name="rdf:resource">
 		<xsl:value-of
-						select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(schede/*/TU/CDG/CDGG)))" />
+				select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(schede/*/TU/CDG/CDGG)))" />
+		</xsl:attribute>
 		</dc:rights>
 	</xsl:if>
 	
@@ -888,9 +892,9 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 <xsl:if test="$sheetType='BNB'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#piante" /> </xsl:if>
 <xsl:if test="$sheetType='BNM'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#minerali" /> </xsl:if>
 <xsl:if test="$sheetType='BNP'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#fossili" /> </xsl:if>
-<xsl:if test="$sheetType='BNPE '"> <dc:subject rdf:resource=" http://culturaitalia.it/pico/thesaurus/4.3#rocce" /> </xsl:if>
+<xsl:if test="$sheetType='BNPE '"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#rocce" /> </xsl:if>
 <xsl:if test="$sheetType='BNZ'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.3#animali" /> </xsl:if>
-<xsl:if test="$sheetType='E'"> <dc:subject rdf:resource=" http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" /> </xsl:if>
+<xsl:if test="$sheetType='E'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore" /> </xsl:if>
 <xsl:if test="$sheetType='PST'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_scientifici" /> </xsl:if>
 <xsl:if test="$sheetType='SM'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_musicali" /> </xsl:if>
 <xsl:if test="$sheetType='SMO'"> <dc:subject rdf:resource="http://culturaitalia.it/pico/thesaurus/4.1#strumenti_musicali" /> </xsl:if>
