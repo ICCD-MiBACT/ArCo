@@ -91,42 +91,8 @@
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="text/text()" name="tokenize">
-        <xsl:param name="text" select="."/>
-        <xsl:param name="separator" select="','"/>
-        <xsl:choose>
-            <xsl:when test="not(contains($text, $separator))">
-                <item>
-                    <xsl:value-of select="normalize-space($text)"/>
-                </item>
-            </xsl:when>
-            <xsl:otherwise>
-                <item>
-                    <xsl:value-of select="normalize-space(substring-before($text, $separator))"/>
-                </item>
-                <xsl:call-template name="tokenize">
-                    <xsl:with-param name="text" select="substring-after($text, $separator)"/>
-                </xsl:call-template>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-<xsl:variable name="agent">
- <xsl:choose>
- <xsl:when test="schede/BNB/LR/LRD/LRDA">
-         <xsl:call-template name="tokenize">
-               <xsl:with-param name="text" select="item"/>
-         </xsl:call-template>
-	</xsl:when>
-<xsl:when test="schede/BNB/SB/TBI/TBIA">
- <xsl:variable name="text" select="."/>
-        <xsl:variable name="separator" select="','"/>
-	<xsl:call-template name="tokenize">
-		<xsl:with-param name="text" select="substring-after($text, $separator)"/>
-	</xsl:call-template>
-	</xsl:when>
-	
-	</xsl:choose>
-</xsl:variable>
+
+
 	
 	<xsl:variable name="sheetVersion"
 		select="schede/*/@version" />
@@ -306,6 +272,55 @@
 		<xsl:attribute name="rdf:about">
         	<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
+		<xsl:if test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'erbario'))">
+			<xsl:if test="schede/BNB/AC/ACE">
+			<l0:identifier>
+				<xsl:value-of select="schede/BNB/AC/ACE" />
+			</l0:identifier>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'erbario'))">
+			<xsl:if test="schede/BNB/AC/ACI">
+			<arco-arco:internationaIdentifier>
+				<xsl:value-of select="schede/BNB/AC/ACI" />
+			</arco-arco:internationaIdentifier>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'collezione'))">
+			<xsl:if test="schede/BNB/AC/ACO">
+			<l0:identifier>
+				<xsl:value-of select="schede/BNB/AC/ACO" />
+			</l0:identifier>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'contenitore'))">
+			<xsl:if test="schede/BNB/AC/ACJ">
+			<l0:identifier>
+				<xsl:value-of select="schede/BNB/AC/ACJ" />
+			</l0:identifier>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'contenitore'))">
+			<xsl:if test="schede/BNB/AC/ACZ">
+			<arco-arco:containerSequence>
+				<xsl:value-of select="schede/BNB/AC/ACZ" />
+			</arco-arco:containerSequence>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'campione'))">
+			<xsl:if test="schede/BNB/AC/ACK">
+			<l0:identifier>
+				<xsl:value-of select="schede/BNB/AC/ACK" />
+			</l0:identifier>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="$sheetType='BNB' and (schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(schede/BNB/OG/OGT/OGTD)), 'campione'))">
+			<xsl:if test="schede/BNB/AC/ACN">
+			<arco-arco:previousIdentifier>
+				<xsl:value-of select="schede/BNB/AC/ACN" />
+			</arco-arco:previousIdentifier>
+			</xsl:if>
+		</xsl:if>
 		<xsl:if test="schede/BNB/SB/NBN/NBNA or schede/BNB/SB/NAA">
 			<arco-mp:isClassifiedByOriginalTaxon>
 			<xsl:attribute name="rdf:resource">
@@ -1701,7 +1716,7 @@
 		</rdf:Description>
 	</xsl:for-each>
 								<!-- Measurement collection as individual -->
-	<xsl:if test="schede/BNB/LR/LRI/LRIH or schede/BNB/LR/LRI/LRIT or schede/BNB/LR/LRI/LRIA">
+	<xsl:if test="schede/BNB/LR/LRI/LRIH or schede/BNB/LR/LRI/LRIT or schede/BNB/LR/LRI/LRIA or schede/BNB/LR/LRI/LRIO">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 		                <xsl:value-of select="concat($NS, 'MeasurementCollection/', $itemURI, 'collecting-site-measurement-collection')" />
@@ -2330,11 +2345,14 @@
 								select="concat('Preparation ', position(), ' related to cultural property ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="./DBRA">
-						<arco-cd:hasAuthor>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBRA))" />
-						</xsl:attribute>
-						</arco-cd:hasAuthor>
+						<xsl:variable name="authorssplit" select="arco-fn:split(./DBRA)" />
+						<xsl:for-each select="$authorssplit">
+							<arco-cd:hasAuthor>
+								<xsl:attribute name="rdf:resource">
+        							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</arco-cd:hasAuthor>
+						</xsl:for-each>
 					</xsl:if>
 					<xsl:if test="./DBRT">	
 						<arco-core:hasType>
@@ -2400,11 +2418,14 @@
 				<xsl:value-of select="concat('Fruit sample related to cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./DBCA">
-				<arco-cd:hasAuthor>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBCA))" />
-				</xsl:attribute>
-				</arco-cd:hasAuthor>
+				<xsl:variable name="authorssplit" select="arco-fn:split(./DBCA)" />
+				<xsl:for-each select="$authorssplit">
+					<arco-cd:hasAuthor>
+						<xsl:attribute name="rdf:resource">
+        					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-cd:hasAuthor>
+				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="./DBCC">	
 				<arco-mp:sampleLocation>
@@ -2474,11 +2495,14 @@
 						<xsl:value-of select="concat('Wood sample related to cultural property ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="./DBXT">
-						<arco-cd:hasAuthor>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBXT))" />
-						</xsl:attribute>
-						</arco-cd:hasAuthor>
+						<xsl:variable name="authorssplit" select="arco-fn:split(./DBXT)" />
+						<xsl:for-each select="$authorssplit">
+							<arco-cd:hasAuthor>
+								<xsl:attribute name="rdf:resource">
+        							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</arco-cd:hasAuthor>
+						</xsl:for-each>
 					</xsl:if>
 					<xsl:if test="./DBXC">	
 						<arco-mp:sampleLocation>
@@ -2613,11 +2637,14 @@
 						<xsl:value-of select="concat('Pollen sample related to cultural property ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="./DBPA">
-						<arco-cd:hasAuthor>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBPA))" />
-						</xsl:attribute>
-						</arco-cd:hasAuthor>
+						<xsl:variable name="authorssplit" select="arco-fn:split(./DBPA)" />
+						<xsl:for-each select="$authorssplit">
+							<arco-cd:hasAuthor>
+								<xsl:attribute name="rdf:resource">
+        							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</arco-cd:hasAuthor>
+						</xsl:for-each>
 					</xsl:if>
 					<xsl:if test="./DBPC">	
 						<arco-mp:sampleLocation>
@@ -2655,11 +2682,14 @@
 						<xsl:value-of select="concat('Seed sample related to cultural property ', $itemURI)" />
 					</l0:name>
 					<xsl:if test="./DBSR">
-						<arco-cd:hasAuthor>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./DBSR))" />
-						</xsl:attribute>
-						</arco-cd:hasAuthor>
+						<xsl:variable name="authorssplit" select="arco-fn:split(./DBSR)" />
+						<xsl:for-each select="$authorssplit">
+							<arco-cd:hasAuthor>
+								<xsl:attribute name="rdf:resource">
+        							<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+								</xsl:attribute>
+							</arco-cd:hasAuthor>
+						</xsl:for-each>
 					</xsl:if>
 					<xsl:if test="./DBSC">	
 						<arco-mp:sampleLocation>
@@ -2698,13 +2728,6 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of 	select="concat('Identification of type specimen of cultural property ', $itemURI)" />
 			</l0:name>
-			<xsl:if test="schede/BNB/SB/TBI/TBIA">
-				<arco-cd:hasAuthor>
-				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/TBI/TBIA))" />					
-				</xsl:attribute>
-				</arco-cd:hasAuthor>	
-			</xsl:if>
 			<xsl:if test="schede/BNB/SB/TBI/TBIL">	
 				<arco-cd:hasBibliography>
 				<xsl:attribute name="rdf:resource">
@@ -2713,11 +2736,11 @@
 				</arco-cd:hasBibliography>
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/TBI/TBIT">	
-				<arco-core:hasType>
+				<arco-core:hasTypeOfTypeSpecimen>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS, 'TypeOfTypeSpecimen/', arco-fn:urify(schede/BNB/SB/TBI/TBIT))" />
 				</xsl:attribute>
-				</arco-core:hasType>
+				</arco-core:hasTypeOfTypeSpecimen>
 			</xsl:if>								
 			<arco-core:hasConsequence>
 			<xsl:attribute name="rdf:resource">
@@ -2732,18 +2755,18 @@
 			</xsl:attribute>
 			</arco-core:hasConsequence>
 			<xsl:if test="schede/BNB/SB/TBI/TBIN">
-			<arco-mp:createsTaxon>
+			<arco-mp:producesTaxon>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="$TypespecimenTaxon" />
 				</xsl:attribute>
-			</arco-mp:createsTaxon>
+			</arco-mp:producesTaxon>
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/NAT">
-			<arco-mp:createsTaxon>
+			<arco-mp:producesTaxon>
 				<xsl:attribute name="rdf:resource">
 		        	<xsl:value-of select="$TypespecimenTaxon" />
 				</xsl:attribute>
-			</arco-mp:createsTaxon>
+			</arco-mp:producesTaxon>
 			</xsl:if>
 			<xsl:if test="schede/BNB/SB/TBI/TBIB">
 				<xsl:variable name="startDate">
@@ -3307,8 +3330,8 @@
 	<xsl:for-each select="$authorssplit">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-                    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
-                	</xsl:attribute>
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
             <rdf:type>
 				<xsl:attribute name="rdf:resource">
 	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
@@ -3407,6 +3430,414 @@
 		</rdf:Description>
 	</xsl:for-each>
 	</xsl:if>
+	
+										<!-- Agent as individual -->	
+	<xsl:if test="schede/BNB/SB/NAA/NAAC">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAC))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAC)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAC)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>    
+	<xsl:if test="schede/BNB/SB/NAA/NAAE">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAE))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAE)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAE)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>    
+	<xsl:if test="schede/BNB/SB/NAA/NAAG">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAG))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAG)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAG)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="schede/BNB/SB/NAA/NAAI">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAA/NAAI))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAI)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAA/NAAI)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if> 
+    	<xsl:if test="schede/BNB/SB/NAT/NATC">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAT/NATC))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATC)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATC)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>    
+	<xsl:if test="schede/BNB/SB/NAT/NATE">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAT/NATE))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATE)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATE)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>    
+	<xsl:if test="schede/BNB/SB/NAT/NATG">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAT/NATG))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATG)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATG)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="schede/BNB/SB/NAT/NATI">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(schede/BNB/SB/NAT/NATI))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATI)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(schede/BNB/SB/NAT/NATI)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:for-each select="schede/BNB/RB/RBN/RBNC">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(.)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(.)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>  
+	<xsl:for-each select="schede/BNB/RB/RBN/RBNE">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(.)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(.)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>    
+	<xsl:for-each select="schede/BNB/RB/RBN/RBNG">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(.)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(.)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	<xsl:for-each select="schede/BNB/RB/RBN/RBNI">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	            <xsl:value-of 	select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+	        </xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+	            </xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(.)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(.)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>    
+	<xsl:if test="schede/BNB/SB/DBV/DBVA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/SB/DBV/DBVA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+	<xsl:if test="schede/BNB/SB/ABC/ABCA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/SB/ABC/ABCA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+	<xsl:if test="schede/BNB/LR/LRD/LRDA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(schede/BNB/LR/LRD/LRDA)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:if>
+	<xsl:for-each select="schede/BNB/RB/RBR/RBRA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:for-each>
+	<xsl:for-each select="schede/BNB/DB/DBC/DBCA">
+		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:for-each>
+	<xsl:for-each select="schede/BNB/DB/DBX/DBXT">
+	<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:for-each>
+	<xsl:for-each select="schede/BNB/DB/DBS/DBSR">
+	<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+		</xsl:for-each>
+	</xsl:for-each>
+	<xsl:for-each select="schede/BNB/DB/DBP/DBPA">
+		<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+		<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:for-each>
+		<xsl:for-each select="schede/BNB/DB/DBR/DBRA">
+	<xsl:variable name="authorssplit" select="arco-fn:split(.)" />
+	<xsl:for-each select="$authorssplit">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+			</xsl:attribute>
+            <rdf:type>
+				<xsl:attribute name="rdf:resource">
+	            	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+				</xsl:attribute>
+			</rdf:type>   
+			<rdfs:label>
+				<xsl:value-of select="." />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="." />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	</xsl:for-each>
+	
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>
