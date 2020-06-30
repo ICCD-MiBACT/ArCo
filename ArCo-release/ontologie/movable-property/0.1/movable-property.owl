@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/ontology/arco/"
-     xml:base="https://w3id.org/arco/ontology/arco/"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/movable-property#"
+     xml:base="https://w3id.org/arco/ontology/movable-property"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
@@ -13,6 +13,7 @@
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:a-ce="https://w3id.org/arco/ontology/cultural-event/"
      xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:a-mp="https://w3id.org/arco/ontology/movable-property/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
