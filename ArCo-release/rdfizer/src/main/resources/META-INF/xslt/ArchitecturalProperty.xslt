@@ -1424,35 +1424,35 @@
 				<xsl:value-of select="concat('Scala del bene culturale ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./SCL/SCLF">
-						<arco-dd:hasShape>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SCL/SCLF)))" />
-						</xsl:attribute>
-						</arco-dd:hasShape>
+				<arco-dd:hasShape>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(./SCL/SCLF)))" />
+					</xsl:attribute>
+				</arco-dd:hasShape>
 			</xsl:if>
 			<xsl:if test="./SCL/SCLL">
-						<arco-dd:spatialLocation>
-							<xsl:value-of 	select="normalize-space(./SCL/SCLL)" />
-						</arco-dd:spatialLocation>
+				<arco-dd:spatialLocation>
+					<xsl:value-of 	select="normalize-space(./SCL/SCLL)" />
+				</arco-dd:spatialLocation>
 			</xsl:if>
 			<xsl:if test="./SCL/SCLN">
-						<arco-dd:numberOfFlights>
-							<xsl:value-of 	select="normalize-space(./SCL/SCLN)" />
-						</arco-dd:numberOfFlights>
+				<arco-dd:numberOfFlights>
+					<xsl:value-of 	select="normalize-space(./SCL/SCLN)" />
+				</arco-dd:numberOfFlights>
 			</xsl:if>
 			<xsl:if test="./SCL/SCLO">
-						<arco-dd:hasUseFunction>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of 	select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(./SCL/SCLO)))" />
-						</xsl:attribute>
-						</arco-dd:hasUseFunction>
+				<arco-dd:hasUseFunction>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of 	select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(./SCL/SCLO)))" />
+					</xsl:attribute>
+				</arco-dd:hasUseFunction>
 			</xsl:if>
 			<xsl:if test="./SCL/SCLG">
-						<arco-core:hasType>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of 	select="concat($NS, 'StairType/', arco-fn:urify(normalize-space(./SCL/SCLG)))" />
-						</xsl:attribute>
-						</arco-core:hasType>	
+				<arco-core:hasType>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of 	select="concat($NS, 'StairType/', arco-fn:urify(normalize-space(./SCL/SCLG)))" />
+					</xsl:attribute>
+				</arco-core:hasType>	
 			</xsl:if>
 			<xsl:if test="./SCS and (not(./SCS/SCSR) or ./SCS/SCSR='intero bene' or ./SCS/SCSR='integrale' or ./SCS/SCSR='tutta' or ./SCS/SCSR='totale') or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'nr')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'intero')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'intera')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'esemplar'))">
 				<xsl:for-each select="./SCS/SCSC">
@@ -1536,55 +1536,55 @@
 	</xsl:for-each>	
 									<!-- Technique as individual -->
 	<xsl:if test="./SCS and (not(./SCS/SCSR) or ./SCS/SCSR='intero bene' or ./SCS/SCSR='integrale' or ./SCS/SCSR='tutta' or ./SCS/SCSR='totale') or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'nr')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'intero')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'intera')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'esemplar'))">
-	<xsl:for-each select="schede/A/SC/SCS/SCSC">
-		<rdf:Description>
- 			<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
-            </xsl:attribute>
- 	        <rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-						<xsl:value-of select="normalize-space(.)" />
-			</rdfs:label>
-			<l0:name>
-						<xsl:value-of select="normalize-space(.)" />
-			</l0:name>
-			<arco-dd:isCharacteristicClassifiedBy>
-				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
-            	</xsl:attribute>
-			</arco-dd:isCharacteristicClassifiedBy>
-		</rdf:Description>
-	</xsl:for-each>
+		<xsl:for-each select="schede/A/SC/SCS/SCSC">
+			<rdf:Description>
+ 				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+	            </xsl:attribute>
+ 		        <rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(.)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(.)" />
+				</l0:name>
+				<arco-dd:isCharacteristicClassifiedBy>
+					<xsl:attribute name="rdf:resource">
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Technique'" />
+	            	</xsl:attribute>
+				</arco-dd:isCharacteristicClassifiedBy>
+			</rdf:Description>
+		</xsl:for-each>
 	</xsl:if>
 									<!-- Material as individual -->
 	<xsl:if test="./SCS and (not(./SCS/SCSR) or ./SCS/SCSR='intero bene' or ./SCS/SCSR='integrale' or ./SCS/SCSR='tutta' or ./SCS/SCSR='totale') or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'nr')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'intero')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'intera')) or (starts-with(lower-case(normalize-space(./SCS/SCSR)), 'esemplar'))">
-	<xsl:for-each select="schede/A/SC/SCS/SCSM">
-		<rdf:Description>
- 			<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
-            </xsl:attribute>
- 	        <rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-						<xsl:value-of select="normalize-space(.)" />
-			</rdfs:label>
-			<l0:name>
-						<xsl:value-of select="normalize-space(.)" />
-			</l0:name>
-			<arco-dd:isCharacteristicClassifiedBy>
-				<xsl:attribute name="rdf:resource">
-            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Material'" />
-            	</xsl:attribute>
-			</arco-dd:isCharacteristicClassifiedBy>
-		</rdf:Description>
-	</xsl:for-each>
+		<xsl:for-each select="schede/A/SC/SCS/SCSM">
+			<rdf:Description>
+ 				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
+	            </xsl:attribute>
+ 		        <rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:value-of select="normalize-space(.)" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="normalize-space(.)" />
+				</l0:name>
+				<arco-dd:isCharacteristicClassifiedBy>
+					<xsl:attribute name="rdf:resource">
+            			<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Material'" />
+            		</xsl:attribute>
+				</arco-dd:isCharacteristicClassifiedBy>
+			</rdf:Description>
+		</xsl:for-each>
 	</xsl:if>
 	
 						<!-- ConstructionPart when there is SIIR (IntenalSubdivision) -->
@@ -1613,21 +1613,21 @@
 					</xsl:attribute>
 				</arco-core:isPartOf>
 				<xsl:if test="./SIIV">
-				<arco-ip:hasInteriorSubdivision>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'VerticalSubdivision/', $itemURI, '-', arco-fn:urify(normalize-space(./SIIV)))" />
-				</xsl:attribute>
-				</arco-ip:hasInteriorSubdivision>	
+					<arco-ip:hasInteriorSubdivision>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'VerticalSubdivision/', $itemURI, '-', arco-fn:urify(normalize-space(./SIIV)))" />
+						</xsl:attribute>
+					</arco-ip:hasInteriorSubdivision>	
 				</xsl:if>
 				<xsl:if test="./SIIO">
-				<arco-ip:hasInteriorSubdivision>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'HorizontalSubdivision/', $itemURI, '-', arco-fn:urify(normalize-space(./SIIO)))" />
-				</xsl:attribute>
-				</arco-ip:hasInteriorSubdivision>
+					<arco-ip:hasInteriorSubdivision>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'HorizontalSubdivision/', $itemURI, '-', arco-fn:urify(normalize-space(./SIIO)))" />
+						</xsl:attribute>
+					</arco-ip:hasInteriorSubdivision>
 				</xsl:if>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>	
 	
 								<!-- ConstructionPart when there is PNR (Design) -->
@@ -1651,14 +1651,14 @@
 					</xsl:attribute>
 				</arco-core:isPartOf>
 				<xsl:if test="./PNT">
-				<arco-ip:hasDesign>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'ConstructionDesign/', $itemURI, '-', arco-fn:arcofy(normalize-space(./PNT)))" />
-				</xsl:attribute>
-				</arco-ip:hasDesign>
+					<arco-ip:hasDesign>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'ConstructionDesign/', $itemURI, '-', arco-fn:arcofy(normalize-space(./PNT)))" />
+						</xsl:attribute>
+					</arco-ip:hasDesign>
 				</xsl:if>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>								
 
 
@@ -1683,12 +1683,12 @@
 					</xsl:attribute>
 				</arco-core:isPartOf>
 				<arco-ip:hasFoundations>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Foundations/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
-				</xsl:attribute>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Foundations/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+					</xsl:attribute>
 				</arco-ip:hasFoundations>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>	
 	
 	
@@ -1714,11 +1714,11 @@
 				</arco-core:isPartOf>
 				<arco-ip:hasVerticalElement>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'VerticalElement/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
-				</xsl:attribute>
+						<xsl:value-of select="concat($NS, 'VerticalElement/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+					</xsl:attribute>
 				</arco-ip:hasVerticalElement>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>	
 	
 	
@@ -1743,12 +1743,12 @@
 					</xsl:attribute>
 				</arco-core:isPartOf>
 				<arco-ip:hasHorizontalElement>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'HorizontalElement/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
-				</xsl:attribute>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'HorizontalElement/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+					</xsl:attribute>
 				</arco-ip:hasHorizontalElement>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>	
 	
 							<!-- ConstructionPart when there is CPU (Roof) -->
@@ -1772,21 +1772,21 @@
 					</xsl:attribute>
 				</arco-core:isPartOf>
 				<xsl:if test="./CPF or ./CPC">
-				<arco-ip:hasRoof>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Roof/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
-				</xsl:attribute>
-				</arco-ip:hasRoof>
+					<arco-ip:hasRoof>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Roof/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+						</xsl:attribute>
+					</arco-ip:hasRoof>
 				</xsl:if>
 				<xsl:if test="./CPM">
-				<arco-ip:hasCovering>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Roofing/', $itemURI, '-', arco-fn:arcofy(normalize-space(./CPM)))" />
-				</xsl:attribute>
-				</arco-ip:hasCovering>
+					<arco-ip:hasCovering>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Roofing/', $itemURI, '-', arco-fn:arcofy(normalize-space(./CPM)))" />
+						</xsl:attribute>
+					</arco-ip:hasCovering>
 				</xsl:if>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>	
 	
 	
@@ -1811,12 +1811,12 @@
 					</xsl:attribute>
 				</arco-core:isPartOf>
 				<arco-ip:hasVerticalConnection>
-				<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Stair/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
-				</xsl:attribute>
+					<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Stair/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
+					</xsl:attribute>
 				</arco-ip:hasVerticalConnection>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>	
 	
 
@@ -1841,12 +1841,12 @@
 					</xsl:attribute>
 				</arco-core:isPartOf>
 				<arco-ip:hasCovering>
-				<xsl:attribute name="rdf:resource">
+					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'Flooring/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
-				</xsl:attribute>
+					</xsl:attribute>
 				</arco-ip:hasCovering>
-		</rdf:Description>
-	</xsl:if>
+			</rdf:Description>
+		</xsl:if>
 	</xsl:for-each>	
 									
 	</rdf:RDF>
