@@ -157,6 +157,7 @@
 			</arco-core:description>
 		</xsl:if>
 		<xsl:for-each select="schede/A/SI/SII">
+			<xsl:if test="./SIIN">
 			<xsl:choose>
 				<xsl:when test="./SIIN and (not(./SIIR) or ./SIIR='intero bene' or ./SIIR='integrale' or ./SIIR='tutta' or ./SIIR='totale' or ./SIIR='carattere generale') or (starts-with(lower-case(normalize-space(./SIIR)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./SIIR)), 'nr')) or (starts-with(lower-case(normalize-space(./SIIR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intero')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intera')) or (starts-with(lower-case(normalize-space(./SIIR)), 'esemplar'))">
 					<arco-ip:numberOfFloors>
@@ -173,6 +174,8 @@
 					</xsl:for-each>
 				</xsl:otherwise>
 			</xsl:choose>
+			</xsl:if>
+			<xsl:if test="./SIIV">
 			<xsl:choose>
 				<xsl:when test="./SIIV and (not(./SIIR) or ./SIIR='intero bene' or ./SIIR='integrale' or ./SIIR='tutta' or ./SIIR='totale') or (starts-with(lower-case(normalize-space(./SIIR)), 'nr')) or (starts-with(lower-case(normalize-space(./SIIR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intero')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intera')) or (starts-with(lower-case(normalize-space(./SIIR)), 'esemplar'))">
 					<arco-ip:hasInteriorSubdivision>
@@ -191,6 +194,8 @@
 					</xsl:for-each>
 				</xsl:otherwise>
 			</xsl:choose>
+			</xsl:if>
+			<xsl:if test="./SIIO">
 			<xsl:choose>	
 				<xsl:when test="./SIIO and (not(./SIIR) or ./SIIR='intero bene' or ./SIIR='integrale' or ./SIIR='tutta' or ./SIIR='totale') or (starts-with(lower-case(normalize-space(./SIIR)), 'nr')) or (starts-with(lower-case(normalize-space(./SIIR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intero')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intera')) or (starts-with(lower-case(normalize-space(./SIIR)), 'esemplar'))">
 					<arco-ip:hasInteriorSubdivision>
@@ -209,6 +214,7 @@
 					</xsl:for-each>
 				</xsl:otherwise>
 			</xsl:choose>
+			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="schede/A/PN">
 			<xsl:choose>	
