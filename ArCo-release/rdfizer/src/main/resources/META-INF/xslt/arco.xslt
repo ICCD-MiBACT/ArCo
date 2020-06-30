@@ -9024,6 +9024,28 @@
 							select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
 						</xsl:attribute>
 					</arco-cd:isBibliographyOf>
+										<xsl:if test="./BIBA">
+						<arco-cd:bibliographicReferenceAuthor>
+							<xsl:value-of select="normalize-space(./BIBA)" />
+						</arco-cd:bibliographicReferenceAuthor>
+					</xsl:if>
+					<xsl:if test="./BIBD">
+						<arco-cd:bibliographicReferenceDate>
+							<xsl:value-of select="normalize-space(./BIBD)" />
+						</arco-cd:bibliographicReferenceDate>
+					</xsl:if>
+					<xsl:if test="./BIBA and ./BIBD">
+						<arco-cd:bibliographicReference>
+							<xsl:choose>
+								<xsl:when test="./BIBX">
+									<xsl:value-of select="concat(normalize-space(./BIBX), ': ', normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(normalize-space(./BIBA), ' - ', normalize-space(./BIBD))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</arco-cd:bibliographicReference>
+					</xsl:if>
 					<xsl:if
 						test="./BIBH and (not(starts-with(lower-case(normalize-space(./BIBH)), 'nr')) and not(starts-with(lower-case(normalize-space(./BIBH)), 'n.r')))">
 						<arco-cd:bibliographyLocalIdentifier>

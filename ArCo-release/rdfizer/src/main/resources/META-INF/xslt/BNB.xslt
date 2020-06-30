@@ -2992,7 +2992,7 @@
 				<xsl:value-of select="concat('Misura del reperto xilologico ',  position(), ': ', (.))" />
 			</l0:name>
 			<arco-dd:hasMeasurementType>
-				<xsl:attribute name="rdf:resource" nselect="concat('https://w3id.org/arco/ontology/denotative-description/', 'Width')" />
+				<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/denotative-description/', 'Width')" />
 			</arco-dd:hasMeasurementType>
 			<arco-dd:hasValue>
 				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', WoodSample, '-', 'width', '-', arco-fn:extract-value(.))" />
