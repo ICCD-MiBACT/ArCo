@@ -24,7 +24,7 @@ import org.xml.sax.SAXException;
 
 public class Harvester {
 
-	private String listIdentifierURL, outputDirectory;
+	private String listIdentifierURL, recordsDirectory, multimediaRecordsDirectory;
 	private static final int chunk_size = 1000;
 	private static final Pattern p = Pattern.compile("@(.*?)@");
 	private DocumentBuilder builder;
@@ -36,7 +36,8 @@ public class Harvester {
 	public Harvester(String listIdentifierURL, String outputDirectory) throws ParserConfigurationException {
 		super();
 		this.listIdentifierURL = listIdentifierURL;
-		this.outputDirectory = outputDirectory;
+		this.recordsDirectory = outputDirectory + "/records";
+		this.multimediaRecordsDirectory = outputDirectory + "/multimedia_records";
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(true);
@@ -47,20 +48,18 @@ public class Harvester {
 
 	public void getRecords() throws IOException, ParserConfigurationException, SAXException, XPathExpressionException,
 			TransformerException {
-		String nextToken = null;
 
 		AtomicInteger chunk = new AtomicInteger(0);
 
-		new File(outputDirectory + "/" + chunk + "/").mkdirs();
-
-		FileOutputStream fos_keys = new FileOutputStream(new File(outputDirectory + "/keys.txt"));
-		FileOutputStream fos_paths = new FileOutputStream(new File(outputDirectory + "/paths.txt"));
+		new File(recordsDirectory + "/" + chunk + "/").mkdirs();
+		new File(multimediaRecordsDirectory + "/" + chunk + "/").mkdirs();
 
 		boolean first = true;
+		String nextToken = null;
 
+		FileOutputStream fos_keys = new FileOutputStream(new File(recordsDirectory + "/keys.txt"));
+		FileOutputStream fos_paths = new FileOutputStream(new File(recordsDirectory + "/paths.txt"));
 		while (nextToken != null || first) {
-
-			logger.trace("Issuing request " + listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
 
 			URL url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
 
@@ -71,7 +70,8 @@ public class Harvester {
 
 			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
 				try {
-					nextToken = getRecordsFromList(url, chunk, fos_keys, fos_paths);
+					logger.trace("Issuing request " + url.toString());
+					nextToken = getRecordsFromList(url, chunk, fos_keys, fos_paths, "/xml", recordsDirectory);
 					break;
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -86,16 +86,64 @@ public class Harvester {
 			}
 
 		}
-
 		fos_keys.flush();
 		fos_paths.flush();
 		fos_keys.close();
 		fos_paths.close();
 
+		logger.trace("Issuing request " + listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc");
+		nextToken = getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc"));
+		AtomicInteger chunk_mr = new AtomicInteger(0);
+		first = true;
+		FileOutputStream fos_keys_mr = new FileOutputStream(new File(multimediaRecordsDirectory + "/keys.txt"));
+		FileOutputStream fos_paths_mr = new FileOutputStream(new File(multimediaRecordsDirectory + "/paths.txt"));
+		while (nextToken != null) {
+
+			URL url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
+			if (first) {
+				url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken
+						+ "/entita_multimediale");
+				first = false;
+			}
+
+			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
+				try {
+					logger.trace("Issuing request " + url.toString());
+					nextToken = getRecordsFromList(url, chunk_mr, fos_keys_mr, fos_paths_mr, "/xml/entita_multimediale",
+							multimediaRecordsDirectory);
+					break;
+				} catch (Exception e) {
+					e.printStackTrace();
+					logger.error(e.getMessage());
+					try {
+						Thread.sleep((i + 1) * 60000);
+					} catch (InterruptedException e1) {
+						e1.printStackTrace();
+					}
+					logger.error("Retry! " + i);
+				}
+			}
+
+		}
+		fos_keys_mr.flush();
+		fos_paths_mr.flush();
+		fos_keys_mr.close();
+		fos_paths_mr.close();
+
+	}
+
+	private String getResumptionToken(URL url)
+			throws IOException, SAXException, XPathExpressionException, TransformerException {
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		conn.setRequestMethod("GET");
+
+		Document d = builder.parse(conn.getInputStream());
+
+		return d.getElementsByTagName("resumptionToken").item(0).getTextContent();
 	}
 
 	private String getRecordsFromList(URL url, AtomicInteger chunk, FileOutputStream fos_keys,
-			FileOutputStream fos_paths)
+			FileOutputStream fos_paths, String postFix, String recordsDirectory)
 			throws IOException, SAXException, XPathExpressionException, TransformerException {
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
@@ -112,11 +160,11 @@ public class Harvester {
 			if (m.find()) {
 				String keycode = identifier.substring(m.start(1), m.end(1));
 
-				String recordString = getRecord(identifier + "/xml");
+				String recordString = getRecord(identifier + postFix);
 
 				if (recordString != null) {
 					FileOutputStream fos = new FileOutputStream(
-							new File(outputDirectory + "/" + chunk.get() + "/" + keycode + ".xml"));
+							new File(recordsDirectory + "/" + chunk.get() + "/" + keycode + ".xml"));
 					fos.write(recordString.getBytes());
 					fos.flush();
 					fos.flush();
@@ -140,7 +188,7 @@ public class Harvester {
 			if (c.incrementAndGet() % chunk_size == 0) {
 				logger.info("Processed " + c);
 				chunk.incrementAndGet();
-				new File(outputDirectory + "/" + chunk + "/").mkdirs();
+				new File(recordsDirectory + "/" + chunk + "/").mkdirs();
 			}
 
 		}
@@ -166,10 +214,13 @@ public class Harvester {
 				conn.setRequestMethod("GET");
 				Document d = builder.parse(conn.getInputStream());
 				try {
-					Element schede = (Element) d.getElementsByTagName("schede").item(0);
-					return Utils.nodeToString(schede, false, true);
+					Element schede = (Element) d.getElementsByTagName("record").item(0);
+					if (schede != null) {
+						return Utils.nodeToString(schede, false, true);
+					}
 				} catch (Exception e) {
 					logger.error(e.getMessage());
+					logger.error(url.toString());
 					e.printStackTrace();
 				}
 				return null;
