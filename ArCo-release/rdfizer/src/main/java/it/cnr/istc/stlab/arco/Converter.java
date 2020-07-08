@@ -25,6 +25,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
 import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
+import it.cnr.istc.stlab.arco.xsltextension.CatalogueRecordIdentifierToCulturalProperty;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
@@ -222,6 +223,7 @@ public class Converter {
 		proc.registerExtensionFunction(ExtractValue.getInstance());
 		proc.registerExtensionFunction(ExtractUnit.getInstance());
 		proc.registerExtensionFunction(LinkEMMFinder.getInstance());
+		proc.registerExtensionFunction(CatalogueRecordIdentifierToCulturalProperty.getInstance());
 		
 		
 		
