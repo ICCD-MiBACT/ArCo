@@ -33,12 +33,14 @@ import it.cnr.istc.stlab.arco.xsltextension.ExtractValue;
 import it.cnr.istc.stlab.arco.xsltextension.FindMaterialAndTechniqueLinker;
 import it.cnr.istc.stlab.arco.xsltextension.FindMaterialLinker;
 import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
+import it.cnr.istc.stlab.arco.xsltextension.LinkEMMFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
 import it.cnr.istc.stlab.arco.xsltextension.ScientificPropertyDefinitionLinker;
 import it.cnr.istc.stlab.arco.xsltextension.Split;
 import it.cnr.istc.stlab.arco.xsltextension.Uncamelizer;
 import it.cnr.istc.stlab.arco.xsltextension.Urify;
+import it.cnr.istc.stlab.arco.xsltextension.Utilities;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
@@ -163,10 +165,10 @@ public class Converter {
             public XdmValue call(XdmValue[] arguments) throws SaxonApiException
             {
                 String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                arg = SpecificCulturalPropertyType.getPropertyType(arg);
-                
-                if(arg == null) arg = "http://www.w3id.org/arco/core/CulturalProperty";
-                return new XdmAtomicValue(arg);
+//                arg = SpecificCulturalPropertyType.getPropertyType(arg);
+//                
+//                if(arg == null) arg = "http://www.w3id.org/arco/core/CulturalProperty";
+                return new XdmAtomicValue(Utilities.getSpecificPropertyType(arg));
             }
         };
         
@@ -193,14 +195,7 @@ public class Converter {
             public XdmValue call(XdmValue[] arguments) throws SaxonApiException
             {
                 String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                int lastSlash = arg.lastIndexOf("/");
-                int lastHash = arg.lastIndexOf("#");
-                
-                if(lastHash > lastSlash)
-                	arg = arg.substring(lastHash+1);
-                else if(lastSlash > lastHash )
-                	arg = arg.substring(lastSlash+1);
-                
+                arg = Utilities.getLocalName(arg);
                 return new XdmAtomicValue(arg);
             }
         };
@@ -226,6 +221,7 @@ public class Converter {
 		proc.registerExtensionFunction(Split.getInstance());
 		proc.registerExtensionFunction(ExtractValue.getInstance());
 		proc.registerExtensionFunction(ExtractUnit.getInstance());
+		proc.registerExtensionFunction(LinkEMMFinder.getInstance());
 		
 		
 		

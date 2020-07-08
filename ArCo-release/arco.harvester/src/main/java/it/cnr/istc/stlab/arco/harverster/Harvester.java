@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,7 +26,7 @@ import org.xml.sax.SAXException;
 
 public class Harvester {
 
-	private String listIdentifierURL, recordsDirectory, multimediaRecordsDirectory;
+	private String listIdentifierURL, recordsDirectory, multimediaRecordsDirectory, outputDirectory;
 	private static final int chunk_size = 1000;
 	private static final Pattern p = Pattern.compile("@(.*?)@");
 	private DocumentBuilder builder;
@@ -38,6 +40,7 @@ public class Harvester {
 		this.listIdentifierURL = listIdentifierURL;
 		this.recordsDirectory = outputDirectory + "/records";
 		this.multimediaRecordsDirectory = outputDirectory + "/multimedia_records";
+		this.outputDirectory = outputDirectory;
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(true);
@@ -237,6 +240,63 @@ public class Harvester {
 		}
 		return null;
 
+	}
+
+	public void getRecordsFromList(List<String> keycodes)
+			throws XPathExpressionException, IOException, SAXException, TransformerException {
+		new File(outputDirectory).mkdirs();
+
+		for (String keycode : keycodes) {
+			String recordString = getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml");
+
+			if (recordString != null) {
+				FileOutputStream fos = new FileOutputStream(new File(outputDirectory + "/" + keycode + ".xml"));
+				fos.write(recordString.getBytes());
+				fos.flush();
+				fos.flush();
+				fos.close();
+				logger.info(keycode + " downloaded!");
+			} else {
+				logger.error("Could not download " + keycode);
+			}
+		}
+	}
+	
+	public static void main(String[] args) throws ParserConfigurationException, XPathExpressionException, IOException, SAXException, TransformerException {
+		Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?", "/Users/lgu/Desktop/testRecords");
+		List<String> keycodes = new ArrayList<>();
+		keycodes.add("ICCD10015760");
+		keycodes.add("ICCD10045923");
+		keycodes.add("ICCD10055673");
+		keycodes.add("ICCD10082711");
+		keycodes.add("ICCD10115591");
+		keycodes.add("ICCD10239336");
+		keycodes.add("ICCD10266725");
+		keycodes.add("ICCD10524764");
+		keycodes.add("ICCD10533913");
+		keycodes.add("ICCD10561093");
+		keycodes.add("ICCD11177581");
+		keycodes.add("ICCD11306544");
+		keycodes.add("ICCD11306860");
+		keycodes.add("ICCD11306934");
+		keycodes.add("ICCD11979011");
+		keycodes.add("ICCD12270243");
+		keycodes.add("ICCD2100596");
+		keycodes.add("ICCD2237068");
+		keycodes.add("ICCD8353344");
+		keycodes.add("ICCD10042835");
+		keycodes.add("ICCD10095890");
+		keycodes.add("ICCD10113684");
+		keycodes.add("ICCD10322197");
+		keycodes.add("ICCD10522154");
+		keycodes.add("ICCD10616036");
+		keycodes.add("ICCD11251491");
+		keycodes.add("ICCD11251795");
+		keycodes.add("ICCD11324026");
+		keycodes.add("ICCD11434960");
+		keycodes.add("ICCD11574733");
+		keycodes.add("ICCD11689075");
+		h.getRecordsFromList(keycodes);
 	}
 
 }
