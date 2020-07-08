@@ -14,7 +14,7 @@
 
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
-	<!-- xsl:template match="schede/*/MT/MTA"> <xsl:for-each select="MTAP"> 
+	<!-- xsl:template match="record/metadata/schede/*/MT/MTA"> <xsl:for-each select="MTAP"> 
 		<rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of select="concat($NS, 
 		'CulturalPropertyPart/', $itemURI, '-part-', position())" />" </xsl:attribute> 
 		<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" 
@@ -27,13 +27,13 @@
 
 	<xsl:variable name="itemURI">
 		<xsl:choose>
-			<xsl:when test="schede/*/RV/RVE/RVEL">
+			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
 				<xsl:value-of
-					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(schede/*/RV/RVE/RVEL)))" />
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of
-					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -46,13 +46,13 @@
 	<xsl:variable name="culturalProperty"
 		select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 
-	<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
-	<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
+	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)"></xsl:variable>
 	<xsl:variable name="cp-name" select="''"></xsl:variable>
 	
 	<xsl:variable name="objectOfDescription">
 		<xsl:choose>
-			<xsl:when test="schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:value-of select="$culturalPropertyComponent" />
 			</xsl:when>
 			<xsl:otherwise>
@@ -64,7 +64,7 @@
 	<xsl:template match="/">
 		<rdf:RDF>
 			<!-- part of cultural property when there is STCP (conservation status) -->
-			<xsl:for-each select="schede/*/CO/STC">
+			<xsl:for-each select="record/metadata/schede/*/CO/STC">
 				<xsl:variable name="conservationStatus">
 					<xsl:value-of
 						select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
@@ -105,7 +105,7 @@
 			</xsl:for-each>
 
 			<!-- part of cultural property when there is AUTW (author) -->
-			<xsl:for-each select="schede/*/AU/AUT">
+			<xsl:for-each select="record/metadata/schede/*/AU/AUT">
 				<xsl:variable name="authorAttribution">
 					<xsl:value-of
 						select="concat($NS, 'PreferredAuthorshipAttribution/', $itemURI, '-', position())" />
@@ -196,7 +196,7 @@
 			
 			
 			<!-- part of cultural property when there is NVCP (protective measure) -->
-			<xsl:for-each select="schede/*/TU/NVC">
+			<xsl:for-each select="record/metadata/schede/*/TU/NVC">
 				<xsl:variable name="protectiveMeasure">
 					<xsl:value-of
 						select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
@@ -237,7 +237,7 @@
 			</xsl:for-each>
 			
 			<!-- part of cultural property when there is VINE (protective measure for A 2.00) -->
-			<xsl:for-each select="schede/*/TU/VIN">
+			<xsl:for-each select="record/metadata/schede/*/TU/VIN">
 				<xsl:variable name="protectiveMeasure">
 					<xsl:value-of
 						select="concat($NS, 'ProtectiveMeasure/', $itemURI, '-protective-measure-', position())" />
@@ -278,8 +278,8 @@
 			</xsl:for-each>
 
 			<!-- part of cultural property when there is MTCP (4.00, material) -->
-			<xsl:if test="(schede/*/MT/MTC/MTCM and (not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r')))) or (schede/*/MT/MTC/MTCT and (not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'n.r'))))">
-			<xsl:for-each select="schede/*/MT/MTC/MTCP">
+			<xsl:if test="(record/metadata/schede/*/MT/MTC/MTCM and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCM)), 'n.r')))) or (record/metadata/schede/*/MT/MTC/MTCT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'n.r'))))">
+			<xsl:for-each select="record/metadata/schede/*/MT/MTC/MTCP">
 			<xsl:variable name="technical-status">
 						<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
@@ -329,7 +329,7 @@
 					</xsl:for-each>
 			</xsl:if>
 			
-					<xsl:for-each select="schede/*/MT/MTC/MTCP">
+					<xsl:for-each select="record/metadata/schede/*/MT/MTC/MTCP">
 					<xsl:variable name="technical-status">
 						<xsl:value-of
 							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
@@ -383,12 +383,12 @@
 						</xsl:for-each>
 						
 			<xsl:if
-				test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
+				test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCM)), 'n.r'))">
 				<xsl:variable name="technical-status">
 						<xsl:value-of
-							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(schede/*/MT/MTC/MTCP)))" />
+							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)))" />
 					</xsl:variable>
-				<xsl:for-each select="schede/*/MT/MTC/MTCM">
+				<xsl:for-each select="record/metadata/schede/*/MT/MTC/MTCM">
 					<xsl:variable name="parentPosition">
 						<xsl:value-of select="position()" />
 					</xsl:variable>
@@ -425,14 +425,14 @@
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:if
-				test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'n.r'))">
+				test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'n.r'))">
 				<xsl:variable name="technical-status">
 						<xsl:value-of
-							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(schede/*/MT/MTC/MTCP)))" />
+							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)))" />
 					</xsl:variable>
 					
 				
-				<xsl:for-each select="schede/*/MT/MTC/MTCT">
+				<xsl:for-each select="record/metadata/schede/*/MT/MTC/MTCT">
 					
 					<xsl:variable name="parentPosition">
 						<xsl:value-of select="position()" />
@@ -475,7 +475,7 @@
 			
 			
 			<!-- part of cultural property when there is DTP (4.00, dating) -->
-			<xsl:for-each select="schede/*/DT">
+			<xsl:for-each select="record/metadata/schede/*/DT">
 				<xsl:variable name="dating">
 					<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />
 				</xsl:variable>
@@ -515,7 +515,7 @@
 			</xsl:for-each>
 			
 			<!-- part of cultural property when there is RSTP (4.00, intervention) -->
-			<xsl:for-each select="schede/*/CO/RST">
+			<xsl:for-each select="record/metadata/schede/*/CO/RST">
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
@@ -561,7 +561,7 @@
 			
 			<!-- part of cultural property when there is RSTR (< 4.00, conservation intervention) -->
 			<xsl:if test="$sheetType='A'">
-			<xsl:for-each select="schede/*/RS/RST">
+			<xsl:for-each select="record/metadata/schede/*/RS/RST">
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
@@ -598,7 +598,7 @@
 			</xsl:if>
 			
 			<!-- part for paleopathology survey (AT) -->
-			<xsl:for-each select="schede/*/PT/PTC">
+			<xsl:for-each select="record/metadata/schede/*/PT/PTC">
 				<xsl:variable name="paleo-survey">
 					<xsl:value-of select="concat($NS, 'PaleopathologySurvey/', $itemURI, '-survey-', position())" />
 				</xsl:variable>
@@ -638,7 +638,7 @@
 				</xsl:for-each>
 			
 			<!-- part for use (A and PG) -->
-			<xsl:for-each select="schede/*/US/USO">
+			<xsl:for-each select="record/metadata/schede/*/US/USO">
 				<xsl:variable name="use">
 					<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
 				</xsl:variable>
@@ -676,7 +676,7 @@
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
-			<xsl:for-each select="schede/*/US/USA">
+			<xsl:for-each select="record/metadata/schede/*/US/USA">
 				<xsl:variable name="use">
 					<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
 				</xsl:variable>
@@ -715,7 +715,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			
-			<xsl:for-each select="schede/*/MT/MIS">
+			<xsl:for-each select="record/metadata/schede/*/MT/MIS">
 				<xsl:variable name="measurementCollection">
 					<xsl:choose>
 						<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP" >
@@ -785,7 +785,7 @@
 			</xsl:for-each>
 
 			<!-- part of cultural property when there is RE/REN/RENR (A and PG, dating) -->
-			<xsl:for-each select="schede/A/RE">
+			<xsl:for-each select="record/metadata/schede/A/RE">
 				<xsl:variable name="dating">
 					<xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />
 				</xsl:variable>
@@ -825,7 +825,7 @@
 			</xsl:for-each>
 
 			<!-- part of cultural property when there is REIP (reuse) -->
-			<xsl:for-each select="schede/*/RO/REI">
+			<xsl:for-each select="record/metadata/schede/*/RO/REI">
 				<xsl:variable name="reuse">
 					<xsl:value-of
 						select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-reuse-', position())" />
@@ -866,7 +866,7 @@
 			</xsl:for-each>
 			
 			<!-- part of cultural property when there is ISER (4.00, affixed elements) -->
-			<xsl:for-each select="schede/*/DA/ISE">
+			<xsl:for-each select="record/metadata/schede/*/DA/ISE">
 				<xsl:variable name="element">
 					<xsl:choose>
 							<xsl:when test="lower-case(normalize-space(./ISED))='timbro'">

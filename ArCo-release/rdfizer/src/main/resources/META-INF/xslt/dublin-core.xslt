@@ -11,20 +11,20 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 
 	<xsl:variable name="sheetVersion"
-		select="schede/*/@version" />
-	<xsl:variable name="sheetType" select="name(schede/*)" />
+		select="record/metadata/schede/*/@version" />
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" />
 	<xsl:variable name="itemURI">
 		<xsl:choose>
-			<xsl:when test="schede/*/RV/RVE/RVEL">
+			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
 				<xsl:value-of
-					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(schede/*/RV/RVE/RVEL)))" />
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of
-					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -32,94 +32,94 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 	<xsl:variable name="dcSubject">
 		<xsl:choose>
-			<xsl:when test='schede/*/SG/SGT'>
+			<xsl:when test='record/metadata/schede/*/SG/SGT'>
 				<xsl:choose>
-					<xsl:when test="schede/*/SG/SGT/SGTD">
+					<xsl:when test="record/metadata/schede/*/SG/SGT/SGTD">
 						<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/SG/SGT/SGTI)), normalize-space(lower-case(schede/*/SG/SGT/SGTD)))))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/SG/SGT/SGTI)), normalize-space(lower-case(record/metadata/schede/*/SG/SGT/SGTD)))))" />
 					</xsl:when>
-					<xsl:when test="schede/*/SG/SGT/SGTI and not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+					<xsl:when test="record/metadata/schede/*/SG/SGT/SGTI and not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 						<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/SG/SGT/SGTI))))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/SG/SGT/SGTI))))" />
 					</xsl:when>
 				</xsl:choose>
 			</xsl:when>
-			<xsl:when test='schede/*/OG/SGT'>
+			<xsl:when test='record/metadata/schede/*/OG/SGT'>
 				<xsl:choose>
-					<xsl:when test="schede/*/OG/SGT/SGTT">
+					<xsl:when test="record/metadata/schede/*/OG/SGT/SGTT">
 						<xsl:value-of
-								select="concat($NS, 'Subject/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/OG/SGT/SGTI)), normalize-space(lower-case(schede/*/OG/SGT/SGTT)))))" />
+								select="concat($NS, 'Subject/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/OG/SGT/SGTI)), normalize-space(lower-case(record/metadata/schede/*/OG/SGT/SGTT)))))" />
 					</xsl:when>
-					<xsl:when test="schede/*/OG/SGT/SGTI and not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/SGT/SGTI))))" />
+					<xsl:when test="record/metadata/schede/*/OG/SGT/SGTI and not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/SGT/SGTI))))" />
 					</xsl:when>
 				</xsl:choose>
 			</xsl:when>
-			<xsl:when test='schede/BNB'>
-				<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(schede/BNB/SB/SBS/SBSF))" />
+			<xsl:when test='record/metadata/schede/BNB'>
+				<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(record/metadata/schede/BNB/SB/SBS/SBSF))" />
 			</xsl:when>
-			<xsl:when test='schede/BDI'>
+			<xsl:when test='record/metadata/schede/BDI'>
 				<xsl:choose>
-					<xsl:when test="schede/BDI/DBL">
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/BDI/DB/DBD)), normalize-space(lower-case(schede/BDI/DB/DBL)))))" />
+					<xsl:when test="record/metadata/schede/BDI/DBL">
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/BDI/DB/DBD)), normalize-space(lower-case(record/metadata/schede/BDI/DB/DBL)))))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/BDI/DB/DBD))))" />
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/BDI/DB/DBD))))" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
-			<xsl:when test='schede/BDM/OG/OGD/OGDN'>
-				<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/BDM/OG/OGD/OGDN))))" />
+			<xsl:when test='record/metadata/schede/BDM/OG/OGD/OGDN'>
+				<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/BDM/OG/OGD/OGDN))))" />
 			</xsl:when>
 			<xsl:when test="$sheetType='CA' or $sheetType='MA'">
 				<xsl:choose>
-					<xsl:when test="schede/*/OG/OGT/OGTC">
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTC))))" />
+					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTC">
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTC))))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTD))))" />
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTD))))" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="$sheetType='A' or $sheetType='PG'">
 				<xsl:choose>
-					<xsl:when test="schede/*/OG/OGT/OGTN">
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTN))))" />
+					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTN">
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTN))))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTD))))" />
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTD))))" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="$sheetType='AT'">
 				<xsl:choose>
-					<xsl:when test="schede/*/OG/OGT/OGTN">
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTN))))" />
+					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTN">
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTN))))" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTD))))" />
+						<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTD))))" />
 					</xsl:otherwise>
 				</xsl:choose>	
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTD))))" />
+				<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTD))))" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>	
 	
 	<xsl:variable name="dcType">
 	<xsl:choose>
-	<xsl:when test="schede/AT/OG/OGT/OGTT and (not(starts-with(lower-case(normalize-space(schede/AT/OG/OGT/OGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/AT/OG/OGT/OGTT)), 'n.r'))) ">
+	<xsl:when test="record/metadata/schede/AT/OG/OGT/OGTT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/AT/OG/OGT/OGTT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/AT/OG/OGT/OGTT)), 'n.r'))) ">
 		<xsl:value-of
-					select="concat($NS, 'Type/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/AT/OG/OGT/OGTT)), normalize-space(lower-case(schede/AT/OG/OGT/OGTP)))))" />
+					select="concat($NS, 'Type/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/AT/OG/OGT/OGTT)), normalize-space(lower-case(record/metadata/schede/AT/OG/OGT/OGTP)))))" />
 	</xsl:when>
 
-	<xsl:when test="schede/*/OG/OGT/OGTD and (not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTD)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/OG/OGT/OGTD)), 'n.r'))) and not(schede/AT)">
-		<xsl:value-of select="concat($NS, 'Type/', arco-fn:arcofy(normalize-space(lower-case(schede/*/OG/OGT/OGTD))))" />
+	<xsl:when test="record/metadata/schede/*/OG/OGT/OGTD and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTD)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTD)), 'n.r'))) and not(record/metadata/schede/AT)">
+		<xsl:value-of select="concat($NS, 'Type/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/*/OG/OGT/OGTD))))" />
 	</xsl:when>
 	
-	<xsl:when test="schede/BDI/DB/DBD and (not(starts-with(lower-case(normalize-space(schede/BDI/DB/DBD)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/BDI/DB/DBD)), 'n.r')))">
-			<xsl:value-of select="concat($NS, 'Type/', arco-fn:arcofy(normalize-space(lower-case(schede/BDI/DB/DBD))))" />
+	<xsl:when test="record/metadata/schede/BDI/DB/DBD and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BDI/DB/DBD)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BDI/DB/DBD)), 'n.r')))">
+			<xsl:value-of select="concat($NS, 'Type/', arco-fn:arcofy(normalize-space(lower-case(record/metadata/schede/BDI/DB/DBD))))" />
 	</xsl:when>
 	<xsl:otherwise></xsl:otherwise>
 	</xsl:choose>
@@ -149,10 +149,10 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		<xsl:attribute name="rdf:about">
 			<xsl:value-of select="$culturalProperty" />
 		</xsl:attribute>
-					<!-- xsl:variable name="sheetType" select="schede/*/CD/TSK/text()"></xsl:variable -->
+					<!-- xsl:variable name="sheetType" select="record/metadata/schede/*/CD/TSK/text()"></xsl:variable -->
 				
 												<!-- dc:type -->
-		<xsl:for-each select="schede/*/OG/OGT">
+		<xsl:for-each select="record/metadata/schede/*/OG/OGT">
 		<xsl:choose>
 			<xsl:when test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
 				<dc:type>
@@ -270,7 +270,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		
 												<!-- dc:title -->	
 
-	<xsl:for-each select="schede/*/OG/SGT/SGTT">
+	<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTT">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 			<dc:title>
 				<xsl:attribute name="rdf:resource">
@@ -280,7 +280,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		</xsl:if>
 	</xsl:for-each>
 	<xsl:if test="not($sheetType='PST')">
-		<xsl:for-each select="schede/*/OG/SGT/SGTP">
+		<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTP">
 			<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 				<dc:title>
 					<xsl:attribute name="rdf:resource">
@@ -290,7 +290,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:if>
 		</xsl:for-each>
 	</xsl:if>
-	<xsl:for-each select="schede/*/SG/SGL/SGLT">
+	<xsl:for-each select="record/metadata/schede/*/SG/SGL/SGLT">
 		<xsl:choose>
 			<xsl:when test="(starts-with(lower-case(normalize-space(.)), 'nr')) or (starts-with(lower-case(normalize-space(.)), 'n.r'))">
 				<xsl:value-of />
@@ -304,7 +304,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:for-each>
-	<xsl:for-each select="schede/*/SG/SGL/SGLA">
+	<xsl:for-each select="record/metadata/schede/*/SG/SGL/SGLA">
 		<xsl:choose>
 			<xsl:when test="(starts-with(lower-case(normalize-space(.)), 'nr')) or (starts-with(lower-case(normalize-space(.)), 'n.r'))">
 				<xsl:value-of />
@@ -318,7 +318,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:for-each>
-	<xsl:for-each select="schede/*/OG/SGT/SGTR">
+	<xsl:for-each select="record/metadata/schede/*/OG/SGT/SGTR">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 			<dc:title>
 				<xsl:attribute name="rdf:resource">
@@ -329,20 +329,20 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:for-each>
 
 											<!-- dcterms:spatial -->
-	<xsl:if test="schede/*/LC/PVC">
+	<xsl:if test="record/metadata/schede/*/LC/PVC">
 		<dcterms:spatial>
 			<xsl:attribute name="rdf:resource">
 				<xsl:choose>
-					<xsl:when test="schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(schede/*/LC/PVC/PVCS))='italia')">
-						<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCS)), normalize-space(lower-case(schede/*/LC/PVC/PVCE)), normalize-space(lower-case(schede/*/LC/PVC/PVCI))))))" />
+					<xsl:when test="record/metadata/schede/*/LC/PVC/PVCS and not(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCS))='italia')">
+						<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCS)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCE)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI))))))" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
-							<xsl:when test="schede/*/LC/PVC/PVCI">
-								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVC/PVCI)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)))))" />
+							<xsl:when test="record/metadata/schede/*/LC/PVC/PVCI">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCI)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCU)))))" />
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(schede/*/LC/PVC/PVCP)), normalize-space(lower-case(schede/*/LC/PVC/PVCC)), normalize-space(lower-case(schede/*/LC/PVC/PVCF)), normalize-space(lower-case(schede/*/LC/PVC/PVCL)), normalize-space(lower-case(schede/*/LC/PVL/PVLT)), normalize-space(lower-case(schede/*/LC/LDC/LDCU)))))" />
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCP)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCC)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCF)), normalize-space(lower-case(record/metadata/schede/*/LC/PVC/PVCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVL/PVLT)), normalize-space(lower-case(record/metadata/schede/*/LC/LDC/LDCU)))))" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:otherwise>
@@ -352,151 +352,151 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:if>
 		
 									<!-- dc:identifier -->
-	<xsl:if test="schede/*/CD/NCT">
+	<xsl:if test="record/metadata/schede/*/CD/NCT">
 		<dc:identifier>
 			<xsl:choose>
-				 <xsl:when	test="schede/*/RV/RVE/RVEL">
-					<xsl:value-of select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', schede/*/RV/RVE/RVEL)" />
+				 <xsl:when	test="record/metadata/schede/*/RV/RVE/RVEL">
+					<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', record/metadata/schede/*/RV/RVE/RVEL)" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
+					<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</dc:identifier>
 	</xsl:if>
 	
 									<!-- dc:description -->
-	<xsl:if test="schede/*/DA/DES/DESO and (not(starts-with(lower-case(normalize-space(schede/*/DA/DES/DESO)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/DA/DES/DESO)), 'n.r')))">
+	<xsl:if test="record/metadata/schede/*/DA/DES/DESO and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO)), 'n.r')))">
 		<dc:description>
 			<xsl:choose>
-				<xsl:when test="schede/BNM/DA/DES/DESO">
+				<xsl:when test="record/metadata/schede/BNM/DA/DES/DESO">
 					<xsl:choose>
-						<xsl:when	test="schede/BNM/LR/LRV">
+						<xsl:when	test="record/metadata/schede/BNM/LR/LRV">
 							<xsl:choose>
-								<xsl:when test="not(schede/*/LR/LRV/LRVE)">
-									<xsl:value-of select="concat(normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVR), ' , ', normalize-space(schede/*/LR/LRV/LRVC), ' ( ', normalize-space(schede/*/LR/LRV/LRVP), ' ), ', normalize-space(schede/*/LR/LRV/LRVL))" />
+								<xsl:when test="not(record/metadata/schede/*/LR/LRV/LRVE)">
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVR), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVC), ' ( ', normalize-space(record/metadata/schede/*/LR/LRV/LRVP), ' ), ', normalize-space(record/metadata/schede/*/LR/LRV/LRVL))" />
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="concat(normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVE))" />
+									<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVE))" />
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:when>									
 						<xsl:otherwise>
-							<xsl:value-of select="normalize-space(schede/*/DA/DES/DESO)" />
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES/DESO)" />
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:when>
-				<xsl:when test="schede/BNPE/DA/DES/DESO">
+				<xsl:when test="record/metadata/schede/BNPE/DA/DES/DESO">
 					<xsl:choose>
-						<xsl:when	test="not(schede/*/LR/LRV/LRVE)">
-							<xsl:value-of select="concat(normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVR), ' , ', normalize-space(schede/*/LR/LRV/LRVC), ' ( ', normalize-space(schede/*/LR/LRV/LRVP), ' ), ', normalize-space(schede/*/LR/LRV/LRVL))" />
+						<xsl:when	test="not(record/metadata/schede/*/LR/LRV/LRVE)">
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVR), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVC), ' ( ', normalize-space(record/metadata/schede/*/LR/LRV/LRVP), ' ), ', normalize-space(record/metadata/schede/*/LR/LRV/LRVL))" />
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:value-of select="concat(normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVE))" />
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVE))" />
 						</xsl:otherwise>		
 					</xsl:choose>
 				</xsl:when>
-				<xsl:when test="schede/BNZ">
+				<xsl:when test="record/metadata/schede/BNZ">
 					<xsl:choose>
-						<xsl:when	test="not(schede/*/LR/LRV/LRVE)">
-							<xsl:value-of select="concat(normalize-space(schede/*/SZ/SZS/SZSP), ' ', normalize-space(schede/*/SZ/SZS/SZSB), ' ', normalize-space(schede/*/SZ/SZS/SZSO), ' ', normalize-space(schede/*/SZ/SZS/SZSF), ' ', normalize-space(schede/*/SZ/SZS/SZSR), ' ', normalize-space(schede/*/SZ/SZS/SZSS), ': ', normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVR), ' , ', normalize-space(schede/*/LR/LRV/LRVC), ' ( ', normalize-space(schede/*/LR/LRV/LRVP), ' ), ', normalize-space(schede/*/LR/LRV/LRVL))" />
+						<xsl:when	test="not(record/metadata/schede/*/LR/LRV/LRVE)">
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/SZ/SZS/SZSP), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSB), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSO), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSF), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSR), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSS), ': ', normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVR), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVC), ' ( ', normalize-space(record/metadata/schede/*/LR/LRV/LRVP), ' ), ', normalize-space(record/metadata/schede/*/LR/LRV/LRVL))" />
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:value-of select="concat(normalize-space(schede/*/SZ/SZS/SZSP), ' ', normalize-space(schede/*/SZ/SZS/SZSB), ' ', normalize-space(schede/*/SZ/SZS/SZSO), ' ', normalize-space(schede/*/SZ/SZS/SZSF), ' ', normalize-space(schede/*/SZ/SZS/SZSR), ' ', normalize-space(schede/*/SZ/SZS/SZSS), ': ', normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVE))" />
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/SZ/SZS/SZSP), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSB), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSO), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSF), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSR), ' ', normalize-space(record/metadata/schede/*/SZ/SZS/SZSS), ': ', normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVE))" />
 						</xsl:otherwise>		
 					</xsl:choose>
 				</xsl:when>
-				<xsl:when test="schede/BNP">
+				<xsl:when test="record/metadata/schede/BNP">
 					<xsl:choose>
-						<xsl:when	test="not(schede/*/LR/LRV/LRVE)">
-							<xsl:value-of select="concat(normalize-space(schede/*/SP/SPS/SPSP), ' ', normalize-space(schede/*/SP/SPS/SPSB), ' ', normalize-space(schede/*/SP/SPS/SPSO), ' ', normalize-space(schede/*/SP/SPS/SPSF), ' ', normalize-space(schede/*/SP/SPS/SPSR), ' ', normalize-space(schede/*/SP/SPS/SPSS), ': ', normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVR), ' , ', normalize-space(schede/*/LR/LRV/LRVC), ' ( ', normalize-space(schede/*/LR/LRV/LRVP), ' ), ', normalize-space(schede/*/LR/LRV/LRVL))" />
+						<xsl:when	test="not(record/metadata/schede/*/LR/LRV/LRVE)">
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/SP/SPS/SPSP), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSB), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSO), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSF), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSR), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSS), ': ', normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVR), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVC), ' ( ', normalize-space(record/metadata/schede/*/LR/LRV/LRVP), ' ), ', normalize-space(record/metadata/schede/*/LR/LRV/LRVL))" />
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:value-of select="concat(normalize-space(schede/*/SP/SPS/SPSP), ' ', normalize-space(schede/*/SP/SPS/SPSH), ' ', normalize-space(schede/*/SP/SPS/SPSB), ' ', normalize-space(schede/*/SP/SPS/SPSO), ' ', normalize-space(schede/*/SP/SPS/SPSF), ' ', normalize-space(schede/*/SP/SPS/SPSR), ' ', normalize-space(schede/*/SP/SPS/SPSS), ': ', normalize-space(schede/*/DA/DES/DESO), ' | ', normalize-space(schede/*/LR/LRV/LRVS), ' , ', normalize-space(schede/*/LR/LRV/LRVE))" />
+							<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/SP/SPS/SPSP), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSH), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSB), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSO), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSF), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSR), ' ', normalize-space(record/metadata/schede/*/SP/SPS/SPSS), ': ', normalize-space(record/metadata/schede/*/DA/DES/DESO), ' | ', normalize-space(record/metadata/schede/*/LR/LRV/LRVS), ' , ', normalize-space(record/metadata/schede/*/LR/LRV/LRVE))" />
 						</xsl:otherwise>		
 					</xsl:choose>
 				</xsl:when>
-				<xsl:when test="not(schede/*/DA/DES/*)">
-					<xsl:value-of select="normalize-space(schede/*/DA/DES)" />
+				<xsl:when test="not(record/metadata/schede/*/DA/DES/*)">
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES)" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="normalize-space(schede/*/DA/DES/DESO)" />
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES/DESO)" />
 				</xsl:otherwise>	
 			</xsl:choose>
 		</dc:description>
 	</xsl:if>
 	
-	<xsl:if test="schede/F/DA/DSO">
+	<xsl:if test="record/metadata/schede/F/DA/DSO">
 		<dc:description>
-			<xsl:value-of select="normalize-space(schede/F/DA/DSO)" />
+			<xsl:value-of select="normalize-space(record/metadata/schede/F/DA/DSO)" />
 		</dc:description>
 	</xsl:if>
 	
-	<xsl:if test="schede/BDI/DA/DRS">
+	<xsl:if test="record/metadata/schede/BDI/DA/DRS">
 		<dc:description>
 			<xsl:choose>
-				<xsl:when test="schede/BDI/DA/DRS">
-					<xsl:value-of select="normalize-space(schede/BDI/DA/DRS)" />
+				<xsl:when test="record/metadata/schede/BDI/DA/DRS">
+					<xsl:value-of select="normalize-space(record/metadata/schede/BDI/DA/DRS)" />
 				</xsl:when>
-				<xsl:when test="schede/BDI/DA/DES">
-					<xsl:value-of select="normalize-space(schede/BDI/DA/DES)" />
+				<xsl:when test="record/metadata/schede/BDI/DA/DES">
+					<xsl:value-of select="normalize-space(record/metadata/schede/BDI/DA/DES)" />
 				</xsl:when>
 			</xsl:choose>
 		</dc:description>
 	</xsl:if>
 	
-	<xsl:if test="schede/PG/OG/OGT/OGTD">
+	<xsl:if test="record/metadata/schede/PG/OG/OGT/OGTD">
 		<dc:description>
-			<xsl:value-of select="concat(normalize-space(schede/PG/OG/OGT/OGTD), ' ', normalize-space(schede/PG/OG/OGT/OGTQ))" />
+			<xsl:value-of select="concat(normalize-space(record/metadata/schede/PG/OG/OGT/OGTD), ' ', normalize-space(record/metadata/schede/PG/OG/OGT/OGTQ))" />
 		</dc:description>
 	</xsl:if>
 	
-	<xsl:if test="schede/A/IS">
+	<xsl:if test="record/metadata/schede/A/IS">
 		<dc:description>
 			<xsl:choose>
-				<xsl:when test="schede/A/IS/ISP">
-					<xsl:value-of select="normalize-space(schede/A/IS/ISP)" />
+				<xsl:when test="record/metadata/schede/A/IS/ISP">
+					<xsl:value-of select="normalize-space(record/metadata/schede/A/IS/ISP)" />
 				</xsl:when>
-				<xsl:when test="schede/A/IS/IST">
-					<xsl:value-of select="normalize-space(schede/A/IS/IST)" />
+				<xsl:when test="record/metadata/schede/A/IS/IST">
+					<xsl:value-of select="normalize-space(record/metadata/schede/A/IS/IST)" />
 				</xsl:when>
 			</xsl:choose>
 		</dc:description>
 	</xsl:if>
 	
-	<xsl:if test="schede/NU/DA/DES/DESA and not(schede/NU/DA/DES/DESO)">
+	<xsl:if test="record/metadata/schede/NU/DA/DES/DESA and not(record/metadata/schede/NU/DA/DES/DESO)">
 		<dc:description>
-			<xsl:value-of select="concat('Dritto: ', normalize-space(schede/NU/DA/DES/DESA), '. Rovescio: ', normalize-space(schede/NU/DA/DES/DESM))"/>
+			<xsl:value-of select="concat('Dritto: ', normalize-space(record/metadata/schede/NU/DA/DES/DESA), '. Rovescio: ', normalize-space(record/metadata/schede/NU/DA/DES/DESM))"/>
 		</dc:description>
 	</xsl:if>
 	
-	<xsl:if test="schede/*/DA/DES/DESS and (not(starts-with(lower-case(normalize-space(schede/*/DA/DES/DESS)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/DA/DES/DESS)), 'n.r'))) and not(schede/*/DA/DES/DESO)">
+	<xsl:if test="record/metadata/schede/*/DA/DES/DESS and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESS)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESS)), 'n.r'))) and not(record/metadata/schede/*/DA/DES/DESO)">
 		<dc:description>
-			<xsl:value-of select="normalize-space(schede/*/DA/DES/DESS)"/>
+			<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES/DESS)"/>
 		</dc:description>
 	</xsl:if>
 
 
 	<!-- dc:rights -->
-	<xsl:if test="schede/*/TU/CDG/CDGG">
+	<xsl:if test="record/metadata/schede/*/TU/CDG/CDGG">
 		<dc:rights>
 			<xsl:attribute name="rdf:resource">
-				<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(schede/*/TU/CDG/CDGG)))" />
+				<xsl:value-of select="concat($NS, 'LegalSituation/', $itemURI, '-legal-situation-', arco-fn:urify(normalize-space(record/metadata/schede/*/TU/CDG/CDGG)))" />
 			</xsl:attribute>
 		</dc:rights>
 	</xsl:if>
 	
 							<!-- dc:coverage -->
-	<xsl:if test="schede/*/LC/PVC/PVCC and (not(starts-with(lower-case(normalize-space(schede/*/LC/PVC/PVCC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/LC/PVC/PVCC)), 'n.r')))">
+	<xsl:if test="record/metadata/schede/*/LC/PVC/PVCC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/PVC/PVCC)), 'n.r')))">
 		<dc:coverage>
 			<xsl:attribute name="rdf:resource">
-                 <xsl:value-of select="concat($NS, 'City/', arco-fn:urify(schede/*/LC/PVC/PVCC))" />
+                 <xsl:value-of select="concat($NS, 'City/', arco-fn:urify(record/metadata/schede/*/LC/PVC/PVCC))" />
             </xsl:attribute>
 		</dc:coverage>
 	</xsl:if>
 
 									<!-- dc:date -->
-	<xsl:for-each select="schede/*/DT">
+	<xsl:for-each select="record/metadata/schede/*/DT">
 		<xsl:if test="./DTS">
 			<xsl:if test="./DTS/DTSI or ./DTS/DTSF">
 				<xsl:variable name="startDate">
@@ -527,7 +527,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:if>
 		</xsl:if>
 	</xsl:for-each>
-	<xsl:for-each select="schede/A/RE">
+	<xsl:for-each select="record/metadata/schede/A/RE">
 	<xsl:if test="./REV/REVI or ./REL/RELI">
 		<xsl:variable name="startDate">
 			<xsl:choose>
@@ -558,7 +558,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:for-each>
 										<!-- dc:creator -->
 	
-	<xsl:for-each select="schede/*/AU/AUT">
+	<xsl:for-each select="record/metadata/schede/*/AU/AUT">
 		<xsl:if test="./AUTN and (not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')))">
 			<dc:creator>
 				<xsl:attribute name="rdf:resource">
@@ -578,7 +578,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		</xsl:if>
 	</xsl:for-each>
 	
-	<xsl:for-each select="schede/F/AU/AUF">
+	<xsl:for-each select="record/metadata/schede/F/AU/AUF">
 		<xsl:if test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 			<dc:creator>
 				<xsl:attribute name="rdf:resource">
@@ -611,7 +611,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		</xsl:if>
 	</xsl:for-each>
 	
-	<xsl:for-each select="schede/BDM/AU/AUF">
+	<xsl:for-each select="record/metadata/schede/BDM/AU/AUF">
 		<xsl:if test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 			<dc:creator>
 				<xsl:attribute name="rdf:resource">
@@ -633,7 +633,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</dc:creator>
 		</xsl:if>
 	</xsl:for-each>
-	<xsl:for-each select="schede/*/AU/ATB">
+	<xsl:for-each select="record/metadata/schede/*/AU/ATB">
 		<xsl:if test="(not(starts-with(lower-case(normalize-space(./ATBD)), 'nr')) and not(starts-with(lower-case(normalize-space(./ATBD)), 'n.r')))">
 			<dc:creator>
 				<xsl:attribute name="rdf:resource">
@@ -645,7 +645,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	
 								<!-- pico:author -->
 	
-	<xsl:for-each select="schede/*/AU/AUT">
+	<xsl:for-each select="record/metadata/schede/*/AU/AUT">
 		<xsl:if test="./AUTN and (not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')))">
 			<pico:author>
 				<xsl:attribute name="rdf:resource">
@@ -664,7 +664,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</pico:author>
 		</xsl:if>
 	</xsl:for-each>
-	<xsl:for-each select="schede/F/AU/AUF">
+	<xsl:for-each select="record/metadata/schede/F/AU/AUF">
 	<xsl:if test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 		<pico:author>
 			<xsl:attribute name="rdf:resource">
@@ -701,7 +701,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:if>
 	</xsl:for-each>
 	
-	<xsl:for-each select="schede/BDM/AU/AUF">
+	<xsl:for-each select="record/metadata/schede/BDM/AU/AUF">
 		<xsl:if test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 			<pico:author>
 				<xsl:attribute name="rdf:resource">
@@ -724,7 +724,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		</xsl:if>
 	</xsl:for-each>
 							<!-- dcterms:bibliographicCitation -->
-	<xsl:for-each select="schede/*/DO/BIB">
+	<xsl:for-each select="record/metadata/schede/*/DO/BIB">
 		<dcterms:bibliographicCitation>
 			<xsl:attribute name="rdf:resource">
 				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-bibliography-', position())" />
@@ -733,7 +733,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:for-each>
 	
 								<!-- dc:format -->
-	<xsl:for-each select="schede/*/MT/MIS">	
+	<xsl:for-each select="record/metadata/schede/*/MT/MIS">	
 		<xsl:variable name="measurement-collection">
 			<xsl:choose>
 				<xsl:when test="($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00') and ./MISP" >
@@ -756,56 +756,56 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	
 	
 									<!-- pico:materialAndTechnique -->	
-	<xsl:if test="not(schede/*/MT/MTC/*) and (not(starts-with(lower-case(normalize-space(schede/*/MT/MTC)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC)), 'n.r')))">
-		<xsl:if test="schede/*/MT/MTC">
+	<xsl:if test="not(record/metadata/schede/*/MT/MTC/*) and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC)), 'n.r')))">
+		<xsl:if test="record/metadata/schede/*/MT/MTC">
 			<pico:materialAndTechnique>
 				<xsl:attribute name="rdf:resource">
-		 	    	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/*/MT/MTC)))" />
+		 	    	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/MTC)))" />
 				</xsl:attribute>
 			</pico:materialAndTechnique>
 		</xsl:if>
 	</xsl:if>
-	<xsl:if test="not(starts-with(lower-case(normalize-space(schede/OAC/MT/MTC/MTCI)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/OAC/MT/MTC/MTCI)), 'n.r'))">
-		<xsl:if test="schede/OAC/MT/MTC/MTCI">
+	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/OAC/MT/MTC/MTCI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/OAC/MT/MTC/MTCI)), 'n.r'))">
+		<xsl:if test="record/metadata/schede/OAC/MT/MTC/MTCI">
 			<pico:materialAndTechnique>
 				<xsl:attribute name="rdf:resource">
-		 	    	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/OAC/MT/MTC/MTCI)))" />
+		 	    	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/OAC/MT/MTC/MTCI)))" />
 				</xsl:attribute>
             </pico:materialAndTechnique>
  		</xsl:if>
 	</xsl:if>	
-	<xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCM)), 'n.r'))">
-		<xsl:if test="schede/*/MT/MTC/MTCM and (not(schede/*/MT/MTC/MTCP) or schede/*/MT/MTC/MTCP='intero bene' or schede/*/MT/MTC/MTCP='integrale' or schede/*/MT/MTC/MTCP='tutta' or schede/*/MT/MTC/MTCP='totale') or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'esemplar'))">
+	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCM)), 'n.r'))">
+		<xsl:if test="record/metadata/schede/*/MT/MTC/MTCM and (not(record/metadata/schede/*/MT/MTC/MTCP) or record/metadata/schede/*/MT/MTC/MTCP='intero bene' or record/metadata/schede/*/MT/MTC/MTCP='integrale' or record/metadata/schede/*/MT/MTC/MTCP='tutta' or record/metadata/schede/*/MT/MTC/MTCP='totale') or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'esemplar'))">
 			<pico:materialAndTechnique>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/*/MT/MTC/MTCM)))" />
+					<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/MTC/MTCM)))" />
 				</xsl:attribute>
 			</pico:materialAndTechnique>
 		</xsl:if>
 	</xsl:if>
-	<xsl:if test="not(starts-with(lower-case(normalize-space(schede/VeAC/MT/MTC/MTCF)), 'nr'))">
-		<xsl:if test="schede/VeAC/MT/MTC/MTCF">
+	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/VeAC/MT/MTC/MTCF)), 'nr'))">
+		<xsl:if test="record/metadata/schede/VeAC/MT/MTC/MTCF">
 			<pico:materialAndTechnique>
 				<xsl:attribute name="rdf:resource">
- 	            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCF)))" />
+ 	            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/MT/MTC/MTCF)))" />
             	</xsl:attribute>
             </pico:materialAndTechnique>
 		</xsl:if>
 	</xsl:if>	
-	<xsl:if test="not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCT)), 'n.r'))">
-		<xsl:if test="schede/*/MT/MTC/MTCT">
+	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'n.r'))">
+		<xsl:if test="record/metadata/schede/*/MT/MTC/MTCT">
 			<xsl:choose>
 				<xsl:when test="$sheetType='VeAC'">
 					<pico:materialAndTechnique>
 						<xsl:attribute name="rdf:resource">
-		 	                <xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/VeAC/MT/MTC/MTCT)))" />
+		 	                <xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/MT/MTC/MTCT)))" />
  	                	</xsl:attribute>
  	                </pico:materialAndTechnique>
 				</xsl:when>
-				<xsl:when test="(not(schede/*/MT/MTC/MTCP)) or schede/*/MT/MTC/MTCP='intero bene' or schede/*/MT/MTC/MTCP='integrale' or schede/*/MT/MTC/MTCP='tutta' or schede/*/MT/MTC/MTCP='totale' or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(schede/*/MT/MTC/MTCP)), 'esemplar'))">
+				<xsl:when test="(not(record/metadata/schede/*/MT/MTC/MTCP)) or record/metadata/schede/*/MT/MTC/MTCP='intero bene' or record/metadata/schede/*/MT/MTC/MTCP='integrale' or record/metadata/schede/*/MT/MTC/MTCP='tutta' or record/metadata/schede/*/MT/MTC/MTCP='totale' or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'esemplar'))">
  	               <pico:materialAndTechnique>
 						<xsl:attribute name="rdf:resource">
-		 	            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(schede/*/MT/MTC/MTCT)))" />
+		 	            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)))" />
 		            	</xsl:attribute>
             		</pico:materialAndTechnique>
 				</xsl:when>
@@ -864,7 +864,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					
 					<!-- dc:subject -->
 	
-	<xsl:for-each select="schede/*/*/SGT/SGTI">
+	<xsl:for-each select="record/metadata/schede/*/*/SGT/SGTI">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 			<dc:subject>
 				<xsl:attribute name="rdf:resource">
@@ -873,7 +873,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</dc:subject>
 		</xsl:if>
 	</xsl:for-each>
-	<xsl:for-each select="schede/NU/DA/DES/DESU">
+	<xsl:for-each select="record/metadata/schede/NU/DA/DES/DESU">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 			<dc:subject>
 				<xsl:attribute name="rdf:resource">
@@ -882,7 +882,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</dc:subject>
 		</xsl:if>
 	</xsl:for-each>
-	<xsl:for-each select="schede/*/DA/AID/AIDI">
+	<xsl:for-each select="record/metadata/schede/*/DA/AID/AIDI">
 		<xsl:if test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
 			<dc:subject>
 				<xsl:attribute name="rdf:resource">

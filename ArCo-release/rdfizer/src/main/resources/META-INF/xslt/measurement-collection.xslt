@@ -23,13 +23,13 @@
 	
 	<xsl:variable name="itemURI">
 		<xsl:choose>
-			<xsl:when test="schede/*/RV/RVE/RVEL">
+			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
 				<xsl:value-of
-					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(schede/*/RV/RVE/RVEL)))" />
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of
-					select="concat(schede/*/CD/NCT/NCTR, schede/*/CD/NCT/NCTN, schede/*/CD/NCT/NCTS)" />
+					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -42,13 +42,13 @@
 		<xsl:variable name="culturalProperty"
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
 	
-	<xsl:variable name="sheetVersion" select="schede/*/@version"></xsl:variable>
-	<xsl:variable name="sheetType" select="name(schede/*)"></xsl:variable>
+	<xsl:variable name="sheetVersion" select="record/metadata/schede/*/@version"></xsl:variable>
+	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)"></xsl:variable>
 	<xsl:variable name="cp-name" select="''"></xsl:variable>
 	
 	<xsl:variable name="objectOfDescription">
 		<xsl:choose>
-			<xsl:when test="schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<xsl:when test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<xsl:value-of select="$culturalPropertyComponent" />
 			</xsl:when>
 			<xsl:otherwise>
@@ -60,7 +60,7 @@
 	<xsl:template match="/">
 
 		<rdf:RDF>
-			<xsl:for-each select="schede/*/VM/VMC">
+			<xsl:for-each select="record/metadata/schede/*/VM/VMC">
 				<xsl:choose>
 					<xsl:when
 						test="./VMCE and not(lower-case(normalize-space(./VMCE))='intero bene') and not(lower-case(normalize-space(./VMCE))='integrale') 
