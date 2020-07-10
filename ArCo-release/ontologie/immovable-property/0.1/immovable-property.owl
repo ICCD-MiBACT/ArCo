@@ -725,6 +725,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/loadBearing -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/loadBearing">
+        <rdfs:label xml:lang="en">load bearing</rdfs:label>
         <rdfs:label xml:lang="it">portante</rdfs:label>
     </owl:DatatypeProperty>
     
