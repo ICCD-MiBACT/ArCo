@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/ontology/arco/"
-     xml:base="https://w3id.org/arco/ontology/arco/"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/immovable-property#"
+     xml:base="https://w3id.org/arco/ontology/immovable-property"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
@@ -13,6 +13,7 @@
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:a-ce="https://w3id.org/arco/ontology/cultural-event/"
      xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:a-ip="https://w3id.org/arco/ontology/immovable-property/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
@@ -187,6 +188,14 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/hasConstructionElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasConstructionElement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/hasCovering -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasCovering">
@@ -259,7 +268,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFlooringDesignOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Flooring"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringDesign"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringLayout"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -331,15 +340,21 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasLayout">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isLayoutOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="it">ha schema iconografico</rdfs:label>
         <rdfs:label xml:lang="en">has layout</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/hasPosition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasPosition">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
     </owl:ObjectProperty>
     
 
@@ -436,6 +451,14 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/isConstructionElementOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isConstructionElementOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/isCoveringOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isCoveringOf">
@@ -502,7 +525,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/isFlooringDesignOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFlooringDesignOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringDesign"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringLayout"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Flooring"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
@@ -567,6 +590,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è schema iconografico di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/isPositionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isPositionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
     </owl:ObjectProperty>
     
 
@@ -691,6 +722,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/loadBearing -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/loadBearing">
+        <rdfs:label xml:lang="en">load bearing</rdfs:label>
+        <rdfs:label xml:lang="it">portante</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/numberOfFlights -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/numberOfFlights">
@@ -774,6 +814,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">numero di stanze</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/originalElement -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/originalElement">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -936,6 +984,20 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/Built-inFurnishingElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Built-inFurnishingElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/FurnishingElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/Chimney -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Chimney">
@@ -975,6 +1037,12 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasLayout"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasRealizationTime"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
@@ -998,12 +1066,6 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/UseFunction"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFloorPlan"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/FloorPlan"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1197,6 +1259,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/ElevationDrawing -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ElevationDrawing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/ElevationLayout -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ElevationLayout">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
+        <rdfs:label xml:lang="it">schema iconografico del prospetto</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/Escalator -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Escalator">
@@ -1242,7 +1321,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/FloorPlan -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/FloorPlan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -1267,7 +1346,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFlooringDesign"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringDesign"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringLayout"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
@@ -1282,17 +1361,18 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/FlooringDesign -->
+    <!-- https://w3id.org/arco/ontology/immovable-property/FlooringLayout -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/FlooringDesign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/FlooringLayout">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="en">Flooring design</rdfs:label>
+        <rdfs:label xml:lang="en">Flooring layout</rdfs:label>
         <rdfs:label xml:lang="it">Schema di posa</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag xml:lang="it">Normativa A: PV/PVm/PVMS</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1456,12 +1536,12 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/Layout -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Layout">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta  lo schema icnografico sul quale è impostata la pianta in esame</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the layout of the plan.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta  lo schema icnografico della pianta o del prospetto della costruzione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the layout of the plan or the elevation of the construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="it">Configurazione della pianta</rdfs:label>
         <rdfs:label xml:lang="en">Layout</rdfs:label>
+        <rdfs:label xml:lang="it">Schema iconografico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>Normativa A: PN/PNT/PNTS e PN/PNT/PNTF</core:iccdNormTag>
@@ -1480,6 +1560,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Lift</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/MovableFurnishingElement -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/MovableFurnishingElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/FurnishingElement"/>
     </owl:Class>
     
 
@@ -1510,6 +1598,15 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Spazio all&apos;aperto</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/PlanLayout -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/PlanLayout">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
+        <rdfs:label xml:lang="it">schema iconografico della pianta</rdfs:label>
     </owl:Class>
     
 
@@ -1872,6 +1969,12 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Window">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/WindowType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -1879,6 +1982,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Window</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/WindowType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/WindowType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
     </owl:Class>
     
 

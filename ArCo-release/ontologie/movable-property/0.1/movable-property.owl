@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/ontology/arco/"
-     xml:base="https://w3id.org/arco/ontology/arco/"
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/movable-property#"
+     xml:base="https://w3id.org/arco/ontology/movable-property"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
@@ -13,6 +13,7 @@
      xmlns:a-cd="https://w3id.org/arco/ontology/context-description/"
      xmlns:a-ce="https://w3id.org/arco/ontology/cultural-event/"
      xmlns:a-dd="https://w3id.org/arco/ontology/denotative-description/"
+     xmlns:a-mp="https://w3id.org/arco/ontology/movable-property/"
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:arco="https://w3id.org/arco/ontology/arco/"
      xmlns:core="https://w3id.org/arco/ontology/core/"
@@ -627,14 +628,28 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isTaxonOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità biologica a un taxon.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a biological entity to a taxon.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una classificazione a un taxon.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a classification to a taxon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">ha taxon</rdfs:label>
         <rdfs:label xml:lang="en">has taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasTypeOfTypeSpecimen -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasTypeOfTypeSpecimen">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <rdfs:comment xml:lang="it">Questa porprietà collega l&apos;identificazione del tipo nomenclaturale al taxon prodotto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the identification of a type specimen to the type of type specimen</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo di campione nomenclaturale</rdfs:label>
+        <rdfs:label xml:lang="en">has type of type specimen</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -954,11 +969,37 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isTaxonOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un taxon con un&apos;entità biologica.</rdfs:comment>
-        <rdfs:comment xml:lang="it">This property relates a taxon to a biological entity.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un taxon con una classificazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a taxon to a classification</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is taxon of</rdfs:label>
         <rdfs:label xml:lang="it">è taxon di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isTaxonProducedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isTaxonProducedBy">
+        <rdfs:comment xml:lang="it">Questa porprietà collega il taxon all&apos;identificazione del tipo nomenclaturale che lo ha prodotto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This porperty relates a taxon to the Type specimen identification which produces it</rdfs:comment>
+        <rdfs:label xml:lang="en">is taxon produced by</rdfs:label>
+        <rdfs:label xml:lang="it">è taxon prodotto da</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isTypeOfTypeSpecimenFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isTypeOfTypeSpecimenFor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <rdfs:comment xml:lang="en">This property relates the type of type specimen to  the identification of a type specimen</rdfs:comment>
+        <rdfs:label xml:lang="en">is type of type specimen for</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di campione nomenclaturale per</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -979,6 +1020,19 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/producesTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/producesTaxon">
+        <rdfs:comment xml:lang="it">Questa porprietà collega l&apos;identificazione del tipo nomenclaturale al taxon prodotto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This porperty relates a Type specimen identification to the taxon it produces</rdfs:comment>
+        <rdfs:label xml:lang="it">produce taxon</rdfs:label>
+        <rdfs:label xml:lang="en">produces taxon</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2472,8 +2526,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo del campione che è servito a denominare un taxon specifico o infraspecifico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the type of a specimen used to produce a specific taxon</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Tipo di campione</rdfs:label>
-        <rdfs:label xml:lang="en">Type of specimen</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di campione nomenclaturale</rdfs:label>
+        <rdfs:label xml:lang="en">Type of type specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI/TBIT</a-cat:iccdNormTag>
