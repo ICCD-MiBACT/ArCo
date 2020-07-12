@@ -28,6 +28,7 @@ public class Harvester {
 
 	private String listIdentifierURL, recordsDirectory, multimediaRecordsDirectory, outputDirectory;
 	private static final int chunk_size = 1000;
+	private long items = Long.MAX_VALUE;
 	private static final Pattern p = Pattern.compile("@(.*?)@");
 	private DocumentBuilder builder;
 	private static final int NUM_OF_ATTEMPTS = 3;
@@ -88,6 +89,10 @@ public class Harvester {
 				}
 			}
 
+			if (c.longValue() >= this.items) {
+				break;
+			}
+
 		}
 		fos_keys.flush();
 		fos_paths.flush();
@@ -97,6 +102,7 @@ public class Harvester {
 		logger.trace("Issuing request " + listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc");
 		nextToken = getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc"));
 		AtomicInteger chunk_mr = new AtomicInteger(0);
+		c = new AtomicInteger(0);
 		first = true;
 		FileOutputStream fos_keys_mr = new FileOutputStream(new File(multimediaRecordsDirectory + "/keys.txt"));
 		FileOutputStream fos_paths_mr = new FileOutputStream(new File(multimediaRecordsDirectory + "/paths.txt"));
@@ -125,6 +131,10 @@ public class Harvester {
 					}
 					logger.error("Retry! " + i);
 				}
+			}
+			
+			if (c.longValue() >= this.items) {
+				break;
 			}
 
 		}
@@ -186,9 +196,11 @@ public class Harvester {
 				fos_keys.flush();
 				fos_paths.flush();
 
+				c.incrementAndGet();
+
 			}
 
-			if (c.incrementAndGet() % chunk_size == 0) {
+			if (c.longValue() % chunk_size == 0) {
 				logger.info("Processed " + c);
 				chunk.incrementAndGet();
 				new File(recordsDirectory + "/" + chunk + "/").mkdirs();
@@ -199,11 +211,8 @@ public class Harvester {
 		logger.trace(d.getElementsByTagName("resumptionToken").item(0).getAttributes().getNamedItem("completeListSize")
 				.getNodeValue());
 
-		long items = Long.parseLong(d.getElementsByTagName("resumptionToken").item(0).getAttributes()
+		this.items = Long.parseLong(d.getElementsByTagName("resumptionToken").item(0).getAttributes()
 				.getNamedItem("completeListSize").getNodeValue());
-		if (c.get() >= items) {
-			return null;
-		}
 
 		return d.getElementsByTagName("resumptionToken").item(0).getTextContent();
 	}
@@ -261,9 +270,11 @@ public class Harvester {
 			}
 		}
 	}
-	
-	public static void main(String[] args) throws ParserConfigurationException, XPathExpressionException, IOException, SAXException, TransformerException {
-		Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?", "/Users/lgu/Desktop/testRecords");
+
+	public static void main(String[] args) throws ParserConfigurationException, XPathExpressionException, IOException,
+			SAXException, TransformerException {
+		Harvester h = new Harvester("http://catalogo.beniculturali.it/oaitarget/OAIHandler?",
+				"/Users/lgu/Desktop/testRecords");
 		List<String> keycodes = new ArrayList<>();
 		keycodes.add("ICCD10015760");
 		keycodes.add("ICCD10045923");
