@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -28,6 +29,8 @@ public class Preprocessor {
 	private String recordsFolder, resourcePrefix, multimediaRecordsFolder;
 
 	private static final Logger logger = Logger.getLogger(Preprocessor.class);
+	private AtomicInteger countRecords = new AtomicInteger(0);
+	private AtomicInteger countMultimediaRecords = new AtomicInteger(0);
 	private Map<String, String> uniqueIdentifier2URI, ftan2URL, catalogueRecordIdentifier2URI;
 	private PreprocessedData pd;
 
@@ -64,6 +67,11 @@ public class Preprocessor {
 
 	private void preprocessMultimediaRecord(Path f) {
 
+		if (this.countMultimediaRecords.get() % 10000 == 0) {
+			logger.info("Processed " + this.countMultimediaRecords + " multimedia records");
+		}
+		this.countMultimediaRecords.incrementAndGet();
+
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
@@ -87,6 +95,12 @@ public class Preprocessor {
 	}
 
 	private void preprocessRecord(Path f) {
+
+		if (this.countRecords.get() % 10000 == 0) {
+			logger.info("Processed " + this.countRecords);
+		}
+
+		this.countRecords.incrementAndGet();
 
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -186,10 +200,8 @@ public class Preprocessor {
 	}
 
 	public static void main(String[] args) {
-		logger.info("test");
-		Preprocessor p = new Preprocessor("/Users/lgu/Desktop/harvesting/records",
-				"/Users/lgu/Desktop/harvesting/multimedia_records", "https://w3id.org/arco/resource/");
-//		p.preprocessMultimediaRecord(Paths.get("/Users/lgu/Desktop/harvesting/multimedia_records/0/ICCD13828212.xml"));
+		logger.info("ArCo Preprocessor");
+		Preprocessor p = new Preprocessor(args[0], args[1], args[2]);
 		p.run();
 	}
 
