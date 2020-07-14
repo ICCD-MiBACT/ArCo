@@ -90,6 +90,8 @@ public class Preprocessor {
 
 		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			logger.info("Error while processing " + f.toFile().getAbsolutePath() + " " + e.getMessage());
 		}
 
 	}
@@ -120,6 +122,9 @@ public class Preprocessor {
 
 		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			logger.info("Error while processing " + f.toFile().getAbsolutePath() + " " + e.getMessage());
+
 		}
 
 	}
