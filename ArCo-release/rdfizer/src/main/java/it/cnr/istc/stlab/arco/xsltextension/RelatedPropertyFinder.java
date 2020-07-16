@@ -114,6 +114,8 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 	@Override
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
+		
+		System.out.println("Argument "+arg);
 
 		String url = uniqueIdentifier2URI.get(arg);
 
