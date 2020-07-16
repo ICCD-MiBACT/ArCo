@@ -23,17 +23,17 @@ public class PreprocessedData {
 	@SuppressWarnings("unchecked")
 	private PreprocessedData() {
 
-		if (new File(dbFileName).exists()) {
-			this.db = DBMaker.fileDB(dbFileName).make();
-		} else {
+		if (!new File(dbFileName).exists()) {
 			try {
 				logger.info("Downloading preprocessed data from " + dbURL);
 				FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName));
+
 				logger.info(dbURL + " downloaded!");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
+		this.db = DBMaker.fileDB(dbFileName).make();
 
 		this.uniqueIdentifier2URI = db.hashMap("uniqueIdentifier2URI").keySerializer(Serializer.STRING)
 				.valueSerializer(Serializer.JAVA).createOrOpen();
