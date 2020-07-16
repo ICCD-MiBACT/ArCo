@@ -32,6 +32,8 @@ public class PreprocessedData {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		} else {
+			logger.info("Preprocessed data already exists! ");
 		}
 		this.db = DBMaker.fileDB(dbFileName).make();
 
