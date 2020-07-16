@@ -1,6 +1,7 @@
 package it.cnr.istc.stlab.arco.preprocessing;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -34,7 +35,7 @@ public class Preprocessor {
 	private Map<String, String> uniqueIdentifier2URI, ftan2URL, catalogueRecordIdentifier2URI;
 	private PreprocessedData pd;
 
-	public Preprocessor(String recordsFolder, String multimediaRecordsFolder, String resourcePrefix) {
+	public Preprocessor(String recordsFolder, String multimediaRecordsFolder, String resourcePrefix) throws MalformedURLException, IOException {
 		super();
 		this.recordsFolder = recordsFolder;
 		this.resourcePrefix = resourcePrefix;
@@ -58,6 +59,8 @@ public class Preprocessor {
 
 			pd.commit();
 			pd.close();
+			
+			logger.info("Preprocessing ended");
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -204,7 +207,7 @@ public class Preprocessor {
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MalformedURLException, IOException {
 		logger.info("ArCo Preprocessor");
 		Preprocessor p = new Preprocessor(args[0], args[1], args[2]);
 		p.run();
