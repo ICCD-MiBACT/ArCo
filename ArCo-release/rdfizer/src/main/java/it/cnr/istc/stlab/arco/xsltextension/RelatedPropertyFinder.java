@@ -30,7 +30,7 @@ import net.sf.saxon.s9api.XdmEmptySequence;
 import net.sf.saxon.s9api.XdmValue;
 
 public class RelatedPropertyFinder implements ExtensionFunction {
-	
+
 //	private static final String IDENTIFIERS = "META-INF/datasets/identifiers.ttl";
 //	
 //	private static RelatedPropertyFinder instance;
@@ -110,14 +110,14 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 //	public SequenceType getResultType() {
 //		return SequenceType.makeSequenceType(ItemType.ANY_ARRAY, OccurrenceIndicator.ZERO_OR_MORE);
 //	}
-	
+
 	private static RelatedPropertyFinder instance;
-	private Map<String, String> uniqueIdentifier2URI;
+	private Map<String, List<String>> uniqueIdentifier2URIs;
 
 	private RelatedPropertyFinder() {
 
 		PreprocessedData pd = PreprocessedData.getInstance();
-		this.uniqueIdentifier2URI = pd.getUniqueIdentifier2URI();
+		this.uniqueIdentifier2URIs = pd.getUniqueIdentifier2URIs();
 
 	}
 
@@ -130,13 +130,13 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 	@Override
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
-		
-		String url = uniqueIdentifier2URI.get(arg);
 
-		if (url == null || url.length() == 0)
+		List<String> uris = uniqueIdentifier2URIs.get(arg);
+
+		if (uris == null || uris.isEmpty())
 			return XdmEmptySequence.getInstance();
 		else
-			return XdmArray.makeArray(new String[] {url});
+			return XdmArray.makeArray(uris.toArray());
 	}
 
 	@Override

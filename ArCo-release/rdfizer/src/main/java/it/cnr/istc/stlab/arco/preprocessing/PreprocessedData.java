@@ -3,6 +3,7 @@ package it.cnr.istc.stlab.arco.preprocessing;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
@@ -17,7 +18,8 @@ public class PreprocessedData {
 
 	private DB db;
 	private static PreprocessedData instance;
-	private Map<String, String> uniqueIdentifier2URI, ftan2URL, catalogueRecordIdentifier2URI;
+	private Map<String, String> ftan2URL, catalogueRecordIdentifier2URI;
+	private Map<String, List<String>> uniqueIdentifier2URIs;
 	private static final Logger logger = Logger.getLogger(PreprocessedData.class);
 
 	@SuppressWarnings("unchecked")
@@ -37,12 +39,13 @@ public class PreprocessedData {
 		}
 		this.db = DBMaker.fileDB(dbFileName).make();
 
-		this.uniqueIdentifier2URI = db.hashMap("uniqueIdentifier2URI").keySerializer(Serializer.STRING)
-				.valueSerializer(Serializer.JAVA).createOrOpen();
 		this.ftan2URL = db.hashMap("ftan2URL").keySerializer(Serializer.STRING).valueSerializer(Serializer.JAVA)
 				.createOrOpen();
 		this.catalogueRecordIdentifier2URI = db.hashMap("catalogueRecordIdentifier2URI")
 				.keySerializer(Serializer.STRING).valueSerializer(Serializer.JAVA).createOrOpen();
+
+		this.uniqueIdentifier2URIs = db.hashMap("uniqueIdentifier2URIs").keySerializer(Serializer.STRING)
+				.valueSerializer(Serializer.JAVA).createOrOpen();
 	}
 
 	public static PreprocessedData getInstance() {
@@ -50,10 +53,6 @@ public class PreprocessedData {
 			instance = new PreprocessedData();
 		}
 		return instance;
-	}
-
-	public Map<String, String> getUniqueIdentifier2URI() {
-		return uniqueIdentifier2URI;
 	}
 
 	public Map<String, String> getFtan2URL() {
@@ -70,6 +69,10 @@ public class PreprocessedData {
 
 	public void close() {
 		db.close();
+	}
+
+	public Map<String, List<String>> getUniqueIdentifier2URIs() {
+		return uniqueIdentifier2URIs;
 	}
 
 }

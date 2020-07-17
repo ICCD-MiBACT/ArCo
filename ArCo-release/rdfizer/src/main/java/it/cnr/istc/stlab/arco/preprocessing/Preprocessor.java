@@ -5,6 +5,8 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -32,16 +34,18 @@ public class Preprocessor {
 	private static final Logger logger = Logger.getLogger(Preprocessor.class);
 	private AtomicInteger countRecords = new AtomicInteger(0);
 	private AtomicInteger countMultimediaRecords = new AtomicInteger(0);
-	private Map<String, String> uniqueIdentifier2URI, ftan2URL, catalogueRecordIdentifier2URI;
+	private Map<String, String> ftan2URL, catalogueRecordIdentifier2URI;
+	private Map<String, List<String>> uniqueIdentifier2URIs;
 	private PreprocessedData pd;
 
-	public Preprocessor(String recordsFolder, String multimediaRecordsFolder, String resourcePrefix) throws MalformedURLException, IOException {
+	public Preprocessor(String recordsFolder, String multimediaRecordsFolder, String resourcePrefix)
+			throws MalformedURLException, IOException {
 		super();
 		this.recordsFolder = recordsFolder;
 		this.resourcePrefix = resourcePrefix;
 		this.multimediaRecordsFolder = multimediaRecordsFolder;
 		this.pd = PreprocessedData.getInstance();
-		this.uniqueIdentifier2URI = pd.getUniqueIdentifier2URI();
+		this.uniqueIdentifier2URIs = pd.getUniqueIdentifier2URIs();
 		this.ftan2URL = pd.getFtan2URL();
 		this.catalogueRecordIdentifier2URI = pd.getCatalogueRecordIdentifier2URI();
 	}
@@ -59,7 +63,7 @@ public class Preprocessor {
 
 			pd.commit();
 			pd.close();
-			
+
 			logger.info("Preprocessing ended");
 
 		} catch (IOException e) {
@@ -120,7 +124,14 @@ public class Preprocessor {
 			String uniqueIdentifier = getUniqueIdentifier(xpath, xml);
 			String catalogueRecordIdentifier = getCatalogueRecordIdentifier(xpath, xml);
 
-			uniqueIdentifier2URI.put(uniqueIdentifier, uriObjectOfDescription);
+
+			List<String> uris = uniqueIdentifier2URIs.get(uniqueIdentifier);
+
+			if (uris == null) {
+				uris = new ArrayList<>();
+			}
+			uniqueIdentifier2URIs.put(uniqueIdentifier, uris);
+
 			catalogueRecordIdentifier2URI.put(catalogueRecordIdentifier, uriObjectOfDescription);
 
 		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
