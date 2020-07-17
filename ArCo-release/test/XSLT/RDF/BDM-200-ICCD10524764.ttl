@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-address:7c92a76200066e323645d455b4e1cd9a
@@ -104,7 +106,7 @@ ar-TimeInterval:2012  a  tiapit:TimeInterval ;
 
 ar-agent:ead124946ac0f35db0b60a6d7cdbced7
         a           l0:Agent ;
-        rdfs:label  "Nunfris, A." .
+        rdfs:label  "Nunfris, A" .
 
 ar-MeasurementCollection:2000168323-1
         a                       arco-dd:MeasurementCollection ;
@@ -120,7 +122,7 @@ ar-agent:f03fcaf397a37cef65d7869f07a2fd39
 
 ar-catalogueRecordVersion:2000168323-rvm
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "TRASCRIZIONE - 2013 Nunfris, A." ;
+        rdfs:label                   "TRASCRIZIONE - 2013 Nunfris, A" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:2000168323-rvm-ead124946ac0f35db0b60a6d7cdbced7 , ar-timeIndexedRole:2000168323-86301fa4402056eb413222f2e8fcf4f2 ;
@@ -149,14 +151,14 @@ ar-agentrole:2000168323-cataloguing-agency
 ar-ConservationStatus:2000168323-conservation-status-1
         a                         arco-dd:ConservationStatus ;
         rdfs:label                "Stato di conservazione 1 del bene: 2000168323"@it , "Conservation status 1 of cultural property: 2000168323"@en ;
-        arco-core:specifications  "mancano i piedi; fessurazioni delle tavole, coperchio probabilmente non pertinente." ;
+        arco-core:specifications  "mancano i piedi; fessurazioni delle tavole, coperchio probabilmente non pertinente" ;
         arco-dd:hasConservationStatusType
                 arco-dd:MediocreConservationStatus ;
         l0:name                   "Stato di conservazione 1 del bene: 2000168323"@it , "Conservation status 1 of cultural property: 2000168323"@en .
 
 ar-timeIndexedRole:2000168323-compilation-f05f363f24f46e74a65720861f90f3d0
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Dettori, M.P."@en , "Compilazione da Dettori, M.P."@it ;
+        rdfs:label             "Compilation by Dettori, M.P"@en , "Compilazione da Dettori, M.P"@it ;
         roapit:isRoleInTimeOf  ar-agent:f05f363f24f46e74a65720861f90f3d0 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -184,7 +186,7 @@ ar-photograpyDocumentation:2000168323-photographic-documentation-1
 
 ar-catalogueRecordVersion:2000168323-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 2012 Dettori, M.P. Nunfris, A." ;
+        rdfs:label                   "COMPILAZIONE - 2012 Dettori, M.P Nunfris, A" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:2000168323-compilation-f05f363f24f46e74a65720861f90f3d0 , ar-timeIndexedRole:2000168323-86301fa4402056eb413222f2e8fcf4f2 , ar-timeIndexedRole:2000168323-compilation-ead124946ac0f35db0b60a6d7cdbced7 ;
@@ -197,7 +199,7 @@ ar-catalogueRecordVersion:2000168323-compilation
 
 ar-agent:f05f363f24f46e74a65720861f90f3d0
         a           l0:Agent ;
-        rdfs:label  "Dettori, M.P." .
+        rdfs:label  "Dettori, M.P" .
 
 ar-Value:2000168323-1-height-75
         a                      mu:Value ;
@@ -220,7 +222,7 @@ ar-Value:2000168323-1-height-75
                 arco-catalogue:P ;
         arco-catalogue:systemRecordCode
                 "BDM-200-ICCD10524764" ;
-        arco-core:note  "La cassa fa parte di una donazione effettuata da parte del \"mastru 'e linna\" (maestro falegname) Antonio Sau a favore del comune di Sorgono, datata 1998. Appartengono al lascito altre sei casse, frammenti di frontoni lignei intagliati, matrici xilografiche e macchinari da falegnameria d'epoca." .
+        arco-core:note  "La cassa fa parte di una donazione effettuata da parte del \"mastru 'e linna\" (maestro falegname) Antonio Sau a favore del comune di Sorgono, datata 1998. Appartengono al lascito altre sei casse, frammenti di frontoni lignei intagliati, matrici xilografiche e macchinari da falegnameria d'epoca" .
 
 ar-role:CataloguinAgency
         a                   roapit:Role ;
@@ -268,7 +270,7 @@ ar-TechnicalCharacteristic:intaglio
 
 ar-timeIndexedRole:2000168323-86301fa4402056eb413222f2e8fcf4f2
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Dettori, M.P."@it , "Official in charge: Dettori, M.P."@en ;
+        rdfs:label             "Funzionario responsabile: Dettori, M.P"@it , "Official in charge: Dettori, M.P"@en ;
         roapit:isRoleInTimeOf  ar-agent:f05f363f24f46e74a65720861f90f3d0 ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -335,14 +337,19 @@ ar-Value:2000168323-1-depth-52
         mu:value               "52" .
 
 ar-bibliography:2000168323-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 2000168323"@en , "Bibliografia 1 del bene culturale: 2000168323"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 2000168323"@it , "Bibliography 1 of cultural property: 2000168323"@en ;
+        arco-cd:bibliographicReference  "di confronto: Paulis, Susanna - 2012" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Paulis, Susanna" ;
+        arco-cd:bibliographicReferenceDate
+                "2012" ;
         arco-cd:bibliographyLocalIdentifier
                 "299" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
-        arco-core:hasCategory     <https://w3id.org/arco/resource/BibliographyCategory/di-confronto> ;
-        arco-core:note            "pp. 64-187." ;
-        l0:name                   "Bibliography 1 of cultural property: 2000168323"@en , "Bibliografia 1 del bene culturale: 2000168323"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323> ;
+        arco-core:hasCategory           <https://w3id.org/arco/resource/BibliographyCategory/di-confronto> ;
+        arco-core:note                  "pp. 64-187" ;
+        l0:name                         "Bibliografia 1 del bene culturale: 2000168323"@en , "Bibliography 1 of cultural property: 2000168323"@en .
 
 ar-CulturalEntityTechnicalStatus:2000168323-decorative-2
         a           arco-dd:CulturalEntityTechnicalStatus ;
@@ -361,17 +368,30 @@ ar-event:2000168323-creation
         tiapit:atTime  ar-TimeInterval:xix-sec ;
         l0:name        "Realizzazione del bene 2000168323"@it , "Creation of cultural property 2000168323"@en .
 
+ar-CulturalEntityTechnicalStatus:2000168323
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico del bene culturale 2000168323"@it , "Technical status of cultural property 2000168323"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:legno-di-castagno , ar-TechnicalCharacteristic:intaglio ;
+        l0:name     "Stato tecnico del bene culturale 2000168323"@it , "Technical status of cultural property 2000168323"@en .
+
+ar-Site:923fd13f958d82813f5116abaf09f866
+        a                cis:Site ;
+        rdfs:label       "Museo del Legno" ;
+        cis:siteAddress  ar-address:7c92a76200066e323645d455b4e1cd9a ;
+        l0:name          "Museo del Legno" .
+
 <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/2000168323>
         a                               arco-arco:DemoEthnoAnthropologicalHeritage , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "cassa" ;
-        rdfs:label                      "cassa - Barbagia di Belvì (XIX sec.)"@it , "cassa - Barbagia di Belvì (XIX sec.)"@en ;
+        rdfs:label                      "cassa - Barbagia di Belvì (XIX sec)"@en , "cassa - Barbagia di Belvì (XIX sec)"@it ;
         pico:materialAndTechnique       ar-TechnicalCharacteristic:legno-di-castagno , ar-TechnicalCharacteristic:intaglio ;
         dc:coverage                     ar-city:sorgono ;
         dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/2000168323-cultural-scope-attribution-1> ;
-        dc:description                  "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato." ;
+        dc:description                  "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato" ;
         dc:format                       ar-MeasurementCollection:2000168323-1 ;
         dc:identifier                   "2000168323" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000168323-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:2000168323-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_materiali_della_tradizione_e_del_folklore> ;
         dc:type                         ar-culturalPropertyType:db645c4a8554c595ba4d24965ae2943b ;
@@ -380,7 +400,7 @@ ar-event:2000168323-creation
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordBDM/2000168323> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/7c92a76200066e323645d455b4e1cd9a" ;
+                ar-address:7c92a76200066e323645d455b4e1cd9a ;
         arco-arco:catalogueNumber       "00168323" ;
         arco-arco:hasCataloguingAgency  ar-agent:b29df33b907c20bd2be0ff0b149efffc ;
         arco-arco:hasHeritageProtectionAgency
@@ -396,7 +416,7 @@ ar-event:2000168323-creation
         arco-cd:hasDocumentation        ar-photograpyDocumentation:2000168323-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:2000168323-legal-situation-proprieta-ente-pubblico-territoriale ;
         arco-cd:hasUse                  <https://w3id.org/arco/resource/Use/2000168323-use-1> ;
-        arco-core:description           "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato." ;
+        arco-core:description           "Cassa parallelepipeda apribile dal lato superiore attraverso un coperchio ribaltabile e caratterizzata da un frontone decorato ad intaglio. Come in molte casse isolane dell'epoca si ravvisano tracce di cromia rossa sul lato decorato" ;
         arco-core:hasAgentRole          ar-agentrole:2000168323-cataloguing-agency , ar-agentrole:2000168323-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:2000168323-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
@@ -413,19 +433,6 @@ ar-event:2000168323-creation
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:2000168323-alternative-1 , ar-timeIndexedTypedLocation:2000168323-current .
 
-ar-CulturalEntityTechnicalStatus:2000168323
-        a           arco-dd:CulturalEntityTechnicalStatus ;
-        rdfs:label  "Stato tecnico del bene culturale 2000168323"@it , "Technical status of cultural property 2000168323"@en ;
-        arco-dd:includesTechnicalCharacteristic
-                ar-TechnicalCharacteristic:legno-di-castagno , ar-TechnicalCharacteristic:intaglio ;
-        l0:name     "Stato tecnico del bene culturale 2000168323"@it , "Technical status of cultural property 2000168323"@en .
-
-ar-Site:923fd13f958d82813f5116abaf09f866
-        a                cis:Site ;
-        rdfs:label       "Museo del Legno" ;
-        cis:siteAddress  ar-address:7c92a76200066e323645d455b4e1cd9a ;
-        l0:name          "Museo del Legno" .
-
 ar-role:HeritageProtectionAgency
         a                   roapit:Role ;
         rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
@@ -433,7 +440,7 @@ ar-role:HeritageProtectionAgency
 
 ar-timeIndexedRole:2000168323-rvm-ead124946ac0f35db0b60a6d7cdbced7
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "TRASCRIZIONE da Nunfris, A."@it , "Digital transcription by Nunfris, A."@en ;
+        rdfs:label             "TRASCRIZIONE da Nunfris, A"@it , "Digital transcription by Nunfris, A"@en ;
         roapit:isRoleInTimeOf  ar-agent:ead124946ac0f35db0b60a6d7cdbced7 ;
         roapit:withRole        ar-role:DigitalTranscriptionOperator .
 
@@ -464,9 +471,9 @@ ar-timeIndexedRole:2000168323-rvm-ead124946ac0f35db0b60a6d7cdbced7
 
 ar-TimeInterval:xix-sec
         a            tiapit:TimeInterval ;
-        rdfs:label   "XIX sec." ;
-        tiapit:time  "XIX sec." ;
-        l0:name      "XIX sec." .
+        rdfs:label   "XIX sec" ;
+        tiapit:time  "XIX sec" ;
+        l0:name      "XIX sec" .
 
 ar-Site:709867ceda77a5e6ce87fe49e08ff1ae
         a                cis:Site ;
@@ -534,7 +541,7 @@ ar-country:italia  a  clvapit:Country ;
 
 ar-timeIndexedRole:2000168323-compilation-ead124946ac0f35db0b60a6d7cdbced7
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Nunfris, A."@en , "Compilazione da Nunfris, A."@it ;
+        rdfs:label             "Compilation by Nunfris, A"@en , "Compilazione da Nunfris, A"@it ;
         roapit:isRoleInTimeOf  ar-agent:ead124946ac0f35db0b60a6d7cdbced7 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 

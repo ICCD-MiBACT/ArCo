@@ -1,15 +1,15 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
 @prefix ar-documentType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix ar-catalogueRecordSI: <https://w3id.org/arco/resource/CatalogueRecordSI/> .
 @prefix pico:  <http://data.cochrane.org/ontologies/pico/> .
-@prefix ar-detectionMethod: <https://w3id.org/arco/resource/DetectionMethod/> .
+@prefix ar-detectionMethod: <htB.tps://w3id.org/arco/resource/DetectionMethod/> .
 @prefix ar-event: <https://w3id.org/arco/resource/Event/> .
 @prefix arco-catalogue: <https://w3id.org/arco/ontology/catalogue/> .
 @prefix ar-RelatedWorkSituation: <https://w3id.org/arco/resource/RelatedWorkSituation/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-role:Mint  a             roapit:Role ;
@@ -121,7 +123,7 @@ ar-agentrole:0900746467-issuance-1-issuer-1
 
 ar-catalogueRecordVersion:0900746467-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 2012 Rousseau B." ;
+        rdfs:label                   "COMPILAZIONE - 2012 Rousseau B" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2012 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0900746467-compilation-33ba533799d182c9e88121412426ea19 , ar-timeIndexedRole:0900746467-ec80617d58e4e524394eba9027cec9ec ;
@@ -144,17 +146,9 @@ ar-agent:f262108a67caf8abf3dd7c8c47251ebd
 
 ar-timeIndexedRole:0900746467-compilation-33ba533799d182c9e88121412426ea19
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Rousseau B."@en , "Compilazione da Rousseau B."@it ;
+        rdfs:label             "Compilation by Rousseau B"@en , "Compilazione da Rousseau B"@it ;
         roapit:isRoleInTimeOf  ar-agent:33ba533799d182c9e88121412426ea19 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
-
-ar-agent:401eab3f41505c97056f8eefc9b7b8b7
-        a                             CPV:Person ;
-        rdfs:label                    "Siries Luigi" ;
-        arco-cd:agentDate             "1743/ 1811" ;
-        arco-cd:agentLocalIdentifier  "00004551" ;
-        arco-cd:isAuthorOf            <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
-        l0:name                       "Siries Luigi" .
 
 <https://w3id.org/arco/resource/WritingSystem/latino>
         a           arco-dd:WritingSystem ;
@@ -240,11 +234,11 @@ ar-event:0900746467-creation-1
 
 ar-agent:8a1c01ed7ebb1de617e6a781118fb41a
         a           l0:Agent ;
-        rdfs:label  "Sframeli M." .
+        rdfs:label  "Sframeli M" .
 
 <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467>
         a             arco-catalogue:CatalogueRecordNU ;
-        rdfs:label    "Scheda catalografica n: 0900746467"@it , "Catalogue Record n: 0900746467"@en ;
+        rdfs:label    "Catalogue Record n: 0900746467"@en , "Scheda catalografica n: 0900746467"@it ;
         dc:language   "ita" ;
         dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
@@ -303,7 +297,7 @@ ar-photograpyDocumentation:0900746467-photographic-documentation-1
 
 ar-timeIndexedRole:0900746467-ec80617d58e4e524394eba9027cec9ec
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Sframeli M."@it , "Official in charge: Sframeli M."@en ;
+        rdfs:label             "Funzionario responsabile: Sframeli M"@it , "Official in charge: Sframeli M"@en ;
         roapit:isRoleInTimeOf  ar-agent:8a1c01ed7ebb1de617e6a781118fb41a ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -365,7 +359,7 @@ ar-Site:29dd39ce13a94d043b713bdb2507228f
         dc:description                  "Dritto: busto corazzato a destra; accette incrociate. Rovescio: stemma rettangolare coronato circondato dal collare del Toson d'oro" ;
         dc:format                       ar-MeasurementCollection:0900746467-1 ;
         dc:identifier                   "0900746467" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900746467-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0900746467-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#monete_e_medaglie> , ar-Subject:184748e0f820f9b05b9167b6e3e88943 ;
         dc:type                         ar-culturalPropertyType:8f9f34c41fd574e8b6c473ff2401db69 ;
@@ -374,7 +368,7 @@ ar-Site:29dd39ce13a94d043b713bdb2507228f
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/790e4be7eaac1705136cfaf4be7454e9" ;
+                ar-address:790e4be7eaac1705136cfaf4be7454e9 ;
         arco-arco:catalogueNumber       "00746467" ;
         arco-arco:hasCataloguingAgency  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
         arco-arco:hasHeritageProtectionAgency
@@ -384,7 +378,7 @@ ar-Site:29dd39ce13a94d043b713bdb2507228f
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordNU/0900746467> ;
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0900746467-acquisition-1> ;
-        arco-cd:hasAuthor               ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        arco-cd:hasAuthor               ar-agent:3bc5762884437378b2b0c92ee3b07e73 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:0900746467-1 ;
         arco-cd:hasBibliography         ar-bibliography:0900746467-bibliography-1 ;
@@ -452,7 +446,7 @@ ar-role:Issuer  a           roapit:Role ;
 ar-PreferredAuthorshipAttribution:0900746467-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0900746467"@it , "Preferred authorship attribution of cultural property: 0900746467"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:401eab3f41505c97056f8eefc9b7b8b7 ;
+        arco-cd:hasAttributedAuthor  ar-agent:3bc5762884437378b2b0c92ee3b07e73 ;
         arco-cd:hasInterpretationCriterion
                 ar-interpretationCriterion:monogramma ;
         arco-cd:isAuthorshipAttributionOf
@@ -466,10 +460,10 @@ ar-PreferredAuthorshipAttribution:0900746467-1
 
 ar-TimeInterval:1780-dc-1780-dc
         a                    tiapit:TimeInterval ;
-        rdfs:label           "1780 d.C. - 1780 d.C." ;
-        arco-arco:endTime    "1780 d.C." ;
-        arco-arco:startTime  "1780 d.C." ;
-        l0:name              "1780 d.C. - 1780 d.C." .
+        rdfs:label           "1780 d.C - 1780 d.C" ;
+        arco-arco:endTime    "1780 d.C" ;
+        arco-arco:startTime  "1780 d.C" ;
+        l0:name              "1780 d.C - 1780 d.C" .
 
 <https://w3id.org/arco/resource/CulturalPropertyPart/0900746467-obverse>
         a                          arco-arco:CulturalPropertyPart ;
@@ -486,6 +480,14 @@ ar-TimeInterval:1780-dc-1780-dc
         arco-cd:isAcquisitionOf      <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
         tiapit:time                  "1958 ante" ;
         l0:name                      "Acquisition 1 of cultural property: 0900746467"@en , "Acquisizione 1 del bene culturale: 0900746467"@it .
+
+ar-agent:3bc5762884437378b2b0c92ee3b07e73
+        a                             CPV:Person ;
+        rdfs:label                    "Siries Luigi" ;
+        arco-cd:agentDate             "1743/ 1811" ;
+        arco-cd:agentLocalIdentifier  "00004551" ;
+        arco-cd:isAuthorOf            <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        l0:name                       "Siries Luigi" .
 
 ar-interpretationCriterion:monogramma
         a           arco-cd:InterpretationCriterion ;
@@ -540,13 +542,18 @@ ar-dating:0900746467-1
         l0:name                 "Dating 1 of cultural property 0900746467"@en , "Cronologia 1 del bene 0900746467"@it .
 
 ar-bibliography:0900746467-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0900746467"@en , "Bibliografia 1 del bene culturale: 0900746467"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 1 of cultural property: 0900746467"@en , "Bibliografia 1 del bene culturale: 0900746467"@it ;
+        arco-cd:bibliographicReference  "bibliografia di confronto: Toderi G./ Vannel F - 2006" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Toderi G./ Vannel F" ;
+        arco-cd:bibliographicReferenceDate
+                "2006" ;
         arco-cd:bibliographyLocalIdentifier
                 "00016431" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
-        arco-core:hasCategory     arco-cd:ComparativeBibliography ;
-        l0:name                   "Bibliography 1 of cultural property: 0900746467"@en , "Bibliografia 1 del bene culturale: 0900746467"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/NumismaticProperty/0900746467> ;
+        arco-core:hasCategory           arco-cd:ComparativeBibliography ;
+        l0:name                         "Bibliografia 1 del bene culturale: 0900746467"@en , "Bibliography 1 of cultural property: 0900746467"@en .
 
 ar-region:fi  a     clvapit:Province ;
         rdfs:label  "FI" ;
@@ -565,7 +572,7 @@ ar-Value:0900746467-1-diameter-041
 
 ar-agent:33ba533799d182c9e88121412426ea19
         a           l0:Agent ;
-        rdfs:label  "Rousseau B." .
+        rdfs:label  "Rousseau B" .
 
 ar-designationInTime:0900746467-francescone
         a           arco-dd:DesignationInTime ;

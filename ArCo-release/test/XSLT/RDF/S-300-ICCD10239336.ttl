@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 <https://w3id.org/arco/resource/FontStyle/stampatello>
@@ -112,7 +114,7 @@ ar-TechnicalCharacteristic:carta-cromolitografia
 ar-ConservationStatus:0500436576-conservation-status-1
         a                         arco-dd:ConservationStatus ;
         rdfs:label                "Stato di conservazione 1 del bene: 0500436576"@it , "Conservation status 1 of cultural property: 0500436576"@en ;
-        arco-core:specifications  "Manifesto stampato su unico foglio con l'altro soggetto Magnesia San Pellegrino (dim. tot. cm 140 x 99). Parzialmente mancante di margine superiore. Il foglio è stato strappato dal muro, e presenta al verso e al recto vari strati di manifesti strappati, resti di colla, accumuli di polvere e altro materiale. Conseguenze della poco attenta rimozione sono le pieghe e le mancanze." ;
+        arco-core:specifications  "Manifesto stampato su unico foglio con l'altro soggetto Magnesia San Pellegrino (dim. tot. cm 140 x 99). Parzialmente mancante di margine superiore. Il foglio è stato strappato dal muro, e presenta al verso e al recto vari strati di manifesti strappati, resti di colla, accumuli di polvere e altro materiale. Conseguenze della poco attenta rimozione sono le pieghe e le mancanze" ;
         arco-dd:hasConservationStatusType
                 arco-dd:MediocreConservationStatus ;
         l0:name                   "Stato di conservazione 1 del bene: 0500436576"@it , "Conservation status 1 of cultural property: 0500436576"@en .
@@ -124,7 +126,7 @@ ar-agent:49aff3509498c7ec71887134339fddce
 ar-PreferredAuthorshipAttribution:0500436576-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0500436576"@it , "Preferred authorship attribution of cultural property: 0500436576"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        arco-cd:hasAttributedAuthor  ar-agent:3fc6cda13116bd6003563c4db9e8d928 ;
         arco-cd:hasInterpretationCriterion
                 ar-interpretationCriterion:firma ;
         arco-cd:isAuthorshipAttributionOf
@@ -168,14 +170,19 @@ ar-CulturalEntityTechnicalStatus:0500436576
         l0:name     "Stato tecnico del bene culturale 0500436576"@it , "Technical status of cultural property 0500436576"@en .
 
 ar-bibliography:0500436576-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0500436576"@en , "Bibliografia 1 del bene culturale: 0500436576"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 0500436576"@it , "Bibliography 1 of cultural property: 0500436576"@en ;
+        arco-cd:bibliographicReference  "bibliografia di confronto: Italia che cambia - 1989" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Italia che cambia" ;
+        arco-cd:bibliographicReferenceDate
+                "1989" ;
         arco-cd:bibliographyLocalIdentifier
                 "S1000001" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0500436576 ;
-        arco-core:hasCategory     arco-cd:ComparativeBibliography ;
-        arco-core:note            "p. 202" ;
-        l0:name                   "Bibliography 1 of cultural property: 0500436576"@en , "Bibliografia 1 del bene culturale: 0500436576"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0500436576 ;
+        arco-core:hasCategory           arco-cd:ComparativeBibliography ;
+        arco-core:note                  "p. 202" ;
+        l0:name                         "Bibliography 1 of cultural property: 0500436576"@en , "Bibliografia 1 del bene culturale: 0500436576"@en .
 
 ar-culturalPropertyType:33d58e4a833816969251025527426665
         a           arco-dd:CulturalPropertyType ;
@@ -355,14 +362,6 @@ ar-TimeInterval:1925-1925
         arco-arco:startTime  "1925" ;
         l0:name              "1925 - 1925" .
 
-ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7
-        a                             CPV:Person ;
-        rdfs:label                    "Depero Fortunato" ;
-        arco-cd:agentDate             "1892/ 1960" ;
-        arco-cd:agentLocalIdentifier  "S1000134" ;
-        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0500436576 ;
-        l0:name                       "Depero Fortunato" .
-
 <https://w3id.org/arco/resource/AffixedElementType/civile>
         a           arco-dd:AffixedElementType ;
         rdfs:label  "civile" ;
@@ -440,6 +439,14 @@ ar-address:8886a02ff0fb574ac2b7860d0e2cffd5
         clvapit:hasProvince  ar-province:tv ;
         clvapit:hasRegion    ar-region:veneto .
 
+ar-agent:3fc6cda13116bd6003563c4db9e8d928
+        a                             CPV:Person ;
+        rdfs:label                    "Depero Fortunato" ;
+        arco-cd:agentDate             "1892/ 1960" ;
+        arco-cd:agentLocalIdentifier  "S1000134" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0500436576 ;
+        l0:name                       "Depero Fortunato" .
+
 ar-HistoricOrArtisticProperty:0500436576
         a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "manifesto, pubblicitario" ;
@@ -449,10 +456,10 @@ ar-HistoricOrArtisticProperty:0500436576
         dc:coverage                     ar-city:treviso ;
         dc:creator                      ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
         dc:date                         ar-TimeInterval:1925-1925 ;
-        dc:description                  "Lettura iconografica: automa. Categoria merceologica/ tipo evento: industria farmaceutica; preparati farmaceutici; purgante. Nomi: Magnesia S. Pellegrino. Luoghi: Trento; Rovereto." ;
+        dc:description                  "Lettura iconografica: automa. Categoria merceologica/ tipo evento: industria farmaceutica; preparati farmaceutici; purgante. Nomi: Magnesia S. Pellegrino. Luoghi: Trento; Rovereto" ;
         dc:format                       ar-MeasurementCollection:0500436576-1 ;
         dc:identifier                   "0500436576" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500436576-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0500436576-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
         dc:subject                      ar-Subject:d4a6948948a409ef3c40ac9be6bf2e8f , <http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici> ;
         dc:title                        <https://w3id.org/arco/resource/Title/0500436576-magnesia-s-pellegrino> ;
@@ -462,7 +469,7 @@ ar-HistoricOrArtisticProperty:0500436576
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/8886a02ff0fb574ac2b7860d0e2cffd5" ;
+                ar-address:8886a02ff0fb574ac2b7860d0e2cffd5 ;
         arco-arco:catalogueNumber       "00436576" ;
         arco-arco:hasCataloguingAgency  ar-agent:fe113185bede3f826ee42b2b66726fde ;
         arco-arco:hasHeritageProtectionAgency
@@ -472,7 +479,7 @@ ar-HistoricOrArtisticProperty:0500436576
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordS/0500436576> ;
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0500436576-acquisition-1> ;
-        arco-cd:hasAuthor               ar-agent:841fb4f5d219adca8e7f1eb276aa3cf7 ;
+        arco-cd:hasAuthor               ar-agent:3fc6cda13116bd6003563c4db9e8d928 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:0500436576-1 ;
         arco-cd:hasBibliography         ar-bibliography:0500436576-bibliography-1 ;

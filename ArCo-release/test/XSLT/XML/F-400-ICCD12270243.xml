@@ -1,211 +1,219 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <F version="4.00_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo scheda">F</TSK>
-         <LIR hint="Livello catalogazione">I</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice Regione">12</NCTR>
-            <NCTN hint="Numero catalogo generale">01250498</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">ICCD</ESC>
-         <ECP hint="Ente competente per tutela">ICCD</ECP>
-      </CD>
-      <OG hint="BENE CULTURALE">
-         <AMB hint="Ambito di tutela MiBACT">storico artistico</AMB>
-         <CTG hint="Categoria">documentazione del patrimonio paesaggistico</CTG>
-         <OGT hint="DEFINIZIONE BENE">
-            <OGTD hint="Definizione">positivo</OGTD>
-            <OGTT hint="Tipologia">cartella</OGTT>
-         </OGT>
-         <QNT hint="QUANTITA'">
-            <QNTN hint="Quantità degli esemplari">1</QNTN>
-            <QNTI hint="Quantità degli elementi">1</QNTI>	
-         </QNT>
-         <OGC hint="TRATTAMENTO CATALOGRAFICO">
-            <OGCT hint="Trattamento catalografico">bene semplice</OGCT>
-            <OGCN hint="Numero parti componenti">1</OGCN>
-         </OGC>
-         <OGM hint="Modalità di individuazione">appartenenza ad una collezione o raccolta pubblica</OGM>
-         <OGR hint="Disponibilità del bene">bene disponibile</OGR>
-      </OG>
-      <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
-         <PVC hint="LOCALIZZAZIONE">
-            <PVCS hint="Stato">ITALIA</PVCS>
-            <PVCR hint="Regione">Lazio</PVCR>
-            <PVCP hint="Provincia">RM</PVCP>
-            <PVCC hint="Comune">Roma</PVCC>
-         </PVC>
-         <LDC hint="COLLOCAZIONE SPECIFICA">
-            <LDCT hint="Tipologia contenitore fisico">ospizio</LDCT>
-            <LDCQ hint="Qualificazione contenitore fisico">apostolico</LDCQ>
-            <LDCN hint="Denominazione contenitore fisico">Conservatorio delle Zitelle</LDCN>
-            <LDCF hint="Uso contenitore fisico">ufficio</LDCF>
-            <LDCC hint="Complesso monumentale di appartenenza">Ospizio apostolico di San Michele a Ripa Grande</LDCC>
-            <LDCU hint="Indicazioni viabilistiche">via di San Michele, 18</LDCU>
-            <LDCM hint="Denominazione contenitore giuridico">Istituto centrale per il catalogo e la documentazione</LDCM>
-            <LDCS hint="Specifiche">Gabinetto fotografico nazionale</LDCS>
-            <LDCD hint="Riferimento cronologico">1975</LDCD>
-         </LDC>
-         <ACB hint="ACCESSIBILITA' DEL BENE">
-            <ACBA hint="Accessibilità">si</ACBA>
-         </ACB>
-      </LC>
-      <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO - AMMINISTRATIVE">
-         <TLC hint="Tipo di localizzazione">luogo di provenienza/collocazione precedente</TLC>
-         <PRV hint="LOCALIZZAZIONE">
-            <PRVS hint="Stato">ITALIA</PRVS>
-            <PRVR hint="Regione">Lazio</PRVR>
-            <PRVP hint="Provincia">RM</PRVP>
-            <PRVC hint="Comune">Roma</PRVC>
-         </PRV>
-         <PRC hint="COLLOCAZIONE SPECIFICA">
-            <PRCT hint="Tipologia contenitore fisico">palazzo</PRCT>
-            <PRCU hint="Indicazioni viabilistiche">via di San Michele, 13</PRCU>
-            <PRCM hint="Denominazione contenitore giuridico">Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti</PRCM>
-            <PRCS hint="Specifiche">Archivio fotografico</PRCS>
-         </PRC>
-         <PRD hint="DATI CRONOLOGICI">
-            <PRDI hint="Riferimento cronologico/data inizio">1893</PRDI>
-            <PRDU hint="Data fine">1973</PRDU>
-         </PRD>
-      </LA>
-      <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO - AMMINISTRATIVE">
-         <TLC hint="Tipo di localizzazione">luogo di provenienza/collocazione precedente</TLC>
-         <PRV hint="LOCALIZZAZIONE">
-            <PRVS hint="Stato">ITALIA</PRVS>
-            <PRVR hint="Regione">Lazio</PRVR>
-            <PRVP hint="Provincia">RM</PRVP>
-            <PRVC hint="Comune">Roma</PRVC>
-         </PRV>
-         <PRC hint="COLLOCAZIONE SPECIFICA">
-            <PRCT hint="Tipologia contenitore fisico">palazzo</PRCT>
-            <PRCU hint="Indicazioni viabilistiche">via in Miranda, 5</PRCU>
-            <PRCM hint="Denominazione contenitore giuridico">Gabinetto Fotografico Nazionale</PRCM>
-         </PRC>
-         <PRD hint="DATI CRONOLOGICI">
-            <PRDI hint="Riferimento cronologico/data inizio">1973</PRDI>
-            <PRDU hint="Data fine">1975</PRDU>
-         </PRD>
-      </LA>
-      <UB hint="DATI PATRIMONIALI/INVENTARI/STIME/COLLEZIONI">
-         <UBF hint="UBICAZIONE BENE">
-            <UBFP hint="Fondo">MPI - Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti</UBFP>
-            <UBFS hint="Serie archivistica">Fotografie inventariate non cartonate/ Da Lucca (LU) - Pinacoteca Nazionale a Luvinate (VA)</UBFS>
-            <UBFU hint="Titolo di unità archivistica">Lusevera (Udine)</UBFU>
-            <UBFC hint="Collocazione">Sala C 6447.03</UBFC>
-         </UBF>
-         <INP hint="INVENTARIO PATRIMONIALE IN VIGORE"/>
-         <INV hint="ALTRI INVENTARI"/>
-      </UB>
-      <AU hint="DEFINIZIONE CULTURALE">
-         <AUT hint="AUTORE/RESPONSABILITA'">
-            <AUTJ hint="Ente schedatore">ICCD</AUTJ>
-            <AUTH hint="Codice identificativo">00242</AUTH>
-            <AUTN hint="Nome scelto di persona o ente">Anonimo &lt;1901-1925&gt;</AUTN>
-            <AUTP hint="Tipo intestazione">P</AUTP>
-            <AUTA hint="Indicazioni cronologiche">XX primo quarto</AUTA>
-            <AUTR hint="Ruolo">fotografo principale</AUTR>
-            <AUTM hint="Motivazione/fonte">analisi tecnico-formale</AUTM>
-         </AUT>
-      </AU>
-      <SG hint="SOGGETTO">
-         <SGT hint="SOGGETTO">
-            <SGTI hint="Identificazione">Friuli Venezia Giulia - Udine &lt;provincia&gt; - Lusevera - Grotta di Villanova</SGTI>
-         </SGT>
-         <SGL hint="TITOLO">
-            <SGLT hint="Titolo proprio">Com. di Lusevera (Udine). Grotta di Villanova. Profondità. metri 60</SGLT>
-            <SGLS hint="Specifiche titolo">manoscritto al verso</SGLS>
-         </SGL>
-      </SG>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Fascia cronologica/periodo">XX</DTZG>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">1901</DTSI>
-            <DTSV hint="Validità">ca</DTSV>
-            <DTSF hint="A">1925</DTSF>
-            <DTSL hint="Validità">ca</DTSL>
-         </DTS>
-         <DTM hint="Motivazione/fonte">analisi tecnico-formale</DTM>
-      </DT>
-      <LR hint="LUOGO E DATA DELLA RIPRESA">
-         <LRC hint="LOCALIZZAZIONE">
-            <LRCS hint="Stato">ITALIA</LRCS>
-            <LRCR hint="Regione">Friuli-Venezia Giulia</LRCR>
-         </LRC>
-         <LRD hint="Data della ripresa">1901-1925</LRD>
-      </LR>
-      <MT hint="DATI TECNICI">
-         <MTX hint="Indicazione di colore">BN</MTX>
-         <MTC hint="MATERIA E TECNICA">
-            <MTCM hint="Materia">carta</MTCM>
-            <MTCT hint="Tecnica">gelatina bromuro d'argento</MTCT>
-         </MTC>
-         <MIS hint="MISURE">
-            <MISP hint="Riferimento alla parte">supporto primario</MISP>
-            <MISZ hint="Tipo di misura">altezzaxlunghezza</MISZ>
-            <MISU hint="Unità di misura">mm</MISU>
-            <MISM hint="Valore">122x171</MISM>
-         </MIS>
-         <FRM hint="Formato">18 x 24</FRM>
-      </MT>
-      <CO hint="CONSERVAZIONE E INTERVENTI">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">buono</STCC>
-         </STC>
-         <STD hint="Modalità di conservazione">conservato in cassettiera, in locale non climatizzato</STD>
-         <STP hint="Proposte di interventi">spolveratura/ condizionamento</STP>
-      </CO>
-      <DA hint="DATI ANALITICI">
-         <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
-            <ISEP hint="Posizione">al verso</ISEP>
-            <ISED hint="Definizione">timbro</ISED>
-            <ISEE hint="Specifiche">di collezione</ISEE>
-            <ISEZ hint="Descrizione">timbro tondo a inchiostro blu con la scritta: Ministero della Pubblica Istruzione direzione Generale Arti - Archivio Fotografico</ISEZ>
-            <ISEO hint="Identificazione">Ministero della Pubblica Istruzione</ISEO>
-         </ISE>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
-            <CDGS hint="Indicazione specifica">Ministero per i Beni e le Attività Culturali/ Istituto centrale per il catalogo e la documentazione</CDGS>
-            <CDGI hint="Indirizzo">via di San Michele 18</CDGI>
-         </CDG>
-         <ACQ hint="ACQUISIZIONE">
-            <ACQT hint="Tipo acquisizione">assegnazione</ACQT>
-            <ACQN hint="Nome">Ministero della Pubblica Istruzione</ACQN>
-            <ACQD hint="Riferimento cronologico">1973</ACQD>
-            <ACQL hint="Luogo acquisizione">Lazio/ RM/ Roma</ACQL>
-         </ACQ>
-         <BPT hint="Provvedimenti di tutela - sintesi">no</BPT>
-      </TU>
-      <DO hint="DOCUMENTAZIONE">
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAN hint="Codice identificativo">MPI6014820</FTAN>
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAF hint="Formato">.jpeg</FTAF>
-            <FTAK hint="Nome file originale">MPI6014820.jpg</FTAK>
-         </FTA>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBM hint="Riferimento bibliografico completo">Riferimento prova</BIBM>
-         </BIB>
-      </DO>
-      <AD hint="ACCESSO AI DATI">
-         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
-            <ADSP hint="Profilo di accesso">1</ADSP>
-            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
-         </ADS>
-      </AD>
-      <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
-         <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
-            <CMPD hint="Anno di redazione">2012</CMPD>
-            <CMPN hint="Responsabile ricerca e redazione">Pacella, Manuela</CMPN>
-         </CMP>
-         <RSR hint="Referente verifica scientifica">Cavanna, Pierangelo</RSR>
-         <FUR hint="Funzionario responsabile">Berardi, Elena</FUR>
-      </CM>
-   </F>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD12270243@</identifier>
+        <datestamp>2016-04-05T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <F version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">F</TSK>
+                    <LIR hint="Livello catalogazione">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice Regione">12</NCTR>
+                        <NCTN hint="Numero catalogo generale">01250498</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                    <ECP hint="Ente competente per tutela">ICCD</ECP>
+                </CD>
+                <OG hint="BENE CULTURALE">
+                    <AMB hint="Ambito di tutela MiBACT">storico artistico</AMB>
+                    <CTG hint="Categoria">documentazione del patrimonio paesaggistico</CTG>
+                    <OGT hint="DEFINIZIONE BENE">
+                        <OGTD hint="Definizione">positivo</OGTD>
+                        <OGTT hint="Tipologia">cartella</OGTT>
+                    </OGT>
+                    <QNT hint="QUANTITA'">
+                        <QNTN hint="Quantità degli esemplari">1</QNTN>
+                        <QNTI hint="Quantità degli elementi">1</QNTI>
+                    </QNT>
+                    <OGC hint="TRATTAMENTO CATALOGRAFICO">
+                        <OGCT hint="Trattamento catalografico">bene semplice</OGCT>
+                        <OGCN hint="Numero parti componenti">1</OGCN>
+                    </OGC>
+                    <OGM hint="Modalità di individuazione">appartenenza ad una collezione o raccolta pubblica</OGM>
+                    <OGR hint="Disponibilità del bene">bene disponibile</OGR>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Lazio</PVCR>
+                        <PVCP hint="Provincia">RM</PVCP>
+                        <PVCC hint="Comune">Roma</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia contenitore fisico">ospizio</LDCT>
+                        <LDCQ hint="Qualificazione contenitore fisico">apostolico</LDCQ>
+                        <LDCN hint="Denominazione contenitore fisico">Conservatorio delle Zitelle</LDCN>
+                        <LDCF hint="Uso contenitore fisico">ufficio</LDCF>
+                        <LDCC hint="Complesso monumentale di appartenenza">Ospizio apostolico di San Michele a Ripa Grande</LDCC>
+                        <LDCU hint="Indicazioni viabilistiche">via di San Michele, 18</LDCU>
+                        <LDCM hint="Denominazione contenitore giuridico">Istituto centrale per il catalogo e la documentazione</LDCM>
+                        <LDCS hint="Specifiche">Gabinetto fotografico nazionale</LDCS>
+                        <LDCD hint="Riferimento cronologico">1975</LDCD>
+                    </LDC>
+                    <ACB hint="ACCESSIBILITA' DEL BENE">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO - AMMINISTRATIVE">
+                    <TLC hint="Tipo di localizzazione">luogo di provenienza/collocazione precedente</TLC>
+                    <PRV hint="LOCALIZZAZIONE">
+                        <PRVS hint="Stato">ITALIA</PRVS>
+                        <PRVR hint="Regione">Lazio</PRVR>
+                        <PRVP hint="Provincia">RM</PRVP>
+                        <PRVC hint="Comune">Roma</PRVC>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCT hint="Tipologia contenitore fisico">palazzo</PRCT>
+                        <PRCU hint="Indicazioni viabilistiche">via di San Michele, 13</PRCU>
+                        <PRCM hint="Denominazione contenitore giuridico">Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti</PRCM>
+                        <PRCS hint="Specifiche">Archivio fotografico</PRCS>
+                    </PRC>
+                    <PRD hint="DATI CRONOLOGICI">
+                        <PRDI hint="Riferimento cronologico/data inizio">1893</PRDI>
+                        <PRDU hint="Data fine">1973</PRDU>
+                    </PRD>
+                </LA>
+                <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO - AMMINISTRATIVE">
+                    <TLC hint="Tipo di localizzazione">luogo di provenienza/collocazione precedente</TLC>
+                    <PRV hint="LOCALIZZAZIONE">
+                        <PRVS hint="Stato">ITALIA</PRVS>
+                        <PRVR hint="Regione">Lazio</PRVR>
+                        <PRVP hint="Provincia">RM</PRVP>
+                        <PRVC hint="Comune">Roma</PRVC>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCT hint="Tipologia contenitore fisico">palazzo</PRCT>
+                        <PRCU hint="Indicazioni viabilistiche">via in Miranda, 5</PRCU>
+                        <PRCM hint="Denominazione contenitore giuridico">Gabinetto Fotografico Nazionale</PRCM>
+                    </PRC>
+                    <PRD hint="DATI CRONOLOGICI">
+                        <PRDI hint="Riferimento cronologico/data inizio">1973</PRDI>
+                        <PRDU hint="Data fine">1975</PRDU>
+                    </PRD>
+                </LA>
+                <UB hint="DATI PATRIMONIALI/INVENTARI/STIME/COLLEZIONI">
+                    <UBF hint="UBICAZIONE BENE">
+                        <UBFP hint="Fondo">MPI - Ministero della Pubblica Istruzione - Direzione generale delle Antichità e Belle Arti</UBFP>
+                        <UBFS hint="Serie archivistica">Fotografie inventariate non cartonate/ Da Lucca (LU) - Pinacoteca Nazionale a Luvinate (VA)</UBFS>
+                        <UBFU hint="Titolo di unità archivistica">Lusevera (Udine)</UBFU>
+                        <UBFC hint="Collocazione">Sala C 6447.03</UBFC>
+                    </UBF>
+                </UB>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <AUT hint="AUTORE/RESPONSABILITA'">
+                        <AUTJ hint="Ente schedatore">ICCD</AUTJ>
+                        <AUTH hint="Codice identificativo">00242</AUTH>
+                        <AUTN hint="Nome scelto di persona o ente">Anonimo &lt;1901-1925&gt;</AUTN>
+                        <AUTP hint="Tipo intestazione">P</AUTP>
+                        <AUTA hint="Indicazioni cronologiche">XX primo quarto</AUTA>
+                        <AUTR hint="Ruolo">fotografo principale</AUTR>
+                        <AUTM hint="Motivazione/fonte">analisi tecnico-formale</AUTM>
+                    </AUT>
+                </AU>
+                <SG hint="SOGGETTO">
+                    <SGT hint="SOGGETTO">
+                        <SGTI hint="Identificazione">Friuli Venezia Giulia - Udine &lt;provincia&gt; - Lusevera - Grotta di Villanova</SGTI>
+                    </SGT>
+                    <SGL hint="TITOLO">
+                        <SGLT hint="Titolo proprio">Com. di Lusevera (Udine). Grotta di Villanova. Profondità. metri 60</SGLT>
+                        <SGLS hint="Specifiche titolo">manoscritto al verso</SGLS>
+                    </SGL>
+                </SG>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Fascia cronologica/periodo">XX</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1901</DTSI>
+                        <DTSV hint="Validità">ca</DTSV>
+                        <DTSF hint="A">1925</DTSF>
+                        <DTSL hint="Validità">ca</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">analisi tecnico-formale</DTM>
+                </DT>
+                <LR hint="LUOGO E DATA DELLA RIPRESA">
+                    <LRC hint="LOCALIZZAZIONE">
+                        <LRCS hint="Stato">ITALIA</LRCS>
+                        <LRCR hint="Regione">Friuli-Venezia Giulia</LRCR>
+                    </LRC>
+                    <LRD hint="Data della ripresa">1901-1925</LRD>
+                </LR>
+                <MT hint="DATI TECNICI">
+                    <MTX hint="Indicazione di colore">BN</MTX>
+                    <MTC hint="MATERIA E TECNICA">
+                        <MTCM hint="Materia">carta</MTCM>
+                        <MTCT hint="Tecnica">gelatina bromuro d'argento</MTCT>
+                    </MTC>
+                    <MIS hint="MISURE">
+                        <MISP hint="Riferimento alla parte">supporto primario</MISP>
+                        <MISZ hint="Tipo di misura">altezzaxlunghezza</MISZ>
+                        <MISU hint="Unità di misura">mm</MISU>
+                        <MISM hint="Valore">122x171</MISM>
+                    </MIS>
+                    <FRM hint="Formato">18 x 24</FRM>
+                </MT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STD hint="Modalità di conservazione">conservato in cassettiera, in locale non climatizzato</STD>
+                    <STP hint="Proposte di interventi">spolveratura/ condizionamento</STP>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISEP hint="Posizione">al verso</ISEP>
+                        <ISED hint="Definizione">timbro</ISED>
+                        <ISEE hint="Specifiche">di collezione</ISEE>
+                        <ISEZ hint="Descrizione">timbro tondo a inchiostro blu con la scritta: Ministero della Pubblica Istruzione direzione Generale Arti - Archivio Fotografico</ISEZ>
+                        <ISEO hint="Identificazione">Ministero della Pubblica Istruzione</ISEO>
+                    </ISE>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Ministero per i Beni e le Attività Culturali/ Istituto centrale per il catalogo e la documentazione</CDGS>
+                        <CDGI hint="Indirizzo">via di San Michele 18</CDGI>
+                    </CDG>
+                    <ACQ hint="ACQUISIZIONE">
+                        <ACQT hint="Tipo acquisizione">assegnazione</ACQT>
+                        <ACQN hint="Nome">Ministero della Pubblica Istruzione</ACQN>
+                        <ACQD hint="Riferimento cronologico">1973</ACQD>
+                        <ACQL hint="Luogo acquisizione">Lazio/ RM/ Roma</ACQL>
+                    </ACQ>
+                    <BPT hint="Provvedimenti di tutela - sintesi">no</BPT>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MPI6014820</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAF hint="Formato">.jpeg</FTAF>
+                        <FTAK hint="Nome file originale">MPI6014820.jpg</FTAK>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2012</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Pacella, Manuela</CMPN>
+                    </CMP>
+                    <RSR hint="Referente verifica scientifica">Cavanna, Pierangelo</RSR>
+                    <FUR hint="Funzionario responsabile">Berardi, Elena</FUR>
+                </CM>
+            </F>
+            <harvesting>
+                <geocoding>
+                    <x>12.4761314</x>
+                    <y>41.8860978</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

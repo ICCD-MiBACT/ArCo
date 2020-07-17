@@ -1,131 +1,142 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <S version="2.00_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo di scheda">S</TSK>
-         <LIR hint="Livello di ricerca">I</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">10</NCTR>
-            <NCTN hint="Numero catalogo generale">00017428</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">S38</ESC>
-         <ECP hint="Ente competente">S38</ECP>
-      </CD>
-      <LC hint="LOCALIZZAZIONE">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
-            <PVCP hint="Provincia">PG</PVCP>
-            <PVCC hint="Comune">Perugia</PVCC>
-         </PVC>
-         <LDC hint="COLLOCAZIONE SPECIFICA">
-            <LDCT hint="Tipologia">palazzo</LDCT>
-            <LDCQ hint="Qualificazione">comunale</LDCQ>
-            <LDCN hint="Denominazione">Palazzo dei Priori</LDCN>
-            <LDCC hint="Complesso monumentale di appartenenza">Palazzo dei Priori</LDCC>
-            <LDCU hint="Denominazione spazio viabilistico">Corso Vannucci - 06100 Perugia</LDCU>
-            <LDCM hint="Denominazione raccolta">Galleria Nazionale dell'Umbria</LDCM>
-            <LDCS hint="Specifiche">uffici</LDCS>
-         </LDC>
-      </LC>
-      <UB hint="UBICAZIONE">
-         <INV hint="INVENTARIO DI MUSEO O SOPRINTENDENZA"/>
-      </UB>
-      <LA hint="ALTRE LOCALIZZAZIONI">
-         <TCL hint="Tipo di Localizzazione">luogo di provenienza</TCL>
-         <PRV hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
-            <PRVP hint="Provincia">PG</PRVP>
-            <PRVC hint="Comune">Perugia</PRVC>
-         </PRV>
-         <PRC hint="COLLOCAZIONE SPECIFICA">
-            <PRCT hint="Tipologia">palazzo</PRCT>
-            <PRCD hint="Denominazione">Palazzo Conestabile della Staffa</PRCD>
-            <PRCM hint="Denominazione raccolta">Biblioteca comunale Augusta</PRCM>
-         </PRC>
-      </LA>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">stampa</OGTD>
-         </OGT>
-         <SGT hint="SOGGETTO">
-            <SGTI hint="Identificazione">veduta di Perugia</SGTI>
-            <SGTT hint="Titolo">La prima campagna del 2° reggimento del Genio a Perugia</SGTT>
-         </SGT>
-      </OG>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Secolo">sec. XIX</DTZG>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">1864</DTSI>
-            <DTSF hint="A">1864</DTSF>
-         </DTS>
-         <DTM hint="Motivazione cronologia">data</DTM>
-      </DT>
-      <AU hint="DEFINIZIONE CULTURALE">
-         <AUT hint="AUTORE">
-            <AUTN hint="Nome scelto">Bucco Luigi</AUTN>
-            <AUTA hint="Dati anagrafici">notizie metà sec. XIX</AUTA>
-            <AUTM hint="Motivazione dell'attribuzione">firma</AUTM>
-            <AUTH hint="Sigla per citazione">00001506</AUTH>
-         </AUT>
-      </AU>
-      <MT hint="DATI TECNICI">
-         <MTC hint="Materia e tecnica">carta/ litografia</MTC>
-         <MIS hint="MISURE">
-            <MISU hint="Unita'">mm.</MISU>
-            <MISA hint="Altezza">420</MISA>
-            <MISL hint="Larghezza">585</MISL>
-         </MIS>
-      </MT>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">discreto</STCC>
-         </STC>
-      </CO>
-      <DA hint="DATI ANALITICI">
-         <DES hint="DESCRIZIONE">
-            <DESS hint="Indicazioni sul soggetto">Vedute: Perugia. Soggetti profani: laa prima compagnia del secondo reggimento del genio a Perugia.</DESS>
-         </DES>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <ACQ hint="ACQUISIZIONE">
-            <ACQT hint="Tipo di acquisizione">deposito</ACQT>
-            <ACQN hint="Nome">Biblioteca comunale Augusta</ACQN>
-            <ACQL hint="Luogo acquisizione">PG/ Perugia</ACQL>
-         </ACQ>
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
-            <CDGS hint="Indicazione specifica">Comune di Perugia</CDGS>
-            <CDGI hint="Indirizzo">Corso Vannucci - 06100 Perugia</CDGI>
-         </CDG>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="FOTOGRAFIE">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale</FTAP>
-            <FTAN hint="Codice identificativo">SBAPSAE PG17428</FTAN>
-         </FTA>
-         <FNT hint="FONTI ARCHIVISTICHE">
-            <FNTP hint="Tipo">inventario</FNTP>
-            <FNTT hint="Denominazione">Inventario della raccolta storico topografica della città di Perugia</FNTT>
-            <FNTD hint="Data">1951</FNTD>
-            <FNTN hint="Nome archivio">PG/ SBAPPSAE</FNTN>
-            <FNTS hint="Posizione">.</FNTS>
-         </FNT>
-      </DO>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">2006</CMPD>
-            <CMPN hint="Nome compilatore">Sargentini C.</CMPN>
-         </CMP>
-         <FUR hint="Funzionario responsabile">Garibaldi V.</FUR>
-         <RVM hint="TRASCRIZIONE PER MEMORIZZAZIONE">
-            <RVMD hint="Data registrazione">2006</RVMD>
-            <RVMN hint="Nome revisore">Sargentini C.</RVMN>
-         </RVM>
-         <AGG hint="AGGIORNAMENTO">
-            <AGGD hint="Data">2006</AGGD>
-            <AGGN hint="Nome revisore">ARTPAST/ Sargentini C.</AGGN>
-         </AGG>
-      </CM>
-   </S>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11306934@</identifier>
+        <datestamp>2020-06-17T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <S version="2.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo di scheda">S</TSK>
+                    <LIR hint="Livello di ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">10</NCTR>
+                        <NCTN hint="Numero catalogo generale">00017428</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S38</ESC>
+                    <ECP hint="Ente competente">S38</ECP>
+                </CD>
+                <LC hint="LOCALIZZAZIONE">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
+                        <PVCP hint="Provincia">PG</PVCP>
+                        <PVCC hint="Comune">Perugia</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">palazzo</LDCT>
+                        <LDCQ hint="Qualificazione">comunale</LDCQ>
+                        <LDCN hint="Denominazione attuale">Palazzo dei Priori</LDCN>
+                        <LDCC hint="Complesso di appartenenza">Palazzo dei Priori</LDCC>
+                        <LDCU hint="Indirizzo">Corso Vannucci - 06100 Perugia</LDCU>
+                        <LDCM hint="Denominazione raccolta">Galleria Nazionale dell'Umbria</LDCM>
+                        <LDCS hint="Specifiche">uffici</LDCS>
+                    </LDC>
+                </LC>
+                <UB hint="UBICAZIONE"/>
+                <LA hint="ALTRE LOCALIZZAZIONI">
+                    <TCL hint="Tipo di Localizzazione">luogo di provenienza</TCL>
+                    <PRV hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
+                        <PRVP hint="Provincia">PG</PRVP>
+                        <PRVC hint="Comune">Perugia</PRVC>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCT hint="Tipologia">palazzo</PRCT>
+                        <PRCD hint="Denominazione">Palazzo Conestabile della Staffa</PRCD>
+                        <PRCM hint="Denominazione raccolta">Biblioteca comunale Augusta</PRCM>
+                    </PRC>
+                </LA>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">stampa</OGTD>
+                    </OGT>
+                    <SGT hint="SOGGETTO">
+                        <SGTI hint="Identificazione">veduta di Perugia</SGTI>
+                        <SGTT hint="Titolo">La prima campagna del 2° reggimento del Genio a Perugia</SGTT>
+                    </SGT>
+                </OG>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">sec. XIX</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1864</DTSI>
+                        <DTSF hint="A">1864</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">data</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <AUT hint="AUTORE">
+                        <AUTN hint="Nome scelto">Bucco Luigi</AUTN>
+                        <AUTA hint="Dati anagrafici">notizie metà sec. XIX</AUTA>
+                        <AUTM hint="Motivazione dell'attribuzione">firma</AUTM>
+                        <AUTH hint="Sigla per citazione">00001506</AUTH>
+                    </AUT>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">carta/ litografia</MTC>
+                    <MIS hint="MISURE">
+                        <MISU hint="Unità">mm</MISU>
+                        <MISA hint="Altezza">420</MISA>
+                        <MISL hint="Larghezza">585</MISL>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                    </STC>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESS hint="Indicazioni sul soggetto">Vedute: Perugia. Soggetti profani: laa prima compagnia del secondo reggimento del genio a Perugia</DESS>
+                    </DES>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <ACQ hint="ACQUISIZIONE">
+                        <ACQT hint="Tipo di acquisizione">deposito</ACQT>
+                        <ACQN hint="Nome">Biblioteca comunale Augusta</ACQN>
+                        <ACQL hint="Luogo acquisizione">PG/ Perugia</ACQL>
+                    </ACQ>
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Perugia</CDGS>
+                        <CDGI hint="Indirizzo">Corso Vannucci - 06100 Perugia</CDGI>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="FOTOGRAFIE">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale</FTAP>
+                        <FTAN hint="Codice identificativo">SBAPSAE PG17428</FTAN>
+                    </FTA>
+                    <FNT hint="FONTI ARCHIVISTICHE">
+                        <FNTP hint="Tipo">inventario</FNTP>
+                        <FNTT hint="Denominazione">Inventario della raccolta storico topografica della città di Perugia</FNTT>
+                        <FNTD hint="Data">1951</FNTD>
+                        <FNTN hint="Nome archivio">PG/ SBAPPSAE</FNTN>
+                        <FNTS hint="Posizione"/>
+                    </FNT>
+                </DO>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2006</CMPD>
+                        <CMPN hint="Nome compilatore">Sargentini C</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Garibaldi V</FUR>
+                    <RVM hint="TRASCRIZIONE PER MEMORIZZAZIONE">
+                        <RVMD hint="Data registrazione">2006</RVMD>
+                        <RVMN hint="Nome revisore">Sargentini C</RVMN>
+                    </RVM>
+                    <AGG hint="AGGIORNAMENTO">
+                        <AGGD hint="Data">2006</AGGD>
+                        <AGGN hint="Nome revisore">ARTPAST/ Sargentini C</AGGN>
+                    </AGG>
+                </CM>
+            </S>
+            <harvesting>
+                <geocoding>
+                    <x>12.3887402</x>
+                    <y>43.11142349</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

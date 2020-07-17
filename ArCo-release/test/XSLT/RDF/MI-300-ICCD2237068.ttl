@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agent:ab0e18f88b67935608a177444ae08812
@@ -91,7 +93,7 @@ ar-agent:ab0e18f88b67935608a177444ae08812
 
 ar-agent:e37fc1aaeae90256eb00d1a067734045
         a           l0:Agent ;
-        rdfs:label  "ARTPAST/ Semenzato A." .
+        rdfs:label  "ARTPAST/ Semenzato A" .
 
 ar-agent:9aace282ddb0c7c5cb2b61e7913ac2d1
         a                    COV:Organization ;
@@ -115,13 +117,13 @@ ar-interpretationCriterion:analisi-stilistica
 
 ar-timeIndexedRole:0100173819-0-compilation-bc58f28b0ffcab04b6389abbca36f787
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Ballaira E."@en , "Compilazione da Ballaira E."@it ;
+        rdfs:label             "Compilation by Ballaira E"@en , "Compilazione da Ballaira E"@it ;
         roapit:isRoleInTimeOf  ar-agent:bc58f28b0ffcab04b6389abbca36f787 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
 ar-catalogueRecordVersion:0100173819-0-agg-1
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2007 ARTPAST/ Semenzato A. NR (recupero pregresso)" ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2007 ARTPAST/ Semenzato A" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2007 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0100173819-0-agg-1-e37fc1aaeae90256eb00d1a067734045 ;
@@ -132,27 +134,27 @@ ar-catalogueRecordVersion:0100173819-0-agg-1
 
 ar-agent:24b2ef2fe855be8ded28c21b578bf5df
         a           l0:Agent ;
-        rdfs:label  "Treu P." .
+        rdfs:label  "Treu P" .
 
 ar-HistoricOrArtisticProperty:0100173819-0
         a                               arco-arco:HistoricOrArtisticProperty , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "matrice, matrice composita" ;
-        rdfs:label                      "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@it , "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@en ;
+        rdfs:label                      "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@en , "storie di San Maurizio (matrice, matrice composita) - ambito piemontese (sec. XVIII, inizio)"@it ;
         pico:materialAndTechnique       ar-TechnicalCharacteristic:legno-intaglio ;
         dc:coverage                     ar-city:torino ;
         dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/0100173819-0-cultural-scope-attribution-1> ;
         dc:date                         ar-TimeInterval:post-1700-ante-1710 ;
-        dc:description                  "Soggetti sacri. Personaggi: San Maurizio." ;
+        dc:description                  "Soggetti sacri. Personaggi: San Maurizio" ;
         dc:format                       ar-MeasurementCollection:0100173819-0-1 ;
         dc:identifier                   "0100173819-0" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0100173819-0-legal-situation-proprieta-ente-pubblico-non-territoriale" ;
+        dc:rights                       ar-legalSituation:0100173819-0-legal-situation-proprieta-ente-pubblico-non-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordMI/0100173819-0> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici> , ar-Subject:bb0f47aa9723633faa20443e4c1757ae ;
         dc:type                         ar-culturalPropertyType:935e6636547b2b41d619bb2664c576ec ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordMI/0100173819-0> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/8292f4af631ec68f0bd8a7a14ffd7351" ;
+                ar-address:8292f4af631ec68f0bd8a7a14ffd7351 ;
         arco-arco:catalogueNumber       "00173819" ;
         arco-arco:hasCataloguingAgency  ar-agent:9aace282ddb0c7c5cb2b61e7913ac2d1 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
@@ -186,13 +188,13 @@ ar-HistoricOrArtisticProperty:0100173819-0
 
 ar-timeIndexedRole:0100173819-0-rvm-24b2ef2fe855be8ded28c21b578bf5df
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da Treu P."@it , "Digital transcription by Treu P."@en ;
+        rdfs:label             "TRASCRIZIONE PER INFORMATIZZAZIONE da Treu P"@it , "Digital transcription by Treu P"@en ;
         roapit:isRoleInTimeOf  ar-agent:24b2ef2fe855be8ded28c21b578bf5df ;
         roapit:withRole        ar-role:DigitalTranscriptionOperator .
 
 ar-timeIndexedRole:0100173819-0-775c3e64736cb0a769e648a95cca7398
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Mossetti C."@it , "Official in charge: Mossetti C."@en ;
+        rdfs:label             "Funzionario responsabile: Mossetti C"@it , "Official in charge: Mossetti C"@en ;
         roapit:isRoleInTimeOf  ar-agent:8c39a4856d0baa5a0f89ad8cc5f4d85f ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -263,7 +265,7 @@ ar-TechnicalCharacteristic:legno-intaglio
 
 ar-catalogueRecordVersion:0100173819-0-rvm
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2005 Treu P." ;
+        rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 2005 Treu P" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2005 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0100173819-0-rvm-24b2ef2fe855be8ded28c21b578bf5df , ar-timeIndexedRole:0100173819-0-775c3e64736cb0a769e648a95cca7398 ;
@@ -343,11 +345,11 @@ ar-TimeInterval:2007  a  tiapit:TimeInterval ;
 
 ar-agent:bc58f28b0ffcab04b6389abbca36f787
         a           l0:Agent ;
-        rdfs:label  "Ballaira E." .
+        rdfs:label  "Ballaira E" .
 
 ar-timeIndexedRole:0100173819-0-agg-1-e37fc1aaeae90256eb00d1a067734045
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Semenzato A."@it , "Update responsible compilation: ARTPAST/ Semenzato A."@en ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Semenzato A"@it , "Update responsible compilation: ARTPAST/ Semenzato A"@en ;
         roapit:isRoleInTimeOf  ar-agent:e37fc1aaeae90256eb00d1a067734045 ;
         roapit:withRole        ar-role:UpdateResponsibleCompilation .
 
@@ -441,7 +443,7 @@ ar-TimeInterval:2005  a  tiapit:TimeInterval ;
 
 ar-agent:8c39a4856d0baa5a0f89ad8cc5f4d85f
         a           l0:Agent ;
-        rdfs:label  "Mossetti C." .
+        rdfs:label  "Mossetti C" .
 
 ar-timeIndexedTypedLocation:0100173819-0-current
         a                              arco-location:TimeIndexedTypedLocation ;
@@ -463,7 +465,7 @@ ar-ConservationStatus:0100173819-0-conservation-status-1
 
 ar-catalogueRecordVersion:0100173819-0-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 1995 Ballaira E." ;
+        rdfs:label                   "COMPILAZIONE - 1995 Ballaira E" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:1995 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0100173819-0-compilation-bc58f28b0ffcab04b6389abbca36f787 , ar-timeIndexedRole:0100173819-0-775c3e64736cb0a769e648a95cca7398 ;

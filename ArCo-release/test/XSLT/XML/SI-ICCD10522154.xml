@@ -1,153 +1,166 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <SI version="3.00_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo scheda">SI</TSK>
-         <LIR hint="Livello ricerca">P</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">05</NCTR>
-            <NCTN hint="Numero catalogo generale">00590493</NCTN>
-            <NCTS hint="Suffisso numero catalogo generale">SI</NCTS>
-         </NCT>
-         <ESC hint="Ente schedatore">S32</ESC>
-         <ECP hint="Ente competente">S32</ECP>
-      </CD>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">grotta</OGTD>
-            <OGTA hint="Livello di individuazione">rinvenimenti casuali e scavo</OGTA>
-         </OGT>
-      </OG>
-      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-            <PVCS hint="Stato">ITALIA</PVCS>
-            <PVCR hint="Regione">Veneto</PVCR>
-            <PVCP hint="Provincia">VI</PVCP>
-            <PVCC hint="Comune">Roana</PVCC>
-            <PVCV hint="Altre vie di comunicazione">GROTTA OBAR DE LEUTE, Valle del Ghelpalch, Strada del Bisele</PVCV>
-         </PVC>
-      </LC>
-      <GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
-         <GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
-         <GPD hint="DESCRIZIONE DEL PUNTO">
-            <GPDP hint="PUNTO">
-               <GPDPX hint="Coordinata X">11.448904058</GPDPX>
-               <GPDPY hint="Coordinata Y">45.854724642</GPDPY>
-            </GPDP>
-         </GPD>
-         <GPM hint="Metodo di georeferenziazione">punto approssimato</GPM>
-         <GPT hint="Tecnica di georeferenziazione">rilievo da foto aerea senza sopralluogo</GPT>
-         <GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
-         <GPB hint="BASE DI RIFERIMENTO">
-            <GPBB hint="Descrizione sintetica">ICCD1004366_OI.ORTOI</GPBB>
-            <GPBT hint="Data">30-9-2013</GPBT>
-            <GPBO hint="Note">(1481189) -ORTOFOTO 2006- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map) -OI.ORTOIMMAGINICOLORE.2006</GPBO>
-         </GPB>
-      </GP>
-      <RE hint="MODALITA' DI REPERIMENTO">
-         <RCG hint="RICOGNIZIONI">
-            <RCGD hint="Data">0000/00/00</RCGD>
-         </RCG>
-         <DSC hint="DATI DI SCAVO">
-            <SCAN hint="Denominazione dello scavo">Obar de Leute</SCAN>
-            <DSCT hint="Motivo">rinvenimento fortuito</DSCT>
-            <DSCM hint="Metodo">scavo stratigrafico</DSCM>
-            <DSCD hint="Data">1955-1956/00/00 - 1959/00/00</DSCD>
-         </DSC>
-      </RE>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Fascia cronologica di riferimento">Paleolitico medio Musteriano</DTZG>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">80.000 B.P.</DTSI>
-            <DTSV hint="Validita'">ca</DTSV>
-            <DTSF hint="A">35.000 B.P.</DTSF>
-            <DTSL hint="Validita'">ca</DTSL>
-         </DTS>
-         <DTM hint="Motivazione cronologia">analisi dei materiali</DTM>
-      </DT>
-      <AU hint="DEFINIZIONE CULTURALE">
-         <ATB hint="AMBITO CULTURALE">
-            <ATBD hint="Denominazione">Musteriano</ATBD>
-         </ATB>
-      </AU>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">discreto</STCC>
-         </STC>
-      </CO>
-      <CA hint="CARATTERI AMBIENTALI">
-         <GEF hint="GEOGRAFIA">
-            <GEFD hint="Descrizione">Montagna, piede di versante, scarpata erosiva</GEFD>
-         </GEF>
-      </CA>
-      <DA hint="DATI ANALITICI">
-         <DES hint="DESCRIZIONE">
-            <DESO hint="Descrizione">Industria litica costituita da strumenti rinvenuti in giacitura secondaria</DESO>
-         </DES>
-         <NCS hint="Interpretazione">Deposito litico</NCS>
-         <MTP hint="MATERIALI PRESENTI">
-            <MTPA hint="Assenza">MNP</MTPA>
-         </MTP>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
-         </CDG>
-         <NVC hint="PROVVEDIMENTI DI TUTELA">
-            <NVCT hint="Tipo provvedimento">DLgs n. 42/2004, art. 142, c. 1, lettera M</NVCT>
-         </NVC>
-         <STU hint="STRUMENTI URBANISTICI">
-            <STUT hint="Strumenti in vigore">P.A.T. 19/04/2012</STUT>
-         </STU>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAA hint="Autore">Google Earth</FTAA>
-            <FTAD hint="Data">2013/00/00</FTAD>
-            <FTAN hint="Codice identificativo">New_1380557120321</FTAN>
-         </FTA>
-         <FNT hint="FONTI E DOCUMENTI">
-            <FNTP hint="Tipo">posizionamento</FNTP>
-            <FNTA hint="Autore">Zone Archeologiche</FNTA>
-            <FNTT hint="Denominazione">Le zone archeologiche del Veneto</FNTT>
-            <FNTD hint="Data">1987</FNTD>
-            <FNTN hint="Nome archivio">/</FNTN>
-            <FNTS hint="Posizione">p. 179</FNTS>
-            <FNTI hint="Codice identificativo">New_1380557241285</FNTI>
-         </FNT>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Carta archeologica I</BIBA>
-            <BIBD hint="Anno di edizione">1988</BIBD>
-            <BIBH hint="Sigla per citazione">00000342</BIBH>
-            <BIBN hint="V., pp., nn.">F. 36, n. 5.1, p. 116</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">LEONARDI G.</BIBA>
-            <BIBD hint="Anno di edizione">1959</BIBD>
-            <BIBH hint="Sigla per citazione">00002410</BIBH>
-            <BIBN hint="V., pp., nn.">p. 308</BIBN>
-         </BIB>
-         <BIL hint="Citazione completa">CAV I 1988, F. 36, n. 5.1, p. 116, con bibliografia precedente.</BIL>
-      </DO>
-      <AD hint="ACCESSO AI DATI">
-         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
-            <ADSP hint="Profilo di accesso">1</ADSP>
-            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
-         </ADS>
-      </AD>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">2013</CMPD>
-            <CMPN hint="Nome">Groppo, Veronica</CMPN>
-         </CMP>
-         <RSR hint="Referente scientifico">Vallicelli, Maria Cristina</RSR>
-         <FUR hint="Funzionario responsabile">Bressan, Marianna</FUR>
-      </CM>
-   </SI>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD10522154@</identifier>
+        <datestamp>2017-09-27T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <SI version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">SI</TSK>
+                    <LIR hint="Livello ricerca">P</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">05</NCTR>
+                        <NCTN hint="Numero catalogo generale">00590493</NCTN>
+                        <NCTS hint="Suffisso numero catalogo generale">SI</NCTS>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S32</ESC>
+                    <ECP hint="Ente competente">S32</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">grotta</OGTD>
+                        <OGTA hint="Livello di individuazione">rinvenimenti casuali e scavo</OGTA>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Veneto</PVCR>
+                        <PVCP hint="Provincia">VI</PVCP>
+                        <PVCC hint="Comune">Roana</PVCC>
+                        <PVCV hint="Altre vie di comunicazione">GROTTA OBAR DE LEUTE, Valle del Ghelpalch, Strada del Bisele</PVCV>
+                    </PVC>
+                </LC>
+                <GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+                    <GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+                    <GPD hint="DESCRIZIONE DEL PUNTO">
+                        <GPDP hint="PUNTO">
+                            <GPDPX hint="Coordinata X">11.448904058</GPDPX>
+                            <GPDPY hint="Coordinata Y">45.854724642</GPDPY>
+                        </GPDP>
+                    </GPD>
+                    <GPM hint="Metodo di georeferenziazione">punto approssimato</GPM>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da foto aerea senza sopralluogo</GPT>
+                    <GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+                    <GPB hint="BASE DI RIFERIMENTO">
+                        <GPBB hint="Descrizione sintetica">ICCD1004366_OI.ORTOI</GPBB>
+                        <GPBT hint="Data">30-9-2013</GPBT>
+                        <GPBO hint="Note">(1481189) -ORTOFOTO 2006- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map) -OI.ORTOIMMAGINICOLORE.2006</GPBO>
+                    </GPB>
+                </GP>
+                <RE hint="MODALITA' DI REPERIMENTO">
+                    <RCG hint="RICOGNIZIONI">
+                        <RCGD hint="Data">0000/00/00</RCGD>
+                    </RCG>
+                    <DSC hint="DATI DI SCAVO">
+                        <SCAN hint="Denominazione dello scavo">Obar de Leute</SCAN>
+                        <DSCT hint="Motivo">rinvenimento fortuito</DSCT>
+                        <DSCM hint="Metodo">scavo stratigrafico</DSCM>
+                        <DSCD hint="Data">1955-1956/00/00 - 1959/00/00</DSCD>
+                    </DSC>
+                </RE>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Fascia cronologica di riferimento">Paleolitico medio Musteriano</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">80.000 B.P</DTSI>
+                        <DTSV hint="Validita'">ca</DTSV>
+                        <DTSF hint="A">35.000 B.P</DTSF>
+                        <DTSL hint="Validita'">ca</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">analisi dei materiali</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBD hint="Denominazione">Musteriano</ATBD>
+                    </ATB>
+                </AU>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                    </STC>
+                </CO>
+                <CA hint="CARATTERI AMBIENTALI">
+                    <GEF hint="GEOGRAFIA">
+                        <GEFD hint="Descrizione">Montagna, piede di versante, scarpata erosiva</GEFD>
+                    </GEF>
+                </CA>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Descrizione">Industria litica costituita da strumenti rinvenuti in giacitura secondaria</DESO>
+                    </DES>
+                    <NCS hint="Interpretazione">Deposito litico</NCS>
+                    <MTP hint="MATERIALI PRESENTI">
+                        <MTPA hint="Assenza">MNP</MTPA>
+                    </MTP>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                    </CDG>
+                    <NVC hint="PROVVEDIMENTI DI TUTELA">
+                        <NVCT hint="Tipo provvedimento">DLgs n. 42/2004, art. 142, c. 1, lettera M</NVCT>
+                    </NVC>
+                    <STU hint="STRUMENTI URBANISTICI">
+                        <STUT hint="Strumenti in vigore">P.A.T. 19/04/2012</STUT>
+                    </STU>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Google Earth</FTAA>
+                        <FTAD hint="Data">2013/00/00</FTAD>
+                        <FTAN hint="Codice identificativo">New_1380557120321</FTAN>
+                    </FTA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">posizionamento</FNTP>
+                        <FNTA hint="Autore">Zone Archeologiche</FNTA>
+                        <FNTT hint="Denominazione">Le zone archeologiche del Veneto</FNTT>
+                        <FNTD hint="Data">1987</FNTD>
+                        <FNTN hint="Nome archivio">/</FNTN>
+                        <FNTS hint="Posizione">p. 179</FNTS>
+                        <FNTI hint="Codice identificativo">New_1380557241285</FNTI>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Carta archeologica I</BIBA>
+                        <BIBD hint="Anno di edizione">1988</BIBD>
+                        <BIBH hint="Sigla per citazione">00000342</BIBH>
+                        <BIBN hint="V., pp., nn.">F. 36, n. 5.1, p. 116</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">LEONARDI G</BIBA>
+                        <BIBD hint="Anno di edizione">1959</BIBD>
+                        <BIBH hint="Sigla per citazione">00002410</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 308</BIBN>
+                    </BIB>
+                    <BIL hint="Citazione completa">CAV I 1988, F. 36, n. 5.1, p. 116, con bibliografia precedente</BIL>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2013</CMPD>
+                        <CMPN hint="Nome">Groppo, Veronica</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Vallicelli, Maria Cristina</RSR>
+                    <FUR hint="Funzionario responsabile">Bressan, Marianna</FUR>
+                </CM>
+            </SI>
+            <harvesting>
+                <geocoding>
+                    <x>11.44394603</x>
+                    <y>45.88190304</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

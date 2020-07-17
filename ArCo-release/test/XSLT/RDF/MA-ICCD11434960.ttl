@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-catalogueRecordVersion:0100354511-agg-1
@@ -103,14 +105,19 @@ ar-dating:0100354511-1
         l0:name                 "Dating 1 of cultural property 0100354511"@en , "Cronologia 1 del bene 0100354511"@it .
 
 ar-bibliography:0100354511-bibliography-4
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 4 of cultural property: 0100354511"@en , "Bibliografia 4 del bene culturale: 0100354511"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 4 of cultural property: 0100354511"@en , "Bibliografia 4 del bene culturale: 0100354511"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Venturino Gambari M. / Traversone B. / Cattaneo Cassano A - 1996" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Venturino Gambari M. / Traversone B. / Cattaneo Cassano A" ;
+        arco-cd:bibliographicReferenceDate
+                "1996" ;
         arco-cd:bibliographyLocalIdentifier
                 "1173" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0100354511 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "pp. 32-33" ;
-        l0:name                   "Bibliography 4 of cultural property: 0100354511"@en , "Bibliografia 4 del bene culturale: 0100354511"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0100354511 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "pp. 32-33" ;
+        l0:name                         "Bibliografia 4 del bene culturale: 0100354511"@en , "Bibliography 4 of cultural property: 0100354511"@en .
 
 ar-TimeInterval:eta-romana-repubblicana-fine
         a            tiapit:TimeInterval ;
@@ -188,25 +195,30 @@ ar-agent:9caafdf03957973051d169a424c2089a
         l0:name     "Archivio Vincoli Beni Immobili SBAP-MAE" .
 
 ar-bibliography:0100354511-bibliography-3
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 3 of cultural property: 0100354511"@en , "Bibliografia 3 del bene culturale: 0100354511"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 3 of cultural property: 0100354511"@en , "Bibliografia 3 del bene culturale: 0100354511"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Zanda E., Venturino Gambari M., Evans S.P - 1991" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Zanda E., Venturino Gambari M., Evans S.P" ;
+        arco-cd:bibliographicReferenceDate
+                "1991" ;
         arco-cd:bibliographyLocalIdentifier
                 "1258" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0100354511 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "pp. 91-92" ;
-        l0:name                   "Bibliography 3 of cultural property: 0100354511"@en , "Bibliografia 3 del bene culturale: 0100354511"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0100354511 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "pp. 91-92" ;
+        l0:name                         "Bibliography 3 of cultural property: 0100354511"@en , "Bibliografia 3 del bene culturale: 0100354511"@en .
 
 ar-archeologicalProperty:0100354511
         a                               arco-arco:ArchaeologicalProperty , arco-arco:ImmovableCulturalProperty ;
         rdfs:comment                    "cinta fortificativa, struttura di fortificazione, Mura urbiche romane" ;
-        rdfs:label                      "Mura urbiche romane (cinta fortificativa, struttura di fortificazione) (Eta' romana repubblicana, fine)"@it , "Mura urbiche romane (cinta fortificativa, struttura di fortificazione) (Eta' romana repubblicana, fine)"@en ;
+        rdfs:label                      "Mura urbiche romane (cinta fortificativa, struttura di fortificazione) (Eta' romana repubblicana, fine)"@en , "Mura urbiche romane (cinta fortificativa, struttura di fortificazione) (Eta' romana repubblicana, fine)"@it ;
         dc:coverage                     ar-city:tortona ;
         dc:date                         ar-TimeInterval:ca-fine-ii-ac-ca-ii-sec-dc ;
-        dc:description                  "Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre. La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica. La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec." ;
+        dc:description                  "Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre. La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica. La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec" ;
         dc:format                       ar-MeasurementCollection:0100354511-1 ;
         dc:identifier                   "0100354511" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0100354511-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0100354511-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordMA/0100354511> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#monumenti_archeologici> ;
         dc:type                         ar-culturalPropertyType:7fad43efbee87c378a34a84405ede61c ;
@@ -215,7 +227,7 @@ ar-archeologicalProperty:0100354511
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordMA/0100354511> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/eeb82c548bb7cfa50433e30585b8ee88" ;
+                ar-address:eeb82c548bb7cfa50433e30585b8ee88 ;
         arco-arco:catalogueNumber       "00354511" ;
         arco-arco:hasCataloguingAgency  ar-agent:208f0cd7c8c771f2b29a68b9b425a6a2 ;
         arco-arco:hasCulturalPropertyCategory
@@ -233,7 +245,7 @@ ar-archeologicalProperty:0100354511
         arco-cd:hasLegalSituation       ar-legalSituation:0100354511-legal-situation-proprieta-stato ;
         arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/0100354511-protective-measure-1> ;
         arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/0100354511-survey-1> ;
-        arco-core:description           "Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre. La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica. La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec." ;
+        arco-core:description           "Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre. La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica. La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec" ;
         arco-core:hasAgentRole          ar-agentrole:0100354511-cataloguing-agency , ar-agentrole:0100354511-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0100354511-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
@@ -304,14 +316,19 @@ ar-timeIndexedRole:0100354511-agg-1-17497d3635bd616aa68b527bfbab3b6e
         l0:name                         "Identità catastale 1 del bene: 0100354511"@it , "Cadastral identity 1 of cultural property: 0100354511"@en .
 
 ar-bibliography:0100354511-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 0100354511"@en , "Bibliografia 2 del bene culturale: 0100354511"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 2 of cultural property: 0100354511"@en , "Bibliografia 2 del bene culturale: 0100354511"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Finocchi S - 1986" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Finocchi S" ;
+        arco-cd:bibliographicReferenceDate
+                "1986" ;
         arco-cd:bibliographyLocalIdentifier
                 "1155" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0100354511 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 228" ;
-        l0:name                   "Bibliography 2 of cultural property: 0100354511"@en , "Bibliografia 2 del bene culturale: 0100354511"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0100354511 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 228" ;
+        l0:name                         "Bibliography 2 of cultural property: 0100354511"@en , "Bibliografia 2 del bene culturale: 0100354511"@en .
 
 ar-designationInTime:0100354511-mura-urbiche-romane
         a           arco-dd:DesignationInTime ;
@@ -377,7 +394,7 @@ ar-accessProfile:0100354511-1
 ar-ConservationStatus:0100354511-conservation-status-1
         a                         arco-dd:ConservationStatus ;
         rdfs:label                "Stato di conservazione 1 del bene: 0100354511"@it , "Conservation status 1 of cultural property: 0100354511"@en ;
-        arco-core:specifications  "Alcune porzioni sono crollate. L'area è stata sistemata e valorizzata." ;
+        arco-core:specifications  "Alcune porzioni sono crollate. L'area è stata sistemata e valorizzata" ;
         arco-dd:hasConservationStatusType
                 arco-dd:DecentConservationStatus ;
         l0:name                   "Stato di conservazione 1 del bene: 0100354511"@it , "Conservation status 1 of cultural property: 0100354511"@en .
@@ -396,14 +413,19 @@ ar-agentrole:0100354511-heritage-protection-agency
         l0:name            "Conservation intervention 2 on cultural property 0100354511"@en , "Intervento conservativo 2 sul bene culturale 0100354511"@it .
 
 ar-bibliography:0100354511-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0100354511"@en , "Bibliografia 1 del bene culturale: 0100354511"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 1 of cultural property: 0100354511"@en , "Bibliografia 1 del bene culturale: 0100354511"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Finocchi S - 1982" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Finocchi S" ;
+        arco-cd:bibliographicReferenceDate
+                "1982" ;
         arco-cd:bibliographyLocalIdentifier
                 "1230" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0100354511 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "pp. 317-341" ;
-        l0:name                   "Bibliography 1 of cultural property: 0100354511"@en , "Bibliografia 1 del bene culturale: 0100354511"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0100354511 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "pp. 317-341" ;
+        l0:name                         "Bibliography 1 of cultural property: 0100354511"@en , "Bibliografia 1 del bene culturale: 0100354511"@en .
 
 ar-docutmentationType:copia-del-provvedimento-di-tutela
         a           arco-cd:DocumentationType ;
@@ -512,10 +534,10 @@ ar-photograpyDocumentation:0100354511-photographic-documentation-1
 
 ar-TimeInterval:ca-fine-ii-ac-ca-ii-sec-dc
         a                    tiapit:TimeInterval ;
-        rdfs:label           "ca fine II a.C. - ca II sec. d.C." ;
-        arco-arco:endTime    "ca II sec. d.C." ;
-        arco-arco:startTime  "ca fine II a.C." ;
-        l0:name              "ca fine II a.C. - ca II sec. d.C." .
+        rdfs:label           "ca fine II a.C - ca II sec. d.C" ;
+        arco-arco:endTime    "ca II sec. d.C" ;
+        arco-arco:startTime  "ca fine II a.C" ;
+        l0:name              "ca fine II a.C - ca II sec. d.C" .
 
 ar-role:Owner  a            roapit:Role ;
         rdfs:label          "Ente proprietario della documentazione"@it , "Owner of documentation"@en ;
@@ -564,7 +586,7 @@ ar-role:ResponsibleCompilation
                 arco-catalogue:P ;
         arco-catalogue:systemRecordCode
                 "MA-ICCD11434960" ;
-        arco-core:note  "La localizzazione catastale si riferisce al 1984." .
+        arco-core:note  "La localizzazione catastale si riferisce al 1984" .
 
 ar-agentrole:0100354511-cataloguing-agency
         a                   arco-core:AgentRole ;

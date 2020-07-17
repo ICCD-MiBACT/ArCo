@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-docutmentationType:planimetria
@@ -153,7 +155,7 @@ ar-archeologicalProperty:0100070554
         dc:date                        ar-TimeInterval:ca-1300-ca-1699 ;
         dc:description                 "Tra 1999 e 2006 si svolti i lavori di scavo e restauro sul sito del castello delfinale di Bardonecchia, avviati nell'ambito del progetto per la creazione di un parco archeologico finanziati dal comune e dalla Comunità Europea. Gli interventi sono stati effettuati nell'area dove sorgevano i resti molto degradati della torre, detta localmente Tour d'Amount o Tur d'Amun, che costituiva l'ultima testimonianza ancora visibile di un complesso più ampio e articolato, il Castello di Borgo Vecchio. La struttura era arroccata a monte del nucleo antico di Bardonecchia, sulle pendici della dorsale di congiunzione tra i valloni della Rho e del Frejus, in posizione dominante su tutta la conca. Il castello controllava l'accesso ai valichi che conducono all'alta Valle della Maurienne, contrapponendosi al Castello di Bramafam, situato sul luogo dove ora sorge il forte ottocentesco. La data di fondazione non è nota, ma i primi documenti che lo menzionano, risalgono alla prima metà del XIV sec. Nella valutazione economica del territorio dei Delfini del 1339 viene citato un impianto strutturato su tre torrioni quadrati, con sale e ambienti di servizio, circondato da una cinta muraria del perimetro di 160 m. La torre principale, alta 23 m. e articolata internamente su quattro piani, era affiancata da una loggia e una sala di rappresentanza. Al momento dell’intervento di scavo, che ha visto dapprima l'asportazione a mezzo meccanico di enormi quantità di depositi di crollo, sopravviveva la parte inferiore del torrione principale, conservato per circa 7 m., ed erano ancora visibili parte del basamento della torretta orientale, nonché tratti delle due cinte murarie che delimitavano il complesso a valle, l’una sui margini del pianoro superiore e l’altra a contenimento di quello inferiore, localizzato a sud; qui erano certamente dislocati altri edifici, e forse anche una delle due altre torri menzionate nei documenti trecenteschi, delle quali si sono perdute le tracce. La torre, sui cui si sviluppava il nucleo originale del castello, si presentava a pianta quadrata (9,5 m. per lato), ed era delimitata a valle da una cortina quadrangolare di cui sono stati individuati per ora un primo muro di terrazzamento lungo 22 m a sud, il lato ovest e parte di quello est. La torre era realizzata in pietre di fiume legate da malta di calce, con paramento a corsi regolari e tracce di tessitura a spina di pesce. Gli angoli erano marcati da conci ben squadrati in pietra tenera di cava. Lo spessore delle mura si riduceva progressivamente in altezza, passando dai 2,7 m. della base, al 1,7 m. della sommità conservata. All'interno si osservano ancora le riseghe che sostenevano gli assiti lignei originari, suddividendo lo spazio in piani alti 3 m, messi in comunicazione da scale a pioli. Sopravvivono i primi due piani e parte del terzo. La presenza di brecce e tamponature successive indica che l'accesso dall'esterno era al piano intermedio. Sul lato orientale si nota la sostruzione di una scala in pietra che sostituì in seguito le scale di legno. La tipologia dell'impianto e la muratura a spina di pesce datano la costruzione al XII-XIII sec., ma il confronto con altre fortificazioni analoghe presenti in alta valle (Oulx, Borgone, Mattie, Meana), documentate a partire dalla fine del XIII sec., induce a post porre la cronologia tra XIII e XIV sec. Una seconda cortina muraria più a valle, in pietre squadrate di taglio medio piccolo, segna il successivo sviluppo dell'impianto. La torre principale viene inglobata sui lati est e sud in una fortificazione dotata di due torrette circolari angolari; lo spazio interno è suddiviso in tre grandi vani rettangolari, comunicanti fra loro, con funzioni residenziali e di rappresentanza. Tratti di muro rinvenuti sul lato nord suggeriscono l'esistenza di una terza torretta. Queste nuove fasi edilizie si collocano tra i secoli XIV e XV, nel momento in cui il Delfino entrò a far parte del consortile, ottenendo il diritto d'uso della Tour d'Amount e coincidono con il preponderante utilizzo militare del castello. Dopo un periodo di interruzione della frequentazione dell'impianto da parte dei coregnanti, nel tardo Cinquecento si registrano ampliamenti della manica residenziale verso nord e si modifica l’edificio in profondità e altezza, ricavando un nuovo ampio vano interrato, collegato con il piano superiore mediante una scala a chiocciola. Nel XVII la famiglia De Jouffrey apportò alcuni adeguamenti alla torre centrale: nel basamento furono aperte alcune brecce, che consentirono il collegamento di questo ambiente con le altre aree del castello, e furono costruite degli orizzontamenti in pietra al posto degli originari solai lignei. Una serie di brecce aperte su diversi lati è di difficile collocazione cronologica. Fonti tarde menzionano l'accesso al castello sul lato ovest, dove arrivava la strada proveniente da Borgo Vecchio. Durante la campagna di scavi del 2005, circa duecento metri a ovest del castello, è stata rinvenuta una necropoli utilizzata da una piccola comunità alloctona tra il VI e l’VIII secolo; le 12 tombe erano a fossa semplice o rivestite di lastre di pietra, disposte in file. Nei dintorni dell’area funeraria probabilmente sorgeva un abitato coevo che sfruttava le stesse opportunità strategiche sfruttate dalla fortezza medievale; non è per il momento possibile dire se ci sia stata continuità di occupazione del sito tra i due periodi. La presenza di un insediamento ad alta quota in una fase così precoce non è un caso isolato e si collega al profondo clima di insicurezza che si stava instaurando a causa della guerra greco-gotica e della crescente pressione dei Franchi sulla fascia Alpina." ;
         dc:identifier                  "0100070554" ;
-        dc:rights                      "https://w3id.org/arco/resource/LegalSituation/0100070554-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                      ar-legalSituation:0100070554-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                      <https://w3id.org/arco/resource/CatalogueRecordCA/0100070554> ;
         dc:subject                     <http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche> ;
         dc:type                        ar-culturalPropertyType:ec00f1c42aad411e35379965d5c4ea61 ;
@@ -162,7 +164,7 @@ ar-archeologicalProperty:0100070554
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordCA/0100070554> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/5ce74bb7e239fdfcf27ca77c55d84ef8" ;
+                ar-address:5ce74bb7e239fdfcf27ca77c55d84ef8 ;
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordCA/0100070554> ;
         arco-cd:hasDating              ar-dating:0100070554-1 ;
@@ -320,14 +322,19 @@ ar-role:OfficialInCharge
         rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
 
 ar-bibliography:0100070554-bibliography-3
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 3 of cultural property: 0100070554"@en , "Bibliografia 3 del bene culturale: 0100070554"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 3 del bene culturale: 0100070554"@it , "Bibliography 3 of cultural property: 0100070554"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Pejrani Baricco, L. - Cerrato, N. - 2001" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Pejrani Baricco, L. - Cerrato, N." ;
+        arco-cd:bibliographicReferenceDate
+                "2001" ;
         arco-cd:bibliographyLocalIdentifier
                 "1352" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0100070554 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "t. LVII" ;
-        l0:name                   "Bibliography 3 of cultural property: 0100070554"@en , "Bibliografia 3 del bene culturale: 0100070554"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0100070554 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "t. LVII" ;
+        l0:name                         "Bibliografia 3 del bene culturale: 0100070554"@en , "Bibliography 3 of cultural property: 0100070554"@en .
 
 ar-photograpyDocumentation:0100070554-photographic-documentation-1
         a                             arco-cd:PhotographicDocumentation ;
@@ -395,14 +402,19 @@ ar-agent:288163f0919cf2ec5f8b90433648eb34
         rdfs:label  "Mele, Silvia" .
 
 ar-bibliography:0100070554-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 0100070554"@en , "Bibliografia 2 del bene culturale: 0100070554"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 2 of cultural property: 0100070554"@en , "Bibliografia 2 del bene culturale: 0100070554"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Pejrani Baricco, L. - Longhi, A. - 2012" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Pejrani Baricco, L. - Longhi, A." ;
+        arco-cd:bibliographicReferenceDate
+                "2012" ;
         arco-cd:bibliographyLocalIdentifier
                 "1351" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0100070554 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 209-219" ;
-        l0:name                   "Bibliography 2 of cultural property: 0100070554"@en , "Bibliografia 2 del bene culturale: 0100070554"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0100070554 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 209-219" ;
+        l0:name                         "Bibliografia 2 del bene culturale: 0100070554"@en , "Bibliography 2 of cultural property: 0100070554"@en .
 
 ar-accessProfile:0100070554-1
         a                               arco-catalogue:AccessProfile ;
@@ -481,14 +493,19 @@ ar-role:ResponsibleCompilation
         arco-core:note  "Negativi esistenti: 274819-274937, 279371-279487; diapositive: 163427-163472." .
 
 ar-bibliography:0100070554-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0100070554"@en , "Bibliografia 1 del bene culturale: 0100070554"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 0100070554"@it , "Bibliography 1 of cultural property: 0100070554"@en ;
+        arco-cd:bibliographicReference  "bibliografia di corredo: Barello, F. - Ferrero L. - Uggé S. - 2013" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Barello, F. - Ferrero L. - Uggé S." ;
+        arco-cd:bibliographicReferenceDate
+                "2013" ;
         arco-cd:bibliographyLocalIdentifier
                 "1288" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0100070554 ;
-        arco-core:hasCategory     arco-cd:AccompanyingBibliography ;
-        arco-core:note            "p. 39 ss." ;
-        l0:name                   "Bibliography 1 of cultural property: 0100070554"@en , "Bibliografia 1 del bene culturale: 0100070554"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0100070554 ;
+        arco-core:hasCategory           arco-cd:AccompanyingBibliography ;
+        arco-core:note                  "p. 39 ss." ;
+        l0:name                         "Bibliography 1 of cultural property: 0100070554"@en , "Bibliografia 1 del bene culturale: 0100070554"@en .
 
 ar-TimeInterval:ca-1300-ca-1699
         a                    tiapit:TimeInterval ;
