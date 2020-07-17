@@ -20,7 +20,7 @@ public class LinkEMMFinder implements ExtensionFunction {
 
 	private LinkEMMFinder() {
 
-		PreprocessedData pd = PreprocessedData.getInstance();
+		PreprocessedData pd = PreprocessedData.getInstance(true);
 		this.ftan2linkEMM = pd.getFtan2URL();
 
 	}

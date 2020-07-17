@@ -44,7 +44,7 @@ public class Preprocessor {
 		this.recordsFolder = recordsFolder;
 		this.resourcePrefix = resourcePrefix;
 		this.multimediaRecordsFolder = multimediaRecordsFolder;
-		this.pd = PreprocessedData.getInstance();
+		this.pd = PreprocessedData.getInstance(false);
 		this.uniqueIdentifier2URIs = pd.getUniqueIdentifier2URIs();
 		this.ftan2URL = pd.getFtan2URL();
 		this.catalogueRecordIdentifier2URI = pd.getCatalogueRecordIdentifier2URI();
@@ -93,7 +93,9 @@ public class Preprocessor {
 
 			logger.trace(f.toFile().getAbsolutePath() + " - " + ftan + " - " + link);
 
-			this.ftan2URL.put(ftan, link);
+			if (validateField(ftan) && validateField(link)) {
+				this.ftan2URL.put(ftan, link);
+			}
 
 		} catch (SAXException | IOException | ParserConfigurationException | XPathExpressionException e) {
 			e.printStackTrace();
@@ -101,6 +103,10 @@ public class Preprocessor {
 			logger.info("Error while processing " + f.toFile().getAbsolutePath() + " " + e.getMessage());
 		}
 
+	}
+
+	private boolean validateField(String field) {
+		return field != null && field.trim().length() > 0;
 	}
 
 	private void preprocessRecord(Path f) {
@@ -123,7 +129,6 @@ public class Preprocessor {
 			String uriObjectOfDescription = getObjectOfDescription(xpath, xml);
 			String uniqueIdentifier = getUniqueIdentifier(xpath, xml);
 			String catalogueRecordIdentifier = getCatalogueRecordIdentifier(xpath, xml);
-
 
 			List<String> uris = uniqueIdentifier2URIs.get(uniqueIdentifier);
 

@@ -116,7 +116,7 @@ public class RelatedPropertyFinder implements ExtensionFunction {
 
 	private RelatedPropertyFinder() {
 
-		PreprocessedData pd = PreprocessedData.getInstance();
+		PreprocessedData pd = PreprocessedData.getInstance(true);
 		this.uniqueIdentifier2URIs = pd.getUniqueIdentifier2URIs();
 
 	}

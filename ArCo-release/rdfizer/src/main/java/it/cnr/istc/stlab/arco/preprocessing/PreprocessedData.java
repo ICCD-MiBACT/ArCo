@@ -23,9 +23,9 @@ public class PreprocessedData {
 	private static final Logger logger = Logger.getLogger(PreprocessedData.class);
 
 	@SuppressWarnings("unchecked")
-	private PreprocessedData() {
+	private PreprocessedData(boolean download) {
 
-		if (!new File(dbFileName).exists()) {
+		if (download && !new File(dbFileName).exists()) {
 			try {
 				logger.info("Downloading preprocessed data from " + dbURL);
 				FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName));
@@ -48,9 +48,9 @@ public class PreprocessedData {
 				.valueSerializer(Serializer.JAVA).createOrOpen();
 	}
 
-	public static PreprocessedData getInstance() {
+	public static PreprocessedData getInstance(boolean download) {
 		if (instance == null) {
-			instance = new PreprocessedData();
+			instance = new PreprocessedData(download);
 		}
 		return instance;
 	}

@@ -20,7 +20,7 @@ public class CatalogueRecordIdentifierToCulturalProperty implements ExtensionFun
 
 	private CatalogueRecordIdentifierToCulturalProperty() {
 
-		PreprocessedData pd = PreprocessedData.getInstance();
+		PreprocessedData pd = PreprocessedData.getInstance(true);
 		this.catalogueRecordIdentifier2URI = pd.getCatalogueRecordIdentifier2URI();
 
 	}
