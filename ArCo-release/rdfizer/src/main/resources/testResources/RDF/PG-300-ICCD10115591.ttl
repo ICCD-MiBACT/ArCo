@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-TimeInterval:2012  a  tiapit:TimeInterval ;
@@ -157,15 +159,14 @@ ar-SourceAndDocument:0900104131-source-document-1
         dc:coverage                     ar-city:lucca ;
         dc:description                  "giardino pubblico" ;
         dc:identifier                   "0900104131" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900104131-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:0900104131-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordPG/0900104131> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#giardini_e_parchi" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#giardini_e_parchi> ;
         dc:type                         ar-culturalPropertyType:2993f3e403f33ab24c72de67921a7102 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordPG/0900104131> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/f6f8c94dec95181c211ec6f6f840babf" ;
+                ar-address:f6f8c94dec95181c211ec6f6f840babf ;
         arco-arco:catalogueNumber       "00104131" ;
         arco-arco:hasCataloguingAgency  ar-agent:44780961703d13411b6ca4b2ec697b4f ;
         arco-arco:hasHeritageProtectionAgency
@@ -187,13 +188,13 @@ ar-SourceAndDocument:0900104131-source-document-1
         arco-location:hasCadastralIdentity
                 <https://w3id.org/arco/resource/CadastralIdentity/0900104131-1> ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:9202df5d5abac00c509816a1dcc52152 ;
+                ar-address:f6f8c94dec95181c211ec6f6f840babf ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0900104131-current .
 
 ar-timeIndexedRole:0900104131-compilation-dcccf64aa59303fb3e85be59dba6089b
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Bedini G."@en , "Compilazione da Bedini G."@it ;
+        rdfs:label             "Compilation by Bedini G"@en , "Compilazione da Bedini G"@it ;
         roapit:isRoleInTimeOf  ar-agent:dcccf64aa59303fb3e85be59dba6089b ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -344,7 +345,7 @@ ar-agentrole:0900104131-heritage-protection-agency
 
 ar-catalogueRecordVersion:0900104131-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 1978 Bedini G." ;
+        rdfs:label                   "COMPILAZIONE - 1978 Bedini G" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:1978 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0900104131-compilation-dcccf64aa59303fb3e85be59dba6089b , ar-timeIndexedRole:0900104131-24619a072af916a7d6e022801d4542e0 ;
@@ -357,7 +358,7 @@ ar-catalogueRecordVersion:0900104131-compilation
 
 ar-agent:dcccf64aa59303fb3e85be59dba6089b
         a           l0:Agent ;
-        rdfs:label  "Bedini G." .
+        rdfs:label  "Bedini G" .
 
 <https://w3id.org/arco/resource/CatalogueRecordPG/0900104131>
         a             arco-catalogue:CatalogueRecordPG ;

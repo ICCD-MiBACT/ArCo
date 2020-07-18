@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedRole:1000176190-23c419e6622aa0cc2cbe145c7053067d
@@ -149,19 +151,17 @@ ar-cis:60c0f1939523b7fe52245c9072da153c
         rdfs:comment                    "fossile, mandibola destra di lince, esemplare, mammalofauna fossile di Pantalla (Todi, PG)" ;
         rdfs:label                      "fossile (mandibola destra di lince, esemplare) ()"@it , "fossile (mandibola destra di lince, esemplare) ()"@en ;
         dc:coverage                     ar-city:perugia ;
-        dc:description                  "Animalia Mammalia Carnivora Felidae Lynx issiodorensis: Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole. | Italia , Umbria , Todi ( PG ), Pantalla" ;
+        dc:description                  "Animalia Mammalia Carnivora Felidae Lynx issiodorensis: Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole | Italia , Umbria , Todi ( PG ), Pantalla" ;
         dc:identifier                   "1000176190" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000176190-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:1000176190-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.3#fossili" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.3#fossili> ;
         dc:type                         ar-culturalPropertyType:c1e65efeb519a78d5117466ccc70b694 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/78f87f90bb197d348b96bf947ce7583e" ;
+                ar-address:78f87f90bb197d348b96bf947ce7583e ;
         arco-arco:catalogueNumber       "00176190" ;
-        arco-arco:description           "Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole." ;
         arco-arco:hasCataloguingAgency  ar-agent:0ed33537564751ea81589bc628149448 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
                 ar-CulturalPropertyCataloguingCategory:esemplare ;
@@ -174,12 +174,13 @@ ar-cis:60c0f1939523b7fe52245c9072da153c
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/1000176190-acquisition-1> ;
         arco-cd:hasDocumentation        ar-photograpyDocumentation:1000176190-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:1000176190-legal-situation-proprieta-stato ;
+        arco-core:description           "Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole" ;
         arco-core:hasAgentRole          ar-agentrole:1000176190-cataloguing-agency , ar-agentrole:1000176190-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1000176190-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:c1e65efeb519a78d5117466ccc70b694 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:1166ffffe191a6f212e2e15f2b92efe7 ;
+                ar-address:78f87f90bb197d348b96bf947ce7583e ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1000176190-current .
 
@@ -346,10 +347,10 @@ ar-country:italia  a  clvapit:Country ;
         l0:name     "ITALIA" .
 
 <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190>
-        a             arco-catalogue:CatalogueRecordBNP ;
-        rdfs:label    "Catalogue Record n: 1000176190"@en , "Scheda catalografica n: 1000176190"@it ;
-        dc:language   "ita" ;
-        dc:publisher  ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
+        a              arco-catalogue:CatalogueRecordBNP ;
+        rdfs:label     "Catalogue Record n: 1000176190"@en , "Scheda catalografica n: 1000176190"@it ;
+        dc:language    "ita" ;
+        dc:publisher   ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-catalogue:catalogueRecordIdentifier
                 "1000176190" ;
         arco-catalogue:describesCulturalProperty
@@ -361,7 +362,8 @@ ar-country:italia  a  clvapit:Country ;
         arco-catalogue:hasCataloguingLevel
                 arco-catalogue:P ;
         arco-catalogue:systemRecordCode
-                "BNP-ICCD10322197" .
+                "BNP-ICCD10322197" ;
+        l0:identifier  "167337" .
 
 ar-timeIndexedRole:1000176190-compilation-8213c4b53967295b9de27e64d98b88f3
         a                      roapit:TimeIndexedRole ;

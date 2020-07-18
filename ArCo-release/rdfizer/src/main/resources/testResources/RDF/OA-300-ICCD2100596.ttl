@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-TimeInterval:1993  a  tiapit:TimeInterval ;
@@ -174,7 +176,7 @@ ar-SiteType:orto-botanico-universitario
 
 ar-catalogueRecordVersion:0500177321-16-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 1993 Piva R." ;
+        rdfs:label                   "COMPILAZIONE - 1993 Piva R" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:1993 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0500177321-16-compilation-b77e88ea4ee0e85f52610e14a72fd7a1 , ar-timeIndexedRole:0500177321-16-59a1574fbb32ef6fc0ee256af6ef5f83 ;
@@ -217,7 +219,7 @@ ar-city:padova  a   clvapit:City ;
 
 ar-agent:c19ee496a75f42bcb59a96b0e19872c5
         a           l0:Agent ;
-        rdfs:label  "ARTPAST/ Cailotto C." .
+        rdfs:label  "ARTPAST/ Cailotto C" .
 
 ar-Measurement:0500177321-16-1-height
         a                           arco-dd:Measurement ;
@@ -325,13 +327,13 @@ ar-photograpyDocumentation:0500177321-16-photographic-documentation-1
 
 ar-timeIndexedRole:0500177321-16-59a1574fbb32ef6fc0ee256af6ef5f83
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Spiazzi A. M."@it , "Official in charge: Spiazzi A. M."@en ;
+        rdfs:label             "Funzionario responsabile: Spiazzi A. M"@it , "Official in charge: Spiazzi A. M"@en ;
         roapit:isRoleInTimeOf  ar-agent:879088b5018ca9da1da982a70983ae9b ;
         roapit:withRole        ar-role:OfficialInCharge .
 
 ar-catalogueRecordVersion:0500177321-16-agg-1
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2006 ARTPAST/ Cailotto C. NR (recupero pregresso)" ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2006 ARTPAST/ Cailotto C" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0500177321-16-agg-1-c19ee496a75f42bcb59a96b0e19872c5 ;
@@ -353,7 +355,7 @@ ar-CulturalEntityTechnicalStatus:0500177321-16
 
 ar-timeIndexedRole:0500177321-16-compilation-b77e88ea4ee0e85f52610e14a72fd7a1
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Piva R."@en , "Compilazione da Piva R."@it ;
+        rdfs:label             "Compilation by Piva R"@en , "Compilazione da Piva R"@it ;
         roapit:isRoleInTimeOf  ar-agent:b77e88ea4ee0e85f52610e14a72fd7a1 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -370,7 +372,7 @@ ar-dating:0500177321-16-1
 
 ar-timeIndexedRole:0500177321-16-agg-1-c19ee496a75f42bcb59a96b0e19872c5
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Cailotto C."@it , "Update responsible compilation: ARTPAST/ Cailotto C."@en ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Cailotto C"@it , "Update responsible compilation: ARTPAST/ Cailotto C"@en ;
         roapit:isRoleInTimeOf  ar-agent:c19ee496a75f42bcb59a96b0e19872c5 ;
         roapit:withRole        ar-role:UpdateResponsibleCompilation .
 
@@ -381,27 +383,24 @@ ar-TimeInterval:2006  a  tiapit:TimeInterval ;
 ar-HistoricOrArtisticProperty:0500177321-16
         a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "scultura" ;
-        rdfs:label                      "busto ritratto di Giulio Pontedera. (scultura) by Bonazza Antonio (bottega) (sec. XVIII)"@en , "busto ritratto di Giulio Pontedera. (scultura) di Bonazza Antonio (bottega) (sec. XVIII)"@it ;
+        rdfs:label                      "busto ritratto di Giulio Pontedera (scultura) by Bonazza Antonio (bottega) (sec. XVIII)"@en , "busto ritratto di Giulio Pontedera (scultura) di Bonazza Antonio (bottega) (sec. XVIII)"@it ;
         pico:author                     ar-agent:0c5576d398fbf9515a0f006a343802a0 ;
         pico:materialAndTechnique       ar-TechnicalCharacteristic:pietra ;
         dc:coverage                     ar-city:padova ;
         dc:creator                      ar-agent:0c5576d398fbf9515a0f006a343802a0 ;
         dc:date                         ar-TimeInterval:1760-1760 ;
-        dc:description                  "Parte posteriore: non lavorata." ;
+        dc:description                  "Parte posteriore: non lavorata" ;
         dc:format                       ar-MeasurementCollection:0500177321-16-1 ;
         dc:identifier                   "0500177321-16" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500177321-16-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0500177321-16-legal-situation-proprieta-stato ;
         dc:source                       ar-CatalogueRecordOA:0500177321-16 ;
-        dc:subject                      ar-Subject:683bf4a5815bbf322fbb94b4e231267a ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" ] ;
+        dc:subject                      ar-Subject:683bf4a5815bbf322fbb94b4e231267a , <http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva> ;
         dc:type                         ar-culturalPropertyType:e0f85950871864ae68bbd52aa767ef8c ;
         <http://purl.org/dc/terms/isReferencedBy>
                 ar-CatalogueRecordOA:0500177321-16 ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/c0716b4e59129ca29c4206e610348d83" ;
+                ar-address:c0716b4e59129ca29c4206e610348d83 ;
         arco-arco:catalogueNumber       "00177321" ;
-        arco-arco:description           "Parte posteriore: non lavorata." ;
         arco-arco:hasCataloguingAgency  ar-agent:7c6d0071bd87a051bc4b945392e573f5 ;
         arco-arco:hasHeritageProtectionAgency
                 ar-agent:d17f157be5bfe842006520aad12086ba ;
@@ -417,7 +416,8 @@ ar-HistoricOrArtisticProperty:0500177321-16
         arco-cd:hasDocumentation        ar-photograpyDocumentation:0500177321-16-photographic-documentation-2 , ar-photograpyDocumentation:0500177321-16-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:0500177321-16-legal-situation-proprieta-stato ;
         arco-cd:hasSubject              ar-Subject:683bf4a5815bbf322fbb94b4e231267a ;
-        arco-cd:subject                 "busto ritratto di Giulio Pontedera." ;
+        arco-cd:subject                 "busto ritratto di Giulio Pontedera" ;
+        arco-core:description           "Parte posteriore: non lavorata" ;
         arco-core:hasAgentRole          ar-agentrole:0500177321-16-heritage-protection-agency , ar-agentrole:0500177321-16-cataloguing-agency ;
         arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0500177321-16-inscription-1> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0500177321-16-conservation-status-1 ;
@@ -428,15 +428,15 @@ ar-HistoricOrArtisticProperty:0500177321-16
                 ar-MeasurementCollection:0500177321-16-1 ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0500177321-16 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:bca9fadd2aea0b422a9c4799506fc000 ;
+                ar-address:c0716b4e59129ca29c4206e610348d83 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0500177321-16-current .
 
 ar-Subject:683bf4a5815bbf322fbb94b4e231267a
         a                    arco-cd:Subject ;
-        rdfs:label           "busto ritratto di Giulio Pontedera." ;
+        rdfs:label           "busto ritratto di Giulio Pontedera" ;
         arco-cd:isSubjectOf  ar-HistoricOrArtisticProperty:0500177321-16 ;
-        l0:name              "busto ritratto di Giulio Pontedera." .
+        l0:name              "busto ritratto di Giulio Pontedera" .
 
 ar-role:ResponsibleCompilation
         a           roapit:Role ;
@@ -450,7 +450,7 @@ ar-MeasurementCollection:0500177321-16-1
 
 ar-agent:879088b5018ca9da1da982a70983ae9b
         a           l0:Agent ;
-        rdfs:label  "Spiazzi A. M." .
+        rdfs:label  "Spiazzi A. M" .
 
 ar-Site:698ae48a9ad109f617aebe0284dc6b24
         a                          cis:Site ;
@@ -504,7 +504,7 @@ ar-agent:0c5576d398fbf9515a0f006a343802a0
 
 ar-agent:b77e88ea4ee0e85f52610e14a72fd7a1
         a           l0:Agent ;
-        rdfs:label  "Piva R." .
+        rdfs:label  "Piva R" .
 
 <https://w3id.org/arco/resource/Language/latino>
         a           language:Language ;

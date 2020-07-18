@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-TimeInterval:2012  a  tiapit:TimeInterval ;
@@ -144,14 +146,19 @@ ar-province:ca  a   clvapit:Province ;
         l0:name     "CA" .
 
 ar-bibliography:2000194980-bibliography-3
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 3 of cultural property: 2000194980"@en , "Bibliografia 3 del bene culturale: 2000194980"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 3 del bene culturale: 2000194980"@it , "Bibliography 3 of cultural property: 2000194980"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Bouville C./ Constandse Westermann T.S./ Newell R.R - 1983" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Bouville C./ Constandse Westermann T.S./ Newell R.R" ;
+        arco-cd:bibliographicReferenceDate
+                "1983" ;
         arco-cd:bibliographyLocalIdentifier
                 "Bouv1983" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "pp. 89-110, n. 10" ;
-        l0:name                   "Bibliography 3 of cultural property: 2000194980"@en , "Bibliografia 3 del bene culturale: 2000194980"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "pp. 89-110, n. 10" ;
+        l0:name                         "Bibliography 3 of cultural property: 2000194980"@en , "Bibliografia 3 del bene culturale: 2000194980"@en .
 
 ar-timeIndexedTypedLocation:2000194980-current
         a                              arco-location:TimeIndexedTypedLocation ;
@@ -240,7 +247,7 @@ ar-timeIndexedTypedLocation:2000194980-alternative-1
 <https://w3id.org/arco/resource/PaleopathologySurvey/2000194980-survey-1>
         a                        arco-cd:PaleopathologySurvey ;
         rdfs:label               "Paleopathology survey of cultural property 2000194980"@en , "Indagine su paleopatologia del bene culturale 2000194980"@it ;
-        arco-cd:diagnosis        "Nella mandibola, tra corpo e ramo di destra, si osserva un?ipertrofia con notevole aumento del diametro trasverso del corpo, con cavitazione all?interno di esso, estesa fino all?apofisi coronoide. Mancando segni d?invasività, la diagnosi propende per un angioma. Carie 0 1 in M2 superiore sinistro; carie A NC 3 in M3 inferiore sinistro." ;
+        arco-cd:diagnosis        "Nella mandibola, tra corpo e ramo di destra, si osserva un?ipertrofia con notevole aumento del diametro trasverso del corpo, con cavitazione all?interno di esso, estesa fino all?apofisi coronoide. Mancando segni d?invasività, la diagnosi propende per un angioma. Carie 0 1 in M2 superiore sinistro; carie A NC 3 in M3 inferiore sinistro" ;
         arco-cd:hasSurveyMethod  <https://w3id.org/arco/resource/SurveyMethod/rilevamento-a-occhio-nudo> ;
         arco-core:note           "Le carie sono codificate secondo Moore e Corbet (1971) e Whittaker et alii (1981)" ;
         l0:name                  "Paleopathology survey of cultural property 2000194980"@en , "Indagine su paleopatologia del bene culturale 2000194980"@it .
@@ -274,7 +281,7 @@ ar-address:d4558e9241ed4446c4e83257fcff67f2
         rdfs:label                "cranio" ;
         arco-arco:numberOfCulturalPropertyParts
                 "1" ;
-        arco-core:note            "Cattivo stato di conservazione, col tavolato esterno vistosamente corroso specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali, il parietale e lo zigomatico del lato destro, la squama occipitale con attacchi muscolari e rugosità marcati." ;
+        arco-core:note            "Cattivo stato di conservazione, col tavolato esterno vistosamente corroso specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali, il parietale e lo zigomatico del lato destro, la squama occipitale con attacchi muscolari e rugosità marcati" ;
         arco-core:specifications  "25 frammenti" ;
         l0:name                   "cranio" .
 
@@ -283,24 +290,29 @@ ar-address:d4558e9241ed4446c4e83257fcff67f2
         rdfs:label                "mandibola" ;
         arco-arco:numberOfCulturalPropertyParts
                 "1" ;
-        arco-core:note            "I frammenti non permettono un rimontaggio dell'osso, ma riavvicinati fra loro permettono di fotografarlo nel suo insieme." ;
+        arco-core:note            "I frammenti non permettono un rimontaggio dell'osso, ma riavvicinati fra loro permettono di fotografarlo nel suo insieme" ;
         arco-core:specifications  "6 frammenti" ;
         l0:name                   "mandibola" .
 
 ar-bibliography:2000194980-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 2000194980"@en , "Bibliografia 2 del bene culturale: 2000194980"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 2 of cultural property: 2000194980"@en , "Bibliografia 2 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Moore W.J./ Corbett M.E - 1971" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Moore W.J./ Corbett M.E" ;
+        arco-cd:bibliographicReferenceDate
+                "1971" ;
         arco-cd:bibliographyLocalIdentifier
                 "Moor1971" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "pp.151-168, n. 5" ;
-        l0:name                   "Bibliography 2 of cultural property: 2000194980"@en , "Bibliografia 2 del bene culturale: 2000194980"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "pp.151-168, n. 5" ;
+        l0:name                         "Bibliografia 2 del bene culturale: 2000194980"@en , "Bibliography 2 of cultural property: 2000194980"@en .
 
 ar-agent:e73b632d8ca49ea18fabd954bbe9bb65
         a           l0:Agent ;
-        rdfs:label  "Van der Plicht, J." ;
-        l0:name     "Van der Plicht, J." .
+        rdfs:label  "Van der Plicht, J" ;
+        l0:name     "Van der Plicht, J" .
 
 ar-ConservationStatus:2000194980-conservation-status-1
         a            arco-dd:ConservationStatus ;
@@ -345,7 +357,7 @@ ar-docutmentationType:fotografia-digitale-file
         rdfs:label                "dente" ;
         arco-arco:numberOfCulturalPropertyParts
                 "20" ;
-        arco-core:note            "Per ogni elemento è stato indicato se è perveuto sparso (S) o se è presente sull'osso(P) ed è stato riportato il grado d'usura valutato secondo le metodiche indicate in Bouville et alii, 1983 (cfr. scheda FTA3, tabella usura dentaria)." ;
+        arco-core:note            "Per ogni elemento è stato indicato se è perveuto sparso (S) o se è presente sull'osso(P) ed è stato riportato il grado d'usura valutato secondo le metodiche indicate in Bouville et alii, 1983 (cfr. scheda FTA3, tabella usura dentaria)" ;
         arco-core:specifications  "16 denti definitivi e il secondo premolare deciduo destro sono pervenuti allo studio come elementi sparsi" ;
         l0:name                   "dente" .
 
@@ -406,14 +418,19 @@ ar-address:758c781289fcb9930e2232011169b1e7
         clvapit:hasRegion       ar-region:sardegna .
 
 ar-bibliography:2000194980-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 2000194980"@en , "Bibliografia 1 del bene culturale: 2000194980"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 1 of cultural property: 2000194980"@en , "Bibliografia 1 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: prevalence distribution - 1981" ;
+        arco-cd:bibliographicReferenceAuthor
+                "prevalence distribution" ;
+        arco-cd:bibliographicReferenceDate
+                "1981" ;
         arco-cd:bibliographyLocalIdentifier
                 "With1981" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "pp. 237-245, n. 26" ;
-        l0:name                   "Bibliography 1 of cultural property: 2000194980"@en , "Bibliografia 1 del bene culturale: 2000194980"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "pp. 237-245, n. 26" ;
+        l0:name                         "Bibliography 1 of cultural property: 2000194980"@en , "Bibliografia 1 del bene culturale: 2000194980"@en .
 
 ar-agent:057ecd9869f1cb61adb90b594bd3a5e1
         a           l0:Agent ;
@@ -461,13 +478,18 @@ ar-agent:5b61db147cfb054ae123c1a5be50474a
         l0:name                        "Finding context of cultural property 2000194980: sepoltura singola primaria"@en , "Contesto di ritrovamento del bene culturale 2000194980: sepoltura singola primaria"@it .
 
 ar-bibliography:2000194980-bibliography-6
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 6 of cultural property: 2000194980"@en , "Bibliografia 6 del bene culturale: 2000194980"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 6 of cultural property: 2000194980"@en , "Bibliografia 6 del bene culturale: 2000194980"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Ubelaker D.H - 1989" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Ubelaker D.H" ;
+        arco-cd:bibliographicReferenceDate
+                "1989" ;
         arco-cd:bibliographyLocalIdentifier
                 "Ube1989" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 6 of cultural property: 2000194980"@en , "Bibliografia 6 del bene culturale: 2000194980"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliografia 6 del bene culturale: 2000194980"@en , "Bibliography 6 of cultural property: 2000194980"@en .
 
 ar-role:ScientificDirector
         a                   roapit:Role ;
@@ -535,21 +557,19 @@ ar-archeologicalProperty:2000194980
         rdfs:comment                    "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario, morfologia/ struttura alterata post mortem per cause naturali, inumato" ;
         rdfs:label                      "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario (morfologia/ struttura alterata post mortem per cause naturali, inumato) (Età del Bronzo-Età del Ferro)"@it , "reperti antropologici pertinenti a un unico individuo, reperto osteo-dentario (morfologia/ struttura alterata post mortem per cause naturali, inumato) (Età del Bronzo-Età del Ferro)"@en ;
         dc:coverage                     ar-city:villanovaforru ;
-        dc:description                  "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro." ;
+        dc:description                  "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro" ;
         dc:identifier                   "2000194980" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000194980-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:2000194980-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#reperti_antropologici" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#reperti_antropologici> ;
         dc:type                         ar-culturalPropertyType:487cd0e5f488a90820c6a12e8f7d5173 ;
         <http://purl.org/dc/terms/bibliographicCitation>
                 ar-bibliography:2000194980-bibliography-2 , ar-bibliography:2000194980-bibliography-6 , ar-bibliography:2000194980-bibliography-3 , ar-bibliography:2000194980-bibliography-1 , ar-bibliography:2000194980-bibliography-5 , ar-bibliography:2000194980-bibliography-4 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/d4558e9241ed4446c4e83257fcff67f2" ;
+                ar-address:d4558e9241ed4446c4e83257fcff67f2 ;
         arco-arco:catalogueNumber       "00194980" ;
-        arco-arco:description           "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro." ;
         arco-arco:hasCataloguingAgency  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
         arco-arco:hasCulturalPropertyCategory
                 <https://w3id.org/arco/resource/CulturalPropertyCategory/inumato> ;
@@ -569,6 +589,7 @@ ar-archeologicalProperty:2000194980
         arco-cd:hasLegalSituation       ar-legalSituation:2000194980-legal-situation-proprieta-stato ;
         arco-cd:hasSexInterpretation    <https://w3id.org/arco/resource/SexInterpretation/2000194980> ;
         arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/2000194980-survey-1> ;
+        arco-core:description           "Tomba a cista 8 - Scavo Bedini. Pervengono all?esame i resti di un neurocranio in cattivo stato di conservazione, con il tavolato esterno vistosamente corroso, specie nella regione frontale. La sutura coronale è aperta. Si individuano bene i temporali , il parietale e lo zigomatico destro, la squama occipitale con attacchi muscolari e rugosità marcati. Sono pervenuti 20 denti. Si riscontra la persistenza dei due secondi premolari decidui inferiori. Dello scheletro postcraniale restano un frammento d?atlante, uno di spina della scapola sinistra, alcuni di costa ed un frammento distale di diafisi di radio destro" ;
         arco-core:hasAgentRole          ar-agentrole:2000194980-cataloguing-agency , ar-agentrole:2000194980-heritage-protection-agency ;
         arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-atlante> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-dente> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-mandibola> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-scapola> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-cranio> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-mandibola-denti> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-costa> , <https://w3id.org/arco/resource/CulturalPropertyPart/2000194980-part-radio> ;
         arco-dd:anthropologicalMaterialMorphology
@@ -577,7 +598,7 @@ ar-archeologicalProperty:2000194980
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:487cd0e5f488a90820c6a12e8f7d5173 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:07a6981d27924ee5f74bfc964e7fb0ef ;
+                ar-address:d4558e9241ed4446c4e83257fcff67f2 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:2000194980-alternative-1 , ar-timeIndexedTypedLocation:2000194980-current .
 
@@ -599,13 +620,18 @@ ar-catalogueRecordVersion:2000194980-compilation
                 <https://w3id.org/arco/resource/CatalogueRecordAT/2000194980> .
 
 ar-bibliography:2000194980-bibliography-5
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 5 of cultural property: 2000194980"@en , "Bibliografia 5 del bene culturale: 2000194980"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 5 del bene culturale: 2000194980"@it , "Bibliography 5 of cultural property: 2000194980"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Oliver G - 1961" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Oliver G" ;
+        arco-cd:bibliographicReferenceDate
+                "1961" ;
         arco-cd:bibliographyLocalIdentifier
                 "Oli1961" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 5 of cultural property: 2000194980"@en , "Bibliografia 5 del bene culturale: 2000194980"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliografia 5 del bene culturale: 2000194980"@en , "Bibliography 5 of cultural property: 2000194980"@en .
 
 ar-dating:2000194980-1
         a                       arco-cd:Dating ;
@@ -692,14 +718,19 @@ ar-agentrole:2000194980-heritage-protection-agency
         l0:name     "lavori agricoli" .
 
 ar-bibliography:2000194980-bibliography-4
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 4 of cultural property: 2000194980"@en , "Bibliografia 4 del bene culturale: 2000194980"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 4 del bene culturale: 2000194980"@it , "Bibliography 4 of cultural property: 2000194980"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Chiarugi G./ Bucciante L - 1969" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Chiarugi G./ Bucciante L" ;
+        arco-cd:bibliographicReferenceDate
+                "1969" ;
         arco-cd:bibliographyLocalIdentifier
                 "Chia1969" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000194980 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "V. 1-2" ;
-        l0:name                   "Bibliography 4 of cultural property: 2000194980"@en , "Bibliografia 4 del bene culturale: 2000194980"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000194980 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "V. 1-2" ;
+        l0:name                         "Bibliografia 4 del bene culturale: 2000194980"@en , "Bibliography 4 of cultural property: 2000194980"@en .
 
 ar-agent:37392174174e71e6b1dfe3f9f5f269bd
         a           l0:Agent ;

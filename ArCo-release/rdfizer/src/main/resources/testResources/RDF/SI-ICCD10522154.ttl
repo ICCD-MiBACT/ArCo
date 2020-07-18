@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedRole:0500590493SI-a62661ad1f45afc635f212edf812e7fa
@@ -105,19 +107,17 @@ ar-archeologicalProperty:0500590493SI
         dc:date                         ar-TimeInterval:ca-80000-bp-ca-35000-bp ;
         dc:description                  "Industria litica costituita da strumenti rinvenuti in giacitura secondaria" ;
         dc:identifier                   "0500590493SI" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500590493SI-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0500590493SI-legal-situation-proprieta-stato ;
         dc:source                       ar-catalogueRecordSI:0500590493SI ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#aree_archeologiche> ;
         dc:type                         ar-culturalPropertyType:9c898aa78b2fd0dfae7091cd8fd61b02 ;
         <http://purl.org/dc/terms/bibliographicCitation>
                 ar-bibliography:0500590493SI-bibliography-1 , ar-bibliography:0500590493SI-bibliography-2 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 ar-catalogueRecordSI:0500590493SI ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/927ba9ea79eff359f634ecf06fde5d7f" ;
+                ar-address:927ba9ea79eff359f634ecf06fde5d7f ;
         arco-arco:catalogueNumber       "00590493" ;
-        arco-arco:description           "Industria litica costituita da strumenti rinvenuti in giacitura secondaria" ;
         arco-arco:hasCataloguingAgency  ar-agent:a860868d23f3a68323a2e3f6563d7f31 ;
         arco-arco:hasHeritageProtectionAgency
                 ar-agent:a860868d23f3a68323a2e3f6563d7f31 ;
@@ -137,12 +137,13 @@ ar-archeologicalProperty:0500590493SI
         arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/0500590493SI-survey-1> ;
         arco-cd:hasUrbanPlanningInstrument
                 <https://w3id.org/arco/resource/UrbanPlanningInstrument/0500590493SI-urban-planning-instrument-1> ;
+        arco-core:description           "Industria litica costituita da strumenti rinvenuti in giacitura secondaria" ;
         arco-core:hasAgentRole          ar-agentrole:0500590493SI-heritage-protection-agency , ar-agentrole:0500590493SI-cataloguing-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0500590493SI-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:9c898aa78b2fd0dfae7091cd8fd61b02 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:0ff0ded6b481fa0b0369b66b4d8617be ;
+                ar-address:927ba9ea79eff359f634ecf06fde5d7f ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0500590493SI-current ;
         clvapit:hasGeometry             ar-geometry:0500590493SI-geometry-point-1 .
@@ -326,16 +327,21 @@ ar-agent:abcd8ca9a95a2d9c0f45dca821fa8b6c
         l0:name     "Zone Archeologiche" .
 
 ar-bibliography:0500590493SI-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliografia 2 del bene culturale: 0500590493SI"@it , "Bibliography 2 of cultural property: 0500590493SI"@en ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 2 del bene culturale: 0500590493SI"@it , "Bibliography 2 of cultural property: 0500590493SI"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: LEONARDI G - 1959" ;
+        arco-cd:bibliographicReferenceAuthor
+                "LEONARDI G" ;
+        arco-cd:bibliographicReferenceDate
+                "1959" ;
         arco-cd:bibliographyLocalIdentifier
                 "00002410" ;
         arco-cd:completeBibliographicReference
-                "CAV I 1988, F. 36, n. 5.1, p. 116, con bibliografia precedente." ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0500590493SI ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 308" ;
-        l0:name                   "Bibliografia 2 del bene culturale: 0500590493SI"@en , "Bibliography 2 of cultural property: 0500590493SI"@en .
+                "CAV I 1988, F. 36, n. 5.1, p. 116, con bibliografia precedente" ;
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0500590493SI ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 308" ;
+        l0:name                         "Bibliografia 2 del bene culturale: 0500590493SI"@en , "Bibliography 2 of cultural property: 0500590493SI"@en .
 
 ar-culturalPropertyDefinition:grotta
         a           arco-dd:CulturalPropertyDefinition ;
@@ -428,16 +434,21 @@ ar-TimeInterval:2013  a  tiapit:TimeInterval ;
         tiapit:time  "2013" .
 
 ar-bibliography:0500590493SI-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliografia 1 del bene culturale: 0500590493SI"@it , "Bibliography 1 of cultural property: 0500590493SI"@en ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 0500590493SI"@it , "Bibliography 1 of cultural property: 0500590493SI"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Carta archeologica I - 1988" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Carta archeologica I" ;
+        arco-cd:bibliographicReferenceDate
+                "1988" ;
         arco-cd:bibliographyLocalIdentifier
                 "00000342" ;
         arco-cd:completeBibliographicReference
-                "CAV I 1988, F. 36, n. 5.1, p. 116, con bibliografia precedente." ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:0500590493SI ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "F. 36, n. 5.1, p. 116" ;
-        l0:name                   "Bibliography 1 of cultural property: 0500590493SI"@en , "Bibliografia 1 del bene culturale: 0500590493SI"@en .
+                "CAV I 1988, F. 36, n. 5.1, p. 116, con bibliografia precedente" ;
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:0500590493SI ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "F. 36, n. 5.1, p. 116" ;
+        l0:name                         "Bibliography 1 of cultural property: 0500590493SI"@en , "Bibliografia 1 del bene culturale: 0500590493SI"@en .
 
 ar-address:927ba9ea79eff359f634ecf06fde5d7f
         a                    clvapit:Address ;
@@ -473,10 +484,10 @@ ar-catalogueRecordSI:0500590493SI
 
 ar-TimeInterval:ca-80000-bp-ca-35000-bp
         a                    tiapit:TimeInterval ;
-        rdfs:label           "ca 80.000 B.P. - ca 35.000 B.P." ;
-        arco-arco:endTime    "ca 35.000 B.P." ;
-        arco-arco:startTime  "ca 80.000 B.P." ;
-        l0:name              "ca 80.000 B.P. - ca 35.000 B.P." .
+        rdfs:label           "ca 80.000 B.P - ca 35.000 B.P" ;
+        arco-arco:endTime    "ca 35.000 B.P" ;
+        arco-arco:startTime  "ca 80.000 B.P" ;
+        l0:name              "ca 80.000 B.P - ca 35.000 B.P" .
 
 ar-event:0500590493SI-creation-1
         a                     l0:Event ;

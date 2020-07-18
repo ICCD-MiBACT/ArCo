@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agentrole:1200870331-proponent-agency
@@ -154,6 +156,12 @@ ar-timeIndexedRole:1200870331-rvm-16aa6c27754f49dc1166a42aed8765c9
         roapit:isRoleInTimeOf  ar-agent:16aa6c27754f49dc1166a42aed8765c9 ;
         roapit:withRole        ar-role:DigitalTranscriptionOperator .
 
+ar-Subject:f146aa45a94ac1a3b311a1951608def5
+        a                    arco-cd:Subject ;
+        rdfs:label           "Ciclo dell’anno/ Immacolata Concezione, 8 dicembre" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/DemoEthnoAnthropologicalHeritage/1200870331> ;
+        l0:name              "Ciclo dell’anno/ Immacolata Concezione, 8 dicembre" .
+
 ar-agent:b6fb9c1c4f6cf3c0f93797093466b50e
         a           l0:Agent ;
         rdfs:label  "Cavatrunci Claudio" .
@@ -221,8 +229,7 @@ ar-role:DigitalTranscriptionResponsibleAgent
         dc:description                  "Il corteo dei personaggi fa il suo ingresso in plaza de Armas, la piazza centrale del paese. Sfilano ordinatamente un suonatore di flauto a tacca #quena# e un suonatore di tamburo, due danzatori mascherati da contadini in abiti tradizionali, due uomini che conducono i buoi aggiogati all’aratro, l’uomo che guida l’aratro. I due musici si dispongono al centro eseguendo la melodia di accompagnamento al rito. I buoi portano coperte multicolori sulla groppa e un giogo appositamente adornato per la festa. Vengono tirati da due uomini mentre un terzo si occupa di guidare l’aratro da dietro, facendo talvolta pressione con il piede sinistro sulla bure, per approfondire il solco. Dietro all’aratro si muovono i personaggi principali, un uomo travestito da contadina, con gonna e #manta# sulle spalle, e un secondo uomo con il volto mascherato e con una lunga barba nera. La donna danza dietro all’aratro simulando l’atto della semina. Con cadenza ritmica si piega in avanti lasciando cadere nel solco alcuni chicchi di mais che preleva con la mano destra da una bisaccia appesa al collo. Alcune donne tra gli astanti si chinano a raccogliere i chicchi dal solco per assicurarsi la buona fortuna e un buon raccolto. Subito dietro, il danzatore barbuto, detto #abuelo# (il nonno) segue la donna accennando con il piede il gesto di coprire il solco dove è stato seminato. Mentre danza fa roteare con la mano destra una lunga sciarpa bianca." ;
         dc:identifier                   "1200870331" ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#beni_immateriali_della_tradizione_e_del_folklore" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_immateriali_della_tradizione_e_del_folklore> ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> ;
         arco-arco:catalogueNumber       "00870331" ;
@@ -235,7 +242,8 @@ ar-role:DigitalTranscriptionResponsibleAgent
                 <https://w3id.org/arco/resource/CatalogueRecordBDI/1200870331> ;
         arco-cd:hasDocumentation        <https://w3id.org/arco/resource/FilmDocumentation/1200870331-film-documentation-1> ;
         arco-cd:hasProponentAgency      ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
-        arco-cd:hasSurvey               <https://w3id.org/arco/resource/ObservationSurvey/1200870331> ;
+        arco-cd:hasSubject              ar-Subject:f146aa45a94ac1a3b311a1951608def5 ;
+        arco-cd:subject                 "Ciclo dell’anno/ Immacolata Concezione, 8 dicembre" ;
         arco-core:hasAgentRole          ar-agentrole:1200870331-proponent-agency , ar-agentrole:1200870331-heritage-protection-agency , ar-agentrole:1200870331-cataloguing-agency ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1200870331-alternative-1 .

@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 <https://w3id.org/arco/resource/Coordinates/1100217609-bene-individuo-geometry-point-coordinates>
@@ -97,21 +99,20 @@ ar-address:cc7e8ac2d6a78041fd6b9068c6d09a40
         clvapit:hasProvince             ar-province:ap .
 
 <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1100217609-bene-individuo>
-        a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchitecturalOrLandscapeHeritage ;
-        rdfs:comment                    "fontana, Fontana di via Vittorio Emanuele" ;
-        rdfs:label                      "Fontana di via Vittorio Emanuele (fontana) - maestranze locali seicentesche ()"@it , "Fontana di via Vittorio Emanuele (fontana) - maestranze locali seicentesche ()"@en ;
+        a                               arco-arco:ImmovableCulturalProperty , arco-ip:Construction , arco-arco:ArchitecturalOrLandscapeHeritage ;
+        rdfs:comment                    "fontana, pubblica, Fontana di via Vittorio Emanuele" ;
+        rdfs:label                      "Fontana di via Vittorio Emanuele (fontana, pubblica) - maestranze locali seicentesche ()"@it , "Fontana di via Vittorio Emanuele (fontana, pubblica) - maestranze locali seicentesche ()"@en ;
         dc:coverage                     ar-city:ripatransone ;
         dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/1100217609-bene-individuo-cultural-scope-attribution-1> ;
         dc:identifier                   "1100217609-bene individuo" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1100217609-bene-individuo-legal-situation-proprieta-ente-locale" ;
+        dc:rights                       ar-legalSituation:1100217609-bene-individuo-legal-situation-proprieta-ente-locale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordA/1100217609-bene-individuo> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#beni_architettonici" ] ;
-        dc:type                         ar-culturalPropertyType:b1233b4654bae701b1993a56c4494636 ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_architettonici> ;
+        dc:type                         ar-culturalPropertyType:87065ce624f0114f44def95f2e438fc0 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordA/1100217609-bene-individuo> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/cc7e8ac2d6a78041fd6b9068c6d09a40" ;
+                ar-address:cc7e8ac2d6a78041fd6b9068c6d09a40 ;
         arco-arco:catalogueNumber       "00217609" ;
         arco-arco:hasCataloguingAgency  ar-agent:91d9cb1511f8ae08a151aca65bbe146f ;
         arco-arco:hasHeritageProtectionAgency
@@ -132,13 +133,13 @@ ar-address:cc7e8ac2d6a78041fd6b9068c6d09a40
         arco-core:hasAgentRole          ar-agentrole:1100217609-bene-individuo-heritage-protection-agency , ar-agentrole:1100217609-bene-individuo-cataloguing-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1100217609-bene-individuo-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
-                ar-culturalPropertyType:b1233b4654bae701b1993a56c4494636 ;
+                ar-culturalPropertyType:87065ce624f0114f44def95f2e438fc0 ;
         arco-dd:hasDesignationInTime    ar-designationInTime:1100217609-bene-individuo-fontana-di-via-vittorio-emanuele ;
         arco-dd:hasUse                  <https://w3id.org/arco/resource/Use/1100217609-bene-individuo-current-use-1> ;
         arco-location:hasCadastralIdentity
                 <https://w3id.org/arco/resource/CadastralIdentity/1100217609-bene-individuo-1> ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:a8a39c5b928631f1e9c252bd0d7dac41 ;
+                ar-address:cc7e8ac2d6a78041fd6b9068c6d09a40 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1100217609-bene-individuo-current ;
         clvapit:hasGeometry             ar-geometry:1100217609-bene-individuo-geometry-point .
@@ -176,6 +177,15 @@ ar-geometry:1100217609-bene-individuo-geometry-point
                 <https://w3id.org/arco/resource/CadastralFolio/1100217609-bene-individuo-33-sd> ;
         l0:name     "Identità catastale 1 del bene: 1100217609-bene-individuo"@it , "Cadastral identity 1 of cultural property: 1100217609-bene-individuo"@en .
 
+ar-culturalPropertyType:87065ce624f0114f44def95f2e438fc0
+        a           arco-dd:CulturalPropertyType ;
+        rdfs:label  "Tipo del bene: fontana pubblica"@it , "Cultural property type: fontana pubblica"@en ;
+        arco-dd:hasCulturalPropertyDefinition
+                ar-culturalPropertyDefinition:fontana ;
+        arco-dd:hasCulturalPropertySpecification
+                ar-culturalPropertySpecification:pubblica ;
+        l0:name     "Tipo del bene: fontana pubblica"@it , "Cultural property type: fontana pubblica"@en .
+
 <https://w3id.org/arco/resource/Altitude/1100217609-bene-individuo-geometry-point-altitude>
         a                  arco-location:Altitude ;
         rdfs:label         "Altitudine del bene culturale: 1100217609-bene-individuo"@it , "Altitude of cultural property: 1100217609-bene-individuo"@en ;
@@ -195,12 +205,16 @@ ar-agentrole:1100217609-bene-individuo-heritage-protection-agency
 
 ar-agent:0386b7914538ae55d233e21e647fb939
         a           l0:Agent ;
-        rdfs:label  "Taffetani D." .
+        rdfs:label  "Taffetani D" .
 
 ar-role:CataloguinAgency
         a                   roapit:Role ;
         rdfs:label          "Ente schedatore"@it , "Cataloguing agency"@en ;
         arco-core:isRoleOf  ar-agentrole:1100217609-bene-individuo-cataloguing-agency .
+
+ar-culturalPropertySpecification:pubblica
+        a           arco-dd:CulturalPropertySpecification ;
+        rdfs:label  "pubblica" .
 
 ar-province:ap  a   clvapit:Province ;
         rdfs:label  "AP" ;
@@ -225,6 +239,8 @@ ar-designationInTime:1100217609-bene-individuo-fontana-di-via-vittorio-emanuele
         a                            arco-cd:CulturalScopeAttribution ;
         rdfs:label                   "Attribuzione di ambito culturale del bene: 1100217609-bene-individuo"@it , "Cultural scope attribution of cultural property: 1100217609-bene-individuo"@en ;
         arco-cd:hasCulturalScope     <https://w3id.org/arco/resource/CulturalScope/maestranze-locali-seicentesche> ;
+        arco-cd:hasInterpretationCriterion
+                ar-interpretationCriterion:analisi-dei-caratteri-stilistici-e-costruttivi-ndc ;
         arco-cd:hasInterventionRole  ar-role:1100217609-bene-individuo-costruzione ;
         arco-cd:isAuthorshipAttributionOf
                 <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1100217609-bene-individuo> ;
@@ -238,13 +254,13 @@ ar-dating:1100217609-bene-individuo-1
 
 ar-timeIndexedRole:1100217609-bene-individuo-compilation-0386b7914538ae55d233e21e647fb939
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Taffetani D."@en , "Compilazione da Taffetani D."@it ;
+        rdfs:label             "Compilation by Taffetani D"@en , "Compilazione da Taffetani D"@it ;
         roapit:isRoleInTimeOf  ar-agent:0386b7914538ae55d233e21e647fb939 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
 ar-catalogueRecordVersion:1100217609-bene-individuo-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILATORI - compilazione della scheda (speditiva) Taffetani D. 2004" ;
+        rdfs:label                   "COMPILATORI - compilazione della scheda (speditiva) Taffetani D 2004" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2004 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1100217609-bene-individuo-compilation-0386b7914538ae55d233e21e647fb939 ;
@@ -255,9 +271,9 @@ ar-catalogueRecordVersion:1100217609-bene-individuo-compilation
 
 ar-TimeInterval:xvii-inizio-xviica-prima-meta
         a            tiapit:TimeInterval ;
-        rdfs:label   "XVII inizio - XVIIca. prima metà" ;
-        tiapit:time  "XVII inizio - XVIIca. prima metà" ;
-        l0:name      "XVII inizio - XVIIca. prima metà" .
+        rdfs:label   "XVII inizio - XVIIca prima metà" ;
+        tiapit:time  "XVII inizio - XVIIca prima metà" ;
+        l0:name      "XVII inizio - XVIIca prima metà" .
 
 ar-agentrole:1100217609-bene-individuo-cataloguing-agency
         a                   arco-core:AgentRole ;
@@ -287,10 +303,15 @@ ar-agent:91d9cb1511f8ae08a151aca65bbe146f
 
 <https://w3id.org/arco/resource/UrbanPlanningInstrument/1100217609-bene-individuo-urban-planning-instrument-1>
         a           arco-cd:UrbanPlanningInstrument ;
-        rdfs:label  "Urban planning instrument 1 of cultural property 1100217609-bene-individuo: P.R."@en , "Strumento urbanistico-territoriale 1 del bene culturale 1100217609-bene-individuo: P.R."@it ;
+        rdfs:label  "Urban planning instrument 1 of cultural property 1100217609-bene-individuo: P.R"@en , "Strumento urbanistico-territoriale 1 del bene culturale 1100217609-bene-individuo: P.R"@it ;
         arco-cd:hasEligibleIntervention
                 <https://w3id.org/arco/resource/EligibleIntervention/restauro-e-risanamento-conservativo> ;
-        l0:name     "Urban planning instrument 1 of cultural property 1100217609-bene-individuo: P.R."@en , "Strumento urbanistico-territoriale 1 del bene culturale 1100217609-bene-individuo: P.R."@it .
+        l0:name     "Urban planning instrument 1 of cultural property 1100217609-bene-individuo: P.R"@en , "Strumento urbanistico-territoriale 1 del bene culturale 1100217609-bene-individuo: P.R"@it .
+
+ar-interpretationCriterion:analisi-dei-caratteri-stilistici-e-costruttivi-ndc
+        a           arco-cd:InterpretationCriterion ;
+        rdfs:label  "analisi dei caratteri stilistici e costruttivi (n.d.c.)" ;
+        l0:name     "analisi dei caratteri stilistici e costruttivi (n.d.c.)" .
 
 <https://w3id.org/arco/resource/CatalogueRecordA/1100217609-bene-individuo>
         a               arco-catalogue:CatalogueRecordA ;
@@ -307,7 +328,7 @@ ar-agent:91d9cb1511f8ae08a151aca65bbe146f
                 arco-catalogue:P ;
         arco-catalogue:systemRecordCode
                 "A-200-ICCD10266725" ;
-        arco-core:note  "F.° 133 I N.O. | RIPATRANSONE" .
+        arco-core:note  "F.° 133 I N.O | RIPATRANSONE" .
 
 ar-timeIndexedTypedLocation:1100217609-bene-individuo-current
         a                              arco-location:TimeIndexedTypedLocation ;
@@ -330,19 +351,12 @@ ar-culturalPropertyDefinition:fontana
 <https://w3id.org/arco/resource/CadastralFolio/1100217609-bene-individuo-33-sd>
         a            arco-location:CadastralFolio ;
         rdfs:label   "Cadastral folio of cultural property 1100217609-bene-individuo: 33"@en , "Foglio di mappa catastale del bene culturale 1100217609-bene-individuo: 33"@it ;
-        tiapit:time  "s.d." ;
+        tiapit:time  "s.d" ;
         l0:name      "Cadastral folio of cultural property 1100217609-bene-individuo: 33"@en , "Foglio di mappa catastale del bene culturale 1100217609-bene-individuo: 33"@it .
 
 ar-role:ResponsibleCompilation
         a           roapit:Role ;
         rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
-
-ar-culturalPropertyType:b1233b4654bae701b1993a56c4494636
-        a           arco-dd:CulturalPropertyType ;
-        rdfs:label  "Tipo del bene: fontana"@it , "Cultural property type: fontana"@en ;
-        arco-dd:hasCulturalPropertyDefinition
-                ar-culturalPropertyDefinition:fontana ;
-        l0:name     "Tipo del bene: fontana"@it , "Cultural property type: fontana "@en .
 
 <https://w3id.org/arco/resource/Use/1100217609-bene-individuo-current-use-1>
         a                    arco-cd:Use ;

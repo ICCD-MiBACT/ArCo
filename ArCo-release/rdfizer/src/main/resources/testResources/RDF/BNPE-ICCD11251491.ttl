@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedRole:1500831200-compilation-823022e720e285e9b09230f327465b76
@@ -88,12 +90,17 @@ ar-timeIndexedRole:1500831200-compilation-823022e720e285e9b09230f327465b76
         roapit:withRole        ar-role:ResponsibleCompilation .
 
 ar-bibliography:1500831200-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 1500831200"@en , "Bibliografia 1 del bene culturale: 1500831200"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 1500831200"@it , "Bibliography 1 of cultural property: 1500831200"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Di Lorenzo, P. - 2011" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Di Lorenzo, P." ;
+        arco-cd:bibliographicReferenceDate
+                "2011" ;
         arco-cd:bibliographyLocalIdentifier
                 "00000001" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/NaturalHeritage/1500831200> ;
-        l0:name                   "Bibliography 1 of cultural property: 1500831200"@en , "Bibliografia 1 del bene culturale: 1500831200"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/NaturalHeritage/1500831200> ;
+        l0:name                         "Bibliografia 1 del bene culturale: 1500831200"@en , "Bibliography 1 of cultural property: 1500831200"@en .
 
 <https://w3id.org/arco/resource/NaturalHeritage/1500831200>
         a                               arco-arco:NaturalHeritage , arco-arco:MovableCulturalProperty ;
@@ -101,7 +108,7 @@ ar-bibliography:1500831200-bibliography-1
         rdfs:label                      "Arenaria (esemplare) ()"@it , "Arenaria (esemplare) ()"@en ;
         dc:coverage                     ar-city:caserta ;
         dc:identifier                   "1500831200" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1500831200-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:1500831200-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBNPE/1500831200> ;
         dc:type                         ar-culturalPropertyType:f802f4924d5f1daa859daf19dc8bbf85 ;
         <http://purl.org/dc/terms/bibliographicCitation>
@@ -109,7 +116,7 @@ ar-bibliography:1500831200-bibliography-1
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordBNPE/1500831200> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/98e2be110abcc2f342ea3e272eb0f2f2" ;
+                ar-address:98e2be110abcc2f342ea3e272eb0f2f2 ;
         arco-arco:catalogueNumber       "00831200" ;
         arco-arco:hasCataloguingAgency  ar-agent:c711702d5dadbfda28dca24e19ceb301 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
@@ -134,7 +141,7 @@ ar-bibliography:1500831200-bibliography-1
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:f802f4924d5f1daa859daf19dc8bbf85 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:da99e2620fd0dbddd6da8144dc34aaa0 ;
+                ar-address:98e2be110abcc2f342ea3e272eb0f2f2 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1500831200-current .
 

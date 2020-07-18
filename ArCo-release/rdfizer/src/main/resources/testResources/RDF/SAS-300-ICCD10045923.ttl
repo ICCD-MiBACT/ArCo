@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agentrole:0303232991-heritage-protection-agency
@@ -233,15 +235,14 @@ ar-archeologicalProperty:0303232991
         rdfs:label                      "saggio stratigrafico in ambito urbano"@it , "saggio stratigrafico in ambito urbano"@en ;
         dc:coverage                     ar-city:brescia ;
         dc:identifier                   "0303232991" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0303232991-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:0303232991-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#saggi_archeologici_stratigrafici" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#saggi_archeologici_stratigrafici> ;
         dc:type                         ar-culturalPropertyType:1a06cce58e40c7f65db5382b7f20f670 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/4581b3af8c56c2232d1341e8e874fd69" ;
+                ar-address:4581b3af8c56c2232d1341e8e874fd69 ;
         arco-arco:catalogueNumber       "03232991" ;
         arco-arco:hasCataloguingAgency  ar-agent:d25fb707067c6b50982cb83b41ae6711 ;
         arco-arco:hasHeritageProtectionAgency
@@ -257,7 +258,7 @@ ar-archeologicalProperty:0303232991
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:1a06cce58e40c7f65db5382b7f20f670 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:3289a4b80e434f6831e76456eb06127d ;
+                ar-address:4581b3af8c56c2232d1341e8e874fd69 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0303232991-current .
 

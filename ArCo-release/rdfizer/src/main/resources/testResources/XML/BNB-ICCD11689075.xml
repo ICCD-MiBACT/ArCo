@@ -1,179 +1,192 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <BNB version="3.01_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo scheda">BNB</TSK>
-         <LIR hint="Livello ricerca">I</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">09</NCTR>
-            <NCTN hint="Numero catalogo generale">00860282</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">UNISI</ESC>
-         <ECP hint="Ente competente">S61</ECP>
-      </CD>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">campione</OGTD>
-            <OGTE hint="Denominazione erbario">Herbarium Universitatis Senensis</OGTE>
-            <OGTR hint="Tipologia erbario">erbario generale</OGTR>
-            <OGTC hint="Denominazione collezione/ raccolta">Collezione xiloteca</OGTC>
-            <OGTZ hint="Tipologia collezione/ raccolta">collezione fanerogamica</OGTZ>
-            <OGTK hint="Tipologia campione">essiccato</OGTK>
-            <OGTS hint="Notizie storico-culturali">Il campione è una rondella di legno grezzo munito di corteccia, ricavata dal taglio trasversale di un tronco o di un ramo, successivamente sistemata su un supporto ligneo sul quale si trova un numero d'ordine e il cartellino che riporta il nome scientifico della specie. Sulla faccia è stata applicata della coppale mentre sul dorso è presente un' iscrizione. Il campione fa parte di una collezione nata grazie al lavoro del  Prof. B. Longo e del Prof. A. Preda, direttori dell'Orto Botanico di Siena rispettivamente dal 1906-1915 e dal 1915-1921. Nella collezione vennero radunati i campioni raccolti dal Prof. A. Tassi e altri reperti legnosi provenienti dall'Orto, molti dei quali recuperati nel 1915 dalle piante strocatesi durante una nevicata. La collezione è stata incrementata fino alla fine degli anni '50 per merito del Prof. A. Nannizzi, direttore dell'Orto dal 1934 al 1950.</OGTS>
-         </OGT>
-      </OG>
-      <SB hint="SISTEMATICA-BOTANICA">
-         <SBS hint="SISTEMATICA">
-            <SBSF hint="Famiglia">Cupressaceae</SBSF>
-            <SBSN hint="Numero genere">8329</SBSN>
-            <SBSC hint="Schema sistematico di riferimento">Durand Th. 1888, Idex Generum Phanerogamorum- Bruxellis</SBSC>
-         </SBS>
-         <NBN hint="NOMENCLATURA">
-            <NBNA hint="Specie nome completo">Cupressus sp.</NBNA>
-         </NBN>
-         <DBV hint="DETERMINAVIT">
-            <DBVA hint="Determinavit">Attilio Tassi, Biagio Longo, Agilulfo Preda</DBVA>
-            <DBVB hint="Da">1864</DBVB>
-            <DBVC hint="Validita'">post</DBVC>
-            <DBVD hint="A">1950</DBVD>
-            <DBVE hint="Validita'">ante</DBVE>
-         </DBV>
-         <SBE hint="CARTELLINI/ ETICHETTE">
-            <SBET hint="Testo">CUPRESSUS/ sp.</SBET>
-            <SBEL hint="Lingua">latina</SBEL>
-            <SBEC hint="Caratteri lingua">latini</SBEC>
-         </SBE>
-      </SB>
-      <LR hint="DATI DI RACCOLTA">
-         <LRV hint="LOCALITA' DI RACCOLTA">
-            <LRVT hint="Tipo di localizzazione">località di raccolta - dati aggiornati</LRVT>
-            <LRVK hint="Continente">Europa</LRVK>
-            <LRVS hint="Stato">Italia</LRVS>
-            <LRVR hint="Regione">Toscana</LRVR>
-            <LRVP hint="Provincia">SI</LRVP>
-            <LRVC hint="Comune">Siena</LRVC>
-         </LRV>
-         <LRI hint="INFORMAZIONI SULLA RACCOLTA">
-            <LRIE hint="Specifiche di raccolta">Orto Botanico</LRIE>
-         </LRI>
-         <LRD hint="LEGIT E DATA">
-            <LRDA hint="Legit">Attilio Tassi, Biagio Longo, Agilulfo Preda</LRDA>
-            <LRDB hint="Da">1864</LRDB>
-            <LRDC hint="Validita'">post</LRDC>
-            <LRDD hint="A">1950</LRDD>
-            <LRDE hint="Validita'">ante</LRDE>
-         </LRD>
-      </LR>
-      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
-            <PVCS hint="Stato">ITALIA</PVCS>
-            <PVCR hint="Regione">Toscana</PVCR>
-            <PVCP hint="Provincia">SI</PVCP>
-            <PVCC hint="Comune">Siena</PVCC>
-         </PVC>
-         <LDC hint="COLLOCAZIONE SPECIFICA">
-            <LDCT hint="Tipologia">ex monastero</LDCT>
-            <LDCQ hint="Qualificazione">camaldolese</LDCQ>
-            <LDCN hint="Denominazione">Accademia dei Fisiocritici Onlus</LDCN>
-            <LDCU hint="Denominazione spazio viabilistico">Piazzetta Silvio Gigli, 2</LDCU>
-            <LDCM hint="Denominazione struttura conservativa">Museo di Storia Naturale - sezione Botanica</LDCM>
-         </LDC>
-      </LC>
-      <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
-         <TCL hint="Tipo di localizzazione">luogo di provenienza</TCL>
-         <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-            <PRVK hint="Continente">Europa</PRVK>
-            <PRVS hint="Stato">ITALIA</PRVS>
-            <PRVR hint="Regione">Toscana</PRVR>
-            <PRVP hint="Provincia">SI</PRVP>
-            <PRVC hint="Comune">Siena</PRVC>
-         </PRV>
-         <PRC hint="COLLOCAZIONE SPECIFICA">
-            <PRCT hint="Tipologia">istituto</PRCT>
-            <PRCQ hint="Qualificazione">universitario</PRCQ>
-            <PRCD hint="Denominazione">Dipartimento di Scienze della Vita</PRCD>
-            <PRCU hint="Denominazione spazio viabilistico">Via Pier Andrea Mattioli, 4</PRCU>
-            <PRCM hint="Denominazione struttura conservativa">Museo Botanico</PRCM>
-            <PRCS hint="Specifiche">piano 1S, corridoio erbario</PRCS>
-         </PRC>
-         <PRD hint="DATA">
-            <PRDI hint="Data ingresso">1864/ post</PRDI>
-            <PRDU hint="Data uscita">2006</PRDU>
-         </PRD>
-      </LA>
-      <MT hint="DATI TECNICI">
-         <MIS hint="MISURE">
-            <MISU hint="Unita'">cm</MISU>
-            <MISA hint="Altezza">10.7</MISA>
-            <MISL hint="Larghezza">10.5</MISL>
-            <MISS hint="Spessore">4</MISS>
-         </MIS>
-      </MT>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCT hint="Tipo">secco</STCT>
-            <STCD hint="Data">2014</STCD>
-            <STCC hint="Stato di conservazione">buono</STCC>
-            <STCS hint="Indicazioni specifiche">Fori di tarlo</STCS>
-         </STC>
-      </CO>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Ente pubblico non territoriale</CDGG>
-            <CDGS hint="Indicazione specifica">Università di Siena 1240</CDGS>
-            <CDGI hint="Indirizzo">Via Banchi di Sotto n. 55, 53100 Siena</CDGI>
-         </CDG>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAA hint="Autore">Vellini, Silvia</FTAA>
-            <FTAD hint="Data">2014/12/00</FTAD>
-            <FTAN hint="Codice identificativo">USIMBH00001</FTAN>
-         </FTA>
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAA hint="Autore">Vellini, Silvia</FTAA>
-            <FTAD hint="Data">2014/12/00</FTAD>
-            <FTAN hint="Codice identificativo">USIMBH00002</FTAN>
-            <FTAT hint="Note">particolare</FTAT>
-         </FTA>
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAA hint="Autore">Vellini, Silvia</FTAA>
-            <FTAD hint="Data">2014/12/00</FTAD>
-            <FTAN hint="Codice identificativo">USIMBH00003</FTAN>
-            <FTAT hint="Note">dorso</FTAT>
-         </FTA>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia di corredo</BIBX>
-            <BIBA hint="Autore">Durand, Th</BIBA>
-            <BIBD hint="Anno di edizione">1888</BIBD>
-            <BIBH hint="Sigla per citazione">USI00056</BIBH>
-         </BIB>
-      </DO>
-      <AD hint="ACCESSO AI DATI">
-         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
-            <ADSP hint="Profilo di accesso">1</ADSP>
-            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
-         </ADS>
-      </AD>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">2015</CMPD>
-            <CMPN hint="Nome">Vellini, Silvia</CMPN>
-         </CMP>
-         <RSR hint="Referente scientifico">Bonini, Ilaria</RSR>
-         <RSR hint="Referente scientifico">Terenna, Gigliola</RSR>
-         <FUR hint="Funzionario responsabile">Vannozzi, Francesca</FUR>
-         <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
-            <RVMD hint="Data">2015</RVMD>
-            <RVMN hint="Nome">Vellini, Silvia</RVMN>
-            <RVME hint="Ente">UNISI</RVME>
-         </RVM>
-      </CM>
-   </BNB>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11689075@</identifier>
+        <datestamp>2015-12-30T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <BNB version="3.01_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">BNB</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">09</NCTR>
+                        <NCTN hint="Numero catalogo generale">00860282</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">UNISI</ESC>
+                    <ECP hint="Ente competente">S61</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">campione</OGTD>
+                        <OGTE hint="Denominazione erbario">Herbarium Universitatis Senensis</OGTE>
+                        <OGTR hint="Tipologia erbario">erbario generale</OGTR>
+                        <OGTC hint="Denominazione collezione/ raccolta">Collezione xiloteca</OGTC>
+                        <OGTZ hint="Tipologia collezione/ raccolta">collezione fanerogamica</OGTZ>
+                        <OGTK hint="Tipologia campione">essiccato</OGTK>
+                        <OGTS hint="Notizie storico-culturali">Il campione è una rondella di legno grezzo munito di corteccia, ricavata dal taglio trasversale di un tronco o di un ramo, successivamente sistemata su un supporto ligneo sul quale si trova un numero d'ordine e il cartellino che riporta il nome scientifico della specie. Sulla faccia è stata applicata della coppale mentre sul dorso è presente un' iscrizione. Il campione fa parte di una collezione nata grazie al lavoro del Prof. B. Longo e del Prof. A. Preda, direttori dell'Orto Botanico di Siena rispettivamente dal 1906-1915 e dal 1915-1921. Nella collezione vennero radunati i campioni raccolti dal Prof. A. Tassi e altri reperti legnosi provenienti dall'Orto, molti dei quali recuperati nel 1915 dalle piante strocatesi durante una nevicata. La collezione è stata incrementata fino alla fine degli anni '50 per merito del Prof. A. Nannizzi, direttore dell'Orto dal 1934 al 1950</OGTS>
+                    </OGT>
+                </OG>
+                <SB hint="SISTEMATICA-BOTANICA">
+                    <SBS hint="SISTEMATICA">
+                        <SBSF hint="Famiglia">Cupressaceae</SBSF>
+                        <SBSN hint="Numero genere">8329</SBSN>
+                        <SBSC hint="Schema sistematico di riferimento">Durand Th. 1888, Idex Generum Phanerogamorum- Bruxellis</SBSC>
+                    </SBS>
+                    <NBN hint="NOMENCLATURA">
+                        <NBNA hint="Specie nome completo">Cupressus sp</NBNA>
+                    </NBN>
+                    <DBV hint="DETERMINAVIT">
+                        <DBVA hint="Determinavit">Attilio Tassi, Biagio Longo, Agilulfo Preda</DBVA>
+                        <DBVB hint="Da">1864</DBVB>
+                        <DBVC hint="Validita'">post</DBVC>
+                        <DBVD hint="A">1950</DBVD>
+                        <DBVE hint="Validita'">ante</DBVE>
+                    </DBV>
+                    <SBE hint="CARTELLINI/ ETICHETTE">
+                        <SBET hint="Testo">CUPRESSUS/ sp</SBET>
+                        <SBEL hint="Lingua">latina</SBEL>
+                        <SBEC hint="Caratteri lingua">latini</SBEC>
+                    </SBE>
+                </SB>
+                <LR hint="DATI DI RACCOLTA">
+                    <LRV hint="LOCALITA' DI RACCOLTA">
+                        <LRVT hint="Tipo di localizzazione">località di raccolta - dati aggiornati</LRVT>
+                        <LRVK hint="Continente">Europa</LRVK>
+                        <LRVS hint="Stato">Italia</LRVS>
+                        <LRVR hint="Regione">Toscana</LRVR>
+                        <LRVP hint="Provincia">SI</LRVP>
+                        <LRVC hint="Comune">Siena</LRVC>
+                    </LRV>
+                    <LRI hint="INFORMAZIONI SULLA RACCOLTA">
+                        <LRIE hint="Specifiche di raccolta">Orto Botanico</LRIE>
+                    </LRI>
+                    <LRD hint="LEGIT E DATA">
+                        <LRDA hint="Legit">Attilio Tassi, Biagio Longo, Agilulfo Preda</LRDA>
+                        <LRDB hint="Da">1864</LRDB>
+                        <LRDC hint="Validita'">post</LRDC>
+                        <LRDD hint="A">1950</LRDD>
+                        <LRDE hint="Validita'">ante</LRDE>
+                    </LRD>
+                </LR>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Toscana</PVCR>
+                        <PVCP hint="Provincia">SI</PVCP>
+                        <PVCC hint="Comune">Siena</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">ex monastero</LDCT>
+                        <LDCQ hint="Qualificazione">camaldolese</LDCQ>
+                        <LDCN hint="Denominazione">Accademia dei Fisiocritici Onlus</LDCN>
+                        <LDCU hint="Denominazione spazio viabilistico">Piazzetta Silvio Gigli, 2</LDCU>
+                        <LDCM hint="Denominazione struttura conservativa">Museo di Storia Naturale - sezione Botanica</LDCM>
+                    </LDC>
+                </LC>
+                <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
+                    <TCL hint="Tipo di localizzazione">luogo di provenienza</TCL>
+                    <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PRVK hint="Continente">Europa</PRVK>
+                        <PRVS hint="Stato">ITALIA</PRVS>
+                        <PRVR hint="Regione">Toscana</PRVR>
+                        <PRVP hint="Provincia">SI</PRVP>
+                        <PRVC hint="Comune">Siena</PRVC>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCT hint="Tipologia">istituto</PRCT>
+                        <PRCQ hint="Qualificazione">universitario</PRCQ>
+                        <PRCD hint="Denominazione">Dipartimento di Scienze della Vita</PRCD>
+                        <PRCU hint="Denominazione spazio viabilistico">Via Pier Andrea Mattioli, 4</PRCU>
+                        <PRCM hint="Denominazione struttura conservativa">Museo Botanico</PRCM>
+                        <PRCS hint="Specifiche">piano 1S, corridoio erbario</PRCS>
+                    </PRC>
+                    <PRD hint="DATA">
+                        <PRDI hint="Data ingresso">1864/ post</PRDI>
+                        <PRDU hint="Data uscita">2006</PRDU>
+                    </PRD>
+                </LA>
+                <MT hint="DATI TECNICI">
+                    <MIS hint="MISURE">
+                        <MISU hint="Unita'">cm</MISU>
+                        <MISA hint="Altezza">10.7</MISA>
+                        <MISL hint="Larghezza">10.5</MISL>
+                        <MISS hint="Spessore">4</MISS>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCT hint="Tipo">secco</STCT>
+                        <STCD hint="Data">2014</STCD>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                        <STCS hint="Indicazioni specifiche">Fori di tarlo</STCS>
+                    </STC>
+                </CO>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico non territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Università di Siena 1240</CDGS>
+                        <CDGI hint="Indirizzo">Via Banchi di Sotto n. 55, 53100 Siena</CDGI>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Vellini, Silvia</FTAA>
+                        <FTAD hint="Data">2014/12/00</FTAD>
+                        <FTAN hint="Codice identificativo">USIMBH00001</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Vellini, Silvia</FTAA>
+                        <FTAD hint="Data">2014/12/00</FTAD>
+                        <FTAN hint="Codice identificativo">USIMBH00002</FTAN>
+                        <FTAT hint="Note">particolare</FTAT>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Vellini, Silvia</FTAA>
+                        <FTAD hint="Data">2014/12/00</FTAD>
+                        <FTAN hint="Codice identificativo">USIMBH00003</FTAN>
+                        <FTAT hint="Note">dorso</FTAT>
+                    </FTA>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia di corredo</BIBX>
+                        <BIBA hint="Autore">Durand, Th</BIBA>
+                        <BIBD hint="Anno di edizione">1888</BIBD>
+                        <BIBH hint="Sigla per citazione">USI00056</BIBH>
+                    </BIB>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2015</CMPD>
+                        <CMPN hint="Nome">Vellini, Silvia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Bonini, Ilaria</RSR>
+                    <RSR hint="Referente scientifico">Terenna, Gigliola</RSR>
+                    <FUR hint="Funzionario responsabile">Vannozzi, Francesca</FUR>
+                    <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+                        <RVMD hint="Data">2015</RVMD>
+                        <RVMN hint="Nome">Vellini, Silvia</RVMN>
+                        <RVME hint="Ente">UNISI</RVME>
+                    </RVM>
+                </CM>
+            </BNB>
+            <harvesting>
+                <geocoding>
+                    <x>11.3317812</x>
+                    <y>43.3206157</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

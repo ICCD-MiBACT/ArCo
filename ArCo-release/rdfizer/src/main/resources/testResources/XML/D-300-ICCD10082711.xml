@@ -1,235 +1,244 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <D version="3.00_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo Scheda">D</TSK>
-         <LIR hint="Livello ricerca">C</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">01</NCTR>
-            <NCTN hint="Numero catalogo generale">00350961</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">S67</ESC>
-         <ECP hint="Ente competente">S67</ECP>
-      </CD>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">disegno</OGTD>
-            <OGTV hint="Identificazione">opera isolata</OGTV>
-         </OGT>
-         <SGT hint="SOGGETTO">
-            <SGTI hint="Identificazione">testa di donna velata</SGTI>
-         </SGT>
-      </OG>
-      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
-            <PVCS hint="Stato">ITALIA</PVCS>
-            <PVCR hint="Regione">Piemonte</PVCR>
-            <PVCP hint="Provincia">TO</PVCP>
-            <PVCC hint="Comune">Torino</PVCC>
-         </PVC>
-         <LDC hint="COLLOCAZIONE SPECIFICA">
-            <LDCT hint="Tipologia">palazzo</LDCT>
-            <LDCN hint="Denominazione">Palazzo Reale, Manica Nuova</LDCN>
-            <LDCU hint="Denominazione spazio viabilistico">via XX Settembre, 86</LDCU>
-            <LDCM hint="Denominazione raccolta">Galleria Sabauda</LDCM>
-         </LDC>
-      </LC>
-      <UB hint="UBICAZIONE E DATI PATRIMONIALI">
-         <UBO hint="Ubicazione originaria">SC</UBO>
-         <INV hint="INVENTARIO DI MUSEO O SOPRINTENDENZA"/>
-         <INV hint="INVENTARIO DI MUSEO O SOPRINTENDENZA"/>
-         <INV hint="INVENTARIO DI MUSEO O SOPRINTENDENZA"/>
-         <STI hint="STIMA"/>
-      </UB>
-      <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
-         <TCL hint="Tipo di localizzazione">luogo di deposito</TCL>
-         <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-            <PRVS hint="Stato">ITALIA</PRVS>
-            <PRVR hint="Regione">Piemonte</PRVR>
-            <PRVP hint="Provincia">TO</PRVP>
-            <PRVC hint="Comune">Torino</PRVC>
-         </PRV>
-         <PRC hint="COLLOCAZIONE SPECIFICA">
-            <PRCT hint="Tipologia">palazzo</PRCT>
-            <PRCD hint="Denominazione">Palazzo dell'Accademia delle Scienze</PRCD>
-            <PRCU hint="Denominazione spazio viabilistico">via Accademia delle Scienze, 6</PRCU>
-            <PRCM hint="Denominazione raccolta">Galleria Sabauda</PRCM>
-            <PRCS hint="Specifiche">Deposito, rete 21 verso</PRCS>
-         </PRC>
-      </LA>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Secolo">sec. XVI</DTZG>
-            <DTZS hint="Frazione di secolo">primo quarto</DTZS>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">1500</DTSI>
-            <DTSV hint="Validita'">ca</DTSV>
-            <DTSF hint="A">1525</DTSF>
-            <DTSL hint="Validita'">ca</DTSL>
-         </DTS>
-         <DTM hint="Motivazione cronologia">bibliografia</DTM>
-      </DT>
-      <AU hint="DEFINIZIONE CULTURALE">
-         <AUT hint="AUTORE">
-            <AUTR hint="Riferimento all'intervento">realizzazione</AUTR>
-            <AUTM hint="Motivazione dell'attribuzione">analisi stilistica</AUTM>
-            <AUTN hint="Nome scelto">Peruzzi Baldassarre</AUTN>
-            <AUTA hint="Dati anagrafici">1481/ 1536</AUTA>
-            <AUTH hint="Sigla per citazione">00006322</AUTH>
-         </AUT>
-      </AU>
-      <MT hint="DATI TECNICI">
-         <MTC hint="Materia e tecnica">carta/ matita nera matita colorata</MTC>
-         <MIS hint="MISURE">
-            <MISU hint="Unita'">mm</MISU>
-            <MISA hint="Altezza">270</MISA>
-            <MISL hint="Larghezza">180</MISL>
-            <MISV hint="Varie">cornice, altezza: 585</MISV>
-            <MISV hint="Varie">cornice, larghezza: 500</MISV>
-         </MIS>
-      </MT>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">discreto</STCC>
-            <STCS hint="Indicazioni specifiche">alcune lacerazioni e consunzioni nella carta</STCS>
-         </STC>
-      </CO>
-      <DA hint="DATI ANALITICI">
-         <DES hint="DESCRIZIONE">
-            <DESO hint="Indicazioni sull'oggetto">DISEGNO su carta</DESO>
-            <DESI hint="Codifica Iconclass">31 A 2211 (+82)</DESI>
-            <DESS hint="Indicazioni sul soggetto">PERSONAGGI: donna. ABBIGLIAMENTO: velo</DESS>
-         </DES>
-         <ISR hint="ISCRIZIONI">
-            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
-            <ISRS hint="Tecnica di scrittura">a penna</ISRS>
-            <ISRT hint="Tipo di caratteri">corsivo</ISRT>
-            <ISRP hint="Posizione">alto, sinistra</ISRP>
-            <ISRI hint="Trascrizione">Baldassarre da Siena</ISRI>
-         </ISR>
-         <ISR hint="ISCRIZIONI">
-            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
-            <ISRS hint="Tecnica di scrittura">a penna</ISRS>
-            <ISRT hint="Tipo di caratteri">corsivo</ISRT>
-            <ISRP hint="Posizione">basso, sinistra</ISRP>
-            <ISRI hint="Trascrizione">Peruzzi</ISRI>
-         </ISR>
-         <ISR hint="ISCRIZIONI">
-            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
-            <ISRS hint="Tecnica di scrittura">a penna</ISRS>
-            <ISRT hint="Tipo di caratteri">corsivo</ISRT>
-            <ISRP hint="Posizione">fodera di supporto antica</ISRP>
-            <ISRI hint="Trascrizione">Biringucci</ISRI>
-         </ISR>
-         <NSC hint="Notizie storico-critiche">Proveniente dalla raccolta Capoquadri di Firenze, il disegno fu acquistato da Giovanni Vico nel 1869 (Vesme 1899). E' attribuito tradizonalmente a Baldassarre Peruzzi e anche se non è possibile mettere lo studio in diretta relazione con un'opera pittorica, il volto di donna delineato con tratto mordido, dai tratti largi, lo sguardo diretto, improntato a un generico classicismo trova un puntuale termine di confronto con le figure delle Muse nella tavola della Galleria Palatina di Palazzo Pitti a Firenze (inv. 1912 n. 167). L'iscrizione presente nella fodera di supporto del disegno retro indica il nome "Biringucci", ovvero Vannoccio Biringucci (Siena, 1480-1540), nota figura di scienziato e alchemico senese, che ebbe relazioni culturali e di amicizia con Peruzzi. Nel 1535 il Biringucci, noto per aver realizzato un trattato dal titolo "De la Pirotechnia" relativo alla metallurgia,  succedette al Peruzzi come architetto e capomastro dell'opera del duomo di Siena ('Dizionario Biografico degli Italiani', X, 1968, pp. 625-631).</NSC>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <ACQ hint="ACQUISIZIONE">
-            <ACQT hint="Tipo acquisizione">acquisto</ACQT>
-            <ACQN hint="Nome">Vico, Giovanni</ACQN>
-            <ACQD hint="Data acquisizione">1869</ACQD>
-            <ACQL hint="Luogo acquisizione">Firenze</ACQL>
-         </ACQ>
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
-            <CDGS hint="Indicazione specifica">Ministero per i Beni e le Attività Culturali</CDGS>
-            <CDGI hint="Indirizzo">via Accademia delle Scienze, 5 - Torino</CDGI>
-         </CDG>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia b/n</FTAP>
-            <FTAA hint="Autore">Carità, Roberto</FTAA>
-            <FTAD hint="Data">1950/00/00</FTAD>
-            <FTAE hint="Ente proprietario">S67</FTAE>
-            <FTAC hint="Collocazione">Archivio fotografico della Soprintendenza BSAE-PIE</FTAC>
-            <FTAN hint="Codice identificativo">SBAS TO 694B/LS</FTAN>
-         </FTA>
-         <FNT hint="FONTI E DOCUMENTI">
-            <FNTP hint="Tipo">scheda OA ad uso interno</FNTP>
-            <FNTA hint="Autore">Quasimodo, Francesca</FNTA>
-            <FNTT hint="Denominazione">00000434</FNTT>
-            <FNTD hint="Data">2005/00/00</FNTD>
-            <FNTF hint="Foglio/Carta">formato digitale</FNTF>
-            <FNTN hint="Nome archivio">Soprintendenza per i Beni Storici, Artistici ed Etnoantropologici del Piemonte - Ufficio Catalogo</FNTN>
-            <FNTS hint="Posizione">database "OA Galleria Sabauda"</FNTS>
-            <FNTI hint="Codice identificativo">UC-SBSAE_PIE00000434</FNTI>
-         </FNT>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">[Vico, Giovanni]</BIBA>
-            <BIBD hint="Anno di edizione">1871</BIBD>
-            <BIBH hint="Sigla per citazione">01002390</BIBH>
-            <BIBN hint="V., pp., nn.">p. 20</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Jacobsen, Emil</BIBA>
-            <BIBD hint="Anno di edizione">1897</BIBD>
-            <BIBH hint="Sigla per citazione">01000166</BIBH>
-            <BIBN hint="V., pp., nn.">p. 132</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">[Baudi di Vesme, Alessandro]</BIBA>
-            <BIBD hint="Anno di edizione">1899</BIBD>
-            <BIBH hint="Sigla per citazione">01002384</BIBH>
-            <BIBN hint="V., pp., nn.">p. 56</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Pacchioni, Guglielmo</BIBA>
-            <BIBD hint="Anno di edizione">1932</BIBD>
-            <BIBH hint="Sigla per citazione">01002348</BIBH>
-            <BIBN hint="V., pp., nn.">p. 20</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Gabrielli, Noemi</BIBA>
-            <BIBD hint="Anno di edizione">1959</BIBD>
-            <BIBH hint="Sigla per citazione">0100017</BIBH>
-            <BIBN hint="V., pp., nn.">p. 26</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Gabrielli, Noemi</BIBA>
-            <BIBD hint="Anno di edizione">1965</BIBD>
-            <BIBH hint="Sigla per citazione">01002347</BIBH>
-            <BIBN hint="V., pp., nn.">p. 28</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Frommel, Christoph Luitpold</BIBA>
-            <BIBD hint="Anno di edizione">1968</BIBD>
-            <BIBH hint="Sigla per citazione">01001021</BIBH>
-            <BIBN hint="V., pp., nn.">p. 119 n. 85, p. 160</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Gabrielli, Noemi</BIBA>
-            <BIBD hint="Anno di edizione">1971</BIBD>
-            <BIBH hint="Sigla per citazione">01002327</BIBH>
-            <BIBN hint="V., pp., nn.">pp. 188-189, n. 129</BIBN>
-         </BIB>
-      </DO>
-      <AD hint="ACCESSO AI DATI">
-         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
-            <ADSP hint="Profilo di accesso">1</ADSP>
-            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
-         </ADS>
-      </AD>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">2012</CMPD>
-            <CMPN hint="Nome">Capretti, Elena</CMPN>
-         </CMP>
-         <RSR hint="Referente scientifico">Gabrielli, Edith</RSR>
-         <FUR hint="Funzionario responsabile">Caldera, Massimiliano</FUR>
-      </CM>
-      <AN hint="ANNOTAZIONI">
-         <OSS hint="Osservazioni">INVENTARI, TESTI (INVT): INVN: 270 INVD: 1952; INVT: 270/ 129/ 145/ Baldassarre Peruzzi/ Testa di giovane donna - disegno/ 0,27x0,18/ Carta/ 60.000/ Acq. 1869 | INVN: 129; INVD: 1899; INVT: 131.- PERUZZI (Baldassarre). Nato a Siena nel 1481, morto a Roma nel 1536. Testa di giovane donna, vista di faccia. A metà del naturale. - Disegno a  matita nera e rossa, su carta. A. 0,27; L. 0,18. Fu venduto alla R. Pinacoteca nel 1869 dal cav. G. Vico. Proveniva dalla raccolta Capoquadri di Firenze. | INVN: 145; INVD: 1871; INVS: 150; INVT: 145/ 128 bis/ 129/ Studio di testa di Giovane/ carta. disegno/ 0,27/ 0, 18 / Peruzzi Baldassarre/ 150. || FONTI E DOCUMENTI (FNT), inventari presso Direzione Galleria Sabauda: FNTA: Gamba F.; FNTT: Regia Pinacoteca di Torino. Inventario degli oggetti d'arte. Parte 1° Quadri, Statue, Disegni e Stampe; FNTD: 1871; FNTF: pp. 19-20; FNTA: Baudi di Vesme A.; FNTT: Catalogo della Regia Pinacoteca di Torino; FNTD: 1899; FNTF: p. 56 | FNTT: Galleria Sabauda, Torino. Inventario dei Dipinti e degli Arazzi al 31 dic. 1969; FNTD: 1952; FNTF: pp. 21-22 ||</OSS>
-      </AN>
-   </D>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD10082711@</identifier>
+        <datestamp>2014-12-30T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <D version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">D</TSK>
+                    <LIR hint="Livello ricerca">C</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">01</NCTR>
+                        <NCTN hint="Numero catalogo generale">00350961</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S67</ESC>
+                    <ECP hint="Ente competente">S67</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">disegno</OGTD>
+                        <OGTV hint="Identificazione">opera isolata</OGTV>
+                    </OGT>
+                    <SGT hint="SOGGETTO">
+                        <SGTI hint="Identificazione">testa di donna velata</SGTI>
+                    </SGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">TO</PVCP>
+                        <PVCC hint="Comune">Torino</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">palazzo</LDCT>
+                        <LDCN hint="Denominazione attuale">Palazzo Reale, Manica Nuova</LDCN>
+                        <LDCU hint="Indirizzo">via XX Settembre, 86</LDCU>
+                        <LDCM hint="Denominazione raccolta">Galleria Sabauda</LDCM>
+                    </LDC>
+                </LC>
+                <UB hint="UBICAZIONE E DATI PATRIMONIALI">
+                    <UBO hint="Ubicazione originaria">SC</UBO>
+                </UB>
+                <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
+                    <TCL hint="Tipo di localizzazione">luogo di deposito</TCL>
+                    <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PRVS hint="Stato">ITALIA</PRVS>
+                        <PRVR hint="Regione">Piemonte</PRVR>
+                        <PRVP hint="Provincia">TO</PRVP>
+                        <PRVC hint="Comune">Torino</PRVC>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCT hint="Tipologia">palazzo</PRCT>
+                        <PRCD hint="Denominazione">Palazzo dell'Accademia delle Scienze</PRCD>
+                        <PRCU hint="Denominazione spazio viabilistico">via Accademia delle Scienze, 6</PRCU>
+                        <PRCM hint="Denominazione raccolta">Galleria Sabauda</PRCM>
+                        <PRCS hint="Specifiche">Deposito, rete 21 verso</PRCS>
+                    </PRC>
+                </LA>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">sec. XVI</DTZG>
+                        <DTZS hint="Frazione di secolo">primo quarto</DTZS>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1500</DTSI>
+                        <DTSV hint="Validità">ca</DTSV>
+                        <DTSF hint="A">1525</DTSF>
+                        <DTSL hint="Validità">ca</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">bibliografia</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <AUT hint="AUTORE">
+                        <AUTR hint="Riferimento all'intervento">realizzazione</AUTR>
+                        <AUTM hint="Motivazione dell'attribuzione">analisi stilistica</AUTM>
+                        <AUTN hint="Nome scelto">Peruzzi Baldassarre</AUTN>
+                        <AUTA hint="Dati anagrafici">1481/ 1536</AUTA>
+                        <AUTH hint="Sigla per citazione">00006322</AUTH>
+                    </AUT>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">carta/ matita nera matita colorata</MTC>
+                    <MIS hint="MISURE">
+                        <MISU hint="Unità">mm</MISU>
+                        <MISA hint="Altezza">270</MISA>
+                        <MISL hint="Larghezza">180</MISL>
+                        <MISV hint="Varie">cornice, altezza: 585</MISV>
+                        <MISV hint="Varie">cornice, larghezza: 500</MISV>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                        <STCS hint="Indicazioni specifiche">alcune lacerazioni e consunzioni nella carta</STCS>
+                    </STC>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Indicazioni sull'oggetto">DISEGNO su carta</DESO>
+                        <DESI hint="Codifica Iconclass">31 A 2211 (+82)</DESI>
+                        <DESS hint="Indicazioni sul soggetto">PERSONAGGI: donna. ABBIGLIAMENTO: velo</DESS>
+                    </DES>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a penna</ISRS>
+                        <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+                        <ISRP hint="Posizione">alto, sinistra</ISRP>
+                        <ISRI hint="Trascrizione">Baldassarre da Siena</ISRI>
+                    </ISR>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a penna</ISRS>
+                        <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+                        <ISRP hint="Posizione">basso, sinistra</ISRP>
+                        <ISRI hint="Trascrizione">Peruzzi</ISRI>
+                    </ISR>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a penna</ISRS>
+                        <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+                        <ISRP hint="Posizione">fodera di supporto antica</ISRP>
+                        <ISRI hint="Trascrizione">Biringucci</ISRI>
+                    </ISR>
+                    <NSC hint="Notizie storico-critiche">Proveniente dalla raccolta Capoquadri di Firenze, il disegno fu acquistato da Giovanni Vico nel 1869 (Vesme 1899). E' attribuito tradizonalmente a Baldassarre Peruzzi e anche se non è possibile mettere lo studio in diretta relazione con un'opera pittorica, il volto di donna delineato con tratto mordido, dai tratti largi, lo sguardo diretto, improntato a un generico classicismo trova un puntuale termine di confronto con le figure delle Muse nella tavola della Galleria Palatina di Palazzo Pitti a Firenze (inv. 1912 n. 167). L'iscrizione presente nella fodera di supporto del disegno retro indica il nome "Biringucci", ovvero Vannoccio Biringucci (Siena, 1480-1540), nota figura di scienziato e alchemico senese, che ebbe relazioni culturali e di amicizia con Peruzzi. Nel 1535 il Biringucci, noto per aver realizzato un trattato dal titolo "De la Pirotechnia" relativo alla metallurgia, succedette al Peruzzi come architetto e capomastro dell'opera del duomo di Siena ('Dizionario Biografico degli Italiani', X, 1968, pp. 625-631)</NSC>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <ACQ hint="ACQUISIZIONE">
+                        <ACQT hint="Tipo acquisizione">acquisto</ACQT>
+                        <ACQN hint="Nome">Vico, Giovanni</ACQN>
+                        <ACQD hint="Data acquisizione">1869</ACQD>
+                        <ACQL hint="Luogo acquisizione">Firenze</ACQL>
+                    </ACQ>
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Ministero per i Beni e le Attività Culturali</CDGS>
+                        <CDGI hint="Indirizzo">via Accademia delle Scienze, 5 - Torino</CDGI>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia b/n</FTAP>
+                        <FTAA hint="Autore">Carità, Roberto</FTAA>
+                        <FTAD hint="Data">1950/00/00</FTAD>
+                        <FTAE hint="Ente proprietario">S67</FTAE>
+                        <FTAC hint="Collocazione">Archivio fotografico della Soprintendenza BSAE-PIE</FTAC>
+                        <FTAN hint="Codice identificativo">SBAS TO 694B/LS</FTAN>
+                    </FTA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">scheda OA ad uso interno</FNTP>
+                        <FNTA hint="Autore">Quasimodo, Francesca</FNTA>
+                        <FNTT hint="Denominazione">00000434</FNTT>
+                        <FNTD hint="Data">2005/00/00</FNTD>
+                        <FNTF hint="Foglio/Carta">formato digitale</FNTF>
+                        <FNTN hint="Nome archivio">Soprintendenza per i Beni Storici, Artistici ed Etnoantropologici del Piemonte - Ufficio Catalogo</FNTN>
+                        <FNTS hint="Posizione">database "OA Galleria Sabauda"</FNTS>
+                        <FNTI hint="Codice identificativo">UC-SBSAE_PIE00000434</FNTI>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">[Vico, Giovanni]</BIBA>
+                        <BIBD hint="Anno di edizione">1871</BIBD>
+                        <BIBH hint="Sigla per citazione">01002390</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 20</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Jacobsen, Emil</BIBA>
+                        <BIBD hint="Anno di edizione">1897</BIBD>
+                        <BIBH hint="Sigla per citazione">01000166</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 132</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">[Baudi di Vesme, Alessandro]</BIBA>
+                        <BIBD hint="Anno di edizione">1899</BIBD>
+                        <BIBH hint="Sigla per citazione">01002384</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 56</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Pacchioni, Guglielmo</BIBA>
+                        <BIBD hint="Anno di edizione">1932</BIBD>
+                        <BIBH hint="Sigla per citazione">01002348</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 20</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Gabrielli, Noemi</BIBA>
+                        <BIBD hint="Anno di edizione">1959</BIBD>
+                        <BIBH hint="Sigla per citazione">0100017</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 26</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Gabrielli, Noemi</BIBA>
+                        <BIBD hint="Anno di edizione">1965</BIBD>
+                        <BIBH hint="Sigla per citazione">01002347</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 28</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Frommel, Christoph Luitpold</BIBA>
+                        <BIBD hint="Anno di edizione">1968</BIBD>
+                        <BIBH hint="Sigla per citazione">01001021</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 119 n. 85, p. 160</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Gabrielli, Noemi</BIBA>
+                        <BIBD hint="Anno di edizione">1971</BIBD>
+                        <BIBH hint="Sigla per citazione">01002327</BIBH>
+                        <BIBN hint="V., pp., nn.">pp. 188-189, n. 129</BIBN>
+                    </BIB>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2012</CMPD>
+                        <CMPN hint="Nome">Capretti, Elena</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Gabrielli, Edith</RSR>
+                    <FUR hint="Funzionario responsabile">Caldera, Massimiliano</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">INVENTARI, TESTI (INVT): INVN: 270 INVD: 1952; INVT: 270/ 129/ 145/ Baldassarre Peruzzi/ Testa di giovane donna - disegno/ 0,27x0,18/ Carta/ 60.000/ Acq. 1869 | INVN: 129; INVD: 1899; INVT: 131.- PERUZZI (Baldassarre). Nato a Siena nel 1481, morto a Roma nel 1536. Testa di giovane donna, vista di faccia. A metà del naturale. - Disegno a matita nera e rossa, su carta. A. 0,27; L. 0,18. Fu venduto alla R. Pinacoteca nel 1869 dal cav. G. Vico. Proveniva dalla raccolta Capoquadri di Firenze. | INVN: 145; INVD: 1871; INVS: 150; INVT: 145/ 128 bis/ 129/ Studio di testa di Giovane/ carta. disegno/ 0,27/ 0, 18 / Peruzzi Baldassarre/ 150. || FONTI E DOCUMENTI (FNT), inventari presso Direzione Galleria Sabauda: FNTA: Gamba F.; FNTT: Regia Pinacoteca di Torino. Inventario degli oggetti d'arte. Parte 1° Quadri, Statue, Disegni e Stampe; FNTD: 1871; FNTF: pp. 19-20; FNTA: Baudi di Vesme A.; FNTT: Catalogo della Regia Pinacoteca di Torino; FNTD: 1899; FNTF: p. 56 | FNTT: Galleria Sabauda, Torino. Inventario dei Dipinti e degli Arazzi al 31 dic. 1969; FNTD: 1952; FNTF: pp. 21-22 ||</OSS>
+                </AN>
+            </D>
+            <harvesting>
+                <geocoding>
+                    <x>7.68454818</x>
+                    <y>45.07313932</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>
