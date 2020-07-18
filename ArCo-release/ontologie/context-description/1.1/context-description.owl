@@ -5802,6 +5802,20 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/dubiuosAuthorshipAttribution -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/dubiuosAuthorshipAttribution">
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un&apos;attribuzione dubbia di autore o responsabilità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a dubious autorship attribution</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">attribuzione dubbia di autore o responsabilità</rdfs:label>
+        <rdfs:label xml:lang="iten">dubious authotship attribution</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/editionLocation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/editionLocation">
@@ -6255,6 +6269,22 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="it">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: PD/SSI/SSIN</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/preferredAuthorshipAttribution -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/preferredAuthorshipAttribution">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/AuthorshipAttribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Questa proprietà rappresenta l&apos;attribuzione preferita di autore o responsabilità</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the preferred autorship attribution</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">attribuzione preferita di autore o responsabilità</rdfs:label>
+        <rdfs:label xml:lang="en">preferred autorship attribution</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -11231,13 +11261,13 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>

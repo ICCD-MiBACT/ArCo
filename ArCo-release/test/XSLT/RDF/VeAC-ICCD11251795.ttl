@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,15 +76,17 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-ConservationStatus:0900750392-conservation-status-1
         a                         arco-dd:ConservationStatus ;
         rdfs:label                "Stato di conservazione 1 del bene: 0900750392"@it , "Conservation status 1 of cultural property: 0900750392"@en ;
-        arco-core:specifications  "Presenza di lisature; colletto staccato; scucitura in corrispondenza della spalla sinistra." ;
+        arco-core:specifications  "Presenza di lisature; colletto staccato; scucitura in corrispondenza della spalla sinistra" ;
         arco-dd:hasConservationStatusType
                 arco-dd:MediocreConservationStatus ;
         tiapit:time               "2014" ;
@@ -95,7 +97,7 @@ ar-SourceAndDocument:0900750392-source-document-1
         rdfs:label                     "Fonti e documenti 1 del bene culturale: 0900750392"@it , "Sources and documents 1 of cultural property: 0900750392"@en ;
         arco-cd:documentationIdentifier
                 "Giornale Costume" ;
-        arco-cd:documentationLocation  "n.p." ;
+        arco-cd:documentationLocation  "n.p" ;
         arco-cd:documentationTitle     "Giornale della Galleria del Costume. Vol. 2" ;
         arco-cd:folio                  "(2014) p. 288" ;
         arco-cd:hasArchive             ar-agent:72ef11de130dbc3bccd555094dddd959 ;
@@ -187,11 +189,6 @@ ar-city:firenze  a  clvapit:City ;
         rdfs:label  "Firenze" ;
         l0:name     "Firenze" .
 
-ar-TechnicalCharacteristic:tessuto
-        a                       arco-dd:TechnicalCharacteristic ;
-        rdfs:label              "tessuto" ;
-        arco-dd:isClassifiedBy  arco-dd:Technique .
-
 ar-photograpyDocumentation:0900750392-photographic-documentation-2
         a                              arco-cd:PhotographicDocumentation ;
         rdfs:label                     "Documentazione fotografica 2 del bene culturale: 0900750392"@it , "Photographic documentation 2 of cultural property: 0900750392"@en ;
@@ -206,6 +203,11 @@ ar-photograpyDocumentation:0900750392-photographic-documentation-2
         arco-core:note                 "dettaglio del colletto" ;
         tiapit:time                    "2014" ;
         l0:name                        "Photographic documentation 2 of cultural property: 0900750392"@en , "Documentazione fotografica 2 del bene culturale: 0900750392"@it .
+
+ar-TechnicalCharacteristic:tessuto
+        a                       arco-dd:TechnicalCharacteristic ;
+        rdfs:label              "tessuto" ;
+        arco-dd:isClassifiedBy  arco-dd:Technique .
 
 ar-culturalPropertyType:b449fefae16a7efad3e1c7242ce36501
         a           arco-dd:CulturalPropertyType ;
@@ -359,7 +361,7 @@ ar-role:OfficialInCharge
                 arco-catalogue:P ;
         arco-catalogue:systemRecordCode
                 "VeAC-ICCD11251795" ;
-        arco-core:note  "Accompagnato da cartellino manoscritto recante la seguente iscrizione: \"Calais/ (Museo)\"." .
+        arco-core:note  "Accompagnato da cartellino manoscritto recante la seguente iscrizione: \"Calais/ (Museo)\"" .
 
 ar-agent:3b493b6877e30a4dc4fee8044f62a65b
         a           l0:Agent ;
@@ -488,21 +490,21 @@ ar-CISNameInTime:galleria-del-costume
 ar-HistoricOrArtisticProperty:0900750392
         a                               arco-arco:MovableCulturalProperty , arco-arco:HistoricOrArtisticProperty ;
         rdfs:comment                    "camicia, intimo, 2 pezzi: polsini, da giorno, femminile, sprone con collo a cinturino" ;
-        rdfs:label                      "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@it , "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@en ;
+        rdfs:label                      "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@en , "camicia, intimo, da giorno, femminile - ambito francese (sec. XIX, fine)"@it ;
         pico:materialAndTechnique       ar-TechnicalCharacteristic:lino , ar-TechnicalCharacteristic:tessuto ;
         dc:coverage                     ar-city:firenze ;
         dc:creator                      <https://w3id.org/arco/resource/CulturalScopeAttribution/0900750392-cultural-scope-attribution-1> ;
         dc:date                         ar-TimeInterval:ca-1890-ca-1899 ;
-        dc:description                  "Sprone di camicia, confezionato in tela di lino grezza tinta écru, ricamata ad ago a punto sfilato: motivo a maglie geometriche traforate, rifinite a punto stuoia e fili lanciati. Lungo l'orlo inferiore, effetto rigato ottenuto dalla recisione e sfilatura delle trame. Presenta girocollo leggermente più pronunciato in corrispondenza del taglio anteriore. Si conserva a parte il colletto ad anello rialzato (h cm 6), con lavorazione a ricamo analoga a quella dello sprone." ;
+        dc:description                  "Sprone di camicia, confezionato in tela di lino grezza tinta écru, ricamata ad ago a punto sfilato: motivo a maglie geometriche traforate, rifinite a punto stuoia e fili lanciati. Lungo l'orlo inferiore, effetto rigato ottenuto dalla recisione e sfilatura delle trame. Presenta girocollo leggermente più pronunciato in corrispondenza del taglio anteriore. Si conserva a parte il colletto ad anello rialzato (h cm 6), con lavorazione a ricamo analoga a quella dello sprone" ;
         dc:identifier                   "0900750392" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900750392-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0900750392-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#abbigliamento_e_accessori> ;
         dc:type                         ar-culturalPropertyType:b449fefae16a7efad3e1c7242ce36501 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordVeAC/0900750392> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/13219322a59903c1360a0c85347b8fa0" ;
+                ar-address:13219322a59903c1360a0c85347b8fa0 ;
         arco-arco:catalogueNumber       "00750392" ;
         arco-arco:hasCataloguingAgency  ar-agent:f262108a67caf8abf3dd7c8c47251ebd ;
         arco-arco:hasCulturalPropertyCategory
@@ -522,7 +524,7 @@ ar-HistoricOrArtisticProperty:0900750392
         arco-cd:hasLegalSituation       ar-legalSituation:0900750392-legal-situation-proprieta-stato ;
         arco-cd:hasRelatedWorkSituation
                 ar-RelatedWorkSituation:0900750392-related-cultural-property-2-1 ;
-        arco-core:description           "Sprone di camicia, confezionato in tela di lino grezza tinta écru, ricamata ad ago a punto sfilato: motivo a maglie geometriche traforate, rifinite a punto stuoia e fili lanciati. Lungo l'orlo inferiore, effetto rigato ottenuto dalla recisione e sfilatura delle trame. Presenta girocollo leggermente più pronunciato in corrispondenza del taglio anteriore. Si conserva a parte il colletto ad anello rialzato (h cm 6), con lavorazione a ricamo analoga a quella dello sprone." ;
+        arco-core:description           "Sprone di camicia, confezionato in tela di lino grezza tinta écru, ricamata ad ago a punto sfilato: motivo a maglie geometriche traforate, rifinite a punto stuoia e fili lanciati. Lungo l'orlo inferiore, effetto rigato ottenuto dalla recisione e sfilatura delle trame. Presenta girocollo leggermente più pronunciato in corrispondenza del taglio anteriore. Si conserva a parte il colletto ad anello rialzato (h cm 6), con lavorazione a ricamo analoga a quella dello sprone" ;
         arco-core:hasAgentRole          ar-agentrole:0900750392-cataloguing-agency , ar-agentrole:0900750392-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0900750392-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
@@ -563,12 +565,9 @@ ar-role:ResponsibleCompilation
         a           roapit:Role ;
         rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
 
-ar-CulturalEntityTechnicalStatus:0900750392-part-su-tutto-il-capo
-        a           arco-dd:CulturalEntityTechnicalStatus ;
-        rdfs:label  "Stato tecnico della parte di bene culturale 0900750392"@it , "Technical status of part of cultural property 0900750392"@en ;
-        arco-dd:includesTechnicalCharacteristic
-                ar-TechnicalCharacteristic:tessuto ;
-        l0:name     "Stato tecnico della parte di bene culturale 0900750392"@it , "Technical status of part of cultural property 0900750392"@en .
+ar-country:italia  a  clvapit:Country ;
+        rdfs:label  "ITALIA" ;
+        l0:name     "ITALIA" .
 
 ar-photograpyDocumentation:0900750392-photographic-documentation-4
         a                              arco-cd:PhotographicDocumentation ;
@@ -585,9 +584,12 @@ ar-photograpyDocumentation:0900750392-photographic-documentation-4
         tiapit:time                    "2014" ;
         l0:name                        "Documentazione fotografica 4 del bene culturale: 0900750392"@it , "Photographic documentation 4 of cultural property: 0900750392"@en .
 
-ar-country:italia  a  clvapit:Country ;
-        rdfs:label  "ITALIA" ;
-        l0:name     "ITALIA" .
+ar-CulturalEntityTechnicalStatus:0900750392-part-su-tutto-il-capo
+        a           arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label  "Stato tecnico della parte di bene culturale 0900750392"@it , "Technical status of part of cultural property 0900750392"@en ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:tessuto ;
+        l0:name     "Stato tecnico della parte di bene culturale 0900750392"@it , "Technical status of part of cultural property 0900750392"@en .
 
 ar-event:0900750392-creation-1
         a                     l0:Event ;

@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedRole:1000176190-23c419e6622aa0cc2cbe145c7053067d
@@ -149,16 +151,16 @@ ar-cis:60c0f1939523b7fe52245c9072da153c
         rdfs:comment                    "fossile, mandibola destra di lince, esemplare, mammalofauna fossile di Pantalla (Todi, PG)" ;
         rdfs:label                      "fossile (mandibola destra di lince, esemplare) ()"@it , "fossile (mandibola destra di lince, esemplare) ()"@en ;
         dc:coverage                     ar-city:perugia ;
-        dc:description                  "Animalia Mammalia Carnivora Felidae Lynx issiodorensis: Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole. | Italia , Umbria , Todi ( PG ), Pantalla" ;
+        dc:description                  "Animalia Mammalia Carnivora Felidae Lynx issiodorensis: Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole | Italia , Umbria , Todi ( PG ), Pantalla" ;
         dc:identifier                   "1000176190" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000176190-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:1000176190-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.3#fossili> ;
         dc:type                         ar-culturalPropertyType:c1e65efeb519a78d5117466ccc70b694 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordBNP/1000176190> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/78f87f90bb197d348b96bf947ce7583e" ;
+                ar-address:78f87f90bb197d348b96bf947ce7583e ;
         arco-arco:catalogueNumber       "00176190" ;
         arco-arco:hasCataloguingAgency  ar-agent:0ed33537564751ea81589bc628149448 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
@@ -172,7 +174,7 @@ ar-cis:60c0f1939523b7fe52245c9072da153c
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/1000176190-acquisition-1> ;
         arco-cd:hasDocumentation        ar-photograpyDocumentation:1000176190-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:1000176190-legal-situation-proprieta-stato ;
-        arco-core:description           "Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole." ;
+        arco-core:description           "Mandibola parzialmente inglobata in un blocco di sedimento e fratturata nella parte centrale del ramo orizzontale. Il medesimo blocco contiene due costole" ;
         arco-core:hasAgentRole          ar-agentrole:1000176190-cataloguing-agency , ar-agentrole:1000176190-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1000176190-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType

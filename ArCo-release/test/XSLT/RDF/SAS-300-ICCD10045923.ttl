@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agentrole:0303232991-heritage-protection-agency
@@ -174,10 +176,6 @@ ar-event:0303232991-creation-1
         tiapit:atTime  ar-TimeInterval:alto-medioevo ;
         l0:name        "Realizzazione del bene 0303232991"@it , "Creation of cultural property 0303232991"@en .
 
-ar-agent:ab99d4117a7099b3167d425a98756f37
-        a           l0:Agent ;
-        rdfs:label  "Rossi, Filomena" .
-
 ar-catalogueRecordVersion:0303232991-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
         rdfs:label                   "COMPILAZIONE - 2012 Guglielmetti, Angela" ;
@@ -190,6 +188,10 @@ ar-catalogueRecordVersion:0303232991-compilation
                 ar-agent:8004520e7ebbed94af7234cd905f1b73 ;
         arco-catalogue:isCatalogueRecordVersionOf
                 <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991> .
+
+ar-agent:ab99d4117a7099b3167d425a98756f37
+        a           l0:Agent ;
+        rdfs:label  "Rossi, Filomena" .
 
 ar-role:ResponsibleCompilation
         a           roapit:Role ;
@@ -233,14 +235,14 @@ ar-archeologicalProperty:0303232991
         rdfs:label                      "saggio stratigrafico in ambito urbano"@it , "saggio stratigrafico in ambito urbano"@en ;
         dc:coverage                     ar-city:brescia ;
         dc:identifier                   "0303232991" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0303232991-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:0303232991-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#saggi_archeologici_stratigrafici> ;
         dc:type                         ar-culturalPropertyType:1a06cce58e40c7f65db5382b7f20f670 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordSAS/0303232991> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/4581b3af8c56c2232d1341e8e874fd69" ;
+                ar-address:4581b3af8c56c2232d1341e8e874fd69 ;
         arco-arco:catalogueNumber       "03232991" ;
         arco-arco:hasCataloguingAgency  ar-agent:d25fb707067c6b50982cb83b41ae6711 ;
         arco-arco:hasHeritageProtectionAgency

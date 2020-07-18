@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-culturalPropertyDefinition:campione
@@ -100,6 +102,12 @@ ar-Value:0900860282-1-height-107
         mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
         mu:value               "10.7" .
 
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressaceae>
+        a                     arco-cd:Family ;
+        rdfs:label            "Cupressaceae" ;
+        arco-cd:hasLowerRank  <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> ;
+        l0:name               "Cupressaceae" .
+
 ar-Measurement:0900860282-1-height
         a                           arco-dd:Measurement ;
         rdfs:label                  "Measurement of cultural property 0900860282: 10.7cm"@en , "Misura del bene culturale 0900860282: 10.7cm"@it ;
@@ -116,6 +124,11 @@ ar-Value:0900860282-1-width-105
         rdfs:label             "10.5"@en , "10.5"@it ;
         mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/cm> ;
         mu:value               "10.5" .
+
+ar-agent:18d9937b701ffe689f6b76f223e98d5a
+        a           l0:Agent ;
+        rdfs:label  "Attilio Tassi" ;
+        l0:name     "Attilio Tassi" .
 
 ar-catalogueRecordVersion:0900860282-rvm
         a                            arco-catalogue:CatalogueRecordVersion ;
@@ -154,6 +167,13 @@ ar-timeIndexedTypedLocation:0900860282-current
                 <https://w3id.org/arco/resource/NaturalHeritage/0900860282> ;
         l0:name                        "Localizzazione fisica attuale del bene: 0900860282"@it , "Current physical location of cultural property: 0900860282"@en .
 
+<https://w3id.org/arco/resource/CollectingSite/0900860282>
+        a                         arco-mp:CollectingSite ;
+        rdfs:label                "Luogo di raccolta del bene 0900860282"@it , "Collecting site of cultural property 0900860282"@en ;
+        arco-core:note            "Orto Botanico" ;
+        arco-location:atLocation  ar-feature:d41d8cd98f00b204e9800998ecf8427e ;
+        l0:name                   "Luogo di raccolta del bene 0900860282"@it , "Collecting site of cultural property 0900860282"@en .
+
 ar-SiteDefinition:ex-monastero
         a           arco-location:SiteDefinition ;
         rdfs:label  "ex monastero" .
@@ -174,6 +194,14 @@ ar-agent:4a6af0eb1b57ae0a9c62e5a5c4efced1
         arco-core:isAgentOf  ar-agentrole:0900860282-cataloguing-agency ;
         l0:name              "Università di Siena" .
 
+ar-Site:814796a25be8ab15adf0b74ec86a1845
+        a                          cis:Site ;
+        rdfs:label                 "Accademia dei Fisiocritici Onlus" ;
+        cis:isSiteOf               ar-cis:6eaaa7af8be827fcd2429917ae63f480 ;
+        cis:siteAddress            ar-address:adeafe9d955cfc5df21beae7af06d74d ;
+        arco-location:hasSiteType  ar-SiteType:ex-monastero-camaldolese ;
+        l0:name                    "Accademia dei Fisiocritici Onlus" .
+
 ar-ConservationStatus:0900860282-conservation-status-1
         a                         arco-dd:ConservationStatus ;
         rdfs:label                "Stato di conservazione 1 del bene: 0900860282"@it , "Conservation status 1 of cultural property: 0900860282"@en ;
@@ -183,13 +211,12 @@ ar-ConservationStatus:0900860282-conservation-status-1
         tiapit:time               "2014" ;
         l0:name                   "Stato di conservazione 1 del bene: 0900860282"@it , "Conservation status 1 of cultural property: 0900860282"@en .
 
-ar-Site:814796a25be8ab15adf0b74ec86a1845
-        a                          cis:Site ;
-        rdfs:label                 "Accademia dei Fisiocritici Onlus" ;
-        cis:isSiteOf               ar-cis:6eaaa7af8be827fcd2429917ae63f480 ;
-        cis:siteAddress            ar-address:adeafe9d955cfc5df21beae7af06d74d ;
-        arco-location:hasSiteType  ar-SiteType:ex-monastero-camaldolese ;
-        l0:name                    "Accademia dei Fisiocritici Onlus" .
+<https://w3id.org/arco/resource/Label/0900860282-1>
+        a                       arco-mp:Label ;
+        rdfs:label              "Etichetta 1 del bene 0900860282"@it , "Label 1 of cultural property 0900860282"@en ;
+        arco-dd:hasFontStyle    <https://w3id.org/arco/resource/FontStyle/latini> ;
+        arco-mp:bodyTranscript  "CUPRESSUS/ sp" ;
+        l0:name                 "Etichetta 1 del bene 0900860282"@it , "Label 1 of cultural property 0900860282"@en .
 
 <https://w3id.org/arco/resource/SiteSpecification/camaldolese>
         a           arco-location:SiteSpecification ;
@@ -231,14 +258,34 @@ ar-docutmentationType:fotografia-digitale-file
         rdfs:label  "fotografia digitale (file)" ;
         l0:name     "fotografia digitale (file)" .
 
+ar-agent:79e239c2c37e42032ecedece3d30c345
+        a           l0:Agent ;
+        rdfs:label  "Biagio Longo" ;
+        l0:name     "Biagio Longo" .
+
+ar-TimeInterval:post-1864-ante-1950
+        a                    tiapit:TimeInterval ;
+        rdfs:label           "post 1864 - ante 1950" ;
+        arco-arco:endTime    "ante 1950" ;
+        arco-arco:startTime  "post 1864" ;
+        l0:name              "post 1864 - ante 1950" .
+
+<https://w3id.org/arco/resource/SpecimenHarvesting/0900860282>
+        a                          arco-mp:SpecimenHarvesting ;
+        rdfs:label                 "Harvesting of cultural property 0900860282"@en , "Raccolta del bene 0900860282"@it ;
+        arco-core:involvesAgent    ar-agent:70246ff3afd21bc46ed92870b92a65ae , ar-agent:18d9937b701ffe689f6b76f223e98d5a , ar-agent:79e239c2c37e42032ecedece3d30c345 ;
+        arco-mp:hasCollectingSite  <https://w3id.org/arco/resource/CollectingSite/0900860282> ;
+        tiapit:atTime              ar-TimeInterval:post-1864-ante-1950 ;
+        l0:name                    "Harvesting of cultural property 0900860282"@en , "Raccolta del bene 0900860282"@it .
+
 <https://w3id.org/arco/resource/NaturalHeritage/0900860282>
-        a                               arco-arco:MovableCulturalProperty , arco-arco:NaturalHeritage ;
-        rdfs:comment                    "campione, Herbarium Universitatis Senensis, erbario generale, Collezione xiloteca, collezione fanerogamica, essiccato, Il campione è una rondella di legno grezzo munito di corteccia, ricavata dal taglio trasversale di un tronco o di un ramo, successivamente sistemata su un supporto ligneo sul quale si trova un numero d'ordine e il cartellino che riporta il nome scientifico della specie. Sulla faccia è stata applicata della coppale mentre sul dorso è presente un' iscrizione. Il campione fa parte di una collezione nata grazie al lavoro del  Prof. B. Longo e del Prof. A. Preda, direttori dell'Orto Botanico di Siena rispettivamente dal 1906-1915 e dal 1915-1921. Nella collezione vennero radunati i campioni raccolti dal Prof. A. Tassi e altri reperti legnosi provenienti dall'Orto, molti dei quali recuperati nel 1915 dalle piante strocatesi durante una nevicata. La collezione è stata incrementata fino alla fine degli anni '50 per merito del Prof. A. Nannizzi, direttore dell'Orto dal 1934 al 1950." ;
-        rdfs:label                      "Cupressus sp. - campione, Herbarium Universitatis Senensis, Collezione xiloteca (1864 - 1950)"@it , "Cupressus sp. - campione, Herbarium Universitatis Senensis, Collezione xiloteca (1864 - 1950)"@en ;
+        a                               arco-arco:NaturalHeritage , arco-arco:MovableCulturalProperty ;
+        rdfs:comment                    "campione, Herbarium Universitatis Senensis, erbario generale, Collezione xiloteca, collezione fanerogamica, essiccato, Il campione è una rondella di legno grezzo munito di corteccia, ricavata dal taglio trasversale di un tronco o di un ramo, successivamente sistemata su un supporto ligneo sul quale si trova un numero d'ordine e il cartellino che riporta il nome scientifico della specie. Sulla faccia è stata applicata della coppale mentre sul dorso è presente un' iscrizione. Il campione fa parte di una collezione nata grazie al lavoro del Prof. B. Longo e del Prof. A. Preda, direttori dell'Orto Botanico di Siena rispettivamente dal 1906-1915 e dal 1915-1921. Nella collezione vennero radunati i campioni raccolti dal Prof. A. Tassi e altri reperti legnosi provenienti dall'Orto, molti dei quali recuperati nel 1915 dalle piante strocatesi durante una nevicata. La collezione è stata incrementata fino alla fine degli anni '50 per merito del Prof. A. Nannizzi, direttore dell'Orto dal 1934 al 1950" ;
+        rdfs:label                      "Cupressus sp - campione, Herbarium Universitatis Senensis, Collezione xiloteca (1864 - 1950)"@en , "Cupressus sp - campione, Herbarium Universitatis Senensis, Collezione xiloteca (1864 - 1950)"@it ;
         dc:coverage                     ar-city:siena ;
         dc:format                       ar-MeasurementCollection:0900860282-1 ;
         dc:identifier                   "0900860282" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0900860282-legal-situation-proprieta-ente-pubblico-non-territoriale" ;
+        dc:rights                       ar-legalSituation:0900860282-legal-situation-proprieta-ente-pubblico-non-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.3#piante> ;
         dc:type                         ar-culturalPropertyType:ba25be98587438b1ddc0e1ca2cb3c280 ;
@@ -247,7 +294,7 @@ ar-docutmentationType:fotografia-digitale-file
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/adeafe9d955cfc5df21beae7af06d74d" ;
+                ar-address:adeafe9d955cfc5df21beae7af06d74d ;
         arco-arco:catalogueNumber       "00860282" ;
         arco-arco:hasCataloguingAgency  ar-agent:4a6af0eb1b57ae0a9c62e5a5c4efced1 ;
         arco-arco:hasHeritageProtectionAgency
@@ -257,9 +304,13 @@ ar-docutmentationType:fotografia-digitale-file
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282> ;
         arco-cd:hasBibliography         ar-bibliography:0900860282-bibliography-1 ;
-        arco-cd:hasDocumentation        ar-photograpyDocumentation:0900860282-photographic-documentation-3 , ar-photograpyDocumentation:0900860282-photographic-documentation-1 , ar-photograpyDocumentation:0900860282-photographic-documentation-2 ;
+        arco-cd:hasDocumentation        ar-photograpyDocumentation:0900860282-photographic-documentation-2 , ar-photograpyDocumentation:0900860282-photographic-documentation-1 , ar-photograpyDocumentation:0900860282-photographic-documentation-3 ;
         arco-cd:hasLegalSituation       ar-legalSituation:0900860282-legal-situation-proprieta-ente-pubblico-non-territoriale ;
-        arco-core:hasAgentRole          ar-agentrole:0900860282-cataloguing-agency , ar-agentrole:0900860282-heritage-protection-agency ;
+        arco-cd:historicalInformation   "Il campione è una rondella di legno grezzo munito di corteccia, ricavata dal taglio trasversale di un tronco o di un ramo, successivamente sistemata su un supporto ligneo sul quale si trova un numero d'ordine e il cartellino che riporta il nome scientifico della specie. Sulla faccia è stata applicata della coppale mentre sul dorso è presente un' iscrizione. Il campione fa parte di una collezione nata grazie al lavoro del Prof. B. Longo e del Prof. A. Preda, direttori dell'Orto Botanico di Siena rispettivamente dal 1906-1915 e dal 1915-1921. Nella collezione vennero radunati i campioni raccolti dal Prof. A. Tassi e altri reperti legnosi provenienti dall'Orto, molti dei quali recuperati nel 1915 dalle piante strocatesi durante una nevicata. La collezione è stata incrementata fino alla fine degli anni '50 per merito del Prof. A. Nannizzi, direttore dell'Orto dal 1934 al 1950" ;
+        arco-core:hasAgentRole          ar-agentrole:0900860282-heritage-protection-agency , ar-agentrole:0900860282-cataloguing-agency ;
+        arco-core:hasClassificationInTime
+                <https://w3id.org/arco/resource/ClassificationInTime/0900860282-original-classification> ;
+        arco-core:isClassifiedBy        <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0900860282-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:ba25be98587438b1ddc0e1ca2cb3c280 ;
@@ -268,7 +319,11 @@ ar-docutmentationType:fotografia-digitale-file
         arco-location:hasCulturalPropertyAddress
                 ar-address:adeafe9d955cfc5df21beae7af06d74d ;
         arco-location:hasTimeIndexedTypedLocation
-                ar-timeIndexedTypedLocation:0900860282-current , ar-timeIndexedTypedLocation:0900860282-alternative-1 .
+                ar-timeIndexedTypedLocation:0900860282-alternative-1 , ar-timeIndexedTypedLocation:0900860282-current ;
+        arco-mp:hasLabel                <https://w3id.org/arco/resource/Label/0900860282-1> ;
+        arco-mp:hasSpecimenHarvesting   <https://w3id.org/arco/resource/SpecimenHarvesting/0900860282> ;
+        arco-mp:isClassifiedByOriginalTaxon
+                <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> .
 
 ar-agent:1161010044c7871d9c46ae4c5e20d359
         a                    COV:Organization ;
@@ -300,13 +355,18 @@ ar-province:si  a   clvapit:Province ;
         l0:name     "SI" .
 
 ar-bibliography:0900860282-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0900860282"@en , "Bibliografia 1 del bene culturale: 0900860282"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 0900860282"@it , "Bibliography 1 of cultural property: 0900860282"@en ;
+        arco-cd:bibliographicReference  "bibliografia di corredo: Durand, Th - 1888" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Durand, Th" ;
+        arco-cd:bibliographicReferenceDate
+                "1888" ;
         arco-cd:bibliographyLocalIdentifier
                 "USI00056" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/NaturalHeritage/0900860282> ;
-        arco-core:hasCategory     arco-cd:AccompanyingBibliography ;
-        l0:name                   "Bibliography 1 of cultural property: 0900860282"@en , "Bibliografia 1 del bene culturale: 0900860282"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/NaturalHeritage/0900860282> ;
+        arco-core:hasCategory           arco-cd:AccompanyingBibliography ;
+        l0:name                         "Bibliografia 1 del bene culturale: 0900860282"@en , "Bibliography 1 of cultural property: 0900860282"@en .
 
 ar-role:OfficialInCharge
         a           roapit:Role ;
@@ -325,10 +385,6 @@ ar-Measurement:0900860282-1-width
         arco-dd:hasValue            ar-Value:0900860282-1-width-105 ;
         l0:name                     "Measurement of cultural property 0900860282: 10.5cm"@en , "Misura del bene culturale 0900860282: 10.5cm"@it .
 
-ar-agent:7c907cc6e1dffa2b262e428dcb0c36e1
-        a           l0:Agent ;
-        rdfs:label  "Vannozzi, Francesca" .
-
 ar-photograpyDocumentation:0900860282-photographic-documentation-1
         a                             arco-cd:PhotographicDocumentation ;
         rdfs:label                    "Documentazione fotografica 1 del bene culturale: 0900860282"@it , "Photographic documentation 1 of cultural property: 0900860282"@en ;
@@ -341,13 +397,28 @@ ar-photograpyDocumentation:0900860282-photographic-documentation-1
         tiapit:time                   "2014/12/00" ;
         l0:name                       "Photographic documentation 1 of cultural property: 0900860282"@en , "Documentazione fotografica 1 del bene culturale: 0900860282"@it .
 
+ar-agent:7c907cc6e1dffa2b262e428dcb0c36e1
+        a           l0:Agent ;
+        rdfs:label  "Vannozzi, Francesca" .
+
 ar-TimeInterval:2015  a  tiapit:TimeInterval ;
         rdfs:label   "2015" ;
         tiapit:time  "2015" .
 
+<https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp>
+        a                        arco-mp:BiologicalTaxon ;
+        rdfs:label               "Cupressus sp" ;
+        arco-cd:hasBibliography  ar-bibliography:0900860282-biological-taxon-bibliography ;
+        l0:name                  "Cupressus sp" .
+
 ar-culturalPropertySpecification:essiccato
         a           arco-dd:CulturalPropertySpecification ;
         rdfs:label  "essiccato" .
+
+ar-feature:d41d8cd98f00b204e9800998ecf8427e
+        a           clvapit:Feature ;
+        rdfs:label  "Italia - SI - Siena" ;
+        l0:name     "Italia - SI - Siena" .
 
 ar-role:DigitalTranscriptionResponsibleAgent
         a           roapit:Role ;
@@ -359,12 +430,6 @@ ar-timeIndexedRole:0900860282-rvm-7165a748d7a8c32f64cb624101bbdc02
         roapit:isRoleInTimeOf  ar-agent:7165a748d7a8c32f64cb624101bbdc02 ;
         roapit:withRole        ar-role:DigitalTranscriptionOperator .
 
-ar-timeIndexedRole:0900860282-37f3238a9cb4dd68183127de1bd74ef4
-        a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Referente scientifico: Terenna, Gigliola"@it , "Scientific director: Terenna, Gigliola"@en ;
-        roapit:isRoleInTimeOf  ar-agent:0d71e15417bcad27e4a5aad6c2726a73 ;
-        roapit:withRole        ar-role:ScientificDirector .
-
 ar-SiteType:istituto-universitario
         a           arco-location:SiteType ;
         rdfs:label  "Tipo di contenitore fisico: istituto universitario"@it , "Site type: istituto universitario"@en ;
@@ -373,6 +438,12 @@ ar-SiteType:istituto-universitario
         arco-location:hasSiteSpecification
                 <https://w3id.org/arco/resource/SiteSpecification/universitario> ;
         l0:name     "Tipo di contenitore fisico: istituto universitario"@it , "Site type: istituto universitario"@en .
+
+ar-timeIndexedRole:0900860282-37f3238a9cb4dd68183127de1bd74ef4
+        a                      roapit:TimeIndexedRole ;
+        rdfs:label             "Referente scientifico: Terenna, Gigliola"@it , "Scientific director: Terenna, Gigliola"@en ;
+        roapit:isRoleInTimeOf  ar-agent:0d71e15417bcad27e4a5aad6c2726a73 ;
+        roapit:withRole        ar-role:ScientificDirector .
 
 ar-SiteDefinition:istituto
         a           arco-location:SiteDefinition ;
@@ -401,6 +472,11 @@ ar-address:adeafe9d955cfc5df21beae7af06d74d
         clvapit:hasCountry   ar-country:italia ;
         clvapit:hasProvince  ar-province:si ;
         clvapit:hasRegion    ar-region:toscana .
+
+<https://w3id.org/arco/resource/FontStyle/latini>
+        a           arco-dd:FontStyle ;
+        rdfs:label  "latini" ;
+        l0:name     "latini" .
 
 ar-accessProfile:0900860282-1
         a                               arco-catalogue:AccessProfile ;
@@ -525,6 +601,11 @@ ar-role:ResponsibleCompilation
         a           roapit:Role ;
         rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
 
+ar-agent:70246ff3afd21bc46ed92870b92a65ae
+        a           l0:Agent ;
+        rdfs:label  "Agilulfo Preda" ;
+        l0:name     "Agilulfo Preda" .
+
 ar-timeIndexedRole:0900860282-55b16182df6b77d6e3b4b14250d3c8a6
         a                      roapit:TimeIndexedRole ;
         rdfs:label             "Referente scientifico: Bonini, Ilaria"@it , "Scientific director: Bonini, Ilaria"@en ;
@@ -540,6 +621,18 @@ ar-timeIndexedRole:0900860282-85279778cb8db53d223bb68395664863
         rdfs:label             "Funzionario responsabile: Vannozzi, Francesca"@it , "Official in charge: Vannozzi, Francesca"@en ;
         roapit:isRoleInTimeOf  ar-agent:7c907cc6e1dffa2b262e428dcb0c36e1 ;
         roapit:withRole        ar-role:OfficialInCharge .
+
+ar-bibliography:0900860282-biological-taxon-bibliography
+        a           arco-cd:Bibliography ;
+        rdfs:label  "Bibliografia relativa al taxon biologico del bene 0900860282"@it , "Bibliography about biological taxon of cultural property 0900860282"@en ;
+        arco-cd:completeBibliographicReference
+                "Durand Th. 1888, Idex Generum Phanerogamorum- Bruxellis" ;
+        l0:name     "Bibliografia relativa al taxon biologico del bene 0900860282"@it , "Bibliography about biological taxon of cultural property 0900860282"@en .
+
+<https://w3id.org/arco/resource/MeasurementUnit/cm>
+        a           mu:MeasurementUnit ;
+        rdfs:label  "cm" ;
+        l0:name     "cm" .
 
 <https://w3id.org/arco/resource/CatalogueRecordBNB/0900860282>
         a             arco-catalogue:CatalogueRecordBNB ;
@@ -559,16 +652,21 @@ ar-timeIndexedRole:0900860282-85279778cb8db53d223bb68395664863
         arco-catalogue:systemRecordCode
                 "BNB-ICCD11689075" .
 
-<https://w3id.org/arco/resource/MeasurementUnit/cm>
-        a           mu:MeasurementUnit ;
-        rdfs:label  "cm" ;
-        l0:name     "cm" .
-
 ar-agentrole:0900860282-cataloguing-agency
         a                   arco-core:AgentRole ;
         rdfs:label          "Ente schedatore del bene 0900860282: UNISI"@it , "Cataloguing agency for cultural property 0900860282: UNISI"@en ;
         arco-core:hasAgent  ar-agent:4a6af0eb1b57ae0a9c62e5a5c4efced1 ;
         arco-core:hasRole   ar-role:CataloguinAgency .
+
+<https://w3id.org/arco/resource/ClassificationInTime/0900860282-original-classification>
+        a                               arco-core:ClassificationInTime ;
+        rdfs:label                      "Classificazione nel tempo  del bene culturale 0900860282"@it , "Classification in time of cultural property 0900860282"@en ;
+        arco-cd:hasBibliography         ar-bibliography:0900860282bibliography-1-1 ;
+        arco-core:involvesAgent         ar-agent:79e239c2c37e42032ecedece3d30c345 , ar-agent:18d9937b701ffe689f6b76f223e98d5a , ar-agent:70246ff3afd21bc46ed92870b92a65ae ;
+        arco-mp:hasTaxon                <https://w3id.org/arco/resource/BiologicalTaxon/cupressus-sp> ;
+        arco-mp:originalClassification  "true" ;
+        tiapit:atTime                   ar-TimeInterval:post-1864-ante-1950 ;
+        l0:name                         "Classification in time of cultural property 0900860282"@en , "Classificazione nel tempo del bene culturale 0900860282"@it .
 
 ar-agent:7165a748d7a8c32f64cb624101bbdc02
         a           l0:Agent ;

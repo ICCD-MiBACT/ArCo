@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 <https://w3id.org/arco/resource/ArchaeologicalExcavation/1400090488-survey-1>
@@ -228,9 +230,9 @@ ar-agentrole:1400090488-photographic-documentation-1-photographic-documentation-
 
 ar-TimeInterval:iii-ac
         a            tiapit:TimeInterval ;
-        rdfs:label   "III a.C." ;
-        tiapit:time  "III a.C." ;
-        l0:name      "III a.C." .
+        rdfs:label   "III a.C" ;
+        tiapit:time  "III a.C" ;
+        l0:name      "III a.C" .
 
 ar-Value:1400090488-1-height-36
         a                      mu:Value ;
@@ -315,7 +317,7 @@ ar-MeasurementCollection:1400090488-1
                 arco-catalogue:C ;
         arco-catalogue:systemRecordCode
                 "RA-300-ICCD10055673" ;
-        arco-core:note  "Argilla marrone, compatta con frequenti e minuti inclusi micacei, quarzo e chamotte." .
+        arco-core:note  "Argilla marrone, compatta con frequenti e minuti inclusi micacei, quarzo e chamotte" .
 
 ar-photograpyDocumentation:1400090488-photographic-documentation-1
         a                             arco-cd:PhotographicDocumentation ;
@@ -361,23 +363,38 @@ ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
         rdfs:label  "scheda contenente dati liberamente accessibili" ;
         l0:name     "scheda contenente dati liberamente accessibili" .
 
+ar-CulturalEntityTechnicalStatus:1400090488
+        a                  arco-dd:CulturalEntityTechnicalStatus ;
+        rdfs:label         "Stato tecnico del bene culturale 1400090488"@it , "Technical status of cultural property 1400090488"@en ;
+        skos:relatedMatch  <http://dati.beniculturali.it/vocabularies/materia_e_tecnica-ra/def/021.025> , <http://dati.beniculturali.it/vocabularies/tecnica_e_materia-ra/def/124.002> ;
+        arco-dd:includesTechnicalCharacteristic
+                ar-TechnicalCharacteristic:argilla-a-tornio ;
+        l0:name            "Stato tecnico del bene culturale 1400090488"@it , "Technical status of cultural property 1400090488"@en .
+
+ar-Measurement:1400090488-1-diameter
+        a                           arco-dd:Measurement ;
+        rdfs:label                  "Measurement of cultural property 1400090488: 11.2cm"@en , "Misura del bene culturale 1400090488: 11.2cm"@it ;
+        arco-dd:hasMeasurementType  arco-dd:Diameter ;
+        arco-dd:hasValue            ar-Value:1400090488-1-diameter-112 ;
+        l0:name                     "Measurement of cultural property 1400090488: 11.2cm"@en , "Misura del bene culturale 1400090488: 11.2cm"@it .
+
 ar-archeologicalProperty:1400090488
         a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
         rdfs:comment                    "olla/ fondo" ;
-        rdfs:label                      "olla/ fondo (III  a.C.)"@it , "olla/ fondo (III  a.C.)"@en ;
+        rdfs:label                      "olla/ fondo (III a.C)"@it , "olla/ fondo (III a.C)"@en ;
         pico:materialAndTechnique       ar-TechnicalCharacteristic:argilla-a-tornio ;
         dc:coverage                     ar-city:campobasso ;
         dc:description                  "Fondo su basso piede ad anello con parete obliqua" ;
         dc:format                       ar-MeasurementCollection:1400090488-1 ;
         dc:identifier                   "1400090488" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1400090488-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:1400090488-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordRA/1400090488> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#reperti_archeologici> ;
         dc:type                         ar-culturalPropertyType:2c9f1e81c61be25cc83015d2917b5d53 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordRA/1400090488> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/d5a2e55b735322c761ef179ecac84259" ;
+                ar-address:d5a2e55b735322c761ef179ecac84259 ;
         arco-arco:catalogueNumber       "00090488" ;
         arco-arco:hasCataloguingAgency  ar-agent:cbff70cf902b51d4f2f930ee23bddb2a ;
         arco-arco:hasCulturalPropertyCategory
@@ -405,21 +422,6 @@ ar-archeologicalProperty:1400090488
                 ar-address:d5a2e55b735322c761ef179ecac84259 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1400090488-current , ar-timeIndexedTypedLocation:1400090488-alternative-1 .
-
-ar-CulturalEntityTechnicalStatus:1400090488
-        a                  arco-dd:CulturalEntityTechnicalStatus ;
-        rdfs:label         "Stato tecnico del bene culturale 1400090488"@it , "Technical status of cultural property 1400090488"@en ;
-        skos:relatedMatch  <http://dati.beniculturali.it/vocabularies/materia_e_tecnica-ra/def/021.025> , <http://dati.beniculturali.it/vocabularies/tecnica_e_materia-ra/def/124.002> ;
-        arco-dd:includesTechnicalCharacteristic
-                ar-TechnicalCharacteristic:argilla-a-tornio ;
-        l0:name            "Stato tecnico del bene culturale 1400090488"@it , "Technical status of cultural property 1400090488"@en .
-
-ar-Measurement:1400090488-1-diameter
-        a                           arco-dd:Measurement ;
-        rdfs:label                  "Measurement of cultural property 1400090488: 11.2cm"@en , "Misura del bene culturale 1400090488: 11.2cm"@it ;
-        arco-dd:hasMeasurementType  arco-dd:Diameter ;
-        arco-dd:hasValue            ar-Value:1400090488-1-diameter-112 ;
-        l0:name                     "Measurement of cultural property 1400090488: 11.2cm"@en , "Misura del bene culturale 1400090488: 11.2cm"@it .
 
 ar-Measurement:1400090488-1-height
         a                           arco-dd:Measurement ;
