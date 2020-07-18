@@ -1,218 +1,228 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <CA version="3.00_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo Scheda">CA</TSK>
-         <LIR hint="Livello ricerca">P</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">01</NCTR>
-            <NCTN hint="Numero catalogo generale">00070554</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">S154</ESC>
-         <ECP hint="Ente competente">S154</ECP>
-      </CD>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">castello militare</OGTD>
-            <OGTC hint="Categoria di appartenenza">struttura di fortificazione</OGTC>
-            <OGTN hint="Denominazione/dedicazione">RESTI DELLA TUR D'AMUN E DEL CASTELLO DI BORGO VECCHIO</OGTN>
-         </OGT>
-      </OG>
-      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-            <PVCS hint="Stato">ITALIA</PVCS>
-            <PVCR hint="Regione">Piemonte</PVCR>
-            <PVCP hint="Provincia">TO</PVCP>
-            <PVCC hint="Comune">Bardonecchia</PVCC>
-            <PVCL hint="Localita'">BARDONECCHIA</PVCL>
-            <PVCI hint="Indirizzo">Via Frejus</PVCI>
-         </PVC>
-      </LC>
-      <CS hint="LOCALIZZAZIONE CATASTALE">
-         <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
-         <CTS hint="LOCALIZZAZIONE CATASTALE">
-            <CTSC hint="Comune">Bardonecchia</CTSC>
-            <CTSF hint="Foglio/Data">15</CTSF>
-            <CTSN hint="Particelle">746, 747</CTSN>
-         </CTS>
-      </CS>
-      <GA hint="GEOREFERENZIAZIONE TRAMITE AREA">
-         <GAL hint="Tipo di localizzazione">localizzazione fisica</GAL>
-         <GAD hint="DESCRIZIONE DEL POLIGONO">
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">6.6967960194</GADPX>
-               <GADPY hint="Coordinata Y">45.083746112</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">6.6971983508</GADPX>
-               <GADPY hint="Coordinata Y">45.083853401</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">6.6975845889</GADPX>
-               <GADPY hint="Coordinata Y">45.083858765</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">6.6974129275</GADPX>
-               <GADPY hint="Coordinata Y">45.083209671</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">6.6971232489</GADPX>
-               <GADPY hint="Coordinata Y">45.083182849</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">6.6969247655</GADPX>
-               <GADPY hint="Coordinata Y">45.083456434</GADPY>
-            </GADP>
-         </GAD>
-         <GAM hint="Metodo di georeferenziazione">perimetrazione approssimata</GAM>
-         <GAT hint="Tecnica di georeferenziazione">rilievo da cartografia senza sopralluogo</GAT>
-         <GAP hint="Proiezione e Sistema di riferimento">WGS84</GAP>
-         <GAB hint="BASE DI RIFERIMENTO">
-            <GABB hint="Descrizione sintetica">ICCD1004366_OI.ORTOI</GABB>
-            <GABT hint="Data">28-12-2014</GABT>
-            <GABO hint="Note">(2372767) -ORTOFOTO 2006- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map) -OI.ORTOIMMAGINICOLORE.2006</GABO>
-         </GAB>
-      </GA>
-      <RE hint="MODALITA' DI REPERIMENTO">
-         <DSC hint="DATI DI SCAVO">
-            <SCAN hint="Denominazione dello scavo">Scavi della Tur d'Amun e delle strutture del Castello di Borgo Vecchio</SCAN>
-            <DSCF hint="Ente responsabile">Soprintendenza dei Beni Archeologici del Piemonte</DSCF>
-            <DSCT hint="Motivo">ricerca scientifica</DSCT>
-            <DSCM hint="Metodo">open area</DSCM>
-            <DSCD hint="Data">1999-2006</DSCD>
-            <DSCZ hint="Bibliografia specifica">Pejrani Baricco, L. - Cerrato, N.,   "Bardonecchia. Tour d’Amount", in QSAP XVIII (2001), p. 113-116; Pejrani Baricco, L. - Longhi, A.,  "Archeologia e storia di castelli alpini: esperienze di indagine in Val di Susa", in AVER – Anciens vestiges en ruine. Atti del colloque de cloture, 2012, p. 209-219.</DSCZ>
-         </DSC>
-      </RE>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Fascia cronologica di riferimento">Eta' medievale</DTZG>
-            <DTZS hint="Frazione cronologica">seconda metà</DTZS>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">1300</DTSI>
-            <DTSV hint="Validita'">ca</DTSV>
-            <DTSF hint="A">1699</DTSF>
-            <DTSL hint="Validita'">ca</DTSL>
-         </DTS>
-         <DTM hint="Motivazione cronologia">analisi storico-scientifica</DTM>
-         <DTM hint="Motivazione cronologia">confronto</DTM>
-         <DTM hint="Motivazione cronologia">documentazione</DTM>
-         <ADT hint="Altre datazioni">Età moderna</ADT>
-      </DT>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">buono</STCC>
-            <STCS hint="Indicazioni specifiche">Strutture coperte da enormi depositi di crollo; dopo lo scavo sono state sottoposte a restauro, ripristino funzionale e apertura al pubblico.</STCS>
-         </STC>
-      </CO>
-      <DA hint="DATI ANALITICI">
-         <DES hint="DESCRIZIONE">
-            <DESO hint="Descrizione">Tra 1999 e 2006 si svolti i lavori di scavo e restauro sul sito del castello delfinale di Bardonecchia, avviati nell'ambito del progetto per la creazione di un parco archeologico finanziati dal comune e dalla Comunità Europea. Gli interventi sono stati effettuati nell'area dove sorgevano i resti molto degradati della torre, detta localmente Tour d'Amount o Tur d'Amun, che costituiva l'ultima testimonianza ancora visibile di un complesso più ampio e articolato, il Castello di Borgo Vecchio. La struttura era arroccata a monte del nucleo antico di Bardonecchia, sulle pendici della dorsale di congiunzione tra i valloni della Rho e del Frejus, in posizione dominante su tutta la conca. Il castello controllava l'accesso ai valichi che conducono all'alta Valle della Maurienne, contrapponendosi al Castello di Bramafam, situato sul luogo dove ora sorge il forte ottocentesco.  La data di fondazione non è nota, ma i primi documenti che lo menzionano, risalgono alla prima metà del XIV sec. Nella valutazione economica del territorio dei Delfini del 1339 viene citato un impianto strutturato su tre torrioni quadrati, con sale e ambienti di servizio, circondato da una cinta muraria del perimetro di 160 m. La torre principale, alta 23 m. e articolata internamente su quattro piani, era affiancata da una loggia e una sala di rappresentanza. Al momento dell’intervento di scavo, che ha visto dapprima l'asportazione a mezzo meccanico di enormi quantità di depositi di crollo, sopravviveva la parte inferiore del torrione principale, conservato per circa 7 m., ed erano ancora visibili parte del basamento della torretta orientale, nonché tratti delle due cinte murarie che delimitavano il complesso a valle, l’una sui margini del pianoro superiore e l’altra a contenimento di quello inferiore, localizzato a sud; qui erano certamente dislocati altri edifici, e forse anche una delle due altre torri menzionate nei documenti trecenteschi, delle quali si sono perdute le tracce. La torre, sui cui si sviluppava il nucleo originale del castello, si presentava a pianta quadrata (9,5 m. per lato), ed era delimitata a valle da una cortina quadrangolare di cui sono stati individuati per ora un primo muro di terrazzamento lungo 22 m a sud, il lato ovest e parte di quello est. La torre era realizzata in pietre di fiume legate da malta di calce, con paramento a corsi regolari e tracce di tessitura a spina di pesce. Gli angoli erano marcati da conci ben squadrati in pietra tenera di cava. Lo spessore delle mura si riduceva progressivamente in altezza, passando dai 2,7 m. della base, al 1,7 m. della sommità conservata. All'interno si osservano ancora le riseghe che sostenevano gli assiti lignei originari, suddividendo lo spazio in piani alti 3 m, messi in comunicazione da scale a pioli. Sopravvivono i primi due piani e parte del terzo. La presenza di brecce e tamponature successive indica che l'accesso dall'esterno era al piano intermedio. Sul lato orientale si nota la sostruzione di una scala in pietra che sostituì in seguito le scale di legno. La tipologia dell'impianto e la muratura a spina di pesce datano la costruzione al XII-XIII sec., ma il confronto con altre fortificazioni analoghe presenti in alta valle (Oulx, Borgone, Mattie, Meana), documentate a partire dalla fine del XIII sec., induce a post porre la cronologia tra XIII e XIV sec. Una seconda cortina muraria più a valle, in pietre squadrate di taglio medio piccolo, segna il successivo sviluppo dell'impianto. La torre principale viene inglobata sui lati est e sud in una fortificazione dotata di due torrette circolari angolari; lo spazio interno è suddiviso in tre grandi vani rettangolari, comunicanti fra loro, con funzioni residenziali e di rappresentanza. Tratti di muro rinvenuti sul lato nord suggeriscono l'esistenza di una terza torretta. Queste nuove fasi edilizie si collocano tra i secoli XIV e XV, nel momento in cui il Delfino entrò a far parte del consortile, ottenendo il diritto d'uso della Tour d'Amount e coincidono con il preponderante utilizzo militare del castello. Dopo un periodo di interruzione della frequentazione dell'impianto da parte dei coregnanti, nel tardo Cinquecento si registrano ampliamenti della manica residenziale verso nord e si modifica l’edificio in profondità e altezza, ricavando un nuovo ampio vano interrato, collegato con il piano superiore mediante una scala a chiocciola. Nel XVII la famiglia De Jouffrey apportò alcuni adeguamenti alla torre centrale: nel basamento furono aperte alcune brecce, che consentirono il collegamento di questo ambiente con le altre aree del castello, e furono costruite degli orizzontamenti in pietra al posto degli originari solai lignei. Una serie di brecce aperte su diversi lati è di difficile collocazione cronologica. Fonti tarde menzionano l'accesso al castello sul lato ovest, dove arrivava la strada proveniente da Borgo Vecchio. Durante la campagna di scavi del 2005, circa duecento metri a ovest del castello, è stata rinvenuta una necropoli utilizzata da una piccola comunità alloctona tra il VI e l’VIII secolo; le 12 tombe erano a fossa semplice o rivestite di lastre di pietra, disposte in file. Nei dintorni dell’area funeraria probabilmente sorgeva un abitato coevo che sfruttava le stesse opportunità strategiche sfruttate dalla fortezza medievale; non è per il momento possibile dire se ci sia stata continuità di occupazione del sito tra i due periodi. La presenza di un insediamento ad alta quota in una fase così precoce non è un caso isolato e si collega al profondo clima di insicurezza che si stava instaurando a causa della guerra greco-gotica e della crescente pressione dei Franchi sulla fascia Alpina.</DESO>
-         </DES>
-         <INT hint="Interpretazione">Castello di Borgo Vecchio, esempio di fortificazione pertinente ad una fase tarda di incastellamento tipica del XIII-XIC sec. Il complesso, le cui vicende si legano a quelle della famiglia De Bardonisca e più in generale alle lotte tra delfinato francese e ducato di Savoia per il controllo dei valichi di montagna, aveva funzione eminentemente militare, ma anche amministrativa e di rappresentanza. I De Bardonisca erano una famiglia di tradizioni militari molto radicata nella propria terra di origine; controllavano infatti il territorio dalla valle del Rio di Bardonecchia sino ai colli della Rho e della Scala. Il complesso costituiva il centro di potere della signoria consortile alla quale, nel Trecento, si unirono i conti d'Albon, noti come Delfini, che acquistarono il castello del Bramafam e parte del feudo di Bardonecchia. Intorno alla Tour d’Amount i regnanti fecero edificare l’antico borgo medievale, costituito da una struttura accentrata disposta a ventaglio lungo le pendici della basse court del castello e suddivisa in quartieri secondo una ortogonalità che è propria delle appendici castellane. Il castello subì nel tempo diverse ammodernamenti fino a che nel XVI sec. i cosignori si trasferirono nelle caseforti all’interno del borgo. Le vicende storiche non toccarono più il castello almeno fino al 1562, quando, nell'ambito delle guerre di religione, venne occupato dagli Ugonotti e successivamente riconquistato dalle truppe cattoliche del generale La Cazette che, nel contrattacco, diedero fuoco all’edificio. Iniziò da allora una progressiva decadenza, dovuta anche alla perdita delle funzioni militari e allo spostamento dell'interesse verso fortezze più importanti come Exilles, al centro dei secolari contrasti tra Savoia e francesi. Nel '600 castello e signoria passarono alla famiglia dei De Jouffrey che, pur restaurandolo, non vi abitarono mai stabilmente. Nel 1670 la comunità di Bardonecchia acquistò i diritti signorili e la piena proprietà dell'impianto, affrancandosi dal potere feudale. Nella “carta topografica in misura della Valle di Susa”, conservata nell’archivio di Stato di Torino e risalente al '700 compare ancora il complesso con le tre torri, ma il catasto Rabbini del 1866 registra solo la torre centrale, circondata da pascoli. Quest’ultima era conservata, ancora ad inizio '900, fino alla merlatura, ma dei crolli negli anni Venti e l’utilizzo dell’area come zona di esercitazione per tiri balistici durante la Seconda Guerra Mondiale, ridussero la torre ad un cumulo di macerie, abbandonate al degrado e allo spoglio dei materiali, fino a che il complesso non è stato acquistato dal comune nel 1998 per essere restaurato e reso fruibile.</INT>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <ACQ hint="ACQUISIZIONE">
-            <ACQT hint="Tipo acquisizione">acquisto</ACQT>
-         </ACQ>
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
-         </CDG>
-         <NVC hint="PROVVEDIMENTI DI TUTELA">
-            <NVCT hint="Tipo provvedimento">DLgs n. 42/2004, art.10</NVCT>
-            <NVCE hint="Estremi provvedimento">D.M. 2005/04/18</NVCE>
-         </NVC>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAN hint="Codice identificativo">Bordonecchia1</FTAN>
-            <FTAT hint="Note">Vista del Castello di Borgo Vecchio da S-E</FTAT>
-         </FTA>
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAN hint="Codice identificativo">Bardonecchia2</FTAN>
-            <FTAT hint="Note">Scavo, restauro e rifunzionalizzazione delle strutture del castello</FTAT>
-         </FTA>
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale</FTAP>
-            <FTAN hint="Codice identificativo">Bardonecchia3</FTAN>
-            <FTAT hint="Note">Castello in fase di scavo, vista da N-W</FTAT>
-         </FTA>
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAN hint="Codice identificativo">Bardonecchia4</FTAN>
-            <FTAT hint="Note">Tur d'Amun, foto del 1925</FTAT>
-         </FTA>
-         <DRA hint="DOCUMENTAZIONE GRAFICA">
-            <DRAX hint="Genere">documentazione allegata</DRAX>
-            <DRAT hint="Tipo">planimetria</DRAT>
-            <DRAN hint="Codice identificativo">Bardonecchia_planimetria</DRAN>
-         </DRA>
-         <FNT hint="FONTI E DOCUMENTI">
-            <FNTP hint="Tipo">copia del provvedimento di tutela</FNTP>
-            <FNTD hint="Data">2005/04/18</FNTD>
-            <FNTF hint="Foglio/Carta">Fg. 15</FNTF>
-            <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP MAE</FNTN>
-            <FNTS hint="Posizione">NR</FNTS>
-            <FNTI hint="Codice identificativo">New_1419790743804</FNTI>
-         </FNT>
-         <FNT hint="FONTI E DOCUMENTI">
-            <FNTP hint="Tipo">copia del provvedimento di tutela</FNTP>
-            <FNTD hint="Data">2005/11/18</FNTD>
-            <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP MAE</FNTN>
-            <FNTS hint="Posizione">NR</FNTS>
-            <FNTI hint="Codice identificativo">New_1419791106162</FNTI>
-         </FNT>
-         <FNT hint="FONTI E DOCUMENTI">
-            <FNTP hint="Tipo">scheda del piano paesaggistico regionale</FNTP>
-            <FNTD hint="Data">2014</FNTD>
-            <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP MAE</FNTN>
-            <FNTS hint="Posizione">NR</FNTS>
-            <FNTI hint="Codice identificativo">New_1419791494591</FNTI>
-         </FNT>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia di corredo</BIBX>
-            <BIBA hint="Autore">Barello, F. - Ferrero L. - Uggé S.</BIBA>
-            <BIBD hint="Anno di edizione">2013</BIBD>
-            <BIBH hint="Sigla per citazione">1288</BIBH>
-            <BIBN hint="V., pp., nn.">p. 39 ss.</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Pejrani Baricco, L. - Longhi, A.</BIBA>
-            <BIBD hint="Anno di edizione">2012</BIBD>
-            <BIBH hint="Sigla per citazione">1351</BIBH>
-            <BIBN hint="V., pp., nn.">p. 209-219</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Pejrani Baricco, L. - Cerrato, N.</BIBA>
-            <BIBD hint="Anno di edizione">2001</BIBD>
-            <BIBH hint="Sigla per citazione">1352</BIBH>
-            <BIBN hint="V., pp., nn.">XVIII, p. 113-116</BIBN>
-            <BIBI hint="V., tavv., figg.">t. LVII</BIBI>
-         </BIB>
-      </DO>
-      <AD hint="ACCESSO AI DATI">
-         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
-            <ADSP hint="Profilo di accesso">1</ADSP>
-            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
-         </ADS>
-      </AD>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">2014</CMPD>
-            <CMPN hint="Nome">Mele, Silvia</CMPN>
-         </CMP>
-         <FUR hint="Funzionario responsabile">Ratto, Stefania</FUR>
-      </CM>
-      <AN hint="ANNOTAZIONI">
-         <OSS hint="Osservazioni">Negativi esistenti: 274819-274937, 279371-279487; diapositive: 163427-163472.</OSS>
-      </AN>
-   </CA>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11574733@</identifier>
+        <datestamp>2015-12-28T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CA version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">CA</TSK>
+                    <LIR hint="Livello ricerca">P</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">01</NCTR>
+                        <NCTN hint="Numero catalogo generale">00070554</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S154</ESC>
+                    <ECP hint="Ente competente">S154</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">castello militare</OGTD>
+                        <OGTC hint="Categoria di appartenenza">struttura di fortificazione</OGTC>
+                        <OGTN hint="Denominazione/dedicazione">RESTI DELLA TUR D'AMUN E DEL CASTELLO DI BORGO VECCHIO</OGTN>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">TO</PVCP>
+                        <PVCC hint="Comune">Bardonecchia</PVCC>
+                        <PVCL hint="Localita'">BARDONECCHIA</PVCL>
+                        <PVCI hint="Indirizzo">Via Frejus</PVCI>
+                    </PVC>
+                </LC>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+                    <CTS hint="LOCALIZZAZIONE CATASTALE">
+                        <CTSC hint="Comune">Bardonecchia</CTSC>
+                        <CTSF hint="Foglio/Data">15</CTSF>
+                        <CTSN hint="Particelle">746, 747</CTSN>
+                    </CTS>
+                </CS>
+                <GA hint="GEOREFERENZIAZIONE TRAMITE AREA">
+                    <GAL hint="Tipo di localizzazione">localizzazione fisica</GAL>
+                    <GAD hint="DESCRIZIONE DEL POLIGONO">
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">6.6967960194</GADPX>
+                            <GADPY hint="Coordinata Y">45.083746112</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">6.6971983508</GADPX>
+                            <GADPY hint="Coordinata Y">45.083853401</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">6.6975845889</GADPX>
+                            <GADPY hint="Coordinata Y">45.083858765</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">6.6974129275</GADPX>
+                            <GADPY hint="Coordinata Y">45.083209671</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">6.6971232489</GADPX>
+                            <GADPY hint="Coordinata Y">45.083182849</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">6.6969247655</GADPX>
+                            <GADPY hint="Coordinata Y">45.083456434</GADPY>
+                        </GADP>
+                    </GAD>
+                    <GAM hint="Metodo di georeferenziazione">perimetrazione approssimata</GAM>
+                    <GAT hint="Tecnica di georeferenziazione">rilievo da cartografia senza sopralluogo</GAT>
+                    <GAP hint="Proiezione e Sistema di riferimento">WGS84</GAP>
+                    <GAB hint="BASE DI RIFERIMENTO">
+                        <GABB hint="Descrizione sintetica">ICCD1004366_OI.ORTOI</GABB>
+                        <GABT hint="Data">28-12-2014</GABT>
+                        <GABO hint="Note">(2372767) -ORTOFOTO 2006- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map) -OI.ORTOIMMAGINICOLORE.2006</GABO>
+                    </GAB>
+                </GA>
+                <RE hint="MODALITA' DI REPERIMENTO">
+                    <DSC hint="DATI DI SCAVO">
+                        <SCAN hint="Denominazione dello scavo">Scavi della Tur d'Amun e delle strutture del Castello di Borgo Vecchio</SCAN>
+                        <DSCF hint="Ente responsabile">Soprintendenza dei Beni Archeologici del Piemonte</DSCF>
+                        <DSCT hint="Motivo">ricerca scientifica</DSCT>
+                        <DSCM hint="Metodo">open area</DSCM>
+                        <DSCD hint="Data">1999-2006</DSCD>
+                        <DSCZ hint="Bibliografia specifica">Pejrani Baricco, L. - Cerrato, N., "Bardonecchia. Tour d’Amount", in QSAP XVIII (2001), p. 113-116; Pejrani Baricco, L. - Longhi, A., "Archeologia e storia di castelli alpini: esperienze di indagine in Val di Susa", in AVER – Anciens vestiges en ruine. Atti del colloque de cloture, 2012, p. 209-219</DSCZ>
+                    </DSC>
+                </RE>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Fascia cronologica di riferimento">Eta' medievale</DTZG>
+                        <DTZS hint="Frazione cronologica">seconda metà</DTZS>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1300</DTSI>
+                        <DTSV hint="Validita'">ca</DTSV>
+                        <DTSF hint="A">1699</DTSF>
+                        <DTSL hint="Validita'">ca</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">analisi storico-scientifica</DTM>
+                    <DTM hint="Motivazione cronologia">confronto</DTM>
+                    <DTM hint="Motivazione cronologia">documentazione</DTM>
+                    <ADT hint="Altre datazioni">Età moderna</ADT>
+                </DT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                        <STCS hint="Indicazioni specifiche">Strutture coperte da enormi depositi di crollo; dopo lo scavo sono state sottoposte a restauro, ripristino funzionale e apertura al pubblico</STCS>
+                    </STC>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Descrizione">Tra 1999 e 2006 si svolti i lavori di scavo e restauro sul sito del castello delfinale di Bardonecchia, avviati nell'ambito del progetto per la creazione di un parco archeologico finanziati dal comune e dalla Comunità Europea. Gli interventi sono stati effettuati nell'area dove sorgevano i resti molto degradati della torre, detta localmente Tour d'Amount o Tur d'Amun, che costituiva l'ultima testimonianza ancora visibile di un complesso più ampio e articolato, il Castello di Borgo Vecchio. La struttura era arroccata a monte del nucleo antico di Bardonecchia, sulle pendici della dorsale di congiunzione tra i valloni della Rho e del Frejus, in posizione dominante su tutta la conca. Il castello controllava l'accesso ai valichi che conducono all'alta Valle della Maurienne, contrapponendosi al Castello di Bramafam, situato sul luogo dove ora sorge il forte ottocentesco. La data di fondazione non è nota, ma i primi documenti che lo menzionano, risalgono alla prima metà del XIV sec. Nella valutazione economica del territorio dei Delfini del 1339 viene citato un impianto strutturato su tre torrioni quadrati, con sale e ambienti di servizio, circondato da una cinta muraria del perimetro di 160 m. La torre principale, alta 23 m. e articolata internamente su quattro piani, era affiancata da una loggia e una sala di rappresentanza. Al momento dell’intervento di scavo, che ha visto dapprima l'asportazione a mezzo meccanico di enormi quantità di depositi di crollo, sopravviveva la parte inferiore del torrione principale, conservato per circa 7 m., ed erano ancora visibili parte del basamento della torretta orientale, nonché tratti delle due cinte murarie che delimitavano il complesso a valle, l’una sui margini del pianoro superiore e l’altra a contenimento di quello inferiore, localizzato a sud; qui erano certamente dislocati altri edifici, e forse anche una delle due altre torri menzionate nei documenti trecenteschi, delle quali si sono perdute le tracce. La torre, sui cui si sviluppava il nucleo originale del castello, si presentava a pianta quadrata (9,5 m. per lato), ed era delimitata a valle da una cortina quadrangolare di cui sono stati individuati per ora un primo muro di terrazzamento lungo 22 m a sud, il lato ovest e parte di quello est. La torre era realizzata in pietre di fiume legate da malta di calce, con paramento a corsi regolari e tracce di tessitura a spina di pesce. Gli angoli erano marcati da conci ben squadrati in pietra tenera di cava. Lo spessore delle mura si riduceva progressivamente in altezza, passando dai 2,7 m. della base, al 1,7 m. della sommità conservata. All'interno si osservano ancora le riseghe che sostenevano gli assiti lignei originari, suddividendo lo spazio in piani alti 3 m, messi in comunicazione da scale a pioli. Sopravvivono i primi due piani e parte del terzo. La presenza di brecce e tamponature successive indica che l'accesso dall'esterno era al piano intermedio. Sul lato orientale si nota la sostruzione di una scala in pietra che sostituì in seguito le scale di legno. La tipologia dell'impianto e la muratura a spina di pesce datano la costruzione al XII-XIII sec., ma il confronto con altre fortificazioni analoghe presenti in alta valle (Oulx, Borgone, Mattie, Meana), documentate a partire dalla fine del XIII sec., induce a post porre la cronologia tra XIII e XIV sec. Una seconda cortina muraria più a valle, in pietre squadrate di taglio medio piccolo, segna il successivo sviluppo dell'impianto. La torre principale viene inglobata sui lati est e sud in una fortificazione dotata di due torrette circolari angolari; lo spazio interno è suddiviso in tre grandi vani rettangolari, comunicanti fra loro, con funzioni residenziali e di rappresentanza. Tratti di muro rinvenuti sul lato nord suggeriscono l'esistenza di una terza torretta. Queste nuove fasi edilizie si collocano tra i secoli XIV e XV, nel momento in cui il Delfino entrò a far parte del consortile, ottenendo il diritto d'uso della Tour d'Amount e coincidono con il preponderante utilizzo militare del castello. Dopo un periodo di interruzione della frequentazione dell'impianto da parte dei coregnanti, nel tardo Cinquecento si registrano ampliamenti della manica residenziale verso nord e si modifica l’edificio in profondità e altezza, ricavando un nuovo ampio vano interrato, collegato con il piano superiore mediante una scala a chiocciola. Nel XVII la famiglia De Jouffrey apportò alcuni adeguamenti alla torre centrale: nel basamento furono aperte alcune brecce, che consentirono il collegamento di questo ambiente con le altre aree del castello, e furono costruite degli orizzontamenti in pietra al posto degli originari solai lignei. Una serie di brecce aperte su diversi lati è di difficile collocazione cronologica. Fonti tarde menzionano l'accesso al castello sul lato ovest, dove arrivava la strada proveniente da Borgo Vecchio. Durante la campagna di scavi del 2005, circa duecento metri a ovest del castello, è stata rinvenuta una necropoli utilizzata da una piccola comunità alloctona tra il VI e l’VIII secolo; le 12 tombe erano a fossa semplice o rivestite di lastre di pietra, disposte in file. Nei dintorni dell’area funeraria probabilmente sorgeva un abitato coevo che sfruttava le stesse opportunità strategiche sfruttate dalla fortezza medievale; non è per il momento possibile dire se ci sia stata continuità di occupazione del sito tra i due periodi. La presenza di un insediamento ad alta quota in una fase così precoce non è un caso isolato e si collega al profondo clima di insicurezza che si stava instaurando a causa della guerra greco-gotica e della crescente pressione dei Franchi sulla fascia Alpina</DESO>
+                    </DES>
+                    <INT hint="Interpretazione">Castello di Borgo Vecchio, esempio di fortificazione pertinente ad una fase tarda di incastellamento tipica del XIII-XIC sec. Il complesso, le cui vicende si legano a quelle della famiglia De Bardonisca e più in generale alle lotte tra delfinato francese e ducato di Savoia per il controllo dei valichi di montagna, aveva funzione eminentemente militare, ma anche amministrativa e di rappresentanza. I De Bardonisca erano una famiglia di tradizioni militari molto radicata nella propria terra di origine; controllavano infatti il territorio dalla valle del Rio di Bardonecchia sino ai colli della Rho e della Scala. Il complesso costituiva il centro di potere della signoria consortile alla quale, nel Trecento, si unirono i conti d'Albon, noti come Delfini, che acquistarono il castello del Bramafam e parte del feudo di Bardonecchia. Intorno alla Tour d’Amount i regnanti fecero edificare l’antico borgo medievale, costituito da una struttura accentrata disposta a ventaglio lungo le pendici della basse court del castello e suddivisa in quartieri secondo una ortogonalità che è propria delle appendici castellane. Il castello subì nel tempo diverse ammodernamenti fino a che nel XVI sec. i cosignori si trasferirono nelle caseforti all’interno del borgo. Le vicende storiche non toccarono più il castello almeno fino al 1562, quando, nell'ambito delle guerre di religione, venne occupato dagli Ugonotti e successivamente riconquistato dalle truppe cattoliche del generale La Cazette che, nel contrattacco, diedero fuoco all’edificio. Iniziò da allora una progressiva decadenza, dovuta anche alla perdita delle funzioni militari e allo spostamento dell'interesse verso fortezze più importanti come Exilles, al centro dei secolari contrasti tra Savoia e francesi. Nel '600 castello e signoria passarono alla famiglia dei De Jouffrey che, pur restaurandolo, non vi abitarono mai stabilmente. Nel 1670 la comunità di Bardonecchia acquistò i diritti signorili e la piena proprietà dell'impianto, affrancandosi dal potere feudale. Nella “carta topografica in misura della Valle di Susa”, conservata nell’archivio di Stato di Torino e risalente al '700 compare ancora il complesso con le tre torri, ma il catasto Rabbini del 1866 registra solo la torre centrale, circondata da pascoli. Quest’ultima era conservata, ancora ad inizio '900, fino alla merlatura, ma dei crolli negli anni Venti e l’utilizzo dell’area come zona di esercitazione per tiri balistici durante la Seconda Guerra Mondiale, ridussero la torre ad un cumulo di macerie, abbandonate al degrado e allo spoglio dei materiali, fino a che il complesso non è stato acquistato dal comune nel 1998 per essere restaurato e reso fruibile</INT>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <ACQ hint="ACQUISIZIONE">
+                        <ACQT hint="Tipo acquisizione">acquisto</ACQT>
+                    </ACQ>
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                    </CDG>
+                    <NVC hint="PROVVEDIMENTI DI TUTELA">
+                        <NVCT hint="Tipo provvedimento">DLgs n. 42/2004, art.10</NVCT>
+                        <NVCE hint="Estremi provvedimento">D.M. 2005/04/18</NVCE>
+                    </NVC>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAN hint="Codice identificativo">Bordonecchia1</FTAN>
+                        <FTAT hint="Note">Vista del Castello di Borgo Vecchio da S-E</FTAT>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAN hint="Codice identificativo">Bardonecchia2</FTAN>
+                        <FTAT hint="Note">Scavo, restauro e rifunzionalizzazione delle strutture del castello</FTAT>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale</FTAP>
+                        <FTAN hint="Codice identificativo">Bardonecchia3</FTAN>
+                        <FTAT hint="Note">Castello in fase di scavo, vista da N-W</FTAT>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAN hint="Codice identificativo">Bardonecchia4</FTAN>
+                        <FTAT hint="Note">Tur d'Amun, foto del 1925</FTAT>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA">
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">planimetria</DRAT>
+                        <DRAN hint="Codice identificativo">Bardonecchia_planimetria</DRAN>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">copia del provvedimento di tutela</FNTP>
+                        <FNTD hint="Data">2005/04/18</FNTD>
+                        <FNTF hint="Foglio/Carta">Fg. 15</FNTF>
+                        <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP MAE</FNTN>
+                        <FNTI hint="Codice identificativo">New_1419790743804</FNTI>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">copia del provvedimento di tutela</FNTP>
+                        <FNTD hint="Data">2005/11/18</FNTD>
+                        <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP MAE</FNTN>
+                        <FNTI hint="Codice identificativo">New_1419791106162</FNTI>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">scheda del piano paesaggistico regionale</FNTP>
+                        <FNTD hint="Data">2014</FNTD>
+                        <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP MAE</FNTN>
+                        <FNTI hint="Codice identificativo">New_1419791494591</FNTI>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia di corredo</BIBX>
+                        <BIBA hint="Autore">Barello, F. - Ferrero L. - Uggé S</BIBA>
+                        <BIBD hint="Anno di edizione">2013</BIBD>
+                        <BIBH hint="Sigla per citazione">1288</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 39 ss</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Pejrani Baricco, L. - Longhi, A</BIBA>
+                        <BIBD hint="Anno di edizione">2012</BIBD>
+                        <BIBH hint="Sigla per citazione">1351</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 209-219</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Pejrani Baricco, L. - Cerrato, N</BIBA>
+                        <BIBD hint="Anno di edizione">2001</BIBD>
+                        <BIBH hint="Sigla per citazione">1352</BIBH>
+                        <BIBN hint="V., pp., nn.">XVIII, p. 113-116</BIBN>
+                        <BIBI hint="V., tavv., figg.">t. LVII</BIBI>
+                    </BIB>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Mele, Silvia</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Ratto, Stefania</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Negativi esistenti: 274819-274937, 279371-279487; diapositive: 163427-163472</OSS>
+                </AN>
+            </CA>
+            <harvesting>
+                <geocoding>
+                    <x>6.69770141</x>
+                    <y>45.0820069</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

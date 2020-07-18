@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-province:ca  a   clvapit:Province ;
@@ -178,7 +180,7 @@ ar-archeologicalProperty:2000202451
         dc:coverage                     ar-city:cagliari ;
         dc:description                  "tra i materiali esposti si individuano una statuina fittile di stile cruciforme, assisa (h. 4,9; largh. 4,5) e una statuina di marmo bianco saccaroide a placca traforata (h. res. 9,3)" ;
         dc:identifier                   "2000202451" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/2000202451-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:2000202451-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> ;
         dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_archeologici> ;
         dc:type                         ar-culturalPropertyType:fdbc5860f8aa1fdb52d6659b43aff227 ;
@@ -187,7 +189,7 @@ ar-archeologicalProperty:2000202451
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordTMA/2000202451> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/33403d0a21f3497e610de99a52d5f967" ;
+                ar-address:33403d0a21f3497e610de99a52d5f967 ;
         arco-arco:catalogueNumber       "00202451" ;
         arco-arco:hasCataloguingAgency  ar-agent:20f5c45a6e3c09e0718c1b8ea9c955d7 ;
         arco-arco:hasHeritageProtectionAgency
@@ -330,14 +332,19 @@ ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
         l0:name     "scheda contenente dati liberamente accessibili" .
 
 ar-bibliography:2000202451-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 2000202451"@en , "Bibliografia 2 del bene culturale: 2000202451"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 2 del bene culturale: 2000202451"@it , "Bibliography 2 of cultural property: 2000202451"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Atzeni E - 1975-1977" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Atzeni E" ;
+        arco-cd:bibliographicReferenceDate
+                "1975-1977" ;
         arco-cd:bibliographyLocalIdentifier
                 "Atz1975b" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000202451 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "figg. 12,4; 15,11; tavv. XXVIII,1-4; XL,2" ;
-        l0:name                   "Bibliography 2 of cultural property: 2000202451"@en , "Bibliografia 2 del bene culturale: 2000202451"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000202451 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "figg. 12,4; 15,11; tavv. XXVIII,1-4; XL,2" ;
+        l0:name                         "Bibliografia 2 del bene culturale: 2000202451"@en , "Bibliography 2 of cultural property: 2000202451"@en .
 
 ar-culturalPropertyDefinition:materiale-di-collezione-museale
         a           arco-dd:CulturalPropertyDefinition ;
@@ -379,14 +386,19 @@ ar-SiteDefinition:museo
         rdfs:label  "museo" .
 
 ar-bibliography:2000202451-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 2000202451"@en , "Bibliografia 1 del bene culturale: 2000202451"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 2000202451"@it , "Bibliography 1 of cultural property: 2000202451"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Lilliu G - 1999" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Lilliu G" ;
+        arco-cd:bibliographicReferenceDate
+                "1999" ;
         arco-cd:bibliographyLocalIdentifier
                 "Lill1999" ;
-        arco-cd:isBibliographyOf  ar-archeologicalProperty:2000202451 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "figg. 52, 84, 257, 310" ;
-        l0:name                   "Bibliography 1 of cultural property: 2000202451"@en , "Bibliografia 1 del bene culturale: 2000202451"@en .
+        arco-cd:isBibliographyOf        ar-archeologicalProperty:2000202451 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "figg. 52, 84, 257, 310" ;
+        l0:name                         "Bibliography 1 of cultural property: 2000202451"@en , "Bibliografia 1 del bene culturale: 2000202451"@en .
 
 ar-legalSituation:2000202451-legal-situation-proprieta-stato
         a           arco-cd:LegalSituation ;

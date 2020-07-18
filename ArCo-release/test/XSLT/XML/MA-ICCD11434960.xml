@@ -1,249 +1,256 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <MA version="3.00_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo Scheda">MA</TSK>
-         <LIR hint="Livello ricerca">P</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">01</NCTR>
-            <NCTN hint="Numero catalogo generale">00354511</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">S154</ESC>
-         <ECP hint="Ente competente">S154</ECP>
-      </CD>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">cinta fortificativa</OGTD>
-            <OGTC hint="Categoria di appartenenza">struttura di fortificazione</OGTC>
-            <OGTN hint="Denominazione/dedicazione">Mura urbiche romane</OGTN>
-         </OGT>
-      </OG>
-      <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
-            <PVCS hint="Stato">Italia</PVCS>
-            <PVCR hint="Regione">Piemonte</PVCR>
-            <PVCP hint="Provincia">AL</PVCP>
-            <PVCC hint="Comune">Tortona</PVCC>
-            <PVCI hint="Indirizzo">Via Alle Fonti / Via Principe Tommaso di Savoia 8</PVCI>
-         </PVC>
-      </LC>
-      <CS hint="LOCALIZZAZIONE CATASTALE">
-         <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
-         <CTS hint="LOCALIZZAZIONE CATASTALE">
-            <CTSC hint="Comune">Tortona</CTSC>
-            <CTSF hint="Foglio/Data">38</CTSF>
-            <CTSN hint="Particelle">63, 64, 65, 66, 67, 109</CTSN>
-         </CTS>
-      </CS>
-      <GA hint="GEOREFERENZIAZIONE TRAMITE AREA">
-         <GAL hint="Tipo di localizzazione">localizzazione fisica</GAL>
-         <GAD hint="DESCRIZIONE DEL POLIGONO">
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.872518613</GADPX>
-               <GADPY hint="Coordinata Y">44.89611238</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8724381467</GADPX>
-               <GADPY hint="Coordinata Y">44.895811973</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.87245424</GADPX>
-               <GADPY hint="Coordinata Y">44.895806608</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8724327823</GADPX>
-               <GADPY hint="Coordinata Y">44.895736871</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8724220535</GADPX>
-               <GADPY hint="Coordinata Y">44.895742235</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8723040363</GADPX>
-               <GADPY hint="Coordinata Y">44.895307718</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8722718498</GADPX>
-               <GADPY hint="Coordinata Y">44.895318446</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.872389867</GADPX>
-               <GADPY hint="Coordinata Y">44.895742235</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8723684093</GADPX>
-               <GADPY hint="Coordinata Y">44.895752964</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8723952314</GADPX>
-               <GADPY hint="Coordinata Y">44.895828066</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8724113247</GADPX>
-               <GADPY hint="Coordinata Y">44.895817337</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8724917909</GADPX>
-               <GADPY hint="Coordinata Y">44.896101651</GADPY>
-            </GADP>
-            <GADP hint="PUNTO DEL POLIGONO">
-               <GADPX hint="Coordinata X">8.8725078842</GADPX>
-               <GADPY hint="Coordinata Y">44.896101651</GADPY>
-            </GADP>
-         </GAD>
-         <GAM hint="Metodo di georeferenziazione">perimetrazione approssimata</GAM>
-         <GAT hint="Tecnica di georeferenziazione">Rilievo da foto aerea senza sopralluogo</GAT>
-         <GAP hint="Proiezione e Sistema di riferimento">WGS84</GAP>
-         <GAB hint="BASE DI RIFERIMENTO">
-            <GABB hint="Descrizione sintetica">ICCD1004366_OI.ORTOI</GABB>
-            <GABT hint="Data">13-11-2014</GABT>
-            <GABO hint="Note">(2325803) -ORTOFOTO 2006- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map) -OI.ORTOIMMAGINICOLORE.2006</GABO>
-         </GAB>
-      </GA>
-      <RE hint="MODALITA' DI REPERIMENTO">
-         <DSC hint="DATI DI SCAVO">
-            <SCAN hint="Denominazione dello scavo">Tortona, via alle Fonti, mura</SCAN>
-            <DSCT hint="Motivo">ricerca scientifica</DSCT>
-            <DSCM hint="Metodo">per saggi stratigrafici</DSCM>
-            <DSCD hint="Data">1988-1989</DSCD>
-         </DSC>
-      </RE>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Fascia cronologica di riferimento">Eta' romana repubblicana</DTZG>
-            <DTZS hint="Frazione cronologica">fine</DTZS>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">fine II a.C.</DTSI>
-            <DTSV hint="Validita'">ca</DTSV>
-            <DTSF hint="A">II sec. d.C.</DTSF>
-            <DTSL hint="Validita'">ca</DTSL>
-         </DTS>
-         <DTM hint="Motivazione cronologia">contesto</DTM>
-         <DTM hint="Motivazione cronologia">analisi tipologica</DTM>
-         <ADT hint="Altre datazioni">XVI sec. d.C.</ADT>
-      </DT>
-      <MT hint="DATI TECNICI">
-         <MIS hint="MISURE">
-            <MISU hint="Unita'">m</MISU>
-            <MISN hint="Lunghezza">100</MISN>
-            <MIST hint="Validita'">ca</MIST>
-         </MIS>
-      </MT>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">discreto</STCC>
-            <STCS hint="Indicazioni specifiche">Alcune porzioni sono crollate. L'area è stata sistemata e valorizzata.</STCS>
-         </STC>
-      </CO>
-      <RS hint="RESTAURI">
-         <RST hint="RESTAURI">
-            <RSTD hint="Data">1985</RSTD>
-            <RSTS hint="Situazione">cortina E e ricomposizione del paramento della cortina W</RSTS>
-         </RST>
-         <RST hint="RESTAURI">
-            <RSTD hint="Data">1989</RSTD>
-            <RSTS hint="Situazione">consolidamento delle mura</RSTS>
-         </RST>
-      </RS>
-      <DA hint="DATI ANALITICI">
-         <DES hint="DESCRIZIONE">
-            <DESO hint="Descrizione">Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre.  La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica.  La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec.</DESO>
-         </DES>
-         <INT hint="Interpretazione">Mura romane di Dertona</INT>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
-         </CDG>
-         <NVC hint="PROVVEDIMENTI DI TUTELA">
-            <NVCT hint="Tipo provvedimento">DM (L. n. 1089/1939)</NVCT>
-            <NVCE hint="Estremi provvedimento">1972/04/29</NVCE>
-         </NVC>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file) ortorettificata</FTAP>
-            <FTAN hint="Codice identificativo">New_1418299701627</FTAN>
-            <FTAT hint="Note">posizionamento della struttura</FTAT>
-         </FTA>
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
-            <FTAE hint="Ente proprietario">SBAP-MAE</FTAE>
-            <FTAN hint="Codice identificativo">New_1415885736289</FTAN>
-         </FTA>
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia b/n</FTAP>
-            <FTAE hint="Ente proprietario">SBAP-MAE</FTAE>
-            <FTAN hint="Codice identificativo">New_1415885899576</FTAN>
-            <FTAT hint="Note">inv. neg. 15334</FTAT>
-         </FTA>
-         <FNT hint="FONTI E DOCUMENTI">
-            <FNTP hint="Tipo">copia del provvedimento di tutela</FNTP>
-            <FNTD hint="Data">1972</FNTD>
-            <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP-MAE</FNTN>
-            <FNTS hint="Posizione">N/R</FNTS>
-            <FNTI hint="Codice identificativo">New_1415886096520</FNTI>
-         </FNT>
-         <FNT hint="FONTI E DOCUMENTI">
-            <FNTP hint="Tipo">scheda del piano paesaggistico regionale</FNTP>
-            <FNTD hint="Data">2014</FNTD>
-            <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP-MAE</FNTN>
-            <FNTS hint="Posizione">N/R</FNTS>
-            <FNTI hint="Codice identificativo">New_1418299813513</FNTI>
-         </FNT>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Finocchi S.</BIBA>
-            <BIBD hint="Anno di edizione">1982</BIBD>
-            <BIBH hint="Sigla per citazione">1230</BIBH>
-            <BIBN hint="V., pp., nn.">pp. 317-341</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Finocchi S.</BIBA>
-            <BIBD hint="Anno di edizione">1986</BIBD>
-            <BIBH hint="Sigla per citazione">1155</BIBH>
-            <BIBN hint="V., pp., nn.">p. 228</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Zanda E., Venturino Gambari M., Evans S.P.</BIBA>
-            <BIBD hint="Anno di edizione">1991</BIBD>
-            <BIBH hint="Sigla per citazione">1258</BIBH>
-            <BIBN hint="V., pp., nn.">pp. 91-92</BIBN>
-         </BIB>
-         <BIB hint="BIBLIOGRAFIA">
-            <BIBX hint="Genere">bibliografia specifica</BIBX>
-            <BIBA hint="Autore">Venturino Gambari M. / Traversone B. / Cattaneo Cassano A.</BIBA>
-            <BIBD hint="Anno di edizione">1996</BIBD>
-            <BIBH hint="Sigla per citazione">1173</BIBH>
-            <BIBN hint="V., pp., nn.">pp. 32-33</BIBN>
-         </BIB>
-      </DO>
-      <AD hint="ACCESSO AI DATI">
-         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
-            <ADSP hint="Profilo di accesso">1</ADSP>
-            <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
-         </ADS>
-      </AD>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">1984</CMPD>
-            <CMPN hint="Nome">Finocchi, Silvana</CMPN>
-         </CMP>
-         <FUR hint="Funzionario responsabile">Finocchi, Silvana</FUR>
-         <AGG hint="AGGIORNAMENTO-REVISIONE">
-            <AGGD hint="Data">2014</AGGD>
-            <AGGN hint="Nome">Quiri, Elena</AGGN>
-            <AGGF hint="Funzionario responsabile">Ratto, Stefania</AGGF>
-         </AGG>
-      </CM>
-      <AN hint="ANNOTAZIONI">
-         <OSS hint="Osservazioni">La localizzazione catastale si riferisce al 1984.</OSS>
-      </AN>
-   </MA>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11434960@</identifier>
+        <datestamp>2015-04-07T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MA version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">MA</TSK>
+                    <LIR hint="Livello ricerca">P</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">01</NCTR>
+                        <NCTN hint="Numero catalogo generale">00354511</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S154</ESC>
+                    <ECP hint="Ente competente">S154</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">cinta fortificativa</OGTD>
+                        <OGTC hint="Categoria di appartenenza">struttura di fortificazione</OGTC>
+                        <OGTN hint="Denominazione/dedicazione">Mura urbiche romane</OGTN>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PVCS hint="Stato">Italia</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">AL</PVCP>
+                        <PVCC hint="Comune">Tortona</PVCC>
+                        <PVCI hint="Indirizzo">Via Alle Fonti / Via Principe Tommaso di Savoia 8</PVCI>
+                    </PVC>
+                </LC>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+                    <CTS hint="LOCALIZZAZIONE CATASTALE">
+                        <CTSC hint="Comune">Tortona</CTSC>
+                        <CTSF hint="Foglio/Data">38</CTSF>
+                        <CTSN hint="Particelle">63, 64, 65, 66, 67, 109</CTSN>
+                    </CTS>
+                </CS>
+                <GA hint="GEOREFERENZIAZIONE TRAMITE AREA">
+                    <GAL hint="Tipo di localizzazione">localizzazione fisica</GAL>
+                    <GAD hint="DESCRIZIONE DEL POLIGONO">
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.872518613</GADPX>
+                            <GADPY hint="Coordinata Y">44.89611238</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8724381467</GADPX>
+                            <GADPY hint="Coordinata Y">44.895811973</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.87245424</GADPX>
+                            <GADPY hint="Coordinata Y">44.895806608</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8724327823</GADPX>
+                            <GADPY hint="Coordinata Y">44.895736871</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8724220535</GADPX>
+                            <GADPY hint="Coordinata Y">44.895742235</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8723040363</GADPX>
+                            <GADPY hint="Coordinata Y">44.895307718</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8722718498</GADPX>
+                            <GADPY hint="Coordinata Y">44.895318446</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.872389867</GADPX>
+                            <GADPY hint="Coordinata Y">44.895742235</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8723684093</GADPX>
+                            <GADPY hint="Coordinata Y">44.895752964</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8723952314</GADPX>
+                            <GADPY hint="Coordinata Y">44.895828066</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8724113247</GADPX>
+                            <GADPY hint="Coordinata Y">44.895817337</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8724917909</GADPX>
+                            <GADPY hint="Coordinata Y">44.896101651</GADPY>
+                        </GADP>
+                        <GADP hint="PUNTO DEL POLIGONO">
+                            <GADPX hint="Coordinata X">8.8725078842</GADPX>
+                            <GADPY hint="Coordinata Y">44.896101651</GADPY>
+                        </GADP>
+                    </GAD>
+                    <GAM hint="Metodo di georeferenziazione">perimetrazione approssimata</GAM>
+                    <GAT hint="Tecnica di georeferenziazione">Rilievo da foto aerea senza sopralluogo</GAT>
+                    <GAP hint="Proiezione e Sistema di riferimento">WGS84</GAP>
+                    <GAB hint="BASE DI RIFERIMENTO">
+                        <GABB hint="Descrizione sintetica">ICCD1004366_OI.ORTOI</GABB>
+                        <GABT hint="Data">13-11-2014</GABT>
+                        <GABO hint="Note">(2325803) -ORTOFOTO 2006- (http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_colore_06.map) -OI.ORTOIMMAGINICOLORE.2006</GABO>
+                    </GAB>
+                </GA>
+                <RE hint="MODALITA' DI REPERIMENTO">
+                    <DSC hint="DATI DI SCAVO">
+                        <SCAN hint="Denominazione dello scavo">Tortona, via alle Fonti, mura</SCAN>
+                        <DSCT hint="Motivo">ricerca scientifica</DSCT>
+                        <DSCM hint="Metodo">per saggi stratigrafici</DSCM>
+                        <DSCD hint="Data">1988-1989</DSCD>
+                    </DSC>
+                </RE>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Fascia cronologica di riferimento">Eta' romana repubblicana</DTZG>
+                        <DTZS hint="Frazione cronologica">fine</DTZS>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">fine II a.C</DTSI>
+                        <DTSV hint="Validita'">ca</DTSV>
+                        <DTSF hint="A">II sec. d.C</DTSF>
+                        <DTSL hint="Validita'">ca</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">contesto</DTM>
+                    <DTM hint="Motivazione cronologia">analisi tipologica</DTM>
+                    <ADT hint="Altre datazioni">XVI sec. d.C</ADT>
+                </DT>
+                <MT hint="DATI TECNICI">
+                    <MIS hint="MISURE">
+                        <MISU hint="Unita'">m</MISU>
+                        <MISN hint="Lunghezza">100</MISN>
+                        <MIST hint="Validita'">ca</MIST>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                        <STCS hint="Indicazioni specifiche">Alcune porzioni sono crollate. L'area è stata sistemata e valorizzata</STCS>
+                    </STC>
+                </CO>
+                <RS hint="RESTAURI">
+                    <RST hint="RESTAURI">
+                        <RSTD hint="Data">1985</RSTD>
+                        <RSTS hint="Situazione">cortina E e ricomposizione del paramento della cortina W</RSTS>
+                    </RST>
+                    <RST hint="RESTAURI">
+                        <RSTD hint="Data">1989</RSTD>
+                        <RSTS hint="Situazione">consolidamento delle mura</RSTS>
+                    </RST>
+                </RS>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Descrizione">Lungo le pendici dell’altura del Castello si individua una lunga porzione (m. 100 ca) rettilinea del lato orientale delle mura romane di Dertona, che presenta due cortine affiancate ai resti di una torre. La tecnica costruttiva consiste in un nucleo di pietrame irregolarmente gettato (a sacco), rivestito esternamente da un paramento di blocchi di calcare, allineati in filari orizzontali e regolari. Tra il 1988 e il 1989 vengono effettuati alcuni sondaggi sul lato interno rispetto a via delle Fonti, che hanno evidenziato il cavo di fondazione delle mura tagliato direttamente nella roccia. La struttura è risultata impostata su una serie di gradoni che regolarizzano il pendio e trovano corrispondenza nella disposizione dei conci rettangolari del paramento esterno, che seguono esattamente con una serie di gradini, l’andamento scalare della fondazione. Nel riempimento del cavo di fondazione si rinvengono materiali ceramici dell’età del Ferro (seconda metà VI sec. a.C. - primo quarto V sec. a.C.), mentre sembrano assenti quelli romani, portando ad ipotizzarne una datazione alta, coincidente con la fondazione della città (ultimo quarto del II secolo a.C.). a fortificazione dell’altura dove bisogna localizzare il villaggio ligure di età pre-protostorica. La cinta è stata completamente riplasmata ad opera di Carlo V nella prima metà del XVI sec</DESO>
+                    </DES>
+                    <INT hint="Interpretazione">Mura romane di Dertona</INT>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                    </CDG>
+                    <NVC hint="PROVVEDIMENTI DI TUTELA">
+                        <NVCT hint="Tipo provvedimento">DM (L. n. 1089/1939)</NVCT>
+                        <NVCE hint="Estremi provvedimento">1972/04/29</NVCE>
+                    </NVC>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file) ortorettificata</FTAP>
+                        <FTAN hint="Codice identificativo">New_1418299701627</FTAN>
+                        <FTAT hint="Note">posizionamento della struttura</FTAT>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAE hint="Ente proprietario">SBAP-MAE</FTAE>
+                        <FTAN hint="Codice identificativo">New_1415885736289</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia b/n</FTAP>
+                        <FTAE hint="Ente proprietario">SBAP-MAE</FTAE>
+                        <FTAN hint="Codice identificativo">New_1415885899576</FTAN>
+                        <FTAT hint="Note">inv. neg. 15334</FTAT>
+                    </FTA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">copia del provvedimento di tutela</FNTP>
+                        <FNTD hint="Data">1972</FNTD>
+                        <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP-MAE</FNTN>
+                        <FNTS hint="Posizione">N/R</FNTS>
+                        <FNTI hint="Codice identificativo">New_1415886096520</FNTI>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">scheda del piano paesaggistico regionale</FNTP>
+                        <FNTD hint="Data">2014</FNTD>
+                        <FNTN hint="Nome archivio">Archivio Vincoli Beni Immobili SBAP-MAE</FNTN>
+                        <FNTS hint="Posizione">N/R</FNTS>
+                        <FNTI hint="Codice identificativo">New_1418299813513</FNTI>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Finocchi S</BIBA>
+                        <BIBD hint="Anno di edizione">1982</BIBD>
+                        <BIBH hint="Sigla per citazione">1230</BIBH>
+                        <BIBN hint="V., pp., nn.">pp. 317-341</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Finocchi S</BIBA>
+                        <BIBD hint="Anno di edizione">1986</BIBD>
+                        <BIBH hint="Sigla per citazione">1155</BIBH>
+                        <BIBN hint="V., pp., nn.">p. 228</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Zanda E., Venturino Gambari M., Evans S.P</BIBA>
+                        <BIBD hint="Anno di edizione">1991</BIBD>
+                        <BIBH hint="Sigla per citazione">1258</BIBH>
+                        <BIBN hint="V., pp., nn.">pp. 91-92</BIBN>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBA hint="Autore">Venturino Gambari M. / Traversone B. / Cattaneo Cassano A</BIBA>
+                        <BIBD hint="Anno di edizione">1996</BIBD>
+                        <BIBH hint="Sigla per citazione">1173</BIBH>
+                        <BIBN hint="V., pp., nn.">pp. 32-33</BIBN>
+                    </BIB>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">1984</CMPD>
+                        <CMPN hint="Nome">Finocchi, Silvana</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Finocchi, Silvana</FUR>
+                    <AGG hint="AGGIORNAMENTO-REVISIONE">
+                        <AGGD hint="Data">2014</AGGD>
+                        <AGGN hint="Nome">Quiri, Elena</AGGN>
+                        <AGGF hint="Funzionario responsabile">Ratto, Stefania</AGGF>
+                    </AGG>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">La localizzazione catastale si riferisce al 1984</OSS>
+                </AN>
+            </MA>
+        </schede>
+    </metadata>
+</record>

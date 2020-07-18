@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agentrole:1200870331-proponent-agency
@@ -242,7 +244,7 @@ ar-role:DigitalTranscriptionResponsibleAgent
         arco-cd:hasProponentAgency      ar-agent:050ae5d29fc291b682bcf51f1250ca75 ;
         arco-cd:hasSubject              ar-Subject:f146aa45a94ac1a3b311a1951608def5 ;
         arco-cd:subject                 "Ciclo dell’anno/ Immacolata Concezione, 8 dicembre" ;
-        arco-core:hasAgentRole          ar-agentrole:1200870331-proponent-agency , ar-agentrole:1200870331-cataloguing-agency , ar-agentrole:1200870331-heritage-protection-agency ;
+        arco-core:hasAgentRole          ar-agentrole:1200870331-proponent-agency , ar-agentrole:1200870331-heritage-protection-agency , ar-agentrole:1200870331-cataloguing-agency ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1200870331-alternative-1 .
 

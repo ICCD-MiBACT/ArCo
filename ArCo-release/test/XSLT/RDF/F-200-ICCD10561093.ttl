@@ -1,8 +1,8 @@
 @prefix ar-country: <https://w3id.org/arco/resource/Country/> .
 @prefix arco-arco: <https://w3id.org/arco/ontology/arco/> .
 @prefix ar-culturalPropertySpecification: <https://w3id.org/arco/resource/CulturalPropertySpecification/> .
-@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix roapit: <https://w3id.org/italia/onto/RO/> .
 @prefix CPV:   <https://w3id.org/italia/onto/CPV/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix language: <https://w3id.org/italia/onto/Language/> .
@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-cis:56a1f90baf6fb2cf73aca4142ba2a4d8
@@ -125,13 +127,18 @@ ar-region:ve  a     clvapit:Province ;
         language:hasLanguage            <https://w3id.org/arco/resource/Language/italiano> .
 
 ar-bibliography:0500677128-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0500677128"@en , "Bibliografia 1 del bene culturale: 0500677128"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 1 of cultural property: 0500677128"@en , "Bibliografia 1 del bene culturale: 0500677128"@it ;
+        arco-cd:bibliographicReference  "Barbieri F./ Cevese R./ Magagnato L - 1956" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Barbieri F./ Cevese R./ Magagnato L" ;
+        arco-cd:bibliographicReferenceDate
+                "1956" ;
         arco-cd:bibliographyLocalIdentifier
                 "00000311" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/PhotographicHeritage/0500677128> ;
-        arco-core:note            "p. 389" ;
-        l0:name                   "Bibliography 1 of cultural property: 0500677128"@en , "Bibliografia 1 del bene culturale: 0500677128"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/PhotographicHeritage/0500677128> ;
+        arco-core:note                  "p. 389" ;
+        l0:name                         "Bibliography 1 of cultural property: 0500677128"@en , "Bibliografia 1 del bene culturale: 0500677128"@en .
 
 <https://w3id.org/arco/resource/AcquisitionType/consegna>
         a           arco-cd:AcquisitionType ;
@@ -189,7 +196,7 @@ ar-CulturalEntityTechnicalStatus:0500677128
 
 ar-timeIndexedRole:0500677128-b0f67ddc03838b0f6ad75f1f4ca52778
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Vecchiato M."@it , "Official in charge: Vecchiato M."@en ;
+        rdfs:label             "Funzionario responsabile: Vecchiato M"@it , "Official in charge: Vecchiato M"@en ;
         roapit:isRoleInTimeOf  ar-agent:42ddee4ecd81ecdcab04e8d37e5149cf ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -262,7 +269,7 @@ ar-TimeInterval:xx-prima-meta
 
 ar-agent:42ddee4ecd81ecdcab04e8d37e5149cf
         a           l0:Agent ;
-        rdfs:label  "Vecchiato M." .
+        rdfs:label  "Vecchiato M" .
 
 ar-TimeInterval:1970  a    tiapit:TimeInterval ;
         arco-arco:endTime  "1970 ?" .
@@ -281,7 +288,7 @@ ar-role:OfficialInCharge
 ar-ConservationStatus:0500677128-conservation-status-1
         a                         arco-dd:ConservationStatus ;
         rdfs:label                "Stato di conservazione 1 del bene: 0500677128"@it , "Conservation status 1 of cultural property: 0500677128"@en ;
-        arco-core:specifications  "La fotografia è fortemente incollata al supporto secondario cartaceo." ;
+        arco-core:specifications  "La fotografia è fortemente incollata al supporto secondario cartaceo" ;
         arco-dd:hasConservationStatusType
                 arco-dd:GoodConservationStatus ;
         l0:name                   "Stato di conservazione 1 del bene: 0500677128"@it , "Conservation status 1 of cultural property: 0500677128"@en .
@@ -302,7 +309,7 @@ ar-province:vr  a   clvapit:Province ;
 
 ar-agent:8d6fbd3bcd337d10e8d39b87f98e67dc
         a           l0:Agent ;
-        rdfs:label  "Barausse M." .
+        rdfs:label  "Barausse M" .
 
 ar-address:47d6c3d8d31edd341dbc51c264dad653
         a                    clvapit:Address ;
@@ -353,6 +360,28 @@ ar-TimeInterval:1944-05-19
         a            tiapit:TimeInterval ;
         tiapit:time  "1944/05/19" .
 
+ar-Subject:ba6912849a18a0a4061872d481cccccb
+        a                    arco-cd:Subject ;
+        rdfs:label           "Vicenza. Villa Fogazzaro a San Bastian" ;
+        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/PhotographicHeritage/0500677128> ;
+        l0:name              "Vicenza. Villa Fogazzaro a San Bastian" .
+
+<https://w3id.org/arco/resource/Acquisition/0500677128-acquisition-1>
+        a                            arco-cd:Acquisition ;
+        rdfs:label                   "Acquisition 1 of cultural property: 0500677128"@en , "Acquisizione 1 del bene culturale: 0500677128"@it ;
+        arco-cd:acquisitionLocation  "Venezia / Verona" ;
+        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/consegna> ;
+        arco-cd:hasPreviousOwner     ar-agent:092941b62e1396d76c63dfc02818cb28 ;
+        arco-cd:isAcquisitionOf      <https://w3id.org/arco/resource/PhotographicHeritage/0500677128> ;
+        tiapit:time                  "1970 ?" ;
+        l0:name                      "Acquisizione 1 del bene culturale: 0500677128"@it , "Acquisition 1 of cultural property: 0500677128"@en .
+
+ar-Value:0500677128-1-width-236
+        a                      mu:Value ;
+        rdfs:label             "236"@en , "236"@it ;
+        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
+        mu:value               "236" .
+
 <https://w3id.org/arco/resource/PhotographicHeritage/0500677128>
         a                               arco-arco:PhotographicHeritage , arco-arco:MovableCulturalProperty ;
         rdfs:comment                    "positivo, m" ;
@@ -362,7 +391,7 @@ ar-TimeInterval:1944-05-19
         dc:date                         ar-TimeInterval:1944-05-19-1944-05-19 ;
         dc:format                       ar-MeasurementCollection:0500677128-2 , ar-MeasurementCollection:0500677128-1 ;
         dc:identifier                   "0500677128" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0500677128-legal-situation-detenzione-stato" ;
+        dc:rights                       ar-legalSituation:0500677128-legal-situation-detenzione-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordF/0500677128> ;
         dc:subject                      ar-Subject:ba6912849a18a0a4061872d481cccccb , <http://culturaitalia.it/pico/thesaurus/4.1#fotografie> ;
         dc:title                        <https://w3id.org/arco/resource/Title/0500677128-il-titolo-proprio-non-corrisponde-al-soggetto-rappresentato> , <https://w3id.org/arco/resource/Title/0500677128-vicenza-villa-valmarana-dei-nani-parco> ;
@@ -372,7 +401,7 @@ ar-TimeInterval:1944-05-19
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordF/0500677128> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/c236ed58ebf45635bf3829839a34bb7c" ;
+                ar-address:c236ed58ebf45635bf3829839a34bb7c ;
         arco-arco:catalogueNumber       "00677128" ;
         arco-arco:hasCataloguingAgency  ar-agent:d329d0ae83d6f6820b8c7b13bbb59d3b ;
         arco-arco:hasHeritageProtectionAgency
@@ -407,28 +436,6 @@ ar-TimeInterval:1944-05-19
                 ar-address:c236ed58ebf45635bf3829839a34bb7c ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0500677128-current , ar-timeIndexedTypedLocation:0500677128-alternative-1 , ar-timeIndexedTypedLocation:0500677128-shot .
-
-ar-Subject:ba6912849a18a0a4061872d481cccccb
-        a                    arco-cd:Subject ;
-        rdfs:label           "Vicenza. Villa Fogazzaro a San Bastian" ;
-        arco-cd:isSubjectOf  <https://w3id.org/arco/resource/PhotographicHeritage/0500677128> ;
-        l0:name              "Vicenza. Villa Fogazzaro a San Bastian" .
-
-<https://w3id.org/arco/resource/Acquisition/0500677128-acquisition-1>
-        a                            arco-cd:Acquisition ;
-        rdfs:label                   "Acquisition 1 of cultural property: 0500677128"@en , "Acquisizione 1 del bene culturale: 0500677128"@it ;
-        arco-cd:acquisitionLocation  "Venezia / Verona" ;
-        arco-cd:hasAcquisitionType   <https://w3id.org/arco/resource/AcquisitionType/consegna> ;
-        arco-cd:hasPreviousOwner     ar-agent:092941b62e1396d76c63dfc02818cb28 ;
-        arco-cd:isAcquisitionOf      <https://w3id.org/arco/resource/PhotographicHeritage/0500677128> ;
-        tiapit:time                  "1970 ?" ;
-        l0:name                      "Acquisizione 1 del bene culturale: 0500677128"@it , "Acquisition 1 of cultural property: 0500677128"@en .
-
-ar-Value:0500677128-1-width-236
-        a                      mu:Value ;
-        rdfs:label             "236"@en , "236"@it ;
-        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/mm> ;
-        mu:value               "236" .
 
 ar-event:0500677128-creation-1
         a                     l0:Event ;
@@ -542,7 +549,7 @@ ar-feature:dd5470bc7134e475dcda372996902cde
                 arco-catalogue:I ;
         arco-catalogue:systemRecordCode
                 "F-200-ICCD10561093" ;
-        arco-core:note  "Il fasc. n. 125 relativo a Villa Fogazzaro - Roi n. 4 immagini fotografiche relative alla villa (schede di catalogo nn. 00677127-00677130)." .
+        arco-core:note  "Il fasc. n. 125 relativo a Villa Fogazzaro - Roi n. 4 immagini fotografiche relative alla villa (schede di catalogo nn. 00677127-00677130)" .
 
 ar-agent:ec90695142bf0da068016dad5609d782
         a                l0:Agent ;
@@ -601,7 +608,7 @@ ar-role:ResponsibleCompilation
 
 ar-catalogueRecordVersion:0500677128-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 2013 Barausse M." ;
+        rdfs:label                   "COMPILAZIONE - 2013 Barausse M" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2013 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0500677128-compilation-8d6fbd3bcd337d10e8d39b87f98e67dc , ar-timeIndexedRole:0500677128-b0f67ddc03838b0f6ad75f1f4ca52778 ;
@@ -708,6 +715,6 @@ ar-MeasurementCollection:0500677128-2
 
 ar-timeIndexedRole:0500677128-compilation-8d6fbd3bcd337d10e8d39b87f98e67dc
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Barausse M."@en , "Compilazione da Barausse M."@it ;
+        rdfs:label             "Compilation by Barausse M"@en , "Compilazione da Barausse M"@it ;
         roapit:isRoleInTimeOf  ar-agent:8d6fbd3bcd337d10e8d39b87f98e67dc ;
         roapit:withRole        ar-role:ResponsibleCompilation .
