@@ -135,6 +135,7 @@ public class Preprocessor {
 			if (uris == null) {
 				uris = new ArrayList<>();
 			}
+			uris.add(uriObjectOfDescription);
 			uniqueIdentifier2URIs.put(uniqueIdentifier, uris);
 
 			catalogueRecordIdentifier2URI.put(catalogueRecordIdentifier, uriObjectOfDescription);

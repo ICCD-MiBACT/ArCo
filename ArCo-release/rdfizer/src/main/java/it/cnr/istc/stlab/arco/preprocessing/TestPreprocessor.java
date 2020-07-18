@@ -1,7 +1,8 @@
 package it.cnr.istc.stlab.arco.preprocessing;
 
+import java.util.List;
 import java.util.Map;
-
+import java.util.Set;
 
 public class TestPreprocessor {
 
@@ -12,6 +13,21 @@ public class TestPreprocessor {
 //		System.out.println(uniqueIdentifier2URI.get("0800196607"));
 		System.out.println(ftan2URL.get("PD_Bacch2018_00009"));
 		System.out.println(cat2URI.get("0800196607"));
+
+		List<String> uris = PreprocessedData.getInstance(true).getUniqueIdentifier2URIs().get("0500436575");
+
+//		System.out.println(PreprocessedData.getInstance(true).getUniqueIdentifier2URIs());
+		
+		Set<String> keys = PreprocessedData.getInstance(true).getUniqueIdentifier2URIs().keySet();
+		
+		System.out.println("\""+keys.iterator().next()+"\"");
+		
+		
+		if (uris == null) {
+			System.out.println("null");
+		} else {
+			System.out.println(uris.size());
+		}
 	}
 
 }

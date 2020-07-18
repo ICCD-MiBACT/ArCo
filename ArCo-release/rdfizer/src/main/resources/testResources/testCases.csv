@@ -28,7 +28,6 @@ src/main/resources/testResources/XML/OA-300-ICCD2100596.xml,src/main/resources/t
 src/main/resources/testResources/XML/OAC-ICCD11324026.xml,src/main/resources/testResources/RDF/OAC-ICCD11324026.ttl
 src/main/resources/testResources/XML/PG-300-ICCD10115591.xml,src/main/resources/testResources/RDF/PG-300-ICCD10115591.ttl
 src/main/resources/testResources/XML/PST-301-ICCD10533913.xml,src/main/resources/testResources/RDF/PST-301-ICCD10533913.ttl
-src/main/resources/testResources/XML/Preparato-Reperti.xml,src/main/resources/testResources/RDF/Preparato-Reperti.ttl
 src/main/resources/testResources/XML/RA-200-ICCD10015760.xml,src/main/resources/testResources/RDF/RA-200-ICCD10015760.ttl
 src/main/resources/testResources/XML/RA-300-ICCD10055673.xml,src/main/resources/testResources/RDF/RA-300-ICCD10055673.ttl
 src/main/resources/testResources/XML/S-200-ICCD11306934.xml,src/main/resources/testResources/RDF/S-200-ICCD11306934.ttl
