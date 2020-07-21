@@ -20,13 +20,37 @@ If the XLST sheet is modified, then the software needs to be rebuilt again.
 
 When running rdfizer on Windows environment provide paramter  ``-Dfile.encoding=UTF-8`` to the JVM (cf. oifbaf's [comment](https://github.com/ICCD-MiBACT/ArCo/issues/75#issuecomment-620469221) on Issue #75).
 
+
 ### rdfizer Usage
+
+
+#### Pre-processing
+
+XSLT transformations use data extracted from a pre-processing of the catalogue records and the EMM files.
+This data is contained in a MapDB's dump, named ``db``, in the project root.
+You can create this file  by running the following command:
+
+```
+mvn exec:java -Dexec.mainClass="it.cnr.istc.stlab.arco.preprocessing.Preprocessor" -Dexec.args="CATALOGUE_RECORDS MULTIMEDIA_RECORDS ARCO_RESOURCES_BASE_URI"
+```
+
+where:
+- ``CATALOGUE_RECORDS`` is the the path to the folder containing a dump of XML files of the catalogue records.
+- ``MULTIMEDIA_RECORDS`` is the the path to the folder containing a dump of XML files of the multimedia records (multimedia entities - EMM). 
+- ``BASE_URI`` is the base URI for the ArCo's resources (e.g. ``https://w3id.org/arco/resource/``).
+
+If the ``db`` file is not available when running the transformation, then the last pre-processed ``db`` will be automatically downloaded from this [address](http://arco.istc.cnr.it/preprocessing/db).
+
+
+#### Transformer
 
 The JAR named `arco.rdfizer.jar` transforms a collection of XML files into an RDF Knowledge Graph according to the XSTL transformations.
 The command synopsis is the following:
+
 ```
 $ java -Xmx2G -jar  arco.rdfizer.jar XML_FOLDER OUT_FOLDER [QUARANTINE]
 ```
+
 Where:
 - the argument `XML_FOLDER`is the folder containing the collection of XML files to transform.
 - the argument `OUT_FOLDER` is the folder where the Knowledge Graph will be stored.
