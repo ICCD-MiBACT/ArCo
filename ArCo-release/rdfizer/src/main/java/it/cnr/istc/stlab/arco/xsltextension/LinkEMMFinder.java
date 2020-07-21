@@ -45,8 +45,7 @@ public class LinkEMMFinder implements ExtensionFunction {
 
 	@Override
 	public SequenceType[] getArgumentTypes() {
-		return new SequenceType[] { SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE),
-				SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE) };
+		return new SequenceType[] { SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE) };
 	}
 
 	@Override
