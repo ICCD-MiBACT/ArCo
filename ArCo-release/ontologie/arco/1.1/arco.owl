@@ -33,6 +33,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
