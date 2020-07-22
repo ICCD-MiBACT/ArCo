@@ -2725,10 +2725,10 @@
 					</arco-dd:hasIconographicOrDecorativeApparatus>
 				</xsl:for-each>
 				<!-- reference coin legend (NU) -->
-				<xsl:if test="record/metadata/schede/*/OG/OGT/OGTL and not($sheetType='E')">
+				<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTL">
 					<arco-arco:hasReferenceCoinLegend>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'ReferenceCoinLegend/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTL)))" />
+							<xsl:value-of select="concat($NS, 'ReferenceCoinLegend/', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTL)))" />
 						</xsl:attribute>
 					</arco-arco:hasReferenceCoinLegend>
 				</xsl:if>
