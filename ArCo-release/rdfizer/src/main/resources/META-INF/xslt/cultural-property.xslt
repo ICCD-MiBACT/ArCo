@@ -1289,9 +1289,9 @@
 							select="$objectOfDescription" />
                     </xsl:attribute>
 				</arco-catalogue:describesCulturalProperty>
-				<arco-catalogue:publicationOrModificationDate>
+				<arco-catalogue:lastUpdateDate>
 					 <xsl:value-of select="record/header/datestamp" />
-				</arco-catalogue:publicationOrModificationDate>
+				</arco-catalogue:lastUpdateDate>
             </rdf:Description>
 
 			<rdf:Description>
