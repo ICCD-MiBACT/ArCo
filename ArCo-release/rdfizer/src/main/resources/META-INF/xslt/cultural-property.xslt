@@ -1389,6 +1389,46 @@
 					</xsl:for-each>
 				</xsl:if>
 				
+				<xsl:if test="record/metadata/schede/*/RV/RVE/RVER">
+					<xsl:if test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso')">
+					<xsl:variable name="rver" select="record/metadata/schede/*/RV/RVE/RVER" />
+					<xsl:variable name="rvel-nospace" select="translate($rver, ' ', '')" />
+					<xsl:variable name="rvel" select="translate($rvel-nospace, '/', '')" />
+					<xsl:variable name="rvel1" select="concat($rvel, '-0')" />
+					<xsl:variable name="bene-complesso" select="concat($rvel, '-bene complesso')" />
+					<arco-arco:isCulturalPropertyComponentOf>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/RV/RVE/RVER and not (record/metadata/schede/*/RV/RVE/RVER='bene componente')">
+								<xsl:value-of select="arco-fn:catalogue-record-identifier-to-cultural-property($rvel1)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="arco-fn:catalogue-record-identifier-to-cultural-property($bene-complesso)" />
+							</xsl:otherwise>
+						</xsl:choose>						
+					</arco-arco:isCulturalPropertyComponentOf>
+					</xsl:if>
+				</xsl:if>
+				<xsl:if test="$sheetType='A' or $sheetType='PG' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0')">
+				<xsl:if test="record/metadata/schede/*/RV/RVE/RVES">
+					<xsl:if test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso')">
+					<xsl:variable name="rves" select="record/metadata/schede/*/RV/RVE/RVES" />
+					<xsl:variable name="rvel-nospace" select="translate($rves, ' ', '')" />
+					<xsl:variable name="rvel" select="translate($rvel-nospace, '/', '')" />
+					<xsl:variable name="rvel1" select="concat($rvel, '-0')" />
+					<xsl:variable name="bene-complesso" select="concat($rvel, '-bene complesso')" />
+					<arco-arco:isCulturalPropertyComponentOf>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/RV/RVE/RVES and not (record/metadata/schede/*/RV/RVE/RVEL='bene componente')">
+								<xsl:value-of select="arco-fn:catalogue-record-identifier-to-cultural-property($rvel1)" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="arco-fn:catalogue-record-identifier-to-cultural-property($bene-complesso)" />
+							</xsl:otherwise>
+						</xsl:choose>						
+					</arco-arco:isCulturalPropertyComponentOf>
+					</xsl:if>
+				</xsl:if>
+				</xsl:if>
 				<!-- tiratura di una fotografia o di una stampa -->
 				<xsl:if test="record/metadata/schede/*/PD/TRT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/PD/TRT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/PD/TRT)), 'n.r')))">
 					<arco-cd:numberInCirculation>
