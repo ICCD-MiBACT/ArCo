@@ -15,7 +15,7 @@
         <testannotationschema:hasCQ xml:lang="en">Which specimens has a cultivar as taxon?</testannotationschema:hasCQ>
         <testannotationschema:hasExpectedResult>{
   &quot;head&quot;: {
-    &quot;vbt&quot;: [
+    &quot;vars&quot;: [
       &quot;specimen&quot;,
       &quot;taxon&quot;
     ]
