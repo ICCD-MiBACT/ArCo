@@ -1,8 +1,0 @@
-@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ32.ttl#> .
-@prefix arcodd: <https://w3id.org/arco/denotative-description/> . 
-
-:CulturalProperty1 arcodd:hasFunctionalPurpose "Magica" .
-:CulturalProperty2 arcodd:hasFunctionalPurpose "Magico" .
-:CulturalProperty3 arcodd:hasFunctionalPurpose "Magici" .
-:CulturalProperty4 arcodd:hasFunctionalPurpose "Magic" .
-:CulturalProperty5 arcodd:hasFunctionalPurpose "Magiche" .

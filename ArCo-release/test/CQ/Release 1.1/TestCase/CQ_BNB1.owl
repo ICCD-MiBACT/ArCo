@@ -11,55 +11,59 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/CQ_BNB1.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
-        <testannotationschema:hasCQ xml:lang="it">Which specimens are type specimen of a cultivar?</testannotationschema:hasCQ>
-        <testannotationschema:hasExpectedResult xml:lang="it">{
+        <testannotationschema:hasCQ xml:lang="it">Quali Campioni sono classificati da un taxon di tipo cultivar?</testannotationschema:hasCQ>
+        <testannotationschema:hasCQ xml:lang="en">Which specimens has a cultivar as taxon?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult>{
   &quot;head&quot;: {
     &quot;vbt&quot;: [
-      &quot;cp&quot;,
-      &quot;bt&quot;
+      &quot;specimen&quot;,
+      &quot;taxon&quot;
     ]
   },
   &quot;results&quot;: {
     &quot;bindings&quot;: [
       {
-        &quot;cp&quot;: {
+        &quot;specimen&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen1&quot;
+          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#Specimen1&quot;
         },
-        &quot;bt&quot;: {
+        &quot;taxon&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon1&quot;
+          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#taxon1&quot;
         }
       },
       {
-        &quot;cp&quot;: {
+        &quot;specimen&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#Specimen3&quot;
+          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#Specimen3&quot;
         },
-        &quot;bt&quot;: {
+        &quot;taxon&quot;: {
           &quot;type&quot;: &quot;uri&quot;,
-          &quot;value&quot;: &quot;https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/test/CQ/ToyDatasets/BNB1.ttl#BiologicalTaxon3&quot;
+          &quot;value&quot;: &quot;C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl#taxon3&quot;
         }
       }
     ]
   }
 }</testannotationschema:hasExpectedResult>
-        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">PREFIX a-cd: &lt;https://w3id.org/arco/context-description/&gt;
-PREFIX a-dd: &lt;https://w3id.org/arco/denotative-description/&gt;
-PREFIX a-mp: &lt;https://w3id.org/arco/movable-property/&gt;
-PREFIX a-ip: &lt;https://w3id.org/arco/immovable-property/&gt;
+        <testannotationschema:hasSPARQLQueryUnitTest>PREFIX l0: &lt;https://w3id.org/italia/onto/l0/&gt;
+PREFIX cis: &lt;http://dati.beniculturali.it/cis/&gt; 
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; 
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX mp: &lt;https://w3id.org/arco/ontology/movable-property&gt;
+PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+PREFIX arco: &lt;https://w3id.org/arco/ontology/core/&gt;
 
-SELECT ?cp ?bt
-
-WHERE {
-?cp a-mp:isClassifiedBy ?bt.
-?bt a a-mp:Cultivar .
+SELECT ?specimen ?taxon
+WHERE{
+?specimen core:hasClassificationInTime ?classification .
+?classification  mp:hasTaxon ?taxon
+?taxon a mp:Cultivar.
 }</testannotationschema:hasSPARQLQueryUnitTest>
         <testannotationschema:testDate>2020-06-17</testannotationschema:testDate>
         <testannotationschema:testedBy xml:lang="en">Run by Margherita Porena</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Testing BNB</rdfs:comment>
         <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#ToyDataset"/>
-        <testalod:hasInputTestDataUri rdf:resource="https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_BNB1.ttl"/>
+        <testalod:hasInputTestDataUri rdf:resource="C:\Users\user\Documents\GitHub\ArCo\ArCo-release\test\CQ\Release 1.1\ToyDataset\Toyset_BNB1.ttl"/>
     </owl:Ontology>
 </rdf:RDF>
 
