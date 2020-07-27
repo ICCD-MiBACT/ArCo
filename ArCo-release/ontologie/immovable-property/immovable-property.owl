@@ -262,17 +262,18 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/hasFlooringDesign -->
+    <!-- https://w3id.org/arco/ontology/immovable-property/hasFlooringLayout -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasFlooringDesign">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasFlooringLayout">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFlooringDesignOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFlooringLayoutOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Flooring"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringLayout"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="it">ha schema di posa</rdfs:label>
+        <rdfs:label xml:lang="en">has flooring layout</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -522,15 +523,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/isFlooringDesignOf -->
+    <!-- https://w3id.org/arco/ontology/immovable-property/isFlooringLayoutOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFlooringDesignOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFlooringLayoutOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringLayout"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Flooring"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="en">is flooring design of</rdfs:label>
+        <rdfs:label xml:lang="en">is flooring layout of</rdfs:label>
         <rdfs:label xml:lang="it">è schema di posa di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -1347,7 +1348,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFlooringDesign"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFlooringLayout"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringLayout"/>
             </owl:Restriction>
         </rdfs:subClassOf>
