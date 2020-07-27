@@ -135,7 +135,6 @@
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" />
-
 	<!-- xsl:import href="./prova.xsl" / -->
 
 	<xsl:template match="/">
@@ -207,11 +206,13 @@
 						<xsl:value-of select="." />
 					</arco-catalogue:deletedICCDIdentifier>
 				</xsl:for-each>
-				<xsl:for-each select="record/metadata/schede/*/RVE/RVES">
+				<xsl:if test="not ($sheetType='A' or $sheetType='PG' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0'))">
+				<xsl:for-each select="record/metadata/schede/*/RV/RVE/RVES">
 					<arco-catalogue:deletedICCDIdentifier>
 						<xsl:value-of select="." />
 					</arco-catalogue:deletedICCDIdentifier>
 				</xsl:for-each>
+				</xsl:if>
 				<!-- alternative identifier (AC/ACC) -->
 				<xsl:if test="record/metadata/schede/*/AC/ACC">
 					<xsl:for-each select="record/metadata/schede/*/AC/ACC">
@@ -1565,10 +1566,14 @@
                         </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+						<xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 						</l0:name>
 						<arco-cd:isSubjectOf>
 							<xsl:attribute name="rdf:resource">
@@ -1599,10 +1604,14 @@
                         </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+						<xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+						<xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						</xsl:call-template>
 						</l0:name>
 						<arco-cd:isSubjectOf>
 							<xsl:attribute name="rdf:resource">
@@ -1629,10 +1638,14 @@
                         </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+						<xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+							<xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 						</l0:name>
 						<arco-cd:isSubjectOf>
 							<xsl:attribute name="rdf:resource">
@@ -1659,10 +1672,14 @@
                         </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+						<xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+						<xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						</xsl:call-template>
 						</l0:name>
 						<arco-cd:isSubjectOf>
 							<xsl:attribute name="rdf:resource">
@@ -2908,10 +2925,14 @@
 				                        </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(./ROFS)" />
+								<xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./ROFS)" />
+								</xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(./ROFS)" />
+								<xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./ROFS)" />
+								</xsl:call-template>
 							</l0:name>
 							<arco-cd:isSubjectOf>
 								<xsl:attribute name="rdf:resource">
@@ -20719,6 +20740,11 @@
                             </xsl:attribute>
 							</arco-cd:hasInterpretationCriterion>
 						</xsl:if>
+						<xsl:if test="contains((./ATBD), '?')">
+							<arco-cd:dubiuosAuthorshipAttribution>
+								<xsl:value-of select="true()" />
+							</arco-cd:dubiuosAuthorshipAttribution>
+						</xsl:if>
 					</rdf:Description>
 					<!-- We add the cultural scope attribution source as an individual. -->
 					<xsl:if
@@ -20775,10 +20801,42 @@
                             </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(./ATBD)" />
+							<xsl:choose>
+								<xsl:when test="contains((./ATBD), '(?)')">
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text" select="normalize-space(substring-before(./ATBD,'('))" />
+									</xsl:call-template>
+								</xsl:when>
+								<xsl:when test="contains((./ATBD), '?')">
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text" select="normalize-space(substring-before(./ATBD,'?'))" />
+									</xsl:call-template>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text" select="normalize-space(./ATBD)" />
+									</xsl:call-template>
+								</xsl:otherwise>
+							</xsl:choose>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(./ATBD)" />
+							<xsl:choose>
+								<xsl:when test="contains((./ATBD), '(?)')">
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text" select="normalize-space(substring-before(./ATBD,'('))" />
+									</xsl:call-template>
+								</xsl:when>
+								<xsl:when test="contains((./ATBD), '?')">
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text" select="normalize-space(substring-before(./ATBD,'?'))" />
+									</xsl:call-template>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text" select="normalize-space(./ATBD)" />
+									</xsl:call-template>
+								</xsl:otherwise>
+							</xsl:choose>
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -21026,22 +21084,32 @@
 							<rdfs:label>
 								<xsl:choose>
 									<xsl:when test="./AUTS">
-										<xsl:value-of
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text"
 											select="concat(normalize-space(./AUTN), ' (', normalize-space(./AUTS), ')')" />
+										</xsl:call-template>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(./AUTN)" />
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text"
+											select="normalize-space(./AUTN)" />
+									</xsl:call-template>
 									</xsl:otherwise>
 								</xsl:choose>
 							</rdfs:label>
 							<l0:name>
 								<xsl:choose>
 									<xsl:when test="./AUTS">
-										<xsl:value-of
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text"
 											select="concat(normalize-space(./AUTN), ' (', normalize-space(./AUTS), ')')" />
+									</xsl:call-template>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="normalize-space(./AUTN)" />
+									<xsl:call-template name="CamelCase">
+										<xsl:with-param name="text"
+											select="normalize-space(./AUTN)" />
+									</xsl:call-template>
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
@@ -21274,22 +21342,28 @@
 										<xsl:when test="./AUFN">
 											<xsl:choose>
 												<xsl:when test="./AUFS">
-													<xsl:value-of
-														select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
+												</xsl:call-template>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:value-of select="normalize-space(./AUFN)" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="normalize-space(./AUFN)" />
+												 </xsl:call-template>
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:when>
 										<xsl:when test="./AUFB">
 											<xsl:choose>
 												<xsl:when test="./AUFS">
-													<xsl:value-of
-														select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
+												</xsl:call-template>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:value-of select="normalize-space(./AUFB)" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="normalize-space(./AUFB)" />
+												</xsl:call-template>
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:when>
@@ -21300,22 +21374,28 @@
 										<xsl:when test="./AUFN">
 											<xsl:choose>
 												<xsl:when test="./AUFS">
-													<xsl:value-of
-														select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="concat(normalize-space(./AUFN), ' (', normalize-space(./AUFS), ')')" />
+												</xsl:call-template>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:value-of select="normalize-space(./AUFN)" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="normalize-space(./AUFN)" />
+												</xsl:call-template>
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:when>
 										<xsl:when test="./AUFB">
 											<xsl:choose>
 												<xsl:when test="./AUFS">
-													<xsl:value-of
-														select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="concat(normalize-space(./AUFB), ' (', normalize-space(./AUFS), ')')" />
+												</xsl:call-template>
 												</xsl:when>
 												<xsl:otherwise>
-													<xsl:value-of select="normalize-space(./AUFB)" />
+												 <xsl:call-template name="CamelCase">
+													<xsl:with-param name="text" select="normalize-space(./AUFB)" />
+												</xsl:call-template>
 												</xsl:otherwise>
 											</xsl:choose>
 										</xsl:when>
@@ -21475,10 +21555,14 @@
                             </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./PDFJ)" />
+						 <xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(./PDFJ)" />
+						</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./PDFJ)" />
+						 <xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(./PDFJ)" />
+						</xsl:call-template>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -22016,10 +22100,14 @@
 	                            </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -22083,10 +22171,14 @@
                         </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(.)" />
+						 <xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						 </xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(.)" />
+						 <xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(.)" />
+						 </xsl:call-template>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -22162,36 +22254,48 @@
 						<rdfs:label>
 							<xsl:choose>
 								<xsl:when test="./AATN">
-									<xsl:value-of select="normalize-space(./AATN)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./AATN)" />
+								 </xsl:call-template>
 								</xsl:when>
 								<xsl:when test="../AAF/AAFN">
-									<xsl:value-of
-										select="normalize-space(../AAF/AAFN)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(../AAF/AAFN)" />
+								 </xsl:call-template>
 								</xsl:when>
 								<xsl:when test="../AAF/AAFB">
-									<xsl:value-of
-										select="normalize-space(../AAF/AAFB)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(../AAF/AAFB)" />
+								 </xsl:call-template>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="normalize-space(.)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(.)" />
+								 </xsl:call-template>
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
 						<l0:name>
 							<xsl:choose>
 								<xsl:when test="./AATN">
-									<xsl:value-of select="normalize-space(./AATN)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./AATN)" />
+								 </xsl:call-template>
 								</xsl:when>
 								<xsl:when test="../AAF/AAFN">
-									<xsl:value-of
-										select="normalize-space(../AAF/AAFN)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(../AAF/AAFN)" />
+								</xsl:call-template>
 								</xsl:when>
 								<xsl:when test="../AAF/AAFB">
-									<xsl:value-of
-										select="normalize-space(../AAF/AAFB)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(../AAF/AAFB)" />
+								</xsl:call-template>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="normalize-space(.)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(.)" />
+								</xsl:call-template>
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
@@ -22306,20 +22410,28 @@
 						<rdfs:label>
 							<xsl:choose>
 								<xsl:when test="normalize-space(./AAFN)">
-									<xsl:value-of select="normalize-space(./AAFN)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./AAFN)" />
+								</xsl:call-template>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="normalize-space(./AAFB)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./AAFB)" />
+								</xsl:call-template>
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
 						<l0:name>
 							<xsl:choose>
 								<xsl:when test="normalize-space(./AAFN)">
-									<xsl:value-of select="normalize-space(./AAFN)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./AAFN)" />
+								</xsl:call-template>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="normalize-space(./AAFB)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(./AAFB)" />
+								</xsl:call-template>
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
@@ -22559,10 +22671,14 @@
 							            </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -22582,10 +22698,14 @@
 							            </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -22605,10 +22725,14 @@
 							            </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -22785,10 +22909,14 @@
 						            </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
-							<xsl:value-of select="normalize-space(./RSTE)" />
+						 <xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(./RSTE)" />
+						 </xsl:call-template>
 						</rdfs:label>
 						<l0:name>
-							<xsl:value-of select="normalize-space(./RSTE)" />
+						 <xsl:call-template name="CamelCase">
+							<xsl:with-param name="text" select="normalize-space(./RSTE)" />
+						</xsl:call-template>
 						</l0:name>
 					</rdf:Description>
 				</xsl:if>
@@ -22807,10 +22935,14 @@
 							            </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -22830,10 +22962,14 @@
 							            </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							 </xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 							</l0:name>
 						</rdf:Description>
 					</xsl:if>
@@ -23539,10 +23675,14 @@
 		                        </xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
-									<xsl:value-of select="normalize-space(.)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(.)" />
+								 </xsl:call-template>
 								</rdfs:label>
 								<l0:name>
-									<xsl:value-of select="normalize-space(.)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(.)" />
+								</xsl:call-template>
 								</l0:name>
 								<arco-core:isAgentOf>
 									<xsl:attribute name="rdf:resource">
@@ -26828,10 +26968,14 @@
                             </xsl:attribute>
 							</rdf:type>
 							<rdfs:label>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 							</rdfs:label>
 							<l0:name>
-								<xsl:value-of select="normalize-space(.)" />
+							 <xsl:call-template name="CamelCase">
+								<xsl:with-param name="text" select="normalize-space(.)" />
+							</xsl:call-template>
 							</l0:name>
 						</rdf:Description>
 					</xsl:for-each>
@@ -27039,10 +27183,14 @@
                                 </xsl:attribute>
 								</rdf:type>
 								<rdfs:label>
-									<xsl:value-of select="normalize-space(.)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(.)" />
+								</xsl:call-template>
 								</rdfs:label>
 								<l0:name>
-									<xsl:value-of select="normalize-space(.)" />
+								 <xsl:call-template name="CamelCase">
+									<xsl:with-param name="text" select="normalize-space(.)" />
+								</xsl:call-template>
 								</l0:name>
 							</rdf:Description>
 						</xsl:for-each>

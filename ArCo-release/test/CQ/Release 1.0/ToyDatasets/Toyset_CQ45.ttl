@@ -1,0 +1,20 @@
+@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ45.ttl#> .
+@prefix arcolocation: <https://w3id.org/arco/ontology/location/> . 
+
+:CulturalProperty1 arcolocation:hasTypeOfContext arcolocation:Suburban .
+
+:CulturalProperty2 arcolocation:hasTypeOfContext arcolocation:Territorial .
+
+:CulturalProperty3 arcolocation:hasTypeOfContext arcolocation:Underwater .
+
+:CulturalProperty4 arcolocation:hasTypeOfContext arcolocation:Urban .
+
+:CulturalProperty5 arcolocation:hasTypeOfContext arcolocation:Suburban .
+
+:CulturalProperty6 arcolocation:hasTypeOfContext arcolocation:Territorial .
+
+:CulturalProperty7 arcolocation:hasTypeOfContext arcolocation:Underwater .
+
+:CulturalProperty8 arcolocation:hasTypeOfContext arcolocation:Urban .
+
+
