@@ -36,6 +36,7 @@ import it.cnr.istc.stlab.arco.xsltextension.FindMaterialLinker;
 import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
 import it.cnr.istc.stlab.arco.xsltextension.LinkEMMFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
+import it.cnr.istc.stlab.arco.xsltextension.NameCleaner;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
 import it.cnr.istc.stlab.arco.xsltextension.ScientificPropertyDefinitionLinker;
 import it.cnr.istc.stlab.arco.xsltextension.Split;
@@ -224,6 +225,7 @@ public class Converter {
 		proc.registerExtensionFunction(ExtractUnit.getInstance());
 		proc.registerExtensionFunction(LinkEMMFinder.getInstance());
 		proc.registerExtensionFunction(CatalogueRecordIdentifierToCulturalProperty.getInstance());
+		proc.registerExtensionFunction(NameCleaner.getInstance());
 		
 		
 		
