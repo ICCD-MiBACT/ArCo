@@ -1107,6 +1107,7 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionSpace"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -1349,6 +1350,7 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/immovable-property/FlooringLayout"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/Roofing"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -2086,6 +2088,16 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalConnection"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Window"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Covering"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/RoofStructure"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Soil"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

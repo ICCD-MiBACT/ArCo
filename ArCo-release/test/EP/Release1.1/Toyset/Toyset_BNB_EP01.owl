@@ -22,35 +22,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/hasGenus -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasGenus"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/hasSpecies -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSpecies"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/hasSubspecies -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSubspecies"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -73,9 +44,6 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Tassonomia1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
-        <movable-property:hasGenus rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Rosa_canina"/>
-        <movable-property:hasSpecies rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Rosa_canina"/>
-        <movable-property:hasSubspecies rdf:resource="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Rosa_canina"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

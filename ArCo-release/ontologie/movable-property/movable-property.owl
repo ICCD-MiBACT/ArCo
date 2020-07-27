@@ -2654,6 +2654,16 @@ In this module the following Ontology Design Patterns have been used:
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalRevisionType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PreparationType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PreservationType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SubstrateType"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Class"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Family"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Genus"/>
@@ -2663,6 +2673,15 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Species"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/CloseIndividual"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/HostIndividual"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Preparation"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Substrate"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
