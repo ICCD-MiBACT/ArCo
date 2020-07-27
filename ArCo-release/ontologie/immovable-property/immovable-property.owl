@@ -994,6 +994,7 @@ In this module the following Ontology Design Patterns have been used:
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/MovableFurnishingElement"/>
     </owl:Class>
     
 
@@ -2094,10 +2095,17 @@ In this module the following Ontology Design Patterns have been used:
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Construction"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionPart"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Covering"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/RoofStructure"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Soil"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/InteriorSubdivision"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Layout"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2110,6 +2118,14 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/SoilType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalConnectionType"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalElementType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Escalator"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/Lift"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/immovable-property/MovingWalkway"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

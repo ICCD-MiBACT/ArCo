@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl#"
-     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP05.owl#"
+     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP05.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:movable-property="https://w3id.org/arco/ontology/movable-property/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP07.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_P05.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property/"/>
     </owl:Ontology>
     
@@ -30,14 +30,13 @@
     
 
 
-    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP06.owl/Test1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP05.owl/Test1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP06.owl/Test1">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/BotanicalRevisionType"/>
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/PreparationType"/>
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/PreservationType"/>
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/SubstrateType"/>
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP05.owl/Test1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/CloseIndividual"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/HostIndividual"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/Preparation"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:movable-property="https://w3id.org/arco/ontology/movable-property/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property/"/>
     </owl:Ontology>
     
@@ -30,9 +30,9 @@
     
 
 
-    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Rosa_canina -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Rosa_canina -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Rosa_canina">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Rosa_canina">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/Genus"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/Species"/>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
@@ -40,9 +40,9 @@
     
 
 
-    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Tassonomia1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Tassonomia1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP01.owl#Tassonomia1">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP01.owl#Tassonomia1">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
     </owl:NamedIndividual>
 </rdf:RDF>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP02.owl#"
-     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP02.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl#"
+     xml:base="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -13,8 +13,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
      xmlns:movable-property="https://w3id.org/arco/ontology/movable-property/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP02.owl">
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property/"/>
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl">
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
     </owl:Ontology>
     
 
@@ -30,17 +30,13 @@
     
 
 
-    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP02.owl#Sample1 -->
+    <!-- https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl/Test1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_BNB_EP02.owl#Sample1">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/PollenSample"/>
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/WoodSample"/>
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/FruitSample"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/EP/ToyDatasets/Toyset_EP07.owl/Test1">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/InteriorSubdivision"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
     </owl:NamedIndividual>
-    
-
-
-
 </rdf:RDF>
 
 
