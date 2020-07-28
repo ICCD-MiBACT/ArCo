@@ -77,29 +77,21 @@
     <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Construction1 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Construction1">
-        <core:hasPart rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
+        <core:hasPart rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Stair1"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1 -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Stair1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
-    
-
-
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Soil1 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Soil1">
-        <immovable-property:isSoilOccupiedBy rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Stair1"/>
     
 
 
     <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Tecnica1 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Tecnica1">
-        <denotative-description:isTechniqueOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
+        <denotative-description:isTechniqueOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Stair1"/>
     </owl:NamedIndividual>
     
 
@@ -107,7 +99,15 @@
     <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Type1 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Type1">
-        <core:isTypeOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
+        <core:isTypeOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Type1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/UseFunction1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/UseFunction1">
+        <context-description:isUseFunctionOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Stair1"/>
     </owl:NamedIndividual>
     
 
@@ -115,7 +115,7 @@
     <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Wood -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Wood">
-        <denotative-description:isMaterialOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
+        <denotative-description:isMaterialOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Stair1"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
