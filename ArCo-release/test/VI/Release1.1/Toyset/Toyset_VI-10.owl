@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl#"
-     xml:base="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl#"
+     xml:base="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -17,7 +17,7 @@
      xmlns:immovable-property="https://w3id.org/arco/ontology/immovable-property/"
      xmlns:context-description="https://w3id.org/arco/ontology/context-description/"
      xmlns:denotative-description="https://w3id.org/arco/ontology/denotative-description/">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
     </owl:Ontology>
     
@@ -74,48 +74,48 @@
     
 
 
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Construction1 -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Construction1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Construction1">
-        <immovable-property:hasCovering rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Covering1"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Construction1">
+        <core:hasPart rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Covering1 -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Covering1"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/FlooringLayout1 -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Soil1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/FlooringLayout1">
-        <immovable-property:isFlooringLayoutOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Covering1"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Soil1">
+        <immovable-property:isSoilOccupiedBy rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Red -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Tecnica1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Red">
-        <immovable-property:isColourOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Covering1"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Tecnica1">
+        <denotative-description:isTechniqueOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Type1 -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Type1 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Type1">
-        <core:isTypeOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Covering1"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Type1">
+        <core:isTypeOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Wood -->
+    <!-- https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Wood -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Wood">
-        <denotative-description:isMaterialOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-08.owl/Covering1"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Wood">
+        <denotative-description:isMaterialOf rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI-10.owl/Foundation1"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

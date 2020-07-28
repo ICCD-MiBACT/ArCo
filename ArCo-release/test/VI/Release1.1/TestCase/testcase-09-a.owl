@@ -1,28 +1,26 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/arco/test/VI/testcase-08-a.owl#"
-     xml:base="https://w3id.org/arco/test/VI/testcase-08-a.owl"
+<rdf:RDF xmlns="https://w3id.org/arco/test/VI/testcase-09-a.owl#"
+     xml:base="https://w3id.org/arco/test/VI/testcase-09-a.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/testcase-08-a.owl">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/VI/testcase-09-a.owl">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
         <testannotationschema:hasActualResult rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</testannotationschema:hasActualResult>
-        <testannotationschema:hasInferenceRequirement xml:lang="en">Covering1:
-- is a type of Flooring
+        <testannotationschema:hasInferenceRequirement xml:lang="en">Foundation1:
+- is a type of Foundation
 - has type Type1
 - has material Wood
-- has colour Red
-- has Layout FlooringLayout1</testannotationschema:hasInferenceRequirement>
-        <testannotationschema:hasInferenceRequirement xml:lang="it">Covering1:
-- è un tipo di Flooring
+- lays on Soil1</testannotationschema:hasInferenceRequirement>
+        <testannotationschema:hasInferenceRequirement xml:lang="it">Foundation1:
+- è un tipo di Foundation
 - ha tipo Type1
-- ha materiale Wood
-- ha colore Red
-- ha schema FlooringLayout1</testannotationschema:hasInferenceRequirement>
-        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI08.owl"/>
+- ha materia Wood
+- sta sul Soil1</testannotationschema:hasInferenceRequirement>
+        <testannotationschema:hasInputTestData rdf:resource="https://w3id.org/arco/test/VI/ToyDatasets/Toyset_VI09.owl"/>
         <testannotationschema:testDate xml:lang="en">2020-06-18</testannotationschema:testDate>
         <testannotationschema:testedBy xml:lang="en">Ran by Margherita Porena</testannotationschema:testedBy>
         <rdfs:comment xml:lang="en">Test on ArCo release 1.1</rdfs:comment>
