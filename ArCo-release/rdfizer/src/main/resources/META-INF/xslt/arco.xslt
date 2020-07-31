@@ -78,6 +78,7 @@
 	xmlns:ar-SiteDefinition="https://w3id.org/arco/resource/SiteDefinition/"
 	xmlns:ar-MeasurementCollection="https://w3id.org/arco/resource/MeasurementCollection/"
 	xmlns:ar-CISNameInTime="https://w3id.org/arco/resource/CISNameInTime/"
+	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
 	xmlns:ar-Measurement="https://w3id.org/arco/resource/Measurement/"
 
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0"
@@ -7246,6 +7247,16 @@
 						<arco-cd:documentationIdentifier>
 							<xsl:value-of select="normalize-space(./FTAN)" />
 						</arco-cd:documentationIdentifier>
+					</xsl:if>
+					<xsl:if test="./FTAN and (not(starts-with(lower-case(normalize-space(./FTAN)), 'nr')) and not(starts-with(lower-case(normalize-space(./FTAN)), 'n.r')))">
+        			<xsl:variable name="url" select="arco-fn:find-link-emm(./FTAN)" />
+        				<xsl:for-each select="$url">            
+        					<foaf:depiction>
+                        		<xsl:attribute name="rdf:resource">
+                                	<xsl:value-of select="." />
+                        		</xsl:attribute>
+                			</foaf:depiction>
+        				</xsl:for-each>
 					</xsl:if>
 					<xsl:if
 						test="./FTAD and (not(starts-with(lower-case(normalize-space(./FTAD)), 'nr')) and not(starts-with(lower-case(normalize-space(./FTAD)), 'n.r')))">

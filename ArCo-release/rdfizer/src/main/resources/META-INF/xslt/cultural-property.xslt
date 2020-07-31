@@ -15,6 +15,7 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:frbr="http://purl.org/vocab/frbr/core#"
 	xmlns:arco-location="https://w3id.org/arco/ontology/location/" xmlns:language="https://w3id.org/italia/onto/Language/"
 	xmlns:arco-cd="https://w3id.org/arco/ontology/context-description/"
+	xmlns:pico="http://data.cochrane.org/ontologies/pico/"
 	exclude-result-prefixes="xsl php">
 
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
@@ -1452,6 +1453,27 @@
 						<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/PLC)" />
 					</arco-cd:rights>
 				</xsl:if>
+										<!-- Depiction -->
+				<xsl:if test="record/metadata/schede/*/DO/FTA/FTAN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DO/FTA/FTAN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DO/FTA/FTAN)), 'n.r')))">
+        			<xsl:variable name="url" select="arco-fn:find-link-emm(record/metadata/schede/*/DO/FTA/FTAN)" />
+        				<xsl:for-each select="$url">            
+        					<foaf:depiction>
+                        		<xsl:attribute name="rdf:resource">
+                                	<xsl:value-of select="." />
+                        		</xsl:attribute>
+                			</foaf:depiction>
+                			<arco-cd:hasDepiction>
+                        		<xsl:attribute name="rdf:resource">
+                                	<xsl:value-of select="." />
+                        		</xsl:attribute>
+                			</arco-cd:hasDepiction>
+                			<pico:preview>
+                        		<xsl:attribute name="rdf:resource">
+                                	<xsl:value-of select="." />
+                        		</xsl:attribute>
+                			</pico:preview>
+        				</xsl:for-each>
+					</xsl:if>
 				<!-- isDescribedByCatalogueRecord -->
 				<arco-catalogue:isDescribedByCatalogueRecord>
 					<xsl:attribute name="rdf:resource">

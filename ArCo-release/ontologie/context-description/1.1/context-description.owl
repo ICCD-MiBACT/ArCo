@@ -988,6 +988,20 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasDepiction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDepiction">
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità alla sua raffigurazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to its depiction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">ha raffigurazione</rdfs:label>
+        <rdfs:label xml:lang="en">has depiction</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/hasDerivatedWorkType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasDerivatedWorkType">
@@ -3337,6 +3351,20 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="it">è cronologia di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isDepictionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isDepictionOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega una raffigurazione all&apos;entità che raffigura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a depiction to the entity it depicts</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">is depiction of</rdfs:label>
+        <rdfs:label xml:lang="it">è raffigurazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
