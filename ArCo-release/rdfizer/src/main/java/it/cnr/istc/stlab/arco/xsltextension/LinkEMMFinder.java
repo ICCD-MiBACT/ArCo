@@ -39,8 +39,9 @@ public class LinkEMMFinder implements ExtensionFunction {
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
 
-		logger.trace("Argument "+arg);
+		logger.trace("Argument " + arg);
 		String url = ftan2linkEMM.get(arg);
+		logger.trace("Link emm " + url);
 
 		if (url == null || url.length() == 0)
 			return XdmEmptySequence.getInstance();
