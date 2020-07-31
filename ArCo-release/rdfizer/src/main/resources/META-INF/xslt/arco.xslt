@@ -24552,6 +24552,12 @@
 										select="$site" />
                                     </xsl:attribute>
 								</cis:hasSite>
+								<arco-location:isCulturalInstituteOrSiteOf>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+									</xsl:attribute>
+								</arco-location:isCulturalInstituteOrSiteOf>
+
 							</rdf:Description>
 							<!-- Name in time -->
 							<rdf:Description>

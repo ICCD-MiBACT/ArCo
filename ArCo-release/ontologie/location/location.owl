@@ -35,6 +35,8 @@
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator
         <dc:creator>Marialetizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>
@@ -417,6 +419,21 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - versioni precedenti: GP/GPD; GA/GAPD; GL/GLS</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSite">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale al luogo o istituto della cultura (contenitore giuridico) in cui è contenuta</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a cultural property to the cultural institute or site</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha luogo o istitutod della cultura</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural institute or site</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -911,6 +928,20 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è continente di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteOf">
+        <rdfs:comment xml:lang="it">Questa proprietà collega un luogo o istituto della cultura (contenitore giuridico) al bene culturale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links a cultural institute or site to a cultutral property</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is cultural institute or site of</rdfs:label>
+        <rdfs:label xml:lang="it">è luogo o istituto della cultura di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
