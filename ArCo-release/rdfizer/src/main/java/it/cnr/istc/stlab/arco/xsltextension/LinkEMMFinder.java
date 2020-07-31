@@ -2,6 +2,9 @@ package it.cnr.istc.stlab.arco.xsltextension;
 
 import java.util.Map;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import it.cnr.istc.stlab.arco.preprocessing.PreprocessedData;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
@@ -17,6 +20,7 @@ public class LinkEMMFinder implements ExtensionFunction {
 
 	private static LinkEMMFinder instance;
 	private Map<String, String> ftan2linkEMM;
+	private static final Logger logger = LogManager.getLogger(LinkEMMFinder.class);
 
 	private LinkEMMFinder() {
 
@@ -35,6 +39,7 @@ public class LinkEMMFinder implements ExtensionFunction {
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
 
+		logger.trace("Argument "+arg);
 		String url = ftan2linkEMM.get(arg);
 
 		if (url == null || url.length() == 0)
@@ -55,6 +60,6 @@ public class LinkEMMFinder implements ExtensionFunction {
 
 	@Override
 	public SequenceType getResultType() {
-		return SequenceType.makeSequenceType(ItemType.ANY_ITEM, OccurrenceIndicator.ONE);
+		return SequenceType.makeSequenceType(ItemType.ANY_ITEM, OccurrenceIndicator.ZERO_OR_MORE);
 	}
 }
