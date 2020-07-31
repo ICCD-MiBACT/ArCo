@@ -17860,6 +17860,7 @@
 							</rdf:Description>
 						</xsl:if>
 					</xsl:for-each>
+
 					<!-- geometry technique for GE as an individual -->
 					<xsl:if
 						test="./GPT and (not(starts-with(lower-case(normalize-space(./GPT)), 'nr')) and not(starts-with(lower-case(normalize-space(./GPT)), 'n.r')))">
@@ -18359,6 +18360,84 @@
 					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
+			<!-- Geometry of cultural property as an individual for geocoding -->
+			<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+            			<xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
+            		</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of
+							select="'https://w3id.org/italia/onto/CLV/Geometry'" />
+            			</xsl:attribute>
+					</rdf:type>
+					<rdfs:label xml:lang="en">
+						<xsl:value-of
+							select="concat('Geometry (point) of cultural property: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="en">
+						<xsl:value-of
+							select="concat('Geometry (point) of cultural property: ', $itemURI)" />
+					</l0:name>
+					<rdfs:label xml:lang="it">
+						<xsl:value-of
+							select="concat('Georeferenziazione (puntuale) del bene culturale: ', $itemURI)" />
+					</rdfs:label>
+					<l0:name xml:lang="it">
+						<xsl:value-of
+							select="concat('Georeferenziazione (puntuale) del bene culturale: ', $itemURI)" />
+					</l0:name>
+					<clvapit:isGeometryFor>
+						<xsl:attribute name="rdf:resource">
+				           <xsl:value-of
+							select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
+				        </xsl:attribute>
+					</clvapit:isGeometryFor>
+					<clvapit:hasGeometryType>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of select="'https://w3id.org/italia/onto/CLV/Point'" />
+                        </xsl:attribute>
+					</clvapit:hasGeometryType>
+					<clvapit:serialization rdf:datatype= "http://www.opengis.net/ont/geosparql#wktLiteral">
+						<xsl:text>![CDATA[ "http://www.opengis.net/def/crs/OGC/1.3/CRS84" </xsl:text>
+						<xsl:value-of select="normalize-space(concat('POINT(', record/metadata/schede/harvesting/geocoding/x, ' ', record/metadata/schede/harvesting/geocoding/y, ')'))" />
+						<xsl:text>]]</xsl:text>
+					</clvapit:serialization>
+					<arco-location:hasCoordinates>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="concat($NS, 'Coordinates/', $itemURI, '-geometry-', 'coordinates')" />
+            			</xsl:attribute>
+					</arco-location:hasCoordinates>
+				</rdf:Description>
+			</xsl:if>
+			<!-- geometry coordinates for geocoding as an individual -->
+	<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+            	<xsl:value-of select="concat($NS, 'Coordinates/', $itemURI, '-geometry-', 'coordinates')" />
+            </xsl:attribute>
+			<rdf:type rdf:resource="https://w3id.org/arco/ontology/location/Coordinates" />
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Coordinates of cultural property: ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Coordinates of cultural property: ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Coordinate del bene culturale: ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Coordinate del bene culturale: ', $itemURI)" />
+			</l0:name>
+			<arco-location:long>
+				<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/geocoding/x)" />
+			</arco-location:long>
+			<arco-location:lat>
+				<xsl:value-of select="normalize-space(record/metadata/schede/harvesting/geocoding/y)" />
+			</arco-location:lat>
+		</rdf:Description>
+	</xsl:if>
 			<!-- Geometry for RA 2.00 -->
 			<xsl:if test="record/metadata/schede/*/RP/LGI">
 				<rdf:Description>

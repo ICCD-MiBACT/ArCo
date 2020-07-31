@@ -2779,6 +2779,14 @@
 						</clvapit:hasGeometry>
 					</xsl:if>
 				</xsl:for-each>
+								<!-- Geometry for geocoding -->
+				<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
+					<clvapit:hasGeometry>
+						<xsl:attribute name="rdf:resource">
+			                <xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
+			            </xsl:attribute>
+					</clvapit:hasGeometry>
+				</xsl:if>
 				<!-- Geometry for RA 2.00 -->
 				<xsl:if test="record/metadata/schede/*/RP/LGI">
 					<clvapit:hasGeometry>
