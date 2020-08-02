@@ -29,6 +29,7 @@ public class TDBMerger {
 			File[] subFolders = inFolder.listFiles(f -> f.isDirectory() && !f.isHidden());
 			
 			for(File subFolder : subFolders){
+				@SuppressWarnings("unused")
 				String subFolderName = subFolder.getName();
 				
 				File[] ttls = subFolder.listFiles(f -> f.isFile() && !f.isHidden() && f.getName().endsWith(".ttl"));
