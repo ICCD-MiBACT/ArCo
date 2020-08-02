@@ -2,6 +2,9 @@ package it.cnr.istc.stlab.arco.xsltextension;
 
 import java.util.Map;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import it.cnr.istc.stlab.arco.preprocessing.PreprocessedData;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
@@ -17,6 +20,7 @@ public class CatalogueRecordIdentifierToCulturalProperty implements ExtensionFun
 
 	private static CatalogueRecordIdentifierToCulturalProperty instance;
 	private Map<String, String> catalogueRecordIdentifier2URI;
+	private static final Logger logger = LogManager.getLogger(CatalogueRecordIdentifierToCulturalProperty.class);
 
 	private CatalogueRecordIdentifierToCulturalProperty() {
 
@@ -35,8 +39,9 @@ public class CatalogueRecordIdentifierToCulturalProperty implements ExtensionFun
 	public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
 		String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
 
+		logger.trace("Argument " + arg);
 		String url = catalogueRecordIdentifier2URI.get(arg);
-
+		logger.trace("Result " + url);
 		if (url == null || url.length() == 0)
 			return XdmEmptySequence.getInstance();
 		else
@@ -55,6 +60,6 @@ public class CatalogueRecordIdentifierToCulturalProperty implements ExtensionFun
 
 	@Override
 	public SequenceType getResultType() {
-		return SequenceType.makeSequenceType(ItemType.ANY_ITEM, OccurrenceIndicator.ONE);
+		return SequenceType.makeSequenceType(ItemType.ANY_ITEM, OccurrenceIndicator.ZERO_OR_MORE);
 	}
 }

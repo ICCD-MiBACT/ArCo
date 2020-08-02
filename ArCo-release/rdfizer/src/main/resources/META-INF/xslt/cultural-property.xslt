@@ -1502,7 +1502,7 @@
 							select="concat($rvel, '-0')" />
 						<xsl:variable name="bene-complesso"
 							select="concat($rvel, '-bene complesso')" />
-						<arco-arco:isCulturalPropertyComponentOf>
+						<xsl:variable name="cri2cp">
 							<xsl:choose>
 								<xsl:when
 									test="record/metadata/schede/*/RV/RVE/RVER and not (record/metadata/schede/*/RV/RVE/RVER='bene componente')">
@@ -1514,7 +1514,13 @@
 										select="arco-fn:catalogue-record-identifier-to-cultural-property($bene-complesso)" />
 								</xsl:otherwise>
 							</xsl:choose>
-						</arco-arco:isCulturalPropertyComponentOf>
+						</xsl:variable>
+						<xsl:if test="count($cri2cp)>0">
+							<arco-arco:isCulturalPropertyComponentOf>
+								<xsl:attribute name="rdf:resource"><xsl:value-of
+									select="$cri2cp" /></xsl:attribute>
+							</arco-arco:isCulturalPropertyComponentOf>
+						</xsl:if>
 					</xsl:if>
 				</xsl:if>
 				<xsl:if
@@ -2779,11 +2785,12 @@
 						</clvapit:hasGeometry>
 					</xsl:if>
 				</xsl:for-each>
-								<!-- Geometry for geocoding -->
+				<!-- Geometry for geocoding -->
 				<xsl:if test="record/metadata/schede/harvesting/geocoding/*">
 					<clvapit:hasGeometry>
 						<xsl:attribute name="rdf:resource">
-			                <xsl:value-of select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
+			                <xsl:value-of
+							select="concat($NS, 'Geometry/', $itemURI, '-geometry-point')" />
 			            </xsl:attribute>
 					</clvapit:hasGeometry>
 				</xsl:if>
