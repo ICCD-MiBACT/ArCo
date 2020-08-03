@@ -20,13 +20,13 @@ ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontol
 
 # Add DB Unico
 RUN mkdir /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-luoghi.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-eventi.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-anagrafeBiblioteche.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-contenitoriFisici.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-contenitoriGiuridici.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-archiviStato.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-luoghi.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-eventi.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-anagrafeBiblioteche.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-contenitoriFisici.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-contenitoriGiuridici.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-archiviStato.ttl.gz /d/cis
 
 
 # Add Virtuoso config
