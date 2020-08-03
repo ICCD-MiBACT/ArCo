@@ -18402,7 +18402,8 @@
 					<!-- http://www.openlinksw.com/schemas/virtrdf#Geometry virtuoso datatype for geometry -->
 					<!-- http://www.opengis.net/ont/geosparql#wktLiteral virtuoso datatype for geometry -->
 					<clvapit:serialization rdf:datatype= "http://www.openlinksw.com/schemas/virtrdf#Geometry">
-						<xsl:text disable-output-escaping="yes">&lt;![CDATA[ &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; </xsl:text>
+						<!-- xsl:text disable-output-escaping="yes">&lt;![CDATA[ &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; </xsl:text-->
+						<xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
 						<xsl:value-of select="normalize-space(concat('POINT(', record/metadata/schede/harvesting/geocoding/x, ' ', record/metadata/schede/harvesting/geocoding/y, ')'))" />
 						<xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
 					</clvapit:serialization>
