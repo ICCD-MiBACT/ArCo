@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-culturalPropertyDefinition:chiesa
@@ -106,6 +108,13 @@ ar-agent:2dd8ab8bd3d7438cac126169c7816b5b
         a           l0:Agent ;
         rdfs:label  "D'Alesio M.V." .
 
+ar-TechnicalCharacteristic:muratura-omogenea
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "muratura omogenea" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:Technique ;
+        l0:name     "muratura omogenea" .
+
 ar-accessProfile:1600040375-1
         a                               arco-catalogue:AccessProfile ;
         rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1600040375: 1"@it , "Access profile to catalogue record of cultural property 1600040375: 1"@en ;
@@ -121,13 +130,18 @@ ar-agentrole:1600040375-cataloguing-agency
         arco-core:hasRole   ar-role:CataloguinAgency .
 
 ar-bibliography:1600040375-bibliography-4
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 4 of cultural property: 1600040375"@en , "Bibliografia 4 del bene culturale: 1600040375"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 4 of cultural property: 1600040375"@en , "Bibliografia 4 del bene culturale: 1600040375"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Vinaccia A. - 1915" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Vinaccia A." ;
+        arco-cd:bibliographicReferenceDate
+                "1915" ;
         arco-cd:bibliographyLocalIdentifier
                 "B4" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 4 of cultural property: 1600040375"@en , "Bibliografia 4 del bene culturale: 1600040375"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliography 4 of cultural property: 1600040375"@en , "Bibliografia 4 del bene culturale: 1600040375"@en .
 
 ar-agent:9404fc450040e101771d1085a11e07e2
         a           l0:Agent ;
@@ -153,6 +167,34 @@ ar-photograpyDocumentation:1600040375-photographic-documentation-7
         arco-core:hasCategory         arco-cd:AttachedDocumentation ;
         arco-core:note                "interno, navata centrale" ;
         l0:name                       "Documentazione fotografica 7 del bene culturale: 1600040375"@it , "Photographic documentation 7 of cultural property: 1600040375"@en .
+
+<https://w3id.org/arco/resource/ConstructionPart/1600040375-part-navata-longitudinale>
+        a                    arco-ip:ConstructionPart , arco-arco:CulturalPropertyPart ;
+        rdfs:label           "navata longitudinale" ;
+        arco-core:isPartOf   <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-ip:hasCovering  <https://w3id.org/arco/resource/Roofing/1600040375-381906f6c3bc2e431b50124309232c59> ;
+        arco-ip:hasRoof      <https://w3id.org/arco/resource/Roof/1600040375-672e0444cb3892c8de01b5b93abe9b73> ;
+        l0:name              "navata longitudinale" .
+
+<https://w3id.org/arco/resource/VerticalElementType/parete>
+        a           arco-ip:VerticalElementType ;
+        rdfs:label  "parete" ;
+        l0:name     "parete" .
+
+<https://w3id.org/arco/resource/HorizontalElement/1600040375-1875727bc12a6e733cc1f91b3c280b1e>
+        a                     arco-ip:HorizontalElement ;
+        rdfs:label            "Horizontal element of cultural property 1600040375"@en , "Elemento orizzontale del bene culturale 1600040375"@it ;
+        arco-core:hasType     <https://w3id.org/arco/resource/HorizontalElementType/volta> ;
+        arco-dd:hasShape      ar-TechnicalCharacteristic:a-botte-a-pieno-centro ;
+        arco-dd:hasTechnique  ar-TechnicalCharacteristic:muratura-omogenea ;
+        l0:name               "Horizontal element of cultural property 1600040375"@en , "Elemento orizzontale del bene culturale 1600040375"@it .
+
+ar-TechnicalCharacteristic:a-due-falde-a-colmo-unico
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a due falde a colmo unico" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:RoofShape ;
+        l0:name     "a due falde a colmo unico" .
 
 <https://w3id.org/arco/resource/CadastralFolio/1600040375-1-1>
         a           arco-location:CadastralFolio ;
@@ -194,6 +236,11 @@ ar-agent:2a0d2ca73fa128714ed86a2e6c8ce0e0
         rdfs:label  "Comune di Bisceglie" ;
         l0:name     "Comune di Bisceglie" .
 
+<https://w3id.org/arco/resource/RoofingType/manto-chiancarelle>
+        a           arco-ip:RoofingType ;
+        rdfs:label  "manto-chiancarelle" ;
+        l0:name     "manto-chiancarelle" .
+
 ar-catalogueRecordVersion:1600040375-rvm
         a                            arco-catalogue:CatalogueRecordVersion ;
         rdfs:label                   "TRASCRIZIONE PER INFORMATIZZAZIONE - 1998 D'Alesio M.V." ;
@@ -208,13 +255,25 @@ ar-catalogueRecordVersion:1600040375-rvm
                 <https://w3id.org/arco/resource/CatalogueRecordA/1600040375> .
 
 ar-bibliography:1600040375-bibliography-3
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 3 of cultural property: 1600040375"@en , "Bibliografia 3 del bene culturale: 1600040375"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 3 del bene culturale: 1600040375"@it , "Bibliography 3 of cultural property: 1600040375"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: D'Elia P.B. - 1976" ;
+        arco-cd:bibliographicReferenceAuthor
+                "D'Elia P.B." ;
+        arco-cd:bibliographicReferenceDate
+                "1976" ;
         arco-cd:bibliographyLocalIdentifier
                 "B3" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 3 of cultural property: 1600040375"@en , "Bibliografia 3 del bene culturale: 1600040375"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliography 3 of cultural property: 1600040375"@en , "Bibliografia 3 del bene culturale: 1600040375"@en .
+
+ar-TechnicalCharacteristic:a-botte-a-pieno-centro
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "a botte a pieno centro" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:HorizontalElementShape ;
+        l0:name     "a botte a pieno centro" .
 
 ar-role:CataloguinAgency
         a                   roapit:Role ;
@@ -249,6 +308,13 @@ ar-photograpyDocumentation:1600040375-photographic-documentation-6
         arco-core:hasCategory         arco-cd:AttachedDocumentation ;
         arco-core:note                "interno, navata laterale destra" ;
         l0:name                       "Photographic documentation 6 of cultural property: 1600040375"@en , "Documentazione fotografica 6 del bene culturale: 1600040375"@it .
+
+ar-TechnicalCharacteristic:in-muratura-omogenea-a-ricorsi-regolari
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "in muratura omogenea a ricorsi regolari" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:VerticalElementShape ;
+        l0:name     "in muratura omogenea a ricorsi regolari" .
 
 ar-address:e3d472a1ce2cb838e72c23db7dbac12e
         a                    clvapit:Address ;
@@ -293,13 +359,18 @@ ar-role:OfficialInCharge
         rdfs:label  "Funzionario responsabile"@it , "Official in charge"@en .
 
 ar-bibliography:1600040375-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 1600040375"@en , "Bibliografia 2 del bene culturale: 1600040375"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 2 of cultural property: 1600040375"@en , "Bibliografia 2 del bene culturale: 1600040375"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: D'Elia P.B. - 1987" ;
+        arco-cd:bibliographicReferenceAuthor
+                "D'Elia P.B." ;
+        arco-cd:bibliographicReferenceDate
+                "1987" ;
         arco-cd:bibliographyLocalIdentifier
                 "B2" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 2 of cultural property: 1600040375"@en , "Bibliografia 2 del bene culturale: 1600040375"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliografia 2 del bene culturale: 1600040375"@en , "Bibliography 2 of cultural property: 1600040375"@en .
 
 ar-culturalPropertyType:3cf11ea1a9b8d257c85dac555cf12179
         a           arco-dd:CulturalPropertyType ;
@@ -317,6 +388,13 @@ ar-ConservationStatus:1600040375-conservation-status-1
                 arco-dd:MediocreConservationStatus ;
         l0:name     "Stato di conservazione 1 del bene: 1600040375"@it , "Conservation status 1 of cultural property: 1600040375"@en .
 
+ar-TechnicalCharacteristic:malta
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "malta" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:Material ;
+        l0:name     "malta" .
+
 ar-photograpyDocumentation:1600040375-photographic-documentation-5
         a                             arco-cd:PhotographicDocumentation ;
         rdfs:label                    "Documentazione fotografica 5 del bene culturale: 1600040375"@it , "Photographic documentation 5 of cultural property: 1600040375"@en ;
@@ -327,6 +405,13 @@ ar-photograpyDocumentation:1600040375-photographic-documentation-5
         arco-core:hasCategory         arco-cd:AttachedDocumentation ;
         arco-core:note                "interno" ;
         l0:name                       "Documentazione fotografica 5 del bene culturale: 1600040375"@it , "Photographic documentation 5 of cultural property: 1600040375"@en .
+
+<https://w3id.org/arco/resource/ConstructionPart/1600040375-part-navata>
+        a                             arco-ip:ConstructionPart , arco-arco:CulturalPropertyPart ;
+        rdfs:label                    "navata" ;
+        arco-core:isPartOf            <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-ip:hasHorizontalElement  <https://w3id.org/arco/resource/HorizontalElement/1600040375-1875727bc12a6e733cc1f91b3c280b1e> ;
+        l0:name                       "navata" .
 
 ar-province:ba  a   clvapit:Province ;
         rdfs:label  "BA" ;
@@ -370,13 +455,18 @@ ar-dating:1600040375-1
         l0:name                 "Dating 1 of cultural property 1600040375"@en , "Cronologia 1 del bene 1600040375"@it .
 
 ar-bibliography:1600040375-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 1600040375"@en , "Bibliografia 1 del bene culturale: 1600040375"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 1 of cultural property: 1600040375"@en , "Bibliografia 1 del bene culturale: 1600040375"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Calo' Mariani M.S. - 1984" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Calo' Mariani M.S." ;
+        arco-cd:bibliographicReferenceDate
+                "1984" ;
         arco-cd:bibliographyLocalIdentifier
                 "B1" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 1 of cultural property: 1600040375"@en , "Bibliografia 1 del bene culturale: 1600040375"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliography 1 of cultural property: 1600040375"@en , "Bibliografia 1 del bene culturale: 1600040375"@en .
 
 ar-privacyReason:scheda-contenente-dati-liberamente-accessibili
         a           arco-catalogue:PrivacyReason ;
@@ -388,6 +478,20 @@ ar-timeIndexedRole:1600040375-a37cbfdae5ccf314be94dd26732728b0
         rdfs:label             "Funzionario responsabile: x"@it , "Official in charge: x"@en ;
         roapit:isRoleInTimeOf  ar-agent:9dd4e461268c8034f5c8564e155c67a6 ;
         roapit:withRole        ar-role:OfficialInCharge .
+
+<https://w3id.org/arco/resource/Roof/1600040375-672e0444cb3892c8de01b5b93abe9b73>
+        a                  arco-ip:Roof ;
+        rdfs:label         "Roof of cultural property 1600040375"@en , "Copertura del bene culturale 1600040375"@it ;
+        arco-core:hasType  <https://w3id.org/arco/resource/RoofType/a-tetto> ;
+        arco-dd:hasShape   ar-TechnicalCharacteristic:a-due-falde-a-colmo-unico ;
+        l0:name            "Roof of cultural property 1600040375"@en , "Copertura del bene culturale 1600040375"@it .
+
+<https://w3id.org/arco/resource/Roofing/1600040375-381906f6c3bc2e431b50124309232c59>
+        a                    arco-ip:Roofing ;
+        rdfs:label           "Roofing of cultural property 1600040375"@en , "Manto di copertura del bene culturale 1600040375"@it ;
+        arco-core:hasType    <https://w3id.org/arco/resource/RoofingType/manto-chiancarelle> ;
+        arco-dd:hasMaterial  ar-TechnicalCharacteristic:pietra ;
+        l0:name              "Roofing of cultural property 1600040375"@en , "Manto di copertura del bene culturale 1600040375"@it .
 
 ar-photograpyDocumentation:1600040375-photographic-documentation-4
         a                             arco-cd:PhotographicDocumentation ;
@@ -407,10 +511,21 @@ ar-photograpyDocumentation:1600040375-photographic-documentation-4
         arco-cd:registrationDateOrGU  "1925/08/07" ;
         l0:name                       "Protective measure 1 of cultural property 1600040375: art. 2, L. 1089/1939"@en , "Provvedimento di tutela 1 del bene culturale 1600040375: art. 2, L. 1089/1939"@it .
 
+<https://w3id.org/arco/resource/RoofType/a-tetto>
+        a           arco-ip:RoofType ;
+        rdfs:label  "a tetto" ;
+        l0:name     "a tetto" .
+
 ar-role:HeritageProtectionAgency
         a                   roapit:Role ;
         rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
         arco-core:isRoleOf  ar-agentrole:1600040375-heritage-protection-agency .
+
+<https://w3id.org/arco/resource/Flooring/1600040375-60dde4577e1d72a4cb80f5b1b244c590>
+        a                  arco-ip:Flooring ;
+        rdfs:label         "Flooring of cultural property 1600040375"@en , "Pavimentazione del bene culturale 1600040375"@it ;
+        arco-core:hasType  <https://w3id.org/arco/resource/FlooringType/in-pietra-lastre> ;
+        l0:name            "Flooring of cultural property 1600040375"@en , "Pavimentazione del bene culturale 1600040375"@it .
 
 ar-timeIndexedTypedLocation:1600040375-current
         a                              arco-location:TimeIndexedTypedLocation ;
@@ -443,6 +558,20 @@ ar-event:1600040375fondazione
         tiapit:atTime          ar-TimeInterval:xii-xii ;
         l0:name                "fondazione"@it , "fondazione"@en .
 
+<https://w3id.org/arco/resource/Layout/1600040375-a-croce-contratta>
+        a           arco-ip:Layout ;
+        rdfs:label  "a croce contratta" ;
+        l0:name     "a croce contratta" .
+
+<https://w3id.org/arco/resource/ConstructionDesign/1600040375-919a66dd8f78b8177fb4904b9c52d4a1>
+        a                             arco-ip:ConstructionDesign ;
+        rdfs:label                    "Construction design  of cultural property 1600040375"@en , "Pianta del bene culturale 1600040375"@it ;
+        arco-ip:hasLayout             <https://w3id.org/arco/resource/Layout/1600040375-a-croce-contratta> ;
+        arco-ip:refersToFloorOrLevel  "+1.50" ;
+        arco-ip:significantIconographicInformation
+                "abside" , "navata" ;
+        l0:name                       "Construction design  of cultural property 1600040375"@en , "Pianta del bene culturale 1600040375"@it .
+
 ar-photograpyDocumentation:1600040375-photographic-documentation-9
         a                             arco-cd:PhotographicDocumentation ;
         rdfs:label                    "Photographic documentation 9 of cultural property: 1600040375"@en , "Documentazione fotografica 9 del bene culturale: 1600040375"@it ;
@@ -458,6 +587,11 @@ ar-role:DigitalTranscriptionOperator
         a           roapit:Role ;
         rdfs:label  "Digital transcription operator"@en , "Operatore della trascrizione per informatizzazione"@it .
 
+<https://w3id.org/arco/resource/FlooringType/in-pietra-lastre>
+        a           arco-ip:FlooringType ;
+        rdfs:label  "in pietra (lastre)" ;
+        l0:name     "in pietra (lastre)" .
+
 ar-role:ResponsibleCompilation
         a           roapit:Role ;
         rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
@@ -465,6 +599,11 @@ ar-role:ResponsibleCompilation
 ar-region:puglia  a  clvapit:Region ;
         rdfs:label  "Puglia" ;
         l0:name     "Puglia" .
+
+<https://w3id.org/arco/resource/HorizontalElementType/volta>
+        a           arco-ip:HorizontalElementType ;
+        rdfs:label  "volta" ;
+        l0:name     "volta" .
 
 ar-photograpyDocumentation:1600040375-photographic-documentation-3
         a                             arco-cd:PhotographicDocumentation ;
@@ -482,24 +621,23 @@ ar-country:italia  a  clvapit:Country ;
         l0:name     "ITALIA" .
 
 <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375>
-        a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchitecturalOrLandscapeHeritage ;
+        a                               arco-arco:ImmovableCulturalProperty , arco-arco:ArchitecturalOrLandscapeHeritage , arco-ip:Building ;
         rdfs:comment                    "chiesa, gentilizia, CHIESA DI S. MARGHERITA" ;
-        rdfs:label                      "CHIESA DI S. MARGHERITA (chiesa, gentilizia) - NR ()"@it , "CHIESA DI S. MARGHERITA (chiesa, gentilizia) - NR ()"@en ;
+        rdfs:label                      "CHIESA DI S. MARGHERITA (chiesa, gentilizia) - NR ()"@en , "CHIESA DI S. MARGHERITA (chiesa, gentilizia) - NR ()"@it ;
         dc:coverage                     ar-city:bisceglie ;
         dc:date                         ar-TimeInterval:1197-00-00-1197-00-00 ;
         dc:description                  "schema strutturale ad unica navata longitudinale, monoabsidata coperta a botte interrotta dalla cupola poggiante su due arcate laterali cieche" ;
         dc:identifier                   "1600040375" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1600040375-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:1600040375-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordA/1600040375> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#beni_architettonici" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#beni_architettonici> ;
         dc:type                         ar-culturalPropertyType:3cf11ea1a9b8d257c85dac555cf12179 ;
         <http://purl.org/dc/terms/bibliographicCitation>
                 ar-bibliography:1600040375-bibliography-5 , ar-bibliography:1600040375-bibliography-2 , ar-bibliography:1600040375-bibliography-4 , ar-bibliography:1600040375-bibliography-1 , ar-bibliography:1600040375-bibliography-3 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordA/1600040375> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/e3d472a1ce2cb838e72c23db7dbac12e" ;
+                ar-address:e3d472a1ce2cb838e72c23db7dbac12e ;
         arco-arco:catalogueNumber       "00040375" ;
         arco-arco:hasCataloguingAgency  ar-agent:a3dcee9173a23ce4a1a427dffefab879 ;
         arco-arco:hasHeritageProtectionAgency
@@ -512,17 +650,21 @@ ar-country:italia  a  clvapit:Country ;
         arco-cd:hasDocumentation        ar-photograpyDocumentation:1600040375-photographic-documentation-7 , ar-photograpyDocumentation:1600040375-photographic-documentation-4 , ar-photograpyDocumentation:1600040375-photographic-documentation-11 , ar-photograpyDocumentation:1600040375-photographic-documentation-8 , ar-photograpyDocumentation:1600040375-photographic-documentation-1 , ar-photograpyDocumentation:1600040375-photographic-documentation-5 , ar-photograpyDocumentation:1600040375-photographic-documentation-2 , ar-photograpyDocumentation:1600040375-photographic-documentation-6 , ar-photograpyDocumentation:1600040375-photographic-documentation-9 , ar-photograpyDocumentation:1600040375-photographic-documentation-10 , ar-photograpyDocumentation:1600040375-photographic-documentation-3 ;
         arco-cd:hasLegalSituation       ar-legalSituation:1600040375-legal-situation-proprieta-ente-pubblico-territoriale ;
         arco-cd:hasProtectiveMeasure    <https://w3id.org/arco/resource/ProtectiveMeasure/1600040375-protective-measure-1> ;
+        arco-core:description           "schema strutturale ad unica navata  longitudinale, monoabsidata coperta a botte interrotta dalla cupola poggiante su due arcate laterali cieche" ;
         arco-core:hasAgentRole          ar-agentrole:1600040375-cataloguing-agency , ar-agentrole:1600040375-heritage-protection-agency ;
-        arco-core:hasPart               <https://w3id.org/arco/resource/CulturalPropertyPart/1600040375-part-chiesa> ;
+        arco-core:hasPart               <https://w3id.org/arco/resource/ConstructionPart/1600040375-part-navata> , <https://w3id.org/arco/resource/CulturalPropertyPart/1600040375-part-chiesa> , <https://w3id.org/arco/resource/ConstructionPart/1600040375-part-pft-carat> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1600040375-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
                 ar-culturalPropertyType:3cf11ea1a9b8d257c85dac555cf12179 ;
         arco-dd:hasDesignationInTime    ar-designationInTime:1600040375-chiesa-di-s-margherita ;
         arco-dd:hasUse                  <https://w3id.org/arco/resource/Use/1600040375-current-use-1> ;
+        arco-ip:hasCovering             <https://w3id.org/arco/resource/Roofing/1600040375-381906f6c3bc2e431b50124309232c59> , <https://w3id.org/arco/resource/Flooring/1600040375-60dde4577e1d72a4cb80f5b1b244c590> ;
+        arco-ip:hasDesign               <https://w3id.org/arco/resource/ConstructionDesign/1600040375-919a66dd8f78b8177fb4904b9c52d4a1> ;
+        arco-ip:hasVerticalElement      <https://w3id.org/arco/resource/VerticalElement/1600040375-4462f043c97763090bf591c0aea5e3ac> ;
         arco-location:hasCadastralIdentity
                 <https://w3id.org/arco/resource/CadastralIdentity/1600040375-1> ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:76074a906f3804a7d0877e2772136c37 ;
+                ar-address:e3d472a1ce2cb838e72c23db7dbac12e ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1600040375-current .
 
@@ -556,13 +698,32 @@ ar-TimeInterval:1197-00-00-1197-00-00
         l0:name              "Current use 1 of cultural property 1600040375"@en , "Uso attuale 1 del bene culturale 1600040375"@it .
 
 ar-bibliography:1600040375-bibliography-5
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 5 of cultural property: 1600040375"@en , "Bibliografia 5 del bene culturale: 1600040375"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 5 of cultural property: 1600040375"@en , "Bibliografia 5 del bene culturale: 1600040375"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Petrucci A. - 1976" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Petrucci A." ;
+        arco-cd:bibliographicReferenceDate
+                "1976" ;
         arco-cd:bibliographyLocalIdentifier
                 "B5" ;
-        arco-cd:isBibliographyOf  <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 5 of cultural property: 1600040375"@en , "Bibliografia 5 del bene culturale: 1600040375"@en .
+        arco-cd:isBibliographyOf        <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliography 5 of cultural property: 1600040375"@en , "Bibliografia 5 del bene culturale: 1600040375"@en .
+
+ar-TechnicalCharacteristic:pietra
+        a           arco-dd:TechnicalCharacteristic ;
+        rdfs:label  "pietra" ;
+        arco-dd:isCharacteristicClassifiedBy
+                arco-dd:Material ;
+        l0:name     "pietra" .
+
+<https://w3id.org/arco/resource/ConstructionPart/1600040375-part-pft-carat>
+        a                       arco-ip:ConstructionPart , arco-arco:CulturalPropertyPart ;
+        rdfs:label              "p.f.t. carat." ;
+        arco-core:isPartOf      <https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/1600040375> ;
+        arco-ip:numberOfFloors  "+1" ;
+        l0:name                 "p.f.t. carat." .
 
 <https://w3id.org/arco/resource/CadastralIdentity/1600040375-1>
         a                               arco-location:CadastralIdentity ;
@@ -582,6 +743,14 @@ ar-photograpyDocumentation:1600040375-photographic-documentation-8
         arco-core:hasCategory         arco-cd:AttachedDocumentation ;
         arco-core:note                "interno, navata centrale verso l'ingresso" ;
         l0:name                       "Photographic documentation 8 of cultural property: 1600040375"@en , "Documentazione fotografica 8 del bene culturale: 1600040375"@it .
+
+<https://w3id.org/arco/resource/VerticalElement/1600040375-4462f043c97763090bf591c0aea5e3ac>
+        a                    arco-ip:VerticalElement ;
+        rdfs:label           "Vertical element of cultural property 1600040375"@en , "Elemento verticale del bene culturale 1600040375"@it ;
+        arco-core:hasType    <https://w3id.org/arco/resource/VerticalElementType/parete> ;
+        arco-dd:hasMaterial  ar-TechnicalCharacteristic:pietra , ar-TechnicalCharacteristic:malta ;
+        arco-dd:hasShape     ar-TechnicalCharacteristic:in-muratura-omogenea-a-ricorsi-regolari ;
+        l0:name              "Vertical element of cultural property 1600040375"@en , "Elemento verticale del bene culturale 1600040375"@it .
 
 ar-city:bisceglie  a  clvapit:City ;
         rdfs:label  "Bisceglie" ;

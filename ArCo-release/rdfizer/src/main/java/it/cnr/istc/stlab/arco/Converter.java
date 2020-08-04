@@ -25,6 +25,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
 import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
+import it.cnr.istc.stlab.arco.xsltextension.CatalogueRecordIdentifierToCulturalProperty;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
@@ -33,12 +34,15 @@ import it.cnr.istc.stlab.arco.xsltextension.ExtractValue;
 import it.cnr.istc.stlab.arco.xsltextension.FindMaterialAndTechniqueLinker;
 import it.cnr.istc.stlab.arco.xsltextension.FindMaterialLinker;
 import it.cnr.istc.stlab.arco.xsltextension.ImageFinder;
+import it.cnr.istc.stlab.arco.xsltextension.LinkEMMFinder;
 import it.cnr.istc.stlab.arco.xsltextension.MeasurementMapper;
+import it.cnr.istc.stlab.arco.xsltextension.NameCleaner;
 import it.cnr.istc.stlab.arco.xsltextension.RelatedPropertyFinder;
 import it.cnr.istc.stlab.arco.xsltextension.ScientificPropertyDefinitionLinker;
 import it.cnr.istc.stlab.arco.xsltextension.Split;
 import it.cnr.istc.stlab.arco.xsltextension.Uncamelizer;
 import it.cnr.istc.stlab.arco.xsltextension.Urify;
+import it.cnr.istc.stlab.arco.xsltextension.Utilities;
 import net.sf.saxon.s9api.ExtensionFunction;
 import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.OccurrenceIndicator;
@@ -56,156 +60,118 @@ import net.sf.saxon.s9api.XsltTransformer;
 
 public class Converter {
 
-	//private static final String XSLT_LOCATION = "META-INF/xslt/arco.xslt";
+	// private static final String XSLT_LOCATION = "META-INF/xslt/arco.xslt";
 	private static final String XSLT_LOCATION = "META-INF/xslt";
-	
+
 	private Processor proc;
 	private List<XSLTConverter> exps;
 	private CataloguingEntityFinder cataloguingEntityFinder;
-	
-	public Converter() {
-		
-		init();
-		
-		ExtensionFunction md5 = new ExtensionFunction()
-        {
-            public QName getName()
-            {
-                return new QName("https://w3id.org/arco/saxon-extension", "md5");
-            }
-            
-            public SequenceType getResultType()
-            {
-                return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
-            }
-            
-            public net.sf.saxon.s9api.SequenceType[] getArgumentTypes()
-            {
-                return new SequenceType[]
-                    {
-                        SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE)
-                    };
-            }
 
-            public XdmValue call(XdmValue[] arguments) throws SaxonApiException
-            {
-                String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                
-                String digest = "";
-                MessageDigest md;
+	public Converter() {
+
+		init();
+
+		ExtensionFunction md5 = new ExtensionFunction() {
+			public QName getName() {
+				return new QName("https://w3id.org/arco/saxon-extension", "md5");
+			}
+
+			public SequenceType getResultType() {
+				return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
+			}
+
+			public net.sf.saxon.s9api.SequenceType[] getArgumentTypes() {
+				return new SequenceType[] { SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE) };
+			}
+
+			public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
+				String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
+
+				String digest = "";
+				MessageDigest md;
 				try {
 					byte[] bytesOfMessage = arg.getBytes("UTF-8");
 					md = MessageDigest.getInstance("MD5");
 					byte[] thedigest = md.digest(bytesOfMessage);
 					StringBuffer sb = new StringBuffer();
-			        for (int i = 0; i < thedigest.length; ++i) {
-			          sb.append(Integer.toHexString((thedigest[i] & 0xFF) | 0x100).substring(1,3));
-			       }
-			        digest = sb.toString();
+					for (int i = 0; i < thedigest.length; ++i) {
+						sb.append(Integer.toHexString((thedigest[i] & 0xFF) | 0x100).substring(1, 3));
+					}
+					digest = sb.toString();
 				} catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-                return new XdmAtomicValue(digest);
-            }
-        };
-        
-        ExtensionFunction sheetType2propertyType = new ExtensionFunction()
-        {
-            public QName getName()
-            {
-                return new QName("https://w3id.org/arco/saxon-extension", "getPropertyType");
-            }
-            
-            public SequenceType getResultType()
-            {
-                return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
-            }
-            
-            public net.sf.saxon.s9api.SequenceType[] getArgumentTypes()
-            {
-                return new SequenceType[]
-                    {
-                        SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE)
-                    };
-            }
+				return new XdmAtomicValue(digest);
+			}
+		};
 
-            public XdmValue call(XdmValue[] arguments) throws SaxonApiException
-            {
-                String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                arg = TopLevelCultruralPropertyType.getPropertyType(arg);
-                
-                if(arg == null) arg = "https://w3id.org/arco/ontology/arco/CulturalProperty";
-                return new XdmAtomicValue(arg);
-            }
-        };
-        
-        ExtensionFunction sheetType2SpecificPropertyType = new ExtensionFunction()
-        {
-            public QName getName()
-            {
-                return new QName("https://w3id.org/arco/saxon-extension", "getSpecificPropertyType");
-            }
-            
-            public SequenceType getResultType()
-            {
-                return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
-            }
-            
-            public net.sf.saxon.s9api.SequenceType[] getArgumentTypes()
-            {
-                return new SequenceType[]
-                    {
-                        SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE)
-                    };
-            }
+		ExtensionFunction sheetType2propertyType = new ExtensionFunction() {
+			public QName getName() {
+				return new QName("https://w3id.org/arco/saxon-extension", "getPropertyType");
+			}
 
-            public XdmValue call(XdmValue[] arguments) throws SaxonApiException
-            {
-                String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                arg = SpecificCulturalPropertyType.getPropertyType(arg);
-                
-                if(arg == null) arg = "http://www.w3id.org/arco/core/CulturalProperty";
-                return new XdmAtomicValue(arg);
-            }
-        };
-        
-        ExtensionFunction localName = new ExtensionFunction()
-        {
-            public QName getName()
-            {
-                return new QName("https://w3id.org/arco/saxon-extension", "local-name");
-            }
-            
-            public SequenceType getResultType()
-            {
-                return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
-            }
-            
-            public net.sf.saxon.s9api.SequenceType[] getArgumentTypes()
-            {
-                return new SequenceType[]
-                    {
-                        SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE)
-                    };
-            }
+			public SequenceType getResultType() {
+				return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
+			}
 
-            public XdmValue call(XdmValue[] arguments) throws SaxonApiException
-            {
-                String arg = ((XdmAtomicValue)arguments[0].itemAt(0)).getStringValue();
-                int lastSlash = arg.lastIndexOf("/");
-                int lastHash = arg.lastIndexOf("#");
-                
-                if(lastHash > lastSlash)
-                	arg = arg.substring(lastHash+1);
-                else if(lastSlash > lastHash )
-                	arg = arg.substring(lastSlash+1);
-                
-                return new XdmAtomicValue(arg);
-            }
-        };
-        
-        proc = new Processor(false);
+			public net.sf.saxon.s9api.SequenceType[] getArgumentTypes() {
+				return new SequenceType[] { SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE) };
+			}
+
+			public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
+				String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
+				arg = TopLevelCultruralPropertyType.getPropertyType(arg);
+
+				if (arg == null)
+					arg = "https://w3id.org/arco/ontology/arco/CulturalProperty";
+				return new XdmAtomicValue(arg);
+			}
+		};
+
+		ExtensionFunction sheetType2SpecificPropertyType = new ExtensionFunction() {
+			public QName getName() {
+				return new QName("https://w3id.org/arco/saxon-extension", "getSpecificPropertyType");
+			}
+
+			public SequenceType getResultType() {
+				return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
+			}
+
+			public net.sf.saxon.s9api.SequenceType[] getArgumentTypes() {
+				return new SequenceType[] { SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE) };
+			}
+
+			public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
+				String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
+//                arg = SpecificCulturalPropertyType.getPropertyType(arg);
+//                
+//                if(arg == null) arg = "http://www.w3id.org/arco/core/CulturalProperty";
+				return new XdmAtomicValue(Utilities.getSpecificPropertyType(arg));
+			}
+		};
+
+		ExtensionFunction localName = new ExtensionFunction() {
+			public QName getName() {
+				return new QName("https://w3id.org/arco/saxon-extension", "local-name");
+			}
+
+			public SequenceType getResultType() {
+				return SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE);
+			}
+
+			public net.sf.saxon.s9api.SequenceType[] getArgumentTypes() {
+				return new SequenceType[] { SequenceType.makeSequenceType(ItemType.STRING, OccurrenceIndicator.ONE) };
+			}
+
+			public XdmValue call(XdmValue[] arguments) throws SaxonApiException {
+				String arg = ((XdmAtomicValue) arguments[0].itemAt(0)).getStringValue();
+				arg = Utilities.getLocalName(arg);
+				return new XdmAtomicValue(arg);
+			}
+		};
+
+		proc = new Processor(false);
 		proc.registerExtensionFunction(new Urify());
 		proc.registerExtensionFunction(Arcofy.getInstance());
 		proc.registerExtensionFunction(md5);
@@ -215,7 +181,7 @@ public class Converter {
 		proc.registerExtensionFunction(cataloguingEntityFinder);
 		proc.registerExtensionFunction(DefinitionMatcherForRASheet.getInstance());
 		proc.registerExtensionFunction(DefinitionMatcherForASheet.getInstance());
-		//proc.registerExtensionFunction(DefinitionMatcherForBDMSheet.getInstance());
+		// proc.registerExtensionFunction(DefinitionMatcherForBDMSheet.getInstance());
 		proc.registerExtensionFunction(ScientificPropertyDefinitionLinker.getInstance());
 		proc.registerExtensionFunction(FindMaterialLinker.getInstance());
 		proc.registerExtensionFunction(FindMaterialAndTechniqueLinker.getInstance());
@@ -226,31 +192,31 @@ public class Converter {
 		proc.registerExtensionFunction(Split.getInstance());
 		proc.registerExtensionFunction(ExtractValue.getInstance());
 		proc.registerExtensionFunction(ExtractUnit.getInstance());
-		
-		
-		
-        XsltCompiler comp = proc.newXsltCompiler();
-        
-        ClassLoader loader = Converter.class.getClassLoader();
-        
-        URL url = loader.getResource(XSLT_LOCATION);
-        URI uri;
+		proc.registerExtensionFunction(LinkEMMFinder.getInstance());
+		proc.registerExtensionFunction(CatalogueRecordIdentifierToCulturalProperty.getInstance());
+		proc.registerExtensionFunction(NameCleaner.getInstance());
+
+		XsltCompiler comp = proc.newXsltCompiler();
+
+		ClassLoader loader = Converter.class.getClassLoader();
+
+		URL url = loader.getResource(XSLT_LOCATION);
+		URI uri;
 		try {
 			uri = url.toURI();
-			Path xsltPath = null; 
-	        if(uri.getScheme().equals("jar")){
-	        	FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.<String, Object>emptyMap());
-	        	xsltPath = fileSystem.getPath(XSLT_LOCATION);
-	        }
-	        else {
-	        	xsltPath = Paths.get(uri);
-	        }
-	        
-	        Files.walk(xsltPath, 1).forEach(path -> {
-	        	
-	        	if(path.toString().endsWith(".xslt")){
-		        	XsltExecutable exp;
-		        	
+			Path xsltPath = null;
+			if (uri.getScheme().equals("jar")) {
+				FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.<String, Object>emptyMap());
+				xsltPath = fileSystem.getPath(XSLT_LOCATION);
+			} else {
+				xsltPath = Paths.get(uri);
+			}
+
+			Files.walk(xsltPath, 1).forEach(path -> {
+
+				if (path.toString().endsWith(".xslt")) {
+					XsltExecutable exp;
+
 					try {
 						System.out.println("-- " + path.toString());
 						exp = comp.compile(new StreamSource(Files.newInputStream(path)));
@@ -259,111 +225,97 @@ public class Converter {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-	        	}
-	        });
-	        
+				}
+			});
+
 		} catch (URISyntaxException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-        
-        /*
-        String path = url.getPath();
-        try {
-        	XsltExecutable exp = comp.compile(new StreamSource(xsltInputStream));
-        	exps.add(exp);
-			
-		} catch (SaxonApiException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		*/
+
+		/*
+		 * String path = url.getPath(); try { XsltExecutable exp = comp.compile(new
+		 * StreamSource(xsltInputStream)); exps.add(exp);
+		 * 
+		 * } catch (SaxonApiException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
 	}
-	
+
 	public Model convert(String item, InputStream sourceXml) throws Exception {
-		
+
 		Model model = ModelFactory.createDefaultModel();
-        
-        StreamSource inputStreamSource = new StreamSource(sourceXml);
+
+		StreamSource inputStreamSource = new StreamSource(sourceXml);
 		XdmNode source = proc.newDocumentBuilder().build(inputStreamSource);
-		
-		//XsltTransformer trans = exp.load();
-		for(XSLTConverter exp : exps){
+
+		// XsltTransformer trans = exp.load();
+		for (XSLTConverter exp : exps) {
 			ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
 			Serializer out = proc.newSerializer(byteArrayOut);
 			XsltTransformer trans = exp.executable.load();
-			
-			//System.out.println(exp.name);
+
+			// System.out.println(exp.name);
 			QName qName = new QName("item");
 			XdmValue value = new XdmAtomicValue(item);
 			trans.setParameter(qName, value);
-            trans.setInitialContextNode(source);
-            trans.setDestination(out);
-            trans.transform();
-            trans.close();
-            out.close();
-            
-            String rdfSource = new String(byteArrayOut.toByteArray());
-            
-            //System.out.println(rdfSource);
-			
+			trans.setInitialContextNode(source);
+			trans.setDestination(out);
+			trans.transform();
+			trans.close();
+			out.close();
+
+			String rdfSource = new String(byteArrayOut.toByteArray());
+
+
 			ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
-            Model localModel = ModelFactory.createDefaultModel();
-            try {
-            	localModel.read(in, null, "RDF/XML");
-            } catch(Exception e) {
-            	//System.out.println(rdfSource);
-            	//System.exit(-1);
-            }
-            
-            model.add(localModel);
+			Model localModel = ModelFactory.createDefaultModel();
+			localModel.read(in, null, "RDF/XML");
+
+			model.add(localModel);
 		}
-            
-            
-            
-            
-		
-        
-        return model;
-        
-		
+
+		return model;
+
 	}
-	
-	private void init(){
-		
+
+	private void init() {
+
 		exps = new ArrayList<XSLTConverter>();
 		cataloguingEntityFinder = CataloguingEntityFinder.create();
-    }
-	
-	public void destroy(){
+	}
+
+	public void destroy() {
 		cataloguingEntityFinder.destroy();
 	}
-	
+
 	public static void main(String[] args) {
 		Converter converter = new Converter();
-		//converter.convert("ICCD3569822", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD3569822.xml"), System.out);
-		
-			
+		// converter.convert("ICCD3569822",
+		// Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD3569822.xml"),
+		// System.out);
+
 		Model model = null;
 		try {
-			model = converter.convert("ICCD10717180", Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
+			model = converter.convert("ICCD10717180",
+					Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		model.write(System.out, "TURTLE");
-		
+
 		converter.destroy();
 	}
-	
+
 	class XSLTConverter {
 		String name;
 		XsltExecutable executable;
-		
+
 		public XSLTConverter(String name, XsltExecutable executable) {
 			this.name = name;
 			this.executable = executable;
 		}
 	}
-	
+
 }

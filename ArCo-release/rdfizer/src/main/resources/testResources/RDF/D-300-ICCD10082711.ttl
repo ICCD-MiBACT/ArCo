@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agent:ab0e18f88b67935608a177444ae08812
@@ -103,20 +105,17 @@ ar-HistoricOrArtisticProperty:0100350961
         dc:description                  "DISEGNO su carta" ;
         dc:format                       ar-MeasurementCollection:0100350961-1 ;
         dc:identifier                   "0100350961" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0100350961-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0100350961-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
-        dc:subject                      ar-Subject:feec4e188957ff3aab6e0844b1d98a62 ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.2#disegni" ] ;
+        dc:subject                      ar-Subject:feec4e188957ff3aab6e0844b1d98a62 , <http://culturaitalia.it/pico/thesaurus/4.2#disegni> ;
         dc:type                         ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
         <http://purl.org/dc/terms/bibliographicCitation>
                 ar-bibliography:0100350961-bibliography-4 , ar-bibliography:0100350961-bibliography-8 , ar-bibliography:0100350961-bibliography-1 , ar-bibliography:0100350961-bibliography-5 , ar-bibliography:0100350961-bibliography-2 , ar-bibliography:0100350961-bibliography-6 , ar-bibliography:0100350961-bibliography-3 , ar-bibliography:0100350961-bibliography-7 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/de0ffb9ac0d0cfe3fc81462221b1d474" ;
+                ar-address:de0ffb9ac0d0cfe3fc81462221b1d474 ;
         arco-arco:catalogueNumber       "00350961" ;
-        arco-arco:description           "DISEGNO su carta" ;
         arco-arco:hasCataloguingAgency  ar-agent:ab0e18f88b67935608a177444ae08812 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
                 ar-CulturalPropertyCataloguingCategory:opera-isolata ;
@@ -127,7 +126,7 @@ ar-HistoricOrArtisticProperty:0100350961
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordD/0100350961> ;
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0100350961-acquisition-1> ;
-        arco-cd:hasAuthor               ar-agent:10ae20f17743df400a1bd794df022add ;
+        arco-cd:hasAuthor               ar-agent:b44ec0ff17d01c60bfee75cf1ffeac41 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:0100350961-1 ;
         arco-cd:hasBibliography         ar-bibliography:0100350961-bibliography-7 , ar-bibliography:0100350961-bibliography-6 , ar-bibliography:0100350961-bibliography-1 , ar-bibliography:0100350961-bibliography-5 , ar-bibliography:0100350961-bibliography-4 , ar-bibliography:0100350961-bibliography-8 , ar-bibliography:0100350961-bibliography-3 , ar-bibliography:0100350961-bibliography-2 ;
@@ -137,6 +136,7 @@ ar-HistoricOrArtisticProperty:0100350961
         arco-cd:hasSubject              ar-Subject:feec4e188957ff3aab6e0844b1d98a62 ;
         arco-cd:iconclassCode           "31 A 2211 (+82)" ;
         arco-cd:subject                 "testa di donna velata" ;
+        arco-core:description           "DISEGNO su carta" ;
         arco-core:hasAgentRole          ar-agentrole:0100350961-cataloguing-agency , ar-agentrole:0100350961-heritage-protection-agency ;
         arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0100350961-inscription-1> , <https://w3id.org/arco/resource/Inscription/0100350961-inscription-2> , <https://w3id.org/arco/resource/Inscription/0100350961-inscription-3> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0100350961-conservation-status-1 ;
@@ -147,7 +147,7 @@ ar-HistoricOrArtisticProperty:0100350961
                 ar-MeasurementCollection:0100350961-1 ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0100350961 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:69f18aca1650d5ad1dc89a2f47db0122 ;
+                ar-address:de0ffb9ac0d0cfe3fc81462221b1d474 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0100350961-alternative-1 , ar-timeIndexedTypedLocation:0100350961-current .
 
@@ -180,7 +180,7 @@ ar-TimeInterval:2012  a  tiapit:TimeInterval ;
 ar-PreferredAuthorshipAttribution:0100350961-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0100350961"@it , "Preferred authorship attribution of cultural property: 0100350961"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:10ae20f17743df400a1bd794df022add ;
+        arco-cd:hasAttributedAuthor  ar-agent:b44ec0ff17d01c60bfee75cf1ffeac41 ;
         arco-cd:hasInterpretationCriterion
                 ar-interpretationCriterion:analisi-stilistica ;
         arco-cd:hasInterventionRole  ar-role:realizzazione ;
@@ -201,14 +201,19 @@ ar-interpretationCriterion:analisi-stilistica
         l0:name     "analisi stilistica" .
 
 ar-bibliography:0100350961-bibliography-5
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 5 of cultural property: 0100350961"@en , "Bibliografia 5 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 5 of cultural property: 0100350961"@en , "Bibliografia 5 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Gabrielli, Noemi - 1959" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Gabrielli, Noemi" ;
+        arco-cd:bibliographicReferenceDate
+                "1959" ;
         arco-cd:bibliographyLocalIdentifier
                 "0100017" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 26" ;
-        l0:name                   "Bibliography 5 of cultural property: 0100350961"@en , "Bibliografia 5 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 26" ;
+        l0:name                         "Bibliografia 5 del bene culturale: 0100350961"@en , "Bibliography 5 of cultural property: 0100350961"@en .
 
 ar-TimeInterval:ca-1500-ca-1525
         a                    tiapit:TimeInterval ;
@@ -283,14 +288,19 @@ ar-CulturalEntityTechnicalStatus:0100350961-inscription-2
         l0:name     "Stato tecnico dell'iscrizione 2 sul bene culturale 0100350961"@it , "Technical status of inscription 2 of cultural property 0100350961"@en .
 
 ar-bibliography:0100350961-bibliography-4
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 4 of cultural property: 0100350961"@en , "Bibliografia 4 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 4 del bene culturale: 0100350961"@it , "Bibliography 4 of cultural property: 0100350961"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Pacchioni, Guglielmo - 1932" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Pacchioni, Guglielmo" ;
+        arco-cd:bibliographicReferenceDate
+                "1932" ;
         arco-cd:bibliographyLocalIdentifier
                 "01002348" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 20" ;
-        l0:name                   "Bibliography 4 of cultural property: 0100350961"@en , "Bibliografia 4 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 20" ;
+        l0:name                         "Bibliografia 4 del bene culturale: 0100350961"@en , "Bibliography 4 of cultural property: 0100350961"@en .
 
 ar-agent:bc70464bc7df4e3b39d1a6a68c4aad9c
         a           l0:Agent ;
@@ -428,14 +438,19 @@ ar-CulturalEntityTechnicalStatus:0100350961-inscription-1
         l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0100350961"@it , "Technical status of inscription 1 of cultural property 0100350961"@en .
 
 ar-bibliography:0100350961-bibliography-3
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 3 of cultural property: 0100350961"@en , "Bibliografia 3 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 3 del bene culturale: 0100350961"@it , "Bibliography 3 of cultural property: 0100350961"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: [Baudi di Vesme, Alessandro] - 1899" ;
+        arco-cd:bibliographicReferenceAuthor
+                "[Baudi di Vesme, Alessandro]" ;
+        arco-cd:bibliographicReferenceDate
+                "1899" ;
         arco-cd:bibliographyLocalIdentifier
                 "01002384" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 56" ;
-        l0:name                   "Bibliography 3 of cultural property: 0100350961"@en , "Bibliografia 3 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 56" ;
+        l0:name                         "Bibliografia 3 del bene culturale: 0100350961"@en , "Bibliography 3 of cultural property: 0100350961"@en .
 
 ar-agent:03196445159411b85f094a4b920ba8c3
         a           l0:Agent ;
@@ -476,14 +491,19 @@ ar-address:3dae63addfb6d100c8b5756774f9628d
         clvapit:hasRegion    ar-region:piemonte .
 
 ar-bibliography:0100350961-bibliography-8
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 8 of cultural property: 0100350961"@en , "Bibliografia 8 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 8 of cultural property: 0100350961"@en , "Bibliografia 8 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Gabrielli, Noemi - 1971" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Gabrielli, Noemi" ;
+        arco-cd:bibliographicReferenceDate
+                "1971" ;
         arco-cd:bibliographyLocalIdentifier
                 "01002327" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "pp. 188-189, n. 129" ;
-        l0:name                   "Bibliography 8 of cultural property: 0100350961"@en , "Bibliografia 8 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "pp. 188-189, n. 129" ;
+        l0:name                         "Bibliografia 8 del bene culturale: 0100350961"@en , "Bibliography 8 of cultural property: 0100350961"@en .
 
 ar-role:realizzazione
         a           roapit:Role ;
@@ -498,14 +518,19 @@ ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48
         l0:name     "Tipo del bene: disegno"@it , "Cultural property type: disegno"@en .
 
 ar-bibliography:0100350961-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 0100350961"@en , "Bibliografia 2 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 2 del bene culturale: 0100350961"@it , "Bibliography 2 of cultural property: 0100350961"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Jacobsen, Emil - 1897" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Jacobsen, Emil" ;
+        arco-cd:bibliographicReferenceDate
+                "1897" ;
         arco-cd:bibliographyLocalIdentifier
                 "01000166" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 132" ;
-        l0:name                   "Bibliography 2 of cultural property: 0100350961"@en , "Bibliografia 2 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 132" ;
+        l0:name                         "Bibliography 2 of cultural property: 0100350961"@en , "Bibliografia 2 del bene culturale: 0100350961"@en .
 
 ar-role:ScientificDirector
         a           roapit:Role ;
@@ -587,14 +612,19 @@ ar-Site:d5bd8e45e2e30a33f4e5cf78acec4d6d
         l0:name                    "Palazzo dell'Accademia delle Scienze" .
 
 ar-bibliography:0100350961-bibliography-7
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 7 of cultural property: 0100350961"@en , "Bibliografia 7 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 7 of cultural property: 0100350961"@en , "Bibliografia 7 del bene culturale: 0100350961"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Frommel, Christoph Luitpold - 1968" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Frommel, Christoph Luitpold" ;
+        arco-cd:bibliographicReferenceDate
+                "1968" ;
         arco-cd:bibliographyLocalIdentifier
                 "01001021" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 119 n. 85, p. 160" ;
-        l0:name                   "Bibliography 7 of cultural property: 0100350961"@en , "Bibliografia 7 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 119 n. 85, p. 160" ;
+        l0:name                         "Bibliography 7 of cultural property: 0100350961"@en , "Bibliografia 7 del bene culturale: 0100350961"@en .
 
 ar-role:HeritageProtectionAgency
         a                   roapit:Role ;
@@ -622,14 +652,19 @@ ar-city:torino  a   clvapit:City ;
         l0:name     "Torino" .
 
 ar-bibliography:0100350961-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0100350961"@en , "Bibliografia 1 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 0100350961"@it , "Bibliography 1 of cultural property: 0100350961"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: [Vico, Giovanni] - 1871" ;
+        arco-cd:bibliographicReferenceAuthor
+                "[Vico, Giovanni]" ;
+        arco-cd:bibliographicReferenceDate
+                "1871" ;
         arco-cd:bibliographyLocalIdentifier
                 "01002390" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 20" ;
-        l0:name                   "Bibliography 1 of cultural property: 0100350961"@en , "Bibliografia 1 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 20" ;
+        l0:name                         "Bibliography 1 of cultural property: 0100350961"@en , "Bibliografia 1 del bene culturale: 0100350961"@en .
 
 ar-timeIndexedRole:0100350961-compilation-03196445159411b85f094a4b920ba8c3
         a                      roapit:TimeIndexedRole ;
@@ -645,6 +680,14 @@ ar-agent:185321a80fbaed803010a58965f17fdf
         a           l0:Agent ;
         rdfs:label  "Soprintendenza per i Beni Storici, Artistici ed Etnoantropologici del Piemonte - Ufficio Catalogo" ;
         l0:name     "Soprintendenza per i Beni Storici, Artistici ed Etnoantropologici del Piemonte - Ufficio Catalogo" .
+
+ar-agent:b44ec0ff17d01c60bfee75cf1ffeac41
+        a                             CPV:Person ;
+        rdfs:label                    "Peruzzi Baldassarre" ;
+        arco-cd:agentDate             "1481/ 1536" ;
+        arco-cd:agentLocalIdentifier  "00006322" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0100350961 ;
+        l0:name                       "Peruzzi Baldassarre" .
 
 ar-role:ResponsibleCompilation
         a           roapit:Role ;
@@ -678,14 +721,6 @@ ar-SourceAndDocument:0100350961-source-document-1
         arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:0100350961 ;
         tiapit:time                    "2005/00/00" ;
         l0:name                        "Fonti e documenti 1 del bene culturale: 0100350961"@en , "Sources and documents 1 of cultural property: 0100350961"@en .
-
-ar-agent:10ae20f17743df400a1bd794df022add
-        a                             CPV:Person ;
-        rdfs:label                    "Peruzzi Baldassarre" ;
-        arco-cd:agentDate             "1481/ 1536" ;
-        arco-cd:agentLocalIdentifier  "00006322" ;
-        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0100350961 ;
-        l0:name                       "Peruzzi Baldassarre" .
 
 ar-country:italia  a  clvapit:Country ;
         rdfs:label  "ITALIA" ;
@@ -722,14 +757,19 @@ ar-MeasurementCollection:0100350961-1
         l0:name                 "Measurements of cultural property 0100350961"@en , "Misure del bene culturale 0100350961"@it .
 
 ar-bibliography:0100350961-bibliography-6
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 6 of cultural property: 0100350961"@en , "Bibliografia 6 del bene culturale: 0100350961"@it ;
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 6 del bene culturale: 0100350961"@it , "Bibliography 6 of cultural property: 0100350961"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Gabrielli, Noemi - 1965" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Gabrielli, Noemi" ;
+        arco-cd:bibliographicReferenceDate
+                "1965" ;
         arco-cd:bibliographyLocalIdentifier
                 "01002347" ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0100350961 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "p. 28" ;
-        l0:name                   "Bibliography 6 of cultural property: 0100350961"@en , "Bibliografia 6 del bene culturale: 0100350961"@en .
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0100350961 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "p. 28" ;
+        l0:name                         "Bibliografia 6 del bene culturale: 0100350961"@en , "Bibliography 6 of cultural property: 0100350961"@en .
 
 ar-agent:50231b771fe964586aad90dfe9643cdd
         a           l0:Agent ;

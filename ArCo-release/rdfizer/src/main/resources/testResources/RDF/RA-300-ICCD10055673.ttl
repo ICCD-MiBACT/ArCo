@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 <https://w3id.org/arco/resource/ArchaeologicalExcavation/1400090488-survey-1>
@@ -228,9 +230,9 @@ ar-agentrole:1400090488-photographic-documentation-1-photographic-documentation-
 
 ar-TimeInterval:iii-ac
         a            tiapit:TimeInterval ;
-        rdfs:label   "III a.C." ;
-        tiapit:time  "III a.C." ;
-        l0:name      "III a.C." .
+        rdfs:label   "III a.C" ;
+        tiapit:time  "III a.C" ;
+        l0:name      "III a.C" .
 
 ar-Value:1400090488-1-height-36
         a                      mu:Value ;
@@ -315,7 +317,7 @@ ar-MeasurementCollection:1400090488-1
                 arco-catalogue:C ;
         arco-catalogue:systemRecordCode
                 "RA-300-ICCD10055673" ;
-        arco-core:note  "Argilla marrone, compatta con frequenti e minuti inclusi micacei, quarzo e chamotte." .
+        arco-core:note  "Argilla marrone, compatta con frequenti e minuti inclusi micacei, quarzo e chamotte" .
 
 ar-photograpyDocumentation:1400090488-photographic-documentation-1
         a                             arco-cd:PhotographicDocumentation ;
@@ -334,11 +336,6 @@ ar-agent:65c89b04734b8b41d8b162708e3c1c7a
         arco-core:isAgentOf  ar-agentrole:1400090488-photographic-documentation-1-photographic-documentation-owner , ar-agentrole:1400090488-archaeological-excavation-1-activity-responsible ;
         l0:name              "SBA CB" .
 
-ar-role:ScientificDirector
-        a                   roapit:Role ;
-        rdfs:label          "Referente scientifico"@it , "Scientific Director"@en , "Responsabile Scientifico"@it ;
-        arco-core:isRoleOf  ar-agentrole:1400090488-archaeological-excavation-1-scientific-director .
-
 ar-accessProfile:1400090488-1
         a                               arco-catalogue:AccessProfile ;
         rdfs:label                      "Profilo d'accesso ai dati della scheda catalografica del bene culturale 1400090488: 1"@it , "Access profile to catalogue record of cultural property 1400090488: 1"@en ;
@@ -346,6 +343,11 @@ ar-accessProfile:1400090488-1
         arco-catalogue:hasPrivacyReason
                 ar-privacyReason:scheda-contenente-dati-liberamente-accessibili ;
         l0:name                         "Profilo d'accesso alla scheda catalografica del bene culturale 1400090488: 1"@it , "Access profile to catalogue record of cultural property 1400090488: 1"@en .
+
+ar-role:ScientificDirector
+        a                   roapit:Role ;
+        rdfs:label          "Referente scientifico"@it , "Scientific Director"@en , "Responsabile Scientifico"@it ;
+        arco-core:isRoleOf  ar-agentrole:1400090488-archaeological-excavation-1-scientific-director .
 
 ar-agent:2a757647cc9b04ec85e3b8f0d11a29f5
         a           l0:Agent ;
@@ -379,23 +381,21 @@ ar-Measurement:1400090488-1-diameter
 ar-archeologicalProperty:1400090488
         a                               arco-arco:MovableCulturalProperty , arco-arco:ArchaeologicalProperty ;
         rdfs:comment                    "olla/ fondo" ;
-        rdfs:label                      "olla/ fondo (III  a.C.)"@it , "olla/ fondo (III  a.C.)"@en ;
+        rdfs:label                      "olla/ fondo (III a.C)"@it , "olla/ fondo (III a.C)"@en ;
         pico:materialAndTechnique       ar-TechnicalCharacteristic:argilla-a-tornio ;
         dc:coverage                     ar-city:campobasso ;
         dc:description                  "Fondo su basso piede ad anello con parete obliqua" ;
         dc:format                       ar-MeasurementCollection:1400090488-1 ;
         dc:identifier                   "1400090488" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1400090488-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:1400090488-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordRA/1400090488> ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#reperti_archeologici" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#reperti_archeologici> ;
         dc:type                         ar-culturalPropertyType:2c9f1e81c61be25cc83015d2917b5d53 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordRA/1400090488> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/d5a2e55b735322c761ef179ecac84259" ;
+                ar-address:d5a2e55b735322c761ef179ecac84259 ;
         arco-arco:catalogueNumber       "00090488" ;
-        arco-arco:description           "Fondo su basso piede ad anello con parete obliqua" ;
         arco-arco:hasCataloguingAgency  ar-agent:cbff70cf902b51d4f2f930ee23bddb2a ;
         arco-arco:hasCulturalPropertyCategory
                 <https://w3id.org/arco/resource/CulturalPropertyCategory/ceramica-comune-da-cucina> ;
@@ -409,6 +409,7 @@ ar-archeologicalProperty:1400090488
         arco-cd:hasDocumentation        ar-photograpyDocumentation:1400090488-photographic-documentation-1 ;
         arco-cd:hasLegalSituation       ar-legalSituation:1400090488-legal-situation-proprieta-stato ;
         arco-cd:hasSurvey               <https://w3id.org/arco/resource/ArchaeologicalExcavation/1400090488-survey-1> ;
+        arco-core:description           "Fondo su basso piede ad anello con parete obliqua" ;
         arco-core:hasAgentRole          ar-agentrole:1400090488-cataloguing-agency , ar-agentrole:1400090488-heritage-protection-agency ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1400090488-conservation-status-1 ;
         arco-dd:hasCulturalPropertyType
@@ -418,7 +419,7 @@ ar-archeologicalProperty:1400090488
                 ar-MeasurementCollection:1400090488-1 ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1400090488 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:d54867c2d373cc76fd9241b267e627ef ;
+                ar-address:d5a2e55b735322c761ef179ecac84259 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1400090488-current , ar-timeIndexedTypedLocation:1400090488-alternative-1 .
 

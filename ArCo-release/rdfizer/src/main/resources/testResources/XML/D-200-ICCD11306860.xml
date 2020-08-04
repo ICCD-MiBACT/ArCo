@@ -1,139 +1,151 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <D version="2.00_ICCD0">
-      <CD hint="CODICI">
-         <TSK hint="Tipo di scheda">D</TSK>
-         <LIR hint="Livello di ricerca">C</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">10</NCTR>
-            <NCTN hint="Numero catalogo generale">00017424</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">S38</ESC>
-         <ECP hint="Ente competente">S38</ECP>
-      </CD>
-      <RV hint="GERARCHIA">
-         <ROZ hint="Riferimento orizzontale">1000017422</ROZ>
-      </RV>
-      <LC hint="LOCALIZZAZIONE">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
-            <PVCP hint="Provincia">PG</PVCP>
-            <PVCC hint="Comune">Perugia</PVCC>
-         </PVC>
-         <LDC hint="COLLOCAZIONE SPECIFICA">
-            <LDCT hint="Tipologia">palazzo</LDCT>
-            <LDCQ hint="Qualificazione">comunale</LDCQ>
-            <LDCN hint="Denominazione">Palazzo dei Priori</LDCN>
-            <LDCU hint="Denominazione spazio viabilistico">Corso Vannucci, 19</LDCU>
-            <LDCM hint="Denominazione raccolta">Galleria Nazionale dell'Umbria</LDCM>
-            <LDCS hint="Specifiche">depositi (Deposito Superiore, cassettiera, cassetto 5)</LDCS>
-         </LDC>
-      </LC>
-      <UB hint="UBICAZIONE">
-         <UBO hint="Ubicazione originaria">SC</UBO>
-         <INV hint="INVENTARIO DI MUSEO O SOPRINTENDENZA"/>
-      </UB>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">disegno</OGTD>
-            <OGTV hint="Identificazione">elemento d'insieme</OGTV>
-         </OGT>
-         <SGT hint="SOGGETTO">
-            <SGTI hint="Identificazione">prospetto di edificio</SGTI>
-            <SGTT hint="Titolo">prospetto delle due facciate di Palazzo Bonaini - Boldrini</SGTT>
-         </SGT>
-      </OG>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Secolo">sec. XVIII</DTZG>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">1769</DTSI>
-            <DTSV hint="Validita'">post</DTSV>
-            <DTSF hint="A">1780</DTSF>
-            <DTSL hint="Validita'">ante</DTSL>
-         </DTS>
-         <DTM hint="Motivazione cronologia">data</DTM>
-      </DT>
-      <AU hint="DEFINIZIONE CULTURALE">
-         <AUT hint="AUTORE">
-            <AUTN hint="Nome scelto">Lorenzini Alessio</AUTN>
-            <AUTA hint="Dati anagrafici">sec. XVIII</AUTA>
-            <AUTM hint="Motivazione dell'attribuzione">firma</AUTM>
-            <AUTH hint="Sigla per citazione">00001090</AUTH>
-         </AUT>
-      </AU>
-      <MT hint="DATI TECNICI">
-         <MTC hint="Materia e tecnica">carta/ inchiostro di china/ acquerellatura</MTC>
-         <MIS hint="MISURE">
-            <MISU hint="Unita'">mm</MISU>
-            <MISA hint="Altezza">540</MISA>
-            <MISL hint="Larghezza">380</MISL>
-         </MIS>
-      </MT>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">discreto</STCC>
-         </STC>
-      </CO>
-      <RS hint="RESTAURI">
-         <RST hint="RESTAURI">
-            <RSTD hint="Data">1990</RSTD>
-            <RSTE hint="Ente responsabile">S.B.A.A.A.A.S. dell'Umbria</RSTE>
-            <RSTN hint="Nome operatore">Cristostomi P.</RSTN>
-            <RSTR hint="Ente finanziatore">S.B.A.A.A.A.S. dell'Umbria</RSTR>
-         </RST>
-      </RS>
-      <DA hint="DATI ANALITICI">
-         <DES hint="DESCRIZIONE">
-            <DESS hint="Indicazioni sul soggetto">Architetture: Perugia: Palazzo Bonaini - Boldrini: prospetto delle due facciate.</DESS>
-         </DES>
-         <ISR hint="ISCRIZIONI">
-            <ISRC hint="Classe di appartenenza">di titolazione</ISRC>
-            <ISRS hint="Tecnica di scrittura">a penna</ISRS>
-            <ISRT hint="Tipo di caratteri">corsivo</ISRT>
-            <ISRP hint="Posizione">in alto, entro cartiglio</ISRP>
-            <ISRI hint="Trascrizione">PROSPETTO DELLE DUE FACCIATE DEL NUOVO/ PALAZZO DELL'ILL(USTRISS)IMO SIG(NOR) CO(N)TE ORA/ZIO BONAINI BOLDRINI IN PERUGIA.</ISRI>
-         </ISR>
-         <ISR hint="ISCRIZIONI">
-            <ISRC hint="Classe di appartenenza">documentaria</ISRC>
-            <ISRS hint="Tecnica di scrittura">a penna</ISRS>
-            <ISRT hint="Tipo di caratteri">corsivo</ISRT>
-            <ISRP hint="Posizione">in basso a destra</ISRP>
-            <ISRI hint="Trascrizione">LORENZINI F(ECIT) 177...</ISRI>
-         </ISR>
-         <NSC hint="Notizie storico critiche">L'opera, parte di un gruppo di tre tavole relative a palazzo Bonaini - Boldrini,  è citata nell'inventario topografico della Galleria. Si tratta di un disegno del noto architetto perugino Alessio Lorenzini, da porre in relazione alla ristrutturazione settecentesca del palazzo. Verso la fine del secolo, Lorenzini si occupò della ristrutturazione di numerosi palazzi.</NSC>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
-            <CDGS hint="Indicazione specifica">Ministero per i Beni e le Attività Culturali</CDGS>
-            <CDGI hint="Indirizzo">Corso Vannucci - 06100 Perugia</CDGI>
-         </CDG>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="FOTOGRAFIE">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia digitale</FTAP>
-            <FTAN hint="Codice identificativo">SBSAE PG17424</FTAN>
-         </FTA>
-      </DO>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">1989</CMPD>
-            <CMPN hint="Nome compilatore">Rosi A.M.</CMPN>
-         </CMP>
-         <FUR hint="Funzionario responsabile">Garibaldi V.</FUR>
-         <RVM hint="TRASCRIZIONE PER MEMORIZZAZIONE">
-            <RVMD hint="Data registrazione">1996</RVMD>
-            <RVMN hint="Nome revisore">Delogu G.L.</RVMN>
-         </RVM>
-         <AGG hint="AGGIORNAMENTO">
-            <AGGD hint="Data">2006</AGGD>
-            <AGGN hint="Nome revisore">ARTPAST/ Sargentini C.</AGGN>
-         </AGG>
-      </CM>
-      <AN hint="ANNOTAZIONI">
-         <OSS hint="Osservazioni">Ultimo aggiornamento: 2007 - Donà A. - nell'ambito del progetto "Catalogazione speditiva dei beni mobili conservati nei depositi dei musei statali".</OSS>
-      </AN>
-   </D>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11306860@</identifier>
+        <datestamp>2020-06-17T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <D version="2.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo di scheda">D</TSK>
+                    <LIR hint="Livello di ricerca">C</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">10</NCTR>
+                        <NCTN hint="Numero catalogo generale">00017424</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S38</ESC>
+                    <ECP hint="Ente competente">S38</ECP>
+                </CD>
+                <RV hint="GERARCHIA">
+                    <ROZ hint="Riferimento orizzontale">1000017422</ROZ>
+                </RV>
+                <LC hint="LOCALIZZAZIONE">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO AMMINISTRATIVA">
+                        <PVCP hint="Provincia">PG</PVCP>
+                        <PVCC hint="Comune">Perugia</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">palazzo</LDCT>
+                        <LDCQ hint="Qualificazione">comunale</LDCQ>
+                        <LDCN hint="Denominazione attuale">Palazzo dei Priori</LDCN>
+                        <LDCU hint="Indirizzo">Corso Vannucci, 19</LDCU>
+                        <LDCM hint="Denominazione raccolta">Galleria Nazionale dell'Umbria</LDCM>
+                        <LDCS hint="Specifiche">depositi (Deposito Superiore, cassettiera, cassetto 5)</LDCS>
+                    </LDC>
+                </LC>
+                <UB hint="UBICAZIONE">
+                    <UBO hint="Ubicazione originaria">SC</UBO>
+                </UB>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">disegno</OGTD>
+                        <OGTV hint="Identificazione">elemento d'insieme</OGTV>
+                    </OGT>
+                    <SGT hint="SOGGETTO">
+                        <SGTI hint="Identificazione">prospetto di edificio</SGTI>
+                        <SGTT hint="Titolo">prospetto delle due facciate di Palazzo Bonaini - Boldrini</SGTT>
+                    </SGT>
+                </OG>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">sec. XVIII</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1769</DTSI>
+                        <DTSV hint="Validità">post</DTSV>
+                        <DTSF hint="A">1780</DTSF>
+                        <DTSL hint="Validità">ante</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">data</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <AUT hint="AUTORE">
+                        <AUTN hint="Nome scelto">Lorenzini Alessio</AUTN>
+                        <AUTA hint="Dati anagrafici">sec. XVIII</AUTA>
+                        <AUTM hint="Motivazione dell'attribuzione">firma</AUTM>
+                        <AUTH hint="Sigla per citazione">00001090</AUTH>
+                    </AUT>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">carta/ inchiostro di china/ acquerellatura</MTC>
+                    <MIS hint="MISURE">
+                        <MISU hint="Unità">mm</MISU>
+                        <MISA hint="Altezza">540</MISA>
+                        <MISL hint="Larghezza">380</MISL>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                    </STC>
+                </CO>
+                <RS hint="RESTAURI">
+                    <RST hint="RESTAURI">
+                        <RSTD hint="Data">1990</RSTD>
+                        <RSTE hint="Ente responsabile">S.B.A.A.A.A.S. dell'Umbria</RSTE>
+                        <RSTN hint="Nome operatore">Cristostomi P</RSTN>
+                        <RSTR hint="Ente finanziatore">S.B.A.A.A.A.S. dell'Umbria</RSTR>
+                    </RST>
+                </RS>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESS hint="Indicazioni sul soggetto">Architetture: Perugia: Palazzo Bonaini - Boldrini: prospetto delle due facciate</DESS>
+                    </DES>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">di titolazione</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a penna</ISRS>
+                        <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+                        <ISRP hint="Posizione">in alto, entro cartiglio</ISRP>
+                        <ISRI hint="Trascrizione">PROSPETTO DELLE DUE FACCIATE DEL NUOVO/ PALAZZO DELL'ILL(USTRISS)IMO SIG(NOR) CO(N)TE ORA/ZIO BONAINI BOLDRINI IN PERUGIA</ISRI>
+                    </ISR>
+                    <ISR hint="ISCRIZIONI">
+                        <ISRC hint="Classe di appartenenza">documentaria</ISRC>
+                        <ISRS hint="Tecnica di scrittura">a penna</ISRS>
+                        <ISRT hint="Tipo di caratteri">corsivo</ISRT>
+                        <ISRP hint="Posizione">in basso a destra</ISRP>
+                        <ISRI hint="Trascrizione">LORENZINI F(ECIT) 177..</ISRI>
+                    </ISR>
+                    <NSC hint="Notizie storico critiche">L'opera, parte di un gruppo di tre tavole relative a palazzo Bonaini - Boldrini, è citata nell'inventario topografico della Galleria. Si tratta di un disegno del noto architetto perugino Alessio Lorenzini, da porre in relazione alla ristrutturazione settecentesca del palazzo. Verso la fine del secolo, Lorenzini si occupò della ristrutturazione di numerosi palazzi</NSC>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Ministero per i Beni e le Attività Culturali</CDGS>
+                        <CDGI hint="Indirizzo">Corso Vannucci - 06100 Perugia</CDGI>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="FOTOGRAFIE">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale</FTAP>
+                        <FTAN hint="Codice identificativo">SBSAE PG17424</FTAN>
+                    </FTA>
+                </DO>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">1989</CMPD>
+                        <CMPN hint="Nome compilatore">Rosi A.M</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Garibaldi V</FUR>
+                    <RVM hint="TRASCRIZIONE PER MEMORIZZAZIONE">
+                        <RVMD hint="Data registrazione">1996</RVMD>
+                        <RVMN hint="Nome revisore">Delogu G.L</RVMN>
+                    </RVM>
+                    <AGG hint="AGGIORNAMENTO">
+                        <AGGD hint="Data">2006</AGGD>
+                        <AGGN hint="Nome revisore">ARTPAST/ Sargentini C</AGGN>
+                    </AGG>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Ultimo aggiornamento: 2007 - Donà A. - nell'ambito del progetto "Catalogazione speditiva dei beni mobili conservati nei depositi dei musei statali"</OSS>
+                </AN>
+            </D>
+            <harvesting>
+                <geocoding>
+                    <x>12.3887692</x>
+                    <y>43.1114689</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

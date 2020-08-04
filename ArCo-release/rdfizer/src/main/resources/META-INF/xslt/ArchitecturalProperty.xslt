@@ -1347,11 +1347,11 @@
 				</arco-core:hasType>
 			</xsl:if>
 			<xsl:for-each select="./PVMS">
-				<arco-ip:hasFlooringDesign>
+				<arco-ip:hasFlooringLayout>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of 	select="concat($NS, 'FlooringDesign/', arco-fn:urify(normalize-space(.)))" />
+					<xsl:value-of 	select="concat($NS, 'FlooringLayout/', arco-fn:urify(normalize-space(.)))" />
 				</xsl:attribute>
-				</arco-ip:hasFlooringDesign>
+				</arco-ip:hasFlooringLayout>
 			</xsl:for-each>
 		</rdf:Description>
 	</xsl:for-each>										
@@ -1375,15 +1375,15 @@
 		</rdf:Description>
 	</xsl:for-each>	
 									
-									<!-- FlooringDesign as individual -->
+									<!-- FlooringLayout as individual -->
 	<xsl:for-each select="record/metadata/schede/A/PV/PVM/PVMS ">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"> 			
- 				<xsl:value-of 	select="concat($NS, 'FlooringDesign/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+ 				<xsl:value-of 	select="concat($NS, 'FlooringLayout/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
 			</xsl:attribute>
  	        <rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/immovable-property/FlooringDesign'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/immovable-property/FlooringLayout'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>

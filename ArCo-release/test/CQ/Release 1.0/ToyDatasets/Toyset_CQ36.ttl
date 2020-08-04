@@ -1,0 +1,76 @@
+@prefix : <https://w3id.org/arco/test/CQ/ToyDatasets/Toyset_CQ36.ttl#>.
+@prefix arcolocation: <https://w3id.org/arco/location/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix arcodd: <https://w3id.org/arco/denotative-description/> .
+@prefix arcocd: <https://w3id.org/arco/context-description/> .
+@prefix ti:<https://w3id.org/italia/onto/TI/> .
+
+:CulturalProperty1 arcolocation:hasCulturalPropertyAddress :Address1 ; 
+    arcodd:hasAffixedElement :Element1 ; 
+    arcocd:hasDating :Date1 .
+:Address1 CLV:hasRegion :Region1 .
+:Region1 rdfs:label "Puglia" .
+:Element1 arcodd:hasWritingSystem :WritingSystem1 .
+:Date1 arcocd:hasEvent :Event1 .
+:Event1 ti:atTime :Time1 .
+:Time1 ti:time "VI a.C." .
+
+:CulturalProperty2 arcolocation:hasCulturalPropertyAddress :Address2 ; 
+    arcodd:hasAffixedElement :Element2 ; 
+    arcocd:hasDating :Date2 .
+:Address2 CLV:hasRegion :Region2 .
+:Region2 rdfs:label "Puglia" .
+:Element2 arcodd:hasWritingSystem :WritingSystem2 .
+:Date2 arcocd:hasEvent :Event2 .
+:Event2 ti:atTime :Time2 .
+:Time2 ti:time "VI a.C." .
+
+:CulturalProperty3 arcolocation:hasCulturalPropertyAddress :Address3 ; 
+    arcodd:hasAffixedElement :Element3 ; 
+    arcocd:hasDating :Date3 .
+:Address3 CLV:hasRegion :Region3 .
+:Region3 rdfs:label "Puglia" .
+:Element3 arcodd:hasWritingSystem :WritingSystem3 .
+:Date3 arcocd:hasEvent :Event3 .
+:Event3 ti:atTime :Time3 .
+:Time3 ti:time "VI a.C." .
+
+:CulturalProperty4 arcolocation:hasCulturalPropertyAddress :Address4 ; 
+    arcodd:hasAffixedElement :Element4 ; 
+    arcocd:hasDating :Date4 .
+:Address4 CLV:hasRegion :Region4 .
+:Region4 rdfs:label "Puglia" .
+:Element4 arcodd:hasWritingSystem :WritingSystem4 .
+:Date4 arcocd:hasEvent :Event4 .
+:Event4 ti:atTime :Time4 .
+:Time4 ti:time "VI a.C." .
+
+:CulturalProperty5 arcolocation:hasCulturalPropertyAddress :Address5 ; 
+    arcodd:hasAffixedElement :Element5 ; 
+    arcocd:hasDating :Date5 .
+:Address5 CLV:hasRegion :Region5 .
+:Region5 rdfs:label "Puglia" .
+:Element5 arcodd:hasWritingSystem :WritingSystem5 .
+:Date5 arcocd:hasEvent :Event5 .
+:Event5 ti:atTime :Time5 .
+:Time5 ti:time "VI a.C." .
+
+:CulturalProperty6 arcolocation:hasCulturalPropertyAddress :Address6 ; 
+    arcodd:hasAffixedElement :Element6 ; 
+    arcocd:hasDating :Date6 .
+:Address6 CLV:hasRegion :Region6 .
+:Region6 rdfs:label "Puglia" .
+:Element6 arcodd:hasWritingSystem :WritingSystem6 .
+:Date6 arcocd:hasEvent :Event6 .
+:Event6 ti:atTime :Time6 .
+:Time6 ti:time "VI a.C." .
+
+:CulturalProperty7 arcolocation:hasCulturalPropertyAddress :Address7 ; 
+    arcodd:hasAffixedElement :Element7 ; 
+    arcocd:hasDating :Date7 .
+:Address7 CLV:hasRegion :Region7 .
+:Region7 rdfs:label "Puglia" .
+:Element7 arcodd:hasWritingSystem :WritingSystem7 .
+:Date7 arcocd:hasEvent :Event7 .
+:Event7 ti:atTime :Time7 .
+:Time7 ti:time "VI a.C." .

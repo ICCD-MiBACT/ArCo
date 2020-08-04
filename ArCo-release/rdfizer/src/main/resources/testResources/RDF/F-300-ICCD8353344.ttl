@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-Measurement:0800418491-1-height
@@ -96,7 +98,6 @@ ar-TimeInterval:xx  a  tiapit:TimeInterval ;
 <https://w3id.org/arco/resource/ConservationIntervention/0800418491-conservation-intervention-1>
         a                               arco-cd:ConservationIntervention ;
         rdfs:label                      "Conservation intervention 1 on cultural property 0800418491"@en , "Intervento conservativo 1 sul bene culturale 0800418491"@it ;
-        arco-cd:framework               "NR (recupero pregresso)" ;
         arco-cd:hasActivityOperator     ar-agent:9bcab4fcbb49b7a4c9495201ba12f7e4 ;
         arco-cd:hasActivityResponsible  ar-agent:460ca2dd20add6803826043ca480f926 ;
         tiapit:atTime                   ar-TimeInterval:2002-2003 ;
@@ -132,6 +133,13 @@ ar-Site:43de88e6a02e6baadfb77935ac251d3b
         arco-location:hasSiteType  ar-SiteType:palazzo-museo ;
         l0:name                    "Palazzo Pepoli Campogrande" .
 
+ar-agent:f517b0141fe3987764e01c133f9681a0
+        a                   CPV:Person ;
+        rdfs:label          "Bissolo, Francesco" ;
+        arco-cd:agentDate   "1470-1475/ 1554" ;
+        arco-cd:isAuthorOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
+        l0:name             "Bissolo, Francesco" .
+
 <https://w3id.org/arco/resource/Inscription/0800418491-inscription-4>
         a                               arco-dd:Inscription ;
         rdfs:label                      "Inscription 4 of cultural property 0800418491"@en , "Iscrizione 4 sul bene culturale 0800418491"@it ;
@@ -146,13 +154,6 @@ ar-privacyReason:dati-pubblicabili
         rdfs:label  "dati pubblicabili" ;
         l0:name     "dati pubblicabili" .
 
-ar-agent:88a853949e67984d831d9779eacdea21
-        a                   CPV:Person ;
-        rdfs:label          "Bissolo, Francesco" ;
-        arco-cd:agentDate   "1470-1475/ 1554" ;
-        arco-cd:isAuthorOf  <https://w3id.org/arco/resource/PhotographicHeritage/0800418491> ;
-        l0:name             "Bissolo, Francesco" .
-
 ar-cis:0a307ed9aa9e3c624d8b55d2c80afbcb
         a                     cis:CulturalInstituteOrSite ;
         rdfs:label            "Archivio Fotografico SBSAE BO" ;
@@ -162,7 +163,7 @@ ar-cis:0a307ed9aa9e3c624d8b55d2c80afbcb
 
 ar-timeIndexedRole:0800418491-agg-1-2ab89e73b8c119f2bf0e189775a2f403
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ICCD/ DG BASAE/ Gagliano C."@it , "Update responsible compilation: ICCD/ DG BASAE/ Gagliano C."@en ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ICCD/ DG BASAE/ Gagliano C"@it , "Update responsible compilation: ICCD/ DG BASAE/ Gagliano C"@en ;
         roapit:isRoleInTimeOf  ar-agent:2ab89e73b8c119f2bf0e189775a2f403 ;
         roapit:withRole        ar-role:UpdateResponsibleCompilation .
 
@@ -200,17 +201,15 @@ ar-Measurement:0800418491-1-width
         dc:date                         ar-TimeInterval:post-1915-ante-1924 ;
         dc:format                       ar-MeasurementCollection:0800418491-1 ;
         dc:identifier                   "0800418491" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0800418491-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:0800418491-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
-        dc:subject                      ar-Subject:38b0632df5a5f2c863893af2d781bc74 ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#fotografie" ] ;
+        dc:subject                      ar-Subject:38b0632df5a5f2c863893af2d781bc74 , <http://culturaitalia.it/pico/thesaurus/4.1#fotografie> ;
         dc:title                        <https://w3id.org/arco/resource/Title/0800418491-francesco-bissolo-madonna-in-trono-col-bambino-i-santi-paolo-e-lorenzo-e-il-committente> ;
         dc:type                         ar-culturalPropertyType:20e6d3fc7923851fb8313bad70a9fd65 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/d437532e901e75933d35137868fb9597" ;
+                ar-address:d437532e901e75933d35137868fb9597 ;
         arco-arco:catalogueNumber       "00418491" ;
         arco-arco:hasCataloguingAgency  ar-agent:52e9543ed285c89c64f4327f479b5835 ;
         arco-arco:hasHeritageProtectionAgency
@@ -221,7 +220,7 @@ ar-Measurement:0800418491-1-width
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordF/0800418491> ;
         arco-cd:attributedTitle         "Francesco Bissolo. Madonna in trono col Bambino, i Santi Paolo e Lorenzo e il committente" ;
-        arco-cd:hasAuthor               ar-agent:ac037c61854d527f164f8e9d23df1918 , ar-agent:88a853949e67984d831d9779eacdea21 ;
+        arco-cd:hasAuthor               ar-agent:f517b0141fe3987764e01c133f9681a0 , ar-agent:ac037c61854d527f164f8e9d23df1918 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:0800418491-1 , ar-PreferredAuthorshipAttribution:0800418491-photographer-1 ;
         arco-cd:hasDating               ar-dating:0800418491-1 ;
@@ -244,13 +243,13 @@ ar-Measurement:0800418491-1-width
         arco-dd:hasPhotoColour          ar-TechnicalCharacteristic:b-n ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0800418491 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:dbde251c49ee76f421b8b99aca8f0265 ;
+                ar-address:d437532e901e75933d35137868fb9597 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0800418491-shot , ar-timeIndexedTypedLocation:0800418491-current .
 
 ar-agent:06c4b86cb803b4784978175669eb7c11
         a           l0:Agent ;
-        rdfs:label  "Gagliano C." .
+        rdfs:label  "Gagliano C" .
 
 ar-agentrole:0800418491-cataloguing-agency
         a                   arco-core:AgentRole ;
@@ -265,7 +264,7 @@ ar-region:emilia-romagna
 
 ar-agent:f467d159be260d399ecd7ce31db60932
         a           l0:Agent ;
-        rdfs:label  "Giudici C." .
+        rdfs:label  "Giudici C" .
 
 <https://w3id.org/arco/resource/Inscription/0800418491-inscription-3>
         a                               arco-dd:Inscription ;
@@ -371,7 +370,7 @@ ar-TimeInterval:2010  a  tiapit:TimeInterval ;
 
 ar-catalogueRecordVersion:0800418491-agg-1
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2010 ICCD/ DG BASAE/ Gagliano C. NR (recupero pregresso)" ;
+        rdfs:label                   "AGGIORNAMENTO - REVISIONE - 2010 ICCD/ DG BASAE/ Gagliano C" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2010 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0800418491-agg-1-2ab89e73b8c119f2bf0e189775a2f403 ;
@@ -471,7 +470,7 @@ ar-role:UpdateResponsibleCompilation
 
 ar-timeIndexedRole:0800418491-29f40400c9f30353bce26bba743e103b
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Giudici C."@it , "Official in charge: Giudici C."@en ;
+        rdfs:label             "Funzionario responsabile: Giudici C"@it , "Official in charge: Giudici C"@en ;
         roapit:isRoleInTimeOf  ar-agent:f467d159be260d399ecd7ce31db60932 ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -513,7 +512,7 @@ ar-CulturalEntityTechnicalStatus:0800418491-inscription-2
 
 ar-catalogueRecordVersion:0800418491-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 2010 Gagliano C." ;
+        rdfs:label                   "COMPILAZIONE - 2010 Gagliano C" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2010 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:0800418491-compilation-06c4b86cb803b4784978175669eb7c11 , ar-timeIndexedRole:0800418491-29f40400c9f30353bce26bba743e103b ;
@@ -533,12 +532,12 @@ ar-TechnicalCharacteristic:a-matita
 
 ar-agent:2ab89e73b8c119f2bf0e189775a2f403
         a           l0:Agent ;
-        rdfs:label  "ICCD/ DG BASAE/ Gagliano C." .
+        rdfs:label  "ICCD/ DG BASAE/ Gagliano C" .
 
 ar-PreferredAuthorshipAttribution:0800418491-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0800418491"@it , "Preferred authorship attribution of cultural property: 0800418491"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:88a853949e67984d831d9779eacdea21 ;
+        arco-cd:hasAttributedAuthor  ar-agent:f517b0141fe3987764e01c133f9681a0 ;
         arco-cd:hasInterpretationCriterion
                 ar-interpretationCriterion:iscrizione ;
         arco-cd:hasInterventionRole  ar-role:pittore ;
@@ -557,7 +556,7 @@ ar-role:HeritageProtectionAgency
 
 ar-timeIndexedRole:0800418491-compilation-06c4b86cb803b4784978175669eb7c11
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Gagliano C."@en , "Compilazione da Gagliano C."@it ;
+        rdfs:label             "Compilation by Gagliano C"@en , "Compilazione da Gagliano C"@it ;
         roapit:isRoleInTimeOf  ar-agent:06c4b86cb803b4784978175669eb7c11 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -656,8 +655,8 @@ ar-TimeInterval:post-1915-ante-1924
 
 ar-agent:9bcab4fcbb49b7a4c9495201ba12f7e4
         a           l0:Agent ;
-        rdfs:label  "La Fototeca s.n.c." ;
-        l0:name     "La Fototeca s.n.c." .
+        rdfs:label  "La Fototeca s.n.c" ;
+        l0:name     "La Fototeca s.n.c" .
 
 ar-agent:00bccd7be8afa55cd8d24b1396ec3b81
         a           l0:Agent ;

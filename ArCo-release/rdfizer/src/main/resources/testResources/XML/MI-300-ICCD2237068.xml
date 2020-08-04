@@ -1,114 +1,125 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schede>
-   <MI version="3.00">
-      <CD hint="CODICI">
-         <TSK hint="Tipo scheda">MI</TSK>
-         <LIR hint="Livello ricerca">P</LIR>
-         <NCT hint="CODICE UNIVOCO">
-            <NCTR hint="Codice regione">01</NCTR>
-            <NCTN hint="Numero catalogo generale">00173819</NCTN>
-         </NCT>
-         <ESC hint="Ente schedatore">R01</ESC>
-         <ECP hint="Ente competente">S67</ECP>
-      </CD>
-      <RV hint="RELAZIONI">
-         <RVE hint="STRUTTURA COMPLESSA">
-            <RVEL hint="Livello">0</RVEL>
-         </RVE>
-      </RV>
-      <OG hint="OGGETTO">
-         <OGT hint="OGGETTO">
-            <OGTD hint="Definizione">matrice</OGTD>
-            <OGTV hint="Identificazione">matrice composita</OGTV>
-         </OGT>
-         <QNT hint="QUANTITA'">
-            <QNTU hint="Numero stampa/matrice composita o serie">2</QNTU>
-         </QNT>
-         <SGT hint="SOGGETTO">
-            <SGTI hint="Identificazione">storie di San Maurizio</SGTI>
-         </SGT>
-      </OG>
-      <LC hint="LOCALIZZAZIONE GEOGRAFICA AMMINISTRATIVA">
-         <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
-            <PVCS hint="Stato">Italia</PVCS>
-            <PVCR hint="Regione">Piemonte</PVCR>
-            <PVCP hint="Provincia">TO</PVCP>
-            <PVCC hint="Comune">Torino</PVCC>
-         </PVC>
-         <LDC hint="COLLOCAZIONE SPECIFICA"/>
-      </LC>
-      <UB hint="UBICAZIONE E DATI PATRIMONIALI">
-         <UBO hint="Ubicazione originaria">SC</UBO>
-      </UB>
-      <DT hint="CRONOLOGIA">
-         <DTZ hint="CRONOLOGIA GENERICA">
-            <DTZG hint="Secolo">sec. XVIII</DTZG>
-            <DTZS hint="Frazione di secolo">inizio</DTZS>
-         </DTZ>
-         <DTS hint="CRONOLOGIA SPECIFICA">
-            <DTSI hint="Da">1700</DTSI>
-            <DTSV hint="Validita'">post</DTSV>
-            <DTSF hint="A">1710</DTSF>
-            <DTSL hint="Validita'">ante</DTSL>
-         </DTS>
-         <DTM hint="Motivazione cronologia">analisi stilistica</DTM>
-      </DT>
-      <AU hint="DEFINIZIONE CULTURALE">
-         <ATB hint="AMBITO CULTURALE">
-            <ATBD hint="Denominazione">ambito piemontese</ATBD>
-            <ATBM hint="Motivazione dell'attribuzione">analisi stilistica</ATBM>
-         </ATB>
-      </AU>
-      <MT hint="DATI TECNICI">
-         <MTC hint="Materia e tecnica">legno/ intaglio</MTC>
-         <MIS hint="MISURE">
-            <MISR hint="Mancanza">MNR</MISR>
-         </MIS>
-      </MT>
-      <CO hint="CONSERVAZIONE">
-         <STC hint="STATO DI CONSERVAZIONE">
-            <STCC hint="Stato di conservazione">mediocre</STCC>
-            <STCS hint="Indicazioni specifiche">attacco di insetti xilofagi, alcune fenditure, abrasione della superficie di alcune figure</STCS>
-         </STC>
-      </CO>
-      <DA hint="DATI ANALITICI">
-         <DES hint="DESCRIZIONE">
-            <DESI hint="Codifica Iconclass">11 H (MAURIZIO)</DESI>
-            <DESS hint="Indicazioni sul soggetto">Soggetti sacri. Personaggi: San Maurizio.</DESS>
-         </DES>
-      </DA>
-      <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
-         <CDG hint="CONDIZIONE GIURIDICA">
-            <CDGG hint="Indicazione generica">proprietà Ente pubblico non territoriale</CDGG>
-         </CDG>
-      </TU>
-      <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
-         <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
-            <FTAX hint="Genere">documentazione allegata</FTAX>
-            <FTAP hint="Tipo">fotografia b/n</FTAP>
-         </FTA>
-      </DO>
-      <AD hint="ACCESSO AI DATI">
-         <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
-            <ADSP hint="Profilo di accesso">2</ADSP>
-            <ADSM hint="Motivazione">dati non pubblicabili</ADSM>
-         </ADS>
-      </AD>
-      <CM hint="COMPILAZIONE">
-         <CMP hint="COMPILAZIONE">
-            <CMPD hint="Data">1995</CMPD>
-            <CMPN hint="Nome">Ballaira E.</CMPN>
-         </CMP>
-         <FUR hint="Funzionario responsabile">Mossetti C.</FUR>
-         <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
-            <RVMD hint="Data">2005</RVMD>
-            <RVMN hint="Nome">Treu P.</RVMN>
-         </RVM>
-         <AGG hint="AGGIORNAMENTO - REVISIONE">
-            <AGGD hint="Data">2007</AGGD>
-            <AGGN hint="Nome">ARTPAST/ Semenzato A.</AGGN>
-            <AGGF hint="Funzionario responsabile">NR (recupero pregresso)</AGGF>
-         </AGG>
-      </CM>
-   </MI>
-</schede>
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD2237068@</identifier>
+        <datestamp>2015-04-07T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MI version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">MI</TSK>
+                    <LIR hint="Livello ricerca">P</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">01</NCTR>
+                        <NCTN hint="Numero catalogo generale">00173819</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">R01</ESC>
+                    <ECP hint="Ente competente">S67</ECP>
+                </CD>
+                <RV hint="RELAZIONI">
+                    <RVE hint="STRUTTURA COMPLESSA">
+                        <RVEL hint="Livello">0</RVEL>
+                    </RVE>
+                </RV>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">matrice</OGTD>
+                        <OGTV hint="Identificazione">matrice composita</OGTV>
+                    </OGT>
+                    <QNT hint="QUANTITA'">
+                        <QNTU hint="Numero matrice composita o serie">2</QNTU>
+                    </QNT>
+                    <SGT hint="SOGGETTO">
+                        <SGTI hint="Identificazione">storie di San Maurizio</SGTI>
+                    </SGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICA AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+                        <PVCS hint="Stato">Italia</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">TO</PVCP>
+                        <PVCC hint="Comune">Torino</PVCC>
+                    </PVC>
+                </LC>
+                <UB hint="UBICAZIONE E DATI PATRIMONIALI">
+                    <UBO hint="Ubicazione originaria">SC</UBO>
+                </UB>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">sec. XVIII</DTZG>
+                        <DTZS hint="Frazione di secolo">inizio</DTZS>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1700</DTSI>
+                        <DTSV hint="Validità">post</DTSV>
+                        <DTSF hint="A">1710</DTSF>
+                        <DTSL hint="Validità">ante</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">analisi stilistica</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBD hint="Denominazione">ambito piemontese</ATBD>
+                        <ATBM hint="Motivazione dell'attribuzione">analisi stilistica</ATBM>
+                    </ATB>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">legno/ intaglio</MTC>
+                    <MIS hint="MISURE">
+                        <MISR hint="Mancanza">MNR</MISR>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCS hint="Indicazioni specifiche">attacco di insetti xilofagi, alcune fenditure, abrasione della superficie di alcune figure</STCS>
+                    </STC>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESI hint="Codifica Iconclass">11 H (MAURIZIO)</DESI>
+                        <DESS hint="Indicazioni sul soggetto">Soggetti sacri. Personaggi: San Maurizio</DESS>
+                    </DES>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico non territoriale</CDGG>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia b/n</FTAP>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">2</ADSP>
+                        <ADSM hint="Motivazione">dati non pubblicabili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">1995</CMPD>
+                        <CMPN hint="Nome">Ballaira E</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Mossetti C</FUR>
+                    <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+                        <RVMD hint="Data">2005</RVMD>
+                        <RVMN hint="Nome">Treu P</RVMN>
+                    </RVM>
+                    <AGG hint="AGGIORNAMENTO - REVISIONE">
+                        <AGGD hint="Data">2007</AGGD>
+                        <AGGN hint="Nome">ARTPAST/ Semenzato A</AGGN>
+                    </AGG>
+                </CM>
+            </MI>
+            <harvesting>
+                <geocoding>
+                    <x>7.67801069</x>
+                    <y>45.07170736</y>
+                </geocoding>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

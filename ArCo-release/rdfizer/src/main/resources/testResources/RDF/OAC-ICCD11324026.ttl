@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-CISNameInTime:collezione-boschi-di-stefano
@@ -151,7 +153,7 @@ ar-city:milano  a   clvapit:City ;
 ar-PreferredAuthorshipAttribution:0302040489-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0302040489"@it , "Preferred authorship attribution of cultural property: 0302040489"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1 ;
+        arco-cd:hasAttributedAuthor  ar-agent:7e79fe1d5dc2396a25ba3622c76a26c4 ;
         arco-cd:isAuthorshipAttributionOf
                 ar-HistoricOrArtisticProperty:0302040489 ;
         l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 0302040489"@it , "Preferred authorship attribution of cultural property: 0302040489"@en .
@@ -224,6 +226,14 @@ ar-dating:0302040489-1
         arco-cd:hasDatingEvent  ar-event:0302040489-creation-1 ;
         l0:name                 "Dating 1 of cultural property 0302040489"@en , "Cronologia 1 del bene 0302040489"@it .
 
+ar-agent:7e79fe1d5dc2396a25ba3622c76a26c4
+        a                             CPV:Person ;
+        rdfs:label                    "Ajmone Giuseppe" ;
+        arco-cd:agentDate             "1923-2005" ;
+        arco-cd:agentLocalIdentifier  "20000001" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0302040489 ;
+        l0:name                       "Ajmone Giuseppe" .
+
 ar-Site:6e7346880af7dbabb368c95b3bad34c1
         a                          cis:Site ;
         rdfs:label                 "magazzino Boschi" ;
@@ -243,11 +253,16 @@ ar-role:CataloguinAgency
         arco-core:isRoleOf  ar-agentrole:0302040489-cataloguing-agency .
 
 ar-bibliography:0302040489-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 0302040489"@en , "Bibliografia 2 del bene culturale: 0302040489"@it ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0302040489 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        l0:name                   "Bibliography 2 of cultural property: 0302040489"@en , "Bibliografia 2 del bene culturale: 0302040489"@en .
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 2 del bene culturale: 0302040489"@it , "Bibliography 2 of cultural property: 0302040489"@en ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Ajmone: opere scelte, 1943 - 1997 - 1997" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Ajmone: opere scelte, 1943 - 1997" ;
+        arco-cd:bibliographicReferenceDate
+                "1997" ;
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        l0:name                         "Bibliography 2 of cultural property: 0302040489"@en , "Bibliografia 2 del bene culturale: 0302040489"@en .
 
 ar-photograpyDocumentation:0302040489-photographic-documentation-2
         a                              arco-cd:PhotographicDocumentation ;
@@ -279,14 +294,6 @@ ar-Site:5ceca7b3c18e1f1bbffbf2f75126a021
         a           arco-location:SiteSpecification ;
         rdfs:label  "museale" .
 
-ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1
-        a                             CPV:Person ;
-        rdfs:label                    "Ajmone Giuseppe" ;
-        arco-cd:agentDate             "1923-2005" ;
-        arco-cd:agentLocalIdentifier  "20000001" ;
-        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:0302040489 ;
-        l0:name                       "Ajmone Giuseppe" .
-
 ar-agent:dac9f9762eb3e93955c58e9592eef408
         a           l0:Agent ;
         rdfs:label  "Boschi, Antonio" ;
@@ -309,11 +316,9 @@ ar-HistoricOrArtisticProperty:0302040489
         dc:date                         ar-TimeInterval:ca-1947-ca-1947 ;
         dc:format                       ar-MeasurementCollection:0302040489-1 ;
         dc:identifier                   "0302040489" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/0302040489-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489> ;
-        dc:subject                      ar-Subject:eb7fb6546fb530af17ecc39dc870224a ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" ] ;
+        dc:subject                      ar-Subject:eb7fb6546fb530af17ecc39dc870224a , <http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva> ;
         dc:title                        <https://w3id.org/arco/resource/Title/0302040489-paesaggio> ;
         dc:type                         ar-culturalPropertyType:54764e0bac66f48b0e7af57043f65a0c ;
         <http://purl.org/dc/terms/bibliographicCitation>
@@ -321,7 +326,7 @@ ar-HistoricOrArtisticProperty:0302040489
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/73f332fff7c9faa04c2374fa5dac9427" ;
+                ar-address:73f332fff7c9faa04c2374fa5dac9427 ;
         arco-arco:catalogueNumber       "02040489" ;
         arco-arco:hasCataloguingAgency  ar-agent:6ab35a3e63bd2a29ca21f1c3b4466dce ;
         arco-arco:hasHeritageProtectionAgency
@@ -331,7 +336,7 @@ ar-HistoricOrArtisticProperty:0302040489
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordOAC/0302040489> ;
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/0302040489-acquisition-1> ;
-        arco-cd:hasAuthor               ar-agent:7a6bdb63d2a46a9910d3977c1d3888a1 ;
+        arco-cd:hasAuthor               ar-agent:7e79fe1d5dc2396a25ba3622c76a26c4 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:0302040489-1 ;
         arco-cd:hasBibliography         ar-bibliography:0302040489-bibliography-1 , ar-bibliography:0302040489-bibliography-2 ;
@@ -342,6 +347,7 @@ ar-HistoricOrArtisticProperty:0302040489
         arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/0302040489-paesaggio> ;
         arco-cd:subject                 "Paesaggio" ;
         arco-cd:title                   "Paesaggio" ;
+        arco-core:description           "" ;
         arco-core:hasAgentRole          ar-agentrole:0302040489-cataloguing-agency , ar-agentrole:0302040489-heritage-protection-agency ;
         arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/0302040489-inscription-2> , <https://w3id.org/arco/resource/Inscription/0302040489-inscription-1> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:0302040489-conservation-status-1 ;
@@ -352,7 +358,7 @@ ar-HistoricOrArtisticProperty:0302040489
                 ar-MeasurementCollection:0302040489-1 ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:0302040489 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:0ed18b53f9dc6ae750e61f1d2082ca5f ;
+                ar-address:73f332fff7c9faa04c2374fa5dac9427 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:0302040489-alternative-1 , ar-timeIndexedTypedLocation:0302040489-current , ar-timeIndexedTypedLocation:0302040489-alternative-2 .
 
@@ -417,12 +423,17 @@ ar-photograpyDocumentation:0302040489-photographic-documentation-1
         l0:name                        "Documentazione fotografica 1 del bene culturale: 0302040489"@it , "Photographic documentation 1 of cultural property: 0302040489"@en .
 
 ar-bibliography:0302040489-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 0302040489"@en , "Bibliografia 1 del bene culturale: 0302040489"@it ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:0302040489 ;
-        arco-core:hasCategory     arco-cd:SpecificBibliography ;
-        arco-core:note            "vol. I, fig. 11" ;
-        l0:name                   "Bibliography 1 of cultural property: 0302040489"@en , "Bibliografia 1 del bene culturale: 0302040489"@en .
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 1 of cultural property: 0302040489"@en , "Bibliografia 1 del bene culturale: 0302040489"@it ;
+        arco-cd:bibliographicReference  "bibliografia specifica: Caramel, L./ Fiorio, M.T./ Pirovano, C - 1980" ;
+        arco-cd:bibliographicReferenceAuthor
+                "Caramel, L./ Fiorio, M.T./ Pirovano, C" ;
+        arco-cd:bibliographicReferenceDate
+                "1980" ;
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:0302040489 ;
+        arco-core:hasCategory           arco-cd:SpecificBibliography ;
+        arco-core:note                  "vol. I, fig. 11" ;
+        l0:name                         "Bibliography 1 of cultural property: 0302040489"@en , "Bibliografia 1 del bene culturale: 0302040489"@en .
 
 ar-region:mi  a     clvapit:Province ;
         rdfs:label  "MI" ;
@@ -591,18 +602,18 @@ ar-agent:ce3337533a58c2be2958ff1c3c06453c
         a           l0:Agent ;
         rdfs:label  "Giacon, Danka" .
 
-ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale
-        a                 arco-cd:LegalSituation ;
-        rdfs:label        "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en ;
-        arco-cd:hasOwner  ar-agent:349291242ff90c347b6e9125a947dd02 ;
-        l0:name           "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en .
-
 ar-CulturalEntityTechnicalStatus:0302040489-inscription-1
         a           arco-dd:CulturalEntityTechnicalStatus ;
         rdfs:label  "Stato tecnico dell'iscrizione 1 sul bene culturale 0302040489"@it , "Technical status of inscription 1 of cultural property 0302040489"@en ;
         arco-dd:includesTechnicalCharacteristic
                 ar-TechnicalCharacteristic:a-pennello ;
         l0:name     "Stato tecnico dell'iscrizione 1 sul bene culturale 0302040489"@it , "Technical status of inscription 1 of cultural property 0302040489"@en .
+
+ar-legalSituation:0302040489-legal-situation-proprieta-ente-pubblico-territoriale
+        a                 arco-cd:LegalSituation ;
+        rdfs:label        "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en ;
+        arco-cd:hasOwner  ar-agent:349291242ff90c347b6e9125a947dd02 ;
+        l0:name           "Condizione giuridica del bene culturale 0302040489: proprietà Ente pubblico territoriale"@it , "Legal situation of cultural property 0302040489: proprietà Ente pubblico territoriale"@en .
 
 ar-SiteType:deposito-museale
         a           arco-location:SiteType ;

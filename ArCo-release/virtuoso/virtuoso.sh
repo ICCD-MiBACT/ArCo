@@ -115,6 +115,58 @@ do
     fi
 done
 
+
+if [  -d "/ontologies" ]; then
+    echo "/ontologies exist, moving to /usr/local/virtuoso-opensource/share/virtuoso/vad"
+    mv /ontologies /usr/local/virtuoso-opensource/share/virtuoso/vad/ 
+else
+	echo "/ontologies does not exist"
+fi
+if [ -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies" ]; 
+	then
+    if [ ! -f "/usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/.arco_data_loaded" ] ;
+    then
+    	echo "Loading DB ArCo data - segment ontologies" ;
+    	echo "File in /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies: ";
+   		ls /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies
+   		echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies', '*.owl', 'https://w3id.org/arco/ontologies');" > /load_arco_data.sql
+		echo "rdf_loader_run();" >> /load_arco_data.sql
+		echo "exec('checkpoint');" >> /load_arco_data.sql
+		echo "WAIT_FOR_CHILDREN; " >> /load_arco_data.sql
+		echo "$(cat /load_arco_data.sql)"
+		virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data.sql
+		kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+		echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > /usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies/.arco_data_loaded
+	fi
+fi
+
+
+if [  -d "/linking" ]; then
+    echo "/linking exist, moving to /usr/local/virtuoso-opensource/share/virtuoso/vad"
+    mv /linking /usr/local/virtuoso-opensource/share/virtuoso/vad/ 
+else
+	echo "/linking does not exist"
+fi
+if [ -d "/usr/local/virtuoso-opensource/share/virtuoso/vad/linking" ]; 
+	then
+    if [ ! -f "/usr/local/virtuoso-opensource/share/virtuoso/vad/linking/.arco_data_loaded" ] ;
+    then
+    	echo "Loading DB ArCo data - segment linking" ;
+    	echo "File in /usr/local/virtuoso-opensource/share/virtuoso/vad/linking: ";
+   		ls /usr/local/virtuoso-opensource/share/virtuoso/vad/linking
+   		echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/linking', '*.gz', 'https://w3id.org/arco/data/linking');" > /load_arco_data.sql
+		echo "rdf_loader_run();" >> /load_arco_data.sql
+		echo "exec('checkpoint');" >> /load_arco_data.sql
+		echo "WAIT_FOR_CHILDREN; " >> /load_arco_data.sql
+		echo "$(cat /load_arco_data.sql)"
+		virtuoso-t +wait && isql-v -U dba -P "$pwd" < /load_arco_data.sql
+		kill $(ps aux | grep '[v]irtuoso-t' | awk '{print $2}')
+		echo "`date +%Y-%m-%dT%H:%M:%S%:z`" > /usr/local/virtuoso-opensource/share/virtuoso/vad/linking/.arco_data_loaded
+	fi
+fi
+
+
+
 if [  -d "/quarantine" ]; then
     echo "/quarantine exist, moving to /usr/local/virtuoso-opensource/share/virtuoso/vad"
     mv /quarantine /usr/local/virtuoso-opensource/share/virtuoso/vad/ 

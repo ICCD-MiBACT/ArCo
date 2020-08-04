@@ -76,9 +76,11 @@
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-docutmentationType:inventario
@@ -88,7 +90,7 @@ ar-docutmentationType:inventario
 
 ar-timeIndexedRole:1000017428-rvm-90b9ab24c15306f938c8ca3a3e41fb6c
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "TRASCRIZIONE PER MEMORIZZAZIONE da Sargentini C."@it , "Digital transcription by Sargentini C."@en ;
+        rdfs:label             "TRASCRIZIONE PER MEMORIZZAZIONE da Sargentini C"@it , "Digital transcription by Sargentini C"@en ;
         roapit:isRoleInTimeOf  ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c ;
         roapit:withRole        ar-role:DigitalTranscriptionOperator .
 
@@ -119,7 +121,7 @@ ar-province:pg  a   clvapit:Province ;
 
 ar-agent:2395621f73e2aae9fbaa132e0f94e1f7
         a           l0:Agent ;
-        rdfs:label  "ARTPAST/ Sargentini C." .
+        rdfs:label  "ARTPAST/ Sargentini C" .
 
 ar-SiteDefinition:palazzo
         a           arco-location:SiteDefinition ;
@@ -131,7 +133,7 @@ ar-culturalPropertyDefinition:stampa
 
 ar-timeIndexedRole:1000017428-compilation-90b9ab24c15306f938c8ca3a3e41fb6c
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Sargentini C."@en , "Compilazione da Sargentini C."@it ;
+        rdfs:label             "Compilation by Sargentini C"@en , "Compilazione da Sargentini C"@it ;
         roapit:isRoleInTimeOf  ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -144,14 +146,6 @@ ar-agent:182e1d9074ba174e80f41429ad21f8a2
                 ar-HistoricOrArtisticProperty:1000017428 ;
         arco-core:isAgentOf  ar-agentrole:1000017428-cataloguing-agency , ar-agentrole:1000017428-heritage-protection-agency ;
         l0:name              "S38" .
-
-ar-agent:bf606979b2b333bae8abdfdc59b16a3d
-        a                             CPV:Person ;
-        rdfs:label                    "Bucco Luigi" ;
-        arco-cd:agentDate             "notizie metà sec. XIX" ;
-        arco-cd:agentLocalIdentifier  "00001506" ;
-        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:1000017428 ;
-        l0:name                       "Bucco Luigi" .
 
 ar-event:1000017428-creation-1
         a                     l0:Event ;
@@ -172,7 +166,7 @@ ar-interpretationCriterion:firma
 
 ar-timeIndexedRole:1000017428-agg-1-2395621f73e2aae9fbaa132e0f94e1f7
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Sargentini C."@it , "Update responsible compilation: ARTPAST/ Sargentini C."@en ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Sargentini C"@it , "Update responsible compilation: ARTPAST/ Sargentini C"@en ;
         roapit:isRoleInTimeOf  ar-agent:2395621f73e2aae9fbaa132e0f94e1f7 ;
         roapit:withRole        ar-role:UpdateResponsibleCompilation .
 
@@ -197,7 +191,7 @@ ar-CulturalEntityTechnicalStatus:1000017428
 
 ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d
         a           l0:Agent ;
-        rdfs:label  "Garibaldi V." .
+        rdfs:label  "Garibaldi V" .
 
 ar-Value:1000017428-1-width-585
         a                      mu:Value ;
@@ -207,14 +201,14 @@ ar-Value:1000017428-1-width-585
 
 ar-timeIndexedRole:1000017428-f22bbb019d3c60b3a5f7d21ed8c526fb
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Garibaldi V."@it , "Official in charge: Garibaldi V."@en ;
+        rdfs:label             "Funzionario responsabile: Garibaldi V"@it , "Official in charge: Garibaldi V"@en ;
         roapit:isRoleInTimeOf  ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
         roapit:withRole        ar-role:OfficialInCharge .
 
 <https://w3id.org/arco/resource/MeasurementUnit/mm>
         a           mu:MeasurementUnit ;
-        rdfs:label  "mm." ;
-        l0:name     "mm." .
+        rdfs:label  "mm" ;
+        l0:name     "mm" .
 
 ar-SiteType:palazzo-comunale
         a           arco-location:SiteType ;
@@ -244,7 +238,7 @@ ar-cis:1a4e4f301bdaf438a1d4213ab77efe08
 
 ar-catalogueRecordVersion:1000017428-agg-1
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "AGGIORNAMENTO - 2006 ARTPAST/ Sargentini C." ;
+        rdfs:label                   "AGGIORNAMENTO - 2006 ARTPAST/ Sargentini C" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1000017428-agg-1-2395621f73e2aae9fbaa132e0f94e1f7 ;
@@ -270,7 +264,7 @@ ar-docutmentationType:fotografia-digitale
 
 ar-agent:90b9ab24c15306f938c8ca3a3e41fb6c
         a           l0:Agent ;
-        rdfs:label  "Sargentini C." .
+        rdfs:label  "Sargentini C" .
 
 ar-Site:f21ac2ec11e92cfa78a23bffc6f7b08a
         a                          cis:Site ;
@@ -322,7 +316,7 @@ ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7
 
 ar-catalogueRecordVersion:1000017428-rvm
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "TRASCRIZIONE PER MEMORIZZAZIONE - 2006 Sargentini C." ;
+        rdfs:label                   "TRASCRIZIONE PER MEMORIZZAZIONE - 2006 Sargentini C" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1000017428-rvm-90b9ab24c15306f938c8ca3a3e41fb6c , ar-timeIndexedRole:1000017428-f22bbb019d3c60b3a5f7d21ed8c526fb ;
@@ -335,10 +329,10 @@ ar-catalogueRecordVersion:1000017428-rvm
 
 ar-Measurement:1000017428-1-height
         a                           arco-dd:Measurement ;
-        rdfs:label                  "Measurement of cultural property 1000017428: 420mm."@en , "Misura del bene culturale 1000017428: 420mm."@it ;
+        rdfs:label                  "Measurement of cultural property 1000017428: 420mm"@en , "Misura del bene culturale 1000017428: 420mm"@it ;
         arco-dd:hasMeasurementType  arco-dd:Height ;
         arco-dd:hasValue            ar-Value:1000017428-1-height-420 ;
-        l0:name                     "Measurement of cultural property 1000017428: 420mm."@en , "Misura del bene culturale 1000017428: 420mm."@it .
+        l0:name                     "Measurement of cultural property 1000017428: 420mm"@en , "Misura del bene culturale 1000017428: 420mm"@it .
 
 ar-cis:043da8a9dfc951488a76bbff5958b680
         a                     cis:CulturalInstituteOrSite ;
@@ -374,10 +368,10 @@ ar-role:HeritageProtectionAgency
 
 ar-Measurement:1000017428-1-width
         a                           arco-dd:Measurement ;
-        rdfs:label                  "Measurement of cultural property 1000017428: 585mm."@en , "Misura del bene culturale 1000017428: 585mm."@it ;
+        rdfs:label                  "Measurement of cultural property 1000017428: 585mm"@en , "Misura del bene culturale 1000017428: 585mm"@it ;
         arco-dd:hasMeasurementType  arco-dd:Width ;
         arco-dd:hasValue            ar-Value:1000017428-1-width-585 ;
-        l0:name                     "Measurement of cultural property 1000017428: 585mm."@en , "Misura del bene culturale 1000017428: 585mm."@it .
+        l0:name                     "Measurement of cultural property 1000017428: 585mm"@en , "Misura del bene culturale 1000017428: 585mm"@it .
 
 ar-city:perugia  a  clvapit:City ;
         rdfs:label  "Perugia" ;
@@ -392,20 +386,18 @@ ar-HistoricOrArtisticProperty:1000017428
         dc:coverage                     ar-city:perugia ;
         dc:creator                      ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
         dc:date                         ar-TimeInterval:1864-1864 ;
-        dc:description                  "Vedute: Perugia. Soggetti profani: laa prima compagnia del secondo reggimento del genio a Perugia." ;
+        dc:description                  "Vedute: Perugia. Soggetti profani: laa prima compagnia del secondo reggimento del genio a Perugia" ;
         dc:format                       ar-MeasurementCollection:1000017428-1 ;
         dc:identifier                   "1000017428" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000017428-legal-situation-proprieta-ente-pubblico-territoriale" ;
+        dc:rights                       ar-legalSituation:1000017428-legal-situation-proprieta-ente-pubblico-territoriale ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
-        dc:subject                      ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7 ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici" ] ;
+        dc:subject                      ar-Subject:db5409ee19a9d9e8ca6d65d541bc69f7 , <http://culturaitalia.it/pico/thesaurus/4.2#stampe_incisioni_matrici> ;
         dc:title                        <https://w3id.org/arco/resource/Title/1000017428-la-prima-campagna-del-2%C2%B0-reggimento-del-genio-a-perugia> ;
         dc:type                         ar-culturalPropertyType:42c2d1489e80b781f7b103e054b8524a ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/57d3ff2d024e7d2ee10f106b3d415321" ;
+                ar-address:57d3ff2d024e7d2ee10f106b3d415321 ;
         arco-arco:catalogueNumber       "00017428" ;
         arco-arco:hasCataloguingAgency  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
         arco-arco:hasHeritageProtectionAgency
@@ -415,7 +407,7 @@ ar-HistoricOrArtisticProperty:1000017428
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordS/1000017428> ;
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/1000017428-acquisition-1> ;
-        arco-cd:hasAuthor               ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        arco-cd:hasAuthor               ar-agent:1d3dc784bb40790356cfec429824bd15 ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:1000017428-1 ;
         arco-cd:hasDating               ar-dating:1000017428-1 ;
@@ -434,7 +426,7 @@ ar-HistoricOrArtisticProperty:1000017428
                 ar-MeasurementCollection:1000017428-1 ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017428 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:21c5b498ba9974a305f918d4084ddfc6 ;
+                ar-address:57d3ff2d024e7d2ee10f106b3d415321 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1000017428-alternative-1 , ar-timeIndexedTypedLocation:1000017428-current .
 
@@ -449,7 +441,7 @@ ar-interpretationCriterion:data
 
 ar-catalogueRecordVersion:1000017428-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 2006 Sargentini C." ;
+        rdfs:label                   "COMPILAZIONE - 2006 Sargentini C" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1000017428-compilation-90b9ab24c15306f938c8ca3a3e41fb6c , ar-timeIndexedRole:1000017428-f22bbb019d3c60b3a5f7d21ed8c526fb ;
@@ -495,6 +487,14 @@ ar-role:DigitalTranscriptionOperator
 ar-role:ResponsibleCompilation
         a           roapit:Role ;
         rdfs:label  "Responsible research and compilation"@en , "Responsabile ricerca e redazione"@it .
+
+ar-agent:1d3dc784bb40790356cfec429824bd15
+        a                             CPV:Person ;
+        rdfs:label                    "Bucco Luigi" ;
+        arco-cd:agentDate             "notizie metà sec. XIX" ;
+        arco-cd:agentLocalIdentifier  "00001506" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:1000017428 ;
+        l0:name                       "Bucco Luigi" .
 
 <https://w3id.org/arco/resource/SiteSpecification/comunale>
         a           arco-location:SiteSpecification ;
@@ -546,7 +546,7 @@ ar-TimeInterval:sec-xix
 ar-PreferredAuthorshipAttribution:1000017428-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1000017428"@it , "Preferred authorship attribution of cultural property: 1000017428"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:bf606979b2b333bae8abdfdc59b16a3d ;
+        arco-cd:hasAttributedAuthor  ar-agent:1d3dc784bb40790356cfec429824bd15 ;
         arco-cd:hasInterpretationCriterion
                 ar-interpretationCriterion:firma ;
         arco-cd:isAuthorshipAttributionOf
@@ -585,11 +585,12 @@ ar-address:57d3ff2d024e7d2ee10f106b3d415321
         clvapit:hasProvince  ar-province:pg .
 
 ar-SourceAndDocument:1000017428-source-document-1
-        a                             arco-cd:SourceAndDocument ;
-        rdfs:label                    "Fonti e documenti 1 del bene culturale: 1000017428"@it , "Sources and documents 1 of cultural property: 1000017428"@en ;
-        arco-cd:documentationTitle    "Inventario della raccolta storico topografica della città di Perugia" ;
-        arco-cd:hasArchive            ar-agent:6a1505e0ccde70bab627a850c1459d30 ;
-        arco-cd:hasDocumentationType  ar-docutmentationType:inventario ;
-        arco-cd:isDocumentationOf     ar-HistoricOrArtisticProperty:1000017428 ;
-        tiapit:time                   "1951" ;
-        l0:name                       "Sources and documents 1 of cultural property: 1000017428"@en , "Fonti e documenti 1 del bene culturale: 1000017428"@en .
+        a                              arco-cd:SourceAndDocument ;
+        rdfs:label                     "Fonti e documenti 1 del bene culturale: 1000017428"@it , "Sources and documents 1 of cultural property: 1000017428"@en ;
+        arco-cd:documentationLocation  "" ;
+        arco-cd:documentationTitle     "Inventario della raccolta storico topografica della città di Perugia" ;
+        arco-cd:hasArchive             ar-agent:6a1505e0ccde70bab627a850c1459d30 ;
+        arco-cd:hasDocumentationType   ar-docutmentationType:inventario ;
+        arco-cd:isDocumentationOf      ar-HistoricOrArtisticProperty:1000017428 ;
+        tiapit:time                    "1951" ;
+        l0:name                        "Sources and documents 1 of cultural property: 1000017428"@en , "Fonti e documenti 1 del bene culturale: 1000017428"@en .

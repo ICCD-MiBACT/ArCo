@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-timeIndexedTypedLocation:1000017424-current
@@ -108,7 +110,7 @@ ar-Value:1000017424-1-width-380
 ar-PreferredAuthorshipAttribution:1000017424-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1000017424"@it , "Preferred authorship attribution of cultural property: 1000017424"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        arco-cd:hasAttributedAuthor  ar-agent:c4fcb4c9bebb4197647dbd8628139c9a ;
         arco-cd:hasInterpretationCriterion
                 ar-interpretationCriterion:firma ;
         arco-cd:isAuthorshipAttributionOf
@@ -117,7 +119,7 @@ ar-PreferredAuthorshipAttribution:1000017424-1
 
 ar-catalogueRecordVersion:1000017424-agg-1
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "AGGIORNAMENTO - 2006 ARTPAST/ Sargentini C." ;
+        rdfs:label                   "AGGIORNAMENTO - 2006 ARTPAST/ Sargentini C" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:2006 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1000017424-agg-1-2395621f73e2aae9fbaa132e0f94e1f7 ;
@@ -142,7 +144,7 @@ ar-CulturalPropertyCataloguingCategory:elemento-dinsieme
 
 ar-timeIndexedRole:1000017424-agg-1-2395621f73e2aae9fbaa132e0f94e1f7
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Sargentini C."@it , "Update responsible compilation: ARTPAST/ Sargentini C."@en ;
+        rdfs:label             "Responsabile ricerca e redazione di aggiornamento: ARTPAST/ Sargentini C"@it , "Update responsible compilation: ARTPAST/ Sargentini C"@en ;
         roapit:isRoleInTimeOf  ar-agent:2395621f73e2aae9fbaa132e0f94e1f7 ;
         roapit:withRole        ar-role:UpdateResponsibleCompilation .
 
@@ -156,17 +158,9 @@ ar-province:pg  a   clvapit:Province ;
         rdfs:label  "PG" ;
         l0:name     "PG" .
 
-ar-agent:1a85f6783a4154e9c94c647f09fd20f4
-        a                             CPV:Person ;
-        rdfs:label                    "Lorenzini Alessio" ;
-        arco-cd:agentDate             "sec. XVIII" ;
-        arco-cd:agentLocalIdentifier  "00001090" ;
-        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:1000017424 ;
-        l0:name                       "Lorenzini Alessio" .
-
 ar-agent:2395621f73e2aae9fbaa132e0f94e1f7
         a           l0:Agent ;
-        rdfs:label  "ARTPAST/ Sargentini C." .
+        rdfs:label  "ARTPAST/ Sargentini C" .
 
 <https://w3id.org/arco/resource/Title/1000017424-prospetto-delle-due-facciate-di-palazzo-bonaini-boldrini>
         a           arco-cd:Title ;
@@ -185,7 +179,7 @@ ar-SiteDefinition:palazzo
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017424-inscription-2 ;
         arco-dd:positionOnCulturalProperty
                 "in basso a destra" ;
-        arco-dd:transcript              "LORENZINI F(ECIT) 177..." .
+        arco-dd:transcript              "LORENZINI F(ECIT) 177.." .
 
 ar-culturalPropertyDefinition:disegno
         a           arco-dd:CulturalPropertyDefinition ;
@@ -227,7 +221,7 @@ ar-agentrole:1000017424-heritage-protection-agency
 
 ar-catalogueRecordVersion:1000017424-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 1989 Rosi A.M." ;
+        rdfs:label                   "COMPILAZIONE - 1989 Rosi A.M" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:1989 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1000017424-compilation-ee45dc7c98a8637a4ae77b851279e80f , ar-timeIndexedRole:1000017424-f22bbb019d3c60b3a5f7d21ed8c526fb ;
@@ -264,7 +258,7 @@ ar-Measurement:1000017424-1-width
 
 ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d
         a           l0:Agent ;
-        rdfs:label  "Garibaldi V." .
+        rdfs:label  "Garibaldi V" .
 
 <https://w3id.org/arco/resource/Inscription/1000017424-inscription-1>
         a                               arco-dd:Inscription ;
@@ -274,7 +268,7 @@ ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017424-inscription-1 ;
         arco-dd:positionOnCulturalProperty
                 "in alto, entro cartiglio" ;
-        arco-dd:transcript              "PROSPETTO DELLE DUE FACCIATE DEL NUOVO/ PALAZZO DELL'ILL(USTRISS)IMO SIG(NOR) CO(N)TE ORA/ZIO BONAINI BOLDRINI IN PERUGIA." .
+        arco-dd:transcript              "PROSPETTO DELLE DUE FACCIATE DEL NUOVO/ PALAZZO DELL'ILL(USTRISS)IMO SIG(NOR) CO(N)TE ORA/ZIO BONAINI BOLDRINI IN PERUGIA" .
 
 ar-CulturalEntityTechnicalStatus:1000017424-inscription-2
         a           arco-dd:CulturalEntityTechnicalStatus ;
@@ -299,7 +293,7 @@ ar-SiteType:palazzo-comunale
 
 ar-agent:6b42c6f0d1145edee89a150b813a3a10
         a           l0:Agent ;
-        rdfs:label  "Delogu G.L." .
+        rdfs:label  "Delogu G.L" .
 
 ar-agentrole:1000017424-cataloguing-agency
         a                   arco-core:AgentRole ;
@@ -317,6 +311,14 @@ ar-TechnicalCharacteristic:carta-inchiostro-di-china-acquerellatura
 ar-TimeInterval:1989  a  tiapit:TimeInterval ;
         rdfs:label   "1989" ;
         tiapit:time  "1989" .
+
+ar-agent:c4fcb4c9bebb4197647dbd8628139c9a
+        a                             CPV:Person ;
+        rdfs:label                    "Lorenzini Alessio" ;
+        arco-cd:agentDate             "sec. XVIII" ;
+        arco-cd:agentLocalIdentifier  "00001090" ;
+        arco-cd:isAuthorOf            ar-HistoricOrArtisticProperty:1000017424 ;
+        l0:name                       "Lorenzini Alessio" .
 
 ar-ConservationStatus:1000017424-conservation-status-1
         a           arco-dd:ConservationStatus ;
@@ -338,20 +340,18 @@ ar-HistoricOrArtisticProperty:1000017424
         dc:coverage                     ar-city:perugia ;
         dc:creator                      ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
         dc:date                         ar-TimeInterval:post-1769-ante-1780 ;
-        dc:description                  "Architetture: Perugia: Palazzo Bonaini - Boldrini: prospetto delle due facciate." ;
+        dc:description                  "Architetture: Perugia: Palazzo Bonaini - Boldrini: prospetto delle due facciate" ;
         dc:format                       ar-MeasurementCollection:1000017424-1 ;
         dc:identifier                   "1000017424" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1000017424-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:1000017424-legal-situation-proprieta-stato ;
         dc:source                       <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
-        dc:subject                      ar-Subject:71f760c94408b3e4ac8727a2fc876817 ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.2#disegni" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.2#disegni> , ar-Subject:71f760c94408b3e4ac8727a2fc876817 ;
         dc:title                        <https://w3id.org/arco/resource/Title/1000017424-prospetto-delle-due-facciate-di-palazzo-bonaini-boldrini> ;
         dc:type                         ar-culturalPropertyType:ff5b440ba28d32ec3f3affeda37d3b48 ;
         <http://purl.org/dc/terms/isReferencedBy>
                 <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/13f44a6b924a1404e569deef12f98db2" ;
+                ar-address:13f44a6b924a1404e569deef12f98db2 ;
         arco-arco:catalogueNumber       "00017424" ;
         arco-arco:hasCataloguingAgency  ar-agent:182e1d9074ba174e80f41429ad21f8a2 ;
         arco-arco:hasCulturalPropertyCataloguingCategory
@@ -362,7 +362,7 @@ ar-HistoricOrArtisticProperty:1000017424
         arco-arco:uniqueIdentifier      "1000017424" ;
         arco-catalogue:isDescribedByCatalogueRecord
                 <https://w3id.org/arco/resource/CatalogueRecordD/1000017424> ;
-        arco-cd:hasAuthor               ar-agent:1a85f6783a4154e9c94c647f09fd20f4 ;
+        arco-cd:hasAuthor               ar-agent:c4fcb4c9bebb4197647dbd8628139c9a ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:1000017424-1 ;
         arco-cd:hasDating               ar-dating:1000017424-1 ;
@@ -385,7 +385,7 @@ ar-HistoricOrArtisticProperty:1000017424
                 ar-MeasurementCollection:1000017424-1 ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1000017424 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:04bb4e9ad6589187dd6f70fb62022f7a ;
+                ar-address:13f44a6b924a1404e569deef12f98db2 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1000017424-current .
 
@@ -418,7 +418,7 @@ ar-TimeInterval:1990  a  tiapit:TimeInterval ;
 
 ar-catalogueRecordVersion:1000017424-rvm
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "TRASCRIZIONE PER MEMORIZZAZIONE - 1996 Delogu G.L." ;
+        rdfs:label                   "TRASCRIZIONE PER MEMORIZZAZIONE - 1996 Delogu G.L" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:1996 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1000017424-rvm-6b42c6f0d1145edee89a150b813a3a10 , ar-timeIndexedRole:1000017424-f22bbb019d3c60b3a5f7d21ed8c526fb ;
@@ -442,7 +442,7 @@ ar-role:UpdateResponsibleCompilation
 
 ar-timeIndexedRole:1000017424-f22bbb019d3c60b3a5f7d21ed8c526fb
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Garibaldi V."@it , "Official in charge: Garibaldi V."@en ;
+        rdfs:label             "Funzionario responsabile: Garibaldi V"@it , "Official in charge: Garibaldi V"@en ;
         roapit:isRoleInTimeOf  ar-agent:a6c416052947bbf49cb9cb7fcb6ce41d ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -503,7 +503,7 @@ ar-agent:8cb75ec50c37b769b2c85210b3716feb
 
 ar-timeIndexedRole:1000017424-rvm-6b42c6f0d1145edee89a150b813a3a10
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "TRASCRIZIONE PER MEMORIZZAZIONE da Delogu G.L."@it , "Digital transcription by Delogu G.L."@en ;
+        rdfs:label             "TRASCRIZIONE PER MEMORIZZAZIONE da Delogu G.L"@it , "Digital transcription by Delogu G.L"@en ;
         roapit:isRoleInTimeOf  ar-agent:6b42c6f0d1145edee89a150b813a3a10 ;
         roapit:withRole        ar-role:DigitalTranscriptionOperator .
 
@@ -531,7 +531,7 @@ ar-interpretationCriterion:data
                 arco-catalogue:C ;
         arco-catalogue:systemRecordCode
                 "D-200-ICCD11306860" ;
-        arco-core:note  "Ultimo aggiornamento: 2007 - Donà A. - nell'ambito del progetto \"Catalogazione speditiva dei beni mobili conservati nei depositi dei musei statali\"." .
+        arco-core:note  "Ultimo aggiornamento: 2007 - Donà A. - nell'ambito del progetto \"Catalogazione speditiva dei beni mobili conservati nei depositi dei musei statali\"" .
 
 ar-Site:0d6864b4e4ab0182acffcc1a57334f84
         a                          cis:Site ;
@@ -571,7 +571,7 @@ ar-photograpyDocumentation:1000017424-photographic-documentation-1
 
 ar-agent:ee45dc7c98a8637a4ae77b851279e80f
         a           l0:Agent ;
-        rdfs:label  "Rosi A.M." .
+        rdfs:label  "Rosi A.M" .
 
 ar-Measurement:1000017424-1-height
         a                           arco-dd:Measurement ;
@@ -582,7 +582,7 @@ ar-Measurement:1000017424-1-height
 
 ar-timeIndexedRole:1000017424-compilation-ee45dc7c98a8637a4ae77b851279e80f
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Rosi A.M."@en , "Compilazione da Rosi A.M."@it ;
+        rdfs:label             "Compilation by Rosi A.M"@en , "Compilazione da Rosi A.M"@it ;
         roapit:isRoleInTimeOf  ar-agent:ee45dc7c98a8637a4ae77b851279e80f ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -596,8 +596,8 @@ ar-dating:1000017424-1
 
 ar-agent:012cf70226157d93877a7a4128f14e96
         a           l0:Agent ;
-        rdfs:label  "Cristostomi P." ;
-        l0:name     "Cristostomi P." .
+        rdfs:label  "Cristostomi P" ;
+        l0:name     "Cristostomi P" .
 
 ar-Subject:71f760c94408b3e4ac8727a2fc876817
         a                    arco-cd:Subject ;

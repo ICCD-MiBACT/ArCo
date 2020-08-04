@@ -33,6 +33,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
@@ -44,6 +45,8 @@
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBAC, ICCD)</dc:creator>
         <dc:creator>Ludovica Marinucci (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Luigi Asprino (ISTC-CNR, STLab)</dc:creator>
+        <dc:creator>Margherita Porena (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Maria Letizia Mancinelli (MiBAC, ICCD)</dc:creator>
         <dc:creator>Valentina Carriero (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Valentina Presutti (ISTC-CNR, STLab)</dc:creator>

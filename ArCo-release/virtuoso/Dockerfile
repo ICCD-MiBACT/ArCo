@@ -9,24 +9,24 @@ COPY download_release.sh /download_release.sh
 RUN /bin/bash /download_release.sh ${KG_VERSION}
 
 # Add ontologies
-RUN mkdir /d/ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /d/ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /d/ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /d/ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl /d/ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl /d/ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /d/ontologies
-ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /d/ontologies
+RUN mkdir /ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl /ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/core/core.owl /ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/catalogue/catalogue.owl /ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/denotative-description/denotative-description.owl /ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl /ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/location/location.owl /ontologies
+ADD https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/context-description/context-description.owl /ontologies
 
 # Add DB Unico
 RUN mkdir /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-luoghi.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-eventi.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-anagrafeBiblioteche.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-contenitoriFisici.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-contenitoriGiuridici.ttl.gz /d/cis
-ADD http://etna.istc.cnr.it/arco-data/cis/dataset-archiviStato.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-thesaurus_definizione_del_bene_reperti_archeologici.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-luoghi.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-eventi.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-anagrafeBiblioteche.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-contenitoriFisici.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-contenitoriGiuridici.ttl.gz /d/cis
+ADD http://arco.istc.cnr.it/arco-data/cis/dataset-archiviStato.ttl.gz /d/cis
 
 
 # Add Virtuoso config

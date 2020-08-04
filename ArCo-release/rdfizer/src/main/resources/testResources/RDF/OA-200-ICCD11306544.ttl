@@ -70,15 +70,17 @@
 @prefix ar-city: <https://w3id.org/arco/resource/City/> .
 @prefix ar-docutmentationType: <https://w3id.org/arco/resource/DocumentationType/> .
 @prefix COV:   <https://w3id.org/italia/onto/COV/> .
-@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix arco-event: <https://w3id.org/arco/ontology/cultural-event/> .
+@prefix ar-accessProfile: <https://w3id.org/arco/resource/AccessProfile/> .
 @prefix ar-HistoricOrArtisticProperty: <https://w3id.org/arco/resource/HistoricOrArtisticProperty/> .
 @prefix ar-timeIndexedTypedLocation: <https://w3id.org/arco/resource/TimeIndexedTypedLocation/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ar-Measurement: <https://w3id.org/arco/resource/Measurement/> .
+@prefix arco-mp: <https://w3id.org/arco/ontology/movable-property/> .
 @prefix ar-addressArea: <https://w3id.org/arco/resource/AddressArea/> .
 @prefix ar-CulturalPropertyCataloguingCategory: <https://w3id.org/arco/resource/CulturalPropertyCataloguingCategory/> .
 @prefix xs:    <http://www.w3.org/2001/XMLSchema> .
+@prefix arco-ip: <https://w3id.org/arco/ontology/immovable-property/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ar-agentrole:1200489492-cataloguing-agency
@@ -93,11 +95,6 @@ ar-agentrole:1200489492-cataloguing-agency
         tiapit:atTime  ar-TimeInterval:1954 ;
         l0:name        "Conservation intervention 3 on cultural property 1200489492"@en , "Intervento conservativo 3 sul bene culturale 1200489492"@it .
 
-<https://w3id.org/arco/resource/MeasurementUnit/nr>
-        a           mu:MeasurementUnit ;
-        rdfs:label  "NR" ;
-        l0:name     "NR" .
-
 ar-culturalPropertyDefinition:dipinto
         a           arco-dd:CulturalPropertyDefinition ;
         rdfs:label  "dipinto" .
@@ -108,16 +105,20 @@ ar-culturalPropertyDefinition:dipinto
         l0:name     "collocazione successiva" .
 
 ar-bibliography:1200489492-bibliography-3
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 3 of cultural property: 1200489492"@en , "Bibliografia 3 del bene culturale: 1200489492"@it ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:1200489492 ;
-        arco-core:note            "p. 86" ;
-        l0:name                   "Bibliography 3 of cultural property: 1200489492"@en , "Bibliografia 3 del bene culturale: 1200489492"@en .
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 3 of cultural property: 1200489492"@en , "Bibliografia 3 del bene culturale: 1200489492"@it ;
+        arco-cd:bibliographicReference  "E. di Majo - 2006" ;
+        arco-cd:bibliographicReferenceAuthor
+                "E. di Majo" ;
+        arco-cd:bibliographicReferenceDate
+                "2006" ;
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:1200489492 ;
+        arco-core:note                  "p. 86" ;
+        l0:name                         "Bibliography 3 of cultural property: 1200489492"@en , "Bibliografia 3 del bene culturale: 1200489492"@en .
 
 ar-Value:1200489492-1-width-308
         a                      mu:Value ;
         rdfs:label             "308"@en , "308"@it ;
-        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/nr> ;
         mu:value               "308" .
 
 ar-TimeInterval:1846-1846
@@ -146,14 +147,12 @@ ar-HistoricOrArtisticProperty:1200489492
         dc:coverage                     ar-city:roma ;
         dc:creator                      ar-agent:e3f5df208cd2709c9d16a469e0b8667a ;
         dc:date                         ar-TimeInterval:1846-1846 ;
-        dc:description                  "Episodio della storia siciliana. Numerose figure con al centro un uomo con la spada, uno disteso ferito ed una donna svenuta tra le braccia di un'altra figura maschile." ;
+        dc:description                  "Episodio della storia siciliana. Numerose figure con al centro un uomo con la spada, uno disteso ferito ed una donna svenuta tra le braccia di un'altra figura maschile" ;
         dc:format                       ar-MeasurementCollection:1200489492-1 ;
         dc:identifier                   "1200489492" ;
-        dc:rights                       "https://w3id.org/arco/resource/LegalSituation/1200489492-legal-situation-proprieta-stato" ;
+        dc:rights                       ar-legalSituation:1200489492-legal-situation-proprieta-stato ;
         dc:source                       ar-CatalogueRecordOA:1200489492 ;
-        dc:subject                      ar-Subject:fb02d68efdd272a1fdf9f723c383e284 ;
-        dc:subject                      [ xsi:type
-                          "http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva" ] ;
+        dc:subject                      <http://culturaitalia.it/pico/thesaurus/4.1#opere_d_arte_visiva> , ar-Subject:fb02d68efdd272a1fdf9f723c383e284 ;
         dc:title                        <https://w3id.org/arco/resource/Title/1200489492-i-vespri-siciliani> ;
         dc:type                         ar-culturalPropertyType:54764e0bac66f48b0e7af57043f65a0c ;
         <http://purl.org/dc/terms/bibliographicCitation>
@@ -161,9 +160,8 @@ ar-HistoricOrArtisticProperty:1200489492
         <http://purl.org/dc/terms/isReferencedBy>
                 ar-CatalogueRecordOA:1200489492 ;
         <http://purl.org/dc/terms/spatial>
-                "https://w3id.org/arco/resource/Address/75c88c672817e56f209bf659a1093119" ;
+                ar-address:75c88c672817e56f209bf659a1093119 ;
         arco-arco:catalogueNumber       "00489492" ;
-        arco-arco:description           "Episodio della storia siciliana. Numerose figure con al centro un uomo con la spada, uno disteso ferito ed una donna svenuta tra le braccia di un'altra figura maschile." ;
         arco-arco:hasCataloguingAgency  ar-agent:233d0c1d9f7d0cb96383afee5c81148b ;
         arco-arco:hasCulturalPropertyCataloguingCategory
                 ar-CulturalPropertyCataloguingCategory:opera-isolata ;
@@ -174,7 +172,7 @@ ar-HistoricOrArtisticProperty:1200489492
         arco-catalogue:isDescribedByCatalogueRecord
                 ar-CatalogueRecordOA:1200489492 ;
         arco-cd:hasAcquisition          <https://w3id.org/arco/resource/Acquisition/1200489492-acquisition-1> ;
-        arco-cd:hasAuthor               ar-agent:e3f5df208cd2709c9d16a469e0b8667a ;
+        arco-cd:hasAuthor               ar-agent:a3a6bc99f600ffaa12a71e8a4b0ebe0f ;
         arco-cd:hasAuthorshipAttribution
                 ar-PreferredAuthorshipAttribution:1200489492-1 ;
         arco-cd:hasBibliography         ar-bibliography:1200489492-bibliography-1 , ar-bibliography:1200489492-bibliography-2 , ar-bibliography:1200489492-bibliography-3 , ar-bibliography:1200489492-bibliography-4 ;
@@ -186,6 +184,7 @@ ar-HistoricOrArtisticProperty:1200489492
         arco-cd:hasTitle                <https://w3id.org/arco/resource/Title/1200489492-i-vespri-siciliani> ;
         arco-cd:subject                 "soggetto storico" ;
         arco-cd:title                   "I Vespri Siciliani" ;
+        arco-core:description           "Episodio della storia siciliana. Numerose figure con al centro un uomo con la spada, uno disteso ferito ed una donna svenuta tra le braccia di un'altra figura maschile" ;
         arco-core:hasAgentRole          ar-agentrole:1200489492-heritage-protection-agency , ar-agentrole:1200489492-cataloguing-agency ;
         arco-dd:hasAffixedElement       <https://w3id.org/arco/resource/Inscription/1200489492-inscription-1> ;
         arco-dd:hasConservationStatus   ar-ConservationStatus:1200489492-conservation-status-1 ;
@@ -196,7 +195,7 @@ ar-HistoricOrArtisticProperty:1200489492
                 ar-MeasurementCollection:1200489492-1 ;
         arco-dd:hasTechnicalStatus      ar-CulturalEntityTechnicalStatus:1200489492 ;
         arco-location:hasCulturalPropertyAddress
-                ar-address:d8f42839a5115585b2e3c3fd39cd551a ;
+                ar-address:75c88c672817e56f209bf659a1093119 ;
         arco-location:hasTimeIndexedTypedLocation
                 ar-timeIndexedTypedLocation:1200489492-alternative-1 , ar-timeIndexedTypedLocation:1200489492-alternative-2 , ar-timeIndexedTypedLocation:1200489492-current .
 
@@ -217,7 +216,7 @@ ar-photograpyDocumentation:1200489492-photographic-documentation-1
 ar-PreferredAuthorshipAttribution:1200489492-1
         a                            arco-cd:PreferredAuthorshipAttribution ;
         rdfs:label                   "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1200489492"@it , "Preferred authorship attribution of cultural property: 1200489492"@en ;
-        arco-cd:hasAttributedAuthor  ar-agent:e3f5df208cd2709c9d16a469e0b8667a ;
+        arco-cd:hasAttributedAuthor  ar-agent:a3a6bc99f600ffaa12a71e8a4b0ebe0f ;
         arco-cd:isAuthorshipAttributionOf
                 ar-HistoricOrArtisticProperty:1200489492 ;
         l0:name                      "Attribuzione di autore preferita, maggiormente accreditata o convincente del bene: 1200489492"@it , "Preferred authorship attribution of cultural property: 1200489492"@en .
@@ -237,12 +236,12 @@ ar-CatalogueRecordOA:1200489492
                 arco-catalogue:C ;
         arco-catalogue:systemRecordCode
                 "OA-200-ICCD11306544" ;
-        arco-core:note  "Bibliografia: P. Bucarelli, La Galleria Nazionale d'Arte Moderna, Roma 1951, pp. 9, 57, fig. p. 70;G. Nicodemi, Francesco Hayez, Milano 1962, pp. 192, 227, 255, tav. 129;I. Faldi, B. Mantura, La Galleria Nazionale d'Arte Moderna, Roma 1977, p. 62, n.39;M.C. Gozzoli, F. Mazzocca (a cura di), Hayez, catalogo della mostra, Milano 1983, pp.215-218, n.102;G. Cogeval, A. Scarlini, in Triomphe et Mort du Heros. La peinture d'historie en Europe dei Rubens à Manet, catalogo della mostra, E. Mai e A. Repp-Eckert, Colonia e Lione, 1988, pp. 312-313 fig.;E. Di Majo, E. Pagliani, in Kermes, n.7, 1990, pp.10-19; F. Mazzocca, Francesco Hayez: catalogo ragionato, Milano, 1994, pp. 289-291, n. 277;F. Mazzocca, in Civiltà dell'Ottocento. Le arti figurative, Napoli 1997, p. 483, n. 17.66;E. di Majo, in Galleria Nazionale d'Arte Moderna. Le collezioni. Il XIX secolo. E. Di Majo, M. Lafranconi (a cura di), Electa, Milano 2006, p. 86;R. Muzii, in Hayez nella Milano di Manzoni e Verdi, F. Mazzocca, I. Marelli, S. Bandera, (a cura di), catalogo della mostra, Milano, 2011, p. 92-93, v.1." .
+        arco-core:note  "Bibliografia: P. Bucarelli, La Galleria Nazionale d'Arte Moderna, Roma 1951, pp. 9, 57, fig. p. 70;G. Nicodemi, Francesco Hayez, Milano 1962, pp. 192, 227, 255, tav. 129;I. Faldi, B. Mantura, La Galleria Nazionale d'Arte Moderna, Roma 1977, p. 62, n.39;M.C. Gozzoli, F. Mazzocca (a cura di), Hayez, catalogo della mostra, Milano 1983, pp.215-218, n.102;G. Cogeval, A. Scarlini, in Triomphe et Mort du Heros. La peinture d'historie en Europe dei Rubens à Manet, catalogo della mostra, E. Mai e A. Repp-Eckert, Colonia e Lione, 1988, pp. 312-313 fig.;E. Di Majo, E. Pagliani, in Kermes, n.7, 1990, pp.10-19; F. Mazzocca, Francesco Hayez: catalogo ragionato, Milano, 1994, pp. 289-291, n. 277;F. Mazzocca, in Civiltà dell'Ottocento. Le arti figurative, Napoli 1997, p. 483, n. 17.66;E. di Majo, in Galleria Nazionale d'Arte Moderna. Le collezioni. Il XIX secolo. E. Di Majo, M. Lafranconi (a cura di), Electa, Milano 2006, p. 86;R. Muzii, in Hayez nella Milano di Manzoni e Verdi, F. Mazzocca, I. Marelli, S. Bandera, (a cura di), catalogo della mostra, Milano, 2011, p. 92-93, v.1" .
 
 ar-agent:94ee2cb95cf3efc3d05c2107772a5d39
         a           l0:Agent ;
-        rdfs:label  "G.N.A.M." ;
-        l0:name     "G.N.A.M." .
+        rdfs:label  "G.N.A.M" ;
+        l0:name     "G.N.A.M" .
 
 ar-SiteType:palazzo-espositivo
         a           arco-location:SiteType ;
@@ -271,7 +270,7 @@ ar-province:rm  a   clvapit:Province ;
 
 ar-timeIndexedRole:1200489492-compilation-f283fc77a2a4a26b7f5447244a800963
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Sepe S."@en , "Compilazione da Sepe S."@it ;
+        rdfs:label             "Compilation by Sepe S"@en , "Compilazione da Sepe S"@it ;
         roapit:isRoleInTimeOf  ar-agent:f283fc77a2a4a26b7f5447244a800963 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -287,17 +286,29 @@ ar-timeIndexedRole:1200489492-compilation-f283fc77a2a4a26b7f5447244a800963
         l0:name        "Conservation intervention 2 on cultural property 1200489492"@en , "Intervento conservativo 2 sul bene culturale 1200489492"@it .
 
 ar-bibliography:1200489492-bibliography-2
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 2 of cultural property: 1200489492"@en , "Bibliografia 2 del bene culturale: 1200489492"@it ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:1200489492 ;
-        arco-core:note            "p.483, n. 17.66" ;
-        l0:name                   "Bibliography 2 of cultural property: 1200489492"@en , "Bibliografia 2 del bene culturale: 1200489492"@en .
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliography 2 of cultural property: 1200489492"@en , "Bibliografia 2 del bene culturale: 1200489492"@it ;
+        arco-cd:bibliographicReference  "F. Mazzocca - 1997" ;
+        arco-cd:bibliographicReferenceAuthor
+                "F. Mazzocca" ;
+        arco-cd:bibliographicReferenceDate
+                "1997" ;
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:1200489492 ;
+        arco-core:note                  "p.483, n. 17.66" ;
+        l0:name                         "Bibliografia 2 del bene culturale: 1200489492"@en , "Bibliography 2 of cultural property: 1200489492"@en .
 
 ar-legalSituation:1200489492-legal-situation-proprieta-stato
         a                 arco-cd:LegalSituation ;
         rdfs:label        "Condizione giuridica del bene culturale 1200489492: proprietà Stato"@it , "Legal situation of cultural property 1200489492: proprietà Stato"@en ;
         arco-cd:hasOwner  ar-agent:abe7006b67d16b266c9e407e90352a94 ;
         l0:name           "Condizione giuridica del bene culturale 1200489492: proprietà Stato"@it , "Legal situation of cultural property 1200489492: proprietà Stato"@en .
+
+ar-agent:a3a6bc99f600ffaa12a71e8a4b0ebe0f
+        a                   CPV:Person ;
+        rdfs:label          "Hayez Francesco" ;
+        arco-cd:agentDate   "Venezia 1791 - Milano 1882" ;
+        arco-cd:isAuthorOf  ar-HistoricOrArtisticProperty:1200489492 ;
+        l0:name             "Hayez Francesco" .
 
 ar-Site:e4e559be375e18260b4df5aeabf79691
         a                          cis:Site ;
@@ -341,7 +352,7 @@ ar-address:75c88c672817e56f209bf659a1093119
 
 ar-catalogueRecordVersion:1200489492-compilation
         a                            arco-catalogue:CatalogueRecordVersion ;
-        rdfs:label                   "COMPILAZIONE - 1995 Biscaglia M. Sepe S." ;
+        rdfs:label                   "COMPILAZIONE - 1995 Biscaglia M Sepe S" ;
         arco-catalogue:editedAtTime  ar-TimeInterval:1995 ;
         arco-catalogue:hasCatalogueRecordVersionRiT
                 ar-timeIndexedRole:1200489492-65f0360799350db175581fc52c75681a , ar-timeIndexedRole:1200489492-compilation-f283fc77a2a4a26b7f5447244a800963 , ar-timeIndexedRole:1200489492-compilation-6a9c0134b9dcb5c538c1dc61370ec721 , ar-timeIndexedRole:1200489492-41b3f08acfb7283ee8b9cb20cb20c221 ;
@@ -363,21 +374,25 @@ ar-catalogueRecordVersion:1200489492-compilation
         rdfs:label  "Napoli" .
 
 ar-bibliography:1200489492-bibliography-1
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 1 of cultural property: 1200489492"@en , "Bibliografia 1 del bene culturale: 1200489492"@it ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:1200489492 ;
-        arco-core:note            "pp. 289-291, n. 277" ;
-        l0:name                   "Bibliography 1 of cultural property: 1200489492"@en , "Bibliografia 1 del bene culturale: 1200489492"@en .
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 1 del bene culturale: 1200489492"@it , "Bibliography 1 of cultural property: 1200489492"@en ;
+        arco-cd:bibliographicReference  "F. Mazzocca - 1994" ;
+        arco-cd:bibliographicReferenceAuthor
+                "F. Mazzocca" ;
+        arco-cd:bibliographicReferenceDate
+                "1994" ;
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:1200489492 ;
+        arco-core:note                  "pp. 289-291, n. 277" ;
+        l0:name                         "Bibliografia 1 del bene culturale: 1200489492"@en , "Bibliography 1 of cultural property: 1200489492"@en .
 
 ar-Value:1200489492-1-height-225
         a                      mu:Value ;
         rdfs:label             "225"@en , "225"@it ;
-        mu:hasMeasurementUnit  <https://w3id.org/arco/resource/MeasurementUnit/nr> ;
         mu:value               "225" .
 
 ar-timeIndexedRole:1200489492-65f0360799350db175581fc52c75681a
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Frezzotti S."@it , "Official in charge: Frezzotti S."@en ;
+        rdfs:label             "Funzionario responsabile: Frezzotti S"@it , "Official in charge: Frezzotti S"@en ;
         roapit:isRoleInTimeOf  ar-agent:dc29250b11926a78ecd907a2c12691e8 ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -405,7 +420,7 @@ ar-city:roma  a     clvapit:City ;
 
 ar-timeIndexedRole:1200489492-compilation-6a9c0134b9dcb5c538c1dc61370ec721
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Compilation by Biscaglia M."@en , "Compilazione da Biscaglia M."@it ;
+        rdfs:label             "Compilation by Biscaglia M"@en , "Compilazione da Biscaglia M"@it ;
         roapit:isRoleInTimeOf  ar-agent:6a9c0134b9dcb5c538c1dc61370ec721 ;
         roapit:withRole        ar-role:ResponsibleCompilation .
 
@@ -438,11 +453,11 @@ ar-agent:dde05b2249685fbbff91ccb49032fef9
 
 <https://w3id.org/arco/resource/CulturalEvent/13f548709525c9148af0a723680f2578>
         a                           cis:CulturalEvent ;
-        rdfs:label                  "Civiltà dell'Ottocento. Dai Borbone ai Savoia." ;
+        rdfs:label                  "Civiltà dell'Ottocento. Dai Borbone ai Savoia" ;
         cis:involvesCulturalEntity  ar-HistoricOrArtisticProperty:1200489492 ;
         clvapit:hasSpatialCoverage  <https://w3id.org/arco/resource/GeographicalFeature/81bd8fe38f89db0696e623c09b6bb820> ;
         tiapit:time                 "1997" ;
-        l0:name                     "Civiltà dell'Ottocento. Dai Borbone ai Savoia." .
+        l0:name                     "Civiltà dell'Ottocento. Dai Borbone ai Savoia" .
 
 ar-TimeInterval:1919  a    tiapit:TimeInterval ;
         arco-arco:endTime  "1919" .
@@ -455,7 +470,7 @@ ar-Site:3f040b8feb2dcde7794f3ab82495e983
 
 ar-timeIndexedRole:1200489492-41b3f08acfb7283ee8b9cb20cb20c221
         a                      roapit:TimeIndexedRole ;
-        rdfs:label             "Funzionario responsabile: Piantoni G."@it , "Official in charge: Piantoni G."@en ;
+        rdfs:label             "Funzionario responsabile: Piantoni G"@it , "Official in charge: Piantoni G"@en ;
         roapit:isRoleInTimeOf  ar-agent:2ccaa360db8eedcaaf164c92227bd390 ;
         roapit:withRole        ar-role:OfficialInCharge .
 
@@ -489,7 +504,7 @@ ar-TimeInterval:1995  a  tiapit:TimeInterval ;
 
 ar-agent:f283fc77a2a4a26b7f5447244a800963
         a           l0:Agent ;
-        rdfs:label  "Sepe S." .
+        rdfs:label  "Sepe S" .
 
 ar-MeasurementCollection:1200489492-1
         a                       arco-dd:MeasurementCollection ;
@@ -506,14 +521,14 @@ ar-Site:052a39ae142d08c0b141821b3883ae27
         cis:siteAddress  ar-address:92195fedf48882dcd45bff75ff25af0c ;
         l0:name          "Ruffo Vincenzo principe di S.Antimo" .
 
+ar-agent:2ccaa360db8eedcaaf164c92227bd390
+        a           l0:Agent ;
+        rdfs:label  "Piantoni G" .
+
 ar-role:HeritageProtectionAgency
         a                   roapit:Role ;
         rdfs:label          "Ente competente per tutela"@it , "Heritage Protection Agency"@en ;
         arco-core:isRoleOf  ar-agentrole:1200489492-heritage-protection-agency .
-
-ar-agent:2ccaa360db8eedcaaf164c92227bd390
-        a           l0:Agent ;
-        rdfs:label  "Piantoni G." .
 
 ar-agent:abe7006b67d16b266c9e407e90352a94
         a                l0:Agent ;
@@ -530,8 +545,8 @@ ar-agent:abe7006b67d16b266c9e407e90352a94
 
 ar-agent:91bd23debf38febcc697eed11284025a
         a           l0:Agent ;
-        rdfs:label  "E.Pagliani, G.Sassu." ;
-        l0:name     "E.Pagliani, G.Sassu." .
+        rdfs:label  "E.Pagliani, G.Sassu" ;
+        l0:name     "E.Pagliani, G.Sassu" .
 
 <https://w3id.org/arco/resource/CulturalEvent/f356790a36226bb7d5972f9159706772>
         a                           cis:CulturalEvent ;
@@ -595,11 +610,16 @@ ar-culturalPropertyType:54764e0bac66f48b0e7af57043f65a0c
         l0:name     "Tipo del bene: dipinto"@it , "Cultural property type: dipinto"@en .
 
 ar-bibliography:1200489492-bibliography-4
-        a                         arco-cd:Bibliography ;
-        rdfs:label                "Bibliography 4 of cultural property: 1200489492"@en , "Bibliografia 4 del bene culturale: 1200489492"@it ;
-        arco-cd:isBibliographyOf  ar-HistoricOrArtisticProperty:1200489492 ;
-        arco-core:note            "pp. 92-93" ;
-        l0:name                   "Bibliography 4 of cultural property: 1200489492"@en , "Bibliografia 4 del bene culturale: 1200489492"@en .
+        a                               arco-cd:Bibliography ;
+        rdfs:label                      "Bibliografia 4 del bene culturale: 1200489492"@it , "Bibliography 4 of cultural property: 1200489492"@en ;
+        arco-cd:bibliographicReference  "R. Muzii - 2011" ;
+        arco-cd:bibliographicReferenceAuthor
+                "R. Muzii" ;
+        arco-cd:bibliographicReferenceDate
+                "2011" ;
+        arco-cd:isBibliographyOf        ar-HistoricOrArtisticProperty:1200489492 ;
+        arco-core:note                  "pp. 92-93" ;
+        l0:name                         "Bibliography 4 of cultural property: 1200489492"@en , "Bibliografia 4 del bene culturale: 1200489492"@en .
 
 <https://w3id.org/arco/resource/Title/1200489492-i-vespri-siciliani>
         a           arco-cd:Title ;
@@ -631,11 +651,11 @@ ar-timeIndexedTypedLocation:1200489492-alternative-1
 
 ar-agent:dc29250b11926a78ecd907a2c12691e8
         a           l0:Agent ;
-        rdfs:label  "Frezzotti S." .
+        rdfs:label  "Frezzotti S" .
 
 ar-agent:6a9c0134b9dcb5c538c1dc61370ec721
         a           l0:Agent ;
-        rdfs:label  "Biscaglia M." .
+        rdfs:label  "Biscaglia M" .
 
 ar-CulturalPropertyCataloguingCategory:opera-isolata
         a           arco-arco:CulturalPropertyCataloguingCategory ;
@@ -644,24 +664,17 @@ ar-CulturalPropertyCataloguingCategory:opera-isolata
 
 ar-Measurement:1200489492-1-width
         a                           arco-dd:Measurement ;
-        rdfs:label                  "Measurement of cultural property 1200489492: 308NR"@en , "Misura del bene culturale 1200489492: 308NR"@it ;
+        rdfs:label                  "Measurement of cultural property 1200489492: 308"@en , "Misura del bene culturale 1200489492: 308"@it ;
         arco-dd:hasMeasurementType  arco-dd:Width ;
         arco-dd:hasValue            ar-Value:1200489492-1-width-308 ;
-        l0:name                     "Measurement of cultural property 1200489492: 308NR"@en , "Misura del bene culturale 1200489492: 308NR"@it .
-
-ar-agent:e3f5df208cd2709c9d16a469e0b8667a
-        a                   CPV:Person ;
-        rdfs:label          "Hayez Francesco" ;
-        arco-cd:agentDate   "Venezia 1791 - Milano 1882" ;
-        arco-cd:isAuthorOf  ar-HistoricOrArtisticProperty:1200489492 ;
-        l0:name             "Hayez Francesco" .
+        l0:name                     "Measurement of cultural property 1200489492: 308"@en , "Misura del bene culturale 1200489492: 308"@it .
 
 ar-Measurement:1200489492-1-height
         a                           arco-dd:Measurement ;
-        rdfs:label                  "Measurement of cultural property 1200489492: 225NR"@en , "Misura del bene culturale 1200489492: 225NR"@it ;
+        rdfs:label                  "Measurement of cultural property 1200489492: 225"@en , "Misura del bene culturale 1200489492: 225"@it ;
         arco-dd:hasMeasurementType  arco-dd:Height ;
         arco-dd:hasValue            ar-Value:1200489492-1-height-225 ;
-        l0:name                     "Measurement of cultural property 1200489492: 225NR"@en , "Misura del bene culturale 1200489492: 225NR"@it .
+        l0:name                     "Measurement of cultural property 1200489492: 225"@en , "Misura del bene culturale 1200489492: 225"@it .
 
 <https://w3id.org/arco/resource/Acquisition/1200489492-acquisition-1>
         a                           arco-cd:Acquisition ;
