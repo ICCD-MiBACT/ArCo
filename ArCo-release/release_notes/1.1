@@ -1,0 +1,40 @@
+# Notes for release 1.1 w.r.t release 1.0
+
+## Italian (English below)
+
+### Principali modifiche software
+
+- Implementato un modulo di harvesting per le schede di catalogo e per le schede EMM https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/arco.harvester
+- Aggiunte a XSLT delle funzioni di estensione per: recuperare il link EMM da un codice FTAN e recuperare la URI di una cultural property dato il catalogue record identifier
+- Aggiunto step di preprocessing per pre-preprocessare le schede al fine di precalcolare delle mappe che verranno usate dalle estensioni (funzioni) di XSLT (cf. https://github.com/ICCD-MiBACT/ArCo/tree/dev/ArCo-release/rdfizer#pre-processing)
+- All'avvio di rdfizer se i dati del preprocessing se non disponibili in locale vengono scaricati da http://arco.istc.cnr.it/preprocessing/db
+- Aggiunta una estensione a XSLT (i.e. funzione name-cleaner) per normalizzare i nomi degli agenti
+- Aggiunto i grafo di quarantena che colleziona le triple estratte da schede che contengono degli errori. L'aggiunta si è tradotta in 1) una modifica in rdfizer che genera un file per le triple in quarantena e 2) una modifica del docker container di virtuoso che carica il file di quarantena generato nel grafo è https://w3id.org/arco/data/quarantine
+- Aggiunte a xslt delle funzione per estrarre da una stringa (e.g. "13 m") il valore (e.g. "13") e l'unità di misura ("m")
+- Aggiunta a xslt una funzione per effettuare lo split di un author string
+- Aggiunto un modulo per il linking automatico di arco https://github.com/ICCD-MiBACT/ArCo/tree/master/ArCo-release/arco.linking
+- Aggiunto un modulo di testing per rdfizer https://github.com/ICCD-MiBACT/ArCo/tree/dev/ArCo-release/rdfizer#xslttester-usage
+- Aggiunti i template per issue di github
+- rdfizer è stato modificato per generare le triple in file compressi in gzip
+
+### Principali modifiche alle trasformazioni xslt
+
+- create regole di trasformazione per generare le triple per la descrizione dei beni architettonici
+- create regole di trasformazione per generare le triple con relazioni dublin core
+- create regole di trasformazione per generare le triple per la descrizione dei beni botanici
+- aggiornate le regole per la creazione delle uri dei site
+- aggiornate le regole per la creazione delle uri degli Agent
+- aggiornate regole per normalizzare in camel case i dati relativi ai soggetti, ai site e all’ambito culturale
+- creato collegamento tra il bene culturale e la raccolta che lo contiene
+- create regole di trasformazione per generare le triple relative alle informazioni bibliografiche
+- create regole per la generazione delle triple relative alla classificazione dei beni numismatici
+- create regole per indicare se l'attribuzione di un ambito è dubbia
+- creata regola per generare triple relative alla classificazione del soggetto della fotografia
+- modifica delle regole per la generazione delle triple relative alle informazioni sul titolo collegato al bene
+- aggiunta indicazione del type relativo agli agent
+- modifica delle regole per la generazione delle triple relative alle informazioni sull’alternative authorship Attribution
+- modifica delle regole per la generazione delle triple relative alle informazioni sull’affixed element
+- modifica delle regole per la generazione delle triple relative alle informazioni sulla related work situation
+- creazione delle regole per collegare un bene componente al bene complesso di cui fa parte
+- Aggiunte regole per la generazione delle triple relative al trattamento catalografico
+- Modifica delle regole per la rappresentazione delle quantità relative al bene culturale (paragrafo QNT)
