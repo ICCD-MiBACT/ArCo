@@ -50,12 +50,12 @@
 	<METRIC>MINUS(1.0*AND(Trigram(x.faddress,y.faddress)|0.5,Trigram(x.cLabel,y.cLabel)|0.8)|0.5,1.0*ExactMatch(x.iri,y.iri)|1.0)</METRIC>
 	<ACCEPTANCE>
 		<THRESHOLD>0.9</THRESHOLD>
-		<FILE>cis_site_match_toponym.tsv</FILE>
+		<FILE>cis_site_match_toponym.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
 	</ACCEPTANCE>
 	<REVIEW>
 		<THRESHOLD>0.8</THRESHOLD>
-		<FILE>review.tsv</FILE>
+		<FILE>cis_site_match_toponym_review.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
 	</REVIEW>
 	<EXECUTION>
@@ -63,5 +63,5 @@
 		<PLANNER>default</PLANNER>
 		<ENGINE>default</ENGINE>
 	</EXECUTION>
-	<OUTPUT>TAB</OUTPUT>
+	<OUTPUT>N3</OUTPUT>
 </LIMES>
