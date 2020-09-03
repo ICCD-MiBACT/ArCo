@@ -145,12 +145,28 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/immovable-property/isFoundationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFoundationOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasFoundation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione alle fondazioni.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a construction to the foundation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
+        <rdfs:label xml:lang="en">are foundation of</rdfs:label>
+        <rdfs:label xml:lang="it">sono fondamenta di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;ordine architettonico.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un'entità all'ordine architettonico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity to the architectural order.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ordine architettonico</rdfs:label>
         <rdfs:label xml:lang="en">has architectural order</rdfs:label>
@@ -181,7 +197,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasConstructionElement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isConstructionElementOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione all&apos;elemento della costruzione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione all'elemento della costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to the construction element.</rdfs:comment>
         <rdfs:label xml:lang="it">ha elemento della costruzione</rdfs:label>
         <rdfs:label xml:lang="en">has construction element</rdfs:label>
@@ -202,7 +218,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Covering"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al rivestimento  .</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un'entità al rivestimento  .</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity to a covering .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="it">ha rivestimento</rdfs:label>
@@ -227,7 +243,7 @@ In this module the following Ontology Design Patterns have been used:
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità al design.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un'entità al design.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity to a design .</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="it">ha progetto</rdfs:label>
@@ -275,11 +291,10 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasFoundation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFoundationOf"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione alle fondazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to a foundation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="it">ha fondazioni</rdfs:label>
+        <rdfs:label xml:lang="it">ha fondamenta</rdfs:label>
         <rdfs:label xml:lang="en">has foundation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -294,7 +309,7 @@ In this module the following Ontology Design Patterns have been used:
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isHorizontalElementOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/HorizontalElement"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione all&apos;elemento orizzontale.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione all'elemento orizzontale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to an horizontal element.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="it">ha elemento orizzontale</rdfs:label>
@@ -421,7 +436,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ordine architettonico ad un&apos;entità.</rdfs:comment>
+ <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l'ordine architettonico ad un'entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the architectural order to an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">is architectural order</rdfs:label>
         <rdfs:label xml:lang="it">è ordine architettonico di</rdfs:label>
@@ -450,13 +466,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isConstructionElementOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/hasConstructionElement"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un elemento della costruzione ad una costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction element to a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="en">is construction element of</rdfs:label>
         <rdfs:label xml:lang="it">è elemento della costruzione</rdfs:label>
+        <rdfs:label xml:lang="en">is construction element of</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -542,28 +559,13 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/isFoundationOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFoundationOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione alle fondazioni.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property connects a construction to the foundation.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="en">are foundation of</rdfs:label>
-        <rdfs:label xml:lang="it">sono fondazioni di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/immovable-property/isHorizontalElementOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isHorizontalElementOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/HorizontalElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;elemento orizzontale alla costruzione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l'elemento orizzontale alla costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the horizontal element to a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">is horizontal element of</rdfs:label>
@@ -687,7 +689,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;elemento verticale alla costruzione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l'elemento verticale alla costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the vertical element to a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">is vertical element of</rdfs:label>
@@ -847,13 +849,13 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/immovable-property/originalElement -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/originalElement">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
+<rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica se un elemento della costruzione è originale.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents a original construction element.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="it">elemento originale</rdfs:label>
         <rdfs:label xml:lang="en">original element</rdfs:label>
+        <rdfs:label xml:lang="it">elemento originale</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -898,7 +900,7 @@ viene descritta.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/spatialLocation">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Stair"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la collocazione delle scale in rapporto alla tipologia dell&apos;edificio.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la collocazione delle scale in rapporto alla tipologia dell'edificio.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the spatial location of a stair.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="it">riferimento spaziale</rdfs:label>
@@ -979,7 +981,7 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta ognuno dei cinque maggiori stili classici dell&apos;architettura classificata in base allo stile delle colonne, dei capitelli, delle trabeazioni (es. tuscanico, dorico, ionico, corinzio, composito).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta ognuno dei cinque maggiori stili classici dell'architettura classificata in base allo stile delle colonne, dei capitelli, delle trabeazioni (es. tuscanico, dorico, ionico, corinzio, composito).</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents any of the five major classical styles of architecture classified by the style of columns, capitals, entablatures (i.e. Tuscan, Doric, Ionic, Corinthian, Composite).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">Architectural order</rdfs:label>
@@ -1035,11 +1037,11 @@ viene descritta.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/immovable-property/MovableFurnishingElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta gli elementi d&apos;arredo integrati in una costruzione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gli elementi d'arredo integrati in una costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the built-in furnishing elements in a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="it">Arredo integrato</rdfs:label>
         <rdfs:label xml:lang="en">Built-in furnishing element</rdfs:label>
+        <rdfs:label xml:lang="it">Arredo integrato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -1053,8 +1055,8 @@ viene descritta.</rdfs:comment>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il comignolo di una costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the chimney of a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <rdfs:label xml:lang="en">Chimney</rdfs:label>
         <rdfs:label xml:lang="it">Comignolo</rdfs:label>
+        <rdfs:label xml:lang="en">Chimney</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
@@ -1095,7 +1097,7 @@ viene descritta.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale immobile che è stato costruito dall&apos;uomo.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un bene culturale immobile che è stato costruito dall'uomo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents an immovable cultural entity that has been built by humankind.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">Construction</rdfs:label>
@@ -1312,7 +1314,7 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ElevationLayout">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la forma del prospetto di una costruzione  e il modo in cui le sue differenti parti sono assemblate nella composizione d&apos;insieme.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la forma del prospetto di una costruzione  e il modo in cui le sue differenti parti sono assemblate nella composizione d'insieme.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the shape of the elevation of a construction and the way in which the different parts of it are arranged in the whole composition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">Elevation layout</rdfs:label>
@@ -1320,7 +1322,6 @@ viene descritta.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
-    
 
 
     <!-- https://w3id.org/arco/ontology/immovable-property/Escalator -->
@@ -1487,7 +1488,7 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/FurnishingElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta gli elementi, sia mobili sia fissi, che compongono l&apos;arredo di una costruzione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gli elementi, sia mobili sia fissi, che compongono l'arredo di una costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the elements, both movable or built-in, that are part of the furniture of a construction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="it">Elemento di mobilio</rdfs:label>
@@ -1583,7 +1584,7 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Layout">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la forma della pianta e del prospetto di una costruzione e il modo in cui le varie parti di essi sono assemblate nella composizione d&apos;insieme.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la forma della pianta e del prospetto di una costruzione e il modo in cui le varie parti di essi sono assemblate nella composizione d'insieme.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the shape of the plan and the elevation of a construction and the way in which the different parts of them are arranged in the whole composition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">Layout</rdfs:label>
@@ -1599,7 +1600,7 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/Lift">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/TransportElement"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ascensore.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l'ascensore.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the lift.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="it">Ascensore</rdfs:label>
@@ -1659,7 +1660,7 @@ viene descritta.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/PlanLayout">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la forma della pianta di una costruzione e il modo in cui le sue differenti parti sono assemblate nella composizione d&apos;insieme.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la forma della pianta di una costruzione e il modo in cui le sue differenti parti sono assemblate nella composizione d'insieme.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the shape of the elevation of a construction and the way in which the different parts of it are arranged in the whole composition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <rdfs:label xml:lang="en">Plan layout</rdfs:label>
@@ -2071,18 +2072,6 @@ viene descritta.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/immovable-property/Column -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/Column">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElementType"/>
-        <rdfs:label xml:lang="it">Colonna</rdfs:label>
-        <rdfs:label xml:lang="en">Column</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/arco/ontology/immovable-property/CoveringColour -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/CoveringColour">
@@ -2111,20 +2100,8 @@ viene descritta.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/HorizontalElementShape">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-        <rdfs:label xml:lang="it">Forma dell&apos;elemento orizzontale</rdfs:label>
+        <rdfs:label xml:lang="it">Forma dell'elemento orizzontale</rdfs:label>
         <rdfs:label xml:lang="en">Horizontal element shape</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/Pillar -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/Pillar">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElementType"/>
-        <rdfs:label xml:lang="en">Pilastro</rdfs:label>
-        <rdfs:label xml:lang="it">Pillar</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -2159,7 +2136,7 @@ viene descritta.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/VerticalElementShape">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
-        <rdfs:label xml:lang="it">Forma dell&apos;elemento verticale</rdfs:label>
+        <rdfs:label xml:lang="it">Forma dell'elemento verticale</rdfs:label>
         <rdfs:label xml:lang="en">Vertical element shape</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
@@ -2173,6 +2150,30 @@ viene descritta.</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElementType"/>
         <rdfs:label xml:lang="it">Parete</rdfs:label>
         <rdfs:label xml:lang="en">Wall</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/Column -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/Column">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElementType"/>
+        <rdfs:label xml:lang="it">Colonna</rdfs:label>
+        <rdfs:label xml:lang="en">Column</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/immovable-property/Pillar -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/immovable-property/Pillar">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElementType"/>
+        <rdfs:label xml:lang="it">Pillar</rdfs:label>
+        <rdfs:label xml:lang="en">Pilastro</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
