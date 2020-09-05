@@ -23560,34 +23560,29 @@
 							<arco-dd:hasConservationStatusType>
 								<xsl:attribute name="rdf:resource">
                                 <xsl:choose>
-                                    <xsl:when
-									test="lower-case(normalize-space(./STCC))='buono' or lower-case(normalize-space(./STCC))='buonoe' or lower-case(normalize-space(./STCC))='buona'">
-                                        <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus'" />
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='ottimo' or lower-case(normalize-space(./STCC))='ottima' or lower-case(normalize-space(./STCC))='eccellente'">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/ExcellentConservationStatus'" />
+									</xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='buono' or lower-case(normalize-space(./STCC))='buonoe' or lower-case(normalize-space(./STCC))='buona'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus'" />
                                     </xsl:when>
-                                    <xsl:when
-									test="lower-case(normalize-space(./STCC))='mediocre'">
-                                        <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/MediocreConservationStatus'" />
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='mediocre'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MediocreConservationStatus'" />
                                     </xsl:when>
-                                    <xsl:when
-									test="lower-case(normalize-space(./STCC))='discreto' or lower-case(normalize-space(./STCC))='discreta'">
-                                        <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/DecentConservationStatus'" />
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='discreto' or lower-case(normalize-space(./STCC))='discreta' or lower-case(normalize-space(./STCC))='sufficiente'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DecentConservationStatus'" />
                                     </xsl:when>
-                                    <xsl:when
-									test="lower-case(normalize-space(./STCC))='cattivo' or lower-case(normalize-space(./STCC))='cattiva'">
-                                        <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/BadConservationStatus'" />
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='cattivo' or lower-case(normalize-space(./STCC))='cattiva'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/BadConservationStatus'" />
                                     </xsl:when>
-                                    <xsl:when
-									test="lower-case(normalize-space(./STCC))='dato non disponibile'">
-                                        <xsl:value-of
-									select="'https://w3id.org/arco/ontology/denotative-description/UnavailableConservationStatus'" />
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='pessimo' or lower-case(normalize-space(./STCC))='pessima' or lower-case(normalize-space(./STCC))='pessomo' or lower-case(normalize-space(./STCC))='immediato pericolo'">
+                                    	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/VeryBadConservationStatus'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='dato non disponibile'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/UnavailableConservationStatus'" />
                                     </xsl:when>
                                     <xsl:when test="./STCC">
-                                        <xsl:value-of
-									select="concat($NS, 'ConservationStatusType/', arco-fn:urify(normalize-space(./STCC)))" />
+                                        <xsl:value-of select="concat($NS, 'ConservationStatusType/', arco-fn:urify(normalize-space(./STCC)))" />
                                     </xsl:when>
                                 </xsl:choose>
                             </xsl:attribute>
@@ -23652,36 +23647,44 @@
 							</tiapit:time>
 						</xsl:if>
 					</rdf:Description>
-					<xsl:if
-						test="./STCC and not(lower-case(normalize-space(./STCC))='nr' or lower-case(normalize-space(./STCC))='n.r.' or lower-case(normalize-space(./STCC))='nr (recupero pregresso)')">
-						<xsl:choose>
-							<xsl:when
-								test="lower-case(normalize-space(./STCC))='buono' or lower-case(normalize-space(./STCC))='buonoe' or lower-case(normalize-space(./STCC))='buona'" />
-							<xsl:when
-								test="lower-case(normalize-space(./STCC))='mediocre'" />
-							<xsl:when
-								test="lower-case(normalize-space(./STCC))='discreto' or lower-case(normalize-space(./STCC))='discreta'" />
-							<xsl:when
-								test="lower-case(normalize-space(./STCC))='cattivo' or lower-case(normalize-space(./STCC))='cattiva'" />
-							<xsl:when
-								test="lower-case(normalize-space(./STCC))='dato non disponibile'" />
-							<xsl:when test="./STCC">
-								<rdf:Description>
-									<xsl:attribute name="rdf:about">
-                                    <xsl:value-of
-										select="concat($NS, 'ConservationStatusType/', arco-fn:urify(normalize-space(./STCC)))" />
-                                </xsl:attribute>
-									<rdf:type
-										rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType" />
-									<rdfs:label>
-										<xsl:value-of select="normalize-space(./STCC)" />
-									</rdfs:label>
-									<l0:name>
-										<xsl:value-of select="normalize-space(./STCC)" />
-									</l0:name>
-								</rdf:Description>
-							</xsl:when>
-						</xsl:choose>
+					<xsl:if test="./STCC and not(lower-case(normalize-space(./STCC))='nr' or lower-case(normalize-space(./STCC))='n.r.' or lower-case(normalize-space(./STCC))='nr (recupero pregresso)')">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+                               <xsl:choose>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='ottimo' or lower-case(normalize-space(./STCC))='ottima' or lower-case(normalize-space(./STCC))='eccellente'">
+										<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/ExcellentConservationStatus'" />
+									</xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='buono' or lower-case(normalize-space(./STCC))='buonoe' or lower-case(normalize-space(./STCC))='buona'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='mediocre'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MediocreConservationStatus'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='discreto' or lower-case(normalize-space(./STCC))='discreta' or lower-case(normalize-space(./STCC))='sufficiente'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/DecentConservationStatus'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='cattivo' or lower-case(normalize-space(./STCC))='cattiva'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/BadConservationStatus'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='pessimo' or lower-case(normalize-space(./STCC))='pessima' or lower-case(normalize-space(./STCC))='pessomo' or lower-case(normalize-space(./STCC))='immediato pericolo'">
+                                    	<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/VeryBadConservationStatus'" />
+                                    </xsl:when>
+                                    <xsl:when test="lower-case(normalize-space(./STCC))='dato non disponibile'">
+                                        <xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/UnavailableConservationStatus'" />
+                                    </xsl:when>
+                                    <xsl:when test="./STCC">
+                                        <xsl:value-of select="concat($NS, 'ConservationStatusType/', arco-fn:urify(normalize-space(./STCC)))" />
+                                    </xsl:when>
+                               </xsl:choose>
+							</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType" />
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(./STCC)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(./STCC)" />
+							</l0:name>
+						</rdf:Description>
 					</xsl:if>
 					<xsl:if
 						test="./STCL and not(lower-case(normalize-space(./STCL))='nr' or lower-case(normalize-space(./STCL))='n.r.' or lower-case(normalize-space(./STCL))='nr (recupero pregresso)')">
