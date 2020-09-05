@@ -2433,10 +2433,16 @@
 					</arco-cd:informationGatheredOnSite>
 				</xsl:if>
 				<!-- historical information -->
-				<xsl:if test="record/metadata/schede/*/DA/NRL">
+				<xsl:if test="record/metadata/schede/*/DA/NSC">
 					<arco-cd:historicalInformation>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/DA/NSC)" />
+					</arco-cd:historicalInformation>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/DA/NCS">
+					<arco-cd:historicalInformation>
+						<xsl:value-of
+							select="normalize-space(record/metadata/schede/*/DA/NCS)" />
 					</arco-cd:historicalInformation>
 				</xsl:if>
 				<!-- explanation note -->
