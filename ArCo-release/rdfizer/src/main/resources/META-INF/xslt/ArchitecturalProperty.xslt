@@ -217,6 +217,7 @@
 			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/A/PN">
+			<xsl:if test="./PNT/PNTQ or ./PNT/PNTS or ./PNT/PNTF or ./PNT/PNTE">
 			<xsl:choose>	
 				<xsl:when test="./PNT/* and (not(./PNR) or ./PNR='intero bene' or ./PNR='integrale' or ./PNR='tutta' or ./PNR='totale') or (starts-with(lower-case(normalize-space(./PNR)), 'nr')) or (starts-with(lower-case(normalize-space(./PNR)), 'n.r')) or (starts-with(lower-case(normalize-space(./PNR)), 'intero')) or (starts-with(lower-case(normalize-space(./PNR)), 'intera')) or (starts-with(lower-case(normalize-space(./PNR)), 'esemplar'))">
 					<arco-ip:hasDesign>
@@ -235,6 +236,7 @@
 					</xsl:for-each>
 				</xsl:otherwise>
 			</xsl:choose>
+			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/A/FN/FNS">
 			<xsl:choose>	
@@ -1041,7 +1043,6 @@
 									
 									<!-- Roof as individual -->
 	<xsl:for-each select="record/metadata/schede/A/CP">
-	<xsl:variable name="horElem" select="arco-fn:arcofy(.)" />
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
         		<xsl:value-of select="concat($NS, 'Roof/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
@@ -1088,9 +1089,9 @@
 				</xsl:attribute>
 				</arco-core:hasType>	
 			</xsl:if>
-			<xsl:if test="./CPC">
+			<xsl:if test="./CPC/CPCT">
 				<xsl:choose>	
-				<xsl:when test="./CPC/* and (not(./CPC/CPCR) or ./CPC/CPCR='intero bene' or ./CPC/CPCR='integrale' or ./CPC/CPCR='tutta' or ./CPC/CPCR='totale') or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'nr')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'n.r')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'intero')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'intera')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'esemplar'))">	
+				<xsl:when test="not(./CPC/CPCR) or ./CPC/CPCR='intero bene' or ./CPC/CPCR='integrale' or ./CPC/CPCR='tutta' or ./CPC/CPCR='totale' or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'nr')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'n.r')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'intero')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'intera')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'esemplar'))">	
 					<arco-ip:hasRoofStructure>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'RoofStructure/', $itemURI, '-', arco-fn:urify(normalize-space(./CPC/CPCT)))" />
