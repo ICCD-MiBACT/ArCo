@@ -975,7 +975,7 @@
 			<!-- Funzionario responsabile -->
 			<xsl:for-each select="record/metadata/schede/*/CM/FUR">
 				<xsl:if
-					test=". and not(lower-case(normalize-space(.))='nr' or lower-case(normalize-space(.))='n.r.' or lower-case(normalize-space(.))='nr (recupero pregresso)')">
+					test="(not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 	                        <xsl:value-of
