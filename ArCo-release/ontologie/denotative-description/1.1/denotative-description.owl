@@ -4388,6 +4388,8 @@ resource:MeasurementCollection/1200865132-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/BadConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+        <rdfs:comment xml:lang="it">Mancano parti rilevanti, cattiva leggibilità, necessità di interventi di restauro</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relevant parts are missing, bad readability, need for restoration work</rdfs:comment>
         <rdfs:label xml:lang="en">Bad conservation status</rdfs:label>
         <rdfs:label xml:lang="it">Stato di conservazione cattivo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4488,6 +4490,8 @@ resource:MeasurementCollection/1200865132-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/DecentConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+        <rdfs:comment xml:lang="it">Leggibile in tutte le sue componenti, ma con rischi di deterioramento</rdfs:comment>
+        <rdfs:comment xml:lang="en">Readable in all its components, but with the risk of deterioration.</rdfs:comment>
         <rdfs:label xml:lang="en">Decent conservation status</rdfs:label>
         <rdfs:label xml:lang="it">Stato di conservazione discreto</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4606,6 +4610,18 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/ExcellentConservationStatus -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/ExcellentConservationStatus">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+        <rdfs:label xml:lang="en">Excellent conservation status</rdfs:label>
+        <rdfs:label xml:lang="it">Stato di conservazione eccellente</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Extension -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Extension">
@@ -4709,6 +4725,8 @@ resource:MeasurementCollection/1200865132-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/GoodConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+        <rdfs:comment xml:lang="en">It doesn&apos;t need preservation or restoration intervention</rdfs:comment>
+        <rdfs:comment xml:lang="it">Non occorrono interventi di restauro o di conservazione</rdfs:comment>
         <rdfs:label xml:lang="en">Good conservation status</rdfs:label>
         <rdfs:label xml:lang="it">Stato di conservazione buono</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -4999,6 +5017,8 @@ resource:MeasurementCollection/1200865132-1
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MediocreConservationStatus">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+        <rdfs:comment xml:lang="en">Readable, but some of its parts are missing or a state of deterioration has occurred</rdfs:comment>
+        <rdfs:comment xml:lang="it">leggibile, ma mancano alcune sue parti o si è verificato uno stato di deterioramento</rdfs:comment>
         <rdfs:label xml:lang="en">Mediocre conservation status</rdfs:label>
         <rdfs:label xml:lang="it">Stato di conservazione mediocre</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
@@ -5380,6 +5400,18 @@ resource:MeasurementCollection/1200865132-1
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/CommunicationMediumType"/>
         <rdfs:label xml:lang="it">Comunicazione verbale</rdfs:label>
         <rdfs:label xml:lang="en">Verbal communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/VeryBadConservationStatus -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/VeryBadConservationStatus">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/ConservationStatusType"/>
+        <rdfs:label xml:lang="it">Stato di conservazione pessimo</rdfs:label>
+        <rdfs:label xml:lang="en">Very bad conservation status</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
