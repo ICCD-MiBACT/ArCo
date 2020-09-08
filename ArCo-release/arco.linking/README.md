@@ -5,8 +5,8 @@ Although new software has been developed to align the KG to certain datasets, th
 
 ### Linking MiBACT's cultural sites
 
-ArCo's sites can be linked to MiBACT's cultural sites by using [LIMES](https://github.com/dice-group/LIMES).
-Limes' configuration can be found in [MiBACTSites](MiBACTSites) folder.
+ArCo's sites (both cultural instituties and physical sites) can be linked to MiBACT's cultural sites by using [LIMES](https://github.com/dice-group/LIMES).
+Limes' configuration can be found in [MiBACTSites](MiBACTSites) and [CISCulturalInstituteOrSite](CISCulturalInstituteOrSite) folders.
 
 
 ```
