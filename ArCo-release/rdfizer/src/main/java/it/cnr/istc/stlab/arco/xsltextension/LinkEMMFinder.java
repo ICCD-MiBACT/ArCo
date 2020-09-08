@@ -45,13 +45,14 @@ public class LinkEMMFinder implements ExtensionFunction {
 		logger.trace("Argument " + arg);
 		String url = ftan2linkEMM.get(arg);
 		logger.trace("Link emm " + url);
-		url = pe.escape(url);
-		logger.trace("Escaped link " + url);
 
-		if (url == null || url.length() == 0)
+		if (url == null || url.length() == 0) {
 			return XdmEmptySequence.getInstance();
-		else
+		} else {
+			url = pe.escape(url);
+			logger.trace("Escaped link " + url);
 			return XdmValue.makeValue(url);
+		}
 	}
 
 	@Override
