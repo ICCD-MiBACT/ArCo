@@ -12,6 +12,7 @@ Limes' configuration can be found in [MiBACTSites](MiBACTSites) folder.
 ```
 java -Xmx16g -jar /path/to/limes/limes-core-1.7.1-SNAPSHOT.jar MiBACTSites/fullAddressMatching/limes.xml
 java -Xmx16g -jar /path/to/limes/limes-core-1.7.1-SNAPSHOT.jar MiBACTSites/label/limes.xml
+java -Xmx16g -jar /path/to/limes/limes-core-1.7.1-SNAPSHOT.jar CISCulturalInstituteOrSite/label/limes.xml
 ```
 
 ### Linking CulturaItalia
