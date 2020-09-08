@@ -51,11 +51,11 @@
 		<FILE>CulturalInstituteOrSite.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
 	</ACCEPTANCE>
-	<!--REVIEW>
+	<REVIEW>
 		<THRESHOLD>0.5</THRESHOLD>
 		<FILE>CulturalInstituteOrSite_review.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
-	</REVIEW-->
+	</REVIEW>
 	<EXECUTION>
 		<REWRITER>default</REWRITER>
 		<PLANNER>default</PLANNER>
