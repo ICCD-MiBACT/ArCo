@@ -47,12 +47,12 @@
 	</TARGET>
 	<METRIC>Trigram(x.lab,y.lab)</METRIC>
 	<ACCEPTANCE>
-		<THRESHOLD>0.2</THRESHOLD>
+		<THRESHOLD>0.9</THRESHOLD>
 		<FILE>CulturalInstituteOrSite.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
 	</ACCEPTANCE>
 	<REVIEW>
-		<THRESHOLD>0.1</THRESHOLD>
+		<THRESHOLD>0.8</THRESHOLD>
 		<FILE>CulturalInstituteOrSite_review.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
 	</REVIEW>
