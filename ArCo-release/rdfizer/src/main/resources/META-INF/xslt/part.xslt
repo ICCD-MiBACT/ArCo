@@ -373,13 +373,7 @@
 		</xsl:for-each>
 						
 		<xsl:for-each select="record/metadata/schede/*/MT/MTC">
-			<xsl:if test="(./MTCM and (not(starts-with(lower-case(normalize-space(./MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCM)), 'n.r')))) or (./MTCT and (not(starts-with(lower-case(normalize-space(./MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCT)), 'n.r'))))">
-			<xsl:variable name="technical-status">
-				<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
-			</xsl:variable>
-			<xsl:variable name="parentPosition">
-				<xsl:value-of select="position()" />
-			</xsl:variable>
+			<xsl:if test="(./MTCM and (not(starts-with(lower-case(normalize-space(./MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCM)), 'n.r')))) or (./MTCM and (not(starts-with(lower-case(normalize-space(./MTCM)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCM)), 'n.r'))))">
 				<xsl:if test="./MTCP and not(lower-case(normalize-space(./MTCP))='intero bene') and not(lower-case(normalize-space(./MTCP))='integrale') and not(lower-case(normalize-space(./MTCP))='tutta') and not(lower-case(normalize-space(./MTCP))='totale') and (not(starts-with(lower-case(normalize-space(./MTCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'intero')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'intera')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'esemplar')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
@@ -388,7 +382,7 @@
 						<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 						<arco-dd:hasTechnicalStatus>
 							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="$technical-status" />
+								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
 							</xsl:attribute>
 						</arco-dd:hasTechnicalStatus>
 						<rdfs:label>
@@ -407,51 +401,34 @@
 			</xsl:if>
 		</xsl:for-each>
 
-		<xsl:if
-				test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'n.r'))">
-				<xsl:variable name="technical-status">
-						<xsl:value-of
-							select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)))" />
-					</xsl:variable>
-					
-				
-				<xsl:for-each select="record/metadata/schede/*/MT/MTC/MTCT">
-					
-					<xsl:variable name="parentPosition">
-						<xsl:value-of select="position()" />
-					</xsl:variable>
-					<xsl:if
-						test="not(lower-case(normalize-space(../MTCP))='integrale') and not(lower-case(normalize-space(../MTCP))='tutta') and not(lower-case(normalize-space(../MTCP))='totale') and (not(starts-with(lower-case(normalize-space(../MTCP)), 'esemplar')) and not(starts-with(lower-case(normalize-space(../MTCP)), 'intero')) and not(starts-with(lower-case(normalize-space(../MTCP)), 'intera')) and not(starts-with(lower-case(normalize-space(../MTCP)), 'nr')) and not(starts-with(lower-case(normalize-space(../MTCP)), 'n.r'))) or $sheetType='VeAC'">
-						<xsl:for-each select="../MTCP">
-
-							<rdf:Description>
-								<xsl:attribute name="rdf:about">
-						 		<xsl:value-of
-									select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
-						 	</xsl:attribute>
-								<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
-								<arco-dd:hasTechnicalStatus>
-									<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="$technical-status" />
-								</xsl:attribute>
-								</arco-dd:hasTechnicalStatus>
-								<rdfs:label>
-									<xsl:value-of select="normalize-space(.)" />
-								</rdfs:label>
-								<l0:name>
-									<xsl:value-of select="normalize-space(.)" />
-								</l0:name>
-								<arco-core:isPartOf>
-								<xsl:attribute name="rdf:resource"> 
-									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
-								</xsl:attribute>
-							</arco-core:isPartOf>
-							</rdf:Description>
-
-						</xsl:for-each>
-					</xsl:if>
-				</xsl:for-each>
+		<xsl:for-each select="record/metadata/schede/*/MT/MTC">
+			<xsl:if test="(./MTCM and (not(starts-with(lower-case(normalize-space(./MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCT)), 'n.r')))) or (./MTCT and (not(starts-with(lower-case(normalize-space(./MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCT)), 'n.r'))))">
+				<xsl:if test="./MTCP and not(lower-case(normalize-space(./MTCP))='intero bene') and not(lower-case(normalize-space(./MTCP))='integrale') and not(lower-case(normalize-space(./MTCP))='tutta') and not(lower-case(normalize-space(./MTCP))='totale') and (not(starts-with(lower-case(normalize-space(./MTCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'intero')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'intera')) and not(starts-with(lower-case(normalize-space(./MTCP)), 'esemplar')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+					 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
+					 	</xsl:attribute>
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+						<arco-dd:hasTechnicalStatus>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI, '-part-', arco-fn:urify(normalize-space(./MTCP)))" />
+							</xsl:attribute>
+						</arco-dd:hasTechnicalStatus>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./MTCP)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./MTCP)" />
+						</l0:name>
+						<arco-core:isPartOf>
+							<xsl:attribute name="rdf:resource"> 
+								<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+							</xsl:attribute>
+						</arco-core:isPartOf>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:if>
+		</xsl:for-each>
 
 			<!-- part of cultural property when there is MTCP (4.00, technique) -->
 			
