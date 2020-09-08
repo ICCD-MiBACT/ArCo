@@ -45,7 +45,7 @@
     <PROPERTY>rdfs:label{0} AS uriasstring RENAME iri</PROPERTY>
 		<PROPERTY>rdfs:label AS nolang->lowercase RENAME lab</PROPERTY>
 	</TARGET>
-	<METRIC>Trigram(x.cLabel,y.cLabel)</METRIC>
+	<METRIC>Trigram(x.lab,y.lab)</METRIC>
 	<ACCEPTANCE>
 		<THRESHOLD>0.2</THRESHOLD>
 		<FILE>CulturalInstituteOrSite.nt</FILE>
