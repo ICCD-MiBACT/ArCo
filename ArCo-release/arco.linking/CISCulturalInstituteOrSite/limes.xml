@@ -32,7 +32,6 @@
 		<VAR>?x</VAR>
 		<PAGESIZE>2000</PAGESIZE>
 		<RESTRICTION>?x a cis:CulturalInstituteOrSite</RESTRICTION>
-    <PROPERTY>rdfs:label{0} AS uriasstring RENAME iri</PROPERTY>
 		<PROPERTY>rdfs:label AS nolang->lowercase RENAME lab</PROPERTY>
 	</SOURCE>
 	<TARGET>
@@ -42,7 +41,6 @@
 		<VAR>?y</VAR>
 		<PAGESIZE>2000</PAGESIZE>
 		<RESTRICTION>?y a cis:CulturalInstituteOrSite</RESTRICTION>
-    <PROPERTY>rdfs:label{0} AS uriasstring RENAME iri</PROPERTY>
 		<PROPERTY>rdfs:label AS nolang->lowercase RENAME lab</PROPERTY>
 	</TARGET>
 	<METRIC>Trigram(x.lab,y.lab)</METRIC>
