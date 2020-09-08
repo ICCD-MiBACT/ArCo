@@ -33,7 +33,7 @@
 		<PAGESIZE>2000</PAGESIZE>
 		<RESTRICTION>?x a cis:CulturalInstituteOrSite</RESTRICTION>
     <PROPERTY>rdfs:label{0} AS uriasstring RENAME iri</PROPERTY>
-		<PROPERTY>rdfs:label AS lowercase RENAME lab</PROPERTY>
+		<PROPERTY>rdfs:label AS nolang->lowercase RENAME lab</PROPERTY>
 	</SOURCE>
 	<TARGET>
 		<ID>arco</ID>
@@ -43,7 +43,7 @@
 		<PAGESIZE>2000</PAGESIZE>
 		<RESTRICTION>?y a cis:CulturalInstituteOrSite</RESTRICTION>
     <PROPERTY>rdfs:label{0} AS uriasstring RENAME iri</PROPERTY>
-		<PROPERTY>rdfs:label AS lowercase RENAME lab</PROPERTY>
+		<PROPERTY>rdfs:label AS nolang->lowercase RENAME lab</PROPERTY>
 	</TARGET>
 	<METRIC>MINUS(1.0*Trigram(x.cLabel,y.cLabel)|0.8,1.0*ExactMatch(x.iri,y.iri)|1.0)</METRIC>
 	<ACCEPTANCE>
