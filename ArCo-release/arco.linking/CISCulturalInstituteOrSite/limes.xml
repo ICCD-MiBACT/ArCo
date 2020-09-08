@@ -33,7 +33,7 @@
 		<PAGESIZE>2000</PAGESIZE>
 		<RESTRICTION>?x a cis:CulturalInstituteOrSite</RESTRICTION>
 		<PROPERTY>rdfs:label AS nolang->lowercase RENAME lab</PROPERTY>
-		<PROPERTY>cis:hasSite/cis:siteAddress/CLV:hasCity AS lowercase RENAME city</PROPERTY>
+		<PROPERTY>cis:hasSite/cis:siteAddress/CLV:hasCity/rdfs:label AS lowercase RENAME city</PROPERTY>
 	</SOURCE>
 	<TARGET>
 		<ID>arco</ID>
@@ -43,7 +43,7 @@
 		<PAGESIZE>2000</PAGESIZE>
 		<RESTRICTION>?y a cis:CulturalInstituteOrSite</RESTRICTION>
 		<PROPERTY>rdfs:label AS nolang->lowercase RENAME lab</PROPERTY>
-		<PROPERTY>cis:hasSite/cis:siteAddress/CLV:hasCity AS lowercase RENAME city</PROPERTY>
+		<PROPERTY>cis:hasSite/cis:siteAddress/CLV:hasCity/rdfs:label AS lowercase RENAME city</PROPERTY>
 	</TARGET>
 	<METRIC>AND(Trigram(x.lab,y.lab)|0.5,ExactMatch(x.city,y.city)|0.9)</METRIC>
 	<ACCEPTANCE>
