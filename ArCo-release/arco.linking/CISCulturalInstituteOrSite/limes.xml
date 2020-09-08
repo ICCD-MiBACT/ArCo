@@ -47,15 +47,15 @@
 	</TARGET>
 	<METRIC>AND(Trigram(x.lab,y.lab)|0.5,ExactMatch(x.city,y.city)|0.9)</METRIC>
 	<ACCEPTANCE>
-		<THRESHOLD>0.8</THRESHOLD>
+		<THRESHOLD>0.6</THRESHOLD>
 		<FILE>CulturalInstituteOrSite.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
 	</ACCEPTANCE>
-	<REVIEW>
+	<!--REVIEW>
 		<THRESHOLD>0.5</THRESHOLD>
 		<FILE>CulturalInstituteOrSite_review.nt</FILE>
 		<RELATION>owl:sameAs</RELATION>
-	</REVIEW>
+	</REVIEW-->
 	<EXECUTION>
 		<REWRITER>default</REWRITER>
 		<PLANNER>default</PLANNER>
