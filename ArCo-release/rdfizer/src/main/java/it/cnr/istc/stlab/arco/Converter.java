@@ -23,6 +23,8 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
 import it.cnr.istc.stlab.arco.xsltextension.CatalogueRecordIdentifierToCulturalProperty;
@@ -62,6 +64,7 @@ public class Converter {
 
 	// private static final String XSLT_LOCATION = "META-INF/xslt/arco.xslt";
 	private static final String XSLT_LOCATION = "META-INF/xslt";
+	private static final Logger logger = LogManager.getLogger(Converter.class);
 
 	private Processor proc;
 	private List<XSLTConverter> exps;
@@ -267,12 +270,16 @@ public class Converter {
 
 			String rdfSource = new String(byteArrayOut.toByteArray());
 
+			try {
+				ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
+				Model localModel = ModelFactory.createDefaultModel();
+				localModel.read(in, null, "RDF/XML");
 
-			ByteArrayInputStream in = new ByteArrayInputStream(rdfSource.getBytes());
-			Model localModel = ModelFactory.createDefaultModel();
-			localModel.read(in, null, "RDF/XML");
-
-			model.add(localModel);
+				model.add(localModel);
+			} catch (Exception e) {
+				logger.error(rdfSource);
+				throw e;
+			}
 		}
 
 		return model;
@@ -289,24 +296,24 @@ public class Converter {
 		cataloguingEntityFinder.destroy();
 	}
 
-	public static void main(String[] args) {
-		Converter converter = new Converter();
-		// converter.convert("ICCD3569822",
-		// Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD3569822.xml"),
-		// System.out);
-
-		Model model = null;
-		try {
-			model = converter.convert("ICCD10717180",
-					Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		model.write(System.out, "TURTLE");
-
-		converter.destroy();
-	}
+//	public static void main(String[] args) {
+//		Converter converter = new Converter();
+//		// converter.convert("ICCD3569822",
+//		// Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD3569822.xml"),
+//		// System.out);
+//
+//		Model model = null;
+//		try {
+//			model = converter.convert("ICCD10717180",
+//					Converter.class.getClassLoader().getResourceAsStream("META-INF/xslt/ICCD10717180.xml"));
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		model.write(System.out, "TURTLE");
+//
+//		converter.destroy();
+//	}
 
 	class XSLTConverter {
 		String name;
