@@ -10561,7 +10561,9 @@
 							</arco-cd:hasArchaeometricDiagnosticSurveyType>
 						</xsl:if>
 						<xsl:if test="./AINS">
-							<xsl:value-of select="normalize-space(./AINS)" />
+							<arco-core:note>
+								<xsl:value-of select="normalize-space(./AINS)" />
+							</arco-core:note>
 						</xsl:if>
 						<xsl:if test="./AINR">
 							<arco-cd:hasActivityOperator>
