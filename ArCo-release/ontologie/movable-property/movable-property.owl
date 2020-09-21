@@ -493,25 +493,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/hasNaturalEnvironment -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasNaturalEnvironment">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isNaturalEnvironmentOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/NaturalEnvironment"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il substrato all&apos;ambiente</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the substrate to the natural environment</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">ha ambiente naturale</rdfs:label>
-        <rdfs:label xml:lang="en">has natural environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIB</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/hasPreservationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasPreservationType">
@@ -847,21 +828,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/isNaturalEnvironmentOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isNaturalEnvironmentOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/NaturalEnvironment"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente al substrato</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the natural environment to  the substrate</rdfs:comment>
-        <rdfs:label xml:lang="en">is natural environment of</rdfs:label>
-        <rdfs:label xml:lang="it">è ambiente naturale di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2005,28 +1971,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/NaturalEnvironment -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalEnvironment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isNaturalEnvironmentOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente cui appartiene il substrato su cui è stato raccolto il campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the natural environment of the substrate where the specimen was collected</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Ambiente naturale</rdfs:label>
-        <rdfs:label xml:lang="en">Natural environment</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIB</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/Order -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Order">
@@ -2482,14 +2426,14 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasIncline"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Incline"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasEnvironment"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasNaturalEnvironment"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/NaturalEnvironment"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasIncline"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Incline"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta substrato specifico sul quale è stato raccolto il campione</rdfs:comment>
@@ -2683,16 +2627,6 @@ In this module the following Ontology Design Patterns have been used:
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/HostIndividual"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Preparation"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Substrate"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Incline"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalEnvironment"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SampleForm"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

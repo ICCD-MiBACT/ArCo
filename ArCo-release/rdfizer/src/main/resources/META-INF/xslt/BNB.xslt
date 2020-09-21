@@ -1886,11 +1886,11 @@
 				</arco-mp:hasIncline>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIB">
-				<arco-mp:hasNaturalEnvironment>
+				<arco-dd:hasEnvironment>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'NaturalEnvironment/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/LR/LRI/LRIB)))" />
 					</xsl:attribute>
-				</arco-mp:hasNaturalEnvironment>
+				</arco-dd:hasEnvironment>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIJ">
 				<arco-mp:hasSubstrateType>
