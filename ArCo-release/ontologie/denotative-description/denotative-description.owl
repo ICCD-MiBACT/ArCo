@@ -175,9 +175,9 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasSource -->
+    <!-- https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSource"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
     
 
 
@@ -2942,15 +2942,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/PhotographicSeries -->
+    <!-- https://w3id.org/arco/ontology/context-description/InterpretationCriterion -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/Source -->
+    <!-- https://w3id.org/arco/ontology/context-description/PhotographicSeries -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Source"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/PhotographicSeries"/>
     
 
 
@@ -3602,8 +3602,8 @@ resource:TechnicalCharacteristic/pietra-scultura
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasSource"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Source"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasInterpretationCriterion"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/InterpretationCriterion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una dedica, intesa come iscrizione dell&apos;autore (dedicante) su un bene culturale contenente un testo che ha lo scopo di offrire l&apos;oggetto a una persona o un ente (dedicatario).</rdfs:comment>
