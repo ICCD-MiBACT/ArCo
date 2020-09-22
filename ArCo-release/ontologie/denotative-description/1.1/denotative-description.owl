@@ -4062,7 +4062,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT - Normativa BNB: LR/LRI/LRIP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT - Normativa BNB: LR/LRI/LRIP - Normativa PG: CA/CAE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4419,6 +4419,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <core:iccdNormTag>Normativa PG: CA/HAT</core:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -4860,6 +4861,18 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/HeightAboveGroundLevel -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HeightAboveGroundLevel">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Altezza relativa</rdfs:label>
+        <rdfs:label xml:lang="en">Height above ground level</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/HeightLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/HeightLength">
@@ -5092,6 +5105,18 @@ resource:MeasurementCollection/1200865132-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/MaximumTemperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MaximumTemperature">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Maximum temperature</rdfs:label>
+        <rdfs:label xml:lang="it">Temperatura massima</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/MaximumTotalLength -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MaximumTotalLength">
@@ -5126,6 +5151,18 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Stato di conservazione mediocre</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/MinimumTemperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/MinimumTemperature">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Minimum temperature</rdfs:label>
+        <rdfs:label xml:lang="it">Temperatura minima</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:NamedIndividual>
     
 
@@ -5361,6 +5398,19 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: OGD/OGDT - Normative A e BDM 3: OGA/OGAG.</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Slope -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Slope">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Pendenza</rdfs:label>
+        <rdfs:label xml:lang="en">Slope</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa PG: CA/CAC</core:iccdNormTag>
     </owl:NamedIndividual>
     
 
