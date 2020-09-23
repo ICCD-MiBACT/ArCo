@@ -3714,7 +3714,7 @@ resource:TechnicalCharacteristic/pietra-scultura
     <!-- https://w3id.org/arco/ontology/denotative-description/Environment -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Environment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
