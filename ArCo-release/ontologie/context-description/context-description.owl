@@ -6031,6 +6031,22 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/historicalInterest -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/historicalInterest">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;interesse storico associto ad una cosa</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the historical interest related to a thing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="en">historical interest</rdfs:label>
+        <rdfs:label xml:lang="it">interesse storico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/iconclassCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/iconclassCode">
@@ -11293,13 +11309,13 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>

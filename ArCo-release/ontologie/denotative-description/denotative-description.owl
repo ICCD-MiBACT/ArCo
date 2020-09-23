@@ -951,7 +951,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has orientation</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT - Normativa BNB: LR/LRI/LRIP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: MT/ORT - ICCD Schede CA e MA: MT/ORT - Normativa BNB: LR/LRI/LRIP - Normativa PG: CA/CAE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
