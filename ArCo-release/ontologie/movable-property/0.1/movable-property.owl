@@ -335,6 +335,36 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalHabit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank">
@@ -493,6 +523,16 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasParamorphosis -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasParamorphosis">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasPreservationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasPreservationType">
@@ -508,6 +548,16 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
     </owl:ObjectProperty>
     
 
@@ -756,6 +806,33 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf">
@@ -832,6 +909,15 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isParamorphosisOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isPreservationTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isPreservationTypeOf">
@@ -845,6 +931,15 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è tipo di conservazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
     </owl:ObjectProperty>
     
 
@@ -1193,6 +1288,33 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/paramorph -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/paramorph">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/pseudomorph -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/pseudomorph">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/radioactivity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/radioactivity">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/sampleLocation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/sampleLocation">
@@ -1223,6 +1345,15 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSG</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/zoning -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/zoning">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -1380,7 +1511,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Taxon biologico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS, SB/TBI, RB/RBN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS, SB/TBI, RB/RBN. Normativa PG: FV/FV/FVED</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1598,6 +1729,110 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Crystal -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Crystal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasParamorphosis"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/paramorph"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/pseudomorph"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/radioactivity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/zoning"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalHabit -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalHabit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalMorphology -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalMorphology">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalTwinning -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalTwinning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2030,6 +2265,20 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/Paramorphosis -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Paramorphosis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Phylum -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum">
@@ -2162,6 +2411,20 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Preservation type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di conservazione</rdfs:label>
         <a-cat:iccdNormTag xml:lang="en">Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Pseudomorphosis -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2498,7 +2761,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasTypeOfTypeSpecimen"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
