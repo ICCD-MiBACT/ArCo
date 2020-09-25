@@ -350,6 +350,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasClimateSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasClimateSituation">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClimateSituationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/ClimateSituation"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ambiente alla situazione climatica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the ambient to the climate situation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha situazione climatica</rdfs:label>
+        <rdfs:label xml:lang="en">has climate situation</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium">
@@ -1137,6 +1154,40 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasSoil -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSoil">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoilOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega una cosa al suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a thing to the soil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha suolo</rdfs:label>
+        <rdfs:label xml:lang="en">has soil</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasSoilUse -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasSoilUse">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoilUseOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/SoilUse"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il suolo al suo uso</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates a soil to its use</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha uso del suolo</rdfs:label>
+        <rdfs:label xml:lang="en">has soil use</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasStorageMethodOrColourDepth -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasStorageMethodOrColourDepth">
@@ -1470,6 +1521,22 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è caratteristica tecnica classificata da</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isClimateSituationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isClimateSituationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/ClimateSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la situazione climatica all&apos;ambiente</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the climate situation to the ambient</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is climate situation of</rdfs:label>
+        <rdfs:label xml:lang="it">è situazione climatica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2227,6 +2294,38 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/isSoilOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSoilOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il suolo ad una cosa</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the soil to a thing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">is soil of</rdfs:label>
+        <rdfs:label xml:lang="it">è suolo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isSoilUseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isSoilUseOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/SoilUse"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;uso al suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the use to the soil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="it">ha uso del suolo</rdfs:label>
+        <rdfs:label xml:lang="en">has soil use</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/isStorageMethodOrColourDepthOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isStorageMethodOrColourDepthOf">
@@ -2636,6 +2735,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/geologicalDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/geologicalDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione geologica di un suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents geological description of a soil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">geological description</rdfs:label>
+        <rdfs:label xml:lang="it">descrizione geologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/handwriting -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/handwriting">
@@ -2680,6 +2795,22 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEB</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/morphologicalDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/morphologicalDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione morfologica di un suolo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents morphological description of a soil</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">morphological description</rdfs:label>
+        <rdfs:label xml:lang="it">descrizione morfologica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
     
 
@@ -3185,6 +3316,33 @@ resource:Inscription/1200865151-inscription-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: se DA/ISE/ISED = &apos;marchio&apos; - ICCD versioni precedenti: DA/STM/STMC = &apos;marchio&apos; - ICCD Normativa A: LI/LSI/LSIG = &apos;marchio&apos;</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/ClimateSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/ClimateSituation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isClimateSituationOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la situazione climatica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the climate situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Climate situation</rdfs:label>
+        <rdfs:label xml:lang="it">Situazione climatica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3717,6 +3875,30 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasClimateSituation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/ClimateSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSoil"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/description"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
@@ -4092,6 +4274,18 @@ resource:MeasurementCollection/1200865132-1
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/RuralEnvironment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/Environment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isEnvironmentOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;ambiente rurale di un oggetto</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the rural environment of a thing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -4162,6 +4356,69 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa MA, CA, SI, SAS: MC/CMN/CMNT</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Soil -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Soil">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SoilType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasSoilUse"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/SoilUse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il suolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the soil.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Soil</rdfs:label>
+        <rdfs:label xml:lang="it">Suolo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SoilType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SoilType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di suolo suolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of the soil.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Soil tyoe</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di suolo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/SoilUse -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/SoilUse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/isSoilUseOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Soil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;uso del suolo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the soil.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <rdfs:label xml:lang="en">Soil use</rdfs:label>
+        <rdfs:label xml:lang="it">Uso del suolo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -5343,6 +5600,19 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:comment xml:lang="en">This individual represents a digital resource&apos;s quality level, e.g. high-resolution, low-resolution, preview.</rdfs:comment>
         <rdfs:label xml:lang="it">Livello di qualità</rdfs:label>
         <rdfs:label xml:lang="en">Quality level</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Rainfall -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Rainfall">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Precipitazioni</rdfs:label>
+        <rdfs:label xml:lang="en">Rainfall</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa PG: CA/CLM/CLMP</core:iccdNormTag>
     </owl:NamedIndividual>
     
 

@@ -316,25 +316,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/hasCollectingSite -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCollectingSite">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLocation"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCollectingSiteOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il campione al luogo di raccolta</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the specimen to the collecting site</rdfs:comment>
-        <rdfs:label xml:lang="it">ha luogo di raccolta</rdfs:label>
-        <rdfs:label xml:lang="en">has collecting site</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalHabit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit">
@@ -405,7 +386,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasFluidDynamism">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta all&apos;idrodinamismo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site to the fluid dynamism</rdfs:comment>
@@ -602,7 +583,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasShadeTolerance">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta del campione alla caratteristica del popolamento del luogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site the individuals&apos; shade tolerance</rdfs:comment>
@@ -640,7 +621,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSubstrate">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isSubstrateOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta al substrato</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site to the substrate</rdfs:comment>
@@ -800,12 +781,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/isCollectingSiteOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCollectingSiteOf"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf">
@@ -837,7 +812,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;idrodinamismo al luogo di raccolta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the fluid dynamism to the collecting site</rdfs:comment>
         <rdfs:label xml:lang="en">is fluid dynamism of</rdfs:label>
@@ -981,7 +956,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la caratteristica del popolamento del luogo di raccolta al il luogo di raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the individuals&apos; shade tolerance the collecting site</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -1013,7 +988,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isSubstrateOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà  collega il substrato al luogo di raccolta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the substrate to the collecting site</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -1436,6 +1411,31 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasFluidDynamism"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasShadeTolerance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSubstrate"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Orientation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
@@ -1444,7 +1444,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1681,58 +1688,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/CollectingSite -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CollectingSite">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCollectingSiteOF"/>
-                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasFluidDynamism"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasShadeTolerance"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSubstrate"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta informazioni specifiche, non relative alla posizione geografica, della località di reperimento dell&apos;oggetto della scheda</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents non geographical information about the site where the specimen was collected</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Collecting site</rdfs:label>
-        <rdfs:label xml:lang="it">Luogo di raccolta</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/Crystal -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Crystal">
@@ -1945,7 +1900,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">This class represents the fluid dynamis when the specimenwas collected</rdfs:comment>
@@ -2512,7 +2467,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tolleranza alla luminosità del popolamento ove il campione è stato raccolto</rdfs:comment>
@@ -2602,8 +2557,8 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCollectingSite"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2685,12 +2640,6 @@ In this module the following Ontology Design Patterns have been used:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SubstrateType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasEnvironment"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
