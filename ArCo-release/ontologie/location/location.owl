@@ -2460,6 +2460,18 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/CollectingLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/CollectingLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:label xml:lang="en">Collecting location</rdfs:label>
+        <rdfs:label xml:lang="it">Luogo di raccolta</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/CurrentPhysicalLocation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/CurrentPhysicalLocation">
