@@ -10,6 +10,7 @@ xmlns:pico="http://data.cochrane.org/ontologies/pico/"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 
+<xsl:param name="item" />
 	<xsl:variable name="sheetVersion"
 		select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
@@ -179,7 +180,11 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<xsl:value-of select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
 			</xsl:attribute>
 		</dc:source>
-		
+							<dc:source>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat('http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=', $item)" />
+						</xsl:attribute>
+					</dc:source>
 												<!-- dc:title -->	
 
 	<xsl:if test="record/metadata/schede/*/OG">
