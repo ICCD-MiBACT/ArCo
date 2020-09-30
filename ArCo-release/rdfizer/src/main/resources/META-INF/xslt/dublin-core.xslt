@@ -18,6 +18,8 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	<xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" />
 	<xsl:variable name="itemURI">
+	<xsl:choose>
+		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
 				<xsl:value-of
@@ -28,6 +30,18 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 			</xsl:otherwise>
 		</xsl:choose>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+					<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCC" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACC" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:otherwise>
+	</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="culturalProperty"
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
@@ -343,7 +357,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:if>
 		
 									<!-- dc:identifier -->
-	<xsl:if test="record/metadata/schede/*/CD/NCT">
+	<xsl:if test="record/metadata/schede/*/CD/NCT/NCTN">
 		<dc:identifier>
 			<xsl:choose>
 				 <xsl:when	test="record/metadata/schede/*/RV/RVE/RVEL">

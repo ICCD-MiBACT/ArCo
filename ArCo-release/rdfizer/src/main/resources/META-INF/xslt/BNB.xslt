@@ -100,7 +100,9 @@
 	<xsl:variable name="cp-name" select="''" />
 	<xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" />
-	<xsl:variable name="itemURI">
+		<xsl:variable name="itemURI">
+	<xsl:choose>
+		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
 				<xsl:value-of
@@ -111,6 +113,18 @@
 					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
 			</xsl:otherwise>
 		</xsl:choose>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+					<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCC" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACC" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:otherwise>
+	</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="culturalProperty" select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />	
 
