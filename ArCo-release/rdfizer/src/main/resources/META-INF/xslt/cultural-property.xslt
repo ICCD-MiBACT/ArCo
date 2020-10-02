@@ -1754,19 +1754,39 @@
 							select="normalize-space(record/metadata/schede/*/OG/QNT/QNTO)" />
 					</arco-arco:positionInSequence>
 				</xsl:if>
+				
 				<!-- cultural property description -->
-
+				<xsl:if test="record/metadata/schede/A/IS">
+					<arco-core:description>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/A/IS/ISP">
+								<xsl:value-of select="normalize-space(record/metadata/schede/A/IS/ISP)" />
+							</xsl:when>
+							<xsl:when test="record/metadata/schede/A/IS/IST">
+								<xsl:value-of select="normalize-space(record/metadata/schede/A/IS/IST)" />
+							</xsl:when>
+						</xsl:choose>
+					</arco-core:description>
+				</xsl:if>
+				
 				<xsl:if test="record/metadata/schede/*/DA/DES">
 					<xsl:choose>
-						<xsl:when
-							test="record/metadata/schede/*/DA/DES/DESO and not($sheetType='NU')">
-							<xsl:if
-								test="not(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='nr' or lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='n.r.' or lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='nr (recupero pregresso)')">
+						<xsl:when test="record/metadata/schede/*/DA/DES/DESO and not($sheetType='NU')">
+							<xsl:if test="not(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='nr' or lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='n.r.' or lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESO))='nr (recupero pregresso)')">
 								<arco-core:description>
-									<xsl:value-of
-										select="normalize-space(record/metadata/schede/*/DA/DES/DESO)" />
+									<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES/DESO)" />
 								</arco-core:description>
 							</xsl:if>
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/NU/DA/DES/DESA and not(record/metadata/schede/NU/DA/DES/DESO)">
+							<arco-core:description>
+								<xsl:value-of select="concat('Dritto: ', normalize-space(record/metadata/schede/NU/DA/DES/DESA), '. Rovescio: ', normalize-space(record/metadata/schede/NU/DA/DES/DESM))"/>
+							</arco-core:description>
+						</xsl:when>
+						<xsl:when test="record/metadata/schede/*/DA/DES/DESS and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESS)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/DA/DES/DESS)), 'n.r'))) and not(record/metadata/schede/*/DA/DES/DESO)">
+							<arco-core:description>
+								<xsl:value-of select="normalize-space(record/metadata/schede/*/DA/DES/DESS)"/>
+							</arco-core:description>
 						</xsl:when>
 						<xsl:when test="not(record/metadata/schede/*/DA/DES/*)">
 							<arco-core:description>
