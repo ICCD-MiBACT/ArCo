@@ -83,20 +83,53 @@
 			<!-- part of cultural property when there is STCP (conservation status) -->
 			<xsl:for-each select="record/metadata/schede/*/CO/STC">
 				<xsl:variable name="conservationStatus">
-					<xsl:value-of
-						select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
+					<xsl:value-of select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
 				</xsl:variable>
 				<xsl:variable name="parentPosition">
 					<xsl:value-of select="position()" />
 				</xsl:variable>
-				<xsl:if
-					test="not(lower-case(normalize-space(./STCP))='intero bene') and not(lower-case(normalize-space(./STCP))='integrale') and not(lower-case(normalize-space(./STCP))='tutta') and not(lower-case(normalize-space(./STCP))='totale') and (not(starts-with(lower-case(normalize-space(./STCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./STCP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./STCP)), 'esemplar')) and not(starts-with(lower-case(normalize-space(./STCP)), 'intero')) and not(starts-with(lower-case(normalize-space(./STCP)), 'intera')))">
-					<xsl:for-each select="./STCP">
-
+				<xsl:if test="not($sheetType='A')">
+					<xsl:if test="not(lower-case(normalize-space(./STCP))='intero bene') and not(lower-case(normalize-space(./STCP))='integrale') and not(lower-case(normalize-space(./STCP))='tutta') and not(lower-case(normalize-space(./STCP))='totale') and (not(starts-with(lower-case(normalize-space(./STCP)), 'nr')) and not(starts-with(lower-case(normalize-space(./STCP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./STCP)), 'esemplar')) and not(starts-with(lower-case(normalize-space(./STCP)), 'intero')) and not(starts-with(lower-case(normalize-space(./STCP)), 'intera')))">
+						<xsl:for-each select="./STCP">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+							 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+							 	</xsl:attribute>
+								<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+								<arco-dd:hasConservationStatus>
+									<xsl:attribute name="rdf:resource">
+										<xsl:value-of select="$conservationStatus" />
+									</xsl:attribute>
+								</arco-dd:hasConservationStatus>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(.)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(.)" />
+								</l0:name>
+								<arco-core:isPartOf>
+									<xsl:attribute name="rdf:resource"> 
+										<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+									</xsl:attribute>
+								</arco-core:isPartOf>
+							</rdf:Description>
+						</xsl:for-each>
+					</xsl:if>
+				</xsl:if>
+			</xsl:for-each>
+						<!-- part of cultural property when there is STCR (conservation status) -->
+			<xsl:for-each select="record/metadata/schede/A/CO/STC">
+				<xsl:variable name="conservationStatus">
+					<xsl:value-of select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
+				</xsl:variable>
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(lower-case(normalize-space(./STCR))='intero bene') and not(lower-case(normalize-space(./STCR))='integrale') and not(lower-case(normalize-space(./STCR))='tutta') and not(lower-case(normalize-space(./STCR))='totale') and (not(starts-with(lower-case(normalize-space(./STCR)), 'nr')) and not(starts-with(lower-case(normalize-space(./STCR)), 'n.r')) and not(starts-with(lower-case(normalize-space(./STCR)), 'esemplar')) and not(starts-with(lower-case(normalize-space(./STCR)), 'intero')) and not(starts-with(lower-case(normalize-space(./STCR)), 'intera')))">
+					<xsl:for-each select="./STCR">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
-						 		<xsl:value-of
-								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 		<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
 						 	</xsl:attribute>
 							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
 							<arco-dd:hasConservationStatus>
@@ -113,13 +146,13 @@
 							<arco-core:isPartOf>
 								<xsl:attribute name="rdf:resource"> 
 									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
-								</xsl:attribute>
+							</xsl:attribute>
 							</arco-core:isPartOf>
 						</rdf:Description>
-
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
+
 
 			<!-- part of cultural property when there is AUTW (author) -->
 			<xsl:for-each select="record/metadata/schede/*/AU/AUT">

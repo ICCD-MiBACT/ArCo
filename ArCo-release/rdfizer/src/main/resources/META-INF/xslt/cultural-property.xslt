@@ -2588,6 +2588,7 @@
 				</xsl:for-each>
 				<!-- conservation status -->
 				<xsl:for-each select="record/metadata/schede/*/CO/STC">
+					<xsl:if test="not($sheetType='A')">
 					<xsl:choose>
 						<xsl:when
 							test="./* and (not(./STCP) or ./REIP='intero bene' or ./STCP='integrale' or ./REIP='tutta' or ./STCP='totale') or (starts-with(lower-case(normalize-space(./STCP)), 'nr')) or (starts-with(lower-case(normalize-space(./STCP)), 'n.r')) or (starts-with(lower-case(normalize-space(./STCP)), 'intero')) or (starts-with(lower-case(normalize-space(./STCP)), 'intera')) or (starts-with(lower-case(normalize-space(./STCP)), 'esemplar'))">
@@ -2600,6 +2601,29 @@
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:for-each select="./STCP">
+								<arco-core:hasPart>
+									<xsl:attribute name="rdf:resource">
+			                				<xsl:value-of
+										select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+								</arco-core:hasPart>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/A/CO/STC">
+					<xsl:choose>
+						<xsl:when test="./* and (not(./STCR) or ./STCR='intero bene' or ./STCR='integrale' or ./STCR='tutta' or ./STCR='totale') or (starts-with(lower-case(normalize-space(./STCR)), 'nr')) or (starts-with(lower-case(normalize-space(./STCR)), 'n.r')) or (starts-with(lower-case(normalize-space(./STCR)), 'intero')) or (starts-with(lower-case(normalize-space(./STCR)), 'intera')) or (starts-with(lower-case(normalize-space(./STCR)), 'esemplar'))">
+							<arco-dd:hasConservationStatus>
+								<xsl:attribute name="rdf:resource">
+		                            <xsl:value-of
+									select="concat($NS, 'ConservationStatus/', $itemURI, '-conservation-status-', position())" />
+		                        </xsl:attribute>
+							</arco-dd:hasConservationStatus>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:for-each select="./STCR">
 								<arco-core:hasPart>
 									<xsl:attribute name="rdf:resource">
 			                				<xsl:value-of
