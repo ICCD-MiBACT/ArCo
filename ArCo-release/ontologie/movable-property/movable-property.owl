@@ -258,7 +258,26 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has accession</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNB: SB/ABC</a-cat:iccdNormTag>
+        <core:iccdNormTag>Normativa ICCD BNB: SB/ABC</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasAppearance -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasAppearance">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isAppearanceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Appearance"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica all&apos;aspetto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral species to the appearance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha aspetto</rdfs:label>
+        <rdfs:label xml:lang="en">has appearance</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAB</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -276,7 +295,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has associated preparation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBR</a-cat:iccdNormTag>
+        <core:iccdNormTag>Normativa ICCD BNB: DB/DBR</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -294,7 +313,45 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has botanical revision</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNB: RB/RBR</a-cat:iccdNormTag>
+        <core:iccdNormTag>Normativa ICCD BNB: RB/RBR</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasChemicalFormula -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasChemicalFormula">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isChemicalFormulaOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla formula chimica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral species to the chemical formula.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha formula chimica</rdfs:label>
+        <rdfs:label xml:lang="en">has chemical formula</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMS/SMSE, SMSF</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCleavage -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCleavage">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCleavageOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla sfaldatura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral species to the cleavage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha sfaldatura</rdfs:label>
+        <rdfs:label xml:lang="en">has cleavage</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMF</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -311,26 +368,98 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has close individual</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIV</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIV</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/hasCollectingSite -->
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystal -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCollectingSite">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasLocation"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCollectingSiteOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il campione al luogo di raccolta</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the specimen to the collecting site</rdfs:comment>
-        <rdfs:label xml:lang="it">ha luogo di raccolta</rdfs:label>
-        <rdfs:label xml:lang="en">has collecting site</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystal">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica al cristallo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral species to the crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha cristallo</rdfs:label>
+        <rdfs:label xml:lang="en">has crystal</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalHabit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica all&apos;aspetto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystal to the crystal habit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha abito del cristallo</rdfs:label>
+        <rdfs:label xml:lang="en">has crystal habit</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAA</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla sua morfologia</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystall to its morphology.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha morfologia cristallina</rdfs:label>
+        <rdfs:label xml:lang="en">has crystal morphology</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla geminazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystal to the crystal twinning.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha geminazione</rdfs:label>
+        <rdfs:label xml:lang="en">has crystal twinning</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAG</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasCrystallographicCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystallographicCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystallographicCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la cella alla caratteristica cristallografica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the unit cell to the crystallographic characteristic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha caratteristica cristallografica</rdfs:label>
+        <rdfs:label xml:lang="en">has crystallographic characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -375,7 +504,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasFluidDynamism">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta all&apos;idrodinamismo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site to the fluid dynamism</rdfs:comment>
@@ -384,7 +513,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has fluid dynamism</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRID</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRID</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -418,7 +547,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has host individual</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -436,7 +565,25 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has incline</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasInclusion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasInclusion">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isInclusionOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Inclusion"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione mineralogico all&apos;inclusione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral specimen to the inclusion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha inclusione</rdfs:label>
+        <rdfs:label xml:lang="en">has inclusion</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAI</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -454,7 +601,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has label</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -472,7 +619,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has language</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -493,6 +640,25 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasParamorphosis -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasParamorphosis">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla paramorfosi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystal to the paramorphosis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha paramorfosi</rdfs:label>
+        <rdfs:label xml:lang="en">has paramorphosis</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAS</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasPreservationType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasPreservationType">
@@ -507,7 +673,44 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has preservation type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
+        <core:iccdNormTag>Normativa ICCD BNB: DB/DBC/DBCX</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla pseudomorfosi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystal to the pseudomorphosis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha pseudomorfosi</rdfs:label>
+        <rdfs:label xml:lang="en">has pseudomorphosis</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>Normativa ICCD BNB: SM/SMA/SMAP</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasRefraction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasRefraction">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasCharacteristic"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isRefractionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Refraction"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione alla rifrazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to the refraction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha rifrazione</rdfs:label>
+        <rdfs:label xml:lang="en">has refraction</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -525,7 +728,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has related sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBC, DB/DBX, DB/DBS, DB/DBP</a-cat:iccdNormTag>
+        <core:iccdNormTag>Normativa ICCD BNB: DB/DBC, DB/DBX, DB/DBS, DB/DBP</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -543,7 +746,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has sample form</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>Normativa ICCD BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
+        <core:iccdNormTag>Normativa ICCD BNB: DB/DBX/DBXX</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -552,7 +755,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasShadeTolerance">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta del campione alla caratteristica del popolamento del luogo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site the individuals&apos; shade tolerance</rdfs:comment>
@@ -561,7 +764,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has shade tolerance</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: LR/LRI/LRIS</a-cat:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa BNB: LR/LRI/LRIS</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -580,7 +783,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has specimen harvesting</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRD, LR/LRD</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRD, LR/LRD</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -590,7 +793,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSubstrate">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isSubstrateOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il luogo di raccolta al substrato</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the collecting site to the substrate</rdfs:comment>
@@ -599,7 +802,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has substrate</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -617,7 +820,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa AT: OG/OGS. BNB: SB/SBS/SBSA, SB/NBN/NBNA, SB/NAA, SB/TBI/TBIN, SB/NAT, RB/RBR/RBRN, RB/RBN</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -650,7 +853,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has type specimen identification</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/TBI</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasUnitCell -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasUnitCell">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isUnitCellOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla cella</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the mineral species to the cell.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha cella</rdfs:label>
+        <rdfs:label xml:lang="en">has unit cell</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -665,6 +885,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is accession of</rdfs:label>
         <rdfs:label xml:lang="it">è accessione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isAppearanceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isAppearanceOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Appearance"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;aspetto alla specie mineralogica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the appearance to the mineral species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is appearance of</rdfs:label>
+        <rdfs:label xml:lang="it">è aspetto di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -703,6 +940,33 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isChemicalFormulaOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isChemicalFormulaOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la formula chimica alla specie mineralogica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the chemical formula to the mineral species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is chemical formula of</rdfs:label>
+        <rdfs:label xml:lang="it">è formula chimica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isClassificationSystemOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isClassificationSystemOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/refersToClassificationSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/ClassificationSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isClassifiedByOriginalTaxon -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isClassifiedByOriginalTaxon">
@@ -714,6 +978,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is classified by original taxon</rdfs:label>
         <rdfs:label xml:lang="it">è classificato dal taxon originario</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCleavageOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCleavageOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la sfaldatura alla specie mineralogica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the cleavage to the mineral species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is cleavage of</rdfs:label>
+        <rdfs:label xml:lang="it">è sfaldatura di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -750,9 +1031,87 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/isCollectingSiteOf -->
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCollectingSiteOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;abito al cristallo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the habit to the crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is crystal habit of</rdfs:label>
+        <rdfs:label xml:lang="it">è abito di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la morfologia al cristallo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the morphology to the crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is crystallographic morphology of</rdfs:label>
+        <rdfs:label xml:lang="it">è morfologia cristallina</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystalOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla specie mineralogica</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystal to the mineral species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is crystal of</rdfs:label>
+        <rdfs:label xml:lang="it">è cristallo di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la geminaione al cristallo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystal twinnign to the crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is crystal twinning of</rdfs:label>
+        <rdfs:label xml:lang="it">è geminazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isCrystallographicCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystallographicCharacteristicOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la caratteristica cristallografica alla cella</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates crystallographc characteristic to the unit cell.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is crystallographic characteristic of</rdfs:label>
+        <rdfs:label xml:lang="it">è caratteristica cristallografica di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
     
 
 
@@ -760,7 +1119,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;idrodinamismo al luogo di raccolta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the fluid dynamism to the collecting site</rdfs:comment>
         <rdfs:label xml:lang="en">is fluid dynamism of</rdfs:label>
@@ -801,6 +1160,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isInclusionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isInclusionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Inclusion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;inclusione al campione mineralogico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the inclusion to the mineral specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is inclusion of</rdfs:label>
+        <rdfs:label xml:lang="it">è inclusione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isLabelOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isLabelOf">
@@ -827,7 +1202,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è lingua di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isParamorphosisOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la paramorfosi al cristallo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the paramorphosis to the crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is paramorphosis of</rdfs:label>
+        <rdfs:label xml:lang="it">è paramorfosi di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -843,6 +1235,40 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is preservation type of</rdfs:label>
         <rdfs:label xml:lang="it">è tipo di conservazione di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la pseudomorfosi al cristallo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the pseudomorphosis to the crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is pseudomorphosis of</rdfs:label>
+        <rdfs:label xml:lang="it">è pseudomorfosi di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isRefractionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isRefractionOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Refraction"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la rifrazione al minerale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the refraction to the mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is refraction of</rdfs:label>
+        <rdfs:label xml:lang="it">è rifrazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -877,7 +1303,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è forma del reperto di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
+        <core:iccdNormTag xml:lang="it">ICCD Normativa BNB: DB/DBX/DBXX</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -886,7 +1312,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la caratteristica del popolamento del luogo di raccolta al il luogo di raccolta del campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the individuals&apos; shade tolerance the collecting site</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -918,7 +1344,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isSubstrateOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
         <rdfs:comment xml:lang="it">Questa proprietà  collega il substrato al luogo di raccolta</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the substrate to the collecting site</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -926,7 +1352,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è substrato di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -986,7 +1412,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è identificazione del tipo nomenclaturale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/TBI</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isUnitCellOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isUnitCellOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la cella al minerale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the unit cella to the mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is unit cell of</rdfs:label>
+        <rdfs:label xml:lang="it">è cella di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -1000,6 +1442,15 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">produces taxon</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/refersToClassificationSystem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/refersToClassificationSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/ClassificationSystem"/>
     </owl:ObjectProperty>
     
 
@@ -1034,7 +1485,41 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">trascrizione del corpo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/cleveageDirection -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/cleveageDirection">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la direzione della sfaldatura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the direction of the cleveage</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">cleveage direction</rdfs:label>
+        <rdfs:label xml:lang="it">direzione della sfaldatura</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMF/SMFZ</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/cleveageGrade -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/cleveageGrade">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il grado della sfaldatura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the grade of the cleveage</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">cleveage grade</rdfs:label>
+        <rdfs:label xml:lang="it">grado della sfaldatura</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMF/SMFA</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1052,7 +1537,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">date of last change preservative</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="en">Normativa BNB: DB/DBC/DBCE</a-cat:iccdNormTag>
+        <core:iccdNormTag xml:lang="en">Normativa BNB: DB/DBC/DBCE</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1069,7 +1554,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">numero del genere</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSN</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSN</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1086,7 +1571,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">simboli grafici</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEG</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEG</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1103,7 +1588,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">handwriting</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEA</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEA</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1121,7 +1606,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">trascrizione dell&apos;intestazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/internalReflection -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/internalReflection">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di riflessi interni</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the presence of internal reflecion</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">internal reflection</rdfs:label>
+        <rdfs:label xml:lang="it">riflesso interno</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMM/SMMR</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1139,7 +1641,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">manufacturing date</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBR/DBRD, DB/DBX/DBXO, DB/DBS/DBSD, DB/DB/DBP/DBPD.</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBR/DBRD, DB/DBX/DBXO, DB/DBS/DBSD, DB/DB/DBP/DBPD.</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1156,7 +1658,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">numero di buste</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1173,7 +1675,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">numero di etichette</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1193,6 +1695,73 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/paramorph -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/paramorph">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di paramorfosi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the presence of paramorphosis</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">paramorph</rdfs:label>
+        <rdfs:label xml:lang="it">paramorfo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAS</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/polytype -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/polytype">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica il politipo della specie minerale</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the polytype of the mineral species</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">polytype</rdfs:label>
+        <rdfs:label xml:lang="it">politipo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMN/SMNP</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/pseudomorph -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/pseudomorph">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di pseudomorfosi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the presence of pseudomorphosis</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">pseudomorph</rdfs:label>
+        <rdfs:label xml:lang="it">pseudomorfo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAP</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/radioactivity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/radioactivity">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di radioattività</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the presence of radioactivity</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">radioactivity</rdfs:label>
+        <rdfs:label xml:lang="it">radioattività</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMF/SMFR</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/sampleLocation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/sampleLocation">
@@ -1205,7 +1774,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">sample location</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC/DBCC, DB/DBX/DBXC, DB/DBS/DBSC, DB/DB/DBP/DBPC.</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBC/DBCC, DB/DBX/DBXC, DB/DBS/DBSC, DB/DB/DBP/DBPC.</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1222,7 +1791,24 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">taxonomic number</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSG</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSG</core:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/zoning -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/zoning">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di zonatura</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property indicates the presence of zoning</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">zoning</rdfs:label>
+        <rdfs:label xml:lang="it">zonatura</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAZ</core:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1305,6 +1891,31 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasFluidDynamism"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasShadeTolerance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSubstrate"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/Orientation -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
@@ -1313,7 +1924,14 @@ In this module the following Ontology Design Patterns have been used:
 
     <!-- https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1347,7 +1965,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Accessione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/ABC</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/ABC</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Appearance -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Appearance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;aspetto complessivo del bene inteso come descrizione sommaria dei rapporti intercorrenti tra cristallo/i e matrice.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents general appearance of the specimen as the description of relations between crystal/s and the matrix</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Appearance</rdfs:label>
+        <rdfs:label xml:lang="it">Aspetto</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAB</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1380,7 +2014,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Taxon biologico</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS, SB/TBI, RB/RBN</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS, SB/TBI, RB/RBN. Normativa PG: FV/FV/FVED</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1415,7 +2049,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Forma botanica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNH; SB/NAA/NAAH; SB/NAT/NATH</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNH; SB/NAA/NAAH; SB/NAT/NATH</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1449,7 +2083,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Revisione botanica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBR</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: RB/RBR</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1465,7 +2099,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Tipo di revisione botanica</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBR/RBRT</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: RB/RBR/RBRT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChemicalFormula -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChemicalFormula">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la formula chimica di una specie mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the chemical formula of a mineral species</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Chemical formula</rdfs:label>
+        <rdfs:label xml:lang="it">Formula chimica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSE</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1528,6 +2178,50 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/ClassificationSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ClassificationSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/System"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il sistema di classificazione in base a cui un&apos;entità è stata classificata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents classification system used to classify an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Classification system</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema di classificazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSG, SMSD, SMSC, SMSS</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Cleavage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Cleavage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/cleveageDirection"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/cleveageGrade"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la sfaldatura di un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the cleveage of a mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Cleveage</rdfs:label>
+        <rdfs:label xml:lang="it">Sfaldatura</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/CloseIndividual -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CloseIndividual">
@@ -1545,59 +2239,156 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Individuo vicino</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIV</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIV</core:iccdNormTag>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/CollectingSite -->
+    <!-- https://w3id.org/arco/ontology/movable-property/Crystal -->
 
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CollectingSite">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Crystal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCollectingSiteOF"/>
-                <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasOrientation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasFluidDynamism"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/FluidDynamism"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasParamorphosis"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasShadeTolerance"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ShadeTolerance"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSubstrate"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Substrate"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/paramorph"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta informazioni specifiche, non relative alla posizione geografica, della località di reperimento dell&apos;oggetto della scheda</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents non geographical information about the site where the specimen was collected</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/pseudomorph"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/radioactivity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/zoning"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il cristallodi un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the crystal of a mineral.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Collecting site</rdfs:label>
-        <rdfs:label xml:lang="it">Luogo di raccolta</rdfs:label>
+        <rdfs:label xml:lang="it">Cristallo</rdfs:label>
+        <rdfs:label xml:lang="en">Crystal</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalHabit -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalHabit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;abito di un cristallo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the habit of a crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Abito del cristallo</rdfs:label>
+        <rdfs:label xml:lang="en">CrystalHabit</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAA</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalMorphology -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalMorphology">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lamorfologia di un cristallo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the morphology of a crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Crystal morphology</rdfs:label>
+        <rdfs:label xml:lang="it">Morfologia del cristallo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalTwinning -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalTwinning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la geminazione di un cristallo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the twinning of a crystal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Crystal twinning</rdfs:label>
+        <rdfs:label xml:lang="it">Geminazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAG</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la caratteristica cristallografica di un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents crystallographic characteristic of a mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Caratteristica cristallografica</rdfs:label>
+        <rdfs:label xml:lang="en">Crystallographic characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -1631,7 +2422,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Cultivar</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNL; SB/NAA/NAAL; SB/NAT/NATL</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNL; SB/NAA/NAAL; SB/NAT/NATL</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/EmpiricalChemicalFormula -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/EmpiricalChemicalFormula">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la formula chimica empirica di una specie mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the empirical chemical formula of a mineral species</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Empirical chemical formula</rdfs:label>
+        <rdfs:label xml:lang="it">Formula chimica empirica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSF</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1698,7 +2505,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Family</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSF</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBS/SBSF</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1710,7 +2517,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isFluidDynamismOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">This class represents the fluid dynamis when the specimenwas collected</rdfs:comment>
@@ -1719,7 +2526,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Idrodinamismo</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRID</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRID</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1747,7 +2554,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Reperto carpologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBC</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBC</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1818,7 +2625,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Genus</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1840,7 +2647,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Individuo ospite</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1862,7 +2669,23 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Incline</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRII</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Inclusion -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Inclusion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;inclusione in un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the inclusion in a mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Inclusion</rdfs:label>
+        <rdfs:label xml:lang="it">Inclusione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAI</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1951,7 +2774,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Label</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">untable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE</core:iccdNormTag>
     </owl:Class>
     
 
@@ -1966,7 +2789,88 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Lingua</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MineralClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MineralGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralGroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MineralSpecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSpecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/OpticCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAppearance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Appearance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasChemicalFormula"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCleavage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystal"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasUnitCell"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/OpticCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/OpticCharacteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la caratteristica ottica di un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the optical characteristic of a mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Caratteristica ottica</rdfs:label>
+        <rdfs:label xml:lang="en">Optic characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2030,6 +2934,28 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/Paramorphosis -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Paramorphosis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la paramorfosi di un cristallo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the paramorphosis of a crystall.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Paramorfosi</rdfs:label>
+        <rdfs:label xml:lang="en">Paramorphosis</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAS</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Phylum -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Phylum">
@@ -2080,6 +3006,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la caratteristica fisica di un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the physical characteristic of a mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Caratteristica fisica</rdfs:label>
+        <rdfs:label xml:lang="en">Physical characteristic</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/PollenSample -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/PollenSample">
@@ -2097,7 +3038,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Reperto palinologico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBP</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBP</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2131,7 +3072,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Preparato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBR</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBR</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2147,7 +3088,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Tipo di preparato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBR/DBRT</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBR/DBRT</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2161,7 +3102,50 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">Preservation type</rdfs:label>
         <rdfs:label xml:lang="it">Tipo di conservazione</rdfs:label>
-        <a-cat:iccdNormTag xml:lang="en">Normativa ICCD BNB: DB/DBC/DBCX</a-cat:iccdNormTag>
+        <core:iccdNormTag xml:lang="en">Normativa ICCD BNB: DB/DBC/DBCX</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Pseudomorphosis -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la pseudomorfosi di un cristallo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the pseudomorphosis of a crystall.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Pseudomorfosi</rdfs:label>
+        <rdfs:label xml:lang="en">Pseudomorphosis</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMA/SMAP</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Refraction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Refraction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la rifrazione di un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the refraction of a mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Refraction</rdfs:label>
+        <rdfs:label xml:lang="it">Rifrazione</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2221,7 +3205,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Sample form</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="en">Normativa ICCD BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
+        <core:iccdNormTag xml:lang="en">Normativa ICCD BNB: DB/DBX/DBXX</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2237,7 +3221,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Seed  sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBS</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBS</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2249,7 +3233,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isShadeToleranceOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la tolleranza alla luminosità del popolamento ove il campione è stato raccolto</rdfs:comment>
@@ -2260,6 +3244,22 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag xml:lang="en">ICCD Normativa BNB: LR/LRI/LRIS</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SimplifiedChemicalFormula -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SimplifiedChemicalFormula">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la formula chimica semplificata di una specie mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the simplified chemical formula of a mineral species</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Formula chimica semplificata</rdfs:label>
+        <rdfs:label xml:lang="en">Simplified chemical formula</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSE</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2322,7 +3322,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Species</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2339,8 +3339,8 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCollectingSite"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CollectingSite"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2409,7 +3409,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Subspecies</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa AT: OG/OGS/OGST. -  Normativa BNB: RB/RBN/RBND; SB/NAA/NAAD; SB/NAT/NATD</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2426,12 +3426,6 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasEnvironment"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/NaturalEnvironment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasIncline"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Incline"/>
             </owl:Restriction>
@@ -2443,7 +3437,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Substrato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIR</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2459,7 +3453,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Tipo di substrato</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIJ</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2475,7 +3469,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Type of type specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI/TBIT</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/TBI/TBIT</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2498,7 +3492,7 @@ In this module the following Ontology Design Patterns have been used:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasTypeOfTypeSpecimen"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2509,7 +3503,34 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Type specimen identification</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/TBI</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: SB/TBI</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/UnitCell -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/UnitCell">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystallographicCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la cella di un minerale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the unit cell of a mineral.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Cella</rdfs:label>
+        <rdfs:label xml:lang="en">Unit cell</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2543,7 +3564,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Varietà</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNF; SB/NAA/NAAF; SB/NAT/NATF</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: RB/RBN/RBNF; SB/NAA/NAAF; SB/NAT/NATF</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2571,7 +3592,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">Wood sample</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: DB/DBX</a-cat:iccdNormTag>
+        <core:iccdNormTag>ICCD Normativa BNB: DB/DBX</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2585,6 +3606,457 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/italia/onto/l0/Object -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Object"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/AlfaRefractiveIndex -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/AlfaRefractiveIndex">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Alfa refractive index</rdfs:label>
+        <rdfs:label xml:lang="it">Biassico alfa</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOA</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Anisotropy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Anisotropy">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Anisotropia</rdfs:label>
+        <rdfs:label xml:lang="en">Anisotropy</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMA</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BetaRefractiveIndex -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/BetaRefractiveIndex">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Beta refractive index</rdfs:label>
+        <rdfs:label xml:lang="it">Biassico beta</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOB</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Bireflectance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Bireflectance">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">BireflectanceV</rdfs:label>
+        <rdfs:label xml:lang="en">Biriflettanza</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMB</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Birefringence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Birefringence">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Birefringence</rdfs:label>
+        <rdfs:label xml:lang="en">Birifrangenza</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOR</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CalcualtedDensity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CalcualtedDensity">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Calculated density</rdfs:label>
+        <rdfs:label xml:lang="it">Densità calcolata</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFF</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CompatibilityIndex -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CompatibilityIndex">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Compatibility index</rdfs:label>
+        <rdfs:label xml:lang="it">Indice di compatibilità</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFI</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalClass -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalClass">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
+        <rdfs:label xml:lang="en">Classe cristallina</rdfs:label>
+        <rdfs:label xml:lang="it">Crystal class</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCL</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/CrystalSystem -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalSystem">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
+        <rdfs:label xml:lang="en">Crysal system</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema cristallino</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCS</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Diaphaneity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Diaphaneity">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Diafanità</rdfs:label>
+        <rdfs:label xml:lang="en">Diaphaneity</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFP</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Dispersion -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Dispersion">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Dispersion</rdfs:label>
+        <rdfs:label xml:lang="it">Dispersione</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOD</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/EpsilonRefractiveIndex -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/EpsilonRefractiveIndex">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Epsilon refractive index</rdfs:label>
+        <rdfs:label xml:lang="it">Uniassico epsilon</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOE</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Fluorescence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Fluorescence">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Fluorescence</rdfs:label>
+        <rdfs:label xml:lang="it">Fluorescenza</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFL</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Fracture -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Fracture">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Fracture</rdfs:label>
+        <rdfs:label xml:lang="it">Frattura</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFU</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GammaRefractiveIndex -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/GammaRefractiveIndex">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Biassico gamma</rdfs:label>
+        <rdfs:label xml:lang="en">Gamma refractive index</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOG</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Gladstone-DaleRelation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Gladstone-DaleRelation">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Gladstone-Dale relation</rdfs:label>
+        <rdfs:label xml:lang="it">Relazione Gladstone-Dale</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFG</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Hardness-Mohs -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Hardness-Mohs">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Durezza (Mohs)</rdfs:label>
+        <rdfs:label xml:lang="en">Hardness (Mohs)</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFH</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Hardness-VHN -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Hardness-VHN">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Durezza (VHN)</rdfs:label>
+        <rdfs:label xml:lang="en">Hardness (VHN)</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFN</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Lustre -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Lustre">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Lucentezza</rdfs:label>
+        <rdfs:label xml:lang="en">Lustre</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFB</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Magnetism -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Magnetism">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Magnetism</rdfs:label>
+        <rdfs:label xml:lang="it">Magnetismo</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFM</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MeasuredDensity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/MeasuredDensity">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Densità misurata</rdfs:label>
+        <rdfs:label xml:lang="en">Measured density</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFD</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/OmegaRefractiveIndex -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/OmegaRefractiveIndex">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Omega refractive index</rdfs:label>
+        <rdfs:label xml:lang="it">Uniassico omega</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOO</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/OpticalPhenomena -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/OpticalPhenomena">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Fenomeno ottico</rdfs:label>
+        <rdfs:label xml:lang="en">Optical phenomena</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFO</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Phosphorescence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Phosphorescence">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Fosforescenza</rdfs:label>
+        <rdfs:label xml:lang="en">Phosphorescence</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFL</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Pleochroism -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Pleochroism">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Pleochroism</rdfs:label>
+        <rdfs:label xml:lang="it">Pleocroismo</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOP, SM/SMM/SMMP</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/PointGroup -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/PointGroup">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
+        <rdfs:label xml:lang="it">Gruppo puntuale</rdfs:label>
+        <rdfs:label xml:lang="en">Point group</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCP</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Radioactivity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Radioactivity">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Radioativity</rdfs:label>
+        <rdfs:label xml:lang="it">Radioattività</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFR</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Reflectance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Reflectance">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Reflectance</rdfs:label>
+        <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMM/SMMF</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/RefractiveIndex -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/RefractiveIndex">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Indice di rifrazione</rdfs:label>
+        <rdfs:label xml:lang="en">Refractive index</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOI</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SpaceGroup -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/SpaceGroup">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic"/>
+        <rdfs:label xml:lang="it">Gruppo spaziale</rdfs:label>
+        <rdfs:label xml:lang="en">Space group</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCG</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Streak -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Streak">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="it">Colore polvere</rdfs:label>
+        <rdfs:label xml:lang="en">Steak</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFT</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Tenacity -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Tenacity">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdfs:label xml:lang="en">Tenacity</rdfs:label>
+        <rdfs:label xml:lang="it">Tenacità</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFE</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/aParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/aParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Parametro a</rdfs:label>
+        <rdfs:label xml:lang="en">a parameter</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCA</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/alfaParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/alfaParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Alfa parameter</rdfs:label>
+        <rdfs:label xml:lang="it">Parametro alfa</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCF</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/bParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/bParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Parametro b</rdfs:label>
+        <rdfs:label xml:lang="en">b parameter</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCB</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/betaParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/betaParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Beta parameter</rdfs:label>
+        <rdfs:label xml:lang="it">Parametro beta</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCE</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/cParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/cParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Parametro c</rdfs:label>
+        <rdfs:label xml:lang="en">c parameter</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCC</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/gammaParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/gammaParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">Gamma parameter</rdfs:label>
+        <rdfs:label xml:lang="it">Parametro gamma</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCM</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/zParameter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/zParameter">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Parametro z</rdfs:label>
+        <rdfs:label xml:lang="en">z parameter</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMC/SMCZ</core:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/2vAngle -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/2vAngle">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="en">2v Angle</rdfs:label>
+        <rdfs:label xml:lang="it">Biassico 2V</rdfs:label>
+        <core:iccdNormTag>ICCD Normativa BNM: SM/SMO/SMOV</core:iccdNormTag>
+    </owl:NamedIndividual>
     
 
 
