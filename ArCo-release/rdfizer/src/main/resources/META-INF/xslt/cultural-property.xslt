@@ -1532,8 +1532,8 @@
 						</xsl:variable>
 						<xsl:if test="count($cri2cp)>0">
 							<arco-arco:isCulturalPropertyComponentOf>
-								<xsl:attribute name="rdf:resource"><xsl:value-of
-									select="$cri2cp" /></xsl:attribute>
+								<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$cri2cp" /></xsl:attribute>
 							</arco-arco:isCulturalPropertyComponentOf>
 						</xsl:if>
 					</xsl:if>
@@ -1553,7 +1553,7 @@
 								select="concat($rvel, '-0')" />
 							<xsl:variable name="bene-complesso"
 								select="concat($rvel, '-bene complesso')" />
-							<arco-arco:isCulturalPropertyComponentOf>
+							<xsl:variable name="cri2cp">
 								<xsl:choose>
 									<xsl:when
 										test="record/metadata/schede/*/RV/RVE/RVES and not (record/metadata/schede/*/RV/RVE/RVEL='bene componente')">
@@ -1565,7 +1565,13 @@
 											select="arco-fn:catalogue-record-identifier-to-cultural-property($bene-complesso)" />
 									</xsl:otherwise>
 								</xsl:choose>
+							</xsl:variable>
+							<xsl:if test="count($cri2cp)>0">
+							<arco-arco:isCulturalPropertyComponentOf>
+								<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$cri2cp" /></xsl:attribute>
 							</arco-arco:isCulturalPropertyComponentOf>
+							</xsl:if>
 						</xsl:if>
 					</xsl:if>
 				</xsl:if>
