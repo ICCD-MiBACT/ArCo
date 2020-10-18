@@ -323,9 +323,9 @@
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'contenitore'))">
 			<xsl:if test="record/metadata/schede/BNB/AC/ACZ">
-			<arco-arco:containerSequence>
+			<arco-mp:containerSequence>
 				<xsl:value-of select="record/metadata/schede/BNB/AC/ACZ" />
-			</arco-arco:containerSequence>
+			</arco-mp:containerSequence>
 			</xsl:if>
 		</xsl:if>
 		<xsl:if test="$sheetType='BNB' and (record/metadata/schede/BNB/OG/OGT/OGTD and starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'campione'))">
