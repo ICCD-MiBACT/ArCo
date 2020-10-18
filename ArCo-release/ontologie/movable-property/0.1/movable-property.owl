@@ -1524,6 +1524,23 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/containerSequence -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/containerSequence">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice che definisce la sequenza dei contenitori</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the code identifying the sequence of the container</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">container sequence</rdfs:label>
+        <rdfs:label xml:lang="it">sequenza contenitore</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACZ</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/dateOfLastChangePreservative -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/dateOfLastChangePreservative">
@@ -2015,6 +2032,28 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa AT: OG/OGS. - Normativa BNB: SB/SBS, SB/TBI, RB/RBN. Normativa PG: FV/FV/FVED</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/BotanicalCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
+erbario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a group of specimens or specimens container, collected into an herbarium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">Botanical Collection</rdfs:label>
+        <rdfs:label xml:lang="it">Collezione botanica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -2626,6 +2665,25 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSG. - Normativa BNB: RB/RBN/RBNA; SB/NAA/NAAA; SB/NAT/NATA</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Herbarium -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BotanicalCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Erbario</rdfs:label>
+        <rdfs:label xml:lang="en">Herbarium</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -3323,6 +3381,103 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Specimen -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/core/ClassificationInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAssociatedPreparation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Preparation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasBotanicalRevision"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BotanicalRevision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLabel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Label"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasRelatedSample"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasTypeSpecimenIdentification"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Questa classe rappresenta un insieme di parti che racchiudono i campioni,
+come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a collection of parts (as boxes, binders,bags, packages), containing specimens.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Campione</rdfs:label>
+        <rdfs:label xml:lang="en">Specimen</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/SpecimenContainer -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLabel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Label"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/containerSequence"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;insieme di parti che racchiudono i campioni,
+come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Contenitore di campioni</rdfs:label>
+        <rdfs:label xml:lang="en">Specimen Container</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4083,6 +4238,15 @@ In this module the following Ontology Design Patterns have been used:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalCollection"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
