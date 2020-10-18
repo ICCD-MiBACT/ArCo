@@ -1703,8 +1703,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di paramorfosi</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the presence of paramorphosis</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">paramorph</rdfs:label>
         <rdfs:label xml:lang="it">paramorfo</rdfs:label>
+        <rdfs:label xml:lang="en">paramorph</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAS</core:iccdNormTag>
@@ -1719,8 +1719,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà indica il politipo della specie minerale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the polytype of the mineral species</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">polytype</rdfs:label>
         <rdfs:label xml:lang="it">politipo</rdfs:label>
+        <rdfs:label xml:lang="en">polytype</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa BNB: SM/SMN/SMNP</core:iccdNormTag>
@@ -1736,8 +1736,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di pseudomorfosi</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the presence of pseudomorphosis</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">pseudomorph</rdfs:label>
         <rdfs:label xml:lang="it">pseudomorfo</rdfs:label>
+        <rdfs:label xml:lang="en">pseudomorph</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAP</core:iccdNormTag>
@@ -1804,8 +1804,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di zonatura</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the presence of zoning</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">zoning</rdfs:label>
         <rdfs:label xml:lang="it">zonatura</rdfs:label>
+        <rdfs:label xml:lang="en">zoning</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa BNB: SM/SMA/SMAZ</core:iccdNormTag>
@@ -2022,7 +2022,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/BotanicalForm -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
@@ -2396,7 +2396,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/Cultivar -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
@@ -3362,7 +3362,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/Subspecies -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
@@ -3458,6 +3458,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/TaxonSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/TaxonSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un taxon biologico che rappresenta organismi della stessa specie ma con delle differenze minime, che non sono sufficienti per considerarli una specie completamente diversa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a biological taxon for organisms of the same species but with minimal differences.</rdfs:comment>
+        <rdfs:label xml:lang="it">Specificazione del taxon</rdfs:label>
+        <rdfs:label xml:lang="en">Taxon specification</rdfs:label>
+        <owl:versionInfo rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen">
@@ -3538,7 +3553,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/Variety -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Variety">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/BiologicalTaxon"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
