@@ -3920,12 +3920,12 @@
 					<xsl:choose>
 						<xsl:when
 							test="./* and (not(./USOR) or ./USOR='intero bene' or ./USOR='integrale' or ./USOR='tutta' or ./USOR='totale') or (starts-with(lower-case(normalize-space(./USOR)), 'nr')) or (starts-with(lower-case(normalize-space(./USOR)), 'n.r')) or (starts-with(lower-case(normalize-space(./USOR)), 'intero')) or (starts-with(lower-case(normalize-space(./USOR)), 'intera')) or (starts-with(lower-case(normalize-space(./USOR)), 'esemplar'))">
-							<arco-dd:hasUse>
+							<arco-cd:hasUse>
 								<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of
 									select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
  	                	</xsl:attribute>
-							</arco-dd:hasUse>
+							</arco-cd:hasUse>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:for-each select="./USOR">
@@ -3943,12 +3943,12 @@
 					<xsl:choose>
 						<xsl:when
 							test="./* and (not(./USAR) or ./USAR='intero bene' or ./USAR='integrale' or ./USAR='tutta' or ./USAR='totale') or (starts-with(lower-case(normalize-space(./USAR)), 'nr')) or (starts-with(lower-case(normalize-space(./USAR)), 'n.r')) or (starts-with(lower-case(normalize-space(./USAR)), 'intero')) or (starts-with(lower-case(normalize-space(./USAR)), 'intera')) or (starts-with(lower-case(normalize-space(./USAR)), 'esemplar'))">
-							<arco-dd:hasUse>
+							<arco-cd:hasUse>
 								<xsl:attribute name="rdf:resource">
 	                		<xsl:value-of
 									select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
  	                	</xsl:attribute>
-							</arco-dd:hasUse>
+							</arco-cd:hasUse>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:for-each select="./USAR">
