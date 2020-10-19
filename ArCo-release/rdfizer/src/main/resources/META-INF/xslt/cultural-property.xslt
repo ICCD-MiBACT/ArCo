@@ -2357,13 +2357,11 @@
 					</xsl:choose>
 				</xsl:for-each>
 				<!-- has dating for BDM < 4.00 norm -->
-				<xsl:for-each
-					select="record/metadata/schede/BDM/AU/DTF">
+				<xsl:for-each select="record/metadata/schede/BDM/AU/DTF">
 					<arco-cd:hasDating>
 						<xsl:attribute name="rdf:resource">
-			                            <xsl:value-of
-							select="concat($NS, 'Dating/', $itemURI, '-', position())" />
-			                        </xsl:attribute>
+			                <xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+			            </xsl:attribute>
 					</arco-cd:hasDating>
 				</xsl:for-each>
 				<!-- has dating for A norm -->
@@ -2373,8 +2371,7 @@
 							test="./* and (not(./REN/RENR) or ./REN/RENR='intero bene' or ./REN/RENR='integrale' or ./REN/RENR='tutta' or ./REN/RENR='totale') or (starts-with(lower-case(normalize-space(./REN/RENR)), 'nr')) or (starts-with(lower-case(normalize-space(./REN/RENR)), 'n.r')) or (starts-with(lower-case(normalize-space(./REN/RENR)), 'intero')) or (starts-with(lower-case(normalize-space(./REN/RENR)), 'intera')) or (starts-with(lower-case(normalize-space(./REN/RENR)), 'esemplar'))">
 							<arco-cd:hasDating>
 								<xsl:attribute name="rdf:resource">
-			                            <xsl:value-of
-									select="concat($NS, 'Dating/', $itemURI, '-', position())" />
+			                            <xsl:value-of select="concat($NS, 'Dating/', $itemURI, '-', position())" />
 			                        </xsl:attribute>
 							</arco-cd:hasDating>
 						</xsl:when>
