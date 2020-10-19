@@ -1797,6 +1797,12 @@
 						</xsl:when>
 					</xsl:choose>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/FF/OG/OGT/OGTC">
+					<arco-core:description>
+						<xsl:value-of select="normalize-space(record/metadata/schede/FF/OG/OGT/OGTC)" />
+					</arco-core:description>
+				</xsl:if>
+				
 				<!-- keywords (PST) -->
 				<xsl:if
 					test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTC)), 'n.r')))">
@@ -4557,7 +4563,16 @@
 					</arco-cd:isPrintingPlateMemberOf>
 				</rdf:Description>
 			</xsl:if>
-
+			<xsl:if test="record/metadata/schede/FF/DA/MTI">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="$objectOfDescription" />
+					</xsl:attribute>
+					<arco-cd:methodOfInterventionAndDigitization>
+							<xsl:value-of select="record/metadata/schede/FF/DA/MTI" />
+					</arco-cd:methodOfInterventionAndDigitization>
+				</rdf:Description>
+			</xsl:if>
 
 
 
