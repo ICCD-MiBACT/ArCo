@@ -28673,7 +28673,22 @@
 				</xsl:for-each>
 			</xsl:for-each>
 
-
+						<!-- Printing Plates Series -->
+			<xsl:if test="record/metadata/schede/MI/OG/SGT/SGTS">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
+					</xsl:attribute>
+					<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/PrintingPlatesSeries" />
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			
 
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->
 		</rdf:RDF>

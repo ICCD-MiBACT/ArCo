@@ -136,8 +136,7 @@
 
 		<rdf:RDF>
 
-			<xsl:if
-				test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 						<xsl:value-of select="$culturalProperty" />
@@ -768,13 +767,11 @@
 						solo se c'è o sgta o sgti, mentre si mette la virgola tra sgta e sgti solo 
 						se ci sono entrambi -->
 
-					<xsl:if
-						test="$sheetType='D' or $sheetType='MI' or $sheetType='S'">
+					<xsl:if test="$sheetType='D' or $sheetType='MI' or $sheetType='S'">
 						<xsl:variable name="sgtt">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/OG/SGT/SGTT">
-									<xsl:value-of
-										select="normalize-space(record/metadata/schede/*/OG/SGT/SGTT)" />
+									<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/SGT/SGTT)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -784,8 +781,7 @@
 						<xsl:variable name="sgti">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/OG/SGT/SGTI">
-									<xsl:value-of
-										select="normalize-space(record/metadata/schede/*/OG/SGT/SGTI)" />
+									<xsl:value-of 	select="normalize-space(record/metadata/schede/*/OG/SGT/SGTI)" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -795,8 +791,7 @@
 						<xsl:variable name="ogtv">
 							<xsl:choose>
 								<xsl:when test="record/metadata/schede/*/OG/OGT/OGTV">
-									<xsl:value-of
-										select="concat(', ', normalize-space(record/metadata/schede/*/OG/OGT/OGTV))" />
+									<xsl:value-of select="concat(', ', normalize-space(record/metadata/schede/*/OG/OGT/OGTV))" />
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="''" />
@@ -823,8 +818,7 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:variable>
-							<xsl:value-of
-								select="concat($tmpLabel, ' - ', $ogtp)" />
+							<xsl:value-of select="concat($tmpLabel, ' - ', $ogtp)" />
 						</rdfs:label>
 					</xsl:if>
 
@@ -4551,6 +4545,18 @@
 				</xsl:if>
 			</rdf:Description>
 
+			<xsl:if test="record/metadata/schede/MI/OG/SGT/SGTS">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="$objectOfDescription" />
+					</xsl:attribute>
+					<arco-cd:isPrintingPlateMemberOf>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
+						</xsl:attribute>
+					</arco-cd:isPrintingPlateMemberOf>
+				</rdf:Description>
+			</xsl:if>
 
 
 
