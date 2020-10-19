@@ -518,6 +518,35 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasGeochronology -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasGeochronology">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isGeochronologyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasGeologicalContext -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasGeologicalContext">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isGeologicalContextOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicalContext"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la localizzazione del luogo di raccolta al contesto geologico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the collecting site to the geological context</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha contesto geologico</rdfs:label>
+        <rdfs:label xml:lang="en">has geological context</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAC</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasHigherRank -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasHigherRank">
@@ -548,6 +577,16 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasHostRock -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasHostRock">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isHostRock"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/HostRock"/>
     </owl:ObjectProperty>
     
 
@@ -636,6 +675,42 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has lower rank</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasMineralDeposit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasMineralDeposit">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isMineralDepositOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicalContext"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralDeposit"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il contesto geologico al deposito mineraliogico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property realtes the geological context to the mineral deposit</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha deposito mineralogico</rdfs:label>
+        <rdfs:label xml:lang="en">has mineral deposit</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAR</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasOutcrop -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasOutcrop">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isOutcropOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicalContext"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Outcrop"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il contesto geologico all&apos;affioramento</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property realtes the geological context to the outcrop</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha affioramento</rdfs:label>
+        <rdfs:label xml:lang="en">has outcrop</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAF, IMAD</core:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1130,6 +1205,31 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/isGeochronologyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isGeochronologyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isGeologicalContextOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isGeologicalContextOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicalContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il contesto geologico alla localizzazione del luogo di raccolta</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the geological context to the collecting site</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">iss geological context of</rdfs:label>
+        <rdfs:label xml:lang="it">è contesto geologico di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/isHostIndividualOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isHostIndividualOf">
@@ -1141,6 +1241,15 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è individuo ospite di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isHostRock -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isHostRock">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/HostRock"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
     </owl:ObjectProperty>
     
 
@@ -1203,6 +1312,38 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEL</core:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isMineralDepositOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isMineralDepositOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralDeposit"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicalContext"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il deposito mineralogico al contesto geologico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property realtes the mineral deposit the geological context</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is mineral deposit of</rdfs:label>
+        <rdfs:label xml:lang="it">è deposito mineralogico di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isOutcropOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isOutcropOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Outcrop"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicalContext"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;affioramento al contesto geologico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property realtes the outcrop the geological context</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is outcrop of</rdfs:label>
+        <rdfs:label xml:lang="it">è affioramento di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2159,6 +2300,86 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/Chron -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Chron">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSeries -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSeries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicStage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicStage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicStage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSubstage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSubstage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSubstage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Chronozone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSeries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Chronozone -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Chronozone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Class -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Class">
@@ -2482,6 +2703,48 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/Eon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Eon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalEra"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Eonthem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Eonthem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Erathem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Erathem -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Erathem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Family -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Family">
@@ -2669,6 +2932,144 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalAge -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalAge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalSubage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalEpoch -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalEpoch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalAge"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalEra -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalEra">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalPeriod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalPeriod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalPeriod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalEpoch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeochronologicalSubage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalSubage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/GeochronologicalClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Chron"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/GeologicalContext -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/GeologicalContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasMineralDeposit"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralDeposit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasOutcrop"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Outcrop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il contesto geologico del luogo di raccolta di un bene.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents geological context of a collecting location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Contesto geologico</rdfs:label>
+        <rdfs:label xml:lang="en">Geological context</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAC</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Geotope -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Geotope">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il geotopo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the geotope</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Geotope</rdfs:label>
+        <rdfs:label xml:lang="it">Geotopo</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAT</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/HarvestingMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/HarvestingMethod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/HarvestingMotivation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Herbarium -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium">
@@ -2706,6 +3107,14 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>ICCD Normativa BNB: LR/LRI/LRIM</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/HostRock -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/HostRock">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/HostIndividual"/>
     </owl:Class>
     
 
@@ -2852,10 +3261,150 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicBed -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicBed">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicComplex -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicComplex">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicSupergroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicFormation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicFormation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicGroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicFormation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicMember -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicMember">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicBed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/LithostratigraphicSupergroup -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicSupergroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectLowerRank"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/LithostratigraphicGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Mine -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Mine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la miniera</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the mine</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Mine</rdfs:label>
+        <rdfs:label xml:lang="it">Miniera</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAM</core:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/MineralClass -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralClass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MineralDeposit -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralDeposit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralDepositType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il deposito mineralogico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the mineral deposit</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Deposito mineralogico</rdfs:label>
+        <rdfs:label xml:lang="en">Mineral deposit</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAR</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MineralDepositType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralDepositType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di deposito mineralogico</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of mineral deposit</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Mineral deposit type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di deposito mineralogico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAP, IMAE</core:iccdNormTag>
     </owl:Class>
     
 
@@ -2988,6 +3537,44 @@ erbario.</rdfs:comment>
         <rdfs:label xml:lang="it">Ordine</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/Outcrop -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Outcrop">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/OutcropType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;affioramento</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the outcrop</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Affioramento</rdfs:label>
+        <rdfs:label xml:lang="en">Outcrop</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAF, IMAD</core:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/OutcropType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/OutcropType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il tipo di affioramento</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the outcrop type</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Outcrop type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di affioramento</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <core:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAF</core:iccdNormTag>
     </owl:Class>
     
 
@@ -4260,6 +4847,30 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Chron"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Eon"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalAge"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalEpoch"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalEra"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalPeriod"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalSubage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSeries"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicStage"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSubstage"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/ChronostratigraphicSystem"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Chronozone"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Eonthem"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Erathem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Class"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Family"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Genus"/>
@@ -4287,6 +4898,17 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PollenSample"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SeedSample"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/WoodSample"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicBed"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicComplex"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicFormation"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicGroup"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicMember"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicSupergroup"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
