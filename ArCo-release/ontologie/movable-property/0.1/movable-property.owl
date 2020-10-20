@@ -3157,6 +3157,14 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/InorganicTaxon -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicTaxon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/Kingdom -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Kingdom">
@@ -3366,7 +3374,7 @@ erbario.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/MineralClass -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralClass">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
     </owl:Class>
     
 
@@ -3412,7 +3420,7 @@ erbario.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/MineralGroup -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralGroup">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
     </owl:Class>
     
 
@@ -3420,7 +3428,7 @@ erbario.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/MineralSpecies -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSpecies">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
@@ -3463,6 +3471,14 @@ erbario.</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/MineralSubclass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSubclass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
     </owl:Class>
     
 
