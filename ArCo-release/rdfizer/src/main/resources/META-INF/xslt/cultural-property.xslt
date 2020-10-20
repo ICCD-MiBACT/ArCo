@@ -1500,7 +1500,7 @@
 
 				<xsl:if test="record/metadata/schede/*/RV/RVE/RVER">
 					<xsl:if
-						test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso')">
+						test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso' or record/metadata/schede/*/RV/RVE/RVEL='bene individuo')">
 						<xsl:variable name="rver"
 							select="record/metadata/schede/*/RV/RVE/RVER" />
 						<xsl:variable name="rvel-nospace"
@@ -1536,7 +1536,7 @@
 					test="$sheetType='A' or $sheetType='PG' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0')">
 					<xsl:if test="record/metadata/schede/*/RV/RVE/RVES">
 						<xsl:if
-							test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso')">
+							test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso' or record/metadata/schede/*/RV/RVE/RVEL='bene individuo')">
 							<xsl:variable name="rves"
 								select="record/metadata/schede/*/RV/RVE/RVES" />
 							<xsl:variable name="rvel-nospace"
