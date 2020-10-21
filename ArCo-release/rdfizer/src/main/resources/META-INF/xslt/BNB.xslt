@@ -1831,6 +1831,11 @@
 					</arco-core:involvesAgent>
 				</xsl:for-each>
 			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIE">
+				<arco-core:note>
+					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/LR/LRI/LRIE)" />
+				</arco-core:note>
+			</xsl:if>			
 			<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDB">
 				<xsl:variable name="startDate">
 					<xsl:choose>
@@ -1981,12 +1986,7 @@
 						<xsl:value-of select="concat($NS, 'NaturalEnvironment/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/LR/LRI/LRIB)))" />
 					</xsl:attribute>
 				</arco-dd:hasEnvironment>
-			</xsl:if>			
-			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIE">
-				<arco-core:note>
-					<xsl:value-of select="normalize-space(record/metadata/schede/BNB/LR/LRI/LRIE)" />
-				</arco-core:note>
-			</xsl:if>			
+			</xsl:if>						
 			<arco-location:hasLocationType>
 				<xsl:attribute name="rdf:resource">
             		<xsl:value-of select="'https://w3id.org/arco/ontology/location/CollectingLocation'" />
