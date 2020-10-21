@@ -571,13 +571,6 @@
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC">
-				<arco-cd:hasBibliography>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, 'bibliography-1-', position())" />
-					</xsl:attribute>
-				</arco-cd:hasBibliography>
-			</xsl:if>
 			<xsl:if test="record/metadata/schede/*/SB/DBV/DBVA">
 			<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/*/SB/DBV/DBVA)" />
 				<xsl:for-each select="$authorssplit">
@@ -909,6 +902,11 @@
 			</xsl:attribute>
 			</arco-cd:hasBibliography>
 		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSN">
+            	<arco-mp:genusNumber>
+            		<xsl:value-of select="record/metadata/schede/BNB/SB/SBS/SBSN" />
+            	</arco-mp:genusNumber>
+        </xsl:if>
 		<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSG">
 			<arco-mp:taxonomicNumber>
 				<xsl:value-of select="record/metadata/schede/BNB/SB/SBS/SBSG" />		
@@ -2029,7 +2027,7 @@
 			<xsl:for-each select="record/metadata/schede/BNB/LR/LRV">
 				<arco-location:atLocation>
 					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(normalize-space(record/metadata/schede/BNB/LR/LRV)))" />
+	            		<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
 	                </xsl:attribute>
 				</arco-location:atLocation>
 			</xsl:for-each>
@@ -2039,7 +2037,7 @@
 	<xsl:for-each select="record/metadata/schede/BNB/LR/LRV">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(normalize-space(record/metadata/schede/BNB/LR/LRV)))" />
+		    	<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
