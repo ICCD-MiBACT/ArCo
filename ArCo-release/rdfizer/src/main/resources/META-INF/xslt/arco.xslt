@@ -28365,7 +28365,7 @@
 							<arco-dd:hasMeasurement>
 								<xsl:attribute name="rdf:resource">
 											<xsl:value-of
-									select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-', arco-fn:urify(./MISZ))" />
+									select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-', arco-fn:uncamelize(arco-fn:map-measure(lower-case(./MISZ))))" />
 										</xsl:attribute>
 							</arco-dd:hasMeasurement>
 						</xsl:otherwise>
@@ -28433,16 +28433,17 @@
 									</xsl:when>
 								</xsl:choose>
 							</xsl:when>
-							<xsl:when test="$tag-name='MISZ'">
-								<xsl:value-of select="." />
-							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of
+									select="arco-fn:map-measure(lower-case(../MISZ))" />
+							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:variable>
 
 					<xsl:if test="$measurement-type != ''">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about"
-								select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-', arco-fn:urify($measurement-type))" />
+								select="concat($NS, 'Measurement/', $itemURI, '-', $parent-id, '-', arco-fn:uncamelize($measurement-type))" />
 							<rdf:type
 								rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 
