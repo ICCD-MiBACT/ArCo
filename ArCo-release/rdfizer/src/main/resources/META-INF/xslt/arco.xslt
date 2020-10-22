@@ -21856,6 +21856,13 @@
 									</xsl:otherwise>
 								</xsl:choose>
 							</l0:name>
+							<xsl:if test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+							<owl:sameAs>
+								<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
+								</xsl:attribute>
+							</owl:sameAs>
+							</xsl:if>
 							<xsl:if
 								test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 								<arco-cd:agentDate>
@@ -28874,6 +28881,17 @@
 				</rdf:Description>
 			</xsl:if>
 			
+					<!-- Deprecated URI -->
+			<xsl:for-each select="record/metadata/schede/*/AU/AUT">
+				<xsl:if test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+						<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./AUTN))" />
+					</xsl:attribute>
+					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+				</rdf:Description>
+				</xsl:if>
+			</xsl:for-each>
 
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->
 		</rdf:RDF>
