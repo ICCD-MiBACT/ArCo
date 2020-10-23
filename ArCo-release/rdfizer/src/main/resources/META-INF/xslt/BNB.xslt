@@ -352,7 +352,7 @@
 		<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRN">
 			<arco-core:isClassifiedBy>
 				<xsl:attribute name="rdf:resource">
-			    	<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/RB/RBR/RBRN)))" />" />
+			    	<xsl:value-of select="concat('https://w3id.org/arco/resource/BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/RB/RBR/RBRN)))" />
 				</xsl:attribute>
 			</arco-core:isClassifiedBy>
 		</xsl:for-each>
