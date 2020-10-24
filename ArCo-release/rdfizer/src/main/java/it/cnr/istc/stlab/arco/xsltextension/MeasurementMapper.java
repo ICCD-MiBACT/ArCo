@@ -22,6 +22,7 @@ public class MeasurementMapper implements ExtensionFunction {
 		map = ImmutableMap.<String,String>builder()
 				.put("altezza", "Height")
 				.put("altezzaxlarghezzaxspessore", "HeightWidthThickness")
+				.put("altezzaxlunghezzaxspessore","HeightWidthThickness")
 				.put("altezzaxlunghezza", "HeightLenght")
 				.put("altezzaxlunghezzaxlarghezza", "HeightLenghtWidth")
 				.put("area", "Area")
