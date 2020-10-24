@@ -1448,6 +1448,14 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/RVERidentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/RVERidentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/archaeologicalSiteIdentifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/archaeologicalSiteIdentifier">
