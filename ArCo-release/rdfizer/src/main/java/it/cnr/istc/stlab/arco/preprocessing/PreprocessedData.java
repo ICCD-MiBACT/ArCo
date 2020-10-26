@@ -56,7 +56,7 @@ public class PreprocessedData {
 			logger.info("The timestamp of the remote db is " + remoteGenerated);
 			logger.info("The timestamp of the local db is " + generated);
 			if (remoteGenerated > generated.longValue()) {
-				logger.info("Updated DB");
+				logger.info("Updating the DB");
 				this.db.commit();
 				this.db.close();
 				new File(dbFileName).delete();
@@ -107,7 +107,8 @@ public class PreprocessedData {
 
 	public void commit() {
 		Long generated = System.currentTimeMillis();
-		db.atomicLong(GENERATED, System.currentTimeMillis()).createOrOpen();
+		org.mapdb.Atomic.Long generatedDB = db.atomicLong(GENERATED, generated).createOrOpen();
+		generatedDB.set(generated);
 		try {
 			FileOutputStream fos = new FileOutputStream(new File("generated"));
 			fos.write((generated + "\n").getBytes());
