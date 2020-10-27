@@ -21596,7 +21596,7 @@
 			<!-- AU/AUT -->
 			<xsl:for-each select="record/metadata/schede/*/AU/AUT">
 				<xsl:if
-					test="(not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')))">
+					test="(not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUTN)), '-')))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                         <xsl:value-of

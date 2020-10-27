@@ -169,7 +169,6 @@
 					<xsl:variable name="partLabel">
 						<xsl:value-of select="normalize-space(./AUTW)" />
 					</xsl:variable>
-					<xsl:for-each select="./AUTW">
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 							<xsl:value-of select="$part" />
@@ -305,7 +304,7 @@
 		                    	</xsl:attribute>
 							</pico:author>
 						</rdf:Description>
-					</xsl:for-each>
+
 				</xsl:if>
 			</xsl:for-each>
 			
