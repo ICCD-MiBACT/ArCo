@@ -38,7 +38,7 @@
 	</SOURCE>
 	<TARGET>
 		<ID>arco</ID>
-		<ENDPOINT>http://arco.istc.cnr.it/arco-pr/virtuoso/sparql</ENDPOINT>
+		<ENDPOINT>http://arco.istc.cnr.it/arco-1.1/virtuoso/sparql</ENDPOINT>
 		<GRAPH>https://w3id.org/arco/data</GRAPH>
 		<VAR>?y</VAR>
 		<PAGESIZE>2000</PAGESIZE>

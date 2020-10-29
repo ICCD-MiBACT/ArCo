@@ -25,7 +25,7 @@ The **arco.linking** can be installed and run with maven as follows.
 git clone https://github.com/ICCD-MiBACT/ArCo.git
 cd ArCo/ArCo-release/arco.linking
 mvn clean install
-mvn exec:java -Dexec.mainClass="it.cnr.istc.stlab.arco.linking.CulturaItalia" -Dexec.args="src/main/resources/config.properties" 
+mvn exec:java -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="it.cnr.istc.stlab.arco.linking.CulturaItalia" -Dexec.args="src/main/resources/config.properties" -DjvmArgs="-Xmx8g"
 ```
 
 
