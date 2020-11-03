@@ -22,6 +22,7 @@
      xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description">
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/context-description/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
@@ -69,8 +70,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Context Description Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Descrizione di Contesto (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -6065,7 +6066,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:label xml:lang="it">informazioni storiche</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/NSC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/NSC. - Normativa BNB: OG/OGT/OGTS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 

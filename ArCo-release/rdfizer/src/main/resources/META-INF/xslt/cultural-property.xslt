@@ -91,8 +91,11 @@
 
 	<xsl:template match="/">
 
-		<xsl:variable name="ogtp"
-			select="normalize-space(record/metadata/schede/*/OG/OGT/OGTP)" />
+		<xsl:variable name="ogtp">
+			<xsl:if test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
+				<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTP)" />
+			</xsl:if>
+		</xsl:variable>
 
 
 		<!-- variable ogtt -->
@@ -1096,11 +1099,11 @@
 											<xsl:when
 												test="record/metadata/schede/*/OG/OGD/OGDN">
 												<xsl:value-of
-													select="concat($ogdn, normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(record/metadata/schede/*/OG/CTG), ')')" />
+													select="concat($ogdn, normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(record/metadata/schede/*/OG/CTG), normalize-space(record/metadata/schede/*/CT/CTG), ')')" />
 											</xsl:when>
 											<xsl:otherwise>
 												<xsl:value-of
-													select="concat(normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(record/metadata/schede/*/OG/CTG))" />
+													select="concat(normalize-space(record/metadata/schede/*/OG/OGT/OGTD), ', ', normalize-space(record/metadata/schede/*/OG/CTG), normalize-space(record/metadata/schede/*/CT/CTG))" />
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:variable>
@@ -1224,6 +1227,10 @@
 										<xsl:when test="record/metadata/schede/*/OG/CTG">
 											<xsl:value-of
 												select="concat(', ', normalize-space(record/metadata/schede/*/OG/CTG))" />
+										</xsl:when>
+										<xsl:when test="record/metadata/schede/*/CT/CTG">
+											<xsl:value-of
+												select="concat(', ', normalize-space(record/metadata/schede/*/CT/CTG))" />
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="''" />
@@ -1552,8 +1559,7 @@
 						</xsl:choose>
 					</xsl:if>
 				</xsl:if>
-				<xsl:if
-					test="$sheetType='A' or $sheetType='PG' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0')">
+				<xsl:if test="$sheetType='A' or $sheetType='PG' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0' or $sheetVersion='1.00' or $sheetVersion='1.00_ICCD0')">
 					<xsl:if test="record/metadata/schede/*/RV/RVE/RVES">
 						<xsl:if
 							test="record/metadata/schede/*/RV/RVE/RVEL and not (record/metadata/schede/*/RV/RVE/RVEL='0' or record/metadata/schede/*/RV/RVE/RVEL='bene complesso' or record/metadata/schede/*/RV/RVE/RVEL='bene individuo')">
@@ -1601,16 +1607,27 @@
 						</xsl:if>
 					</xsl:if>
 				</xsl:if>
+				
+				<xsl:if test="record/metadata/schede/*/RV/RVE/RVEZ and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/RV/RVE/RVEZ)), 'nr')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/RV/RVE/RVEZ)), 'n.r'))">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/RV/RVE/RVEZ)" />
+					</arco-core:note>
+				</xsl:if>
 				<!-- tiratura di una fotografia o di una stampa -->
-				<xsl:if
-					test="record/metadata/schede/*/PD/TRT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/PD/TRT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/PD/TRT)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/PD/TRT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/PD/TRT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/PD/TRT)), 'n.r')))">
 					<arco-cd:numberInCirculation>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/PD/TRT)" />
 					</arco-cd:numberInCirculation>
 				</xsl:if>
-				<xsl:if
-					test="record/metadata/schede/*/AU/TRT/TRTN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/TRT/TRTN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/TRT/TRTN)), 'n.r')))">
+				<!-- archaeological site identifier -->
+				<xsl:if test="record/metadata/schede/*/OG/OGT/OGTI and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/OGT/OGTI)), 'n.r')))">
+					<arco-arco:archaeologicalSiteIdentifier>
+						<xsl:value-of
+							select="normalize-space(record/metadata/schede/*/OG/OGT/OGTI)" />
+					</arco-arco:archaeologicalSiteIdentifier>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/AU/TRT/TRTN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/TRT/TRTN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AU/TRT/TRTN)), 'n.r')))">
 					<arco-cd:numberInCirculation>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AU/TRT/TRTN)" />
@@ -2895,6 +2912,22 @@
 	                    </xsl:attribute>
 					</arco-arco:hasCulturalPropertyCategory>
 				</xsl:if>
+				<xsl:if test="record/metadata/schede/*/CT/CTG">
+					<arco-arco:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/CT/CTG)))" />
+	                    </xsl:attribute>
+					</arco-arco:hasCulturalPropertyCategory>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/BDM/OG/OGT/OGTG">
+					<arco-arco:hasCulturalPropertyCategory>
+						<xsl:attribute name="rdf:resource">
+	                        <xsl:value-of
+							select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTG)))" />
+	                    </xsl:attribute>
+					</arco-arco:hasCulturalPropertyCategory>
+				</xsl:if>
 				<xsl:if test="record/metadata/schede/RA/OG/CLS">
 					<arco-arco:hasCulturalPropertyCategory>
 						<xsl:attribute name="rdf:resource">
@@ -3594,6 +3627,22 @@
                         </xsl:attribute>
 					</arco-dd:hasDesignationInTime>
 				</xsl:for-each>
+				<xsl:if test="record/metadata/schede/*/OG/OGT/OGTU">
+					<arco-dd:hasDesignationInTime>
+						<xsl:attribute name="rdf:resource">
+                        	<xsl:value-of
+							select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTU)))" />                      	                            
+                        </xsl:attribute>
+					</arco-dd:hasDesignationInTime>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/SI/OG/OGT/OGTY">
+					<arco-dd:hasDesignationInTime>
+						<xsl:attribute name="rdf:resource">
+                        	<xsl:value-of
+							select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/SI/OG/OGT/OGTY)))" />                      	                            
+                        </xsl:attribute>
+					</arco-dd:hasDesignationInTime>
+				</xsl:if>
 				<xsl:if
 					test="record/metadata/schede/*/OG/OGT/OGTD and $sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0')">
 					<xsl:if test="record/metadata/schede/*/OG/OGT/OGTD">

@@ -25,6 +25,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/denotative-description">
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
@@ -63,8 +64,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Denotative Description Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia della Descrizione Denotativa (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -512,7 +513,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cultural property specification</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>OG/OGT/OGTT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>OG/OGT/OGTT. Scheda A e PG (v. 1 e v.2): OG/OGT/OGTQ. - Normativa BNB: OG/OGT/OGTK, OGTZ</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -568,7 +569,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has designation in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: OG/OGD. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3726,7 +3727,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="it">Specifiche del bene culturale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>OG/OGT/OGTT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>OG/OGT/OGTT. Scheda A e PG (v. 1 e v.2): OG/OGT/OGTQ. - Normativa BNB: OG/OGT/OGTK, OGTZ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3827,7 +3828,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="en">Designation In Time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: OG/OGD. - Normative A, BDM, PG 3: OG/OGA. - Normativa BNB: OG/OGT/OGTE e OG/OGT/OGTC. - Normativa NU: OG/OGT/OGTO. - OG/OGT/OGTU. Normativa SI: OG/OGT/OGTY</a-cat:iccdNormTag>
     </owl:Class>
     
 
