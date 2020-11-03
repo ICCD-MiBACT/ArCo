@@ -30,9 +30,9 @@
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
