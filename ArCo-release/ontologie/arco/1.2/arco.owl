@@ -28,7 +28,7 @@
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/arco">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.1"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/arco/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -76,8 +76,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">ArCo Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia ArCo (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 1.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 1.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -171,7 +171,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has alternative discipline</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa PST: CT/CTA</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa PST: CT/CTA, versione 4.00: OG/CTA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1547,6 +1547,21 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/arco/containerSequence -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/containerSequence">
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice che definisce la sequenza dei contenitori.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Thisproperty represents the code defining the container sequence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/arco"/>
+        <rdfs:label xml:lang="it">codice sequenza</rdfs:label>
+        <rdfs:label xml:lang="en">container sequence</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNB: AC/ACZ</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/arco/definitionAndPositionOfComponents -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/arco/definitionAndPositionOfComponents">
@@ -1817,7 +1832,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">region identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CD/NCT/NCTR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1889,7 +1904,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">unique identifier</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: concat(CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS)</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: concat(CD/NCT/NCTR + CD/NCT/NCTN + CD/NCT/NCTS); RV/RVE/RVER (identificativo univoco delle schede collegate); scheda A e PG, v. 1 e v. 2: RV/RVE/RVES (identificativo univoco delle schede collegate). RV/RSE/RSEC (identificativo univoco delle schede collegate)</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 

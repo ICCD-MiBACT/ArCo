@@ -2743,8 +2743,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione geologica di un suolo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents geological description of a soil</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">geological description</rdfs:label>
         <rdfs:label xml:lang="it">descrizione geologica</rdfs:label>
+        <rdfs:label xml:lang="en">geological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -2807,8 +2807,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione morfologica di un suolo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents morphological description of a soil</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">morphological description</rdfs:label>
         <rdfs:label xml:lang="it">descrizione morfologica</rdfs:label>
+        <rdfs:label xml:lang="en">morphological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:DatatypeProperty>
@@ -2934,7 +2934,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">posizione rispetto al bene culturale complesso</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normative OA e RA: OG/OGT/OGTP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normative D, OA, RA, BDM (v.1 e v.2): OG/OGT/OGTP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 

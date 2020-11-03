@@ -2534,11 +2534,11 @@
 			</xsl:for-each>
 			<!-- reference coin legend (NU) -->
 			<xsl:if
-				test="record/metadata/schede/*/OG/OGT/OGTL and not($sheetType='E')">
+				test="record/metadata/schede/NU/OG/OGT/OGTL">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
 							<xsl:value-of
-						select="concat($NS, 'ReferenceCoinLegend/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTL)))" />
+						select="concat($NS, 'ReferenceCoinLegend/', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTL)))" />
 						</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -2548,11 +2548,11 @@
 					</rdf:type>
 					<rdfs:label>
 						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/OG/OGT/OGTL)" />
+							select="normalize-space(record/metadata/schede/NU/OG/OGT/OGTL)" />
 					</rdfs:label>
 					<l0:name>
 						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/OG/OGT/OGTL)" />
+							select="normalize-space(record/metadata/schede/NU/OG/OGT/OGTL)" />
 					</l0:name>
 				</rdf:Description>
 			</xsl:if>
@@ -20365,6 +20365,29 @@
 			<xsl:if
 				test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTA)), 'n.r')))">
 				<xsl:for-each select="record/metadata/schede/*/CT/CTA">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+			                		<xsl:value-of
+							select="concat($NS, 'SubjectDiscipline/', arco-fn:urify(normalize-space(.)))" />
+			                	</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+		                                <xsl:value-of
+								select="'http://dati.beniculturali.it/cis/SubjectDiscipline'" />
+		                            </xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(.)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(.)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:for-each>
+			</xsl:if>
+			<xsl:if
+				test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTA)), 'n.r')))">
+				<xsl:for-each select="record/metadata/schede/*/OG/CTA">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 			                		<xsl:value-of

@@ -1618,7 +1618,7 @@
 				</xsl:if>
 				<!-- position in complex CP -->
 				<xsl:if
-					test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetType='OA' or $sheetType='RA')">
+					test="record/metadata/schede/*/OG/OGT/OGTP and not($sheetType='AT' or $sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 					<arco-dd:positionInComplexCulturalProperty>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/OG/OGT/OGTP)" />
@@ -1854,6 +1854,14 @@
 						</arco-core:keyword>
 					</xsl:for-each>
 				</xsl:if>
+				<xsl:if
+					test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTC)), 'n.r')))">
+					<xsl:for-each select="record/metadata/schede/*/OG/CTC">
+						<arco-core:keyword>
+							<xsl:value-of select="normalize-space(.)" />
+						</arco-core:keyword>
+					</xsl:for-each>
+				</xsl:if>
 				<!-- main discipline (PST) -->
 				<xsl:if
 					test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTP)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTP)), 'n.r')))">
@@ -1870,6 +1878,17 @@
 				<xsl:if
 					test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CT/CTA)), 'n.r')))">
 					<xsl:for-each select="record/metadata/schede/*/CT/CTA">
+						<arco-arco:hasAlternativeDiscipline>
+							<xsl:attribute name="rdf:resource">
+		                		<xsl:value-of
+								select="concat($NS, 'SubjectDiscipline/', arco-fn:urify(normalize-space(.)))" />
+		                	</xsl:attribute>
+						</arco-arco:hasAlternativeDiscipline>
+					</xsl:for-each>
+				</xsl:if>
+				<xsl:if
+					test="(not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTA)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/OG/CTA)), 'n.r')))">
+					<xsl:for-each select="record/metadata/schede/*/OG/CTA">
 						<arco-arco:hasAlternativeDiscipline>
 							<xsl:attribute name="rdf:resource">
 		                		<xsl:value-of
