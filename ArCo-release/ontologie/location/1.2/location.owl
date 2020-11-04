@@ -2035,7 +2035,7 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation). - CS/CTL</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation). - CS/CTL. - GE/GEL; GP/GPL; GL/GLL; GA/GAL</a-cat:iccdNormTag>
     </owl:Class>
     
 

@@ -1411,7 +1411,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has inventory</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>UB/INV; ICCD Normativa Trasversale: UB/INP</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>UB/INV; ICCD Normativa Trasversale: UB/INP. -  ICCD Normativa RA 3.00 RE/DSC/DSCI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5381,7 +5381,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">codice identificativo locale della ricognizione archeologica</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGH</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGH, NUNC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
