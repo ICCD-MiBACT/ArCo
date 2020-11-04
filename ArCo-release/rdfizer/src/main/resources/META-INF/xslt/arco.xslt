@@ -18492,7 +18492,7 @@
 				</xsl:for-each>
 			</xsl:if>
 			<!-- Geometry of cultural property as an individual for GP (Point) -->
-			<xsl:for-each select="record/metadata/schede/*/GP/*/*">
+			<xsl:for-each select="record/metadata/schede/*/GP">
 				<xsl:variable name="geometry-position"
 					select="position()" />
 				<rdf:Description>
