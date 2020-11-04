@@ -1597,31 +1597,28 @@
 			</rdf:Description>
 
 			<!-- Subject as an individual (sgti) -->
-			<xsl:for-each
-				select="record/metadata/schede/*/*/SGT/SGTI">
-				<xsl:if
-					test="not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r'))">
+			<xsl:for-each select="record/metadata/schede/*/*/SGT">
+				<xsl:if test="$sheetType='PST' or 'SMO'">
+				<xsl:if test="./SGTI and not(starts-with(lower-case(normalize-space(./SGTI)), 'nr')) and not(starts-with(lower-case(normalize-space(./SGTI)), 'n.r'))">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-	            			<xsl:value-of
-							select="concat($NS, 'Subject/', arco-fn:arcofy(.))" />
+	            			<xsl:value-of select="concat($NS, 'Subject/', arco-fn:arcofy(./SGTI))" />
             		</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
-                          <xsl:value-of
-								select="'https://w3id.org/arco/ontology/context-description/Subject'" />
+                          <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Subject'" />
                         </xsl:attribute>
 						</rdf:type>
 						<rdfs:label>
 							<xsl:call-template name="CamelCase">
 								<xsl:with-param name="text"
-									select="normalize-space(.)" />
+									select="normalize-space(./SGTI)" />
 							</xsl:call-template>
 						</rdfs:label>
 						<l0:name>
 							<xsl:call-template name="CamelCase">
 								<xsl:with-param name="text"
-									select="normalize-space(.)" />
+									select="normalize-space(./SGTI)" />
 							</xsl:call-template>
 						</l0:name>
 						<arco-cd:isSubjectOf>
@@ -1630,12 +1627,13 @@
 								select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
                     	</xsl:attribute>
 						</arco-cd:isSubjectOf>
-						<xsl:if test="../SGTP">
+						<xsl:if test="./SGTP">
 							<arco-dd:positionOnCulturalProperty>
-								<xsl:value-of select="../SGTP" />
+								<xsl:value-of select="./SGTP" />
 							</arco-dd:positionOnCulturalProperty>
 						</xsl:if>
 					</rdf:Description>
+				</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:for-each
@@ -29001,19 +28999,21 @@
 			</xsl:for-each>
 
 						<!-- Printing Plates Series -->
-			<xsl:if test="record/metadata/schede/MI/OG/SGT/SGTS">
+			<xsl:if test="$sheetType='MI' or 'S'">
+			<xsl:if test="record/metadata/schede/*/OG/SGT/SGTS">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-						<xsl:value-of select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)))" />
+						<xsl:value-of select="concat($NS, 'PrintingPlatesSeries/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/SGT/SGTS)))" />
 					</xsl:attribute>
 					<rdf:type rdf:resource="https://w3id.org/arco/ontology/context-description/PrintingPlatesSeries" />
 					<rdfs:label>
-						<xsl:value-of select="normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)" />
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/SGT/SGTS)" />
 					</rdfs:label>
 					<l0:name>
-						<xsl:value-of select="normalize-space(record/metadata/schede/MI/OG/SGT/SGTS)" />
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/SGT/SGTS)" />
 					</l0:name>
 				</rdf:Description>
+			</xsl:if>
 			</xsl:if>
 							<!-- Cataloguing level as individual -->
 			<xsl:for-each select="record/metadata/schede/*/CD/LIR">
