@@ -1963,8 +1963,7 @@
 					<xsl:for-each select="record/metadata/schede/*/LS/CSS">
 						<arco-location:hasCadastralIdentity>
 							<xsl:attribute name="rdf:resource">
-		                		<xsl:value-of
-								select="concat($NS, 'CadastralIdentity/', $itemURI, '-historical-', position())" />
+		                		<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-historical-', position())" />
 		                	</xsl:attribute>
 						</arco-location:hasCadastralIdentity>
 					</xsl:for-each>
@@ -2651,12 +2650,12 @@
 				<!-- member of collection -->
 				<xsl:for-each select="record/metadata/schede/*/UB/COL">
 					<xsl:if test="./*">
-						<arco-cd:isMemberOfCollection>
+						<arco-cd:isMemberOfCollectionOf>
 							<xsl:attribute name="rdf:resource">
 		                            <xsl:value-of
 								select="concat($NS, 'CollectionMembership/', $itemURI, '-collection-membership-', position())" />
 		                        </xsl:attribute>
-						</arco-cd:isMemberOfCollection>
+						</arco-cd:isMemberOfCollectionOf>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- other cultural property records -->

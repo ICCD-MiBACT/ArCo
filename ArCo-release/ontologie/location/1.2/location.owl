@@ -310,7 +310,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cadastral city</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: CS/CTS/CTSC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: CS/CTS/CTSC. - Normativa RA v.2: RP/LGC/LGCC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -328,7 +328,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cadastral entity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Traversale 4.00: CS/CTS; LS/CSS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Traversale 4.00: CS/CTS, CS/CTS/CTSF, CTSN; LS/CSS. LG/LGC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -346,7 +346,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cadastral identity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS. - Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -366,6 +366,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has cadastre type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>CS/CTS/CTST</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -554,7 +555,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has referred location type</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation) - Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: GE/GEL; LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation) - Normative di versioni precedenti: GP/GPL; GA/GAL; GL/GLL. - CS/CTL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -759,7 +760,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has toponym in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVL; LA/PRL</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVL/PVLT; LA/PRL/PRLT. - Versioni precedenti: LC/PVL, LA/PRL</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1800,7 +1801,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">Foglio di mappa catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTSF ; LS/CSS/CSSF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTS/CTSF ; LS/CSS/CSSF. - Normativa RA v.2: RP/LGC/LGCM+LGCA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1867,6 +1868,7 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:label xml:lang="it">Identità catastale</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS. - Normativa RA v.2: RP/LGC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1882,7 +1884,7 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:label xml:lang="it">Collezione di particelle catastali</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Traversale 4.00: CS/CTS/CTSN; LS/CSS/CSSN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Traversale 4.00: CS/CTS/CTSN; LS/CSS/CSSN. - Normativa RA v.2: RP/LGC/LGCR</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2033,7 +2035,7 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:label xml:lang="it">Tipo di localizzazione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation)</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LA/TLC; LA/TCL; LC (CurrentPhysicalLocation) - Normativa F: anche LR (ShotLocation). - CS/CTL</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2049,7 +2051,7 @@ resource:CadastralIdentity/1400055239-1
         <rdfs:label xml:lang="en">Neighbouring cadastral entity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTE</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: CS/CTE. - CS/CTS/CTSE. - LC/CSS/CSSE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2270,7 +2272,7 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:label xml:lang="en">Toponym in time</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVL; LA/PRL</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: LC/PVL/PVLT; LA/PRL/PRLT. - Versioni precedenti: LC/PVL, LA/PRL</a-cat:iccdNormTag>
     </owl:Class>
     
 
