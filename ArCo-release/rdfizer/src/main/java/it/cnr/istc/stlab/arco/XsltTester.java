@@ -28,10 +28,12 @@ public class XsltTester {
 
 	private static final String VERBOSE_FILE = "v";
 	private static final String VERBOSE_FILE_LONG = "verbose";
-	
+
 	private static final String PREFIX = "prefix";
 	private static final String PREFIX_LONG = "prefix";
 
+	private static final String SOURCE_PREFIX = "d";
+	private static final String SOURCE_PREFIX_LONG = "document-prefix";
 
 	public static void main(String[] args) throws IOException {
 		Converter converter = new Converter();
@@ -46,10 +48,16 @@ public class XsltTester {
 			Option outputFileOption = optionBuilder.argName("verbose").required(false)
 					.desc("OPTIONAL - Print the differences between generated file and expected result, and viceversa.")
 					.longOpt(VERBOSE_FILE_LONG).build();
-			
+
 			Option prefixOption = Option.builder(PREFIX).argName("string").hasArg().required(false)
 					.desc("OPTIONAL - Prefix for generated resources [default: https://w3id.org/arco/resource/].")
 					.longOpt(PREFIX_LONG).build();
+
+			Option sourcePrefixOption = Option.builder(SOURCE_PREFIX).argName("string").hasArg().required(false).desc(
+					"OPTIONAL - Prefix of the source PDF document [default: http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=].")
+					.longOpt(SOURCE_PREFIX_LONG).build();
+
+			options.addOption(sourcePrefixOption);
 
 			options.addOption(outputFileOption);
 			options.addOption(prefixOption);
@@ -65,14 +73,16 @@ public class XsltTester {
 			}
 
 			boolean verbose = commandLine.hasOption(VERBOSE_FILE);
-			String prefix = commandLine.getOptionValue(PREFIX,"https://w3id.org/arco/resource/");
+			String prefix = commandLine.getOptionValue(PREFIX, "https://w3id.org/arco/resource/");
+			String sourceprefix = commandLine.getOptionValue(SOURCE_PREFIX,
+					"http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=");
 
 			if (commandLine != null) {
 				String[] arguments = commandLine.getArgs();
 				if (arguments != null && arguments.length > 0) {
 					File testDescriptionFile = new File(arguments[0]);
 					if (testDescriptionFile.exists() && testDescriptionFile.isFile()) {
-						processTestFile(converter,prefix, testDescriptionFile, verbose);
+						processTestFile(converter, prefix, sourceprefix, testDescriptionFile, verbose);
 					} else {
 						System.err.println("file passato come parametro non è un file di descrizione");
 					}
@@ -86,8 +96,8 @@ public class XsltTester {
 
 	}
 
-	private static void processTestFile(Converter converter,String prefix, File testDescriptionFile, boolean verbose)
-			throws FileNotFoundException, IOException {
+	private static void processTestFile(Converter converter, String prefix, String sourceprefix,
+			File testDescriptionFile, boolean verbose) throws FileNotFoundException, IOException {
 		Reader in = new FileReader(testDescriptionFile);
 		int lineNumber = 0;
 		Iterator<CSVRecord> records = CSVFormat.DEFAULT.withHeader("XML", "RDF").parse(in).iterator();
@@ -98,13 +108,13 @@ public class XsltTester {
 				continue;
 			}
 			File xmlIn = new File(csvRecord.get("XML").trim());
-			doTest(converter,prefix, lineNumber, xmlIn, csvRecord.get("RDF"), verbose);
+			doTest(converter, prefix, sourceprefix, lineNumber, xmlIn, csvRecord.get("RDF"), verbose);
 			lineNumber++;
 		}
 	}
 
-	private static void doTest(Converter converter, String prefix, int lineNumber, File xmlIn, String expectedResultFile,
-			boolean verbose) throws FileNotFoundException {
+	private static void doTest(Converter converter, String prefix, String sourceprefix, int lineNumber, File xmlIn,
+			String expectedResultFile, boolean verbose) throws FileNotFoundException {
 		if (xmlIn.exists()) {
 			if (xmlIn.isFile()) {
 				if (xmlIn.getName().endsWith(".xml")) {
@@ -113,7 +123,7 @@ public class XsltTester {
 
 					Model generatedModel = null;
 					try {
-						generatedModel = converter.convert(fileNameInXML,prefix, inputStream);
+						generatedModel = converter.convert(fileNameInXML, prefix, sourceprefix, inputStream);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

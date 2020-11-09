@@ -24,6 +24,9 @@ public class XsltSingleTester {
 
 	private static final String PREFIX = "prefix";
 	private static final String PREFIX_LONG = "prefix";
+	
+	private static final String SOURCE_PREFIX = "d";
+	private static final String SOURCE_PREFIX_LONG = "document-prefix";
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Converter converter = new Converter();
@@ -42,7 +45,12 @@ public class XsltSingleTester {
 			Option prefixOption = Option.builder(PREFIX).argName("string").hasArg().required(false)
 					.desc("OPTIONAL - Prefix for generated resources [default: https://w3id.org/arco/resource/].")
 					.longOpt(PREFIX_LONG).build();
+			
+			Option sourcePrefixOption = Option.builder(SOURCE_PREFIX).argName("string").hasArg().required(false).desc(
+					"OPTIONAL - Prefix of the source PDF document [default: http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=].")
+					.longOpt(SOURCE_PREFIX_LONG).build();
 
+			options.addOption(sourcePrefixOption);
 			options.addOption(outputFileOption);
 			options.addOption(prefixOption);
 			
@@ -69,10 +77,11 @@ public class XsltSingleTester {
 
 								String expectedResultFile = commandLine.getOptionValue(EXPECTED_RESULT);
 								String prefix = commandLine.getOptionValue(PREFIX,"https://w3id.org/arco/resource/");
+								String sourceprefix = commandLine.getOptionValue(SOURCE_PREFIX,"http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=");
 
 								Model generatedModel = null;
 								try {
-									generatedModel = converter.convert(fileNameInXML,prefix, inputStream);
+									generatedModel = converter.convert(fileNameInXML,prefix,sourceprefix, inputStream);
 								} catch (Exception e) {
 									e.printStackTrace();
 								}

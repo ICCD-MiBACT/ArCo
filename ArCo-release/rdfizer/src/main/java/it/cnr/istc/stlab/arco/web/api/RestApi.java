@@ -34,7 +34,7 @@ public class RestApi {
 		
 		Model model = null;
 		try {
-			model = converter.convert(fileName,"https://w3id.org/arco/resource/", xmlInputStream);
+			model = converter.convert(fileName,"https://w3id.org/arco/resource/","http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=", xmlInputStream);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

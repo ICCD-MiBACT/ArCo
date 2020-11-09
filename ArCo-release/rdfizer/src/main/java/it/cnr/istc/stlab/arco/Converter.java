@@ -245,7 +245,7 @@ public class Converter {
 		 */
 	}
 
-	public Model convert(String item, String prefix,InputStream sourceXml) throws Exception {
+	public Model convert(String item, String prefix, String sourcePrefix, InputStream sourceXml) throws Exception {
 
 		Model model = ModelFactory.createDefaultModel();
 
@@ -263,6 +263,7 @@ public class Converter {
 			XdmValue value = new XdmAtomicValue(item);
 			trans.setParameter(qName, value);
 			trans.setParameter(new QName("NS"), new XdmAtomicValue(prefix));
+			trans.setParameter(new QName("SOURCE"), new XdmAtomicValue(sourcePrefix));
 			trans.setInitialContextNode(source);
 			trans.setDestination(out);
 			trans.transform();

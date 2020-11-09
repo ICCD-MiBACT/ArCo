@@ -29,12 +29,13 @@ public class Main {
 		String inFolderString = args[0];
 		String outNtriplesFolder = args[1];
 		String prefix = args[2];
+		String sourceprefix = args[3];
 
 		File inFolder = new File(inFolderString);
 
 		Set<String> catalogueRecordsToQuarantine = new HashSet<>();
 
-		if (args.length > 3) {
+		if (args.length > 4) {
 			// A file listing the catalogue records to quarantine is provided
 			try {
 				BufferedReader br = new BufferedReader(new FileReader(new File(args[2])));
@@ -98,7 +99,7 @@ public class Main {
 								try {
 
 									// System.out.println(itemName);
-									Model model = converter.convert(itemName, prefix, is);
+									Model model = converter.convert(itemName, prefix, sourceprefix, is);
 
 									if (catalogueRecordsToQuarantine.contains(itemName)) {
 										OutputStream osQuarantine = new GZIPOutputStream(new FileOutputStream(
@@ -160,7 +161,7 @@ public class Main {
 				}
 
 			}
-			
+
 			bw_quarantine.flush();
 			bw_quarantine.close();
 
