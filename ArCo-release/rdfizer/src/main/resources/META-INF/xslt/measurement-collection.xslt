@@ -48,7 +48,8 @@
 	</xsl:choose>
 	</xsl:variable>
 	
-	<xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" />
+	<!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'" /-->
+	<xsl:param name="NS" />
 	
 	<xsl:variable name="culturalPropertyComponent"
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI, '-component')" />

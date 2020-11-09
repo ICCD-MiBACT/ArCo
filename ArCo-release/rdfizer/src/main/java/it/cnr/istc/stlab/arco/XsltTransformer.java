@@ -25,6 +25,9 @@ public class XsltTransformer {
     private static final String OUTPUT_SYNTAX = "s";
     private static final String OUTPUT_SYNTAX_LONG = "syntax";
     
+    private static final String PREFIX = "p";
+    private static final String PREFIX_LONG = "prefix";
+    
     public static void main(String[] args) throws FileNotFoundException {
 		Converter converter = new Converter();
 		
@@ -50,8 +53,17 @@ public class XsltTransformer {
 	                                 .longOpt(OUTPUT_SYNTAX_LONG)
 	                                 .build();
 	        
+	        optionBuilder = Option.builder(PREFIX);
+	        Option prefixOption = optionBuilder.argName("string")
+	                                 .hasArg()
+	                                 .required(false)
+	                                 .desc("OPTIONAL - Prefix for generated resources [default: https://w3id.org/arco/resource/].")
+	                                 .longOpt(PREFIX_LONG)
+	                                 .build();
+	        
 	        options.addOption(outputFileOption);
 	        options.addOption(outputSyntaxOption);
+	        options.addOption(prefixOption);
 	        
 	        CommandLine commandLine = null;
 	        
@@ -86,9 +98,11 @@ public class XsltTransformer {
 	        					if(outputSyntax == null)
 	        						outputSyntax = "N-TRIPLES";
 	        					
+	        					String prefix = commandLine.getOptionValue(PREFIX,"https://w3id.org/arco/resource/");
+	        					
 	        					Model model = null;
 								try {
-									model = converter.convert(fileName, inputStream);
+									model = converter.convert(fileName,prefix, inputStream);
 								} catch (Exception e) {
 									// TODO Auto-generated catch block
 									e.printStackTrace();

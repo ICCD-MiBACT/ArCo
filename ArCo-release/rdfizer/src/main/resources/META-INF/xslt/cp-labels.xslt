@@ -13,6 +13,7 @@
 
 	<xsl:output method="xml" encoding="utf-8" indent="yes" />
 	<xsl:param name="item" />
+	<xsl:param name="NS" />
 	<xsl:template match="/">
 
 			<xsl:variable name="itemURI">
@@ -46,7 +47,8 @@
 		<xsl:variable name="sheetType" select="name(record/metadata/schede/*)"></xsl:variable>
 		<xsl:variable name="cp-name" select="''"></xsl:variable>
         
-        <xsl:variable name="NS" select="'https://w3id.org/arco/resource/'"></xsl:variable>
+        <!-- xsl:variable name="NS" select="'https://w3id.org/arco/resource/'"></xsl:variable-->
+        
         <xsl:variable name="culturalProperty">
         	<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
         </xsl:variable>

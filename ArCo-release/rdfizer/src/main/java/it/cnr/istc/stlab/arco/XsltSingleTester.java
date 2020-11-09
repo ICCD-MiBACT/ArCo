@@ -22,6 +22,9 @@ public class XsltSingleTester {
 	private static final String EXPECTED_RESULT = "e";
 	private static final String EXPECTED_RESULT_LONG = "expected";
 
+	private static final String PREFIX = "prefix";
+	private static final String PREFIX_LONG = "prefix";
+
 	public static void main(String[] args) throws FileNotFoundException {
 		Converter converter = new Converter();
 
@@ -36,8 +39,13 @@ public class XsltSingleTester {
 					.desc("An RDF file containing the result expected from the transformation of the input file.")
 					.longOpt(EXPECTED_RESULT_LONG).build();
 
-			options.addOption(outputFileOption);
+			Option prefixOption = Option.builder(PREFIX).argName("string").hasArg().required(false)
+					.desc("OPTIONAL - Prefix for generated resources [default: https://w3id.org/arco/resource/].")
+					.longOpt(PREFIX_LONG).build();
 
+			options.addOption(outputFileOption);
+			options.addOption(prefixOption);
+			
 			CommandLine commandLine = null;
 
 			CommandLineParser cmdLineParser = new DefaultParser();
@@ -60,10 +68,11 @@ public class XsltSingleTester {
 								InputStream inputStream = new FileInputStream(xmlIn);
 
 								String expectedResultFile = commandLine.getOptionValue(EXPECTED_RESULT);
+								String prefix = commandLine.getOptionValue(PREFIX,"https://w3id.org/arco/resource/");
 
 								Model generatedModel = null;
 								try {
-									generatedModel = converter.convert(fileNameInXML, inputStream);
+									generatedModel = converter.convert(fileNameInXML,prefix, inputStream);
 								} catch (Exception e) {
 									e.printStackTrace();
 								}

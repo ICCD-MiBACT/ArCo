@@ -150,8 +150,9 @@
 	<xsl:variable name="sheetType"
 		select="name(record/metadata/schede/*)" />
 	<xsl:variable name="cp-name" select="''" />
-	<xsl:variable name="NS"
-		select="'https://w3id.org/arco/resource/'" />
+	<xsl:param name="NS" />
+	<!-- xsl:variable name="NS"
+		select="'https://w3id.org/arco/resource/'" /-->
 	<!-- xsl:import href="./prova.xsl" / -->
 
 	<xsl:template match="/">
@@ -6487,7 +6488,7 @@
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
                             			<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+										select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
                         			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
@@ -6496,7 +6497,7 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTT)))" />
+										select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTT)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -6574,7 +6575,7 @@
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
                             			<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+										select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
                         			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
@@ -6583,7 +6584,7 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
+										select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -6661,7 +6662,7 @@
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
                             			<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTT)))" />
+										select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTT)))" />
                         			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
@@ -6670,7 +6671,7 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
+										select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTQ)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -6748,7 +6749,7 @@
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
                             			<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+										select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
                         			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
@@ -6757,7 +6758,7 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTR)))" />
+										select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTR)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -6835,7 +6836,7 @@
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
                             			<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+										select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
                         			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
@@ -6844,7 +6845,7 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTK)))" />
+										select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTK)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -6922,7 +6923,7 @@
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
                             			<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+										select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
                         			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
@@ -6931,7 +6932,7 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTZ)))" />
+										select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTZ)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -7009,7 +7010,7 @@
 								<arco-dd:hasCulturalPropertyDefinition>
 									<xsl:attribute name="rdf:resource">
                             			<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
+										select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(./OGTD)))" />
                         			</xsl:attribute>
 								</arco-dd:hasCulturalPropertyDefinition>
 							</xsl:if>
@@ -7018,7 +7019,7 @@
 								<arco-dd:hasCulturalPropertySpecification>
 									<xsl:attribute name="rdf:resource">
                                 		<xsl:value-of
-										select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTO)))" />
+										select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(./OGTO)))" />
                             		</xsl:attribute>
 								</arco-dd:hasCulturalPropertySpecification>
 							</xsl:if>
@@ -7037,7 +7038,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTD)))" />
+								select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTD)))" />
 	                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -7083,7 +7084,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 	                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertyDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTT)))" />
+								select="concat($NS,'CulturalPropertyDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTT)))" />
 	                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -7109,7 +7110,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTT)))" />
+								select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTT)))" />
 		                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -7131,7 +7132,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTQ)))" />
+								select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTQ)))" />
 		                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -7153,7 +7154,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTK)))" />
+								select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTK)))" />
 		                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -7175,7 +7176,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTR)))" />
+								select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTR)))" />
 		                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -7197,7 +7198,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTZ)))" />
+								select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTZ)))" />
 		                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -7219,7 +7220,7 @@
 						<rdf:Description>
 							<xsl:attribute name="rdf:about">
 		                        <xsl:value-of
-								select="concat('https://w3id.org/arco/resource/CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTO)))" />
+								select="concat($NS,'CulturalPropertySpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTO)))" />
 		                    </xsl:attribute>
 							<rdf:type>
 								<xsl:attribute name="rdf:resource">
@@ -19869,7 +19870,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         	<xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(./OGDN)))" />
+						select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(./OGDN)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -19989,7 +19990,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
 				                        	<xsl:value-of
-									select="concat('https://w3id.org/arco/resource/DesignationType/', arco-fn:urify(normalize-space(./OGDT)))" />
+									select="concat($NS,'DesignationType/', arco-fn:urify(normalize-space(./OGDT)))" />
 				                       </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -20014,7 +20015,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         	<xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
+						select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />
                        
                     </xsl:attribute>
 					<rdf:type>
@@ -20036,7 +20037,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         	<xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTO)))" />
+						select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/NU/OG/OGT/OGTO)))" />
                        
                     </xsl:attribute>
 					<rdf:type>
@@ -20067,7 +20068,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         	<xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTD)))" />
+						select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGT/OGTD)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20092,7 +20093,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         	<xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTE)))" />
+						select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTE)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20115,7 +20116,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         	<xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTC)))" />
+						select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTC)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20158,7 +20159,7 @@
 				</rdf:Description>
 			</xsl:if>
 			<!-- Name in time - Time interval - rules for previous model <xsl:if test="record/metadata/schede/*/OG/OGD/OGDR"> 
-				<rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of select="concat('https://w3id.org/arco/resource/TimeInterval/', 
+				<rdf:Description> <xsl:attribute name="rdf:about"> <xsl:value-of select="concat($NS,'TimeInterval/', 
 				arco-fn:urify(record/metadata/schede/*/OG/OGD/OGDR))" /> </xsl:attribute> 
 				<rdf:type> <xsl:attribute name="rdf:resource"> <xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" 
 				/> </xsl:attribute> </rdf:type> <rdfs:label> <xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGD/OGDR)" 
@@ -20170,7 +20171,7 @@
 				ALERT: this part has been removed in version 0.2 as the Mibact Scope of Protection 
 				has been defined within the ontologies. -->
 			<!-- xsl:if test="record/metadata/schede/*/OG/AMB"> <rdf:Description> 
-				<xsl:attribute name="rdf:about"> <xsl:value-of select="concat('https://w3id.org/arco/resource/MibactScopeOfProtection/', 
+				<xsl:attribute name="rdf:about"> <xsl:value-of select="concat($NS,'MibactScopeOfProtection/', 
 				arco-fn:urify(normalize-space(record/metadata/schede/*/OG/AMB)))" /> </xsl:attribute> 
 				<rdf:type> <xsl:attribute name="rdf:resource"> <xsl:value-of select="'https://w3id.org/arco/cpdescription/MibactScopeOfProtection'" 
 				/> </xsl:attribute> </rdf:type> <rdfs:label> <xsl:value-of select="normalize-space(record/metadata/schede/*/OG/AMB)" 
@@ -20182,7 +20183,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/CTG)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/CTG)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20205,7 +20206,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/RA/OG/CLS)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/RA/OG/CLS)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20223,7 +20224,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/MA/OG/OGT/OGTC)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/MA/OG/OGT/OGTC)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20241,7 +20242,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/CA/OG/OGT/OGTC)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/CA/OG/OGT/OGTC)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20259,7 +20260,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTC)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/VeAC/OG/OGT/OGTC)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20277,7 +20278,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/AT/OG/OGT/OGTP)))" />
+						select="concat($NS,'CulturalPropertyCategory/', arco-fn:urify(normalize-space(record/metadata/schede/AT/OG/OGT/OGTP)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20296,7 +20297,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DetectionMethod/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGM)))" />
+						select="concat($NS,'DetectionMethod/', arco-fn:urify(normalize-space(record/metadata/schede/*/OG/OGM)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -20319,7 +20320,7 @@
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
-						select="concat('https://w3id.org/arco/resource/DetectionMethod/', arco-fn:urify(normalize-space(record/metadata/schede/SI/OG/OGT/OGTA)))" />
+						select="concat($NS,'DetectionMethod/', arco-fn:urify(normalize-space(record/metadata/schede/SI/OG/OGT/OGTA)))" />
                     </xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -25216,7 +25217,7 @@
 									<arco-location:hasSiteDefinition>
 										<xsl:attribute name="rdf:resource">
                                         <xsl:value-of
-											select="concat('https://w3id.org/arco/resource/SiteDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)))" />
+											select="concat($NS,'SiteDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)))" />
                                     </xsl:attribute>
 									</arco-location:hasSiteDefinition>
 								</xsl:if>
@@ -25225,7 +25226,7 @@
 									<arco-location:hasSiteSpecification>
 										<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
-											select="concat('https://w3id.org/arco/resource/SiteSpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)))" />
+											select="concat($NS,'SiteSpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)))" />
                                         </xsl:attribute>
 									</arco-location:hasSiteSpecification>
 								</xsl:if>
@@ -25237,7 +25238,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                     <xsl:value-of
-									select="concat('https://w3id.org/arco/resource/SiteDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)))" />
+									select="concat($NS,'SiteDefinition/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)))" />
                                 </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -25257,7 +25258,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                     <xsl:value-of
-									select="concat('https://w3id.org/arco/resource/SiteSpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)))" />
+									select="concat($NS,'SiteSpecification/', arco-fn:urify(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)))" />
                                 </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -26140,7 +26141,7 @@
 									<arco-location:hasSiteDefinition>
 										<xsl:attribute name="rdf:resource">
                                             <xsl:value-of
-											select="concat('https://w3id.org/arco/resource/SiteDefinition/', arco-fn:urify(normalize-space(./PRC/PRCT)))" />
+											select="concat($NS,'SiteDefinition/', arco-fn:urify(normalize-space(./PRC/PRCT)))" />
                                         </xsl:attribute>
 									</arco-location:hasSiteDefinition>
 								</xsl:if>
@@ -26149,7 +26150,7 @@
 									<arco-location:hasSiteSpecification>
 										<xsl:attribute name="rdf:resource">
                                                 <xsl:value-of
-											select="concat('https://w3id.org/arco/resource/SiteSpecification/', arco-fn:urify(normalize-space(./PRC/PRCQ)))" />
+											select="concat($NS,'SiteSpecification/', arco-fn:urify(normalize-space(./PRC/PRCQ)))" />
                                             </xsl:attribute>
 									</arco-location:hasSiteSpecification>
 								</xsl:if>
@@ -26161,7 +26162,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                         <xsl:value-of
-									select="concat('https://w3id.org/arco/resource/SiteDefinition/', arco-fn:urify(normalize-space(./PRC/PRCT)))" />
+									select="concat($NS,'SiteDefinition/', arco-fn:urify(normalize-space(./PRC/PRCT)))" />
                                     </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">
@@ -26180,7 +26181,7 @@
 							<rdf:Description>
 								<xsl:attribute name="rdf:about">
                                         <xsl:value-of
-									select="concat('https://w3id.org/arco/resource/SiteSpecification/', arco-fn:urify(normalize-space(./PRC/PRCQ)))" />
+									select="concat($NS,'SiteSpecification/', arco-fn:urify(normalize-space(./PRC/PRCQ)))" />
                                     </xsl:attribute>
 								<rdf:type>
 									<xsl:attribute name="rdf:resource">

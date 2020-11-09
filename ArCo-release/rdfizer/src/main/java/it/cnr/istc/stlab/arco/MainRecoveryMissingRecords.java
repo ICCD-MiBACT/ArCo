@@ -78,7 +78,7 @@ public class MainRecoveryMissingRecords {
 				File subFolder = new File(inFolder, subFolderName);
 				File xmlFile = new File(subFolder, key + ".xml");
 				InputStream is = new FileInputStream(xmlFile);
-				Model model = converter.convert(key, is);
+				Model model = converter.convert(key,"https://w3id.org/arco/resource/", is);
 				
 				File ret = new File(outFolder, key + ".nt");
 				OutputStream modelOut = new FileOutputStream(ret);

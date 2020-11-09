@@ -92,8 +92,9 @@
 		select="record/metadata/schede/*/@version" />
 	<xsl:variable name="sheetType" select="name(record/metadata/schede/*)" />
 	<xsl:variable name="cp-name" select="''" />
-	<xsl:variable name="NS"
-		select="'https://w3id.org/arco/resource/'" />
+	<!-- xsl:variable name="NS"
+		select="'https://w3id.org/arco/resource/'" /-->
+	<xsl:param name="NS" />
 		<xsl:variable name="itemURI">
 	<xsl:choose>
 		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">

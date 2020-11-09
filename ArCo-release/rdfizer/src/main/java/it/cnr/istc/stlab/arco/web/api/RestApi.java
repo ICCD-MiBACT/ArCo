@@ -34,7 +34,7 @@ public class RestApi {
 		
 		Model model = null;
 		try {
-			model = converter.convert(fileName, xmlInputStream);
+			model = converter.convert(fileName,"https://w3id.org/arco/resource/", xmlInputStream);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
