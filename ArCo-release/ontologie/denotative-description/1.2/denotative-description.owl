@@ -310,7 +310,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has element affixed to cultural property</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI - ICCD Normativa MI: AU/DDC</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE - ICCD versioni precedenti alla 4.00: DA/ISR; DA/STM - ICCD Normativa A: LI/LSI - ICCD Normativa MI: AU/DDC. -  Normativa NU: DA/DES/DESA, DESL, DESN, DESF, DESM, DESG, DESR, DEST</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -987,6 +987,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy xml:lang="en">unstable</rdfs:isDefinedBy>
         <rdfs:label xml:lang="it">ha motivo decorativo</rdfs:label>
         <rdfs:label xml:lang="en">has ornamental motif</rdfs:label>
+        <a-cat:iccdNormTag>DA/APF/APFT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1275,7 +1276,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has technical status</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1402,7 +1403,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has writing system</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEF. DA/DES/DEST, DESF</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -3024,7 +3025,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">trascrizione</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale 4.00: DA/ISE/ISEI - Normative di versioni precedenti: DA/ISR/ISRI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: DA/ISE/ISEI - Normative di versioni precedenti: DA/ISR/ISRI. DA/DES/DESG, DESL</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -3392,7 +3393,7 @@ resource:Inscription/1200865151-inscription-1
         <rdfs:label xml:lang="it">Legenda della moneta</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa NU 4.00: DA/DES/DELS; DA/DES/DESN; DA/DES/DEL; DA/DES/DESF; DA/DES/DESG; DA/DES/DESR; DA/DES/DEST.</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -3640,7 +3641,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="en">Technical status of cultural entity</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM;</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: MT/MTC/MTCM; MT/MTC/MTCT - Normativa OA, D, F, S, MI: MT/FRM - Normativa OA, D, F, S: MT/FIL - Normativa VeAC: MT/MTC/MTCC; MT/MTC/MTCF - Normativa F: MT/FVC/FVCC; MT/FVC/FVCF; MT/FVC/FVCP; MT/FVC/FVCU; MT/FVC/FVCM; MT/FVM; DA/APF/APFE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4268,6 +4269,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Ornamental Motif</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>DA/APF/APFT</a-cat:iccdNormTag>
     </owl:Class>
     
 

@@ -253,7 +253,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has activity responsible</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGR; RE/DSC/DSCF; RE/IND/INDE; RE/FOI/FOIE - Normativa SM e BDM 4.00: DR/DRV</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGR; RE/DSC/DSCF; RE/IND/INDE; RE/FOI/FOIE - Normativa SM e BDM 4.00: DR/DRV. RS/RST/RSTE. CM/ISP/ISPN</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -636,6 +636,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/context-description/ChangeOfAvailability"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un bene culturale coinvolto in un un evento di mutamento di condizione materiale (furto, distruzione, recupero) all&apos;evento stesso.</rdfs:comment>
+        <rdfs:comment>TU/ALN</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a cultural enity involved in a change of availability event (i.e. theft, destruction, recovery) to the event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:label xml:lang="it">ha mutamento condizione materiale</rdfs:label>
@@ -725,7 +726,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has coin issuance</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE; DA/CON/CONN; DA/CON/CONZ; DA/CON/CONA; DA/CON/CONC - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE; DA/CON/CONN; DA/CON/CONZ; DA/CON/CONA; DA/CON/CONC - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT. DA/AUE/AUE</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1336,7 +1337,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has interpretation criterion</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - ICCD Normativa F: PD/PDF/PDFM - ICCD Normativa VeAC: AU/FRU/FRUF - CCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFM</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - ICCD Normativa F: PD/PDF/PDFM - ICCD Normativa VeAC: AU/FRU/FRUF - CCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFM. DA/SEM/SEMC. DA/STS/STSC</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1449,7 +1450,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has issuer</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUEE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE/AUEE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT/EDTN. DA/CON/CONA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -2241,7 +2242,7 @@ Normativa CA: RO/RIS (intervento successivo)</a-cat:iccdNormTag>
         <rdfs:label xml:lang="en">has subject</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS. DA/DES/DESU</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5235,7 +5236,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">indirizzo</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: TU/CDG/CDGI, TU/CPR/CPRI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5253,6 +5254,7 @@ ICCD Normative RA, SMO, PST, S, OAC, OA, MI, D, NU, CA, MA, F: RO</a-cat:iccdNor
         <rdfs:label xml:lang="it">età della morte stimata</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>DA/SEM/SEME</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -5970,7 +5972,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:label xml:lang="en">expiry date</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR/CPRD</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa F 4.00 e OAC: TU/CPR/CPRD. AD/ADS/ADSD</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6100,6 +6102,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:label xml:lang="en">Iconclass Code</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>DA/DES/DESI (tranne per normativa TMA). DA/AID/AIDC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6613,6 +6616,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:label xml:lang="it">sesso stimato</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>DA/STS/STSS</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6646,7 +6650,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:label xml:lang="en">subject</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI. DA/DES/DESU</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -7873,7 +7877,7 @@ resource:ArchivalSubseries/museo-civico-romano
         <rdfs:label xml:lang="it">Emissione di moneta</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa NU: DA/AUE - ICCD Normativa OA (dopo il rilascio della specifica scheda NU nel 2004 la scheda OA non è stata più utilizzata per la catalogazione di monete e medaglie): AU/EDT- DA/AUE</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -8916,7 +8920,7 @@ resource:PreferredAuthorshipAttribution/1200865600-1 a           cd:PreferredAut
         <rdfs:label xml:lang="en">Interpretation criterion</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - Normativa VeAC: AU/FRU/FRUF - Normativa MI 3.00: AU/DC/DDCF</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: AU/AUT/AUTM; AU/CMM/CMMF; AU/AAT/AATM; AU/ATB/ATBM; DT/DTM/DTMM; SG/SGT/SGTL - Normativa VeAC: AU/FRU/FRUF - Normativa MI 3.00: AU/DC/DDCF. DA/SEM/SEMC. DA/STS/STSC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -10221,7 +10225,7 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
         <rdfs:label xml:lang="en">Subject</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale: DA/AID/AIDI - Normativa F: SG/SGT/SGTI - Altre normative di versioni precedenti alla 4.00: OG/SGT/SGTI - ICCD Normative F, RA, SMO, PST, S, OAC, OA, MI, D, NU: RO/ROF/ROFS. DA/DES/DESU</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -11382,15 +11386,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reuse</rdfs:label>
         <rdfs:label xml:lang="it">Riuso</rdfs:label>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
     </rdf:Description>
     
 

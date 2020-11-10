@@ -2753,10 +2753,10 @@
 					</arco-cd:historicalInformation>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/DA/NCS">
-					<arco-cd:historicalInformation>
+					<arco-cd:explanationNote>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/DA/NCS)" />
-					</arco-cd:historicalInformation>
+					</arco-cd:explanationNote>
 				</xsl:if>
 				<!-- explanation note -->
 				<xsl:if test="record/metadata/schede/CA/DA/INT">
