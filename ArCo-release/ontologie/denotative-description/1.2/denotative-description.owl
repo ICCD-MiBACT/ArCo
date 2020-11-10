@@ -1346,6 +1346,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has value</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>MT/MIS/MISM</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 

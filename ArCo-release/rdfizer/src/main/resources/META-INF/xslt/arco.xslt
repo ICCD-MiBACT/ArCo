@@ -5288,7 +5288,7 @@
 						test="./DTM and (not(starts-with(lower-case(normalize-space(./DTM)), 'nr')) and not(starts-with(lower-case(normalize-space(./DTM)), 'n.r')))">
 						<arco-cd:hasInterpretationCriterion>
 							<xsl:choose>
-								<xsl:when test="./DTM/DTMS">
+								<xsl:when test="./DTM/DTMM">
 									<xsl:attribute name="rdf:resource">
                                     <xsl:value-of
 										select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./DTM/DTMM)))" />
@@ -5309,7 +5309,7 @@
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
                             <xsl:choose>
-                                <xsl:when test="./DTM/DTMS">
+                                <xsl:when test="./DTM/DTMM">
                                     <xsl:value-of
 							select="concat($NS, 'InterpretationCriterion/', arco-fn:urify(normalize-space(./DTM/DTMM)))" />
                                 </xsl:when>
@@ -5327,7 +5327,7 @@
 						</rdf:type>
 						<rdfs:label>
 							<xsl:choose>
-								<xsl:when test="./DTM/DTMS">
+								<xsl:when test="./DTM/DTMM">
 									<xsl:value-of select="normalize-space(./DTM/DTMM)" />
 								</xsl:when>
 								<xsl:otherwise>
@@ -5337,7 +5337,7 @@
 						</rdfs:label>
 						<l0:name>
 							<xsl:choose>
-								<xsl:when test="./DTM/DTMS">
+								<xsl:when test="./DTM/DTMM">
 									<xsl:value-of select="normalize-space(./DTM/DTMM)" />
 								</xsl:when>
 								<xsl:otherwise>
@@ -5345,9 +5345,9 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
-						<xsl:if test="./DTMS">
+						<xsl:if test=".DTM/DTMS">
 							<arco-core:specifications>
-								<xsl:value-of select="normalize-space(./DTMS)" />
+								<xsl:value-of select="normalize-space(.DTM/DTMS)" />
 							</arco-core:specifications>
 						</xsl:if>
 					</rdf:Description>
