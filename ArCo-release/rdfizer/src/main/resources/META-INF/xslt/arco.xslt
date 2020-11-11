@@ -15740,6 +15740,7 @@
 			</xsl:for-each>
 			<!-- USA -->
 			<xsl:for-each select="record/metadata/schede/*/US/USA">
+				<xsl:if test="./* " >
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
             			<xsl:value-of
@@ -15780,6 +15781,7 @@
 							</xsl:attribute>
 					</arco-cd:hasUseType>
 				</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- obverse of coin -->
 			<xsl:if
