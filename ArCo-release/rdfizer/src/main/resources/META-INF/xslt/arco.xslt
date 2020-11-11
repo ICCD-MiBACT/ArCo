@@ -20862,6 +20862,9 @@
 			<!-- historical cadastral identity -->
 			<xsl:if test="record/metadata/schede/*/LS/CSS/*">
 				<xsl:for-each select="record/metadata/schede/*/LS/CSS">
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
 		                		<xsl:value-of select="concat($NS, 'CadastralIdentity/', $itemURI, '-historical-', position())" />
@@ -20909,7 +20912,7 @@
 							<xsl:for-each select="./CSSN">
 								<arco-location:hasCadastralEntity>
 									<xsl:attribute name="rdf:resource">
-									<xsl:value-of select="concat($NS, 'CadastralUnitCollection/', $itemURI, '-historical-', position())" />
+									<xsl:value-of select="concat($NS, 'CadastralUnitCollection/', $itemURI, '-historical-', $parentPosition)" />
 								</xsl:attribute>
 								</arco-location:hasCadastralEntity>
 							</xsl:for-each>
