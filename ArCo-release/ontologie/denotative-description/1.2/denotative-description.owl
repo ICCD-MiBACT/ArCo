@@ -1229,6 +1229,9 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCaracteristicQualification">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una caratteristica tecnica alla sua qualificazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a technical characteristic to a aqualification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -2366,6 +2369,8 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isTechnicalCaracteristicQualificationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristicQualification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una qualificazione a una caratteristica tecnica</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an qualification to a technical characteristic</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
@@ -2524,21 +2529,6 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è accordatura di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isUnitOfMesurementOf">
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement"/>
-        <rdfs:comment xml:lang="it">Questa classe collega l&apos;unità di misura ad una misura</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a unit of measurement to a measurement</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <rdfs:label xml:lang="en">is unit of measurement of</rdfs:label>
-        <rdfs:label xml:lang="it">è unità di misura di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2704,22 +2694,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/bodyTranscript -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/bodyTranscript">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nel corpo dell&apos;etichetta</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the text written in the body of the label</rdfs:comment>
-        <rdfs:label xml:lang="en">body transcript</rdfs:label>
-        <rdfs:label xml:lang="it">trascrizione del corpo</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBET</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/creationDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/creationDate">
@@ -2757,6 +2731,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/denotative-description/handwriting -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/handwriting">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:label xml:lang="it">autografa</rdfs:label>
         <rdfs:label xml:lang="en">handwriting</rdfs:label>
@@ -2765,22 +2740,6 @@ In this module the following Ontology Design Patterns have been used:
         <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEA</a-cat:iccdNormTag>
         <a-cat:iccdNormTag xml:lang="it">Questa proprietà indica se l&apos;etichetta è autografa o meno</a-cat:iccdNormTag>
         <a-cat:iccdNormTag xml:lang="en">This property indicates if the label is handwritten or not</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/headingTranscript -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/headingTranscript">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/transcript"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo scritto nell&apos;intestazione dell&apos;etichetta</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the heading of the label</rdfs:comment>
-        <rdfs:label xml:lang="en">heading transcript</rdfs:label>
-        <rdfs:label xml:lang="it">trascrizione dell&apos;intestazione</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/SBE/SBEI</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -2836,23 +2795,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfEnvelopes">
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di buste che contengono il campione o sue parti se conservate assieme al campione, e non in collezioni ancillari</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the numebr of envelopes, containing the specimen or its parts, if they are preserved with the specimen itself and not in ancillar collections</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/denotative-description</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">numbers of envelopes</rdfs:label>
-        <rdfs:label xml:lang="it">numero di buste</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPB</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfFemaleParticipants">
@@ -2867,23 +2809,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BDI: CU/CUV/CUVF; CU/CUM/CUMF; CU/CUC/CUCF</a-cat:iccdNormTag>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/denotative-description/numberOfLabels -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/numberOfLabels">
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <rdfs:comment xml:lang="it">Questa proprietà rappresenta etichette presenti assieme al campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property represents the number of labels with the specimen</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/arco/ontology/denotative-description</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">number of labels</rdfs:label>
-        <rdfs:label xml:lang="it">numero di etichette</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: SB/CBP/CBPE</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 

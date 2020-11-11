@@ -4218,6 +4218,94 @@
 			</rdf:Description>
 		</xsl:for-each>
 	</xsl:for-each>
+					
+						<!-- MeasurementUnit as individual -->
+	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIO">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIO))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIO))" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIO))" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIA">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIA))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIA))" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(record/metadata/schede/BNB/LR/LRI/LRIA))" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXA">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXL">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXN">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXD">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXP">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about" select="concat($NS, 'MeasurementUnit/', arco-fn:extract-unit(.))" />
+			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/MeasurementUnit" />
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(arco-fn:extract-unit(.))" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:for-each>
+	
+	
 	
 	</rdf:RDF>
 </xsl:template>								

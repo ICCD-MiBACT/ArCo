@@ -29,7 +29,7 @@
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/immovable-property">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/immovable-property/0.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
@@ -69,8 +69,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Immovable property Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia dei beni immobili (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 0.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -150,6 +150,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;ordine architettonico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity to the architectural order.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ordine architettonico</rdfs:label>
@@ -181,6 +183,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasConstructionElement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isConstructionElementOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione all&apos;elemento della costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to the construction element.</rdfs:comment>
         <rdfs:label xml:lang="it">ha elemento della costruzione</rdfs:label>
@@ -276,6 +280,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasFoundation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFoundationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Building"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Foundation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione alle fondazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to a foundation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -333,6 +339,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasLayout">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isLayoutOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il design allo schema iconografico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the design to the layout.</rdfs:comment>
@@ -357,14 +364,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/hasPosition -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasPosition">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
     </owl:ObjectProperty>
     
 
@@ -509,6 +508,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ordine architettonico ad un&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the architectural order to an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">is architectural order</rdfs:label>
@@ -634,6 +635,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFoundationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Foundation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Building"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione alle fondazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to the foundation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -714,14 +717,6 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/isPositionOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isPositionOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
     </owl:ObjectProperty>
     
 
