@@ -28979,6 +28979,7 @@
 				
 					<!-- Deprecated URI -->
 			<xsl:for-each select="record/metadata/schede/*/AU/AUT">
+			<xsl:if test="./AUTN and (not(starts-with(lower-case(normalize-space(./AUTN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUTN)), '-')))">
 				<xsl:if test="./AUTA and (not(starts-with(lower-case(normalize-space(./AUTA)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUTA)), 'n.r')))">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
@@ -28987,6 +28988,7 @@
 					<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
 				</rdf:Description>
 				</xsl:if>
+			</xsl:if>
 			</xsl:for-each>
 
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->
