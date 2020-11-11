@@ -979,7 +979,21 @@
 			</arco-mp:taxonomicNumber>
 		</xsl:if>
 	</rdf:Description>
-	</xsl:if>															
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNB/SB/NAA">
+	<rdf:Description>
+		<xsl:attribute name="rdf:about">
+        	<xsl:value-of select="$BiologicalTaxon" />
+        </xsl:attribute>    
+		<xsl:if test="record/metadata/schede/BNB/SB/SBS/SBSC and (not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/SB/SBS/SBSC)), 'n.r')))">
+			<arco-cd:hasBibliography>
+			<xsl:attribute name="rdf:resource">
+	        	<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-biological-taxon-bibliography')" />	
+			</xsl:attribute>
+			</arco-cd:hasBibliography>
+		</xsl:if>
+	</rdf:Description>
+	</xsl:if>																		
 	<xsl:if test="record/metadata/schede/BNB/SB/NAA/NAAL">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">

@@ -5345,9 +5345,9 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</l0:name>
-						<xsl:if test=".DTM/DTMS">
+						<xsl:if test="./DTM/DTMS">
 							<arco-core:specifications>
-								<xsl:value-of select="normalize-space(.DTM/DTMS)" />
+								<xsl:value-of select="normalize-space(./DTM/DTMS)" />
 							</arco-core:specifications>
 						</xsl:if>
 					</rdf:Description>
