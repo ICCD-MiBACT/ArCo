@@ -2384,7 +2384,6 @@
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/AU/EDT">
 					<xsl:if test="$sheetType='OAC' or $sheetType='S'">
-						<xsl:if test="./EDTN">
 							<arco-cd:hasEdition>
 								<xsl:attribute name="rdf:resource">
 	                                <xsl:choose>
@@ -2408,7 +2407,6 @@
 	                                </xsl:choose>
 	                            </xsl:attribute>
 							</arco-cd:hasEdition>
-						</xsl:if>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- has dating -->

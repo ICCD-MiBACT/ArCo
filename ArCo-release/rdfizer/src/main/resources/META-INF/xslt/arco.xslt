@@ -181,12 +181,10 @@
 					</xsl:if>
 				</xsl:if>
 				<rdfs:label xml:lang="en">
-					<xsl:value-of
-						select="concat('Catalogue Record n: ', $itemURI)" />
+					<xsl:value-of select="concat('Catalogue Record n: ', $itemURI)" />
 				</rdfs:label>
 				<rdfs:label xml:lang="it">
-					<xsl:value-of
-						select="concat('Scheda catalografica n: ', $itemURI)" />
+					<xsl:value-of select="concat('Scheda catalografica n: ', $itemURI)" />
 				</rdfs:label>
 				<xsl:if test="not ($sheetType='AT') ">
 					<xsl:if test="record/metadata/schede/*/OG/OGC/OGCS">
@@ -211,8 +209,7 @@
 					<arco-catalogue:catalogueRecordIdentifier>
 						<xsl:choose>
 							<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
-								<xsl:value-of
-									select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', record/metadata/schede/*/RV/RVE/RVEL)" />
+								<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', record/metadata/schede/*/RV/RVE/RVEL)" />
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of
@@ -259,56 +256,49 @@
 					</arco-catalogue:hasAccessProfile>
 				</xsl:if>
 				<!-- international identifier -->
-				<xsl:if
-					test="record/metadata/schede/*/AC/ACI and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/AC/ACI and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'n.r')))">
 					<arco-catalogue:internationalIdentifier>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AC/ACI)" />
 					</arco-catalogue:internationalIdentifier>
 				</xsl:if>
-				<xsl:if
-					test="record/metadata/schede/*/AC/ACE and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACE)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACE)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/AC/ACE and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACE)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACE)), 'n.r')))">
 					<l0:identifier>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AC/ACE)" />
 					</l0:identifier>
 				</xsl:if>
-				<xsl:if
-					test="record/metadata/schede/*/AC/ACO and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACO)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACO)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/AC/ACO and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACO)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACO)), 'n.r')))">
 					<l0:identifier>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AC/ACO)" />
 					</l0:identifier>
 				</xsl:if>
-				<xsl:if
-					test="record/metadata/schede/*/AC/ACZ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACZ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACZ)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/AC/ACZ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACZ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACZ)), 'n.r')))">
 					<arco-arco:containerSequence>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AC/ACZ)" />
 					</arco-arco:containerSequence>
 				</xsl:if>
-				<xsl:if
-					test="record/metadata/schede/*/AC/ACJ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACJ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACJ)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/AC/ACJ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACJ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACJ)), 'n.r')))">
 					<l0:identifier>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AC/ACJ)" />
 					</l0:identifier>
 				</xsl:if>
-				<xsl:if
-					test="record/metadata/schede/*/AC/ACN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACN)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/AC/ACN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACN)), 'n.r')))">
 					<arco-arco:previousIdentifier>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AC/ACN)" />
 					</arco-arco:previousIdentifier>
 				</xsl:if>
-				<xsl:if
-					test="record/metadata/schede/*/AC/ACK and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACK)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACK)), 'n.r')))">
+				<xsl:if test="record/metadata/schede/*/AC/ACK and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACK)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACK)), 'n.r')))">
 					<l0:identifier>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/AC/ACK)" />
 					</l0:identifier>
 				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/CM/CMP">
+				<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 					<arco-catalogue:hasCatalogueRecordVersion>
 						<xsl:attribute name="rdf:resource">
                             <xsl:value-of
@@ -396,7 +386,7 @@
 			</rdf:Description>
 			<!-- This block introduces the triples about the sheet versions. I.e. 
 				sub-elements of record/metadata/schede/*/CM -->
-			<xsl:if test="record/metadata/schede/*/CM/CMP">
+			<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
                         <xsl:value-of
@@ -409,8 +399,14 @@
                         </xsl:attribute>
 					</rdf:type>
 					<rdfs:label>
-						<xsl:value-of
-							select="concat(record/metadata/schede/*/CM/CMP/@hint, ' - ', normalize-space(record/metadata/schede/*/CM/CMP))" />
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/CM/CMP">
+								<xsl:value-of select="concat(record/metadata/schede/*/CM/CMP/@hint, ' - ', normalize-space(record/metadata/schede/*/CM/CMP))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="'COMPILAZIONE'" />
+							</xsl:otherwise>
+						</xsl:choose>
 					</rdfs:label>
 					<arco-catalogue:isCatalogueRecordVersionOf>
 						<xsl:attribute name="rdf:resource">
@@ -418,8 +414,7 @@
 							select="concat($NS, 'CatalogueRecord', $sheetType, '/', $itemURI)" />
                         </xsl:attribute>
 					</arco-catalogue:isCatalogueRecordVersionOf>
-					<xsl:for-each
-						select="record/metadata/schede/*/CM/CMP/CMPN">
+					<xsl:for-each select="record/metadata/schede/*/CM/CMP/CMPN">
 						<xsl:if
 							test=". and (not(starts-with(lower-case(normalize-space(.)), 'nr')) and not(starts-with(lower-case(normalize-space(.)), 'n.r')))">
 							<arco-catalogue:hasCatalogueRecordVersionRiT>
@@ -436,8 +431,7 @@
 							</arco-catalogue:hasResponsibleResearchAndCompilation>
 						</xsl:if>
 					</xsl:for-each>
-					<xsl:if
-						test="record/metadata/schede/*/CM/CMP/CMPD and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/CMP/CMPD)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/CMP/CMPD)), 'n.r')))">
+					<xsl:if test="record/metadata/schede/*/CM/CMP/CMPD and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/CMP/CMPD)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/CM/CMP/CMPD)), 'n.r')))">
 						<arco-catalogue:editedAtTime>
 							<xsl:attribute name="rdf:resource">
                                 <xsl:value-of
