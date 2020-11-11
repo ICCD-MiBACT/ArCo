@@ -1076,6 +1076,7 @@
 									
 									<!-- Roof as individual -->
 	<xsl:for-each select="record/metadata/schede/A/CP">
+	<xsl:if test="./CPF/* or ./CPC/* ">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
         		<xsl:value-of select="concat($NS, 'Roof/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
@@ -1141,9 +1142,11 @@
 				</xsl:choose>
 			</xsl:if>
 		</rdf:Description>
+	</xsl:if>
 	</xsl:for-each>	
 
 	<xsl:for-each select="record/metadata/schede/A/CP">
+	<xsl:if test="./CPC/CPCT">
 	<xsl:if test="./CPC/CPCR  and not (./CPC/CPCR='intero bene' or ./CPC/CPCR='integrale' or ./CPC/CPCR='tutta' or ./CPC/CPCR='totale' or ./CPC/CPCR='carattere generale' or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'nr')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'n.r')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'intero')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'intera')) or (starts-with(lower-case(normalize-space(./CPC/CPCR)), 'esemplar')) or ((lower-case(normalize-space(./CPC/CPCR)))=(lower-case(normalize-space(./CPU)))))">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -1174,6 +1177,7 @@
 				</arco-ip:hasRoofStructure>
 			</xsl:if>
 		</rdf:Description>
+	</xsl:if>
 	</xsl:if>
 	</xsl:for-each>	
 
