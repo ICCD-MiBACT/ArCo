@@ -3838,7 +3838,7 @@ resource:TechnicalCharacteristic/pietra-scultura
         <rdfs:label xml:lang="en">Environment</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>ICCD Normativa PG: CA</core:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa PG: CA</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4605,7 +4605,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Area</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/HAT</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/HAT</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5541,7 +5541,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Rainfall</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CLM/CLMP</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CLM/CLMP</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5609,7 +5609,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Slope</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAC</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAC</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
