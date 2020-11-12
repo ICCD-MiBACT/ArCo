@@ -151,7 +151,7 @@
 	<xsl:variable name="BiologicalTaxon">   
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/BNB/SB/NBN/NBNA and not(lower-case(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA))='nr' or lower-case(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA))='n.r.' or lower-case(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA))='nr (recupero pregresso)')">
-				<xsl:value-of select="concat($NS,'/BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA)))" />
+				<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNB/SB/NBN/NBNA)))" />
 			</xsl:when>
 			<xsl:when test="record/metadata/schede/BNB/SB/NAA/NAAL and not(record/metadata/schede/BNB/SB/NAA/NAAH) and not(record/metadata/schede/BNB/SB/NBN/NBNA)">
 				<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(concat($naaa-naab,  '-', record/metadata/schede/BNB/SB/NAA/NAAL)))" />                	
