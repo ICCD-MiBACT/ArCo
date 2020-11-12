@@ -314,9 +314,9 @@
 			</xsl:choose>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/A/CP">
-			<xsl:if test="not(./CPU) or ./CPU='intero bene' or ./CPU='integrale' or ./CPU='tutta' or ./CPU='totale' or ./CPU='carattere generale' or (starts-with(lower-case(normalize-space(./CPU)), 'nr')) or (starts-with(lower-case(normalize-space(./CPU)), 'n.r')) or (starts-with(lower-case(normalize-space(./CPU)), 'intero')) or (starts-with(lower-case(normalize-space(./CPU)), 'intera')) or (starts-with(lower-case(normalize-space(./CPU)), 'esemplar'))">
+			<xsl:if test="./CPF/* or ./CPC/*">		
 			<xsl:choose>	
-				<xsl:when test="./CPF/* or ./CPC/* ">
+				<xsl:when test="not(./CPU) or ./CPU='intero bene' or ./CPU='integrale' or ./CPU='tutta' or ./CPU='totale' or ./CPU='carattere generale' or (starts-with(lower-case(normalize-space(./CPU)), 'nr')) or (starts-with(lower-case(normalize-space(./CPU)), 'n.r')) or (starts-with(lower-case(normalize-space(./CPU)), 'intero')) or (starts-with(lower-case(normalize-space(./CPU)), 'intera')) or (starts-with(lower-case(normalize-space(./CPU)), 'esemplar'))">
 					<arco-ip:hasRoof>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'Roof/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
@@ -324,22 +324,31 @@
 					</arco-ip:hasRoof>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:for-each select="./CPU">
-						<arco-core:hasPart>
-							<xsl:attribute name="rdf:resource">
-								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
-							</xsl:attribute>
-						</arco-core:hasPart>
-					</xsl:for-each>
+					<arco-core:hasPart>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./CPU)))" />
+						</xsl:attribute>
+					</arco-core:hasPart>
 				</xsl:otherwise>
 			</xsl:choose>
 			</xsl:if>
-			<xsl:if test="./CPM"> 
+			<xsl:if test="./CPM">
+				<xsl:choose>	
+				<xsl:when test="not(./CPU) or ./CPU='intero bene' or ./CPU='integrale' or ./CPU='tutta' or ./CPU='totale' or ./CPU='carattere generale' or (starts-with(lower-case(normalize-space(./CPU)), 'nr')) or (starts-with(lower-case(normalize-space(./CPU)), 'n.r')) or (starts-with(lower-case(normalize-space(./CPU)), 'intero')) or (starts-with(lower-case(normalize-space(./CPU)), 'intera')) or (starts-with(lower-case(normalize-space(./CPU)), 'esemplar'))">
 					<arco-ip:hasCovering>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'Roofing/', $itemURI, '-', arco-fn:arcofy(normalize-space(./CPM)))" />
 					</xsl:attribute>
 					</arco-ip:hasCovering>
+				</xsl:when>
+				<xsl:otherwise>
+					<arco-core:hasPart>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./CPU)))" />
+						</xsl:attribute>
+					</arco-core:hasPart>
+				</xsl:otherwise>
+				</xsl:choose>
 			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/A/PV/PVM">
@@ -916,7 +925,7 @@
 			<xsl:if test="./SOE/SOEC">
 					<arco-dd:hasTechnique>
 						<xsl:choose>
-							<xsl:when test="./SOE/SOES">
+							<xsl:when test="./SOE/SOES and (not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'nr')) and not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'non ')) and not(starts-with(lower-case(normalize-space(./SOE/SOES)), 'n.r')))">
 							<xsl:attribute name="rdf:resource">
 								<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SOE/SOEC), '-', normalize-space(./SOE/SOES))))" />
 							</xsl:attribute>
@@ -1033,7 +1042,7 @@
 		<rdf:Description>
  			<xsl:attribute name="rdf:about">
             	<xsl:choose>
-					<xsl:when test="./SOES">
+					<xsl:when test="./SOES and (not(starts-with(lower-case(normalize-space(./SOES)), 'nr')) and not(starts-with(lower-case(normalize-space(./SOES)), 'non ')) and not(starts-with(lower-case(normalize-space(./SOES)), 'n.r')))">
 						<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(concat(normalize-space(./SOEC), '-', normalize-space(./SOES))))" />
 					</xsl:when>
 					<xsl:otherwise>
