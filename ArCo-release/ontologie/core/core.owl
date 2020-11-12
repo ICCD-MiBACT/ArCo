@@ -16,6 +16,7 @@
      xmlns:opla="http://ontologydesignpatterns.org/opla/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:a-cat="https://w3id.org/arco/ontology/catalogue/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/core">
         <opla:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
@@ -137,9 +138,9 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/core/iccdNormTag -->
+    <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/core/iccdNormTag"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
     
 
 
@@ -398,7 +399,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has part</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -738,7 +739,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è parte di</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">&quot;Riferimento alla parte&quot;, presente in molti campi strutturati delle normative ICCD</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -881,7 +882,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">parola chiave</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <iccdNormTag>ICCD Normativa PST: CT/CTC</iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa PST: CT/CTC</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 

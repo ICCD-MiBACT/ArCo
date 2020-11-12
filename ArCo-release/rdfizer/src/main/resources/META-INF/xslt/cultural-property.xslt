@@ -1501,10 +1501,9 @@
 					</xsl:if>
 				</xsl:for-each>
 
-				<xsl:variable name="roz-related-property"
-					select="arco-fn:related-property(normalize-space(record/metadata/schede/*/*/RSE/RSEC), 'foaf')" />
-				<xsl:if test="count($roz-related-property) > 0">
-					<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
+				<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
+				<xsl:variable name="rel-work" select="arco-fn:related-property(normalize-space(.), '')" />
+				<xsl:if test="count($rel-work) > 0">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
@@ -1512,8 +1511,8 @@
 								select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-2-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>
-					</xsl:for-each>
 				</xsl:if>
+				</xsl:for-each>
 
 				<xsl:if test="record/metadata/schede/*/RV/RVE/RVER">
 					<xsl:if
@@ -1663,11 +1662,11 @@
                                 	<xsl:value-of select="." />
                         		</xsl:attribute>
 							</foaf:depiction>
-							<arco-cd:hasDepiction>
+							<arco-cd:depiction>
 								<xsl:attribute name="rdf:resource">
                                 	<xsl:value-of select="." />
                         		</xsl:attribute>
-							</arco-cd:hasDepiction>
+							</arco-cd:depiction>
 							<pico:preview>
 								<xsl:attribute name="rdf:resource">
                                 	<xsl:value-of select="." />
@@ -2384,7 +2383,6 @@
 				</xsl:for-each>
 				<xsl:for-each select="record/metadata/schede/*/AU/EDT">
 					<xsl:if test="$sheetType='OAC' or $sheetType='S'">
-						<xsl:if test="./EDTN">
 							<arco-cd:hasEdition>
 								<xsl:attribute name="rdf:resource">
 	                                <xsl:choose>
@@ -2408,7 +2406,6 @@
 	                                </xsl:choose>
 	                            </xsl:attribute>
 							</arco-cd:hasEdition>
-						</xsl:if>
 					</xsl:if>
 				</xsl:for-each>
 				<!-- has dating -->
@@ -2753,10 +2750,10 @@
 					</arco-cd:historicalInformation>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/DA/NCS">
-					<arco-cd:historicalInformation>
+					<arco-cd:explanationNote>
 						<xsl:value-of
 							select="normalize-space(record/metadata/schede/*/DA/NCS)" />
-					</arco-cd:historicalInformation>
+					</arco-cd:explanationNote>
 				</xsl:if>
 				<!-- explanation note -->
 				<xsl:if test="record/metadata/schede/CA/DA/INT">

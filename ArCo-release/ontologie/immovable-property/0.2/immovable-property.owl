@@ -29,12 +29,10 @@
      xmlns:roapit="https://w3id.org/italia/onto/RO/"
      xmlns:tiapit="https://w3id.org/italia/onto/TI/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/immovable-property">
-        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/cultural-event"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/immovable-property/0.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>
@@ -69,8 +67,8 @@ In this module the following Ontology Design Patterns have been used:
 - http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:comment>
         <rdfs:label xml:lang="en">Immovable property Ontology (ArCo network)</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia dei beni immobili (ArCo network)</rdfs:label>
-        <owl:versionInfo xml:lang="en">Version 0.1</owl:versionInfo>
-        <owl:versionInfo xml:lang="it">Versione 0.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">Version 0.2</owl:versionInfo>
+        <owl:versionInfo xml:lang="it">Versione 0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -134,6 +132,12 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/catalogue/iccdNormTag -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/arco/ontology/catalogue/iccdNormTag"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -145,11 +149,19 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/hasUseFunction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUseFunction"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasArchitecturalOrder">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;ordine architettonico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects an entity to the architectural order.</rdfs:comment>
         <rdfs:label xml:lang="it">ha ordine architettonico</rdfs:label>
@@ -181,6 +193,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasConstructionElement">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isConstructionElementOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Construction"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionElement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione all&apos;elemento della costruzione.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to the construction element.</rdfs:comment>
         <rdfs:label xml:lang="it">ha elemento della costruzione</rdfs:label>
@@ -276,6 +290,8 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasFoundation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isFoundationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Building"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Foundation"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione alle fondazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to a foundation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -333,6 +349,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasLayout">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/immovable-property/isLayoutOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ConstructionDesign"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Layout"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il design allo schema iconografico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the design to the layout.</rdfs:comment>
@@ -356,15 +373,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has mode of irrigation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/hasPosition -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/hasPosition">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -464,7 +473,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has water availability</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -482,7 +491,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has water distribution type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -500,7 +509,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has water element</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: FO/FOT</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: FO/FOT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -509,6 +518,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isArchitecturalOrderOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/ArchitecturalOrder"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/VerticalElement"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;ordine architettonico ad un&apos;entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects the architectural order to an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">is architectural order</rdfs:label>
@@ -634,6 +645,8 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isFoundationOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/immovable-property/Foundation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/immovable-property/Building"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega una costruzione alle fondazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property connects a construction to the foundation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/immovable-property"/>
@@ -713,15 +726,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è modalità di irrigazione di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/immovable-property/isPositionOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/immovable-property/isPositionOf">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -831,7 +836,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è disponibilità idrica di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -848,7 +853,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è tipo di distribuzione idrica di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -865,7 +870,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è elemento idrico di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: FO/FOT</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: FO/FOT</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -926,7 +931,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">geological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAG/CAGG e CA/CAG/CAGP</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAG/CAGG e CA/CAG/CAGP</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -960,7 +965,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">morphological description</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAM</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAM</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -1128,6 +1133,18 @@ viene descritta.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/GraphicOrCartographicDocumentation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/UseFunction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UseFunction"/>
+    
+
+
     <!-- https://w3id.org/arco/ontology/immovable-property/ArchitecturalElement -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/immovable-property/ArchitecturalElement">
@@ -1227,7 +1244,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Edificio</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: SI/SII/SIIN</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: SI/SII/SIIN</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1622,7 +1639,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Pavimentazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: PV/PVM</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: PV/PVM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1638,7 +1655,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Schema di posa</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag xml:lang="it">Normativa A: PV/PVm/PVMS</core:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">Normativa A: PV/PVm/PVMS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1655,7 +1672,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di pavimentazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: PV/PVM/PVMG</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: PV/PVM/PVMG</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1683,7 +1700,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Foundation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: FN</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: FN</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1735,7 +1752,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Horizontal element</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: SO</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: SO</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1810,7 +1827,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Schema iconografico</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: PN/PNT/PNTS e PN/PNT/PNTF</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: PN/PNT/PNTS e PN/PNT/PNTF</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1841,7 +1858,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Mode of irrigation</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -1960,7 +1977,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Roof</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: CP</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: CP</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2012,7 +2029,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Roofing</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: CP/CPM</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: CP/CPM</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2028,7 +2045,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="it">Tipo di manto di copertura</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: CP/CPM/CPMT e CP/CPM/CPMQ</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: CP/CPM/CPMT e CP/CPM/CPMQ</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2155,7 +2172,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Technical system</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: IM/IMP/IMPT</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: IM/IMP/IMPT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2222,7 +2239,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Vertical connection</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: SC</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: SC</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2259,7 +2276,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Vertical element</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa A: SV</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa A: SV</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2305,7 +2322,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Water availability</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2321,7 +2338,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Water distribution type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2337,7 +2354,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Water element</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: FO/FOT</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: FO/FOT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2389,7 +2406,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Water system</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI, IM/IMP/IMPT</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI, IM/IMP/IMPT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -2405,7 +2422,7 @@ viene descritta.</rdfs:comment>
         <rdfs:label xml:lang="en">Water system type</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <core:iccdNormTag>Normativa PG: CA/CAI</core:iccdNormTag>
+        <a-cat:iccdNormTag>Normativa PG: CA/CAI</a-cat:iccdNormTag>
     </owl:Class>
     
 
