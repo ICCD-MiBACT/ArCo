@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/ontology/context-description-aligns/"
+     xml:base="https://w3id.org/arco/ontology/context-description-aligns/"
+     xmlns:opla="http://ontologydesignpatterns.org/opla/"
+     xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla1="http://www.ontologydesignpatterns.org/opla/"
+     xmlns:d0="http://www.ontologydesignpatterns.org/ont/d0.owl#"
+     xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/"
+     xmlns:core="https://w3id.org/arco/ontology/core/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:context="https://w3id.org/arco/ontology/context-description/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/arco/ontology/context-description-aligns/">
+        <owl:imports rdf:resource="http://id.loc.gov/ontologies/bibframe-2-0-1/"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/context-description/"/>
+        <rdfs:label xml:lang="en">These are the alignments of Context Description module (ArCo ontology network) to external ontologies widely used and available at the state of the art.</rdfs:label>
+        <dc:creator>STLab (ISTC-CNR)</dc:creator>
+        <rdfs:label xml:lang="it">Questi sono gli allineamenti del modulo Context Description (ArCo ontology network) verso ontologie esterne del Web semantico standard e ampiamente utilizzate.</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/acquisitionSource -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/acquisitionSource"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/copyrightRegistration -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/copyrightRegistration"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/immediateAcquisition -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/immediateAcquisition"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/physicalLocation -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/physicalLocation"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/scale -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/scale"/>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/title -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#creator"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#owner -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#owner">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasOwner"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P31_has_modified -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/hasOwner"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/documentationLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/documentationLocation">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/physicalLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAcquisition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAcquisition">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/immediateAcquisition"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasActivityOperator -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasActivityOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasActivityResponsible -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasActivityResponsible">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasActivitySponsor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasActivitySponsor">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasArchivalRecordSet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasArchivalRecordSet">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAssociatedObject -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAssociatedObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasCollection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCollection">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasCopyright -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyright">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/copyrightRegistration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasCopyrightHolder -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasCopyrightHolder">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasInterventionRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasInterventionRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasLegalSituation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasLegalSituation"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfArchivalRecordSet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfArchivalRecordSet">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfCollection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfCollection">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasMemberOfPhotographicSeries -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasMemberOfPhotographicSeries">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasOwner"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasPhotographicSeries -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPhotographicSeries">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasPreviousOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasPreviousOwner">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/acquisitionSource"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasProfession -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasProfession">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasRelatedWork -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasRelatedWork">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasScale -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasScale">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/scale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasTitle -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasTitle">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/hasUseFunction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasUseFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isAcquisitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isAcquisitionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isArchivalRecordSetIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isArchivalRecordSetIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isCollectionIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isCollectionIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isInterventionOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isInterventionOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P31_has_modified"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSet -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfArchivalRecordSet">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfCollection -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfCollection">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isMemberOfPhotographicSeries">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isObjectAssociatedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isObjectAssociatedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isPhotographicSeriesIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPhotographicSeriesIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isPreviousOwnerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isPreviousOwnerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P23i_surrendered_title_through"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/isProfessionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/isProfessionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E11_Modification -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E11_Modification"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E30_Right -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E30_Right"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E35_Title -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E35_Title"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/d0.owl#Topic -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#EntityInfluence -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#EntityInfluence"/>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Acquisition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Acquisition">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ImmediateAcquisition"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ArchivalRecord -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ArchivalRecord">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Archival"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Bibliography -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Bibliography">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Copyright -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Copyright">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/CopyrightRegistration"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E30_Right"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Documentation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Documentation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Edition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Edition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ExportImportCertification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ExportImportCertification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Intervention -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Intervention">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E11_Modification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Inventory -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Inventory">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ProtectiveMeasure -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ProtectiveMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/ReferenceCatalogue -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/ReferenceCatalogue">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/RelatedWorkSituation -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/RelatedWorkSituation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#EntityInfluence"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Reproduction -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Reproduction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Scale -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Scale">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Scale"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Subject -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Subject">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/SurveyImage -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SurveyImage">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Title -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Title">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/Tomb -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Tomb">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/UrbanPlanningInstrument">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
