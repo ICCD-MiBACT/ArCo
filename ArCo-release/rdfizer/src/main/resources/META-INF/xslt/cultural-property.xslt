@@ -1431,7 +1431,8 @@
 							</xsl:when>
 							<xsl:when
 								test="(lower-case(normalize-space(./RSER))='era contenuto in' 
-							or lower-case(normalize-space(./RSER))='luogo di provenienza')">
+							or lower-case(normalize-space(./RSER))='luogo di provenienza')
+							or lower-case(normalize-space(./RSER))='sede di provenienza')">
 								<xsl:value-of
 									select="'arco-cd:hasPreviousLocation'" />
 							</xsl:when>
