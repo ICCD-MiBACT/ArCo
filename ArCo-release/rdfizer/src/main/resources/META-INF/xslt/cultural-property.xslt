@@ -1501,10 +1501,9 @@
 					</xsl:if>
 				</xsl:for-each>
 
-				<xsl:variable name="roz-related-property"
-					select="arco-fn:related-property(normalize-space(record/metadata/schede/*/*/RSE/RSEC), 'foaf')" />
-				<xsl:if test="count($roz-related-property) > 0">
-					<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
+				<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
+				<xsl:variable name="rel-work" select="arco-fn:related-property(normalize-space(.), '')" />
+				<xsl:if test="count($rel-work) > 0">
 						<arco-cd:hasRelatedWorkSituation>
 							<xsl:attribute name="rdf:resource">
 								<!-- The individual typed as RelatedWorkSituation is created within the arco.xslt sheet. -->
@@ -1512,8 +1511,8 @@
 								select="concat($NS, 'RelatedWorkSituation/', $itemURI, '-related-cultural-property-2-', position())" />
 							</xsl:attribute>
 						</arco-cd:hasRelatedWorkSituation>
-					</xsl:for-each>
 				</xsl:if>
+				</xsl:for-each>
 
 				<xsl:if test="record/metadata/schede/*/RV/RVE/RVER">
 					<xsl:if

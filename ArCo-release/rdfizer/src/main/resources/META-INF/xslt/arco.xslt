@@ -28427,8 +28427,7 @@
 			</xsl:for-each>
 			<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
 
-				<xsl:variable name="rel-work"
-					select="arco-fn:related-property(normalize-space(.), '')" />
+				<xsl:variable name="rel-work" select="arco-fn:related-property(normalize-space(.), '')" />
 				<xsl:if test="count($rel-work) > 0">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
