@@ -658,21 +658,9 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:if>	
 	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'n.r'))">
 		<xsl:if test="record/metadata/schede/*/MT/MTC/MTCT">
-			<xsl:choose>
-				<xsl:when test="$sheetType='VeAC'">
-					<pico:materialAndTechnique>
-		 	                <xsl:value-of select="record/metadata/schede/VeAC/MT/MTC/MTCT" />
- 	                </pico:materialAndTechnique>
-				</xsl:when>
-				<xsl:when test="(not(record/metadata/schede/*/MT/MTC/MTCP)) or record/metadata/schede/*/MT/MTC/MTCP='intero bene' or record/metadata/schede/*/MT/MTC/MTCP='integrale' or record/metadata/schede/*/MT/MTC/MTCP='tutta' or record/metadata/schede/*/MT/MTC/MTCP='totale' or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'nr')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'n.r')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'intero')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'intera')) or (starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCP)), 'esemplar'))">
- 	               <pico:materialAndTechnique>
-		 	            	<xsl:value-of select="record/metadata/schede/*/MT/MTC/MTCT" />
-            		</pico:materialAndTechnique>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of />
-				</xsl:otherwise>
-			</xsl:choose>
+			<pico:materialAndTechnique>
+				<xsl:value-of select="record/metadata/schede/VeAC/MT/MTC/MTCT" />
+			</pico:materialAndTechnique>
 		</xsl:if>
 	</xsl:if>
 
