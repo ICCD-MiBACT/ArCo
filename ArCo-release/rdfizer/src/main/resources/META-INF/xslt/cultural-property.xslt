@@ -50,14 +50,20 @@
 				</xsl:choose>
 			</xsl:when>
 			<xsl:otherwise>
+			<xsl:variable name="accc-space" select="record/metadata/schede/*/AC/ACC/ACCC" />
+			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
+			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
+			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
+			<xsl:variable name="acc-nospace" select="translate($acc-space, ' ', '')" />
+			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
 						<xsl:value-of
-							select="record/metadata/schede/*/AC/ACC/ACCC" />
+							select="$accc" />
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of
-							select="record/metadata/schede/*/AC/ACC" />
+							select="$acc" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:otherwise>
@@ -1431,7 +1437,7 @@
 							</xsl:when>
 							<xsl:when
 								test="(lower-case(normalize-space(./RSER))='era contenuto in' 
-							or lower-case(normalize-space(./RSER))='luogo di provenienza')
+							or lower-case(normalize-space(./RSER))='luogo di provenienza'
 							or lower-case(normalize-space(./RSER))='sede di provenienza')">
 								<xsl:value-of
 									select="'arco-cd:hasPreviousLocation'" />
