@@ -2943,11 +2943,11 @@
 				</arco-mp:manufacturingDate>
 			</xsl:if>
 			<xsl:if test="./DBXX">
-				<arco-mp:hasSampleForm>
+				<arco-dd:hasShape>
 					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS, 'SampleForm/', arco-fn:urify(./DBXX))" />
-					</xsl:attribute>
-				</arco-mp:hasSampleForm>
+		 	           	<xsl:value-of select="concat($NS, 'SampleShape/', arco-fn:urify(./DBXX))" />
+		            </xsl:attribute>
+				</arco-dd:hasShape>
 			</xsl:if>
 			<xsl:if test="./DBXA or ./DBXL or ./DBXN or ./DBXD or ./DBXP">
 				<arco-cd:hasMeasurementCollection>
@@ -3019,23 +3019,28 @@
 			</xsl:if>					
 		</rdf:Description>
 	</xsl:for-each>							
-							<!-- Sample form as individual -->
+							<!-- Shape as individual -->
 	<xsl:for-each select="record/metadata/schede/BNB/DB/DBX/DBXX">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'SampleForm/', arco-fn:urify(.))" />
+				<xsl:value-of select="concat($NS, 'SampleShape/', arco-fn:urify(.))" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-               		<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/SampleForm'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
 				</xsl:attribute>
 			</rdf:type>
-			<rdfs:label xml:lang="it">
+			<rdfs:label>
 				<xsl:value-of select="." />
 			</rdfs:label>
-			<l0:name xml:lang="it">
+			<l0:name>
 				<xsl:value-of select="." />
-			</l0:name>		
+			</l0:name>
+			<arco-dd:isCharacteristicClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+            		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Shape'" />
+            	</xsl:attribute>
+			</arco-dd:isCharacteristicClassifiedBy>		
 		</rdf:Description>
 	</xsl:for-each>
 							<!-- Pollen Sample as individual -->

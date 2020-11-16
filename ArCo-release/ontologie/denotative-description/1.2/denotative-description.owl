@@ -368,6 +368,14 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/denotative-description/hasColour -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasColour">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/hasCommunicationMedium">
@@ -1152,6 +1160,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has shape</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -1543,6 +1552,14 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è situazione climatica di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/isColourOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/denotative-description/isColourOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/denotative-description/isTechnicalCharacteristicOf"/>
     </owl:ObjectProperty>
     
 
@@ -5571,7 +5588,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Shape</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normative OA, D, S, MI: MT/FRM. Normativa BNB: DB/DBX/DBXX</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 

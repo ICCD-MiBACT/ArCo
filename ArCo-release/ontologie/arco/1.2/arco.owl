@@ -37,6 +37,7 @@
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/denotative-description/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/immovable-property/0.2"/>
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/location/1.2"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/movable-property/0.2"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
         <opla:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl"/>

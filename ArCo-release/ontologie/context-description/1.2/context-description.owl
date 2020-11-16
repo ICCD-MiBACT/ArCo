@@ -234,7 +234,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has activity operator</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: RE/IND/INDN; CO/RST/RSTN - ICCD Normativa SM e BDM 4.00: DR/DRL - ICCD normative di versioni precedenti: RE/AIN/AINR</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: RE/IND/INDN; CO/RST/RSTN - ICCD Normativa SM e BDM 4.00: DR/DRL - ICCD normative di versioni precedenti: RE/AIN/AINR. RS/ALB/ALBO; CO/ALB/ALBO. Normativa BNB: RB/RBR/RBRA</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -253,7 +253,7 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="en">has activity responsible</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGR; RE/DSC/DSCF; RE/IND/INDE; RE/FOI/FOIE - Normativa SM e BDM 4.00: DR/DRV. RS/RST/RSTE. CM/ISP/ISPN</a-cat:iccdNormTag>
+        <a-cat:iccdNormTag>ICCD Normativa Trasversale 4.00: RE/RCG/RCGR; RE/DSC/DSCF; RE/IND/INDE; RE/FOI/FOIE - Normativa SM e BDM 4.00: DR/DRV. RS/RST/RSTE. CM/ISP/ISPN. RS/ALB/ALBE; CO/ALB/ALBE.</a-cat:iccdNormTag>
     </owl:ObjectProperty>
     
 
@@ -5632,6 +5632,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <rdfs:label xml:lang="it">specifiche su pasta/argilla</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>RS/ALB/ALBA. CO/ALB/ALBA</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -6661,6 +6662,23 @@ the area), to the environment and to the square from which the good comes.</rdfs
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/synonym -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/synonym">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un sinonimo</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents a synonym</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">sinonimo</rdfs:label>
+        <rdfs:label xml:lang="en">synonym</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>Notmativa BNM: SM/SMN/SMNS</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/context-description/taxonAuthorAndDate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/taxonAuthorAndDate">
@@ -6682,7 +6700,7 @@ the area), to the environment and to the square from which the good comes.</rdfs
     <!-- https://w3id.org/arco/ontology/context-description/technicalDocumentation -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/technicalDocumentation">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/ArchaeologicalPropertySurvey"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la documentazione relativa alle informazioni rilevate nel corso dell&apos;indagine su reperto antropologico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents documentation relating to information collected during survey on anthropological evidence.</rdfs:comment>
@@ -6692,6 +6710,23 @@ the area), to the environment and to the square from which the good comes.</rdfs
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa AT 3.01: IN/INI/INIZ</a-cat:iccdNormTag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/context-description/testResults -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/context-description/testResults">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà descrive i risultati dell&apos;attività di analisi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the results of a test activity</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
+        <rdfs:label xml:lang="it">risultati dell&apos;analisi</rdfs:label>
+        <rdfs:label xml:lang="en">test results</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">RS/ALB/ALBR. CO/ALB/ALBR</a-cat:iccdNormTag>
     </owl:DatatypeProperty>
     
 
@@ -9062,6 +9097,18 @@ resource:Intervention/0800640527-10-intervention-1
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/Survey"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityOperator"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasActivityResponsible"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasLaboratoryTestType"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTestType"/>
             </owl:Restriction>
@@ -9069,6 +9116,12 @@ resource:Intervention/0800640527-10-intervention-1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/claySpecifications"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/testResults"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10251,6 +10304,18 @@ resource:RelatedWorkSituation/0300199368-preparatory-final-work-1
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/technicalDocumentation"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description xml:lang="en">An example of usage of one of the subclasses of the class &apos;Survey&apos; is the following:
 resource:ArchaeologicalExcavation/0500590557-survey-1
         a           cd:ArchaeologicalExcavation ;
@@ -11374,15 +11439,15 @@ resource:ArchaeologicalExcavation/0500590557-survey-1
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/Reuse">
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/context-description"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il riuso subito dal bene catalogato o da una sua parte.</rdfs:comment>
-        <a-cat:iccdNormTag>ICCD Normative RA, SMO, PST,  OAC, OA, MI, NU: RO/REI - ICCD Normative CA, MA: RO/RIU - ICCD Normativa F: ROP/CRF/CRFT = &apos;reimpiego&apos;</a-cat:iccdNormTag>
         <rdfs:comment xml:lang="en">This class represents the reuse of a cultural property or of one of its parts.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <owl:versionInfo xml:lang="en">provvisoria</owl:versionInfo>
         <rdfs:comment xml:lang="en">This class represents cultural entity&apos;s reuse.</rdfs:comment>
-        <rdfs:label xml:lang="it">Riuso</rdfs:label>
         <rdfs:label xml:lang="en">Reuse</rdfs:label>
+        <rdfs:label xml:lang="it">Riuso</rdfs:label>
     </rdf:Description>
     
 
