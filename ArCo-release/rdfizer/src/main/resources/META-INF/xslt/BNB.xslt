@@ -521,11 +521,11 @@
 			</arco-mp:hasSpecimenHarvesting>
 		</xsl:if>				
 		<xsl:for-each select="record/metadata/schede/BNB/RB">
-			<arco-cd:hasSurvey>
+			<arco-mp:hasSpecimenAnalysis>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'BotanicalRevision/', $itemURI, '-', position())" />
+					<xsl:value-of select="concat($NS,'SpecimenAnalysis/', $itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-cd:hasSurvey>
+			</arco-mp:hasSpecimenAnalysis>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNB/DB/DBR">
 			<arco-mp:hasAssociatedPreparation>
@@ -1209,7 +1209,7 @@
 	<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
-        	<xsl:value-of select="$BiologicalTaxon" />
+        	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIN)" />
         </xsl:attribute>    
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -1918,11 +1918,11 @@
 			<xsl:if test="record/metadata/schede/BNB/LR/LRD/LRDA">
 				<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/LR/LRD/LRDA)" />
 				<xsl:for-each select="$authorssplit">
-					<arco-core:involvesAgent>
+					<arco-mp:hasHarvestingOperator>
 						<xsl:attribute name="rdf:resource">
         					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 						</xsl:attribute>
-					</arco-core:involvesAgent>
+					</arco-mp:hasHarvestingOperator>
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIE">
@@ -2476,37 +2476,37 @@
 		</rdf:Description>
 	</xsl:if>
 											
-								<!-- Botanical Revision as individual  -->
+								<!-- Specimen Analysis as individual  -->
  	<xsl:for-each select="record/metadata/schede/BNB/RB">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS,'BotanicalRevision/', $itemURI, '-', position())" />
+				<xsl:value-of select="concat($NS,'SpecimenAnalysis/', $itemURI, '-', position())" />
 			</xsl:attribute>
 	        <rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/BotanicalRevision'" />
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/SpecimenAnalysis'" />
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of 	select="concat('Revisione botanica del bene ', $itemURI)" />
+				<xsl:value-of 	select="concat('Analisi del campione ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Revisione botanica del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Analisi del campione ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Botanical revision of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Specimen analysis of ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of 	select="concat('Botanical revision of cultural property ', $itemURI)" />
+				<xsl:value-of 	select="concat('Specimen analysis of ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="./RBR/RBRA">
 			<xsl:variable name="authorssplit" select="arco-fn:split(./RBR/RBRA)" />
 			<xsl:for-each select="$authorssplit">
-				<arco-core:involvesAgent>
+				<arco-cd:hasActivityOperator>
 					<xsl:attribute name="rdf:resource">
         				<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
 					</xsl:attribute>
-				</arco-core:involvesAgent>
+				</arco-cd:hasActivityOperator>
 			</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="./RBR/RBRB">	
@@ -2517,11 +2517,11 @@
 				</arco-cd:hasBibliography>
 			</xsl:if>
 			<xsl:if test="./RBR/RBRT">	
-				<arco-core:hasType>
+				<arco-cd:hasLaboratoryTestType>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'BotanicalRevisionType/', arco-fn:urify(./RBR/RBRT))" />
+					<xsl:value-of select="concat($NS, 'LaboratoryTestType/', arco-fn:urify(./RBR/RBRT))" />
 				</xsl:attribute>
-				</arco-core:hasType>
+				</arco-cd:hasLaboratoryTestType>
 			</xsl:if>
 			<xsl:if test="./RBA">
 				<arco-core:note>
@@ -2644,11 +2644,11 @@
 	</xsl:if>
 	</xsl:for-each>
 
-							<!--Botanical Revision Bibliography as individual -->
+							<!--Specimen analysis Bibliography as individual -->
 	<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRB">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-botanical-revision-bibliography-', position())" />
+				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-specimen-analysis-bibliography-', position())" />
 	        </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -2656,16 +2656,16 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Bibliografia relativa alla revisione botanica del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliografia relativa all'analisi del campione ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Bibliografia relativa alla revisione botanica del bene ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliografia relativa all'analisi del campione', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Bibliography about botanical revision of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliography about specimen analysis of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Bibliography about botanical revision of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliography about specimen analysis of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-cd:completeBibliographicReference>
 				<xsl:value-of select="normalize-space(.)" />
@@ -2730,15 +2730,15 @@
 	</xsl:if>
 
 							
-								<!-- Botanical Revision type as individual  -->
+								<!-- Laboratory Test type as individual  -->
 	<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRT">	
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'BotanicalRevisionType/', arco-fn:urify(.))" />
+				<xsl:value-of select="concat($NS, 'LaboratoryTestType/', arco-fn:urify(.))" />
 			</xsl:attribute>
 	        <rdf:type>
 				<xsl:attribute name="rdf:resource">
-	            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/BotanicalRevisionType'" />
+	            	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/LaboratoryTestType'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -3172,18 +3172,6 @@
 				</xsl:attribute>
 				</arco-mp:hasTypeOfTypeSpecimen>
 			</xsl:if>								
-			<arco-core:hasConsequence>
-			<xsl:attribute name="rdf:resource">
-				<xsl:choose>
-				<xsl:when test="record/metadata/schede/BNB/SB/TBI/TBIN or record/metadata/schede/BNB/SB/NAT">
-					<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-typespecimen-classification')" />
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI, '-original-classification')" />
-				</xsl:otherwise>	
-				</xsl:choose>
-			</xsl:attribute>
-			</arco-core:hasConsequence>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
 			<arco-mp:producesTaxon>
 				<xsl:attribute name="rdf:resource">
@@ -3197,6 +3185,16 @@
 		        	<xsl:value-of select="$TypespecimenTaxon" />
 				</xsl:attribute>
 			</arco-mp:producesTaxon>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIA">
+			<xsl:variable name="authorssplit" select="arco-fn:split(record/metadata/schede/BNB/SB/TBI/TBIA)" />
+				<xsl:for-each select="$authorssplit">
+					<arco-core:involvesAgent>
+						<xsl:attribute name="rdf:resource">
+        					<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(.))" />
+						</xsl:attribute>
+					</arco-core:involvesAgent>
+				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIB">
 				<xsl:variable name="startDate">
