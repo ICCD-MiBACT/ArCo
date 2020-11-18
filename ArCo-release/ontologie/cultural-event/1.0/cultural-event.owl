@@ -26,7 +26,7 @@
      xmlns:roapit="https://w3id.org/italia/onto/RO/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cultural-event">
         <owl:imports rdf:resource="https://w3id.org/arco/ontology/catalogue"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Andrea Nuzzolese (ISTC-CNR, STLab)</dc:creator>
         <dc:creator>Chiara Veninata (MiBACT, ICCD)</dc:creator>

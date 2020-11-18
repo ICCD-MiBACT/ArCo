@@ -26,7 +26,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/location">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/location/1.2"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
         <opla1:reusesPatternAsTemplate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl"/>
