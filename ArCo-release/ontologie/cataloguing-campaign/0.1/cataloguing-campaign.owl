@@ -22,7 +22,7 @@
      xmlns:catalogue="https://w3id.org/arco/ontology/catalogue/">
     <owl:Ontology rdf:about="https://w3id.org/arco/ontology/cataloguing-campaign">
         <owl:versionIRI rdf:resource="https://w3id.org/arco/ontology/cataloguing-campaign/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core"/>
+        <owl:imports rdf:resource="https://w3id.org/arco/ontology/core/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/COV"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/TI"/>
         <dc:creator>Aldo Gangemi (ISTC-CNR, STLab)</dc:creator>
