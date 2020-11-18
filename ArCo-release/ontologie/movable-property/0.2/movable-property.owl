@@ -1470,8 +1470,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;anisotropia al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the anisotropy to the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è anisotropia di</rdfs:label>
         <rdfs:label xml:lang="en">is anisotropy of</rdfs:label>
+        <rdfs:label xml:lang="it">è anisotropia di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>SM/SMM/SMMA</a-cat:iccdNormTag>
@@ -1543,6 +1543,23 @@ In this module the following Ontology Design Patterns have been used:
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>Normativa ICCD BNM: SM/SMSD/SMSC</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isClassifiedByCurrentTaxon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isClassifiedByCurrentTaxon">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isClassifiedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Taxon"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un&apos;entità all&apos;attuale taxon che l&apos;ha classificata</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates an entity to the current taxon assigned to it</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is classified by current taxon</rdfs:label>
+        <rdfs:label xml:lang="it">è classificato dal taxon attuale</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
     
 
@@ -2163,8 +2180,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega il pleocroismo al campione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the pleochroism to the specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">è pleocroismo di</rdfs:label>
         <rdfs:label xml:lang="en">is pleochroism of</rdfs:label>
+        <rdfs:label xml:lang="it">è pleocroismo di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -4344,6 +4361,7 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MetallicSpecimen">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/NotMetallicSpecimen"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il campione metallico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the metallic specimen</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
@@ -5589,7 +5607,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/CalcualtedDensity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/CalcualtedDensity">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Calculated density</rdfs:label>
         <rdfs:label xml:lang="it">Densità calcolata</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFF</a-cat:iccdNormTag>
@@ -5732,7 +5750,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/MeasuredDensity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/MeasuredDensity">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Densità misurata</rdfs:label>
         <rdfs:label xml:lang="en">Measured density</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFD</a-cat:iccdNormTag>
@@ -5743,7 +5761,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/MohsHardness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/MohsHardness">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Durezza (Mohs)</rdfs:label>
         <rdfs:label xml:lang="en">Hardness (Mohs)</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFH</a-cat:iccdNormTag>
@@ -5809,7 +5827,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/Radioactivity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/Radioactivity">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="en">Radioativity</rdfs:label>
         <rdfs:label xml:lang="it">Radioattività</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFV</a-cat:iccdNormTag>
@@ -5872,7 +5890,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/VhnHardness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/movable-property/VhnHardness">
-        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/TechnicalConcept"/>
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
         <rdfs:label xml:lang="it">Durezza (VHN)</rdfs:label>
         <rdfs:label xml:lang="en">Hardness (VHN)</rdfs:label>
         <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMF/SMFN</a-cat:iccdNormTag>

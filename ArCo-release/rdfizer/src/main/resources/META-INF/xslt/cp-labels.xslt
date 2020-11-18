@@ -377,6 +377,38 @@
 			        		</xsl:otherwise>
         				</xsl:choose>
 				</xsl:when>
+				<xsl:when test="$sheetType='BNM'">
+					<xsl:choose>
+		        		<xsl:when test="record/metadata/schede/*/IM/IMG">
+		        			<xsl:choose>
+		        				<xsl:when test="record/metadata/schede/*/IM/IMG/IMGC">
+		        					<xsl:value-of select="concat(' (', record/metadata/schede/*/IM/IMG/IMGC, ')')" />
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/IM/IMG/IMGS">
+		        					<xsl:value-of select="concat(' (', record/metadata/schede/*/IM/IMG/IMGS, ')')" />
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/IM/IMG/IMGT">
+		        					<xsl:value-of select="concat(' (', record/metadata/schede/*/IM/IMG/IMGT, ')')" />
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/IM/IMG/IMGO">
+		        					<xsl:value-of select="concat(' (', record/metadata/schede/*/IM/IMG/IMGO, ')')" />
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/IM/IMG/IMGP">
+		        					<xsl:value-of select="concat(' (', record/metadata/schede/*/IM/IMG/IMGP, ')')" />
+								</xsl:when>
+								<xsl:when test="record/metadata/schede/*/IM/IMG/IMGR">
+		        					<xsl:value-of select="concat(' (', record/metadata/schede/*/IM/IMG/IMGR, ')')" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat(' (', record/metadata/schede/*/IM/IMG/IMGE, ')')" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:when>
+		        		<xsl:otherwise>
+		        			<xsl:value-of select="''" />
+			        	</xsl:otherwise>
+        			</xsl:choose>
+				</xsl:when>
 				<xsl:when test="$sheetType='BDM'">
                       			<xsl:choose>
 	                      			<xsl:when test="record/metadata/schede/BDM/AU/DTF/DTFZ">

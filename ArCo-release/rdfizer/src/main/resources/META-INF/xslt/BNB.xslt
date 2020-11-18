@@ -1209,7 +1209,7 @@
 	<xsl:if test="record/metadata/schede/BNB/SB/TBI/TBIN">
 	<rdf:Description>
 		<xsl:attribute name="rdf:about">
-        	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIN)" />
+        	<xsl:value-of select="concat($NS,'BiologicalTaxon/', arco-fn:urify(record/metadata/schede/BNB/SB/TBI/TBIN))" />
         </xsl:attribute>    
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -2656,10 +2656,10 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Bibliografia relativa all'analisi del campione ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliografia relativa ad analisi del campione ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Bibliografia relativa all'analisi del campione', $itemURI)" />
+				<xsl:value-of select="concat('Bibliografia relativa ad analisi del campione', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
 				<xsl:value-of select="concat('Bibliography about specimen analysis of cultural property ', $itemURI)" />

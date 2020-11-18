@@ -264,47 +264,12 @@
 					</arco-catalogue:hasAccessProfile>
 				</xsl:if>
 				<!-- international identifier -->
-				<xsl:if test="record/metadata/schede/*/AC/ACI and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'n.r')))">
-					<arco-catalogue:internationalIdentifier>
-						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/AC/ACI)" />
-					</arco-catalogue:internationalIdentifier>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/AC/ACE and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACE)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACE)), 'n.r')))">
-					<l0:identifier>
-						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/AC/ACE)" />
-					</l0:identifier>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/AC/ACO and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACO)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACO)), 'n.r')))">
-					<l0:identifier>
-						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/AC/ACO)" />
-					</l0:identifier>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/AC/ACZ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACZ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACZ)), 'n.r')))">
-					<arco-arco:containerSequence>
-						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/AC/ACZ)" />
-					</arco-arco:containerSequence>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/AC/ACJ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACJ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACJ)), 'n.r')))">
-					<l0:identifier>
-						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/AC/ACJ)" />
-					</l0:identifier>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/AC/ACN and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACN)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACN)), 'n.r')))">
-					<arco-arco:previousIdentifier>
-						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/AC/ACN)" />
-					</arco-arco:previousIdentifier>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/*/AC/ACK and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACK)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACK)), 'n.r')))">
-					<l0:identifier>
-						<xsl:value-of
-							select="normalize-space(record/metadata/schede/*/AC/ACK)" />
-					</l0:identifier>
+				<xsl:if test="$sheetType='PST' or $sheetType='SMO' or $sheetType='VeAC'" >
+					<xsl:if test="record/metadata/schede/*/AC/ACI and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/AC/ACI)), 'n.r')))">
+						<arco-catalogue:internationalIdentifier>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/AC/ACI)" />
+						</arco-catalogue:internationalIdentifier>
+					</xsl:if>
 				</xsl:if>
 				<xsl:if test="record/metadata/schede/*/CM/CMP or record/metadata/schede/*/CM/RSR or record/metadata/schede/*/CM/FUR">
 					<arco-catalogue:hasCatalogueRecordVersion>
