@@ -521,11 +521,11 @@
 			</arco-mp:hasSpecimenHarvesting>
 		</xsl:if>				
 		<xsl:for-each select="record/metadata/schede/BNB/RB">
-			<arco-mp:hasSpecimenAnalysis>
+			<arco-cd:hasLaboratoryTest>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'SpecimenAnalysis/', $itemURI, '-', position())" />
+					<xsl:value-of select="concat($NS,'LaboratoryTest/', $itemURI, '-', position())" />
 				</xsl:attribute>
-			</arco-mp:hasSpecimenAnalysis>
+			</arco-cd:hasLaboratoryTest>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/BNB/DB/DBR">
 			<arco-mp:hasAssociatedPreparation>
@@ -2476,29 +2476,29 @@
 		</rdf:Description>
 	</xsl:if>
 											
-								<!-- Specimen Analysis as individual  -->
+								<!-- Laboraotry test as individual  -->
  	<xsl:for-each select="record/metadata/schede/BNB/RB">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS,'SpecimenAnalysis/', $itemURI, '-', position())" />
+				<xsl:value-of select="concat($NS,'LaboratoryTest/', $itemURI, '-', position())" />
 			</xsl:attribute>
-	        <rdf:type>
+			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/SpecimenAnalysis'" />
-	            </xsl:attribute>
+			      	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/LaboratoryTest'" />
+				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of 	select="concat('Analisi del campione ', $itemURI)" />
+				<xsl:value-of select="concat('Analisi di laboratorio del bene ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Analisi del campione ', $itemURI)" />
+				<xsl:value-of select="concat('Analisi di laboratorio del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Specimen analysis of ', $itemURI)" />
+				<xsl:value-of select="concat('Laboratory test of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of 	select="concat('Specimen analysis of ', $itemURI)" />
-			</l0:name>
+				<xsl:value-of select="concat('Analisi di laboratorio del bene ', $itemURI)" />
+			</l0:name>		
 			<xsl:if test="./RBR/RBRA">
 			<xsl:variable name="authorssplit" select="arco-fn:split(./RBR/RBRA)" />
 			<xsl:for-each select="$authorssplit">
@@ -2512,7 +2512,7 @@
 			<xsl:if test="./RBR/RBRB">	
 				<arco-cd:hasBibliography>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-botanical-revision-bibliography-', position())" />
+					<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-laboratory-test-bibliography-', position())" />
 				</xsl:attribute>
 				</arco-cd:hasBibliography>
 			</xsl:if>
@@ -2644,11 +2644,11 @@
 	</xsl:if>
 	</xsl:for-each>
 
-							<!--Specimen analysis Bibliography as individual -->
+							<!--Laboratory test Bibliography as individual -->
 	<xsl:for-each select="record/metadata/schede/BNB/RB/RBR/RBRB">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
-				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-specimen-analysis-bibliography-', position())" />
+				<xsl:value-of select="concat($NS, 'Bibliography/', $itemURI, '-laboratory-test-bibliography-', position())" />
 	        </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -2656,16 +2656,16 @@
 	            </xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-				<xsl:value-of select="concat('Bibliografia relativa ad analisi del campione ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliografia relativa ad analisi di laboratorio del campione ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="it">
-				<xsl:value-of select="concat('Bibliografia relativa ad analisi del campione', $itemURI)" />
+				<xsl:value-of select="concat('Bibliografia relativa ad analisi di laboratorio del campione', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Bibliography about specimen analysis of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliography about laboratory test of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Bibliography about specimen analysis of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Bibliography about laboratory test of cultural property ', $itemURI)" />
 			</l0:name>
 			<arco-cd:completeBibliographicReference>
 				<xsl:value-of select="normalize-space(.)" />

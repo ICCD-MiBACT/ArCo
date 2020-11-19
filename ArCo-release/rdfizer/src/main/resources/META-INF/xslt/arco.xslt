@@ -29127,6 +29127,9 @@
 					</l0:name>
 				</rdf:Description>
 			</xsl:for-each>
+		
+							
+		
 				
 					<!-- Deprecated URI -->
 			<xsl:for-each select="record/metadata/schede/*/AU/AUT">
@@ -29165,6 +29168,147 @@
 				</rdf:Description>
 			</xsl:if>
 			
+			<!-- Laboratory test as individual -->
+		<xsl:for-each select="record/metadata/schede/*/*/ALB">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS,'LaboratoryTest/', $itemURI, '-', position())" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+			        	<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/LaboratoryTest'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Analisi di laboratorio del bene ', $itemURI)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Analisi di laboratorio del bene ', $itemURI)" />
+				</l0:name>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Laboratory test of cultural property ', $itemURI)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Laboratory test of cultural property ', $itemURI)" />
+				</l0:name>
+				<xsl:if test="./ALBD">
+					<tiapit:atTime>
+						<xsl:attribute name="rdf:resource">
+		        			<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./ALBD, '-',  ./ALBD)))" />
+						</xsl:attribute>
+					</tiapit:atTime>
+				</xsl:if>						
+				<xsl:if test="./ALBO">
+					<arco-cd:hasActivityOperator>
+						<xsl:attribute name="rdf:resource">
+			        		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ALBO))" />
+						</xsl:attribute>
+					</arco-cd:hasActivityOperator>
+				</xsl:if>
+				<xsl:if test="./ALBE">
+					<arco-cd:hasActivityResponsible>
+						<xsl:attribute name="rdf:resource">
+		    	    		<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ALBE))" />
+						</xsl:attribute>
+					</arco-cd:hasActivityResponsible>
+				</xsl:if>
+				<xsl:if test="./ALBT">
+					<arco-cd:hasLaboratoryTestType>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'LaboratoryTestType/', arco-fn:urify(./ALBT))" />
+						</xsl:attribute>
+					</arco-cd:hasLaboratoryTestType>
+				</xsl:if>
+				<xsl:if test="./ALBR">
+					<arco-cd:testResults>
+						<xsl:value-of select="normalize-space(./ALBR)" />
+					</arco-cd:testResults>
+				</xsl:if>
+				<xsl:if test="./ALBN">
+					<arco-core:note>
+						<xsl:value-of select="normalize-space(./ALBN)" />
+					</arco-core:note>
+				</xsl:if>
+			</rdf:Description>
+			<xsl:if test="./ALBO">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+        		       	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ALBO))" />
+                	</xsl:attribute>
+		            <rdf:type>
+						<xsl:attribute name="rdf:resource">
+	    		        	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+						</xsl:attribute>
+					</rdf:type>   
+					<rdfs:label>
+						<xsl:value-of select="./ALBO" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./ALBO" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./ALBE">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+            	    	<xsl:value-of select="concat($NS, 'Agent/', arco-fn:arcofy(./ALBE))" />
+                	</xsl:attribute>
+		            <rdf:type>
+						<xsl:attribute name="rdf:resource">
+	    		        	<xsl:value-of	select="'https://w3id.org/italia/onto/l0/Agent'" />
+						</xsl:attribute>
+					</rdf:type>   
+					<rdfs:label>
+						<xsl:value-of select="./ALBE" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./ALBE" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./ALBT">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+	        	    	<xsl:value-of select="concat($NS, 'LaboratoryTestType/', arco-fn:urify(./ALBT))" />
+			        </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+	            			<xsl:value-of	select="'https://w3id.org/arco/ontology/context-description/LaboratoryTestType'" />
+			            </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./ALBT)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./ALBT)" />
+					</l0:name>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="./ALBD">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+				    	<xsl:value-of 	select="concat($NS, 'TimeInterval/', arco-fn:urify(concat(./ALBD, '-',  ./ALBD)))" />
+					</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+		        			<xsl:value-of select="'https://w3id.org/italia/onto/TI/TimeInterval'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="concat(./ALBD, ' - ', ./ALBD)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="concat(./ALBD, ' - ', ./ALBD)" />
+					</l0:name>
+					<arco-arco:startTime>
+						<xsl:value-of select="./ALBD" />
+					</arco-arco:startTime>
+					<arco-arco:endTime>
+						<xsl:value-of select="./ALBD" />
+					</arco-arco:endTime>
+				</rdf:Description>
+			</xsl:if>
+		</xsl:for-each>
 
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->
 		</rdf:RDF>

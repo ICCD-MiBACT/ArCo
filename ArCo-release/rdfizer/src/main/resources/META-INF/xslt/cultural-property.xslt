@@ -2364,7 +2364,14 @@
 						</arco-cd:isMemberOfPhotographicSeries>
 					</xsl:for-each>
 				</xsl:if>
-
+				<!-- laboratory test -->
+				<xsl:for-each select="record/metadata/schede/*/*/ALB">
+					<arco-cd:hasLaboratoryTest>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS,'LaboratoryTest/', $itemURI, '-', position())" />
+						</xsl:attribute>
+					</arco-cd:hasLaboratoryTest>
+				</xsl:for-each>
 				<!-- responsibility (F and FF) -->
 				<xsl:for-each select="record/metadata/schede/*/PD/PDF">
 					<arco-cd:hasResponsibility>

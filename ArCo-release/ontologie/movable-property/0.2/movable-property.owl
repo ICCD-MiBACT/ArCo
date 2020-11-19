@@ -1260,24 +1260,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/hasSpecimenAnalysis -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSpecimenAnalysis">
-        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isSpecimenAnalysisOf"/>
-        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenAnalysis"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega un campione con l&apos;analisi a cui è stato sottoposto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a specimen to a specimen analysis</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">ha analisi del campione</rdfs:label>
-        <rdfs:label xml:lang="en">has specimen analysis</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>CO/ALB. RS/ALB. Normativa ICCD BNB: RB/RBR</a-cat:iccdNormTag>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting">
@@ -2339,22 +2321,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/isSpecimenAnalysisOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isSpecimenAnalysisOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenAnalysis"/>
-        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;analisi del campione al campione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the specimen analysis to a specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">is specimen analysis of</rdfs:label>
-        <rdfs:label xml:lang="it">è analisi del campione di</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/isSpecimenHarvestingOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isSpecimenHarvestingOf">
@@ -2543,8 +2509,8 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:comment xml:lang="it">Questa proprietà collega il concetto al sistema di classificazione</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the concept to the classification system</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">is classification system of</rdfs:label>
-        <rdfs:label xml:lang="it">è sistema di classificazione di</rdfs:label>
+        <rdfs:label xml:lang="en">refers to classification system</rdfs:label>
+        <rdfs:label xml:lang="it">si riferisce a sistema di classificazione</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -3020,6 +2986,19 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
+    <!-- https://w3id.org/arco/ontology/context-description/LaboratoryTest -->
+
+    <rdf:Description rdf:about="https://w3id.org/arco/ontology/context-description/LaboratoryTest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConsequence"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/arco/ontology/core/ClassificationInTime -->
 
     <rdf:Description rdf:about="https://w3id.org/arco/ontology/core/ClassificationInTime">
@@ -3043,13 +3022,7 @@ SB/NAA</a-cat:iccdNormTag>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/currentClassification"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/originalClassification"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5091,12 +5064,6 @@ erbario.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSpecimenAnalysis"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenAnalysis"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasSpecimenHarvesting"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
             </owl:Restriction>
@@ -5127,56 +5094,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:label xml:lang="en">Specimen</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/SpecimenAnalysis -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenAnalysis">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/context-description/LaboratoryTest"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasConsequence"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/TypeSpecimenIdentification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/context-description/hasBibliography"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/context-description/Bibliography"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenAnalysisType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni su eventuali analisi cui il campione  sia andato incontro, compresi i cambi nomenclaturali conseguenti.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a revision analysis</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Analisi del campione</rdfs:label>
-        <rdfs:label xml:lang="en">Specimen analysis</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>CO/ALB. RS/ALB. ICCD Normativa BNB: RB/RBR.</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/SpecimenAnalysisType -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenAnalysisType">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia dell&apos;analisi cui il campione è stato oggetto.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the type of analysis of the specimen</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Botanical revision type</rdfs:label>
-        <rdfs:label xml:lang="it">Tipo di revisione botanica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNB: RB/RBR/RBRT</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -6001,8 +5918,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <rdfs:label xml:lang="en">Reflectance</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
     </rdf:Description>
     
 
@@ -6097,16 +6014,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/MineralClass"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSubclass"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PreparationType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PreservationType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenAnalysisType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SubstrateType"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/TypeOfTypeSpecimen"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

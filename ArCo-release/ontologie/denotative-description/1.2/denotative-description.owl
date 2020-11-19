@@ -3572,6 +3572,12 @@ resource:ConservationStatus/0900750201-conservation-status-1
                 <owl:someValuesFrom rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/current"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <opla1:isNativeTo rdf:resource="https://w3id.org/arco/pattern/technical-characteristic/"/>
         <dc:description xml:lang="en">An example of usage of the class &apos;Cultural entity technical status&apos; is the following:
 resource:CulturalEntityTechnicalStatus/0900281817-4
