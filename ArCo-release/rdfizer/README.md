@@ -57,6 +57,7 @@ Where:
 - the argument `ARCO_RESOURCES_BASE_URI` is the prefix for the resources that will be generated.
 - the argument `SOURCE_PREFIX` is the Prefix of the source document.
 - the optional argument `QUARANTINE` is the filepath containing the identifiers of the cards to put in the quarantine graph.
+- XML documents in `XML_FOLDER` should be organised in subfolders e.g. ``[XML_FOLDER]/1/1.xml``, ``[XML_FOLDER]/1/2.xml``, ``[XML_FOLDER]/2/1.xml``, ``[XML_FOLDER]/2/2.xml`` etc.
 
 
 **Note:**
