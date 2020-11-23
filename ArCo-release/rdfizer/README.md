@@ -55,6 +55,7 @@ Where:
 - the argument `XML_FOLDER`is the folder containing the collection of XML files to transform.
 - the argument `OUT_FOLDER` is the folder where the Knowledge Graph will be stored.
 - the optional argument `QUARANTINE` is the filepath containing the identifiers of the cards to put in the quarantine graph.
+- XML documents in `XML_FOLDER` should be organised in subfolders e.g. ``[XML_FOLDER]/1/1.xml``, ``[XML_FOLDER]/1/2.xml``, ``[XML_FOLDER]/2/1.xml``, ``[XML_FOLDER]/2/2.xml`` etc.
 
 
 **Note:**
