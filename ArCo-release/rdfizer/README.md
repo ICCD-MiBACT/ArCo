@@ -67,7 +67,7 @@ Where:
 #### Example
 
 ```
-$ java -Xmx2G -jar arco.rdfizer.jar /path/to/input/XML_FOLDER /path/to/output/arco-knowledge-graph-1.0.0 quarantine
+$ java -Xmx2G -jar arco.rdfizer.jar /path/to/input/XML_FOLDER /path/to/output/arco-knowledge-graph-1.0.0 https://w3id.org/arco/resource/ http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode= quarantine
 ```
 
 
