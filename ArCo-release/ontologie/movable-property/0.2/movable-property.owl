@@ -2552,9 +2552,9 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/cleveageDirection -->
+    <!-- https://w3id.org/arco/ontology/movable-property/cleavageDirection -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/cleveageDirection">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/cleavageDirection">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta la direzione della sfaldatura</rdfs:comment>
@@ -2569,9 +2569,9 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/cleveageGrade -->
+    <!-- https://w3id.org/arco/ontology/movable-property/cleavageGrade -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/cleveageGrade">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/cleavageGrade">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il grado della sfaldatura</rdfs:comment>
@@ -3407,13 +3407,13 @@ erbario.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/cleveageDirection"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/cleavageDirection"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/cleveageGrade"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/cleavageGrade"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>

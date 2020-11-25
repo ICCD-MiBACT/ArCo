@@ -18305,7 +18305,7 @@
 					                                    <xsl:when
 									test="lower-case(normalize-space(./GEL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GEL))='luogo di provenienza' or lower-case(normalize-space(./GEL))='sede di provenienza' or lower-case(normalize-space(./GEL))='provenienza' or lower-case(normalize-space(./GEL))='provenienza'">
 					                                        <xsl:value-of
-									select="'https://w3id.org/arco/ontology/location/LastLocation'" />
+									select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
 					                                    </xsl:when>
 					                                    <xsl:when
 									test="lower-case(normalize-space(./GEL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GEL))='luogo di esecuzione/fabbricazione'">
@@ -18706,7 +18706,7 @@
 					                                    <xsl:when
 								test="lower-case(normalize-space(./GPL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GPL))='luogo di provenienza' or lower-case(normalize-space(./GPL))='sede di provenienza' or lower-case(normalize-space(./GPL))='provenienza' or lower-case(normalize-space(./GPL))='provenienza'">
 					                                        <xsl:value-of
-								select="'https://w3id.org/arco/ontology/location/LastLocation'" />
+								select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
 					                                    </xsl:when>
 					                                    <xsl:when
 								test="lower-case(normalize-space(./GPL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GPL))='luogo di esecuzione/fabbricazione'">
@@ -19358,7 +19358,7 @@
 					                                    <xsl:when
 									test="lower-case(normalize-space(./GLL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GLL))='luogo di provenienza' or lower-case(normalize-space(./GLL))='sede di provenienza' or lower-case(normalize-space(./GLL))='provenienza' or lower-case(normalize-space(./GLL))='provenienza'">
 					                                        <xsl:value-of
-									select="'https://w3id.org/arco/ontology/location/LastLocation'" />
+									select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
 					                                    </xsl:when>
 					                                    <xsl:when
 									test="lower-case(normalize-space(./GLL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GLL))='luogo di esecuzione/fabbricazione'">
@@ -19701,7 +19701,7 @@
 					                                    <xsl:when
 										test="lower-case(normalize-space(./GAL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./GAL))='luogo di provenienza' or lower-case(normalize-space(./GAL))='sede di provenienza' or lower-case(normalize-space(./GAL))='provenienza' or lower-case(normalize-space(./GAL))='provenienza'">
 					                                        <xsl:value-of
-										select="'https://w3id.org/arco/ontology/location/LastLocation'" />
+										select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
 					                                    </xsl:when>
 					                                    <xsl:when
 										test="lower-case(normalize-space(./GAL))='luogo di produzione/realizzazione' or lower-case(normalize-space(./GAL))='luogo di esecuzione/fabbricazione'">
@@ -20723,7 +20723,7 @@
 	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/location/CurrentPhysicalLocation'" />
 	                                    </xsl:when>
 	                                    <xsl:when test="lower-case(normalize-space(./CTL))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./CTL))='luogo di provenienza' or lower-case(normalize-space(./CTL))='sede di provenienza' or lower-case(normalize-space(./CTL))='provenienza'">
-	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/location/LastLocation'" />
+	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
 	                                    </xsl:when>
 	                                     <xsl:when test="lower-case(normalize-space(./CTL))='di archivio'">
 	                                        <xsl:value-of select="'https://w3id.org/arco/ontology/location/ArchivalLocation'" />
@@ -25850,7 +25850,7 @@
                                     <xsl:when
 								test="lower-case(normalize-space(./TLC))='luogo di provenienza/collocazione precedente' or lower-case(normalize-space(./TCL))='luogo di provenienza' or lower-case(normalize-space(./TLC))='sede di provenienza' or lower-case(normalize-space(./TCL))='sede di provenienza' or lower-case(normalize-space(./TLC))='provenienza' or lower-case(normalize-space(./TCL))='provenienza'">
                                         <xsl:value-of
-								select="'https://w3id.org/arco/ontology/location/LastLocation'" />
+								select="'https://w3id.org/arco/ontology/location/PreviousLocation'" />
                                     </xsl:when>
                                      <xsl:when
 								test="lower-case(normalize-space(./TLC))='di archivio' or lower-case(normalize-space(./TCL))='di archivio'">

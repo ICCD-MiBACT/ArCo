@@ -1964,7 +1964,7 @@
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNB/LR/LRI">
+			<xsl:if test="record/metadata/schede/BNB/LR/LRI or record/metadata/schede/BNB/LR/LRV">
 				<arco-location:hasTimeIndexedTypedLocation>
 						<xsl:attribute name="rdf:resource">
 	                            <xsl:value-of
@@ -2045,7 +2045,7 @@
 	</xsl:if>	
 				
 										<!-- TimeIndexedTypedLocation as individual -->
-	<xsl:if test="record/metadata/schede/BNB/LR/LRI">
+	<xsl:if test="record/metadata/schede/BNB/LR/LRI or record/metadata/schede/BNB/LR/LRV">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'TimeIndexedTypedLocation/', $itemURI, '-collecting-location')" />
@@ -2120,34 +2120,9 @@
 					</xsl:attribute>
 				</tiapit:atTime>
 			</xsl:if>
-			<xsl:for-each select="record/metadata/schede/BNB/LR/LRV">
-				<arco-location:atLocation>
-					<xsl:attribute name="rdf:resource">
-	            		<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
-	                </xsl:attribute>
-				</arco-location:atLocation>
-			</xsl:for-each>
 		</rdf:Description>
 	</xsl:if>
-										<!-- use location LRV as an individual -->
-	<xsl:for-each select="record/metadata/schede/BNB/LR/LRV">
-		<rdf:Description>
-			<xsl:attribute name="rdf:about">
-		    	<xsl:value-of 	select="concat($NS, 'Feature/', arco-fn:arcofy(concat(normalize-space(./LRVK), normalize-space(./LRVS), normalize-space(./LRVP), normalize-space(./LRVC), normalize-space(./LRVL), normalize-space(./LRVE))))" />
-			</xsl:attribute>
-			<rdf:type>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="'https://w3id.org/italia/onto/CLV/Feature'" />
-				</xsl:attribute>
-			</rdf:type>
-			<rdfs:label>
-				<xsl:value-of select="concat(normalize-space(./LRVS), ' - ', normalize-space(./LRVP),  ' - ', normalize-space(./LRVC))" />
-			</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="concat(normalize-space(./LRVS), ' - ', normalize-space(./LRVP),  ' - ', normalize-space(./LRVC))" />
-			</l0:name>			
-		</rdf:Description>
-	</xsl:for-each>
+								
 								<!-- Measurement collection as individual -->
 	<xsl:if test="record/metadata/schede/BNB/LR/LRI/LRIH or record/metadata/schede/BNB/LR/LRI/LRIT or record/metadata/schede/BNB/LR/LRI/LRIA or record/metadata/schede/BNB/LR/LRI/LRIO">
 		<rdf:Description>

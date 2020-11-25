@@ -2577,10 +2577,12 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
     <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/LastLocation">
         <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
         <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di provenienza o collocazione precedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Replaced by https://w3id.org/arco/ontology/location/PreviousLocation</rdfs:comment>
         <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the place of origin or last location.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">Luogo di provenienza / Collocazione precedente</rdfs:label>
         <rdfs:label xml:lang="en">Place of Origin / Last Location</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
@@ -2612,6 +2614,21 @@ resource:TimeIndexedTypedLocation/0800055566-alternative-1
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="it">Luogo di rilevamento</rdfs:label>
         <rdfs:label xml:lang="en">Observation Location</rdfs:label>
+        <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/PreviousLocation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/location/PreviousLocation">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/location/LocationType"/>
+        <rdfs:comment xml:lang="it">Questo individuo rappresenta uno specifico tipo di localizzazione, ovvero il luogo di provenienza o collocazione precedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This individual represents a specific type of location, that is the place of origin or previous location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Luogo di provenienza / Collocazione precedente</rdfs:label>
+        <rdfs:label xml:lang="en">Place of Origin / Previous Location</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
     </owl:NamedIndividual>
