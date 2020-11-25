@@ -14,7 +14,7 @@ public abstract class SKOSThesaurusLinker {
 
 	protected final String sparql = "SELECT ?definition "
 			+ "WHERE{ "
-			+ "?definition skos:prefLabel ?label "
+			+ "?definition skos:prefLabel|skos:hiddenLabel|skos:altLabel ?label "
 			+ "FILTER(REGEX(STR(?label), ?x, 'i')) "
 			+ "} "
 			+ "LIMIT 1";
