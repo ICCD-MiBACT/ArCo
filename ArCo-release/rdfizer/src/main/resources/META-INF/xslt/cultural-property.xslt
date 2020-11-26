@@ -148,7 +148,7 @@
 		</xsl:variable>
 
 		<rdf:RDF>
-
+		<xsl:if test="not($sheetType='CF' or $sheetType='AUT')" >
 			<xsl:if
 				test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
@@ -4761,6 +4761,7 @@
 				select="$objectOfDescription" /> </xsl:attribute> <foaf:image> <xsl:attribute 
 				name="rdf:resource"> <xsl:value-of select="$image-link" /> </xsl:attribute> 
 				</foaf:image> </rdf:Description> </xsl:if> -->
+		</xsl:if>
 		</rdf:RDF>
 
 	</xsl:template>

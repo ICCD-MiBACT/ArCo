@@ -166,6 +166,7 @@
 	<xsl:template match="/">
 
 		<rdf:RDF>
+		<xsl:if test="not($sheetType='CF' or $sheetType='AUT')" >
 			<!-- We firstly introduce the sheet. -->
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -29311,6 +29312,7 @@
 		</xsl:for-each>
 
 			<!-- xsl:apply-templates select="record/metadata/schede/*/MT/MIS" / -->
+		</xsl:if>
 		</rdf:RDF>
 	</xsl:template>
 </xsl:stylesheet>
