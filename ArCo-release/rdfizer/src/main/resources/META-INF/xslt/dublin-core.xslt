@@ -652,14 +652,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/VeAC/MT/MTC/MTCF)), 'nr'))">
 		<xsl:if test="record/metadata/schede/VeAC/MT/MTC/MTCF">
 			<pico:materialAndTechnique>
- 	            	<xsl:value-of select="record/metadata/schede/VeAC/MT/MTC/MTCF" />
+ 	            	<xsl:value-of select="record/metadata/schede/*/MT/MTC/MTCF" />
             </pico:materialAndTechnique>
 		</xsl:if>
 	</xsl:if>	
 	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/MT/MTC/MTCT)), 'n.r'))">
 		<xsl:if test="record/metadata/schede/*/MT/MTC/MTCT">
 			<pico:materialAndTechnique>
-				<xsl:value-of select="record/metadata/schede/VeAC/MT/MTC/MTCT" />
+				<xsl:value-of select="record/metadata/schede/*/MT/MTC/MTCT" />
 			</pico:materialAndTechnique>
 		</xsl:if>
 	</xsl:if>

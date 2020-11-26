@@ -354,12 +354,14 @@
 				</xsl:attribute>
 			</arco-mp:hasLabel>			
 		</xsl:for-each>
+		<xsl:if test="not($sheetType='F')">
 		<xsl:if test="record/metadata/schede/*/LR">
 			<arco-mp:hasSpecimenHarvesting>
 				<xsl:attribute name="rdf:resource">
 					<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
 				</xsl:attribute>
 			</arco-mp:hasSpecimenHarvesting>
+		</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
 			<arco-mp:hasHostRock>
@@ -391,6 +393,7 @@
 				</xsl:attribute>
 			</arco-mp:hasInclusion>
 		</xsl:for-each>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA">
 		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAZ and starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAZ)), 'presente')">
 			<arco-mp:zoning>
             	<xsl:value-of select="true()" />
@@ -400,6 +403,7 @@
 			<arco-mp:zoning>
             	<xsl:value-of select="false()" />
 			</arco-mp:zoning>
+		</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFR and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFR)), 'non rilevata'))">
 			<arco-mp:radioactivity>
@@ -2486,6 +2490,7 @@
 		</rdf:Description>
 	</xsl:if>
 					<!-- Taxon when not SMNV -->
+	<xsl:if test="record/metadata/schede/BNM/SM/SMN">
 	<rdf:Description>
 		<xsl:choose>
 			<xsl:when test="record/metadata/schede/BNM/SM/SMN/SMNI">
@@ -2630,8 +2635,9 @@
             	</arco-mp:hasDirectHigherRank>
 			</xsl:if>
 	</rdf:Description>
-	<rdf:Description>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSS">
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSS">
+		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 		    	<xsl:value-of select="concat($NS,'InorganicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSS)))" />
 		    </xsl:attribute>
@@ -2658,10 +2664,10 @@
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
 			</arco-mp:refersToClassificationSystem>
-		</xsl:if>
-	</rdf:Description>
-	<rdf:Description>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
+		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
 		    	<xsl:value-of select="concat($NS,'InorganicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSC)))" />
 		    </xsl:attribute>
@@ -2681,10 +2687,10 @@
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/StrunzClassificationSystem'" />
 		    	</xsl:attribute>
 			</arco-mp:refersToClassificationSystem>
-		</xsl:if>
 	</rdf:Description>
-	<rdf:Description>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSD">
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSD">
+		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 		    	<xsl:value-of select="concat($NS,'InorganicTaxon/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSD)))" />
 		    </xsl:attribute>
@@ -2704,8 +2710,8 @@
 		    		<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/NewDanaClassificationSystem'" />
 		    	</xsl:attribute>
 			</arco-mp:refersToClassificationSystem>
-		</xsl:if>
-	</rdf:Description>						
+		</rdf:Description>
+	</xsl:if>						
 						
 	<xsl:for-each select="record/metadata/schede/BNM/RM">					
 						<!-- Taxon of mineral property -->	
@@ -3108,8 +3114,8 @@
 	</xsl:for-each>
 	
 								<!-- Classification in time -->
-	<rdf:Description>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMN">
+	<xsl:if test="record/metadata/schede/BNM/SM/SMN">
+		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
 		    	<xsl:value-of select="concat($NS,'ClassificationInTime/',$itemURI)" />
 			</xsl:attribute>
@@ -3165,8 +3171,8 @@
 		    		</xsl:otherwise>
 				</xsl:choose>
 			</arco-mp:hasTaxon>
-		</xsl:if>
-	</rdf:Description>
+		</rdf:Description>
+	</xsl:if>
 	<xsl:for-each select="record/metadata/schede/BNM/RM/RMN">
 	<xsl:variable name="rmnv">
 		<xsl:choose>
@@ -3315,6 +3321,7 @@
 	</xsl:for-each>
 
 								<!-- Specimen Harvesting as individual -->
+	<xsl:if test="not($sheetType='F')">
 	<xsl:if test="record/metadata/schede/*/LR or record/metadata/schede/*/IM">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
@@ -3419,7 +3426,7 @@
 	</xsl:if>
 	
 								<!-- Harvesting Motivation as individual -->
-	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIU">
+	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIU and not($sheetType='F')">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 	            <xsl:value-of select="concat($NS, 'HarvestingMotivation/', arco-fn:urify(record/metadata/schede/*/LR/LRI/LRIU))" />
@@ -3789,7 +3796,7 @@
 			</rdf:Description>
 		</xsl:if>
 	</xsl:for-each>		
-					
+	</xsl:if>				
 					<!-- Geological context as individual -->
 	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAM or record/metadata/schede/*/IM/IMA/IMAR or record/metadata/schede/*/IM/IMA/IMAT or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF">
 		<rdf:Description>
@@ -4473,8 +4480,8 @@
 	</xsl:for-each>
 		
 							<!-- Host rock as individual -->
-	<rdf:Description>
-		<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
+	<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
+		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
 		    	<xsl:value-of select="concat($NS,'HostRock/', arco-fn:urify(record/metadata/schede/BNM/IM/IMA/IMAO))" />
 			</xsl:attribute>
@@ -4489,8 +4496,8 @@
             <l0:name>
             	<xsl:value-of select="record/metadata/schede/BNM/IM/IMA/IMAO" />
             </l0:name>
-           </xsl:if>
-	</rdf:Description>
+		</rdf:Description>
+	</xsl:if>
 	
 										<!-- Inclusions rock as individual -->
 	<xsl:for-each select="record/metadata/schede/BNM/SM/SMA/SMAI">
