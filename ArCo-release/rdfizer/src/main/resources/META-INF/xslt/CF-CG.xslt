@@ -180,6 +180,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		
 <xsl:template match="/">
 	<rdf:RDF>
+	<xsl:if test="$sheetType='CF' or $sheetType='AUT'" >
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
                 <xsl:value-of
@@ -1736,6 +1737,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				</l0:name>
 			</rdf:Description>
 		</xsl:for-each>	
+	</xsl:if>
 	</rdf:RDF>
 </xsl:template>								
 </xsl:stylesheet>
