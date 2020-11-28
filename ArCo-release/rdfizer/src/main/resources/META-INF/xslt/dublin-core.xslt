@@ -20,21 +20,32 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	<!-- xsl:variable name="NS"
 		select="'https://w3id.org/arco/resource/'" /-->
 	<xsl:variable name="itemURI">
-	<xsl:choose>
-		<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
 		<xsl:choose>
-			<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
-				<xsl:value-of
-					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
+			<xsl:when test="record/metadata/schede/*/CD/NCT/NCTN">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/RV/RVE/RVEL">
+						<xsl:value-of
+							select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS, '-', arco-fn:urify(normalize-space(record/metadata/schede/*/RV/RVE/RVEL)))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of
+							select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:when test="record/metadata/schede/*/CD/CBC">
+				<xsl:value-of select="record/metadata/schede/*/CD/CBC" />
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of
-					select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
-			</xsl:otherwise>
-		</xsl:choose>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:variable name="accc-space" select="record/metadata/schede/*/AC/ACC/ACCC" />
+			<xsl:variable name="accc-space" />
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
+						<xsl:value-of select="record/metadata/schede/*/AC/ACC/ACCC" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="record/metadata/schede/*/CD/ACC/ACCC" />
+					</xsl:otherwise>
+				</xsl:choose>
 			<xsl:variable name="accc-nospace" select="translate($accc-space, ' ', '')" />
 			<xsl:variable name="accc" select="translate($accc-nospace, '/', '_')" />
 			<xsl:variable name="acc-space" select="record/metadata/schede/*/AC/ACC" />
@@ -42,16 +53,17 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			<xsl:variable name="acc" select="translate($acc-nospace, '/', '_')" />
 				<xsl:choose>
 					<xsl:when test="record/metadata/schede/*/AC/ACC/ACCC">
-						<xsl:value-of
-							select="$accc" />
+						<xsl:value-of select="$accc" />
+					</xsl:when>
+					<xsl:when test="record/metadata/schede/*/CD/ACC/ACCC">
+						<xsl:value-of select="$accc" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of
-							select="$acc" />
+						<xsl:value-of select="$acc" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:otherwise>
-	</xsl:choose>
+		</xsl:choose>
 	</xsl:variable>
 	<xsl:variable name="culturalProperty"
 			select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" />
@@ -103,6 +115,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					<!-- xsl:variable name="sheetType" select="record/metadata/schede/*/CD/TSK/text()"></xsl:variable -->
 				
 												<!-- dc:type -->
+		<xsl:if test="not($sheetType='MODI')">
 		<xsl:for-each select="record/metadata/schede/*/OG/OGT">
 		<xsl:choose>
 			<xsl:when test="not($sheetType='BNB') and not($sheetType='A' and ($sheetVersion='3.00' or $sheetVersion='3.00_ICCD0')) and not($sheetType='A' and ($sheetVersion='2.00' or $sheetVersion='2.00_ICCD0'))">
@@ -191,7 +204,21 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:when>
 		</xsl:choose>
 		</xsl:for-each>
-
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/MODI/OG">
+			<dc:type>
+				<xsl:attribute name="rdf:resource">
+							<xsl:choose>
+								<xsl:when test="record/metadata/schede/MODI/OG/OGT">
+									<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(record/metadata/schede/MODI/OG/OGD, '-', record/metadata/schede/MODI/OG/OGT)))" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(record/metadata/schede/MODI/OG/OGD))" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
+					</dc:type>
+				</xsl:if>
 									<!-- dcterms:isReferencedBy  -->
 		<dcterms:isReferencedBy>
 			<xsl:attribute name="rdf:resource">
@@ -339,6 +366,16 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					</xsl:otherwise>
 				</xsl:choose>	
 			</xsl:if>
+			<xsl:if test="$sheetType='MODI'">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/MODI/OG/OGT">
+						<xsl:value-of select="concat(record/metadata/schede/MODI/OG/OGD, ' ', record/metadata/schede/MODI/OG/OGT)" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="record/metadata/schede/MODI/OG/OGD" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:if>
 		</dc:title>
 	</xsl:if>
 
@@ -366,6 +403,27 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:attribute>
 		</dcterms:spatial>
 	</xsl:if>
+	<xsl:if test="record/metadata/schede/MODI/LC/*">
+		<dcterms:spatial>
+			<xsl:attribute name="rdf:resource">
+				<xsl:choose>
+					<xsl:when test="record/metadata/schede/*/LC/LCS and not(lower-case(normalize-space(record/metadata/schede/*/LC/LCS))='italia')">
+						<xsl:value-of select="concat($NS, 'Address/', arco-fn:urify(arco-fn:md5(concat(normalize-space(lower-case(record/metadata/schede/*/LC/LCS)), normalize-space(lower-case(record/metadata/schede/*/LC/LCE)), normalize-space(lower-case(record/metadata/schede/*/LC/LCI))))))" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:choose>
+							<xsl:when test="record/metadata/schede/*/LC/LCI">
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/LCP)), normalize-space(lower-case(record/metadata/schede/*/LC/LCC)), normalize-space(lower-case(record/metadata/schede/*/LC/LCL)), normalize-space(lower-case(record/metadata/schede/*/LC/LCI)))))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'Address/', arco-fn:arcofy(concat(normalize-space(lower-case(record/metadata/schede/*/LC/LCP)), normalize-space(lower-case(record/metadata/schede/*/LC/LCC)), normalize-space(lower-case(record/metadata/schede/*/LC/LCL)), normalize-space(lower-case(record/metadata/schede/*/LC/PVL/PVLT)))))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
+		</dcterms:spatial>
+	</xsl:if>
 		
 									<!-- dc:identifier -->
 	<xsl:if test="record/metadata/schede/*/CD/NCT/NCTN">
@@ -376,6 +434,21 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="concat(record/metadata/schede/*/CD/NCT/NCTR, record/metadata/schede/*/CD/NCT/NCTN, record/metadata/schede/*/CD/NCT/NCTS)" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</dc:identifier>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/MODI/CD">
+		<dc:identifier>
+			<xsl:choose>
+				 <xsl:when	test="record/metadata/schede/MODI/CD/CBC">
+					<xsl:value-of select="record/metadata/schede/MODI/CD/CBC" />
+				</xsl:when>
+				<xsl:when	test="record/metadata/schede/MODI/CD/CDM">
+					<xsl:value-of select="record/metadata/schede/MODI/CD/CDM" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="record/metadata/schede/MODI/CD/ACC/ACCC" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</dc:identifier>
@@ -740,7 +813,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		</xsl:if>
 	</xsl:for-each>
 	
-	<xsl:if test="record/metadata/schede/*/OG/OGT and not (record/metadata/schede/*/*/SGT or $sheetType='AT' or $sheetType='NU' or $sheetType='BDI' or $sheetType='BDM')">
+	<xsl:if test="record/metadata/schede/*/OG/OGT and not (record/metadata/schede/*/*/SGT or $sheetType='AT'or $sheetType='MODI' or $sheetType='NU' or $sheetType='BDI' or $sheetType='BDM')">
 		<dc:subject>
 			<xsl:choose>
 				<xsl:when test="record/metadata/schede/*/OG/OGT/OGTN">
@@ -802,6 +875,21 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</dc:subject>
 		</xsl:if>
 	</xsl:for-each>	
+	<xsl:if test="$sheetType='MODI'">
+		<dc:subject>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/*/OG/OGN">
+					<xsl:value-of select="record/metadata/schede/*/OG/OGN" />
+				</xsl:when>
+				<xsl:when test="record/metadata/schede/MODI/OG/OGT">
+					<xsl:value-of select="concat(record/metadata/schede/MODI/OG/OGD, ' ', record/metadata/schede/MODI/OG/OGT)" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="record/metadata/schede/MODI/OG/OGD" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</dc:subject>
+	</xsl:if>
 	</rdf:Description>				
 					
 
