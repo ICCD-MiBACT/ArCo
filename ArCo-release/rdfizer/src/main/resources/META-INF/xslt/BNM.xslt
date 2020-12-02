@@ -3656,6 +3656,13 @@
 					</xsl:attribute>
 				</clvapit:hasAddressArea>
 			</xsl:if>
+			<xsl:if test="./LRVE and (not(starts-with(lower-case(normalize-space(./LRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRVE)), 'n.r')))">
+				<clvapit:hasAddressArea>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(./LRVE)))" />
+					</xsl:attribute>
+				</clvapit:hasAddressArea>
+			</xsl:if>
 			<xsl:if test="./LRVS and (not(starts-with(lower-case(normalize-space(./LRVS)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRVS)), 'n.r')))">
 				<clvapit:hasCountry>
 					<xsl:attribute name="rdf:resource">
@@ -3703,6 +3710,28 @@
 				<l0:name>
 					<xsl:call-template name="CamelCase">
 						<xsl:with-param name="text" select="normalize-space(./LRVL)" />
+					</xsl:call-template>
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./LRVE and (not(starts-with(lower-case(normalize-space(./LRVE)), 'nr')) and not(starts-with(lower-case(normalize-space(./LRVE)), 'n.r')))">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of 	select="concat($NS, 'AddressArea/', arco-fn:urify(normalize-space(./LRVE)))" />
+			 	</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="'https://w3id.org/italia/onto/CLV/AddressArea'" />
+					</xsl:attribute>
+				</rdf:type>
+				<rdfs:label>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(./LRVE)" />
+					</xsl:call-template>
+				</rdfs:label>
+				<l0:name>
+					<xsl:call-template name="CamelCase">
+						<xsl:with-param name="text" select="normalize-space(./LRVE)" />
 					</xsl:call-template>
 				</l0:name>
 			</rdf:Description>
