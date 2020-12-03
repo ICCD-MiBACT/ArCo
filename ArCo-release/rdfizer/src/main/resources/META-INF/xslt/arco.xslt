@@ -27273,7 +27273,7 @@
 								<rdf:Description>
 									<xsl:attribute name="rdf:about">
                                             <xsl:value-of
-										select="concat($NS, 'Region/', arco-fn:urify(./PRV/PRVP))" />
+										select="concat($NS, 'Province/', arco-fn:urify(./PRV/PRVP))" />
                                         </xsl:attribute>
 									<rdf:type>
 										<xsl:attribute name="rdf:resource">
@@ -29191,12 +29191,14 @@
 							</xsl:if>
 							<!-- new -->
 							<xsl:if test="./MISR">
+							<xsl:if test="$sheetType='VeAC'">
 								<arco-dd:hasMeasurement>
 									<xsl:attribute name="rdf:resource">
 												<xsl:value-of
 										select="concat($NS, 'Measurement/', $itemURI, '-', position(), '-front-total-length')" />
 											</xsl:attribute>
 								</arco-dd:hasMeasurement>
+							</xsl:if>
 							</xsl:if>
 						</xsl:when>
 						<xsl:otherwise>
@@ -29264,7 +29266,9 @@
 										<xsl:value-of select="'Weight'" />
 									</xsl:when>
 									<xsl:when test="$tag-name='MISR'">
-										<xsl:value-of select="'FrontTotalLength'" />
+										<xsl:if test="$sheetType='VeAC'">
+											<xsl:value-of select="'FrontTotalLength'" />
+										</xsl:if>
 									</xsl:when>
 									<xsl:when test="$tag-name='MISN'">
 										<xsl:value-of select="'Length'" />
@@ -29323,7 +29327,9 @@
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
 											<xsl:when test="$tag-name='MISR'">
+												<xsl:if test="$sheetType='VeAC'">
 												<xsl:value-of select="normalize-space(.)" />
+												</xsl:if>
 											</xsl:when>
 										</xsl:choose>
 									</xsl:when>
@@ -29393,7 +29399,9 @@
 													<xsl:value-of select="normalize-space(.)" />
 												</xsl:when>
 												<xsl:when test="$tag-name='MISR'">
+													<xsl:if test="$sheetType='VeAC'">
 													<xsl:value-of select="normalize-space(.)" />
+													</xsl:if>
 												</xsl:when>
 											</xsl:choose>
 										</xsl:variable>
@@ -29448,7 +29456,9 @@
 												<xsl:value-of select="normalize-space(.)" />
 											</xsl:when>
 											<xsl:when test="$tag-name='MISR'">
+												<xsl:if test="$sheetType='VeAC'">
 												<xsl:value-of select="normalize-space(.)" />
+												</xsl:if>
 											</xsl:when>
 										</xsl:choose>
 									</xsl:when>
