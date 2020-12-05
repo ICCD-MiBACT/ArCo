@@ -410,12 +410,50 @@
             	<xsl:value-of select="true()" />
 			</arco-mp:radioactivity>
 		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAB or record/metadata/schede/BNM/SM/SMA/SMAA or record/metadata/schede/BNM/SM/SMA/SMAF or record/metadata/schede/BNM/SM/SMA/SMAG or record/metadata/schede/BNM/SM/SMA/SMAP or record/metadata/schede/BNM/SM/SMA/SMAS or record/metadata/schede/BNM/RM/RMA/RMAB or record/metadata/schede/BNM/RM/RMA/RMAA or record/metadata/schede/BNM/RM/RMA/RMAF or record/metadata/schede/BNM/RM/RMA/RMAG or record/metadata/schede/BNM/RM/RMA/RMAP or record/metadata/schede/BNM/RM/RMA/RMAS">
-			<arco-mp:hasCrystal>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAP and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAP)), 'non rilevata'))">
+			<arco-mp:pseudomorph>
+            	<xsl:value-of select="true()" />
+			</arco-mp:pseudomorph>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAS and not(starts-with(lower-case(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAS)), 'non rilevata'))">
+			<arco-mp:paramorph>
+            	<xsl:value-of select="true()" />
+			</arco-mp:paramorph>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAB" >
+			<arco-mp:hasCrystalMorphology>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'Crystal/', $itemURI)" />
+					<xsl:value-of select="concat($NS,'CrystalMorphology/', $itemURI)" />
 				</xsl:attribute>
-			</arco-mp:hasCrystal>
+			</arco-mp:hasCrystalMorphology>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAA" >
+			<arco-mp:hasCrystalHabit>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'CrystalHabit/', $itemURI)" />
+				</xsl:attribute>
+			</arco-mp:hasCrystalHabit>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAP" >
+			<arco-mp:hasPseudomorhosis>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'Pseudomorhosis/', $itemURI)" />
+				</xsl:attribute>
+			</arco-mp:hasPseudomorhosis>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAS" >
+			<arco-mp:hasParamorhosis>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'Paramorhosis/', $itemURI)" />
+				</xsl:attribute>
+			</arco-mp:hasParamorhosis>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAG" >
+			<arco-mp:hasCrystalTwinning>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'CrystalTwinning/', $itemURI)" />
+				</xsl:attribute>
+			</arco-mp:hasCrystalTwinning>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFC">
 			<arco-dd:hasTechnicalStatus>
@@ -428,6 +466,18 @@
             		<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFC)))" />
             	</xsl:attribute>
 			</arco-dd:hasColour>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAF">
+			<arco-dd:hasTechnicalStatus>
+				<xsl:attribute name="rdf:resource">
+	                <xsl:value-of select="concat($NS, 'CulturalEntityTechnicalStatus/', $itemURI)" />
+ 				</xsl:attribute>
+			</arco-dd:hasTechnicalStatus>
+			<arco-dd:hasShape>
+				<xsl:attribute name="rdf:resource">
+            		<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAF)))" />
+            	</xsl:attribute>
+			</arco-dd:hasShape>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFT">
 			<arco-dd:hasTechnicalStatus>
@@ -607,11 +657,13 @@
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/arco/NotMetallicSpecimen'" />
 		        </xsl:attribute>
 			</rdf:type>
-			<arco-mp:hasRefraction>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'Refraction/', arco-fn:arcofy(.))" />
-				</xsl:attribute>
-			</arco-mp:hasRefraction>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOI or record/metadata/schede/BNM/SM/SMO/SMOR or record/metadata/schede/BNM/SM/SMO/SMOO or record/metadata/schede/BNM/SM/SMO/SMOE or record/metadata/schede/BNM/SM/SMO/SMOA or record/metadata/schede/BNM/SM/SMO/SMOB or record/metadata/schede/BNM/SM/SMO/SMOG or record/metadata/schede/BNM/SM/SMO/SMOV or record/metadata/schede/BNM/SM/SMO/SMOD">
+				<arco-mp:hasRefraction>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'Refraction/', $itemURI)" />
+					</xsl:attribute>
+				</arco-mp:hasRefraction>
+			</xsl:if>
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/RM/RMO and not(record/metadata/schede/BNM/SM/SMO or record/metadata/schede/BNM/SM/SMM)">
 			<rdf:type>
@@ -626,11 +678,13 @@
 		        	<xsl:value-of select="'https://w3id.org/arco/ontology/arco/MetallicSpecimen'" />
 		        </xsl:attribute>
 			</rdf:type>
-			<arco-mp:hasReflectance>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'Reflectance/', arco-fn:arcofy(.))" />
-				</xsl:attribute>
-			</arco-mp:hasReflectance>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMF or record/metadata/schede/BNM/SM/SMM/SMMB">
+				<arco-mp:hasReflectance>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'Reflectance/', $itemURI)" />
+					</xsl:attribute>
+				</arco-mp:hasReflectance>
+			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMR">
 				<arco-mp:internalReflection>
             		<xsl:value-of select="true()" />
@@ -653,6 +707,20 @@
 	 					</xsl:attribute>
 					</arco-dd:hasTechnicalStatus>
 				</xsl:if>
+			</xsl:if>
+			<xsl:if test="./RMM/RMMF or ./RMM/RMMB">
+				<arco-mp:hasReflectance>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'Reflectance/', $itemURI)" />
+					</xsl:attribute>
+				</arco-mp:hasReflectance>
+			</xsl:if>
+			<xsl:if test="./RMO/RMOI or ./RMO/RMOR or ./RMO/RMOO or ./RMO/RMOE or ./RMO/RMOA or ./RMO/RMOB or ./RMO/RMOG or ./RMO/RMOV or ./RMO/RMOD">
+				<arco-mp:hasRefraction>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'Refraction/', $itemURI)" />
+					</xsl:attribute>
+				</arco-mp:hasRefraction>
 			</xsl:if>
 		</xsl:for-each>
 	</rdf:Description>
@@ -776,6 +844,13 @@
 					<arco-dd:includesTechnicalCharacteristic>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'OpticCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOP)))" />
+						</xsl:attribute>
+					</arco-dd:includesTechnicalCharacteristic>
+				</xsl:if>
+				<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAF">
+					<arco-dd:includesTechnicalCharacteristic>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAF)))" />
 						</xsl:attribute>
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
@@ -1554,6 +1629,30 @@
 			</arco-dd:isCharacteristicClassifiedBy>
 		</rdf:Description>
 	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOP">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+            	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAF)))" />
+         	</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAF)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAF)" />
+			</l0:name>
+			<arco-dd:isCharacteristicClassifiedBy>
+				<xsl:attribute name="rdf:resource">
+          			<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/Shape'" />
+          		</xsl:attribute>
+			</arco-dd:isCharacteristicClassifiedBy>
+		</rdf:Description>
+	</xsl:if>
+	
 	
 						<!-- Measurement collection as individual -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFV or record/metadata/schede/BNM/SM/SMF/SMFG or record/metadata/schede/BNM/SM/SMF/SMFI or record/metadata/schede/BNM/SM/SMF/SMFD or record/metadata/schede/BNM/SM/SMF/SMFF or record/metadata/schede/BNM/SM/SMF/SMFH or record/metadata/schede/BNM/SM/SMF/SMFN">
@@ -2373,6 +2472,7 @@
         	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Variety'" />
             	</xsl:attribute>
 			</rdf:type>
+			
 			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNI">
 				<rdfs:label xml:lang="en">
 					<xsl:choose>
@@ -2524,7 +2624,7 @@
 		   </xsl:choose>	
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSpecies'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicSpecies'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMN/SMNI">
@@ -2643,7 +2743,7 @@
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSubclass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2673,7 +2773,7 @@
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2696,7 +2796,7 @@
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -2923,7 +3023,7 @@
 		   </xsl:choose>	
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSpecies'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicSpecies'" />
             	</xsl:attribute>
 			</rdf:type>
 			<xsl:if test="./RMN/RMNI">
@@ -3042,7 +3142,7 @@
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralSubclass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -3072,7 +3172,7 @@
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -3095,7 +3195,7 @@
 		    </xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/MineralClass'" />
+        	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicClass'" />
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label>
@@ -4567,6 +4667,97 @@
 		</rdf:Description>
 	</xsl:if>
 	
+												<!-- Morphology as individual -->	
+	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAB" >
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'CrystalMorphology/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystalMorphology'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAB)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAB)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAA" >
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'CrystalHabit/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystalHabit'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAA)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAA)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAP" >
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'Pseudomorhosis/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Pseudomorhosis'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAP)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAP)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAS" >
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'Paramorhosis/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Paramorhosis'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAS)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAS)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
+	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAG" >
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'CrystalTwinning/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystalTwinning'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAG)" />
+			</rdfs:label>
+			<l0:name>
+				<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMA/SMAG)" />
+			</l0:name>
+		</rdf:Description>
+	</xsl:if>
 	
 							<!-- Cleavage as individual -->	
 	<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFA or record/metadata/schede/BNM/SM/SMF/SMFZ">
@@ -5664,7 +5855,994 @@
 	</xsl:if>
 	</xsl:for-each>	
 	
+					<!-- Reflectance as individual -->
+	<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMF or record/metadata/schede/BNM/SM/SMM/SMMB">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'Reflectance/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Reflectance'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Riflettanza del minerale ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Riflettanza del minerale ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Reflectance of mineral ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Reflectance of mineral ', $itemURI)" />
+			</l0:name>
+			<arco-dd:hasMeasurementCollection>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/Reflectance/', $itemURI)" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurementCollection>
+		</rdf:Description>
+		<rdf:Description>	
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'MeasurementCollection/Reflectance/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+       	       		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+           	   	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="'Misure della riflettanza del minerale ', $itemURI" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="'Misure della riflettanza del minerale ', $itemURI" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
+			</l0:name>
+			<arco-core:current>
+            	<xsl:value-of select="true()" />
+       	    </arco-core:current>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMF">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-reflectance')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMB">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-bireflectance')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-reflectance')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMF)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMF)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMF)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMF)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Reflectance')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-reflectance', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMM/SMMF)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-reflectance', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMM/SMMF)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMM/SMMF" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMM/SMMF" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMM/SMMB">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-bireflectance')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMB)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMB)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMB)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMM/SMMB)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Bireflectance')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-bireflectance', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMM/SMMB)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-bireflectance', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMM/SMMB)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMM/SMMB" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMM/SMMB" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
 	
+				<!-- Refraction as individual -->
+	<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOI or record/metadata/schede/BNM/SM/SMO/SMOR or record/metadata/schede/BNM/SM/SMO/SMOO or record/metadata/schede/BNM/SM/SMO/SMOE or record/metadata/schede/BNM/SM/SMO/SMOA or record/metadata/schede/BNM/SM/SMO/SMOB or record/metadata/schede/BNM/SM/SMO/SMOG or record/metadata/schede/BNM/SM/SMO/SMOV or record/metadata/schede/BNM/SM/SMO/SMOD">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'Refraction/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Refraction'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Rifrazione del minerale ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Rifrazione del minerale ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Refraction of mineral ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Refraction of mineral ', $itemURI)" />
+			</l0:name>
+			<arco-dd:hasMeasurementCollection>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI)" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurementCollection>
+		</rdf:Description>
+		<rdf:Description>	
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+               		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+           	   	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="'Misure della rifrazione del minerale ', $itemURI" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="'Misure della rifrazione del minerale ', $itemURI" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
+			</l0:name>
+			<arco-core:current>
+    	       	<xsl:value-of select="true()" />
+            </arco-core:current>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOI">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-refractive-index')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOR">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-birefingence')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOO">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOE">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOA">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOB">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOG">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOV">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-2vAngle')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOD">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-dispersion')" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+		</rdf:Description>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOI">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOI)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOI)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOI)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOI)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'RefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOI)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOI)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOI" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOI" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOR">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-birefringence')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOR)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOR)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOR)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOR)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Birefringence')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-birefringence', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOR)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-rbirefringence', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOR)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOR" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOR" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOO)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOO)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOO)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOO)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'OmegaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOO)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-omega-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOO)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOO" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOO" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOE">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOE)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOE)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOE)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOE)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'EpsilonRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-epsilon-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOE)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-epsilon-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOE)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOE" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOE" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOA">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOA)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOA)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOA)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOA)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'AlfaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-alfa-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOA)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-alfa-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOA)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOA" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOA" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOB">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOB)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOB)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOB)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOB)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'BetaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-beta-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOB)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-beta-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOB)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOB" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOB" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOG">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOG)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOG)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOG)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOG)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'GammaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-gamma-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOG)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-gamma-refractive-index', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOG)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOG" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOG" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOV">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-2vAngle')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOV)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOV)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOV)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOV)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', '2vAngle')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-2vAngle', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOV)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-2vAngle', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOV)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOV" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOV" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOD">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-dispersion')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOD)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOD)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOD)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', record/metadata/schede/BNM/SM/SMO/SMOD)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Dispersion')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-dispersion', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOD)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-dispersion', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOD)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOD" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOD" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+					<!-- Refraction as individual -->
+	<xsl:for-each select="record/metadata/schede/BNM/RM">
+	<xsl:if test="./RMO/RMOI or ./RMO/RMOR or ./RMO/RMOO or ./RMO/RMOE or ./RMO/RMOA or ./RMO/RMOB or ./RMO/RMOG or ./RMO/RMOV or ./RMO/RMOD">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'Refraction/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Refraction'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Rifrazione del minerale ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Rifrazione del minerale ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Refraction of mineral ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Refraction of mineral ', $itemURI)" />
+			</l0:name>
+			<arco-dd:hasMeasurementCollection>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI)" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurementCollection>
+		</rdf:Description>
+		<rdf:Description>	
+				<xsl:attribute name="rdf:about">
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI)" />
+				</xsl:attribute>
+				<rdf:type>
+					<xsl:attribute name="rdf:resource">
+        	       		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+            	   	</xsl:attribute>
+				</rdf:type>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="'Misure della rifrazione del minerale ', $itemURI" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="'Misure della rifrazione del minerale ', $itemURI" />
+				</l0:name>
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="'Measuerements of refraction of mineral ', $itemURI" />
+				</l0:name>
+				<arco-core:current>
+    	        	<xsl:value-of select="false()" />
+        	    </arco-core:current>
+				<xsl:if test="./RMO/RMOI">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-refractive-index')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOR">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-birefingence')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOO">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOE">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOA">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOB">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOG">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOV">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-2vAngle')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+				<xsl:if test="./RMO/RMOD">
+					<arco-dd:hasMeasurement>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-dispersion')" />
+						</xsl:attribute>
+					</arco-dd:hasMeasurement>
+				</xsl:if>
+			</rdf:Description>
+		<xsl:if test="./RMO/RMOI">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOI)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOI)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOI)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOI)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'RefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOI)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOI)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOI" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOI" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOR">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-birefringence')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOR)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOR)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOR)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOR)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Birefringence')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-birefringence', '-', arco-fn:urify(normalize-space(./RMO/RMOR)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-rbirefringence', '-', arco-fn:urify(normalize-space(./RMO/RMOR)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOR" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOR" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOO)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOO)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOO)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOO)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'OmegaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOO)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-omega-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOO)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOO" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOO" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOE">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOE)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOE)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOE)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOE)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'EpsilonRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-epsilon-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOE)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-epsilon-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOE)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOE" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOE" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOA">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOA)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOA)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOA)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOA)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'AlfaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-alfa-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOA)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-alfa-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOA)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOA" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOA" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOB">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOB)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOB)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOB)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOB)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'BetaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-beta-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOB)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-beta-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOB)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOB" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOB" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOG">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOG)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOG)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOG)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOG)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'GammaRefractiveIndex')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-gamma-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOG)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-gamma-refractive-index', '-', arco-fn:urify(normalize-space(./RMO/RMOG)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOG" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOG" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOV">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-2vAngle')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOV)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOV)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOV)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOV)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', '2vAngle')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-2vAngle', '-', arco-fn:urify(normalize-space(./RMO/RMOV)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-2vAngle', '-', arco-fn:urify(normalize-space(./RMO/RMOV)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOV" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOV" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMO/RMOD">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-dispersion')" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOD)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOD)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOD)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMO/RMOD)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Dispersion')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-dispersion', '-', arco-fn:urify(normalize-space(./RMO/RMOD)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-dispersion', '-', arco-fn:urify(normalize-space(./RMO/RMOD)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMO/RMOD" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMO/RMOD" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	</xsl:for-each>
 				
 					<!-- Author as individual -->
 	<xsl:if test="record/metadata/schede/*/LR/LRI/LRIL">

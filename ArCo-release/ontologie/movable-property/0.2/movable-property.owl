@@ -329,7 +329,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasChemicalFormula">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isChemicalFormulaOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla formula chimica</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the mineral species to the chemical formula.</rdfs:comment>
@@ -348,7 +348,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCleavage">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCleavageOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla sfaldatura</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the mineral species to the cleavage.</rdfs:comment>
@@ -402,8 +402,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystal">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica al cristallo</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the mineral species to the crystal.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -439,10 +438,10 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica all&apos;aspetto</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the crystal to the crystal habit.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione all&apos;aspetto</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to the crystal habit.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">ha abito del cristallo</rdfs:label>
         <rdfs:label xml:lang="en">has crystal habit</rdfs:label>
@@ -458,10 +457,10 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla sua morfologia</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the crystall to its morphology.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione alla sua morfologia</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to its morphology.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">ha morfologia cristallina</rdfs:label>
         <rdfs:label xml:lang="en">has crystal morphology</rdfs:label>
@@ -496,10 +495,10 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla geminazione</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the crystal to the crystal twinning.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione alla geminazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to the crystal twinning.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">ha geminazione</rdfs:label>
         <rdfs:label xml:lang="en">has crystal twinning</rdfs:label>
@@ -1022,10 +1021,10 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasParamorphosis">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla paramorfosi</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the crystal to the paramorphosis.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione alla paramorfosi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to the paramorphosis.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">ha paramorfosi</rdfs:label>
         <rdfs:label xml:lang="en">has paramorphosis</rdfs:label>
@@ -1136,10 +1135,10 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla pseudomorfosi</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the crystal to the pseudomorphosis.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il campione alla pseudomorfosi</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen to the pseudomorphosis.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="it">ha pseudomorfosi</rdfs:label>
         <rdfs:label xml:lang="en">has pseudomorphosis</rdfs:label>
@@ -1395,7 +1394,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasUnitCell">
         <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isUnitCellOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la specie mineralogica alla cella</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the mineral species to the cell.</rdfs:comment>
@@ -1499,7 +1498,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isChemicalFormulaOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la formula chimica alla specie mineralogica</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the chemical formula to the mineral species.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -1568,7 +1567,7 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCleavageOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la sfaldatura alla specie mineralogica</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the cleavage to the mineral species.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -1635,9 +1634,9 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;abito al cristallo</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the habit to the crystal.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega l&apos;abito al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the habit to the specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is crystal habit of</rdfs:label>
         <rdfs:label xml:lang="it">è abito di</rdfs:label>
@@ -1652,9 +1651,9 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la morfologia al cristallo</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the morphology to the crystal.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la morfologia al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the morphology to the specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is crystallographic morphology of</rdfs:label>
         <rdfs:label xml:lang="it">è morfologia cristallina</rdfs:label>
@@ -1667,8 +1666,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/isCrystalOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalOf">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega il cristallo alla specie mineralogica</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the crystal to the mineral species.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -1702,9 +1700,9 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la geminaione al cristallo</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the crystal twinnign to the crystal.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la geminaione al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the crystal twinnign to the specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is crystal twinning of</rdfs:label>
         <rdfs:label xml:lang="it">è geminazione di</rdfs:label>
@@ -2107,9 +2105,9 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la paramorfosi al cristallo</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the paramorphosis to the crystal.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la paramorfosi al campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the paramorphosis to the specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is paramorphosis of</rdfs:label>
         <rdfs:label xml:lang="it">è paramorfosi di</rdfs:label>
@@ -2209,9 +2207,9 @@ In this module the following Ontology Design Patterns have been used:
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-        <rdfs:comment xml:lang="it">Questa proprietà collega la pseudomorfosi al cristallo</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates the pseudomorphosis to the crystal.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la pseudomorfosi al  campione</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the pseudomorphosis to the specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
         <rdfs:label xml:lang="en">is pseudomorphosis of</rdfs:label>
         <rdfs:label xml:lang="it">è pseudomorfosi di</rdfs:label>
@@ -2457,7 +2455,7 @@ In this module the following Ontology Design Patterns have been used:
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isUnitCellOf">
         <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
-        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:comment xml:lang="it">Questa proprietà collega la cella al minerale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates the unit cella to the mineral.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -2710,7 +2708,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/imaCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/imaCode">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice IMA di un minerale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the IMA code of a mineral</rdfs:comment>
@@ -2762,7 +2760,7 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/movable-property/newDanaCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/newDanaCode">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice New Dana di un minerale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the New Dana code of a mineral</rdfs:comment>
@@ -2830,7 +2828,7 @@ SB/NAA</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/movable-property/paramorph -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/paramorph">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di paramorfosi</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the presence of paramorphosis</rdfs:comment>
@@ -2864,7 +2862,7 @@ SB/NAA</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/movable-property/pseudomorph -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/pseudomorph">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di pseudomorfosi</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the presence of pseudomorphosis</rdfs:comment>
@@ -2881,7 +2879,7 @@ SB/NAA</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/movable-property/radioactivity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/radioactivity">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="it">Questa proprietà indica la presenza di radioattività</rdfs:comment>
         <rdfs:comment xml:lang="en">This property indicates the presence of radioactivity</rdfs:comment>
@@ -2915,7 +2913,7 @@ SB/NAA</a-cat:iccdNormTag>
     <!-- https://w3id.org/arco/ontology/movable-property/strunzCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/arco/ontology/movable-property/strunzCode">
-        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice Strunz di un minerale</rdfs:comment>
         <rdfs:comment xml:lang="en">This property represents the Strunz code of a mineral</rdfs:comment>
@@ -3200,24 +3198,6 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista della forma estetica o cromatica</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a variety from an aesthetic or chromatic point of view.</rdfs:comment>
@@ -3451,79 +3431,10 @@ erbario.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/Crystal -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Crystal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasParamorphosis"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/paramorph"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/pseudomorph"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/radioactivity"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta il cristallo di un minerale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents the crystal of a mineral.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="it">Cristallo</rdfs:label>
-        <rdfs:label xml:lang="en">Crystal</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/CrystalHabit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalHabit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalHabitOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;abito di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the habit of a crystal.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -3540,12 +3451,6 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalMorphology">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalMorphologyOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta lamorfologia di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the morphology of a crystal.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -3562,12 +3467,6 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/CrystalTwinning">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isCrystalTwinningOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la geminazione di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the twinning of a crystal.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -3600,24 +3499,6 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta una varietà dal punto di vista delle specifiche forme coltivate</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents is the most basic classification category of cultivated plants in the International Code of Nomenclature for Cultivated Plants</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -4124,6 +4005,84 @@ erbario.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/InorganicClass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la classe mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a inorganic taxon, the mineral class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="it">Classe inorganica</rdfs:label>
+        <rdfs:label xml:lang="en">Inorganic class</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/InorganicSpecies -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicSpecies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/OpticCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasChemicalFormula"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCleavage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasUnitCell"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la specie mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of an inorganic taxon, the mineral species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Inorganic species</rdfs:label>
+        <rdfs:label xml:lang="it">Specie inorganica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/InorganicSubclass -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicSubclass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la sottoclasse mineralogica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents one level of a inorganic taxon, the mineral class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
+        <rdfs:label xml:lang="en">Inorganic subclass</rdfs:label>
+        <rdfs:label xml:lang="it">Sottoclasse inorganica</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/InorganicTaxon -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicTaxon">
@@ -4363,22 +4322,6 @@ erbario.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/MineralClass -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralClass">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la classe mineralogica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a inorganic taxon, the mineral class.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="it">Classe mineralogica</rdfs:label>
-        <rdfs:label xml:lang="en">Mineral class</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSC, SMSD</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/MineralDeposit -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralDeposit">
@@ -4413,74 +4356,6 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAP, IMAE</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/MineralSpecies -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSpecies">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/OpticCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasChemicalFormula"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCleavage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystal"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasUnitCell"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la specie mineralogica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of an inorganic taxon, the mineral species.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Mineral species</rdfs:label>
-        <rdfs:label xml:lang="it">Specie mineralogica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa AT: OG/OGS/OGSN. - Normativa BNB: RB/RBN/RBNB; SB/NAA/NAAB; SB/NAT/NATB</a-cat:iccdNormTag>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/movable-property/MineralSubclass -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSubclass">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la sottoclasse mineralogica.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents one level of a inorganic taxon, the mineral class.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
-        <rdfs:label xml:lang="en">Mineral subclass</rdfs:label>
-        <rdfs:label xml:lang="it">Sottoclasse mineralogica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-        <a-cat:iccdNormTag>ICCD Normativa BNM: SM/SMS/SMSS</a-cat:iccdNormTag>
     </owl:Class>
     
 
@@ -4633,12 +4508,6 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Paramorphosis">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isParamorphosisOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la paramorfosi di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the paramorphosis of a crystall.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -4806,12 +4675,6 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isPseudomorphosisOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Crystal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la pseudomorfosi di un cristallo.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the pseudomorphosis of a crystall.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -5040,6 +4903,36 @@ erbario.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalHabit"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalHabit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalMorphology"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalMorphology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCrystalTwinning"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/CrystalTwinning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasParamorphosis"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Paramorphosis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasPseudomorphosis"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Pseudomorphosis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasAssociatedPreparation"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Preparation"/>
             </owl:Restriction>
@@ -5078,6 +4971,18 @@ erbario.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/zoning"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/paramorph"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/pseudomorph"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5185,45 +5090,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Species"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Subspecies"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasLowerRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la sottospecie.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the subspecies.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
@@ -5391,24 +5257,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Variety">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/TaxonSpecification"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHigherRank"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Cultivar"/>
-                                    <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Variety"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia biologica, ovvero la varietà.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a biological taxon, the variety</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
@@ -6000,20 +5848,20 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicClass"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicSpecies"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicSubclass"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicBed"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicComplex"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicFormation"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicGroup"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicMember"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/LithostratigraphicSupergroup"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/MineralClass"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSpecies"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/MineralSubclass"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
