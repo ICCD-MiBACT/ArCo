@@ -203,6 +203,20 @@
 		        </xsl:attribute>
 			</rdf:type>			
 		</xsl:if>
+		<xsl:if test="not($sheetType='BNB')">
+			<xsl:if test="record/metadata/schede/*/AC/ACK">
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACK" />
+				</l0:identifier>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione'))">
+			<xsl:if test="record/metadata/schede/*/AC/ACO">
+				<arco-core:isPartOf>
+					<xsl:value-of select="concat($NS, 'Collection/', arco-fn:urify(record/metadata/schede/*/AC/ACO))" />
+				</arco-core:isPartOf>
+			</xsl:if>
+		</xsl:if>
 		<xsl:if test="record/metadata/schede/BNM/SM/SMN">
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
@@ -2746,12 +2760,24 @@
         	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
-			<rdfs:label>
-		   		<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSS" />
-		   	</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSS" />
-			</l0:name>
+			<xsl:choose>
+				<xsl:when test="record/metadata/schede/BNM/SM/SMS/SMSC" >
+					<rdfs:label>
+				   		<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMS/SMSC, ' ', record/metadata/schede/BNM/SM/SMS/SMSS)" />
+				   	</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="concat(record/metadata/schede/BNM/SM/SMS/SMSC, ' ', record/metadata/schede/BNM/SM/SMS/SMSS)" />
+					</l0:name>
+				</xsl:when>
+				<xsl:otherwise>
+					<rdfs:label>
+				   		<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSS" />
+				   	</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSS" />
+					</l0:name>
+				</xsl:otherwise>
+			</xsl:choose>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSC">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
@@ -3145,12 +3171,24 @@
         	       	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/InorganicSubclass'" />
             	</xsl:attribute>
 			</rdf:type>
-			<rdfs:label>
-		   		<xsl:value-of select="./RMS/RMSS" />
-		   	</rdfs:label>
-			<l0:name>
-				<xsl:value-of select="./RMS/RMSS" />
-			</l0:name>
+			<xsl:choose>
+				<xsl:when test="./RMS/RMSC" >
+					<rdfs:label>
+				   		<xsl:value-of select="concat(./RMS/RMSC, ' ', ./RMS/RMSS)" />
+				   	</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="concat(./RMS/RMSC, ' ', ./RMS/RMSS)" />
+					</l0:name>
+				</xsl:when>
+				<xsl:otherwise>
+					<rdfs:label>
+				   		<xsl:value-of select="./RMS/RMSS" />
+				   	</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="./RMS/RMSS" />
+					</l0:name>
+				</xsl:otherwise>
+			</xsl:choose>
 			<xsl:if test="./RMS/RMSC">
 				<arco-mp:hasDirectHigherRank>
 					<xsl:attribute name="rdf:resource">
@@ -3225,16 +3263,16 @@
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-            	 <xsl:value-of select="concat('Classificazione nel tempo  del bene culturale ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classificazione del bene culturale ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="it">
-            	<xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
+            	<xsl:value-of select="concat('Classificazione del bene culturale ', $itemURI)" />
             </l0:name>
 			<rdfs:label xml:lang="en">
-            	 <xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="en">
-            	<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classification of cultural property ', $itemURI)" />
             </l0:name>
             <arco-core:current>
             	<xsl:value-of select="true()" />
@@ -3294,16 +3332,16 @@
             	</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
-            	 <xsl:value-of select="concat('Classificazione nel tempo  del bene culturale ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classificazione ', position(), ' del bene culturale ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="it">
-            	<xsl:value-of select="concat('Classificazione nel tempo del bene culturale ', $itemURI)" />
+            	<xsl:value-of select="concat('Classificazione ', position(), ' del bene culturale ', $itemURI)" />
             </l0:name>
 			<rdfs:label xml:lang="en">
-            	 <xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
             </rdfs:label>
             <l0:name xml:lang="en">
-            	<xsl:value-of select="concat('Classification in time of cultural property ', $itemURI)" />
+            	 <xsl:value-of select="concat('Classification ', position(), ' of cultural property ', $itemURI)" />
             </l0:name>
             <arco-core:current>
             	<xsl:value-of select="false()" />
@@ -4378,7 +4416,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-		<xsl:if test="./RMT/RMTT and not(starts-with(lower-case(normalize-space(./RMT/RMTT)), 'non tipo'))">
+	<xsl:if test="./RMT/RMTT and not(starts-with(lower-case(normalize-space(./RMT/RMTT)), 'non tipo'))">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS,'TypeSpecimenIdentification/', $itemURI, '-', position())" />
@@ -6924,7 +6962,49 @@
 			</rdf:Description>
 	</xsl:for-each>
 	
-										
+	<xsl:if test="not($sheetType='CA' or $sheetType='MA' or $sheetType='VeAC')">
+	<xsl:if test="not(starts-with(lower-case(normalize-space(record/metadata/schede/BNB/OG/OGT/OGTD)), 'collezione'))">
+		<xsl:if test="record/metadata/schede/*/AC/ACO">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about">
+                	<xsl:value-of select="concat($NS, 'Collection/', arco-fn:urify(record/metadata/schede/*/AC/ACO))" />
+                </xsl:attribute>
+	            <rdf:type>
+					<xsl:attribute name="rdf:resource">
+	    	        	<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection'" />
+					</xsl:attribute>
+				</rdf:type>
+				<xsl:choose> 
+					<xsl:when test="record/metadata/schede/*/OG/OGT/OGTC">
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTC)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/OGT/OGTC)" />
+						</l0:name>
+					</xsl:when>
+					<xsl:otherwise>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Natural heritage collection ', record/metadata/schede/*/AC/ACO)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Natural heritage collection ', record/metadata/schede/*/AC/ACO)" />
+						</l0:name>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Collezione di beni naturalistici ', record/metadata/schede/*/AC/ACO)" />
+						</l0:name>
+					</xsl:otherwise>
+				</xsl:choose>
+				<l0:identifier>
+					<xsl:value-of select="record/metadata/schede/*/AC/ACO" />
+				</l0:identifier>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>	
+	</xsl:if>								
 					
 	
 	</rdf:RDF>

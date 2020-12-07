@@ -3172,28 +3172,6 @@ SB/NAA</a-cat:iccdNormTag>
     
 
 
-    <!-- https://w3id.org/arco/ontology/movable-property/BotanicalCollection -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalCollection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
-erbario.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class represents a group of specimens or specimens container, collected into an herbarium.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
-        <rdfs:label xml:lang="en">Botanical Collection</rdfs:label>
-        <rdfs:label xml:lang="it">Collezione botanica</rdfs:label>
-        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/arco/ontology/movable-property/BotanicalForm -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalForm">
@@ -3913,11 +3891,11 @@ erbario.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/Herbarium -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/BotanicalCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -4356,6 +4334,29 @@ erbario.</rdfs:comment>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa BNM: IM/IMA/IMAP, IMAE</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection">
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gruppi di campioni all&apos;interno di un
+erbario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents a group of specimens or specimens container, collected into an herbarium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">Collezione di beni naturalistici</rdfs:label>
+        <rdfs:label xml:lang="en">Natural heritage collection</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:Class>
     
 
@@ -4876,7 +4877,7 @@ erbario.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/Specimen -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasClassificationInTime"/>
@@ -5006,7 +5007,7 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <!-- https://w3id.org/arco/ontology/movable-property/SpecimenContainer -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="http://dati.beniculturali.it/cis/CulturalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasPart"/>
@@ -5783,15 +5784,6 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/BotanicalCollection"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen"/>
-            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Chron"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Eon"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/GeochronologicalAge"/>
@@ -5843,6 +5835,15 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/PollenSample"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SeedSample"/>
             <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/WoodSample"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Herbarium"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/NaturalHeritageCollection"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+            <rdf:Description rdf:about="https://w3id.org/arco/ontology/movable-property/SpecimenContainer"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
