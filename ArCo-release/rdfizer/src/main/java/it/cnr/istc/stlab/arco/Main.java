@@ -30,6 +30,7 @@ public class Main {
 		String outNtriplesFolder = args[1];
 		String prefix = args[2];
 		String sourceprefix = args[3];
+		String quarantineList = args[4];
 
 		File inFolder = new File(inFolderString);
 
@@ -38,7 +39,7 @@ public class Main {
 		if (args.length > 4) {
 			// A file listing the catalogue records to quarantine is provided
 			try {
-				BufferedReader br = new BufferedReader(new FileReader(new File(args[2])));
+				BufferedReader br = new BufferedReader(new FileReader(new File(quarantineList)));
 				String line;
 				while ((line = br.readLine()) != null) {
 					System.out.println(line + " goes to quarantine.");
