@@ -25499,6 +25499,38 @@
 											select="concat('Contenitore fisico di: ', normalize-space(record/metadata/schede/*/LC/LDC/LDCM))" />
 									</l0:name>
 								</xsl:when>
+								<xsl:when
+									test="record/metadata/schede/*/LC/LDC/LDCT and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCT)), 'n.r')))">
+									<xsl:choose>
+										<xsl:when test="record/metadata/schede/*/LC/LDC/LDCQ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)), 'n.r')))">
+											<rdfs:label>
+												<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT, ' ' normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
+											</rdfs:label>
+											<l0:name>
+												<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT, ' ' normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
+											</l0:name>
+										</xsl:when>
+										<xsl:otherwise>
+											<rdfs:label>
+												<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCT)" />
+											</rdfs:label>
+											<l0:name>
+												<xsl:value-of select="normalize-space(record/metadata/schede/*/LC/LDC/LDCT)" />
+											</l0:name>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:when>
+								<xsl:when
+									test="record/metadata/schede/*/LC/LDC/LDCU and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCU)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCU)), 'n.r')))">
+									<rdfs:label>
+										<xsl:value-of
+											select="normalize-space(record/metadata/schede/*/LC/LDC/LDCU)" />
+									</rdfs:label>
+									<l0:name>
+										<xsl:value-of
+											select="normalize-space(record/metadata/schede/*/LC/LDC/LDCU)" />
+									</l0:name>
+								</xsl:when>
 								<xsl:otherwise>
 									<rdfs:label xml:lang="it">Contenitore fisico</rdfs:label>
 									<l0:name xml:lang="it">Contenitore fisico</l0:name>
