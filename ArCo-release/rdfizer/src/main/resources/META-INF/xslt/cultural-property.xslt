@@ -1822,35 +1822,17 @@
 				</xsl:if>
 				<!-- has number of components -->
 				<xsl:if
-					test="record/metadata/schede/*/OG/QNT/QNTN or record/metadata/schede/*/OG/QNT/QNTS">
+					test="record/metadata/schede/*/OG/QNT/QNTN">
 					<arco-arco:numberOfComponents>
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/*/OG/QNT/QNTN">
-								<xsl:value-of
-									select="normalize-space(record/metadata/schede/*/OG/QNT/QNTN)" />
-							</xsl:when>
-							<xsl:when test="record/metadata/schede/*/OG/QNT/QNTS">
-								<xsl:value-of
-									select="normalize-space(record/metadata/schede/*/OG/QNT/QNTS)" />
-							</xsl:when>
-						</xsl:choose>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/QNT/QNTN)" />
 					</arco-arco:numberOfComponents>
 				</xsl:if>
 
 				<!-- has number of elements -->
 				<xsl:if
-					test="record/metadata/schede/*/OG/QNT/QNTI or record/metadata/schede/*/OG/QNT/QNTS">
+					test="record/metadata/schede/*/OG/QNT/QNTI">
 					<arco-arco:numberOfElements>
-						<xsl:choose>
-							<xsl:when test="record/metadata/schede/*/OG/QNT/QNTI">
-								<xsl:value-of
-									select="normalize-space(record/metadata/schede/*/OG/QNT/QNTI)" />
-							</xsl:when>
-							<xsl:when test="record/metadata/schede/*/OG/QNT/QNTS">
-								<xsl:value-of
-									select="normalize-space(record/metadata/schede/*/OG/QNT/QNTS)" />
-							</xsl:when>
-						</xsl:choose>
+						<xsl:value-of select="normalize-space(record/metadata/schede/*/OG/QNT/QNTI)" />
 					</arco-arco:numberOfElements>
 				</xsl:if>
 

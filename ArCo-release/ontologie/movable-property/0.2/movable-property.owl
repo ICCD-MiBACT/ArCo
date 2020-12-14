@@ -694,6 +694,36 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingMethod -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasHarvestingMethod">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasMethod"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isHarvestingMethodOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMethod"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la raccolta al suo metodo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the specimen harvesting to the method</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="it">ha metodo di raccolta</rdfs:label>
+        <rdfs:label xml:lang="en">has harvesting method</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">Normativa Beni naturalistici: LR/LRI/LRIW</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingMotivation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasHarvestingMotivation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/hasDescription"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/movable-property/isHarvestingMotivation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/movable-property/hasHarvestingOperator -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/hasHarvestingOperator">
@@ -1840,6 +1870,33 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:label xml:lang="it">è relazione Gladstone-Dale di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isHarvestingMethodOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isHarvestingMethodOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isMethodOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMethod"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il metodo di raccolta alla raccolta del campione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property relates the harvesting method to the specimen harvesting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
+        <rdfs:label xml:lang="en">is harvesting method of</rdfs:label>
+        <rdfs:label xml:lang="it">è metodo di raccolta di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/movable-property/isHarvestingMotivation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/movable-property/isHarvestingMotivation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/isDescriptionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/movable-property/SpecimenHarvesting"/>
     </owl:ObjectProperty>
     
 
@@ -3098,6 +3155,12 @@ SB/NAA</a-cat:iccdNormTag>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/Orientation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasGeologicalContext"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/GeologicalContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4003,36 +4066,6 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicSpecies">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/OpticCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasTechnicalCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/PhysicalCharacteristic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasChemicalFormula"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ChemicalFormula"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasCleavage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Cleavage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasUnitCell"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/UnitCell"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la specie mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of an inorganic taxon, the mineral species.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
@@ -4049,6 +4082,12 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/InorganicSubclass">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicTaxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasDirectHigherRank"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/InorganicClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno dei livelli di classificazione di una tassonomia inorganica, ovvero la sottoclasse mineralogica.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents one level of a inorganic taxon, the mineral class.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
@@ -4271,6 +4310,18 @@ SB/NAA</a-cat:iccdNormTag>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/MetallicSpecimen">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasReflectance"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Reflectance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/internalReflection"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/NotMetallicSpecimen"/>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il campione metallico</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the metallic specimen</rdfs:comment>
@@ -4381,6 +4432,12 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/NotMetallicSpecimen">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasRefraction"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Refraction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un campione di minerale non metallico.</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents a non metallic specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/movable-property"/>
@@ -4471,6 +4528,12 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Outcrop">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
@@ -4692,6 +4755,12 @@ erbario.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Reflectance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/denotative-description/hasMeasurementCollection"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/arco/ontology/movable-property/Refraction"/>
     </owl:Class>
     
@@ -5043,14 +5112,44 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/TimeIndexedEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/core/involvesAgent"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHarvestingMethod"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHarvestingMotivation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/HarvestingMotivation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHarvestingOperator"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation"/>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHarvestingResponsible"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/hasHarvestingSponsor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/isSpecimenHarvestingOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/Specimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5151,6 +5250,12 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/movable-property/Taxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/arco/ontology/movable-property/refersToClassificationSystem"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/arco/ontology/movable-property/ClassificationSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Questa classe rappresenta il taxon</rdfs:comment>
         <rdfs:comment xml:lang="en">This class represents the taxon</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3di.org/arco/ontology/movable-property/"/>
@@ -5767,8 +5872,8 @@ come scatole, buste, faldoni o pacchi, inserti.</rdfs:comment>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
         <rdfs:label xml:lang="it">Riflettanza</rdfs:label>
         <rdfs:comment xml:lang="it">Questa classe rappresenta la riflettanza</rdfs:comment>
-        <rdfs:label xml:lang="en">Reflectance</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <rdfs:label xml:lang="en">Reflectance</rdfs:label>
     </rdf:Description>
     
 

@@ -25504,10 +25504,10 @@
 									<xsl:choose>
 										<xsl:when test="record/metadata/schede/*/LC/LDC/LDCQ and (not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)), 'nr')) and not(starts-with(lower-case(normalize-space(record/metadata/schede/*/LC/LDC/LDCQ)), 'n.r')))">
 											<rdfs:label>
-												<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT, ' ' normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
+												<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT), ' ', normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
 											</rdfs:label>
 											<l0:name>
-												<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT, ' ' normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
+												<xsl:value-of select="concat(normalize-space(record/metadata/schede/*/LC/LDC/LDCT), ' ', normalize-space(record/metadata/schede/*/LC/LDC/LDCQ))" />
 											</l0:name>
 										</xsl:when>
 										<xsl:otherwise>
