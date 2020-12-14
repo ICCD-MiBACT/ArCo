@@ -29,8 +29,10 @@ public class OAIHarvester {
 
 			String outputFolder = config.getString("outputFolder");
 			String oaiEndpoint = config.getString("oaiEndpoint");
+			Long limit = config.getLong("limit", Long.MAX_VALUE);
 
 			Harvester h = new Harvester(oaiEndpoint, outputFolder);
+			h.setLimit(limit);
 
 			h.getRecords();
 
