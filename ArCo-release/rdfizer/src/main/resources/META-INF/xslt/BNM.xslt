@@ -369,14 +369,54 @@
 			</arco-mp:hasLabel>			
 		</xsl:for-each>
 		<xsl:if test="not($sheetType='F')">
-		<xsl:if test="record/metadata/schede/*/LR">
-			<arco-mp:hasSpecimenHarvesting>
+			<xsl:if test="record/metadata/schede/*/LR">
+				<arco-mp:hasSpecimenHarvesting>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
+					</xsl:attribute>
+				</arco-mp:hasSpecimenHarvesting>
+			</xsl:if>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSF">
+			<arco-mp:hasChemicalFormula>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'SpecimenHarvesting/', $itemURI)" />
+					<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSF)))" />
 				</xsl:attribute>
-			</arco-mp:hasSpecimenHarvesting>
+			</arco-mp:hasChemicalFormula>
 		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSE">
+			<arco-mp:hasChemicalFormula>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSE)))" />
+				</xsl:attribute>
+			</arco-mp:hasChemicalFormula>
 		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMC">
+			<arco-mp:hasUnitCell>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'UnitCell/',  $itemURI)" />
+				</xsl:attribute>
+			</arco-mp:hasUnitCell>
+		</xsl:if>
+		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFA or record/metadata/schede/BNM/SM/SMF/SMFZ">
+			<arco-mp:hasCleavage>
+				<xsl:value-of select="concat($NS, 'Cleavage/',  $itemURI)" />
+			</arco-mp:hasCleavage>
+		</xsl:if>
+		<xsl:for-each select="record/metadata/schede/BNM/RM">
+			<xsl:if test="./RMC">
+				<arco-mp:hasUnitCell>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'UnitCell/',  $itemURI)" />
+					</xsl:attribute>
+				</arco-mp:hasUnitCell>
+			</xsl:if>
+			<xsl:if test="./RMF/RMFA or./RMF/RMFZ">
+				<arco-mp:hasCleavage>
+					<xsl:value-of select="concat($NS,'Cleavage/',  $itemURI, '-', position())" />
+				</arco-mp:hasCleavage>
+			</xsl:if>
+		</xsl:for-each>
 		<xsl:if test="record/metadata/schede/BNM/IM/IMA/IMAO">
 			<arco-mp:hasHostRock>
 				<xsl:attribute name="rdf:resource">
@@ -1643,7 +1683,7 @@
 			</arco-dd:isCharacteristicClassifiedBy>
 		</rdf:Description>
 	</xsl:if>
-	<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOP">
+	<xsl:if test="record/metadata/schede/BNM/SM/SMA/SMAF">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
             	<xsl:value-of select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMA/SMAF)))" />
@@ -1996,7 +2036,7 @@
 	</xsl:if>
 	<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFN">
 		<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-', 'mohs-hardness', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFH)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-', 'vhn-hardness', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMF/SMFN)))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label>
 				<xsl:value-of select="record/metadata/schede/BNM/SM/SMF/SMFN" />
@@ -2332,7 +2372,7 @@
 	</xsl:if>
 	<xsl:if test="./RMFN">
 		<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-', 'mohs-hardness', '-', arco-fn:urify(normalize-space(./RMFH)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-', 'vhn-hardness', '-', arco-fn:urify(normalize-space(./RMFN)))" />
 			<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 			<rdfs:label>
 				<xsl:value-of select="./RMFN" />
@@ -2376,18 +2416,6 @@
 				</xsl:choose>
 		    </xsl:otherwise>
 		</xsl:choose>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMC">
-			<arco-mp:hasUnitCell>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'UnitCell/',  $itemURI)" />
-				</xsl:attribute>
-			</arco-mp:hasUnitCell>
-		</xsl:if>
-		<xsl:if test="record/metadata/schede/BNM/SM/SMF/SMFA or record/metadata/schede/BNM/SM/SMF/SMFZ">
-			<arco-mp:hasCleavage>
-				<xsl:value-of select="concat($NS,'Cleavage/',  $itemURI)" />
-			</arco-mp:hasCleavage>
-		</xsl:if>
 		</rdf:Description>
 	</xsl:if> 
 	<xsl:for-each select="record/metadata/schede/BNM/RM">					
@@ -2432,18 +2460,6 @@
 				</xsl:choose>
 		    </xsl:otherwise>
 		</xsl:choose>
-		<xsl:if test="./RMC">
-			<arco-mp:hasUnitCell>
-				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS,'UnitCell/',  $itemURI)" />
-				</xsl:attribute>
-			</arco-mp:hasUnitCell>
-		</xsl:if>
-		<xsl:if test="./RMF/RMFA or./RMF/RMFZ">
-			<arco-mp:hasCleavage>
-				<xsl:value-of select="concat($NS,'Cleavage/',  $itemURI, '-', position())" />
-			</arco-mp:hasCleavage>
-		</xsl:if>
 		</rdf:Description>
 	</xsl:for-each>
 	
@@ -2554,20 +2570,6 @@
 				<arco-mp:imaCode>
 					<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSG" />
 				</arco-mp:imaCode>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSF">
-				<arco-mp:hasChemicalFormula>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSF)))" />
-					</xsl:attribute>
-				</arco-mp:hasChemicalFormula>
-			</xsl:if>
-			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSE">
-				<arco-mp:hasChemicalFormula>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSE)))" />
-					</xsl:attribute>
-				</arco-mp:hasChemicalFormula>
 			</xsl:if>
 			<arco-mp:hasDirectHigherRank>
 				<xsl:choose>
@@ -2709,20 +2711,6 @@
 					<arco-mp:imaCode>
 						<xsl:value-of select="record/metadata/schede/BNM/SM/SMS/SMSG" />
 					</arco-mp:imaCode>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSF">
-					<arco-mp:hasChemicalFormula>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSF)))" />
-						</xsl:attribute>
-					</arco-mp:hasChemicalFormula>
-				</xsl:if>
-				<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSE">
-					<arco-mp:hasChemicalFormula>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMS/SMSE)))" />
-						</xsl:attribute>
-					</arco-mp:hasChemicalFormula>
 				</xsl:if>
 			</xsl:if>
 			<xsl:if test="record/metadata/schede/BNM/SM/SMS/SMSD">
@@ -2966,20 +2954,7 @@
 					<xsl:value-of select="./RMS/RMSG" />
 				</arco-mp:imaCode>
 			</xsl:if>
-			<xsl:if test="./RMS/RMSF">
-				<arco-mp:hasChemicalFormula>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(./RMS/RMSF)))" />
-					</xsl:attribute>
-				</arco-mp:hasChemicalFormula>
-			</xsl:if>
-			<xsl:if test="./RMS/RMSE">
-				<arco-mp:hasChemicalFormula>
-					<xsl:attribute name="rdf:resource">
-						<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(./RMS/RMSE)))" />
-					</xsl:attribute>
-				</arco-mp:hasChemicalFormula>
-			</xsl:if>
+			
 			<arco-mp:hasDirectHigherRank>
 				<xsl:choose>
 					<xsl:when test="./RMN/RMNI">
@@ -3120,20 +3095,6 @@
 					<arco-mp:imaCode>
 						<xsl:value-of select="./RMS/RMSG" />
 					</arco-mp:imaCode>
-				</xsl:if>
-				<xsl:if test="./RMS/RMSF">
-					<arco-mp:hasChemicalFormula>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(./RMS/RMSF)))" />
-						</xsl:attribute>
-					</arco-mp:hasChemicalFormula>
-				</xsl:if>
-				<xsl:if test="./RMS/RMSE">
-					<arco-mp:hasChemicalFormula>
-						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS,'ChemicalFormula/', arco-fn:urify(normalize-space(./RMS/RMSE)))" />
-						</xsl:attribute>
-					</arco-mp:hasChemicalFormula>
 				</xsl:if>
 			</xsl:if>
 			<xsl:if test="./RMS/RMSD">
@@ -3606,7 +3567,7 @@
 			<l0:name xml:lang="en">
 				<xsl:value-of select="concat('Collecting location of cultural property ', $itemURI)" />
 			</l0:name>
-			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAM or record/metadata/schede/*/IM/IMA/IMAR or record/metadata/schede/*/IM/IMA/IMAT or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF">
+			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
 				<arco-mp:hasGeologicalContex>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
@@ -3965,14 +3926,14 @@
 	</xsl:for-each>		
 	</xsl:if>				
 					<!-- Geological context as individual -->
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAM or record/metadata/schede/*/IM/IMA/IMAR or record/metadata/schede/*/IM/IMA/IMAT or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF">
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAC or record/metadata/schede/*/IM/IMA/IMAE or record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'GeologicalContext/', $itemURI)" />
 			</xsl:attribute>
 			<rdf:type>
 				<xsl:attribute name="rdf:resource">
-		        	<xsl:value-of select="'https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation'" />
+		        	<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/GeologicalContext'" />
 				</xsl:attribute>
 			</rdf:type>
 			<rdfs:label xml:lang="it">
@@ -3982,19 +3943,19 @@
 				<xsl:value-of select="concat('Contesto geologico del luogo di raccolta del bene ', $itemURI)" />
 			</l0:name>
 			<rdfs:label xml:lang="en">
-				<xsl:value-of select="concat('Geological context of Collecting location of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
 			</rdfs:label>
 			<l0:name xml:lang="en">
-				<xsl:value-of select="concat('Geological context of Collecting location of cultural property ', $itemURI)" />
+				<xsl:value-of select="concat('Geological context of collecting location of cultural property ', $itemURI)" />
 			</l0:name>
-			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR or record/metadata/schede/*/IM/IMA/IMAM or record/metadata/schede/*/IM/IMA/IMAT">
+			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAE">
 				<arco-mp:hasMineralDeposit>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'MineralDeposit/', $itemURI)" />
 					</xsl:attribute>
 				</arco-mp:hasMineralDeposit>
 			</xsl:if>
-			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAD">
+			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAG">
 				<arco-mp:hasOutcrop>
 					<xsl:attribute name="rdf:resource">
 						<xsl:value-of select="concat($NS, 'Outcrop/', $itemURI)" />
@@ -4022,55 +3983,27 @@
 	</xsl:if>						
 	
 						<!-- Mineral deposit as individual -->
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAR or record/metadata/schede/*/IM/IMA/IMAM or record/metadata/schede/*/IM/IMA/IMAT">
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAP or record/metadata/schede/*/IM/IMA/IMAE">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 	            <xsl:value-of select="concat($NS, 'MineralDeposit/', $itemURI)" />
 	        </xsl:attribute>
 			<rdf:type>
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAR">
-						<xsl:attribute name="rdf:resource">
-	            			<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/MineralDeposit'" />
-	            		</xsl:attribute>
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAM">
-						<xsl:attribute name="rdf:resource">
-	            			<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/Mine'" />
-	            		</xsl:attribute>
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAT">
-						<xsl:attribute name="rdf:resource">
-	            			<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/Geotope'" />
-	            		</xsl:attribute>
-					</xsl:when>
-				</xsl:choose>	
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of	select="'https://w3id.org/arco/ontology/movable-property/MineralDeposit'" />
+				</xsl:attribute>	
 			</rdf:type>
-			<rdfs:label>
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAR">
-	            		<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAR)" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAM">
-	            		<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAM)" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAT">
-	            		<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAT)" />
-					</xsl:when>
-				</xsl:choose>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Giacimento del bene ', $itemURI)" />
 			</rdfs:label>
-			<l0:name>
-				<xsl:choose>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAR">
-	            		<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAR)" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAM">
-	            		<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAM)" />
-					</xsl:when>
-					<xsl:when test="record/metadata/schede/*/IM/IMA/IMAT">
-	            		<xsl:value-of select="normalize-space(record/metadata/schede/*/IM/IMA/IMAT)" />
-					</xsl:when>
-				</xsl:choose>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Giacimento del bene ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Mineral deposit of cultural property ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Mineral deposit of cultural property ', $itemURI)" />
 			</l0:name>
 			<xsl:if test="record/metadata/schede/*/IM/IMA/IMAP">
 				<arco-mp:hasMineralDepositType>
@@ -4128,7 +4061,7 @@
 	</xsl:if>
 					
 						<!-- OutCrop as individual -->
-	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAD">
+	<xsl:if test="record/metadata/schede/*/IM/IMA/IMAF or record/metadata/schede/*/IM/IMA/IMAD or record/metadata/schede/*/IM/IMA/IMAG">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
 				<xsl:value-of select="concat($NS, 'Outcrop/', $itemURI)" />
@@ -4946,16 +4879,16 @@
             	   	</xsl:attribute>
 				</rdf:type>
 				<rdfs:label xml:lang="it">
-					<xsl:value-of select="'Misure della cella del minerale ', $itemURI" />
+					<xsl:value-of select="concat('Misure della cella del minerale ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="it">
-					<xsl:value-of select="'Misure della cella del minerale ', $itemURI" />
+					<xsl:value-of select="concat('Misure della cella del minerale ', $itemURI)" />
 				</l0:name>
 				<rdfs:label xml:lang="en">
-					<xsl:value-of select="'Measuerements of cell of mineral ', $itemURI" />
+					<xsl:value-of select="concat('Measuerements of cell of mineral ', $itemURI)" />
 				</rdfs:label>
 				<l0:name xml:lang="en">
-					<xsl:value-of select="'Measuerements of cell of mineral ', $itemURI" />
+					<xsl:value-of select="concat('Measuerements of cell of mineral ', $itemURI)" />
 				</l0:name>
 				<arco-core:current>
     	        	<xsl:value-of select="true()" />
@@ -5345,9 +5278,100 @@
 					</arco-dd:includesTechnicalCharacteristic>
 				</xsl:if>
 			</rdf:Description>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCS">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+        	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCS)))" />
+         			</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCS)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCS)" />
+					</l0:name>
+					<arco-dd:isCharacteristicClassifiedBy>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystalSystem'" />
+	            		</xsl:attribute>
+					</arco-dd:isCharacteristicClassifiedBy>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCL">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+        	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCL)))" />
+         			</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCL)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCL)" />
+					</l0:name>
+					<arco-dd:isCharacteristicClassifiedBy>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystalClass'" />
+	            		</xsl:attribute>
+					</arco-dd:isCharacteristicClassifiedBy>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCP">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+        	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCP)))" />
+         			</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCP)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCP)" />
+					</l0:name>
+					<arco-dd:isCharacteristicClassifiedBy>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/PointGroup'" />
+	            		</xsl:attribute>
+					</arco-dd:isCharacteristicClassifiedBy>
+				</rdf:Description>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/BNM/SM/SMC/SMCG">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+        	    		<xsl:value-of select="concat($NS, 'CrystallographicCharacteristic/', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMC/SMCG)))" />
+         			</xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/CrystallographicCharacteristic'" />
+						</xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCG)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(record/metadata/schede/BNM/SM/SMC/SMCG)" />
+					</l0:name>
+					<arco-dd:isCharacteristicClassifiedBy>
+						<xsl:attribute name="rdf:resource">
+            				<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/SpaceGroup'" />
+	            		</xsl:attribute>
+					</arco-dd:isCharacteristicClassifiedBy>
+				</rdf:Description>
+			</xsl:if>
 		</xsl:if>
-	</xsl:if>
-		
+	</xsl:if>		
 	<xsl:for-each select="record/metadata/schede/BNM/RM">					
 	<xsl:if test="./RMC">
 			<rdf:Description>
@@ -6030,7 +6054,145 @@
 			</rdf:Description>
 		</xsl:if>
 	</xsl:if>
-	
+	<xsl:for-each select="record/metadata/schede/BNM/RM/RMM">
+	<xsl:if test="./RMMF or ./RMMB">
+		<rdf:Description>
+			<xsl:attribute name="rdf:about">
+	       		<xsl:value-of select="concat($NS,'Reflectance/', $itemURI)" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="'https://w3id.org/arco/ontology/movable-property/Reflectance'" />
+				</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="concat('Riflettanza del minerale ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="concat('Riflettanza del minerale ', $itemURI)" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="concat('Reflectance of mineral ', $itemURI)" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="concat('Reflectance of mineral ', $itemURI)" />
+			</l0:name>
+			<arco-dd:hasMeasurementCollection>
+				<xsl:attribute name="rdf:resource">
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/Reflectance/', $itemURI, '-', position())" />
+				</xsl:attribute>
+			</arco-dd:hasMeasurementCollection>
+		</rdf:Description>
+		<rdf:Description>	
+			<xsl:attribute name="rdf:about">
+				<xsl:value-of select="concat($NS, 'MeasurementCollection/Reflectance/', $itemURI, '-', position())" />
+			</xsl:attribute>
+			<rdf:type>
+				<xsl:attribute name="rdf:resource">
+       	       		<xsl:value-of select="'https://w3id.org/arco/ontology/denotative-description/MeasurementCollection'" />
+           	   	</xsl:attribute>
+			</rdf:type>
+			<rdfs:label xml:lang="it">
+				<xsl:value-of select="'Misure della riflettanza del minerale ', $itemURI" />
+			</rdfs:label>
+			<l0:name xml:lang="it">
+				<xsl:value-of select="'Misure della riflettanza del minerale ', $itemURI" />
+			</l0:name>
+			<rdfs:label xml:lang="en">
+				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
+			</rdfs:label>
+			<l0:name xml:lang="en">
+				<xsl:value-of select="'Measuerements of reflectance of mineral ', $itemURI" />
+			</l0:name>
+			<arco-core:current>
+            	<xsl:value-of select="true()" />
+       	    </arco-core:current>
+			<xsl:if test="./RMMF">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-reflectance', '-', position())" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+			<xsl:if test="./RMMB">
+				<arco-dd:hasMeasurement>
+					<xsl:attribute name="rdf:resource">
+						<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-bireflectance', '-', position())" />
+					</xsl:attribute>
+				</arco-dd:hasMeasurement>
+			</xsl:if>
+		</rdf:Description>
+		<xsl:if test="./RMMF">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-reflectance', '-', position())" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', ./RMMF)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', ./RMMF)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMMF)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMMF)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Reflectance')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-reflectance', '-', arco-fn:urify(normalize-space(./RMMF)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-reflectance', '-', arco-fn:urify(normalize-space(./RMMF)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMMF" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMMF" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+		<xsl:if test="./RMMB">
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-bireflectance', '-', position())" />
+				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
+				<rdfs:label xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', ./RMMB)" />
+				</rdfs:label>
+				<l0:name xml:lang="en">
+					<xsl:value-of select="concat('Measurement of reflectance of mineral ', $itemURI, ': ', ./RMMB)" />
+				</l0:name>
+				<rdfs:label xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMMB)" />
+				</rdfs:label>
+				<l0:name xml:lang="it">
+					<xsl:value-of select="concat('Misura della rifrazione del minerale ', $itemURI, ': ', ./RMMB)" />
+				</l0:name>
+				<arco-dd:hasMeasurementType>
+					<xsl:attribute name="rdf:resource" select="concat('https://w3id.org/arco/ontology/movable-property/', 'Bireflectance')" />
+				</arco-dd:hasMeasurementType>
+				<arco-dd:hasValue>
+					<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', $itemURI, '-bireflectance', '-', arco-fn:urify(normalize-space(./RMMB)))" />
+				</arco-dd:hasValue>
+			</rdf:Description>
+			<rdf:Description>
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-bireflectance', '-', arco-fn:urify(normalize-space(./RMMB)))" />
+				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
+				<rdfs:label>
+					<xsl:value-of select="./RMMB" />
+				</rdfs:label>
+				<l0:name>
+					<xsl:value-of select="./RMMB" />
+				</l0:name>
+			</rdf:Description>
+		</xsl:if>
+	</xsl:if>
+	</xsl:for-each>	
+
 				<!-- Refraction as individual -->
 	<xsl:if test="record/metadata/schede/BNM/SM/SMO/SMOI or record/metadata/schede/BNM/SM/SMO/SMOR or record/metadata/schede/BNM/SM/SMO/SMOO or record/metadata/schede/BNM/SM/SMO/SMOE or record/metadata/schede/BNM/SM/SMO/SMOA or record/metadata/schede/BNM/SM/SMO/SMOB or record/metadata/schede/BNM/SM/SMO/SMOG or record/metadata/schede/BNM/SM/SMO/SMOV or record/metadata/schede/BNM/SM/SMO/SMOD">
 		<rdf:Description>
@@ -6206,7 +6368,7 @@
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-rbirefringence', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOR)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-birefringence', '-', arco-fn:urify(normalize-space(record/metadata/schede/BNM/SM/SMO/SMOR)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="record/metadata/schede/BNM/SM/SMO/SMOR" />
@@ -6481,13 +6643,13 @@
 			</l0:name>
 			<arco-dd:hasMeasurementCollection>
 				<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI)" />
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI, '-', position())" />
 				</xsl:attribute>
 			</arco-dd:hasMeasurementCollection>
 		</rdf:Description>
 		<rdf:Description>	
 				<xsl:attribute name="rdf:about">
-					<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI)" />
+					<xsl:value-of select="concat($NS, 'MeasurementCollection/Refraction/', $itemURI, '-', position())" />
 				</xsl:attribute>
 				<rdf:type>
 					<xsl:attribute name="rdf:resource">
@@ -6512,70 +6674,70 @@
 				<xsl:if test="./RMO/RMOI">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-refractive-index')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-refractive-index', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOR">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-birefingence')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-birefingence', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOO">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOE">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOA">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOB">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOG">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOV">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-2vAngle')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-2vAngle', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 				<xsl:if test="./RMO/RMOD">
 					<arco-dd:hasMeasurement>
 						<xsl:attribute name="rdf:resource">
-							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-dispersion')" />
+							<xsl:value-of select="concat($NS, 'Measurement/', $itemURI, '-dispersion', '-', position())" />
 						</xsl:attribute>
 					</arco-dd:hasMeasurement>
 				</xsl:if>
 			</rdf:Description>
 		<xsl:if test="./RMO/RMOI">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-refractive-index')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-refractive-index', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOI)" />
@@ -6609,7 +6771,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOR">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-birefringence')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-birefringence', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOR)" />
@@ -6631,7 +6793,7 @@
 				</arco-dd:hasValue>
 			</rdf:Description>
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-rbirefringence', '-', arco-fn:urify(normalize-space(./RMO/RMOR)))" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Value/', $itemURI, '-birefringence', '-', arco-fn:urify(normalize-space(./RMO/RMOR)))" />
 				<rdf:type rdf:resource="https://w3id.org/italia/onto/MU/Value" />
 				<rdfs:label>
 					<xsl:value-of select="./RMO/RMOR" />
@@ -6643,7 +6805,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOO">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-omega-refractive-index', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOO)" />
@@ -6677,7 +6839,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOE">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-epsilon-refractive-index', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOE)" />
@@ -6711,7 +6873,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOA">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-alfa-refractive-index', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOA)" />
@@ -6745,7 +6907,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOB">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-beta-refractive-index', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOB)" />
@@ -6779,7 +6941,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOG">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-gamma-refractive-index', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOG)" />
@@ -6813,7 +6975,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOV">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-2vAngle')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-2vAngle', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOV)" />
@@ -6847,7 +7009,7 @@
 		</xsl:if>
 		<xsl:if test="./RMO/RMOD">
 			<rdf:Description>
-				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-dispersion')" />
+				<xsl:attribute name="rdf:about" select="concat($NS, 'Measurement/', $itemURI, '-dispersion', '-', position())" />
 				<rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/Measurement" />
 				<rdfs:label xml:lang="en">
 					<xsl:value-of select="concat('Measurement of refration of mineral ', $itemURI, ': ', ./RMO/RMOD)" />
