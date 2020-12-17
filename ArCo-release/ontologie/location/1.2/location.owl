@@ -443,6 +443,61 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSiteDefinition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSiteDefinition">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteDefinitionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteDefinition"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore giuridico a una delle sue componenti, cioè alla definizione della sua tipologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links the type of a cultural institute or site to one of its components, that is to the definition of its type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha definizione del contenitore giuridico</rdfs:label>
+        <rdfs:label xml:lang="en">has cultiral institute or site definition</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSiteSpecification -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSiteSpecification">
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteSpecificationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteSpecification"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la tipologia di un contenitore giuridico a una delle sue componenti, cioè alle specifiche sulla sua tipologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links the type of a cultural institute or site to one of its components, that is to the specifications of its type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha qualificazione del contenitore giuridico</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural institute or site specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGQ</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSiteType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCulturalInstituteOrSiteType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/hasType"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteTypeof"/>
+        <rdfs:domain rdf:resource="http://dati.beniculturali.it/cis/CulturalInstituteOrSite"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega un contenitore giuridico al tipo di contenitore giuridico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects a Cultural institute or site to its type, to allow its correct and precise identification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">ha tipo di contenitore giuridico</rdfs:label>
+        <rdfs:label xml:lang="en">has cultural institute or site type</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT; CG/CGQ</a-cat:iccdNormTag>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/hasCulturalPropertyAddress">
@@ -937,6 +992,22 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
+    <!-- https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteDefinitionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteDefinition"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega la definizione del contenitore giuridico alla sua tipologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links the definition of a cultural institute or site to its type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is cultural institute or site definition of</rdfs:label>
+        <rdfs:label xml:lang="it">è definizione del contenitore giuridico di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteOf">
@@ -947,6 +1018,39 @@ In this module the following Ontology Design Patterns have been used:
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
         <rdfs:label xml:lang="en">is cultural institute or site of</rdfs:label>
         <rdfs:label xml:lang="it">è luogo o istituto della cultura di</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteSpecificationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteSpecificationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteSpecification"/>
+        <rdfs:range rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega le specifiche sulla qualificazione del contenitore giuridico alla sua tipologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property links the specification of a cultural institute or site to one of its type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is cultural institute or site specification of</rdfs:label>
+        <rdfs:label xml:lang="it">è specificazione di contenitore giuridico</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteTypeof -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/location/isCulturalInstituteOrSiteTypeof">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/arco/ontology/core/isTypeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType"/>
+        <rdfs:range rdf:resource="http://dati.beniculturali.it/cis/CulturalInstituteOrSite"/>
+        <rdfs:comment xml:lang="it">Questa proprietà collega il tipo di contenitore giuridico a un contenitore giuridico, per permetterne la corretta e precisa individuazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property connects the type of cultural institute or site to a cultural institute or site, to allow its correct and precise identification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="en">is cultural institute or site type of</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di contenitore giuridico di</rdfs:label>
         <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
     </owl:ObjectProperty>
@@ -1974,6 +2078,54 @@ resource:CadastralIdentity/1400055239-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag xml:lang="it">ICCD Normativa Trasversale: GE/GEC - Normative precedenti: GP/GPD; GA/GAPD; GL/GLS</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteDefinition -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteDefinition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la definizione della tipologia di un contenitore giuridico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type definition of a cultural insititute or site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Definizione di Contenitore Giuridico</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural Institute or Site Definition</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteSpecification -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Description"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la specificazione della tipologia di un contenitore giuridico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type specification of a cultural insititute or site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Specificazione di Contenitore Giuridico</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural Institute or Site Specification</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGQ</a-cat:iccdNormTag>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType -->
+
+    <owl:Class rdf:about="https://w3id.org/arco/ontology/location/CulturalInstituteOrSiteType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arco/ontology/core/Type"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la tipologia di un contenitore giuridico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class represents the type of a cultural insititute or site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/arco/ontology/location"/>
+        <rdfs:label xml:lang="it">Tipo di Contenitore Giuridico</rdfs:label>
+        <rdfs:label xml:lang="en">Cultural Institute or Site type</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag xml:lang="it">ICCD Normativa CG: CG/CGT, CG/CGQ</a-cat:iccdNormTag>
     </owl:Class>
     
 

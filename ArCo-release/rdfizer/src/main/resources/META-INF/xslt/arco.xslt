@@ -178,7 +178,7 @@
 	<xsl:template match="/">
 
 		<rdf:RDF>
-		<xsl:if test="not($sheetType='CF' or $sheetType='AUT')" >
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT')" >
 			<!-- We firstly introduce the sheet. -->
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -20369,6 +20369,102 @@
 						<xsl:value-of select="normalize-space(.)" />
 					</l0:name>
 				</rdf:Description>
+			</xsl:for-each>
+			<xsl:for-each select="record/metadata/schede/*/OG/OGA">
+				<rdf:Description>
+					<xsl:attribute name="rdf:about">
+                        	<xsl:value-of
+						select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(./OGAD)))" />
+                    </xsl:attribute>
+					<rdf:type>
+						<xsl:attribute name="rdf:resource">
+                            <xsl:value-of
+							select="'https://w3id.org/arco/ontology/denotative-description/DesignationInTime'" />
+                        </xsl:attribute>
+					</rdf:type>
+					<rdfs:label>
+						<xsl:value-of select="normalize-space(./OGAD)" />
+					</rdfs:label>
+					<l0:name>
+						<xsl:value-of select="normalize-space(./OGAD)" />
+					</l0:name>
+					<xsl:if test="./OGAG and (not(starts-with(lower-case(normalize-space(./OGAG)), 'nr')) and not(starts-with(lower-case(normalize-space(./OGAG)), 'n.r')))">
+						<arco-dd:hasDesignationType>
+							<xsl:attribute name="rdf:resource">
+		                                <xsl:choose>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='attuale' or lower-case(normalize-space(./OGAG))='attuale di uso corrente' or lower-case(normalize-space(./OGAG))='attuale ufficiale'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CurrentDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='attribuita'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/AssignedDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='altra lingua'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/OtherLanguageDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='consuetudinaria'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CustomaryDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='dialettale'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/DialectalDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='gergale'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/SlangDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='idiomatica'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/IdiomaticDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:when test="lower-case(normalize-space(./OGAG))='locale'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/LocalDesignation'" />
+		                                    </xsl:when>
+		                                     <xsl:when test="lower-case(normalize-space(./OGAG))='originaria'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/OriginalDesignation'" />
+		                                    </xsl:when>
+		                                     <xsl:when test="lower-case(normalize-space(./OGAG))='storica'">
+		                                        <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/HistoricalDesignation'" />
+		                                    </xsl:when>
+		                                    <xsl:otherwise>
+		                                        <xsl:value-of select="concat($NS, 'DesignationType/', arco-fn:urify(normalize-space(./OGAG)))" />
+		                                    </xsl:otherwise>
+		                                </xsl:choose>
+	                			</xsl:attribute>
+						</arco-dd:hasDesignationType>
+					</xsl:if>
+				</rdf:Description>
+				<!-- designation type as an individual -->
+				<xsl:if test="./OGAG and (not(starts-with(lower-case(normalize-space(./OGAG)), 'nr')) and not(starts-with(lower-case(normalize-space(./OGAG)), 'n.r')))">
+					<xsl:choose>
+						<xsl:when test="lower-case(normalize-space(./OGAG))='attuale'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='attuale ufficiale'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='attuale di uso corrente'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='idiomatica'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='gergale'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='dialettale'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='consuetudinaria'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='altra lingua'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='locale'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='storica'" />
+						<xsl:when test="lower-case(normalize-space(./OGAG))='originaria'" />
+						<xsl:when test="./OGAG and not(./OGAG='.' or ./OGAG='-' or ./OGAG='/')">
+							<rdf:Description>
+								<xsl:attribute name="rdf:about">
+									<xsl:value-of select="concat($NS,'DesignationType/', arco-fn:urify(normalize-space(./OGAG)))" />
+								</xsl:attribute>
+								<rdf:type>
+									<xsl:attribute name="rdf:resource">
+											<xsl:value-of
+										select="'https://w3id.org/arco/ontology/denotative-description/DesignationType'" />
+										</xsl:attribute>
+								</rdf:type>
+								<rdfs:label>
+									<xsl:value-of select="normalize-space(./OGAG)" />
+								</rdfs:label>
+								<l0:name>
+									<xsl:value-of select="normalize-space(./OGAG)" />
+								</l0:name>
+							</rdf:Description>
+						</xsl:when>
+					</xsl:choose>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- Name in time for NU (OGTO) -->
 			<xsl:if test="record/metadata/schede/NU/OG/OGT/OGTO">

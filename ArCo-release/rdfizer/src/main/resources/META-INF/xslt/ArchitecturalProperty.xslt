@@ -238,6 +238,31 @@
 				</xsl:otherwise>
 			</xsl:choose>
 			</xsl:if>
+			<xsl:if test="./SIIP">
+			<xsl:variable name="siip-virgola" select="./SIIP" />
+			<xsl:variable name="siip" select="translate($siip-virgola, ';', ',')" />
+			<xsl:variable name="floorssplit" select="arco-fn:split($siip)" />
+			<xsl:choose>
+				<xsl:when test="not(./SIIR) or ./SIIR='intero bene' or ./SIIR='integrale' or ./SIIR='tutta' or ./SIIR='totale' or ./SIIR='carattere generale' or (starts-with(lower-case(normalize-space(./SIIR)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./SIIR)), 'nr')) or (starts-with(lower-case(normalize-space(./SIIR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intero')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intera')) or (starts-with(lower-case(normalize-space(./SIIR)), 'esemplar'))">
+					<xsl:for-each select="$floorssplit">
+						<arco-core:hasPart>
+							<xsl:attribute name="rdf:resource">
+    		    				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+							</xsl:attribute>
+						</arco-core:hasPart>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="./SIIR">
+						<arco-core:hasPart>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+							</xsl:attribute>
+						</arco-core:hasPart>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
+			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/A/PN">
 			<xsl:if test="./PNT/PNTQ or ./PNT/PNTS or ./PNT/PNTF or ./PNT/PNTE">
@@ -439,7 +464,33 @@
 			</l0:name>
 		</rdf:Description>
 	</xsl:for-each>	
-	
+	<xsl:for-each select="record/metadata/schede/A/SI/SII">
+		<xsl:if test="./SIIP">
+			<xsl:if test="not(./SIIR) or ./SIIR='intero bene' or ./SIIR='integrale' or ./SIIR='tutta' or ./SIIR='totale' or ./SIIR='carattere generale' or (starts-with(lower-case(normalize-space(./SIIR)), 'non accertabile')) or (starts-with(lower-case(normalize-space(./SIIR)), 'nr')) or (starts-with(lower-case(normalize-space(./SIIR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intero')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intera')) or (starts-with(lower-case(normalize-space(./SIIR)), 'esemplar'))">
+			<xsl:variable name="siip-virgola" select="./SIIP" />
+			<xsl:variable name="siip" select="translate($siip-virgola, ';', ',')" />
+			<xsl:variable name="floorssplit" select="arco-fn:split($siip)" />
+				<xsl:for-each select="$floorssplit">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+   	    					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/immovable-property/Floor'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(.)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(.)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:for-each>
+			</xsl:if>
+		</xsl:if>
+	</xsl:for-each>
 
 							<!-- ConstructionDesign as individual -->
 	<xsl:for-each select="record/metadata/schede/A/PN/PNT">
@@ -1722,7 +1773,42 @@
 						</xsl:attribute>
 					</arco-ip:hasInteriorSubdivision>
 				</xsl:if>
+				<xsl:if test="./SIIP">
+					<xsl:variable name="siip-virgola" select="./SIIP" />
+					<xsl:variable name="siip" select="translate($siip-virgola, ';', ',')" />
+					<xsl:variable name="floorssplit" select="arco-fn:split($siip)" />
+					<xsl:for-each select="$floorssplit">
+						<arco-core:hasPart>
+							<xsl:attribute name="rdf:resource">
+    		    				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+							</xsl:attribute>
+						</arco-core:hasPart>
+					</xsl:for-each>
+				</xsl:if>
 			</rdf:Description>
+		<xsl:if test="./SIIP">
+			<xsl:variable name="siip-virgola" select="./SIIP" />
+			<xsl:variable name="siip" select="translate($siip-virgola, ';', ',')" />
+			<xsl:variable name="floorssplit" select="arco-fn:split($siip)" />
+				<xsl:for-each select="$floorssplit">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+   	    					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="'https://w3id.org/arco/ontology/immovable-property/Floor'" />
+							</xsl:attribute>
+						</rdf:type>
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(.)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(.)" />
+						</l0:name>
+					</rdf:Description>
+				</xsl:for-each>
+			</xsl:if>
 		</xsl:if>
 	</xsl:for-each>	
 	
