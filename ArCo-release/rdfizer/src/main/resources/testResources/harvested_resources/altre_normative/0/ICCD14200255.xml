@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200255@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_6413567237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e della seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Magnago</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Magnago</LCC>
+                    <LCL hint="Località">MAGNAGO</LCL>
+                    <LCI hint="Indirizzo">viale Rimembranze c/o Parco delle Rimembranze</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale situato all’esterno del centro, sul quale si innesta alla sua dx, tra via A. Manzoni e via Firenze, il parco con all’interno il monumento ai caduti</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Magnago come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il viale delle Rimembranze, situato tra via G. Marconi e via Asilo, è circoscritto da un marciapiede su cui si inseriscono le piante di gelso andando a formare i filari che lo delimitano. Alla sua dx, tra via A. Manzoni e via Firenze, è situato il parco, un ampia area a prato, con percorsi pedonali in ghiaia con all’interno alte piante di abeti, gelsi e tigli. All’angolo superiore sx, in corrispondenza con il viale delle Rimembranze, è situato il monumento ai caduti, un lungo muro in cemento che si estende longitudinalmente all'interno dello stesso, su cui è inserito una trave in acciaio su cui sono inseriti i nomi dei caduti, concludendo in uno spazio circolare, a mò di arena, con gradonata delimitata all’estremità da una parete di circa 2m di altezza, la quale copre una rampa di accesso dal parco</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento</AIDI>
+                        <AIDD hint="Descrizione">Il monumento architettonico è composto da un lungo muro in cemento che, a partire da un angolo del parco si estende all'interno creando e delimitando alla fine uno spazio circolare. I gradini sono parte integrante della struttura ed in corrispondenza dell'ultimo è presente una putrella in acciaio su cui sono riportati i nomi dei caduti</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">putrella</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">relazione di progetto</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">targa inchiodata</ISES>
+                        <ISEC hint="Classe di appartenenza">documentaria</ISEC>
+                        <ISEI hint="Trascrizione">DALLA RELAZIONE DI PROGETTO (i dati della stessa incisi non sono leggibili)</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">Putrella</ISEP>
+                        <ISEZ hint="Descrizione">nominativo del caduto, data di nascita, data di morte</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">N.5 Targhe poste orizzontalmente inchiodate alla putrella</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">BOTTINI AMEDEO N.20.9.1892-M.12.7.1916/COLOMBO ANGELO N.28.11.1891-M.10.10.1916/FERRARIO CARLO N.16.8.1891-M.23.12.1916/CRIVELLI ANTONIO N.31.3.1884-M.16.8.1917/TRITTONI GIOVANNI N.21.1.1898-M.16.8.1917/GRITTI BATTISTA N.9.9.1912-M.12.5.1937/LAMPERTI CARLO N.2.8.1893-M.1.9.1917/COLOMBO FILIPPO N.24.12.1898-M.1.10.1917/FERRE ANGELO N.31.1.1889-M.1.11.1917/COLOMBO LUIGI N.3.8.1897-M.15.6.1918/COLOMBO GIOVANNI N.2.6.1889-M.4.4.1919/MAININI MARIO N.13.3.1914-M.7.3.1945/PIANTANIDA UMBERTO N.28.3.1895-M.3.7.1915/TACCHI PASQUALE N.1892-M.15.8.1915/COLOMBO ENRICO N.30.10.1894-M.21.10.1915/BORLANDELLI GIUSEPPE N.24.2.1884-M.27.5.1916/COLOMBO ALBERTO N.23.10.1896-M.16.6.1916/CACCIA GAETANO N.30.10.1897-M.1.8.1920/LEONI GIOVANNI N.2.7.1881-M.20.17.1917/BELLONI PIETRO N.1892-M.12.8.1916/CHIODINI GIOVANNI N.17.5.1883-M.27.10.1917/CALLONI ANGELO N.30.11.1911-M.22.6.1936</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">Putrella</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">nominativo del caduto, data di nascita, data di morte</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">N.5 Targhe poste orizzontalmente inchiodate alla putrella</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">BRANCA ANGELO CL 1900-M.28.4.1945/COLOMBO ALBERTO CL 1908-M.18.1.1945/CRESPI STEFANO CL 1915-M.7.4.1941/FERRARIO GEROLAMO CL 1917-M.4.1.1945/GIANA GIUSEPPE CL 1910-M.10.3.1941/MAININI LUIGI CL 1914-M.4.4.1941/MELLONI LUIGI CL 1907-M.22.1.1942/ROLLA GIACOBBE CL 1913-M.5.10.1945/ROLLA GIOVANNI CL 1913-M.13.8.1944/ROSA GEROLAMO CL 1914-M.31.3.1944/ROSA GIUSEPPE CL 1917-M.28.4.1942/CRIVELLI PIERINO CL 1915-M.25.1.1943/LANCENI BARTOLOMEO CL 1921-M.29.6.1942/LANCENI CARLO CL 1919-M.22.12.1942/LATTUADA LUIGI CL 1916-M.18.12.1941/MAGNI UGO CL 1918-M.28.3.1942/MALOSETTI ANTONIO CL 1914-M.24.12.1942/MARZAROLI MARIO CL 1922-M.17.12.1942/MURO FRANCESCO CL 1918-M.25.1.1943/NICOLI GIOVANNI CL 1920-M.20.8.1942/PISONI REMO CL 1927-M.26.3.1945/ROSA GAETANO CL 1911-M.19.1.1943</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">strada carrabile</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">parco</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento</STCP>
+                        <STCC hint="Stato di conservazione">cattivo</STCC>
+                        <STCS hint="Specifiche">macchia</STCS>
+                        <STCN hint="Note">Il degrado riguarda principalmente la putrella</STCN>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.795599</GECX>
+                        <GECY hint="Coordinata y">45.577005</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.801540</GECX>
+                        <GECY hint="Coordinata y">45.575961</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">8.799874</GECX>
+                        <GECY hint="Coordinata y">45.575732</GECY>
+                        <GECS hint="Note">Le coordinate geografiche sono state prese al centro del parco</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341860) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Magnago</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">11,19/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m.(viale)/36,204,37,38,42,41,39,40,45 parte</CTSN>
+                        <CTSP hint="Proprietari">Comune di Magnago</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Magnago</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Magnago_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale verso il parco</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Magnago_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Magnago_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale verso il parco</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Magnago_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Magnago_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del parco posto alla dx del viale</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Magnago_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Magnago_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del monumento ai caduti posto all'angolo sx della porzione terminale del parco</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/08/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Magnago_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Magnago_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.11, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Magnago_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Magnago_C2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.19, part.36,204,37,38,42,41,39,40,45 parte</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Magnago_C2.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Magnago_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/08/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Magnago_A1.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Magnago_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">documentazione fotografica integrativa del viale</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/08/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Magnago_5.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Magnago_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">documentazione fotografica integrativa del parco</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/08/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Magnago_6.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza, Udine 2012</BIBM>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>8.809149</x>
+                    <y>45.576734</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

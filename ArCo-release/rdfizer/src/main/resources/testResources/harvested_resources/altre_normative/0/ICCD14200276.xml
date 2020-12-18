@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200276@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_3117188237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Rosate</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Rosate</LCC>
+                    <LCL hint="Località">ROSATE</LCL>
+                    <LCI hint="Indirizzo">viale della Rimembranza</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale situato all’interno del centro abitato</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Rosate come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”. Da una veduta storica degli anni venti, l’attuale viale era una semplice via delimitata dalle abitazioni priva di alberatura</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1920/00/00</DTSI>
+                        <DTSF hint="A">1923/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Viale situato all’interno del centro abitato, carrabile, delimitato da un doppio filare di tigli, interrotto nel tratto davanti alla chiesa. Il monumento, situato all’inizio del viale, sul lato dx, in una piccola area a verde delimitato da una recinzione in ferro</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">Monumento</AIDI>
+                        <AIDD hint="Descrizione">Il monumento, situato all’inizio del viale, sul lato dx, in una piccola area a verde delimitato da una recinzione in ferro, è formato da un alto basamento posto su gradinata. In cima un soldato in bronzo a grandezza naturale, in abiti civili, che solleva nella mano destra un'asta con bandiera e nella mano sinistra tiene un rametto di pianta. Sul basamento oltre alle targhe riportanti i nomi dei caduti, è affissa una scultura in bassorilievo raffigurante una figura femminile che sorregge un soldato sofferente</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">lato frontale</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Scritta formata da lettere in bronzo affisse al basamento</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">I ROSATESI AI PROPRI EROI</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">lato sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra fis. da bulloni circolari in bronzo con scritta incisa colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI ROSATESI/MAGANZA GIUSEPPE/MERCHETTI GIUSEPPE/MORANDOTTI MARIO/MORANDOTTI PIETRO/MORENNA GIUSEPPE/OLDRATI ALFREDO/OLDRATI ANGELO/OLDRATI CARLO/OLDRATI GIOVANNI/PANARA EDOARDO/PASI ALFREDO/PAROZZI GIUSEPPE/PORTALUPPI ENRICO/RADICI ERNESTO/RE ANTONIO/RE GUGLIELMO/RE PIETRO/ROBECCHI CARLO/ROGNONI FRANCESCO/SACCHI CARLO/SEGU’ PIETRO/SPAIRANI ALESSANDRO/STELLA GIUSEPPE/SUIGHI SILVIO/SUIGHI VINCENZO/TANDU’ LUIGI/VILLA STEFANO/ZOANNI GIUSEPPE/CAINARCA LUIGI/INVERNIZZI GIUSEPPE</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">Fronte posteriore</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra d’Africa e nella guerra del 1940-1945</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra fis. da bulloni circolari in bronzo con scritta incisa colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">GUERRA D’AFRICA E GUERRA 1940 1945/CADUTI/BARBIERI FRANCESCO/CASALI ALFREDO/COSTA FRANCESCO/MALANDRA MARIO/MARAGGIA ANGELO/MORETTI AMBROGIO/NIDASIO GIUSEPPE/OLDRATI MARIO/PORTALUPPI ENRICO/TRONCONI FRANCESCO/VILLA ANGELO/BOSONI CARLO/CICERI LUIGI/DEVOTI LUIGI/MALDIFASSI ANGELO/MARONI GASPARE/MORO GUIDO/NIDASIO STEFANO/PASI UGO/ROSCIO LUCIANO/TRONCONI GIUSEPPE/BRAMBILLA GIUSEPPE//DISPERSI//BARBIERI CAMILLO/CAINARCA RENZO/CICERI ANGELO/RACCHI RICCARDO/CARIMALI LUIGI/MACANZA ALFREDO/MARGHETTI UMBERTO/NIDASIO ANGELO/NOE CARLO/ORLANDI EUGENIO/PANARA ANGELO/RADICI CARLO/SCARIONI ANGELO/SFONDRINI LUIGI/SUIGHI ANGELO/TURRI CARLO/BOLOGNINI LEOPOLDO/LONATI GIOVANNI</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento_basamento</ISER>
+                        <ISEP hint="Posizione">Fronte posteriore</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Racconto della sconfitta austro-ungarica</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo imbrunito fissata con bulloni piramidali</ISES>
+                        <ISEC hint="Classe di appartenenza">descrittiva</ISEC>
+                        <ISEI hint="Trascrizione">IV NOVEMBRE MGMXVIII/LA GUERRA CONTRO L’AUSTRIA.UNGHERIA CHE SOTTO L’ALTA GUIDA DI S.M. IL RE DUCE SUPREMO L’ESERCITO ITALIANO INFERIORE PER NUMERO E PER MEZZI INIZIO IL XXIV MAGGIO MOMXV E CON FEDE INCROLLABILE E TENACE VALORE CONDUSSE IN INTERROTTA ED ASPRISSIMA PER XLI MESI E’ VINTA LA GIGANTESCA BATTAGLIA INGAGGIATA IL XXIV DELLO SCORSO OTTOBRE ED ALLA QUALE PRENDEVANO PARTE CINQUANTA DIVISIONI ITALIANE.TRE BRITANNICHE .DUE FRANCESI.UNA GRECO –SLOVACCA E UN REGGIMENTO AMERICANO CONTRO SETTANTATRE’ DIVISIONI AUSTRO-UNGHARICHE E’ FINITA A FULMINEA ARDITISSIMA AVANZATA DEL VENTINOVESIMO CORPO D’ARMATA S. TRENTO SBARRANDO LE VIE DELLA RITIRATA ALLE ARMATE NEMICHE DEL TRENTINO TRAVOLTE AD OCCIDENTE DALLE TRUPPE DELLA SETTIMA ARMATA E AD ORIENTE DA QUELLE DELLA PRIMA AL TORRE L’IRRESISTIBILE SLANCIO DELLA DODICESIMA DELL’OTTAVA DELA DECIMA ARMATA E DELLE DIVISIONI DI CAVALLERIA RICACCIA SEMPRE PIU’ INDIETRO IL NEMICO FUGGENTE NELAL PIA MIRA SAR IL DUCA D’AOSTA AVANZA RAPIDAMENTE ALLA TESTA DELLA SUA INVITTA TERZA ARMATA ANELANTE DI RITORNARE SULLE POSIZIONI DA ESSA GIA’ VITTORIOSAMENTE CONQUISTATE CHE MAI AVEVA PERDUTE L’ESERCITO AUSTRO UNGARICO E’ ANNIENTATO. ESSO HA SUBITO PERDITE GRAVISSIME NELL’ACCANITA RESISTENZA DEI PRIMI GIORNI E NELL’INSEGUIMENTO HA PERDUTE QUANTITA’ INGENTISSIME DI MATERAILE DI OGNI SORTA E PRESSO CHE PER INTERO I SUOI MAGAZZINI E I DEPOSITI HA LASCIATO FINORA NELLE NOSTRE MANI CIRCA TRECENTOMILA PRIGIONIERI CON INTERI STATI MAGGIORI E NON MENO DI CINQUEMILA CANNONI I RESTI DI QUELLO CHE FU’. DEI PIU’ POTENTI ESERCITI DEL MONDO RISALGONO IN DISORDINE E SENZA SPERANZA LE VALLI CHE AVEVANO DISCESO CON ORGOGLIOSA SICUREZZA// COMANDO SUPREMO DIAZ</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">Monumento</ISER>
+                        <ISEP hint="Posizione">Fronte dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra fis. da bulloni circolari in bronzo con scritta incisa colorata di nero</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI ROSATESI/ALLIEVI ACHILLE/ALLIEVI GIOVANNI/ARRIGONI PAOLO/ASTORI GIUSEPPE/BAREGGI LUIGI/BATTAGLIA ERNESTO/BERTOCCHI ANTONIO/BETTASSA BARTOLOMEO/BLORA EUGENIO/BLORA FRANCESCO/BOLOGNINI EMILIO/BONFICO GIOVANNI/BORELLI LUIGI/BOTTA CARLO/CASALI ANGELO/CASERINI ENRICO/CASERINI GIACOMO/CASERINI LUIGI/CAVALLI CARLO/CAVALAZZI LUIGI/CHIODINI CARLO PRIMO/CICERI GIUSEPPE/DE ISABELLA FRANCESCO/GALLI LUIGI/GARANZINI GAETANO/GRIFFINI LUIGI/LAURI CARLO/LONGHI ACHILLE/LUCCA LUIGI/ARIOLI EDOARDO</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">strada carrabile</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso frequente</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCS hint="Specifiche">macchia, Problemi di umidità</STCS>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.016481</GECX>
+                        <GECY hint="Coordinata y">45.349526</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.018191</GECX>
+                        <GECY hint="Coordinata y">45.350273</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341950) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Rosate</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">11/2019</CTSF>
+                        <CTSF hint="Foglio/data">12/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSP hint="Proprietari">Comune di Rosate</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Rosate</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rosate_1</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale da via Dacco</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rosate_1.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rosate_2</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale da via Roma</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rosate_2.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rosate_3</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta della piazza con il monumento ai caduti</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rosate_3.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Rosate_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del monumento ai caduti</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Rosate_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Rosate_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.11, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Rosate_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Rosate_C2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.12, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Rosate_C2.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Rosate_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Rosate_A1.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Rosate_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">riproduzione immagine storica</FNTP>
+                        <FNTT hint="Denominazione/titolo">Veduta storica degli anni '20 prima che venisse realizzato il viale</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTN hint="Nome archivio">Archivio Blibioteca parrocchiale</FNTN>
+                        <FNTK hint="Nome file digitale">MI_Rosate_5.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Rosate_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del viale</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Rosate_6.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Rosate_7</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del monumento ai caduti</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Rosate_7.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Rosate_8</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">immagine da sito web</FNTP>
+                        <FNTE hint="Ente proprietario">MONUMENTIGRANDEGUERRA</FNTE>
+                        <FNTS hint="Collocazione">ID Monumento 1897</FNTS>
+                        <FNTK hint="Nome file digitale">MI_Rosate_8.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza, Udine 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">ASSOCIAZIONE NAZIONALE COMBATTENTI E REDUCI 1990</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">rivista</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Ai caduti di tutte le guerre, Associazione Nazionale Combattenti e Reduci, Milano 1990, p. 153</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">MONUMENTIGRANDEGUERRA</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">sito web</BIBF>
+                        <BIBW hint="Indirizzo web (URL)">http://www.monumentigrandeguerra.it/(2019/09/00)</BIBW>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>9.017243</x>
+                    <y>45.349864</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

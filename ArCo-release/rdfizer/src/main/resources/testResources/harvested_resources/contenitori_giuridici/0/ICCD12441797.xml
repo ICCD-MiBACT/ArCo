@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD12441797@</identifier>
+        <datestamp>2018-04-17T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">1472695893404</CCG>
+                    <CCF hint="Codice contenitore fisico">1472695902064</CCF>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <CGT hint="Tipologia">museo</CGT>
+                    <CGN hint="Denominazione raccolta">Museo Nazionale del Ducato di Spoleto</CGN>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Umbria</PVCR>
+                        <PVCP hint="Provincia">PG</PVCP>
+                        <PVCC hint="Comune">Spoleto</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2017</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">ICCD</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">ICCD</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Nota ICCD: Contenitore creato in automatico e revisionato</OSS>
+                </AN>
+            </CG>
+        </schede>
+    </metadata>
+</record>

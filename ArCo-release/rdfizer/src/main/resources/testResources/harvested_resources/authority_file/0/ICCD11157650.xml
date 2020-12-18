@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11157650@</identifier>
+        <datestamp>2015-04-28T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <AUT version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">AUT</TSK>
+                    <ESC hint="Ente schedatore">S160</ESC>
+                    <ECP hint="Ente competente">S160</ECP>
+                </CD>
+                <AU hint="AUTORE">
+                    <AUT hint="AUTORE">
+                        <AUTN hint="Nome scelto">Iraci Alberto</AUTN>
+                        <AUTA hint="Dati anagrafici">1876/ 1958</AUTA>
+                        <AUTC hint="Cognome">Iraci</AUTC>
+                        <AUTO hint="Nome">Alberto</AUTO>
+                        <AUTF hint="Monogramma, firma">A IRACI</AUTF>
+                        <AUTZ hint="Sesso">M</AUTZ>
+                        <AUTL hint="Luogo di nascita">Perugia</AUTL>
+                        <AUTD hint="Data di nascita">1876</AUTD>
+                        <AUTX hint="Luogo di morte">Perugia</AUTX>
+                        <AUTT hint="Data di morte">1958</AUTT>
+                        <AUTG hint="Luogo e/o periodo di attivita'">Umbria</AUTG>
+                        <AUTU hint="Scuola di appartenenza">scuola italiana</AUTU>
+                        <AUTQ hint="Qualifica">pittore, illustratore</AUTQ>
+                        <AUTH hint="Sigla per citazione">S4000293</AUTH>
+                    </AUT>
+                </AU>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Pigozzo, Lucia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Pigozzo, Lucia</RSR>
+                    <FUR hint="Funzionario responsabile">Majoli, Luca</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Iraci A., ALBERTO IRACI PITTORE - ELENCO DEI MIEI QUADRI , STUDI , BOZZETTI ESISTENTI NEL MIO STUDIO E MIA ABITAZIONE, PERUGIA [s.d.]</OSS>
+                </AN>
+            </AUT>
+        </schede>
+    </metadata>
+</record>

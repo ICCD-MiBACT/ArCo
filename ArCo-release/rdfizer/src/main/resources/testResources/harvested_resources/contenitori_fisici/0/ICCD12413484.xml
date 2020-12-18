@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD12413484@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CF version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CF</TSK>
+                    <LIR hint="Livello">P</LIR>
+                    <CCF hint="Codice contenitore fisico">1470737142060</CCF>
+                    <ESC hint="Ente schedatore">S277</ESC>
+                </CD>
+                <CF hint="CONTENITORE FISICO">
+                    <CFT hint="Tipologia">convento</CFT>
+                    <CFN hint="Denominazione attuale">Convento del Beato Giacomo Illirico</CFN>
+                    <CFC hint="Complesso di appartenenza">Convento dei Frati Minori</CFC>
+                </CF>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">Italia</PVCS>
+                        <PVCR hint="Regione">Puglia</PVCR>
+                        <PVCP hint="Provincia">BA</PVCP>
+                        <PVCC hint="Comune">Bitetto</PVCC>
+                        <PVCI hint="Indirizzo">Via Beato Giacomo</PVCI>
+                    </PVC>
+                </LC>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione puntuale</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">16.736615</GECX>
+                        <GECY hint="Coordinata y">41.037390</GECY>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia senza sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento approssimato</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2017</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4020924) https://www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1531570596787</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">2</ADSP>
+                        <ADSM hint="Motivazione">scheda di bene di proprietà privata</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2018</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Savino, Antonella</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Carcavallo, Mara</FUR>
+                </CM>
+            </CF>
+            <harvesting>
+                <geocoding>
+                    <x>16.739635</x>
+                    <y>41.038104</y>
+                </geocoding>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

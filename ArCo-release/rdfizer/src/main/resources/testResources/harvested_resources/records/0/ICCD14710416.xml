@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14710416@</identifier>
+        <datestamp>2020-11-02T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <A version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">A</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">01</NCTR>
+                        <NCTN hint="Numero catalogo generale">00442783</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S251</ESC>
+                    <ECP hint="Ente competente">S251</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione tipologica">casa</OGTD>
+                        <OGTQ hint="Qualificazione">privata</OGTQ>
+                        <OGTN hint="Denominazione">[Casa privata in via Montebello, 21]</OGTN>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">TO</PVCP>
+                        <PVCC hint="Comune">Torino</PVCC>
+                        <PVCI hint="Indirizzo">via Montebello, 21</PVCI>
+                    </PVC>
+                </LC>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTL hint="Tipo di localizzazione">localizzazione fisica</CTL>
+                    <CTS hint="LOCALIZZAZIONE CATASTALE">
+                        <CTSC hint="Comune">Torino</CTSC>
+                        <CTSF hint="Foglio/Data">1248/ 2020</CTSF>
+                    </CTS>
+                </CS>
+                <GP hint="GEOREFERENZIAZIONE TRAMITE PUNTO">
+                    <GPI hint="Identificativo Punto">1</GPI>
+                    <GPL hint="Tipo di localizzazione">localizzazione fisica</GPL>
+                    <GPD hint="DESCRIZIONE DEL PUNTO">
+                        <GPDP hint="PUNTO">
+                            <GPDPX hint="Coordinata X">7.693490</GPDPX>
+                            <GPDPY hint="Coordinata Y">45.070182</GPDPY>
+                        </GPDP>
+                    </GPD>
+                    <GPM hint="Metodo di georeferenziazione">punto esatto</GPM>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da foto aerea con sopralluogo</GPT>
+                    <GPP hint="Proiezione e Sistema di riferimento">WGS84</GPP>
+                    <GPB hint="BASE DI RIFERIMENTO">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2020</GPBT>
+                        <GPBO hint="Note">https://www.google.com/maps</GPBO>
+                    </GPB>
+                </GP>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <AUT hint="AUTORE">
+                        <AUTM hint="Fonte dell'attribuzione">documentazione</AUTM>
+                        <AUTN hint="Nome scelto">Panizza, Barnaba</AUTN>
+                        <AUTA hint="Dati anagrafici">1806/ 1895</AUTA>
+                    </AUT>
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBR hint="Riferimento all'intervento">costruzione</ATBR>
+                        <ATBD hint="Denominazione">ambito piemontese</ATBD>
+                        <ATBM hint="Fonte dell'attribuzione">analisi stilistica</ATBM>
+                    </ATB>
+                </AU>
+                <RE hint="NOTIZIE STORICHE">
+                    <REN hint="NOTIZIA">
+                        <RENR hint="Riferimento">intero bene</RENR>
+                        <RENS hint="Notizia sintetica">costruzione</RENS>
+                    </REN>
+                    <REL hint="CRONOLOGIA, ESTREMO REMOTO">
+                        <RELS hint="Secolo">XIX</RELS>
+                        <RELI hint="Data">1853/00/00</RELI>
+                    </REL>
+                    <REV hint="CRONOLOGIA, ESTREMO RECENTE">
+                        <REVS hint="Secolo">XIX</REVS>
+                        <REVI hint="Data">1853/00/00</REVI>
+                    </REV>
+                </RE>
+                <SI hint="SPAZI">
+                    <SII hint="SUDDIVISIONE INTERNA">
+                        <SIIN hint="Numero di piani">+6</SIIN>
+                    </SII>
+                </SI>
+                <PN hint="PIANTA">
+                    <PNT hint="PIANTA">
+                        <PNTF hint="Forma">a C</PNTF>
+                    </PNT>
+                </PN>
+                <US hint="UTILIZZAZIONI">
+                    <USA hint="USO ATTUALE">
+                        <USAD hint="Uso">abitazione</USAD>
+                    </USA>
+                    <USA hint="USO ATTUALE">
+                        <USAD hint="Uso">negozio</USAD>
+                    </USA>
+                    <USO hint="USO STORICO">
+                        <USOD hint="Uso">abitazione</USOD>
+                    </USO>
+                    <USO hint="USO STORICO">
+                        <USOD hint="Uso">negozio</USOD>
+                    </USO>
+                </US>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà privata</CDGG>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Vergano, Alice</FTAA>
+                        <FTAD hint="Data">2020/08/31</FTAD>
+                        <FTAE hint="Ente proprietario">Soprintendenza Archeologia, Belle Arti e Paesaggio per la Città Metropolitana di Torino</FTAE>
+                        <FTAN hint="Codice identificativo">0100442783_foto_01</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Vergano, Alice</FTAA>
+                        <FTAD hint="Data">2020/08/31</FTAD>
+                        <FTAE hint="Ente proprietario">Soprintendenza Archeologia, Belle Arti e Paesaggio per la Città Metropolitana di Torino</FTAE>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione esistente</FTAX>
+                        <FTAP hint="Tipo">positivo b/n</FTAP>
+                        <FTAA hint="Autore">Vaccarone, Alberto</FTAA>
+                        <FTAD hint="Data">1968</FTAD>
+                        <FTAE hint="Ente proprietario">Soprintendenza Archeologia, Belle Arti e Paesaggio per la Città Metropolitana di Torino</FTAE>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA">
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAE hint="Ente proprietario">Agenzia delle Entrate - Geoportale Cartografico Catastale</DRAE>
+                        <DRAD hint="Data">2020</DRAD>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA">
+                        <DRAX hint="Genere">documentazione esistente</DRAX>
+                        <DRAT hint="Tipo">planimetria</DRAT>
+                        <DRAE hint="Ente proprietario">Soprintendenza Archeologia, Belle Arti e Paesaggio per la Città Metropolitana di Torino</DRAE>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA">
+                        <DRAX hint="Genere">documentazione esistente</DRAX>
+                        <DRAT hint="Tipo">disegno</DRAT>
+                        <DRAE hint="Ente proprietario">Soprintendenza Archeologia, Belle Arti e Paesaggio per la Città Metropolitana di Torino</DRAE>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">scheda storica</FNTP>
+                        <FNTA hint="Autore">Vaccarone, Alberto</FNTA>
+                        <FNTD hint="Data">1968/12/00</FNTD>
+                    </FNT>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">2</ADSP>
+                        <ADSM hint="Motivazione">scheda di bene di proprietà privata</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">1968</CMPD>
+                        <CMPN hint="Nome">Vaccarone, Alberto</CMPN>
+                    </CMP>
+                    <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+                        <RVMD hint="Data">2020</RVMD>
+                        <RVMN hint="Nome">Vergano, Alice</RVMN>
+                    </RVM>
+                    <AGG hint="AGGIORNAMENTO - REVISIONE">
+                        <AGGD hint="Data">2020</AGGD>
+                        <AGGN hint="Nome">Vergano, Alice</AGGN>
+                        <AGGF hint="Funzionario responsabile">Pratissoli, Manuela</AGGF>
+                    </AGG>
+                </CM>
+            </A>
+            <harvesting>
+                <idProgetto>ICCD1064593</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

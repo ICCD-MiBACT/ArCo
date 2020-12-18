@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14200242@</identifier>
+        <datestamp>2020-11-06T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <MODI version="4.00_ICCD0">
+                <CD hint="IDENTIFICAZIONE">
+                    <TSK hint="Tipo modulo">MODI</TSK>
+                    <CDR hint="Codice Regione">03</CDR>
+                    <CDM hint="Codice Modulo">ICCD_MODI_5821607237651</CDM>
+                    <ESC hint="Ente schedatore">S287</ESC>
+                    <ECP hint="Ente competente per tutela">S287</ECP>
+                </CD>
+                <OG hint="ENTITA'">
+                    <AMB hint="Ambito di tutela MiBACT">architettonico e paesaggistico</AMB>
+                    <AMA hint="Ambito di applicazione">censimento parchi e giardini</AMA>
+                    <CTG hint="Categoria">ARCHITETTURA DEI PARCHI E GIARDINI</CTG>
+                    <OGD hint="Definizione">viale</OGD>
+                    <OGT hint="Tipologia">commemorativo/ ai caduti della prima e seconda guerra mondiale</OGT>
+                    <OGN hint="Denominazione">Viale della Rimembranza di Gaggiano</OGN>
+                </OG>
+                <LC hint="LOCALIZZAZIONE">
+                    <LCS hint="Stato">ITALIA</LCS>
+                    <LCR hint="Regione">Lombardia</LCR>
+                    <LCP hint="Provincia">MI</LCP>
+                    <LCC hint="Comune">Gaggiano</LCC>
+                    <LCL hint="Località">GAGGIANO</LCL>
+                    <LCI hint="Indirizzo">via Rimembranze</LCI>
+                    <LCV hint="Altri percorsi/specifiche">Viale che congiunge il centro città con il cimitero comunale affiancando un canale e parallelo alla SP38 in direzione Vigano</LCV>
+                    <ACB hint="ACCESSIBILITA'">
+                        <ACBA hint="Accessibilità">si</ACBA>
+                    </ACB>
+                </LC>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">viale</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il comune di Gaggiano come molti altri comuni d’Italia, agli inizi degli anni venti intitolarono un viale della Rimembranza per ricordare i propri caduti, vista la circolare del Ministero della Pubblica Istruzione per l’istituzione di Viali e Parchi della Rimembranza e le circolari del 17-12-1922 e 25-1-1923 dell’Ispettorato Scolastico di Milano per la costruzione di un Comitato locale “per l’attuazione della nobilissima iniziativa di onorare i caduti in battaglia e dispersi dopo i fatti d’arme durante la grande guerra, piantando un albero per ogni caduto lungo una strada o parco del paese”</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <DT hint="CRONOLOGIA">
+                    <DTP hint="Riferimento alla parte">monumento</DTP>
+                    <DTN hint="NOTIZIA STORICA">
+                        <DTNS hint="Notizia (sintesi)">realizzazione</DTNS>
+                        <DTNN hint="Notizia (dettaglio)">Il monumento è stato realizzato da Villa Cesare nel 1923</DTNN>
+                    </DTN>
+                    <DTR hint="Riferimento cronologico">XX</DTR>
+                    <DTG hint="Specifiche riferimento cronologico">prima metà</DTG>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1923/00/00</DTSI>
+                        <DTSF hint="A">1923/00/00</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione/fonte">bibliografia</DTM>
+                </DT>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMR hint="Responsabile dei contenuti">Bentivoglio Ravasio, Raffaella</CMR>
+                    <CMC hint="Responsabile ricerca e redazione">Minnucci, Ramona</CMC>
+                    <CMA hint="Anno di redazione">2019</CMA>
+                    <CMM hint="Motivo della redazione del MODI">Censimento all’interno del Progetto “Narrando i territori della Grande Guerra attraverso i monumenti, le lapidi, i parchi e i viali della rimembranza”</CMM>
+                    <IMD hint="MIGRAZIONE DATI NELLE SCHEDE DI CATALOGO">
+                        <IMDT hint="Tipo scheda">PG</IMDT>
+                    </IMD>
+                    <ADP hint="Profilo di accesso">1</ADP>
+                </CM>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="Descrizione">Il lungo viale che congiunge il centro città con il cimitero comunale affiancando un canale e parallelo alla SP38 in direzione Vigano, è delimitato da un doppio filare di tigli, per lo più omogeneo e continuo. Il monumento ai caduti, invece, è situato nell’angolo individuato da via Marconi e via Manzoni, recintato da una bassa cancellata in ferro battuto e contornato da arbusti bassi sempreverdi</DES>
+                    <AID hint="APPARATO ICONOGRAFICO/DECORATIVO">
+                        <AIDO hint="Tipo">apparato decorativo</AIDO>
+                        <AIDI hint="Identificazione">monumento</AIDI>
+                        <AIDD hint="Descrizione">Il monumento ai caduti è situato nell’angolo individuato da via Marconi e via Manzoni. Si tratta di una scultura in bronzo che rappresenta un soldato che innalza e guarda la bandiera d'Italia. Nell'altra mano tiene una rivoltella. La scultura poggia su un alto basamento simile a una roccia scolpita nella pietra, su cui sono affisse alcune targhe con l'elenco dei caduti della Prima guerra mondiale</AIDD>
+                    </AID>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">Fronte principale_basamento</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">Frase commemorativa</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in bronzo inquadrata ai lati, da mazzetti di fiori</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">GAGGIANO AI SUOI GLORIOSI FIGLI CADUTI PER LA PATRIA / 1915 - 1918 / 1940 - 1945</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">Fronte</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1915-1918 / 1935-1936 (grado, cognome, nome)</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra su cui sono fissate le lettere in bronzo formanti l’elenco dei caduti</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI 1915 1918/SOL. AIRAGHI RICCARDO/ “ ALBINI CARLO/ “ ALBINI MARIO/ “ AMBROSIA MARIO/ “ ANDREONI ANGELO/ “ ASTORI VINCENZO/ “ BALCONATI GIUSEPPE/ “ BARILI ANGELO/ “ BELLAVITA ABELE/ “ BIANCHI FEDERICO/ “ BIRAGLIA GIOVANNI/ “ BOGNETTI GIOVANNI/ “ BONAZZI ALESSANDRO/ “ BOSSI CARLO/ “ BOSSI SANTINO/ “ BRAMANI ANTONIO/ “ CAMERA GIOVANNI/C.M.CAMPARIA ALESSANDRO/SOL. CAGNANI GIUSEPPE/ “ CANEPARI PIETRO/ “ CANEPARI SANTO/ “ CASSANI GIUSEPPE/ “ CIMPANELLI RINALDO/ “ CIOCCA VITTORIO/ “ CITELLI GIOVANNI/ “ COLOMBO DAVIDE/ “ CORTESI ENRICO/ “ COTTI GIGLIELMO/ “ CRIPPA FEDERICO/ “ DELL ACQUA CARLO/ “ DAGNINI LUIGI/ “ FONTANA ANGELO/ “ FONTANA VITO/ “ FOSSATI MICHELE/ “ GALLOTTI FRANCESCO/ “ GERLA ANGELO/ “ GERLI LUIGI/ “ GRANDI PAOLO/ “ GRAZIOLI GIUSEPPE/ “ GERLI LUIGI/ SOL. GRILLI EMILIO/ “ LOCATELLI LUIGI/LUNGHI LUIGI/ “ MALTAGLIATI LUIGI/ “ MARZORATI ANGELO/ “ MAZZARONI GIUSEPPE/ “ MELEGATTI MARI/ “ MORONI AMBROGIO/ “ MOZZAIA ERNESTO/ “ MUSANTI GIUSEPPE/ “ NEGRETTI GIOVANNI/ “ OLDRATI LUIGI/ “ PAGANI GIOVANNI/ “ PASSERINI ANGELO/ “ PASSERINI GIOVANNI/ “ PIFFERI GEROLAMO/ “ PORAZZI ERNESTO/ “ POZZINI ADOLFO/ “ RAMELLA ANGELO/ CAP. RAVELLI EMILIO/SOL. RE CESARE/ “ REPOSSI ANGELO/ “ REPOSSI PIERINO/ “ RESTELLA AMBROGIO/ “ ROSSI PIETRO/ “ ROVIDA ANGELO/ “ SALA EDOARDO/ “ SGUINZI ANTONIO/ “ SELMI ATTILIO/ “ SISTI GIULIO/ “ SPAGNOLI GIOVANNI/ “ SPERONI ANGELO/ “ TAINI ATTILIO/ “ TRONI ANGELO/ “ TURATI ANTONIO/VOLPI ENRICO/ZANONI GIUSEPPE/ZUCCA PIETRO/1935-1936/CAP. BARBIERI RICCARDO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">Fronte sx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei caduti nella guerra del 1940 - 1945(grado, cognome, nome)</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra su cui sono fissate le lettere in bronzo formanti l’elenco dei caduti</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">CADUTI 1940 1945/SOL. BALZAROTTI ENRICO/ “ BARNACCHI MARIO/S.C.M. BERTOLDI GIOVANNI/SOL. BRANDUALDI VITTORIO/ “ BRAMBILLA DANTE/ “ BOFFINO ANGELO/CAP. MAG. CAMERONI LUIGI/SOL. CASTOLDI MARIO/ “ CAVALLERI MARIO/ “ CAMPAGNOLI GIUSEPPE/ “ CICERI ATTILIO/ “ CICERI MARIO/CAP. CROTTI ANGELO/SOL. DELL’ACQUA ERNESTO/ “ FERRARI ANTONIO/ “ FONTANA LUIGI/ “ GANDELLI BATTISTA/ “ GUALENI MARTINO/ “ MAZZUCCO SIRO/ “ NEBULONI CARLO/ “ NOE ATTILIO/ “ PORTALUPPI ANGELO/ “ RONCATO ATTILIO/ “ TEGONI CELIO/ “ TECA MARIO/ S.TEN. ZAMBELLI ENRICO/SOL. ZONCADA ENRICO</ISEI>
+                    </ISE>
+                    <ISE hint="ISCRIZIONI/EMBLEMI/MARCHI/STEMMI/TIMBRI">
+                        <ISER hint="Riferimento alla parte">monumento</ISER>
+                        <ISEP hint="Posizione">Fronte dx</ISEP>
+                        <ISED hint="Definizione">iscrizione</ISED>
+                        <ISEZ hint="Descrizione">elenco dei dispersi nella guerra del 1940 - 1945(grado, cognome, nome)</ISEZ>
+                        <ISEQ hint="Quantità">1</ISEQ>
+                        <ISES hint="Supporto">Targa in pietra su cui sono fissate le lettere in bronzo formanti l’elenco dei caduti</ISES>
+                        <ISEC hint="Classe di appartenenza">commemorativa</ISEC>
+                        <ISEI hint="Trascrizione">SER. FESTA CARLO/SOL. CANDINI PIETRO/ “ GERLA ANGELO/ “ MAGRI LUIGI/ “ MARNATI ANGANGELO/ “ MEAZZA ILDEBRANDO/ “ PASSERNI CARLO/ “ PELUZIO ANGELO/AR. SORESINI GAETANO/SOL. TIRABOSCHI DAVIDE/ “ NOVELLI LUIGI//CADUTI CIVILI//CERONI MARIA/COSTA PIETRO/GRILLI GIUSEPPE/ NEGRI ALDO/DISP. BONECCHI BRUNO//1945-1945//SOL. DE ANGELI GUSEPPE/MORANDI RICCARDO</ISEI>
+                    </ISE>
+                </DA>
+                <UT hint="UTILIZZAZIONI">
+                    <UTU hint="DATI DI USO">
+                        <UTUR hint="Riferimento alla parte">viale</UTUR>
+                        <UTUT hint="Tipo">attuale</UTUT>
+                        <UTUF hint="Funzione">viale pedonale</UTUF>
+                    </UTU>
+                    <CNU hint="CONDIZIONE D'USO">
+                        <CNUV hint="Visitabile">aperto al pubblico</CNUV>
+                        <CNUS hint="Specifiche">uso saltuario</CNUS>
+                    </CNU>
+                </UT>
+                <CO hint="CONSERVAZIONE E INTERVENTI">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">viale</STCP>
+                        <STCC hint="Stato di conservazione">buono</STCC>
+                    </STC>
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCP hint="Riferimento alla parte">monumento</STCP>
+                        <STCC hint="Stato di conservazione">mediocre</STCC>
+                        <STCS hint="Specifiche">macchia, Problemi di umidità, presenza di depositi superficiali</STCS>
+                    </STC>
+                </CO>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione lineare</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.030036</GECX>
+                        <GECY hint="Coordinata y">45.395083</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">9.032581</GECX>
+                        <GECY hint="Coordinata y">45.403993</GECY>
+                        <GECS hint="Note">Georeferenziazione sulla linea mediana del viale.La coppia di coordinate geografiche sono state prese all’inizio e alla fine del viale</GECS>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">google maps</GPBB>
+                        <GPBT hint="Data">2019</GPBT>
+                        <GPBU hint="Indirizzo web (URL)">(4341838) www.google.it/maps</GPBU>
+                    </GPB>
+                </GE>
+                <CS hint="LOCALIZZAZIONE CATASTALE">
+                    <CTS hint="DATI CATASTALI">
+                        <CTSC hint="Comune">Gaggiano</CTSC>
+                        <CTST hint="Tipo catasto">catasto misto</CTST>
+                        <CTSF hint="Foglio/data">19/2019</CTSF>
+                        <CTSF hint="Foglio/data">14/2019</CTSF>
+                        <CTSN hint="Particelle">s.n.m</CTSN>
+                        <CTSN hint="Particelle">A</CTSN>
+                        <CTSP hint="Proprietari">Comune di Gaggiano</CTSP>
+                    </CTS>
+                </CS>
+                <TU hint="CONDIZIONE GIURIDICA E PROVVEDIMENTI DI TUTELA">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Ente pubblico territoriale</CDGG>
+                        <CDGS hint="Indicazione specifica">Comune di Gaggiano</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Gaggiano_1a</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale da via Matteotti</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Gaggiano_1a.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Gaggiano_2a</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del viale in direzione via II Giugno</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Gaggiano_2a.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Gaggiano_3a</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta del monumento posto tra via G. Marconi e via Gozzadini</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Gaggiano_3a.JPG</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">MI_Gaggiano_4</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAM hint="Titolo/didascalia">Veduta della statua posta in cima al monumento</FTAM>
+                        <FTAA hint="Autore">Minnucci, Ramona</FTAA>
+                        <FTAD hint="Riferimento cronologico">2019/09/00</FTAD>
+                        <FTAK hint="Nome file digitale">MI_Gaggiano_4.JPG</FTAK>
+                    </FTA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Gaggiano_C1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.19, s.n.m</DRAP>
+                        <DRAS hint="Scala">1:2000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Gaggiano_C1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Gaggiano_C2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">estratto di mappa catastale</DRAT>
+                        <DRAP hint="Specifiche">F.14, p.A</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Gaggiano_C2.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Gaggiano_A1</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAP hint="Specifiche">Viale</DRAP>
+                        <DRAS hint="Scala">1:2000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Gaggiano_A1.pdf</DRAK>
+                    </DRA>
+                    <DRA hint="DOCUMENTAZIONE GRAFICA E CARTOGRAFICA">
+                        <DRAN hint="Codice identificativo">MI_Gaggiano_A2</DRAN>
+                        <DRAX hint="Genere">documentazione allegata</DRAX>
+                        <DRAT hint="Tipo">cartografia con delimitazione dell’area</DRAT>
+                        <DRAP hint="Specifiche">Monumento</DRAP>
+                        <DRAS hint="Scala">1:1000</DRAS>
+                        <DRAA hint="Autore">Minnucci, Ramona</DRAA>
+                        <DRAD hint="Riferimento cronologico">2019/09/00</DRAD>
+                        <DRAK hint="Nome file digitale">MI_Gaggiano_A2.pdf</DRAK>
+                    </DRA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Gaggiano_5</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del viale</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Gaggiano_5.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Gaggiano_6</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">documentazione fotografica integrativa</FNTP>
+                        <FNTT hint="Denominazione/titolo">Documentazione fotografica integrativa del monumento ai caduti</FNTT>
+                        <FNTA hint="Autore">Minnucci, Ramona</FNTA>
+                        <FNTD hint="Riferimento cronologico">2019/09/00</FNTD>
+                        <FNTK hint="Nome file digitale">MI_Gaggiano_6.pdf</FNTK>
+                    </FNT>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTI hint="Codice identificativo">MI_Gaggiano_7</FNTI>
+                        <FNTX hint="Genere">documentazione allegata</FNTX>
+                        <FNTP hint="Tipo">immagine da sito web</FNTP>
+                        <FNTE hint="Ente proprietario">http://www.monumentigrandeguerra.it</FNTE>
+                        <FNTS hint="Collocazione">ID Monumento 1466</FNTS>
+                        <FNTK hint="Nome file digitale">MI_Gaggiano_7.pdf</FNTK>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">CAZZANI 2012</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Cazzani Alberta, I monumenti e i giardini celebrativi della grande guerra in Lombardia. Il censimento per le province di Brescia, Milano e Monza Brianza, Udine 2012</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">LUPI 1923</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">libro</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">D. Lupi, Parchi e Viali della Rimembranza, R.Bemporad e figlio Editori, Firenze, 1923</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">ASSOCIAZIONE NAZIONALE COMBATTENTI E REDUCI 1990</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">rivista</BIBF>
+                        <BIBM hint="Riferimento bibliografico completo">Ai caduti di tutte le guerre, Associazione Nazionale Combattenti e Reduci, Milano, 1990, p.1122</BIBM>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBR hint="Abbreviazione">MONUMENTIGRANDEGUERRA</BIBR>
+                        <BIBX hint="Genere">bibliografia specifica</BIBX>
+                        <BIBF hint="Tipo">sito web</BIBF>
+                        <BIBW hint="Indirizzo web (URL)">http://www.monumentigrandeguerra.it/(2019/09/00)</BIBW>
+                    </BIB>
+                </DO>
+            </MODI>
+            <harvesting>
+                <geocoding>
+                    <x>9.031972</x>
+                    <y>45.401535</y>
+                </geocoding>
+                <idProgetto>ICCD1063423</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

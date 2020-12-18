@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14711365@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <OA version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">OA</TSK>
+                    <LIR hint="Livello ricerca">I</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">05</NCTR>
+                        <NCTN hint="Numero catalogo generale">00707052</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">M264</ESC>
+                    <ECP hint="Ente competente">M264</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">lancia</OGTD>
+                        <OGTT hint="Tipologia">yari</OGTT>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Veneto</PVCR>
+                        <PVCP hint="Provincia">PD</PVCP>
+                        <PVCC hint="Comune">Padova</PVCC>
+                        <PVCL hint="Località">PADOVA</PVCL>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">complesso</LDCT>
+                        <LDCQ hint="Qualificazione">museale</LDCQ>
+                        <LDCN hint="Denominazione attuale">Complesso Cavalli</LDCN>
+                        <LDCC hint="Complesso di appartenenza">Complesso Cavalli</LDCC>
+                        <LDCU hint="Indirizzo">Via Giotto, 1</LDCU>
+                        <LDCM hint="Denominazione raccolta">Museo di Antropologia dell'Università degli Studi di Padova</LDCM>
+                        <LDCS hint="Specifiche">Deposito/ sala II/ a sinistra</LDCS>
+                    </LDC>
+                </LC>
+                <UB hint="UBICAZIONE E DATI PATRIMONIALI"/>
+                <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
+                    <TCL hint="Tipo di localizzazione">luogo di provenienza</TCL>
+                    <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PRVS hint="Stato">ITALIA</PRVS>
+                        <PRVR hint="Regione">Veneto</PRVR>
+                        <PRVP hint="Provincia">VE</PRVP>
+                        <PRVC hint="Comune">Venezia</PRVC>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCT hint="Tipologia">palazzo</PRCT>
+                        <PRCQ hint="Qualificazione">comunale</PRCQ>
+                        <PRCD hint="Denominazione">Ca' Pesaro</PRCD>
+                        <PRCU hint="Denominazione spazio viabilistico">Santa Croce, 2046</PRCU>
+                        <PRCM hint="Denominazione raccolta">Museo d'arte orientale</PRCM>
+                        <PRCS hint="Specifiche">piano III</PRCS>
+                    </PRC>
+                    <PRD hint="DATA">
+                        <PRDI hint="Data ingresso">1925</PRDI>
+                        <PRDU hint="Data uscita">1942</PRDU>
+                    </PRD>
+                </LA>
+                <LA hint="ALTRE LOCALIZZAZIONI GEOGRAFICO-AMMINISTRATIVE">
+                    <TCL hint="Tipo di localizzazione">luogo di provenienza</TCL>
+                    <PRV hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                        <PRVS hint="Stato">ITALIA</PRVS>
+                        <PRVR hint="Regione">Veneto</PRVR>
+                        <PRVP hint="Provincia">VE</PRVP>
+                        <PRVC hint="Comune">Venezia</PRVC>
+                    </PRV>
+                    <PRC hint="COLLOCAZIONE SPECIFICA">
+                        <PRCT hint="Tipologia">palazzo</PRCT>
+                        <PRCQ hint="Qualificazione">nobiliare</PRCQ>
+                        <PRCD hint="Denominazione">Ca' Vendramin Calergi</PRCD>
+                        <PRCU hint="Denominazione spazio viabilistico">Cannaregio, 2040</PRCU>
+                        <PRCM hint="Denominazione raccolta">collezione privata Enrico di Borbone</PRCM>
+                        <PRCS hint="Specifiche">piano II</PRCS>
+                    </PRC>
+                    <PRD hint="DATA">
+                        <PRDI hint="Data ingresso">1889</PRDI>
+                        <PRDU hint="Data uscita">1925</PRDU>
+                    </PRD>
+                </LA>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">XIX</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1800</DTSI>
+                        <DTSV hint="Validità">post</DTSV>
+                        <DTSF hint="A">1868</DTSF>
+                        <DTSL hint="Validità">ante</DTSL>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">analisi stilistica</DTM>
+                    <ADT hint="Altre datazioni">periodo Edo</ADT>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBD hint="Denominazione">ambito giapponese</ATBD>
+                        <ATBR hint="Riferimento all'intervento">esecuzione</ATBR>
+                        <ATBM hint="Motivazione dell'attribuzione">analisi stilistica</ATBM>
+                    </ATB>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">legno</MTC>
+                    <MTC hint="Materia e tecnica">lacca</MTC>
+                    <MTC hint="Materia e tecnica">metallo</MTC>
+                    <MTC hint="Materia e tecnica">raden</MTC>
+                    <MIS hint="MISURE">
+                        <MISU hint="Unità">cm</MISU>
+                        <MISA hint="Altezza">244</MISA>
+                        <MISV hint="Varie">lunghezza lama 13</MISV>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                    </STC>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Indicazioni sull'oggetto">lancia del tipo yari in legno laccato e fusto in raden (intarsio di madreperla)</DESO>
+                        <DESI hint="Codifica Iconclass">soggetto assente</DESI>
+                        <DESS hint="Indicazioni sul soggetto">soggetto assente</DESS>
+                    </DES>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <ACQ hint="ACQUISIZIONE">
+                        <ACQT hint="Tipo acquisizione">confisca</ACQT>
+                        <ACQN hint="Nome">ditta C. Trau</ACQN>
+                        <ACQD hint="Data acquisizione">1915</ACQD>
+                        <ACQL hint="Luogo acquisizione">Veneto/ VE/ Venezia</ACQL>
+                    </ACQ>
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Ministero per i beni e le attività culturali e per il turismo</CDGS>
+                    </CDG>
+                    <NVC hint="PROVVEDIMENTI DI TUTELA">
+                        <NVCT hint="Tipo provvedimento">Dlgs n. 42/2004, art. 10, co 2, let. a</NVCT>
+                        <NVCE hint="Estremi provvedimento">28/12/1924</NVCE>
+                    </NVC>
+                    <ALN hint="MUTAMENTI TITOLARITA'/POSSESSO/DETENZIONE">
+                        <ALNT hint="Tipo evento">acquisto</ALNT>
+                        <ALND hint="Data evento">1907</ALND>
+                        <ALNN hint="Note">Vendita dalla famiglia Borbone alla ditta C. Trau di Vienna</ALNN>
+                    </ALN>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Milanesi, Federico</FTAA>
+                        <FTAD hint="Data">2020</FTAD>
+                        <FTAE hint="Ente proprietario">Direzione regionale Musei Veneto</FTAE>
+                        <FTAC hint="Collocazione">Piazza san Marco, 63</FTAC>
+                        <FTAN hint="Codice identificativo">IMG_8244</FTAN>
+                        <FTAF hint="Formato">jpg</FTAF>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2020</CMPD>
+                        <CMPN hint="Nome">Concini, Elisa Assunta de</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Boscolo Marchi, Marta</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Nel verbale di consegna all'università di Padova del 1942 il bene è iscritto nella posizione 530</OSS>
+                </AN>
+            </OA>
+            <harvesting>
+                <idContenitoreFisico>ICCD13963387</idContenitoreFisico>
+                <idContenitoreGiuridico>ICCD13954023</idContenitoreGiuridico>
+                <idProgetto>ICCD1065779</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

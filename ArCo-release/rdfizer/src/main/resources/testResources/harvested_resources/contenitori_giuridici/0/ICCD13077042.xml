@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13077042@</identifier>
+        <datestamp>2020-10-02T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">DBunicoCG104092</CCG>
+                    <CCF hint="Codice contenitore fisico">DBunicoCF104092</CCF>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                    <ACC hint="ALTRA IDENTIFICAZIONE">
+                        <ACCE hint="Ente/soggetto responsabile">MIBACT. DG Organizzazione. Servizio I</ACCE>
+                        <ACCC hint="Codice identificativo">104092</ACCC>
+                        <ACCP hint="Progetto di riferimento">DBUnico 2.0</ACCP>
+                    </ACC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGT hint="Tipologia">museo</CGT>
+                    <CGN hint="Denominazione raccolta">Museo biblioteca Francesco Antonio Marcucci</CGN>
+                    <CGD hint="Descrizione">Il Museo Biblioteca è ospitato al secondo piano di un settecentesco palazzo nobiliare realizzato in stile neoclassico, sede dell'Istituto Suore Pie Operaie dell'Immacolata Concezione. Si deve a Monsignor Marcucci (1717-1798) la donazione dell'edificio all'Istituto che, sorto con lo scopo di provvedere all'educazione della donna, divenne la prima scuola femminile della città. Nel 1993 le suore inaugurarono un percorso espositivo che comprende, oltre alla collezione di quadri, di arredi sacri e di mobili della famiglia Marcucci, la cappella affrescata, una serie di ritratti delle più illustri suore del tempo e la Biblioteca che raccoglie, tra l'altro, pregiati manoscritti. Alcuni locali del museo conservano i banchi dell'antica scuola con oggetti e libri che ricordano le varie attività dell'Istituto: dal disegno al ricamo, dalle lingue antiche alle lingue moderne, dalla storia alla matematica, dalle scienze alla teologia, dalla musica alla filosofia</CGD>
+                    <CGE hint="ENTE">
+                        <CGET hint="Tipo">proprietà Ente religioso cattolico</CGET>
+                    </CGE>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Marche</PVCR>
+                        <PVCP hint="Provincia">AP</PVCP>
+                        <PVCC hint="Comune">Ascoli Piceno</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2016</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">ICCD</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">ICCD</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Scheda prodotta da ICCD tramite migrazione dati da DB Unico</OSS>
+                </AN>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1038112</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

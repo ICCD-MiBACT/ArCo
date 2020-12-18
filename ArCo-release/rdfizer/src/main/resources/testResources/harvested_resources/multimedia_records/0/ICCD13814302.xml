@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13814302@</identifier>
+        <datestamp>2020-10-23T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <IMR version="3.00_ICCD0">
+                <MC hint="METADATI DI CATALOGAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAA hint="Autore">Picco, E</FTAA>
+                        <FTAD hint="Data">2017/10/14</FTAD>
+                        <FTAE hint="Ente proprietario">S239</FTAE>
+                        <FTAN hint="Codice identificativo">S239_57084</FTAN>
+                        <FTAF hint="Formato">Jpeg</FTAF>
+                    </FTA>
+                </MC>
+                <MM hint="METADATI DATO MULTIMEDIALE">
+                    <MMT hint="METADATI TECNICI DATO MULTIMEDIALE">
+                        <MMTO hint="Nome file originale">S239_57084.jpg</MMTO>
+                    </MMT>
+                </MM>
+            </IMR>
+            <harvesting>
+                <linkEmm>http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1038895/ICCD13814302_S239_57084.jpg</linkEmm>
+                <idProgetto>ICCD1026586</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

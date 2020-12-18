@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11157702@</identifier>
+        <datestamp>2015-08-31T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <AUT version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">AUT</TSK>
+                    <ESC hint="Ente schedatore">S160</ESC>
+                    <ECP hint="Ente competente">S160</ECP>
+                </CD>
+                <AU hint="AUTORE">
+                    <AUT hint="AUTORE">
+                        <AUTN hint="Nome scelto">Edgardo Sambo</AUTN>
+                        <AUTA hint="Dati anagrafici">1882/ 1966</AUTA>
+                        <AUTC hint="Cognome">Sambo</AUTC>
+                        <AUTO hint="Nome">Edgardo</AUTO>
+                        <AUTF hint="Monogramma, firma">E. Sambo [un trattino orizzontale sull'asta della B]</AUTF>
+                        <AUTZ hint="Sesso">M</AUTZ>
+                        <AUTL hint="Luogo di nascita">Trieste</AUTL>
+                        <AUTD hint="Data di nascita">1882</AUTD>
+                        <AUTX hint="Luogo di morte">Trieste</AUTX>
+                        <AUTT hint="Data di morte">1966</AUTT>
+                        <AUTU hint="Scuola di appartenenza">scuola triestina</AUTU>
+                        <AUTQ hint="Qualifica">pittore, illustratore</AUTQ>
+                        <AUTH hint="Sigla per citazione">S4000296</AUTH>
+                    </AUT>
+                </AU>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Pigozzo, Lucia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Pigozzo, Lucia</RSR>
+                    <FUR hint="Funzionario responsabile">Majoli, Luca</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">"Dal 1929 al 1956 fu Conservatore del Civico Museo Revoltella di Trieste, avviando l'ente a un'apertura verso l'arte moderna, con l’apertura di nuove sale e la creazione della Scuola libera del nudo e del costume, nella quale tenne alcune lezioni. Per questa intensa attività didattica e culturale, nel 1956 Sambo venne insignito dell’onorificenza di Cavaliere dell’ordine al Merito della Repubblica." (http://provincia-trieste.regione.fvg.it/opencms/opencms/it/contatti/edgardosambo.html)</OSS>
+                </AN>
+            </AUT>
+        </schede>
+    </metadata>
+</record>

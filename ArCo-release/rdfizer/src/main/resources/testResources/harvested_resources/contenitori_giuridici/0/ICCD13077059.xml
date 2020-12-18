@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13077059@</identifier>
+        <datestamp>2020-10-02T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CG version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CG</TSK>
+                    <LIR hint="Livello">I</LIR>
+                    <CCG hint="Codice contenitore giuridico">DBunicoCG104120</CCG>
+                    <CCF hint="Codice contenitore fisico">DBunicoCF104120</CCF>
+                    <ESC hint="Ente schedatore">ICCD</ESC>
+                    <ACC hint="ALTRA IDENTIFICAZIONE">
+                        <ACCE hint="Ente/soggetto responsabile">MIBACT. DG Organizzazione. Servizio I</ACCE>
+                        <ACCC hint="Codice identificativo">104120</ACCC>
+                        <ACCP hint="Progetto di riferimento">DBUnico 2.0</ACCP>
+                    </ACC>
+                </CD>
+                <CG hint="CONTENITORE GIURIDICO">
+                    <LUC hint="Luogo della cultura">si</LUC>
+                    <CGT hint="Tipologia">museo</CGT>
+                    <CGN hint="Denominazione raccolta">Museo civico</CGN>
+                    <CGC hint="Complesso giuridico di appartenenza">Polo museale di Monsampolo</CGC>
+                    <CGD hint="Descrizione">Il Museo è ospitato in alcuni locali dell’ex convento di San Francesco a Monsampolo del Tronto. ll Museo è suddiviso in due sezioni. La collezione d’arte sacra conserva pale d’altare e dipinti provenienti dalla demolita chiesa del Santissimo Crocifisso, una cornice lignea del secolo XVI e una scultura in legno policromo raffigurante Sant’Alessio, di epoca seicentesca. La sezione espositiva comprende alcuni tra i volumi più pregevoli del fondo bibliografico della Biblioteca tomistica di Sant’Alessio, fondato dal prelato Giovanni Battista Corradi nel XVII secolo e destinata ad uso pubblico presso l’ospedale Sant’Alessio di Monsampolo. Le opere, molte delle quali risalenti ai secoli XVI e XVII, rivestono un significativo interesse storico e trattano prevalentemente di teologia, storia, giurisprudenza e medicina</CGD>
+                    <CGE hint="ENTE">
+                        <CGET hint="Tipo">proprietà Ente pubblico territoriale</CGET>
+                    </CGE>
+                </CG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Marche</PVCR>
+                        <PVCP hint="Provincia">AP</PVCP>
+                        <PVCC hint="Comune">Monsampolo del Tronto</PVCC>
+                    </PVC>
+                </LC>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2016</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">ICCD</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">ICCD</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Scheda prodotta da ICCD tramite migrazione dati da DB Unico</OSS>
+                </AN>
+            </CG>
+            <harvesting>
+                <idProgetto>ICCD1038112</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

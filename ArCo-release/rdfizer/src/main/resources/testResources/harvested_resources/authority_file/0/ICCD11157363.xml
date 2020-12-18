@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11157363@</identifier>
+        <datestamp>2015-12-03T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <AUT version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">AUT</TSK>
+                    <ESC hint="Ente schedatore">S160</ESC>
+                    <ECP hint="Ente competente">S160</ECP>
+                </CD>
+                <AU hint="AUTORE">
+                    <AUT hint="AUTORE">
+                        <AUTN hint="Nome scelto">Atelier Exax-Spitzer</AUTN>
+                        <AUTA hint="Dati anagrafici">1925/ 1935</AUTA>
+                        <AUTF hint="Monogramma, firma">AES EXAX SPITZER [ES sovrapposte a grande A che ha sotto i 2 cognomi]</AUTF>
+                        <AUTL hint="Luogo di nascita">Vienna</AUTL>
+                        <AUTD hint="Data di nascita">1925</AUTD>
+                        <AUTX hint="Luogo di morte">Vienna</AUTX>
+                        <AUTT hint="Data di morte">1935</AUTT>
+                        <AUTG hint="Luogo e/o periodo di attivita'">Vienna (sede: Bennogasse 5)</AUTG>
+                        <AUTU hint="Scuola di appartenenza">scuola austriaca</AUTU>
+                        <AUTQ hint="Qualifica">cartellonista, pubblicitario, fotografo, grafico</AUTQ>
+                        <AUTH hint="Sigla per citazione">SK400013</AUTH>
+                    </AUT>
+                </AU>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Pigozzo, Lucia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Pigozzo, Lucia</RSR>
+                    <FUR hint="Funzionario responsabile">Majoli, Luca</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Alexander Exax reincontra Oscar Spitzer, amico di infanzia, nel 1925 e insieme mettono in piedi uno studio pubblicitario (ATELIER EXAX-SPITZER). Entrambi appassionati di fotografia, diedero all'Atelier una impronta specialistica nei montaggi fotografici applicati a manifesti, copertine, pieghevoli, ecc. (www.bildindex.de)</OSS>
+                </AN>
+            </AUT>
+        </schede>
+    </metadata>
+</record>

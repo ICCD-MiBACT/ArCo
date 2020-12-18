@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13057625@</identifier>
+        <datestamp>2020-11-04T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <CF version="4.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">CF</TSK>
+                    <LIR hint="Livello">P</LIR>
+                    <CCF hint="Codice contenitore fisico">1478872367787</CCF>
+                    <ESC hint="Ente schedatore">S251</ESC>
+                </CD>
+                <CF hint="CONTENITORE FISICO">
+                    <CFT hint="Tipologia">palazzo</CFT>
+                    <CFQ hint="Qualificazione">statale</CFQ>
+                    <CFN hint="Denominazione attuale">Palazzo Carignano</CFN>
+                    <CFD hint="Descrizione">Il palazzo venne eretto per volontà di Emanuele Filiberto di Savoia-Carignano, su progetto del padre teatino Guarino Guarini che ne iniziò la costruzione nel 1679. L'edificio aveva, in origine, una pianta a C aperta sui giardini; l’attuale struttura quadrangolare è dovuta all’aggiunta del corpo di fabbrica ottocentesco costruito per ospitare il Parlamento italiano. Il salone centrale ellittico situato nella parte seicentesca, già destinato alle feste, era stato trasformato nel 1848 in aula del Primo Parlamento Subalpino. Oggi il palazzo ospita il Museo Nazionale del Risorgimento e gli uffici della Soprintendenza Archeologia, Belle Arti e Paesaggio della Città Metropolitana di Torino</CFD>
+                    <CFG hint="Condizione giuridica">proprietà Stato</CFG>
+                </CF>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE">
+                        <PVCS hint="Stato">ITALIA</PVCS>
+                        <PVCR hint="Regione">Piemonte</PVCR>
+                        <PVCP hint="Provincia">TO</PVCP>
+                        <PVCC hint="Comune">Torino</PVCC>
+                        <PVCI hint="Indirizzo">Via Accademia delle Scienze, 5</PVCI>
+                    </PVC>
+                </LC>
+                <GE hint="GEOREFERENZIAZIONE">
+                    <GEI hint="Identificativo geometria">2</GEI>
+                    <GEL hint="Tipo di localizzazione">localizzazione fisica</GEL>
+                    <GET hint="Tipo di georeferenziazione">georeferenziazione puntuale</GET>
+                    <GEP hint="Sistema di riferimento">WGS84</GEP>
+                    <GEC hint="COORDINATE">
+                        <GECX hint="Coordinata x">7.685265</GECX>
+                        <GECY hint="Coordinata y">45.069112</GECY>
+                    </GEC>
+                    <GPT hint="Tecnica di georeferenziazione">rilievo da cartografia con sopralluogo</GPT>
+                    <GPM hint="Metodo di posizionamento">posizionamento esatto</GPM>
+                    <GPB hint="BASE CARTOGRAFICA">
+                        <GPBB hint="Descrizione sintetica">Google Maps</GPBB>
+                    </GPB>
+                </GE>
+                <DO hint="DOCUMENTAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1570897083070</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAK hint="Nome file originale">Torino, Palazzo Carignano.jpeg</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1570897141975</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAK hint="Nome file originale">Torino, Palazzo Carignano_3.jpeg</FTAK>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAN hint="Codice identificativo">New_1570897330064</FTAN>
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAK hint="Nome file originale">Torino, Palazzo Carignano_2.jpeg</FTAK>
+                    </FTA>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="CERTIFICAZIONE E GESTIONE DEI DATI">
+                    <CMP hint="REDAZIONE E VERIFICA SCIENTIFICA">
+                        <CMPD hint="Anno di redazione">2018</CMPD>
+                        <CMPN hint="Responsabile ricerca e redazione">Piavento, Orso Maria</CMPN>
+                    </CMP>
+                    <RSR hint="Referente verifica scientifica">Martinella, Stefano</RSR>
+                    <FUR hint="Funzionario responsabile">Pratissoli, Manuela</FUR>
+                </CM>
+            </CF>
+            <harvesting>
+                <geocoding>
+                    <x>7.685067</x>
+                    <y>45.069167</y>
+                </geocoding>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD13814921@</identifier>
+        <datestamp>2020-10-23T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <IMR version="3.00_ICCD0">
+                <MC hint="METADATI DI CATALOGAZIONE">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAP hint="Tipo">fotografia digitale (file)</FTAP>
+                        <FTAD hint="Data">2015</FTAD>
+                        <FTAN hint="Codice identificativo">3978</FTAN>
+                        <FTAT hint="Note">Veduta del fronte principale</FTAT>
+                    </FTA>
+                </MC>
+                <MM hint="METADATI DATO MULTIMEDIALE">
+                    <MMT hint="METADATI TECNICI DATO MULTIMEDIALE">
+                        <MMTO hint="Nome file originale">F1_esterno.jpg</MMTO>
+                    </MMT>
+                </MM>
+            </IMR>
+            <harvesting>
+                <linkEmm>http://www.sigecweb.beniculturali.it/images/fullsize/ICCD1060938/ICCD13814921_F1_esterno.jpg</linkEmm>
+                <idProgetto>ICCD1060052</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

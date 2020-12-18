@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11156037@</identifier>
+        <datestamp>2020-01-20T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <BIB version="2.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">BIB</TSK>
+                    <ESC hint="Ente schedatore">S59</ESC>
+                    <ECP hint="Ente competente">S59</ECP>
+                </CD>
+                <BI hint="BIBLIOGRAFIA">
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBA hint="Autore">Deleuchi A</BIBA>
+                        <BIBF hint="Tipo">periodico</BIBF>
+                        <BIBG hint="Titolo libro o rivista">Nova</BIBG>
+                        <BIBT hint="Titolo contributo">Figli e spoglie dei Garibaldi</BIBT>
+                        <BIBL hint="Luogo di edizione">Olbia</BIBL>
+                        <BIBD hint="Anno di edizione">2005</BIBD>
+                        <BIBS hint="Specifiche">n. 17</BIBS>
+                        <BIBH hint="Sigla per citazione">00000198</BIBH>
+                    </BIB>
+                </BI>
+            </BIB>
+        </schede>
+    </metadata>
+</record>

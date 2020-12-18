@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD14703539@</identifier>
+        <datestamp>2020-11-09T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <OA version="3.00">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo Scheda">OA</TSK>
+                    <LIR hint="Livello ricerca">P</LIR>
+                    <NCT hint="CODICE UNIVOCO">
+                        <NCTR hint="Codice regione">16</NCTR>
+                        <NCTN hint="Numero catalogo generale">00041089</NCTN>
+                    </NCT>
+                    <ESC hint="Ente schedatore">S114</ESC>
+                    <ECP hint="Ente competente">S114</ECP>
+                </CD>
+                <OG hint="OGGETTO">
+                    <OGT hint="OGGETTO">
+                        <OGTD hint="Definizione">pavimento</OGTD>
+                    </OGT>
+                </OG>
+                <LC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA">
+                    <PVC hint="LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE">
+                        <PVCS hint="Stato">Italia</PVCS>
+                        <PVCR hint="Regione">Puglia</PVCR>
+                        <PVCP hint="Provincia">BA</PVCP>
+                        <PVCC hint="Comune">Mola di Bari</PVCC>
+                    </PVC>
+                    <LDC hint="COLLOCAZIONE SPECIFICA">
+                        <LDCT hint="Tipologia">chiesa</LDCT>
+                        <LDCQ hint="Qualificazione">conventuale</LDCQ>
+                        <LDCN hint="Denominazione attuale">Chiesa di S. Chiara</LDCN>
+                        <LDCC hint="Complesso di appartenenza">monastero delle Clarisse</LDCC>
+                        <LDCS hint="Specifiche">presbiterio</LDCS>
+                    </LDC>
+                </LC>
+                <UB hint="UBICAZIONE E DATI PATRIMONIALI">
+                    <UBO hint="Ubicazione originaria">OR</UBO>
+                </UB>
+                <DT hint="CRONOLOGIA">
+                    <DTZ hint="CRONOLOGIA GENERICA">
+                        <DTZG hint="Secolo">sec. XVIII</DTZG>
+                    </DTZ>
+                    <DTS hint="CRONOLOGIA SPECIFICA">
+                        <DTSI hint="Da">1790</DTSI>
+                        <DTSF hint="A">1799</DTSF>
+                    </DTS>
+                    <DTM hint="Motivazione cronologia">bibliografia</DTM>
+                </DT>
+                <AU hint="DEFINIZIONE CULTURALE">
+                    <ATB hint="AMBITO CULTURALE">
+                        <ATBD hint="Denominazione">ambito napoletano</ATBD>
+                        <ATBM hint="Motivazione dell'attribuzione">analisi stilistica</ATBM>
+                    </ATB>
+                </AU>
+                <MT hint="DATI TECNICI">
+                    <MTC hint="Materia e tecnica">ceramica/ pittura</MTC>
+                    <MIS hint="MISURE">
+                        <MISU hint="Unità">cm</MISU>
+                        <MISL hint="Larghezza">180</MISL>
+                        <MISN hint="Lunghezza">194</MISN>
+                    </MIS>
+                </MT>
+                <CO hint="CONSERVAZIONE">
+                    <STC hint="STATO DI CONSERVAZIONE">
+                        <STCC hint="Stato di conservazione">discreto</STCC>
+                    </STC>
+                </CO>
+                <DA hint="DATI ANALITICI">
+                    <DES hint="DESCRIZIONE">
+                        <DESO hint="Indicazioni sull'oggetto">Pavimento</DESO>
+                    </DES>
+                </DA>
+                <TU hint="CONDIZIONE GIURIDICA E VINCOLI">
+                    <CDG hint="CONDIZIONE GIURIDICA">
+                        <CDGG hint="Indicazione generica">proprietà Stato</CDGG>
+                        <CDGS hint="Indicazione specifica">Ministero dell'Interno - Fondo Edifici di Culto</CDGS>
+                    </CDG>
+                </TU>
+                <DO hint="FONTI E DOCUMENTI DI RIFERIMENTO">
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia colore</FTAP>
+                        <FTAN hint="Codice identificativo">SBAAAS BA 230180/D</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia colore</FTAP>
+                        <FTAN hint="Codice identificativo">SBAAAS BA 230181/D</FTAN>
+                    </FTA>
+                    <FTA hint="DOCUMENTAZIONE FOTOGRAFICA">
+                        <FTAX hint="Genere">documentazione allegata</FTAX>
+                        <FTAP hint="Tipo">fotografia colore</FTAP>
+                        <FTAN hint="Codice identificativo">SBAAAS BA 230182/D</FTAN>
+                    </FTA>
+                    <FNT hint="FONTI E DOCUMENTI">
+                        <FNTP hint="Tipo">scheda storica</FNTP>
+                        <FNTD hint="Data">NR(RECUPERO PREGRESSO)</FNTD>
+                        <FNTN hint="Nome archivio">Archivio Catalogo SABAP Bari</FNTN>
+                        <FNTS hint="Posizione">Convento San Francesco della Scarp'a</FNTS>
+                        <FNTI hint="Codice identificativo">New_1601877220009</FNTI>
+                    </FNT>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia di confronto</BIBX>
+                        <BIBA hint="Autore">Donatone G</BIBA>
+                        <BIBD hint="Anno di edizione">1974</BIBD>
+                        <BIBH hint="Sigla per citazione">00001367</BIBH>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia di confronto</BIBX>
+                        <BIBA hint="Autore">Donatone G</BIBA>
+                        <BIBD hint="Anno di edizione">1981</BIBD>
+                        <BIBH hint="Sigla per citazione">00001368</BIBH>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia di confronto</BIBX>
+                        <BIBA hint="Autore">Borrelli G</BIBA>
+                        <BIBD hint="Anno di edizione">1982</BIBD>
+                        <BIBH hint="Sigla per citazione">00001369</BIBH>
+                    </BIB>
+                    <BIB hint="BIBLIOGRAFIA">
+                        <BIBX hint="Genere">bibliografia di confronto</BIBX>
+                        <BIBA hint="Autore">Pasculli Ferrara M</BIBA>
+                        <BIBD hint="Anno di edizione">1984</BIBD>
+                        <BIBH hint="Sigla per citazione">00001370</BIBH>
+                    </BIB>
+                </DO>
+                <AD hint="ACCESSO AI DATI">
+                    <ADS hint="SPECIFICHE DI ACCESSO AI DATI">
+                        <ADSP hint="Profilo di accesso">1</ADSP>
+                        <ADSM hint="Motivazione">scheda contenente dati liberamente accessibili</ADSM>
+                    </ADS>
+                </AD>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">1988</CMPD>
+                        <CMPN hint="Nome">Chianura L</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Piccolo A</FUR>
+                    <RVM hint="TRASCRIZIONE PER INFORMATIZZAZIONE">
+                        <RVMD hint="Data">1998</RVMD>
+                        <RVMN hint="Nome">Bucci Morichi A</RVMN>
+                    </RVM>
+                    <AGG hint="AGGIORNAMENTO - REVISIONE">
+                        <AGGD hint="Data">2006</AGGD>
+                        <AGGN hint="Nome">ARTPAST/ Sforza M</AGGN>
+                    </AGG>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">/SK[1]/RSE[1]/RSEN[1]: Luceri M</OSS>
+                </AN>
+            </OA>
+            <harvesting>
+                <geocoding>
+                    <x>17.076549</x>
+                    <y>41.039665</y>
+                </geocoding>
+                <idContenitoreFisico>ICCD12410438</idContenitoreFisico>
+                <idProgetto>ICCD1007384</idProgetto>
+            </harvesting>
+        </schede>
+    </metadata>
+</record>

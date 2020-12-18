@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11156301@</identifier>
+        <datestamp>2015-08-03T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <AUT version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">AUT</TSK>
+                    <ESC hint="Ente schedatore">S160</ESC>
+                    <ECP hint="Ente competente">S160</ECP>
+                </CD>
+                <AU hint="AUTORE">
+                    <AUT hint="AUTORE">
+                        <AUTN hint="Nome scelto">Koll Magdalena</AUTN>
+                        <AUTA hint="Dati anagrafici">1879/ post 1959</AUTA>
+                        <AUTC hint="Cognome">Koll</AUTC>
+                        <AUTO hint="Nome">Magdalena</AUTO>
+                        <AUTE hint="Nome convenzionale">Magda Koll</AUTE>
+                        <AUTF hint="Monogramma, firma">KOLL/ M. KOLL</AUTF>
+                        <AUTV hint="Varianti">Magda Koll/ Magdalene Koll</AUTV>
+                        <AUTZ hint="Sesso">F</AUTZ>
+                        <AUTL hint="Luogo di nascita">Amburgo</AUTL>
+                        <AUTD hint="Data di nascita">1879</AUTD>
+                        <AUTX hint="Luogo di morte">Brema (?)</AUTX>
+                        <AUTT hint="Data di morte">post 1959</AUTT>
+                        <AUTU hint="Scuola di appartenenza">scuola tedesca</AUTU>
+                        <AUTQ hint="Qualifica">pittore, cartellonista, grafico, calligrafo</AUTQ>
+                        <AUTH hint="Sigla per citazione">S4000281</AUTH>
+                    </AUT>
+                </AU>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Pigozzo, Lucia</CMPN>
+                    </CMP>
+                    <RSR hint="Referente scientifico">Pigozzo, Lucia</RSR>
+                    <FUR hint="Funzionario responsabile">Majoli, Luca</FUR>
+                </CM>
+                <AN hint="ANNOTAZIONI">
+                    <OSS hint="Osservazioni">Il Frauenmuseum di Brema da notizia che la Kunsthalle di Brema ha festeggiato con una personale di Magda Koll sia il 70esimo che l'80esimo compleanno dell'artista. (http://www.bremer-frauenmuseum.de/frauenhandbuch/koll.html) ___ http://www.bildindex.de/#|1</OSS>
+                </AN>
+            </AUT>
+        </schede>
+    </metadata>
+</record>

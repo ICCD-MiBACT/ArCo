@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+    <header>
+        <identifier>oai:oaicat.iccd.org:@ICCD11157465@</identifier>
+        <datestamp>2015-12-11T00:00:00Z</datestamp>
+    </header>
+    <metadata>
+        <schede>
+            <AUT version="3.00_ICCD0">
+                <CD hint="CODICI">
+                    <TSK hint="Tipo scheda">AUT</TSK>
+                    <ESC hint="Ente schedatore">S118</ESC>
+                    <ECP hint="Ente competente">S118</ECP>
+                </CD>
+                <AU hint="AUTORE">
+                    <AUT hint="AUTORE">
+                        <AUTN hint="Nome scelto">Officine Sala</AUTN>
+                        <AUTA hint="Dati anagrafici">notizie prima metà sec. XX</AUTA>
+                        <AUTG hint="Luogo e/o periodo di attivita'">attive Verona prima metà sec. XX</AUTG>
+                        <AUTU hint="Scuola di appartenenza">scuola italiana</AUTU>
+                        <AUTQ hint="Qualifica">fonditore</AUTQ>
+                        <AUTH hint="Sigla per citazione">A0000080</AUTH>
+                    </AUT>
+                </AU>
+                <CM hint="COMPILAZIONE">
+                    <CMP hint="COMPILAZIONE">
+                        <CMPD hint="Data">2014</CMPD>
+                        <CMPN hint="Nome">Carraro, Giada</CMPN>
+                    </CMP>
+                    <FUR hint="Funzionario responsabile">Rigoni, Chiara</FUR>
+                </CM>
+            </AUT>
+        </schede>
+    </metadata>
+</record>
