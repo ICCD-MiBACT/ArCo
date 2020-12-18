@@ -265,7 +265,37 @@
 			</xsl:if>
 		</xsl:for-each>
 		<xsl:for-each select="record/metadata/schede/A/PN">
-			<xsl:if test="./PNT/PNTQ or ./PNT/PNTS or ./PNT/PNTF or ./PNT/PNTE">
+			<xsl:if test="./PNT/PNTS or ./PNT/PNTF">
+				<xsl:choose>	
+					<xsl:when test="not(./PNR) or ./PNR='intero bene' or ./PNR='integrale' or ./PNR='tutta' or ./PNR='totale' or ./PNR='carattere generale' or (starts-with(lower-case(normalize-space(./PNR)), 'nr')) or (starts-with(lower-case(normalize-space(./PNR)), 'n.r')) or (starts-with(lower-case(normalize-space(./PNR)), 'intero')) or (starts-with(lower-case(normalize-space(./PNR)), 'intera')) or (starts-with(lower-case(normalize-space(./PNR)), 'esemplar'))">
+					<xsl:variable name="layout"> 		
+						<xsl:choose>
+							<xsl:when test="./PNT/PNTS and ./PNT/PNTF">
+								<xsl:value-of select="concat($NS, 'Layout/', $itemURI, '-', arco-fn:urify(concat(normalize-space(./PNT/PNTS), '-', normalize-space(./PNT/PNTF))))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'Layout/', $itemURI, '-', arco-fn:urify(concat(normalize-space(./PNT/PNTS), normalize-space(./PNT/PNTF))))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+						<arco-ip:hasLayout>
+							<xsl:attribute name="rdf:resource">
+								<xsl:value-of select="$layout" />
+							</xsl:attribute>
+						</arco-ip:hasLayout>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:for-each select="./PNR">
+							<arco-core:hasPart>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+								</xsl:attribute>
+							</arco-core:hasPart>
+						</xsl:for-each>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:if>			
+			<xsl:if test="./PNT/PNTQ or ./PNT/PNTE">
 			<xsl:choose>	
 				<xsl:when test="not(./PNR) or ./PNR='intero bene' or ./PNR='integrale' or ./PNR='tutta' or ./PNR='totale' or ./PNR='carattere generale' or (starts-with(lower-case(normalize-space(./PNR)), 'nr')) or (starts-with(lower-case(normalize-space(./PNR)), 'n.r')) or (starts-with(lower-case(normalize-space(./PNR)), 'intero')) or (starts-with(lower-case(normalize-space(./PNR)), 'intera')) or (starts-with(lower-case(normalize-space(./PNR)), 'esemplar'))">
 					<arco-ip:hasDesign>
@@ -525,23 +555,6 @@
 					<xsl:value-of select="normalize-space(.)" />
 				</arco-ip:significantIconographicInformation>
 			</xsl:for-each>
-			<xsl:if test="./PNTS or ./PNTF">
-				<xsl:variable name="layout"> 		
-					<xsl:choose>
-						<xsl:when test="./PNTS and ./PNTF">
-							<xsl:value-of select="concat($NS, 'Layout/', $itemURI, '-', arco-fn:urify(concat(normalize-space(./PNTS), '-', normalize-space(./PNTF))))" />
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="concat($NS, 'Layout/', $itemURI, '-', arco-fn:urify(concat(normalize-space(./PNTS), normalize-space(./PNTF))))" />
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
-				<arco-ip:hasLayout>
-					<xsl:attribute name="rdf:resource">
-					<xsl:value-of select="$layout" />
-					</xsl:attribute>
-				</arco-ip:hasLayout>
-			</xsl:if>			
 		</rdf:Description>
 	</xsl:for-each>		
 										<!-- Layout as individual -->
@@ -1736,6 +1749,7 @@
 	
 						<!-- CulturalPropertyPart when there is SIIR (IntenalSubdivision) -->
 	<xsl:for-each select="record/metadata/schede/A/SI/SII">
+		<xsl:variable name="siir" select="./SIIR" />
 		<xsl:if test="./SIIR and not (./SIIR='intero bene' or ./SIIR='integrale' or ./SIIR='tutta' or ./SIIR='totale' or ./SIIR='carattere generale' or (starts-with(lower-case(normalize-space(./SIIR)), 'nr')) or (starts-with(lower-case(normalize-space(./SIIR)), 'n.r')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intero')) or (starts-with(lower-case(normalize-space(./SIIR)), 'intera')) or (starts-with(lower-case(normalize-space(./SIIR)), 'esemplar')))">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -1780,7 +1794,7 @@
 					<xsl:for-each select="$floorssplit">
 						<arco-core:hasPart>
 							<xsl:attribute name="rdf:resource">
-    		    				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+    		    				<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.), '-', arco-fn:urify($siir))" />
 							</xsl:attribute>
 						</arco-core:hasPart>
 					</xsl:for-each>
@@ -1793,7 +1807,7 @@
 				<xsl:for-each select="$floorssplit">
 					<rdf:Description>
 						<xsl:attribute name="rdf:about">
-   	    					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.))" />
+   	    					<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', arco-fn:urify(.), '-', arco-fn:urify($siir))" />
 						</xsl:attribute>
 						<rdf:type>
 							<xsl:attribute name="rdf:resource">
@@ -1832,7 +1846,24 @@
 						<xsl:value-of select="$culturalProperty" /> 
 					</xsl:attribute>
 				</arco-core:isPartOf>
-				<xsl:if test="./PNT">
+				<xsl:if test="./PNT/PNTS or ./PNT/PNTF">
+					<xsl:variable name="layout"> 		
+						<xsl:choose>
+							<xsl:when test="./PNT/PNTS and ./PNT/PNTF">
+								<xsl:value-of select="concat($NS, 'Layout/', $itemURI, '-', arco-fn:urify(concat(normalize-space(./PNT/PNTS), '-', normalize-space(./PNT/PNTF))))" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="concat($NS, 'Layout/', $itemURI, '-', arco-fn:urify(concat(normalize-space(./PNT/PNTS), normalize-space(./PNT/PNTF))))" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<arco-ip:hasLayout>
+						<xsl:attribute name="rdf:resource">
+							<xsl:value-of select="$layout" />
+						</xsl:attribute>
+					</arco-ip:hasLayout>
+				</xsl:if>			
+				<xsl:if test="./PNT/PNTQ or ./PNT/PNTE">
 					<arco-ip:hasDesign>
 						<xsl:attribute name="rdf:resource">
 							<xsl:value-of select="concat($NS, 'ConstructionDesign/', $itemURI, '-', arco-fn:arcofy(normalize-space(./PNT)))" />
