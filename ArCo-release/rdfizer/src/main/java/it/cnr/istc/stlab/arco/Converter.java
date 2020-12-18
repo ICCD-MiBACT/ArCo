@@ -29,6 +29,8 @@ import org.apache.log4j.Logger;
 import it.cnr.istc.stlab.arco.xsltextension.Arcofy;
 import it.cnr.istc.stlab.arco.xsltextension.CatalogueRecordIdentifierToCulturalProperty;
 import it.cnr.istc.stlab.arco.xsltextension.CataloguingEntityFinder;
+import it.cnr.istc.stlab.arco.xsltextension.ContenitoreFisicoFinder;
+import it.cnr.istc.stlab.arco.xsltextension.ContenitoreGiuridicoFinder;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForASheet;
 import it.cnr.istc.stlab.arco.xsltextension.DefinitionMatcherForRASheet;
 import it.cnr.istc.stlab.arco.xsltextension.ExtractUnit;
@@ -198,6 +200,8 @@ public class Converter {
 		proc.registerExtensionFunction(LinkEMMFinder.getInstance());
 		proc.registerExtensionFunction(CatalogueRecordIdentifierToCulturalProperty.getInstance());
 		proc.registerExtensionFunction(NameCleaner.getInstance());
+		proc.registerExtensionFunction(ContenitoreFisicoFinder.getInstance());
+		proc.registerExtensionFunction(ContenitoreGiuridicoFinder.getInstance());
 
 		XsltCompiler comp = proc.newXsltCompiler();
 
