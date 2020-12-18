@@ -92,7 +92,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		
 <xsl:template match="/">
 	<rdf:RDF>
-	<xsl:if test="not($sheetType='CF' or $sheetType='AUT')" >
+	<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT')" >
 		<rdf:Description>
 			<xsl:attribute name="rdf:about">
                 <xsl:value-of

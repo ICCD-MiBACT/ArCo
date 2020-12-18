@@ -160,7 +160,7 @@
 		</xsl:variable>
 
 		<rdf:RDF>
-		<xsl:if test="not($sheetType='CF' or $sheetType='AUT')" >
+		<xsl:if test="not($sheetType='CF' or $sheetType='CG' or $sheetType='AUT')" >
 			<xsl:if
 				test="record/metadata/schede/*/OG/OGT/OGTP and ($sheetVersion='4.00_ICCD0' or $sheetVersion='4.00')">
 				<rdf:Description>
@@ -3664,6 +3664,14 @@
 						<xsl:attribute name="rdf:resource">
                         	<xsl:value-of
 							select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(.)))" />                      	                            
+                        </xsl:attribute>
+					</arco-dd:hasDesignationInTime>
+				</xsl:for-each>
+				<xsl:for-each select="record/metadata/schede/*/OG/OGA">
+					<arco-dd:hasDesignationInTime>
+						<xsl:attribute name="rdf:resource">
+                        	<xsl:value-of
+							select="concat($NS,'DesignationInTime/', $itemURI, '-', arco-fn:urify(normalize-space(./OGAD)))" />                      	                            
                         </xsl:attribute>
 					</arco-dd:hasDesignationInTime>
 				</xsl:for-each>
