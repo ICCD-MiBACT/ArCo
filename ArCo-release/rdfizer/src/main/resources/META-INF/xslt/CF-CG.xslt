@@ -2319,6 +2319,16 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CD/CCG)" />
 				</arco-location:culturalInstituteOrSiteIdentifier>
 			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/CG/CGD">
+				<arco-core:description>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/CG/CGD)" />
+				</arco-core:description>
+			</xsl:if>
+			<xsl:if test="record/metadata/schede/*/CG/NSC">
+				<arco-cd:historicalInformation>
+					<xsl:value-of select="normalize-space(record/metadata/schede/*/CG/NSC)" />
+				</arco-cd:historicalInformation>
+			</xsl:if>
 							<!-- Site Type -->
 			<xsl:if test="record/metadata/schede/*/CG/CGT">
 				<arco-location:hasCulturalInstituteOrSiteType>
