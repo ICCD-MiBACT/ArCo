@@ -35,6 +35,8 @@ public class Harvester {
 	private static final int NUM_OF_ATTEMPTS = 3;
 	private long limit = Long.MAX_VALUE;
 	private long downloaded = 0;
+	private boolean records, multimedia_records, contenitoriFisici, contenitoriGiuridici, altreNormative,
+			authorityFiles;
 	private AtomicInteger c = new AtomicInteger(0);
 
 	private static final Logger logger = LogManager.getLogger(OAIHarvester.class);
@@ -123,22 +125,35 @@ public class Harvester {
 	public void getRecords() throws IOException, ParserConfigurationException, SAXException, XPathExpressionException,
 			TransformerException {
 
-		downloadRecords(recordsDirectory, "", "/xml", null);
-		downloaded = 0;
-		downloadRecords(multimediaRecordsDirectory, "/entita_multimediale", "/xml/entita_multimediale",
-				getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
-		downloaded = 0;
-		downloadRecords(contenitoriFisiciDirectory, "/contenitori_fisici", "/xml/contenitori_fisici",
-				getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
-		downloaded = 0;
-		downloadRecords(contenitoriGiuridiciDirectory, "/contenitori_giuridici", "/xml/contenitori_giuridici",
-				getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
-		downloaded = 0;
-		downloadRecords(altreNormativeDirectory, "/altre_normative", "/xml/altre_normative",
-				getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
-		downloaded = 0;
-		downloadRecords(authorityFilesDirectory, "/authorities", "/xml/authorities",
-				getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+		if (records) {
+			downloadRecords(recordsDirectory, "", "/xml", null);
+			downloaded = 0;
+		}
+		if (multimedia_records) {
+			downloadRecords(multimediaRecordsDirectory, "/entita_multimediale", "/xml/entita_multimediale",
+					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloaded = 0;
+		}
+		if (contenitoriFisici) {
+			downloadRecords(contenitoriFisiciDirectory, "/contenitori_fisici", "/xml/contenitori_fisici",
+					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloaded = 0;
+		}
+		if (contenitoriGiuridici) {
+			downloadRecords(contenitoriGiuridiciDirectory, "/contenitori_giuridici", "/xml/contenitori_giuridici",
+					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloaded = 0;
+		}
+		if (altreNormative) {
+			downloadRecords(altreNormativeDirectory, "/altre_normative", "/xml/altre_normative",
+					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloaded = 0;
+		}
+
+		if (authorityFiles) {
+			downloadRecords(authorityFilesDirectory, "/authorities", "/xml/authorities",
+					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+		}
 
 //		AtomicInteger chunk = new AtomicInteger(0);
 //
@@ -260,11 +275,12 @@ public class Harvester {
 			if (m.find()) {
 				String keycode = identifier.substring(m.start(1), m.end(1));
 
+				String filename = recordsDirectory + "/" + chunk.get() + "/" + keycode + ".xml";
+
 				String recordString = getRecord(identifier + postFix);
 
 				if (recordString != null) {
-					FileOutputStream fos = new FileOutputStream(
-							new File(recordsDirectory + "/" + chunk.get() + "/" + keycode + ".xml"));
+					FileOutputStream fos = new FileOutputStream(new File(filename));
 					fos.write(recordString.getBytes());
 					fos.flush();
 					fos.flush();
@@ -372,6 +388,30 @@ public class Harvester {
 			keycodes.add(args[i]);
 		}
 		h.getRecordsFromList(keycodes);
+	}
+
+	public void setRecords(boolean records) {
+		this.records = records;
+	}
+
+	public void setMultimedia_records(boolean multimedia_records) {
+		this.multimedia_records = multimedia_records;
+	}
+
+	public void setContenitoriFisici(boolean contenitoriFisici) {
+		this.contenitoriFisici = contenitoriFisici;
+	}
+
+	public void setContenitoriGiuridici(boolean contenitoriGiuridici) {
+		this.contenitoriGiuridici = contenitoriGiuridici;
+	}
+
+	public void setAltreNormative(boolean altreNormative) {
+		this.altreNormative = altreNormative;
+	}
+
+	public void setAuthorityFiles(boolean authorityFiles) {
+		this.authorityFiles = authorityFiles;
 	}
 
 }
