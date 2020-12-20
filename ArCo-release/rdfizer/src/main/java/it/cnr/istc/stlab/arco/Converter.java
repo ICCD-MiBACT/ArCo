@@ -249,6 +249,18 @@ public class Converter {
 		 */
 	}
 
+	public void addXSTLConverter(Path path) {
+		XsltExecutable exp;
+		XsltCompiler comp = proc.newXsltCompiler();
+		try {
+			System.out.println("-- " + path.toString());
+			exp = comp.compile(new StreamSource(Files.newInputStream(path)));
+			exps.add(new XSLTConverter(path.toString(), exp));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	public Model convert(String item, String prefix, String sourcePrefix, InputStream sourceXml) throws Exception {
 
 		Model model = ModelFactory.createDefaultModel();
