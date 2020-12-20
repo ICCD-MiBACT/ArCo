@@ -52,22 +52,24 @@ public class PreprocessedData {
 		this.db = DBMaker.fileDB(dbFileName).make();
 		initMaps();
 
-		if (!forceCreate && !download) {
+		if (!forceCreate) {
 			try {
 				org.mapdb.Atomic.Long generated = db.atomicLong(GENERATED).createOrOpen();
 				Long remoteGenerated = readRemoteGenerated();
 				logger.info("The timestamp of the remote db is " + remoteGenerated);
 				logger.info("The timestamp of the local db is " + generated);
 				if (remoteGenerated > generated.longValue()) {
-					logger.info("Updating the DB");
-					this.db.commit();
-					this.db.close();
-					new File(dbFileName).delete();
-					logger.info("Downloading preprocessed data from " + dbURL);
-					FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName));
-					logger.info(dbURL + " downloaded!");
-					this.db = DBMaker.fileDB(dbFileName).make();
-					initMaps();
+					if (download) {
+						logger.info("Updating the DB");
+						this.db.commit();
+						this.db.close();
+						new File(dbFileName).delete();
+						logger.info("Downloading preprocessed data from " + dbURL);
+						FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName));
+						logger.info(dbURL + " downloaded!");
+						this.db = DBMaker.fileDB(dbFileName).make();
+						initMaps();
+					}
 				}
 			} catch (IOException e) {
 				logger.info("Remote generated does not exist!");
