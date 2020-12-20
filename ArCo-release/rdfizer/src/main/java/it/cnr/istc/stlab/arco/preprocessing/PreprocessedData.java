@@ -52,7 +52,7 @@ public class PreprocessedData {
 		this.db = DBMaker.fileDB(dbFileName).make();
 		initMaps();
 
-		if (!forceCreate) {
+		if (!forceCreate && !download) {
 			try {
 				org.mapdb.Atomic.Long generated = db.atomicLong(GENERATED).createOrOpen();
 				Long remoteGenerated = readRemoteGenerated();
