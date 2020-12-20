@@ -32,6 +32,7 @@ public class PreprocessedData {
 	private PreprocessedData(boolean download, String dbFileName, boolean forceCreate) {
 
 		if (download) {
+			logger.info("Download " + dbURL);
 			if (!new File(dbFileName).exists()) {
 				logger.info("Downloading preprocessed data from " + dbURL);
 				try {
@@ -153,6 +154,11 @@ public class PreprocessedData {
 
 	public Map<String, List<String>> getUniqueIdentifier2URIs() {
 		return uniqueIdentifier2URIs;
+	}
+	
+	public Long getGenerated() {
+		return db.atomicLong(GENERATED).open().get();
+		
 	}
 
 }
