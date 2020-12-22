@@ -423,7 +423,7 @@
 				</xsl:choose>
 			</xsl:if>
 		</xsl:for-each>
-		<xsl:for-each select="record/metadata/schede/A/PV/PVM">
+		<xsl:for-each select="record/metadata/schede/*/PV/PVM">
 			<xsl:choose>	
 				<xsl:when test="not(./PVMU) or ./PVMU='intero bene' or ./PVMU='integrale' or ./PVMU='tutta' or ./PVMU='totale' or ./PVMU='carattere generale' or (starts-with(lower-case(normalize-space(./PVMU)), 'nr')) or (starts-with(lower-case(normalize-space(./PVMU)), 'n.r')) or (starts-with(lower-case(normalize-space(./PVMU)), 'intero')) or (starts-with(lower-case(normalize-space(./PVMU)), 'intera')) or (starts-with(lower-case(normalize-space(./PVMU)), 'esemplar'))">
 					<arco-ip:hasCovering>
@@ -443,7 +443,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
-		<xsl:for-each select="record/metadata/schede/A/SC">
+		<xsl:for-each select="record/metadata/schede/*/SC">
 			<xsl:choose>	
 				<xsl:when test="not(./SCL/SCLU) or ./SCL/SCLU='intero bene' or ./SCL/SCLU='integrale' or ./SCL/SCLU='tutta' or ./SCL/SCLU='totale' or ./SCL/SCLU='carattere generale' or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'nr')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'n.r')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'intero')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'intera')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'esemplar'))">
 					<arco-ip:hasVerticalConnection>
@@ -1541,7 +1541,7 @@
 									
 									
 									<!-- Flooring as individual -->	
-	<xsl:for-each select="record/metadata/schede/A/PV/PVM">	
+	<xsl:for-each select="record/metadata/schede/*/PV/PVM">	
 		<rdf:Description>	
 			<xsl:attribute name="rdf:about">
         		<xsl:value-of select="concat($NS, 'Flooring/', $itemURI, '-', arco-fn:arcofy(normalize-space(.)))" />
@@ -1580,7 +1580,7 @@
 		</rdf:Description>
 	</xsl:for-each>										
 											<!-- FlooringType as individual -->
-	<xsl:for-each select="record/metadata/schede/A/PV/PVM/PVMG ">
+	<xsl:for-each select="record/metadata/schede/*/PV/PVM/PVMG ">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"> 			
  				<xsl:value-of 	select="concat($NS, 'FlooringType/', arco-fn:urify(normalize-space(.)))" />
@@ -1600,7 +1600,7 @@
 	</xsl:for-each>	
 									
 									<!-- FlooringLayout as individual -->
-	<xsl:for-each select="record/metadata/schede/A/PV/PVM/PVMS ">
+	<xsl:for-each select="record/metadata/schede/*/PV/PVM/PVMS ">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"> 			
  				<xsl:value-of 	select="concat($NS, 'FlooringLayout/', arco-fn:urify(normalize-space(.)))" />
@@ -1620,7 +1620,7 @@
 	</xsl:for-each>	
 	
 									<!-- Stair as individual -->
-	<xsl:for-each select="record/metadata/schede/A/SC">
+	<xsl:for-each select="record/metadata/schede/*/SC">
 	<xsl:variable name="soff" select="normalize-space(./SOF/SOFF)" />
 	<xsl:variable name="sofq" select="normalize-space(./SOF/SOFQ)" />
 	<xsl:variable name="sofg" select="normalize-space(./SOF/SOFG)" />
@@ -1744,7 +1744,7 @@
 		</xsl:if>
 	</xsl:for-each>	
 									<!-- StairShape as individual -->
-	<xsl:for-each select="record/metadata/schede/A/SC/SCL/SCLF">
+	<xsl:for-each select="record/metadata/schede/*/SC/SCL/SCLF">
 		<rdf:Description>
  			<xsl:attribute name="rdf:about">
 						<xsl:value-of 	select="concat($NS, 'TechnicalCharacteristic/', arco-fn:urify(normalize-space(.)))" />
@@ -1768,7 +1768,7 @@
 		</rdf:Description>
 	</xsl:for-each>
 									<!-- UseFunction as individual -->
-	<xsl:for-each select="record/metadata/schede/A/SC/SCL/SCLO">
+	<xsl:for-each select="record/metadata/schede/*/SC/SCL/SCLO">
 		<rdf:Description>
  			<xsl:attribute name="rdf:about">
 						<xsl:value-of 	select="concat($NS, 'UseFunction/', arco-fn:urify(normalize-space(.)))" />
@@ -1787,7 +1787,7 @@
 		</rdf:Description>
 	</xsl:for-each>
 									<!-- StairType as individual -->
-	<xsl:for-each select="record/metadata/schede/A/SC/SCL/SCLG ">
+	<xsl:for-each select="record/metadata/schede/*/SC/SCL/SCLG ">
 		<rdf:Description>
 			<xsl:attribute name="rdf:about"> 				
 						<xsl:value-of 	select="concat($NS, 'StairType/', arco-fn:urify(normalize-space(.)))" />
@@ -1806,7 +1806,7 @@
 		</rdf:Description>
 	</xsl:for-each>	
 									<!-- Technique as individual -->
-	<xsl:if test="record/metadata/schede/A/SC/SCS">
+	<xsl:if test="record/metadata/schede/*/SC/SCS">
 		<xsl:for-each select="record/metadata/schede/A/SC/SCS/SCSC">
 			<rdf:Description>
  				<xsl:attribute name="rdf:about">
@@ -2150,7 +2150,7 @@
 	</xsl:for-each>
 	
 					<!-- CulturalPropertyPart when there is SCLU (Stair) -->
-	<xsl:for-each select="record/metadata/schede/A/SC">
+	<xsl:for-each select="record/metadata/schede/*/SC">
 		<xsl:if test="./SCL/SCLU and not(./SCL/SCLU='intero bene' or ./SCL/SCLU='integrale' or ./SCL/SCLU='tutta' or ./SCL/SCLU='totale' or ./SCL/SCLU='carattere generale' or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'nr')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'n.r')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'intero')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'intera')) or (starts-with(lower-case(normalize-space(./SCL/SCLU)), 'esemplar')))">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
@@ -2180,7 +2180,7 @@
 	
 
 						<!-- CulturalPropertyPart when there is PVMU (Flooring) -->
-	<xsl:for-each select="record/metadata/schede/A/PV/PVM">
+	<xsl:for-each select="record/metadata/schede/*/PV/PVM">
 		<xsl:if test="./PVMU and not(./PVMU='intero bene' or ./PVMU='integrale' or ./PVMU='tutta' or ./PVMU='totale' or ./PVMU='carattere generale' or (starts-with(lower-case(normalize-space(./PVMU)), 'nr')) or (starts-with(lower-case(normalize-space(./PVMU)), 'n.r')) or (starts-with(lower-case(normalize-space(./PVMU)), 'intero')) or (starts-with(lower-case(normalize-space(./PVMU)), 'intera')) or (starts-with(lower-case(normalize-space(./PVMU)), 'esemplar')))">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">

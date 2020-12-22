@@ -16152,8 +16152,7 @@
 			<xsl:for-each select="record/metadata/schede/*/US/USO">
 				<rdf:Description>
 					<xsl:attribute name="rdf:about">
-            			<xsl:value-of
-						select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
+            			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
             		</xsl:attribute>
 					<rdf:type>
 						<xsl:attribute name="rdf:resource">
@@ -16196,50 +16195,80 @@
 							</xsl:attribute>
 					</arco-cd:hasUseType>
 				</rdf:Description>
+				<xsl:if test="./USOR and not(./USOR='intero bene' or ./USOR='integrale' or ./USOR='tutta' or ./USOR='totale' or (starts-with(lower-case(normalize-space(./USOR)), 'nr')) or (starts-with(lower-case(normalize-space(./USOR)), 'n.r')) or (starts-with(lower-case(normalize-space(./USOR)), 'intero')) or (starts-with(lower-case(normalize-space(./USOR)), 'intera')) or (starts-with(lower-case(normalize-space(./USOR)), 'esemplar')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./USOR)))" />
+						</xsl:attribute>
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./USOR)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./USOR)" />
+						</l0:name>
+						<arco-cd:hasUse>
+							<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
+ 	                		</xsl:attribute>
+						</arco-cd:hasUse>
+					</rdf:Description>
+				</xsl:if>
 			</xsl:for-each>
 			<!-- USA -->
 			<xsl:for-each select="record/metadata/schede/*/US/USA">
-				<xsl:if test="./* " >
-				<rdf:Description>
-					<xsl:attribute name="rdf:about">
-            			<xsl:value-of
-						select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
-            		</xsl:attribute>
-					<rdf:type>
-						<xsl:attribute name="rdf:resource">
-            				<xsl:value-of
-							select="'https://w3id.org/arco/ontology/context-description/Use'" />
-            			</xsl:attribute>
-					</rdf:type>
-					<rdfs:label xml:lang="en">
-						<xsl:value-of
-							select="concat('Current use ', position(), ' of cultural property ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="en">
-						<xsl:value-of
-							select="concat('Current use ', position(), ' of cultural property ', $itemURI)" />
-					</l0:name>
-					<rdfs:label xml:lang="it">
-						<xsl:value-of
-							select="concat('Uso attuale ', position(), ' del bene culturale ', $itemURI)" />
-					</rdfs:label>
-					<l0:name xml:lang="it">
-						<xsl:value-of
-							select="concat('Uso attuale ', position(), ' del bene culturale ', $itemURI)" />
-					</l0:name>
-					<xsl:if
-						test="./USAD and (not(starts-with(lower-case(normalize-space(./USAD)), 'nr')) and not(starts-with(lower-case(normalize-space(./USAD)), 'n.r')))">
-						<arco-cd:useFunction>
-							<xsl:value-of select="normalize-space(./USAD)" />
-						</arco-cd:useFunction>
-					</xsl:if>
-					<arco-cd:hasUseType>
-						<xsl:attribute name="rdf:resource">
-		                       <xsl:value-of
-							select="'https://w3id.org/arco/ontology/context-description/CurrentUse'" />
+				<xsl:if test="./*">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+           					<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
+						</xsl:attribute>
+						<rdf:type>
+							<xsl:attribute name="rdf:resource">
+           						<xsl:value-of select="'https://w3id.org/arco/ontology/context-description/Use'" />
+	            			</xsl:attribute>
+						</rdf:type>
+						<rdfs:label xml:lang="en">
+							<xsl:value-of select="concat('Current use ', position(), ' of cultural property ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="en">
+							<xsl:value-of select="concat('Current use ', position(), ' of cultural property ', $itemURI)" />
+						</l0:name>
+						<rdfs:label xml:lang="it">
+							<xsl:value-of select="concat('Uso attuale ', position(), ' del bene culturale ', $itemURI)" />
+						</rdfs:label>
+						<l0:name xml:lang="it">
+							<xsl:value-of select="concat('Uso attuale ', position(), ' del bene culturale ', $itemURI)" />
+						</l0:name>
+						<xsl:if test="./USAD and (not(starts-with(lower-case(normalize-space(./USAD)), 'nr')) and not(starts-with(lower-case(normalize-space(./USAD)), 'n.r')))">
+							<arco-cd:useFunction>
+								<xsl:value-of select="normalize-space(./USAD)" />
+							</arco-cd:useFunction>
+						</xsl:if>
+						<arco-cd:hasUseType>
+							<xsl:attribute name="rdf:resource">
+	                		       <xsl:value-of select="'https://w3id.org/arco/ontology/context-description/CurrentUse'" />
 							</xsl:attribute>
-					</arco-cd:hasUseType>
-				</rdf:Description>
+						</arco-cd:hasUseType>
+					</rdf:Description>
+				</xsl:if>
+				<xsl:if test="./USAR and not(./USAR='intero bene' or ./USAR='integrale' or ./USAR='tutta' or ./USAR='totale' or (starts-with(lower-case(normalize-space(./USAR)), 'nr')) or (starts-with(lower-case(normalize-space(./USAR)), 'n.r')) or (starts-with(lower-case(normalize-space(./USAR)), 'intero')) or (starts-with(lower-case(normalize-space(./USAR)), 'intera')) or (starts-with(lower-case(normalize-space(./USAR)), 'esemplar')))">
+					<rdf:Description>
+						<xsl:attribute name="rdf:about">
+							<xsl:value-of select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(./USAR)))" />
+						</xsl:attribute>
+						<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+						<rdfs:label>
+							<xsl:value-of select="normalize-space(./USAR)" />
+						</rdfs:label>
+						<l0:name>
+							<xsl:value-of select="normalize-space(./USAR)" />
+						</l0:name>
+						<arco-cd:hasUse>
+							<xsl:attribute name="rdf:resource">
+	                			<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-current-use-', position())" />
+ 	                		</xsl:attribute>
+						</arco-cd:hasUse>
+					</rdf:Description>
 				</xsl:if>
 			</xsl:for-each>
 			<!-- obverse of coin -->

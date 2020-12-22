@@ -4136,9 +4136,8 @@
 							test="./* and (not(./USOR) or ./USOR='intero bene' or ./USOR='integrale' or ./USOR='tutta' or ./USOR='totale') or (starts-with(lower-case(normalize-space(./USOR)), 'nr')) or (starts-with(lower-case(normalize-space(./USOR)), 'n.r')) or (starts-with(lower-case(normalize-space(./USOR)), 'intero')) or (starts-with(lower-case(normalize-space(./USOR)), 'intera')) or (starts-with(lower-case(normalize-space(./USOR)), 'esemplar'))">
 							<arco-cd:hasUse>
 								<xsl:attribute name="rdf:resource">
-	                		<xsl:value-of
-									select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
- 	                	</xsl:attribute>
+	                				<xsl:value-of select="concat($NS, 'Use/', $itemURI, '-historical-use-', position())" />
+ 	                			</xsl:attribute>
 							</arco-cd:hasUse>
 						</xsl:when>
 						<xsl:otherwise>
