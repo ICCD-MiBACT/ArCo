@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 
 import it.cnr.istc.stlab.arco.Converter;
+import it.cnr.istc.stlab.arco.preprocessing.PreprocessedData;
 
 public class TestConverter {
 
@@ -37,6 +38,11 @@ public class TestConverter {
 					model.getGraph().find(null, NodeFactory.createURI(ns + name.getMethodName()), null).next()
 							.getObject().getLiteral().toString());
 
+			System.out.println(
+					PreprocessedData.getInstance().getContenitoreFisicoSystemRecordCode2CCF().get("ICCD13963387"));
+			
+			System.out.println(PreprocessedData.getInstance().getContenitoreFisicoSystemRecordCode2CCF().keySet().iterator().next());
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -55,8 +61,11 @@ public class TestConverter {
 					"http://www.catalogo.beniculturali.it/sigecSSU_FE/dettaglioScheda.action?keycode=", inputStream);
 			String actual = model.getGraph().find(null, NodeFactory.createURI(ns + name.getMethodName()), null).next()
 					.getObject().getLiteral().toString();
-			System.out.println("Expected ICCD13432299 actual " + actual);
+			System.out.println("Expected ICCD_CG_6292999854941 actual " + actual);
 			assertEquals("ICCD_CG_6292999854941", actual);
+			
+			System.out.println(
+					PreprocessedData.getInstance().getContenitoreGiuridicoSystemRecordCode2CCG().get("ICCD13432299"));
 
 		} catch (Exception e) {
 			e.printStackTrace();

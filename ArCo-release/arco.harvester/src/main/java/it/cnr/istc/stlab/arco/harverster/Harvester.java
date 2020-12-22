@@ -1,10 +1,12 @@
 package it.cnr.istc.stlab.arco.harverster;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -17,6 +19,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
@@ -29,7 +32,6 @@ public class Harvester {
 	private String listIdentifierURL, recordsDirectory, multimediaRecordsDirectory, altreNormativeDirectory,
 			contenitoriFisiciDirectory, contenitoriGiuridiciDirectory, authorityFilesDirectory, outputDirectory;
 	private static final int chunk_size = 1000;
-	private long items = Long.MAX_VALUE;
 	private static final Pattern p = Pattern.compile("@(.*?)@");
 	private DocumentBuilder builder;
 	private static final int NUM_OF_ATTEMPTS = 3;
@@ -63,37 +65,39 @@ public class Harvester {
 		this.limit = limit;
 	}
 
-	private void downloadRecords(String folder, String postfixList, String postfixRecord, String firstToken)
+	private static String getResumptionToken(String postfix) {
+		return System.currentTimeMillis() + ":0:oai_dc:00010101000000:99991231235959:null" + postfix;
+	}
+
+	public List<String> downloadRecords(String folder, String postfixList, String postfixRecord, boolean download)
 			throws IOException {
 
-		boolean first = true;
-		String nextToken = firstToken;
+		String nextToken = getResumptionToken(postfixList);
 
 		AtomicInteger chunk = new AtomicInteger(0);
+		List<String> downloadedRecords = new ArrayList<>();
 
-		new File(folder + "/" + chunk + "/").mkdirs();
+		FileOutputStream fos_keys = null, fos_paths = null;
+		if (download) {
 
-		FileOutputStream fos_keys = new FileOutputStream(new File(folder + "/keys.txt"));
-		FileOutputStream fos_paths = new FileOutputStream(new File(folder + "/paths.txt"));
-		while (nextToken != null || first) {
+			new File(folder + "/" + chunk + "/").mkdirs();
+			fos_keys = new FileOutputStream(new File(folder + "/keys.txt"));
+			fos_paths = new FileOutputStream(new File(folder + "/paths.txt"));
+		}
+
+		Document d;
+		while (nextToken != null) {
 
 			URL url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
-
-			if (first) {
-				if (firstToken != null) {
-					url = new URL(
-							listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken + postfixList);
-				} else {
-					url = new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc");
-				}
-
-				first = false;
-			}
 
 			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
 				try {
 					logger.trace("Issuing request " + url.toString());
-					nextToken = getRecordsFromList(url, chunk, fos_keys, fos_paths, postfixRecord, folder);
+					String identifiersResponse = IOUtils.toString(url, Charset.forName("UTF-8"));
+					d = builder.parse(new ByteArrayInputStream(identifiersResponse.getBytes()));
+					downloadedRecords
+							.addAll(getRecordsFromList(d, chunk, fos_keys, fos_paths, postfixRecord, folder, download));
+					nextToken = getResumptionToken(d);
 					break;
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -107,207 +111,108 @@ public class Harvester {
 				}
 			}
 
-			if (c.longValue() >= this.items) {
-				break;
-			}
-
-			if (downloaded > limit) {
+			if (nextToken == null || downloaded >= limit) {
 				break;
 			}
 
 		}
-		fos_keys.flush();
-		fos_paths.flush();
-		fos_keys.close();
-		fos_paths.close();
+		if (fos_keys != null) {
+
+			fos_keys.flush();
+			fos_keys.close();
+		}
+		if (fos_paths != null) {
+			fos_paths.flush();
+			fos_paths.close();
+		}
+		return downloadedRecords;
 	}
 
 	public void getRecords() throws IOException, ParserConfigurationException, SAXException, XPathExpressionException,
 			TransformerException {
 
 		if (records) {
-			downloadRecords(recordsDirectory, "", "/xml", null);
+			downloadRecords(recordsDirectory, "", "/xml", true);
 			downloaded = 0;
 		}
 		if (multimedia_records) {
-			downloadRecords(multimediaRecordsDirectory, "/entita_multimediale", "/xml/entita_multimediale",
-					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloadRecords(multimediaRecordsDirectory, "/entita_multimediale", "/xml/entita_multimediale", true);
 			downloaded = 0;
 		}
 		if (contenitoriFisici) {
-			downloadRecords(contenitoriFisiciDirectory, "/contenitori_fisici", "/xml/contenitori_fisici",
-					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloadRecords(contenitoriFisiciDirectory, "/contenitori_fisici", "/xml/contenitori_fisici", true);
 			downloaded = 0;
 		}
 		if (contenitoriGiuridici) {
 			downloadRecords(contenitoriGiuridiciDirectory, "/contenitori_giuridici", "/xml/contenitori_giuridici",
-					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+					true);
 			downloaded = 0;
 		}
 		if (altreNormative) {
-			downloadRecords(altreNormativeDirectory, "/altre_normative", "/xml/altre_normative",
-					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloadRecords(altreNormativeDirectory, "/altre_normative", "/xml/altre_normative", true);
 			downloaded = 0;
 		}
 
 		if (authorityFiles) {
-			downloadRecords(authorityFilesDirectory, "/authorities", "/xml/authorities",
-					getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc")));
+			downloadRecords(authorityFilesDirectory, "/authorities", "/xml/authorities", true);
 		}
 
-//		AtomicInteger chunk = new AtomicInteger(0);
-//
-//		new File(recordsDirectory + "/" + chunk + "/").mkdirs();
-//		new File(multimediaRecordsDirectory + "/" + chunk + "/").mkdirs();
-//
-//		boolean first = true;
-//		String nextToken = null;
-//
-//		FileOutputStream fos_keys = new FileOutputStream(new File(recordsDirectory + "/keys.txt"));
-//		FileOutputStream fos_paths = new FileOutputStream(new File(recordsDirectory + "/paths.txt"));
-//		while (nextToken != null || first) {
-//
-//			URL url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
-//
-//			if (first) {
-//				url = new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc");
-//				first = false;
-//			}
-//
-//			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
-//				try {
-//					logger.trace("Issuing request " + url.toString());
-//					nextToken = getRecordsFromList(url, chunk, fos_keys, fos_paths, "/xml", recordsDirectory);
-//					break;
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//					logger.error(e.getMessage());
-//					try {
-//						Thread.sleep((i + 1) * 60000);
-//					} catch (InterruptedException e1) {
-//						e1.printStackTrace();
-//					}
-//					logger.error("Retry! " + i);
-//				}
-//			}
-//
-//			if (c.longValue() >= this.items) {
-//				break;
-//			}
-//
-//		}
-//		fos_keys.flush();
-//		fos_paths.flush();
-//		fos_keys.close();
-//		fos_paths.close();
-//
-//		logger.trace("Issuing request " + listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc");
-//		nextToken = getResumptionToken(new URL(listIdentifierURL + "verb=ListIdentifiers&metadataPrefix=oai_dc"));
-//		AtomicInteger chunk_mr = new AtomicInteger(0);
-//		c = new AtomicInteger(0);
-//		first = true;
-//		FileOutputStream fos_keys_mr = new FileOutputStream(new File(multimediaRecordsDirectory + "/keys.txt"));
-//		FileOutputStream fos_paths_mr = new FileOutputStream(new File(multimediaRecordsDirectory + "/paths.txt"));
-//		while (nextToken != null) {
-//
-//			URL url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken);
-//			if (first) {
-//				url = new URL(listIdentifierURL + "verb=ListIdentifiers&resumptionToken=" + nextToken
-//						+ "/entita_multimediale");
-//				first = false;
-//			}
-//
-//			for (int i = 0; i < NUM_OF_ATTEMPTS; i++) {
-//				try {
-//					logger.trace("Issuing request " + url.toString());
-//					nextToken = getRecordsFromList(url, chunk_mr, fos_keys_mr, fos_paths_mr, "/xml/entita_multimediale",
-//							multimediaRecordsDirectory);
-//					break;
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//					logger.error(e.getMessage());
-//					try {
-//						Thread.sleep((i + 1) * 60000);
-//					} catch (InterruptedException e1) {
-//						e1.printStackTrace();
-//					}
-//					logger.error("Retry! " + i);
-//				}
-//			}
-//
-//			if (c.longValue() >= this.items) {
-//				break;
-//			}
-//
-//		}
-//		fos_keys_mr.flush();
-//		fos_paths_mr.flush();
-//		fos_keys_mr.close();
-//		fos_paths_mr.close();
-
 	}
 
-	private String getResumptionToken(URL url)
+	private List<String> getRecordsFromList(Document d, AtomicInteger chunk, FileOutputStream fos_keys,
+			FileOutputStream fos_paths, String postFix, String recordsDirectory, boolean download)
 			throws IOException, SAXException, XPathExpressionException, TransformerException {
-		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		conn.setRequestMethod("GET");
 
-		Document d = builder.parse(conn.getInputStream());
+		List<String> recordsChunk = getRecords(d);
+		List<String> result = new ArrayList<>();
 
-		return d.getElementsByTagName("resumptionToken").item(0).getTextContent();
-	}
+		for (String keycode : recordsChunk) {
 
-	private String getRecordsFromList(URL url, AtomicInteger chunk, FileOutputStream fos_keys,
-			FileOutputStream fos_paths, String postFix, String recordsDirectory)
-			throws IOException, SAXException, XPathExpressionException, TransformerException {
-		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		conn.setRequestMethod("GET");
+			String filename = recordsDirectory + "/" + chunk.get() + "/" + keycode + ".xml";
 
-		Document d = builder.parse(conn.getInputStream());
+			String recordString = getRecord(getIdentifierFromKeycode(keycode) + postFix);
 
-		NodeList headers = d.getElementsByTagName("header");
-
-		for (int i = 0; i < headers.getLength(); i++) {
-			Element header = (Element) headers.item(i);
-			String identifier = header.getElementsByTagName("identifier").item(0).getTextContent();
-			String datestamp = header.getElementsByTagName("datestamp").item(0).getTextContent();
-			Matcher m = p.matcher(identifier);
-			if (m.find()) {
-				String keycode = identifier.substring(m.start(1), m.end(1));
-
-				String filename = recordsDirectory + "/" + chunk.get() + "/" + keycode + ".xml";
-
-				String recordString = getRecord(identifier + postFix);
-
-				if (recordString != null) {
+			if (recordString != null) {
+				if (download) {
 					FileOutputStream fos = new FileOutputStream(new File(filename));
 					fos.write(recordString.getBytes());
 					fos.flush();
 					fos.flush();
 					fos.close();
 
-					fos_keys.write((keycode + "\tSUCCESS\t" + identifier + "\t" + datestamp + "\t" + chunk.get() + "/"
-							+ keycode + ".xml" + "\n").getBytes());
-				} else {
-					logger.error("Could not download " + identifier);
-					fos_keys.write((keycode + "\tERROR\t" + identifier + "\t" + datestamp + "\t" + chunk.get() + "/"
-							+ keycode + ".xml" + "\n").getBytes());
-				}
+					fos_keys.write(
+							(keycode + "\tSUCCESS\t" + keycode + "\t" + chunk.get() + "/" + keycode + ".xml" + "\n")
+									.getBytes());
 
+				}
+				result.add(keycode);
+
+			} else {
+				logger.error("Could not download " + keycode);
+				if (fos_keys != null) {
+					fos_keys.write(
+							(keycode + "\tERROR\t" + keycode + "\t" + chunk.get() + "/" + keycode + ".xml" + "\n")
+									.getBytes());
+				}
+			}
+
+			if (fos_paths != null)
 				fos_paths.write((chunk.get() + "/" + keycode + ".xml" + "\n").getBytes());
 
-				downloaded++;
+			downloaded++;
 
-				if (downloaded > limit) {
-					break;
-				}
-
-				fos_keys.flush();
-				fos_paths.flush();
-
-				c.incrementAndGet();
-
+			if (downloaded >= limit) {
+				break;
 			}
+
+			if (fos_keys != null) {
+				fos_keys.flush();
+			}
+			if (fos_paths != null) {
+				fos_paths.flush();
+			}
+
+			c.incrementAndGet();
 
 			if (c.longValue() % chunk_size == 0) {
 				logger.info("Processed " + c);
@@ -317,13 +222,41 @@ public class Harvester {
 
 		}
 
-		logger.trace(d.getElementsByTagName("resumptionToken").item(0).getAttributes().getNamedItem("completeListSize")
-				.getNodeValue());
+		return result;
 
-		this.items = Long.parseLong(d.getElementsByTagName("resumptionToken").item(0).getAttributes()
-				.getNamedItem("completeListSize").getNodeValue());
+	}
 
-		return d.getElementsByTagName("resumptionToken").item(0).getTextContent();
+	private String getResumptionToken(Document d) {
+		NodeList rt = d.getElementsByTagName("resumptionToken");
+		if (rt.getLength() > 0) {
+			return rt.item(0).getTextContent();
+		} else {
+			return null;
+		}
+
+	}
+
+	private List<String> getRecords(Document d)
+			throws IOException, SAXException, XPathExpressionException, TransformerException {
+
+		List<String> result = new ArrayList<>();
+
+		NodeList headers = d.getElementsByTagName("header");
+
+		for (int i = 0; i < headers.getLength(); i++) {
+			Element header = (Element) headers.item(i);
+			String identifier = header.getElementsByTagName("identifier").item(0).getTextContent();
+			Matcher m = p.matcher(identifier);
+			if (m.find()) {
+				String keycode = identifier.substring(m.start(1), m.end(1));
+
+				result.add(keycode);
+
+			}
+
+		}
+
+		return result;
 	}
 
 	private String getRecord(String identifier)
@@ -360,12 +293,16 @@ public class Harvester {
 
 	}
 
+	private static String getIdentifierFromKeycode(String keycode) {
+		return "oai:oaicat.iccd.org:@" + keycode + "@";
+	}
+
 	public void getRecordsFromList(List<String> keycodes)
 			throws XPathExpressionException, IOException, SAXException, TransformerException {
 		new File(outputDirectory).mkdirs();
 
 		for (String keycode : keycodes) {
-			String recordString = getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml");
+			String recordString = getRecord(getIdentifierFromKeycode(keycode));
 
 			if (recordString != null) {
 				FileOutputStream fos = new FileOutputStream(new File(outputDirectory + "/" + keycode + ".xml"));
@@ -378,6 +315,11 @@ public class Harvester {
 				logger.error("Could not download " + keycode);
 			}
 		}
+	}
+
+	public String getContenitoreFisico(String keycode)
+			throws XPathExpressionException, IOException, SAXException, TransformerException {
+		return getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml/contenitori_fisici");
 	}
 
 	public static void main(String[] args) throws ParserConfigurationException, XPathExpressionException, IOException,
