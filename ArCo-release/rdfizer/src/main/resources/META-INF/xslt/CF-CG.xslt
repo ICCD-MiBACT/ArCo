@@ -2329,7 +2329,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 					<xsl:value-of select="normalize-space(record/metadata/schede/*/CG/NSC)" />
 				</arco-cd:historicalInformation>
 			</xsl:if>
-							<!-- Site Type -->
+							<!-- CIS Type -->
 			<xsl:if test="record/metadata/schede/*/CG/CGT">
 				<arco-location:hasCulturalInstituteOrSiteType>
 					<xsl:attribute name="rdf:resource">
@@ -2346,7 +2346,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 			</xsl:if>
 		</rdf:Description>
 						
-						<!-- Site Type as an individual -->
+						<!-- CIS Type as an individual -->
 		<xsl:if test="record/metadata/schede/*/CG/CGT">
 			<rdf:Description>
 				<xsl:attribute name="rdf:about">
