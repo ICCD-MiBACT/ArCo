@@ -170,10 +170,9 @@ public class Harvester {
 
 			String filename = recordsDirectory + "/" + chunk.get() + "/" + keycode + ".xml";
 
-			String recordString = getRecord(getIdentifierFromKeycode(keycode) + postFix);
-
-			if (recordString != null) {
-				if (download) {
+			if (download) {
+				String recordString = getRecord(getIdentifierFromKeycode(keycode) + postFix);
+				if (recordString != null) {
 					FileOutputStream fos = new FileOutputStream(new File(filename));
 					fos.write(recordString.getBytes());
 					fos.flush();
@@ -184,16 +183,18 @@ public class Harvester {
 							(keycode + "\tSUCCESS\t" + keycode + "\t" + chunk.get() + "/" + keycode + ".xml" + "\n")
 									.getBytes());
 
-				}
-				result.add(keycode);
+					result.add(keycode);
 
-			} else {
-				logger.error("Could not download " + keycode);
-				if (fos_keys != null) {
-					fos_keys.write(
-							(keycode + "\tERROR\t" + keycode + "\t" + chunk.get() + "/" + keycode + ".xml" + "\n")
-									.getBytes());
+				} else {
+					logger.error("Could not download " + keycode);
+					if (fos_keys != null) {
+						fos_keys.write(
+								(keycode + "\tERROR\t" + keycode + "\t" + chunk.get() + "/" + keycode + ".xml" + "\n")
+										.getBytes());
+					}
 				}
+			} else {
+				result.add(keycode);
 			}
 
 			if (fos_paths != null)
