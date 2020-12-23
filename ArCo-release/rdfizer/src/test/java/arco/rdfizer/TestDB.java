@@ -59,12 +59,18 @@ public class TestDB {
 
 	@Test
 	public void testDownload() {
-		if (System.getenv("USER").equals("lgu")) {
+		String user = System.getenv("USER");
+		if (user != null && System.getenv("USER").equals("lgu")) {
 			String dbFile = "test_db";
 			System.out.println("Test download");
 			new File(dbFile).delete();
 			PreprocessedData pd = PreprocessedData.getInstance(true, dbFile, false);
 			assertTrue(pd.getGenerated() > 0);
+
+			assertEquals("ICCD_CG_0445195133451", pd.getContenitoreGiuridicoSystemRecordCode2CCG().get("ICCD13954023"));
+
+			assertEquals("ICCD_CF_0160885714451", pd.getContenitoreFisicoSystemRecordCode2CCF().get("ICCD13963387"));
+
 			new File(dbFile).delete();
 			try {
 				resetInstance();

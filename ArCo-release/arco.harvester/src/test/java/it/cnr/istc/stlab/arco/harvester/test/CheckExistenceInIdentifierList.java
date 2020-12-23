@@ -22,6 +22,7 @@ public class CheckExistenceInIdentifierList {
 
 			System.out.println("Numero di contenitori fisici: " + identifiers.size());
 			assertTrue(identifiers.contains("ICCD13678576"));
+			assertTrue(identifiers.contains("ICCD13963387"));
 
 		} catch (ParserConfigurationException | IOException e) {
 			e.printStackTrace();

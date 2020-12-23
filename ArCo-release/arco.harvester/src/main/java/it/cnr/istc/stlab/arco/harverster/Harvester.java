@@ -322,6 +322,11 @@ public class Harvester {
 			throws XPathExpressionException, IOException, SAXException, TransformerException {
 		return getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml/contenitori_fisici");
 	}
+	
+	public String getContenitoreGiuridico(String keycode)
+			throws XPathExpressionException, IOException, SAXException, TransformerException {
+		return getRecord("oai:oaicat.iccd.org:@" + keycode + "@/xml/contenitori_giuridici");
+	}
 
 	public static void main(String[] args) throws ParserConfigurationException, XPathExpressionException, IOException,
 			SAXException, TransformerException {
