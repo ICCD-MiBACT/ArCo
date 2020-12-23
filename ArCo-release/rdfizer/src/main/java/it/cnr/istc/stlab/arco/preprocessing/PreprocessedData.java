@@ -1,6 +1,7 @@
 package it.cnr.istc.stlab.arco.preprocessing;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Map;
+import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -18,7 +20,7 @@ import org.mapdb.Serializer;
 
 public class PreprocessedData {
 
-	public static final String dbFileName = "db", dbURL = "http://arco.istc.cnr.it/preprocessing/db",
+	public static final String dbFileName = "db", dbURL = "http://arco.istc.cnr.it/preprocessing/db.gz",
 			generatedURLString = "http://arco.istc.cnr.it/preprocessing/generated";
 
 	private DB db;
@@ -36,7 +38,12 @@ public class PreprocessedData {
 			if (!new File(dbFileName).exists()) {
 				logger.info("Downloading preprocessed data from " + dbURL);
 				try {
-					FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName));
+					FileUtils.copyURLToFile(new URL(dbURL), new File(dbFileName + ".gz"));
+					logger.info(dbURL+" downloaded!");
+					logger.info("Unzipping "+dbFileName + ".gz");
+					IOUtils.copy(new GZIPInputStream(new FileInputStream(new File(dbFileName + ".gz"))),
+							new FileOutputStream(new File(dbFileName)));
+					logger.info(dbFileName + ".gz unzipped");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -155,10 +162,10 @@ public class PreprocessedData {
 	public Map<String, List<String>> getUniqueIdentifier2URIs() {
 		return uniqueIdentifier2URIs;
 	}
-	
+
 	public Long getGenerated() {
 		return db.atomicLong(GENERATED).open().get();
-		
+
 	}
 
 }
