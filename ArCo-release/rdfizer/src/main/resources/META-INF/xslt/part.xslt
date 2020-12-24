@@ -933,7 +933,7 @@
 				</xsl:if>
 			</xsl:for-each>
 			
-			<!-- part of cultural property when there is ISER (4.00, affixed elements) -->
+			<!-- part of cultural property when there is ISRP (4.00, affixed elements) -->
 			<xsl:for-each select="record/metadata/schede/*/DA/ISE">
 				<xsl:variable name="element">
 					<xsl:choose>
@@ -996,7 +996,39 @@
 					</xsl:for-each>
 				</xsl:if>
 			</xsl:for-each>
-
+				<!-- part of cultural property when there is ISRP (4.00, affixed elements) -->
+			<xsl:for-each select="record/metadata/schede/*/DA/ISR/ISRP">
+				<xsl:variable name="parentPosition">
+					<xsl:value-of select="position()" />
+				</xsl:variable>
+				<xsl:if test="not(lower-case(normalize-space(./ISRP))='intero bene') and not(lower-case(normalize-space(./ISRP))='integrale') and not(lower-case(normalize-space(./ISRP))='tutta') and not(lower-case(normalize-space(./ISRP))='totale') and (not(starts-with(lower-case(normalize-space(./ISRP)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'n.r')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'intero')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'intera')) and not(starts-with(lower-case(normalize-space(./ISRP)), 'esemplar')))">
+					<xsl:for-each select="./ISRP">
+						<rdf:Description>
+							<xsl:attribute name="rdf:about">
+						 		<xsl:value-of
+								select="concat($NS, 'CulturalPropertyPart/', $itemURI, '-part-', arco-fn:urify(normalize-space(.)))" />
+						 	</xsl:attribute>
+							<rdf:type rdf:resource="https://w3id.org/arco/ontology/arco/CulturalPropertyPart" />
+							<arco-dd:hasAffixedElement>
+								<xsl:attribute name="rdf:resource">
+									<xsl:value-of select="concat($NS, 'Inscription/', $itemURI, '-affixed-element-', position())" />
+								</xsl:attribute>
+							</arco-dd:hasAffixedElement>
+							<rdfs:label>
+								<xsl:value-of select="normalize-space(.)" />
+							</rdfs:label>
+							<l0:name>
+								<xsl:value-of select="normalize-space(.)" />
+							</l0:name>
+							<arco-core:isPartOf>
+								<xsl:attribute name="rdf:resource"> 
+									<xsl:value-of select="concat($NS, arco-fn:local-name(arco-fn:getSpecificPropertyType($sheetType)), '/', $itemURI)" /> 
+								</xsl:attribute>
+							</arco-core:isPartOf>
+						</rdf:Description>
+					</xsl:for-each>
+				</xsl:if>
+			</xsl:for-each>
 		</rdf:RDF>
 	</xsl:template>
 </xsl:stylesheet>

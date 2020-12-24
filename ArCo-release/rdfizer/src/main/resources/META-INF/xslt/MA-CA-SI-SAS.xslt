@@ -386,7 +386,7 @@
 				<xsl:value-of select="concat('Misura delle fondazioni ',  position(), ': ', (.))" />
 			</l0:name>
 			<arco-dd:hasValue>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', Foundation, '-', (.))" />
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/Foundation-', (.))" />
 			</arco-dd:hasValue>
 		</rdf:Description>	
 	</xsl:for-each>
@@ -596,7 +596,7 @@
 				<xsl:value-of select="concat('Misura delle strutture verticali ',  position(), ': ', (.))" />
 			</l0:name>
 			<arco-dd:hasValue>
-				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/', VerticalElement, '-', (.))" />
+				<xsl:attribute name="rdf:resource" select="concat($NS, 'Value/VerticalElement-', (.))" />
 			</arco-dd:hasValue>
 		</rdf:Description>	
 	</xsl:for-each>

@@ -4958,6 +4958,7 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="en">Duration</rdfs:label>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa OAC: MT/MIS/MISH</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5024,6 +5025,19 @@ resource:MeasurementCollection/1200865132-1
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <a-cat:iccdNormTag>ICCD Normativa F: MT/FVC/FVCF</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/FileSize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/FileSize">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Dimensione del file</rdfs:label>
+        <rdfs:label xml:lang="en">File size</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normativa OAC: MT/MIS/MISB</a-cat:iccdNormTag>
     </owl:NamedIndividual>
     
 
@@ -5657,6 +5671,20 @@ resource:MeasurementCollection/1200865132-1
         <rdfs:label xml:lang="it">Comunicazione musicale vocale</rdfs:label>
         <rdfs:label xml:lang="en">Singing communication</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/arco/ontology/denotative-description/Size -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arco/ontology/denotative-description/Size">
+        <rdf:type rdf:resource="https://w3id.org/arco/ontology/denotative-description/MeasurementType"/>
+        <rdfs:label xml:lang="it">Dimensione del file</rdfs:label>
+        <rdfs:label xml:lang="en">File size</rdfs:label>
+        <owl:versionInfo xml:lang="it">instabile</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">unstable</owl:versionInfo>
+        <a-cat:iccdNormTag>ICCD Normative OAC: MT/MIS/MISI</a-cat:iccdNormTag>
+    </owl:NamedIndividual>
+    
     
 
 
