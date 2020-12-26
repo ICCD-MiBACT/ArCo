@@ -13675,6 +13675,11 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</rdfs:label>
+						<xsl:if test="./ISEN and (not(starts-with(lower-case(normalize-space(./ISEN)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEN)), 'n.r')))">
+							<arco-core:description>
+								<xsl:value-of select="normalize-space(./ISEN)" />
+							</arco-core:description>
+						</xsl:if> 
 						<xsl:if
 							test="./ISEZ and (not(starts-with(lower-case(normalize-space(./ISEZ)), 'nr')) and not(starts-with(lower-case(normalize-space(./ISEZ)), 'n.r')))">
 							<arco-core:description>
@@ -23208,8 +23213,8 @@
 					</xsl:if>
 				</xsl:if>
 			</xsl:for-each>
-			<!-- AU/AUF (F version 2.00, 3.00) -->
-			<xsl:for-each select="record/metadata/schede/F/AU/AUF">
+			<!-- AU/AUF (F version 2.00, 3.00 and BDM) -->
+			<xsl:for-each select="record/metadata/schede/*/AU/AUF">
 				<xsl:if
 					test="./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 					<rdf:Description>

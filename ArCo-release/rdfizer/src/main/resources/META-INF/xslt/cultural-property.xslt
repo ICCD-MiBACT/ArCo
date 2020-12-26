@@ -2205,8 +2205,8 @@
 						</pico:author>
 					</xsl:if>
 				</xsl:for-each>
-				<!-- AU/AUF (F version 2.00, 3.00) -->
-				<xsl:for-each select="record/metadata/schede/F/AU/AUF">
+				<!-- AU/AUF (F version 2.00, 3.00 and BDM) -->
+				<xsl:for-each select="record/metadata/schede/*/AU/AUF">
 					<xsl:if
 						test="./* and ./AUFN and not(starts-with(lower-case(normalize-space(./AUFN)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'n.r')) and not(starts-with(lower-case(normalize-space(./AUFB)), 'nr')) and not(starts-with(lower-case(normalize-space(./AUFN)), 'nr'))">
 
