@@ -87,7 +87,11 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 	</xsl:choose>
 	</xsl:variable>
 	
-	
+	<xsl:template name="CamelCase1">
+		<xsl:param name="text" />
+		<xsl:value-of
+			select="translate(($text),'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
+	</xsl:template>	
 	
 		
 <xsl:template match="/">
@@ -122,7 +126,9 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<dc:type>
 						<xsl:choose>
 							<xsl:when test="./OGTT">
-								<xsl:value-of select="concat(./OGTD, ' ', ./OGTT)" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTD, ' ', ./OGTT)" />
+								</xsl:call-template>
 							</xsl:when>
 							<xsl:when test="./OGTD">
 								<xsl:value-of select="./OGTD" />
@@ -134,10 +140,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<dc:type>
 						<xsl:choose>
 							<xsl:when test="./OGTQ">
-								<xsl:value-of select="concat(./OGTD, '-', ./OGTQ)" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTD, '-', ./OGTQ)" />
+								</xsl:call-template>
 							</xsl:when>
 							<xsl:when test="./OGTD">
-								<xsl:value-of select="./OGTD" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="./OGTD" />
+								</xsl:call-template>
 							</xsl:when>
 						</xsl:choose>
 				</dc:type>
@@ -146,7 +156,9 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<dc:type>
 						<xsl:choose>
 							<xsl:when test="./OGTQ">
-								<xsl:value-of	select="concat(./OGTT, '-', ./OGTQ)" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTT, '-', ./OGTQ)" />
+								</xsl:call-template>
 							</xsl:when>
 							<xsl:when test="./OGTT">
 								<xsl:value-of select="./OGTT" />
@@ -158,10 +170,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<dc:type>
 						<xsl:choose>
 							<xsl:when test="./OGTK">
-								<xsl:value-of	select="concat(./OGTD, ' ', ./OGTK)" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTD, ' ', ./OGTK)" />
+								</xsl:call-template>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="./OGTD" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text"  select="./OGTD" />
+								</xsl:call-template>
 							</xsl:otherwise>
 						</xsl:choose>
 				</dc:type>					
@@ -170,10 +186,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<dc:type>
 						<xsl:choose>
 							<xsl:when test="./OGTR">
-								<xsl:value-of	select="concat(./OGTD, ' ', ./OGTR)" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTD, ' ', ./OGTR)" />
+								</xsl:call-template>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="./OGTD" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text"  select="./OGTD" />
+								</xsl:call-template>
 							</xsl:otherwise>
 						</xsl:choose>
 				</dc:type>					
@@ -182,10 +202,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<dc:type>
 						<xsl:choose>
 							<xsl:when test="./OGTZ">
-								<xsl:value-of	select="concat(./OGTD, ' ', ./OGTZ)" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text"  select="concat(./OGTD, ' ', ./OGTZ)" />
+								</xsl:call-template>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="./OGTD" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="./OGTD" />
+								</xsl:call-template>
 							</xsl:otherwise>
 						</xsl:choose>
 				</dc:type>					
@@ -194,10 +218,14 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 				<dc:type>
 						<xsl:choose>
 							<xsl:when test="./OGTO">
-								<xsl:value-of	select="concat(./OGTD, ' ', ./OGTO)" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="concat(./OGTD, ' ', ./OGTO)" />
+								</xsl:call-template>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:value-of select="./OGTD" />
+								<xsl:call-template name="CamelCase1">
+											<xsl:with-param name="text" select="./OGTD" />
+								</xsl:call-template>
 							</xsl:otherwise>
 						</xsl:choose>
 				</dc:type>					
@@ -207,18 +235,20 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="1.0">
 		</xsl:if>
 		<xsl:if test="record/metadata/schede/MODI/OG">
 			<dc:type>
-				<xsl:attribute name="rdf:resource">
-							<xsl:choose>
-								<xsl:when test="record/metadata/schede/MODI/OG/OGT">
-									<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(concat(record/metadata/schede/MODI/OG/OGD, '-', record/metadata/schede/MODI/OG/OGT)))" />
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat($NS, 'CulturalPropertyType/', arco-fn:arcofy(record/metadata/schede/MODI/OG/OGD))" />
-								</xsl:otherwise>
-							</xsl:choose>
-						</xsl:attribute>
-					</dc:type>
-				</xsl:if>
+				<xsl:choose>
+							<xsl:when test="record/metadata/schede/MODI/OG/OGT">
+								<xsl:call-template name="CamelCase1">
+									<xsl:with-param name="text" select="concat(record/metadata/schede/MODI/OG/OGD, ' ', record/metadata/schede/MODI/OG/OGT)" />
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="CamelCase1">
+									<xsl:with-param name="text" select="record/metadata/schede/MODI/OG/OGD" />
+								</xsl:call-template>
+							</xsl:otherwise>
+				</xsl:choose>
+			</dc:type>
+		</xsl:if>
 									<!-- dcterms:isReferencedBy  -->
 		<dcterms:isReferencedBy>
 			<xsl:attribute name="rdf:resource">

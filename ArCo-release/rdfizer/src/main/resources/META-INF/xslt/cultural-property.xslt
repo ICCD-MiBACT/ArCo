@@ -1439,6 +1439,7 @@
 
 
 				<xsl:for-each select="record/metadata/schede/*/*/RSE">
+				<xsl:if test="./RSEC">
 					<xsl:variable name="create-rel-work-situation">
 						<xsl:choose>
 							<xsl:when
@@ -1518,6 +1519,7 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:if>
+				</xsl:if>
 				</xsl:for-each>
 
 				<xsl:for-each select="record/metadata/schede/*/RV/ROZ">
