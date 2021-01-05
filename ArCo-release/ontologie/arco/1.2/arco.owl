@@ -965,12 +965,7 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAgeOfDeathEstimate"/>
-    
-
-
+ 
     <!-- https://w3id.org/arco/ontology/context-description/hasAuthor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasAuthor"/>
@@ -1112,12 +1107,6 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/hasResponsibility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasResponsibility"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/hasSexEstimate -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/arco/ontology/context-description/hasSexEstimate"/>
     
 
 
@@ -3518,12 +3507,6 @@ In this module the following Ontology Design Patterns have been used:
     
 
 
-    <!-- https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AgeOfDeathEstimate"/>
-    
-
-
     <!-- https://w3id.org/arco/ontology/context-description/AnomalyOrigin -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/AnomalyOrigin"/>
@@ -3691,12 +3674,6 @@ In this module the following Ontology Design Patterns have been used:
     <!-- https://w3id.org/arco/ontology/context-description/Responsibility -->
 
     <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/Responsibility"/>
-    
-
-
-    <!-- https://w3id.org/arco/ontology/context-description/SexEstimate -->
-
-    <owl:Class rdf:about="https://w3id.org/arco/ontology/context-description/SexEstimate"/>
     
 
 
